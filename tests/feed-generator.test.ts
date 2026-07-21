@@ -42,6 +42,24 @@ describe('FeedGenerator', () => {
     expect(result.feedDistributionSet.atom).toContain('<feed');
   });
 
+  it('guidが属性付き要素でオブジェクトになっている場合はリンクをIDに使う', () => {
+    const feedItem = {
+      title: 'テスト記事',
+      link: 'https://example.com/test-article/',
+      // rss-parser は `<guid isPermaLink="false"/>` をオブジェクトとして返す
+      guid: { $: { isPermaLink: 'false' } } as unknown as string,
+      isoDate: '2026-06-09T04:03:10.000Z',
+      blogTitle: 'Example Tech Blog',
+      blogLink: 'https://example.com',
+    } as CustomRssParserItem;
+    const feedGenerator = new FeedGenerator();
+
+    const result = feedGenerator.generateFeeds([feedItem], new Map(), new Map(), 200, 500, testFeedMeta);
+
+    expect(result.aggregatedFeed.items[0].id).toBe(feedItem.link);
+    expect(result.feedDistributionSet.atom).toContain('<feed');
+  });
+
   it('メタ情報がフィードのタイトル・リンクに反映される', () => {
     const feedItem = {
       title: 'テスト記事',

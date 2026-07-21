@@ -46,7 +46,7 @@ const SECTIONS_DIR_PATH = path.join(dirName, 'sections');
 /**
  * セクション定義JSONの形式チェック。不正があればファイル名付きのエラーを投げる
  */
-const assertSectionFileContent = (fileName: string, content: unknown): asserts content is SectionFileContent => {
+function assertSectionFileContent(fileName: string, content: unknown): asserts content is SectionFileContent {
   const sectionContent = content as SectionFileContent;
 
   if (typeof sectionContent.order !== 'number') {
@@ -66,7 +66,7 @@ const assertSectionFileContent = (fileName: string, content: unknown): asserts c
       throw new Error(`セクション定義「${fileName}」のフィード「${feed?.label}」のURLが不正です: ${feed?.url}`);
     }
   }
-};
+}
 
 /**
  * resources/sections/*.json を読み込み、order 昇順（同値はID昇順）のセクション一覧を返す

@@ -91,7 +91,8 @@ export class FeedGenerator {
     for (const feedItem of feedItems) {
       logger.info('[create-feed-item]', feedItem.isoDate, feedItem.title);
 
-      const feedItemId = feedItem.guid || feedItem.link;
+      // guid は `<guid isPermaLink="false">` のような属性付き要素だとオブジェクトになることがあるため、文字列のときだけ使う
+      const feedItemId = (typeof feedItem.guid === 'string' && feedItem.guid) || feedItem.link;
       const feedItemContent = (feedItem.summary || feedItem.contentSnippet || '').replace(/(\n|\t+|\s+)/g, ' ');
 
       const ogObject = feedItemOgObjectMap.get(feedItem.link);
