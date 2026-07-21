@@ -243,9 +243,15 @@ export const FEED_SECTION_LIST: FeedSection[] = [
     ['The Trail of Bits Blog', 'https://blog.trailofbits.com/feed/'],
   ]),
   createFeedSection('security-advisory', 'Security Advisory', [
-    ['Security Advisory for JavaScript packages hosted at npmjs.com', 'https://azu.github.io/github-advisory-database-rss/npm.rss'],
+    [
+      'Security Advisory for JavaScript packages hosted at npmjs.com',
+      'https://azu.github.io/github-advisory-database-rss/npm.rss',
+    ],
     ['Security Advisory for Github Actions', 'https://azu.github.io/github-advisory-database-rss/actions.rss'],
-    ['Security Advisory for Python packages hosted at PyPI.org', 'https://azu.github.io/github-advisory-database-rss/pip.rss'],
+    [
+      'Security Advisory for Python packages hosted at PyPI.org',
+      'https://azu.github.io/github-advisory-database-rss/pip.rss',
+    ],
   ]),
   createFeedSection('speakerdeck', 'Speaker Deck', [
     ['Business - Speaker Deck', 'https://speakerdeck.com/c/business.atom'],
