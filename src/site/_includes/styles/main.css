@@ -137,16 +137,6 @@ img {
 .ui-top-section .ui-text-note {
   margin-bottom: 0.6em;
 }
-.ui-top-section .ui-top-section__subscribe {
-  margin-top: 0.3em;
-  display: flex;
-  gap: 0.5em;
-}
-.ui-top-section .ui-top-section__subscribe img {
-  height: 37px;
-  width: auto;
-}
-
 /**
  * ナビゲーション
  */
@@ -155,6 +145,9 @@ img {
 
 .ui-section-nav__layout {
   justify-content: start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
 .ui-section-nav__link {
@@ -163,6 +156,8 @@ img {
   padding: 0.5em 0;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
   color: var(--base-color-muted);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .ui-section-nav__link--active {
