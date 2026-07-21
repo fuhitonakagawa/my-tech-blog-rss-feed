@@ -176,3 +176,43 @@ Qdrant - Vector Search Engine	https://qdrant.tech/index.xml	#my-tech-blog-db-fee
 Qdrant Articles on Qdrant - Vector Search Engine	https://qdrant.tech/articles/index.xml	#my-tech-blog-db-feed
 Weaviate Blog	https://weaviate.io/blog/rss.xml	#my-tech-blog-db-feed
 Release notes from milvus	https://github.com/milvus-io/milvus/releases.atom	#my-tech-blog-db-feed
+
+
+
+-----
+
+状況は以下のとおりです。実クロール以外は完了しています。
+
+## 完了
+
+**26セクション・約130フィード**を `4-section.md` の「投稿先」列ベースで構築しました。
+
+| セクション例                                         | ID                                               | 内容                       |
+| ---------------------------------------------------- | ------------------------------------------------ | -------------------------- |
+| Zenn / Qiita / はてブ                                | `zenn` `qiita` `hatena`                          | トレンド系                 |
+| AWS                                                  | `aws`                                            | AWSブログ 45件             |
+| Google Cloud / Azure                                 | `google-cloud` `azure`                           | クラウド                   |
+| 国内テックブログ                                     | `jp-tech-blog`                                   | メルカリ〜Wantedly 19件    |
+| AI / Engineering / Platform / Programming / Database | `ai` `engineering` `platform` `programming` `db` | 海外テック系               |
+| セキュリティ / Security Advisory                     | `security` `security-advisory`                   | 18件 + azu氏のAdvisory 3件 |
+| Speaker Deck / 技術書 / ニュース系ほか               | `speakerdeck` `tech-book` など                   | 単独フィード系             |
+
+`tsc` と内部テスト60件はすべて通過しています。
+
+## データ整理で判断した点
+
+1. **重複URLは先出のセクションに一本化**（現在の仕組みは1フィード=1セクション）
+   - Elastic Blog: `platform` に（`db` 側と重複）
+   - AWS Database Blog: `aws` に（`db` 側と末尾スラッシュ違いの同一フィード）
+2. **重複ラベルの改名**: 「LINEヤフー Tech Blog」が2件 → 旧Yahoo!側を `LINEヤフー Tech Blog (旧Yahoo! JAPAN)` に
+3. **ラベル修正**: URL がそのまま名前だった行 → `Think IT`、単に「AI」だった Google のブログ → `Google AI Blog`
+4. **メルカリの9時間ズレ補正を維持**（フィードを実確認して現在もズレていたため、新ラベルに合わせて調整コードを更新）。登録がなくなった旧ブログ向けの補正分岐は削除
+
+## 未実施
+
+**全130フィードの実クロール検証**（`feed-generate`）を実行しようとしたところで止めていただいた状態です。実行すると約130件への並列アクセスが発生し、数分かかります。
+
+- 実行してよければそのまま流します（一部フィードは404等で失敗する可能性がありますが、失敗分はスキップされる設計です）
+- ご自身で `npm run feed-generate && npm run site-serve` で確認いただいても大丈夫です
+
+どうしますか？
