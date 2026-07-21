@@ -28,7 +28,6 @@ export default {
   author: 'fuhitonakagawa',
   gitHubUserUrl: 'https://github.com/fuhitonakagawa/',
   gitHubRepositoryUrl: 'https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/',
-  xUserUrl: 'https://x.com/yamadashy',
 
   // Google Analytics系。フォークして使う際は値を空にするか書き換えてください
   googleSiteVerification: '',

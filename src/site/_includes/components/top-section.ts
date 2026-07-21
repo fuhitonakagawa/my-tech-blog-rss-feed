@@ -1,14 +1,14 @@
-import constants from '../../../common/constants';
 import { relativeUrlFilter } from '../../../common/eleventy-utils';
 import { escapeHtml } from './html-utils';
 import type { EleventyPage } from './types';
 
 /**
  * partials/top-section.njk 相当のトップセクション。
+ * トップページ・セクションページ共通で、渡されたRSSフィードURLのコピーUIを表示する
  */
-export const renderTopSection = (page: EleventyPage): string => {
+export const renderTopSection = (page: EleventyPage, rssFeedUrl: string): string => {
   const relativeUrl = escapeHtml(relativeUrlFilter(page.url));
-  const rssFeedUrl = escapeHtml(constants.feedUrls.rss);
+  const escapedRssFeedUrl = escapeHtml(rssFeedUrl);
 
   return `<section class="ui-section-content ui-top-section">
     <div class="ui-layout-container">
@@ -21,7 +21,7 @@ export const renderTopSection = (page: EleventyPage): string => {
                     <label class='ui-component-form__label' for='feed-url-slack'>
                         <img src='${relativeUrl}images/slack-mark.png' alt='Slackのロゴ' loading="eager" width='96' height='96'>
                     </label>
-                    <input type='text' id='feed-url-slack' class="ui-component-input ui-component-input-medium" readonly value='/feed ${rssFeedUrl}'>
+                    <input type='text' id='feed-url-slack' class="ui-component-input ui-component-input-medium" readonly value='/feed ${escapedRssFeedUrl}'>
                     <button type="button" class="ui-component-button ui-component-button-medium ui-component-button-primary feed-url-copy-button">コピー</button>
                 </form>
                 <p class="ui-text-note"><small>Slackに貼り付けると更新を受け取ることができます</small></p>
@@ -29,7 +29,7 @@ export const renderTopSection = (page: EleventyPage): string => {
                     <label class='ui-component-form__label' for='feed-url-rss'>
                         <span>RSS URL</span>
                     </label>
-                    <input type='text' id='feed-url-rss' class="ui-component-input ui-component-input-medium" readonly value='${rssFeedUrl}'>
+                    <input type='text' id='feed-url-rss' class="ui-component-input ui-component-input-medium" readonly value='${escapedRssFeedUrl}'>
                     <button type="button" class="ui-component-button ui-component-button-medium ui-component-button-primary feed-url-copy-button">コピー</button>
                 </form>
             </div>

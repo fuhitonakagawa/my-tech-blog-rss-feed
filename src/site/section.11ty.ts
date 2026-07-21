@@ -3,6 +3,7 @@ import { renderFeedItem } from './_includes/components/feed-item';
 import { escapeHtml } from './_includes/components/html-utils';
 import { renderNav } from './_includes/components/nav';
 import { indexScript } from './_includes/components/scripts';
+import { renderTopSection } from './_includes/components/top-section';
 import { type EleventyPage, type FeedSectionPageData, SITE_PAGE_DATE } from './_includes/components/types';
 
 interface SectionData {
@@ -31,7 +32,6 @@ export const data = {
 
 export async function render(data: SectionData): Promise<string> {
   const { page, section } = data;
-  const rssFeedUrl = escapeHtml(sectionFeedUrls(section.id).rss);
 
   const chunks: string[] = [];
   for (const [dateString, feedItems] of Object.entries(section.feedItemsChunks)) {
@@ -47,21 +47,13 @@ export async function render(data: SectionData): Promise<string> {
   const feedItemsContent =
     chunks.length > 0 ? chunks.join('\n\n') : `<p class='ui-text-note'>直近1週間の更新はありません</p>`;
 
-  return `${renderNav(page)}
+  return `${renderTopSection(page, sectionFeedUrls(section.id).rss)}
+
+${renderNav(page)}
 
 <section class="ui-section-content ui-section-feed">
     <div class="ui-layout-container">
         <h2 class='ui-typography-heading'>${escapeHtml(section.title)}の直近1週間の更新</h2>
-
-        <div class="ui-layout-column-6 ui-layout-column-center">
-            <form class="ui-component-form ui-layout-grid">
-                <label class='ui-component-form__label' for='feed-url-rss'>
-                    <span>RSS URL</span>
-                </label>
-                <input type='text' id='feed-url-rss' class="ui-component-input ui-component-input-medium" readonly value='${rssFeedUrl}'>
-                <button type="button" class="ui-component-button ui-component-button-medium ui-component-button-primary feed-url-copy-button">コピー</button>
-            </form>
-        </div>
 
         ${feedItemsContent}
     </div>

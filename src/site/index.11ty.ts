@@ -36,7 +36,7 @@ export async function render(data: IndexData): Promise<string> {
             </div>`);
   }
 
-  return `${renderTopSection(page)}
+  return `${renderTopSection(page, constants.feedUrls.rss)}
 
 ${renderNav(page)}
 

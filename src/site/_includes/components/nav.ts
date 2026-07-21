@@ -22,7 +22,7 @@ export const renderNav = (page: EleventyPage): string => {
   return `<nav class='ui-nav'>
     <div class='ui-layout-container'>
         <div class='ui-section-nav__layout ui-layout-flex'>
-            <a class='ui-section-nav__link ${feedActive}' href='${relativeUrl}'>フィード</a>
+            <a class='ui-section-nav__link ${feedActive}' href='${relativeUrl}'>ALL</a>
             ${sectionLinks}
             <a class='ui-section-nav__link ${hotActive}' href='${relativeUrl}hot/'>人気フィード</a>
             <a class='ui-section-nav__link ${blogsActive}' href='${relativeUrl}blogs/'>ブログ一覧</a>
