@@ -10,6 +10,21 @@ export interface FeedDistributionSet {
   json: string;
 }
 
+/**
+ * まとめフィードのメタ情報。全体まとめ・セクションまとめの双方で使用する
+ */
+export interface AggregatedFeedMeta {
+  title: string;
+  description: string;
+  /** フィードに対応するページのURL。末尾スラッシュ付き */
+  pageUrl: string;
+  feedUrls: {
+    atom: string;
+    rss: string;
+    json: string;
+  };
+}
+
 export interface GenerateFeedResult {
   aggregatedFeed: Feed;
   feedDistributionSet: FeedDistributionSet;
@@ -29,6 +44,7 @@ export class FeedGenerator {
     allFeedItemHatenaCountMap: FeedItemHatenaCountMap,
     maxFeedDescriptionLength: number,
     maxFeedContentLength: number,
+    feedMeta: AggregatedFeedMeta,
   ): GenerateFeedResult {
     const aggregatedFeed = this.generateAggregatedFeed(
       feedItems,
@@ -36,6 +52,7 @@ export class FeedGenerator {
       allFeedItemHatenaCountMap,
       maxFeedDescriptionLength,
       maxFeedContentLength,
+      feedMeta,
     );
 
     return {
@@ -55,14 +72,15 @@ export class FeedGenerator {
     allFeedItemHatenaCountMap: FeedItemHatenaCountMap,
     maxFeedDescriptionLength: number,
     maxFeedContentLength: number,
+    feedMeta: AggregatedFeedMeta,
   ): Feed {
     const outputFeed = new Feed({
-      title: constants.feedTitle,
-      description: constants.feedDescription,
+      title: feedMeta.title,
+      description: feedMeta.description,
       language: constants.feedLanguage,
-      id: `${constants.siteUrlStem}/`,
-      link: `${constants.siteUrlStem}/`,
-      feedLinks: constants.feedUrls,
+      id: feedMeta.pageUrl,
+      link: feedMeta.pageUrl,
+      feedLinks: feedMeta.feedUrls,
       image: `${constants.siteUrlStem}/images/icon.png`,
       favicon: `${constants.siteUrlStem}/images/favicon.ico`,
       copyright: constants.feedCopyright,

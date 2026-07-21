@@ -15,6 +15,8 @@ module.exports = (eleventyConfig: any) => {
   // static assets
   eleventyConfig.addPassthroughCopy('src/site/images');
   eleventyConfig.addPassthroughCopy('src/site/feeds');
+  // セクションフィード: src/site/section-feeds/<id>/feeds/* を /rss/<id>/feeds/* として配信
+  eleventyConfig.addPassthroughCopy({ 'src/site/section-feeds': constants.sectionRootPath });
 
   // images
   eleventyConfig.addNunjucksAsyncShortcode('imageThumbnail', imageThumbnailShortcode);

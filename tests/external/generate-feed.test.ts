@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import constants from '../../src/common/constants';
 import { FeedCrawler } from '../../src/feed/feed-crawler';
 import { FeedGenerator } from '../../src/feed/feed-generator';
 import { FEED_INFO_LIST } from '../../src/resources/feed-info-list';
@@ -34,6 +35,12 @@ describe('フィード生成', async () => {
       crawlFeedsResult.feedItemHatenaCountMap,
       MAX_FEED_DESCRIPTION_LENGTH,
       MAX_FEED_CONTENT_LENGTH,
+      {
+        title: constants.feedTitle,
+        description: constants.feedDescription,
+        pageUrl: `${constants.siteUrlStem}/`,
+        feedUrls: constants.feedUrls,
+      },
     );
 
     // 一つでもimageがあればok

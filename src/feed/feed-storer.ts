@@ -45,6 +45,23 @@ export class FeedStorer {
     }
   }
 
+  /**
+   * セクションごとのまとめフィードを `<出力先>/<セクションID>/feeds/` に出力する。
+   * 出力先ディレクトリは毎回作り直し、削除されたセクションの残骸が残らないようにする
+   */
+  public async storeSectionFeeds(
+    sectionFeedDistributionSets: Map<string, FeedDistributionSet>,
+    storeDirPath: string,
+  ): Promise<void> {
+    await fs.rm(storeDirPath, { recursive: true, force: true });
+
+    for (const [sectionId, feedDistributionSet] of sectionFeedDistributionSets) {
+      await this.storeArticleFeeds(feedDistributionSet, path.join(storeDirPath, sectionId, 'feeds'));
+    }
+
+    logger.info('[store-section-feeds] finished');
+  }
+
   private async storeArticleFeeds(feedDistributionSet: FeedDistributionSet, storeDirPath: string): Promise<void> {
     await fs.mkdir(storeDirPath, { recursive: true });
     await fs.writeFile(path.join(storeDirPath, 'atom.xml'), feedDistributionSet.atom, 'utf-8');

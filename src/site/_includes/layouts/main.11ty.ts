@@ -8,6 +8,8 @@ interface MainLayoutData {
   content: string;
   pageTitle: unknown;
   page: EleventyPage;
+  /** alternate リンクに使うフィードディレクトリ（サイトルート相対）。セクションページで上書きされる */
+  feedDir?: string;
 }
 
 /**
@@ -16,6 +18,7 @@ interface MainLayoutData {
 export function render(data: MainLayoutData): string {
   const { content, pageTitle, page } = data;
   const relativeUrl = escapeHtml(relativeUrlFilter(page.url));
+  const feedDir = escapeHtml(data.feedDir ?? 'feeds/');
   const escapedPageTitle = escapeHtml(pageTitle);
   const canonicalUrl = escapeHtml(`${constants.siteUrlStem}${page.url}`);
 
@@ -83,9 +86,9 @@ export function render(data: MainLayoutData): string {
 
     <link rel="shortcut icon" href="${relativeUrl}images/favicon.ico">
     <link rel="apple-touch-icon" href="${relativeUrl}images/apple-icon.png">
-    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="${relativeUrl}feeds/atom.xml" />
-    <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="${relativeUrl}feeds/rss.xml" />
-    <link rel="alternate" type="application/json" href="${relativeUrl}feeds/feed.json" />
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="${relativeUrl}${feedDir}atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="${relativeUrl}${feedDir}rss.xml" />
+    <link rel="alternate" type="application/json" href="${relativeUrl}${feedDir}feed.json" />
 
     <link rel="stylesheet" type="text/css" href="${relativeUrl}styles/bundle.css" />
 

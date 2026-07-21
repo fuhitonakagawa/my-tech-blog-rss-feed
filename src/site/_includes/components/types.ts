@@ -83,3 +83,15 @@ export type SiteBlogFeed = Omit<BlogFeed, 'items' | 'title'> & {
  * feedItemsChunks の型（日付文字列ごとにグルーピングされた feed item）。
  */
 export type FeedItemsChunks = Record<string, FeedJsonItem[]>;
+
+/**
+ * セクションページ（`section.11ty.ts`）用のデータ。
+ * `_data/sections.js` がセクションごとの feed.json から構築する。
+ */
+export interface FeedSectionPageData {
+  id: string;
+  title: string;
+  feedItemsChunks: FeedItemsChunks;
+  /** 記事が1件も無い場合は空文字 */
+  lastModified: string;
+}

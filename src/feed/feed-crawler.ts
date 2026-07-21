@@ -31,10 +31,12 @@ export type CustomRssParserItem = RssParser.Item & {
   isoDate: string;
   blogTitle: string;
   blogLink: string;
+  sectionId: string;
 };
 export type CustomRssParserFeed = RssParser.Output<CustomRssParserItem> & {
   link: string;
   title: string;
+  sectionId: string;
 };
 
 export interface ClawlFeedsResult {
@@ -218,38 +220,17 @@ export class FeedCrawler {
    */
   private static postProcessFeed(feedInfo: FeedInfo, feed: CustomRssParserFeed): CustomRssParserFeed {
     const customFeed = feed as CustomRssParserFeed;
+    customFeed.sectionId = feedInfo.sectionId;
 
     // ブログごとの調整
     switch (feedInfo.label) {
-      case 'メルカリ':
+      case 'メルカリエンジニアリングブログ':
         // 9時間ずれているので調整
         FeedCrawler.subtractFeedItemsDateHour(customFeed, 9);
         customFeed.link = 'https://engineering.mercari.com/blog/';
         break;
-      case 'KAIZEN PLATFORM':
-        // 9時間ずれているので調整
-        FeedCrawler.subtractFeedItemsDateHour(customFeed, 9);
-        break;
-      case 'Tokyo Otaku Mode':
-        customFeed.link = 'https://blog.otakumode.com/';
-        break;
-      case 'フューチャー':
-        customFeed.link = 'https://future-architect.github.io/';
-        break;
-      case 'さくら':
+      case 'さくらのナレッジ':
         customFeed.link = 'https://knowledge.sakura.ad.jp/';
-        break;
-      case 'YOJO Technologies':
-        customFeed.title = 'YOJO Technologies Blog';
-        break;
-      case 'POL':
-        customFeed.title = 'POL テックノート';
-        break;
-      case 'mofmof':
-        customFeed.link = 'https://tech.mof-mof.co.jp';
-        break;
-      case 'CADDi':
-        customFeed.link = 'https://caddi.tech/';
         break;
     }
 
@@ -279,6 +260,9 @@ export class FeedCrawler {
       // view用
       feedItem.blogTitle = customFeed.title || '';
       feedItem.blogLink = customFeed.link || '';
+
+      // セクション分割用
+      feedItem.sectionId = feedInfo.sectionId;
     }
 
     return customFeed;
