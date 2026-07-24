@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/</id>
+    <title>Platform｜企業テックブログRSS</title>
+    <updated>2026-07-24T16:43:36.783Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/feeds/atom.xml"/>
+    <subtitle>Platformセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[trunk/688f44f2596fd7a693042d06380b0785eb3f879c: Modernize Claude workflow models (#190960) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F688f44f2596fd7a693042d06380b0785eb3f879c</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F688f44f2596fd7a693042d06380b0785eb3f879c"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/23dfa5d963cce8fa2994f9d1e537fdfb0f3fbe9c10ad6c6e544b369366892856/pytorch/pytorch" type="image//23dfa5d963cce8fa2994f9d1e537fdfb0f3fbe9c10ad6c6e544b369366892856/pytorch/pytorch"/>
+        <updated>2026-07-24T06:16:30.000Z</updated>
+        <summary type="html"><![CDATA[Bumps the verisons, tested in CI forge we can add the fable check if once we let this run a few rounds and check in on price and re-asses aferwordsUse Sonnet 5 for issue triage and distributed triage,]]></summary>
+        <content type="html"><![CDATA[Bumps the verisons, tested in CI forge we can add the fable check if once we let this run a few rounds and check in on price and re-asses aferwordsUse Sonnet 5 for issue triage and distributed triage, and use Fable 5Test Plan:ruby -ryaml -e 'ARGV.each { |path| YAML.load_file(path); puts path }' .github/workflows/claude-code.yml .github/workflows/claude-distributed-triage.yml .github/workflows/claude-issue-triage-run.ymlgit diff --checklintrunner -a was attempted but lintrunner is not installed i]]></content>
+        <published>2026-07-24T06:16:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/940c9f893f8094687f496979120328bcc6d7845d: [triton hash update] update the pinned triton hash (#181680) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F940c9f893f8094687f496979120328bcc6d7845d</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F940c9f893f8094687f496979120328bcc6d7845d"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/23dfa5d963cce8fa2994f9d1e537fdfb0f3fbe9c10ad6c6e544b369366892856/pytorch/pytorch" type="image//23dfa5d963cce8fa2994f9d1e537fdfb0f3fbe9c10ad6c6e544b369366892856/pytorch/pytorch"/>
+        <updated>2026-07-24T05:33:33.000Z</updated>
+        <summary type="html"><![CDATA[This PR is auto-generated nightly by this action.#181680https://github.com/pytorchbot, https://github.com/njriasan, https://github.com/atalman, https://github.com/warrendeng]]></summary>
+        <content type="html"><![CDATA[This PR is auto-generated nightly by this action.#181680https://github.com/pytorchbot, https://github.com/njriasan, https://github.com/atalman, https://github.com/warrendeng]]></content>
+        <published>2026-07-24T05:33:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[viable/strict/1784887317: Update torch-xpu-ops commit pin (#190783) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1784887317</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1784887317"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/fa9e5ddebec741bb0d0024001defa98b8222f3f55130658d1488a497ea72e024/pytorch/pytorch" type="image//fa9e5ddebec741bb0d0024001defa98b8222f3f55130658d1488a497ea72e024/pytorch/pytorch"/>
+        <updated>2026-07-24T05:26:14.000Z</updated>
+        <summary type="html"><![CDATA[Update the torch-xpu-ops commit to intel/torch-xpu-ops@301504.New feature:Add philox unpack kernel for OneDNN SDPA dropoutBuild system:Probe the SYCL compiler for the fast-math-disabling flagPass macr]]></summary>
+        <content type="html"><![CDATA[Update the torch-xpu-ops commit to intel/torch-xpu-ops@301504.New feature:Add philox unpack kernel for OneDNN SDPA dropoutBuild system:Probe the SYCL compiler for the fast-math-disabling flagPass macro definitions to sycl kernel codeSimplify SYCL build-flag and Windows CMake setupKernel fixes:Fix local atomicMax incorrectly doing fetch_addFix FakeTensor stride for fft c2r outputFix SIMD macro hygiene and cover index_add's high-contention pathUse int64_t for chunk_size in foreach kernels to preve]]></content>
+        <published>2026-07-24T05:26:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/526b9cee8c9ad8da312bf33ea2c3f308cbfe8876: Update torch-xpu-ops commit pin (#190783) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F526b9cee8c9ad8da312bf33ea2c3f308cbfe8876</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F526b9cee8c9ad8da312bf33ea2c3f308cbfe8876"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/23dfa5d963cce8fa2994f9d1e537fdfb0f3fbe9c10ad6c6e544b369366892856/pytorch/pytorch" type="image//23dfa5d963cce8fa2994f9d1e537fdfb0f3fbe9c10ad6c6e544b369366892856/pytorch/pytorch"/>
+        <updated>2026-07-24T05:26:14.000Z</updated>
+        <summary type="html"><![CDATA[Update the torch-xpu-ops commit to intel/torch-xpu-ops@301504.New feature:Add philox unpack kernel for OneDNN SDPA dropoutBuild system:Probe the SYCL compiler for the fast-math-disabling flagPass macr]]></summary>
+        <content type="html"><![CDATA[Update the torch-xpu-ops commit to intel/torch-xpu-ops@301504.New feature:Add philox unpack kernel for OneDNN SDPA dropoutBuild system:Probe the SYCL compiler for the fast-math-disabling flagPass macro definitions to sycl kernel codeSimplify SYCL build-flag and Windows CMake setupKernel fixes:Fix local atomicMax incorrectly doing fetch_addFix FakeTensor stride for fft c2r outputFix SIMD macro hygiene and cover index_add's high-contention pathUse int64_t for chunk_size in foreach kernels to preve]]></content>
+        <published>2026-07-24T05:26:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[viable/strict/1784884053: [torchcomms hash update] update the pinned torchcomms hash (#190134) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1784884053</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1784884053"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/fa9e5ddebec741bb0d0024001defa98b8222f3f55130658d1488a497ea72e024/pytorch/pytorch" type="image//fa9e5ddebec741bb0d0024001defa98b8222f3f55130658d1488a497ea72e024/pytorch/pytorch"/>
+        <updated>2026-07-24T05:19:26.000Z</updated>
+        <summary type="html"><![CDATA[This PR is auto-generated nightly by this action.#190134https://github.com/pytorchbot]]></summary>
+        <content type="html"><![CDATA[This PR is auto-generated nightly by this action.#190134https://github.com/pytorchbot]]></content>
+        <published>2026-07-24T05:19:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[viable/strict/1784880052: Skip non-fd shareable_handle in ExpandableSegment cleanup (#190860) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1784880052</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1784880052"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/fa9e5ddebec741bb0d0024001defa98b8222f3f55130658d1488a497ea72e024/pytorch/pytorch" type="image//fa9e5ddebec741bb0d0024001defa98b8222f3f55130658d1488a497ea72e024/pytorch/pytorch"/>
+        <updated>2026-07-24T03:31:47.000Z</updated>
+        <summary type="html"><![CDATA[ExpandableSegment::unmapHandles releases each handle's exported shareable handle with close(std::get(*h.shareable_handle)). But shareable_handle is a std::variant that also holds CUmemFabricHandle for]]></summary>
+        <content type="html"><![CDATA[ExpandableSegment::unmapHandles releases each handle's exported shareable handle with close(std::get(*h.shareable_handle)). But shareable_handle is a std::variant that also holds CUmemFabricHandle for fabric segments, so once a fabric segment has been shared (share() caches the exported CUmemFabricHandle), destroying it makes std::get throw std::bad_variant_access from the destructor, which calls std::terminate.Use std::get_if so only POSIX-fd handles are closed; fabric handles (plain values wit]]></content>
+        <published>2026-07-24T03:31:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[viable/strict/1784877062: [Inductor] Skip folding inf/nan to int in index propagation (#190427) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1784877062</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1784877062"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/23dfa5d963cce8fa2994f9d1e537fdfb0f3fbe9c10ad6c6e544b369366892856/pytorch/pytorch" type="image//23dfa5d963cce8fa2994f9d1e537fdfb0f3fbe9c10ad6c6e544b369366892856/pytorch/pytorch"/>
+        <updated>2026-07-24T02:42:59.000Z</updated>
+        <summary type="html"><![CDATA[Fixes #190421WhyIndex propagation constant-folds dtype casts with Python's int(), which has no value for inf/nan, so compiling e.g. sum(log(zeros), dtype=torch.int32) crashes with OverflowError at com]]></summary>
+        <content type="html"><![CDATA[Fixes #190421WhyIndex propagation constant-folds dtype casts with Python's int(), which has no value for inf/nan, so compiling e.g. sum(log(zeros), dtype=torch.int32) crashes with OverflowError at compile time.HowSymPyOps.to_dtype returns NotImplemented for a non-finite constant cast to an integer dtype, following the existing pattern in mod/remainder/minimum; index propagation falls back to the wrapped handler, so the cast is emitted by codegen with the backend's runtime semantics (matching eag]]></content>
+        <published>2026-07-24T02:42:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/96af44ca00d28ce850756e23cc29058d21c3d452 | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F96af44ca00d28ce850756e23cc29058d21c3d452</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F96af44ca00d28ce850756e23cc29058d21c3d452"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/0304e43bae81a22055e18635ea0d4f20612a3ab2502dbe10170b9959761c766d/pytorch/pytorch" type="image//0304e43bae81a22055e18635ea0d4f20612a3ab2502dbe10170b9959761c766d/pytorch/pytorch"/>
+        <updated>2026-07-24T02:36:57.000Z</updated>
+        <summary type="html"><![CDATA[Fix typos in inductor, ao, distributed, and nn comments and docstring…]]></summary>
+        <content type="html"><![CDATA[Fix typos in inductor, ao, distributed, and nn comments and docstring…]]></content>
+        <published>2026-07-24T02:36:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[viable/strict/1784873452: [CUDA] Change nvmlDeviceGetGpuFabricInfoV assertion to warning (#186375) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1784873452</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1784873452"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/23dfa5d963cce8fa2994f9d1e537fdfb0f3fbe9c10ad6c6e544b369366892856/pytorch/pytorch" type="image//23dfa5d963cce8fa2994f9d1e537fdfb0f3fbe9c10ad6c6e544b369366892856/pytorch/pytorch"/>
+        <updated>2026-07-24T01:49:43.000Z</updated>
+        <summary type="html"><![CDATA[nvmlDeviceGetGpuFabricInfoV is only supported on Hopper and above, but get_fabric_access wraps it in an assertion, causing a crash on Orin and other pre-Hopper devices instead of falling back graceful]]></summary>
+        <content type="html"><![CDATA[nvmlDeviceGetGpuFabricInfoV is only supported on Hopper and above, but get_fabric_access wraps it in an assertion, causing a crash on Orin and other pre-Hopper devices instead of falling back gracefully. Similar to #185946, this PR replaces the assertion with a warning and allows control flow to continue.Fixes #186374Pull Request resolved: #186375https://github.com/ngimel]]></content>
+        <published>2026-07-24T01:49:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/20648f2741de9dc43cce379ae1de6ae06e0e22c4 | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F20648f2741de9dc43cce379ae1de6ae06e0e22c4</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F20648f2741de9dc43cce379ae1de6ae06e0e22c4"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/0304e43bae81a22055e18635ea0d4f20612a3ab2502dbe10170b9959761c766d/pytorch/pytorch" type="image//0304e43bae81a22055e18635ea0d4f20612a3ab2502dbe10170b9959761c766d/pytorch/pytorch"/>
+        <updated>2026-07-24T01:43:00.000Z</updated>
+        <summary type="html"><![CDATA[[Test] Decouple hardcoded device types in distributed test infrastruc…]]></summary>
+        <content type="html"><![CDATA[[Test] Decouple hardcoded device types in distributed test infrastruc…]]></content>
+        <published>2026-07-24T01:43:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A new allowlists design for Grafana Cloud IP addresses: What you need to know | Grafana Labs blog on Grafana Labs]]></title>
+        <id>https://grafana.com/blog/a-new-allowlists-design-for-grafana-cloud-ip-addresses-what-you-need-to-know/</id>
+        <link href="https://grafana.com/blog/a-new-allowlists-design-for-grafana-cloud-ip-addresses-what-you-need-to-know/"/>
+        <link rel="enclosure" href="https://a-us.storyblok.com/f/1022730/1200x628/1042d1b4b5/grafana-cloud-allowlists-meta-image.png/m/1200x630/filters:quality(80)/" type="image/png/m/1200x630/filters:quality(80)/"/>
+        <updated>2026-07-23T19:22:13.000Z</updated>
+        <summary type="html"><![CDATA[If your network restricts inbound or outbound traffic, you likely maintain an allowlist of Grafana Cloud IP addresses so your systems and Grafana Cloud can talk to each other. Today we're introducing ]]></summary>
+        <content type="html"><![CDATA[If your network restricts inbound or outbound traffic, you likely maintain an allowlist of Grafana Cloud IP addresses so your systems and Grafana Cloud can talk to each other. Today we're introducing a new allowlists design: a single, structured API that replaces the collection of per-product lists we've published until now.If you don't use IP allowlisting—or you connect to Grafana Cloud over private connectivity such as AWS PrivateLink—nothing changes for you, and no action is needed. If you do]]></content>
+        <author>
+            <name>Pablo Angulo</name>
+        </author>
+        <published>2026-07-23T19:22:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to monitor your Supabase projects: connect Grafana Cloud in one click | Grafana Labs blog on Grafana Labs]]></title>
+        <id>https://grafana.com/blog/grafana-cloud-supabase-one-click-integration/</id>
+        <link href="https://grafana.com/blog/grafana-cloud-supabase-one-click-integration/"/>
+        <link rel="enclosure" href="https://a-us.storyblok.com/f/1022730/1280x720/c58585cac4/grafana-cloud-and-supabase-meta-image.png/m/1200x630/filters:quality(80)/" type="image/png/m/1200x630/filters:quality(80)/"/>
+        <updated>2026-07-23T14:10:08.000Z</updated>
+        <summary type="html"><![CDATA[As AI agents accelerate software development and spin up applications at scale, visibility into what's happening behind the scenes, including query performance and database health, has never been more]]></summary>
+        <content type="html"><![CDATA[As AI agents accelerate software development and spin up applications at scale, visibility into what's happening behind the scenes, including query performance and database health, has never been more important. Gaining that level of insight requires observability that can keep pace. Supabase and Grafana Labs have partnered to launch a new integration available directly in Supabase, bringing production-grade observability to Supabase projects with a single click. Supabase users can now activate ]]></content>
+        <author>
+            <name>Logan Smith</name>
+        </author>
+        <published>2026-07-23T14:10:08.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Evaluation metrics for Vercel Flags | Vercel News]]></title>
+        <id>https://vercel.com/changelog/evaluation-metrics-for-vercel-flags</id>
+        <link href="https://vercel.com/changelog/evaluation-metrics-for-vercel-flags"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5dOdsvM6zshHfyHZLXUI6e/6da5139755735df561835b7bd8fac5c6/Group_1_3_.png" type="image/png"/>
+        <updated>2026-07-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[now shows a live evaluation view on each flag's detail page. You can see evaluations per minute charted over time, with each flag version marked in the chart so you can tie evaluation shifts to specif]]></summary>
+        <content type="html"><![CDATA[now shows a live evaluation view on each flag's detail page. You can see evaluations per minute charted over time, with each flag version marked in the chart so you can tie evaluation shifts to specific configuration changes.Vercel FlagsYou can group and filter evaluations by variant, reason, environment, SDK key, client, and reporting project. Custom clients can set the new property on the client initializer to show up as their own group. This makes it straightforward to confirm rollout percent]]></content>
+        <published>2026-07-23T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Connect to and manage Sandboxes from the dashboard | Vercel News]]></title>
+        <id>https://vercel.com/changelog/connect-to-and-manage-sandboxes-from-the-dashboard</id>
+        <link href="https://vercel.com/changelog/connect-to-and-manage-sandboxes-from-the-dashboard"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/19x5OeGjLKd03hfm8rd5Az/4cd8afb22597f890d0814c4446ac2bc1/image__2_.png" type="image/png"/>
+        <updated>2026-07-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You can now connect to any running Sandbox from the Vercel dashboard. Run commands, browse the filesystem, upload and download files, and inspect open ports without leaving the browser.From the same v]]></summary>
+        <content type="html"><![CDATA[You can now connect to any running Sandbox from the Vercel dashboard. Run commands, browse the filesystem, upload and download files, and inspect open ports without leaving the browser.From the same view, you can also manage the sandbox lifecycle: take snapshots, and stop or resume persistent sandboxes. Open the on any sandbox to try it out.Connect tabLearn more about Vercel Sandboxes in the .documentationRead more]]></content>
+        <published>2026-07-23T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Inspect feature flag history with Vercel CLI | Vercel News]]></title>
+        <id>https://vercel.com/changelog/inspect-feature-flag-history-with-vercel-cli</id>
+        <link href="https://vercel.com/changelog/inspect-feature-flag-history-with-vercel-cli"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/pnjG0PDhtLATbCPOxZDJ5/4a3bf15eff0e57d0a31e95a56b4a7c53/inspect_feature_flag_history_using_vercel_cli_og_card.jpg" type="image/jpg"/>
+        <updated>2026-07-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[version history can now be inspected from the Vercel CLI with the new command.Vercel Flagsvercel flags versionsRun to print the full revision history for a flag, with each revision's author, message, ]]></summary>
+        <content type="html"><![CDATA[version history can now be inspected from the Vercel CLI with the new command.Vercel Flagsvercel flags versionsRun to print the full revision history for a flag, with each revision's author, message, timestamp, and changed environments. Filter to a specific environment with , paginate with and , or add for scripting.vercel flags versions &amp;lt;flag&amp;gt;--environment--limit--cursor--jsonTo compare a revision against the one before it, run . The diff is semantic, surfacing field-level changes to targeting ]]></content>
+        <published>2026-07-23T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub tools are now an installable eve extension | Vercel News]]></title>
+        <id>https://vercel.com/changelog/github-tools-eve-extension</id>
+        <link href="https://vercel.com/changelog/github-tools-eve-extension"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6MycN7g1CXGyCjNUqNyYPV/9ca38c557ba54283dba37a2d22b01dce/image__7_.png" type="image/png"/>
+        <updated>2026-07-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You can now add to your eve agent as an .GitHub toolsextensionAdd the package, drop one file in , and your agent gets every tool with Vercel Connect auth, presets, and approval rules built in.agent/ex]]></summary>
+        <content type="html"><![CDATA[You can now add to your eve agent as an .GitHub toolsextensionAdd the package, drop one file in , and your agent gets every tool with Vercel Connect auth, presets, and approval rules built in.agent/extensions/ :Install@github-tools/eve-extension :Then register it from a file inagent/extensions/Get started by creating a and reading the .GitHub connectordocumentationRead morePass a connector and the extension mints short-lived, scoped GitHub tokens at runtime. Connector-backed auth: Vercel Connect]]></content>
+        <published>2026-07-23T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ling 3.0 Flash is now available on AI Gateway | Vercel News]]></title>
+        <id>https://vercel.com/changelog/ling-3-0-flash-is-now-available-on-ai-gateway</id>
+        <link href="https://vercel.com/changelog/ling-3-0-flash-is-now-available-on-ai-gateway"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5P96Goh9cE4twnHsrz63Rz/e97e41e40a8d533c9c7b213d12783de5/image__77_.png" type="image/png"/>
+        <updated>2026-07-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[from Ant Group is now available on AI Gateway.Ling 3.0 FlashThe model is free to use for the next three weeks, through August 3rd.Ling 3.0 Flash is a Mixture-of-Experts model with 124B total parameter]]></summary>
+        <content type="html"><![CDATA[from Ant Group is now available on AI Gateway.Ling 3.0 FlashThe model is free to use for the next three weeks, through August 3rd.Ling 3.0 Flash is a Mixture-of-Experts model with 124B total parameters and about 5.1B active per token. It has a 256K token context window and runs in thinking and non-thinking modes.Ling 3.0 Flash is built for token-efficient agentic inference at production scale, doing more work within tighter token, latency, and cost budgets across multi-step agent runs. The model]]></content>
+        <published>2026-07-23T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vercel MCP can now deploy code | Vercel News]]></title>
+        <id>https://vercel.com/changelog/vercel-mcp-can-now-deploy-code</id>
+        <link href="https://vercel.com/changelog/vercel-mcp-can-now-deploy-code"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4trG2FPhro9Si1nAjk8m28/aea997aea4f4e33a223c8a58d0755065/image__5_.png" type="image/png"/>
+        <updated>2026-07-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Vercel MCP server can now deploy code directly to a new or existing project. When your AI assistant finishes building something, it can ship it to Vercel and hand back a shareable URL without leav]]></summary>
+        <content type="html"><![CDATA[The Vercel MCP server can now deploy code directly to a new or existing project. When your AI assistant finishes building something, it can ship it to Vercel and hand back a shareable URL without leaving the chat.Point the tool at your files and Vercel creates the project, detects the framework, installs dependencies, and builds. You get a URL you can open and share while the build finishes in the background.deploy_to_vercelTo get started, connect the to Claude, Cursor, or any , and ask it to de]]></content>
+        <published>2026-07-23T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elastic’s new metrics capabilities will dramatically improve uptime for public sector IT | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/observability-metrics-public-sector-it</id>
+        <link href="https://www.elastic.co/blog/observability-metrics-public-sector-it"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt95a1ba816c24b3ac/6a60f31da66b927d848135b7/720x420_blogheader_metrics_for_public_sectorit_Superside_V1.png" type="image/png"/>
+        <updated>2026-07-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The new columnar metrics engine in Elastic Observability enables public sector IT teams to combine logging, metrics, and traces in one platform. As a result, SREs can improve uptime while protecting t]]></summary>
+        <content type="html"><![CDATA[The new columnar metrics engine in Elastic Observability enables public sector IT teams to combine logging, metrics, and traces in one platform. As a result, SREs can improve uptime while protecting taxpayer dollars in the process.]]></content>
+        <author>
+            <name>Leanne Link,Abhi Pandey</name>
+        </author>
+        <published>2026-07-23T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Release Notes for Safari Technology Preview 248 | WebKit]]></title>
+        <id>https://webkit.org/?p=18162</id>
+        <link href="https://webkit.org/blog/18162/release-notes-for-safari-technology-preview-248/"/>
+        <link rel="enclosure" href="https://webkit.org/wp-content/themes/webkit/images/preview-card.jpg" type="image/jpg"/>
+        <updated>2026-07-22T18:58:31.000Z</updated>
+        <summary type="html"><![CDATA[Safari Technology Preview Release 248 is now available for download for macOS Golden Gate and macOS Tahoe.]]></summary>
+        <content type="html"><![CDATA[Safari Technology Preview Release 248 is now available for download for macOS Golden Gate and macOS Tahoe.]]></content>
+        <category label="Safari Technology Preview"/>
+        <published>2026-07-22T18:58:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Terraform introduces workspaces and Stacks restore, and more | HashiCorp Blog]]></title>
+        <id>https://www.hashicorp.com/blog/terraform-introduces-workspaces-and-stacks-restore-and-more</id>
+        <link href="https://www.hashicorp.com/blog/terraform-introduces-workspaces-and-stacks-restore-and-more"/>
+        <updated>2026-07-22T17:00:00.000Z</updated>
+        <summary type="html"><![CDATA[HCP Terraform and Terraform Enterprise boost resiliency, governance, and scalability, helping platform teams manage infrastructure and deliver faster at scale.]]></summary>
+        <content type="html"><![CDATA[HCP Terraform and Terraform Enterprise boost resiliency, governance, and scalability, helping platform teams manage infrastructure and deliver faster at scale.]]></content>
+        <published>2026-07-22T17:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cost attribution in Grafana Cloud: Manage spend across observability and testing workflows | Grafana Labs blog on Grafana Labs]]></title>
+        <id>https://grafana.com/blog/cost-attribution-in-grafana-cloud-manage-spend-across-observability-and-testing-workflows/</id>
+        <link href="https://grafana.com/blog/cost-attribution-in-grafana-cloud-manage-spend-across-observability-and-testing-workflows/"/>
+        <link rel="enclosure" href="https://a-us.storyblok.com/f/1022730/1200x628/c30281b487/cost-attribution-meta-image-2.png/m/1200x630/filters:quality(80)/" type="image/png/m/1200x630/filters:quality(80)/"/>
+        <updated>2026-07-22T15:27:07.000Z</updated>
+        <summary type="html"><![CDATA[Knowing what you're spending on observability is useful. Knowing which team, service, or project is driving that spend is what actually lets you act on that information. Cost attribution is a core par]]></summary>
+        <content type="html"><![CDATA[Knowing what you're spending on observability is useful. Knowing which team, service, or project is driving that spend is what actually lets you act on that information. Cost attribution is a core part of how Grafana Cloud approaches cost management and optimization. It gives your organization a clear, structured way to allocate observability spend across teams, projects, and services, turning a single consolidated bill into a meaningful breakdown that builds accountability and supports internal]]></content>
+        <author>
+            <name>Arun Ulagappan</name>
+        </author>
+        <published>2026-07-22T15:27:07.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Runtime Enforcement, Not Runtime Advice | Docker]]></title>
+        <id>https://www.docker.com/?p=92418</id>
+        <link href="https://www.docker.com/blog/runtime-enforcement-not-runtime-advice/"/>
+        <link rel="enclosure" href="https://www.docker.com/app/uploads/2025/03/image.png" type="image/png"/>
+        <updated>2026-07-22T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Explore governance at the runtime layer and learn why isolation, policy enforcement, and controlled tool access are becoming foundational for agentic systems.]]></summary>
+        <content type="html"><![CDATA[Explore governance at the runtime layer and learn why isolation, policy enforcement, and controlled tool access are becoming foundational for agentic systems.]]></content>
+        <author>
+            <name>Jennifer Kohl</name>
+        </author>
+        <category label="Community"/>
+        <category label="AI Agent"/>
+        <category label="Docker Sandboxes"/>
+        <published>2026-07-22T13:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[One service, many doors: Multi-port services in Consul  | HashiCorp Blog]]></title>
+        <id>https://www.hashicorp.com/blog/one-service-many-doors-multi-port-services-in-consul</id>
+        <link href="https://www.hashicorp.com/blog/one-service-many-doors-multi-port-services-in-consul"/>
+        <updated>2026-07-22T07:09:00.000Z</updated>
+        <summary type="html"><![CDATA[Native multi-port support lets Consul model applications the way teams understand them, resulting in one identity, multiple named ports, and less catalog clutter. ]]></summary>
+        <content type="html"><![CDATA[Native multi-port support lets Consul model applications the way teams understand them, resulting in one identity, multiple named ports, and less catalog clutter. ]]></content>
+        <published>2026-07-22T07:09:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Modernize Java with Cursor and GitLab | GitLab]]></title>
+        <id>https://about.gitlab.com/blog/modernize-java-with-cursor-and-gitlab/</id>
+        <link href="https://about.gitlab.com/blog/modernize-java-with-cursor-and-gitlab/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/about-gitlab-com/image/upload/v1776457632/llddiylsgwuze0u1rjks.png" type="image/png"/>
+        <updated>2026-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA["Modernize Java 8 to Java 21" sounds like one task. It is not. It touches the build, the runtime, dependencies, APIs, concurrency, tests, containers, and production behavior, often all at once. Ask an]]></summary>
+        <content type="html"><![CDATA["Modernize Java 8 to Java 21" sounds like one task. It is not. It touches the build, the runtime, dependencies, APIs, concurrency, tests, containers, and production behavior, often all at once. Ask an agent to do all of that in one prompt, and you get one enormous merge request that nobody can safely review.Cursor, an AI coding agent, is good at the focused part of that problem. Give it one failing test or one bounded issue, and it can inspect the implementation, explain what went wrong, propose]]></content>
+        <published>2026-07-22T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI Gateway now supports streaming transcription | Vercel News]]></title>
+        <id>https://vercel.com/changelog/ai-gateway-now-supports-streaming-transcription</id>
+        <link href="https://vercel.com/changelog/ai-gateway-now-supports-streaming-transcription"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1qbfMqmqwPG1RWAWW6U9ed/488e924510957aa663110375c54125f8/IMG_4852.jpg" type="image/jpg"/>
+        <updated>2026-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI Gateway now supports . Previously, transcription required a complete audio file and returned the full transcript in a single response. Now you can stream audio in as it's captured and get transcrip]]></summary>
+        <content type="html"><![CDATA[AI Gateway now supports . Previously, transcription required a complete audio file and returned the full transcript in a single response. Now you can stream audio in as it's captured and get transcript updates back as the model produces them, keeping latency low for uses like live captioning and voice input.streaming transcriptionStreaming transcription is in beta and available through the 's function with any streaming-capable transcription model.AI SDKstreamTranscribeThe example below streams ]]></content>
+        <published>2026-07-22T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Extend eve agents with installable extensions | Vercel News]]></title>
+        <id>https://vercel.com/changelog/eve-extensions</id>
+        <link href="https://vercel.com/changelog/eve-extensions"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4uTm1498fINR67A2zOjcEy/85a3f6a6c17c5f00fb7295bd441cae55/image.png" type="image/png"/>
+        <updated>2026-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You can now package tools, connections, skills, instructions, and hooks into extensions that any agent can import. Extensions can be published to package registries, then installed, versioned, and upg]]></summary>
+        <content type="html"><![CDATA[You can now package tools, connections, skills, instructions, and hooks into extensions that any agent can import. Extensions can be published to package registries, then installed, versioned, and upgraded like any other project dependency.eveA browser-use extension might ship tools for navigating a site, a memory extension can capture context with hooks and recall it with tools, and a self-improvement extension pairs hooks with dynamic instructions.Scaffold a new extension with a single command]]></content>
+        <published>2026-07-22T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Unbiased Java CPU profiling with JFR in JDK 25 | Datadog | Engineering blog]]></title>
+        <id>https://www.datadoghq.com/blog/engineering/jfr-cpu-time-profiling/</id>
+        <link href="https://www.datadoghq.com/blog/engineering/jfr-cpu-time-profiling/"/>
+        <link rel="enclosure" href="https://web-assets.dd-static.net/42588/1783700864-java-cpu-profilers-hero_resized.jpg" type="image/jpg"/>
+        <updated>2026-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Modern Java profilers often rely on unsupported JVM internals for accurate CPU profiling. Here’s how engineers from Datadog, SAP, Amazon, and the OpenJDK community helped bring a new CPU profiling eve]]></summary>
+        <content type="html"><![CDATA[Modern Java profilers often rely on unsupported JVM internals for accurate CPU profiling. Here’s how engineers from Datadog, SAP, Amazon, and the OpenJDK community helped bring a new CPU profiling event to JDK 25.]]></content>
+        <published>2026-07-22T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elastic and Deductive AI join forces to accelerate agentic incident investigation for engineering teams | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/elastic-deductive-ai</id>
+        <link href="https://www.elastic.co/blog/elastic-deductive-ai"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt24bb9f76ca333e02/6a5fd73108c1744e665ad40c/blog-1.png" type="image/png"/>
+        <updated>2026-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today, Elastic announced that it has entered into an agreement to acquire Deductive AI, an AI-powered investigation platform that helps engineering teams identify and resolve production issues faster.]]></summary>
+        <content type="html"><![CDATA[Today, Elastic announced that it has entered into an agreement to acquire Deductive AI, an AI-powered investigation platform that helps engineering teams identify and resolve production issues faster.]]></content>
+        <author>
+            <name>Baha Azarmi</name>
+        </author>
+        <published>2026-07-22T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Terraform Stacks, explained | HashiCorp Blog]]></title>
+        <id>https://www.hashicorp.com/blog/terraform-stacks-explained</id>
+        <link href="https://www.hashicorp.com/blog/terraform-stacks-explained"/>
+        <updated>2026-07-21T19:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Terraform Stacks simplify provisioning and managing resources at scale, reducing the time and overhead of managing infrastructure.]]></summary>
+        <content type="html"><![CDATA[Terraform Stacks simplify provisioning and managing resources at scale, reducing the time and overhead of managing infrastructure.]]></content>
+        <published>2026-07-21T19:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Autonomous infrastructure: Managing complexity in agentic workflows   | HashiCorp Blog]]></title>
+        <id>https://www.hashicorp.com/blog/autonomous-infrastructure-managing-complexity-in-agentic-workflows</id>
+        <link href="https://www.hashicorp.com/blog/autonomous-infrastructure-managing-complexity-in-agentic-workflows"/>
+        <updated>2026-07-21T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI agents are changing infrastructure operations. Learn the seven layers required to scale autonomy with confidence, control, and visibility.]]></summary>
+        <content type="html"><![CDATA[AI agents are changing infrastructure operations. Learn the seven layers required to scale autonomy with confidence, control, and visibility.]]></content>
+        <published>2026-07-21T16:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI speeds software development. Is your secret security keeping up? | HashiCorp Blog]]></title>
+        <id>https://www.hashicorp.com/blog/ai-speeds-software-development-is-your-secret-security-keeping-up</id>
+        <link href="https://www.hashicorp.com/blog/ai-speeds-software-development-is-your-secret-security-keeping-up"/>
+        <updated>2026-07-21T07:09:00.000Z</updated>
+        <summary type="html"><![CDATA[As AI accelerates software development, secret sprawl is becoming one of the fastest growing sources of security, compliance, and operational risk.]]></summary>
+        <content type="html"><![CDATA[As AI accelerates software development, secret sprawl is becoming one of the fastest growing sources of security, compliance, and operational risk.]]></content>
+        <published>2026-07-21T07:09:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How Searchable ships customer-requested features in 30 minutes on Vercel  | Vercel News]]></title>
+        <id>https://vercel.com/blog/how-searchable-ships-customer-requested-features-in-30-minutes-on-vercel</id>
+        <link href="https://vercel.com/blog/how-searchable-ships-customer-requested-features-in-30-minutes-on-vercel"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6QU4oQpPSQsxY597hG192W/81e3c5879f3e7120ea7611704217c075/searchable_customer_story_og_card.jpg" type="image/jpg"/>
+        <updated>2026-07-21T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Searchable on Vercel5x increase in development velocity100+ billion tokens processed Customer-requested features shipped in as little as 30 minutesZero model SDK implementation or API key rotation wit]]></summary>
+        <content type="html"><![CDATA[Searchable on Vercel5x increase in development velocity100+ billion tokens processed Customer-requested features shipped in as little as 30 minutesZero model SDK implementation or API key rotation with AI GatewayAI SDK AI GatewayRead more]]></content>
+        <published>2026-07-21T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing the new Vercel Agent | Vercel News]]></title>
+        <id>https://vercel.com/blog/vercel-agent</id>
+        <link href="https://vercel.com/blog/vercel-agent"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/h5mjIE8eya4blHr5sSRlE/e217cbbb7a3fe73baea58864cc9c0d22/image.png" type="image/png"/>
+        <updated>2026-07-21T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today we're expanding . It started by triaging alerts and reviewing your pull requests. Now it has a home in your dashboard, where it can investigate production, answer questions about your projects, ]]></summary>
+        <content type="html"><![CDATA[Today we're expanding . It started by triaging alerts and reviewing your pull requests. Now it has a home in your dashboard, where it can investigate production, answer questions about your projects, and take action once you approve it.Vercel AgentBecause Vercel Agent is built into the platform that deploys and runs your app, when something changes in production, it's your first responder. It autonomously investigates your logs, metrics, and deployments, finds the root cause, and proposes a fix,]]></content>
+        <published>2026-07-21T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python function bundles now include precompiled bytecode | Vercel News]]></title>
+        <id>https://vercel.com/changelog/python-function-bundles-now-include-precompiled-bytecode</id>
+        <link href="https://vercel.com/changelog/python-function-bundles-now-include-precompiled-bytecode"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5G1hgxHUFrSQmRn7oBtKlz/90ef96ec39f181dfe5698a709e482bff/image__3_.png" type="image/png"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Vercel now compiles Python functions to bytecode at build time. In our benchmarks, cold starts for the median-sized function dropped from .2.8s to 1.3sCold starts are already rare in practice. Pre-war]]></summary>
+        <content type="html"><![CDATA[Vercel now compiles Python functions to bytecode at build time. In our benchmarks, cold starts for the median-sized function dropped from .2.8s to 1.3sCold starts are already rare in practice. Pre-warmed instances keep at least one function instance active for production deployments on paid plans, and reduces how often new instances start cold. Precompiling to bytecode makes starts faster across the board, so proactive initialization finishes sooner and fewer requests ever hit a cold start.autom]]></content>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vercel Connect adds 100+ preset connectors | Vercel News]]></title>
+        <id>https://vercel.com/changelog/vercel-connect-preset-connectors</id>
+        <link href="https://vercel.com/changelog/vercel-connect-preset-connectors"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3SfkRCcEcnGsHHsP57cDSN/4850c1782bcd1252e1a0c5461b574ff8/image__1_.png" type="image/png"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Vercel Connect now includes preset connectors for 100+ services, including Shopify, Resend, Sanity, Okta, Workday, and Jira.Preset are predefined configurations for supported services. They reduce man]]></summary>
+        <content type="html"><![CDATA[Vercel Connect now includes preset connectors for 100+ services, including Shopify, Resend, Sanity, Okta, Workday, and Jira.Preset are predefined configurations for supported services. They reduce manual setup by pre-populating the brand name, icon, auth type, and MCP or discovery URL. Unlike managed connectors, preset connectors don't register your app with the external service for you. connectorsSelect a preset from the in the Vercel dashboard. Review the pre-populated configuration, add any c]]></content>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vercel MCP now supports purchases | Vercel News]]></title>
+        <id>https://vercel.com/changelog/vercel-mcp-now-supports-purchases</id>
+        <link href="https://vercel.com/changelog/vercel-mcp-now-supports-purchases"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7iZ36Ln4ltdAhg6QfxCfCM/06e4a30c9fe8eb2cddc2df0de14155ec/purchase_vercel_products_using_vercel_mcp_og_card__1_.jpg" type="image/jpg"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[now supports purchasing Vercel products. You can:Vercel MCPVercel MCP quotes the price, explains whether the charge is one-time or recurring, and completes the purchase only after you confirm. When an]]></summary>
+        <content type="html"><![CDATA[now supports purchasing Vercel products. You can:Vercel MCPVercel MCP quotes the price, explains whether the charge is one-time or recurring, and completes the purchase only after you confirm. When an exact price isn't available, it links to the relevant pricing or billing page. Purchases require a team role with billing access and a valid payment method. to Vercel MCP to get started.Connect your AI assistantRead moreUpgrade your team to the Pro planAdd prepaid credits for (requires a paid v0 pl]]></content>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Laguna S 2.1 is now available on AI Gateway | Vercel News]]></title>
+        <id>https://vercel.com/changelog/laguna-s-2-1-is-now-available-on-ai-gateway</id>
+        <link href="https://vercel.com/changelog/laguna-s-2-1-is-now-available-on-ai-gateway"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4VOiYWG2p7Eno58fwhNjxx/00121e050f89f31ff796f6feda0c69e4/image__73_.png" type="image/png"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[is now available on AI Gateway. There are 2 versions of the model available:Laguna S 2.1 from PoolsideLaguna S 2.1 is an open-weight Mixture-of-Experts model that supports a context window of up to 1M]]></summary>
+        <content type="html"><![CDATA[is now available on AI Gateway. There are 2 versions of the model available:Laguna S 2.1 from PoolsideLaguna S 2.1 is an open-weight Mixture-of-Experts model that supports a context window of up to 1M tokens and runs in thinking and no-thinking modes.The model specializes in agentic coding and long-running tasks, including writing and debugging code, running tests, building browser-based tooling, and working on MLOps pipelines and AI research. In thinking mode, Laguna S 2.1 reports 70.2% on Term]]></content>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gemini 3.6 Flash and Gemini 3.5 Flash-Lite are now available on AI Gateway | Vercel News]]></title>
+        <id>https://vercel.com/changelog/gemini-3-6-flash-3-5-flash-lite-on-ai-gateway</id>
+        <link href="https://vercel.com/changelog/gemini-3-6-flash-3-5-flash-lite-on-ai-gateway"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/38lhFWswSQd6xdOwRCNNKC/9d4006e436aba2c29c165b60f58e816a/image.png" type="image/png"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[and are now available on AI Gateway.Gemini 3.6 FlashGemini 3.5 Flash-LiteGemini 3.6 Flash improves quality across coding, agentic tasks, and web development while consuming fewer tokens and making few]]></summary>
+        <content type="html"><![CDATA[and are now available on AI Gateway.Gemini 3.6 FlashGemini 3.5 Flash-LiteGemini 3.6 Flash improves quality across coding, agentic tasks, and web development while consuming fewer tokens and making fewer model calls. It produces cleaner web and app development output.Gemini 3.5 Flash Lite upgrades the agentic capabilities of the Flash-Lite tier, making it a good fit for subagents that handle scoped parts of a larger task.To use them, set to or in the :modelgoogle/gemini-3.6-flashgoogle/gemini-3.5]]></content>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Service tiers now available on AI Gateway | Vercel News]]></title>
+        <id>https://vercel.com/changelog/service-tiers-now-available-on-ai-gateway</id>
+        <link href="https://vercel.com/changelog/service-tiers-now-available-on-ai-gateway"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4r89inYi1JuBW9p1lL5kap/27a9ebebecae6bfdcc162b91cf7d3cf6/gateway-service-tier-og.png" type="image/png"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI Gateway now supports service tiering. Service tiers let you optimize for latency, throughput, and cost per request to match your use case. Pick a faster tier for interactive workloads (less queuein]]></summary>
+        <content type="html"><![CDATA[AI Gateway now supports service tiering. Service tiers let you optimize for latency, throughput, and cost per request to match your use case. Pick a faster tier for interactive workloads (less queueing, higher token throughput), or a lower cost tier for background jobs that can tolerate more latency.At launch, service tiering is available for OpenAI and Gemini models. work across every AI Gateway API format: , , , , and . AI Gateway adjusts billing based on the tier each request used.Service tie]]></content>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elastic Stack 9.4.3 released | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/elastic-stack-9-4-3-released</id>
+        <link href="https://www.elastic.co/blog/elastic-stack-9-4-3-released"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt00920d33ce189106/6a60cbdf3bf825ca43fc3a86/patch-release-9.4.3.png" type="image/png"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Version 9.4.3 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 9.4.3 over the previous versions 9.4.2For details of the issues that have been fixe]]></summary>
+        <content type="html"><![CDATA[Version 9.4.3 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 9.4.3 over the previous versions 9.4.2For details of the issues that have been fixed and a full list of changes for each product in this version, please refer to the release notes.]]></content>
+        <author>
+            <name>Navya Uppalapati</name>
+        </author>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elastic Stack 9.4.4 released | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/elastic-stack-9-4-4-released</id>
+        <link href="https://www.elastic.co/blog/elastic-stack-9-4-4-released"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltbd4b11e6ef8834ee/6a60ca639e4a6b523bf52ce3/Patch-release-9.4.4.png" type="image/png"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Version 9.4.4 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 9.4.4 over the previous versions 9.4.3For details of the issues that have been fixe]]></summary>
+        <content type="html"><![CDATA[Version 9.4.4 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 9.4.4 over the previous versions 9.4.3For details of the issues that have been fixed and a full list of changes for each product in this version, please refer to the release notes.]]></content>
+        <author>
+            <name>Navya Uppalapati</name>
+        </author>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elastic Stack 9.3.8 released | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/elastic-stack-9-3-8-released</id>
+        <link href="https://www.elastic.co/blog/elastic-stack-9-3-8-released"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltd646d7457982870a/6a60c7b216166f24a80c46c5/Patch-release-9.3.8.png" type="image/png"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Version 9.3.8 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 9.3.8 over the previous versions 9.3.7For details of the issues that have been fixe]]></summary>
+        <content type="html"><![CDATA[Version 9.3.8 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 9.3.8 over the previous versions 9.3.7For details of the issues that have been fixed and a full list of changes for each product in this version, please refer to the release notes.]]></content>
+        <author>
+            <name>Navya Uppalapati</name>
+        </author>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elastic Stack 8.19.19 released | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/elastic-stack-8-19-19-released</id>
+        <link href="https://www.elastic.co/blog/elastic-stack-8-19-19-released"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltdf1f2dabda42eb0e/6a60c5c0b932590484b2726e/patch-release-8.19.19.png" type="image/png"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Version 8.19.19 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 8.19.19 over the previous version 8.19.18For details of the issues that have been]]></summary>
+        <content type="html"><![CDATA[Version 8.19.19 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 8.19.19 over the previous version 8.19.18For details of the issues that have been fixed and a full list of changes for each product in this version, please refer to the release notes.]]></content>
+        <author>
+            <name>Navya Uppalapati</name>
+        </author>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Higher education analytics for the ultra-intelligent university | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/higher-education-analytics-ultra-intelligent-university</id>
+        <link href="https://www.elastic.co/blog/higher-education-analytics-ultra-intelligent-university"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltc448eb7346bbc68e/6a5e5a590133d4897be06b09/universities-unified-data-platform-blog_(1)_(1).png" type="image/png"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn how higher education analytics and a unified data platform help institutions break down silos and build a smarter, AI-ready university.]]></summary>
+        <content type="html"><![CDATA[Learn how higher education analytics and a unified data platform help institutions break down silos and build a smarter, AI-ready university.]]></content>
+        <author>
+            <name>Oksana Abramovych</name>
+        </author>
+        <published>2026-07-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Beyond performance monitoring: Understand the user experience with Grafana Cloud Frontend Observability | Grafana Labs blog on Grafana Labs]]></title>
+        <id>https://grafana.com/blog/beyond-performance-monitoring-understand-the-user-experience-with-grafana-cloud-frontend-observability/</id>
+        <link href="https://grafana.com/blog/beyond-performance-monitoring-understand-the-user-experience-with-grafana-cloud-frontend-observability/"/>
+        <link rel="enclosure" href="https://a-us.storyblok.com/f/1022730/1200x628/2bb858dd83/frontend-o11y-user-experience-meta-image.png/m/1200x630/filters:quality(80)/" type="image/png/m/1200x630/filters:quality(80)/"/>
+        <updated>2026-07-20T16:00:44.000Z</updated>
+        <summary type="html"><![CDATA[You've optimized your Largest Contentful Paint. Your Time to First Byte is under 200ms. Your Lighthouse scores are green. And yet, your checkout conversion rate is quietly dropping. A segment of users]]></summary>
+        <content type="html"><![CDATA[You've optimized your Largest Contentful Paint. Your Time to First Byte is under 200ms. Your Lighthouse scores are green. And yet, your checkout conversion rate is quietly dropping. A segment of users in Southeast Asia is churning. Your support team is fielding tickets about a form that "just doesn't work" and you have no idea which one.Traditional frontend performance monitoring tells you whether your application is fast. It doesn't tell you whether people are actually succeeding when using it.]]></content>
+        <author>
+            <name>Priscilla Lam</name>
+        </author>
+        <published>2026-07-20T16:00:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Coding Agent Horror Stories: The Agent That Deleted Production | Docker]]></title>
+        <id>https://www.docker.com/?p=91314</id>
+        <link href="https://www.docker.com/blog/coding-agent-horror-stories-the-agent-that-deleted-production/"/>
+        <link rel="enclosure" href="https://www.docker.com/app/uploads/2026/06/AI_Agents_Horror_Stories_1080x1080_v03.png" type="image/png"/>
+        <updated>2026-07-20T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn how an AI coding agent caused a 13-hour outage and how Docker Sandboxes help reduce risk with scoped identities and isolated execution.]]></summary>
+        <content type="html"><![CDATA[Learn how an AI coding agent caused a 13-hour outage and how Docker Sandboxes help reduce risk with scoped identities and isolated execution.]]></content>
+        <author>
+            <name>Jennifer Kohl</name>
+        </author>
+        <category label="Engineering"/>
+        <category label="Agentic AI"/>
+        <category label="AI Agent"/>
+        <category label="Docker Sandboxes"/>
+        <published>2026-07-20T13:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Automate work item assignment with a "Work item created" trigger | GitLab]]></title>
+        <id>https://about.gitlab.com/blog/how-to-use-a-work-item-created-trigger/</id>
+        <link href="https://about.gitlab.com/blog/how-to-use-a-work-item-created-trigger/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/about-gitlab-com/image/upload/q_auto/f_auto/v1774465167/n5hlvrsrheadeccyr1oz.png" type="image/png"/>
+        <updated>2026-07-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A new, event-driven trigger in GitLab Duo Agent Platform lets flows fire the moment a work item is created, turning triage and assignment from a manual, all-day chore into automation that runs in seco]]></summary>
+        <content type="html"><![CDATA[A new, event-driven trigger in GitLab Duo Agent Platform lets flows fire the moment a work item is created, turning triage and assignment from a manual, all-day chore into automation that runs in seconds. This comprehensive guide shows you how to use the "Work item created" trigger and follow along with this video demonstration:See the flow fire, route, and assign in real time — and imagine what continuous, hands-off automation could do for your own projects.The problem: Assignment doesn't scale]]></content>
+        <published>2026-07-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitLab Transcend Hackathon: What developers built on GitLab Orbit | GitLab]]></title>
+        <id>https://about.gitlab.com/blog/gitlab-transcend-hackathon-orbit/</id>
+        <link href="https://about.gitlab.com/blog/gitlab-transcend-hackathon-orbit/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/about-gitlab-com/image/upload/v1780996524/sd1vpl8empy26wizarqj.png" type="image/png"/>
+        <updated>2026-07-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We gave a few thousand developers GitLab Orbit. Then we got out of the way. The community responded with creative solutions to real production problems slowing down their teams. The same problems you ]]></summary>
+        <content type="html"><![CDATA[We gave a few thousand developers GitLab Orbit. Then we got out of the way. The community responded with creative solutions to real production problems slowing down their teams. The same problems you hit every week: What does this change break, which tests actually matter, and what will this migration really cost.GitLab Orbit is a live, queryable graph of your code, merge requests, pipelines, deployments, and ownership, with every relationship between them kept current. Agents write code well bu]]></content>
+        <published>2026-07-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Configure where run state lives in Vercel Workflows | Vercel News]]></title>
+        <id>https://vercel.com/changelog/configure-where-run-state-lives-in-vercel-workflows</id>
+        <link href="https://vercel.com/changelog/configure-where-run-state-lives-in-vercel-workflows"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4EHdvjDsA5p6jsMqiUPJd2/633b7ed65e8052d938e4f4a8ddedf37c/image.png" type="image/png"/>
+        <updated>2026-07-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[now keeps each run's state, queue dispatch, and output streams in a single home region: the region where the run starts by default, or any target region you choose.Vercel WorkflowsA run keeps its home]]></summary>
+        <content type="html"><![CDATA[now keeps each run's state, queue dispatch, and output streams in a single home region: the region where the run starts by default, or any target region you choose.Vercel WorkflowsA run keeps its home region for its lifetime, so for agents built on Workflows, the whole loop stays near the user: an agent serving someone in Sydney executes, checkpoints its progress, and streams output from Sydney. During a regional incident, workflow traffic fails over to the next closest region.To get started, up]]></content>
+        <published>2026-07-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Purge your Remote Cache's build and CI artifacts | Vercel News]]></title>
+        <id>https://vercel.com/changelog/purge-your-remote-caches-build-and-ci-artifacts</id>
+        <link href="https://vercel.com/changelog/purge-your-remote-caches-build-and-ci-artifacts"/>
+        <link rel="enclosure" href="https://vercel.com/api/dynamic-og?title=Purge%20your%20Remote%20Cache%27s%20build%20and%20CI%20artifacts&amp;format=changelog" type="image//api/dynamic-og"/>
+        <updated>2026-07-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Team Owners can now clear the team's Remote Cache of all artifacts in one click. This is useful when you believe there are poisoned artifacts in your cache.In your team's Build and Deployment settings]]></summary>
+        <content type="html"><![CDATA[Team Owners can now clear the team's Remote Cache of all artifacts in one click. This is useful when you believe there are poisoned artifacts in your cache.In your team's Build and Deployment settings, and clear the Remote Cache.visit the Remote Caching section to learn more.Visit the docsRead more]]></content>
+        <published>2026-07-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Data downloaded by Vercel Sandbox is now free | Vercel News]]></title>
+        <id>https://vercel.com/changelog/data-downloaded-by-vercel-sandbox-is-now-free</id>
+        <link href="https://vercel.com/changelog/data-downloaded-by-vercel-sandbox-is-now-free"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/17WzhstpADfV1CFwN3WUIu/8ab6b62bbd0fd3ddbbacff28bc4044da/image.png" type="image/png"/>
+        <updated>2026-07-17T07:01:00.000Z</updated>
+        <summary type="html"><![CDATA[no longer bills for data it downloads from the internet. Installing packages, cloning a Git repository, or pulling artifacts and datasets from an external source does not count toward Sandbox Data Tra]]></summary>
+        <content type="html"><![CDATA[no longer bills for data it downloads from the internet. Installing packages, cloning a Git repository, or pulling artifacts and datasets from an external source does not count toward Sandbox Data Transfer usage.Vercel SandboxTraffic received on a Sandbox's exposed ports is still billable, as is outbound traffic the Sandbox sends to the internet. Pricing for Active CPU, Provisioned Memory, Snapshot Storage, and Sandbox Creations is unchanged.See the for the full breakdown.pricing documentationRe]]></content>
+        <published>2026-07-17T07:01:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Runtime logs now show cache reasons | Vercel News]]></title>
+        <id>https://vercel.com/changelog/runtime-logs-now-show-cache-reasons</id>
+        <link href="https://vercel.com/changelog/runtime-logs-now-show-cache-reasons"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5PCKHL18WuGV9yvnFoEjlH/37f161fe31e150ef988ec06cc2d50549/runtime_logs_display_cache_reasons_og_card.jpg" type="image/jpg"/>
+        <updated>2026-07-17T01:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Runtime logs now show a Cache Reason explaining why a request wasn't a fresh cache hit, for example a time-based or tag-based revalidation. Use cache reasons to debug misses and improve your hit rate.]]></summary>
+        <content type="html"><![CDATA[Runtime logs now show a Cache Reason explaining why a request wasn't a fresh cache hit, for example a time-based or tag-based revalidation. Use cache reasons to debug misses and improve your hit rate.Cache reasons appear for any response the CDN can cache, including ISR, Partial Prerendering, and functions that set a header with directives like . Responses rendered dynamically on every request don't have a cache reason.Cache-Controlstale-while-revalidateOpen the Logs tab and select a request to ]]></content>
+        <published>2026-07-17T01:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GLM 5.2 is 35% off via Novita on AI Gateway | Vercel News]]></title>
+        <id>https://vercel.com/changelog/glm-5-2-is-35-off-via-novita-on-ai-gateway</id>
+        <link href="https://vercel.com/changelog/glm-5-2-is-35-off-via-novita-on-ai-gateway"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/xwZak3Wsw3NwyFr8qJoyg/45302f6a4e14f62628fe05776e3bb104/glm_52_via_novita_is_35_off_on_ai_gateway_until_ju_og_card_2_.jpg" type="image/jpg"/>
+        <updated>2026-07-17T00:01:00.000Z</updated>
+        <summary type="html"><![CDATA[is 35% off on AI Gateway through July 24 when routed through Novita.GLM 5.2To get the discounted rate, set the model to in the and route requests through Novita:zai/glm-5.2AI SDKAfter July 24, the mod]]></summary>
+        <content type="html"><![CDATA[is 35% off on AI Gateway through July 24 when routed through Novita.GLM 5.2To get the discounted rate, set the model to in the and route requests through Novita:zai/glm-5.2AI SDKAfter July 24, the model stays available at standard provider rates with no markup.Try GLM 5.2 in the .model playgroundRead more]]></content>
+        <published>2026-07-17T00:01:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Optimized CDN caching and deploying of immutable static assets | Vercel News]]></title>
+        <id>https://vercel.com/changelog/optimized-cdn-caching-and-deploying-of-immutable-static-assets</id>
+        <link href="https://vercel.com/changelog/optimized-cdn-caching-and-deploying-of-immutable-static-assets"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3sq9xMvppyxWXPeYODO9B8/1a99e557e010bd4747f4bdede3d52ef9/optimize_cdn_caching_and_deploy_static_assets_og_card.jpg" type="image/jpg"/>
+        <updated>2026-07-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Vercel now reuses static files across deployments for frameworks that output content-addressed assets. It's zero-config: Vercel uses to manage these immutable files alongside your code changes, handli]]></summary>
+        <content type="html"><![CDATA[Vercel now reuses static files across deployments for frameworks that output content-addressed assets. It's zero-config: Vercel uses to manage these immutable files alongside your code changes, handling the hard parts like hash collisions, file lifecycles, and efficient routing.Framework-defined infrastructureThis brings several benefits:Vercel's supported frameworks will automatically take advantage of this optimization, even for projects without enabled. Next.js 16.3 preview and later already ]]></content>
+        <published>2026-07-17T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vercel Plugin now available in Kimi Code CLI | Vercel News]]></title>
+        <id>https://vercel.com/changelog/vercel-plugin-now-available-in-kimi-code-cli</id>
+        <link href="https://vercel.com/changelog/vercel-plugin-now-available-in-kimi-code-cli"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5goGpGNA6ABoEmr9pgXQsU/28b2568f052cdfd4059ca408dc38c20a/vercel_plugin_available_in_kimi_cli_og_card_1_.jpg" type="image/jpg"/>
+        <updated>2026-07-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The is now available in the .Vercel PluginKimi Code CLIKimi Code can now draw on Vercel platform knowledge on demand, with skills for Next.js, AI SDK, Vercel Functions, and more. The Vercel Plugin als]]></summary>
+        <content type="html"><![CDATA[The is now available in the .Vercel PluginKimi Code CLIKimi Code can now draw on Vercel platform knowledge on demand, with skills for Next.js, AI SDK, Vercel Functions, and more. The Vercel Plugin also helps Kimi Code stay up to date with the latest Vercel APIs and recommended patterns.To install it, upgrade to the latest Kimi Code CLI and select the Vercel Plugin from the Third-party section of the menu./pluginLearn more in the .Vercel Plugin documentationRead more]]></content>
+        <published>2026-07-17T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Chat SDK adds native Slack agent support | Vercel News]]></title>
+        <id>https://vercel.com/changelog/chat-sdk-adds-native-slack-agent-support</id>
+        <link href="https://vercel.com/changelog/chat-sdk-adds-native-slack-agent-support"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4bdA3IiWWJ19asdScmboLq/bafe9527dc3cc25a6add6d2ab88cbf3c/image.png" type="image/png"/>
+        <updated>2026-07-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You can now build native Slack agents with Chat SDK's .Slack adapterThe adapter supports the full , from agent conversations in the Messages tab to suggested prompts, rotating status messages, token-b]]></summary>
+        <content type="html"><![CDATA[You can now build native Slack agents with Chat SDK's .Slack adapterThe adapter supports the full , from agent conversations in the Messages tab to suggested prompts, rotating status messages, token-by-token streamed replies, and native feedback buttons.Slack agent messaging experienceHere's what the adapter gives you:One thing to know: under , Slack threads each user message individually, so channel history only returns the user's side of a DM. Use to build AI conversation history instead.agent]]></content>
+        <published>2026-07-17T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Understanding Vault performance: Benchmarks from real-world workloads  | HashiCorp Blog]]></title>
+        <id>https://www.hashicorp.com/blog/understanding-vault-performance-benchmarks-from-real-world-workloads</id>
+        <link href="https://www.hashicorp.com/blog/understanding-vault-performance-benchmarks-from-real-world-workloads"/>
+        <updated>2026-07-16T17:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Discover how Vault Enterprise performs under real-world concurrency and payload sizes, with KV, SSH, and PKI benchmarks on HashiCorp Validated Designs. ]]></summary>
+        <content type="html"><![CDATA[Discover how Vault Enterprise performs under real-world concurrency and payload sizes, with KV, SSH, and PKI benchmarks on HashiCorp Validated Designs. ]]></content>
+        <published>2026-07-16T17:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[From the Captain’s Chair: Mohammad-Ali A’râbi | Docker]]></title>
+        <id>https://www.docker.com/?p=92217</id>
+        <link href="https://www.docker.com/blog/from-the-captains-chair-mohammad-ali-arabi/"/>
+        <link rel="enclosure" href="https://www.docker.com/app/uploads/2025/03/image.png" type="image/png"/>
+        <updated>2026-07-16T17:15:44.000Z</updated>
+        <summary type="html"><![CDATA[In this edition of From the Captain’s Chair, we’re interviewing Mohammad-Ali A'râbi, author, public speaker, and software engineer.]]></summary>
+        <content type="html"><![CDATA[In this edition of From the Captain’s Chair, we’re interviewing Mohammad-Ali A'râbi, author, public speaker, and software engineer.]]></content>
+        <author>
+            <name>Jennifer Kohl</name>
+        </author>
+        <category label="Community"/>
+        <category label="Docker Captains"/>
+        <published>2026-07-16T17:15:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ObservabilityCON 2026: Register today and preview this year's agenda | Grafana Labs blog on Grafana Labs]]></title>
+        <id>https://grafana.com/blog/observabilitycon-2026-register-today-and-preview-this-year-s-agenda/</id>
+        <link href="https://grafana.com/blog/observabilitycon-2026-register-today-and-preview-this-year-s-agenda/"/>
+        <link rel="enclosure" href="https://a-us.storyblok.com/f/1022730/1200x628/c31961b4c7/obscon26_regopen_blog_tiny.png/m/1200x630/filters:quality(80)/" type="image/png/m/1200x630/filters:quality(80)/"/>
+        <updated>2026-07-16T17:01:51.000Z</updated>
+        <summary type="html"><![CDATA[This fall, prepare to leave your heart in San Francisco. Registration is officially open for ObservabilityCON 2026, our flagship observability event that’s taking place from October 19-21 at Pier 27 i]]></summary>
+        <content type="html"><![CDATA[This fall, prepare to leave your heart in San Francisco. Registration is officially open for ObservabilityCON 2026, our flagship observability event that’s taking place from October 19-21 at Pier 27 in San Francisco.Whether you're building in a local environment or operating agentic workflows in production, ObservabilityCON brings together all the latest innovations, thought leaders, and experts to help you (and your agents) navigate the fast-moving AI era.Learn tips and tricks from interactive ]]></content>
+        <author>
+            <name>Grafana Labs Team</name>
+        </author>
+        <published>2026-07-16T17:01:51.000Z</published>
+    </entry>
+</feed>

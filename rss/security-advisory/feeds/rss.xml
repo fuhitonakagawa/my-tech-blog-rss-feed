@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Security Advisory｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</link>
+        <description>Security Advisoryセクションのブログ更新をまとめたRSSフィード</description>
+        <lastBuildDate>Fri, 24 Jul 2026 16:43:36 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+        <language>ja</language>
+        <image>
+            <title>Security Advisory｜企業テックブログRSS</title>
+            <url>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</url>
+            <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</link>
+        </image>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[[react-router] React Router: Unauthenticated Denial of Service via Inefficient Route Matching | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-chx6-hx7r-mcp5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-chx6-hx7r-mcp5</guid>
+            <pubDate>Fri, 24 Jul 2026 14:06:57 GMT</pubDate>
+            <description><![CDATA[This is a follow up to https://github.com/remix-run/react-router/security/advisories/GHSA-8x6r-g9mw-2r78 that covers additional reported scenarios in which the manifest endpoint could be accessed via ]]></description>
+            <content:encoded><![CDATA[This is a follow up to https://github.com/remix-run/react-router/security/advisories/GHSA-8x6r-g9mw-2r78 that covers additional reported scenarios in which the manifest endpoint could be accessed via unauthenticated targeted requests that would put heavy load on the server and slow down response times.[!NOTE]This only impacts Framework Mode applications. This does not impact your application if you are using Declarative or Data Mode.Referenceshttps://github.com/remix-run/react-router/security/ad]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="React Router: Unauthenticated Denial of Service via Inefficient Route Matching"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[react-router] React Router: Unauthenticated Denial of Service via Inefficient Route Matching</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[liquidjs] LiquidJS: `pop` filter bypasses `memoryLimit` accounting that its array-filter siblings enforce | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-g357-x5c3-c72p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-g357-x5c3-c72p</guid>
+            <pubDate>Fri, 24 Jul 2026 14:05:20 GMT</pubDate>
+            <description><![CDATA[pop filter bypasses memoryLimit accounting that its array-filter siblings enforceCWE: CWE-770 (Allocation of Resources Without Limits or Throttling) — sibling class of GHSA-8xx9-69p8-7jp3 and GHSA-254]]></description>
+            <content:encoded><![CDATA[pop filter bypasses memoryLimit accounting that its array-filter siblings enforceCWE: CWE-770 (Allocation of Resources Without Limits or Throttling) — sibling class of GHSA-8xx9-69p8-7jp3 and GHSA-2546-xv4c-mc8g, applied to memoryLimit instead of renderLimitSummaryThe pop array filter at src/filters/array.ts:91-95 allocates a full clone of its input array via [...toArray(v)] but does not call this.context.memoryLimit.use(...) the way every other array-clone filter in the same file does (shift, u]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="LiquidJS: `pop` filter bypasses `memoryLimit` accounting that its array-filter siblings enforce"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[liquidjs] LiquidJS: `pop` filter bypasses `memoryLimit` accounting that its array-filter siblings enforce</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[builder-util-runtime] electron-updater: Cross-origin redirect leaks `PRIVATE-TOKEN` and mixed-case `Authorization` credentials in `builder-util-runtime` | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-p2f4-r6v6-j797</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-p2f4-r6v6-j797</guid>
+            <pubDate>Fri, 24 Jul 2026 14:03:19 GMT</pubDate>
+            <description><![CDATA[SummaryIn electron-builder's builder-util-runtime package, the HTTP redirect handler (HttpExecutor.prepareRedirectUrlOptions) only stripped a credential header whose key string matched exactly lowerca]]></description>
+            <content:encoded><![CDATA[SummaryIn electron-builder's builder-util-runtime package, the HTTP redirect handler (HttpExecutor.prepareRedirectUrlOptions) only stripped a credential header whose key string matched exactly lowercase "authorization". Other credential-bearing headers — most notably PRIVATE-TOKEN (used by GitLab's personal access token flow) and mixed-case Authorization (used by GitLab's Bearer/OAuth flow) — were not stripped and could be forwarded to an attacker-controlled cross-origin redirect destination.Det]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="electron-updater: Cross-origin redirect leaks `PRIVATE-TOKEN` and mixed-case `Authorization` credentials in `builder-util-runtime`"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[builder-util-runtime] electron-updater: Cross-origin redirect leaks `PRIVATE-TOKEN` and mixed-case `Authorization` credentials in `builder-util-runtime`</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[app-builder-lib] electron-updater: Uncontrolled search path elements within `AppImage` built by `app-builder-lib` | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7g7r-gx96-252g</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7g7r-gx96-252g</guid>
+            <pubDate>Fri, 24 Jul 2026 14:00:59 GMT</pubDate>
+            <description><![CDATA[SummaryAppImage targets built by app-builder-lib could use an empty path component when setting the LD_LIBRARY_PATH environment variable at runtime. This causes the current working directory to be add]]></description>
+            <content:encoded><![CDATA[SummaryAppImage targets built by app-builder-lib could use an empty path component when setting the LD_LIBRARY_PATH environment variable at runtime. This causes the current working directory to be added to the dynamic linker search path, which may allow an attacker to execute arbitrary code by placing a malicious shared library in the directory from which the AppImage is launched.This vulnerability is the same class as CVE-2024-41817.DetailsThe vulnerability existed in two independent code paths]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="electron-updater: Uncontrolled search path elements within `AppImage` built by `app-builder-lib`"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[app-builder-lib] electron-updater: Uncontrolled search path elements within `AppImage` built by `app-builder-lib`</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[react-router] React Router: Open redirect via backslash in &amp;lt;Link&amp;gt; and useNavigate (CVE-2025-68470 bypass) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-wrjc-x8rr-h8h6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-wrjc-x8rr-h8h6</guid>
+            <pubDate>Thu, 23 Jul 2026 19:38:28 GMT</pubDate>
+            <description><![CDATA[This is a follow up to CVE-2025-68470. React Router was alerted to certain scenarios in which the fix there was incomplete so there still existed some scenarios where attacker supplied paths passed to]]></description>
+            <content:encoded><![CDATA[This is a follow up to CVE-2025-68470. React Router was alerted to certain scenarios in which the fix there was incomplete so there still existed some scenarios where attacker supplied paths passed to navigation mechanisms could result in unexpected external navigations.Referenceshttps://github.com/remix-run/react-router/security/advisories/GHSA-wrjc-x8rr-h8h6https://github.com/remix-run/react-router/pull/15176https://github.com/remix-run/react-router/blob/main/CHANGELOG.md#v7180https://github.c]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="React Router: Open redirect via backslash in &amp;lt;Link&amp;gt; and useNavigate (CVE-2025-68470 bypass)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[react-router] React Router: Open redirect via backslash in &amp;amp;lt;Link&amp;amp;gt; and useNavigate (CVE-2025-68470 bypass)</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[react-router] React Router: Open redirect leading to XSS | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jjmj-jmhj-qwj2</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jjmj-jmhj-qwj2</guid>
+            <pubDate>Thu, 23 Jul 2026 19:36:31 GMT</pubDate>
+            <description><![CDATA[Applications with open redirects could permit attacker crafted links to result in redirects to unexpected external location or XSS vectors.Referenceshttps://github.com/remix-run/react-router/security/]]></description>
+            <content:encoded><![CDATA[Applications with open redirects could permit attacker crafted links to result in redirects to unexpected external location or XSS vectors.Referenceshttps://github.com/remix-run/react-router/security/advisories/GHSA-jjmj-jmhj-qwj2https://github.com/remix-run/react-router/pull/14718https://github.com/remix-run/react-router/commit/3a5b5ad0e5cf9918c646509563f5c41a89226ff3https://github.com/remix-run/react-router/blob/main/CHANGELOG.md#v7180https://github.com/remix-run/react-router/releases/tag/reac]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="React Router: Open redirect leading to XSS"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[react-router] React Router: Open redirect leading to XSS</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[react-router-dom] React Router: Open redirect leading to XSS | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jjmj-jmhj-qwj2</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jjmj-jmhj-qwj2</guid>
+            <pubDate>Thu, 23 Jul 2026 19:36:31 GMT</pubDate>
+            <description><![CDATA[Applications with open redirects could permit attacker crafted links to result in redirects to unexpected external location or XSS vectors.Referenceshttps://github.com/remix-run/react-router/security/]]></description>
+            <content:encoded><![CDATA[Applications with open redirects could permit attacker crafted links to result in redirects to unexpected external location or XSS vectors.Referenceshttps://github.com/remix-run/react-router/security/advisories/GHSA-jjmj-jmhj-qwj2https://github.com/remix-run/react-router/pull/14718https://github.com/remix-run/react-router/commit/3a5b5ad0e5cf9918c646509563f5c41a89226ff3https://github.com/remix-run/react-router/blob/main/CHANGELOG.md#v7180https://github.com/remix-run/react-router/releases/tag/reac]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="React Router: Open redirect leading to XSS"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[react-router-dom] React Router: Open redirect leading to XSS</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[react-router] React Router: RSCErrorHandler Missing Protocol Validation (XSS) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h8fp-f39c-q6mh</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h8fp-f39c-q6mh</guid>
+            <pubDate>Thu, 23 Jul 2026 19:35:57 GMT</pubDate>
+            <description><![CDATA[This is a follow up to https://github.com/remix-run/react-router/security/advisories/GHSA-8646-j5j9-6r62. React Router was alerted of a code path in the (unstable) RSC error handling path in which red]]></description>
+            <content:encoded><![CDATA[This is a follow up to https://github.com/remix-run/react-router/security/advisories/GHSA-8646-j5j9-6r62. React Router was alerted of a code path in the (unstable) RSC error handling path in which redirects from untrusted sources could still result in an XSS vector via attacker-supplied redirect targets[!NOTE]This only affects your application if you are using the unstable RSC APIsReferenceshttps://github.com/remix-run/react-router/security/advisories/GHSA-h8fp-f39c-q6mhhttps://github.com/remix-]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="React Router: RSCErrorHandler Missing Protocol Validation (XSS)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[react-router] React Router: RSCErrorHandler Missing Protocol Validation (XSS)</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[react-router] React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-337j-9hxr-rhxg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-337j-9hxr-rhxg</guid>
+            <pubDate>Thu, 23 Jul 2026 19:34:14 GMT</pubDate>
+            <description><![CDATA[If application code allows attacker supplied input to overwrite certain aspects of errors caught by the SSR process, then it was possible for attacker to trigger unexpected constructor execution on th]]></description>
+            <content:encoded><![CDATA[If application code allows attacker supplied input to overwrite certain aspects of errors caught by the SSR process, then it was possible for attacker to trigger unexpected constructor execution on the client which would trigger outbound network traffic. This is only possible with very specific (and unlikely) application layer code.[!NOTE]This does not impact your application if you are using Declarative Mode. This only impacts Framework Mode and Data Mode applications doing manual SSR/hydration]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[react-router] React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[find-my-way] find-my-way: DDoS with HTTP2 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-c96f-x56v-gq3h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-c96f-x56v-gq3h</guid>
+            <pubDate>Thu, 23 Jul 2026 19:33:15 GMT</pubDate>
+            <description><![CDATA[ImpactRemotely triggerable DoS in find-my-way when it is used with Node's HTTP/2 server.The short version is that lookup() passes req.method into find(), and find() indexes this.trees[method]. Since t]]></description>
+            <content:encoded><![CDATA[ImpactRemotely triggerable DoS in find-my-way when it is used with Node's HTTP/2 server.The short version is that lookup() passes req.method into find(), and find() indexes this.trees[method]. Since this.trees is a normal object, HTTP/2 method values like constructor, toString, or __proto__ can resolve inherited object properties instead of returning undefined. The code then treats that value like a router node and crashes when it reaches currentNode.prefix.length.PatchesUpgrade to v9.7.0.Workar]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="find-my-way: DDoS with HTTP2"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[find-my-way] find-my-way: DDoS with HTTP2</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf: Possible infinite loop for not terminated inline images (ASCII85 and ASCIIHex filter) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-g867-7843-wf8q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-g867-7843-wf8q</guid>
+            <pubDate>Thu, 23 Jul 2026 16:37:07 GMT</pubDate>
+            <description><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires parsing the content stream of a page with a not terminated inline image, as done when extra]]></description>
+            <content:encoded><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires parsing the content stream of a page with a not terminated inline image, as done when extracting the page text for example. It only affects the ASCII85 and ASCIIHex filters.PatchesThis has been fixed in pypdf==6.14.2.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #3892.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-g867-7843-wf8qhttps://nvd]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="pypdf: Possible infinite loop for not terminated inline images (ASCII85 and ASCIIHex filter)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[pypdf] pypdf: Possible infinite loop for not terminated inline images (ASCII85 and ASCIIHex filter)</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf: Possible infinite loop for not terminated inline images | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-5xf7-4p34-54qr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5xf7-4p34-54qr</guid>
+            <pubDate>Thu, 23 Jul 2026 16:36:41 GMT</pubDate>
+            <description><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires parsing the content stream of a page with a not terminated inline image, as done when extra]]></description>
+            <content:encoded><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires parsing the content stream of a page with a not terminated inline image, as done when extracting the page text for example.PatchesThis has been fixed in pypdf==6.14.1.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #3891.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-5xf7-4p34-54qrhttps://nvd.nist.gov/vuln/detail/CVE-2026-59936https://github]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="pypdf: Possible infinite loop for not terminated inline images"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[pypdf] pypdf: Possible infinite loop for not terminated inline images</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf: Possible long runtimes for repeated malformed cross-reference entries  | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-55h5-xmcq-c37v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-55h5-xmcq-c37v</guid>
+            <pubDate>Thu, 23 Jul 2026 15:07:33 GMT</pubDate>
+            <description><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to long runtimes. This requires cross-reference streams with repeated malformed cross-reference streams.PatchesThis has been f]]></description>
+            <content:encoded><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to long runtimes. This requires cross-reference streams with repeated malformed cross-reference streams.PatchesThis has been fixed in pypdf==6.14.0.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #3887.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-55h5-xmcq-c37vhttps://nvd.nist.gov/vuln/detail/CVE-2026-59937https://github.com/py-pdf/pypdf/pull/3887https://github.com/py-pdf/p]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="pypdf: Possible long runtimes for repeated malformed cross-reference entries "/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[pypdf] pypdf: Possible long runtimes for repeated malformed cross-reference entries </originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf: Possible large memory usage for wrong image dimensions | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-5qjq-93h5-hrgp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5qjq-93h5-hrgp</guid>
+            <pubDate>Thu, 23 Jul 2026 15:06:58 GMT</pubDate>
+            <description><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires loading images where the declared size values are much too large compared to the actual d]]></description>
+            <content:encoded><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires loading images where the declared size values are much too large compared to the actual data.PatchesThis has been fixed in pypdf==6.14.0.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #3888.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-5qjq-93h5-hrgphttps://nvd.nist.gov/vuln/detail/CVE-2026-59938https://github.com/py-pdf/pypdf/pull/3888h]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="pypdf: Possible large memory usage for wrong image dimensions"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[pypdf] pypdf: Possible large memory usage for wrong image dimensions</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[postcss] PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6g55-p6wh-862q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6g55-p6wh-862q</guid>
+            <pubDate>Thu, 23 Jul 2026 15:06:16 GMT</pubDate>
+            <description><![CDATA[SummaryPostCSS's PreviousMap parses the /*# sourceMappingURL=PATH */ comment from any CSS string passed to process() and dereferences PATH against the local filesystem with no scheme, allowlist, or tr]]></description>
+            <content:encoded><![CDATA[SummaryPostCSS's PreviousMap parses the /*# sourceMappingURL=PATH */ comment from any CSS string passed to process() and dereferences PATH against the local filesystem with no scheme, allowlist, or traversal check. An attacker who controls the CSS input can cause the host process to read any file readable by Node and leak the first ~10 bytes of its content through the resulting JSON.parse SyntaxError message. The bug also yields a precise file-existence oracle and a controllable-read primitive t]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[postcss] PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[next-auth] Auth.js: Configuration errors can cause existence-based auth checks to fail open (auth object populated with an error) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8fpg-xm3f-6cx3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8fpg-xm3f-6cx3</guid>
+            <pubDate>Thu, 23 Jul 2026 14:52:23 GMT</pubDate>
+            <description><![CDATA[Impactnext-auth (Auth.js) v5 applications that gate access by checking only for the existence of the auth object — the pattern shown in the official session management / protecting resources guide — a]]></description>
+            <content:encoded><![CDATA[Impactnext-auth (Auth.js) v5 applications that gate access by checking only for the existence of the auth object — the pattern shown in the official session management / protecting resources guide — are affected.When the Auth.js configuration produces a server-side error, the auth object exposed by the auth() wrapper (in middleware, Route Handlers, etc.) is populated with an error object instead of being null:{ "message": "There was a problem with the server configuration. Check the server logs ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Auth.js: Configuration errors can cause existence-based auth checks to fail open (auth object populated with an error)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[next-auth] Auth.js: Configuration errors can cause existence-based auth checks to fail open (auth object populated with an error)</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[next-auth] Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xmf8-cvqr-rfgj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xmf8-cvqr-rfgj</guid>
+            <pubDate>Thu, 23 Jul 2026 14:42:55 GMT</pubDate>
+            <description><![CDATA[SummaryThe exported getToken() helper (next-auth/jwt and @auth/core/jwt) can throw an uncaught exception when it reads a malformed Authorization: Bearer … header. When no session cookie is present, ge]]></description>
+            <content:encoded><![CDATA[SummaryThe exported getToken() helper (next-auth/jwt and @auth/core/jwt) can throw an uncaught exception when it reads a malformed Authorization: Bearer … header. When no session cookie is present, getToken() URL-decodes the bearer value before validating it, and malformed percent-encoding causes the decode step to throw rather than being treated as an invalid token. Because getToken() is commonly called in API routes, middleware, and other request handlers, a single unauthenticated request can ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[next-auth] Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[next-auth] Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xmf8-cvqr-rfgj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xmf8-cvqr-rfgj</guid>
+            <pubDate>Thu, 23 Jul 2026 14:42:55 GMT</pubDate>
+            <description><![CDATA[SummaryThe exported getToken() helper (next-auth/jwt and @auth/core/jwt) can throw an uncaught exception when it reads a malformed Authorization: Bearer … header. When no session cookie is present, ge]]></description>
+            <content:encoded><![CDATA[SummaryThe exported getToken() helper (next-auth/jwt and @auth/core/jwt) can throw an uncaught exception when it reads a malformed Authorization: Bearer … header. When no session cookie is present, getToken() URL-decodes the bearer value before validating it, and malformed percent-encoding causes the decode step to throw rather than being treated as an invalid token. Because getToken() is commonly called in API routes, middleware, and other request handlers, a single unauthenticated request can ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[next-auth] Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[@auth/core] Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xmf8-cvqr-rfgj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xmf8-cvqr-rfgj</guid>
+            <pubDate>Thu, 23 Jul 2026 14:42:55 GMT</pubDate>
+            <description><![CDATA[SummaryThe exported getToken() helper (next-auth/jwt and @auth/core/jwt) can throw an uncaught exception when it reads a malformed Authorization: Bearer … header. When no session cookie is present, ge]]></description>
+            <content:encoded><![CDATA[SummaryThe exported getToken() helper (next-auth/jwt and @auth/core/jwt) can throw an uncaught exception when it reads a malformed Authorization: Bearer … header. When no session cookie is present, getToken() URL-decodes the bearer value before validating it, and malformed percent-encoding causes the decode step to throw rather than being treated as an invalid token. Because getToken() is commonly called in API routes, middleware, and other request handlers, a single unauthenticated request can ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[@auth/core] Auth.js: getToken() throws an uncaught exception on malformed Bearer authorization headers</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[next-auth] Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7rqj-j65f-68wh</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7rqj-j65f-68wh</guid>
+            <pubDate>Thu, 23 Jul 2026 14:40:15 GMT</pubDate>
+            <description><![CDATA[SummaryThe default email-address normalizer used by the email/magic-link sign-in flow validates the address before applying Unicode normalization. An address can contain a Unicode character that is no]]></description>
+            <content:encoded><![CDATA[SummaryThe default email-address normalizer used by the email/magic-link sign-in flow validates the address before applying Unicode normalization. An address can contain a Unicode character that is not an ASCII @ (U+0040) but canonicalizes to one under NFKC/NFKD normalization (the normalization commonly applied by mail libraries and services for internationalized email). Such an address passes the normalizer's single-@ check, but a downstream mail library that normalizes the string then sees two]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[next-auth] Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[next-auth] Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7rqj-j65f-68wh</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7rqj-j65f-68wh</guid>
+            <pubDate>Thu, 23 Jul 2026 14:40:15 GMT</pubDate>
+            <description><![CDATA[SummaryThe default email-address normalizer used by the email/magic-link sign-in flow validates the address before applying Unicode normalization. An address can contain a Unicode character that is no]]></description>
+            <content:encoded><![CDATA[SummaryThe default email-address normalizer used by the email/magic-link sign-in flow validates the address before applying Unicode normalization. An address can contain a Unicode character that is not an ASCII @ (U+0040) but canonicalizes to one under NFKC/NFKD normalization (the normalization commonly applied by mail libraries and services for internationalized email). Such an address passes the normalizer's single-@ check, but a downstream mail library that normalizes the string then sees two]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[next-auth] Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[@auth/core] Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7rqj-j65f-68wh</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7rqj-j65f-68wh</guid>
+            <pubDate>Thu, 23 Jul 2026 14:40:15 GMT</pubDate>
+            <description><![CDATA[SummaryThe default email-address normalizer used by the email/magic-link sign-in flow validates the address before applying Unicode normalization. An address can contain a Unicode character that is no]]></description>
+            <content:encoded><![CDATA[SummaryThe default email-address normalizer used by the email/magic-link sign-in flow validates the address before applying Unicode normalization. An address can contain a Unicode character that is not an ASCII @ (U+0040) but canonicalizes to one under NFKC/NFKD normalization (the normalization commonly applied by mail libraries and services for internationalized email). Such an address passes the normalizer's single-@ check, but a downstream mail library that normalizes the string then sees two]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[@auth/core] Auth.js: Email normalizer validates the address before Unicode normalization, allowing a homoglyph @ bypass</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[next-auth] Auth.js: OAuth state, nonce, and PKCE check cookies are not bound to the provider that created them | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-x445-f3h2-j279</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x445-f3h2-j279</guid>
+            <pubDate>Thu, 23 Jul 2026 14:31:51 GMT</pubDate>
+            <description><![CDATA[SummaryAuth.js stores the OAuth/OIDC anti-CSRF checks (state, nonce, and the PKCE verifier) in global cookies that are not bound to the provider that created them. On callback, a check value minted du]]></description>
+            <content:encoded><![CDATA[SummaryAuth.js stores the OAuth/OIDC anti-CSRF checks (state, nonce, and the PKCE verifier) in global cookies that are not bound to the provider that created them. On callback, a check value minted during a sign-in started with one provider can satisfy the callback for a different provider, because the stored cookie is not verified against the callback provider's identity (provider id, issuer, client id, or redirect URI). In a multi-provider app that allows account linking while logged in, this ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Auth.js: OAuth state, nonce, and PKCE check cookies are not bound to the provider that created them"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[next-auth] Auth.js: OAuth state, nonce, and PKCE check cookies are not bound to the provider that created them</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[next-auth] Auth.js: OAuth state, nonce, and PKCE check cookies are not bound to the provider that created them | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-x445-f3h2-j279</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x445-f3h2-j279</guid>
+            <pubDate>Thu, 23 Jul 2026 14:31:51 GMT</pubDate>
+            <description><![CDATA[SummaryAuth.js stores the OAuth/OIDC anti-CSRF checks (state, nonce, and the PKCE verifier) in global cookies that are not bound to the provider that created them. On callback, a check value minted du]]></description>
+            <content:encoded><![CDATA[SummaryAuth.js stores the OAuth/OIDC anti-CSRF checks (state, nonce, and the PKCE verifier) in global cookies that are not bound to the provider that created them. On callback, a check value minted during a sign-in started with one provider can satisfy the callback for a different provider, because the stored cookie is not verified against the callback provider's identity (provider id, issuer, client id, or redirect URI). In a multi-provider app that allows account linking while logged in, this ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Auth.js: OAuth state, nonce, and PKCE check cookies are not bound to the provider that created them"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[next-auth] Auth.js: OAuth state, nonce, and PKCE check cookies are not bound to the provider that created them</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jupyterlab] JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-pppj-hq3g-57pj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-pppj-hq3g-57pj</guid>
+            <pubDate>Wed, 22 Jul 2026 23:16:18 GMT</pubDate>
+            <description><![CDATA[JupyterLab 4.5+ allows notebook settings to be shared and applied through an overrides.json file using the Import button in the Settings Editor.Certain notebook display settings were not properly vali]]></description>
+            <content:encoded><![CDATA[JupyterLab 4.5+ allows notebook settings to be shared and applied through an overrides.json file using the Import button in the Settings Editor.Certain notebook display settings were not properly validated before being applied. As a result, a crafted settings file could contain hidden instructions that run as code inside JupyterLab when imported, instead of only changing a display preference.Because importing a settings file appears harmless, a user could import a file shared by another party wi]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jupyterlab] JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jupyterlab] JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-pppj-hq3g-57pj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-pppj-hq3g-57pj</guid>
+            <pubDate>Wed, 22 Jul 2026 23:16:18 GMT</pubDate>
+            <description><![CDATA[JupyterLab 4.5+ allows notebook settings to be shared and applied through an overrides.json file using the Import button in the Settings Editor.Certain notebook display settings were not properly vali]]></description>
+            <content:encoded><![CDATA[JupyterLab 4.5+ allows notebook settings to be shared and applied through an overrides.json file using the Import button in the Settings Editor.Certain notebook display settings were not properly validated before being applied. As a result, a crafted settings file could contain hidden instructions that run as code inside JupyterLab when imported, instead of only changing a display preference.Because importing a settings file appears harmless, a user could import a file shared by another party wi]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jupyterlab] JupyterLab: Cross-site scripting (XSS) via crafted settings file (`overrides.json`)</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jupyterlab] JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-gx64-gj6p-pc4c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gx64-gj6p-pc4c</guid>
+            <pubDate>Wed, 22 Jul 2026 23:14:44 GMT</pubDate>
+            <description><![CDATA[JupyterLab's image viewer allows for cross-site scripting (XSS) when a specially-crafted image file is opened through the image viewer and then opened in a new tab. This XSS issue can be used to cause]]></description>
+            <content:encoded><![CDATA[JupyterLab's image viewer allows for cross-site scripting (XSS) when a specially-crafted image file is opened through the image viewer and then opened in a new tab. This XSS issue can be used to cause remote code execution (RCE) on the JupyterLab server.ImpactThis vulnerability allows for arbitrary code execution.PatchesJupyterLab v4.6.2 and v4.5.10 contain the patch.WorkaroundsDisable the image viewer plugin:jupyter labextension disable @jupyterlab/imageviewer-extension:pluginConfirm with:jupyt]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jupyterlab] JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jupyterlab] JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-gx64-gj6p-pc4c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gx64-gj6p-pc4c</guid>
+            <pubDate>Wed, 22 Jul 2026 23:14:44 GMT</pubDate>
+            <description><![CDATA[JupyterLab's image viewer allows for cross-site scripting (XSS) when a specially-crafted image file is opened through the image viewer and then opened in a new tab. This XSS issue can be used to cause]]></description>
+            <content:encoded><![CDATA[JupyterLab's image viewer allows for cross-site scripting (XSS) when a specially-crafted image file is opened through the image viewer and then opened in a new tab. This XSS issue can be used to cause remote code execution (RCE) on the JupyterLab server.ImpactThis vulnerability allows for arbitrary code execution.PatchesJupyterLab v4.6.2 and v4.5.10 contain the patch.WorkaroundsDisable the image viewer plugin:jupyter labextension disable @jupyterlab/imageviewer-extension:pluginConfirm with:jupyt]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jupyterlab] JupyterLab: Image viewer allows XSS when opening malicious image in new browser tab</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jupyterlab] JupyterLab: PyPI extension blocklist package-name canonicalization bypass | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-89vp-jrxv-24w8</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-89vp-jrxv-24w8</guid>
+            <pubDate>Wed, 22 Jul 2026 23:14:27 GMT</pubDate>
+            <description><![CDATA[JupyterLab's PyPI extension manager enforces blocked_extensions_uris by comparing the requested install name to blocklist entries with a custom string normalization that is weaker than PyPI package-na]]></description>
+            <content:encoded><![CDATA[JupyterLab's PyPI extension manager enforces blocked_extensions_uris by comparing the requested install name to blocklist entries with a custom string normalization that is weaker than PyPI package-name canonicalization. An authenticated user can request a PyPI-equivalent spelling such as JupyterLab.Git for a blocklisted package such as jupyterlab-git; JupyterLab accepts the install request even though pip resolves the variant to the same package.This has security implications only for deploymen]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JupyterLab: PyPI extension blocklist package-name canonicalization bypass"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jupyterlab] JupyterLab: PyPI extension blocklist package-name canonicalization bypass</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jupyterlab] JupyterLab: PyPI extension blocklist package-name canonicalization bypass | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-89vp-jrxv-24w8</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-89vp-jrxv-24w8</guid>
+            <pubDate>Wed, 22 Jul 2026 23:14:27 GMT</pubDate>
+            <description><![CDATA[JupyterLab's PyPI extension manager enforces blocked_extensions_uris by comparing the requested install name to blocklist entries with a custom string normalization that is weaker than PyPI package-na]]></description>
+            <content:encoded><![CDATA[JupyterLab's PyPI extension manager enforces blocked_extensions_uris by comparing the requested install name to blocklist entries with a custom string normalization that is weaker than PyPI package-name canonicalization. An authenticated user can request a PyPI-equivalent spelling such as JupyterLab.Git for a blocklisted package such as jupyterlab-git; JupyterLab accepts the install request even though pip resolves the variant to the same package.This has security implications only for deploymen]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JupyterLab: PyPI extension blocklist package-name canonicalization bypass"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jupyterlab] JupyterLab: PyPI extension blocklist package-name canonicalization bypass</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jupyterlab] JupyterLab PluginManager lock-rule enforcement bypass | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-h5v5-8746-g7mm</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h5v5-8746-g7mm</guid>
+            <pubDate>Wed, 22 Jul 2026 23:13:34 GMT</pubDate>
+            <description><![CDATA[JupyterLab's plugin manager exposes administrator controls intended to prevent users from enabling or disabling selected plugins. Two server-side enforcement gaps let an authenticated user bypass thos]]></description>
+            <content:encoded><![CDATA[JupyterLab's plugin manager exposes administrator controls intended to prevent users from enabling or disabling selected plugins. Two server-side enforcement gaps let an authenticated user bypass those controls with direct requests to /lab/api/plugins.ImpactUsers could workaround the plugin manager lock rules via direct API access for either:child plugins of extensions covering multiple pluginswhen "lock all" was issued by the administratorThe integrity of data can be impacted, and any hardening]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JupyterLab PluginManager lock-rule enforcement bypass"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jupyterlab] JupyterLab PluginManager lock-rule enforcement bypass</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jupyterlab] JupyterLab PluginManager lock-rule enforcement bypass | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-h5v5-8746-g7mm</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h5v5-8746-g7mm</guid>
+            <pubDate>Wed, 22 Jul 2026 23:13:34 GMT</pubDate>
+            <description><![CDATA[JupyterLab's plugin manager exposes administrator controls intended to prevent users from enabling or disabling selected plugins. Two server-side enforcement gaps let an authenticated user bypass thos]]></description>
+            <content:encoded><![CDATA[JupyterLab's plugin manager exposes administrator controls intended to prevent users from enabling or disabling selected plugins. Two server-side enforcement gaps let an authenticated user bypass those controls with direct requests to /lab/api/plugins.ImpactUsers could workaround the plugin manager lock rules via direct API access for either:child plugins of extensions covering multiple pluginswhen "lock all" was issued by the administratorThe integrity of data can be impacted, and any hardening]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JupyterLab PluginManager lock-rule enforcement bypass"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jupyterlab] JupyterLab PluginManager lock-rule enforcement bypass</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jupyterlab] JupyterLab: Allowlist/blocklist check in `PyPIExtensionManager.install()` not enforced for direct callers (missing `await`) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-whvh-wf3x-g77j</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-whvh-wf3x-g77j</guid>
+            <pubDate>Wed, 22 Jul 2026 23:12:22 GMT</pubDate>
+            <description><![CDATA[The extension allowlist/blocklist check inside PyPIExtensionManager.install() was not enforced due to a missing await. For purposes of JupyterLab this was a secondary defense-in-depth check: install()]]></description>
+            <content:encoded><![CDATA[The extension allowlist/blocklist check inside PyPIExtensionManager.install() was not enforced due to a missing await. For purposes of JupyterLab this was a secondary defense-in-depth check: install() was intended to enforce the allowlist/blocklist itself for any future uses and users calling this method directly (in addition to the separate check handling requests arriving through the HTTP API). The only runtime symptom was a RuntimeWarning: coroutine 'is_install_allowed' was never awaited.This]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JupyterLab: Allowlist/blocklist check in `PyPIExtensionManager.install()` not enforced for direct callers (missing `await`)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jupyterlab] JupyterLab: Allowlist/blocklist check in `PyPIExtensionManager.install()` not enforced for direct callers (missing `await`)</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jupyterlab] JupyterLab: Allowlist/blocklist check in `PyPIExtensionManager.install()` not enforced for direct callers (missing `await`) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-whvh-wf3x-g77j</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-whvh-wf3x-g77j</guid>
+            <pubDate>Wed, 22 Jul 2026 23:12:22 GMT</pubDate>
+            <description><![CDATA[The extension allowlist/blocklist check inside PyPIExtensionManager.install() was not enforced due to a missing await. For purposes of JupyterLab this was a secondary defense-in-depth check: install()]]></description>
+            <content:encoded><![CDATA[The extension allowlist/blocklist check inside PyPIExtensionManager.install() was not enforced due to a missing await. For purposes of JupyterLab this was a secondary defense-in-depth check: install() was intended to enforce the allowlist/blocklist itself for any future uses and users calling this method directly (in addition to the separate check handling requests arriving through the HTTP API). The only runtime symptom was a RuntimeWarning: coroutine 'is_install_allowed' was never awaited.This]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JupyterLab: Allowlist/blocklist check in `PyPIExtensionManager.install()` not enforced for direct callers (missing `await`)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jupyterlab] JupyterLab: Allowlist/blocklist check in `PyPIExtensionManager.install()` not enforced for direct callers (missing `await`)</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[litellm] LiteLLM: Custom Code Guardrails production endpoints bypass code safety checks | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-72m8-9m7m-h278</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-72m8-9m7m-h278</guid>
+            <pubDate>Wed, 22 Jul 2026 22:38:55 GMT</pubDate>
+            <description><![CDATA[ImpactLiteLLM's Custom Code Guardrails production create/update paths did not apply the same sandboxing and validation used by the test endpoint.A privileged user with access to create or update guard]]></description>
+            <content:encoded><![CDATA[ImpactLiteLLM's Custom Code Guardrails production create/update paths did not apply the same sandboxing and validation used by the test endpoint.A privileged user with access to create or update guardrails could submit custom Python code that executed in the LiteLLM proxy environment. In deployments without a configured master key, callers could be treated as proxy administrators, making this reachable without intended administrative authorization.This could allow arbitrary code execution in the]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="LiteLLM: Custom Code Guardrails production endpoints bypass code safety checks"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[litellm] LiteLLM: Custom Code Guardrails production endpoints bypass code safety checks</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[litellm] LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-7488-6r32-c95q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7488-6r32-c95q</guid>
+            <pubDate>Wed, 22 Jul 2026 22:38:33 GMT</pubDate>
+            <description><![CDATA[ImpactLiteLLM's MCP Streamable HTTP endpoint could allow an unauthenticated attacker to establish an authenticated MCP session using an arbitrary Bearer token.The MCP auth handler supported OAuth2 pas]]></description>
+            <content:encoded><![CDATA[ImpactLiteLLM's MCP Streamable HTTP endpoint could allow an unauthenticated attacker to establish an authenticated MCP session using an arbitrary Bearer token.The MCP auth handler supported OAuth2 passthrough for upstream MCP servers, but the fallback path could replace failed LiteLLM key validation with an empty UserAPIKeyAuth() object. This allowed requests with a fabricated Authorization header to reach MCP tooling without a valid LiteLLM key.An attacker could use this to list and call config]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[litellm] LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[litellm] LiteLLM: Local file read via request-supplied OIDC file references | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-4g5m-c9r5-49xf</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4g5m-c9r5-49xf</guid>
+            <pubDate>Wed, 22 Jul 2026 22:38:04 GMT</pubDate>
+            <description><![CDATA[ImpactLiteLLM's /health/test_connection endpoint resolved request-supplied environment and OIDC file references in litellm_params. A proxy administrator, or another privileged caller with permission t]]></description>
+            <content:encoded><![CDATA[ImpactLiteLLM's /health/test_connection endpoint resolved request-supplied environment and OIDC file references in litellm_params. A proxy administrator, or another privileged caller with permission to test model connections, could cause LiteLLM to read files from the local filesystem via an oidc/file/ reference.Because exploitation requires privileged proxy access, this is treated as a defense-in-depth issue rather than a cross-tenant privilege bypass.PatchesThe issue is fixed in 1.83.10-stable]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="LiteLLM: Local file read via request-supplied OIDC file references"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[litellm] LiteLLM: Local file read via request-supplied OIDC file references</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[litellm] LiteLLM: Arbitrary file write via path traversal in Skills archive extraction | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-5jmr-gcrj-2c9q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5jmr-gcrj-2c9q</guid>
+            <pubDate>Wed, 22 Jul 2026 22:37:15 GMT</pubDate>
+            <description><![CDATA[ImpactLiteLLM Skills archive extraction did not sufficiently validate file paths from uploaded skill ZIP archives. An authenticated user with access to LiteLLM LLM API routes, or a key whose allowed_r]]></description>
+            <content:encoded><![CDATA[ImpactLiteLLM Skills archive extraction did not sufficiently validate file paths from uploaded skill ZIP archives. An authenticated user with access to LiteLLM LLM API routes, or a key whose allowed_routes includes /v1/skills, anthropic_routes, or llm_api_routes, could upload a crafted skill archive containing path traversal entries.When the skill was processed for execution, those entries could be written outside the intended extraction/staging directory. This could allow arbitrary file write a]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="LiteLLM: Arbitrary file write via path traversal in Skills archive extraction"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[litellm] LiteLLM: Arbitrary file write via path traversal in Skills archive extraction</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[gitpython] GitPython: Environment-variable exfiltration via os.path.expandvars() on Repo.clone_from() URL | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-rwj8-pgh3-r573</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-rwj8-pgh3-r573</guid>
+            <pubDate>Tue, 21 Jul 2026 22:06:09 GMT</pubDate>
+            <description><![CDATA[SummaryRepo.clone_from() passes the caller-supplied remote URL through Git.polish_url(), which on every non-Cygwin platform calls os.path.expandvars() on the URL before handing it to git clone. An att]]></description>
+            <content:encoded><![CDATA[SummaryRepo.clone_from() passes the caller-supplied remote URL through Git.polish_url(), which on every non-Cygwin platform calls os.path.expandvars() on the URL before handing it to git clone. An attacker who controls the URL argument — the documented use case for clone_from() in "import repository from URL" features of CI servers, git-hosting mirrors, and dependency scanners — can embed $NAME / ${NAME} tokens that are expanded server-side to the values of the hosting process's environment vari]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="GitPython: Environment-variable exfiltration via os.path.expandvars() on Repo.clone_from() URL"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[gitpython] GitPython: Environment-variable exfiltration via os.path.expandvars() on Repo.clone_from() URL</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[GitPython] GitPython: command injection via unguarded Git options in `Repo.archive()`, `git.ls_remote()`, and arbitrary file overwrite via `Repo.iter_commits()` / `Repo.blame()` | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-956x-8gvw-wg5v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-956x-8gvw-wg5v</guid>
+            <pubDate>Tue, 21 Jul 2026 20:10:06 GMT</pubDate>
+            <description><![CDATA[SummaryGitPython spawns the real git binary with an argument vector built from caller-supplied values. To prevent argument injection, GitPython maintains denylists of "unsafe" Git options (--upload-pa]]></description>
+            <content:encoded><![CDATA[SummaryGitPython spawns the real git binary with an argument vector built from caller-supplied values. To prevent argument injection, GitPython maintains denylists of "unsafe" Git options (--upload-pack, --receive-pack, --exec, -c, --config, …) that can be abused to run arbitrary commands, and enforces them with Git.check_unsafe_options().That enforcement is only wired into the network commands — clone_from, Remote.fetch, Remote.pull, Remote.push. Several other public APIs that also forward call]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="GitPython: command injection via unguarded Git options in `Repo.archive()`, `git.ls_remote()`, and arbitrary file overwrite via `Repo.iter_commits()` / `Repo.blame()`"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[GitPython] GitPython: command injection via unguarded Git options in `Repo.archive()`, `git.ls_remote()`, and arbitrary file overwrite via `Repo.iter_commits()` / `Repo.blame()`</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+    </channel>
+</rss>
