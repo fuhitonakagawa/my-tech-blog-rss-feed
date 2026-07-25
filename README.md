@@ -6,7 +6,6 @@ https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/
 
 このリポジトリは [yamadashy/tech-blog-rss-feed](https://github.com/yamadashy/tech-blog-rss-feed) のフォークです。
 
-独自のフィードを作って公開したい場合は自由にフォークしてください。
 
 ## セクション
 フィードはセクション（カテゴリ）ごとに分けて管理しており、セクションごとのページとRSSフィードを配信しています。
