@@ -1,4 +1,10 @@
 const elemCopyButtons = document.querySelectorAll('.feed-url-copy-button');
+const elemActiveNavLink = document.querySelector('.ui-section-nav__link--active');
+
+elemActiveNavLink?.scrollIntoView({
+  block: 'nearest',
+  inline: 'center',
+});
 
 // biome-ignore lint/complexity/noForEach: This is intentional
 elemCopyButtons.forEach((elemCopyButton) => {
