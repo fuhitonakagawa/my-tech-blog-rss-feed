@@ -58,6 +58,28 @@ const toSpeakerDeckPageUrl = (feedUrl: string): string | undefined => {
   return feedUrl.slice(0, -SPEAKER_DECK_ATOM_EXTENSION.length);
 };
 
+const normalizeFeedItemCreator = (creator: unknown): string => {
+  if (typeof creator === 'string') {
+    return removeInvalidUnicode(creator);
+  }
+
+  if (creator === null || typeof creator !== 'object' || !('name' in creator)) {
+    return '';
+  }
+
+  const { name } = creator as { name?: unknown };
+  if (typeof name === 'string') {
+    return removeInvalidUnicode(name);
+  }
+
+  if (Array.isArray(name)) {
+    const firstName = name.find((value): value is string => typeof value === 'string');
+    return firstName ? removeInvalidUnicode(firstName) : '';
+  }
+
+  return '';
+};
+
 export class FeedCrawler {
   private rssParser;
   private feedValidator;
@@ -120,7 +142,7 @@ export class FeedCrawler {
     const feeds: CustomRssParserFeed[] = [];
     const feedLinkSet = new Set<string>();
 
-    await PromisePool.for(feedInfoList)
+    const { errors } = await PromisePool.for(feedInfoList)
       .withConcurrency(concurrency)
       .process(async (feedInfo) => {
         const [error, feed] = await to(
@@ -186,6 +208,16 @@ export class FeedCrawler {
         feeds.push(postProcessedFeed);
         logger.info('[fetch-feed] fetched', `${fetchProcessCounter++}/${feedInfoListLength}`, feedInfo.label);
       });
+
+    for (const error of errors) {
+      logger.error(
+        '[fetch-feed] unexpected error',
+        `${fetchProcessCounter++}/${feedInfoListLength}`,
+        error.item.label,
+        error.item.url,
+      );
+      logger.trace(error.raw);
+    }
 
     logger.info('[fetch-feed] finished');
 
@@ -270,7 +302,7 @@ export class FeedCrawler {
       feedItem.summary = feedItem.summary ? removeInvalidUnicode(feedItem.summary) : '';
       feedItem.content = feedItem.content ? removeInvalidUnicode(feedItem.content) : '';
       feedItem.contentSnippet = feedItem.contentSnippet ? removeInvalidUnicode(feedItem.contentSnippet) : '';
-      feedItem.creator = feedItem.creator ? removeInvalidUnicode(feedItem.creator) : '';
+      feedItem.creator = normalizeFeedItemCreator(feedItem.creator);
       feedItem.categories = feedItem.categories?.map(removeInvalidUnicode) || [];
 
       // view用
