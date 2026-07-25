@@ -59,6 +59,19 @@
   background: var(--orange-background-dark-active);
   border-color: var(--orange-background-dark-active);
 }
+.ui-component-copy-value {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: 0.625rem 1rem 0.75rem;
+  background-color: var(--ui-color-form-input);
+  color: var(--base-color);
+  font-family: var(--base-font);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
 @media screen and (min-width: 48rem) {
   .ui-layout-grid-3 div:last-of-type {
     left: 0;

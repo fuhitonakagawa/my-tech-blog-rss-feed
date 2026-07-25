@@ -9,6 +9,7 @@ import type { EleventyPage } from './types';
 export const renderTopSection = (page: EleventyPage, rssFeedUrl: string): string => {
   const relativeUrl = escapeHtml(relativeUrlFilter(page.url));
   const escapedRssFeedUrl = escapeHtml(rssFeedUrl);
+  const escapedSlackFeedCommand = escapeHtml(`/feed ${rssFeedUrl}`);
 
   return `<section class="ui-section-content ui-top-section">
     <div class="ui-layout-container">
@@ -18,19 +19,19 @@ export const renderTopSection = (page: EleventyPage, rssFeedUrl: string): string
             </p>
             <div class="ui-component-cta ui-layout-flex">
                 <form class="ui-component-form ui-layout-grid">
-                    <label class='ui-component-form__label' for='feed-url-slack'>
+                    <span class='ui-component-form__label'>
                         <img src='${relativeUrl}images/slack-mark.png' alt='Slackのロゴ' loading="eager" width='96' height='96'>
-                    </label>
-                    <input type='text' id='feed-url-slack' class="ui-component-input ui-component-input-medium" readonly value='/feed ${escapedRssFeedUrl}'>
-                    <button type="button" class="ui-component-button ui-component-button-medium ui-component-button-primary feed-url-copy-button">コピー</button>
+                    </span>
+                    <code id='feed-url-slack' class="ui-component-copy-value">${escapedSlackFeedCommand}</code>
+                    <button type="button" class="ui-component-button ui-component-button-medium ui-component-button-primary feed-url-copy-button" data-copy-value="${escapedSlackFeedCommand}" aria-label="Slack用フィードURLをコピー">コピー</button>
                 </form>
                 <p class="ui-text-note"><small>Slackに貼り付けると更新を受け取ることができます</small></p>
                 <form class="ui-component-form ui-layout-grid">
-                    <label class='ui-component-form__label' for='feed-url-rss'>
+                    <span class='ui-component-form__label'>
                         <span>RSS URL</span>
-                    </label>
-                    <input type='text' id='feed-url-rss' class="ui-component-input ui-component-input-medium" readonly value='${escapedRssFeedUrl}'>
-                    <button type="button" class="ui-component-button ui-component-button-medium ui-component-button-primary feed-url-copy-button">コピー</button>
+                    </span>
+                    <code id='feed-url-rss' class="ui-component-copy-value">${escapedRssFeedUrl}</code>
+                    <button type="button" class="ui-component-button ui-component-button-medium ui-component-button-primary feed-url-copy-button" data-copy-value="${escapedRssFeedUrl}" aria-label="RSS URLをコピー">コピー</button>
                 </form>
             </div>
         </div>

@@ -3,16 +3,20 @@ const elemCopyButtons = document.querySelectorAll('.feed-url-copy-button');
 // biome-ignore lint/complexity/noForEach: This is intentional
 elemCopyButtons.forEach((elemCopyButton) => {
   elemCopyButton.addEventListener('click', () => {
-    const elemInput = elemCopyButton.parentElement?.querySelector('input');
-    if (!elemInput) {
-      throw new Error('要素が見つかりません');
+    const copyValue = elemCopyButton instanceof HTMLButtonElement ? elemCopyButton.dataset.copyValue : undefined;
+    if (!copyValue) {
+      throw new Error('コピー対象が見つかりません');
     }
 
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(elemInput.value);
+      navigator.clipboard.writeText(copyValue);
     } else {
-      elemInput.select();
+      const elemTextarea = document.createElement('textarea');
+      elemTextarea.value = copyValue;
+      document.body.appendChild(elemTextarea);
+      elemTextarea.select();
       document.execCommand('copy');
+      elemTextarea.remove();
     }
 
     elemCopyButton.classList.add('active');
