@@ -22,8 +22,6 @@ export function render(data: MainLayoutData): string {
   const escapedPageTitle = escapeHtml(pageTitle);
   const canonicalUrl = escapeHtml(`${constants.siteUrlStem}${page.url}`);
 
-  const prerender = ['/'].includes(page.url) ? `<link rel="prerender" href="${relativeUrl}hot/">` : '';
-
   const googleSiteVerification = constants.googleSiteVerification
     ? `<meta name="google-site-verification" content="${escapeHtml(constants.googleSiteVerification)}" />`
     : '';
@@ -80,7 +78,6 @@ export function render(data: MainLayoutData): string {
 
     <link rel="canonical" href="${canonicalUrl}">
     <link rel="preload" href="${relativeUrl}styles/bundle.css" as="style">
-    ${prerender}
 
     ${googleSiteVerification}
 

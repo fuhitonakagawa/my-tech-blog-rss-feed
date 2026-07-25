@@ -10,7 +10,6 @@ import type { EleventyPage } from './types';
 export const renderNav = (page: EleventyPage): string => {
   const relativeUrl = escapeHtml(relativeUrlFilter(page.url));
   const feedActive = ['/'].includes(page.url) ? 'ui-section-nav__link--active' : '';
-  const hotActive = ['/hot/'].includes(page.url) ? 'ui-section-nav__link--active' : '';
   const blogsActive = ['/blogs/'].includes(page.url) ? 'ui-section-nav__link--active' : '';
 
   const sectionLinks = FEED_SECTION_LIST.map((section) => {
@@ -24,7 +23,6 @@ export const renderNav = (page: EleventyPage): string => {
         <div class='ui-section-nav__layout ui-layout-flex'>
             <a class='ui-section-nav__link ${feedActive}' href='${relativeUrl}'>ALL</a>
             ${sectionLinks}
-            <a class='ui-section-nav__link ${hotActive}' href='${relativeUrl}hot/'>人気フィード</a>
             <a class='ui-section-nav__link ${blogsActive}' href='${relativeUrl}blogs/'>ブログ一覧</a>
         </div>
     </div>
