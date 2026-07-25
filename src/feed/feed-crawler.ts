@@ -47,6 +47,17 @@ export interface ClawlFeedsResult {
   feedBlogOgObjectMap: OgObjectMap;
 }
 
+const SPEAKER_DECK_URL_PREFIX = 'https://speakerdeck.com/';
+const SPEAKER_DECK_ATOM_EXTENSION = '.atom';
+
+const toSpeakerDeckPageUrl = (feedUrl: string): string | undefined => {
+  if (!feedUrl.startsWith(SPEAKER_DECK_URL_PREFIX) || !feedUrl.endsWith(SPEAKER_DECK_ATOM_EXTENSION)) {
+    return undefined;
+  }
+
+  return feedUrl.slice(0, -SPEAKER_DECK_ATOM_EXTENSION.length);
+};
+
 export class FeedCrawler {
   private rssParser;
   private feedValidator;
@@ -232,6 +243,11 @@ export class FeedCrawler {
       case 'さくらのナレッジ':
         customFeed.link = 'https://knowledge.sakura.ad.jp/';
         break;
+    }
+
+    const speakerDeckPageUrl = toSpeakerDeckPageUrl(feedInfo.url);
+    if (speakerDeckPageUrl) {
+      customFeed.link = speakerDeckPageUrl;
     }
 
     if (!isValidHttpUrl(customFeed.link)) {
