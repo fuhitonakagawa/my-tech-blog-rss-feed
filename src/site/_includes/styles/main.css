@@ -117,8 +117,10 @@ img {
 .ui-section-header__layout .ui-section-header__links {
   display: flex;
   justify-content: center;
+  gap: 0.5rem;
 }
-.ui-section-header__layout .ui-section-header__links a {
+.ui-section-header__layout .ui-section-header__links a,
+.ui-section-header__layout .ui-section-header__links button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,12 +129,98 @@ img {
   opacity: 0.7;
   transition: opacity .5s;
 }
-.ui-section-header__layout .ui-section-header__links a:hover {
+.ui-section-header__layout .ui-section-header__links a:hover,
+.ui-section-header__layout .ui-section-header__links button:hover {
   opacity: 1;
+}
+.ui-feed-list-button__icon {
+  font-size: 20px;
+  line-height: 1;
 }
 .ui-section-header__layout .ui-section-header__links a img {
   width: 20px;
   height: 20px;
+}
+.ui-modal-open {
+  overflow: hidden;
+}
+.ui-feed-list-dialog[hidden] {
+  display: none;
+}
+.ui-feed-list-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+}
+.ui-feed-list-dialog__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+.ui-feed-list-dialog__panel {
+  position: relative;
+  width: min(100% - 2rem, 56rem);
+  max-height: calc(100dvh - 2rem);
+  margin: 1rem auto;
+  overflow: auto;
+  background: var(--base-background);
+  color: var(--base-color);
+  padding: 1rem;
+}
+.ui-feed-list-dialog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.ui-feed-list-dialog__title {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+.ui-feed-list-dialog__close {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--base-color);
+}
+.ui-feed-list-dialog__body {
+  display: grid;
+  gap: 1.5rem;
+  text-align: left;
+}
+.ui-feed-list-dialog__section-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.ui-feed-list-dialog__section-title a:hover,
+.ui-feed-list-dialog__feed-label:hover,
+.ui-feed-list-dialog__feed-url:hover {
+  text-decoration: underline;
+}
+.ui-feed-list-dialog__feeds {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 0;
+  list-style: none;
+}
+.ui-feed-list-dialog__feed {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--yellow-background);
+}
+.ui-feed-list-dialog__feed-label {
+  display: block;
+  font-weight: bold;
+  color: var(--base-color);
+}
+.ui-feed-list-dialog__feed-url {
+  display: block;
+  margin-top: 0.1rem;
+  color: var(--base-color-muted);
+  font-size: 0.78em;
+  overflow-wrap: anywhere;
+  word-break: break-all;
 }
 
 /*

@@ -1,7 +1,8 @@
 import constants from '../../../common/constants';
 import { relativeUrlFilter } from '../../../common/eleventy-utils';
+import { renderFeedListButton, renderFeedListDialog } from '../components/feed-list-dialog';
 import { escapeHtml } from '../components/html-utils';
-import { relativeTimeScript } from '../components/scripts';
+import { feedListDialogScript, relativeTimeScript } from '../components/scripts';
 import type { EleventyPage } from '../components/types';
 
 interface MainLayoutData {
@@ -103,6 +104,7 @@ export function render(data: MainLayoutData): string {
                     <span class='ui-section-header__title'>${escapeHtml(constants.siteTitle)}</span>
                 </a>
                 <div class="ui-section-header__links">
+                    ${renderFeedListButton()}
                     <a href="${escapeHtml(constants.gitHubRepositoryUrl)}" role="link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                         <img src='${relativeUrl}images/icon-github.png' alt='GitHubロゴ' loading="eager" width='96' height='96' />
                     </a>
@@ -112,6 +114,7 @@ export function render(data: MainLayoutData): string {
     </header>
 
     <main role="main">
+        ${renderFeedListDialog(page)}
         ${content}
     </main>
 
@@ -138,6 +141,7 @@ export function render(data: MainLayoutData): string {
 
     <script>
     ${relativeTimeScript}
+    ${feedListDialogScript}
     </script>
 
 </body>

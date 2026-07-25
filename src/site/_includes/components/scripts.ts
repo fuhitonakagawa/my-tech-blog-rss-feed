@@ -16,3 +16,11 @@ export const relativeTimeScript = fs.readFileSync(
   fileURLToPath(new URL('../scripts/relative-time.ts', import.meta.url)),
   'utf-8',
 );
+
+/**
+ * ヘッダーの登録フィード一覧モーダルを制御するクライアントスクリプト。
+ */
+export const feedListDialogScript = fs.readFileSync(
+  fileURLToPath(new URL('../scripts/feed-list-dialog.ts', import.meta.url)),
+  'utf-8',
+);
