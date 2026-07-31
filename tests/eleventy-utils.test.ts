@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { minifyCssFilter, relativeUrlFilter } from '../src/common/eleventy-utils';
+import { imageIconShortcode, minifyCssFilter, relativeUrlFilter } from '../src/common/eleventy-utils';
 
 describe('relativeUrlFilter', () => {
   it('ルート（/）は ./ を返す', () => {
@@ -22,5 +22,16 @@ describe('minifyCssFilter', () => {
 
   it('空文字は空文字を返す', () => {
     expect(minifyCssFilter('')).toEqual('');
+  });
+});
+
+describe('imageIconShortcode', () => {
+  it('data URL の属性値を HTML エスケープする', async () => {
+    const dataUrl =
+      "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctext%3Eicon%3C/text%3E%3C/svg%3E";
+
+    await expect(imageIconShortcode(dataUrl, "ブログ's ファビコン", '', 'lazy')).resolves.toBe(
+      "<img src='data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%3E%3Ctext%3Eicon%3C/text%3E%3C/svg%3E' alt='ブログ&#39;s ファビコン' loading='lazy' width='16' height='16'>",
+    );
   });
 });

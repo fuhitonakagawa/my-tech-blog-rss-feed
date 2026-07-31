@@ -5,6 +5,7 @@ import EleventyImage from '@11ty/eleventy-img';
 import CleanCSS from 'clean-css';
 import htmlmin from 'html-minifier-terser';
 import sharpIco, { type ImageData } from 'sharp-ico';
+import { escapeHtml } from '../site/_includes/components/html-utils';
 import constants from './constants';
 import { imageCacheOptions } from './eleventy-cache-option';
 
@@ -56,7 +57,7 @@ export const imageIconShortcode = async (src: string, alt: string, pathPrefix = 
   }
 
   if (src.startsWith('data:')) {
-    return `<img src='${src}' alt='${alt}' loading='lazy' width='16' height='16'>`;
+    return `<img src='${escapeHtml(src)}' alt='${escapeHtml(alt)}' loading='${escapeHtml(imageLoading)}' width='16' height='16'>`;
   }
 
   const parsedUrl = url.parse(src);
