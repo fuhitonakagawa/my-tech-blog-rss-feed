@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Security Advisory｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</link>
+        <description>Security Advisoryセクションのブログ更新をまとめたRSSフィード</description>
+        <lastBuildDate>Sat, 08 Aug 2026 15:22:29 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+        <language>ja</language>
+        <image>
+            <title>Security Advisory｜企業テックブログRSS</title>
+            <url>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</url>
+            <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</link>
+        </image>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[[crypto-js] crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-rg76-677x-56q9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-rg76-677x-56q9</guid>
+            <pubDate>Fri, 07 Aug 2026 18:48:59 GMT</pubDate>
+            <description><![CDATA[SummaryCryptoJS.lib.WordArray.random() in affected versions is not a cryptographically secure random number generator. Nominal requests for 128 or 256 bits of entropy produce effective search spaces o]]></description>
+            <content:encoded><![CDATA[SummaryCryptoJS.lib.WordArray.random() in affected versions is not a cryptographically secure random number generator. Nominal requests for 128 or 256 bits of entropy produce effective search spaces of approximately 2^39 and 2^47 possibilities — small enough to enumerate on commodity hardware.Coinspect's Ill Bloom investigation confirmed that downstream wallet applications used this function as the entropy source for BIP39 recovery phrases.An application is affected only if it uses the vulnerabl]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[crypto-js] crypto-js: Insufficient Entropy in Cryptographic Secret Generation via Vulnerable CryptoJS Dependency Chain</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: `memo()` retains SSR output across requests, leading to cross-user data disclosure | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-f23p-vx2j-j53r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-f23p-vx2j-j53r</guid>
+            <pubDate>Fri, 07 Aug 2026 18:42:01 GMT</pubDate>
+            <description><![CDATA[Summarymemo() from hono/jsx retains the result of a server-side render and reuses it for later renders with comparator-equal props. Request-scoped values read inside the component take no part in that]]></description>
+            <content:encoded><![CDATA[Summarymemo() from hono/jsx retains the result of a server-side render and reuses it for later renders with comparator-equal props. Request-scoped values read inside the component take no part in that comparison, so a response can contain HTML rendered for another user's request.DetailsComponents wrapped with memo() are compared by props alone. Values read implicitly during rendering do not participate: JSX Context through createContext() and useContext(), useRequestContext() from hono/jsx-rende]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Hono: `memo()` retains SSR output across requests, leading to cross-user data disclosure"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[hono] Hono: `memo()` retains SSR output across requests, leading to cross-user data disclosure</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: Proxy Helper does not remove response headers listed in the `Connection` header | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-79qm-7rj5-m7r9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-79qm-7rj5-m7r9</guid>
+            <pubDate>Fri, 07 Aug 2026 18:38:48 GMT</pubDate>
+            <description><![CDATA[SummaryThe Proxy Helper (hono/proxy) does not remove response headers named by the origin's Connection header. Headers that the origin marked as connection-scoped are therefore forwarded to clients.De]]></description>
+            <content:encoded><![CDATA[SummaryThe Proxy Helper (hono/proxy) does not remove response headers named by the origin's Connection header. Headers that the origin marked as connection-scoped are therefore forwarded to clients.DetailsPer RFC 9110 Section 7.6.1, an intermediary must remove the header fields listed in a message's Connection header field before forwarding the message, in addition to the well-known hop-by-hop headers. The proxy() function removed the well-known hop-by-hop headers (including Connection itself) f]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Hono: Proxy Helper does not remove response headers listed in the `Connection` header"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[hono] Hono: Proxy Helper does not remove response headers listed in the `Connection` header</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: Algorithmic Complexity DoS in Language Middleware | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-54fx-42gc-7vw4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-54fx-42gc-7vw4</guid>
+            <pubDate>Fri, 07 Aug 2026 18:36:31 GMT</pubDate>
+            <description><![CDATA[SummaryThe languageDetector middleware is vulnerable to algorithmic complexity denial of service when processing a crafted language tag containing a large number of hyphen-separated subtags.DetailsTo ]]></description>
+            <content:encoded><![CDATA[SummaryThe languageDetector middleware is vulnerable to algorithmic complexity denial of service when processing a crafted language tag containing a large number of hyphen-separated subtags.DetailsTo implement progressive language-tag truncation, normalizeLanguage() repeatedly calls parts.slice(0, i).join('-') for every possible prefix. The total amount of string processing grows quadratically with the number of subtags.Language values may come from a query parameter, cookie, Accept-Language hea]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Hono: Algorithmic Complexity DoS in Language Middleware"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[hono] Hono: Algorithmic Complexity DoS in Language Middleware</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jsii-diff] jsii-diff: Command Injection via npm: package argument | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-wcx4-wpfv-mc5c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-wcx4-wpfv-mc5c</guid>
+            <pubDate>Fri, 07 Aug 2026 18:15:47 GMT</pubDate>
+            <description><![CDATA[Summaryjsii-diff is a command line tool to compare the API differences between two jsii assemblies, and report errors if there are backwards-incompatible changes to the API. An issue exists where spec]]></description>
+            <content:encoded><![CDATA[Summaryjsii-diff is a command line tool to compare the API differences between two jsii assemblies, and report errors if there are backwards-incompatible changes to the API. An issue exists where specially formatted command line arguments can be used to execute shell commands via this tool.Impactjsii-diff supports downloading packages to compare directly from NPM, so that you can compare a proposed candidate version of your jsii package with an already-published version, by passing an argument t]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="jsii-diff: Command Injection via npm: package argument"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jsii-diff] jsii-diff: Command Injection via npm: package argument</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[@sveltejs/kit] SvelteKit: ReDoS (O(n^2)) in content negotiation — unauthenticated DoS via the Accept header | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-29g2-3rmr-qm68</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-29g2-3rmr-qm68</guid>
+            <pubDate>Fri, 07 Aug 2026 16:50:02 GMT</pubDate>
+            <description><![CDATA[ImpactSvelteKit is vulnerable to remote CPU-exhaustion DoS attacks via specifically-crafted Accept headers. The impact is mitigated by default header length limits on most platforms, but in the case o]]></description>
+            <content:encoded><![CDATA[ImpactSvelteKit is vulnerable to remote CPU-exhaustion DoS attacks via specifically-crafted Accept headers. The impact is mitigated by default header length limits on most platforms, but in the case of raised or absent limits a denial of service is possible.PatchesThe vulnerability is patched in @sveltejs/kit version 2.70.2.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-29g2-3rmr-qm68https://github.com/sveltejs/kit/commit/82712fc02c24b1dcf5b25d7a52129cd8455f04f5https://github]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="SvelteKit: ReDoS (O(n^2)) in content negotiation — unauthenticated DoS via the Accept header"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[@sveltejs/kit] SvelteKit: ReDoS (O(n^2)) in content negotiation — unauthenticated DoS via the Accept header</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[nuxt] Nuxt dev server discloses project root and workspace UUID via the Chrome DevTools workspace endpoint | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7c4v-fwgw-9rf7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7c4v-fwgw-9rf7</guid>
+            <pubDate>Fri, 07 Aug 2026 16:45:21 GMT</pubDate>
+            <description><![CDATA[ImpactWhen a Nuxt dev server is bound to a network-reachable interface (for example nuxt dev --host for on-device testing), the default-enabled Chrome DevTools workspace endpoint GET /.well-known/apps]]></description>
+            <content:encoded><![CDATA[ImpactWhen a Nuxt dev server is bound to a network-reachable interface (for example nuxt dev --host for on-device testing), the default-enabled Chrome DevTools workspace endpoint GET /.well-known/appspecific/com.chrome.devtools.json returns the absolute project root (workspace.root, i.e. rootDir) and a persistent per-project workspace UUID.GHSA-rq7w-g337-39qq added a gate (isLocalDevRequest) intended to restrict this endpoint to local requests, but that gate is header-based: it trusts request me]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Nuxt dev server discloses project root and workspace UUID via the Chrome DevTools workspace endpoint"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[nuxt] Nuxt dev server discloses project root and workspace UUID via the Chrome DevTools workspace endpoint</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[keras] Keras: HDF5 links can disclose local file contents | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-m8wh-29wm-52mv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-m8wh-29wm-52mv</guid>
+            <pubDate>Sun, 02 Aug 2026 06:30:20 GMT</pubDate>
+            <description><![CDATA[A vulnerability in keras-team/keras versions &amp;lt;= 3.14.0 allows arbitrary local HDF5 file content disclosure due to improper handling of HDF5 ExternalLinks. The KerasFileEditor and keras.saving.load_wei]]></description>
+            <content:encoded><![CDATA[A vulnerability in keras-team/keras versions &amp;lt;= 3.14.0 allows arbitrary local HDF5 file content disclosure due to improper handling of HDF5 ExternalLinks. The KerasFileEditor and keras.saving.load_weights functions bypass the safe_get_h5_group and safe_get_h5_dataset helpers, which are designed to reject ExternalLinks and SoftLinks. This results in automatic dereferencing of links to external HDF5 files, enabling attackers to disclose sensitive data from the victim's local filesystem. Specifical]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Keras: HDF5 links can disclose local file contents"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[keras] Keras: HDF5 links can disclose local file contents</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[keras] Keras: HDF5 links can disclose local file contents | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-m8wh-29wm-52mv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-m8wh-29wm-52mv</guid>
+            <pubDate>Sun, 02 Aug 2026 06:30:20 GMT</pubDate>
+            <description><![CDATA[A vulnerability in keras-team/keras versions &amp;lt;= 3.14.0 allows arbitrary local HDF5 file content disclosure due to improper handling of HDF5 ExternalLinks. The KerasFileEditor and keras.saving.load_wei]]></description>
+            <content:encoded><![CDATA[A vulnerability in keras-team/keras versions &amp;lt;= 3.14.0 allows arbitrary local HDF5 file content disclosure due to improper handling of HDF5 ExternalLinks. The KerasFileEditor and keras.saving.load_weights functions bypass the safe_get_h5_group and safe_get_h5_dataset helpers, which are designed to reject ExternalLinks and SoftLinks. This results in automatic dereferencing of links to external HDF5 files, enabling attackers to disclose sensitive data from the victim's local filesystem. Specifical]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Keras: HDF5 links can disclose local file contents"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[keras] Keras: HDF5 links can disclose local file contents</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[axios] Duplicate Advisory: Axios: Prototype pollution auth subfields can inject Basic auth | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-38gx-cfqf-f652</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-38gx-cfqf-f652</guid>
+            <pubDate>Sat, 01 Aug 2026 15:30:27 GMT</pubDate>
+            <description><![CDATA[Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-xj6q-8x83-jv6g. This link is maintained to preserve external references.Original Descriptionaxios versions &amp;gt;=1.15.2]]></description>
+            <content:encoded><![CDATA[Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-xj6q-8x83-jv6g. This link is maintained to preserve external references.Original Descriptionaxios versions &amp;gt;=1.15.2 and &amp;lt;1.18.0 contain prototype-pollution read-side gadgets in Basic auth subfield handling (lib/adapters/http.js and lib/helpers/resolveConfig.js). When an application is already affected by a separate prototype-pollution primitive and makes an axios request with an own auth object that omits the us]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Duplicate Advisory: Axios: Prototype pollution auth subfields can inject Basic auth"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[axios] Duplicate Advisory: Axios: Prototype pollution auth subfields can inject Basic auth</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+    </channel>
+</rss>

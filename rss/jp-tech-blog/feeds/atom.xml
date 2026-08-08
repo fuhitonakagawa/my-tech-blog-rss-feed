@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/jp-tech-blog/</id>
+    <title>国内テックブログ｜企業テックブログRSS</title>
+    <updated>2026-08-08T15:22:29.704Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/jp-tech-blog/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/jp-tech-blog/feeds/atom.xml"/>
+    <subtitle>国内テックブログセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[Markdown を読むための canvas を GitHub Copilot app に追加してみた | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/skimdown-for-github-copilot-app</id>
+        <link href="https://zenn.dev/microsoft/articles/skimdown-for-github-copilot-app"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--BXF3RP9q--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Markdown%2520%25E3%2582%2592%25E8%25AA%25AD%25E3%2582%2580%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%2520canvas%2520%25E3%2582%2592%2520GitHub%2520Copilot%2520app%2520%25E3%2581%25AB%25E8%25BF%25BD%25E5%258A%25A0%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kazuki%2520Ota%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzhmNzg3NDJjNDQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-08T12:25:17.000Z</updated>
+        <summary type="html"><![CDATA[はじめに同僚の土田さんが、macOS 向けの Markdown リーダー SkimDown を作っています。設計書や仕様書のような長い Markdown をさくさく読むことに特化したビューアーで、個人的にも「これは良いな」と思っていたアプリです。土田さんに許可をもらって、自分は WinUI 3 + WebView2 で SkimDown for Windows という Windows 版を作りまし]]></summary>
+        <content type="html"><![CDATA[はじめに同僚の土田さんが、macOS 向けの Markdown リーダー SkimDown を作っています。設計書や仕様書のような長い Markdown をさくさく読むことに特化したビューアーで、個人的にも「これは良いな」と思っていたアプリです。土田さんに許可をもらって、自分は WinUI 3 + WebView2 で SkimDown for Windows という Windows 版を作りました。ここまでは普通に「デスクトップアプリの移植」だったのですが、最近 GitHub Copilot app の canvas 拡張をいくつか作っていたこともあり、「これ、canvas と...]]></content>
+        <author>
+            <name>Kazuki Ota</name>
+        </author>
+        <published>2026-08-08T12:25:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Bedrockの長期APIキー作成と短期APIキー利用をIAMポリシーで拒否してみた | Fusic 技術ブログのフィード]]></title>
+        <id>https://zenn.dev/fusic/articles/cd15c2cb068ed9</id>
+        <link href="https://zenn.dev/fusic/articles/cd15c2cb068ed9"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--74Q4tSTe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Amazon%2520Bedrock%25E3%2581%25AE%25E9%2595%25B7%25E6%259C%259FAPI%25E3%2582%25AD%25E3%2583%25BC%25E4%25BD%259C%25E6%2588%2590%25E3%2581%25A8%25E7%259F%25AD%25E6%259C%259FAPI%25E3%2582%25AD%25E3%2583%25BC%25E5%2588%25A9%25E7%2594%25A8%25E3%2582%2592IAM%25E3%2583%259D%25E3%2583%25AA%25E3%2582%25B7%25E3%2583%25BC%25E3%2581%25A7%25E6%258B%2592%25E5%2590%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:xthixsl_ml%2540%25E3%2583%25AC%25E3%2582%25AA%25E3%2583%258A%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNhNDgxMzQ3YjkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Fusic%2520%25E6%258A%2580%25E8%25A1%2593%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzIzOGE3MzVjMDIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T17:13:17.000Z</updated>
+        <summary type="html"><![CDATA[はじめにFusicのレオナです。Amazon Bedrockでは、AWS標準の署名認証であるSigV4に加えて、APIキーによるBearer認証を利用できます。また、APIキーには既存のAWS認証情報から生成する短期APIキーと、IAMユーザーに関連付けて発行する長期APIキーがあります。利用環境やシステムのセキュリティ方針によっては、長期APIキーを新しく作成できないようにしたり、APIキーによ]]></summary>
+        <content type="html"><![CDATA[はじめにFusicのレオナです。Amazon Bedrockでは、AWS標準の署名認証であるSigV4に加えて、APIキーによるBearer認証を利用できます。また、APIキーには既存のAWS認証情報から生成する短期APIキーと、IAMユーザーに関連付けて発行する長期APIキーがあります。利用環境やシステムのセキュリティ方針によっては、長期APIキーを新しく作成できないようにしたり、APIキーによるアクセスだけを制限したりしたい場合があります。そこで本ブログでは、IAMユーザーやIAMロールに付与するアイデンティティベースのポリシーを使用し、以下の4点を検証します。Ama...]]></content>
+        <author>
+            <name>xthixsl_ml@レオナ</name>
+        </author>
+        <published>2026-08-07T17:13:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PC を閉じても Kiro / Claude Code は動き続ける — EC2 + tmux で 24 時間開発 | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/49d2c641322289</id>
+        <link href="https://zenn.dev/aws_japan/articles/49d2c641322289"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--Qwa4Sxi3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PC%2520%25E3%2582%2592%25E9%2596%2589%25E3%2581%2598%25E3%2581%25A6%25E3%2582%2582%2520Kiro%2520%252F%2520Claude%2520Code%2520%25E3%2581%25AF%25E5%258B%2595%25E3%2581%258D%25E7%25B6%259A%25E3%2581%2591%25E3%2582%258B%2520%25E2%2580%2594%2520EC2%2520%252B%2520tmux%2520%25E3%2581%25A7%252024%2520%25E6%2599%2582%25E9%2596%2593%25E9%2596%258B%25E7%2599%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kohei%2520Yoshikawa%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzcwYzM4NjkzZWMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T10:12:42.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこんにちは、AWS Japan でソリューションアーキテクトをしている吉川です。エージェントに大きめの仕事を任せている間、PC を開けっぱなしにして待っていませんか。大規模リファクタ、依存の一括アップデート、長いテストの回し直し、ログの総ざらい。どれも数十分から数時間かかるのに、ラップトップの蓋を閉じた瞬間に止まってしまいます。移動する、会議に出る、寝る。そのたびに作業が中断されるのは、や]]></summary>
+        <content type="html"><![CDATA[はじめにこんにちは、AWS Japan でソリューションアーキテクトをしている吉川です。エージェントに大きめの仕事を任せている間、PC を開けっぱなしにして待っていませんか。大規模リファクタ、依存の一括アップデート、長いテストの回し直し、ログの総ざらい。どれも数十分から数時間かかるのに、ラップトップの蓋を閉じた瞬間に止まってしまいます。移動する、会議に出る、寝る。そのたびに作業が中断されるのは、やはりもったいない話です。そんなときは、エージェントの実体を EC2 に移しましょう。手元は見るだけにします。EC2 に CLI を入れ、tmux の中で走らせる。これで PC の電源を...]]></content>
+        <author>
+            <name>Kohei Yoshikawa</name>
+        </author>
+        <published>2026-08-07T10:12:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[統合時代に Microsoft Sentinel「Defender for Office 365」コンテンツパックは要るのか？ | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/mdo-sentinel-solution</id>
+        <link href="https://zenn.dev/microsoft/articles/mdo-sentinel-solution"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--luW3iqgE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25B5%25B1%25E5%2590%2588%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25AB%2520Microsoft%2520Sentinel%25E3%2580%258CDefender%2520for%2520Office%2520365%25E3%2580%258D%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%25B3%25E3%2583%2584%25E3%2583%2591%25E3%2583%2583%25E3%2582%25AF...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Naoki%2520Abe%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzA3Y2VkYjUwYzAuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T10:02:20.000Z</updated>
+        <summary type="html"><![CDATA[はじめにMicrosoft Sentinel の Content hub には Microsoft Defender for Office 365（以下 MDO）というコンテンツパックがあります。メールセキュリティ製品の名前がついているので、「フィッシング検知の分析ルールがたくさん入っているのだろう」と思って中を開くと、これがまた意外な構成になっています。実はこのコンテンツパックには 分析ルール（]]></summary>
+        <content type="html"><![CDATA[はじめにMicrosoft Sentinel の Content hub には Microsoft Defender for Office 365（以下 MDO）というコンテンツパックがあります。メールセキュリティ製品の名前がついているので、「フィッシング検知の分析ルールがたくさん入っているのだろう」と思って中を開くと、これがまた意外な構成になっています。実はこのコンテンツパックには 分析ルール（Analytic Rules）もハンティングクエリも入っていません。中身はコネクタ・ブック・Playbook だけです。そして調べていくと、もっと根本的な疑問にぶつかります。統合（D...]]></content>
+        <author>
+            <name>Naoki Abe</name>
+        </author>
+        <published>2026-08-07T10:02:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIエージェントに管制塔を建てる、LoopX | Accenture Japan (有志)のフィード]]></title>
+        <id>https://zenn.dev/acntechjp/articles/1fb4326c6b62ad</id>
+        <link href="https://zenn.dev/acntechjp/articles/1fb4326c6b62ad"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--PtUTOY2l--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AB%25E7%25AE%25A1%25E5%2588%25B6%25E5%25A1%2594%25E3%2582%2592%25E5%25BB%25BA%25E3%2581%25A6%25E3%2582%258B%25E3%2580%2581LoopX%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ShintaroAmaike%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2ZDA4MDY5ODcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Accenture%2520Japan%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzVmNWYzMmE0MWIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T09:45:05.000Z</updated>
+        <summary type="html"><![CDATA[https://github.com/huangruiteng/loopx/tree/main/MITライセンスとして利用（https://github.com/huangruiteng/loopx/blob/main/docs/assets/control-plane-board.svg）Keep the loop moving. Keep the judgment human.AIコーディング]]></summary>
+        <content type="html"><![CDATA[https://github.com/huangruiteng/loopx/tree/main/MITライセンスとして利用（https://github.com/huangruiteng/loopx/blob/main/docs/assets/control-plane-board.svg）Keep the loop moving. Keep the judgment human.AIコーディングエージェントは「一つのタスクを一つのセッションで終わらせる」ことには長けている。だが現実の開発は違う。目標は変わり、人間の判断が必要になり、エビデンスは陳腐化し、複数のエージェントが...]]></content>
+        <author>
+            <name>ShintaroAmaike</name>
+        </author>
+        <published>2026-08-07T09:45:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日本語音声の訛りを、参照音声との比較で計測する | エクサウィザーズ Tech Blogのフィード]]></title>
+        <id>https://zenn.dev/exwzd/articles/20260728_japanese_accent_evaluation</id>
+        <link href="https://zenn.dev/exwzd/articles/20260728_japanese_accent_evaluation"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--6Dy2dwJt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E9%259F%25B3%25E5%25A3%25B0%25E3%2581%25AE%25E8%25A8%259B%25E3%2582%258A%25E3%2582%2592%25E3%2580%2581%25E5%258F%2582%25E7%2585%25A7%25E9%259F%25B3%25E5%25A3%25B0%25E3%2581%25A8%25E3%2581%25AE%25E6%25AF%2594%25E8%25BC%2583%25E3%2581%25A7%25E8%25A8%2588%25E6%25B8%25AC%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hiromasa%2520Sakurai%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzA5NTQ0OTVhMzYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A8%25E3%2582%25AF%25E3%2582%25B5%25E3%2582%25A6%25E3%2582%25A3%25E3%2582%25B6%25E3%2583%25BC%25E3%2582%25BA%2520Tech%2520Blog%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSl9fMURVTjZ3UnY2MWJQdVY2MWVtSllmYmc4bHpObEVkRnVqZHhTX0xpVVF1VDVRPXMyNTAtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T09:30:37.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこんにちは。株式会社エクサウィザーズの櫻井です。この記事では、日本語音声の訛りを客観的に評価する手法 を試してみた結果を共有します。多言語音声合成モデルが合成する日本語は、他言語の音声データで訓練された影響を受けていることが多いです。そのため、抑揚が不自然だったり、伸ばす音（長音）や詰まる音（促音）に違和感があるような、日本語以外の言語由来の「訛り」がある傾向があります。この「訛り」を客観]]></summary>
+        <content type="html"><![CDATA[はじめにこんにちは。株式会社エクサウィザーズの櫻井です。この記事では、日本語音声の訛りを客観的に評価する手法 を試してみた結果を共有します。多言語音声合成モデルが合成する日本語は、他言語の音声データで訓練された影響を受けていることが多いです。そのため、抑揚が不自然だったり、伸ばす音（長音）や詰まる音（促音）に違和感があるような、日本語以外の言語由来の「訛り」がある傾向があります。この「訛り」を客観的に評価できれば、音声合成モデルの品質管理や比較に使えるはずです。ところが、いざ測ろうとすると手頃な道具が見当たりません。合成音声の訛りは、実際に人間の聞き手に聞き比べてもらう主観評...]]></content>
+        <author>
+            <name>Hiromasa Sakurai</name>
+        </author>
+        <published>2026-08-07T09:30:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Genkit Go に入門してみた | ABEJA Tech Blog]]></title>
+        <id>hatenablog://entry/14945776032056741448</id>
+        <link href="https://tech-blog.abeja.asia/entry/learning-genkit-go-202608"/>
+        <link rel="enclosure" href="https://cdn.image.st-hatena.com/image/scale/0514731ee5e82b9bdcdc93629d34ae31d1440899/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Ff%2Fflat-face%2F20260728%2F20260728103423.jpg" type="image/jpg"/>
+        <updated>2026-08-07T07:34:08.000Z</updated>
+        <summary type="html"><![CDATA[実行環境基本機能Hello, GenkitLLMを呼び出す会話履歴を持たせるTool CallingTool CallingでLLMに仕事をしてもらうTool Callingも履歴に残すTool Callingに認可を実装するおわりにWe Are Hiring!ABEJA Insight for Retailの開発・保守を担当している平原です。AI 搭載アプリケーション向けのオープンソースフレーム]]></summary>
+        <content type="html"><![CDATA[実行環境基本機能Hello, GenkitLLMを呼び出す会話履歴を持たせるTool CallingTool CallingでLLMに仕事をしてもらうTool Callingも履歴に残すTool Callingに認可を実装するおわりにWe Are Hiring!ABEJA Insight for Retailの開発・保守を担当している平原です。AI 搭載アプリケーション向けのオープンソースフレームワーク Genkit の Go SDK は、2025年9月に安定版がリリースされてからしばらく経ちます。今更ながらですが、応答が長くなりやすいLLMを並列処理に強いGoで実装できないかと思い、どのように使うのかキャッチアップしてみました。チャットベースで必要に応じてTool Callingでデータを参照することを想定して、基本的な使い方とTool Callingについてみていきます。（開発者ツールからの確認までで、APIやCLIでの公開については触れないです。）genkit.dev実行環境macOS上でmise（2026.7.11）のみから始めました。Windowsやよく使われるLinux上で]]></content>
+        <category label="Golang"/>
+        <category label="Genkit"/>
+        <published>2026-08-07T07:34:08.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[なぜ「ユーザー価値ファースト」がアジャイル組織をつくるのか？ 〜ソリューションファーストと御用聞き開発の罠〜 | ABEJA Tech Blog]]></title>
+        <id>hatenablog://entry/14945776032055954836</id>
+        <link href="https://tech-blog.abeja.asia/entry/user-value-first-agile-organization-202608"/>
+        <link rel="enclosure" href="https://cdn.image.st-hatena.com/image/scale/0475f423282ac6d46e053876d3d653d35d9bad00/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fm%2Fmichiaki_ogawa%2F20260730%2F20260730233345.png" type="image/png"/>
+        <updated>2026-08-07T07:04:42.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは！ABEJAでアジャイルコーチをしている小川です！「ソリューションファースト」「ユーザー価値ファースト」という言葉、実は結構何気なく使ってきました。アジャイルやプロダクト開発を日常的に語り合う仲間内では大体通じるのですが、少し文脈が変わると「それってどういう意味ですか？」と聞かれることが少なくありません。「あ、これ共通言語じゃないんだ…」と痛感すると同時に、自分でもちゃんと言語化できてい]]></summary>
+        <content type="html"><![CDATA[こんにちは！ABEJAでアジャイルコーチをしている小川です！「ソリューションファースト」「ユーザー価値ファースト」という言葉、実は結構何気なく使ってきました。アジャイルやプロダクト開発を日常的に語り合う仲間内では大体通じるのですが、少し文脈が変わると「それってどういう意味ですか？」と聞かれることが少なくありません。「あ、これ共通言語じゃないんだ…」と痛感すると同時に、自分でもちゃんと言語化できていなかったことに気づきました。しかもこのテーマにフォーカスした日本語の記事、探してみてもあまり見当たらないんですよね。今後の自分のためにも、一度整理しておこうと思ったのが本稿を書いたきっかけです！スクラムを導入してスプリントを回している。バックログも整備されている。レトロスペクティブもやっている。それでも「なんか作ったものが使われていないな…」「チームがただの機能製造マシンになっている気がする」という感覚を拭えないチーム、意外と多いのではないでしょうか？その根っこにある問いは、実はシンプルです。「ユーザーの何を解決するために、これを作っているのか？」この問いへの答えが起点にあるかどうか、それがア]]></content>
+        <category label="ABEJAアジャイル活動記録"/>
+        <published>2026-08-07T07:04:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ウルトラ gpt-5.5-sol high の供養記事 | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/agent-framework-ultra-soul-memorial</id>
+        <link href="https://zenn.dev/microsoft/articles/agent-framework-ultra-soul-memorial"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--1XK4n_h_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25A6%25E3%2583%25AB%25E3%2583%2588%25E3%2583%25A9%2520gpt-5.5-sol%2520high%2520%25E3%2581%25AE%25E4%25BE%259B%25E9%25A4%258A%25E8%25A8%2598%25E4%25BA%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kazuki%2520Ota%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzhmNzg3NDJjNDQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T04:42:45.000Z</updated>
+        <summary type="html"><![CDATA[はじめに先日、以下のような記事を書きました。結構反響を頂いていたので供養記事を書いておこうと思います。https://zenn.dev/microsoft/articles/agent-framework-ultra-soul 供養のためにクラウドに送りたいということで、前の記事で作ったウルトラ ソウル エージェントをクラウドにデプロイしようと思います。Microsoft Foundry にはコー]]></summary>
+        <content type="html"><![CDATA[はじめに先日、以下のような記事を書きました。結構反響を頂いていたので供養記事を書いておこうと思います。https://zenn.dev/microsoft/articles/agent-framework-ultra-soul 供養のためにクラウドに送りたいということで、前の記事で作ったウルトラ ソウル エージェントをクラウドにデプロイしようと思います。Microsoft Foundry にはコードで書かれたエージェントをホスティングするための Hosted Agent という機能があります。今回作った Microsoft Agent Framework で作ったウルト...]]></content>
+        <author>
+            <name>Kazuki Ota</name>
+        </author>
+        <published>2026-08-07T04:42:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[生成AIプロジェクトの95%が成果ゼロ。差を分けるのは「現場力」——会社を待たず個人で鍛える、この夏行きたい関東の博物館7選 | ヘッドウォータースのフィード]]></title>
+        <id>https://zenn.dev/headwaters/articles/c0290b9162dc45</id>
+        <link href="https://zenn.dev/headwaters/articles/c0290b9162dc45"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--XDG7Ut3Z--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2594%259F%25E6%2588%2590AI%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AE95%2525%25E3%2581%258C%25E6%2588%2590%25E6%259E%259C%25E3%2582%25BC%25E3%2583%25AD%25E3%2580%2582%25E5%25B7%25AE%25E3%2582%2592%25E5%2588%2586%25E3%2581%2591%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25AF%25E3%2580%258C%25E7%258F%25BE%25E5%25A0%25B4%25E5%258A%259B%25E3%2580%258D%25E2%2580%2594%25E2%2580%2594%25E4%25BC%259A%25E7%25A4%25BE%25E3%2582%2592%25E5%25BE%2585%25E3%2581%259F%25E3%2581%259A%25E5%2580%258B%25E4%25BA%25BA%25E3%2581%25A7%25E9%258D%259B%25E3%2581%2588%25E3%2582%258B%25E3%2580%2581%25E3%2581%2593%25E3%2581%25AE%25E5%25A4%258F%25E8%25A1%258C%25E3%2581%258D%25E3%2581%259F%25E3%2581%2584%25E9%2596%25A2%25E6%259D%25B1%25E3%2581%25AE...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2582%25B1%25E3%2583%25B3%25E5%2590%2589%2520%252F%2520%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E4%25BD%259C%25E3%2582%258BAI%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E9%2596%258B%25E7%2599%25BA%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSTlSRFk5eEFXaDBwVGgyZnNJX0w2VnFXZmFfYWR4NG9Oc1JhQ1BVV3hkenNGa3hDLW49czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T04:16:52.000Z</updated>
+        <summary type="html"><![CDATA[はじめに生成AIを導入した企業の95%が、いまだに測定可能な成果を出せていません。MITメディアラボのProject NANDAが2025年7月に発表した「The GenAI Divide: State of AI in Business 2025」による調査結果です。Forbesの解説記事も参照してください。原因はモデルの性能ではありません。既存の業務フロー・レガシーシステム・組織の意思決定プロ]]></summary>
+        <content type="html"><![CDATA[はじめに生成AIを導入した企業の95%が、いまだに測定可能な成果を出せていません。MITメディアラボのProject NANDAが2025年7月に発表した「The GenAI Divide: State of AI in Business 2025」による調査結果です。Forbesの解説記事も参照してください。原因はモデルの性能ではありません。既存の業務フロー・レガシーシステム・組織の意思決定プロセスへの統合の弱さにあると報告されています。この数字を裏付けるように、2026年、OpenAIが企業向けのAI導入を専門に行う組織を立ち上げました。AnthropicもBlackston...]]></content>
+        <author>
+            <name>ケン吉 / ゼロから作るAIアプリ開発</name>
+        </author>
+        <published>2026-08-07T04:16:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bedrock ネイティブの Web Search が GA したので早速ディープリサーチしてみた | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/bedrock-web-search-ga</id>
+        <link href="https://zenn.dev/aws_japan/articles/bedrock-web-search-ga"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--2baQDqZC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Bedrock%2520%25E3%2583%258D%25E3%2582%25A4%25E3%2583%2586%25E3%2582%25A3%25E3%2583%2596%25E3%2581%25AE%2520Web%2520Search%2520%25E3%2581%258C%2520GA%2520%25E3%2581%2597%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E6%2597%25A9%25E9%2580%259F%25E3%2583%2587%25E3%2582%25A3%25E3%2583%25BC%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2581%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hikotty%2520%252F%2520Hikoto%2520I...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q5ZTY0MmNkYTMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T04:00:52.000Z</updated>
+        <summary type="html"><![CDATA[はじめに2026 年 8 月 4 日、Web Search on Amazon Bedrock が GA しました。モデル推論の中に組み込まれたサーバーサイドの Web 検索ツールで、API 呼び出しに tools パラメータを 1 つ足すだけで、検索から引用付き回答の生成までを Bedrock 側で完結させることができます（Anthoropic APIあるいはOpenAI APIのWeb Sea]]></summary>
+        <content type="html"><![CDATA[はじめに2026 年 8 月 4 日、Web Search on Amazon Bedrock が GA しました。モデル推論の中に組み込まれたサーバーサイドの Web 検索ツールで、API 呼び出しに tools パラメータを 1 つ足すだけで、検索から引用付き回答の生成までを Bedrock 側で完結させることができます（Anthoropic APIあるいはOpenAI APIのWeb Search付きの推論と近い挙動となります）。https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-bedrock-web/ht...]]></content>
+        <author>
+            <name>Hikotty / Hikoto Iseda</name>
+        </author>
+        <published>2026-08-07T04:00:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Codexと作る「 漫画でわかるCodex 」〜相談で終わらせないAI活用の伝え方〜 | CyberAgent Developers Blog | サイバーエージェント デベロッパーズブログ]]></title>
+        <id>https://developers.cyberagent.co.jp/blog/?p=64359</id>
+        <link href="https://developers.cyberagent.co.jp/blog/archives/64359/"/>
+        <link rel="enclosure" href="https://developers.cyberagent.co.jp/blog/wp-content/uploads/2026/07/titlebanner_1280_670-1.jpg" type="image/jpg"/>
+        <updated>2026-08-07T02:53:56.000Z</updated>
+        <summary type="html"><![CDATA[はじめに こんにちは。グループIT推進本部の鷹雄です。 Codex Ambassadorとして、社内 ...]]></summary>
+        <content type="html"><![CDATA[はじめに こんにちは。グループIT推進本部の鷹雄です。 Codex Ambassadorとして、社内 ...]]></content>
+        <author>
+            <name>Ken Takao</name>
+        </author>
+        <category label="エンジニア"/>
+        <category label="AI"/>
+        <category label="ChatGPT"/>
+        <category label="Codex"/>
+        <category label="漫画"/>
+        <published>2026-08-07T02:53:56.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI時代の競争優位はどこに宿るのか：PL思考からBS思考の投資へ ② | 松尾研究所テックブログのフィード]]></title>
+        <id>https://zenn.dev/mkj/articles/2c2424a6bc3270</id>
+        <link href="https://zenn.dev/mkj/articles/2c2424a6bc3270"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--Fc3R9SEM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25AE%25E7%25AB%25B6%25E4%25BA%2589%25E5%2584%25AA%25E4%25BD%258D%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%2593%25E3%2581%25AB%25E5%25AE%25BF%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258B%25EF%25BC%259APL%25E6%2580%259D%25E8%2580%2583%25E3%2581%258B%25E3%2582%2589BS%25E6%2580%259D%25E8%2580%2583%25E3%2581%25AE%25E6%258A%2595%25E8%25B3%2587%25E3%2581%25B8%2520%25E2%2591%25A1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Ruuchami%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2NGM3ZTBkMzIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%259D%25BE%25E5%25B0%25BE%25E7%25A0%2594%25E7%25A9%25B6%25E6%2589%2580%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzM3YzNlZmU4MWUuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T02:50:05.000Z</updated>
+        <summary type="html"><![CDATA[0. はじめに松尾研究所でシニアAIコンサルタントをしている角谷です。企業のさまざまな経営・事業課題に対して、AI技術を軸にした課題解決のご支援をしています。先日アップされた「AI時代の競争優位はどこに宿るのか：PL思考からBS思考の投資へ」の記事に引き続き、今回は続編をお届けします。改めて、以下の記事になります。https://zenn.dev/mkj/articles/628742c785c5]]></summary>
+        <content type="html"><![CDATA[0. はじめに松尾研究所でシニアAIコンサルタントをしている角谷です。企業のさまざまな経営・事業課題に対して、AI技術を軸にした課題解決のご支援をしています。先日アップされた「AI時代の競争優位はどこに宿るのか：PL思考からBS思考の投資へ」の記事に引き続き、今回は続編をお届けします。改めて、以下の記事になります。https://zenn.dev/mkj/articles/628742c785c51bここでは、AI活用が「PoCの時代」から「オペレーションの時代」へ移行する中で、短期のROIを追う「PL思考のAI投資」だけでなく、モデルが進化しても陳腐化しない「資産」（デ...]]></content>
+        <author>
+            <name>Ruuchami</name>
+        </author>
+        <published>2026-08-07T02:50:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[手書きコーディング禁止へ。OmiaiがClaude Codeで変えたFlutter開発フロー | Omiai Tech Blogのフィード]]></title>
+        <id>https://zenn.dev/omiai_techblog/articles/2bd347ff5b3188</id>
+        <link href="https://zenn.dev/omiai_techblog/articles/2bd347ff5b3188"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--eAjGR2As--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2589%258B%25E6%259B%25B8%25E3%2581%258D%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2587%25E3%2582%25A3%25E3%2583%25B3%25E3%2582%25B0%25E7%25A6%2581%25E6%25AD%25A2%25E3%2581%25B8%25E3%2580%2582Omiai%25E3%2581%258CClaude%2520Code%25E3%2581%25A7%25E5%25A4%2589%25E3%2581%2588%25E3%2581%259FFlutter%25E9%2596%258B%25E7%2599%25BA%25E3%2583%2595%25E3%2583%25AD%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E5%25B9%25B3%25E8%25B3%2580%25E9%25A6%2599%25E5%25A5%2588%25E5%25AD%2590%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzI1OGM1ZjI5N2QuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Omiai%2520Tech%2520Blog%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzQyMzQ0NTlkMzguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T02:00:05.000Z</updated>
+        <summary type="html"><![CDATA[2026年6月25日、Flutter開発におけるClaude Code活用をテーマにしたイベント「Claude Codeで変わるFlutter開発【YOUTRUST｜ASSIGN｜Omiai】」を開催しました。https://enito.connpass.com/event/393820/YOUTRUST、アサイン、Omiaiの3社からFlutterエンジニアが登壇し、LTとトークセッション形式で]]></summary>
+        <content type="html"><![CDATA[2026年6月25日、Flutter開発におけるClaude Code活用をテーマにしたイベント「Claude Codeで変わるFlutter開発【YOUTRUST｜ASSIGN｜Omiai】」を開催しました。https://enito.connpass.com/event/393820/YOUTRUST、アサイン、Omiaiの3社からFlutterエンジニアが登壇し、LTとトークセッション形式で「どこまでAIに任せているのか」「Flutter特有の相性や課題はあるのか」「設計・実装・レビューはどう変わったのか」といった、現場だからこそ見えてきた知見を共有しました。本記事では、その...]]></content>
+        <author>
+            <name>平賀香奈子</name>
+        </author>
+        <published>2026-08-07T02:00:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【後編】受賞作品はこうして生まれた—GMO DESIGN AWARD 2025受賞者が語る、アイデアと制作の裏側 | GMO Developers]]></title>
+        <id>https://developers.gmo.jp/?p=85600</id>
+        <link href="https://developers.gmo.jp/cultures/interview/85600/"/>
+        <link rel="enclosure" href="https://developers.gmo.jp/wp-content/uploads/2026/08/gda25_winner_interview_02.png" type="image/png"/>
+        <updated>2026-08-07T01:00:18.000Z</updated>
+        <summary type="html"><![CDATA[仲村怜夏さん（株式会社yomiyomi） —制作でこだわった点や、工夫したポイントを教えてください —制作過程でAIツールをどのように活用しましたか。使ってみて意外だった発見や、工夫したポイントも教えてください —「応募 […]]]></summary>
+        <content type="html"><![CDATA[仲村怜夏さん（株式会社yomiyomi） —制作でこだわった点や、工夫したポイントを教えてください —制作過程でAIツールをどのように活用しましたか。使ってみて意外だった発見や、工夫したポイントも教えてください —「応募 […]]]></content>
+        <author>
+            <name>rina-wakabayashi</name>
+        </author>
+        <category label="インタビュー"/>
+        <category label="クリエイティブ"/>
+        <category label="デザイン"/>
+        <category label="AI"/>
+        <category label="GMO DESIGN AWARD"/>
+        <category label="クリエイターインタビュー"/>
+        <published>2026-08-07T01:00:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kubernetes マニフェストレビューは「どこで評価するか」と「どう扱うか」を分けて設計する | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/a56bc58d9f6ebb</id>
+        <link href="https://zenn.dev/aws_japan/articles/a56bc58d9f6ebb"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--P6S8DcBq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kubernetes%2520%25E3%2583%259E%25E3%2583%258B%25E3%2583%2595%25E3%2582%25A7%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25AC%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%25E3%2581%25AF%25E3%2580%258C%25E3%2581%25A9%25E3%2581%2593%25E3%2581%25A7%25E8%25A9%2595%25E4%25BE%25A1%25E3%2581%2599%25E3%2582%258B%25E3%2581%258B%25E3%2580%258D%25E3%2581%25A8%25E3%2580%258C%25E3%2581%25A9%25E3%2581%2586%25E6%2589%25B1%25E3%2581%2586%25E3%2581%258B%25E3%2580%258D%25E3%2582%2592%25E5%2588%2586%25E3%2581%2591%25E3%2581%25A6%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:konippi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Y3ZDNjOWQ5M2YuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-07T00:54:59.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこんにちは konippi です。Kubernetes マニフェストには、コンテナイメージだけでなく、実行権限、リソース量、障害時の挙動など、本番環境を左右する設定が詰まっています。それでも PR ではアプリケーションコードほど注意深く見られず、過剰な RBAC や resource requests の欠落などがそのまま通ることがあります。2026 年 5 月に CNCF Blog の ]]></summary>
+        <content type="html"><![CDATA[はじめにこんにちは konippi です。Kubernetes マニフェストには、コンテナイメージだけでなく、実行権限、リソース量、障害時の挙動など、本番環境を左右する設定が詰まっています。それでも PR ではアプリケーションコードほど注意深く見られず、過剰な RBAC や resource requests の欠落などがそのまま通ることがあります。2026 年 5 月に CNCF Blog の Community Post として公開された「Why Kubernetes policy enforcement happens too late—and what to do ab...]]></content>
+        <author>
+            <name>konippi</name>
+        </author>
+        <published>2026-08-07T00:54:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Agent Framework Harness と Agent Governance Toolkit でファイル操作エージェント制御 | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/agent-governance-toolkit-policy-02</id>
+        <link href="https://zenn.dev/microsoft/articles/agent-governance-toolkit-policy-02"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--xkB9olMA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Agent%2520Framework%2520Harness%2520%25E3%2581%25A8%2520Agent%2520Governance%2520Toolkit%2520%25E3%2581%25A7%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E6%2593%258D...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Daichi%2520Isami%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGF2NkRDRXVKdXRUN2VRRmI0ZDdKcmJycURONXBQNmdxNVI1NGdkZFhoY0o2Mj1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-06T22:48:46.000Z</updated>
+        <summary type="html"><![CDATA[はじめに前回の記事 では、Agent Governance Toolkit（AGT）のポリシーエンジンを単体で評価し、Microsoft Agent Framework のエージェントに .WithGovernance() で組み込む方法を紹介しました。今回は一歩進めて、Microsoft Agent Framework の Harness と AGT を組み合わせます。題材は、エージェントがロー]]></summary>
+        <content type="html"><![CDATA[はじめに前回の記事 では、Agent Governance Toolkit（AGT）のポリシーエンジンを単体で評価し、Microsoft Agent Framework のエージェントに .WithGovernance() で組み込む方法を紹介しました。今回は一歩進めて、Microsoft Agent Framework の Harness と AGT を組み合わせます。題材は、エージェントがローカルの作業ディレクトリを操作するファイルアクセスエージェントです。エージェントにファイルを扱わせると、次のような要件がすぐに発生します。ファイルの一覧表示・読み取り・検索は許可した...]]></content>
+        <author>
+            <name>Daichi Isami</name>
+        </author>
+        <published>2026-08-06T22:48:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kaggle ROGIIコンペ振り返りー192nd Place Solution | Fusic 技術ブログのフィード]]></title>
+        <id>https://zenn.dev/fusic/articles/240bd206835c53</id>
+        <link href="https://zenn.dev/fusic/articles/240bd206835c53"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--GwiKNSCb--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kaggle%2520ROGII%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%259A%25E6%258C%25AF%25E3%2582%258A%25E8%25BF%2594%25E3%2582%258A%25E3%2583%25BC192nd%2520Place%2520Solution%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:xthixsl_ml%2540%25E3%2583%25AC%25E3%2582%25AA%25E3%2583%258A%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNhNDgxMzQ3YjkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Fusic%2520%25E6%258A%2580%25E8%25A1%2593%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzIzOGE3MzVjMDIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-06T22:00:05.000Z</updated>
+        <summary type="html"><![CDATA[はじめにFusicのレオナです。KaggleのROGII - Wellbore Geology Prediction[1]で、水平井戸のガンマ線（GR）をtypewellへ対応付けるCNN-SDFモデルを実装しました。最終結果は192位、Privateスコア8.143で銀メダルでした。[2]このコンペでは、当初は行単位の特徴量と後処理を中心に試していました。しかし最終日に方針を変え、井戸1本を1サ]]></summary>
+        <content type="html"><![CDATA[はじめにFusicのレオナです。KaggleのROGII - Wellbore Geology Prediction[1]で、水平井戸のガンマ線（GR）をtypewellへ対応付けるCNN-SDFモデルを実装しました。最終結果は192位、Privateスコア8.143で銀メダルでした。[2]このコンペでは、当初は行単位の特徴量と後処理を中心に試していました。しかし最終日に方針を変え、井戸1本を1サンプルとする2次元モデルを実装しました。本ブログでは、CNN-SDFの仕組み、評価方法を切り替えた理由、終了後に公開された上位解法との共通点を振り返ります。 結果構成pa...]]></content>
+        <author>
+            <name>xthixsl_ml@レオナ</name>
+        </author>
+        <published>2026-08-06T22:00:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI コストの DeNA 的管理手法 〜 FinOps の視点で 〜 | DeNA Engineering on DeNA Engineering]]></title>
+        <id>https://engineering.dena.com/blog/2026/08/ai-token-cost-report/</id>
+        <link href="https://engineering.dena.com/blog/2026/08/ai-token-cost-report/"/>
+        <link rel="enclosure" href="https://engineering.dena.com/blog/2026/08/ai-token-cost-report/cover.png" type="image/png"/>
+        <updated>2026-08-06T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは。IT 基盤部の小池です。副部長とパブリッククラウドチームのリーダーを兼務しています。 2026 年 7 月 28 日(火) に開催された、 トークンコストへの向き合い方 ― 新時代の開発コストへの対応を学ぶ会 に登壇した際の内容を説明しようと思います。AI コストの DeNA 的管理手法 ~ FinOps の視点で ~ by @DeNA_Tech はじめに 生成 AI の劇的な進化を受]]></summary>
+        <content type="html"><![CDATA[こんにちは。IT 基盤部の小池です。副部長とパブリッククラウドチームのリーダーを兼務しています。 2026 年 7 月 28 日(火) に開催された、 トークンコストへの向き合い方 ― 新時代の開発コストへの対応を学ぶ会 に登壇した際の内容を説明しようと思います。AI コストの DeNA 的管理手法 ~ FinOps の視点で ~ by @DeNA_Tech はじめに 生成 AI の劇的な進化を受け、DeNA は現在、全社を挙げてAIをフル活用する「AIオールイン」の姿勢を鮮明に打ち出しています。 しかし、この「攻め」の姿勢を支えるためには、裏側で急増する AI コストをコントロールする「守り」の基盤も不可欠です。]]></content>
+        <published>2026-08-06T15:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[移行工数とコストを抑えた、Cloud SQL への MySQL 移行 [DeNA インフラ SRE] | DeNA Engineering on DeNA Engineering]]></title>
+        <id>https://engineering.dena.com/blog/2026/08/migrate-iaas-to-cloudsql/</id>
+        <link href="https://engineering.dena.com/blog/2026/08/migrate-iaas-to-cloudsql/"/>
+        <link rel="enclosure" href="https://engineering.dena.com/blog/2026/08/migrate-iaas-to-cloudsql/cover.png" type="image/png"/>
+        <updated>2026-08-06T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに こんにちは、 IT 基盤部の izawa です。主に高い可用性が求められる大規模プロダクトのインフラを担当しています。この記事では、以前 IaaS (MySQL on GCE) で運用していたデータベースを Google Cloud のマネージドサービスである Cloud SQL に移行した際の経験をご紹介します。マネージドサービスへのデータベース移行を検討されているインフラエンジニアの]]></summary>
+        <content type="html"><![CDATA[はじめに こんにちは、 IT 基盤部の izawa です。主に高い可用性が求められる大規模プロダクトのインフラを担当しています。この記事では、以前 IaaS (MySQL on GCE) で運用していたデータベースを Google Cloud のマネージドサービスである Cloud SQL に移行した際の経験をご紹介します。マネージドサービスへのデータベース移行を検討されているインフラエンジニアの方々にとって、本記事が具体的なイメージを深める一助となれば幸いです。本記事では、マネージドサービスを活用することで移行工数を抑えつつ安全に移行できたこと、マネージド移行の懸念点であるコストを抑えながら実現できた工夫、そして移行作業の全体像と具体的なポイントについてお伝えします。]]></content>
+        <published>2026-08-06T15:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[金融機関が直面するAIエージェントの課題とGemini Drop | Accenture Japan (有志)のフィード]]></title>
+        <id>https://zenn.dev/acntechjp/articles/88098cfc47fe46</id>
+        <link href="https://zenn.dev/acntechjp/articles/88098cfc47fe46"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--BOXZsKMq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%2587%2591%25E8%259E%258D%25E6%25A9%259F%25E9%2596%25A2%25E3%2581%258C%25E7%259B%25B4%25E9%259D%25A2%25E3%2581%2599%25E3%2582%258BAI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AE%25E8%25AA%25B2%25E9%25A1%258C%25E3%2581%25A8Gemini%2520Drop%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E9%259D%2592%25E6%259F%25B3%25E9%259B%2585%25E4%25B9%258B%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2ZDA4MDY5ODcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Accenture%2520Japan%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSTRXMUpvSTBoSXoxTTBOWkxfdWFtRnJiRjZIRFZUUWdDOWh5SEVnV0JvPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-06T13:20:24.000Z</updated>
+        <summary type="html"><![CDATA[アクセンチュア株式会社 プリンシパル・ディレクターの青柳雅之です。金融機関向けにクラウドやAIを導入しています。 Geimni DropとはGemini Drop（ジェミニ・ドロップ）というサイトが存在し、定期的に情報を取得することが出来ます。Gemini Dropは、GoogleがGemini関連の新機能やモデルの改善を月次でまとめて発表するためのアップデートプログラムです。Google Clo]]></summary>
+        <content type="html"><![CDATA[アクセンチュア株式会社 プリンシパル・ディレクターの青柳雅之です。金融機関向けにクラウドやAIを導入しています。 Geimni DropとはGemini Drop（ジェミニ・ドロップ）というサイトが存在し、定期的に情報を取得することが出来ます。Gemini Dropは、GoogleがGemini関連の新機能やモデルの改善を月次でまとめて発表するためのアップデートプログラムです。Google Cloudを扱うAI推進部門やDX部門の担当者は、毎月のアップデートを確認することを推奨します。 金融機関のAIエージェントに関する課題現在、多くの金融機関でAI活用は実証実験（PoC...]]></content>
+        <author>
+            <name>青柳雅之</name>
+        </author>
+        <published>2026-08-06T13:20:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kiro Crew のアーキテクチャから学ぶ、永続型 AI エージェント基盤の設計 | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/dc2ee378f25adb</id>
+        <link href="https://zenn.dev/aws_japan/articles/dc2ee378f25adb"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--6bkZVBGH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kiro%2520Crew%2520%25E3%2581%25AE%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2581%25E3%2583%25A3%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2581%25B6%25E3%2580%2581%25E6%25B0%25B8%25E7%25B6%259A%25E5%259E%258B%2520AI%2520%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E5%259F%25BA%25E7%259B%25A4%25E3%2581%25AE%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:konippi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Y3ZDNjOWQ5M2YuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-06T11:41:17.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこんにちは konippi です。Kiro から、セッションをまたいでコンテキストを記憶し、スケジュールやイベントをきっかけに作業を継続できるオープンソースの開発ワークスペース Kiro Crew が公開されました🎉Kiro Crew は単に Kiro CLI に Web UI を付けたものではありません。Kiro CLI をエージェントランタイムとして利用し、その周囲にセッション管理、永]]></summary>
+        <content type="html"><![CDATA[はじめにこんにちは konippi です。Kiro から、セッションをまたいでコンテキストを記憶し、スケジュールやイベントをきっかけに作業を継続できるオープンソースの開発ワークスペース Kiro Crew が公開されました🎉Kiro Crew は単に Kiro CLI に Web UI を付けたものではありません。Kiro CLI をエージェントランタイムとして利用し、その周囲にセッション管理、永続メモリ、スケジューラー、Subagent、セキュリティポリシー、複数のインターフェースを加えた常駐型ワークスペースです。本記事では、公開実装をたどりながら、長期間動き続ける AI ...]]></content>
+        <author>
+            <name>konippi</name>
+        </author>
+        <published>2026-08-06T11:41:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Cowork はファイルサーバーのフォルダをアタッチできるのか試してみた | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/aws-fsx-ontap-claude-cowork-fileserver</id>
+        <link href="https://zenn.dev/aws_japan/articles/aws-fsx-ontap-claude-cowork-fileserver"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--G7634xFu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%2520Cowork%2520%25E3%2581%25AF%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AB%25E3%2583%2580%25E3%2582%2592%25E3%2582%25A2%25E3%2582%25BF%25E3%2583%2583%25E3%2583%2581%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258B%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:sugimount%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2FHcVNmNmotUkNxVWJfdFNuZ2lLR082VGl3NENaU28yRmhjdURMQWhrczRDc0huMTZKZz1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-06T08:54:29.000Z</updated>
+        <summary type="html"><![CDATA[Claude Cowork はファイルサーバーのフォルダをアタッチできるのか試してみたこんにちは！ AWS でソリューションアーキテクトをしている杉山です。Claude Cowork、使っていますか？ローカルのフォルダをアタッチして、中のファイルを読ませたり整理させたりできるのが便利なポイントですが、ふと気になったことはありませんか？「これ、ファイルサーバーのフォルダでもいけるの？」と。私はありま]]></summary>
+        <content type="html"><![CDATA[Claude Cowork はファイルサーバーのフォルダをアタッチできるのか試してみたこんにちは！ AWS でソリューションアーキテクトをしている杉山です。Claude Cowork、使っていますか？ローカルのフォルダをアタッチして、中のファイルを読ませたり整理させたりできるのが便利なポイントですが、ふと気になったことはありませんか？「これ、ファイルサーバーのフォルダでもいけるの？」と。私はあります。企業でよくあるのは、ドキュメントがローカルではなく部署共有のファイルサーバーに置かれているパターンです。そこで今回は、ファイルサーバーの共有フォルダをネットワークドライブとしてマウ...]]></content>
+        <author>
+            <name>sugimount</name>
+        </author>
+        <published>2026-08-06T08:54:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[フィジカルAI]なんと、Strands でロボットを動かせる！？Strands Robots のご紹介 | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/strands-robots-intro</id>
+        <link href="https://zenn.dev/aws_japan/articles/strands-robots-intro"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--eQJQo4i4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255B%25E3%2583%2595%25E3%2582%25A3%25E3%2582%25B8%25E3%2582%25AB%25E3%2583%25ABAI%255D%25E3%2581%25AA%25E3%2582%2593%25E3%2581%25A8%25E3%2580%2581Strands%2520%25E3%2581%25A7%25E3%2583%25AD%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%259B%25E3%2582%258B%25EF%25BC%2581%25EF%25BC%259FStrands%2520Robots%2520%25E3%2581%25AE%25E3%2581%2594%25E7%25B4%25B9%25E4%25BB%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hikotty%2520%252F%2520Hikoto%2520I...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q5ZTY0MmNkYTMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-06T08:36:11.000Z</updated>
+        <summary type="html"><![CDATA[はじめにStrands Agents は、AWS が公開しているオープンソースの AI エージェント SDK です。エージェントループにおける判断を LLM 自身に委ねるモデル駆動アプローチが特徴で、モデルとツールを渡すだけの数行でエージェントが書けます。https://strandsagents.com/この Strands Agents のエコシステムに、ロボットを動かすためのライブラリがあり]]></summary>
+        <content type="html"><![CDATA[はじめにStrands Agents は、AWS が公開しているオープンソースの AI エージェント SDK です。エージェントループにおける判断を LLM 自身に委ねるモデル駆動アプローチが特徴で、モデルとツールを渡すだけの数行でエージェントが書けます。https://strandsagents.com/この Strands Agents のエコシステムに、ロボットを動かすためのライブラリがあります。Strands Labs で開発されている strands-robots です。本記事では、この strands-robots を実際に動かして何ができるのかを紹介します。具体...]]></content>
+        <author>
+            <name>Hikotty / Hikoto Iseda</name>
+        </author>
+        <published>2026-08-06T08:36:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIエージェントをNotion/GitHub/Google Driveに接続する方法 | 松尾研究所テックブログのフィード]]></title>
+        <id>https://zenn.dev/mkj/articles/8c75b21b4101b3</id>
+        <link href="https://zenn.dev/mkj/articles/8c75b21b4101b3"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--Ub9rvbTP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592Notion%252FGitHub%252FGoogle%2520Drive%25E3%2581%25AB%25E6%258E%25A5%25E7%25B6%259A%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%258B%25E3%2582%2589%25E3%2581%2582%25E3%2581%2592%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2NGM3ZTBkMzIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%259D%25BE%25E5%25B0%25BE%25E7%25A0%2594%25E7%25A9%25B6%25E6%2589%2580%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hDZEtvakJfZXdDTjNCV1Z0WXIteFNIZ0hmRjlXZmt3QzI5c0Y0aXYwPXMyNTAtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-06T02:50:05.000Z</updated>
+        <summary type="html"><![CDATA[Claude CodeやCodexなどのAIエージェントを、Notion、GitHub、Google Driveへ接続すると便利です。ただし、サービスと接続するための設定を適切にしないと、運用で問題が出てくるケースがあります。特に、プロジェクトで共通のAIエージェントを利用するようなケースでは、個人のOAuth認証を使ってAIエージェントに権限を与えると、AIエージェントが、本来見えてはいけないフ]]></summary>
+        <content type="html"><![CDATA[Claude CodeやCodexなどのAIエージェントを、Notion、GitHub、Google Driveへ接続すると便利です。ただし、サービスと接続するための設定を適切にしないと、運用で問題が出てくるケースがあります。特に、プロジェクトで共通のAIエージェントを利用するようなケースでは、個人のOAuth認証を使ってAIエージェントに権限を与えると、AIエージェントが、本来見えてはいけないファイルにアクセスできてしまいます。例えばNotionだと、プロジェクトで使うのは数ページだけなのに、個人OAuthでは自分が閲覧できる他のページまでアクセス対象になり得ます。GitHubやG...]]></content>
+        <author>
+            <name>からあげ</name>
+        </author>
+        <published>2026-08-06T02:50:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[複雑な業務フロー図を、Claude Codeで扱ってみる | 株式会社ZOZO の記事]]></title>
+        <id>https://qiita.com/suuu/items/1e9ca1134fa9ebe65e9c</id>
+        <link href="https://qiita.com/suuu/items/1e9ca1134fa9ebe65e9c"/>
+        <link rel="enclosure" href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.1.1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRmF2YXRhcnMxLmdpdGh1YnVzZXJjb250ZW50LmNvbSUyRnUlMkY0NDI2NTY4MyUzRnYlM0Q0P2l4bGliPXJiLTQuMS4xJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz1lZDQ5ZjBjMmYzZDdhOTQ0NjU2MmZhY2FhN2U4Y2I0Ng%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkY5MzU4NjdkMzdkNjAxZTZjNzA1MjQyNDdmMzdmZDZmMjY3NjIyY2JlJTJGb3JpZ2luYWwuanBnJTNGMTYzMzAzODY5Nj9peGxpYj1yYi00LjEuMSZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz0zMzRiZjFkZjM4MWFjYjAxN2NjNGI3MzY2MWIzYjFkMg%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3D568fa17dab0ed82eb1573693326d825c?ixlib=rb-4.1.1&amp;w=1200&amp;fm=jpg&amp;mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTk2MCZoPTMyNCZ0eHQ9JUU4JUE0JTg3JUU5JTlCJTkxJUUzJTgxJUFBJUU2JUE1JUFEJUU1JThCJTk5JUUzJTgzJTk1JUUzJTgzJUFEJUUzJTgzJUJDJUU1JTlCJUIzJUUzJTgyJTkyJUUzJTgwJTgxQ2xhdWRlJTIwQ29kZSVFMyU4MSVBNyVFNiU4OSVCMSVFMyU4MSVBMyVFMyU4MSVBNiVFMyU4MSVCRiVFMyU4MiU4QiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPWUzNWM3NDdjYmE4Y2IxMzUyMjlhOGZhYWQ5MWMyMWM2&amp;mark-x=120&amp;mark-y=112&amp;blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjEuMSZ3PTgzOCZoPTU4JnR4dD0lNDBzdXV1JnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9Y2Q5N2NhODk1NTIyMTY2ZTE4NjE0YmQwNWYzNGVkNjA&amp;blend-x=242&amp;blend-y=454&amp;blend-w=838&amp;blend-h=46&amp;blend-fit=crop&amp;blend-crop=left%2Cbottom&amp;blend-mode=normal&amp;txt64=5qCq5byP5Lya56S-Wk9aTw&amp;txt-x=242&amp;txt-y=539&amp;txt-width=838&amp;txt-clip=end%2Cellipsis&amp;txt-color=%231E2121&amp;txt-font=Hiragino%20Sans%20W6&amp;txt-size=28&amp;s=8db6d98be0f374319e095e145128d986" type="image/1%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRmF2YXRhcnMxLmdpdGh1YnVzZXJjb250ZW50LmNvbSUyRnUlMkY0NDI2NTY4MyUzRnYlM0Q0P2l4bGliPXJiLTQuMS4xJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz1lZDQ5ZjBjMmYzZDdhOTQ0NjU2MmZhY2FhN2U4Y2I0Ng%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkY5MzU4NjdkMzdkNjAxZTZjNzA1MjQyNDdmMzdmZDZmMjY3NjIyY2JlJTJGb3JpZ2luYWwuanBnJTNGMTYzMzAzODY5Nj9peGxpYj1yYi00LjEuMSZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz0zMzRiZjFkZjM4MWFjYjAxN2NjNGI3MzY2MWIzYjFkMg%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3D568fa17dab0ed82eb1573693326d825c"/>
+        <updated>2026-08-06T01:53:18.000Z</updated>
+        <summary type="html"><![CDATA[※本記事の内容は実例をベースにしていますが、一部ぼかしています。※本記事に登場するプロンプト例は、実際の指示とは異なる可能性があります。きっかけ私のチームでは、担当しているシステムの業務フローをスイムレーン図の形式で作成し、共有の資料として使用していました...]]></summary>
+        <content type="html"><![CDATA[※本記事の内容は実例をベースにしていますが、一部ぼかしています。※本記事に登場するプロンプト例は、実際の指示とは異なる可能性があります。きっかけ私のチームでは、担当しているシステムの業務フローをスイムレーン図の形式で作成し、共有の資料として使用していました...]]></content>
+        <published>2026-08-06T01:53:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【前編】受賞作品はこうして生まれた—GMO DESIGN AWARD 2025受賞者が語る、アイデアと制作の裏側 | GMO Developers]]></title>
+        <id>https://developers.gmo.jp/?p=85538</id>
+        <link href="https://developers.gmo.jp/cultures/interview/85538/"/>
+        <link rel="enclosure" href="https://developers.gmo.jp/wp-content/uploads/2026/08/gda25_winner_interview_01.png" type="image/png"/>
+        <updated>2026-08-06T01:00:58.000Z</updated>
+        <summary type="html"><![CDATA[GMO DESIGN AWARD 2026とは？ GMO DESIGN AWARD（以下、本コンテスト）は、GMOインターネットグループが主催する、18〜29歳の若手クリエイターを対象としたデザインコンテストです。 20 […]]]></summary>
+        <content type="html"><![CDATA[GMO DESIGN AWARD 2026とは？ GMO DESIGN AWARD（以下、本コンテスト）は、GMOインターネットグループが主催する、18〜29歳の若手クリエイターを対象としたデザインコンテストです。 20 […]]]></content>
+        <author>
+            <name>rina-wakabayashi</name>
+        </author>
+        <category label="インタビュー"/>
+        <category label="クリエイティブ"/>
+        <category label="デザイン"/>
+        <category label="AI"/>
+        <category label="GMO DESIGN AWARD"/>
+        <category label="クリエイターインタビュー"/>
+        <published>2026-08-06T01:00:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft Agent Framework -ハンズオンと試作- | ヘッドウォータースのフィード]]></title>
+        <id>https://zenn.dev/headwaters/articles/62dd9febbbb554</id>
+        <link href="https://zenn.dev/headwaters/articles/62dd9febbbb554"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--eZ0-OUXH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Microsoft%2520Agent%2520Framework%2520-%25E3%2583%258F%25E3%2583%25B3%25E3%2582%25BA%25E3%2582%25AA%25E3%2583%25B3%25E3%2581%25A8%25E8%25A9%25A6%25E4%25BD%259C-%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Tanaka%2520Kentaro%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzY2YmU0NjAxOTIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-06T00:26:12.000Z</updated>
+        <summary type="html"><![CDATA[執筆日2026/08/05 はじめにMicrosoft Agent Frameworkの理解を進めよう！というところでMicrosoftのチュートリアルをベースにハンズオンといろいろ遊んでみました。 偉大なる先人のみなさんhttps://zenn.dev/headwaters/articles/d46d821dff0aa2https://zenn.dev/headwaters/articles/4]]></summary>
+        <content type="html"><![CDATA[執筆日2026/08/05 はじめにMicrosoft Agent Frameworkの理解を進めよう！というところでMicrosoftのチュートリアルをベースにハンズオンといろいろ遊んでみました。 偉大なる先人のみなさんhttps://zenn.dev/headwaters/articles/d46d821dff0aa2https://zenn.dev/headwaters/articles/4bf7d7b6cf1ce4 参考資料https://learn.microsoft.com/ja-jp/agent-framework/get-started/ 前...]]></content>
+        <author>
+            <name>Tanaka Kentaro</name>
+        </author>
+        <published>2026-08-06T00:26:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kiro Crew を Windows にインストールして使ってみよう！ | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/kiro-crew-on-windows</id>
+        <link href="https://zenn.dev/aws_japan/articles/kiro-crew-on-windows"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--fbRt68Da--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kiro%2520Crew%2520%25E3%2582%2592%2520Windows%2520%25E3%2581%25AB%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2597%25E3%2581%25A6%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%2588%25E3%2581%2586%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hiro%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzkyN2I1NzkzM2EuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-06T00:00:17.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこんにちわ。Kiro 好きなソリューションアーキテクトの Hiro です。Kiro Crew は、タスクを投げて席を離れても作業が進んでいる、非同期・自走型のエージェントワークスペースです。エージェントの推論・ツール呼び出し・結果が Activity ビューで追えるようになっていて、専用のダッシュボードから複数のセッションを並行して回せます。もともとは Amazon 社内の個人プロジェクト]]></summary>
+        <content type="html"><![CDATA[はじめにこんにちわ。Kiro 好きなソリューションアーキテクトの Hiro です。Kiro Crew は、タスクを投げて席を離れても作業が進んでいる、非同期・自走型のエージェントワークスペースです。エージェントの推論・ツール呼び出し・結果が Activity ビューで追えるようになっていて、専用のダッシュボードから複数のセッションを並行して回せます。もともとは Amazon 社内の個人プロジェクトから始まり、社内で 39,000 人を超えるビルダーに使われたあとオープンソースとして公開されました。どんなものかは AWS の日本語ブログ Kiro Crew の紹介（英語原題 "In...]]></content>
+        <author>
+            <name>Hiro</name>
+        </author>
+        <published>2026-08-06T00:00:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[実装の遅さは、意思決定のゲートだった ── AIで積み上がるコストを仕組みで止める | エアークローゼットテックブログのフィード]]></title>
+        <id>https://zenn.dev/aircloset/articles/7760060d03216c</id>
+        <link href="https://zenn.dev/aircloset/articles/7760060d03216c"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--bOpXTNlf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%25AE%25E9%2581%2585%25E3%2581%2595%25E3%2581%25AF%25E3%2580%2581%25E6%2584%258F%25E6%2580%259D%25E6%25B1%25BA%25E5%25AE%259A%25E3%2581%25AE%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%2588%25E3%2581%25A0%25E3%2581%25A3%25E3%2581%259F%2520%25E2%2594%2580%25E2%2594%2580%2520AI%25E3%2581%25A7%25E7%25A9%258D%25E3%2581%25BF%25E4%25B8%258A%25E3%2581%258C%25E3%2582%258B%25E3%2582%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E3%2581%25A7%25E6%25AD%25A2%25E3%2582%2581%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E8%25BE%25BB%2520%25E4%25BA%25AE%25E4%25BD%2591%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzkxZjY1NmYzNDQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A8%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25BC%25E3%2583%2583%25E3%2583%2588%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2EyNzdkMDFjYWQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-05T23:40:12.000Z</updated>
+        <summary type="html"><![CDATA[!English Version is hereみなさまこんにちは！エアークローゼットでCTOをしている辻です。社内AI基盤の運用コストを1週間かけて棚卸ししました。結果を先に言うと:Cloud Runのinstance-based課金は84%減（カナリア1サービス単体では44%減）コンテナイメージの保持世代を見直してストレージ65%減一番効いたのは削減施策そのものではなく、コストの入口に置いたゲ]]></summary>
+        <content type="html"><![CDATA[!English Version is hereみなさまこんにちは！エアークローゼットでCTOをしている辻です。社内AI基盤の運用コストを1週間かけて棚卸ししました。結果を先に言うと:Cloud Runのinstance-based課金は84%減（カナリア1サービス単体では44%減）コンテナイメージの保持世代を見直してストレージ65%減一番効いたのは削減施策そのものではなく、コストの入口に置いたゲートと日次の可視化ただ、この記事で書きたいのは削減額ではありません。実装コストが下がった結果、「本当にそれが必要か」を問う時間だけが相対的に高くなったという話です。 実装...]]></content>
+        <author>
+            <name>辻 亮佑</name>
+        </author>
+        <published>2026-08-05T23:40:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[EC2 の SQL Server License Included に同梱されているインストールメディアで再インストールしてみる | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/aws-ec2-sqlserver-li-reinstall</id>
+        <link href="https://zenn.dev/aws_japan/articles/aws-ec2-sqlserver-li-reinstall"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--BtvLTpp9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:EC2%2520%25E3%2581%25AE%2520SQL%2520Server%2520License%2520Included%2520%25E3%2581%25AB%25E5%2590%258C%25E6%25A2%25B1%25E3%2581%2595%25E3%2582%258C%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2583%25A1%25E3%2583%2587%25E3%2582%25A3%25E3%2582%25A2%25E3%2581%25A7%25E5%2586%258D%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:sugimount%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2FHcVNmNmotUkNxVWJfdFNuZ2lLR082VGl3NENaU28yRmhjdURMQWhrczRDc0huMTZKZz1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-05T16:44:29.000Z</updated>
+        <summary type="html"><![CDATA[EC2 の SQL Server License Included に同梱されているインストールメディアで再インストールしてみるこんにちは！ AWS でソリューションアーキテクトをしている杉山 です。Amazon EC2 には、SQL Server のライセンスが込みになった License Included (LI) の AMI が用意されています。この AMI では SQL Server がプ]]></summary>
+        <content type="html"><![CDATA[EC2 の SQL Server License Included に同梱されているインストールメディアで再インストールしてみるこんにちは！ AWS でソリューションアーキテクトをしている杉山 です。Amazon EC2 には、SQL Server のライセンスが込みになった License Included (LI) の AMI が用意されています。この AMI では SQL Server がプリインストールされた状態で起動しますが、「データファイルの配置先を変えたい」「照合順序を変えたい」といった理由で、SQL Server を一度アンインストールして入れ直したくなることがあ...]]></content>
+        <author>
+            <name>sugimount</name>
+        </author>
+        <published>2026-08-05T16:44:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ARC Region Switch で実現する 10 分以内の自動リージョン切り替え [DeNA インフラ SRE] | DeNA Engineering on DeNA Engineering]]></title>
+        <id>https://engineering.dena.com/blog/2026/08/disaster-recovery-automation/</id>
+        <link href="https://engineering.dena.com/blog/2026/08/disaster-recovery-automation/"/>
+        <link rel="enclosure" href="https://engineering.dena.com/blog/2026/08/disaster-recovery-automation/cover.png" type="image/png"/>
+        <updated>2026-08-05T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに こんにちは、 IT 本部 IT 基盤部 第三グループの横野です。DeNA では、全社的な業務を支える基盤サービスが多数存在します。その中には、リージョン障害が発生した場合でも 目標復旧時間（RTO）が 10 分のサービスなど、特に高い可用性が求められるサービスもあります。こうした要件を満たすため、私たちは Disaster Recovery（DR）の自動化に取り組みました。本稿では、その]]></summary>
+        <content type="html"><![CDATA[はじめに こんにちは、 IT 本部 IT 基盤部 第三グループの横野です。DeNA では、全社的な業務を支える基盤サービスが多数存在します。その中には、リージョン障害が発生した場合でも 目標復旧時間（RTO）が 10 分のサービスなど、特に高い可用性が求められるサービスもあります。こうした要件を満たすため、私たちは Disaster Recovery（DR）の自動化に取り組みました。本稿では、そのような厳しい要件を持つサービスに対して、どのように障害を正確に検知し、高可用性な自動切り替えメカニズムを実現したのか、そのアーキテクチャと具体的な仕組みについてご紹介します。読者の皆さんが、高い可用性を要求されるサービスにおける DR 自動化の一例について理解を深めていただければ幸いです。]]></content>
+        <published>2026-08-05T15:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kiro Crew 徹底解説 — セッションをまたいで働き続けるエージェントワークスペース | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/22b095fb2b2892</id>
+        <link href="https://zenn.dev/aws_japan/articles/22b095fb2b2892"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--BB2oEyKh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kiro%2520Crew%2520%25E5%25BE%25B9%25E5%25BA%2595%25E8%25A7%25A3%25E8%25AA%25AC%2520%25E2%2580%2594%2520%25E3%2582%25BB%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%2592%25E3%2581%25BE%25E3%2581%259F%25E3%2581%2584%25E3%2581%25A7%25E5%2583%258D%25E3%2581%258D%25E7%25B6%259A%25E3%2581%2591%25E3%2582%258B%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%25B9%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kai%2520Mitsuzawa%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzA3MWRiMzJmYTguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-05T12:00:05.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこんにちは。AWS Japan の Solutions Architect であり、Kiro Crew Contributor の Kai Mitsuzawa です。日本時間 2026 年 8 月 5日、Kiro チームが Kiro Crew をオープンソースとして公開しました 🎉 Apache 2.0 ライセンスで GitHub に置かれており、誰でもソースを読み、自分のマシンで動かし、]]></summary>
+        <content type="html"><![CDATA[はじめにこんにちは。AWS Japan の Solutions Architect であり、Kiro Crew Contributor の Kai Mitsuzawa です。日本時間 2026 年 8 月 5日、Kiro チームが Kiro Crew をオープンソースとして公開しました 🎉 Apache 2.0 ライセンスで GitHub に置かれており、誰でもソースを読み、自分のマシンで動かし、中身を変えられます。Kiro Crew は一言でいうと、「1 回のチャットで終わらない仕事」をエージェントに任せるためのワークスペースです。実際のエンジニアリングは、複数のリポジトリ...]]></content>
+        <author>
+            <name>Kai Mitsuzawa</name>
+        </author>
+        <published>2026-08-05T12:00:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[gpt-5.6-sol の high に「ウルトラ」と入力して「ソウル」と話させる技術 | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/agent-framework-ultra-soul</id>
+        <link href="https://zenn.dev/microsoft/articles/agent-framework-ultra-soul"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--15vpWpKV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:gpt-5.6-sol%2520%25E3%2581%25AE%2520high%2520%25E3%2581%25AB%25E3%2580%258C%25E3%2582%25A6%25E3%2583%25AB%25E3%2583%2588%25E3%2583%25A9%25E3%2580%258D%25E3%2581%25A8%25E5%2585%25A5%25E5%258A%259B%25E3%2581%2597%25E3%2581%25A6%25E3%2580%258C%25E3%2582%25BD%25E3%2582%25A6%25E3%2583%25AB%25E3%2580%258D%25E3%2581%25A8%25E8%25A9%25B1%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%25E6%258A%2580%25E8%25A1%2593%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kazuki%2520Ota%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzhmNzg3NDJjNDQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-05T11:19:01.000Z</updated>
+        <summary type="html"><![CDATA[更新履歴2026/08/05: 「Agents Skill」を追記、末尾に正解を追記2026/08/06: 「画面が欲しい」を追記 注意!ネタ記事なので真面目に読まないでね…！（と思って書き始めたら結構有益な記事になったかも…） ことの始まり先日行われた Japan Azure Travelers 広島回(次回は和歌山で次々回は秋田！)の前日の飲み会の席で gpt-5.6-sol の reason]]></summary>
+        <content type="html"><![CDATA[更新履歴2026/08/05: 「Agents Skill」を追記、末尾に正解を追記2026/08/06: 「画面が欲しい」を追記 注意!ネタ記事なので真面目に読まないでね…！（と思って書き始めたら結構有益な記事になったかも…） ことの始まり先日行われた Japan Azure Travelers 広島回(次回は和歌山で次々回は秋田！)の前日の飲み会の席で gpt-5.6-sol の reasoning effort high に対して「ウルトラ」と入力したら「ソウル」と出力してくれたら面白いという話がありました。https://www.youtube.co...]]></content>
+        <author>
+            <name>Kazuki Ota</name>
+        </author>
+        <published>2026-08-05T11:19:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[検証環境のCloud Composer 2（Managed Airflow 2） の Redis の OOMで DAG が停止した時の対応記録 | ABEJA Tech Blog]]></title>
+        <id>hatenablog://entry/17179246901376069159</id>
+        <link href="https://tech-blog.abeja.asia/entry/managed-airflow-recovery-202608"/>
+        <link rel="enclosure" href="https://cdn.image.st-hatena.com/image/scale/5b318b294b220b4d403ac519385727861d2fe238/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Ff%2Fflat-face%2F20260729%2F20260729092647.jpg" type="image/jpg"/>
+        <updated>2026-08-05T05:44:02.000Z</updated>
+        <summary type="html"><![CDATA[事象最初に観測された事象その他発生していた事象事象発生の原因対処暫定対応 - Redisメモリの増設リカバリ - 大量の「未確認の Celery タスク」の処理恒久対応 - 構成変更予防 - サイジング・アラート設定We Are Hiring!ABEJA Insight for Retailの開発・運用を担当している平原です。検証環境のワークフローエンジンであるCloud Composer 2（M]]></summary>
+        <content type="html"><![CDATA[事象最初に観測された事象その他発生していた事象事象発生の原因対処暫定対応 - Redisメモリの増設リカバリ - 大量の「未確認の Celery タスク」の処理恒久対応 - 構成変更予防 - サイジング・アラート設定We Are Hiring!ABEJA Insight for Retailの開発・運用を担当している平原です。検証環境のワークフローエンジンであるCloud Composer 2（Managed Airflow 2）でアップグレードの検証をしようとしたところ、タスクキュー（Redis）のOOMにより停止していたため、復旧対応をした時のログを記事に残しておこうと思います。事象最初に観測された事象検証環境で全てのDAG（および、その中で動くタスク）がqueuedの状態でスタックしていました。定期的に実行されるairflow_monitoring DAGも停止してスタックしていました。また、DAGを実行する環境であるワーカーも再起動を繰り返していました。その他発生していた事象対応する中で見られた事象は次のようなものでした。ワーカーコンテナの再起動（Redisへの接続ができないた]]></content>
+        <category label="Cloud Composer"/>
+        <published>2026-08-05T05:44:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DynamoDBを諦めないためのZero-ETL | PKSHAテックブログ のフィード]]></title>
+        <id>https://zenn.dev/pksha/articles/dynamodb-zero-etl</id>
+        <link href="https://zenn.dev/pksha/articles/dynamodb-zero-etl"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--hHxV7D27--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:DynamoDB%25E3%2582%2592%25E8%25AB%25A6%25E3%2582%2581%25E3%2581%25AA%25E3%2581%2584%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AEZero-ETL%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%25BE%25E3%2581%25A3%25E3%2581%2599%25E3%2583%25BC%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJlOTZhNTRiYWMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:PKSHA%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2520%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q0NTVjYzI0NTUuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-05T05:15:50.000Z</updated>
+        <summary type="html"><![CDATA[TL;DRDynamoDB が苦手な集計・分析は、AWS Glue の Zero-ETL 統合で S3 Tables へ分析用コピーを作ることで補える。アプリケーション側のテーブル設計は変えなくてよい同期は初回のみ全量、以降は変更データキャプチャによる差分。更新間隔は最短15分で、リアルタイム反映ではないコストは変更のある取り込みが何回走るかでほぼ決まる。鮮度要件から更新間隔を逆算するのが費用最適]]></summary>
+        <content type="html"><![CDATA[TL;DRDynamoDB が苦手な集計・分析は、AWS Glue の Zero-ETL 統合で S3 Tables へ分析用コピーを作ることで補える。アプリケーション側のテーブル設計は変えなくてよい同期は初回のみ全量、以降は変更データキャプチャによる差分。更新間隔は最短15分で、リアルタイム反映ではないコストは変更のある取り込みが何回走るかでほぼ決まる。鮮度要件から更新間隔を逆算するのが費用最適化の鍵 1. はじめにPKSHA Technology でソフトウェアエンジニアをしている増田です。DynamoDB は、スケーラビリティ、運用負荷の低さ、キーアクセスにお...]]></content>
+        <author>
+            <name>まっすー</name>
+        </author>
+        <published>2026-08-05T05:15:50.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[センサー x LLM でのマルチモーダル化 〜 SensorLLM を使用してモーションセンサーから人間行動認識（HAR）を行ってみた | ABEJA Tech Blog]]></title>
+        <id>hatenablog://entry/14945776032054416786</id>
+        <link href="https://tech-blog.abeja.asia/entry/sensorllm-human-activity-recognition-202608"/>
+        <link rel="enclosure" href="https://cdn.image.st-hatena.com/image/scale/42512d38a64dc0e7b57685a974f2ca23445b7d3d/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Ft%2Fttyyuyu%2F20260805%2F20260805135116.png" type="image/png"/>
+        <updated>2026-08-05T04:58:09.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは！株式会社 ABEJA で ABEJA Platform 開発を行っている坂井（GitHub : @Yagami360）です。LLM のマルチモーダル化は、この数年で テキスト → 画像 → 動画 → 音声 という風に扱えるモダリティをどんどん広げてきました。個人的には、この流れで次に重要になるのはセンサーデータも含めたマルチモーダル化だと考えています。温度・振動・電力・加速度・生体信号]]></summary>
+        <content type="html"><![CDATA[こんにちは！株式会社 ABEJA で ABEJA Platform 開発を行っている坂井（GitHub : @Yagami360）です。LLM のマルチモーダル化は、この数年で テキスト → 画像 → 動画 → 音声 という風に扱えるモダリティをどんどん広げてきました。個人的には、この流れで次に重要になるのはセンサーデータも含めたマルチモーダル化だと考えています。温度・振動・電力・加速度・生体信号などのような「物理世界の情報」を基盤モデルが直接あるいは間接的に扱えるようになると、現実世界を観測して物理世界での意思決定・行動するタイプの AI ——いわゆるフィジカル AI—— の中核である「知覚」の部分を、汎用モデルで一気通貫に扱える可能性が出てきます。そしてこのことは、AGI（汎用人工知能）やフィジカル AI 実現に向けて必須の流れだと思ってます。前回の記事では、センサーデータでのマルチモーダル化に関連して、LLM に様々な形式でセンサーデータを入力して精度比較を行ってみました。tech-blog.abeja.asia本記事では、センサーデータにネットワーク構造を特化したりファインチュ]]></content>
+        <category label="マルチモーダル"/>
+        <category label="センサー"/>
+        <category label="LLM"/>
+        <published>2026-08-05T04:58:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【スライド作成一本勝負】M365 Copilot Cowork・Claude Cowork・ChatGPT Workを比較してみた | ヘッドウォータースのフィード]]></title>
+        <id>https://zenn.dev/headwaters/articles/f01666dff21c3b</id>
+        <link href="https://zenn.dev/headwaters/articles/f01666dff21c3b"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--OkbVpYaD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E3%2582%25B9%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2589%25E4%25BD%259C%25E6%2588%2590%25E4%25B8%2580%25E6%259C%25AC%25E5%258B%259D%25E8%25B2%25A0%25E3%2580%2591M365%2520Copilot%2520Cowork%25E3%2583%25BBClaude%2520Cowork%25E3%2583%25BBChatGPT%2520Wor...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Keita%2520Sakashita%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-05T04:19:46.000Z</updated>
+        <summary type="html"><![CDATA[Microsoft、Anthropic、OpenAIが提供するAIエージェントに、まったく同じプロンプトでスライド作成を依頼しました。比較したのは、以下の3つです。M365 Copilot CoworkClaude CoworkChatGPT Workなお、M365 Copilot Coworkについては、モデル選択による違いも確認するため、「自動」とGPT-5.6 Solの2条件で実行しました。]]></summary>
+        <content type="html"><![CDATA[Microsoft、Anthropic、OpenAIが提供するAIエージェントに、まったく同じプロンプトでスライド作成を依頼しました。比較したのは、以下の3つです。M365 Copilot CoworkClaude CoworkChatGPT Workなお、M365 Copilot Coworkについては、モデル選択による違いも確認するため、「自動」とGPT-5.6 Solの2条件で実行しました。単にスライドを生成できるかではなく、デザイン性、指示の遵守、顧客向け資料としての完成度、生成スピード、コストまで比較します。 比較条件 使用したプロンプト詳細な指示を与...]]></content>
+        <author>
+            <name>Keita Sakashita</name>
+        </author>
+        <published>2026-08-05T04:19:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dataverse を SQL で確認する：TDS エンドポイントの使い方と制約 | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/dataverse-tds-endpoint-sql</id>
+        <link href="https://zenn.dev/microsoft/articles/dataverse-tds-endpoint-sql"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--eMWGaHXn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Dataverse%2520%25E3%2582%2592%2520SQL%2520%25E3%2581%25A7%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2599%25E3%2582%258B%25EF%25BC%259ATDS%2520%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2581%25A8%25E5%2588%25B6%25E7%25B4%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Masachika%2520Kamada%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I1YTAzYmVjZjYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-04T20:01:15.000Z</updated>
+        <summary type="html"><![CDATA[Dataverse では、TDS (Tabular Data Stream) エンドポイントを介して、テーブル データを SQL で照会できます。SQL Server Management Studio (SSMS) から接続すれば、HTTP リクエストや JSON 応答を扱わずに、必要なデータをその場で確認できます。複数テーブルの JOIN、絞り込み、並べ替え、集計を SQL で組み立て、結果を]]></summary>
+        <content type="html"><![CDATA[Dataverse では、TDS (Tabular Data Stream) エンドポイントを介して、テーブル データを SQL で照会できます。SQL Server Management Studio (SSMS) から接続すれば、HTTP リクエストや JSON 応答を扱わずに、必要なデータをその場で確認できます。複数テーブルの JOIN、絞り込み、並べ替え、集計を SQL で組み立て、結果を SSMS のグリッドで確認できる点が TDS エンドポイントの利点です。この記事では、接続方法と具体的な利用場面を確認したうえで、利用できる SQL、制約、Web API との使い分けを整理...]]></content>
+        <author>
+            <name>Masachika Kamada</name>
+        </author>
+        <published>2026-08-04T20:01:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ADKマルチエージェントでkintone承認を自動化した設計と自動評価（eval）の実践 | DeNA Engineering on DeNA Engineering]]></title>
+        <id>https://engineering.dena.com/blog/2026/08/kintone-approve-agent-adk-eval/</id>
+        <link href="https://engineering.dena.com/blog/2026/08/kintone-approve-agent-adk-eval/"/>
+        <link rel="enclosure" href="https://engineering.dena.com/blog/2026/08/kintone-approve-agent-adk-eval/cover.png" type="image/png"/>
+        <updated>2026-08-04T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに こんにちは。DeNA でエンジニアをしている外山です。社内のツール利用申請ワークフロー（kintoneで運用）には、承認前に人間が行っていた3つの確認作業がありました。予算内かどうか（予算残額シートとの突き合わせ） 申請されたツール名がマスターに存在するか 「法務確認は不要」という選択が本当に妥当か どれもレコードの内容を読んで、別のスプレッドシートやマスターと照合するだけの定型作業です]]></summary>
+        <content type="html"><![CDATA[はじめに こんにちは。DeNA でエンジニアをしている外山です。社内のツール利用申請ワークフロー（kintoneで運用）には、承認前に人間が行っていた3つの確認作業がありました。予算内かどうか（予算残額シートとの突き合わせ） 申請されたツール名がマスターに存在するか 「法務確認は不要」という選択が本当に妥当か どれもレコードの内容を読んで、別のスプレッドシートやマスターと照合するだけの定型作業ですが、申請件数が増えると地味に時間を取られます。判断基準がはっきりしていて件数も多いこうした作業は、エージェントに任せて効率化できる余地が大きいと感じていました。]]></content>
+        <published>2026-08-04T15:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[『汎用AIがあるのになぜ機械学習を学ぶのか』を図解と実践で理解する | ヘッドウォータースのフィード]]></title>
+        <id>https://zenn.dev/headwaters/articles/68d7502efc3073</id>
+        <link href="https://zenn.dev/headwaters/articles/68d7502efc3073"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--EFeUR8Ap--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258E%25E6%25B1%258E%25E7%2594%25A8AI%25E3%2581%258C%25E3%2581%2582%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25AB%25E3%2581%25AA%25E3%2581%259C%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%2592%25E5%25AD%25A6%25E3%2581%25B6%25E3%2581%25AE%25E3%2581%258B%25E3%2580%258F%25E3%2582%2592%25E5%259B%25B3%25E8%25A7%25A3%25E3%2581%25A8%25E5%25AE%259F%25E8%25B7%25B5%25E3%2581%25A7%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2582%25B1%25E3%2583%25B3%25E5%2590%2589%2520%252F%2520%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E4%25BD%259C%25E3%2582%258BAI%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E9%2596%258B%25E7%2599%25BA%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSTlSRFk5eEFXaDBwVGgyZnNJX0w2VnFXZmFfYWR4NG9Oc1JhQ1BVV3hkenNGa3hDLW49czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-04T11:16:26.000Z</updated>
+        <summary type="html"><![CDATA[はじめに汎用AIとビジネス課題を解決する設計を組み合わせる仕事をする中で、深く込み入った課題には機械学習の知識が必要だと感じてきました。そこでエンジニアとしての技術力を高めるため、機械学習の知識をバージョンアップすることにしました。学習済みモデルを触り始めると、こんな疑問にもぶつかります。モデルって結局何が入っているの？返ってくる数値って何を意味しているの？精度を上げるには何をいじればいいの？想定]]></summary>
+        <content type="html"><![CDATA[はじめに汎用AIとビジネス課題を解決する設計を組み合わせる仕事をする中で、深く込み入った課題には機械学習の知識が必要だと感じてきました。そこでエンジニアとしての技術力を高めるため、機械学習の知識をバージョンアップすることにしました。学習済みモデルを触り始めると、こんな疑問にもぶつかります。モデルって結局何が入っているの？返ってくる数値って何を意味しているの？精度を上げるには何をいじればいいの？想定読者は、実装経験はあるけど機械学習は初めてという方です。この記事では「なぜ学ぶ意義があるのか」から「実際の仕組み」まで図解メインで整理します。今回は実務に近い「欠損値」や「カ...]]></content>
+        <author>
+            <name>ケン吉 / ゼロから作るAIアプリ開発</name>
+        </author>
+        <published>2026-08-04T11:16:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[院内検査マスターをJLAC11へマッピング — NEDO医療LLMプロジェクトでのユースケース検証 | ABEJA Tech Blog]]></title>
+        <id>hatenablog://entry/14945776032046445641</id>
+        <link href="https://tech-blog.abeja.asia/entry/medical-llm-jlac11-mapping-202608"/>
+        <link rel="enclosure" href="https://cdn.image.st-hatena.com/image/scale/a4a235f868a07eb881519881ebda860704d4f2d8/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Ft%2Fttyyuyu%2F20260804%2F20260804193354.png" type="image/png"/>
+        <updated>2026-08-04T10:42:31.000Z</updated>
+        <summary type="html"><![CDATA[はじめに背景：なぜ医療データの「標準化」が必要なのか扱うデータの概観JLAC11コードとは（マッピング先の標準コード体系）医療機関側のデータ（マッピング元のデータ）検査マスター試薬マスタアプローチ：試薬・検査機器情報を起点にしたマッピング有識者・先行医療機関へのヒアリングなぜ「試薬・検査機器情報」を起点にするのかシステムフローの全体像なぜ完全自動化ではなく「人の判断」を挟むのか試薬・機器からJLA]]></summary>
+        <content type="html"><![CDATA[はじめに背景：なぜ医療データの「標準化」が必要なのか扱うデータの概観JLAC11コードとは（マッピング先の標準コード体系）医療機関側のデータ（マッピング元のデータ）検査マスター試薬マスタアプローチ：試薬・検査機器情報を起点にしたマッピング有識者・先行医療機関へのヒアリングなぜ「試薬・検査機器情報」を起点にするのかシステムフローの全体像なぜ完全自動化ではなく「人の判断」を挟むのか試薬・機器からJLAC検査名称候補を絞り込む2つの方法方法1：検査名称ベース（ファジーマッチング）方法2：バーコードベース（GS1-128スキャン）2つの方法の使い分け検査名称をLLMで突合する精度の評価評価の観点検証結果アプリ評価アプリを使った想定業務フローアプリの画面と機能振り返りデータが揃わない現実との向き合い方スコープの制限ドメイン有識者へのヒアリングの重要性まとめ参考リンク謝辞はじめにABEJAは、さくらインターネット株式会社ら関係10機関とともに、NEDOが推進する「日本語版医療特化型LLMの社会実装に向けた安全性検証・実証」事業に参画しました。医療特化型LLMの開発を軸に、ユースケース検証や事業化を]]></content>
+        <category label="NEDO"/>
+        <category label="医療"/>
+        <category label="LLM"/>
+        <published>2026-08-04T10:42:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mobプロで「何も分からない」と伝えてみた新卒の話 | ABEJA Tech Blog]]></title>
+        <id>hatenablog://entry/14945776032056777636</id>
+        <link href="https://tech-blog.abeja.asia/entry/mob-pro-retrospective-new-grad-202608"/>
+        <link rel="enclosure" href="https://cdn.image.st-hatena.com/image/scale/e123355546536c6636d58bececd4bbe235ebf6d3/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Ft%2Fttyyuyu%2F20260804%2F20260804182331.png" type="image/png"/>
+        <updated>2026-08-04T09:37:06.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは。新卒エンジニアとしてアプリケーションGに所属している堂浦です。私は今年の4月にABEJAへ入社し、現在はABEJA Insight for Retailの開発・運用・保守に携わっています。入社してから、ReactやGoを使った開発に取り組んでいます。ただ、入社した時点では、どちらもほとんど触ったことがありませんでした。そんな私が配属後にぶつかったのが、Mobプログラミングで何も分からな]]></summary>
+        <content type="html"><![CDATA[こんにちは。新卒エンジニアとしてアプリケーションGに所属している堂浦です。私は今年の4月にABEJAへ入社し、現在はABEJA Insight for Retailの開発・運用・保守に携わっています。入社してから、ReactやGoを使った開発に取り組んでいます。ただ、入社した時点では、どちらもほとんど触ったことがありませんでした。そんな私が配属後にぶつかったのが、Mobプログラミングで何も分からない問題です。今回は、その困りごとをレトロスペクティブでチームに伝えてみた話を書きます。Mobプロには参加している。でも、分からない私たちのチームでは、開発スタイルの一つとしてMobプログラミング（以下、Mobプロ）を取り入れています。一人が画面を共有してコードを書くドライバーを担当し、ほかのメンバーがナビゲーターとして考え方や進め方を伝えます。複数人で相談しながら進められるので、先輩たちの考え方を近くで見られるのは、Mobプロの面白いところです。一方で、配属されたばかりの私は、そもそも画面に映っているコードがほとんど分かりませんでした。先輩たちはコードを見ながら、次に何を確認するか、どこを直す]]></content>
+        <category label="アジャイル"/>
+        <category label="スクラム"/>
+        <category label="レトロスペクティブ"/>
+        <published>2026-08-04T09:37:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[低レイテンシな広告配信を支えるキャッシュ戦略の刷新 | CyberAgent Developers Blog | サイバーエージェント デベロッパーズブログ]]></title>
+        <id>https://developers.cyberagent.co.jp/blog/?p=65145</id>
+        <link href="https://developers.cyberagent.co.jp/blog/archives/65145/"/>
+        <link rel="enclosure" href="https://developers.cyberagent.co.jp/blog/wp-content/themes/onepress-child/assets/images/og/og.png" type="image/png"/>
+        <updated>2026-08-04T07:25:39.000Z</updated>
+        <summary type="html"><![CDATA[はじめに こんにちは、同志社大学理工学部情報システムデザイン学科4年生の金谷一輝です。 2026年7 ...]]></summary>
+        <content type="html"><![CDATA[はじめに こんにちは、同志社大学理工学部情報システムデザイン学科4年生の金谷一輝です。 2026年7 ...]]></content>
+        <author>
+            <name>internship</name>
+        </author>
+        <category label="エンジニア"/>
+        <category label="AJA"/>
+        <category label="インターンシップ"/>
+        <category label="広告"/>
+        <published>2026-08-04T07:25:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【VSCode】MCPサーバの停止方法 | ヘッドウォータースのフィード]]></title>
+        <id>https://zenn.dev/headwaters/articles/310ba66b319328</id>
+        <link href="https://zenn.dev/headwaters/articles/310ba66b319328"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--QGnMB6bc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590VSCode%25E3%2580%2591MCP%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2581%25AE%25E5%2581%259C%25E6%25AD%25A2%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Son%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E5NGQ5YmQ4NWIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-04T07:06:37.000Z</updated>
+        <summary type="html"><![CDATA[VSCodeにてMCPサーバの停止方法で詰まったので、記事に残します。 1. ctrl + shift + P → mcpで検索する 2.「サーバーの一覧表示」を選択し、任意のMCPサーバを選択 3. 「サーバーの停止」を選択 停止される]]></summary>
+        <content type="html"><![CDATA[VSCodeにてMCPサーバの停止方法で詰まったので、記事に残します。 1. ctrl + shift + P → mcpで検索する 2.「サーバーの一覧表示」を選択し、任意のMCPサーバを選択 3. 「サーバーの停止」を選択 停止される]]></content>
+        <author>
+            <name>Son</name>
+        </author>
+        <published>2026-08-04T07:06:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[APIM の「中身の見えない 500」を AI Gateway トレースで一撃特定する | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/20260804-apim-500</id>
+        <link href="https://zenn.dev/microsoft/articles/20260804-apim-500"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--zfFiKY8p--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:APIM%2520%25E3%2581%25AE%25E3%2580%258C%25E4%25B8%25AD%25E8%25BA%25AB%25E3%2581%25AE%25E8%25A6%258B%25E3%2581%2588%25E3%2581%25AA%25E3%2581%2584%2520500%25E3%2580%258D%25E3%2582%2592%2520AI%2520Gateway%2520%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25A7%25E4%25B8%2580%25E6%2592%2583%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:zukako%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2JiMjYzNTIyNGEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-04T07:04:42.000Z</updated>
+        <summary type="html"><![CDATA[!本記事は筆者個人の検証結果に基づくものであり、所属する組織の公式見解を示すものではありません。正確な情報や最新の仕様については、公式ドキュメントをご確認ください。 はじめにAzure API Management（APIM）を AI Gateway として使っていると、バックエンド（Azure OpenAI など）へのリクエストが HTTP 500 で返ってくることがあります。しかも応答ボディは]]></summary>
+        <content type="html"><![CDATA[!本記事は筆者個人の検証結果に基づくものであり、所属する組織の公式見解を示すものではありません。正確な情報や最新の仕様については、公式ドキュメントをご確認ください。 はじめにAzure API Management（APIM）を AI Gateway として使っていると、バックエンド（Azure OpenAI など）へのリクエストが HTTP 500 で返ってくることがあります。しかも応答ボディは statusCode / message / activityId だけ——どのポリシーで何が起きたのかがまったく分からない、というやつです。本記事では、APIM の API In...]]></content>
+        <author>
+            <name>zukako</name>
+        </author>
+        <published>2026-08-04T07:04:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Zenn力執筆】＃５　火事と喧嘩は江戸の華、サイバー攻撃と権限は令和の攻防。 | ヘッドウォータースのフィード]]></title>
+        <id>https://zenn.dev/headwaters/articles/5f475fa7ff0511</id>
+        <link href="https://zenn.dev/headwaters/articles/5f475fa7ff0511"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--U3dEmWxp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Zenn%25E5%258A%259B%25E5%259F%25B7%25E7%25AD%2586%25E3%2580%2591%25EF%25BC%2583%25EF%25BC%2595%25E3%2580%2580%25E7%2581%25AB%25E4%25BA%258B%25E3%2581%25A8%25E5%2596%25A7%25E5%2598%25A9%25E3%2581%25AF%25E6%25B1%259F%25E6%2588%25B8%25E3%2581%25AE%25E8%258F%25AF%25E3%2580%2581%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E6%2594%25BB%25E6%2592%2583%25E3%2581%25A8%25E6%25A8%25A9%25E9%2599%2590%25E3%2581%25AF%25E4%25BB%25A4%25E5%2592%258C%25E3%2581%25AE%25E6%2594%25BB%25E9%2598%25B2%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:nanami%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzY1M2UyNWNlYzguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-04T04:58:22.000Z</updated>
+        <summary type="html"><![CDATA[はじめに♬ かじだ かじだ おおかじだ！まっかっかのおおかじだ！けがにん たくさん でたそうだ！子どもの頃に読んだ『からすのパンやさん』における、ゴロベエどんの勘違いから生まれた嘘火事のシーンは、今でも覚えている印象的なシーンです。参考: からすのパンやさん - 偕成社絵本における火事はゴロベエどんの勘違いでしたが、現実世界で火事が発生したら、一番怖いことは何でしょうか。自分の家が燃えてしまうこと]]></summary>
+        <content type="html"><![CDATA[はじめに♬ かじだ かじだ おおかじだ！まっかっかのおおかじだ！けがにん たくさん でたそうだ！子どもの頃に読んだ『からすのパンやさん』における、ゴロベエどんの勘違いから生まれた嘘火事のシーンは、今でも覚えている印象的なシーンです。参考: からすのパンやさん - 偕成社絵本における火事はゴロベエどんの勘違いでしたが、現実世界で火事が発生したら、一番怖いことは何でしょうか。自分の家が燃えてしまうことでしょうか。もちろん、それも大きな被害です。しかし、よりマクロな視点で考えてみてください。本当に怖いのは、その火が隣の家へ燃え移り、さらに街全体へ広がってしまうことでは...]]></content>
+        <author>
+            <name>nanami</name>
+        </author>
+        <published>2026-08-04T04:58:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[移行ツールは進化した。それでも計画段階でつまずく理由 | Accenture Japan (有志)のフィード]]></title>
+        <id>https://zenn.dev/acntechjp/articles/58bfbf64566ab7</id>
+        <link href="https://zenn.dev/acntechjp/articles/58bfbf64566ab7"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--oAFmyP_R--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25A7%25BB%25E8%25A1%258C%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%25AF%25E9%2580%25B2%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%25E3%2580%2582%25E3%2581%259D%25E3%2582%258C%25E3%2581%25A7%25E3%2582%2582%25E8%25A8%2588%25E7%2594%25BB%25E6%25AE%25B5%25E9%259A%258E%25E3%2581%25A7%25E3%2581%25A4%25E3%2581%25BE%25E3%2581%259A%25E3%2581%258F%25E7%2590%2586%25E7%2594%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:TGP_CDAI%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2ZDA4MDY5ODcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Accenture%2520Japan%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlkwTVEwWDE5WE1COHdLc3Rtak1kbnNnYV9ZeHQ1RmxrRFNUR01kb3pxU3h4dHpnPXMyNTAtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-04T03:16:33.000Z</updated>
+        <summary type="html"><![CDATA[執筆者：Hirokazu Namitani はじめにここ2年ほどで、クラウド移行の道具はかなり揃いました。サーバーをまるごと移すツールも、VMware環境をそのまま載せる選択肢も、AIエージェントが移行計画を組み立ててくれるサービスも出てきて、「技術的に移せるかどうか」で悩む場面は確かに減っています。一方で、実際の移行検討に関わるほど、効いてくるのはツールの外側だと感じるようになりました。移した後]]></summary>
+        <content type="html"><![CDATA[執筆者：Hirokazu Namitani はじめにここ2年ほどで、クラウド移行の道具はかなり揃いました。サーバーをまるごと移すツールも、VMware環境をそのまま載せる選択肢も、AIエージェントが移行計画を組み立ててくれるサービスも出てきて、「技術的に移せるかどうか」で悩む場面は確かに減っています。一方で、実際の移行検討に関わるほど、効いてくるのはツールの外側だと感じるようになりました。移した後に残る運用、使う人の学習コスト、そして数年単位で見たときの総額。この記事では、移行が楽になった話を認めたうえで、それでも計画段階の見極めが一番効くと考えている理由を、いくつかの経験...]]></content>
+        <author>
+            <name>TGP_CDAI</name>
+        </author>
+        <published>2026-08-04T03:16:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIを活用してウェブエンジニアなしで、LINEアプリ内にグループビデオ通話サービスを作る | LINEヤフー Tech Blog (LY Corporation Tech Blog]]></title>
+        <id>https://techblog.lycorp.co.jp/ja/20260804a</id>
+        <link href="https://techblog.lycorp.co.jp/ja/20260804a"/>
+        <link rel="enclosure" href="https://techblog.lycorp.co.jp/static/faa8f3e07799533177dfde2f0dfa1bad/7d66e/1bd41d3633ae478eae9ba773addafd73.png" type="image/png"/>
+        <updated>2026-08-04T02:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめにLINE Developersから利用できるLIFF（LINE Front-end Framework）を活用すれば、LINEアプリのユーザーを対象に、独自のサービススペースを開設できます。L...]]></summary>
+        <content type="html"><![CDATA[はじめにLINE Developersから利用できるLIFF（LINE Front-end Framework）を活用すれば、LINEアプリのユーザーを対象に、独自のサービススペースを開設できます。L...]]></content>
+        <published>2026-08-04T02:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【後編】「ショップ様のためになる」が判断の軸―インハウスデザイナーの役割と「売れるデザイン」 | GMO Developers]]></title>
+        <id>https://developers.gmo.jp/?p=84912</id>
+        <link href="https://developers.gmo.jp/cultures/interview/84912/"/>
+        <link rel="enclosure" href="https://developers.gmo.jp/wp-content/uploads/2026/08/eyecatch_yuurioohashi_02.png" type="image/png"/>
+        <updated>2026-08-04T01:01:30.000Z</updated>
+        <summary type="html"><![CDATA[大橋有理（おおはし・ゆうり）｜GMOメイクショップ株式会社 makeshop事業本部 営業部 制作チーム 異なる立場の声を読み解き、目的に沿った「最善」を探る —リリース後、購入者様の使いやすさとショップ様の要望が両立 […]]]></summary>
+        <content type="html"><![CDATA[大橋有理（おおはし・ゆうり）｜GMOメイクショップ株式会社 makeshop事業本部 営業部 制作チーム 異なる立場の声を読み解き、目的に沿った「最善」を探る —リリース後、購入者様の使いやすさとショップ様の要望が両立 […]]]></content>
+        <author>
+            <name>devrel-author-gmo</name>
+        </author>
+        <category label="インタビュー"/>
+        <category label="デザイン"/>
+        <category label="GMOメイクショップ"/>
+        <category label="UI/UX"/>
+        <category label="クリエイターインタビュー"/>
+        <category label="決済"/>
+        <published>2026-08-04T01:01:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【前編】決済画面のリニューアルでCVR35%→50%に改善 「最短ワンステップ」を実現したUI設計の舞台裏 | GMO Developers]]></title>
+        <id>https://developers.gmo.jp/?p=84900</id>
+        <link href="https://developers.gmo.jp/cultures/interview/84900/"/>
+        <link rel="enclosure" href="https://developers.gmo.jp/wp-content/uploads/2026/07/eyecatch_yuurioohashi_01.png" type="image/png"/>
+        <updated>2026-08-04T01:00:48.000Z</updated>
+        <summary type="html"><![CDATA[大橋有理（おおはし・ゆうり）｜GMOメイクショップ株式会社 makeshop事業本部 営業部 制作チーム 制作会社での経験を経て、事業会社のインハウスデザイナーへ —まず、大橋さんのこれまでのご経歴を教えてください。 […]]]></summary>
+        <content type="html"><![CDATA[大橋有理（おおはし・ゆうり）｜GMOメイクショップ株式会社 makeshop事業本部 営業部 制作チーム 制作会社での経験を経て、事業会社のインハウスデザイナーへ —まず、大橋さんのこれまでのご経歴を教えてください。 […]]]></content>
+        <author>
+            <name>devrel-author-gmo</name>
+        </author>
+        <category label="インタビュー"/>
+        <category label="デザイン"/>
+        <category label="GMOメイクショップ"/>
+        <category label="UI/UX"/>
+        <category label="クリエイターインタビュー"/>
+        <category label="決済"/>
+        <published>2026-08-04T01:00:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPT Sitesは『作る』だけでなく『公開』まで終わらせてくれる | ヘッドウォータースのフィード]]></title>
+        <id>https://zenn.dev/headwaters/articles/6b5643581e0bf3</id>
+        <link href="https://zenn.dev/headwaters/articles/6b5643581e0bf3"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--AZ_rSxlE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%2520Sites%25E3%2581%25AF%25E3%2580%258E%25E4%25BD%259C%25E3%2582%258B%25E3%2580%258F%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25A7%25E3%2581%25AA%25E3%2581%258F%25E3%2580%258E%25E5%2585%25AC%25E9%2596%258B%25E3%2580%258F%25E3%2581%25BE%25E3%2581%25A7%25E7%25B5%2582%25E3%2582%258F%25E3%2582%2589%25E3%2581%259B%25E3%2581%25A6%25E3%2581%258F%25E3%2582%258C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Keita%2520Sakashita%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-04T00:21:31.000Z</updated>
+        <summary type="html"><![CDATA[はじめに生成AIを使えば、TodoアプリのようなシンプルなWebアプリはかなり簡単に作れるようになりました。しかし、コードが完成しても、それだけではブラウザから使えるWebサービスにはなりません。ホスティング先を決め、ビルドやデプロイを設定し、公開URLを用意する必要があります。今回ChatGPT Sitesを使ってみて強く感じたのは、AIによるアプリ作成だけでなく、この「公開までの最後のひと手間]]></summary>
+        <content type="html"><![CDATA[はじめに生成AIを使えば、TodoアプリのようなシンプルなWebアプリはかなり簡単に作れるようになりました。しかし、コードが完成しても、それだけではブラウザから使えるWebサービスにはなりません。ホスティング先を決め、ビルドやデプロイを設定し、公開URLを用意する必要があります。今回ChatGPT Sitesを使ってみて強く感じたのは、AIによるアプリ作成だけでなく、この「公開までの最後のひと手間」まで完結することでした。この記事では、Todoアプリの細かな実装ではなく、ChatGPT Sitesの機能と、作ったアプリをすぐ使える状態にできる利便性を中心に紹介します。こ...]]></content>
+        <author>
+            <name>Keita Sakashita</name>
+        </author>
+        <published>2026-08-04T00:21:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIを「同僚」として組織に迎える ─ 果物の名を持つDeNAのAI社員たちと、その実装の裏側 | DeNA Engineering on DeNA Engineering]]></title>
+        <id>https://engineering.dena.com/blog/2026/08/ai-employee-introduction/</id>
+        <link href="https://engineering.dena.com/blog/2026/08/ai-employee-introduction/"/>
+        <link rel="enclosure" href="https://engineering.dena.com/blog/2026/08/ai-employee-introduction/cover.png" type="image/png"/>
+        <updated>2026-08-03T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに こんにちは、IT本部IT戦略部の小山です。DeNAで「AI社員」という取り組みを進めています。「AI社員」と聞くと、チャットボットや業務自動化ツールを大げさに呼んでいるだけなのでは、と思う方もいるかもしれません。私たちが取り組んでいるのは少し違います。Slack上の専用チャンネルに常駐し、名前とアイコンを持ち、部署に配属され、予定されたタスクをこなし、チームメンバーからの質問に答え、一日]]></summary>
+        <content type="html"><![CDATA[はじめに こんにちは、IT本部IT戦略部の小山です。DeNAで「AI社員」という取り組みを進めています。「AI社員」と聞くと、チャットボットや業務自動化ツールを大げさに呼んでいるだけなのでは、と思う方もいるかもしれません。私たちが取り組んでいるのは少し違います。Slack上の専用チャンネルに常駐し、名前とアイコンを持ち、部署に配属され、予定されたタスクをこなし、チームメンバーからの質問に答え、一日の終わりに日報を書く——人間の同僚と同じような形で組織に組み込まれたAIエージェントを、社内では「AI社員」と呼んでいます。]]></content>
+        <published>2026-08-03T15:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenCode × Amazon Bedrock で好きなモデルを選べる AI コーディング環境を構築する！ | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/opencode-bedrock-lab</id>
+        <link href="https://zenn.dev/aws_japan/articles/opencode-bedrock-lab"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--W-KTPP7p--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenCode%2520%25C3%2597%2520Amazon%2520Bedrock%2520%25E3%2581%25A7%25E5%25A5%25BD%25E3%2581%258D%25E3%2581%25AA%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592%25E9%2581%25B8%25E3%2581%25B9%25E3%2582%258B%2520AI%2520%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2587%25E3%2582%25A3%25E3%2583%25B3%25E3%2582%25B0%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hikotty%2520%252F%2520Hikoto%2520I...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q5ZTY0MmNkYTMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-03T14:04:25.000Z</updated>
+        <summary type="html"><![CDATA[はじめにターミナルで動くコーディングエージェントというと、Claude Code や Codex CLI が定番になりつつあります。どちらも完成度の高いツールですが、ツールとモデルファミリーが強く結びついています。Claude Code は Anthropic の Claude、Codex は OpenAI の GPT 系を前提にハーネスが設計されています。使いたいモデルが変わると、多くの場合ツー]]></summary>
+        <content type="html"><![CDATA[はじめにターミナルで動くコーディングエージェントというと、Claude Code や Codex CLI が定番になりつつあります。どちらも完成度の高いツールですが、ツールとモデルファミリーが強く結びついています。Claude Code は Anthropic の Claude、Codex は OpenAI の GPT 系を前提にハーネスが設計されています。使いたいモデルが変わると、多くの場合ツールごと乗り換えることになります。この結びつきをほどく選択肢として、OpenCode というオープンソースのコーディングエージェントがあります。特定のモデルベンダーに属さず、75 以上のプ...]]></content>
+        <author>
+            <name>Hikotty / Hikoto Iseda</name>
+        </author>
+        <published>2026-08-03T14:04:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GH-600: GitHub Agentic AI Developerに合格しました | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/gh-600-how-to-pass</id>
+        <link href="https://zenn.dev/microsoft/articles/gh-600-how-to-pass"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--uClWBrsV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GH-600%253A%2520GitHub%2520Agentic%2520AI%2520Developer%25E3%2581%25AB%25E5%2590%2588%25E6%25A0%25BC%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:yuriemori%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Y5MDNlZWFlMWYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-03T10:32:42.000Z</updated>
+        <summary type="html"><![CDATA[GH-600: GitHub Agentic AI Developerに合格しました(/・ω・)/記憶が薄れないうちにどんな感じだったか試験範囲のドメインごとにどういう知識が問われたのか、どんな準備をしておくべきかを書いておこうと思います。 GH-600の概要と問題の構成GH-600: GitHub Agentic AI Developerは、新しく公開された試験で、ソフトウェア開発ライフサイクル]]></summary>
+        <content type="html"><![CDATA[GH-600: GitHub Agentic AI Developerに合格しました(/・ω・)/記憶が薄れないうちにどんな感じだったか試験範囲のドメインごとにどういう知識が問われたのか、どんな準備をしておくべきかを書いておこうと思います。 GH-600の概要と問題の構成GH-600: GitHub Agentic AI Developerは、新しく公開された試験で、ソフトウェア開発ライフサイクル(SDLC)の中でGitHubのエージェントをどのように組み込むか、エージェントの管理や挙動の監査をどう行うか、CI/CDのプロセスの中でエージェントをどのように活用するかなど、GitH...]]></content>
+        <author>
+            <name>yuriemori</name>
+        </author>
+        <published>2026-08-03T10:32:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI駆動開発、レビューをやめずに再配分する | Accenture Japan (有志)のフィード]]></title>
+        <id>https://zenn.dev/acntechjp/articles/183ee14d2ca77b</id>
+        <link href="https://zenn.dev/acntechjp/articles/183ee14d2ca77b"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--c1RUyjNm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E9%25A7%2586%25E5%258B%2595%25E9%2596%258B%25E7%2599%25BA%25E3%2580%2581%25E3%2583%25AC%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%2592%25E3%2582%2584%25E3%2582%2581%25E3%2581%259A%25E3%2581%25AB%25E5%2586%258D%25E9%2585%258D%25E5%2588%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ShintaroAmaike%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2ZDA4MDY5ODcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Accenture%2520Japan%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzVmNWYzMmE0MWIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-03T09:45:05.000Z</updated>
+        <summary type="html"><![CDATA[私は今、来るべき完全自動AI駆動開発に向けた検証を重ねている。私は15年のソフトウェアエンジニア経験がある。最近、プロダクトの構想から、インフラ設計・実装、Webアプリケーションのアーキテクチャ設計・実装、CI/CD、IaC、テスト設計・実装。ソフトウェアエンジニアリングの全工程を、開発リード兼実装者としてデリバリーしきった。これができたのは、AIエージェントを前提にした体系があったからだ。ここ数]]></summary>
+        <content type="html"><![CDATA[私は今、来るべき完全自動AI駆動開発に向けた検証を重ねている。私は15年のソフトウェアエンジニア経験がある。最近、プロダクトの構想から、インフラ設計・実装、Webアプリケーションのアーキテクチャ設計・実装、CI/CD、IaC、テスト設計・実装。ソフトウェアエンジニアリングの全工程を、開発リード兼実装者としてデリバリーしきった。これができたのは、AIエージェントを前提にした体系があったからだ。ここ数ヶ月で、AI駆動開発まわりの「部品」が急速にそろってきました。CI/CD・IaCによる土台整備、Spec.mdを起点とした設計・テストフロー、レビュー配分の考え方、規約設計、高リスク領...]]></content>
+        <author>
+            <name>ShintaroAmaike</name>
+        </author>
+        <published>2026-08-03T09:45:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【大吉祥寺.pm 2026】Foodスポンサー協賛 &amp;amp; セッション登壇レポート！ | CARTA TECH BLOG]]></title>
+        <id>hatenablog://entry/14945776032059648811</id>
+        <link href="https://techblog.cartaholdings.co.jp/entry/daikichijojipm2026"/>
+        <link rel="enclosure" href="https://cdn.image.st-hatena.com/image/scale/2fd09b11eaf55fd825c120c7b2ed365793d7f0b8/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fv%2Fvoyagegroup_tech%2F20260731%2F20260731160555.png" type="image/png"/>
+        <updated>2026-08-03T06:21:49.000Z</updated>
+        <summary type="html"><![CDATA[CARTA HOLDINGSは、2026年7月25日に開催された「大吉祥寺.pm 2026」にFoodスポンサーとして協賛し、スタッフエンジニアのbash（@bash0C7）がセッション登壇を行いました！ 今回は当日の模様をレポートします。大吉祥寺.pm とは「大吉祥寺.pm 2026」は平日夜に開催されている勉強会「吉祥寺.pm」の拡大版として、土曜日に終日開催されるテックカンファレンスです。今]]></summary>
+        <content type="html"><![CDATA[CARTA HOLDINGSは、2026年7月25日に開催された「大吉祥寺.pm 2026」にFoodスポンサーとして協賛し、スタッフエンジニアのbash（@bash0C7）がセッション登壇を行いました！ 今回は当日の模様をレポートします。大吉祥寺.pm とは「大吉祥寺.pm 2026」は平日夜に開催されている勉強会「吉祥寺.pm」の拡大版として、土曜日に終日開催されるテックカンファレンスです。今年で3回目の開催となりました。今年のテーマは 「かわるもの、かわらないもの」。 AIの台頭で仕事やエンジニアリングのあり方が大きく変化する中で、変わらず重要であり続けるもの・改めて価値が見直されるものを問うテーマです。会場もこれまでの吉祥寺から初の大井町開催へ。場所は変わっても、ワントラックで全員が同じセッションを聞き、参加者同士が同じ内容で語り合えるスタイルは変わりません。開催概要日時：前夜祭 2026年7月24日（金）／本編 2026年7月25日（土）会場：きゅりあん（品川区立総合区民会館）主催：吉祥寺.pm と JPA（Japan Perl Association）の共同開催kichij]]></content>
+        <category label="カンファレンス・イベント"/>
+        <published>2026-08-03T06:21:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub Copilot で /init したら追記しておくインストラクション | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/github-copilot-base-instructions</id>
+        <link href="https://zenn.dev/microsoft/articles/github-copilot-base-instructions"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s---gjhE6g8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GitHub%2520Copilot%2520%25E3%2581%25A7%2520%252Finit%2520%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589%25E8%25BF%25BD%25E8%25A8%2598%25E3%2581%2597%25E3%2581%25A6%25E3%2581%258A%25E3%2581%258F%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25A9%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Junpei%2520Tsuchida%25EF%25BC%258807...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lQa0Vqc2NGS1VkNVdjN2UyRTd6X0ZxbjNScWdrVzVUY2wzUWlwQmc9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-03T06:05:38.000Z</updated>
+        <summary type="html"><![CDATA[GitHub Copilot で Claude Opus 5 や GPT-5.6 系モデルを使用すると、自律性が高まった一方で、さまざまなパターンの自己省察（self-reflection）を繰り返すあまり、必要以上に考えたり、齟齬が生じたりするケースがあります。こうした課題は thinking effort を調整することで抑えられる場合もありますが、事前に適切な thinking effort]]></summary>
+        <content type="html"><![CDATA[GitHub Copilot で Claude Opus 5 や GPT-5.6 系モデルを使用すると、自律性が高まった一方で、さまざまなパターンの自己省察（self-reflection）を繰り返すあまり、必要以上に考えたり、齟齬が生じたりするケースがあります。こうした課題は thinking effort を調整することで抑えられる場合もありますが、事前に適切な thinking effort を決めることは難しく、最終的にはプロンプト（インストラクション）に指示を追記するケースが多いです。GitHub Copilot では、.github/copilot-instructions...]]></content>
+        <author>
+            <name>Junpei Tsuchida（07JP27）</name>
+        </author>
+        <published>2026-08-03T06:05:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIはExcel方眼紙を正しく更新できるか：スキルとルールファイルによる再現性の設計 | PKSHAテックブログ のフィード]]></title>
+        <id>https://zenn.dev/pksha/articles/6efc5bf8351a29</id>
+        <link href="https://zenn.dev/pksha/articles/6efc5bf8351a29"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--iiCpHhgE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2581%25AFExcel%25E6%2596%25B9%25E7%259C%25BC%25E7%25B4%2599%25E3%2582%2592%25E6%25AD%25A3%25E3%2581%2597%25E3%2581%258F%25E6%259B%25B4%25E6%2596%25B0%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2581%258B%25EF%25BC%259A%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25AB%25E3%2581%25A8%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%25AB%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E5%2586%258D%25E7%258F%25BE%25E6%2580%25A7%25E3%2581%25AE%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Umetch%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJlOTZhNTRiYWMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:PKSHA%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2520%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzU5M2Y1MmMwOTQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-03T05:38:22.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは。PKSHA Technology でソフトウェアエンジニアをしている梅津です。クライアントワークでは、要件定義書や課題管理表などを Excel で作成し、打ち合わせのたびに更新する場面がよくあります。「変更箇所は赤字にする」「削除した行は消さずにグレーで残す」「更新のたびに履歴を1行追加する」など、ドキュメントごとに細かな更新ルールが決められていることも少なくありません。そのため、内容]]></summary>
+        <content type="html"><![CDATA[こんにちは。PKSHA Technology でソフトウェアエンジニアをしている梅津です。クライアントワークでは、要件定義書や課題管理表などを Excel で作成し、打ち合わせのたびに更新する場面がよくあります。「変更箇所は赤字にする」「削除した行は消さずにグレーで残す」「更新のたびに履歴を1行追加する」など、ドキュメントごとに細かな更新ルールが決められていることも少なくありません。そのため、内容を更新する作業はもちろん、ルールに沿って体裁を整える作業にも時間がかかります。こうした更新作業では、担当者が既存ファイルの見た目からルールを読み取り、反映しているケースも多いでしょう。そこ...]]></content>
+        <author>
+            <name>Umetch</name>
+        </author>
+        <published>2026-08-03T05:38:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[オントロジーで AI に業務知識を渡す — AWS の OSS「Context Ontology Accelerator」を試してみた | アマゾン ウェブ サービス ジャパン (有志)のフィード]]></title>
+        <id>https://zenn.dev/aws_japan/articles/context-ontology-accelerator-deploy</id>
+        <link href="https://zenn.dev/aws_japan/articles/context-ontology-accelerator-deploy"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--tBnwPxIJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AA%25E3%2583%25B3%25E3%2583%2588%25E3%2583%25AD%25E3%2582%25B8%25E3%2583%25BC%25E3%2581%25A7%2520AI%2520%25E3%2581%25AB%25E6%25A5%25AD%25E5%258B%2599%25E7%259F%25A5%25E8%25AD%2598%25E3%2582%2592%25E6%25B8%25A1%25E3%2581%2599%2520%25E2%2580%2594%2520AWS%2520%25E3%2581%25AE%2520OSS%25E3%2580%258CContext%2520Ontology%2520Accelera...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%2584%25E3%2581%25AA%25E3%2582%258A%25E3%2581%258F%2520%252F%2520Riku%2520Inada%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTFB2am5INFd2dWRBT2p6Tm9JUEpQR3lNYmt4eWFuVlVXbEJZT3ZmVE1DRlFlTnh6Zz1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-03T05:26:48.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこんにちは、AWS Japan でソリューションアーキテクトをしているいなりくです。AI エージェントを業務に入れようとすると、必ず同じ壁にぶつかります。データはあるのに、業務の意味が渡っていないという壁です。「売上」は total_amount の合計なのか、送料込みなのか、キャンセル分を引くのか「この注文はキャンセルできる？」に答えるには、注文テーブルの状態とキャンセルポリシー文書の両]]></summary>
+        <content type="html"><![CDATA[はじめにこんにちは、AWS Japan でソリューションアーキテクトをしているいなりくです。AI エージェントを業務に入れようとすると、必ず同じ壁にぶつかります。データはあるのに、業務の意味が渡っていないという壁です。「売上」は total_amount の合計なのか、送料込みなのか、キャンセル分を引くのか「この注文はキャンセルできる？」に答えるには、注文テーブルの状態とキャンセルポリシー文書の両方が必要「アクティブ顧客」の定義は部署ごとに違うかもしれないこれらは人間の頭と社内ドキュメントの中にあり、information_schema には存在しません。LLM がい...]]></content>
+        <author>
+            <name>いなりく / Riku Inada</name>
+        </author>
+        <published>2026-08-03T05:26:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Aurora MySQLのバックアップは本当に今の設定で安全か考える | CyberAgent Developers Blog | サイバーエージェント デベロッパーズブログ]]></title>
+        <id>https://developers.cyberagent.co.jp/blog/?p=65126</id>
+        <link href="https://developers.cyberagent.co.jp/blog/archives/65126/"/>
+        <link rel="enclosure" href="https://s3.ap-northeast-1.amazonaws.com/wraptas-prod/ca-srg/3a74358b-43f7-80fb-ab55-d076bf5deb34/28070e9b2727369633f05ea1de21e48b.png" type="image/png"/>
+        <updated>2026-08-03T05:05:00.000Z</updated>
+        <summary type="html"><![CDATA[本記事は、Aurora MySQLの安全なバックアップ設計についてまとめている記事になります なにか ...]]></summary>
+        <content type="html"><![CDATA[本記事は、Aurora MySQLの安全なバックアップ設計についてまとめている記事になります なにか ...]]></content>
+        <author>
+            <name>技術 / クリエイティブ広報</name>
+        </author>
+        <category label="エンジニア"/>
+        <published>2026-08-03T05:05:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Teamsから直接Databricksカタログにアクセスする | ヘッドウォータースのフィード]]></title>
+        <id>https://zenn.dev/headwaters/articles/31a1ffe741479e</id>
+        <link href="https://zenn.dev/headwaters/articles/31a1ffe741479e"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--0CiPlo_W--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Teams%25E3%2581%258B%25E3%2582%2589%25E7%259B%25B4%25E6%258E%25A5Databricks%25E3%2582%25AB%25E3%2582%25BF%25E3%2583%25AD%25E3%2582%25B0%25E3%2581%25AB%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%259B%25E3%2581%25A8%25E3%2581%2585%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzMyZGJmYjNkNmIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-03T03:08:27.000Z</updated>
+        <summary type="html"><![CDATA[DatabricksをTeams上で利用できる！Microsoft Teams上でDatabricks Genieを直接利用できるようになりました。設定手順は以下Microsoft Learnにまとまってます。機能の有効化など数分程度でできました。弊社のDatabricks環境もさっそくTeamsに追加してみました。https://learn.microsoft.com/ja-jp/azure/d]]></summary>
+        <content type="html"><![CDATA[DatabricksをTeams上で利用できる！Microsoft Teams上でDatabricks Genieを直接利用できるようになりました。設定手順は以下Microsoft Learnにまとまってます。機能の有効化など数分程度でできました。弊社のDatabricks環境もさっそくTeamsに追加してみました。https://learn.microsoft.com/ja-jp/azure/databricks/integrations/msft-teamsアプリストアにもDatabricks Genieが！ Teamsアプリバーに追加する設定を行うと、Teams...]]></content>
+        <author>
+            <name>せとぅ</name>
+        </author>
+        <published>2026-08-03T03:08:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Expert cross #3・後編】組織と業界を動かすエキスパートへ GMOサイバーセキュリティ byイエラエ・三村聡志が描く、「安全なロボット」を実現する世界 | GMO Developers]]></title>
+        <id>https://developers.gmo.jp/?p=85227</id>
+        <link href="https://developers.gmo.jp/technology/85227/"/>
+        <link rel="enclosure" href="https://developers.gmo.jp/wp-content/uploads/2026/07/【ブログ】アイキャッチフォルダ3後編.jpg" type="image/jpg"/>
+        <updated>2026-08-03T01:01:00.000Z</updated>
+        <summary type="html"><![CDATA[現場に立って気づいた「本当の課題」 ———エキスパートとして活動するなかで、ご自身に変化はありましたか。 ———小池さんから見て、三村さんの存在は組織にどんな影響を与えていますか。 ———広報や発信の面では、三村さんにど […]]]></summary>
+        <content type="html"><![CDATA[現場に立って気づいた「本当の課題」 ———エキスパートとして活動するなかで、ご自身に変化はありましたか。 ———小池さんから見て、三村さんの存在は組織にどんな影響を与えていますか。 ———広報や発信の面では、三村さんにど […]]]></content>
+        <author>
+            <name>devrel-author-gmo</name>
+        </author>
+        <category label="Expert"/>
+        <category label="技術情報"/>
+        <category label="expert"/>
+        <category label="EXPERT CROSS"/>
+        <category label="GMOサイバーセキュリティ byイエラエ"/>
+        <published>2026-08-03T01:01:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Expert Cross #3・前編】ソフト・ハードの両面から「話せる」エンジニアの流儀 GMOサイバーセキュリティ byイエラエ・三村聡志が語る、「伝えることで世界を良くする」エキスパートの在り方 | GMO Developers]]></title>
+        <id>https://developers.gmo.jp/?p=84369</id>
+        <link href="https://developers.gmo.jp/technology/84369/"/>
+        <link rel="enclosure" href="https://developers.gmo.jp/wp-content/uploads/2026/07/【ブログ】アイキャッチフォルダ3前編.jpg" type="image/jpg"/>
+        <updated>2026-08-03T01:00:00.000Z</updated>
+        <summary type="html"><![CDATA[「話せるエンジニア」として、情報発信から教育までを幅広く行う 三村聡志（みむら さとし）｜GMOサイバーセキュリティ byイエラエ株式会社 小池 悠生（こいけ ゆうき）｜GMOサイバーセキュリティ byイエラエ株式会社 […]]]></summary>
+        <content type="html"><![CDATA[「話せるエンジニア」として、情報発信から教育までを幅広く行う 三村聡志（みむら さとし）｜GMOサイバーセキュリティ byイエラエ株式会社 小池 悠生（こいけ ゆうき）｜GMOサイバーセキュリティ byイエラエ株式会社 […]]]></content>
+        <author>
+            <name>devrel-author-gmo</name>
+        </author>
+        <category label="Expert"/>
+        <category label="技術情報"/>
+        <category label="expert"/>
+        <category label="EXPERT CROSS"/>
+        <category label="GMOサイバーセキュリティ byイエラエ"/>
+        <published>2026-08-03T01:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft Agent Framework - 宣言型エージェント（Declarative Agents）を検証する | ヘッドウォータースのフィード]]></title>
+        <id>https://zenn.dev/headwaters/articles/4d3d791bef9022</id>
+        <link href="https://zenn.dev/headwaters/articles/4d3d791bef9022"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--aEJgAUGE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Microsoft%2520Agent%2520Framework%2520-%2520%25E5%25AE%25A3%25E8%25A8%2580%25E5%259E%258B%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25EF%25BC%2588Declarative%2520Agents%25EF%25BC%2589...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:takekawa%2520tomoki%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzA2ZjBlNjkxMDkuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-03T00:12:44.000Z</updated>
+        <summary type="html"><![CDATA[執筆日2026/8/1 やることMicrosoft Agent Framework では、YAMLでWorkflowを定義することで、コードを書かずにマルチエージェントのオーケストレーションや分岐・ループを構築できます。どんな書き方ができるのか、単純なものから少し複雑なものまで順番に検証していきます。https://learn.microsoft.com/ja-jp/agent-framework]]></summary>
+        <content type="html"><![CDATA[執筆日2026/8/1 やることMicrosoft Agent Framework では、YAMLでWorkflowを定義することで、コードを書かずにマルチエージェントのオーケストレーションや分岐・ループを構築できます。どんな書き方ができるのか、単純なものから少し複雑なものまで順番に検証していきます。https://learn.microsoft.com/ja-jp/agent-framework/workflows/declarativehttps://learn.microsoft.com/ja-jp/agent-framework/agents/declarati...]]></content>
+        <author>
+            <name>takekawa tomoki</name>
+        </author>
+        <published>2026-08-03T00:12:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Snowflake の Per-User Quota を活用してウェアハウスや AI 機能のユーザー別コスト管理を始めよう！ | Snowflake Japanのフィード]]></title>
+        <id>https://zenn.dev/snowflakejp/articles/snowflake-per-user-quota</id>
+        <link href="https://zenn.dev/snowflakejp/articles/snowflake-per-user-quota"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--I5NekFPL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Snowflake%2520%25E3%2581%25AE%2520Per-User%2520Quota%2520%25E3%2582%2592%25E6%25B4%25BB%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2582%25A6%25E3%2582%25A7%25E3%2582%25A2%25E3%2583%258F%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%2584%2520AI%2520%25E6%25A9%259F%25E8%2583%25BD%25E3%2581%25AE%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E5%2588%25A5%25E3%2582%25B3%25E3%2582%25B9%25E3%2583%2588%25E7%25AE%25A1%25E7%2590%2586%25E3%2582%2592...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:tatsuya%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzQ0ZmE2OGQyM2YuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Snowflake%2520Japan%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2NhNjFkZDFkNzUuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-03T00:05:23.000Z</updated>
+        <summary type="html"><![CDATA[!著者は Snowflake に所属しておりますが、本記事は個人の見解であり、所属する組織の公式見解ではありません。 イベント紹介2026/9/10,11 に Snowflake World Tour Tokyo が開催されます！最新のテクノロジーアップデートとデモ、そしてセキュアに AI とデータを活用している企業が一堂に集結し様々な活用例をお話いただきます。ぜひお申し込みいただければと思います]]></summary>
+        <content type="html"><![CDATA[!著者は Snowflake に所属しておりますが、本記事は個人の見解であり、所属する組織の公式見解ではありません。 イベント紹介2026/9/10,11 に Snowflake World Tour Tokyo が開催されます！最新のテクノロジーアップデートとデモ、そしてセキュアに AI とデータを活用している企業が一堂に集結し様々な活用例をお話いただきます。ぜひお申し込みいただければと思います！https://www.snowflake.com/ja/world-tour/tokyo/ はじめにSnowflake の Per-User Quota が Pubilc...]]></content>
+        <author>
+            <name>tatsuya</name>
+        </author>
+        <published>2026-08-03T00:05:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Snowflake CLIの認証設定、結局どうすればいいのか？調べてみた | Fusic 技術ブログのフィード]]></title>
+        <id>https://zenn.dev/fusic/articles/snowflake-cli-oauth</id>
+        <link href="https://zenn.dev/fusic/articles/snowflake-cli-oauth"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--oGVeoX4x--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Snowflake%2520CLI%25E3%2581%25AE%25E8%25AA%258D%25E8%25A8%25BC%25E8%25A8%25AD%25E5%25AE%259A%25E3%2580%2581%25E7%25B5%2590%25E5%25B1%2580%25E3%2581%25A9%25E3%2581%2586%25E3%2581%2599%25E3%2582%258C%25E3%2581%25B0%25E3%2581%2584%25E3%2581%2584%25E3%2581%25AE%25E3%2581%258B%25EF%25BC%259F%25E8%25AA%25BF%25E3%2581%25B9%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Y_uuu%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNhNDgxMzQ3YjkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Fusic%2520%25E6%258A%2580%25E8%25A1%2593%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dVMGM0YkQ1cEJFbW5SNDFkY0wyeVI2UnBOOG1BUHVPbnlDR3M9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-02T22:30:05.000Z</updated>
+        <summary type="html"><![CDATA[Snowflake CLIとは、Snowflakeが提供する開発者向けのコマンドラインツールです。スピーディにアプリケーションを構築したり、SQLを実行したりすることができます。https://docs.snowflake.com/ja/developer-guide/snowflake-cli/indexこの記事はOAuthで認証したい場合の設定をどうすればCLIで完結させられるか、まとめたもの]]></summary>
+        <content type="html"><![CDATA[Snowflake CLIとは、Snowflakeが提供する開発者向けのコマンドラインツールです。スピーディにアプリケーションを構築したり、SQLを実行したりすることができます。https://docs.snowflake.com/ja/developer-guide/snowflake-cli/indexこの記事はOAuthで認証したい場合の設定をどうすればCLIで完結させられるか、まとめたものです。時間のない人向けに、私が考えた最短の設定コマンドを先に記載しておきます。$ snow connection add \ --connection-name {コネクション名}...]]></content>
+        <author>
+            <name>Y_uuu</name>
+        </author>
+        <published>2026-08-02T22:30:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoftが公開するマルチエージェント構成パターン解説 | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/52715c3aed1998</id>
+        <link href="https://zenn.dev/microsoft/articles/52715c3aed1998"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--z36YGa4p--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Microsoft%25E3%2581%258C%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2599%25E3%2582%258B%25E3%2583%259E%25E3%2583%25AB%25E3%2583%2581%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E6%25A7%258B%25E6%2588%2590%25E3%2583%2591%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%25E8%25A7%25A3%25E8%25AA%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Yuka%2520Niimi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNlNTY1ZWYwZjcuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-02T22:00:05.000Z</updated>
+        <summary type="html"><![CDATA[Microsoft 公式 AI エージェント オーケストレーション パターンマルチエージェントの構成は、以下公開資料のように用途や目的に応じて構成が異なります。https://learn.microsoft.com/ja-jp/azure/architecture/ai-ml/guide/ai-agent-design-patterns各パターンについて整理してまとめます。 1. 早見表Micro]]></summary>
+        <content type="html"><![CDATA[Microsoft 公式 AI エージェント オーケストレーション パターンマルチエージェントの構成は、以下公開資料のように用途や目的に応じて構成が異なります。https://learn.microsoft.com/ja-jp/azure/architecture/ai-ml/guide/ai-agent-design-patterns各パターンについて整理してまとめます。 1. 早見表Microsoft の公開しているオーケストレーションパターンは以下5つです。パターン別名形ひと言強み弱みシーケンシャル（順次）パイプライン / プロンプト...]]></content>
+        <author>
+            <name>Yuka Niimi</name>
+        </author>
+        <published>2026-08-02T22:00:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[カメラを止めるな！ | Accenture Japan (有志)のフィード]]></title>
+        <id>https://zenn.dev/acntechjp/articles/win-camera-freeze</id>
+        <link href="https://zenn.dev/acntechjp/articles/win-camera-freeze"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--KT4J__B2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AB%25E3%2583%25A1%25E3%2583%25A9%25E3%2582%2592%25E6%25AD%25A2%25E3%2582%2581%25E3%2582%258B%25E3%2581%25AA%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:yosuke.yasuda%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2ZDA4MDY5ODcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Accenture%2520Japan%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzUwZjU2MzJlNjguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-02T07:38:01.000Z</updated>
+        <summary type="html"><![CDATA[はじめに先日Claudeの検定をオンライン受験したのですが、試験中にカメラがフリーズして途中退場となってしまう事態に陥りました…(´;ω;`)試験官の方も英語で色々とアドバイスしてくれて、試験用のアプリやPCを再起動したのですがまた少し経つと再発してしまい解決できずアタフタしていると、「3-5営業日以内に連絡するから、今日はゆっくり過ごしてくれ👍」みたいなチャットが来て、そのまま退出となりました。]]></summary>
+        <content type="html"><![CDATA[はじめに先日Claudeの検定をオンライン受験したのですが、試験中にカメラがフリーズして途中退場となってしまう事態に陥りました…(´;ω;`)試験官の方も英語で色々とアドバイスしてくれて、試験用のアプリやPCを再起動したのですがまた少し経つと再発してしまい解決できずアタフタしていると、「3-5営業日以内に連絡するから、今日はゆっくり過ごしてくれ👍」みたいなチャットが来て、そのまま退出となりました。今回はCCAO-F（Associate）コースでしたが、他のも受けたいので色々と調べて原因と思われる設定を見つけたので、もし今後受験される方で同じ現象が発生するようでしたら試してみて...]]></content>
+        <author>
+            <name>yosuke.yasuda</name>
+        </author>
+        <published>2026-08-02T07:38:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft Copilot / Copilot Studio のエージェント削除 | Microsoft (有志)のフィード]]></title>
+        <id>https://zenn.dev/microsoft/articles/agent365-agent-usage-cleanup</id>
+        <link href="https://zenn.dev/microsoft/articles/agent365-agent-usage-cleanup"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--DdKgDBRE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Microsoft%2520Copilot%2520%252F%2520Copilot%2520Studio%2520%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E5%2589%258A%25E9%2599%25A4%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:k.sato%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2NiYjYxYjNkMmIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-08-01T03:48:42.000Z</updated>
+        <summary type="html"><![CDATA[!本記事は GitHub Copilot を活用して作成しています。 はじめに組織内で AI エージェントの作成が広がると、検証用のまま残ったエージェントや、現在は使われていないエージェントも増えていきます。管理者には、エージェントの利用状況を確認し、不要なものを適切に削除するライフサイクル管理が必要です。本記事では、Microsoft 365 管理センターで アクティブ ユーザー と セッション]]></summary>
+        <content type="html"><![CDATA[!本記事は GitHub Copilot を活用して作成しています。 はじめに組織内で AI エージェントの作成が広がると、検証用のまま残ったエージェントや、現在は使われていないエージェントも増えていきます。管理者には、エージェントの利用状況を確認し、不要なものを適切に削除するライフサイクル管理が必要です。本記事では、Microsoft 365 管理センターで アクティブ ユーザー と セッション を確認し、利用されていないエージェントを特定する方法を紹介します。その後、作成プラットフォームに応じて、次の 2 種類のエージェントを整理します。Microsoft 365 C...]]></content>
+        <author>
+            <name>k.sato</name>
+        </author>
+        <published>2026-08-01T03:48:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ローカルタスク管理アプリを設計してみた | ヘッドウォータースのフィード]]></title>
+        <id>https://zenn.dev/headwaters/articles/76f20490b76952</id>
+        <link href="https://zenn.dev/headwaters/articles/76f20490b76952"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--FWL23qvr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2582%25BF%25E3%2582%25B9%25E3%2582%25AF%25E7%25AE%25A1%25E7%2590%2586%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:takito%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzcxZTMxZmM4ZDQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-07-31T23:36:46.000Z</updated>
+        <summary type="html"><![CDATA[背景今まではタスクは自分の頭で整理するか、メモ帳のようなものに書き留めていました。それくらいの管理で十分でした。しかし最近、案件業務・社内業務とタスクが増え、整理していかないと厳しい状態になってきました。 課題課題なのが、私自身タスク管理というものが苦手ということ。アプリを開いたり記入したりするのが面倒になりがちで、何かにメモしておこうとしてもベタ書き（用件だけ書いて締め切りなどは書かない、など）]]></summary>
+        <content type="html"><![CDATA[背景今まではタスクは自分の頭で整理するか、メモ帳のようなものに書き留めていました。それくらいの管理で十分でした。しかし最近、案件業務・社内業務とタスクが増え、整理していかないと厳しい状態になってきました。 課題課題なのが、私自身タスク管理というものが苦手ということ。アプリを開いたり記入したりするのが面倒になりがちで、何かにメモしておこうとしてもベタ書き（用件だけ書いて締め切りなどは書かない、など）になってしまいがちです。 解決策これを解決するために、音声入力 + 文章整形 + 保存ができれば良いのではないかと思いました。そこで今回取り入れたのが Claude Co...]]></content>
+        <author>
+            <name>takito</name>
+        </author>
+        <published>2026-07-31T23:36:46.000Z</published>
+    </entry>
+</feed>

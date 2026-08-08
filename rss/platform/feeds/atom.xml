@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/</id>
+    <title>Platform｜企業テックブログRSS</title>
+    <updated>2026-08-08T15:22:29.729Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/feeds/atom.xml"/>
+    <subtitle>Platformセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[trunk/80a802e49932d20c6b2539dc6cab6cc8d0dd04cc: Log multi-device backward passes via C10_LOG_API_USAGE_ONCE (#192081) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F80a802e49932d20c6b2539dc6cab6cc8d0dd04cc</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F80a802e49932d20c6b2539dc6cab6cc8d0dd04cc"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/6681be969ca689d79cbb30a04eb14f684328adc8909ccea9934919151fd5e560/pytorch/pytorch" type="image//6681be969ca689d79cbb30a04eb14f684328adc8909ccea9934919151fd5e560/pytorch/pytorch"/>
+        <updated>2026-08-08T13:41:45.000Z</updated>
+        <summary type="html"><![CDATA[Add once-per-process API usage logs for backward passes, split by the settorch.autograd.multidevice_backward when two distinct non-CPU devicestorch.autograd.gpu_cpu_backward when a single non-CPU devi]]></summary>
+        <content type="html"><![CDATA[Add once-per-process API usage logs for backward passes, split by the settorch.autograd.multidevice_backward when two distinct non-CPU devicestorch.autograd.gpu_cpu_backward when a single non-CPU device runsMulti-device (multiple accelerators in one backward) is the case thatTest Plan: Built, then ran each case in a fresh process witha = torch.randn(4, requires_grad=True, device="cuda")b = torch.randn(4, requires_grad=True, device="cpu")(a.sum() + b.sum()).backward()a = torch.randn(4, requires_g]]></content>
+        <published>2026-08-08T13:41:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/58766245fc08f235d8959f6e533e9bc7adbd223a | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F58766245fc08f235d8959f6e533e9bc7adbd223a</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F58766245fc08f235d8959f6e533e9bc7adbd223a"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/2d09ceb8d29958c61fb1378b038e181abc99053cf34a0235326f676f989238d6/pytorch/pytorch" type="image//2d09ceb8d29958c61fb1378b038e181abc99053cf34a0235326f676f989238d6/pytorch/pytorch"/>
+        <updated>2026-08-08T12:02:04.000Z</updated>
+        <summary type="html"><![CDATA[[c10d][nccl2] Make reconfigure failures rank-consistent and retryable…]]></summary>
+        <content type="html"><![CDATA[[c10d][nccl2] Make reconfigure failures rank-consistent and retryable…]]></content>
+        <published>2026-08-08T12:02:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/83192d1daccbcc0e22dfc5e5f4469b9afe0cca19: c10d: make nccl2 window puts rank-local and bounds-safe (#192278) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F83192d1daccbcc0e22dfc5e5f4469b9afe0cca19</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F83192d1daccbcc0e22dfc5e5f4469b9afe0cca19"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/2d09ceb8d29958c61fb1378b038e181abc99053cf34a0235326f676f989238d6/pytorch/pytorch" type="image//2d09ceb8d29958c61fb1378b038e181abc99053cf34a0235326f676f989238d6/pytorch/pytorch"/>
+        <updated>2026-08-08T12:02:04.000Z</updated>
+        <summary type="html"><![CDATA[Window put entered collective symmetric-window registration for an unregistered source, which can deadlock when only the origin rank executes the one-sided operation. It also used the origin rank tens]]></summary>
+        <content type="html"><![CDATA[Window put entered collective symmetric-window registration for an unregistered source, which can deadlock when only the origin rank executes the one-sided operation. It also used the origin rank tensor layout for destination offsets, recorded RMA completion before nonblocking NCCL had necessarily enqueued the operation, and rejected asynchronous window registration while NCCL still retained the output handle pointer.Exchange each rank logical window offset, size, and dtype during collective reg]]></content>
+        <published>2026-08-08T12:02:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/6830baae658edc0574998c77148c21a1e2e33118: [c10d][nccl2] Use split_from for eager new_group (#192276) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F6830baae658edc0574998c77148c21a1e2e33118</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F6830baae658edc0574998c77148c21a1e2e33118"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/2d09ceb8d29958c61fb1378b038e181abc99053cf34a0235326f676f989238d6/pytorch/pytorch" type="image//2d09ceb8d29958c61fb1378b038e181abc99053cf34a0235326f676f989238d6/pytorch/pytorch"/>
+        <updated>2026-08-08T12:02:04.000Z</updated>
+        <summary type="html"><![CDATA[An eager parent backend advertises communicator splitting, but the nccl2 factory ignored Options.split_from. Members created an unrelated store-bootstrapped communicator while nonmembers had no matchi]]></summary>
+        <content type="html"><![CDATA[An eager parent backend advertises communicator splitting, but the nccl2 factory ignored Options.split_from. Members created an unrelated store-bootstrapped communicator while nonmembers had no matching no-color split, producing either an exception or a collective mismatch.Honor split_from generically in the nccl2 and lazy factories: members split from the supplied parent, nonmembers issue the matching no-color split, and lazy delegates to its primary backend. Every parent rank now makes exactly]]></content>
+        <published>2026-08-08T12:02:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/4352a63b983588dea1b9488a074b6e7410535e36 | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F4352a63b983588dea1b9488a074b6e7410535e36</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F4352a63b983588dea1b9488a074b6e7410535e36"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/2bf721824ed1c06b6d084b9aa869106c7f65396b7c40c4a00a11c0089e3e3b3a/pytorch/pytorch" type="image//2bf721824ed1c06b6d084b9aa869106c7f65396b7c40c4a00a11c0089e3e3b3a/pytorch/pytorch"/>
+        <updated>2026-08-08T08:21:25.000Z</updated>
+        <summary type="html"><![CDATA[[AOTAutograd] Fix CSE to deduplicate NaN constant tensors by normaliz…]]></summary>
+        <content type="html"><![CDATA[[AOTAutograd] Fix CSE to deduplicate NaN constant tensors by normaliz…]]></content>
+        <published>2026-08-08T08:21:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/061ace3a865340a4f6a351e5ef8f3a7f37b6645e: [symm_mem] Self-import the multicast handle on rank 0 (#192530) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F061ace3a865340a4f6a351e5ef8f3a7f37b6645e</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F061ace3a865340a4f6a351e5ef8f3a7f37b6645e"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/6a91ac928dd20bafc995e8fcbdb322a995d0f8671ce3abf87ada8df129ad3c51/pytorch/pytorch" type="image//6a91ac928dd20bafc995e8fcbdb322a995d0f8671ce3abf87ada8df129ad3c51/pytorch/pytorch"/>
+        <updated>2026-08-08T05:30:26.000Z</updated>
+        <summary type="html"><![CDATA[In init_multicast_for_block, rank 0 kept the CUmemGenericAllocationHandle it got from cuMulticastCreate while every other rank adopted a handle obtained by importing rank 0's exported handle. Handle p]]></summary>
+        <content type="html"><![CDATA[In init_multicast_for_block, rank 0 kept the CUmemGenericAllocationHandle it got from cuMulticastCreate while every other rank adopted a handle obtained by importing rank 0's exported handle. Handle provenance is not cosmetic: it selects the copy path the driver uses for a write into the multicast VA. Over a natively created handle the driver treats the write as a plain local device-to-device copy and schedules it on the async copy engines that also service pinned HtoD/DtoH, so the memcpy in sym]]></content>
+        <published>2026-08-08T05:30:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/8807bf00a8ab19ebf08f23b8b202ccec1401db83: Fix (unused) return type for AtomicFPOp for BF16 (#192548) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F8807bf00a8ab19ebf08f23b8b202ccec1401db83</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F8807bf00a8ab19ebf08f23b8b202ccec1401db83"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/6a91ac928dd20bafc995e8fcbdb322a995d0f8671ce3abf87ada8df129ad3c51/pytorch/pytorch" type="image//6a91ac928dd20bafc995e8fcbdb322a995d0f8671ce3abf87ada8df129ad3c51/pytorch/pytorch"/>
+        <updated>2026-08-08T04:40:48.000Z</updated>
+        <summary type="html"><![CDATA[This bug was left latent because no where in our codebase do we read the return type.Pull Request resolved: #192548https://github.com/Skylion007#192546, #192547]]></summary>
+        <content type="html"><![CDATA[This bug was left latent because no where in our codebase do we read the return type.Pull Request resolved: #192548https://github.com/Skylion007#192546, #192547]]></content>
+        <published>2026-08-08T04:40:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/559f6519e6030950db3d7bf7afe0817627e53cee | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F559f6519e6030950db3d7bf7afe0817627e53cee</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F559f6519e6030950db3d7bf7afe0817627e53cee"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/4e5cb28315ed8bcc12925c490dbf3425d974055b9d1341af63ed3c88a52eb194/pytorch/pytorch" type="image//4e5cb28315ed8bcc12925c490dbf3425d974055b9d1341af63ed3c88a52eb194/pytorch/pytorch"/>
+        <updated>2026-08-08T02:13:05.000Z</updated>
+        <summary type="html"><![CDATA[[torch] Fix deprecated getPointerTo to be compatible with LLVM 24 (#1…]]></summary>
+        <content type="html"><![CDATA[[torch] Fix deprecated getPointerTo to be compatible with LLVM 24 (#1…]]></content>
+        <published>2026-08-08T02:13:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/93977bb3572e38d49f94886e559049bc66fe9366 | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F93977bb3572e38d49f94886e559049bc66fe9366</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F93977bb3572e38d49f94886e559049bc66fe9366"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/4e5cb28315ed8bcc12925c490dbf3425d974055b9d1341af63ed3c88a52eb194/pytorch/pytorch" type="image//4e5cb28315ed8bcc12925c490dbf3425d974055b9d1341af63ed3c88a52eb194/pytorch/pytorch"/>
+        <updated>2026-08-08T01:24:19.000Z</updated>
+        <summary type="html"><![CDATA[Revert "[S615805][RecSysCheckpointing][PyTorch] Add strides to Tensor…]]></summary>
+        <content type="html"><![CDATA[Revert "[S615805][RecSysCheckpointing][PyTorch] Add strides to Tensor…]]></content>
+        <published>2026-08-08T01:24:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trunk/8101d3078a3a0c7a60bd2e5c1e715f77a81c2165: [MPS] Fix `torch.hypot` extreme value behavior (#192541) | Release notes from pytorch]]></title>
+        <id>https://github.com/pytorch/pytorch/releases/tag/trunk%2F8101d3078a3a0c7a60bd2e5c1e715f77a81c2165</id>
+        <link href="https://github.com/pytorch/pytorch/releases/tag/trunk%2F8101d3078a3a0c7a60bd2e5c1e715f77a81c2165"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/4e5cb28315ed8bcc12925c490dbf3425d974055b9d1341af63ed3c88a52eb194/pytorch/pytorch" type="image//4e5cb28315ed8bcc12925c490dbf3425d974055b9d1341af63ed3c88a52eb194/pytorch/pytorch"/>
+        <updated>2026-08-08T01:20:03.000Z</updated>
+        <summary type="html"><![CDATA[Fixes #192507#192541https://github.com/Skylion007, https://github.com/malfet]]></summary>
+        <content type="html"><![CDATA[Fixes #192507#192541https://github.com/Skylion007, https://github.com/malfet]]></content>
+        <published>2026-08-08T01:20:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vercel AI Gateway and Vercel Sandbox now available on Hermes Agent | Vercel News]]></title>
+        <id>https://vercel.com/changelog/vercel-ai-gateway-and-vercel-sandbox-now-available-on-hermes-agent</id>
+        <link href="https://vercel.com/changelog/vercel-ai-gateway-and-vercel-sandbox-now-available-on-hermes-agent"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3ifBH7CYvDwa7AMsfMt0vC/eb4cb0fea5e578e32b988ba2bdede5b9/vercel_x_nous_research_og_card.jpg" type="image/jpg"/>
+        <updated>2026-08-07T19:00:00.000Z</updated>
+        <summary type="html"><![CDATA[can now use as its inference layer and run its agent commands in an isolated microVM. Access 200+ models through AI Gateway at no markup on tokens, and every request appears in your AI Gateway dashboa]]></summary>
+        <content type="html"><![CDATA[can now use as its inference layer and run its agent commands in an isolated microVM. Access 200+ models through AI Gateway at no markup on tokens, and every request appears in your AI Gateway dashboard with the rest of your usage and spend.Hermes AgentVercel AI GatewayVercel SandboxInstall Hermes, then pick Vercel AI Gateway in the setup wizard:The picker pulls live model availability and current pricing from AI Gateway. For the full walkthrough, see .Configuring HermesThe backend is opt-in. Co]]></content>
+        <published>2026-08-07T19:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vercel Container Registry repositories can now be made public | Vercel News]]></title>
+        <id>https://vercel.com/changelog/vercel-container-registry-repositories-can-now-be-made-public</id>
+        <link href="https://vercel.com/changelog/vercel-container-registry-repositories-can-now-be-made-public"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/38MLxrEREV4noHC9K35YMS/b085827e390e49cf0a6eed95dcf0300d/image__18_.png" type="image/png"/>
+        <updated>2026-08-07T17:00:00.000Z</updated>
+        <summary type="html"><![CDATA[now lets you make a repository public, so anyone with a Vercel account can pull and use its images.Vercel Container RegistrySharing already granted read access to up to 100 teams, and making a reposit]]></summary>
+        <content type="html"><![CDATA[now lets you make a repository public, so anyone with a Vercel account can pull and use its images.Vercel Container RegistrySharing already granted read access to up to 100 teams, and making a repository public opens that access to every Vercel team rather than a named set. Public access is read-only, so anyone can pull and use the images but cannot push, delete, or otherwise change the repository. Repositories stay private by default.Make a repository public from the project dashboard under Ima]]></content>
+        <published>2026-08-07T17:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Audit Log Drains now support Datadog, Splunk, and Panther | Vercel News]]></title>
+        <id>https://vercel.com/changelog/audit-log-drains-now-support-datadog-splunk-and-panther</id>
+        <link href="https://vercel.com/changelog/audit-log-drains-now-support-datadog-splunk-and-panther"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/28GgzJ71oD7JLncG3wbBgp/09c4140a101d7f240dd1be14143e7ab8/image.png" type="image/png"/>
+        <updated>2026-08-07T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Audit Log Drains now stream your team's audit events into , , and , joining the existing custom HTTPS endpoint and Amazon S3 destinations. DatadogSplunkPantherAn forwards every event from your team's ]]></summary>
+        <content type="html"><![CDATA[Audit Log Drains now stream your team's audit events into , , and , joining the existing custom HTTPS endpoint and Amazon S3 destinations. DatadogSplunkPantherAn forwards every event from your team's Activity Log, plus additional audit metadata, to the destination you choose. They're available on Enterprise plans. Audit Log DrainTo create one, go to in your team settings. Click Add Drain, choose Audit Log as the data type, and pick a destination. DrainsAudit Log Drains replace . If you already s]]></content>
+        <published>2026-08-07T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Skill packs are now available on skills.sh | Vercel News]]></title>
+        <id>https://vercel.com/changelog/skill-packs-are-now-available</id>
+        <link href="https://vercel.com/changelog/skill-packs-are-now-available"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5pPU6ia7fXt3YXG9MMo9Zt/6818b0ef5ae3b403dcad1508569f358f/skills-sh-packs-og-final.png" type="image/png"/>
+        <updated>2026-08-07T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You can now bundle multiple agent skills into a shareable pack on .skills.shBuild a pack from community skills, your own local folders and zips, or public and private GitHub repositories. Every pack i]]></summary>
+        <content type="html"><![CDATA[You can now bundle multiple agent skills into a shareable pack on .skills.shBuild a pack from community skills, your own local folders and zips, or public and private GitHub repositories. Every pack is unlisted, with its own URL. Share that link with a single person, or your whole team to standardize the skills across your projects.Install a pack with one command:Run to update a pack to its latest version.npx skills updateExplore and create packs at .skills.sh/packsRead more]]></content>
+        <published>2026-08-07T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Free domain now included with new Pro subscriptions | Vercel News]]></title>
+        <id>https://vercel.com/changelog/free-domain-now-included-with-new-pro-subscriptions</id>
+        <link href="https://vercel.com/changelog/free-domain-now-included-with-new-pro-subscriptions"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1vEwZdFndQTzpt0nd8yUNQ/1650b61028d8fa13f497a286acfe8abd/pro-domain-og-v4.png" type="image/png"/>
+        <updated>2026-08-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[New subscriptions now include a domain free for the first year. ProThe offer covers six TLDs:.online.site.space.store.tech.websiteEach team has 30 days after subscribing to claim one domain, either at]]></summary>
+        <content type="html"><![CDATA[New subscriptions now include a domain free for the first year. ProThe offer covers six TLDs:.online.site.space.store.tech.websiteEach team has 30 days after subscribing to claim one domain, either at checkout or later from the in the dashboard.domain searchAfter the first year, your domain will at the regular price shown at checkout when you claim it.renew automaticallySee the for the full terms.free domain FAQRead more]]></content>
+        <published>2026-08-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Give every agent in Herdr its own Vercel Sandbox | Vercel News]]></title>
+        <id>https://vercel.com/changelog/give-every-agent-in-herdr-its-own-vercel-sandbox</id>
+        <link href="https://vercel.com/changelog/give-every-agent-in-herdr-its-own-vercel-sandbox"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/56m7aJpJ2aGwaZeyeeCRPh/b1621129325d3ae21ed81ecb5c6fbb40/Herdr_Sandbox_terminal_og__1_.png" type="image/png"/>
+        <updated>2026-08-06T23:01:00.000Z</updated>
+        <summary type="html"><![CDATA[Terminal coding agents like Claude Code, Codex, and OpenCode can now each run in their own isolated , orchestrated from , a tmux-style manager that runs them side by side in panes. Nothing an agent ru]]></summary>
+        <content type="html"><![CDATA[Terminal coding agents like Claude Code, Codex, and OpenCode can now each run in their own isolated , orchestrated from , a tmux-style manager that runs them side by side in panes. Nothing an agent runs or edits touches your machine.Vercel SandboxHerdrWhen you start an agent, the plugin uploads your project files into a new Sandbox, installs the agent there, and opens a pane connected to it. The pane works like a local terminal; you type to the agent and watch it work. But it lives in the Sandbo]]></content>
+        <published>2026-08-06T23:01:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitLab Secrets Manager adds ESO, Terraform, API support | GitLab]]></title>
+        <id>https://about.gitlab.com/blog/gitlab-secrets-manager-add-eso-terraform-api-support/</id>
+        <link href="https://about.gitlab.com/blog/gitlab-secrets-manager-add-eso-terraform-api-support/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/about-gitlab-com/image/upload/v1759320418/xjmqcozxzt4frx0hori3.png" type="image/png"/>
+        <updated>2026-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today, you might maintain separate secret stores for CI/CD, Kubernetes, and Terraform. However, that leaves multiple tools to manage, access models to keep in sync, and audit trails to correlate when ]]></summary>
+        <content type="html"><![CDATA[Today, you might maintain separate secret stores for CI/CD, Kubernetes, and Terraform. However, that leaves multiple tools to manage, access models to keep in sync, and audit trails to correlate when something goes wrong.GitLab Secrets Manager now supports External Secrets Operator (ESO) and Terraform, extending secure secret retrieval beyond CI/CD pipelines. Powered by OpenBao, GitLab Secrets Manager provides a single source of truth for secrets across your software delivery chain. You can now ]]></content>
+        <published>2026-08-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Confidential AI for GitLab Self-Hosted | GitLab]]></title>
+        <id>https://about.gitlab.com/blog/confidential-ai-for-gitlab-self-hosted/</id>
+        <link href="https://about.gitlab.com/blog/confidential-ai-for-gitlab-self-hosted/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/about-gitlab-com/image/upload/v1773866173/vte9qh8rriznvyclhkes.png" type="image/png"/>
+        <updated>2026-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Your developers want AI coding agents. Your source code is regulated IP that can't be sent to a third-party AI service, and your compliance team has said so in writing. The usual escape hatch, standin]]></summary>
+        <content type="html"><![CDATA[Your developers want AI coding agents. Your source code is regulated IP that can't be sent to a third-party AI service, and your compliance team has said so in writing. The usual escape hatch, standing up your own GPU cluster and running the models yourself, means buying scarce hardware, hiring a team to operate it, and still trailing the frontier models by months. So you do nothing, and your teams fall behind the ones that adopted AI a year ago.GitLab Duo Self-Hosted can now use Privatemode AI ]]></content>
+        <published>2026-08-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Building trusted agentic AI in financial services: From data to autonomous action | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/building-trusted-agentic-ai-in-financial-services</id>
+        <link href="https://www.elastic.co/blog/building-trusted-agentic-ai-in-financial-services"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt38a747ecc55b0f9c/6a74cbc48a155275c364aac1/mike-hindle-TCCBk_tk3hE-unsplash.jpg" type="image/jpg"/>
+        <updated>2026-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn why trusted context — not just powerful AI models — is the foundation for scaling agentic AI in financial services. Discover how unified data, observability, enterprise search, and governance en]]></summary>
+        <content type="html"><![CDATA[Learn why trusted context — not just powerful AI models — is the foundation for scaling agentic AI in financial services. Discover how unified data, observability, enterprise search, and governance enable trusted autonomous operations.]]></content>
+        <author>
+            <name>Karen Mcdermott</name>
+        </author>
+        <published>2026-08-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing Agent Plugins | Vercel News]]></title>
+        <id>https://vercel.com/blog/introducing-agent-plugins</id>
+        <link href="https://vercel.com/blog/introducing-agent-plugins"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5npoRUZsHGv7Th4j3Boyas/de6d75811eac19f93fd43522c1f829b2/agent-plugins-og-v5.png" type="image/png"/>
+        <updated>2026-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today, Agent Plugins 1.0.0 is publicly available. is an open, vendor-neutral standard for plugins that extend AI agents. Agent Plugins provide reusable instructions and resources for AI agents. connec]]></summary>
+        <content type="html"><![CDATA[Today, Agent Plugins 1.0.0 is publicly available. is an open, vendor-neutral standard for plugins that extend AI agents. Agent Plugins provide reusable instructions and resources for AI agents. connect agents to tools and services. Both can be reused across clients, but clients often package and discover them differently.Agent SkillsMCP serversAgent Plugins gives compatible clients a common format: a directory with a manifest and fixed locations for its components. The format is intentionally sm]]></content>
+        <published>2026-08-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Seedance 2.5 now available on Vercel AI Gateway | Vercel News]]></title>
+        <id>https://vercel.com/changelog/seedance-2-5-now-available-on-vercel-ai-gateway</id>
+        <link href="https://vercel.com/changelog/seedance-2-5-now-available-on-vercel-ai-gateway"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3PVusyg4GJTngxeJbW91dE/670e505710206670276c64b772a40692/image__21_.png" type="image/png"/>
+        <updated>2026-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[from ByteDance is now available on AI Gateway. It generates up to 30 seconds in a single clip, holding camera movement and continuity without stitching shots together in post. Short clips can also be ]]></summary>
+        <content type="html"><![CDATA[from ByteDance is now available on AI Gateway. It generates up to 30 seconds in a single clip, holding camera movement and continuity without stitching shots together in post. Short clips can also be extended with character, scene, and camera movement carried over.Seedance 2.5Seedance 2.5 supports text, video, image, and audio as inputs in the same request, following a subject's appearance from one asset and the motion or camera work from another. On a finished video it edits locally, swapping b]]></content>
+        <published>2026-08-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Marketplace integrations now install provider skills | Vercel News]]></title>
+        <id>https://vercel.com/changelog/vercel-marketplace-agent-skills</id>
+        <link href="https://vercel.com/changelog/vercel-marketplace-agent-skills"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/48VKfk2luQx52lqtkbeuWd/59cca006f3282057f4c3c5f4ff505fbd/marketplace-installations-provider-skills-og.png" type="image/png"/>
+        <updated>2026-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[When you install a integration from the Vercel CLI, it now also installs that provider's agent skills from , so your agents know how to use it: Vercel Marketplaceskills.shThis happens automatically fo]]></summary>
+        <content type="html"><![CDATA[When you install a integration from the Vercel CLI, it now also installs that provider's agent skills from , so your agents know how to use it: Vercel Marketplaceskills.shThis happens automatically for any provider that publishes skills.You can also find integrations without leaving the terminal:Update to the latest Vercel CLI with , then read the to get started.npm i -g vercel@latestintegration documentationRead more browses available providers.vercel integration discover lists all the Marketpl]]></content>
+        <published>2026-08-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ling 3.0 Tiny is now available on AI Gateway | Vercel News]]></title>
+        <id>https://vercel.com/changelog/ling-3-0-tiny-is-now-available-on-ai-gateway</id>
+        <link href="https://vercel.com/changelog/ling-3-0-tiny-is-now-available-on-ai-gateway"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5P96Goh9cE4twnHsrz63Rz/e97e41e40a8d533c9c7b213d12783de5/image__77_.png" type="image/png"/>
+        <updated>2026-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[from ANT Group is now on AI Gateway, free to use till 8:00am PT on 8/14. Ling 3.0 Tiny takes the free slot from .Ling 3.0 TinyLing 3.0 FlashLing 3.0 Tiny is a MOE model with 7.9B total parameters and ]]></summary>
+        <content type="html"><![CDATA[from ANT Group is now on AI Gateway, free to use till 8:00am PT on 8/14. Ling 3.0 Tiny takes the free slot from .Ling 3.0 TinyLing 3.0 FlashLing 3.0 Tiny is a MOE model with 7.9B total parameters and about 1.3B active per token, a 256K token context window, and up to 32K output tokens. The model is built for responsive agents, instruction following, and multi-turn conversation, with native function calling and prompt caching.To use Ling 3.0 Tiny, set to in the . On August 14th, the new model nam]]></content>
+        <published>2026-08-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing Agent Plugins 1.0.0 | Vercel News]]></title>
+        <id>https://vercel.com/changelog/introducing-agent-plugins-1-0-0</id>
+        <link href="https://vercel.com/changelog/introducing-agent-plugins-1-0-0"/>
+        <link rel="enclosure" href="https://vercel.com/api/dynamic-og?title=Introducing%20Agent%20Plugins%201.0.0&amp;format=changelog" type="image//api/dynamic-og"/>
+        <updated>2026-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Agent Plugins 1.0.0 is now available. It is an open, vendor-neutral standard for packaging Agent Skills and MCP servers into portable plugins. Compatible agent clients can discover and load them.Agent]]></summary>
+        <content type="html"><![CDATA[Agent Plugins 1.0.0 is now available. It is an open, vendor-neutral standard for packaging Agent Skills and MCP servers into portable plugins. Compatible agent clients can discover and load them.Agent Plugins defines a common format: a root manifest, plus fixed locations for portable components. Each client keeps control of installation, distribution, policy, user experience, and client-specific capabilities.plugin.jsonAt launch, Agent Plugins is supported across the following clients:Read the ,]]></content>
+        <published>2026-08-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pause workflows for approval with Chat SDK | Vercel News]]></title>
+        <id>https://vercel.com/changelog/chat-sdk-durable-approvals</id>
+        <link href="https://vercel.com/changelog/chat-sdk-durable-approvals"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6dyo7mxKDEAWXcf0R090NX/9b96a9cdccf94b71d38d948a6a761403/image.png" type="image/png"/>
+        <updated>2026-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You can build human-in-the-loop approvals with Chat SDK through the new subpath. One call posts a card with Approve and Deny buttons and suspends a workflow until someone decides.chat/workflowrequestA]]></summary>
+        <content type="html"><![CDATA[You can build human-in-the-loop approvals with Chat SDK through the new subpath. One call posts a card with Approve and Deny buttons and suspends a workflow until someone decides.chat/workflowrequestApprovalWorkflow SDKThe wait can last seconds or days and survives deploys and restarts. You don't need an approvals table, an handler, or a polling loop:onActionStart the workflow from any handler, and instances serialize across the workflow boundary automatically. The card handles the rest:ThreadGe]]></content>
+        <published>2026-08-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Set your own project avatars | Vercel News]]></title>
+        <id>https://vercel.com/changelog/project-avatars</id>
+        <link href="https://vercel.com/changelog/project-avatars"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4Z93JYxoBq4SI3iuuhfm14/fcad4fe3ddce1ad12a33ee5de0279b1a/set_custom_project_avatars_og_card__1_.jpg" type="image/jpg"/>
+        <updated>2026-08-05T17:30:00.000Z</updated>
+        <summary type="html"><![CDATA[You can now set a project's avatar from its settings in the Vercel dashboard. Until now, Vercel set it automatically, using the favicon from the project's production deployment. That's still the defau]]></summary>
+        <content type="html"><![CDATA[You can now set a project's avatar from its settings in the Vercel dashboard. Until now, Vercel set it automatically, using the favicon from the project's production deployment. That's still the default if you haven't set one.The avatar renders across the dashboard and on Vercel bot comments in GitHub. Microfrontend projects that share one favicon can now get distinct avatars, and backend projects with no favicon to detect can set one explicitly.You can change a project's avatar from its in the ]]></content>
+        <published>2026-08-05T17:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[New setup page after domain checkout | Vercel News]]></title>
+        <id>https://vercel.com/changelog/new-setup-page-after-domain-checkout</id>
+        <link href="https://vercel.com/changelog/new-setup-page-after-domain-checkout"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7FMlF4SA9t3AZ8zJbTkhkc/d1c4ef18cb519536fd418776da617f20/image__4_.png" type="image/png"/>
+        <updated>2026-08-05T17:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Buying a domain on Vercel now takes you to a setup page that tracks registration live, with direct paths to deploy a new project, connect an existing one, proxy or redirect a site you already run, or ]]></summary>
+        <content type="html"><![CDATA[Buying a domain on Vercel now takes you to a setup page that tracks registration live, with direct paths to deploy a new project, connect an existing one, proxy or redirect a site you already run, or set up email.Registration can take a few minutes. Each setup action unlocks as soon as the domain is ready. If registration fails, the page shows what went wrong and the status of your refund. opens project creation with the domain preselected. Connect a Git repository, prompt with v0, or start from]]></content>
+        <published>2026-08-05T17:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HCP Terraform is the control plane for AI-driven infrastructure | HashiCorp Blog]]></title>
+        <id>https://www.hashicorp.com/blog/hcp-terraform-is-the-control-plane-for-ai-driven-infrastructure</id>
+        <link href="https://www.hashicorp.com/blog/hcp-terraform-is-the-control-plane-for-ai-driven-infrastructure"/>
+        <updated>2026-08-05T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI agents author and run Terraform on their own. HCP Terraform makes autonomy accountable: provenance, policy, identity, isolation, and audit.]]></summary>
+        <content type="html"><![CDATA[AI agents author and run Terraform on their own. HCP Terraform makes autonomy accountable: provenance, policy, identity, isolation, and audit.]]></content>
+        <published>2026-08-05T16:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Get ready for new creative assets on the App Store | Latest News - Apple Developer]]></title>
+        <id>https://developer.apple.com/news/?id=kug6m2ea</id>
+        <link href="https://developer.apple.com/news/"/>
+        <link rel="enclosure" href="https://developer.apple.com/news/images/og/apple-developer-og.png" type="image/png"/>
+        <updated>2026-08-05T15:00:58.000Z</updated>
+        <summary type="html"><![CDATA[As we announced in June, Apple is introducing new ways to market your apps and games on the App Store. With these new assets, you can go beyond in-use visuals to highlight your brand, seasonal offerin]]></summary>
+        <content type="html"><![CDATA[As we announced in June, Apple is introducing new ways to market your apps and games on the App Store. With these new assets, you can go beyond in-use visuals to highlight your brand, seasonal offerings, exciting new content, and more. Your creative assets can be used across the App Store in multiple places, including your product page header, search results, In-App Events, and more.To help you plan your images and videos ahead of the fall launch, review our new App Store asset best practices, w]]></content>
+        <published>2026-08-05T15:00:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Developer: August 2026 | Latest News - Apple Developer]]></title>
+        <id>https://developer.apple.com/news/?id=vrvvlonn</id>
+        <link href="https://developer.apple.com/news/"/>
+        <link rel="enclosure" href="https://developer.apple.com/news/images/og/apple-developer-og.png" type="image/png"/>
+        <updated>2026-08-05T15:00:51.000Z</updated>
+        <summary type="html"><![CDATA[In this edition: Check out an all-new video from Cupertino to dive deeper into the biggest updates from WWDC26.Download templates and get started building App Store assets for iOS 27.Discover best pra]]></summary>
+        <content type="html"><![CDATA[In this edition: Check out an all-new video from Cupertino to dive deeper into the biggest updates from WWDC26.Download templates and get started building App Store assets for iOS 27.Discover best practices for integrating visual intelligence in your app.Learn how to supercharge your builds with Xcode Cloud workflows.Meet the clever creators of Is This Seat Taken?Read now]]></content>
+        <published>2026-08-05T15:00:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Governance Is a Developer Experience Problem | Docker]]></title>
+        <id>https://www.docker.com/?p=92675</id>
+        <link href="https://www.docker.com/blog/governance-is-a-developer-experience-problem/"/>
+        <link rel="enclosure" href="https://www.docker.com/app/uploads/2025/03/image.png" type="image/png"/>
+        <updated>2026-08-05T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn why AI governance is about more than security. Discover how trust, clear boundaries, and developer experience enable AI adoption at scale.]]></summary>
+        <content type="html"><![CDATA[Learn why AI governance is about more than security. Discover how trust, clear boundaries, and developer experience enable AI adoption at scale.]]></content>
+        <author>
+            <name>Jennifer Kohl</name>
+        </author>
+        <category label="Community"/>
+        <category label="AI Agent"/>
+        <category label="Docker AI Governance"/>
+        <category label="Docker Sandboxes"/>
+        <published>2026-08-05T13:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Export AI Gateway traces with Vercel Drains | Vercel News]]></title>
+        <id>https://vercel.com/changelog/export-ai-gateway-traces-with-vercel-drains</id>
+        <link href="https://vercel.com/changelog/export-ai-gateway-traces-with-vercel-drains"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/61nsNMsIQriF9ODDhCA6CE/33270442579fbb6ee5c6550be28ab5c3/export-ai-gateway-traces-with-log-drains.png" type="image/png"/>
+        <updated>2026-08-05T05:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI Gateway now produces an OpenTelemetry trace for every request. Pro and Enterprise teams can send these traces through Vercel Drains to any OTLP/HTTP-compatible endpoint, including native integratio]]></summary>
+        <content type="html"><![CDATA[AI Gateway now produces an OpenTelemetry trace for every request. Pro and Enterprise teams can send these traces through Vercel Drains to any OTLP/HTTP-compatible endpoint, including native integrations for Braintrust, Dash0, Kubiks, Sentry, and Statsig.Each trace shows the full request lifecycle, including:Trace Drains do not include prompt or completion content. Sampling controls let you choose how much traffic to export to each drain.AI Gateway traces cost $0.05 per 1,000 traces delivered to ]]></content>
+        <published>2026-08-05T05:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Continuous Offensive Security &amp;amp; AI Pentesting: 20 FAQs | Blog RSS Feed | Snyk]]></title>
+        <id>https://snyk.io/blog/continuous-offensive-security-ai-pentesting-20-faqs/</id>
+        <link href="https://snyk.io/blog/continuous-offensive-security-ai-pentesting-20-faqs/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/snyk/image/upload/v1671633728/wordpress-sync/feature-5FoCS5.jpg" type="image/jpg"/>
+        <updated>2026-08-05T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Get answers to 20 common questions about continuous offensive security, AI penetration testing, DAST, and AI red teaming.]]></summary>
+        <content type="html"><![CDATA[Get answers to 20 common questions about continuous offensive security, AI penetration testing, DAST, and AI red teaming.]]></content>
+        <published>2026-08-05T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing the new v0 API | Vercel News]]></title>
+        <id>https://vercel.com/blog/introducing-the-new-v0-api</id>
+        <link href="https://vercel.com/blog/introducing-the-new-v0-api"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2BtUvoFl8WENVpl7rJD9PG/b915f49ab7b25f3eace6c7d46f3749a3/v0-api-og-final6.png" type="image/png"/>
+        <updated>2026-08-05T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today we're introducing the new : programmatic, headless access to v0's app-building agent. Send a prompt and generates an app, starts a dev server in a , and gives you a preview URL you can embed in ]]></summary>
+        <content type="html"><![CDATA[Today we're introducing the new : programmatic, headless access to v0's app-building agent. Send a prompt and generates an app, starts a dev server in a , and gives you a preview URL you can embed in your own UI.v0 APIv0Vercel SandboxEach chat is an isolated workspace for one app, where v0 can read, edit, and run the files. Follow-up messages continue from the current state. v0 verifies the code running in the Sandbox, so it can catch and fix errors in your app in real time.The new API is now ge]]></content>
+        <published>2026-08-05T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI Gateway is now available on AWS Marketplace | Vercel News]]></title>
+        <id>https://vercel.com/changelog/ai-gateway-is-now-available-on-aws-marketplace</id>
+        <link href="https://vercel.com/changelog/ai-gateway-is-now-available-on-aws-marketplace"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2ZUOn5NAKtfuaaX660jQ4s/7792a1945ada65424f816318cac0905d/image__3_.png" type="image/png"/>
+        <updated>2026-08-05T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI Gateway is available on .AWS MarketplaceTeams can procure AI Gateway through their existing AWS account, consolidating inference spend onto their AWS bill and streamlining procurement. Purchases ar]]></summary>
+        <content type="html"><![CDATA[AI Gateway is available on .AWS MarketplaceTeams can procure AI Gateway through their existing AWS account, consolidating inference spend onto their AWS bill and streamlining procurement. Purchases are available as private offers with annual contract terms, plus usage-based pricing beyond the contract. gives you one API to hundreds of models through a single endpoint. Reliability, cost controls, and governance, including automatic fallbacks, regional inference, and Zero Data Retention, are built]]></content>
+        <published>2026-08-05T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Muse Spark 1.2 is now available on Vercel AI Gateway | Vercel News]]></title>
+        <id>https://vercel.com/changelog/muse-spark-1-2-is-now-available-on-vercel-ai-gateway</id>
+        <link href="https://vercel.com/changelog/muse-spark-1-2-is-now-available-on-vercel-ai-gateway"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7A6sXjeRC0lrfnxInP7996/e908500d803496bcb3b0dc8e37de3259/image__65_.png" type="image/png"/>
+        <updated>2026-08-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[from Meta is now available on AI Gateway. It is a coding-focused update to the previous Muse Spark model. While keeping its general capabilities, 1.2 ships with improvements in code generation, comple]]></summary>
+        <content type="html"><![CDATA[from Meta is now available on AI Gateway. It is a coding-focused update to the previous Muse Spark model. While keeping its general capabilities, 1.2 ships with improvements in code generation, complex debugging, codebase understanding, and end-to-end developer workflows.Muse Spark 1.2The model is built for long-horizon work like generating whole repositories, building out large projects end to end, and sustaining iterative loops where it writes, compiles, profiles, and improves code over many r]]></content>
+        <published>2026-08-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vercel Sandbox now supports 10,000 concurrent sandboxes and 5,000 vCPUs per minute | Vercel News]]></title>
+        <id>https://vercel.com/changelog/vercel-sandbox-now-supports-10-000-concurrent-sandboxes-and-5-000-vcpus-per-minute</id>
+        <link href="https://vercel.com/changelog/vercel-sandbox-now-supports-10-000-concurrent-sandboxes-and-5-000-vcpus-per-minute"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6hPrz5bUmD7i70dwRihUDR/ae1476778cb63afab8c64779ff94adfd/image.png" type="image/png"/>
+        <updated>2026-08-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We've increased the default quotas for on Pro and Enterprise plans:Vercel SandboxThe higher vCPU allocation rate is possible thanks to a new dynamic quota: instead of a fixed limit, the allowed rate n]]></summary>
+        <content type="html"><![CDATA[We've increased the default quotas for on Pro and Enterprise plans:Vercel SandboxThe higher vCPU allocation rate is possible thanks to a new dynamic quota: instead of a fixed limit, the allowed rate now ramps with sustained usage: it starts at 150 vCPUs per minute and increases by 500 vCPUs per minute as you continue creating sandboxes, up to 5,000 vCPUs per minute The new quotas apply automatically to all Pro and Enterprise teams. If you need higher quotas, .contact salesLearn more about and .S]]></content>
+        <published>2026-08-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Search and buy domains in the dashboard | Vercel News]]></title>
+        <id>https://vercel.com/changelog/search-and-buy-domains-in-the-dashboard</id>
+        <link href="https://vercel.com/changelog/search-and-buy-domains-in-the-dashboard"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6uEru3N6KTzVZTpSmOkS5W/6491615c5751ce4634e4159b5b625462/image.png" type="image/png"/>
+        <updated>2026-08-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You can now search for and purchase domains from the .Vercel dashboardOpen the domain search panel from the Buy button in or the + button on the project overview.domain settingsNameservers are configu]]></summary>
+        <content type="html"><![CDATA[You can now search for and purchase domains from the .Vercel dashboardOpen the domain search panel from the Buy button in or the + button on the project overview.domain settingsNameservers are configured automatically for your project, so there are no DNS records to set.Read the to get started.working with domains documentationRead more]]></content>
+        <published>2026-08-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Measure time between steps in Vercel Workflows | Vercel News]]></title>
+        <id>https://vercel.com/changelog/measure-time-between-steps-in-vercel-workflows</id>
+        <link href="https://vercel.com/changelog/measure-time-between-steps-in-vercel-workflows"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/35CSfyoQTIBBW0ImK7hd33/97c4beb2680b27a976e94423e1a6ca12/file-f91a12bcb090a93b2096242579ff8f62.png" type="image/png"/>
+        <updated>2026-08-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You can now measure the time between any two steps in the trace viewer for and the .Vercel WorkflowsWorkflow SDKSelect a step, hold on macOS or on Windows and Linux, then hover another step to see a m]]></summary>
+        <content type="html"><![CDATA[You can now measure the time between any two steps in the trace viewer for and the .Vercel WorkflowsWorkflow SDKSelect a step, hold on macOS or on Windows and Linux, then hover another step to see a measurement line between them:OptionAltWith no step selected, hold the modifier to see the gaps across the timeline, now drawn with the same measurement line.This can be useful for spotting delayed starts and queue waits when a run takes longer than its steps account for.To get started, open a workfl]]></content>
+        <published>2026-08-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Full Sandbox egress firewall now available on Hobby plan | Vercel News]]></title>
+        <id>https://vercel.com/changelog/full-sandbox-egress-firewall-now-available-on-hobby-plan</id>
+        <link href="https://vercel.com/changelog/full-sandbox-egress-firewall-now-available-on-hobby-plan"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2gUOmbC92EVaIOcbgnRiqc/23e3ddd1f583fca3c8e12299bfd6b55c/full_sandbox_egress_firewall_available_on_hobby_pl_og_card.jpg" type="image/jpg"/>
+        <updated>2026-08-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[All firewall features are now available on the Hobby plan.Vercel SandboxThis brings the same network isolation that protects production workloads to the free tier, giving Hobby builders control over e]]></summary>
+        <content type="html"><![CDATA[All firewall features are now available on the Hobby plan.Vercel SandboxThis brings the same network isolation that protects production workloads to the free tier, giving Hobby builders control over exactly what leaves the sandbox while keeping secrets out of the code entirely. Because the firewall attaches secrets to outbound requests itself, sandboxed code can call authenticated services like without ever seeing the token.AI GatewayDefine , , or custom network policies with domain and IP-based]]></content>
+        <published>2026-08-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vercel Sandbox now supports Devin Outposts | Vercel News]]></title>
+        <id>https://vercel.com/changelog/vercel-sandbox-now-supports-devin-outposts</id>
+        <link href="https://vercel.com/changelog/vercel-sandbox-now-supports-devin-outposts"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7ALO8LZEg3OpeSVkxVHqdX/e0488cb6cc295424d6ff0921a4920455/image.png" type="image/png"/>
+        <updated>2026-08-04T23:01:00.000Z</updated>
+        <summary type="html"><![CDATA[now supports . Each Devin session executes in its own isolated Sandbox microVM, with no local Outpost worker to keep online.Vercel SandboxDevin OutpostsThe Devin control plane stays with Cognition, wh]]></summary>
+        <content type="html"><![CDATA[now supports . Each Devin session executes in its own isolated Sandbox microVM, with no local Outpost worker to keep online.Vercel SandboxDevin OutpostsThe Devin control plane stays with Cognition, where the agent loop handles inference and planning. Session orchestration and command execution run in your Vercel project, and a manages each session's lifecycle.durable workflowWith the integration, teams can:To get started, and approve the connection as a Devin administrator. Encrypted credentials]]></content>
+        <published>2026-08-04T23:01:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Software Supply Chain Is Under Siege. Devs Are Still the First Line of Defense | Docker]]></title>
+        <id>https://www.docker.com/?p=92640</id>
+        <link href="https://www.docker.com/blog/software-supply-chain-security-omdia-2026-report/"/>
+        <link rel="enclosure" href="https://www.docker.com/app/uploads/2025/03/image.png" type="image/png"/>
+        <updated>2026-08-04T15:10:16.000Z</updated>
+        <summary type="html"><![CDATA[77% of organizations experienced a software supply chain incident in the past year. Explore Omdia's latest research on top risks, security gaps, and why developers are your first line of defense.]]></summary>
+        <content type="html"><![CDATA[77% of organizations experienced a software supply chain incident in the past year. Explore Omdia's latest research on top risks, security gaps, and why developers are your first line of defense.]]></content>
+        <author>
+            <name>Jin Kim</name>
+        </author>
+        <category label="Engineering"/>
+        <category label="Security"/>
+        <category label="AI Agent"/>
+        <category label="AI/ML"/>
+        <category label="Docker"/>
+        <category label="Research Insights"/>
+        <category label="SBOM"/>
+        <category label="Secure Software Supply Chain"/>
+        <category label="security"/>
+        <category label="software supply chain security"/>
+        <published>2026-08-04T15:10:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Next.js 16.3 support on Vercel | Vercel News]]></title>
+        <id>https://vercel.com/blog/vercel-supports-next-js-16-3</id>
+        <link href="https://vercel.com/blog/vercel-supports-next-js-16-3"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4b6hesIsDxKvyZUCUQVwTH/7e79c19178670057e31aeca91782574f/image.png" type="image/png"/>
+        <updated>2026-08-04T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Yesterday the Next.js team announced the release of , with leaner prefetching, immutable static assets, and instant navigations. As part of this release, we worked with the Next.js team to fully suppo]]></summary>
+        <content type="html"><![CDATA[Yesterday the Next.js team announced the release of , with leaner prefetching, immutable static assets, and instant navigations. As part of this release, we worked with the Next.js team to fully support 16.3 on Vercel, including better performance and additional observability. Applications that have upgraded have seen:Next.js 16.3Next.js 16.3 ships leaner prefetching and enables immutable static assets by default. Supporting both meant changing the platform too, in how it caches static assets, r]]></content>
+        <published>2026-08-04T07:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Evo Continuous Offensive Security Is Here Pentesting Grade Coverage For The 350 Days A Year You Aren't Testing | Blog RSS Feed | Snyk]]></title>
+        <id>https://snyk.io/blog/evo-continuous-offensive-security/</id>
+        <link href="https://snyk.io/blog/evo-continuous-offensive-security/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/snyk/image/upload/v1785793425/snyk-evo-cos-pr_zf6grj.png" type="image/png"/>
+        <updated>2026-08-04T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Snyk Evo Continuous Offensive Security brings autonomous, AI-powered pentesting to the 350 days between traditional tests, uncovering exploitable flaws attackers can find first.]]></summary>
+        <content type="html"><![CDATA[Snyk Evo Continuous Offensive Security brings autonomous, AI-powered pentesting to the 350 days between traditional tests, uncovering exploitable flaws attackers can find first.]]></content>
+        <published>2026-08-04T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI Model Risk Intelligence Know Which Models You Can Trust Before You Deploy | Blog RSS Feed | Snyk]]></title>
+        <id>https://snyk.io/blog/why-we-rebuilt-evo-ai-model-risk-scoring/</id>
+        <link href="https://snyk.io/blog/why-we-rebuilt-evo-ai-model-risk-scoring/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/snyk/image/upload/v1782152648/Blog_feature_gj8ts8.png" type="image/png"/>
+        <updated>2026-08-04T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI model risk depends on how a model is deployed. Learn how Evo combines adversarial testing, attack impact, and deployment context to help teams compare models and enforce policy.]]></summary>
+        <content type="html"><![CDATA[AI model risk depends on how a model is deployed. Learn how Evo combines adversarial testing, attack impact, and deployment context to help teams compare models and enforce policy.]]></content>
+        <published>2026-08-04T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stop The Sprawl Snyk Secrets Now Generally Available | Blog RSS Feed | Snyk]]></title>
+        <id>https://snyk.io/blog/snyk-secrets/</id>
+        <link href="https://snyk.io/blog/snyk-secrets/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/snyk/image/upload/v1785790842/blog-feature-snyk-secrets_aazgdq.png" type="image/png"/>
+        <updated>2026-08-04T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Snyk Secrets is now generally available, bringing contextual ML detection, secure-at-commit prevention, and unified secrets governance to the Snyk AI Security Platform.]]></summary>
+        <content type="html"><![CDATA[Snyk Secrets is now generally available, bringing contextual ML detection, secure-at-commit prevention, and unified secrets governance to the Snyk AI Security Platform.]]></content>
+        <published>2026-08-04T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A First Look at Evo Agentic AppSec: Agentic Remediation and Malicious Code Defense | Blog RSS Feed | Snyk]]></title>
+        <id>https://snyk.io/blog/remediation-agent-malicious-code-defense/</id>
+        <link href="https://snyk.io/blog/remediation-agent-malicious-code-defense/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/snyk/image/upload/v1698944636/feature-ai-ide-dark.jpg" type="image/jpg"/>
+        <updated>2026-08-04T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Explore Snyk’s first Agentic AppSec capabilities: an autonomous Remediation Agent that fixes vulnerabilities and Malicious Code Defense that blocks risky packages before they ship.]]></summary>
+        <content type="html"><![CDATA[Explore Snyk’s first Agentic AppSec capabilities: an autonomous Remediation Agent that fixes vulnerabilities and Malicious Code Defense that blocks risky packages before they ship.]]></content>
+        <published>2026-08-04T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Inside the keyv npm Compromise: preinstall Malware, Trusted Provenance, and IDE Hooks | Blog RSS Feed | Snyk]]></title>
+        <id>https://snyk.io/blog/inside-keyv-npm-compromise-preinstall-malware-trusted-provenance-ide-hooks/</id>
+        <link href="https://snyk.io/blog/inside-keyv-npm-compromise-preinstall-malware-trusted-provenance-ide-hooks/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/snyk/image/upload/v1686004185/feature-insights-context.jpg" type="image/jpg"/>
+        <updated>2026-08-04T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[keyv 6.0.0 and ten related npm releases shipped install-time malware. See affected versions, hashes, detection steps, and safe remediation order.]]></summary>
+        <content type="html"><![CDATA[keyv 6.0.0 and ten related npm releases shipped install-time malware. See affected versions, hashes, detection steps, and safe remediation order.]]></content>
+        <published>2026-08-04T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Deploys are now up to 33% faster for apps with many ISR pages | Vercel News]]></title>
+        <id>https://vercel.com/changelog/deploys-are-now-up-to-33-faster-for-apps-with-many-isr-pages</id>
+        <link href="https://vercel.com/changelog/deploys-are-now-up-to-33-faster-for-apps-with-many-isr-pages"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/32zndUtzXEByqOcq1GuMYp/dcc458b2d38a3d90a69fa772fcc0fda5/ISR-og.png" type="image/png"/>
+        <updated>2026-08-04T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Deploys are now up to 33% faster for apps using (ISR). The more prerendered pages you have, the more you're likely to save.Incremental Static RegenerationISR combines the speed of static generation wi]]></summary>
+        <content type="html"><![CDATA[Deploys are now up to 33% faster for apps using (ISR). The more prerendered pages you have, the more you're likely to save.Incremental Static RegenerationISR combines the speed of static generation with the flexibility of dynamic rendering, letting sites update content without full rebuilds. Every ISR page has routing metadata that ships alongside it. Previously, when that metadata grew too large, it split into a separate upload, adding work to every deploy. Now it always ships in a single uploa]]></content>
+        <published>2026-08-04T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Give your eve agent a browser | Vercel News]]></title>
+        <id>https://vercel.com/changelog/give-your-eve-agent-a-browser</id>
+        <link href="https://vercel.com/changelog/give-your-eve-agent-a-browser"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1D7dKimTHvQQeeW7Xa87YH/ae57e47291e68f5acb7a0376d64c2afd/give-your-agent-a-browser-04__2_.png" type="image/png"/>
+        <updated>2026-08-04T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Your eve agent can now navigate the web like a human with .agent-browserThe extension gives any agent a full set of browser tools: navigate pages, read content, click, fill forms, take screenshots, an]]></summary>
+        <content type="html"><![CDATA[Your eve agent can now navigate the web like a human with .agent-browserThe extension gives any agent a full set of browser tools: navigate pages, read content, click, fill forms, take screenshots, and inspect console and network activity. Everything runs inside the agent's sandbox.@agent-browser/eveeveInstall the extension:Then mount it under :agent/extensions/Your agent gets namespaced tools like , , , , and . Snapshot refs such as become selectors, so the agent can inspect a page, then act on]]></content>
+        <published>2026-08-04T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI consolidation: Why platforms will win and portfolios will break | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/ai-consolidation</id>
+        <link href="https://www.elastic.co/blog/ai-consolidation"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt8d6bbed8ff8489df/6a72319fb966e1a05063dba5/ai-consolidation.png" type="image/png"/>
+        <updated>2026-08-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Our partners are proof that getting this architecture right drives real success. By building on Elastic’s unified platform rather than a fragmented portfolio, they bypass the friction of integrating d]]></summary>
+        <content type="html"><![CDATA[Our partners are proof that getting this architecture right drives real success. By building on Elastic’s unified platform rather than a fragmented portfolio, they bypass the friction of integrating disparate tools.]]></content>
+        <author>
+            <name>Jesse Sladek</name>
+        </author>
+        <published>2026-08-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elastic 9.5: Columnar, VectorDB index mode &amp;amp; auto-calibration, and AI-driven alert triage | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/whats-new-elastic-9-5-0</id>
+        <link href="https://www.elastic.co/blog/whats-new-elastic-9-5-0"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt06b80eb6b39592e6/6a68e60caacc0d215b0b13f9/9.5-blog.png" type="image/png"/>
+        <updated>2026-08-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today, we are pleased to announce the GA of Elastic 9.5 as the latest version of the Elasticsearch Platform. This release includes a range of new features, including Columnar Mode, VectorDB index mode]]></summary>
+        <content type="html"><![CDATA[Today, we are pleased to announce the GA of Elastic 9.5 as the latest version of the Elasticsearch Platform. This release includes a range of new features, including Columnar Mode, VectorDB index mode, and Agent Builder enhancements. Learn more.]]></content>
+        <author>
+            <name>Sarah Leslie</name>
+        </author>
+        <published>2026-08-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Azure Private Link for Elastic Cloud Serverless is now generally available | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+        <id>https://www.elastic.co/blog/azure-private-link-elastic-cloud-serverless</id>
+        <link href="https://www.elastic.co/blog/azure-private-link-elastic-cloud-serverless"/>
+        <link rel="enclosure" href="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blta15262f936172268/6a714ea20c5aa94fbdf8672a/azure-privatelink.png" type="image/png"/>
+        <updated>2026-08-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Azure Private Link for Elastic Cloud Serverless is generally available. Your traffic stays inside Azure's private backbone — no public internet exposure required.]]></summary>
+        <content type="html"><![CDATA[Azure Private Link for Elastic Cloud Serverless is generally available. Your traffic stays inside Azure's private backbone — no public internet exposure required.]]></content>
+        <author>
+            <name>Alex Chalkias,Jordi Mon Companys</name>
+        </author>
+        <published>2026-08-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DeepSeek V4 Flash is 90% off through Novita on AI Gateway | Vercel News]]></title>
+        <id>https://vercel.com/changelog/deepseek-v4-flash-is-90-off-through-novita</id>
+        <link href="https://vercel.com/changelog/deepseek-v4-flash-is-90-off-through-novita"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5uAgA0rYB6pYoAuTLppcBm/257f777f9afbc9e6cc5dca8685ab78da/deepseekflashfinal.png" type="image/png"/>
+        <updated>2026-08-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[is 90% off on AI Gateway when you route to Novita. The discount is available to Vercel Pro customers through August 11.DeepSeek v4 FlashTo get the discounted rate, set the to or and put Novita first w]]></summary>
+        <content type="html"><![CDATA[is 90% off on AI Gateway when you route to Novita. The discount is available to Vercel Pro customers through August 11.DeepSeek v4 FlashTo get the discounted rate, set the to or and put Novita first with the option:modeldeepseek/deepseek-v4-flashdeepseek/deepseek-v4-flash-0731orderIf Novita can't serve the request, it falls back to other providers at the standard rate. After August 11, the model stays available at standard rates with no markup. in the AI Gateway section of your dashboard, or try]]></content>
+        <published>2026-08-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vercel WAF for Blob is now generally available | Vercel News]]></title>
+        <id>https://vercel.com/changelog/vercel-waf-for-blob-is-now-generally-available</id>
+        <link href="https://vercel.com/changelog/vercel-waf-for-blob-is-now-generally-available"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/nY1cXBWmX1t9YT9OkZTGS/11b47e364e3bfeea0d0aa95db20db21c/vercel_waf_for_blob_is_generally_available_og_card__1_.jpg" type="image/jpg"/>
+        <updated>2026-08-03T17:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Vercel WAF for Blob is now generally available and supported for production use on all plans. If you protected a store , nothing has changed: your rules and setup carry over exactly as they are.during]]></summary>
+        <content type="html"><![CDATA[Vercel WAF for Blob is now generally available and supported for production use on all plans. If you protected a store , nothing has changed: your rules and setup carry over exactly as they are.during the beta protects a Blob store with , the same kind you use to guard your deployments. Rules that match on properties like IP address, country, and path can deny, challenge, or rate limit requests to your stored objects. This requires no changes to your code, your blob URLs, or how you use .Vercel ]]></content>
+        <published>2026-08-03T17:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gateway API v1.6: TCPRoute and UDPRoute Graduate to Standard | Kubernetes Blog]]></title>
+        <id>https://kubernetes.io/blog/2026/08/03/gateway-api-v1-6-release/</id>
+        <link href="https://kubernetes.io/blog/2026/08/03/gateway-api-v1-6-release/"/>
+        <link rel="enclosure" href="https://kubernetes.io/blog/2026/08/03/gateway-api-v1-6-release/gateway-api-logo.svg" type="image/svg"/>
+        <updated>2026-08-03T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Kubernetes SIG Network community is thrilled to share the release of Gateway API v1.6.0, which was released on June 30th of this year!Gateway API has become the standard for modern, role-oriented,]]></summary>
+        <content type="html"><![CDATA[The Kubernetes SIG Network community is thrilled to share the release of Gateway API v1.6.0, which was released on June 30th of this year!Gateway API has become the standard for modern, role-oriented,and expressive service networking in Kubernetes.In previous releases, Gateway API established a production-grade foundationfor HTTP and TLS layer 7 traffic.With version 1.6.0, Gateway API takes a major step forward by expandingstandard layer 4 protocol routing and introducing cleaner API boundaries ]]></content>
+        <published>2026-08-03T16:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Empty sandboxes break developer experience | Docker]]></title>
+        <id>https://www.docker.com/?p=92667</id>
+        <link href="https://www.docker.com/blog/empty-sandboxes-break-developer-experience/"/>
+        <link rel="enclosure" href="https://www.docker.com/app/uploads/2025/03/image.png" type="image/png"/>
+        <updated>2026-08-03T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn how Docker Sandbox kits turn empty sandboxes into productive development environments with repeatable tooling, credentials, and configuration.]]></summary>
+        <content type="html"><![CDATA[Learn how Docker Sandbox kits turn empty sandboxes into productive development environments with repeatable tooling, credentials, and configuration.]]></content>
+        <author>
+            <name>Jennifer Kohl</name>
+        </author>
+        <category label="Products"/>
+        <category label="AI Agent"/>
+        <category label="Docker Sandboxes"/>
+        <published>2026-08-03T13:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker AI Governance: Audit Logs, Now Where Your Security Team Already Works | Docker]]></title>
+        <id>https://www.docker.com/?p=92655</id>
+        <link href="https://www.docker.com/blog/docker-ai-governance-audit-logs-now-where-your-security-team-already-works/"/>
+        <link rel="enclosure" href="https://www.docker.com/app/uploads/2025/03/image.png" type="image/png"/>
+        <updated>2026-08-03T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Now in Docker AI Governance: a single searchable record of every policy decision your agents trigger, streamed to the SIEM your security team already runs, so you can show what your agents did and wha]]></summary>
+        <content type="html"><![CDATA[Now in Docker AI Governance: a single searchable record of every policy decision your agents trigger, streamed to the SIEM your security team already runs, so you can show what your agents did and what your policy stopped. Today, Docker AI Governance now streams every policy decision in your organization into the SIEM your security...]]></content>
+        <author>
+            <name>Srini Sekaran</name>
+        </author>
+        <category label="Products"/>
+        <category label="Solutions"/>
+        <category label="Audit"/>
+        <category label="Docker AI Governance"/>
+        <published>2026-08-03T13:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How Factory scaled its cloud backend to one billion monthly requests on Vercel | Vercel News]]></title>
+        <id>https://vercel.com/blog/how-factory-scaled-its-cloud-backend-to-one-billion-monthly-requests-on-vercel</id>
+        <link href="https://vercel.com/blog/how-factory-scaled-its-cloud-backend-to-one-billion-monthly-requests-on-vercel"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/owoEjlb0zSaqAseyETnTQ/35f2ee502362e88812ee894c4509e93e/how_factory_scaled_its_backend_to_tens_of_millions_og_card.jpg" type="image/jpg"/>
+        <updated>2026-08-03T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Factory on VercelNon-technical teams were bottlenecked on engineeringDroids hit Vercel's APIs to build and deploy autonomouslyGoing self-serve exposed Factory's backend to a new category of threatObse]]></summary>
+        <content type="html"><![CDATA[Factory on VercelNon-technical teams were bottlenecked on engineeringDroids hit Vercel's APIs to build and deploy autonomouslyGoing self-serve exposed Factory's backend to a new category of threatObservability and WAF handle protection at the network levelOne billion backend API requests served daily 350ms p95 response timeScaled backend, internal tooling, and security without a dedicated infrastructure teamAPI routes handle the customer-facing API, which launched in its own section of their Nex]]></content>
+        <published>2026-08-03T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Secure every commit to production with Claude and GitLab | GitLab]]></title>
+        <id>https://about.gitlab.com/blog/claude-security-and-gitlab/</id>
+        <link href="https://about.gitlab.com/blog/claude-security-and-gitlab/"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/about-gitlab-com/image/upload/v1756122536/akivvcnafog9c4dhhzkp.png" type="image/png"/>
+        <updated>2026-08-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Agentic coding is moving faster than many enterprise governance programs can keep up with. Coding assistants, like the Claude security guidance plugin and Claude Security, can flag and fix common vuln]]></summary>
+        <content type="html"><![CDATA[Agentic coding is moving faster than many enterprise governance programs can keep up with. Coding assistants, like the Claude security guidance plugin and Claude Security, can flag and fix common vulnerabilities in code as it's written, in the same session. This is valuable for writing more secure code, but security doesn't stop there. A commit is one stage in the path to production: Merges, dependency updates, infrastructure changes, and audits happen after the session ends.GitLab covers securi]]></content>
+        <published>2026-08-03T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Share Vercel Container Registry repositories across teams | Vercel News]]></title>
+        <id>https://vercel.com/changelog/share-vercel-container-registry-repositories-across-teams</id>
+        <link href="https://vercel.com/changelog/share-vercel-container-registry-repositories-across-teams"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/26I9bvjAxqKs55H4XkLkSF/1c651b5eb656ec25856e5ab2a3a5cf8e/image__4_.png" type="image/png"/>
+        <updated>2026-08-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[now lets you share a repository with other Vercel teams to grant read access to its images.Vercel Container RegistrySharing is read-only and covers the whole repository. Recipients can pull and use ev]]></summary>
+        <content type="html"><![CDATA[now lets you share a repository with other Vercel teams to grant read access to its images.Vercel Container RegistrySharing is read-only and covers the whole repository. Recipients can pull and use every image, but cannot push, delete, or re-share. You can also share a repository with your own team. Each repository can be shared with up to 100 teams. Share from the project dashboard under Images → repository → Settings → Repository Sharing, or with the Vercel CLI:# Share a repository with a team]]></content>
+        <published>2026-08-03T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Qwen 3.8 Max now available on Vercel AI Gateway | Vercel News]]></title>
+        <id>https://vercel.com/changelog/qwen-3-8-max-now-available-on-vercel-ai-gateway</id>
+        <link href="https://vercel.com/changelog/qwen-3-8-max-now-available-on-vercel-ai-gateway"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2aBIEKewKIpdYSPv9E76Wn/5a0957249bafced81d33df0534df0187/Vercel_x_Qwen.png" type="image/png"/>
+        <updated>2026-08-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[is now available on AI Gateway.Qwen 3.8 MaxQwen 3.8 Max handles text-only and vision-language work in one model, with 2.4 trillion parameters and a context window of up to 1 million tokens. The model ]]></summary>
+        <content type="html"><![CDATA[is now available on AI Gateway.Qwen 3.8 MaxQwen 3.8 Max handles text-only and vision-language work in one model, with 2.4 trillion parameters and a context window of up to 1 million tokens. The model is suited for software engineering and office productivity, along with visual work like turning screenshots or design files into working pages, captioning video, and answering questions grounded in an image.To use Qwen 3.8 Max, set to .modelalibaba/qwen3.8-maxTry Qwen 3.8 Max in the .model playgroun]]></content>
+        <published>2026-08-02T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI Gateway now supports team and project spend budgets | Vercel News]]></title>
+        <id>https://vercel.com/changelog/ai-gateway-spend-budgets-and-alerts</id>
+        <link href="https://vercel.com/changelog/ai-gateway-spend-budgets-and-alerts"/>
+        <link rel="enclosure" href="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6X797219tbul2kft7JW0Wc/dd811ac1aa2b8ed70f10fba2c6f24ea6/team_and_project_budgets_available_on_ai_gateway_og_card__1_.jpg" type="image/jpg"/>
+        <updated>2026-07-31T17:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI Gateway spend budgets can now be scoped to a team or a project, in addition to individual API keys. Set a dollar limit on a scope, and the gateway meters spend against it and stops further requests]]></summary>
+        <content type="html"><![CDATA[AI Gateway spend budgets can now be scoped to a team or a project, in addition to individual API keys. Set a dollar limit on a scope, and the gateway meters spend against it and stops further requests once the limit is reached, until the budget resets or you raise it.A budget attaches to one of three scopes. A request can fall under multiple budgets and has to pass all of them: if any one is over its limit, the request is rejected, even when the others have room left.BYOK spend is not counted ag]]></content>
+        <published>2026-07-31T17:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker OIDC connections for GitHub Actions available for Docker Orgs | Docker]]></title>
+        <id>https://www.docker.com/?p=92559</id>
+        <link href="https://www.docker.com/blog/docker-oidc-connections-for-github-actions-available-for-docker-orgs/"/>
+        <link rel="enclosure" href="https://www.docker.com/app/uploads/2025/03/image.png" type="image/png"/>
+        <updated>2026-07-31T16:30:48.000Z</updated>
+        <summary type="html"><![CDATA[Eliminate Stored Credentials in Your CI/CD Pipelines TL;DR: Docker now supports OpenID Connect (OIDC) for GitHub Actions. Your workflows can authenticate with short-lived, per-run tokens instead of st]]></summary>
+        <content type="html"><![CDATA[Eliminate Stored Credentials in Your CI/CD Pipelines TL;DR: Docker now supports OpenID Connect (OIDC) for GitHub Actions. Your workflows can authenticate with short-lived, per-run tokens instead of stored PATs or OATs. No secrets to rotate, no credentials to leak. GitHub OIDC connections are available to organizations with Docker Team, Docker Business, or Docker Hardened Images...]]></content>
+        <author>
+            <name>Dan Berezin Stelzer</name>
+        </author>
+        <category label="Products"/>
+        <category label="Docker Hub"/>
+        <category label="github actions"/>
+        <category label="oidc connections"/>
+        <category label="security"/>
+        <category label="software supply chain security"/>
+        <published>2026-07-31T16:30:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kubernetes v1.37 Sneak Peek | Kubernetes Blog]]></title>
+        <id>https://kubernetes.io/blog/2026/07/31/kubernetes-v1-37-sneak-peek/</id>
+        <link href="https://kubernetes.io/blog/2026/07/31/kubernetes-v1-37-sneak-peek/"/>
+        <updated>2026-07-31T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[As we get closer to the release date for Kubernetes v1.37, the project develops and matures,features may be deprecated, removed, or replaced with better ones for the project's overallhealth. This blog]]></summary>
+        <content type="html"><![CDATA[As we get closer to the release date for Kubernetes v1.37, the project develops and matures,features may be deprecated, removed, or replaced with better ones for the project's overallhealth. This blog outlines some of the planned changes for the Kubernetes v1.37 release that therelease team feels you should be aware of for the continued maintenance of your Kubernetesenvironment and keeping up to date with the latest changes. The information below reflects thecurrent status of the v1.37 release a]]></content>
+        <published>2026-07-31T16:00:00.000Z</published>
+    </entry>
+</feed>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/</id>
+    <title>Think IT｜企業テックブログRSS</title>
+    <updated>2026-08-08T15:22:29.593Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/feeds/atom.xml"/>
+    <subtitle>Think ITセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[「GNOME 50.4/49.9」リリース ─ GDMとGLibの脆弱性を修正 | ]]></title>
+        <id>39442 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/news/39442"/>
+        <updated>2026-08-08T14:53:01.000Z</updated>
+        <summary type="html"><![CDATA[「GNOME 50.4/49.9」リリース ─ GDMとGLibの脆弱性を修正 GNOME ShellやMutterの表示・操作関連の不具合も改善kawahara2026年8月8日シェア ポスト はてブ 優先するニュース提供元に追加 GNOME Release Teamは8月5日(現地時間)、デスクトップ環境「GNOME 50.4/49.9」をリリースした。 「GNOME 50.4」は、GNOME]]></summary>
+        <content type="html"><![CDATA[「GNOME 50.4/49.9」リリース ─ GDMとGLibの脆弱性を修正 GNOME ShellやMutterの表示・操作関連の不具合も改善kawahara2026年8月8日シェア ポスト はてブ 優先するニュース提供元に追加 GNOME Release Teamは8月5日(現地時間)、デスクトップ環境「GNOME 50.4/49.9」をリリースした。 「GNOME 50.4」は、GNOME 50系列の安定版アップデートリリース。ハイライトは次の通り。なお、本リリースのアップデートのいくつかを施した「GNOME 49.9」も同日にリリースされている。 「GNOME 50.3/49.9」は、Webサイトから入手できる。(川原 龍人/びぎねっと)[関連リンク]リリースアナウンス(GNOME 50.4)リリースアナウンス(GNOME 49.9) この記事をシェアしてください シェアする ポストする &amp;gt;ブクマする noteで書く 優先するニュース提供元にThink ITを追加 前の記事「Python 3.14.7/3.13.15」リリース ─ 約900件の修正・改善 関連記事この記事の筆]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-08-08T14:53:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MySQLの「ST_Union()」でポリゴンを合体させてみよう | ]]></title>
+        <id>39417 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/article/39417"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/94/39417/ren_mysql-gis_cover.png?itok=4s6ONwZQ" type="image/png"/>
+        <updated>2026-08-06T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに前回はST_Area()関数を使って、POLYGONの面積を計算する方法を紹介しました。今回は、2つのPolygonを1つに合体させる「ST_Union()」関数を紹介します。複数の市町村をまとめて「地域」として扱ったり、エリアを拡張したりと、様々な場面で活用できる機能です。ST_Union()の基本ST_Union()は、2つのジオメトリを与えられると、それらを合体させ、1つのジオメトリ]]></summary>
+        <content type="html"><![CDATA[はじめに前回はST_Area()関数を使って、POLYGONの面積を計算する方法を紹介しました。今回は、2つのPolygonを1つに合体させる「ST_Union()」関数を紹介します。複数の市町村をまとめて「地域」として扱ったり、エリアを拡張したりと、様々な場面で活用できる機能です。ST_Union()の基本ST_Union()は、2つのジオメトリを与えられると、それらを合体させ、1つのジオメトリを返す関数です。まずはシンプルな例として、互いに重なる2つの四角形を合体させてみましょう。mysql&amp;gt; SET @g1 = ST_GeomFromText('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))');mysql&amp;gt; SET @g2 = ST_GeomFromText('POLYGON((0.5 0.5, 0.5 1.2, 1.5 1.2, 1.5 0.5, 0.5 0.5))');mysql&amp;gt; SELECT ST_AsText(ST_Union(@g1, @g2));+------------------------------------------------]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-08-06T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【クラウドネイティブ会議】相手を知ることから始める、使われる社内基盤を育てるためのプラットフォームエンジニアリング | ]]></title>
+        <id>39436 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/article/39436"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/94/39436/39436_main.jpg?itok=5ZhGaao5" type="image/jpg"/>
+        <updated>2026-08-06T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[クラウドネイティブ技術の浸透により、開発者の責任範囲と認知負荷が拡大するなか、注目されているのがプラットフォームエンジニアリングである。クラウドネイティブ会議のセッション「プラットフォームエンジニアリング 結局何をすれば良いのか」では、PagerDuty Japanの草間一人氏が、プラットフォームを「魅力的な社内プロダクト」として捉え、使う相手を知り、小さく始め、プロダクトとして育て続ける重要性を]]></summary>
+        <content type="html"><![CDATA[クラウドネイティブ技術の浸透により、開発者の責任範囲と認知負荷が拡大するなか、注目されているのがプラットフォームエンジニアリングである。クラウドネイティブ会議のセッション「プラットフォームエンジニアリング 結局何をすれば良いのか」では、PagerDuty Japanの草間一人氏が、プラットフォームを「魅力的な社内プロダクト」として捉え、使う相手を知り、小さく始め、プロダクトとして育て続ける重要性を解説した。プラットフォームエンジニアリングとは何か、認知負荷を下げる共通基盤草間氏はまず、「プラットフォームとは何か」から説明を始めた。ここでは開発者や運用者に役立つ機能を「魅力的な社内プロダクト」として整備した基盤をプラットフォームと位置づける。ここでいう機能には、セルフサービスのAPI、ツール、サービス、ナレッジ、サポートなどが含まれる。共通機能を提供し管理することで、開発者やオペレーターがアプリケーションやサービスを迅速に提供できるようにするものだ。 この定義を説明するために、草間氏は空港の例を挙げた。空港には多くの航空会社が乗り入れているが、滑走路や管制塔、給油設備、保安検査場などを航]]></content>
+        <author>
+            <name>iioka</name>
+        </author>
+        <published>2026-08-06T21:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Python 3.14.7/3.13.15」リリース ─ 約900件の修正・改善 | ]]></title>
+        <id>39437 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/news/39437"/>
+        <updated>2026-08-06T15:33:38.000Z</updated>
+        <summary type="html"><![CDATA[「Python 3.14.7/3.13.15」リリース ─ 約900件の修正・改善 tarfileの脆弱性、HTML/XML処理のDoS問題などを修正kawahara2026年8月7日シェア ポスト はてブ 優先するニュース提供元に追加 Python Software Foundationは8月5日(現地時間)、プログラミング言語「Python 3.14.7/3.13.15」をリリースした。 「P]]></summary>
+        <content type="html"><![CDATA[「Python 3.14.7/3.13.15」リリース ─ 約900件の修正・改善 tarfileの脆弱性、HTML/XML処理のDoS問題などを修正kawahara2026年8月7日シェア ポスト はてブ 優先するニュース提供元に追加 Python Software Foundationは8月5日(現地時間)、プログラミング言語「Python 3.14.7/3.13.15」をリリースした。 「Python」は、オブジェクト指向、命令型、関数型など複数のプログラミングスタイルに対応する汎用プログラミング言語。簡潔で可読性の高い構文や、豊富な標準ライブラリおよび外部パッケージなどを特徴としている。 「Python 3.14.7」は、Python 3.14.6以降86人のコントリビューターによる約499件のバグ修正、ビルド改善、ドキュメント変更が取り込まれた。また同時に公開された「Python 3.13.15」は、Python 3.13.14以降の約400件のバグ修正、ビルド改善、ドキュメント変更が施されている。 セキュリティ関連では、html.parser.HTMLParserにおいて、]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-08-06T15:33:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Tails 7.10.1」リリース ─ 緊急性の高いセキュリティアップデート | ]]></title>
+        <id>39435 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/news/39435"/>
+        <updated>2026-08-06T02:16:01.000Z</updated>
+        <summary type="html"><![CDATA[「Tails 7.10.1」リリース ─ 緊急性の高いセキュリティアップデート Linux 6.12.100とExpat 2.8.2を採用、計22件のCVEに対処kawahara2026年8月6日シェア ポスト はてブ 優先するニュース提供元に追加 Tails Teamは8月5日(現地時間)、ユーザのプライバシー保護施策に注力したLinuxディストリビューション「Tails 7.10.1」をリリー]]></summary>
+        <content type="html"><![CDATA[「Tails 7.10.1」リリース ─ 緊急性の高いセキュリティアップデート Linux 6.12.100とExpat 2.8.2を採用、計22件のCVEに対処kawahara2026年8月6日シェア ポスト はてブ 優先するニュース提供元に追加 Tails Teamは8月5日(現地時間)、ユーザのプライバシー保護施策に注力したLinuxディストリビューション「Tails 7.10.1」をリリースした。 「Tails 7.10.1」のハイライトは次の通り。 今回のアップデートでは、Linuxカーネルに存在するCVE-2026-64560への対応が重要な修正となる。同脆弱性が悪用されると、Tails上のTor Browserが管理者権限を不正に取得する可能性がある。これによって、利用者が悪意あるWebサイトへアクセスした場合、攻撃者にTailsを完全に制御され、利用者の匿名性を解除される危険がある。そのほかにも、いくつかのセキュリティ修正が施されており、ユーザはアップデートを施すことが推奨される。 「Tails 7.10.1」は、Webサイトから入手できる。(川原 龍人/びぎねっと)[]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-08-06T02:16:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【若者と生成AI】検索から相談相手へ ーAIネイティブ世代に必要な距離感ー | ]]></title>
+        <id>39415 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/article/39415"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/ren_gen-ai-times_main_35.png?itok=XudJkoK8" type="image/png"/>
+        <updated>2026-08-05T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[本記事は、生成AIコミュニティ「IKIGAI lab.」に所属するメンバーが、生成AIに関するニュースを紹介＆深掘りしながら、AIがもたらす「半歩先」の未来に皆さんをご案内します。はじめに「この問題の解き方を教えて！」若者の生成AI利用は、検索や文章作成だけでなく、学習、雑談、悩み相談へと広がっています。LINEリサーチによると、10代の利用目的として学習支援が多く、10〜30代女性の間では会話や]]></summary>
+        <content type="html"><![CDATA[本記事は、生成AIコミュニティ「IKIGAI lab.」に所属するメンバーが、生成AIに関するニュースを紹介＆深掘りしながら、AIがもたらす「半歩先」の未来に皆さんをご案内します。はじめに「この問題の解き方を教えて！」若者の生成AI利用は、検索や文章作成だけでなく、学習、雑談、悩み相談へと広がっています。LINEリサーチによると、10代の利用目的として学習支援が多く、10〜30代女性の間では会話や悩み相談への利用も目立ちます。生成AIはユーザーの質問にカスタマイズされた回答を作り、続けて相談できる点が従来の検索サービスと異なります。そのため、情報を調べる道具であると同時に、若者の間では家庭教師や相談相手に近い役割としても利用されています。本記事では、主に10代から20代を若者として、国内外の利用状況と、安全に使うためのルールを検討します。【出典】「【LINEリサーチ】生成AIの認知度は9割強！全体の利用率は3割強、10代で最も高く6割弱」(PRTIMES 2025/07/22)海外の若者もAIを相談相手にしているのか？日本には『ドラえもん』のように、人とロボットが友人として描かれるアニ]]></content>
+        <author>
+            <name>kaoringo</name>
+        </author>
+        <published>2026-08-05T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「今日はなぜか進まなかった」に名前が付いた――New RelicのOSS「Preflight」がAIコーディングのアンチパターンを検知 | ]]></title>
+        <id>39431 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/article/39431"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/94/39431/ren_3-list-tech-news_cover.png?itok=1vfb8F4e" type="image/png"/>
+        <updated>2026-08-05T21:20:00.000Z</updated>
+        <summary type="html"><![CDATA[📌 このニュース、3行で押さえるなら 📌New Relicが、AI支援型ソフトウェア開発向けのオブザーバビリティ機能「New Relic Preflight」を発表。AIコーディングアシスタントに直接接続し、セッションメトリクス・コスト内訳・動作パターン・効率スコアなどの構造化されたテレメトリーを収集するオープンソースのMCPサーバーとして提供されるスラッシング(進行が見られないのに同じツールを繰]]></summary>
+        <content type="html"><![CDATA[📌 このニュース、3行で押さえるなら 📌New Relicが、AI支援型ソフトウェア開発向けのオブザーバビリティ機能「New Relic Preflight」を発表。AIコーディングアシスタントに直接接続し、セッションメトリクス・コスト内訳・動作パターン・効率スコアなどの構造化されたテレメトリーを収集するオープンソースのMCPサーバーとして提供されるスラッシング(進行が見られないのに同じツールを繰り返し呼び出す)、理由のないトークン使用量の水増し、盲目的なコード変更、行き詰まったループといったアンチパターンを検知。トークン支出をセッション・日次・週次で追跡し、予算のしきい値超過前にアラートを出せるNew Relicアカウント不要でローカル実行でき、ダッシュボード・セッション履歴・週次サマリー・アラートまですべてマシン内に保存される。対応はClaude Code、Cursor、GitHub Copilot、Windsurf、Zed、Continue.dev、Amazon Qおよび一般的なMCP対応クライアント📝 Think IT編集部の見解 📝この発表の要点は、オブザーバビリティの適用範]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-08-05T21:20:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenAI、セキュリティエージェント「Codex Security CLI」を早期公開 ─ 脆弱性の検出・検証・修正を支援 | ]]></title>
+        <id>39434 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/news/39434"/>
+        <updated>2026-08-05T14:51:37.000Z</updated>
+        <summary type="html"><![CDATA[OpenAI、セキュリティエージェント「Codex Security CLI」を早期公開 ─ 脆弱性の検出・検証・修正を支援 TypeScript援 SDKやCI連携にも対応、最新版は0.1.5kawahara2026年8月5日シェア ポスト はてブ 優先するニュース提供元に追加 OpenAIは7月29日(現地時間)、ソースコードの脆弱性を検出、検証、修正するコマンドラインツール「Codex Se]]></summary>
+        <content type="html"><![CDATA[OpenAI、セキュリティエージェント「Codex Security CLI」を早期公開 ─ 脆弱性の検出・検証・修正を支援 TypeScript援 SDKやCI連携にも対応、最新版は0.1.5kawahara2026年8月5日シェア ポスト はてブ 優先するニュース提供元に追加 OpenAIは7月29日(現地時間)、ソースコードの脆弱性を検出、検証、修正するコマンドラインツール「Codex Security CLI」の公開を発表した。最新版は「0.1.5」。 本リリースは「early release(早期公開)」とされており、「Codex Security CLI」とSDKはいずれも現時点ではベータ版に位置付けられている。 複数のスキャン結果を照合し、同一の根本原因を持つ問題を関連付ける機能も備えている。これによって、脆弱性がどのタイミングで発生したのかを比較・検討できる。スキャン範囲が不完全な場合には、検出されなくなった問題を自動的に解決済みとはせず、状態を不明として扱う。 スキャンの対象や方法を柔軟に設定できるのも特徴。リポジトリ内の特定のパスを対象にしたり、指定リビジョンとHE]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-08-05T14:51:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Ruby」の「Gosu」でデスクトップゲーム「Color」を開発してみよう | ]]></title>
+        <id>39410 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/article/39410"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/94/39410/ren_game-prog_etc_cover.png?itok=rFIJ2dzz" type="image/png"/>
+        <updated>2026-08-04T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこの連載では、さまざまなプログラミング言語やライブラリで同じゲームを開発することで、容易にそのプログラミング言語に入門します。第9回の今回はプログラミング言語「Ruby」を使って、次のURLのようなColorゲームを作ります。こちらからアセットをダウンロードしておいてください。ColorゲームについてColorゲームの内容は第1回でも解説した通り、ゲームを開始したら、赤緑青の色ブロックをク]]></summary>
+        <content type="html"><![CDATA[はじめにこの連載では、さまざまなプログラミング言語やライブラリで同じゲームを開発することで、容易にそのプログラミング言語に入門します。第9回の今回はプログラミング言語「Ruby」を使って、次のURLのようなColorゲームを作ります。こちらからアセットをダウンロードしておいてください。ColorゲームについてColorゲームの内容は第1回でも解説した通り、ゲームを開始したら、赤緑青の色ブロックをクリックします。すると背景色にその色が混ぜられるので、どんどんクリックして真っ白な背景にしていこうというゲームです。プログラミング言語についてプログラミング言語「Ruby」はまつもと ゆきひろ氏(Matz)が開発した純国産の言語で、唯一国際電気標準会議(IEC)に認証されたプログラミング言語です。文法が読みやすく、数値や文字列を含めほぼすべてがオブジェクトのオブジェクト指向言語で、開発効率が高く、パッケージ管理システム「Gem」により多くのライブラリを利用できます。RubyではWebアプリケーション、自動化ツール、データ処理、API開発、コマンドラインツール、ゲームなどを作ることができます。Go]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-08-04T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LFのフェローとドコモイノベーションズのCEO、オープンソースへの貢献を増やすためのアイデアを語る＆写真で見るKubeCon Europe 2026 | ]]></title>
+        <id>39430 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/article/39430"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/94/39430/39430_main.jpg?itok=c1PmlRIg" type="image/jpg"/>
+        <updated>2026-08-04T20:59:00.000Z</updated>
+        <summary type="html"><![CDATA[KubeCon＋CloudNativeCon Europe 2026の取材記事の最後となる本稿ではカンファレンスを振り返りつつ、日本のエンタープライズ企業がオープンソースの消費者から還元を行う立場になるためには何が必要か？ について、The Linux Foundationの江藤圭也氏とNTTドコモの子会社で北米におけるドコモのR＆D拠点であるドコモイノベーションズのCEO、秋永和計氏による対談形]]></summary>
+        <content type="html"><![CDATA[KubeCon＋CloudNativeCon Europe 2026の取材記事の最後となる本稿ではカンファレンスを振り返りつつ、日本のエンタープライズ企業がオープンソースの消費者から還元を行う立場になるためには何が必要か？ について、The Linux Foundationの江藤圭也氏とNTTドコモの子会社で北米におけるドコモのR＆D拠点であるドコモイノベーションズのCEO、秋永和計氏による対談形式で語ってもらったものを紹介する。秋永和計氏はドコモイノベーションズのCEOとして、オープンソースだけではなくAWSやGoogleなど北米で開催されるクラウドベンダーのカンファレンスにも参加しているベテランである。江藤氏も富士通を定年退職した後に、The Linux Foundationのフェローとしてオープンソースに関わり続けている人物だ。今回はインタビューに応えてくれた2名の写真以外に、会場で撮り集めたショーケースの写真を紹介する。また2名の他に匿名の見学者も同席し、忌憚の無い意見をもらうことができた。秋永氏には2025年にロンドンで行われたKubeCon Europeでもインタビューに応]]></content>
+        <author>
+            <name>iioka</name>
+        </author>
+        <published>2026-08-04T20:59:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「KDE Plasma 6.7.4」リリース ─ KWinやDiscover、ログイン画面の不具合を修正 | ]]></title>
+        <id>39432 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/news/39432"/>
+        <updated>2026-08-04T15:37:33.000Z</updated>
+        <summary type="html"><![CDATA[「KDE Plasma 6.7.4」リリース ─ KWinやDiscover、ログイン画面の不具合を修正 GPUリセット後の処理、SpectacleのQRコード読み取り、スクリーンキャストも改善kawahara2026年8月5日シェア ポスト はてブ 優先するニュース提供元に追加 KDEは8月4日(現地時間)、デスクトップ環境「KDE Plasma 6.7.4」をリリースした。 「KDE Plas]]></summary>
+        <content type="html"><![CDATA[「KDE Plasma 6.7.4」リリース ─ KWinやDiscover、ログイン画面の不具合を修正 GPUリセット後の処理、SpectacleのQRコード読み取り、スクリーンキャストも改善kawahara2026年8月5日シェア ポスト はてブ 優先するニュース提供元に追加 KDEは8月4日(現地時間)、デスクトップ環境「KDE Plasma 6.7.4」をリリースした。 「KDE Plasma 6.7.4」の主な変更点は次の通り。 「KDE 6.7.4」は、Webサイトから入手できる。(川原 龍人/びぎねっと)[関連リンク]リリースアナウンス変更履歴 この記事をシェアしてください シェアする ポストする &amp;gt;ブクマする noteで書く 優先するニュース提供元にThink ITを追加 前の記事「Samba 4.24.5」「4.23.11」などリリース ─ ADドメイン乗っ取りなど6件の脆弱性を修正 次の記事OpenAI、セキュリティエージェント「Codex Security CLI」を早期公開 ─ 脆弱性の検出・検証・修正を支援 関連記事この記事の筆者 kawahara kawah]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-08-04T15:37:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Samba 4.24.5」「4.23.11」などリリース ─ ADドメイン乗っ取りなど6件の脆弱性を修正 | ]]></title>
+        <id>39433 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/news/39433"/>
+        <updated>2026-08-04T14:23:24.000Z</updated>
+        <summary type="html"><![CDATA[「Samba 4.24.5」「4.23.11」などリリース ─ ADドメイン乗っ取りなど6件の脆弱性を修正 DRSのメモリリーク、CephFS共有利用時のsmbdクラッシュも修正kawahara2026年8月4日シェア ポスト はてブ 優先するニュース提供元に追加 Samba Teamは7月28日(現地時間)、「Samba 4.24.5/4.23.10/4.22.11」をリリースした。また、8月3]]></summary>
+        <content type="html"><![CDATA[「Samba 4.24.5」「4.23.11」などリリース ─ ADドメイン乗っ取りなど6件の脆弱性を修正 DRSのメモリリーク、CephFS共有利用時のsmbdクラッシュも修正kawahara2026年8月4日シェア ポスト はてブ 優先するニュース提供元に追加 Samba Teamは7月28日(現地時間)、「Samba 4.24.5/4.23.10/4.22.11」をリリースした。また、8月3日(現地時間)にはSamba 4.23系列の最新版となる「Samba 4.23.11」をリリースしている。 「Samba」は、Windowsのファイル共有プロトコルであるSMBをオープンソースで実装したサーバソフトウェア。LinuxやUNIX系OSをWindowsネットワークへ参加させ、ファイルサーバ、プリントサーバ、Active Directoryドメインコントローラ、ドメインメンバーなどとして利用できる。 「Samba 4.24.5」は、脆弱性の修正を施したセキュリティリリース。同じ脆弱性を修正した「Samba 4.23.10」および「4.22.11」も同日公開され、4.23系列に関しては]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-08-04T14:23:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[IT初心者でもしっかりわかる！しっかり受かる！『徹底攻略Biz 生成AIパスポート 教科書＆問題集』を5名様にプレゼント！ | ]]></title>
+        <id>38785 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/reader-presents"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/present/bnr-ti-present_2608_600x315.png?itok=SW9Prw4P" type="image/png"/>
+        <updated>2026-08-04T01:00:59.000Z</updated>
+        <summary type="html"><![CDATA[IT初心者でもしっかりわかる！しっかり受かる！『徹底攻略Biz 生成AIパスポート 教科書＆問題集』を5名様にプレゼント！nishi-d2026年8月4日 Think ITで実施している読者プレゼント企画です。ご応募お待ちしています。 シェア ポスト はてブ 優先するニュース提供元に追加 今すぐ応募する! 著者：一般社団法人 生成AI活用普及協会（GUGA）監修価格：1,870円（税込）ページ数：]]></summary>
+        <content type="html"><![CDATA[IT初心者でもしっかりわかる！しっかり受かる！『徹底攻略Biz 生成AIパスポート 教科書＆問題集』を5名様にプレゼント！nishi-d2026年8月4日 Think ITで実施している読者プレゼント企画です。ご応募お待ちしています。 シェア ポスト はてブ 優先するニュース提供元に追加 今すぐ応募する! 著者：一般社団法人 生成AI活用普及協会（GUGA）監修価格：1,870円（税込）ページ数：296ページ出版社：インプレスISBN：9784295024309書籍を詳しく調べる 目次第1章 AI（人工知能）とは 第2章 生成AIとは 第3章 生成AIの現在地 第4章 インターネットリテラシー・基本理念とAI社会原則 第5章 生成AI活用のためのプロンプト 第6章 模擬問題「理解して合格したい」に応える決定版！本書は、ITに不慣れな方でも安心して学習できるよう、専門用語はできるだけ平易な言葉に置き換え、難しい概念は身近な例を使って解説。試験対策に必要な知識を、基礎からしっかりと身に付けることができます。各解説では、試験で特に重要となるポイントを「試験対策」欄に整理。覚えるべきポイントが]]></content>
+        <author>
+            <name>nishi-d</name>
+        </author>
+        <published>2026-08-04T01:00:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「CloudWatch Log Analytics」でCloudTrailからSecurity Hubまでのログを横断分析してみよう | ]]></title>
+        <id>39409 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/article/39409"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/94/39409/ren_devops-tools_main.png?itok=1cQh8f6K" type="image/png"/>
+        <updated>2026-08-03T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに前回では、「AWS Security Hub CSPM」で複数のセキュリティサービスの検出結果を集約する仕組みを構築しました。併せて、CIS AWS Foundations BenchmarkやFSBPに沿った基準評価も自動化しました。これで記録(第25回：CloudTrail)、検知(第26回：GuardDuty)、集約と基準評価(第27回：Security Hub CSPM)が揃いまし]]></summary>
+        <content type="html"><![CDATA[はじめに前回では、「AWS Security Hub CSPM」で複数のセキュリティサービスの検出結果を集約する仕組みを構築しました。併せて、CIS AWS Foundations BenchmarkやFSBPに沿った基準評価も自動化しました。これで記録(第25回：CloudTrail)、検知(第26回：GuardDuty)、集約と基準評価(第27回：Security Hub CSPM)が揃いました。ただし、集約画面と通知だけでは、個別のログを掘り下げた調査には追いつきません。特定のIAMユーザーが過去1週間に呼び出したAPIの一覧、リージョン別のAPI呼び出し件数、EKS上のアプリケーションで頻発するエラーメッセージ。これらは、蓄積された生ログに直接クエリを実行しなければ得られません。「CloudWatch Log Analytics」は、CloudWatch Logsに保存されたログに対して、SQLに似た独自のクエリ言語で対話的に検索、集計、可視化するUIです。2026年6月に導入された統合画面で、従来のLogs Insights、Live Tail、Contributor Ins]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-08-03T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[クラウドネイティブ教科書 Ver.1.0.0――ツール単位で覚えてきたKubernetesを「構造」から捉え直す無償教材 | ]]></title>
+        <id>39427 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/article/39427"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/94/39427/ren_3-list-tech-news_cover.png?itok=2QPlM0gw" type="image/png"/>
+        <updated>2026-08-03T21:20:00.000Z</updated>
+        <summary type="html"><![CDATA[クラウドネイティブ教科書 Ver.1.0.0――ツール単位で覚えてきたKubernetesを「構造」から捉え直す無償教材📌 このニュース、3行で押さえるなら 📌LPI-Japanが学習用教材「クラウドネイティブ教科書」Ver.1.0.0を2026年7月28日に無償公開。日本語版88ページ・英語版90ページをPDF/EPUB形式で提供し、CC BY-NC-ND 4.0のもと学校教育・企業研修・個人学]]></summary>
+        <content type="html"><![CDATA[クラウドネイティブ教科書 Ver.1.0.0――ツール単位で覚えてきたKubernetesを「構造」から捉え直す無償教材📌 このニュース、3行で押さえるなら 📌LPI-Japanが学習用教材「クラウドネイティブ教科書」Ver.1.0.0を2026年7月28日に無償公開。日本語版88ページ・英語版90ページをPDF/EPUB形式で提供し、CC BY-NC-ND 4.0のもと学校教育・企業研修・個人学習を問わず利用できるコマンド操作の暗記ではなく、Kubernetesのアーキテクチャや設計思想といった「構造と仕組みの理解」を重視した構成。マイクロサービス、GitOps、サービスメッシュ、モニタリング、セキュリティ、SRE、FinOps、AIとKubernetesの活用まで現場のトピックを網羅する第2部(実践編)ではブラウザ上でKubernetes環境を操作できる「Killercoda」を使ったハンズオン実習を提供。2,000名超が参加するLinuC Open Networkコミュニティの成果物として、技術者のレビューと改善提案を重ねて作成された📝 Think IT編集部の見解 📝この教材の]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-08-03T21:20:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「NetBSD 11.0」リリース ─ 64ビットRISC-Vを正式サポート | ]]></title>
+        <id>39429 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/news/39429"/>
+        <updated>2026-08-03T15:49:46.000Z</updated>
+        <summary type="html"><![CDATA[「NetBSD 11.0」リリース ─ 64ビットRISC-Vを正式サポート 約10ミリ秒で起動するMICROVMカーネル、Snapdragon X Elite初期対応もkawahara2026年8月4日シェア ポスト はてブ 優先するニュース提供元に追加 NetBSD Projectは7月30日(現地時間)、「NetBSD 11.0」をリリースした。 「NetBSD 11.0」はメジャーアップデ]]></summary>
+        <content type="html"><![CDATA[「NetBSD 11.0」リリース ─ 64ビットRISC-Vを正式サポート 約10ミリ秒で起動するMICROVMカーネル、Snapdragon X Elite初期対応もkawahara2026年8月4日シェア ポスト はてブ 優先するニュース提供元に追加 NetBSD Projectは7月30日(現地時間)、「NetBSD 11.0」をリリースした。 「NetBSD 11.0」はメジャーアップデートリリースに相当し、64ビットRISC-Vへの正式対応、Qualcomm Snapdragon X Eliteの初期サポート、仮想マシンを高速に起動するMICROVMカーネル、Linuxシステムコール互換機能の拡張、POSIX.1-2024およびC23への対応強化などが行われている。 「NetBSD 11.0」のハイライトは次の通り。 「NetBSD 11.0」はWebサイトから入手できる。(川原 龍人/びぎねっと)[関連リンク]リリースアナウンスCHANGES この記事をシェアしてください シェアする ポストする &amp;gt;ブクマする noteで書く 優先するニュース提供元にThink ITを追加]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-08-03T15:49:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「MocaccinoOS v26.08」リリース ─ パッケージ構築をDocker Buildx/BuildKitへ移行 | ]]></title>
+        <id>39428 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/news/39428"/>
+        <updated>2026-08-03T14:50:46.000Z</updated>
+        <summary type="html"><![CDATA[「MocaccinoOS v26.08」リリース ─ パッケージ構築をDocker Buildx/BuildKitへ移行 「Linux 6.18.41 LTS」「KDE Plasma 6.6.6」「COSMIC 1.5.0」などを採用kawahara2026年8月3日シェア ポスト はてブ 優先するニュース提供元に追加 mocaccino.orgは8月1日(現地時間)、Gentoo Linuxベー]]></summary>
+        <content type="html"><![CDATA[「MocaccinoOS v26.08」リリース ─ パッケージ構築をDocker Buildx/BuildKitへ移行 「Linux 6.18.41 LTS」「KDE Plasma 6.6.6」「COSMIC 1.5.0」などを採用kawahara2026年8月3日シェア ポスト はてブ 優先するニュース提供元に追加 mocaccino.orgは8月1日(現地時間)、Gentoo Linuxベースのディストリビューション「MocaccinoOS v26.08」をリリースした。 「MocaccinoOS v26.08」の主な変更点は次の通り。 「MocaccinoOS v26.08」は、KDE Plasma、GNOME、Xfce、MATE、COSMICの各デスクトップ環境を収録したISOイメージがSourceForgeから入手できる。(川原 龍人/びぎねっと)[関連リンク]リリースアナウンスMocaccinoOS Documentation この記事をシェアしてください シェアする ポストする &amp;gt;ブクマする noteで書く 優先するニュース提供元にThink ITを追加 前の記事「Ar]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-08-03T14:50:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIはコードを書ける。では、ソフトウェアエンジニアは何をするのか | ]]></title>
+        <id>39397 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/article/39397"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/93/39397/ren_ai-engineer_judgment_main.png?itok=VxvGOZOm" type="image/png"/>
+        <updated>2026-08-02T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに家にパソコンがなかったので、ノートにコードを書いて、放課後にパソコン室でBASICをひたすら入力して、エラーになって、家に帰ってまたノートでゼロからコードを書き直す。そんな、世間一般的にはだいぶ変な中学生でした。今は、ごく普通の中間管理職のソフトウェアエンジニアです。今回、「Web記事を連載しませんか」というお話をいただきました。せっかくなので、AI時代のエンジニア論のようなものを書いてみ]]></summary>
+        <content type="html"><![CDATA[はじめに家にパソコンがなかったので、ノートにコードを書いて、放課後にパソコン室でBASICをひたすら入力して、エラーになって、家に帰ってまたノートでゼロからコードを書き直す。そんな、世間一般的にはだいぶ変な中学生でした。今は、ごく普通の中間管理職のソフトウェアエンジニアです。今回、「Web記事を連載しませんか」というお話をいただきました。せっかくなので、AI時代のエンジニア論のようなものを書いてみようと思います。ただし、「これからのエンジニアはこうあるべきだ」と断言できるほど、きれいな答えを持っているわけではありません。20年以上、Webやモバイル、少しだけ地図のエンジニアをやってきた人間が、AI時代にこれからどう生き抜いていくのか。ノラリクラリと生きてきたエンジニアとして、技術的なことも踏まえながら、AIとどう付き合うのかを書いてみようと思います。この連載では、主にモバイルアプリ開発を題材にします。ただし、そこで起きる落とし穴の多くは、Webアプリやバックエンドの開発にも通じる話です。AIはすでに仕事の相棒になった多くのエンジニアの皆さんが、すでに何らかのAIツールを使っていますよね]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-08-02T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Meta、AIグラス助成プログラム 30団体を採択、Roblox Plus、新たなカスタマイズ機能を順次展開 ほか | ]]></title>
+        <id>39424 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/article/39424"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/94/39424/39424_main.jpg?itok=bvdpcOrM" type="image/jpg"/>
+        <updated>2026-08-02T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[今週も、XR・AI領域の最新動向をお届けします。Metaは、AIグラスを活用して社会や産業の課題解決に挑む30の組織を助成プログラムに採択し、総額約200万ドル規模の支援を発表しました。人気プラットフォームのRobloxでは、サブスクリプションサービス向けにアバター背景やアプリテーマなど、プレイヤーの自己表現をさらに広げる新たなカスタマイズ機能が順次展開されます。さらに国内の注目ニュースとして、W]]></summary>
+        <content type="html"><![CDATA[今週も、XR・AI領域の最新動向をお届けします。Metaは、AIグラスを活用して社会や産業の課題解決に挑む30の組織を助成プログラムに採択し、総額約200万ドル規模の支援を発表しました。人気プラットフォームのRobloxでは、サブスクリプションサービス向けにアバター背景やアプリテーマなど、プレイヤーの自己表現をさらに広げる新たなカスタマイズ機能が順次展開されます。さらに国内の注目ニュースとして、Webブラウザーのみで動作する国産VPSエンジンの提供を開始したSTYLY WebARの最新機能や、日本から世界的なエンタメIP創出を目指して始動した学生・若手向けのXRゲーム開発プログラムMade in Japan XR Projectについて紹介していきます。Meta、約200万ドル規模のAIグラス助成プログラム 30団体を採択Metaは、AIグラスを活用して社会や産業の課題解決に取り組む組織を支援する助成プログラム「AI Glasses Impact Grants」の採択団体を発表しました。米国18州の30組織を対象に、総額約200万ドルが助成されます。この支援は、実績のある取り組みを広げ]]></content>
+        <author>
+            <name>iioka</name>
+        </author>
+        <published>2026-08-02T21:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Arch Linux 2026.08.01」リリース ─ Linux 7.1.5を採用 | ]]></title>
+        <id>39423 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/news/39423"/>
+        <updated>2026-08-01T16:30:56.000Z</updated>
+        <summary type="html"><![CDATA[「Arch Linux 2026.08.01」リリース ─ Linux 7.1.5を採用 glibc 2.44、systemd 261.2、OpenSSH 10.4p1などを搭載kawahara2026年8月2日シェア ポスト はてブ 優先するニュース提供元に追加 Arch Linuxプロジェクトは8月1日（現地時間）、最新のインストールイメージ「Arch Linux 2026.08.01」をリリ]]></summary>
+        <content type="html"><![CDATA[「Arch Linux 2026.08.01」リリース ─ Linux 7.1.5を採用 glibc 2.44、systemd 261.2、OpenSSH 10.4p1などを搭載kawahara2026年8月2日シェア ポスト はてブ 優先するニュース提供元に追加 Arch Linuxプロジェクトは8月1日（現地時間）、最新のインストールイメージ「Arch Linux 2026.08.01」をリリースした。 「Arch Linux」は、シンプルさ、最新性、ユーザーによるカスタマイズ性を重視するLinuxディストリビューション。パッケージ管理には「pacman」を使用し、Arch User Repository(AUR)からも多数のソフトウェアを導入できる。 「Arch Linux 2026.08.01」は、新規インストール用に提供される月例スナップショット。今回のスナップショットでは新たにLinuxカーネル7.1.5が採用されており、glibc 2.44、systemd 261.2、OpenSSH 10.4p1など、7月末で取り込まれたパッケージが組み込まれている。 「Arch Lin]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-08-01T16:30:56.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Shelly 3.0.0」リリース ─ 翌日には「3.0.1」も | ]]></title>
+        <id>39422 at https://thinkit.co.jp</id>
+        <link href="https://thinkit.co.jp/news/39422"/>
+        <updated>2026-08-01T15:47:22.000Z</updated>
+        <summary type="html"><![CDATA[「Shelly 3.0.0」リリース ─ 翌日には「3.0.1」も Arch Linux向けパッケージ管理ツール、GTK4アプリやCLIも再構築kawahara2026年8月2日シェア ポスト はてブ 優先するニュース提供元に追加 Seafoam Labsは7月29日(現地時間)、Arch Linux向けパッケージ管理ツール「Shelly 3.0.0」をリリースした。また、翌30日には、初期修正版]]></summary>
+        <content type="html"><![CDATA[「Shelly 3.0.0」リリース ─ 翌日には「3.0.1」も Arch Linux向けパッケージ管理ツール、GTK4アプリやCLIも再構築kawahara2026年8月2日シェア ポスト はてブ 優先するニュース提供元に追加 Seafoam Labsは7月29日(現地時間)、Arch Linux向けパッケージ管理ツール「Shelly 3.0.0」をリリースした。また、翌30日には、初期修正版の「Shelly 3.0.1」もリリースされた。 「Shelly」は、Arch LinuxおよびArch Linuxベースのディストリビューションに対応するオープンソースのパッケージ管理ツール。pacmanでも使用されているパッケージ管理ライブラリ「libalpm」と直接連携し、標準リポジトリ、Arch User Repository(AUR)、AppImage、Flatpakのソフトウェアを、GTK4によるグラフィカルインターフェイスまたはコマンドラインから管理できる。 「Shelly 3.0」では、従来のC#/.NETコードベースが大幅に刷新された。パッケージ管理コア、コマンドラインインタ]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-08-01T15:47:22.000Z</published>
+    </entry>
+</feed>
