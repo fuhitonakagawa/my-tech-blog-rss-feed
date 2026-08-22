@@ -1,0 +1,98 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Programming｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming/feeds/feed.json",
+    "description": "Programmingセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/",
+            "content_html": "After nearly 4 years of active development, the next-generation trait solver is close to stabilization. We are enabling it by default on nightly to surface any remaining issues and plan to stabilize it in the next months. This is the largest single change to the Rust compiler since its initial release. It completely replaces how we prove where-clauses, normalize associated types, and much more. Please try out the latest nightly and open an issue if you encounter any bugs or regressions.This is a",
+            "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/",
+            "title": "Enabling the next-generation trait solver on nightly | Rust Blog",
+            "summary": "After nearly 4 years of active development, the next-generation trait solver is close to stabilization. We are enabling it by default on nightly to surface any remaining issues and plan to stabilize i",
+            "image": {
+                "url": "https://www.rust-lang.org/static/images/rust-social-wide.jpg",
+                "type": "jpg"
+            },
+            "date_modified": "2026-08-21T00:00:00.000Z",
+            "date_published": "2026-08-21T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 2,
+                "originalTitle": "Enabling the next-generation trait solver on nightly",
+                "blogTitle": "Rust Blog",
+                "blogLink": "https://blog.rust-lang.org/",
+                "blogLinkMd5Hash": "7c10e450b50413a1bd33ba8fb390cbb5",
+                "favicon": "https://blog.rust-lang.org/images/favicon-16x16.png"
+            }
+        },
+        {
+            "id": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/",
+            "content_html": "What happenedOn 2026-08-20 at 7:15 UTC we got a report that the proc-macro1 crate was malicious.The Rust Security Response Team verified this to be the case: the crate had a build script that was downloading a malicious payload.This crate proc-macro1 and others like it (proc-macro-en, aovine, arone, aronenao, tinymember) have been deleted.Furthermore, we discovered that the popular arrayref crate had recently been republished and made to depend on this crate, with the most recent versions yanked",
+            "url": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/",
+            "title": "Supply chain attack on arrayref | Rust Blog",
+            "summary": "What happenedOn 2026-08-20 at 7:15 UTC we got a report that the proc-macro1 crate was malicious.The Rust Security Response Team verified this to be the case: the crate had a build script that was down",
+            "image": {
+                "url": "https://www.rust-lang.org/static/images/rust-social-wide.jpg",
+                "type": "jpg"
+            },
+            "date_modified": "2026-08-20T00:00:00.000Z",
+            "date_published": "2026-08-20T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 8,
+                "originalTitle": "Supply chain attack on arrayref",
+                "blogTitle": "Rust Blog",
+                "blogLink": "https://blog.rust-lang.org/",
+                "blogLinkMd5Hash": "7c10e450b50413a1bd33ba8fb390cbb5",
+                "favicon": "https://blog.rust-lang.org/images/favicon-16x16.png"
+            }
+        },
+        {
+            "id": "https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/",
+            "content_html": "The Rust team is happy to announce a new version of Rust, 1.98.0. Rust is a programming language empowering everyone to build reliable and efficient software.If you have a previous version of Rust installed via rustup, you can get 1.98.0 with:$ rustup update stableIf you don't have it already, you can get rustup from the appropriate page on our website, and check out the detailed release notes for 1.98.0.If you'd like to help us out by testing future releases, you might consider updating locally",
+            "url": "https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/",
+            "title": "Announcing Rust 1.98.0 | Rust Blog",
+            "summary": "The Rust team is happy to announce a new version of Rust, 1.98.0. Rust is a programming language empowering everyone to build reliable and efficient software.If you have a previous version of Rust ins",
+            "image": {
+                "url": "https://www.rust-lang.org/static/images/rust-social-wide.jpg",
+                "type": "jpg"
+            },
+            "date_modified": "2026-08-20T00:00:00.000Z",
+            "date_published": "2026-08-20T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Announcing Rust 1.98.0",
+                "blogTitle": "Rust Blog",
+                "blogLink": "https://blog.rust-lang.org/",
+                "blogLinkMd5Hash": "7c10e450b50413a1bd33ba8fb390cbb5",
+                "favicon": "https://blog.rust-lang.org/images/favicon-16x16.png"
+            }
+        },
+        {
+            "id": "https://go.dev/blog/go1.27",
+            "content_html": "Go 1.27 adds generic methods, encoding/json/v2 package, uuid package, faster memory allocation, goroutine leak profiles, and more.",
+            "url": "https://go.dev/blog/go1.27",
+            "title": "Go 1.27 is released | The Go Blog",
+            "summary": "Go 1.27 adds generic methods, encoding/json/v2 package, uuid package, faster memory allocation, goroutine leak profiles, and more.",
+            "image": {
+                "url": "https://go.dev/doc/gopher/gopher5logo.jpg",
+                "type": "jpg"
+            },
+            "date_modified": "2026-08-19T00:00:00.000Z",
+            "date_published": "2026-08-19T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 9,
+                "originalTitle": "Go 1.27 is released",
+                "blogTitle": "The Go Blog",
+                "blogLink": "https://go.dev/blog/feed.atom",
+                "blogLinkMd5Hash": "2f02a05b9ae2b09d6abb5aa771db4a68",
+                "favicon": "https://go.dev/images/favicon-gopher.png"
+            }
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming/</id>
+    <title>Programming｜企業テックブログRSS</title>
+    <updated>2026-08-22T15:13:46.266Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming/feeds/atom.xml"/>
+    <subtitle>Programmingセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[Enabling the next-generation trait solver on nightly | Rust Blog]]></title>
+        <id>https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/</id>
+        <link href="https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/"/>
+        <link rel="enclosure" href="https://www.rust-lang.org/static/images/rust-social-wide.jpg" type="image/jpg"/>
+        <updated>2026-08-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[After nearly 4 years of active development, the next-generation trait solver is close to stabilization. We are enabling it by default on nightly to surface any remaining issues and plan to stabilize i]]></summary>
+        <content type="html"><![CDATA[After nearly 4 years of active development, the next-generation trait solver is close to stabilization. We are enabling it by default on nightly to surface any remaining issues and plan to stabilize it in the next months. This is the largest single change to the Rust compiler since its initial release. It completely replaces how we prove where-clauses, normalize associated types, and much more. Please try out the latest nightly and open an issue if you encounter any bugs or regressions.This is a]]></content>
+        <published>2026-08-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Supply chain attack on arrayref | Rust Blog]]></title>
+        <id>https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/</id>
+        <link href="https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/"/>
+        <link rel="enclosure" href="https://www.rust-lang.org/static/images/rust-social-wide.jpg" type="image/jpg"/>
+        <updated>2026-08-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[What happenedOn 2026-08-20 at 7:15 UTC we got a report that the proc-macro1 crate was malicious.The Rust Security Response Team verified this to be the case: the crate had a build script that was down]]></summary>
+        <content type="html"><![CDATA[What happenedOn 2026-08-20 at 7:15 UTC we got a report that the proc-macro1 crate was malicious.The Rust Security Response Team verified this to be the case: the crate had a build script that was downloading a malicious payload.This crate proc-macro1 and others like it (proc-macro-en, aovine, arone, aronenao, tinymember) have been deleted.Furthermore, we discovered that the popular arrayref crate had recently been republished and made to depend on this crate, with the most recent versions yanked]]></content>
+        <published>2026-08-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Announcing Rust 1.98.0 | Rust Blog]]></title>
+        <id>https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/</id>
+        <link href="https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/"/>
+        <link rel="enclosure" href="https://www.rust-lang.org/static/images/rust-social-wide.jpg" type="image/jpg"/>
+        <updated>2026-08-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Rust team is happy to announce a new version of Rust, 1.98.0. Rust is a programming language empowering everyone to build reliable and efficient software.If you have a previous version of Rust ins]]></summary>
+        <content type="html"><![CDATA[The Rust team is happy to announce a new version of Rust, 1.98.0. Rust is a programming language empowering everyone to build reliable and efficient software.If you have a previous version of Rust installed via rustup, you can get 1.98.0 with:$ rustup update stableIf you don't have it already, you can get rustup from the appropriate page on our website, and check out the detailed release notes for 1.98.0.If you'd like to help us out by testing future releases, you might consider updating locally]]></content>
+        <published>2026-08-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Go 1.27 is released | The Go Blog]]></title>
+        <id>https://go.dev/blog/go1.27</id>
+        <link href="https://go.dev/blog/go1.27"/>
+        <link rel="enclosure" href="https://go.dev/doc/gopher/gopher5logo.jpg" type="image/jpg"/>
+        <updated>2026-08-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Go 1.27 adds generic methods, encoding/json/v2 package, uuid package, faster memory allocation, goroutine leak profiles, and more.]]></summary>
+        <content type="html"><![CDATA[Go 1.27 adds generic methods, encoding/json/v2 package, uuid package, faster memory allocation, goroutine leak profiles, and more.]]></content>
+        <published>2026-08-19T00:00:00.000Z</published>
+    </entry>
+</feed>

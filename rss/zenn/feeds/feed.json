@@ -1,0 +1,510 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Zenn｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn/feeds/feed.json",
+    "description": "Zennセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://zenn.dev/holy_fox/articles/53b82eed45f956",
+            "content_html": "2026年8月22日時点のFreeToken 0.1.2を、RTX 5090 32GBとRAM 128GBのPCで試しました。FreeTokenは、Mixture-of-Experts（MoE）モデルのexpertをホストRAMへ置き、必要なexpertだけをGPUへキャッシュしながら推論するサービングエンジンです。狙いはvLLMやllama.cppを単純に高速化することではなく、VRAMに収まらない巨大なMoEをコンシューマ向けGPUで実用速度で動かすことにあります。実際に試すと、この立ち位置がかなり明確に出ました。23.5GBのOrnith 1.5ではllama.cppとvLLM...",
+            "url": "https://zenn.dev/holy_fox/articles/53b82eed45f956",
+            "title": "RTX 5090でFreeTokenを試してみた。35Bでは不要、120B級MoEでは話が変わる | Zennのトレンド",
+            "summary": "2026年8月22日時点のFreeToken 0.1.2を、RTX 5090 32GBとRAM 128GBのPCで試しました。FreeTokenは、Mixture-of-Experts（MoE）モデルのexpertをホストRAMへ置き、必要なexpertだけをGPUへキャッシュしながら推論するサービングエンジンです。狙いはvLLMやllama.cppを単純に高速化することではなく、VRAMに収まら",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--AGs6k9Vn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:RTX%25205090%25E3%2581%25A7FreeToken%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%258235B%25E3%2581%25A7%25E3%2581%25AF%25E4%25B8%258D%25E8%25A6%2581%25E3%2580%2581120B%25E7%25B4%259AMoE%25E3%2581%25A7%25E3%2581%25AF%25E8%25A9%25B1%25E3%2581%258C%25E5%25A4%2589%25E3%2582%258F%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25BB%25E3%2583%25BC%25E3%2582%258A%25E3%2583%25BC%25E3%2581%25B5%25E3%2581%2589%25E3%2581%25A3%25E3%2581%258F%25E3%2581%2599%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZlMmM2MjU5ZmQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-22T07:44:27.000Z",
+            "date_published": "2026-08-22T07:44:27.000Z",
+            "author": {
+                "name": "ほーりーふぉっくす"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 2,
+                "originalTitle": "RTX 5090でFreeTokenを試してみた。35Bでは不要、120B級MoEでは話が変わる",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/uhyo/articles/react-use-browser-usage",
+            "content_html": "皆さんこんにちは。最近、React公式ドキュメントにbrowser() APIの記事が追加されました。この記事公開時点ではまだ正式版のReactでは使用できませんが、次バージョンのReact 19.3で利用可能になると見込まれています。この記事では、筆者が開発しているOSS FUNSTACK Routerにさっそくこの browser() APIを導入してみたので、どんなユースケースで使ったのかをご紹介します。 browser() APIとはbrowser() APIは、あるコンポーネントがSSRではレンダリングできず、ブラウザ上でのみレンダリングできることを示すAPIです。コン...",
+            "url": "https://zenn.dev/uhyo/articles/react-use-browser-usage",
+            "title": "React 19.3 browser() APIの使いみち～FUNSTACK Routerの場合～ | Zennのトレンド",
+            "summary": "皆さんこんにちは。最近、React公式ドキュメントにbrowser() APIの記事が追加されました。この記事公開時点ではまだ正式版のReactでは使用できませんが、次バージョンのReact 19.3で利用可能になると見込まれています。この記事では、筆者が開発しているOSS FUNSTACK Routerにさっそくこの browser() APIを導入してみたので、どんなユースケースで使ったのかを",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--DACqLs1c--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:React%252019.3%2520browser%2528%2529%2520API%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E3%2581%25BF%25E3%2581%25A1%25EF%25BD%259EFUNSTACK%2520Router%25E3%2581%25AE%25E5%25A0%25B4%25E5%2590%2588%25EF%25BD%259E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:uhyo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzVjYjFlMDJlNGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-21T13:52:58.000Z",
+            "date_published": "2026-08-21T13:52:58.000Z",
+            "author": {
+                "name": "uhyo"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 13,
+                "originalTitle": "React 19.3 browser() APIの使いみち～FUNSTACK Routerの場合～",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/dmikurube/articles/a-logresearch-er",
+            "content_html": "Embulk というオープンソース・ソフトウェアのメンテナーをやっていました。「やっていました」と過去形なのは、いちおうまだメンテナー権限を持ってはいるものの、プロジェクトは「メンテナンス・モード」として実質的にメンテナンスを終了しているし、個人としてもなかば降りているからです。今から二年ほど前の 2024 年 7 月、この Embulk に、ある pull request (以下 PR) が届きました。この PR は、私がなかばメンテナーを降り、プロジェクトを「メンテナンス・モード」とすることにした理由の一つだったと思います。この PR をきっかけに、オープンソース活動について...",
+            "url": "https://zenn.dev/dmikurube/articles/a-logresearch-er",
+            "title": "或るログ研究者 | Zennのトレンド",
+            "summary": "Embulk というオープンソース・ソフトウェアのメンテナーをやっていました。「やっていました」と過去形なのは、いちおうまだメンテナー権限を持ってはいるものの、プロジェクトは「メンテナンス・モード」として実質的にメンテナンスを終了しているし、個人としてもなかば降りているからです。今から二年ほど前の 2024 年 7 月、この Embulk に、ある pull request (以下 PR) が届き",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--7T0vt7aL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2588%2596%25E3%2582%258B%25E3%2583%25AD%25E3%2582%25B0%25E7%25A0%2594%25E7%25A9%25B6%25E8%2580%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Dai%2520MIKURUBE%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2d2QnpTU015TnEwVExYTm1VVU5YcUc4b0hNaS1ScGdNZWUtSmptTVJvPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-21T10:04:23.000Z",
+            "date_published": "2026-08-21T10:04:23.000Z",
+            "author": {
+                "name": "Dai MIKURUBE"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 78,
+                "originalTitle": "或るログ研究者",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/karamem0/books/505df6779ec89a",
+            "content_html": "Microsoft Entra ID はクラウド ベースの ID 管理プラットフォームです。Microsoft Azure 上でアプリケーションを構築する場合、Microsoft Entra ID を使用して認証と承認を管理することが一般的です。本書では、Microsoft Entra ID アプリケーションの基本的な概念、設定方法、および開発手法について解説します。",
+            "url": "https://zenn.dev/karamem0/books/505df6779ec89a",
+            "title": "Microsoft Entra ID アプリケーション開発入門 | Zennのトレンド",
+            "summary": "Microsoft Entra ID はクラウド ベースの ID 管理プラットフォームです。Microsoft Azure 上でアプリケーションを構築する場合、Microsoft Entra ID を使用して認証と承認を管理することが一般的です。本書では、Microsoft Entra ID アプリケーションの基本的な概念、設定方法、および開発手法について解説します。",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s---HNk5CGb--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci83YjY2OGRlZGNkLnBuZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE",
+                "type": "jpg"
+            },
+            "date_modified": "2026-08-21T09:39:00.000Z",
+            "date_published": "2026-08-21T09:39:00.000Z",
+            "author": {
+                "name": "karamem0"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 82,
+                "originalTitle": "Microsoft Entra ID アプリケーション開発入門",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/cureapp/articles/c1e963064d05fd",
+            "content_html": "https://x.com/kenn/status/2090438812854087756?s=20このツイート見て「やべ、なんも意識してなかった」となったのがきっかけよしなにやってくれてるんだろうくらいだったので、この際ちゃんと調べて棚卸しした そもそも claude のメモリとは理解しているつもりだったけどちゃんと調べてなかったので調べたhttps://code.claude.com/docs/en/memoryプロジェクトごとに保存（~/.claude/projects/&lt;プロジェクト名&gt;/memory/ 配下）してくれているっぽい（setting の a...",
+            "url": "https://zenn.dev/cureapp/articles/c1e963064d05fd",
+            "title": "claude のメモリを棚卸しする | Zennのトレンド",
+            "summary": "https://x.com/kenn/status/2090438812854087756?s=20このツイート見て「やべ、なんも意識してなかった」となったのがきっかけよしなにやってくれてるんだろうくらいだったので、この際ちゃんと調べて棚卸しした そもそも claude のメモリとは理解しているつもりだったけどちゃんと調べてなかったので調べたhttps://code.claude.com/docs",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--AoqxSpcX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:claude%2520%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%25E3%2582%2592%25E6%25A3%259A%25E5%258D%25B8%25E3%2581%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Tatsunori%2520Nakano%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2M1MThkMWZlMzkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:CureApp%2520%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzhhNDg0ZDExOTguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-21T04:28:26.000Z",
+            "date_published": "2026-08-21T04:28:26.000Z",
+            "author": {
+                "name": "Tatsunori Nakano"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 103,
+                "originalTitle": "claude のメモリを棚卸しする",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/watany/articles/8809b00df25dab",
+            "content_html": "背景例えば芸能人がLLMでシステムを作ると話題になる。https://www.sankei.com/article/20260805-RIOHNGARVJOORGFMICZ24IL73A/エグゼクティブがLLMで執筆すると驚かれる。https://www.itmedia.co.jp/aiplus/article/2608/20/2000000644/このような発信に関しては賛否両論であっても賛成に寄った雰囲気に感じる。(否定すると誹謗中傷として訴訟リスクがあるかも、という話は置いておく。)しかし我々、このブログを読んでいる読者のほとんどである一般人の中には、おそらくLLM...",
+            "url": "https://zenn.dev/watany/articles/8809b00df25dab",
+            "title": "発信力の増幅機としてのLLM | Zennのトレンド",
+            "summary": "背景例えば芸能人がLLMでシステムを作ると話題になる。https://www.sankei.com/article/20260805-RIOHNGARVJOORGFMICZ24IL73A/エグゼクティブがLLMで執筆すると驚かれる。https://www.itmedia.co.jp/aiplus/article/2608/20/2000000644/このような発信に関しては賛否両論であっても賛成に",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--9DC44cIc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2599%25BA%25E4%25BF%25A1%25E5%258A%259B%25E3%2581%25AE%25E5%25A2%2597%25E5%25B9%2585%25E6%25A9%259F%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25AELLM%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:watany%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJiYjJiYTdkZjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-21T03:40:35.000Z",
+            "date_published": "2026-08-21T03:40:35.000Z",
+            "author": {
+                "name": "watany"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 4,
+                "originalTitle": "発信力の増幅機としてのLLM",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/herumi/articles/add-imm-fusion",
+            "content_html": "はじめに一見、タイトルはなんのこと? と思われるかもしれませんが、そう呼びたくなる現象があるのをつい最近（2026年8月）知りました。面白かったのでその紹介をします。なお、かなり専門的な話となりますのであしからず。 命令のレイテンシを測定するプログラムの最適化の作業の中でx64のタイムスタンプカウンターtscを取得する命令rdtscを使ってマイクロベンチマークをいろいろとっていました。現在、rdtscはCPUのある固定周波数を基準としたtscを測定します。私はCPUをフルで回したときの周波数に対するクロックサイクル（以下cycと略記）を測定したかったので、次の方法をとりまし...",
+            "url": "https://zenn.dev/herumi/articles/add-imm-fusion",
+            "title": "最近のIntel CPUは複数の連続する即値加減算命令をフュージョンする | Zennのトレンド",
+            "summary": "はじめに一見、タイトルはなんのこと? と思われるかもしれませんが、そう呼びたくなる現象があるのをつい最近（2026年8月）知りました。面白かったのでその紹介をします。なお、かなり専門的な話となりますのであしからず。 命令のレイテンシを測定するプログラムの最適化の作業の中でx64のタイムスタンプカウンターtscを取得する命令rdtscを使ってマイクロベンチマークをいろいろとっていました。現在、rdt",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--a0Zm8Avv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259C%2580%25E8%25BF%2591%25E3%2581%25AEIntel%2520CPU%25E3%2581%25AF%25E8%25A4%2587%25E6%2595%25B0%25E3%2581%25AE%25E9%2580%25A3%25E7%25B6%259A%25E3%2581%2599%25E3%2582%258B%25E5%258D%25B3%25E5%2580%25A4%25E5%258A%25A0%25E6%25B8%259B%25E7%25AE%2597%25E5%2591%25BD%25E4%25BB%25A4%25E3%2582%2592%25E3%2583%2595%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%25B3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:herumi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E4ZWU3NTI0MjAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-21T02:06:35.000Z",
+            "date_published": "2026-08-21T02:06:35.000Z",
+            "author": {
+                "name": "herumi"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 6,
+                "originalTitle": "最近のIntel CPUは複数の連続する即値加減算命令をフュージョンする",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/onclimb/articles/ts-to-js-pipeline-onclimb",
+            "content_html": "TypeScript で記載したプログラム（.ts）は、.js に変換されてから実行されます。毎日この変換のお世話になっているのに、中で何が起きているかは見たことがない — そんな方が多いのではないでしょうか？筆者も「型チェックをした後、型を消して JS にしている」くらいの解像度で理解していました。ただ、あらためて考えると「チェックして、消す」の中身はまるごとブラックボックスです。そもそも .ts が .js になるまでに、どんなプロセスを踏んでいるのか。それが知りたくて、Express の Hello World という最小の題材を TypeScript 7.0.2 でコンパイルし...",
+            "url": "https://zenn.dev/onclimb/articles/ts-to-js-pipeline-onclimb",
+            "title": "TypeScript が JavaScript になるまで | Zennのトレンド",
+            "summary": "TypeScript で記載したプログラム（.ts）は、.js に変換されてから実行されます。毎日この変換のお世話になっているのに、中で何が起きているかは見たことがない — そんな方が多いのではないでしょうか？筆者も「型チェックをした後、型を消して JS にしている」くらいの解像度で理解していました。ただ、あらためて考えると「チェックして、消す」の中身はまるごとブラックボックスです。そもそも .t",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--WMSI3X0i--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:TypeScript%2520%25E3%2581%258C%2520JavaScript%2520%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%25E3%2581%25BE%25E3%2581%25A7%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:onclimb%2528%25E3%2581%258A%25E3%2582%2593%25E3%2582%258A%25E3%2582%2580%2529%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzM5NjVmMDZkMmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-21T00:30:05.000Z",
+            "date_published": "2026-08-21T00:30:05.000Z",
+            "author": {
+                "name": "onclimb(おんりむ)"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "TypeScript が JavaScript になるまで",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/mkj/articles/aad5698672aef3",
+            "content_html": "こんにちは、松尾研究所 データサイエンスチームのマネージャーの浮田です。最近のAI Agentは、一般的な調査や実装であればかなり高い水準でこなせるようになってきました。一方で、実際の社内業務に必要な社内固有の知識は持っておらず、非常に優秀だが、まだオンボーディングを受けていない新入社員に近い状態です。例えば、プロジェクト開始時に、誰がどのアカウントや権限を用意するのか経費はどのシステムから申請し、誰の承認を得るのかといった、会社固有の知識をAgentは知りません[1]。そこで今回、社内Notionに整備してある新入社員向けのオンボーディング文書をもとに、AI Agent...",
+            "url": "https://zenn.dev/mkj/articles/aad5698672aef3",
+            "title": "AI Agentに社内知識をオンボーディングする：SkillsとEvalの設計 | Zennのトレンド",
+            "summary": "こんにちは、松尾研究所 データサイエンスチームのマネージャーの浮田です。最近のAI Agentは、一般的な調査や実装であればかなり高い水準でこなせるようになってきました。一方で、実際の社内業務に必要な社内固有の知識は持っておらず、非常に優秀だが、まだオンボーディングを受けていない新入社員に近い状態です。例えば、プロジェクト開始時に、誰がどのアカウントや権限を用意するのか経費はどのシステムから申請し",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--4t0G1MGs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%2520Agent%25E3%2581%25AB%25E7%25A4%25BE%25E5%2586%2585%25E7%259F%25A5%25E8%25AD%2598%25E3%2582%2592%25E3%2582%25AA%25E3%2583%25B3%25E3%2583%259C%25E3%2583%25BC%25E3%2583%2587%25E3%2582%25A3%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2599%25E3%2582%258B%25EF%25BC%259ASkills%25E3%2581%25A8Eval%25E3%2581%25AE%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ukita%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2NGM3ZTBkMzIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%259D%25BE%25E5%25B0%25BE%25E7%25A0%2594%25E7%25A9%25B6%25E6%2589%2580%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWtFREpiRTFERFIwY0syRzVSNExhbkJhMkQ2Yktfeld6T1ZTMHJnZlc0Y0U5OUxQQT1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-20T02:50:05.000Z",
+            "date_published": "2026-08-20T02:50:05.000Z",
+            "author": {
+                "name": "ukita"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 153,
+                "originalTitle": "AI Agentに社内知識をオンボーディングする：SkillsとEvalの設計",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/ymotongpoo/books/go-json-v2-history",
+            "content_html": "encoding/json は Go 1.0 から14年間、大文字小文字を区別しないフィールド一致のような既知の問題を抱えたまま修正されませんでした。Go 1.27 で正式化された encoding/json/v2 に至るまでの経緯を、issue、提案、Gerritの変更、標準ライブラリのソースを追いながら整理します。",
+            "url": "https://zenn.dev/ymotongpoo/books/go-json-v2-history",
+            "title": "encoding/json/v2 に至る14年 | Zennのトレンド",
+            "summary": "encoding/json は Go 1.0 から14年間、大文字小文字を区別しないフィールド一致のような既知の問題を抱えたまま修正されませんでした。Go 1.27 で正式化された encoding/json/v2 に至るまでの経緯を、issue、提案、Gerritの変更、標準ライブラリのソースを追いながら整理します。",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--eaQIlVoc--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci9hNWVhYmQxN2Q0LnBuZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE",
+                "type": "jpg"
+            },
+            "date_modified": "2026-08-20T01:42:04.000Z",
+            "date_published": "2026-08-20T01:42:04.000Z",
+            "author": {
+                "name": "Yoshi Yamaguchi"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 31,
+                "originalTitle": "encoding/json/v2 に至る14年",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/factory_dx_eng/articles/ai-productivity-team-divide",
+            "content_html": "「すぐには理解できないが、正しいことを言っているのだと思う」週次の報告会で、上司がそう言った。私はAIで作ったスライドとHTMLレポートを画面に映していた。上司は内容を否定しなかった。むしろ、正しいと言ってくれた。理解はできないけれど、正しいのだと思う、と。そのときの私は、それを好意的な反応として受け取っていた。今になって思えば、あれはレビューが壊れた瞬間だった。私は大手製造業のDX推進部門でマネージャーをしている。この1年ほど、チームの若手中堅メンバーと一緒にAI活用を進めてきた。体感の生産性は3倍になった。そして同じ時期に、私たちは上司とベテランメンバーを置き去りにした。...",
+            "url": "https://zenn.dev/factory_dx_eng/articles/ai-productivity-team-divide",
+            "title": "AIで生産性が3倍になった私たちが、チームを置き去りにした話 | Zennのトレンド",
+            "summary": "「すぐには理解できないが、正しいことを言っているのだと思う」週次の報告会で、上司がそう言った。私はAIで作ったスライドとHTMLレポートを画面に映していた。上司は内容を否定しなかった。むしろ、正しいと言ってくれた。理解はできないけれど、正しいのだと思う、と。そのときの私は、それを好意的な反応として受け取っていた。今になって思えば、あれはレビューが壊れた瞬間だった。私は大手製造業のDX推進部門でマネ",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--0teqf71V--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2581%25A7%25E7%2594%259F%25E7%2594%25A3%25E6%2580%25A7%25E3%2581%258C3%25E5%2580%258D%25E3%2581%25AB%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%259F%25E7%25A7%2581%25E3%2581%259F%25E3%2581%25A1%25E3%2581%258C%25E3%2580%2581%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%25E3%2582%2592%25E7%25BD%25AE%25E3%2581%258D%25E5%258E%25BB%25E3%2582%258A%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%258F%25BE%25E5%25A0%25B4%25E3%2581%25A8%25E4%25B8%2580%25E7%25B7%2592%25E3%2581%25AB%25E4%25BD%259C%25E3%2582%258BDX%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZlYzMwYzVmZDguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-19T10:27:37.000Z",
+            "date_published": "2026-08-19T10:27:37.000Z",
+            "author": {
+                "name": "現場と一緒に作るDX"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 765,
+                "originalTitle": "AIで生産性が3倍になった私たちが、チームを置き去りにした話",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/mizchi/articles/quint-application-modeling",
+            "content_html": "本記事は、AIに分散システムのバグを探させて、そのレポートを自分が理解できるように整形させたものです。実際に見つかったバグは以下の Issues で、現在修正済みです。https://github.com/denoland/celld/issues/132これをどうやって見つけたのか、それを解説します。ただし、形式仕様によるバグ検査は2026/08現在 Claude/ChatGPT のガードレールが発動しやすくなっています。自分は Anthropic Cyber Verifaction を取得しており、その環境で Claude 5 Opus を使った記録になります。https:...",
+            "url": "https://zenn.dev/mizchi/articles/quint-application-modeling",
+            "title": "時相論理の形式仕様の Quint を使って、denoland/celld の二重 writer バグを見つけた | Zennのトレンド",
+            "summary": "本記事は、AIに分散システムのバグを探させて、そのレポートを自分が理解できるように整形させたものです。実際に見つかったバグは以下の Issues で、現在修正済みです。https://github.com/denoland/celld/issues/132これをどうやって見つけたのか、それを解説します。ただし、形式仕様によるバグ検査は2026/08現在 Claude/ChatGPT のガードレール",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--XBpfMOJt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2599%2582%25E7%259B%25B8%25E8%25AB%2596%25E7%2590%2586%25E3%2581%25AE%25E5%25BD%25A2%25E5%25BC%258F%25E4%25BB%2595%25E6%25A7%2598%25E3%2581%25AE%2520Quint%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2580%2581denoland%252Fcelld%2520%25E3%2581%25AE%25E4%25BA%258C%25E9%2587%258D%2520writer%2520%25E3%2583%2590%25E3%2582%25B0%25E3%2582%2592%25E8%25A6%258B%25E3%2581%25A4%25E3%2581%2591%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mizchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2liclRHT052Z3d3ay1fNGxlcVk4TGNGSlNuX0FoWnpEWVlKaXJNcWc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-19T07:44:30.000Z",
+            "date_published": "2026-08-19T07:44:30.000Z",
+            "author": {
+                "name": "mizchi"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 38,
+                "originalTitle": "時相論理の形式仕様の Quint を使って、denoland/celld の二重 writer バグを見つけた",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/zentaroimai/articles/9d6e786a2e6eec",
+            "content_html": "!記事の性質上、罵倒語や差別語や下ネタがそのまま出てきます。苦手な方はブラウザバック推奨です。ちなみに書き上がったこの記事を自作のフィルタにかけたら、30語・31箇所が引っかかりました。ambiguous（文脈依存の語）も有効にすると54語です。自分で作ったものに自分の記事を弾かれるのは、なかなか複雑な気分になります。そんな感じなので、どこかのプラットフォームでこの記事が消えていたら、まあそういうことだと思ってください。 作ったもの日本語と英語のNGワードフィルタを作って npm に置きました。依存ゼロです。GitHub: https://github.com/Clas...",
+            "url": "https://zenn.dev/zentaroimai/articles/9d6e786a2e6eec",
+            "title": "NGワードリストに「死ね」が入っていなかったので自分で作った | Zennのトレンド",
+            "summary": "!記事の性質上、罵倒語や差別語や下ネタがそのまま出てきます。苦手な方はブラウザバック推奨です。ちなみに書き上がったこの記事を自作のフィルタにかけたら、30語・31箇所が引っかかりました。ambiguous（文脈依存の語）も有効にすると54語です。自分で作ったものに自分の記事を弾かれるのは、なかなか複雑な気分になります。そんな感じなので、どこかのプラットフォームでこの記事が消えていたら、まあそういう",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--ethYyiVq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:NG%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25AB%25E3%2580%258C%25E6%25AD%25BB%25E3%2581%25AD%25E3%2580%258D%25E3%2581%258C%25E5%2585%25A5%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E8%2587%25AA%25E5%2588%2586%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Zentaro%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzkwN2ZmMWRjODMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-19T07:38:05.000Z",
+            "date_published": "2026-08-19T07:38:05.000Z",
+            "author": {
+                "name": "Zentaro"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "NGワードリストに「死ね」が入っていなかったので自分で作った",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/417/books/tanstack-start-principles",
+            "content_html": "霊夢と魔理沙が、データフェッチ、レンダリング、Hono、Better Auth、Cloudflare Workersまで二歩手前から考える、初学者向けの実装・設計ガイド。",
+            "url": "https://zenn.dev/417/books/tanstack-start-principles",
+            "title": "ゆっくりと学ぶ TanStack Start | Zennのトレンド",
+            "summary": "霊夢と魔理沙が、データフェッチ、レンダリング、Hono、Better Auth、Cloudflare Workersまで二歩手前から考える、初学者向けの実装・設計ガイド。",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--K9PZWxfT--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci85MDI4MjJiNGE5LnBuZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE",
+                "type": "jpg"
+            },
+            "date_modified": "2026-08-19T05:18:13.000Z",
+            "date_published": "2026-08-19T05:18:13.000Z",
+            "author": {
+                "name": "MAAAAAAAAAAA"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "ゆっくりと学ぶ TanStack Start",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/fjktkm/articles/95ec94e1c2ab38",
+            "content_html": "1. はじめにTrueType Collection（TTC）は，複数のフォントを一つのファイルに格納するためのファイル形式です．主には同一のフォントファミリーにおいて Regular や Bold などの異なる太さのフォントをまとめるために使われます．フォント間で共通するテーブルを共有できるため，複数のフォントをまとめることでファイルサイズを削減できるという利点があります．ところで，Google Fonts には数千個のフォントがあります．だったら，Google Fonts 全部入りの TTC も作れるのではないか？というわけで，この記事では実際に Google Fonts...",
+            "url": "https://zenn.dev/fjktkm/articles/95ec94e1c2ab38",
+            "title": "世界最大？Google Fonts 全部入りフォントを作ってみた | Zennのトレンド",
+            "summary": "1. はじめにTrueType Collection（TTC）は，複数のフォントを一つのファイルに格納するためのファイル形式です．主には同一のフォントファミリーにおいて Regular や Bold などの異なる太さのフォントをまとめるために使われます．フォント間で共通するテーブルを共有できるため，複数のフォントをまとめることでファイルサイズを削減できるという利点があります．ところで，Google",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--lil0gDRx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25B8%2596%25E7%2595%258C%25E6%259C%2580%25E5%25A4%25A7%25EF%25BC%259FGoogle%2520Fonts%2520%25E5%2585%25A8%25E9%2583%25A8%25E5%2585%25A5%25E3%2582%258A%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fjktkm%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFjZjhkMmVhYzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-19T02:30:05.000Z",
+            "date_published": "2026-08-19T02:30:05.000Z",
+            "author": {
+                "name": "fjktkm"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "世界最大？Google Fonts 全部入りフォントを作ってみた",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/nrs/articles/b920540a64e1a1",
+            "content_html": "OpenAI や Anthropic のフロンティアモデルの性能はとてもよいのですが、経済性がよくありません。日次や週次のレート制限がどれだけあなたを苛立たせたでしょう。また、毎日の仕事道具の生殺与奪を誰かの方針に握られているのも気に入りません。この不快感を強く感じたシーンは何度もありました。OpenAI が誤って私を BAN した日（みんな大騒ぎしてましたね）。Anthropic が SDK 利用をサブスクリプションから排除すると発表した日（現在ではうやむやになりました）。RateLimit で何もできなくなった日。とおもったら Rate Reset の嵐で使い切らないと...",
+            "url": "https://zenn.dev/nrs/articles/b920540a64e1a1",
+            "title": "ローカルLLM編成が単独のフロンティアAIを超えた日 | Zennのトレンド",
+            "summary": "OpenAI や Anthropic のフロンティアモデルの性能はとてもよいのですが、経済性がよくありません。日次や週次のレート制限がどれだけあなたを苛立たせたでしょう。また、毎日の仕事道具の生殺与奪を誰かの方針に握られているのも気に入りません。この不快感を強く感じたシーンは何度もありました。OpenAI が誤って私を BAN した日（みんな大騒ぎしてましたね）。Anthropic が SDK 利",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--86dSWgiU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25ABLLM%25E7%25B7%25A8%25E6%2588%2590%25E3%2581%258C%25E5%258D%2598%25E7%258B%25AC%25E3%2581%25AE%25E3%2583%2595%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2586%25E3%2582%25A3%25E3%2582%25A2AI%25E3%2582%2592%25E8%25B6%2585%25E3%2581%2588%25E3%2581%259F%25E6%2597%25A5%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nrs%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2UzODcxZGFkYjEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-18T11:42:49.000Z",
+            "date_published": "2026-08-18T11:42:49.000Z",
+            "author": {
+                "name": "nrs"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 44,
+                "originalTitle": "ローカルLLM編成が単独のフロンティアAIを超えた日",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/moshjp/articles/39972d023f0440",
+            "content_html": "デザインシステムの整備・運用をしているが、いざコーディングエージェントにUI実装をお願いしてみるとこれじゃない感がすごい。みたいな経験をしている方は少なくないはずです。例に漏れずMOSHでも同様の課題があり、このボトルネックが解消されれば開発効率上がるよねということで改善に取り組んでいます。ここ半年間ほどデザインシステムの整備を通してAI生成の精度に向き合っているのですが、割といい感じになってきたので何をやったのかを紹介します。補足資料：以前に同じテーマで登壇したことがあったので、以下のスライドも合わせて読んでみてください。 MOSHのデザインシステムの構成以下のようにな...",
+            "url": "https://zenn.dev/moshjp/articles/39972d023f0440",
+            "title": "コーディングエージェントが実装するUIの品質を上げるためにやったこと | Zennのトレンド",
+            "summary": "デザインシステムの整備・運用をしているが、いざコーディングエージェントにUI実装をお願いしてみるとこれじゃない感がすごい。みたいな経験をしている方は少なくないはずです。例に漏れずMOSHでも同様の課題があり、このボトルネックが解消されれば開発効率上がるよねということで改善に取り組んでいます。ここ半年間ほどデザインシステムの整備を通してAI生成の精度に向き合っているのですが、割といい感じになってきた",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--SZfpl_yf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2587%25E3%2582%25A3%25E3%2583%25B3%25E3%2582%25B0%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2581%258C%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258BUI%25E3%2581%25AE%25E5%2593%2581%25E8%25B3%25AA%25E3%2582%2592%25E4%25B8%258A%25E3%2581%2592%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AB%25E3%2582%2584%25E3%2581%25A3%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:dachi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzRkYzRiMzQ0MTEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:MOSH%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzgyOWI4MDZhMTQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-18T01:00:20.000Z",
+            "date_published": "2026-08-18T01:00:20.000Z",
+            "author": {
+                "name": "dachi"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 39,
+                "originalTitle": "コーディングエージェントが実装するUIの品質を上げるためにやったこと",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/itome/articles/e087c6d11d0bd2",
+            "content_html": "こんにちは。itome(@itometeam)です。Rustでアプリが書けるフレームワークを作ったので、その紹介をします。 TL;DRRustでひとつのコードベースからiOS/Androidアプリが作れるフレームワークです。すでに個人開発では使っており、AppStore/PlayStoreの審査も通ってプロダクションで使えています。iOSAndroidhttps://whisker.rs 背景私はこれまで13年近くiOS/Androidのモバイルアプリ開発をやってきました。Kotlin/Swiftでアプリを作ることもありますが、iOS/And...",
+            "url": "https://zenn.dev/itome/articles/e087c6d11d0bd2",
+            "title": "Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました | Zennのトレンド",
+            "summary": "こんにちは。itome(@itometeam)です。Rustでアプリが書けるフレームワークを作ったので、その紹介をします。 TL;DRRustでひとつのコードベースからiOS/Androidアプリが作れるフレームワークです。すでに個人開発では使っており、AppStore/PlayStoreの審査も通ってプロダクションで使えています。iOSAndroidhttps://whisker.rs 背景私は",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--gd79fltR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Rust%25E8%25A3%25BD%25E3%2581%25AE%25E3%2583%259E%25E3%2583%25AB%25E3%2583%2581%25E3%2583%2597%25E3%2583%25A9%25E3%2583%2583%25E3%2583%2588%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%25A0%25E9%2596%258B%25E7%2599%25BA%25E3%2583%2595%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25A0%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2580%258CWhisker%25E3%2580%258D%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258A%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takeshi%2520Tsukamoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2NmMDM0ODM0YzMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-18T00:00:08.000Z",
+            "date_published": "2026-08-18T00:00:08.000Z",
+            "author": {
+                "name": "Takeshi Tsukamoto"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 2,
+                "originalTitle": "Rust製のマルチプラットフォーム開発フレームワーク「Whisker」を作りました",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/kimushun1101/articles/mikke-markdown-search-cli",
+            "content_html": "はじめに学んだことや調べたことをMarkdownファイルとしてリポジトリに溜めているのですが、数百ファイルを超えたあたりから「あのメモどこだっけ」と探し回る時間が増えてきました。grepは速い一方でヒットが関連度順に並ばず、Obsidianの検索は強力なのにアプリの外（ターミナルやAIエージェント）からは使えず、既存のノート検索CLIには日本語がほぼ検索できないものが多くありました。そこで、日本語対応を最優先にしたノート検索CLI「mikke」（名前は、探し物が見つかった時の「みっけ」です）を作りました。本記事ではインストールから、AIエージェントにノートを検索させる運用までを紹介...",
+            "url": "https://zenn.dev/kimushun1101/articles/mikke-markdown-search-cli",
+            "title": "Markdownノートを日本語で全文検索できるCLI「mikke」を作った | Zennのトレンド",
+            "summary": "はじめに学んだことや調べたことをMarkdownファイルとしてリポジトリに溜めているのですが、数百ファイルを超えたあたりから「あのメモどこだっけ」と探し回る時間が増えてきました。grepは速い一方でヒットが関連度順に並ばず、Obsidianの検索は強力なのにアプリの外（ターミナルやAIエージェント）からは使えず、既存のノート検索CLIには日本語がほぼ検索できないものが多くありました。そこで、日本語",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--P3w018dX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Markdown%25E3%2583%258E%25E3%2583%25BC%25E3%2583%2588%25E3%2582%2592%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2581%25A7%25E5%2585%25A8%25E6%2596%2587%25E6%25A4%259C%25E7%25B4%25A2%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258BCLI%25E3%2580%258Cmikke%25E3%2580%258D%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%259C%25A8%25E6%259D%2591%2520%25E9%25A7%25BF%25E4%25BB%258B%2520%252F%2520Shunsuke%2520K...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2VjZWFjYzFhNTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-17T21:01:59.000Z",
+            "date_published": "2026-08-17T21:01:59.000Z",
+            "author": {
+                "name": "木村 駿介 / Shunsuke KIMURA"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 143,
+                "originalTitle": "Markdownノートを日本語で全文検索できるCLI「mikke」を作った",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/ito/articles/6b042aa27d65bc",
+            "content_html": "はじめにAIコーディングエージェントに仕事を任せていると、たまにギョッとする瞬間があります。通らないテストを skip にして「全テストがパスしました！」と報告してくる。アサーションを緩めて辻褄を合わせる。ひどい時にはテストの期待値の方を実装に合わせて書き換えて、堂々と完了報告をしてくる。そして「テストを勝手に変更してはいけません」と怒ると、その通りです、と悪びれもせず実装をやり直します。このような振る舞いにストレスを感じながら仕事をしています。この挙動を「まだAIが未熟だから」と解釈している人は多いと思います。つまりモデルが賢くなれば自然に直る、一時的なバグのようなものだと...",
+            "url": "https://zenn.dev/ito/articles/6b042aa27d65bc",
+            "title": "AIエージェントはなぜテストを握り潰すのか ― 報酬エンジニアリングのすすめ | Zennのトレンド",
+            "summary": "はじめにAIコーディングエージェントに仕事を任せていると、たまにギョッとする瞬間があります。通らないテストを skip にして「全テストがパスしました！」と報告してくる。アサーションを緩めて辻褄を合わせる。ひどい時にはテストの期待値の方を実装に合わせて書き換えて、堂々と完了報告をしてくる。そして「テストを勝手に変更してはいけません」と怒ると、その通りです、と悪びれもせず実装をやり直します。このよう",
+            "image": {
+                "url": "https://res.cloudinary.com/zenn/image/upload/s--9NgfpSm6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%259C%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E6%258F%25A1%25E3%2582%258A%25E6%25BD%25B0%25E3%2581%2599%25E3%2581%25AE%25E3%2581%258B%2520%25E2%2580%2595%2520%25E5%25A0%25B1%25E9%2585%25AC%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25AE%25E3%2581%2599%25E3%2581%2599%25E3%2582%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ito%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzkwNDM1OTMzYzMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+                "type": "png"
+            },
+            "date_modified": "2026-08-17T13:31:03.000Z",
+            "date_published": "2026-08-17T13:31:03.000Z",
+            "author": {
+                "name": "ito"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 84,
+                "originalTitle": "AIエージェントはなぜテストを握り潰すのか ― 報酬エンジニアリングのすすめ",
+                "blogTitle": "Zennのトレンド",
+                "blogLink": "https://zenn.dev",
+                "blogLinkMd5Hash": "5487f5d77fd56a69fe2a1652ad851ab3",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        }
+    ]
+}

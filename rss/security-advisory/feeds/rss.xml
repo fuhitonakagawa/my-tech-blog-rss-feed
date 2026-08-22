@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Security Advisory｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</link>
+        <description>Security Advisoryセクションのブログ更新をまとめたRSSフィード</description>
+        <lastBuildDate>Sat, 22 Aug 2026 15:13:46 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+        <language>ja</language>
+        <image>
+            <title>Security Advisory｜企業テックブログRSS</title>
+            <url>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</url>
+            <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</link>
+        </image>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[[jsonata] JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-66mm-25pp-rfff</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-66mm-25pp-rfff</guid>
+            <pubDate>Fri, 21 Aug 2026 21:04:19 GMT</pubDate>
+            <description><![CDATA[Before JSONata 2.2.1 and 1.8.8 it was possible to execute arbitrary code withcrafted expressions, due to:overwriting $clone allowing mutation of objects via transforms (seeevaluateTransformExpression)]]></description>
+            <content:encoded><![CDATA[Before JSONata 2.2.1 and 1.8.8 it was possible to execute arbitrary code withcrafted expressions, due to:overwriting $clone allowing mutation of objects via transforms (seeevaluateTransformExpression)it being possible to destruct jsonata functions/lambdas (e.g. $merge.*)applyProcedureusing proc.arguments.forEach and not Array.prototype.forEachWhich could be chained to execute arbitrary code.This was fixed with:https://github.com/jsonata-js/jsonata/pull/799(https://github.com/jsonata-js/jsonata/p]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jsonata] JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jsonata] JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-66mm-25pp-rfff</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-66mm-25pp-rfff</guid>
+            <pubDate>Fri, 21 Aug 2026 21:04:19 GMT</pubDate>
+            <description><![CDATA[Before JSONata 2.2.1 and 1.8.8 it was possible to execute arbitrary code withcrafted expressions, due to:overwriting $clone allowing mutation of objects via transforms (seeevaluateTransformExpression)]]></description>
+            <content:encoded><![CDATA[Before JSONata 2.2.1 and 1.8.8 it was possible to execute arbitrary code withcrafted expressions, due to:overwriting $clone allowing mutation of objects via transforms (seeevaluateTransformExpression)it being possible to destruct jsonata functions/lambdas (e.g. $merge.*)applyProcedureusing proc.arguments.forEach and not Array.prototype.forEachWhich could be chained to execute arbitrary code.This was fixed with:https://github.com/jsonata-js/jsonata/pull/799(https://github.com/jsonata-js/jsonata/p]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jsonata] JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jsonata] JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-2943-5xfg-gq5f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2943-5xfg-gq5f</guid>
+            <pubDate>Fri, 21 Aug 2026 20:58:01 GMT</pubDate>
+            <description><![CDATA[Before JSONata 2.2.1 and 1.8.8 it was possible to execute arbitrary code withcrafted expressions, due to a bypassable hasOwnProperty check inenvironment.lookuphttps://github.com/jsonata-js/jsonata/blo]]></description>
+            <content:encoded><![CDATA[Before JSONata 2.2.1 and 1.8.8 it was possible to execute arbitrary code withcrafted expressions, due to a bypassable hasOwnProperty check inenvironment.lookuphttps://github.com/jsonata-js/jsonata/blob/8ee4476f8a228bfc7a62979ae0a9c13a4043cd03/src/jsonata.js#L1863-L1871This was fixed in https://github.com/jsonata-js/jsonata/pull/799(https://github.com/jsonata-js/jsonata/pull/799/files#diff-de23c1b6e199d0e59406a284aae5fa7be63fcbbff706829913dba73dcdeb061cL1865-R1865)which is included in the 2.2.1 r]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jsonata] JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jsonata] JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-2943-5xfg-gq5f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2943-5xfg-gq5f</guid>
+            <pubDate>Fri, 21 Aug 2026 20:58:01 GMT</pubDate>
+            <description><![CDATA[Before JSONata 2.2.1 and 1.8.8 it was possible to execute arbitrary code withcrafted expressions, due to a bypassable hasOwnProperty check inenvironment.lookuphttps://github.com/jsonata-js/jsonata/blo]]></description>
+            <content:encoded><![CDATA[Before JSONata 2.2.1 and 1.8.8 it was possible to execute arbitrary code withcrafted expressions, due to a bypassable hasOwnProperty check inenvironment.lookuphttps://github.com/jsonata-js/jsonata/blob/8ee4476f8a228bfc7a62979ae0a9c13a4043cd03/src/jsonata.js#L1863-L1871This was fixed in https://github.com/jsonata-js/jsonata/pull/799(https://github.com/jsonata-js/jsonata/pull/799/files#diff-de23c1b6e199d0e59406a284aae5fa7be63fcbbff706829913dba73dcdeb061cL1865-R1865)which is included in the 2.2.1 r]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jsonata] JSONata vulnerable to Arbitrary Code Execution via crafted JSONata expressions</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[hydra-core] Hydra: hydra.utils.instantiate with untrusted config can lead to code execution | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-2cp2-2r3c-7p7r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2cp2-2r3c-7p7r</guid>
+            <pubDate>Fri, 21 Aug 2026 20:57:31 GMT</pubDate>
+            <description><![CDATA[Summaryhydra.utils.instantiate() resolves and calls Python objects from config. If anapplication passes untrusted config to instantiate(), an attacker who controls_target_ and its arguments can cause ]]></description>
+            <content:encoded><![CDATA[Summaryhydra.utils.instantiate() resolves and calls Python objects from config. If anapplication passes untrusted config to instantiate(), an attacker who controls_target_ and its arguments can cause arbitrary code execution in the consumingprocess.Hydra is not a network service. Exploitation requires a consuming application,library, or user workflow to load attacker-controlled config, CLI overrides, ormodel metadata and pass it to hydra.utils.instantiate().DetailsHydra's instantiate API is desi]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Hydra: hydra.utils.instantiate with untrusted config can lead to code execution"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[hydra-core] Hydra: hydra.utils.instantiate with untrusted config can lead to code execution</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jsonata] JSONata: Arbitrary Code Execution via crafted JSONata expressions | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8gq3-vp5j-2grp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8gq3-vp5j-2grp</guid>
+            <pubDate>Fri, 21 Aug 2026 20:57:07 GMT</pubDate>
+            <description><![CDATA[ImpactBefore JSONata 2.2.0 and 1.8.8 it was possible to execute arbitrary code with crafted expressions, due to a missing hasOwnProperty check in the lookup function:https://github.com/jsonata-js/json]]></description>
+            <content:encoded><![CDATA[ImpactBefore JSONata 2.2.0 and 1.8.8 it was possible to execute arbitrary code with crafted expressions, due to a missing hasOwnProperty check in the lookup function:https://github.com/jsonata-js/jsonata/blob/f9632e01e6e67d4f9f00593f9795420cb4b57f48/src/functions.js#L1686-L1705This was fixed with https://github.com/jsonata-js/jsonata/pull/794, which is included in the 2.2.0 release, and ported in the 1.8.8 release.PoCimport jsonata from "jsonata";const expression = jsonata(`( __lookupSetter__('_]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JSONata: Arbitrary Code Execution via crafted JSONata expressions"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jsonata] JSONata: Arbitrary Code Execution via crafted JSONata expressions</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[jsonata] JSONata: Arbitrary Code Execution via crafted JSONata expressions | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8gq3-vp5j-2grp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8gq3-vp5j-2grp</guid>
+            <pubDate>Fri, 21 Aug 2026 20:57:07 GMT</pubDate>
+            <description><![CDATA[ImpactBefore JSONata 2.2.0 and 1.8.8 it was possible to execute arbitrary code with crafted expressions, due to a missing hasOwnProperty check in the lookup function:https://github.com/jsonata-js/json]]></description>
+            <content:encoded><![CDATA[ImpactBefore JSONata 2.2.0 and 1.8.8 it was possible to execute arbitrary code with crafted expressions, due to a missing hasOwnProperty check in the lookup function:https://github.com/jsonata-js/jsonata/blob/f9632e01e6e67d4f9f00593f9795420cb4b57f48/src/functions.js#L1686-L1705This was fixed with https://github.com/jsonata-js/jsonata/pull/794, which is included in the 2.2.0 release, and ported in the 1.8.8 release.PoCimport jsonata from "jsonata";const expression = jsonata(`( __lookupSetter__('_]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="JSONata: Arbitrary Code Execution via crafted JSONata expressions"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[jsonata] JSONata: Arbitrary Code Execution via crafted JSONata expressions</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[xinference] Xinference vulnerable to remote code execution via unsafe `eval()` in Llama3 tool-call parsing | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-x2rj-828p-hx9m</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x2rj-828p-hx9m</guid>
+            <pubDate>Fri, 21 Aug 2026 20:56:37 GMT</pubDate>
+            <description><![CDATA[SummaryXinference used Python's unsafe eval() function when parsing Llama3 tool-call output generated by a large language model. Because the model output can be influenced by attacker-controlled promp]]></description>
+            <content:encoded><![CDATA[SummaryXinference used Python's unsafe eval() function when parsing Llama3 tool-call output generated by a large language model. Because the model output can be influenced by attacker-controlled prompts sent to the chat completion API, a remote attacker can craft prompts that cause the model to return a Python expression. Xinference then evaluates that expression on the server while post-processing the tool-call result. In the tested default deployment, authentication was not enabled, so the vul]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Xinference vulnerable to remote code execution via unsafe `eval()` in Llama3 tool-call parsing"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[xinference] Xinference vulnerable to remote code execution via unsafe `eval()` in Llama3 tool-call parsing</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[@keystone-6/core] Keystone vulnerable to `graphql.maxTake` bypass with negative `take` | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-cqmq-8755-7xvh</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-cqmq-8755-7xvh</guid>
+            <pubDate>Fri, 21 Aug 2026 20:55:11 GMT</pubDate>
+            <description><![CDATA[SummaryThe value of graphql.maxTake can be bypassed by providing a negative input.This can be used to exceed the developer's intended graphql.maxTake value, allowing queries to return results in exces]]></description>
+            <content:encoded><![CDATA[SummaryThe value of graphql.maxTake can be bypassed by providing a negative input.This can be used to exceed the developer's intended graphql.maxTake value, allowing queries to return results in excess of the graphql.maxTake value set.ImpactThis affects any project relying on graphql.maxTake to bound the number of items returned per query.PatchesThis issue has been patched in @keystone-6/core version 6.5.3.If you cannot patch, you can workaround this by restricting take input values in your Grap]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Keystone vulnerable to `graphql.maxTake` bypass with negative `take`"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[@keystone-6/core] Keystone vulnerable to `graphql.maxTake` bypass with negative `take`</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[defuddle] Defuddle vulnerable to XSS via unescaped attribute interpolation in site extractors | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jg4p-g6xj-4qmf</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jg4p-g6xj-4qmf</guid>
+            <pubDate>Fri, 21 Aug 2026 20:54:56 GMT</pubDate>
+            <description><![CDATA[SummaryAn Improper Neutralization of Input During Web Page Generation issue in the site extractor component allows an attacker-controlled attribute value to be injected into output HTML without escapi]]></description>
+            <content:encoded><![CDATA[SummaryAn Improper Neutralization of Input During Web Page Generation issue in the site extractor component allows an attacker-controlled attribute value to be injected into output HTML without escaping. An attacker who crafts a malicious HTML page or controls content on a matching domain can execute arbitrary scripts when a victim processes the page, resulting in Cross-Site Scripting (XSS). This affects defuddle through 0.19.0 and has been patched in version 0.19.1.ImpactThis vulnerability allo]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Defuddle vulnerable to XSS via unescaped attribute interpolation in site extractors"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[defuddle] Defuddle vulnerable to XSS via unescaped attribute interpolation in site extractors</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[unleash-server] Unleash: Global Mustache.escape override disables HTML escaping process-wide, enabling Slack/Teams link-injection via unrestricted username | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-w4mq-xh27-6xpx</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-w4mq-xh27-6xpx</guid>
+            <pubDate>Fri, 21 Aug 2026 19:14:52 GMT</pubDate>
+            <description><![CDATA[Vulnerability DetailsFile: src/lib/addons/feature-event-formatter-md.tsLine: 355 (in v8.0.1; format() method)Root CauseFeatureEventFormatterMd.format() does:Mustache.escape = (text) =&amp;gt; text;const text]]></description>
+            <content:encoded><![CDATA[Vulnerability DetailsFile: src/lib/addons/feature-event-formatter-md.tsLine: 355 (in v8.0.1; format() method)Root CauseFeatureEventFormatterMd.format() does:Mustache.escape = (text) =&amp;gt; text;const text = Mustache.render(action, context);mustache (pinned ^4.2.0, confirmed installed 4.2.0) keeps escape as a module-level singleton (mustache.js: mustache.escape = escapeHtml;), read by every Mustache.render() call in the process unless a per-call config.escape override is passed (var escape = this.get]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Unleash: Global Mustache.escape override disables HTML escaping process-wide, enabling Slack/Teams link-injection via unrestricted username"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[unleash-server] Unleash: Global Mustache.escape override disables HTML escaping process-wide, enabling Slack/Teams link-injection via unrestricted username</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[unleash-server] Unleash: Addon webhook URL is dialed server-side with no internal-address filtering, enabling SSRF to internal services / cloud metadata and exfiltration of configured request headers | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5vf6-jrqr-78fj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5vf6-jrqr-78fj</guid>
+            <pubDate>Fri, 21 Aug 2026 19:14:45 GMT</pubDate>
+            <description><![CDATA[SummaryUnleash's addon/integration subsystem lets an operator configure a webhook (and the Slack, Microsoft Teams, Datadog, and New Relic integrations) with a target url parameter. Whenever a subscrib]]></description>
+            <content:encoded><![CDATA[SummaryUnleash's addon/integration subsystem lets an operator configure a webhook (and the Slack, Microsoft Teams, Datadog, and New Relic integrations) with a target url parameter. Whenever a subscribed feature-flag event fires, the Unleash server itself issues an HTTP request to that configured URL. The URL is taken verbatim from the addon's parameters.url and passed straight to the HTTP client (ky) with no validation of the host: there is no allow-list, no deny-list, and no blocking of loopbac]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Unleash: Addon webhook URL is dialed server-side with no internal-address filtering, enabling SSRF to internal services / cloud metadata and exfiltration of configured request headers"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[unleash-server] Unleash: Addon webhook URL is dialed server-side with no internal-address filtering, enabling SSRF to internal services / cloud metadata and exfiltration of configured request headers</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[unleash-server] Unleash: Addon webhook URL is dialed server-side with no internal-address filtering, enabling SSRF to internal services / cloud metadata and exfiltration of configured request headers | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5vf6-jrqr-78fj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5vf6-jrqr-78fj</guid>
+            <pubDate>Fri, 21 Aug 2026 19:14:45 GMT</pubDate>
+            <description><![CDATA[SummaryUnleash's addon/integration subsystem lets an operator configure a webhook (and the Slack, Microsoft Teams, Datadog, and New Relic integrations) with a target url parameter. Whenever a subscrib]]></description>
+            <content:encoded><![CDATA[SummaryUnleash's addon/integration subsystem lets an operator configure a webhook (and the Slack, Microsoft Teams, Datadog, and New Relic integrations) with a target url parameter. Whenever a subscribed feature-flag event fires, the Unleash server itself issues an HTTP request to that configured URL. The URL is taken verbatim from the addon's parameters.url and passed straight to the HTTP client (ky) with no validation of the host: there is no allow-list, no deny-list, and no blocking of loopbac]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Unleash: Addon webhook URL is dialed server-side with no internal-address filtering, enabling SSRF to internal services / cloud metadata and exfiltration of configured request headers"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[unleash-server] Unleash: Addon webhook URL is dialed server-side with no internal-address filtering, enabling SSRF to internal services / cloud metadata and exfiltration of configured request headers</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[unleash-server] Unleash: Addon webhook URL is dialed server-side with no internal-address filtering, enabling SSRF to internal services / cloud metadata and exfiltration of configured request headers | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5vf6-jrqr-78fj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5vf6-jrqr-78fj</guid>
+            <pubDate>Fri, 21 Aug 2026 19:14:45 GMT</pubDate>
+            <description><![CDATA[SummaryUnleash's addon/integration subsystem lets an operator configure a webhook (and the Slack, Microsoft Teams, Datadog, and New Relic integrations) with a target url parameter. Whenever a subscrib]]></description>
+            <content:encoded><![CDATA[SummaryUnleash's addon/integration subsystem lets an operator configure a webhook (and the Slack, Microsoft Teams, Datadog, and New Relic integrations) with a target url parameter. Whenever a subscribed feature-flag event fires, the Unleash server itself issues an HTTP request to that configured URL. The URL is taken verbatim from the addon's parameters.url and passed straight to the HTTP client (ky) with no validation of the host: there is no allow-list, no deny-list, and no blocking of loopbac]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Unleash: Addon webhook URL is dialed server-side with no internal-address filtering, enabling SSRF to internal services / cloud metadata and exfiltration of configured request headers"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[unleash-server] Unleash: Addon webhook URL is dialed server-side with no internal-address filtering, enabling SSRF to internal services / cloud metadata and exfiltration of configured request headers</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[unleash-server] Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r5pq-6chh-j3xp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r5pq-6chh-j3xp</guid>
+            <pubDate>Fri, 21 Aug 2026 19:14:37 GMT</pubDate>
+            <description><![CDATA[SummaryAn unauthenticated POST to any OpenAPI-validated endpoint, including the anonymous POST /edge/validate and POST /edge/issue-token, crashes the entire Unleash server with one request body of dee]]></description>
+            <content:encoded><![CDATA[SummaryAn unauthenticated POST to any OpenAPI-validated endpoint, including the anonymous POST /edge/validate and POST /edge/issue-token, crashes the entire Unleash server with one request body of deeply-nested JSON.When request-body validation fails, Unleash builds the error message by calling JSON.stringify on the raw offending value taken from the request body. A value nested a few thousand levels deep makes JSON.stringify recurse past the V8 call-stack limit and throw RangeError: Maximum cal]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[unleash-server] Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[unleash-server] Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r5pq-6chh-j3xp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r5pq-6chh-j3xp</guid>
+            <pubDate>Fri, 21 Aug 2026 19:14:37 GMT</pubDate>
+            <description><![CDATA[SummaryAn unauthenticated POST to any OpenAPI-validated endpoint, including the anonymous POST /edge/validate and POST /edge/issue-token, crashes the entire Unleash server with one request body of dee]]></description>
+            <content:encoded><![CDATA[SummaryAn unauthenticated POST to any OpenAPI-validated endpoint, including the anonymous POST /edge/validate and POST /edge/issue-token, crashes the entire Unleash server with one request body of deeply-nested JSON.When request-body validation fails, Unleash builds the error message by calling JSON.stringify on the raw offending value taken from the request body. A value nested a few thousand levels deep makes JSON.stringify recurse past the V8 call-stack limit and throw RangeError: Maximum cal]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[unleash-server] Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[unleash-server] Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r5pq-6chh-j3xp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r5pq-6chh-j3xp</guid>
+            <pubDate>Fri, 21 Aug 2026 19:14:37 GMT</pubDate>
+            <description><![CDATA[SummaryAn unauthenticated POST to any OpenAPI-validated endpoint, including the anonymous POST /edge/validate and POST /edge/issue-token, crashes the entire Unleash server with one request body of dee]]></description>
+            <content:encoded><![CDATA[SummaryAn unauthenticated POST to any OpenAPI-validated endpoint, including the anonymous POST /edge/validate and POST /edge/issue-token, crashes the entire Unleash server with one request body of deeply-nested JSON.When request-body validation fails, Unleash builds the error message by calling JSON.stringify on the raw offending value taken from the request body. A value nested a few thousand levels deep makes JSON.stringify recurse past the V8 call-stack limit and throw RangeError: Maximum cal]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[unleash-server] Unleash: Unauthenticated single-request DoS via OpenAPI validation error formatter</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[gettext-converter] gettext-converter: Prototype pollution in js2i18next() via crafted translation keys | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-f4jp-rw7w-ccwg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-f4jp-rw7w-ccwg</guid>
+            <pubDate>Thu, 20 Aug 2026 20:11:13 GMT</pubDate>
+            <description><![CDATA[Impactjs2i18next() is vulnerable to prototype pollution. When converting translations, it splits nested keys on the key separator (default ##) and uses each segment as a dynamic object key while build]]></description>
+            <content:encoded><![CDATA[Impactjs2i18next() is vulnerable to prototype pollution. When converting translations, it splits nested keys on the key separator (default ##) and uses each segment as a dynamic object key while building the output object. A key whose segment is __proto__ (e.g. __proto__##gcPolluted) causes the converter to resolve Object.prototype as the nested write target and assign the translated value onto it, polluting Object.prototype for the whole runtime.Any application that converts translation data (P]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="gettext-converter: Prototype pollution in js2i18next() via crafted translation keys"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[gettext-converter] gettext-converter: Prototype pollution in js2i18next() via crafted translation keys</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper restriction handling on Page translation API endpoint | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-jm5p-837g-rv8g</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jm5p-837g-rv8g</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:27 GMT</pubDate>
+            <description><![CDATA[ImpactA CMS user with the "submit translations" permission, could use the Admin API's "copy for translation" endpoint to copy an existing page that they do not have edit access to, allowing them to vi]]></description>
+            <content:encoded><![CDATA[ImpactA CMS user with the "submit translations" permission, could use the Admin API's "copy for translation" endpoint to copy an existing page that they do not have edit access to, allowing them to view its contents.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsN/AAcknowledgementsMany thanks to tinyb0y for reporting this issue.For more informationIf you have any questions or comments about this advisory:Visit Wagtail's support channelsEmail us at]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper restriction handling on Page translation API endpoint"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper restriction handling on Page translation API endpoint</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper restriction handling on Page translation API endpoint | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-jm5p-837g-rv8g</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jm5p-837g-rv8g</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:27 GMT</pubDate>
+            <description><![CDATA[ImpactA CMS user with the "submit translations" permission, could use the Admin API's "copy for translation" endpoint to copy an existing page that they do not have edit access to, allowing them to vi]]></description>
+            <content:encoded><![CDATA[ImpactA CMS user with the "submit translations" permission, could use the Admin API's "copy for translation" endpoint to copy an existing page that they do not have edit access to, allowing them to view its contents.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsN/AAcknowledgementsMany thanks to tinyb0y for reporting this issue.For more informationIf you have any questions or comments about this advisory:Visit Wagtail's support channelsEmail us at]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper restriction handling on Page translation API endpoint"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper restriction handling on Page translation API endpoint</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper restriction handling on Page translation API endpoint | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-jm5p-837g-rv8g</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jm5p-837g-rv8g</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:27 GMT</pubDate>
+            <description><![CDATA[ImpactA CMS user with the "submit translations" permission, could use the Admin API's "copy for translation" endpoint to copy an existing page that they do not have edit access to, allowing them to vi]]></description>
+            <content:encoded><![CDATA[ImpactA CMS user with the "submit translations" permission, could use the Admin API's "copy for translation" endpoint to copy an existing page that they do not have edit access to, allowing them to view its contents.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsN/AAcknowledgementsMany thanks to tinyb0y for reporting this issue.For more informationIf you have any questions or comments about this advisory:Visit Wagtail's support channelsEmail us at]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper restriction handling on Page translation API endpoint"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper restriction handling on Page translation API endpoint</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper restriction handling on Page translation API endpoint | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-jm5p-837g-rv8g</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jm5p-837g-rv8g</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:27 GMT</pubDate>
+            <description><![CDATA[ImpactA CMS user with the "submit translations" permission, could use the Admin API's "copy for translation" endpoint to copy an existing page that they do not have edit access to, allowing them to vi]]></description>
+            <content:encoded><![CDATA[ImpactA CMS user with the "submit translations" permission, could use the Admin API's "copy for translation" endpoint to copy an existing page that they do not have edit access to, allowing them to view its contents.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsN/AAcknowledgementsMany thanks to tinyb0y for reporting this issue.For more informationIf you have any questions or comments about this advisory:Visit Wagtail's support channelsEmail us at]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper restriction handling on Page translation API endpoint"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper restriction handling on Page translation API endpoint</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper permission handling when copying snippets | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-x5cx-w6p2-mxf2</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x5cx-w6p2-mxf2</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:23 GMT</pubDate>
+            <description><![CDATA[ImpactA CMS user with "add" permission over a snippet model, but not "change" or "view" permission, could copy an existing snippet that they do not have access to, allowing them to view its contents.P]]></description>
+            <content:encoded><![CDATA[ImpactA CMS user with "add" permission over a snippet model, but not "change" or "view" permission, could copy an existing snippet that they do not have access to, allowing them to view its contents.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsN/AAcknowledgementsMany thanks to tinyb0y for reporting this issue.For more informationIf you have any questions or comments about this advisory:Visit Wagtail's support channelsEmail us at security@wagtail]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper permission handling when copying snippets"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper permission handling when copying snippets</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper permission handling when copying snippets | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-x5cx-w6p2-mxf2</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x5cx-w6p2-mxf2</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:23 GMT</pubDate>
+            <description><![CDATA[ImpactA CMS user with "add" permission over a snippet model, but not "change" or "view" permission, could copy an existing snippet that they do not have access to, allowing them to view its contents.P]]></description>
+            <content:encoded><![CDATA[ImpactA CMS user with "add" permission over a snippet model, but not "change" or "view" permission, could copy an existing snippet that they do not have access to, allowing them to view its contents.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsN/AAcknowledgementsMany thanks to tinyb0y for reporting this issue.For more informationIf you have any questions or comments about this advisory:Visit Wagtail's support channelsEmail us at security@wagtail]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper permission handling when copying snippets"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper permission handling when copying snippets</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper permission handling when copying snippets | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-x5cx-w6p2-mxf2</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x5cx-w6p2-mxf2</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:23 GMT</pubDate>
+            <description><![CDATA[ImpactA CMS user with "add" permission over a snippet model, but not "change" or "view" permission, could copy an existing snippet that they do not have access to, allowing them to view its contents.P]]></description>
+            <content:encoded><![CDATA[ImpactA CMS user with "add" permission over a snippet model, but not "change" or "view" permission, could copy an existing snippet that they do not have access to, allowing them to view its contents.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsN/AAcknowledgementsMany thanks to tinyb0y for reporting this issue.For more informationIf you have any questions or comments about this advisory:Visit Wagtail's support channelsEmail us at security@wagtail]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper permission handling when copying snippets"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper permission handling when copying snippets</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper permission handling when copying snippets | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-x5cx-w6p2-mxf2</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x5cx-w6p2-mxf2</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:23 GMT</pubDate>
+            <description><![CDATA[ImpactA CMS user with "add" permission over a snippet model, but not "change" or "view" permission, could copy an existing snippet that they do not have access to, allowing them to view its contents.P]]></description>
+            <content:encoded><![CDATA[ImpactA CMS user with "add" permission over a snippet model, but not "change" or "view" permission, could copy an existing snippet that they do not have access to, allowing them to view its contents.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsN/AAcknowledgementsMany thanks to tinyb0y for reporting this issue.For more informationIf you have any questions or comments about this advisory:Visit Wagtail's support channelsEmail us at security@wagtail]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper permission handling when copying snippets"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper permission handling when copying snippets</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper restriction handling on descendant collections in Documents and Images API | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-c2xx-cjmh-9q8f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-c2xx-cjmh-9q8f</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:14 GMT</pubDate>
+            <description><![CDATA[ImpactThe Documents and Images API V2 incorrectly listed items in descendants of private collections, which should inherit the view restrictions defined on their ancestors. A user with access to the A]]></description>
+            <content:encoded><![CDATA[ImpactThe Documents and Images API V2 incorrectly listed items in descendants of private collections, which should inherit the view restrictions defined on their ancestors. A user with access to the API could see the filename and name of documents and images in these descendant collections.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsSite owners using Wagtail's API can avoid the vulnerability by adding authentication to the Documents and Images ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper restriction handling on descendant collections in Documents and Images API"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper restriction handling on descendant collections in Documents and Images API</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper restriction handling on descendant collections in Documents and Images API | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-c2xx-cjmh-9q8f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-c2xx-cjmh-9q8f</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:14 GMT</pubDate>
+            <description><![CDATA[ImpactThe Documents and Images API V2 incorrectly listed items in descendants of private collections, which should inherit the view restrictions defined on their ancestors. A user with access to the A]]></description>
+            <content:encoded><![CDATA[ImpactThe Documents and Images API V2 incorrectly listed items in descendants of private collections, which should inherit the view restrictions defined on their ancestors. A user with access to the API could see the filename and name of documents and images in these descendant collections.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsSite owners using Wagtail's API can avoid the vulnerability by adding authentication to the Documents and Images ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper restriction handling on descendant collections in Documents and Images API"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper restriction handling on descendant collections in Documents and Images API</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper restriction handling on descendant collections in Documents and Images API | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-c2xx-cjmh-9q8f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-c2xx-cjmh-9q8f</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:14 GMT</pubDate>
+            <description><![CDATA[ImpactThe Documents and Images API V2 incorrectly listed items in descendants of private collections, which should inherit the view restrictions defined on their ancestors. A user with access to the A]]></description>
+            <content:encoded><![CDATA[ImpactThe Documents and Images API V2 incorrectly listed items in descendants of private collections, which should inherit the view restrictions defined on their ancestors. A user with access to the API could see the filename and name of documents and images in these descendant collections.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsSite owners using Wagtail's API can avoid the vulnerability by adding authentication to the Documents and Images ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper restriction handling on descendant collections in Documents and Images API"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper restriction handling on descendant collections in Documents and Images API</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Improper restriction handling on descendant collections in Documents and Images API | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-c2xx-cjmh-9q8f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-c2xx-cjmh-9q8f</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:14 GMT</pubDate>
+            <description><![CDATA[ImpactThe Documents and Images API V2 incorrectly listed items in descendants of private collections, which should inherit the view restrictions defined on their ancestors. A user with access to the A]]></description>
+            <content:encoded><![CDATA[ImpactThe Documents and Images API V2 incorrectly listed items in descendants of private collections, which should inherit the view restrictions defined on their ancestors. A user with access to the API could see the filename and name of documents and images in these descendant collections.PatchesPatched versions have been released as Wagtail 7.0.9, 7.3.4, 7.4.3 and 8.0rc2.WorkaroundsSite owners using Wagtail's API can avoid the vulnerability by adding authentication to the Documents and Images ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Improper restriction handling on descendant collections in Documents and Images API"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Improper restriction handling on descendant collections in Documents and Images API</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Identification of documents by SHA1 hash | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-92hv-j533-69wc</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-92hv-j533-69wc</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:09 GMT</pubDate>
+            <description><![CDATA[ImpactBy passing specific HTTP headers to the document serve URL endpoint, an attacker was able to determine whether a document with a given ID matched a specified SHA1 hash, regardless of any permiss]]></description>
+            <content:encoded><![CDATA[ImpactBy passing specific HTTP headers to the document serve URL endpoint, an attacker was able to determine whether a document with a given ID matched a specified SHA1 hash, regardless of any permission restrictions on the document or knowing its filename. This could allow an attacker to determine whether a document with a specific known hash is present in the Wagtail document library.This vulnerability does not expose the document's contents or any metadata beyond the already known SHA1 hash, ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Identification of documents by SHA1 hash"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Identification of documents by SHA1 hash</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Identification of documents by SHA1 hash | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-92hv-j533-69wc</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-92hv-j533-69wc</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:09 GMT</pubDate>
+            <description><![CDATA[ImpactBy passing specific HTTP headers to the document serve URL endpoint, an attacker was able to determine whether a document with a given ID matched a specified SHA1 hash, regardless of any permiss]]></description>
+            <content:encoded><![CDATA[ImpactBy passing specific HTTP headers to the document serve URL endpoint, an attacker was able to determine whether a document with a given ID matched a specified SHA1 hash, regardless of any permission restrictions on the document or knowing its filename. This could allow an attacker to determine whether a document with a specific known hash is present in the Wagtail document library.This vulnerability does not expose the document's contents or any metadata beyond the already known SHA1 hash, ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Identification of documents by SHA1 hash"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Identification of documents by SHA1 hash</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Identification of documents by SHA1 hash | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-92hv-j533-69wc</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-92hv-j533-69wc</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:09 GMT</pubDate>
+            <description><![CDATA[ImpactBy passing specific HTTP headers to the document serve URL endpoint, an attacker was able to determine whether a document with a given ID matched a specified SHA1 hash, regardless of any permiss]]></description>
+            <content:encoded><![CDATA[ImpactBy passing specific HTTP headers to the document serve URL endpoint, an attacker was able to determine whether a document with a given ID matched a specified SHA1 hash, regardless of any permission restrictions on the document or knowing its filename. This could allow an attacker to determine whether a document with a specific known hash is present in the Wagtail document library.This vulnerability does not expose the document's contents or any metadata beyond the already known SHA1 hash, ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Identification of documents by SHA1 hash"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Identification of documents by SHA1 hash</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wagtail] Wagtail: Identification of documents by SHA1 hash | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-92hv-j533-69wc</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-92hv-j533-69wc</guid>
+            <pubDate>Thu, 20 Aug 2026 18:45:09 GMT</pubDate>
+            <description><![CDATA[ImpactBy passing specific HTTP headers to the document serve URL endpoint, an attacker was able to determine whether a document with a given ID matched a specified SHA1 hash, regardless of any permiss]]></description>
+            <content:encoded><![CDATA[ImpactBy passing specific HTTP headers to the document serve URL endpoint, an attacker was able to determine whether a document with a given ID matched a specified SHA1 hash, regardless of any permission restrictions on the document or knowing its filename. This could allow an attacker to determine whether a document with a specific known hash is present in the Wagtail document library.This vulnerability does not expose the document's contents or any metadata beyond the already known SHA1 hash, ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Wagtail: Identification of documents by SHA1 hash"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wagtail] Wagtail: Identification of documents by SHA1 hash</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[django-cms] django CMS: Missing authorization in `render_object_structure` discloses non-PageContent placeholder structure to low-privileged staff | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-8qj2-c6q4-f399</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8qj2-c6q4-f399</guid>
+            <pubDate>Thu, 20 Aug 2026 18:42:50 GMT</pubDate>
+            <description><![CDATA[SummaryThe django-cms frontend-editing structure endpointGET /&amp;lt;lang&amp;gt;/admin/cms/placeholder/object/&amp;lt;content_type_id&amp;gt;/structure/&amp;lt;object_id&amp;gt;/did not perform an object-level authorization check for non-Pa]]></description>
+            <content:encoded><![CDATA[SummaryThe django-cms frontend-editing structure endpointGET /&amp;lt;lang&amp;gt;/admin/cms/placeholder/object/&amp;lt;content_type_id&amp;gt;/structure/&amp;lt;object_id&amp;gt;/did not perform an object-level authorization check for non-PageContent objects. Any authenticated, active staff user could request the structure endpoint for a frontend-editable object (a model using PlaceholderRelationField) and read its placeholder/plugin structure, even without permission to change that object and without the cms.use_structure permission t]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="django CMS: Missing authorization in `render_object_structure` discloses non-PageContent placeholder structure to low-privileged staff"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[django-cms] django CMS: Missing authorization in `render_object_structure` discloses non-PageContent placeholder structure to low-privileged staff</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[django-cms] django CMS: Broken access control in page *Duplicate* allows reading the content of any page (cross-site / restriction bypass) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-6x92-6vx4-5fwr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6x92-6vx4-5fwr</guid>
+            <pubDate>Thu, 20 Aug 2026 18:42:44 GMT</pubDate>
+            <description><![CDATA[ImpactThe only authorization gate on the duplicate flow is PageAdmin.has_add_permission,which checks user_can_add_page(user, site) / user_can_add_subpage(...) — i.e. “maythis user create a page at all]]></description>
+            <content:encoded><![CDATA[ImpactThe only authorization gate on the duplicate flow is PageAdmin.has_add_permission,which checks user_can_add_page(user, site) / user_can_add_subpage(...) — i.e. “maythis user create a page at all”. Nothing checks the user’s relationship to the page beingcopied:cms/admin/forms.py — DuplicatePageForm.source = ModelChoiceField(queryset=Page.objects.all(), widget=HiddenInput())spans every page in the database, on every site.cms/admin/forms.py — AddPageForm.__init__ returns early when the source]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="django CMS: Broken access control in page *Duplicate* allows reading the content of any page (cross-site / restriction bypass)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[django-cms] django CMS: Broken access control in page *Duplicate* allows reading the content of any page (cross-site / restriction bypass)</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[@nocobase/server] NocoBase: Arbitrary File Write chained with Local file Inclusion leads to Remote code execution | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-ghvf-qf6h-g8x5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-ghvf-qf6h-g8x5</guid>
+            <pubDate>Thu, 20 Aug 2026 18:42:21 GMT</pubDate>
+            <description><![CDATA[Executive SummaryTwo vulnerabilities were identified and chained to achieve authenticated remote code executionThe first vulnerability allows any authenticated admin to redirect the file upload storag]]></description>
+            <content:encoded><![CDATA[Executive SummaryTwo vulnerabilities were identified and chained to achieve authenticated remote code executionThe first vulnerability allows any authenticated admin to redirect the file upload storage root to an arbitrary path on disk including the application directory itself by supplying an unsanitized documentRoot value to the storages:update API. The second vulnerability allows the same admin to trigger Node.js require() on any absolute filesystem path via the pm:enable plugin manager endpo]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="NocoBase: Arbitrary File Write chained with Local file Inclusion leads to Remote code execution"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[@nocobase/server] NocoBase: Arbitrary File Write chained with Local file Inclusion leads to Remote code execution</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[@whyour/qinglong] Qinglong has an incomplete fix for CVE-2026-3965: Improper Authentication | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-v667-gc2r-2xm7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-v667-gc2r-2xm7</guid>
+            <pubDate>Thu, 20 Aug 2026 18:36:59 GMT</pubDate>
+            <description><![CDATA[SummaryThe init guard middleware in Qinglong only checks /api/user/init paths but not /open/user/init, which is whitelisted from JWT authentication and rewritten to /api/user/init after the guard has ]]></description>
+            <content:encoded><![CDATA[SummaryThe init guard middleware in Qinglong only checks /api/user/init paths but not /open/user/init, which is whitelisted from JWT authentication and rewritten to /api/user/init after the guard has already passed, allowing unauthenticated admin credential reset on initialized instances.Affected PackageEcosystem: npmPackage: whyour/qinglongAffected versions: &amp;lt; 6bec52dca158Patched versions: &amp;gt;= 6bec52dca158SeverityMediumCWECWE-287 — Improper AuthenticationDetailsThe Qinglong panel has an initiali]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Qinglong has an incomplete fix for CVE-2026-3965: Improper Authentication"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[@whyour/qinglong] Qinglong has an incomplete fix for CVE-2026-3965: Improper Authentication</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[node-opcua] node-opcua missing nonce verification in UserNameIdentityToken authentication | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-mq36-523m-x7vv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mq36-523m-x7vv</guid>
+            <pubDate>Thu, 20 Aug 2026 18:35:33 GMT</pubDate>
+            <description><![CDATA[SummaryA missing nonce verification in the UserNameIdentityToken authentication handler allows an unauthenticated remote attacker to forge a password token that extracts as an empty string, and to rep]]></description>
+            <content:encoded><![CDATA[SummaryA missing nonce verification in the UserNameIdentityToken authentication handler allows an unauthenticated remote attacker to forge a password token that extracts as an empty string, and to replay captured authentication tokens across sessions.Affected versions: &amp;lt;= 2.165.0Tested version: 2.165.0CVSS Score: 8.1 (High)CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:LCWE: CWE-347 Improper Verification of Cryptographic SignatureRoot CauseIn packages/node-opcua-server/source/opcua_serv]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="node-opcua missing nonce verification in UserNameIdentityToken authentication"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[node-opcua] node-opcua missing nonce verification in UserNameIdentityToken authentication</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[next-video] next-video: Unauthenticated arbitrary file read via /api/video request handler | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-2p39-2jf3-fv2q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2p39-2jf3-fv2q</guid>
+            <pubDate>Thu, 20 Aug 2026 18:35:11 GMT</pubDate>
+            <description><![CDATA[ImpactThe HTTP route handler exported by next-video/request-handler — which the README instructs consumers to mount at /api/video — allows an unauthenticated remote attacker to read arbitrary .json fi]]></description>
+            <content:encoded><![CDATA[ImpactThe HTTP route handler exported by next-video/request-handler — which the README instructs consumers to mount at /api/video — allows an unauthenticated remote attacker to read arbitrary .json files from the production filesystem of any application following the documented setup.The handler's GET endpoint accepts a url query parameter and uses it to locate and serve a JSON asset descriptor from disk. The only guard between "remote URL" and "local file path" is a regex check for ^https?://. ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="next-video: Unauthenticated arbitrary file read via /api/video request handler"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[next-video] next-video: Unauthenticated arbitrary file read via /api/video request handler</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[wktk/conflibot] conflibot vulnerable to command injection via crafted pull request branch names under pull_request_target | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-2qvg-qr73-mqxp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2qvg-qr73-mqxp</guid>
+            <pubDate>Mon, 17 Aug 2026 13:35:07 GMT</pubDate>
+            <description><![CDATA[ImpactVersions of conflibot before 1.2.1 build git commands by string interpolation and run them through a shell. Several of the interpolated values are pull request branch names (head.ref), which are]]></description>
+            <content:encoded><![CDATA[ImpactVersions of conflibot before 1.2.1 build git commands by string interpolation and run them through a shell. Several of the interpolated values are pull request branch names (head.ref), which are attacker-controlled: anyone can open a pull request (including from a fork) whose head branch name contains shell metacharacters such as `, $( ), ;, |, or &amp;amp;.The recommended workflow runs conflibot on the pull_request_target event, where the job has access to the base repository's secrets and a writ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="conflibot vulnerable to command injection via crafted pull request branch names under pull_request_target"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[wktk/conflibot] conflibot vulnerable to command injection via crafted pull request branch names under pull_request_target</originalTitle>
+                <blogTitle>Security Advisory for Github Actions</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Aactions</blogLink>
+                <blogLinkMd5Hash>087871ca82b856eb22fbc0e3c58220c4</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+    </channel>
+</rss>
