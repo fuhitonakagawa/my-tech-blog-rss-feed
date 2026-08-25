@@ -165,6 +165,9 @@ export class FeedCrawler {
                 feedData = cachedData;
               } else {
                 const response = await fetch(feedInfo.url, {
+                  headers: {
+                    'user-agent': constants.requestUserAgent,
+                  },
                   signal: AbortSignal.timeout(1000 * 10),
                 });
                 if (!response.ok) {
