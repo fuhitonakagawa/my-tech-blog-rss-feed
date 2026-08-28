@@ -1,4 +1,5 @@
 import { imageIconShortcode, imageThumbnailShortcode, relativeUrlFilter } from '../../../common/eleventy-utils';
+import { sanitizeHttpUrl } from '../../../common/url-guard';
 import { escapeHtml, truncateNunjucks } from './html-utils';
 import type { EleventyPage, FeedJsonItem } from './types';
 
@@ -13,6 +14,8 @@ export const renderFeedItem = async (
 ): Promise<string> => {
   const rawRelativeUrl = relativeUrlFilter(page.url);
   const relativeUrl = escapeHtml(rawRelativeUrl);
+  // 外部フィード由来のURLはスキームを絞ってから href に出す
+  const feedItemUrl = escapeHtml(sanitizeHttpUrl(feedItem.url));
 
   const ogImage = feedItem.image
     ? await imageThumbnailShortcode(feedItem.image.url, '記事のアイキャッチ画像', rawRelativeUrl, imageLoading)
@@ -39,11 +42,11 @@ export const renderFeedItem = async (
   const dateAttr = feedItem.date_published ? ` data-datetime='${escapeHtml(feedItem.date_published)}'` : '';
 
   return `<div class='ui-feed-item'>
-    <a class='ui-feed-item__og-image' href='${escapeHtml(feedItem.url)}'>
+    <a class='ui-feed-item__og-image' href='${feedItemUrl}'>
         ${ogImage}
     </a>
     <div class='ui-feed-item__content'>
-        <a class='ui-feed-item__title' href='${escapeHtml(feedItem.url)}'>${escapeHtml(feedItem._custom.originalTitle)}</a>
+        <a class='ui-feed-item__title' href='${feedItemUrl}'>${escapeHtml(feedItem._custom.originalTitle)}</a>
         ${hatenaCount}
         <a class='ui-feed-item__blog-title ui-feed-item__blog-title--link' href='${relativeUrl}blogs/${escapeHtml(feedItem._custom.blogLinkMd5Hash)}'>
           ${favicon}

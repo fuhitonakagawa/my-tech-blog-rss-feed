@@ -61,4 +61,80 @@ describe('FeedCrawler', () => {
     expect(result.items[0].creator).toBe('Google Cloud Content & Editorial ');
     expect(result.items[0].sectionId).toBe('google-cloud');
   });
+
+  it('記事URLが http / https でない記事を取り込まない', () => {
+    const feedInfo: FeedInfo = {
+      label: 'テストブログ',
+      url: 'https://example.com/feed',
+      sectionId: 'engineering',
+    };
+    const feed = {
+      title: 'テストブログ',
+      link: 'https://example.com/',
+      items: [
+        {
+          title: '正常な記事',
+          link: 'https://example.com/article',
+          isoDate: '2026-07-25T01:46:08.000Z',
+        },
+        {
+          title: 'スクリプトを仕込んだ記事',
+          link: 'javascript:alert(document.domain)',
+          isoDate: '2026-07-25T01:46:08.000Z',
+        },
+      ],
+    } as CustomRssParserFeed;
+
+    const result = postProcessFeed(feedInfo, feed);
+
+    expect(result.items).toHaveLength(1);
+    expect(result.items[0].link).toBe('https://example.com/article');
+  });
+
+  it('記事URLが相対パスならブログURLを基準に絶対URLへ解決する', () => {
+    const feedInfo: FeedInfo = {
+      label: 'テストブログ',
+      url: 'https://example.com/feed',
+      sectionId: 'engineering',
+    };
+    const feed = {
+      title: 'テストブログ',
+      link: 'https://example.com/blog/',
+      items: [
+        {
+          title: '記事タイトル',
+          link: '/articles/1',
+          isoDate: '2026-07-25T01:46:08.000Z',
+        },
+      ],
+    } as CustomRssParserFeed;
+
+    const result = postProcessFeed(feedInfo, feed);
+
+    expect(result.items[0].link).toBe('https://example.com/articles/1');
+  });
+
+  it('ブログURLが http / https でなければ空文字にする', () => {
+    const feedInfo: FeedInfo = {
+      label: 'テストブログ',
+      url: 'https://example.com/feed',
+      sectionId: 'engineering',
+    };
+    const feed = {
+      title: 'テストブログ',
+      link: 'javascript:alert(document.domain)',
+      items: [
+        {
+          title: '記事タイトル',
+          link: 'https://example.com/article',
+          isoDate: '2026-07-25T01:46:08.000Z',
+        },
+      ],
+    } as CustomRssParserFeed;
+
+    const result = postProcessFeed(feedInfo, feed);
+
+    expect(result.link).toBe('');
+    expect(result.items[0].blogLink).toBe('');
+  });
 });

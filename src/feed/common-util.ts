@@ -32,18 +32,6 @@ export const removeInvalidUnicode = (text: string) => {
   return text.replace(/[\x00-\x1F\x7F-\x9F]/g, '');
 };
 
-export const isValidHttpUrl = (url: string) => {
-  let urlObject: URL;
-
-  try {
-    urlObject = new URL(url);
-  } catch {
-    return false;
-  }
-
-  return urlObject.protocol === 'http:' || urlObject.protocol === 'https:';
-};
-
 export const exponentialBackoff = async <A>(
   retrier: (attemptCount: number) => Promise<A>,
   baseWaitMs = 1000,

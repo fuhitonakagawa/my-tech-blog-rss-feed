@@ -7,11 +7,11 @@ import { default as ogs } from 'open-graph-scraper';
 import type { ImageObject, OgObject, OpenGraphScraperOptions } from 'open-graph-scraper/types/lib/types';
 import RssParser from 'rss-parser';
 import constants from '../common/constants';
+import { isValidHttpUrl, isValidImageDataUrl, publicNetworkDispatcher } from '../common/url-guard';
 import type { FeedInfo } from '../resources/feed-info-list';
 import {
   exponentialBackoff,
   fetchHatenaCountMap,
-  isValidHttpUrl,
   objectDeepCopy,
   removeInvalidUnicode,
   textToMd5Hash,
@@ -56,6 +56,22 @@ const toSpeakerDeckPageUrl = (feedUrl: string): string | undefined => {
   }
 
   return feedUrl.slice(0, -SPEAKER_DECK_ATOM_EXTENSION.length);
+};
+
+/**
+ * 記事URLが相対パスのフィードがあるため、ブログURLを基準に絶対URLへ解決する。
+ * 解決できない場合は元の値をそのまま返す
+ */
+const toAbsoluteFeedItemLink = (link: string, blogLink: string): string => {
+  if (!link || isValidHttpUrl(link) || !isValidHttpUrl(blogLink)) {
+    return link;
+  }
+
+  try {
+    return new URL(link, blogLink).toString();
+  } catch {
+    return link;
+  }
 };
 
 const normalizeFeedItemCreator = (creator: unknown): string => {
@@ -169,6 +185,7 @@ export class FeedCrawler {
                     'user-agent': constants.requestUserAgent,
                   },
                   signal: AbortSignal.timeout(1000 * 10),
+                  dispatcher: publicNetworkDispatcher,
                 });
                 if (!response.ok) {
                   throw new Error(`HTTP Error: ${response.status}`);
@@ -285,8 +302,10 @@ export class FeedCrawler {
       customFeed.link = speakerDeckPageUrl;
     }
 
+    // ブログURLはリンクとして描画し、OG情報の取得にも使うため http / https のみ扱う
     if (!isValidHttpUrl(customFeed.link)) {
       logger.warn('取得したフィードのURLが正しくありません。 ', feedInfo.label, customFeed.link);
+      customFeed.link = '';
     }
 
     if (customFeed.items.length === 0) {
@@ -299,6 +318,7 @@ export class FeedCrawler {
 
       // 記事URLのクエリパラメーター削除。はてな用
       feedItem.link = urlRemoveQueryParams(feedItem.link);
+      feedItem.link = toAbsoluteFeedItemLink(feedItem.link, customFeed.link);
 
       // 不正な文字列の削除
       feedItem.title = feedItem.title ? removeInvalidUnicode(feedItem.title) : '';
@@ -315,6 +335,16 @@ export class FeedCrawler {
       // セクション分割用
       feedItem.sectionId = feedInfo.sectionId;
     }
+
+    // 記事URLはリンクとして描画し、OG情報の取得にも使うため http / https のみ扱う
+    customFeed.items = customFeed.items.filter((feedItem) => {
+      if (isValidHttpUrl(feedItem.link)) {
+        return true;
+      }
+
+      logger.warn('記事のURLが正しくないのでスキップしました', feedInfo.label, feedItem.title, feedItem.link);
+      return false;
+    });
 
     return customFeed;
   }
@@ -458,6 +488,7 @@ export class FeedCrawler {
           headers: {
             'user-agent': constants.requestUserAgent,
           },
+          dispatcher: publicNetworkDispatcher,
         },
       };
       const [error, ogsResponse] = await to<{ result: OgObject }>(ogs(options));
@@ -499,6 +530,11 @@ export class FeedCrawler {
           ogImage.url = new URL(ogImageUrl, url).toString();
         }
 
+        // 画像は取得して配信物に含めるため http / https のみ扱う
+        if (!isValidHttpUrl(ogImage.url ?? '')) {
+          continue;
+        }
+
         validOgImages.push(ogImage);
       }
     }
@@ -510,6 +546,15 @@ export class FeedCrawler {
     // faviconはフルURLにする
     if (customOgObject.favicon && !customOgObject.favicon.startsWith('http')) {
       customOgObject.favicon = new URL(customOgObject.favicon, url).toString();
+    }
+
+    // favicon は取得して配信物に含めるため http / https と画像のデータURLのみ扱う
+    if (
+      customOgObject.favicon &&
+      !isValidHttpUrl(customOgObject.favicon) &&
+      !isValidImageDataUrl(customOgObject.favicon)
+    ) {
+      customOgObject.favicon = undefined;
     }
 
     return customOgObject;

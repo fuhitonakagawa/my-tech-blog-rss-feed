@@ -1,5 +1,6 @@
 import constants from '../common/constants';
 import { imageThumbnailShortcode } from '../common/eleventy-utils';
+import { sanitizeHttpUrl } from '../common/url-guard';
 import { escapeHtml, truncateNunjucks } from './_includes/components/html-utils';
 import { renderNav } from './_includes/components/nav';
 import { type EleventyPage, SITE_PAGE_DATE, type SiteBlogFeed } from './_includes/components/types';
@@ -45,7 +46,7 @@ export async function render(data: BlogsData): Promise<string> {
                     </a>
                     <div class='ui-blog__content'>
                         <a class='ui-blog__title' href='./${escapeHtml(blogFeed.linkMd5Hash)}/'>${escapeHtml(blogFeed.title || blogFeed.link)}</a>
-                        <a class='ui-blog__link' href='${escapeHtml(blogFeed.link)}'>${escapeHtml(blogFeed.link)}</a>
+                        <a class='ui-blog__link' href='${escapeHtml(sanitizeHttpUrl(blogFeed.link))}'>${escapeHtml(blogFeed.link)}</a>
                         ${description}
                         ${date}
                     </div>

@@ -8,12 +8,14 @@ import sharpIco, { type ImageData } from 'sharp-ico';
 import { escapeHtml } from '../site/_includes/components/html-utils';
 import constants from './constants';
 import { imageCacheOptions } from './eleventy-cache-option';
+import { isValidHttpUrl, isValidImageDataUrl } from './url-guard';
 
 export const imageThumbnailShortcode = async (src: string, alt: string, pathPrefix = '', imageLoading = 'lazy') => {
   // 取れなければ代替画像
   const alternativeImageTag = `<img src='${pathPrefix}images/alternate-feed-image.png' alt='${alt}' loading='lazy' width='256' height='256'>`;
 
-  if (!src) {
+  // 外部由来のURLを取得して配信物に含めるため http / https のみ扱う
+  if (!isValidHttpUrl(src)) {
     return alternativeImageTag;
   }
 
@@ -52,12 +54,13 @@ export const imageIconShortcode = async (src: string, alt: string, pathPrefix = 
   // 取れなければ画像なし
   const alternativeImageTag = '';
 
-  if (!src) {
-    return alternativeImageTag;
+  if (isValidImageDataUrl(src)) {
+    return `<img src='${escapeHtml(src)}' alt='${escapeHtml(alt)}' loading='${escapeHtml(imageLoading)}' width='16' height='16'>`;
   }
 
-  if (src.startsWith('data:')) {
-    return `<img src='${escapeHtml(src)}' alt='${escapeHtml(alt)}' loading='${escapeHtml(imageLoading)}' width='16' height='16'>`;
+  // 外部由来のURLを取得して配信物に含めるため http / https のみ扱う
+  if (!isValidHttpUrl(src)) {
+    return alternativeImageTag;
   }
 
   const parsedUrl = url.parse(src);
@@ -72,6 +75,7 @@ export const imageIconShortcode = async (src: string, alt: string, pathPrefix = 
         type: 'buffer',
         duration: imageCacheOptions.duration,
         concurrency: constants.eleventyFetchConcurrency,
+        fetchOptions: imageCacheOptions.fetchOptions,
       });
       const sharpIcoImages = (await sharpIco.sharpsFromIco(icoBuffer, {}, true)) as ImageData[];
       const sharpIcoImage = sharpIcoImages.sort((a, b) => b.width - a.width)[0];

@@ -9,9 +9,13 @@
   "rangeStrategy": "bump",
   "dependencyDashboard": false,
   "labels": ["dependencies", "renovate"],
-  "automerge": true,
-  // 公開直後のパッケージは 3 日間の様子見期間を設けてから automerge する
-  "minimumReleaseAge": '3 days',
+  // ビルドは外部フィードを処理し、書き込み権限を持つワークフローから実行されるため、
+  // 依存の更新は人が内容を確認してからマージする
+  "automerge": false,
+  // 公開直後のパッケージを取り込まないよう様子見期間を設ける
+  "minimumReleaseAge": '14 days',
+  // GitHub Actions とコンテナイメージは可変タグではなく不変の参照に固定する
+  "pinDigests": true,
   "packageRules": [
     {
       matchDepTypes: ['peerDependencies'],

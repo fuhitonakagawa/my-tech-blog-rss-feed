@@ -1,5 +1,6 @@
 import constants from '../common/constants';
 import { imageThumbnailShortcode, relativeUrlFilter } from '../common/eleventy-utils';
+import { sanitizeHttpUrl } from '../common/url-guard';
 import { escapeHtml, truncateNunjucks } from './_includes/components/html-utils';
 import { renderNav } from './_includes/components/nav';
 import { type EleventyPage, SITE_PAGE_DATE, type SiteBlogFeed } from './_includes/components/types';
@@ -40,6 +41,8 @@ export async function render(data: BlogFeedData): Promise<string> {
       // Nunjucks の `{% if feedItem.ogImageUrl !== null %}` は常に true。
       // 空文字のときは shortcode 側が代替画像を返す。
       const ogImage = await imageThumbnailShortcode(feedItem.ogImageUrl, '記事のアイキャッチ画像', rawRelativeUrl);
+      // 外部フィード由来のURLはスキームを絞ってから href に出す
+      const feedItemUrl = escapeHtml(sanitizeHttpUrl(feedItem.link));
 
       const hatenaCount =
         feedItem.hatenaCount > 0
@@ -58,11 +61,11 @@ export async function render(data: BlogFeedData): Promise<string> {
       const dateAttr = feedItem.isoDate ? ` data-datetime='${escapeHtml(feedItem.isoDate)}'` : '';
 
       return `<div class='ui-feed-item'>
-                    <a class='ui-feed-item__og-image' href='${escapeHtml(feedItem.link)}'>
+                    <a class='ui-feed-item__og-image' href='${feedItemUrl}'>
                         ${ogImage}
                     </a>
                     <div class='ui-feed-item__content'>
-                        <a class='ui-feed-item__title' href='${escapeHtml(feedItem.link)}'>${escapeHtml(feedItem.title)}</a>
+                        <a class='ui-feed-item__title' href='${feedItemUrl}'>${escapeHtml(feedItem.title)}</a>
                         ${hatenaCount}
                         <div class='ui-feed-item__blog-title'>${escapeHtml(blogTitle)}</div>
                         ${summary}
@@ -79,7 +82,7 @@ export async function render(data: BlogFeedData): Promise<string> {
         <h2 class='ui-typography-heading'>${escapeHtml(blogTitle)}</h2>
         <div class='ui-container-blog-summary'>
             <div class='ui-blog-summary'>
-                <a class='ui-blog-summary__link' href='${escapeHtml(blogFeed.link)}'>${escapeHtml(blogFeed.link)}</a>
+                <a class='ui-blog-summary__link' href='${escapeHtml(sanitizeHttpUrl(blogFeed.link))}'>${escapeHtml(blogFeed.link)}</a>
                 <p class='ui-blog-summary__description'>${escapeHtml(blogFeed.ogDescription)}</p>
             </div>
         </div>
