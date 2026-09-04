@@ -13,6 +13,48 @@ import { Agent, buildConnector } from 'undici';
 /** 取得・リンクを許可するURLスキーム */
 const ALLOWED_URL_PROTOCOLS = new Set(['http:', 'https:']);
 
+/** 公開成果物に含めない認証・署名用クエリパラメーター */
+const CREDENTIAL_QUERY_PARAMETER_NAMES = new Set([
+  '__token__',
+  'access_token',
+  'api-key',
+  'api_key',
+  'apikey',
+  'auth',
+  'auth_key',
+  'auth_token',
+  'authorization',
+  'credential',
+  'googleaccessid',
+  'hdntl',
+  'hdnts',
+  'jwt',
+  'key-pair-id',
+  'password',
+  'passwd',
+  'secret',
+  'sig',
+  'signature',
+  'token',
+]);
+
+/** 署名付きURLで使われるクエリパラメーターの接頭辞 */
+const SIGNED_QUERY_PARAMETER_PREFIXES = ['x-amz-', 'x-goog-'];
+
+const hasCredentialParameter = (searchParams: URLSearchParams): boolean => {
+  for (const parameterName of searchParams.keys()) {
+    const normalizedName = parameterName.toLowerCase();
+    if (CREDENTIAL_QUERY_PARAMETER_NAMES.has(normalizedName)) {
+      return true;
+    }
+    if (SIGNED_QUERY_PARAMETER_PREFIXES.some((prefix) => normalizedName.startsWith(prefix))) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
 /**
  * 公開インターネット上のホストとみなさないIPv4アドレス範囲。
  * プライベート・ループバック・リンクローカル・共有アドレス空間・文書用・マルチキャスト・予約領域
@@ -73,6 +115,29 @@ export const isValidHttpUrl = (url: string): boolean => {
   }
 
   return ALLOWED_URL_PROTOCOLS.has(urlObject.protocol);
+};
+
+/**
+ * HTTP URLを公開成果物に含められるか判定する。
+ *
+ * URLのユーザー情報や認証・署名用クエリを含むURLは拒否する。
+ */
+export const isPublishableHttpUrl = (url: string): boolean => {
+  if (!isValidHttpUrl(url)) {
+    return false;
+  }
+
+  const urlObject = new URL(url);
+  if (urlObject.username || urlObject.password) {
+    return false;
+  }
+
+  if (hasCredentialParameter(urlObject.searchParams)) {
+    return false;
+  }
+
+  const fragmentParameters = new URLSearchParams(urlObject.hash.slice(1).replace(/^\?/, ''));
+  return !hasCredentialParameter(fragmentParameters);
 };
 
 /**

@@ -1,6 +1,6 @@
 import { Feed, type FeedOptions } from 'feed';
 import constants from '../common/constants.js';
-import { isValidHttpUrl } from '../common/url-guard';
+import { isPublishableHttpUrl, isValidImageDataUrl } from '../common/url-guard';
 import { textToMd5Hash, textTruncate } from './common-util';
 import type { CustomRssParserItem, FeedItemHatenaCountMap, OgObjectMap } from './feed-crawler';
 import { logger } from './logger';
@@ -98,7 +98,10 @@ export class FeedGenerator {
 
       const ogObject = feedItemOgObjectMap.get(feedItem.link);
       const ogImage = ogObject?.customOgImage;
-      const feedItemImage = ogImage?.url && isValidHttpUrl(ogImage.url) ? { ...ogImage } : undefined;
+      const feedItemImage = ogImage?.url && isPublishableHttpUrl(ogImage.url) ? { ...ogImage } : undefined;
+      const favicon = ogObject?.favicon;
+      const feedItemFavicon =
+        favicon && (isPublishableHttpUrl(favicon) || isValidImageDataUrl(favicon)) ? favicon : undefined;
 
       if (feedItemImage?.alt) {
         feedItemImage.alt = escapeTextForXml(feedItemImage.alt);
@@ -143,7 +146,7 @@ export class FeedGenerator {
               blogTitle: escapeTextForXml(feedItem.blogTitle),
               blogLink: feedItem.blogLink,
               blogLinkMd5Hash: textToMd5Hash(feedItem.blogLink),
-              favicon: ogObject?.favicon,
+              favicon: feedItemFavicon,
             },
           },
         ],

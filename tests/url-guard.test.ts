@@ -3,6 +3,7 @@ import type { AddressInfo } from 'node:net';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import {
   isPublicIpAddress,
+  isPublishableHttpUrl,
   isValidHttpUrl,
   isValidImageDataUrl,
   publicNetworkDispatcher,
@@ -26,6 +27,86 @@ describe('isValidHttpUrl', () => {
     expect(isValidHttpUrl('')).toBe(false);
     expect(isValidHttpUrl('/relative/path')).toBe(false);
   });
+});
+
+describe('isPublishableHttpUrl', () => {
+  it.each([
+    ['クエリなし', 'https://example.com/image.png'],
+    ['通常の画像変換クエリ', 'https://example.com/image.png?width=1200&format=webp'],
+    ['認証語を値にだけ含むクエリ', 'https://example.com/image.png?description=token'],
+    ['拒否対象と似た名前のクエリ', 'https://example.com/image.png?signatureVersion=4&x-amazing=true'],
+    ['通常のフラグメント', 'https://example.com/image.svg#thumbnail'],
+  ])('%sを持つURLを許可する', (_caseName, url) => {
+    expect(isPublishableHttpUrl(url)).toBe(true);
+  });
+
+  it.each([
+    'https://user@example.com/image.png',
+    'https://user:password@example.com/image.png',
+    'https://:password@example.com/image.png',
+  ])('ユーザー情報を含むURLを拒否する: %s', (url) => {
+    expect(isPublishableHttpUrl(url)).toBe(false);
+  });
+
+  it.each([
+    '__token__',
+    'access_token',
+    'api-key',
+    'api_key',
+    'apikey',
+    'auth',
+    'auth_key',
+    'auth_token',
+    'authorization',
+    'credential',
+    'GoogleAccessId',
+    'hdntl',
+    'hdnts',
+    'jwt',
+    'Key-Pair-Id',
+    'password',
+    'passwd',
+    'secret',
+    'sig',
+    'Signature',
+    'token',
+  ])('認証・署名用クエリパラメーター %s を拒否する', (parameterName) => {
+    expect(isPublishableHttpUrl(`https://example.com/image.png?${parameterName}=example`)).toBe(false);
+  });
+
+  it.each([
+    [
+      'AWS',
+      'https://example.com/image.png?response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=example&X-Amz-Signature=example',
+    ],
+    ['Google Cloud', 'https://example.com/image.png?X-Goog-Algorithm=GOOG4-RSA-SHA256'],
+    ['Azure SAS', 'https://example.com/image.png?sv=example&sp=r&sig=example'],
+    ['CloudFront', 'https://example.com/image.png?Expires=1&Signature=example&Key-Pair-Id=example'],
+    ['Akamai', 'https://example.com/image.png?hdnts=example'],
+  ])('%sの署名付きURLを拒否する', (_providerName, url) => {
+    expect(isPublishableHttpUrl(url)).toBe(false);
+  });
+
+  it.each([
+    'https://example.com/image.png?ACCESS_TOKEN=example',
+    'https://example.com/image.png?X%2DAmz%2DCredential=example',
+  ])('大文字小文字とURLエンコードを正規化して拒否する: %s', (url) => {
+    expect(isPublishableHttpUrl(url)).toBe(false);
+  });
+
+  it.each([
+    'https://example.com/image.png#access_token=example',
+    'https://example.com/image.png#?X-Goog-Signature=example',
+  ])('フラグメントに認証・署名情報を含むURLを拒否する: %s', (url) => {
+    expect(isPublishableHttpUrl(url)).toBe(false);
+  });
+
+  it.each(['data:image/png;base64,iVBORw0KGgo=', '/image.png', '', 'not-a-url'])(
+    'http / https 以外と不正なURLを拒否する: %s',
+    (url) => {
+      expect(isPublishableHttpUrl(url)).toBe(false);
+    },
+  );
 });
 
 describe('sanitizeHttpUrl', () => {

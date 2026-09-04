@@ -7,7 +7,12 @@ import { default as ogs } from 'open-graph-scraper';
 import type { ImageObject, OgObject, OpenGraphScraperOptions } from 'open-graph-scraper/types/lib/types';
 import RssParser from 'rss-parser';
 import constants from '../common/constants';
-import { isValidHttpUrl, isValidImageDataUrl, publicNetworkDispatcher } from '../common/url-guard';
+import {
+  isPublishableHttpUrl,
+  isValidHttpUrl,
+  isValidImageDataUrl,
+  publicNetworkDispatcher,
+} from '../common/url-guard';
 import type { FeedInfo } from '../resources/feed-info-list';
 import {
   exponentialBackoff,
@@ -506,7 +511,14 @@ export class FeedCrawler {
       ogObjectCache.save();
     }
 
-    const ogImages = ogObject?.ogImage;
+    return FeedCrawler.normalizeOgObject(url, ogObject);
+  }
+
+  /**
+   * OGPの画像とfaviconを公開可能なURLに正規化する。
+   */
+  private static normalizeOgObject(url: string, ogObject: OgObject): CustomOgObject {
+    const ogImages = ogObject.ogImage;
 
     const validOgImages: ImageObject[] = [];
 
@@ -530,8 +542,8 @@ export class FeedCrawler {
           ogImage.url = new URL(ogImageUrl, url).toString();
         }
 
-        // 画像は取得して配信物に含めるため http / https のみ扱う
-        if (!isValidHttpUrl(ogImage.url ?? '')) {
+        // 画像は公開可能な http / https URL のみ扱う
+        if (!isPublishableHttpUrl(ogImage.url ?? '')) {
           continue;
         }
 
@@ -551,7 +563,7 @@ export class FeedCrawler {
     // favicon は取得して配信物に含めるため http / https と画像のデータURLのみ扱う
     if (
       customOgObject.favicon &&
-      !isValidHttpUrl(customOgObject.favicon) &&
+      !isPublishableHttpUrl(customOgObject.favicon) &&
       !isValidImageDataUrl(customOgObject.favicon)
     ) {
       customOgObject.favicon = undefined;

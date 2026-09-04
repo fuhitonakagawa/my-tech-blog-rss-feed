@@ -1,16 +1,49 @@
 import { describe, expect, it } from 'vitest';
-import { type CustomRssParserFeed, FeedCrawler } from '../src/feed/feed-crawler';
+import { type CustomOgObject, type CustomRssParserFeed, FeedCrawler } from '../src/feed/feed-crawler';
 import type { FeedInfo } from '../src/resources/feed-info-list';
 
 type FeedCrawlerPostProcessor = {
   postProcessFeed(feedInfo: FeedInfo, feed: CustomRssParserFeed): CustomRssParserFeed;
 };
 
+type FeedCrawlerOgNormalizer = {
+  normalizeOgObject(url: string, ogObject: CustomOgObject): CustomOgObject;
+};
+
 const postProcessFeed = (feedInfo: FeedInfo, feed: CustomRssParserFeed): CustomRssParserFeed => {
   return (FeedCrawler as unknown as FeedCrawlerPostProcessor).postProcessFeed(feedInfo, feed);
 };
 
+const normalizeOgObject = (url: string, ogObject: CustomOgObject): CustomOgObject => {
+  return (FeedCrawler as unknown as FeedCrawlerOgNormalizer).normalizeOgObject(url, ogObject);
+};
+
 describe('FeedCrawler', () => {
+  it('署名付きOG画像を除外し、次の公開可能な画像を採用する', () => {
+    const safeImageUrl = 'https://example.com/safe.png?width=1200';
+    const ogObject = {
+      ogImage: [{ url: 'https://example.com/signed.png?X-Amz-Credential=example' }, { url: safeImageUrl }],
+      favicon: 'https://example.com/favicon.ico?token=example',
+    } as CustomOgObject;
+
+    const result = normalizeOgObject('https://example.com/article', ogObject);
+
+    expect(result.customOgImage?.url).toBe(safeImageUrl);
+    expect(result.favicon).toBeUndefined();
+  });
+
+  it('相対パスのOG画像とfaviconを記事URL基準の絶対URLにする', () => {
+    const ogObject = {
+      ogImage: [{ url: '/images/article.png?width=1200' }],
+      favicon: '/favicon.ico',
+    } as CustomOgObject;
+
+    const result = normalizeOgObject('https://example.com/articles/1', ogObject);
+
+    expect(result.customOgImage?.url).toBe('https://example.com/images/article.png?width=1200');
+    expect(result.favicon).toBe('https://example.com/favicon.ico');
+  });
+
   it('Speaker Deck のカテゴリフィードはカテゴリページをブログURLにする', () => {
     const feedInfo: FeedInfo = {
       label: 'Programming - Speaker Deck',

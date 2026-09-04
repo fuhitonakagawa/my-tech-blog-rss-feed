@@ -1,6 +1,7 @@
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import { to } from 'await-to-js';
+import { isPublishableHttpUrl } from '../common/url-guard';
 import { textToMd5Hash, textTruncate } from './common-util';
 import type { CustomRssParserFeed, FeedItemHatenaCountMap, OgObjectMap } from './feed-crawler';
 import type { FeedDistributionSet } from './feed-generator';
@@ -83,17 +84,19 @@ export class FeedStorer {
     const blogFeeds: BlogFeed[] = [];
 
     for (const feed of feeds) {
+      const blogOgImageUrl = ogObjectMap.get(feed.link)?.customOgImage?.url || '';
       const customFeed: BlogFeed = {
         title: feed.title,
         link: feed.link,
         linkMd5Hash: textToMd5Hash(feed.link),
-        ogImageUrl: ogObjectMap.get(feed.link)?.customOgImage?.url || '',
+        ogImageUrl: isPublishableHttpUrl(blogOgImageUrl) ? blogOgImageUrl : '',
         ogDescription: ogObjectMap.get(feed.link)?.ogDescription || '',
         items: [],
       };
 
       for (const feedItem of feed.items) {
         const feedItemContent = (feedItem.summary || feedItem.contentSnippet || '').replace(/(\n|\t+|\s+)/g, ' ');
+        const ogImageUrl = ogObjectMap.get(feedItem.link)?.customOgImage?.url || '';
         customFeed.items.push({
           title: feedItem.title || '',
           summary: textTruncate(feedItemContent, 200),
@@ -101,7 +104,7 @@ export class FeedStorer {
           link: feedItem.link,
           isoDate: feedItem.isoDate,
           hatenaCount: allFeedItemHatenaCountMap.get(feedItem.link) || 0,
-          ogImageUrl: ogObjectMap.get(feedItem.link)?.customOgImage?.url || '',
+          ogImageUrl: isPublishableHttpUrl(ogImageUrl) ? ogImageUrl : '',
         });
       }
 

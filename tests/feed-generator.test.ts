@@ -42,6 +42,64 @@ describe('FeedGenerator', () => {
     expect(result.feedDistributionSet.atom).toContain('<feed');
   });
 
+  it('署名・認証情報を含む画像URLはフィードに出力しない', () => {
+    const feedItem = {
+      title: 'テスト記事',
+      link: 'https://example.com/test-article/',
+      isoDate: '2026-06-09T04:03:10.000Z',
+      blogTitle: 'Example Tech Blog',
+      blogLink: 'https://example.com',
+    } as CustomRssParserItem;
+    const ogObjectMap = new Map([
+      [
+        feedItem.link,
+        {
+          customOgImage: {
+            url: 'https://example.com/image.png?X-Amz-Credential=example',
+          },
+          favicon: 'https://example.com/favicon.ico?access_token=example',
+        },
+      ],
+    ]) as OgObjectMap;
+    const feedGenerator = new FeedGenerator();
+
+    const result = feedGenerator.generateFeeds([feedItem], ogObjectMap, new Map(), 200, 500, testFeedMeta);
+
+    expect(result.aggregatedFeed.items[0].image).toBeUndefined();
+    for (const feedOutput of Object.values(result.feedDistributionSet)) {
+      expect(feedOutput).not.toContain('X-Amz-Credential');
+      expect(feedOutput).not.toContain('access_token');
+    }
+  });
+
+  it('公開可能なOG画像URLと画像データ形式のfaviconはフィードに出力する', () => {
+    const feedItem = {
+      title: 'テスト記事',
+      link: 'https://example.com/test-article/',
+      isoDate: '2026-06-09T04:03:10.000Z',
+      blogTitle: 'Example Tech Blog',
+      blogLink: 'https://example.com',
+    } as CustomRssParserItem;
+    const imageUrl = 'https://example.com/image.png?width=1200&format=webp';
+    const favicon = 'data:image/png;base64,iVBORw0KGgo=';
+    const ogObjectMap = new Map([
+      [
+        feedItem.link,
+        {
+          customOgImage: { url: imageUrl },
+          favicon,
+        },
+      ],
+    ]) as OgObjectMap;
+    const feedGenerator = new FeedGenerator();
+
+    const result = feedGenerator.generateFeeds([feedItem], ogObjectMap, new Map(), 200, 500, testFeedMeta);
+
+    expect(result.aggregatedFeed.items[0].image).toMatchObject({ url: imageUrl });
+    expect(result.feedDistributionSet.json).toContain(imageUrl);
+    expect(result.feedDistributionSet.json).toContain(favicon);
+  });
+
   it('guidが属性付き要素でオブジェクトになっている場合はリンクをIDに使う', () => {
     const feedItem = {
       title: 'テスト記事',
