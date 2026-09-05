@@ -68,6 +68,30 @@ describe('FeedCrawler', () => {
     expect(result.items[0].blogLink).toBe('https://speakerdeck.com/c/programming');
   });
 
+  it('Qiita のタグフィードはタグページをブログURLにする', () => {
+    const feedInfo: FeedInfo = {
+      label: 'Qiita - AIエージェント',
+      url: 'https://qiita.com/tags/AIエージェント/feed',
+      sectionId: 'ai',
+    };
+    const feed = {
+      title: 'AIエージェントタグが付けられた新着記事 - Qiita',
+      link: 'https://qiita.com',
+      items: [
+        {
+          title: 'テスト記事',
+          link: 'https://qiita.com/example/items/test',
+          isoDate: '2026-09-05T01:00:00.000Z',
+        },
+      ],
+    } as CustomRssParserFeed;
+
+    const result = postProcessFeed(feedInfo, feed);
+
+    expect(result.link).toBe('https://qiita.com/tags/AIエージェント');
+    expect(result.items[0].blogLink).toBe('https://qiita.com/tags/AIエージェント');
+  });
+
   it('creator が author オブジェクトの場合は名前を文字列として扱う', () => {
     const feedInfo: FeedInfo = {
       label: 'Google Cloud',

@@ -54,6 +54,8 @@ export interface ClawlFeedsResult {
 
 const SPEAKER_DECK_URL_PREFIX = 'https://speakerdeck.com/';
 const SPEAKER_DECK_ATOM_EXTENSION = '.atom';
+const QIITA_TAG_URL_PREFIX = 'https://qiita.com/tags/';
+const QIITA_TAG_FEED_SUFFIX = '/feed';
 
 const toSpeakerDeckPageUrl = (feedUrl: string): string | undefined => {
   if (!feedUrl.startsWith(SPEAKER_DECK_URL_PREFIX) || !feedUrl.endsWith(SPEAKER_DECK_ATOM_EXTENSION)) {
@@ -61,6 +63,14 @@ const toSpeakerDeckPageUrl = (feedUrl: string): string | undefined => {
   }
 
   return feedUrl.slice(0, -SPEAKER_DECK_ATOM_EXTENSION.length);
+};
+
+const toQiitaTagPageUrl = (feedUrl: string): string | undefined => {
+  if (!feedUrl.startsWith(QIITA_TAG_URL_PREFIX) || !feedUrl.endsWith(QIITA_TAG_FEED_SUFFIX)) {
+    return undefined;
+  }
+
+  return feedUrl.slice(0, -QIITA_TAG_FEED_SUFFIX.length);
 };
 
 /**
@@ -305,6 +315,11 @@ export class FeedCrawler {
     const speakerDeckPageUrl = toSpeakerDeckPageUrl(feedInfo.url);
     if (speakerDeckPageUrl) {
       customFeed.link = speakerDeckPageUrl;
+    }
+
+    const qiitaTagPageUrl = toQiitaTagPageUrl(feedInfo.url);
+    if (qiitaTagPageUrl) {
+      customFeed.link = qiitaTagPageUrl;
     }
 
     // ブログURLはリンクとして描画し、OG情報の取得にも使うため http / https のみ扱う
