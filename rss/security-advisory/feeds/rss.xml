@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Security Advisory｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</link>
+        <description>Security Advisoryセクションのブログ更新をまとめたRSSフィード</description>
+        <lastBuildDate>Sat, 05 Sep 2026 15:09:34 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+        <language>ja</language>
+        <image>
+            <title>Security Advisory｜企業テックブログRSS</title>
+            <url>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</url>
+            <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</link>
+        </image>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[[@typespec/spector] TypeSpec: Unauthenticated Remote Shutdown of Spector Mock Server via POST /.admin/stop | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7q9c-hpx7-9cwm</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7q9c-hpx7-9cwm</guid>
+            <pubDate>Fri, 04 Sep 2026 21:43:13 GMT</pubDate>
+            <description><![CDATA[Summary@typespec/spector registers a POST /.admin/stop HTTP route with no authentication, authorization token, Origin check, or IP-source restriction. Any network-reachable client can send a single un]]></description>
+            <content:encoded><![CDATA[Summary@typespec/spector registers a POST /.admin/stop HTTP route with no authentication, authorization token, Origin check, or IP-source restriction. Any network-reachable client can send a single unauthenticated POST request to terminate the mock server process. Because the server binds to 0.0.0.0 by default (all interfaces), this endpoint is exposed to any host that can reach the server's port—not just localhost—making a complete denial-of-service trivially achievable with one HTTP request. S]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="TypeSpec: Unauthenticated Remote Shutdown of Spector Mock Server via POST /.admin/stop"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[@typespec/spector] TypeSpec: Unauthenticated Remote Shutdown of Spector Mock Server via POST /.admin/stop</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[vllm]  vLLM: Incomplete CVE-2025-62164 remediation can be bypassed by concurrent prompt parts | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-pr7f-p5mw-fc87</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-pr7f-p5mw-fc87</guid>
+            <pubDate>Fri, 04 Sep 2026 21:39:02 GMT</pubDate>
+            <description><![CDATA[Executive SummaryThe follow-up protection for CVE-2025-62164 is incomplete at vLLM revision 26587f9519e22a5c4549ead7595ad9ca3229c4fd. It wraps serialized prompt-embedding reconstruction and dense conv]]></description>
+            <content:encoded><![CDATA[Executive SummaryThe follow-up protection for CVE-2025-62164 is incomplete at vLLM revision 26587f9519e22a5c4549ead7595ad9ca3229c4fd. It wraps serialized prompt-embedding reconstruction and dense conversion in torch.sparse.check_sparse_tensor_invariants(), but PyTorch 2.11.0 implements that context with save/enable/restore operations over process-global state. Two prompt-embedding parts in one /v1/chat/completions request are gathered concurrently on the event loop's default executor. When one c]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt=" vLLM: Incomplete CVE-2025-62164 remediation can be bypassed by concurrent prompt parts"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[vllm]  vLLM: Incomplete CVE-2025-62164 remediation can be bypassed by concurrent prompt parts</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[vllm] vLLM: ReDoS via structured_outputs.regex in the lm-format-enforcer backend (no compile timeout) — missed sibling of GHSA-rwxx-mrjm-wc2m | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-48jh-3gj7-fg8v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-48jh-3gj7-fg8v</guid>
+            <pubDate>Fri, 04 Sep 2026 21:37:00 GMT</pubDate>
+            <description><![CDATA[SummaryThe fix for GHSA-rwxx-mrjm-wc2m ("ReDoS via structured_outputs.regex compiled without timeout") wrapped the regex compile in the xgrammar and outlines backends with compile_regex_with_timeout (]]></description>
+            <content:encoded><![CDATA[SummaryThe fix for GHSA-rwxx-mrjm-wc2m ("ReDoS via structured_outputs.regex compiled without timeout") wrapped the regex compile in the xgrammar and outlines backends with compile_regex_with_timeout (and, for outlines, validate_regex_is_buildable). The lm-format-enforcer backend was left unguarded: it compiles the attacker-supplied regex with no timeout and no buildability check. A single request with a catastrophic regex hangs the structured-output compile step and stalls the engine worker (den]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="vLLM: ReDoS via structured_outputs.regex in the lm-format-enforcer backend (no compile timeout) — missed sibling of GHSA-rwxx-mrjm-wc2m"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[vllm] vLLM: ReDoS via structured_outputs.regex in the lm-format-enforcer backend (no compile timeout) — missed sibling of GHSA-rwxx-mrjm-wc2m</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[vllm] vLLM: Unauthenticated Internal Path and Username Disclosure via Validation Error Messages | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-hwrm-c4cx-rf4j</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-hwrm-c4cx-rf4j</guid>
+            <pubDate>Fri, 04 Sep 2026 21:36:33 GMT</pubDate>
+            <description><![CDATA[SummaryWhen the vLLM API receives a malformed request (e.g., invalid JSON or missing required fields), FastAPI raises a Pydantic RequestValidationError. The validation_exception_handler in vllm/entryp]]></description>
+            <content:encoded><![CDATA[SummaryWhen the vLLM API receives a malformed request (e.g., invalid JSON or missing required fields), FastAPI raises a Pydantic RequestValidationError. The validation_exception_handler in vllm/entrypoints/openai/server_utils.py converts this exception to a string via str(exc), which includes the internal file path and line number of the handler function. The existing sanitize_message() function in vllm/entrypoints/utils.py strips memory addresses (e.g., 0x7f...) but does not strip File "...", l]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="vLLM: Unauthenticated Internal Path and Username Disclosure via Validation Error Messages"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[vllm] vLLM: Unauthenticated Internal Path and Username Disclosure via Validation Error Messages</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[vllm] vLLM: Derender endpoints decode caller-supplied GenerateResponse token IDs without output bounds | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-8737-qx52-hjff</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8737-qx52-hjff</guid>
+            <pubDate>Fri, 04 Sep 2026 21:32:07 GMT</pubDate>
+            <description><![CDATA[SummaryThe /v1/completions/derender and /v1/chat/completions/derender endpoints accept caller-supplied GenerateResponse objects and postprocess every nested choices[*].token_ids list directly. Unlike ]]></description>
+            <content:encoded><![CDATA[SummaryThe /v1/completions/derender and /v1/chat/completions/derender endpoints accept caller-supplied GenerateResponse objects and postprocess every nested choices[*].token_ids list directly. Unlike the normal render/generate path, derender does not enforce model context length, resolved max_tokens, max_num_seqs, choice-count, or response-size bounds before detokenizing and returning the supplied token IDs. An authenticated API client can therefore make the CPU-only render frontend, or any serv]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="vLLM: Derender endpoints decode caller-supplied GenerateResponse token IDs without output bounds"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[vllm] vLLM: Derender endpoints decode caller-supplied GenerateResponse token IDs without output bounds</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[codewhale] CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-gx45-xrj5-g6c4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gx45-xrj5-g6c4</guid>
+            <pubDate>Fri, 04 Sep 2026 18:14:09 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 43563356b98c6b9930855]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 43563356b98c6b993085554da82e77370160a31c. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.SummaryA malicious .codewhale/config.toml or .deepseek/config.toml committed to a repository can silently set allow_shell = true for any user who clones and opens the repository in CodeWha]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[codewhale] CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[deepseek-tui] CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-gx45-xrj5-g6c4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gx45-xrj5-g6c4</guid>
+            <pubDate>Fri, 04 Sep 2026 18:14:09 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 43563356b98c6b9930855]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 43563356b98c6b993085554da82e77370160a31c. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.SummaryA malicious .codewhale/config.toml or .deepseek/config.toml committed to a repository can silently set allow_shell = true for any user who clones and opens the repository in CodeWha]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[deepseek-tui] CodeWhale: Project config `allow_shell` override enables arbitrary shell command execution via cloned repository</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[codewhale] CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-wrj3-vj8c-784f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-wrj3-vj8c-784f</guid>
+            <pubDate>Fri, 04 Sep 2026 18:12:15 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 57f3c89471e27ac4032d9]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 57f3c89471e27ac4032d9791f6885e5d4408c381. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.SummaryThe rlm_eval tool runs an arbitrary Python string chosen by the model in a real python3 interpreter. Its approval_requirement() returns ApprovalRequirement::Auto, which the engine t]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[codewhale] CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE)</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[deepseek-tui] CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-wrj3-vj8c-784f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-wrj3-vj8c-784f</guid>
+            <pubDate>Fri, 04 Sep 2026 18:12:15 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 57f3c89471e27ac4032d9]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 57f3c89471e27ac4032d9791f6885e5d4408c381. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.SummaryThe rlm_eval tool runs an arbitrary Python string chosen by the model in a real python3 interpreter. Its approval_requirement() returns ApprovalRequirement::Auto, which the engine t]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[deepseek-tui] CodeWhale: rlm_eval auto-approves arbitrary Python execution, bypassing the user's approval policy (RCE)</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[codewhale] CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-c6mw-8xh8-gpq6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-c6mw-8xh8-gpq6</guid>
+            <pubDate>Fri, 04 Sep 2026 18:11:45 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 9a34b5034d29f05d1f28f]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 9a34b5034d29f05d1f28fa61b04719ca6a741020. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.Argument Injection in git_blame Tool Allows Arbitrary File Read Without ApprovalOverviewThe git_blame tool in DeepSeek-TUI passes the model-supplied rev parameter unvalidated into the argv]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[codewhale] CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[deepseek-tui] CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-c6mw-8xh8-gpq6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-c6mw-8xh8-gpq6</guid>
+            <pubDate>Fri, 04 Sep 2026 18:11:45 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 9a34b5034d29f05d1f28f]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 9a34b5034d29f05d1f28fa61b04719ca6a741020. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.Argument Injection in git_blame Tool Allows Arbitrary File Read Without ApprovalOverviewThe git_blame tool in DeepSeek-TUI passes the model-supplied rev parameter unvalidated into the argv]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[deepseek-tui] CodeWhale: Argument Injection in `git_blame` Tool Allows Arbitrary File Read Without Approval</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[codewhale] CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6v2g-fpxh-pmmh</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6v2g-fpxh-pmmh</guid>
+            <pubDate>Fri, 04 Sep 2026 18:05:12 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 26de44a8bd5051f8f944e]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 26de44a8bd5051f8f944ea60b2c37ae1d2b7d25e. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.SummaryDNS-pinning failure allows natural failure of code, however with a custom DNS server that fails the initial requests and allows the secondary requests, it's possible to bypass the l]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[codewhale] CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[deepseek-tui] CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6v2g-fpxh-pmmh</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6v2g-fpxh-pmmh</guid>
+            <pubDate>Fri, 04 Sep 2026 18:05:12 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 26de44a8bd5051f8f944e]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 26de44a8bd5051f8f944ea60b2c37ae1d2b7d25e. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.SummaryDNS-pinning failure allows natural failure of code, however with a custom DNS server that fails the initial requests and allows the secondary requests, it's possible to bypass the l]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[deepseek-tui] CodeWhale: SSRF‌ bypass - TOCTOU on DNS failure for DNS pinning</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[codewhale] CodeWhale: js_execution leaks parent environment to model context via missing env scrub | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h539-c7r8-3xq4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h539-c7r8-3xq4</guid>
+            <pubDate>Fri, 04 Sep 2026 18:03:08 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 26de44a8bd5051f8f944e]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 26de44a8bd5051f8f944ea60b2c37ae1d2b7d25e. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.Summaryjs_execution exposes parent process environment to model-provided JavaScriptThe js_execution tool spawns Node with tokio::process::Command::new without calling the child_env scrubbe]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: js_execution leaks parent environment to model context via missing env scrub"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[codewhale] CodeWhale: js_execution leaks parent environment to model context via missing env scrub</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[deepseek-tui] CodeWhale: js_execution leaks parent environment to model context via missing env scrub | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h539-c7r8-3xq4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h539-c7r8-3xq4</guid>
+            <pubDate>Fri, 04 Sep 2026 18:03:08 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 26de44a8bd5051f8f944e]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 26de44a8bd5051f8f944ea60b2c37ae1d2b7d25e. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.Summaryjs_execution exposes parent process environment to model-provided JavaScriptThe js_execution tool spawns Node with tokio::process::Command::new without calling the child_env scrubbe]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: js_execution leaks parent environment to model context via missing env scrub"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[deepseek-tui] CodeWhale: js_execution leaks parent environment to model context via missing env scrub</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[codewhale] CodeWhale: Argument Injection in `git_show` Tool Allows Arbitrary File Write Without Approval | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7j5w-7r7x-9v27</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7j5w-7r7x-9v27</guid>
+            <pubDate>Fri, 04 Sep 2026 18:02:37 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 9a34b5034d29f05d1f28f]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 9a34b5034d29f05d1f28fa61b04719ca6a741020. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.Argument Injection in git_show Tool Allows Arbitrary File Write Without ApprovalOverviewThe git_show tool in DeepSeek-TUI executes git show with the model-supplied rev parameter passed unv]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: Argument Injection in `git_show` Tool Allows Arbitrary File Write Without Approval"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[codewhale] CodeWhale: Argument Injection in `git_show` Tool Allows Arbitrary File Write Without Approval</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[deepseek-tui] CodeWhale: Argument Injection in `git_show` Tool Allows Arbitrary File Write Without Approval | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7j5w-7r7x-9v27</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7j5w-7r7x-9v27</guid>
+            <pubDate>Fri, 04 Sep 2026 18:02:37 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 9a34b5034d29f05d1f28f]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 9a34b5034d29f05d1f28fa61b04719ca6a741020. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.Argument Injection in git_show Tool Allows Arbitrary File Write Without ApprovalOverviewThe git_show tool in DeepSeek-TUI executes git show with the model-supplied rev parameter passed unv]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: Argument Injection in `git_show` Tool Allows Arbitrary File Write Without Approval"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[deepseek-tui] CodeWhale: Argument Injection in `git_show` Tool Allows Arbitrary File Write Without Approval</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[codewhale] CodeWhale: exec_shell_interact sends LLM-controlled input to a running shell without an approval prompt (privilege escalation) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-g29h-pfmp-qp9r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-g29h-pfmp-qp9r</guid>
+            <pubDate>Fri, 04 Sep 2026 18:02:10 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 57f3c89471e27ac4032d9]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 57f3c89471e27ac4032d9791f6885e5d4408c381. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.Summaryexec_shell is correctly approval-gated. Its sibling exec_shell_interact returns ApprovalRequirement::Auto, so when the model writes input into a shell the user already approved (a p]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: exec_shell_interact sends LLM-controlled input to a running shell without an approval prompt (privilege escalation)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[codewhale] CodeWhale: exec_shell_interact sends LLM-controlled input to a running shell without an approval prompt (privilege escalation)</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[deepseek-tui] CodeWhale: exec_shell_interact sends LLM-controlled input to a running shell without an approval prompt (privilege escalation) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-g29h-pfmp-qp9r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-g29h-pfmp-qp9r</guid>
+            <pubDate>Fri, 04 Sep 2026 18:02:10 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 57f3c89471e27ac4032d9]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 57f3c89471e27ac4032d9791f6885e5d4408c381. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.Summaryexec_shell is correctly approval-gated. Its sibling exec_shell_interact returns ApprovalRequirement::Auto, so when the model writes input into a shell the user already approved (a p]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: exec_shell_interact sends LLM-controlled input to a running shell without an approval prompt (privilege escalation)"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[deepseek-tui] CodeWhale: exec_shell_interact sends LLM-controlled input to a running shell without an approval prompt (privilege escalation)</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[codewhale] CodeWhale: Project config `instructions` override enables arbitrary file read into AI system prompt via cloned repository | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-62f5-cp2p-vq95</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-62f5-cp2p-vq95</guid>
+            <pubDate>Fri, 04 Sep 2026 18:00:37 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 43563356b98c6b9930855]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 43563356b98c6b993085554da82e77370160a31c. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.SummaryA malicious .codewhale/config.toml or .deepseek/config.toml committed to a repository can set instructions to an array of arbitrary file paths (including paths outside the workspace]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: Project config `instructions` override enables arbitrary file read into AI system prompt via cloned repository"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[codewhale] CodeWhale: Project config `instructions` override enables arbitrary file read into AI system prompt via cloned repository</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[deepseek-tui] CodeWhale: Project config `instructions` override enables arbitrary file read into AI system prompt via cloned repository | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-62f5-cp2p-vq95</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-62f5-cp2p-vq95</guid>
+            <pubDate>Fri, 04 Sep 2026 18:00:37 GMT</pubDate>
+            <description><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 43563356b98c6b9930855]]></description>
+            <content:encoded><![CDATA[Maintainer resolutionThe CodeWhale maintainers validated this report. The affected package ranges are recorded in the advisory metadata. Version 0.8.64 contains the fix in commit 43563356b98c6b993085554da82e77370160a31c. Users should upgrade to 0.8.64 or later. The original reporter analysis is preserved below.SummaryA malicious .codewhale/config.toml or .deepseek/config.toml committed to a repository can set instructions to an array of arbitrary file paths (including paths outside the workspace]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="CodeWhale: Project config `instructions` override enables arbitrary file read into AI system prompt via cloned repository"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[deepseek-tui] CodeWhale: Project config `instructions` override enables arbitrary file read into AI system prompt via cloned repository</originalTitle>
+                <blogTitle>Security Advisory for JavaScript packages hosted at npmjs.com</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm</blogLink>
+                <blogLinkMd5Hash>1093f3c8d7e9f3d6e56ed3ce1786ac28</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[mkdocs-material] Material for MkDocs: DOM XSS in search suggestions via query parameter | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-xvg9-69gf-fjrf</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xvg9-69gf-fjrf</guid>
+            <pubDate>Thu, 03 Sep 2026 19:52:32 GMT</pubDate>
+            <description><![CDATA[ImpactMaterial for MkDocs 7.2.0 through 9.7.6 contains a DOM-based cross-site scripting vulnerability in the optional search.suggest feature. A crafted q URL parameter could execute JavaScript in the ]]></description>
+            <content:encoded><![CDATA[ImpactMaterial for MkDocs 7.2.0 through 9.7.6 contains a DOM-based cross-site scripting vulnerability in the optional search.suggest feature. A crafted q URL parameter could execute JavaScript in the documentation site's origin after user interaction.PatchesThe issue is fixed in Material for MkDocs 9.7.7. Users should upgrade to 9.7.7 or later.WorkaroundsSites unable to upgrade should disable the search.suggest feature.Referenceshttps://github.com/squidfunk/mkdocs-material/security/advisories/GH]]></content:encoded>
+            <enclosure length="0" type="png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" alt="Material for MkDocs: DOM XSS in search suggestions via query parameter"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[mkdocs-material] Material for MkDocs: DOM XSS in search suggestions via query parameter</originalTitle>
+                <blogTitle>Security Advisory for Python packages hosted at PyPI.org</blogTitle>
+                <blogLink>https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip</blogLink>
+                <blogLinkMd5Hash>218eb82de313149914fad992ddfdc78e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+    </channel>
+</rss>

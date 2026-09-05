@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/</id>
+    <title>DevelopersIO｜企業テックブログRSS</title>
+    <updated>2026-09-05T15:09:33.964Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/feeds/atom.xml"/>
+    <subtitle>DevelopersIOセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon EC2のAMIで起動可能なインスタンスタイプを制限できるようになりました | DevelopersIO]]></title>
+        <id>53hjWWlL5Oix1sGLDWK2vG</id>
+        <link href="https://dev.classmethod.jp/articles/ec2-ami-allowed-instance-types/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-bac3d29aa65f45576f73094798087ee5/039ad6f8a7d8f18da47986d21c447f48/amazon-ec2" type="image//ct0aopd36mqt/wp-thumbnail-bac3d29aa65f45576f73094798087ee5/039ad6f8a7d8f18da47986d21c447f48/amazon-ec2"/>
+        <updated>2026-09-05T13:15:01.000Z</updated>
+        <summary type="html"><![CDATA[EC2のAMIで起動可能なインスタンスタイプを明示的に指定できるようになりました。この機能で意図しないインスタンスタイプでの起動を防ぎ、コスト削減やインスタンスタイプ起因のトラブルを防止しましょう。]]></summary>
+        <content type="html"><![CDATA[EC2のAMIで起動可能なインスタンスタイプを明示的に指定できるようになりました。この機能で意図しないインスタンスタイプでの起動を防ぎ、コスト削減やインスタンスタイプ起因のトラブルを防止しましょう。]]></content>
+        <author>
+            <name>あかいけ</name>
+        </author>
+        <published>2026-09-05T13:15:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Snowflake Gateway による A/B テスト用トラフィック分割を試してみた | DevelopersIO]]></title>
+        <id>7acFLbqKbhIc6KZMv8cSnW</id>
+        <link href="https://dev.classmethod.jp/articles/snowflake-model-monitoring-ab-testing-try/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake" type="image//ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake"/>
+        <updated>2026-09-05T08:59:16.000Z</updated>
+        <summary type="html"><![CDATA[Snowflake の2026年8月アップデートで一般提供されたGateway Monitoring と A/B Testing について、ゲートウェイの作成からトラフィック分割までを実際に試してみましたので、その内容をまとめてみます。]]></summary>
+        <content type="html"><![CDATA[Snowflake の2026年8月アップデートで一般提供されたGateway Monitoring と A/B Testing について、ゲートウェイの作成からトラフィック分割までを実際に試してみましたので、その内容をまとめてみます。]]></content>
+        <author>
+            <name>安原朋紀</name>
+        </author>
+        <published>2026-09-05T08:59:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[EC2 アプリケーションステータスチェックと Step Functions で Nginx の2段階自動復旧を試してみた | DevelopersIO]]></title>
+        <id>2yly0TuFzI3N4cFctAzMTE</id>
+        <link href="https://dev.classmethod.jp/articles/ec2-application-status-check-stepfunctions-two-stage-recovery/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-bac3d29aa65f45576f73094798087ee5/039ad6f8a7d8f18da47986d21c447f48/amazon-ec2" type="image//ct0aopd36mqt/wp-thumbnail-bac3d29aa65f45576f73094798087ee5/039ad6f8a7d8f18da47986d21c447f48/amazon-ec2"/>
+        <updated>2026-09-05T08:46:22.000Z</updated>
+        <summary type="html"><![CDATA[アラート発生時、1段階目は SSM でサービスを再起動し、それで戻らなければ2段階目で EC2 を Stop/Start します。インスタンスの置き換えでは復旧しにくいステートフルな環境を想定し、Lambda は使わず AWS SDK 統合と JSONata だけで組みました。]]></summary>
+        <content type="html"><![CDATA[アラート発生時、1段階目は SSM でサービスを再起動し、それで戻らなければ2段階目で EC2 を Stop/Start します。インスタンスの置き換えでは復旧しにくいステートフルな環境を想定し、Lambda は使わず AWS SDK 統合と JSONata だけで組みました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-09-05T08:46:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Security Hub修復手順】[SecretsManager.2] 自動ローテーションを設定した Secrets Manager のシークレットは正常にローテーションする必要があります | DevelopersIO]]></title>
+        <id>3bmO2EPY0WNCCaQIW81BuG</id>
+        <link href="https://dev.classmethod.jp/articles/securityhub-fsbp-remediation-secretsmanager-2/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-refcat-img-cea52bc8a6ec5cad9021b38df4a08b9e/24c76ee7c1ae7aa7f9676a59c77f8702/aws-security-hub" type="image//ct0aopd36mqt/wp-refcat-img-cea52bc8a6ec5cad9021b38df4a08b9e/24c76ee7c1ae7aa7f9676a59c77f8702/aws-security-hub"/>
+        <updated>2026-09-05T06:39:27.000Z</updated>
+        <summary type="html"><![CDATA[AWS SecurityHub 基礎セキュリティのベストプラクティスコントロール修復手順をご紹介します。]]></summary>
+        <content type="html"><![CDATA[AWS SecurityHub 基礎セキュリティのベストプラクティスコントロール修復手順をご紹介します。]]></content>
+        <author>
+            <name>三山 祐輝 (みゃん)</name>
+        </author>
+        <published>2026-09-05T06:39:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS ParallelCluster の Slurm を CVE 対応の 25.11.8 にアップグレードしてみた | DevelopersIO]]></title>
+        <id>61k1sfLMuDRSaUrwcJim6N</id>
+        <link href="https://dev.classmethod.jp/articles/aws-parallelcluster-slurm-25-11-8-inplace-upgrade/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-b7a97109267e33040a02666309325eb5/0ce782e59c1b66fe6bdad2e6c8370893/aws-parallelcluster" type="image//ct0aopd36mqt/wp-thumbnail-b7a97109267e33040a02666309325eb5/0ce782e59c1b66fe6bdad2e6c8370893/aws-parallelcluster"/>
+        <updated>2026-09-05T06:35:28.000Z</updated>
+        <summary type="html"><![CDATA[AWS ParallelCluster で Slurm の複数の CVE が報告されました。クラスターを作り直さずに対応する方法として、稼働中のシステムで Slurm 25.11.6 から 25.11.8 へのインプレースアップグレードを試してみました。]]></summary>
+        <content type="html"><![CDATA[AWS ParallelCluster で Slurm の複数の CVE が報告されました。クラスターを作り直さずに対応する方法として、稼働中のシステムで Slurm 25.11.6 から 25.11.8 へのインプレースアップグレードを試してみました。]]></content>
+        <author>
+            <name>大村 保貴</name>
+        </author>
+        <published>2026-09-05T06:35:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NVIDIA Jetson で推論型モデルを現場へ届ける構成を考えてみた | DevelopersIO]]></title>
+        <id>1eRtF1W1UjtqhEajMBRdWW</id>
+        <link href="https://dev.classmethod.jp/articles/jetson-edge-reasoning-model-deployment/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/1dD7b8HkT2sbiJzUIewMTD/e5cdc6f33c4fdd9d798f11a4564612ff/eyecatch_developersio_darktone_1200x630.jpg" type="image/jpg"/>
+        <updated>2026-09-05T06:24:33.000Z</updated>
+        <summary type="html"><![CDATA[Jetson で推論型モデルを現場に配置する考え方を、NVIDIA の公開資料から整理しました。量子化と投機的デコーディングの違い、Thor・AGX Orin・Orin Nano の選定、必要に応じた蒸留や映像認識の処理分担を解説し、実機未検証の設計例として品質と待ち時間の評価軸を示します。]]></summary>
+        <content type="html"><![CDATA[Jetson で推論型モデルを現場に配置する考え方を、NVIDIA の公開資料から整理しました。量子化と投機的デコーディングの違い、Thor・AGX Orin・Orin Nano の選定、必要に応じた蒸留や映像認識の処理分担を解説し、実機未検証の設計例として品質と待ち時間の評価軸を示します。]]></content>
+        <author>
+            <name>森茂洋 / Hiroshi Morishige</name>
+        </author>
+        <published>2026-09-05T06:24:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code v2.1.261 の主要アップデート - /skill-doctor 追加と単語編集キーの Bash 準拠化 | DevelopersIO]]></title>
+        <id>6dQb6TxwzB4HAxJgC19V7i</id>
+        <link href="https://dev.classmethod.jp/articles/20260905-cc-updates-v2-1-261/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png" type="image/png"/>
+        <updated>2026-09-05T04:46:29.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code v2.1.261がリリースされました。入力処理やバックグラウンド実行の修正が中心ですが、新たに追加された `/skill-doctor` で未使用スキルとコンテキスト消費を可視化できるようになったので、実際に試してみた結果をまとめています。]]></summary>
+        <content type="html"><![CDATA[Claude Code v2.1.261がリリースされました。入力処理やバックグラウンド実行の修正が中心ですが、新たに追加された `/skill-doctor` で未使用スキルとコンテキスト消費を可視化できるようになったので、実際に試してみた結果をまとめています。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-09-05T04:46:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[プレビュー] AWS Interconnect - multicloud で AWS と Microsoft Azure のネットワークを接続してみる | DevelopersIO]]></title>
+        <id>33gV8UGPjH6DG4hOyj2H3d</id>
+        <link href="https://dev.classmethod.jp/articles/aws-interconnect-multicloud-microsoft-azure-preview/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-a25fe53c4e0e62cddd4b3619d3e7b27d/ca05eb372480507504b0ea6d9d0bfbe9/aws-direct-connect" type="image//ct0aopd36mqt/wp-thumbnail-a25fe53c4e0e62cddd4b3619d3e7b27d/ca05eb372480507504b0ea6d9d0bfbe9/aws-direct-connect"/>
+        <updated>2026-09-05T03:55:21.000Z</updated>
+        <summary type="html"><![CDATA[AWS と Azure を簡単に専用線で接続可能になったので試してみたら、Azure の設定で躓きました。。。。。。]]></summary>
+        <content type="html"><![CDATA[AWS と Azure を簡単に専用線で接続可能になったので試してみたら、Azure の設定で躓きました。。。。。。]]></content>
+        <author>
+            <name>Guri / Hajime Oguri</name>
+        </author>
+        <published>2026-09-05T03:55:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[リージョナル NAT Gateway はどの AZ で課金されますか | DevelopersIO]]></title>
+        <id>3IKH0PhOIIWIt21Tqh7TXd</id>
+        <link href="https://dev.classmethod.jp/articles/tsnote-regional-nat-gateway-eni-az-pricing/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/6WDF8DnUY0lRO6CiIHDszj/395fdc3b14a82a82ca9f794ee9494118/amazon-vpc.webp" type="image/webp"/>
+        <updated>2026-09-05T02:54:19.000Z</updated>
+        <summary type="html"><![CDATA[リージョナル NAT Gateway の課金対象となるアベイラビリティーゾーン（AZ）を確認する方法について説明します。]]></summary>
+        <content type="html"><![CDATA[リージョナル NAT Gateway の課金対象となるアベイラビリティーゾーン（AZ）を確認する方法について説明します。]]></content>
+        <author>
+            <name>片方 裕人</name>
+        </author>
+        <published>2026-09-05T02:54:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DevOps Agentの調査（Investigation）中にチャットでメッセージを追加できるようになりました | DevelopersIO]]></title>
+        <id>42CijnFtmDGfCS2sWNPso2</id>
+        <link href="https://dev.classmethod.jp/articles/devops-agent-chat-with-an-investigation/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/51cg1nDeDwY3QV8Q8Z2bVX/73d108504bcf60ba8d92ebeb7e372b43/aws-devops-agent-DevOpsAgent.png" type="image/png"/>
+        <updated>2026-09-05T01:17:14.000Z</updated>
+        <summary type="html"><![CDATA[AWS DevOps Agentの調査中にチャットでメッセージを送れるようになり、調査の進行状況を見ながらリアルタイムで軌道修正できるようになりました]]></summary>
+        <content type="html"><![CDATA[AWS DevOps Agentの調査中にチャットでメッセージを送れるようになり、調査の進行状況を見ながらリアルタイムで軌道修正できるようになりました]]></content>
+        <author>
+            <name>たかやま</name>
+        </author>
+        <published>2026-09-05T01:17:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon SES で S/MIME 署名が使えるようになったので試してみた | DevelopersIO]]></title>
+        <id>69FO6xCguoE2xP0uhUnTwI</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-ses-supports-smime-signing/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-853da183b76d05403642726376140e38/c540874c56864efad6bd036621e947e7/amazon-ses" type="image//ct0aopd36mqt/wp-thumbnail-853da183b76d05403642726376140e38/c540874c56864efad6bd036621e947e7/amazon-ses"/>
+        <updated>2026-09-04T22:03:14.000Z</updated>
+        <summary type="html"><![CDATA[証明書を ACM に入れて設定セットで有効にしたあと、実際にメールを送って署名パートが付くところまで確認しました]]></summary>
+        <content type="html"><![CDATA[証明書を ACM に入れて設定セットで有効にしたあと、実際にメールを送って署名パートが付くところまで確認しました]]></content>
+        <author>
+            <name>いわさ</name>
+        </author>
+        <published>2026-09-04T22:03:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[東京リージョンで利用可能になった EC2 C9gインスタンスのCPU、CloudTrail情報を確認してみた | DevelopersIO]]></title>
+        <id>58evTznP88KuNSBymC8YrJ</id>
+        <link href="https://dev.classmethod.jp/articles/ec2-c9g-graviton5-tokyo-launch/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-bac3d29aa65f45576f73094798087ee5/039ad6f8a7d8f18da47986d21c447f48/amazon-ec2" type="image//ct0aopd36mqt/wp-thumbnail-bac3d29aa65f45576f73094798087ee5/039ad6f8a7d8f18da47986d21c447f48/amazon-ec2"/>
+        <updated>2026-09-04T21:49:37.000Z</updated>
+        <summary type="html"><![CDATA[EC2 C9g・C9gdインスタンス（AWS Graviton5）がap-northeast-1（東京）を含む4リージョンで利用可能になりました。CloudTrailで起動を確認し、OSコマンドで取得したCPU情報がM9gと一致することを確認しました。Pricing APIで取得した東京リージョンの料金と、C8gとの世代間の料金差もあわせて紹介します。]]></summary>
+        <content type="html"><![CDATA[EC2 C9g・C9gdインスタンス（AWS Graviton5）がap-northeast-1（東京）を含む4リージョンで利用可能になりました。CloudTrailで起動を確認し、OSコマンドで取得したCPU情報がM9gと一致することを確認しました。Pricing APIで取得した東京リージョンの料金と、C8gとの世代間の料金差もあわせて紹介します。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-09-04T21:49:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Status Check に失敗した EC2 を Lambda なしの Step Functions で自動復旧させてみた | DevelopersIO]]></title>
+        <id>5FZdiNWfBeyMO4xfAuToEm</id>
+        <link href="https://dev.classmethod.jp/articles/ec2-auto-recovery-stepfunctions-lambdaless/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-5f8ac6d1392d52f09eefb00a5ad1b303/fceee02f9b8607d60014a828933bc45b/aws-step-functions" type="image//ct0aopd36mqt/wp-thumbnail-5f8ac6d1392d52f09eefb00a5ad1b303/fceee02f9b8607d60014a828933bc45b/aws-step-functions"/>
+        <updated>2026-09-04T20:41:45.000Z</updated>
+        <summary type="html"><![CDATA[EC2 Auto Recovery の対象外、または復旧に至らない場合に、手動で行う EC2 の Stop/Start と復旧確認を Lambda を使わずに自動化する仕組みを作りました。CloudWatch アラーム、EventBridge、Step Functions、SNS を使い、FIS で NIC を無効化して障害を再現し、検知から復旧完了までの動きを確認しました。]]></summary>
+        <content type="html"><![CDATA[EC2 Auto Recovery の対象外、または復旧に至らない場合に、手動で行う EC2 の Stop/Start と復旧確認を Lambda を使わずに自動化する仕組みを作りました。CloudWatch アラーム、EventBridge、Step Functions、SNS を使い、FIS で NIC を無効化して障害を再現し、検知から復旧完了までの動きを確認しました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-09-04T20:41:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[東京リージョンで利用可能になった EC2 M9gインスタンス（Graviton5）でCPU情報を確認してみた | DevelopersIO]]></title>
+        <id>eZasXvCKlzMQSKVHGytLm</id>
+        <link href="https://dev.classmethod.jp/articles/ec2-m9g-graviton5-tokyo-launch/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-bac3d29aa65f45576f73094798087ee5/039ad6f8a7d8f18da47986d21c447f48/amazon-ec2" type="image//ct0aopd36mqt/wp-thumbnail-bac3d29aa65f45576f73094798087ee5/039ad6f8a7d8f18da47986d21c447f48/amazon-ec2"/>
+        <updated>2026-09-04T20:34:30.000Z</updated>
+        <summary type="html"><![CDATA[EC2 M9g・M9gdインスタンス（AWS Graviton5）がap-northeast-1（東京）を含む4リージョンで利用可能になりました。北米GA時と同じOSコマンドで確認したCPU情報はすべて一致しました。Pricing APIで取得した東京リージョンの料金と、m8gとの世代間の料金差もあわせて紹介します。]]></summary>
+        <content type="html"><![CDATA[EC2 M9g・M9gdインスタンス（AWS Graviton5）がap-northeast-1（東京）を含む4リージョンで利用可能になりました。北米GA時と同じOSコマンドで確認したCPU情報はすべて一致しました。Pricing APIで取得した東京リージョンの料金と、m8gとの世代間の料金差もあわせて紹介します。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-09-04T20:34:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon ECS マネージドデーモンが重要度の低いデーモンをサポートするようになりました | DevelopersIO]]></title>
+        <id>3NfuOmLyQzQNPeMcRB3STm</id>
+        <link href="https://dev.classmethod.jp/articles/ecs-managed-daemons-support-non-critical/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-6d4fdf3578638cab4e6e4655b3d692aa/15a803840d72679e6593006354d5766b/amazon-elastic-container-service" type="image//ct0aopd36mqt/wp-thumbnail-6d4fdf3578638cab4e6e4655b3d692aa/15a803840d72679e6593006354d5766b/amazon-elastic-container-service"/>
+        <updated>2026-09-04T18:46:10.000Z</updated>
+        <summary type="html"><![CDATA[Amazon ECS マネージドデーモンに「重要度」の設定が追加されました。この新機能でデーモン障害時の挙動がどう変わるのか、実際に検証してみました。]]></summary>
+        <content type="html"><![CDATA[Amazon ECS マネージドデーモンに「重要度」の設定が追加されました。この新機能でデーモン障害時の挙動がどう変わるのか、実際に検証してみました。]]></content>
+        <author>
+            <name>あかいけ</name>
+        </author>
+        <published>2026-09-04T18:46:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C++ のビットフィールドを Rust で再現してみた | DevelopersIO]]></title>
+        <id>DVw3FeYQFSAISiWlGNd7x</id>
+        <link href="https://dev.classmethod.jp/articles/rust-bit-packing-packet-repr-packed/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/4u1gqKpsvlSCxsWDlEyXiJ/36c9da357c4278091af22c281a79ddca/rust-eyecatch.png" type="image/png"/>
+        <updated>2026-09-04T15:13:52.000Z</updated>
+        <summary type="html"><![CDATA[C++ のビットフィールドで実現していた 2 バイトのパケットヘッダーを Rust で作成してみました。repr(packed) ではなく、シフトとマスクを使って通信形式を組み立てました。]]></summary>
+        <content type="html"><![CDATA[C++ のビットフィールドで実現していた 2 バイトのパケットヘッダーを Rust で作成してみました。repr(packed) ではなく、シフトとマスクを使って通信形式を組み立てました。]]></content>
+        <author>
+            <name>越井 琢巳 (Koshii Takumi)</name>
+        </author>
+        <published>2026-09-04T15:13:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[新機能]Snowflake の Restricted Session Scope が一般提供になったので CoCo 利用時だけ実効権限を狭めてみた | DevelopersIO]]></title>
+        <id>6riqn02cOKIhGQLtGBAaSN</id>
+        <link href="https://dev.classmethod.jp/articles/snowflake-restricted-session-scope-coco-permission-limit/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-refcat-img-3610e3c1ff5961bdb7b464e17f8bf06d/90b168b240005ead852ec1d474bb74fb/snowflake-logo-1200x630-1.png" type="image/png"/>
+        <updated>2026-09-04T13:42:25.000Z</updated>
+        <summary type="html"><![CDATA[Snowflake の Restricted Session Scope(RSS)が一般提供となりました。実務で想定される 4 つのユースケースで CoCo in Snowsight から検証します。]]></summary>
+        <content type="html"><![CDATA[Snowflake の Restricted Session Scope(RSS)が一般提供となりました。実務で想定される 4 つのユースケースで CoCo in Snowsight から検証します。]]></content>
+        <author>
+            <name>かわばた</name>
+        </author>
+        <published>2026-09-04T13:42:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GuardDuty 検知対応を DevOps Agent で効率化しようとしている話 #opsmethod 登壇資料 | DevelopersIO]]></title>
+        <id>6t4JU2NwRfNJn0nX9DL940</id>
+        <link href="https://dev.classmethod.jp/articles/opsmethod-3-guardduty-with-devops-agent/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/51cg1nDeDwY3QV8Q8Z2bVX/73d108504bcf60ba8d92ebeb7e372b43/aws-devops-agent-DevOpsAgent.png" type="image/png"/>
+        <updated>2026-09-04T12:00:11.000Z</updated>
+        <summary type="html"><![CDATA[GuardDuty の検知対応を AWS DevOps Agent で自動化した仕組みについて、勉強会での発表内容を共有します]]></summary>
+        <content type="html"><![CDATA[GuardDuty の検知対応を AWS DevOps Agent で自動化した仕組みについて、勉強会での発表内容を共有します]]></content>
+        <author>
+            <name>川原征大</name>
+        </author>
+        <published>2026-09-04T12:00:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon Redshift の rg.large インスタンスがシングルノードクラスターをサポートしました | DevelopersIO]]></title>
+        <id>5omk4CVTzYm7O3GbJApPjQ</id>
+        <link href="https://dev.classmethod.jp/articles/20260903-redshift-rg-large-single-node/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-63f1274931b942e9a92e601c1127ad73/cfe87ec6d62fa2fc3c474ed4cb2f6c2e/amazon-redshift" type="image//ct0aopd36mqt/wp-thumbnail-63f1274931b942e9a92e601c1127ad73/cfe87ec6d62fa2fc3c474ed4cb2f6c2e/amazon-redshift"/>
+        <updated>2026-09-04T11:00:26.000Z</updated>
+        <summary type="html"><![CDATA[AWS Graviton プロセッサ搭載の Amazon Redshift RG インスタンスが、シングルノード構成に対応しました。これまで 2 ノード以上が必須だった制約が解かれ、検証環境や PoC をより低コストで構築できるようになりました。]]></summary>
+        <content type="html"><![CDATA[AWS Graviton プロセッサ搭載の Amazon Redshift RG インスタンスが、シングルノード構成に対応しました。これまで 2 ノード以上が必須だった制約が解かれ、検証環境や PoC をより低コストで構築できるようになりました。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-09-04T11:00:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Github Actionsで他リポジトリのワークフローを実行する | DevelopersIO]]></title>
+        <id>6YLmdwPDPLPhKTOOTH72c9</id>
+        <link href="https://dev.classmethod.jp/articles/call-github-actions-workflow/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-91eb2f9137effbf2d7ef323771b1fe2c/4e752204e0e94cf3247cfd55418398c9/github-eyecatch.png" type="image/png"/>
+        <updated>2026-09-04T09:30:04.000Z</updated>
+        <summary type="html"><![CDATA[別リポジトリのワークフローを実行したいときは、`workflow_dispatch`か`repository_dispatch`のどちらかをトリガーに指定することで実現できます。今回は、この2つの違いと使い分けについてまとめました。]]></summary>
+        <content type="html"><![CDATA[別リポジトリのワークフローを実行したいときは、`workflow_dispatch`か`repository_dispatch`のどちらかをトリガーに指定することで実現できます。今回は、この2つの違いと使い分けについてまとめました。]]></content>
+        <author>
+            <name>夏目祐樹</name>
+        </author>
+        <published>2026-09-04T09:30:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NemoHermes に Backlog でのタスク管理を任せてみる | DevelopersIO]]></title>
+        <id>3YGf9CcV8i2bePy7HkBHFy</id>
+        <link href="https://dev.classmethod.jp/articles/reona-03-dgx-spark-backlog-skill/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/1dD7b8HkT2sbiJzUIewMTD/e5cdc6f33c4fdd9d798f11a4564612ff/eyecatch_developersio_darktone_1200x630.jpg" type="image/jpg"/>
+        <updated>2026-09-04T08:51:49.000Z</updated>
+        <summary type="html"><![CDATA[エージェントに Backlog を操作させる仕組みを作りました。読み取り専用から始めて、削除は通さない粒度で更新を段階的に開き、実運用の改善ループを回していくまでの設計判断と、そこで見つかったセキュリティ上の落とし穴を紹介します。]]></summary>
+        <content type="html"><![CDATA[エージェントに Backlog を操作させる仕組みを作りました。読み取り専用から始めて、削除は通さない粒度で更新を段階的に開き、実運用の改善ループを回していくまでの設計判断と、そこで見つかったセキュリティ上の落とし穴を紹介します。]]></content>
+        <author>
+            <name>嶋田怜央成 / Reona Shimada</name>
+        </author>
+        <published>2026-09-04T08:51:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CloudFront Functions のテスト機能で HTTP ヘッダー名の大文字・小文字を確認してみた | DevelopersIO]]></title>
+        <id>18CcXiw5Waj0jp4D0CH8CP</id>
+        <link href="https://dev.classmethod.jp/articles/cloudfront-functions-lowercase-header/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-f66629e23bafcf47fa6477fd0349a4f7/3e371b05917375d87daf613d54a600d8/amazon-cloudfront" type="image//ct0aopd36mqt/wp-thumbnail-f66629e23bafcf47fa6477fd0349a4f7/3e371b05917375d87daf613d54a600d8/amazon-cloudfront"/>
+        <updated>2026-09-04T08:35:28.000Z</updated>
+        <summary type="html"><![CDATA[CloudFront Functions のテスト機能を使用して、HTTP ヘッダー名の大文字・小文字の扱いを確認してみました。イベントオブジェクト内でのヘッダー名の指定方法や、実装時の注意点をご紹介します。]]></summary>
+        <content type="html"><![CDATA[CloudFront Functions のテスト機能を使用して、HTTP ヘッダー名の大文字・小文字の扱いを確認してみました。イベントオブジェクト内でのヘッダー名の指定方法や、実装時の注意点をご紹介します。]]></content>
+        <author>
+            <name>片方 裕人</name>
+        </author>
+        <published>2026-09-04T08:35:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Typescript] Lambda SnapStart がコンテナイメージに対応したので試してみた [Rust] | DevelopersIO]]></title>
+        <id>3Fv6fDDArKabsEnFNNcRIN</id>
+        <link href="https://dev.classmethod.jp/articles/lambda-snapstart-container-benchmark/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-484d8afca1cbe50513cd4d6738af2960/fa0838fa40f247093d532945fc785e88/aws-lambda" type="image//ct0aopd36mqt/wp-thumbnail-484d8afca1cbe50513cd4d6738af2960/fa0838fa40f247093d532945fc785e88/aws-lambda"/>
+        <updated>2026-09-04T07:41:43.000Z</updated>
+        <summary type="html"><![CDATA[[AI要約]AWS Lambda SnapStart がコンテナイメージに対応。Rust・Node.js での実測結果から、Init 2秒以上で 68から90%以上 の cold start 削減を確認]]></summary>
+        <content type="html"><![CDATA[[AI要約]AWS Lambda SnapStart がコンテナイメージに対応。Rust・Node.js での実測結果から、Init 2秒以上で 68から90%以上 の cold start 削減を確認]]></content>
+        <author>
+            <name>中村 修太</name>
+        </author>
+        <published>2026-09-04T07:41:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Deadline Cloud で Arnold の UBL 利用を確認する〜ジョブの SUCCEEDED だけでは判断できなかった話〜 | DevelopersIO]]></title>
+        <id>1KCCTLIjDtFJCUmXEWf0My</id>
+        <link href="https://dev.classmethod.jp/articles/deadline-cloud-arnold-ubl-license-verification/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-63bbeae61ddc7456fcd9818728b426fb/f15a3d2af2d97810abdc317d80941950/temp-aws-deadline-cloud" type="image//ct0aopd36mqt/wp-thumbnail-63bbeae61ddc7456fcd9818728b426fb/f15a3d2af2d97810abdc317d80941950/temp-aws-deadline-cloud"/>
+        <updated>2026-09-04T07:16:20.000Z</updated>
+        <summary type="html"><![CDATA[AWS Deadline Cloud の Customer-Managed Fleet で Arnold ジョブが成功しても、UBL ライセンスを利用できたとは限りません。CloudWatch の LicensesInUse やセッションログ、出力画像など諸々を照合したうえで成否を確認する必要があります。]]></summary>
+        <content type="html"><![CDATA[AWS Deadline Cloud の Customer-Managed Fleet で Arnold ジョブが成功しても、UBL ライセンスを利用できたとは限りません。CloudWatch の LicensesInUse やセッションログ、出力画像など諸々を照合したうえで成否を確認する必要があります。]]></content>
+        <author>
+            <name>越井 琢巳 (Koshii Takumi)</name>
+        </author>
+        <published>2026-09-04T07:16:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【アップデート】AWS DevOps Agent の Slack連携に双方向コミュニケーション機能が追加されました | DevelopersIO]]></title>
+        <id>5MptveblOsgm97IswjPUSV</id>
+        <link href="https://dev.classmethod.jp/articles/devops-agent-slack-bidirectional-communication/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/51cg1nDeDwY3QV8Q8Z2bVX/73d108504bcf60ba8d92ebeb7e372b43/aws-devops-agent-DevOpsAgent.png" type="image/png"/>
+        <updated>2026-09-04T06:33:50.000Z</updated>
+        <summary type="html"><![CDATA[AWS DevOps Agent の Slack連携に双方向コミュニケーション機能が追加されました。これまでの一方向のメッセージ送信から、Slackチャンネル上で @メンション することで DevOps Agent と対話的にやり取りできるようになったので、さっそく試してみました。]]></summary>
+        <content type="html"><![CDATA[AWS DevOps Agent の Slack連携に双方向コミュニケーション機能が追加されました。これまでの一方向のメッセージ送信から、Slackチャンネル上で @メンション することで DevOps Agent と対話的にやり取りできるようになったので、さっそく試してみました。]]></content>
+        <author>
+            <name>川原征大</name>
+        </author>
+        <published>2026-09-04T06:33:50.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[온프레미스 VM을 AWS로 옮길 때 확인해야 할 것들 | DevelopersIO]]></title>
+        <id>2W28nzIQj3TVFzsKg17M2n</id>
+        <link href="https://dev.classmethod.jp/articles/check-when-migration-on-premises-vm-to-aws-kr/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/1dD7b8HkT2sbiJzUIewMTD/e5cdc6f33c4fdd9d798f11a4564612ff/eyecatch_developersio_darktone_1200x630.jpg" type="image/jpg"/>
+        <updated>2026-09-04T05:33:34.000Z</updated>
+        <summary type="html"><![CDATA[온프레미스에서 AWS로의 마이그레이션을 계획할 때, 서버를 통째로 옮길지 데이터만 옮길지부터 결정해야 합니다. 이 글에서는 상황별 마이그레이션 방식과 각 서비스의 특징, 그리고 놓치기 쉬운 라이선스 문제까지 정리해보겠습니다.]]></summary>
+        <content type="html"><![CDATA[온프레미스에서 AWS로의 마이그레이션을 계획할 때, 서버를 통째로 옮길지 데이터만 옮길지부터 결정해야 합니다. 이 글에서는 상황별 마이그레이션 방식과 각 서비스의 특징, 그리고 놓치기 쉬운 라이선스 문제까지 정리해보겠습니다.]]></content>
+        <author>
+            <name>Lee Sujae</name>
+        </author>
+        <published>2026-09-04T05:33:34.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Athena で CloudTrail ログ（S3 データイベント）を直接クエリして、IAM ユーザーやロールが操作したオブジェクトを特定する | DevelopersIO]]></title>
+        <id>1XWBKkRmqeeYoNoynN7OLQ</id>
+        <link href="https://dev.classmethod.jp/articles/aws-athena-cloudtrail-query-s3-dataevent/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-764c44f07bcd41184fe62a432ae120ab/512a4cdcd05a0ed3ddea950fdf619fa0/amazon-athena" type="image//ct0aopd36mqt/wp-thumbnail-764c44f07bcd41184fe62a432ae120ab/512a4cdcd05a0ed3ddea950fdf619fa0/amazon-athena"/>
+        <updated>2026-09-04T04:43:01.000Z</updated>
+        <summary type="html"><![CDATA[CloudTrail の S3 データイベントを Amazon Athena で直接クエリし、特定の IAM エンティティがどのオブジェクトに対してどの操作を行ったかを特定する方法を解説します。IAM Access Analyzer のポリシー生成ではデータイベントを扱えないため、データイベントまで踏み込んだ最小権限化にはこの方法が有効です。]]></summary>
+        <content type="html"><![CDATA[CloudTrail の S3 データイベントを Amazon Athena で直接クエリし、特定の IAM エンティティがどのオブジェクトに対してどの操作を行ったかを特定する方法を解説します。IAM Access Analyzer のポリシー生成ではデータイベントを扱えないため、データイベントまで踏み込んだ最小権限化にはこの方法が有効です。]]></content>
+        <author>
+            <name>m.hayakawa</name>
+        </author>
+        <published>2026-09-04T04:43:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【PostgreSQL】SELECT結果がshared_buffers / OSキャッシュ / ディスクのどこから来ているか実行時間で検証してみた | DevelopersIO]]></title>
+        <id>4gXG2SwVLYjn54gndAFm62</id>
+        <link href="https://dev.classmethod.jp/articles/postgresql-shared-buffers-os-cache-disk-verification/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/v1788139226/user-gen-eyecatch/hb8jb0en1sfqiclciytz.webp" type="image/webp"/>
+        <updated>2026-09-04T04:39:58.000Z</updated>
+        <summary type="html"><![CDATA[PostgreSQL の shared_buffers、OS メモリキャッシュ、実ディスクの3層構造における実行時間の差を、実際の検証を通じて確認してみました。]]></summary>
+        <content type="html"><![CDATA[PostgreSQL の shared_buffers、OS メモリキャッシュ、実ディスクの3層構造における実行時間の差を、実際の検証を通じて確認してみました。]]></content>
+        <author>
+            <name>すながわ</name>
+        </author>
+        <published>2026-09-04T04:39:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code v2.1.259〜v2.1.260 の主要アップデート - 差分パネルの追加と権限ルールのセキュリティ修正 | DevelopersIO]]></title>
+        <id>3QhXOdPkKjzlT05DGtrvPk</id>
+        <link href="https://dev.classmethod.jp/articles/20260904-cc-updates-v2-1-260/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png" type="image/png"/>
+        <updated>2026-09-04T04:17:03.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code v2.1.259と260の2つのリリースで100件超の変更が入りました。権限ルール周りの重要な修正が多いほか、会話の横で差分を確認できる新しいパネルも登場しています。本日は、差分パネル（`/diff`）を試してみました。]]></summary>
+        <content type="html"><![CDATA[Claude Code v2.1.259と260の2つのリリースで100件超の変更が入りました。権限ルール周りの重要な修正が多いほか、会話の横で差分を確認できる新しいパネルも登場しています。本日は、差分パネル（`/diff`）を試してみました。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-09-04T04:17:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[うっかりBacklog MCP Server経由で別プロジェクトに課題を登録しないようにhooksでガードレールを設定してみた | DevelopersIO]]></title>
+        <id>2QwUmsrzt1dZ3YTdT0PdDc</id>
+        <link href="https://dev.classmethod.jp/articles/backlog-add-issue-guardrail-by-hooks/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png" type="image/png"/>
+        <updated>2026-09-04T04:09:25.000Z</updated>
+        <summary type="html"><![CDATA[AIの意図せぬ挙動によってインシデントが発生しないようにhooksを設定してみました。Backlog MCP Serverのadd_issueを題材にしていますが、考え方は他のMCP Server/ツールにも応用可能です。]]></summary>
+        <content type="html"><![CDATA[AIの意図せぬ挙動によってインシデントが発生しないようにhooksを設定してみました。Backlog MCP Serverのadd_issueを題材にしていますが、考え方は他のMCP Server/ツールにも応用可能です。]]></content>
+        <author>
+            <name>岩田智哉</name>
+        </author>
+        <published>2026-09-04T04:09:25.000Z</published>
+    </entry>
+</feed>
