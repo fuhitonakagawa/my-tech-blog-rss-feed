@@ -17,12 +17,13 @@ import type { FeedInfo } from '../resources/feed-info-list';
 import {
   exponentialBackoff,
   fetchHatenaCountMap,
+  normalizeArticleUrl,
   objectDeepCopy,
   removeInvalidUnicode,
   textToMd5Hash,
-  urlRemoveQueryParams,
 } from './common-util';
 import { FeedValidator } from './feed-validator';
+import type { GeneratedFeedRegistry } from './generated/types';
 import { logger } from './logger';
 
 export type CustomOgObject = OgObject & {
@@ -112,10 +113,11 @@ const normalizeFeedItemCreator = (creator: unknown): string => {
 };
 
 export class FeedCrawler {
-  private rssParser;
-  private feedValidator;
+  private rssParser: RssParser;
+  private feedValidator: FeedValidator;
+  private generatedFeedRegistry: GeneratedFeedRegistry;
 
-  constructor() {
+  constructor(generatedFeedRegistry: GeneratedFeedRegistry = new Map()) {
     this.rssParser = new RssParser({
       maxRedirects: 5,
       timeout: 1000 * 10,
@@ -124,6 +126,7 @@ export class FeedCrawler {
       },
     });
     this.feedValidator = new FeedValidator();
+    this.generatedFeedRegistry = generatedFeedRegistry;
   }
 
   public async crawlFeeds(
@@ -183,38 +186,7 @@ export class FeedCrawler {
                 logger.warn(`[fetch-feed] retry ${feedInfo.url}`);
               }
 
-              const feedCacheKey = `feed-${textToMd5Hash(feedInfo.url)}`;
-              const feedCache = flatCacheCreate({
-                cacheId: feedCacheKey,
-                ttl: constants.fetchedFeedCacheDurationInHours * 60 * 60 * 1000,
-              });
-              const cachedData = feedCache.get<string>(feedCacheKey);
-              let feedData: string;
-
-              if (cachedData) {
-                logger.trace('[fetch-feed] cache hit', feedInfo.label, feedInfo.url);
-                feedData = cachedData;
-              } else {
-                const response = await fetch(feedInfo.url, {
-                  headers: {
-                    'user-agent': constants.requestUserAgent,
-                  },
-                  signal: AbortSignal.timeout(1000 * 10),
-                  dispatcher: publicNetworkDispatcher,
-                });
-                if (!response.ok) {
-                  throw new Error(`HTTP Error: ${response.status}`);
-                }
-                feedData = await response.text();
-
-                // バリデーション
-                await this.feedValidator.assertXmlFeed('fetched-feed', feedData);
-
-                feedCache.set(feedCacheKey, feedData);
-                feedCache.save();
-              }
-
-              return this.rssParser.parseString(feedData) as Promise<CustomRssParserFeed>;
+              return this.fetchSourceFeed(feedInfo);
             },
             1000,
             constants.feedFetchRetryCount,
@@ -259,6 +231,56 @@ export class FeedCrawler {
     return feeds;
   }
 
+  /** 入力URLから検証済みのフィードデータを取得する */
+  private async fetchSourceFeed(feedInfo: FeedInfo): Promise<CustomRssParserFeed> {
+    if (feedInfo.input.kind === 'generated') {
+      const generatedFeedXml = this.generatedFeedRegistry.get(feedInfo.input.id);
+      if (!generatedFeedXml) {
+        throw new Error(`生成フィード「${feedInfo.input.id}」を利用できません`);
+      }
+      return this.parseFeedXml(generatedFeedXml);
+    }
+
+    const feedCacheKey = `feed-${textToMd5Hash(feedInfo.input.url)}`;
+    const feedCache = flatCacheCreate({
+      cacheId: feedCacheKey,
+      ttl: constants.fetchedFeedCacheDurationInHours * 60 * 60 * 1000,
+    });
+    const cachedData = feedCache.get<string>(feedCacheKey);
+    if (cachedData) {
+      logger.trace('[fetch-feed] cache hit', feedInfo.label, feedInfo.url);
+      return this.parseFeedXml(cachedData);
+    }
+
+    const feedXml = await this.requestRemoteFeedXml(feedInfo.input.url);
+    const feed = await this.parseFeedXml(feedXml);
+    feedCache.set(feedCacheKey, feedXml);
+    feedCache.save();
+    return feed;
+  }
+
+  /** 外部サイトが配信するフィードXMLを取得する */
+  private async requestRemoteFeedXml(feedUrl: string): Promise<string> {
+    const response = await fetch(feedUrl, {
+      headers: {
+        'user-agent': constants.requestUserAgent,
+      },
+      signal: AbortSignal.timeout(1000 * 10),
+      dispatcher: publicNetworkDispatcher,
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP Error: ${response.status}`);
+    }
+
+    return response.text();
+  }
+
+  /** フィードXMLを検証して解析する */
+  private async parseFeedXml(feedXml: string): Promise<CustomRssParserFeed> {
+    await this.feedValidator.assertXmlFeed('fetched-feed', feedXml);
+    return this.rssParser.parseString(feedXml) as Promise<CustomRssParserFeed>;
+  }
+
   /**
    * フィード情報のチェック
    */
@@ -289,6 +311,15 @@ export class FeedCrawler {
     for (const url of allUrls) {
       if (!isValidHttpUrl(url)) {
         throw new Error(`フィードのURL「${url}」が正しくありません`);
+      }
+    }
+
+    for (const feedInfo of feedInfoList) {
+      if (feedInfo.input.kind === 'remote' && !isValidHttpUrl(feedInfo.input.url)) {
+        throw new Error(`外部フィードのURL「${feedInfo.input.url}」が正しくありません`);
+      }
+      if (feedInfo.input.kind === 'generated' && feedInfo.input.id === '') {
+        throw new Error('生成フィードIDが空です');
       }
     }
   }
@@ -323,7 +354,7 @@ export class FeedCrawler {
     }
 
     // ブログURLはリンクとして描画し、OG情報の取得にも使うため http / https のみ扱う
-    if (!isValidHttpUrl(customFeed.link)) {
+    if (!isPublishableHttpUrl(customFeed.link)) {
       logger.warn('取得したフィードのURLが正しくありません。 ', feedInfo.label, customFeed.link);
       customFeed.link = '';
     }
@@ -336,9 +367,9 @@ export class FeedCrawler {
     for (const feedItem of customFeed.items) {
       feedItem.link = feedItem.link || '';
 
-      // 記事URLのクエリパラメーター削除。はてな用
-      feedItem.link = urlRemoveQueryParams(feedItem.link);
       feedItem.link = toAbsoluteFeedItemLink(feedItem.link, customFeed.link);
+      // 記事の識別に不要な追跡情報を除外
+      feedItem.link = normalizeArticleUrl(feedItem.link);
 
       // 不正な文字列の削除
       feedItem.title = feedItem.title ? removeInvalidUnicode(feedItem.title) : '';
@@ -358,7 +389,7 @@ export class FeedCrawler {
 
     // 記事URLはリンクとして描画し、OG情報の取得にも使うため http / https のみ扱う
     customFeed.items = customFeed.items.filter((feedItem) => {
-      if (isValidHttpUrl(feedItem.link)) {
+      if (isPublishableHttpUrl(feedItem.link)) {
         return true;
       }
 

@@ -214,6 +214,21 @@ img {
   font-weight: bold;
   color: var(--base-color);
 }
+.ui-feed-list-dialog__feed-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+.ui-feed-list-dialog__feed-status {
+  padding: 0.1rem 0.35rem;
+  border: 1px solid var(--yellow-background);
+  color: var(--base-color-muted);
+  font-size: 0.7em;
+}
+.ui-feed-list-dialog__feed-status[data-status="stale"] {
+  border-color: currentColor;
+}
 .ui-feed-list-dialog__feed-url {
   display: block;
   margin-top: 0.1rem;

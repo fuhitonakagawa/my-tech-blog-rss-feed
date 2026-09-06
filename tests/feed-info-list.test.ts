@@ -29,4 +29,19 @@ describe('FEED_SECTION_LIST', () => {
     const sectionFeedCount = FEED_SECTION_LIST.reduce((count, section) => count + section.feedInfoList.length, 0);
     expect(FEED_INFO_LIST.length).toBe(sectionFeedCount);
   });
+
+  it('生成フィード参照を公開URLと内部入力へ解決する', () => {
+    const feedInfo = FEED_INFO_LIST.find((feed) => feed.label === 'Serverless Operations');
+
+    expect(feedInfo).toEqual({
+      label: 'Serverless Operations',
+      url: 'https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/serverless-operations/rss.xml',
+      pageUrl: 'https://serverless.co.jp/blog/',
+      sectionId: 'jp-tech-blog',
+      input: {
+        kind: 'generated',
+        id: 'serverless-operations',
+      },
+    });
+  });
 });

@@ -1,13 +1,33 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as url from 'node:url';
+import { generatedFeedUrls } from '../common/constants';
+import { isValidHttpUrl } from '../common/url-guard';
+import { GENERATED_FEED_DEFINITION_MAP } from './generated-feed-list';
 
 type ValidUrl = `${'http' | 'https'}://${string}.${string}`;
+
+/** 外部サイトが配信するフィード */
+export interface RemoteFeedInput {
+  kind: 'remote';
+  url: ValidUrl;
+}
+
+/** 同一実行内で生成するフィード */
+export interface GeneratedFeedInput {
+  kind: 'generated';
+  id: string;
+}
+
+/** 集約処理へ渡すフィードの入力元 */
+export type FeedInput = RemoteFeedInput | GeneratedFeedInput;
 
 export interface FeedInfo {
   label: string;
   url: ValidUrl;
   sectionId: string;
+  pageUrl?: ValidUrl;
+  input: FeedInput;
 }
 
 /**
@@ -16,7 +36,7 @@ export interface FeedInfo {
  *
  * セクションは resources/sections/<id>.json で1セクション1ファイルで管理する。
  * - ファイル名（拡張子を除く）がセクションIDになる
- * - JSONの形式: { "order": 表示順の数値, "title": "表示名", "feeds": [{ "label": "フィード名", "url": "フィードURL" }] }
+ * - feedsは外部フィードのlabel・url、または生成フィードのgeneratedFeedIdを持つ
  * - ラベル・URLはセクションをまたいで重複するとバリデーションエラーになる（同一フィードの複数セクション所属は不可）
  */
 export interface FeedSection {
@@ -31,17 +51,79 @@ interface SectionFileContent {
   /** セクションの表示順。小さいほど先頭 */
   order: number;
   title: string;
-  feeds: {
-    label: string;
-    url: string;
-  }[];
+  feeds: unknown[];
+}
+
+interface RemoteSectionFeed extends Record<string, unknown> {
+  label: string;
+  url: string;
+}
+
+interface GeneratedSectionFeed extends Record<string, unknown> {
+  generatedFeedId: string;
 }
 
 const SECTION_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
-const FEED_URL_PATTERN = /^https?:\/\/.+\..+/;
 
 const dirName = url.fileURLToPath(new URL('.', import.meta.url));
 const SECTIONS_DIR_PATH = path.join(dirName, 'sections');
+
+/** 外部フィードの定義であることを検証する */
+const isRemoteSectionFeed = (value: Record<string, unknown>): value is RemoteSectionFeed => {
+  return typeof value.label === 'string' && typeof value.url === 'string' && value.generatedFeedId === undefined;
+};
+
+/** 生成フィード参照であることを検証する */
+const isGeneratedSectionFeed = (value: Record<string, unknown>): value is GeneratedSectionFeed => {
+  return typeof value.generatedFeedId === 'string' && value.label === undefined && value.url === undefined;
+};
+
+/** セクション内のフィード定義を集約用の情報へ変換する */
+const toFeedInfo = (fileName: string, sectionId: string, value: unknown): FeedInfo => {
+  if (value === null || typeof value !== 'object' || Array.isArray(value)) {
+    throw new Error(`セクション定義「${fileName}」の feeds に不正な項目があります`);
+  }
+
+  const feed = value as Record<string, unknown>;
+  if (isRemoteSectionFeed(feed)) {
+    if (feed.label.trim() === '') {
+      throw new Error(`セクション定義「${fileName}」の feeds に label が不正な項目があります`);
+    }
+    if (!isValidHttpUrl(feed.url)) {
+      throw new Error(`セクション定義「${fileName}」のフィード「${feed.label}」のURLが不正です: ${feed.url}`);
+    }
+
+    return {
+      label: feed.label,
+      url: feed.url as ValidUrl,
+      sectionId,
+      input: {
+        kind: 'remote',
+        url: feed.url as ValidUrl,
+      },
+    };
+  }
+
+  if (isGeneratedSectionFeed(feed)) {
+    const definition = GENERATED_FEED_DEFINITION_MAP.get(feed.generatedFeedId);
+    if (!definition) {
+      throw new Error(`セクション定義「${fileName}」が未定義の生成フィード「${feed.generatedFeedId}」を参照しています`);
+    }
+
+    return {
+      label: definition.label,
+      url: generatedFeedUrls(definition.id).rss as ValidUrl,
+      pageUrl: definition.pageUrl as ValidUrl,
+      sectionId,
+      input: {
+        kind: 'generated',
+        id: definition.id,
+      },
+    };
+  }
+
+  throw new Error(`セクション定義「${fileName}」の feeds は label と url、または generatedFeedId を指定してください`);
+};
 
 /**
  * セクション定義JSONの形式チェック。不正があればファイル名付きのエラーを投げる
@@ -57,14 +139,6 @@ function assertSectionFileContent(fileName: string, content: unknown): asserts c
   }
   if (!Array.isArray(sectionContent.feeds)) {
     throw new Error(`セクション定義「${fileName}」の feeds は配列で指定してください`);
-  }
-  for (const feed of sectionContent.feeds) {
-    if (typeof feed?.label !== 'string' || feed.label === '') {
-      throw new Error(`セクション定義「${fileName}」の feeds に label が不正な項目があります`);
-    }
-    if (typeof feed?.url !== 'string' || !FEED_URL_PATTERN.test(feed.url)) {
-      throw new Error(`セクション定義「${fileName}」のフィード「${feed?.label}」のURLが不正です: ${feed?.url}`);
-    }
   }
 }
 
@@ -93,16 +167,26 @@ const loadFeedSectionList = (): FeedSection[] => {
       section: {
         id: sectionId,
         title: content.title,
-        feedInfoList: content.feeds.map((feed) => ({
-          label: feed.label,
-          url: feed.url as ValidUrl,
-          sectionId: sectionId,
-        })),
+        feedInfoList: content.feeds.map((feed) => toFeedInfo(fileName, sectionId, feed)),
       },
     });
   }
 
   sections.sort((a, b) => a.order - b.order || a.section.id.localeCompare(b.section.id));
+
+  const feedInfoList = sections.flatMap((entry) => entry.section.feedInfoList);
+  const labels = new Set<string>();
+  const urls = new Set<string>();
+  for (const feedInfo of feedInfoList) {
+    if (labels.has(feedInfo.label)) {
+      throw new Error(`フィードのラベル「${feedInfo.label}」が重複しています`);
+    }
+    if (urls.has(feedInfo.url)) {
+      throw new Error(`フィードのURL「${feedInfo.url}」が重複しています`);
+    }
+    labels.add(feedInfo.label);
+    urls.add(feedInfo.url);
+  }
 
   return sections.map((entry) => entry.section);
 };

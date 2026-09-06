@@ -9,14 +9,17 @@ const rssParser = new RssParser({
 });
 
 describe('フィードが取得可能', () => {
-  FEED_INFO_LIST.map((feedInfo: FeedInfo) => {
+  FEED_INFO_LIST.filter((feedInfo: FeedInfo) => feedInfo.input.kind === 'remote').map((feedInfo: FeedInfo) => {
     const testTitle = `${feedInfo.label} / ${feedInfo.url}`;
     it.concurrent(
       testTitle,
       async () => {
         const feed = await exponentialBackoff(
           async () => {
-            return rssParser.parseURL(feedInfo.url);
+            if (feedInfo.input.kind !== 'remote') {
+              throw new Error('外部フィードではありません');
+            }
+            return rssParser.parseURL(feedInfo.input.url);
           },
           3000,
           5,

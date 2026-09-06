@@ -19,12 +19,37 @@ export const textTruncate = (text: string, maxLength: number): string => {
   return Array.from(text).slice(0, maxLength).join('');
 };
 
-export const urlRemoveQueryParams = (url: string) => {
-  if (!url.includes('?')) {
+const TRACKING_QUERY_PARAMETER_NAMES = new Set([
+  '_hsenc',
+  '_hsmi',
+  'dclid',
+  'fbclid',
+  'gclid',
+  'mc_cid',
+  'mc_eid',
+  'msclkid',
+]);
+
+/** 記事識別に影響しない追跡用パラメーターとフラグメントを取り除く */
+export const normalizeArticleUrl = (url: string): string => {
+  let urlObject: URL;
+  try {
+    urlObject = new URL(url);
+  } catch {
     return url;
   }
 
-  return url.split('?')[0];
+  let changed = urlObject.hash !== '';
+  urlObject.hash = '';
+  for (const parameterName of [...urlObject.searchParams.keys()]) {
+    const normalizedName = parameterName.toLowerCase();
+    if (normalizedName.startsWith('utm_') || TRACKING_QUERY_PARAMETER_NAMES.has(normalizedName)) {
+      urlObject.searchParams.delete(parameterName);
+      changed = true;
+    }
+  }
+
+  return changed ? urlObject.toString() : url;
 };
 
 export const removeInvalidUnicode = (text: string) => {

@@ -3,6 +3,7 @@ const siteUrl = `${siteUrlStem}/`;
 
 // セクションページ・フィードを配置するパスのプレフィックス。/rss/<セクションID>/ の形になる
 const sectionRootPath = 'rss';
+const generatedFeedRootPath = 'feeds/generated';
 
 export default {
   // サイト設定
@@ -57,6 +58,8 @@ export default {
   // eleventy-fetchのバッファは3日おきに更新されるため、14日以上古いファイルは実質使われていないとみなせる
   feedFetchRetryCount: 1, // フィード取得のリトライ回数。ワークフローは1時間おきに動くので、失敗しても次回実行時にリトライされる
   ogFetchRetryCount: 1, // OGP取得のリトライ回数。ワークフローは1時間おきに動くので、失敗しても次回実行時にリトライされる
+  generatedFeedFetchTimeoutMs: 10 * 1000,
+  generatedFeedMaxResponseBytes: 5 * 1024 * 1024,
 };
 
 /**
@@ -71,4 +74,13 @@ export const sectionFeedUrls = (sectionId: string): { atom: string; rss: string;
   atom: `${siteUrl}${sectionRootPath}/${sectionId}/feeds/atom.xml`,
   rss: `${siteUrl}${sectionRootPath}/${sectionId}/feeds/rss.xml`,
   json: `${siteUrl}${sectionRootPath}/${sectionId}/feeds/feed.json`,
+});
+
+/**
+ * 生成フィードの公開URL一式を返す
+ */
+export const generatedFeedUrls = (generatedFeedId: string): { atom: string; rss: string; json: string } => ({
+  atom: `${siteUrl}${generatedFeedRootPath}/${generatedFeedId}/atom.xml`,
+  rss: `${siteUrl}${generatedFeedRootPath}/${generatedFeedId}/rss.xml`,
+  json: `${siteUrl}${generatedFeedRootPath}/${generatedFeedId}/feed.json`,
 });
