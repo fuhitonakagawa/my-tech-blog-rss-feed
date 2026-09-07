@@ -6,6 +6,8 @@ https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/
 
 このリポジトリは [yamadashy/tech-blog-rss-feed](https://github.com/yamadashy/tech-blog-rss-feed) のフォークです。
 
+AIエージェント向けの継続指示とプロジェクト固有ナレッジは [AGENTS.md](AGENTS.md) を参照してください。
+
 
 ## セクション
 フィードはセクション（カテゴリ）ごとに分けて管理しており、セクションごとのページとRSSフィードを配信しています。
