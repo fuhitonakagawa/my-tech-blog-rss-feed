@@ -44,4 +44,19 @@ describe('FEED_SECTION_LIST', () => {
       },
     });
   });
+
+  it('Forbes JAPANの生成フィード参照を専用セクションへ解決する', () => {
+    const feedInfo = FEED_INFO_LIST.find((feed) => feed.label === 'Forbes JAPAN テクノロジー');
+
+    expect(feedInfo).toEqual({
+      label: 'Forbes JAPAN テクノロジー',
+      url: 'https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/forbes-japan-technology/rss.xml',
+      pageUrl: 'https://forbesjapan.com/category/technology',
+      sectionId: 'forbes-japan',
+      input: {
+        kind: 'generated',
+        id: 'forbes-japan-technology',
+      },
+    });
+  });
 });

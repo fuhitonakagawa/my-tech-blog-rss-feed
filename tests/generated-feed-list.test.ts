@@ -28,6 +28,28 @@ describe('GENERATED_FEED_DEFINITION_LIST', () => {
     expect(definition?.label).toBe('Serverless Operations');
   });
 
+  it('Forbes JAPAN テクノロジーの生成元定義を読み込む', () => {
+    expect(GENERATED_FEED_DEFINITION_MAP.get('forbes-japan-technology')).toEqual({
+      id: 'forbes-japan-technology',
+      schemaVersion: 1,
+      label: 'Forbes JAPAN テクノロジー',
+      pageUrl: 'https://forbesjapan.com/category/technology',
+      language: 'ja',
+      extractor: {
+        type: 'css',
+        itemSelector: '.section-articles-list .articles-list__item',
+        titleSelector: '.tit',
+        linkSelector: 'a[href^="/articles/detail/"]',
+        dateSelector: '.date',
+        timeZoneOffset: '+09:00',
+        categorySelector: '.cate',
+        creatorSelector: '.author a',
+      },
+      pollIntervalMinutes: 60,
+      maxItems: 50,
+    });
+  });
+
   it('未対応のスキーマバージョンを拒否する', () => {
     expect(() =>
       parseGeneratedFeedDefinition('test.json', 'test', {
