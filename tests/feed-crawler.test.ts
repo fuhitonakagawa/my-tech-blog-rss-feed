@@ -162,6 +162,45 @@ describe('FeedCrawler', () => {
     expect(result.items[0].blogLink).toBe('https://qiita.com/tags/AIエージェント');
   });
 
+  it('ビジネス＋ITの2本のフィードは一覧URLで区別し、記事の所属を保持する', () => {
+    const sources = [
+      {
+        url: 'https://www.sbbit.jp/rss/HotTopics.rss',
+        pageUrl: 'https://www.sbbit.jp/search?ste%5B%5D=11',
+      },
+      {
+        url: 'https://www.sbbit.jp/rss/pheedo2.rss',
+        pageUrl: 'https://www.sbbit.jp/search?ste%5B%5D=12',
+      },
+    ] as const;
+    const results = sources.map(({ url, pageUrl }, index) => {
+      const feedInfo: FeedInfo = {
+        label: `ビジネス＋IT ${index}`,
+        url,
+        sectionId: 'business-it',
+        input: { kind: 'remote', url },
+      };
+      const articleUrl = `https://www.sbbit.jp/article/cont1/${index}`;
+      const feed = {
+        title: feedInfo.label,
+        link: 'https://www.sbbit.jp/',
+        items: [{ title: '記事', link: articleUrl, isoDate: '2026-09-05T01:00:00.000Z' }],
+      } as CustomRssParserFeed;
+
+      const result = postProcessFeed(feedInfo, feed);
+
+      expect(result.link).toBe(pageUrl);
+      expect(result.items[0]).toMatchObject({
+        link: articleUrl,
+        blogLink: pageUrl,
+        sectionId: 'business-it',
+      });
+      return result;
+    });
+
+    expect(new Set(results.map((feed) => feed.link)).size).toBe(2);
+  });
+
   it('creator が author オブジェクトの場合は名前を文字列として扱う', () => {
     const feedInfo: FeedInfo = {
       label: 'Google Cloud',

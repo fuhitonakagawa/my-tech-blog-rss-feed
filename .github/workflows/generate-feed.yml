@@ -71,11 +71,40 @@ jobs:
         with:
           name: site
           path: ./public
-      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
+      # 公開先の一時的なエラーには15秒、30秒の間隔で最大3回試行し、全試行失敗時はジョブを失敗させる
+      - name: Deploy site (attempt 1)
+        id: deploy_first
+        continue-on-error: true
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          # NOTE: 変更履歴が必要な場合は false に変更
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+      - name: Wait before second deployment attempt
+        if: steps.deploy_first.outcome == 'failure'
+        run: sleep 15
+      - name: Deploy site (attempt 2)
+        id: deploy_second
+        if: steps.deploy_first.outcome == 'failure'
+        continue-on-error: true
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+      - name: Wait before third deployment attempt
+        if: steps.deploy_second.outcome == 'failure'
+        run: sleep 30
+      - name: Deploy site (attempt 3)
+        if: steps.deploy_second.outcome == 'failure'
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
           force_orphan: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

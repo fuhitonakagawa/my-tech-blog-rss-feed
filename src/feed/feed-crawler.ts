@@ -74,6 +74,18 @@ const toQiitaTagPageUrl = (feedUrl: string): string | undefined => {
   return feedUrl.slice(0, -QIITA_TAG_FEED_SUFFIX.length);
 };
 
+/** ビジネス＋ITのフィードを記事種別ごとの一覧ページに対応させる */
+const toBusinessItPageUrl = (feedUrl: string): string | undefined => {
+  switch (feedUrl) {
+    case 'https://www.sbbit.jp/rss/HotTopics.rss':
+      return 'https://www.sbbit.jp/search?ste%5B%5D=11';
+    case 'https://www.sbbit.jp/rss/pheedo2.rss':
+      return 'https://www.sbbit.jp/search?ste%5B%5D=12';
+    default:
+      return undefined;
+  }
+};
+
 /**
  * 記事URLが相対パスのフィードがあるため、ブログURLを基準に絶対URLへ解決する。
  * 解決できない場合は元の値をそのまま返す
@@ -351,6 +363,11 @@ export class FeedCrawler {
     const qiitaTagPageUrl = toQiitaTagPageUrl(feedInfo.url);
     if (qiitaTagPageUrl) {
       customFeed.link = qiitaTagPageUrl;
+    }
+
+    const businessItPageUrl = toBusinessItPageUrl(feedInfo.url);
+    if (businessItPageUrl) {
+      customFeed.link = businessItPageUrl;
     }
 
     // ブログURLはリンクとして描画し、OG情報の取得にも使うため http / https のみ扱う
