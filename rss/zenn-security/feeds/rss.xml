@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Zenn Security｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/</link>
+        <description>Zenn Securityセクションのブログ更新をまとめたRSSフィード</description>
+        <lastBuildDate>Sun, 13 Sep 2026 05:08:28 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+        <language>ja</language>
+        <image>
+            <title>Zenn Security｜企業テックブログRSS</title>
+            <url>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</url>
+            <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/</link>
+        </image>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[車のデータは誰が読めるのか — AAOSの車両パーミッション134個を全部数えた | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/tarooo137/articles/aaos-vehicle-data-permissions</link>
+            <guid isPermaLink="false">https://zenn.dev/tarooo137/articles/aaos-vehicle-data-permissions</guid>
+            <pubDate>Sat, 12 Sep 2026 16:20:51 GMT</pubDate>
+            <description><![CDATA[!TL;DRAndroid Automotive OS (AAOS) が定義する車両パーミッションは、手元のエミュレータ (API 34-ext9) で 134 個ありました。保護レベルの内訳はこうです。保護レベル件数誰が取れるかsignature|privileged117プリインストール + OEM 署名のアプリのみnormal8インストールしただけで取れるsignature4OEM 署名のア]]></description>
+            <content:encoded><![CDATA[!TL;DRAndroid Automotive OS (AAOS) が定義する車両パーミッションは、手元のエミュレータ (API 34-ext9) で 134 個ありました。保護レベルの内訳はこうです。保護レベル件数誰が取れるかsignature|privileged117プリインストール + OEM 署名のアプリのみnormal8インストールしただけで取れるsignature4OEM 署名のアプリのみsignature|privileged|vendorPrivileged3上記 + ベンダー特権dangerous2...]]></content:encoded>
+            <author>Tarooo</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--BR8S7jb2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25BB%258A%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AF%25E8%25AA%25B0%25E3%2581%258C%25E8%25AA%25AD%25E3%2582%2581%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258B%2520%25E2%2580%2594%2520AAOS%25E3%2581%25AE%25E8%25BB%258A%25E4%25B8%25A1%25E3%2583%2591%25E3%2583%25BC%25E3%2583%259F%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3131%25E5%2580%258B%25E3%2582%2592%25E5%2585%25A8%25E9%2583%25A8%25E6%2595%25B0%25E3%2581%2588%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tarooo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNjZmFmMzM2ZjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>車のデータは誰が読めるのか — AAOSの車両パーミッション134個を全部数えた</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[GuardDuty×EventBridge×Lambdaで組む、Organizationsクロスアカウント自動封じ込め ― 設計編 | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/nyondev/articles/zenn-article-design</link>
+            <guid isPermaLink="false">https://zenn.dev/nyondev/articles/zenn-article-design</guid>
+            <pubDate>Sat, 12 Sep 2026 16:01:34 GMT</pubDate>
+            <description><![CDATA[この記事の位置づけある企業がAWS Organizationsで12の本番アカウントを運用しているという想定で、次の4点を満たすセキュリティ基盤の設計を検証した。本番アカウント全体にわたり、不審なAPI呼び出しや普段と異なる通信を継続して見つけ出す見つかった事象に対し、担当者の操作を挟まずに封じ込めの処理を走らせる重大度の高い検出が出たときにAmazon SNSへ通知する検出結果をすべてセキュリテ]]></description>
+            <content:encoded><![CDATA[この記事の位置づけある企業がAWS Organizationsで12の本番アカウントを運用しているという想定で、次の4点を満たすセキュリティ基盤の設計を検証した。本番アカウント全体にわたり、不審なAPI呼び出しや普段と異なる通信を継続して見つけ出す見つかった事象に対し、担当者の操作を挟まずに封じ込めの処理を走らせる重大度の高い検出が出たときにAmazon SNSへ通知する検出結果をすべてセキュリティ運用アカウントへ集める12アカウント規模を個人の検証環境でそのまま再現するのは非現実的なので、今回はOrganizations配下の3アカウント構成で、仕組みの核心部分(検...]]></content:encoded>
+            <author>NyonDev</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--a2IewIXi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GuardDuty%25C3%2597EventBridge%25C3%2597Lambda%25E3%2581%25A7%25E7%25B5%2584%25E3%2582%2580%25E3%2580%2581Organizations%25E3%2582%25AF%25E3%2583%25AD%25E3%2582%25B9%25E3%2582%25A2%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%2588%25E8%2587%25AA%25E5%258B%2595%25E5%25B0%2581%25E3%2581%2598...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NyonDev%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzgwYWU1YTQ1N2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>GuardDuty×EventBridge×Lambdaで組む、Organizationsクロスアカウント自動封じ込め ― 設計編</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[書いた deny ルールが、一度も参照されていなかった | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/quintetkit/articles/permission-rule-allows-more</link>
+            <guid isPermaLink="false">https://zenn.dev/quintetkit/articles/permission-rule-allows-more</guid>
+            <pubDate>Sat, 12 Sep 2026 14:46:28 GMT</pubDate>
+            <description><![CDATA[エージェントを1つのディレクトリの中に留めるつもりで、これを書いていました。{ "permissions": { "deny": ["Write(src/generated/**)"] } }構文は正しい。読み込まれる。そして一度も参照されません。ファイルパスのルールが効くのは Read(...) と Edit(...) だけです。Write / NotebookEdit / Glob / 旧 M]]></description>
+            <content:encoded><![CDATA[エージェントを1つのディレクトリの中に留めるつもりで、これを書いていました。{ "permissions": { "deny": ["Write(src/generated/**)"] } }構文は正しい。読み込まれる。そして一度も参照されません。ファイルパスのルールが効くのは Read(...) と Edit(...) だけです。Write / NotebookEdit / Glob / 旧 MultiEdit に書いても、受け付けられたうえで一度も見られません。起動時に警告は出ます。私は起動時の出力を読んでいませんでした。それまで一度も、そこに何か問題が出たことがなかっ...]]></content:encoded>
+            <author>Quintet Kit</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--lYRJSkww--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259B%25B8%25E3%2581%2584%25E3%2581%259F%2520deny%2520%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%258C%25E3%2580%2581%25E4%25B8%2580%25E5%25BA%25A6%25E3%2582%2582%25E5%258F%2582%25E7%2585%25A7%25E3%2581%2595%25E3%2582%258C%25E3%2581%25A6%25E3%2581%2584%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Quintet%2520Kit%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2M4NDY1YTk1NjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>書いた deny ルールが、一度も参照されていなかった</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[ゼロから学ぶ「信用できる」セキュリティ検証 #11 — 0件なのにTrueになる理由をPythonのall()から学ぶ | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/schutzz/articles/65226a16fab35f</link>
+            <guid isPermaLink="false">https://zenn.dev/schutzz/articles/65226a16fab35f</guid>
+            <pubDate>Sat, 12 Sep 2026 14:11:06 GMT</pubDate>
+            <description><![CDATA[はじめに前回は、「何もない」という状態を一種類として扱ってよいのかを考えました。artifactが確認できないという同じ見た目でも、生成段階へ到達していない、生成を試みて失敗した、正常な非生成だった、生成後に失われた、observerが確認できなかった、といった複数の可能性があります。つまり、0件やmissingという結果だけを見ても、その状態がどのように生じたのかまでは分かりません。では、その「]]></description>
+            <content:encoded><![CDATA[はじめに前回は、「何もない」という状態を一種類として扱ってよいのかを考えました。artifactが確認できないという同じ見た目でも、生成段階へ到達していない、生成を試みて失敗した、正常な非生成だった、生成後に失われた、observerが確認できなかった、といった複数の可能性があります。つまり、0件やmissingという結果だけを見ても、その状態がどのように生じたのかまでは分かりません。では、その「何もない」をそのまま判定処理へ渡したらどうなるのでしょうか。たとえば、複数の検証結果がすべて正常だったか確認するため、Pythonで次のようなコードを書いたとします。passed =...]]></content:encoded>
+            <author>Daichi Terayama</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--2QgmZrDz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2581%25B6%25E3%2580%258C%25E4%25BF%25A1%25E7%2594%25A8%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2580%258D%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E6%25A4%259C%25E8%25A8%25BC%2520%252311%2520%25E2%2580%2594%25200%25E4%25BB%25B6%25E3%2581%25AA%25E3%2581%25AE%25E3%2581%25ABTrue%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%25E7%2590%2586%25E7%2594%25B1%25E3%2582%2592Python%25E3%2581%25AEall%2528%2529%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Daichi%2520Terayama%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNjOWY3MWZlN2MuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>ゼロから学ぶ「信用できる」セキュリティ検証 #11 — 0件なのにTrueになる理由をPythonのall()から学ぶ</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[1Password SSH Agentで秘密鍵レスなSSH接続を実現する | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/slowhand/articles/9381c89bb46a1d</link>
+            <guid isPermaLink="false">https://zenn.dev/slowhand/articles/9381c89bb46a1d</guid>
+            <pubDate>Sat, 12 Sep 2026 13:27:53 GMT</pubDate>
+            <description><![CDATA[概要MacからUbuntu端末へSSH接続する際、秘密鍵をローカルファイルとして保存せず、1Password SSH Agent経由で認証する構成にしました。最終的には、次のコマンドだけで接続できます。ssh home-ubuntuコマンドを実行すると以下の様な1Passwordの認証画面が開き、Touch IDで承認するとUbuntuへログインできます。 動作環境MacBook Air（M3）m]]></description>
+            <content:encoded><![CDATA[概要MacからUbuntu端末へSSH接続する際、秘密鍵をローカルファイルとして保存せず、1Password SSH Agent経由で認証する構成にしました。最終的には、次のコマンドだけで接続できます。ssh home-ubuntuコマンドを実行すると以下の様な1Passwordの認証画面が開き、Touch IDで承認するとUbuntuへログインできます。 動作環境MacBook Air（M3）macOS Tahoe 26.5.2Ubuntu 26.04 LTS（GNU/Linux 7.0.0-28-generic x86_64）1Passwordデスクトップ...]]></content:encoded>
+            <author>slowhand</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--FvKKuOMR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:1Password%2520SSH%2520Agent%25E3%2581%25A7%25E7%25A7%2598%25E5%25AF%2586%25E9%258D%25B5%25E3%2583%25AC%25E3%2582%25B9%25E3%2581%25AASSH%25E6%258E%25A5%25E7%25B6%259A%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:slowhand%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzEwY2YzMGUzMDAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>1Password SSH Agentで秘密鍵レスなSSH接続を実現する</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Azure Storageの認証・認可地図 ― 共有キー、3種類のSAS、発行者RBACの関係を整理する | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/kkou/articles/azure-storage-key-sas</link>
+            <guid isPermaLink="false">https://zenn.dev/kkou/articles/azure-storage-key-sas</guid>
+            <pubDate>Sat, 12 Sep 2026 13:03:02 GMT</pubDate>
+            <description><![CDATA[1. はじめにAzure Storage で共有キーアクセスを無効化している環境に対して、「特定のBlobコンテナーへアクセスするためのSASを発行してほしい」という依頼が発生することがある。もっとも素直な選択肢はユーザー委任SASだが、有効期間は最大7日という制約がある。マネージドIDが使えず、SAS URLを構成情報として継続的に保存する必要があるユースケースでは、7日ごとの更新運用が現実的な]]></description>
+            <content:encoded><![CDATA[1. はじめにAzure Storage で共有キーアクセスを無効化している環境に対して、「特定のBlobコンテナーへアクセスするためのSASを発行してほしい」という依頼が発生することがある。もっとも素直な選択肢はユーザー委任SASだが、有効期間は最大7日という制約がある。マネージドIDが使えず、SAS URLを構成情報として継続的に保存する必要があるユースケースでは、7日ごとの更新運用が現実的な負担になる。このとき、次のような判断を求められる。共有キーアクセスの無効化を維持し、7日以内の自動更新を組み込むのか共有キーアクセスを有効化し、代わりに長期のサービスSASを発行...]]></content:encoded>
+            <author>あずーれ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--bA1zt4JV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520Storage%25E3%2581%25AE%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BB%25E8%25AA%258D%25E5%258F%25AF%25E5%259C%25B0%25E5%259B%25B3%2520%25E2%2580%2595%2520%25E5%2585%25B1%25E6%259C%2589%25E3%2582%25AD%25E3%2583%25BC%25E3%2580%25813%25E7%25A8%25AE%25E9%25A1%259E%25E3%2581%25AESAS%25E3%2580%2581%25E7%2599%25BA%25E8%25A1%258C%25E8%2580%2585RBAC%25E3%2581%25AE%25E9%2596%25A2%25E4%25BF%2582%25E3%2582%2592%25E6%2595%25B4%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2581%259A%25E3%2583%25BC%25E3%2582%258C%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2ZhNTZiM2JiMTcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Azure Storageの認証・認可地図 ― 共有キー、3種類のSAS、発行者RBACの関係を整理する</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[AI coding agentはモデル名で選ばない。導入前に決める5つの運用境界 | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/heftykoo/articles/8b66919f3ab11e</link>
+            <guid isPermaLink="false">https://zenn.dev/heftykoo/articles/8b66919f3ab11e</guid>
+            <pubDate>Sat, 12 Sep 2026 08:32:48 GMT</pubDate>
+            <description><![CDATA[AI coding agentはモデル名で選ばない。導入前に決める5つの運用境界AI coding agentを選ぶとき、最初にモデルの比較表を開く人は多い。推論性能、速度、料金。数字が並ぶので、判断した気になりやすい。しかし、モデルを決めても導入設計はほとんど終わっていない。同じモデルでも、managed sandboxで動かすのか、自社のcomputeで動かすのか、IDEから操作するのかで、触]]></description>
+            <content:encoded><![CDATA[AI coding agentはモデル名で選ばない。導入前に決める5つの運用境界AI coding agentを選ぶとき、最初にモデルの比較表を開く人は多い。推論性能、速度、料金。数字が並ぶので、判断した気になりやすい。しかし、モデルを決めても導入設計はほとんど終わっていない。同じモデルでも、managed sandboxで動かすのか、自社のcomputeで動かすのか、IDEから操作するのかで、触れるファイルも秘密情報の置き場所も変わる。途中で止まったときに成果物を回収できるかどうかも、モデルの能力とは別問題だ。いま比較すべき単位は、モデル単体よりagent runtimeであ...]]></content:encoded>
+            <author>heftykoo</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--Rnmqlo_P--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%2520coding%2520agent%25E3%2581%25AF%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E5%2590%258D%25E3%2581%25A7%25E9%2581%25B8%25E3%2581%25B0%25E3%2581%25AA%25E3%2581%2584%25E3%2580%2582%25E5%25B0%258E%25E5%2585%25A5%25E5%2589%258D%25E3%2581%25AB%25E6%25B1%25BA%25E3%2582%2581%25E3%2582%258B5%25E3%2581%25A4%25E3%2581%25AE%25E9%2581%258B%25E7%2594%25A8%25E5%25A2%2583%25E7%2595%258C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:heftykoo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2UzMjg5NzNmZjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AI coding agentはモデル名で選ばない。導入前に決める5つの運用境界</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[未来予測の設計図 付録B：用語集 ―― 本書が採用した専門用語の定義 | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/takenori_kusaka/articles/srb-appendix-glossary</link>
+            <guid isPermaLink="false">https://zenn.dev/takenori_kusaka/articles/srb-appendix-glossary</guid>
+            <pubDate>Sat, 12 Sep 2026 07:49:45 GMT</pubDate>
+            <description><![CDATA[本記事は、Zenn Book『未来予測の設計図』の付録Bです。本編が特定の意味で用いる用語を、初出の章とともに定義します。本編はこちらです。未来予測の設計図 ―― 歴史的事実・現在の外部入力・20年後の社会構造 本付録の位置づけ本付録は、本書が特定の意味で用いる用語を定義します。一般的な語義と異なる用法、あるいは本書が独自に導入した概念については、初出の章を併記します。用語は、本書の構造に沿って5]]></description>
+            <content:encoded><![CDATA[本記事は、Zenn Book『未来予測の設計図』の付録Bです。本編が特定の意味で用いる用語を、初出の章とともに定義します。本編はこちらです。未来予測の設計図 ―― 歴史的事実・現在の外部入力・20年後の社会構造 本付録の位置づけ本付録は、本書が特定の意味で用いる用語を定義します。一般的な語義と異なる用法、あるいは本書が独自に導入した概念については、初出の章を併記します。用語は、本書の構造に沿って5つの群に分けて掲載します。各群の内部は、初出の順に並べます。 Ⅰ. 本書の方法に関する用語砂時計アーキテクチャ（第0章）本書全体の構造。上半分の「過去」に4系列の事象が広が...]]></content:encoded>
+            <author>日下武紀</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--UZyPdpuP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259C%25AA%25E6%259D%25A5%25E4%25BA%2588%25E6%25B8%25AC%25E3%2581%25AE%25E8%25A8%25AD%25E8%25A8%2588%25E5%259B%25B3%2520%25E4%25BB%2598%25E9%258C%25B2B%25EF%25BC%259A%25E7%2594%25A8%25E8%25AA%259E%25E9%259B%2586%2520%25E2%2580%2595%25E2%2580%2595%2520%25E6%259C%25AC%25E6%259B%25B8%25E3%2581%258C%25E6%258E%25A1%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E5%25B0%2582%25E9%2596%2580%25E7%2594%25A8%25E8%25AA%259E%25E3%2581%25AE%25E5%25AE%259A%25E7%25BE%25A9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%2597%25A5%25E4%25B8%258B%25E6%25AD%25A6%25E7%25B4%2580%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzU1YjEzYmRhMmMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>未来予測の設計図 付録B：用語集 ―― 本書が採用した専門用語の定義</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Service Extensions で自前 gRPC のガードレールを Agent Gateway に挿す | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/satohjohn/articles/service-extensions-grpc-guardrail</link>
+            <guid isPermaLink="false">https://zenn.dev/satohjohn/articles/service-extensions-grpc-guardrail</guid>
+            <pubDate>Sat, 12 Sep 2026 05:22:55 GMT</pubDate>
+            <description><![CDATA[はじめにAgent Gateway を通る通信に、自前の gRPC モジュールを割り込ませる話です。Model Armor のような既成のエンジンではなく、社内固有のルールで通信を止めたい場合の手順と、実際に動かした結果をまとめます。 先に結論挿す先使える拡張ボディ結果Agent Gateway（Egress）authz 拡張（REQUEST_AUTHZ）渡らない効く（実測）。403 を確認Age]]></description>
+            <content:encoded><![CDATA[はじめにAgent Gateway を通る通信に、自前の gRPC モジュールを割り込ませる話です。Model Armor のような既成のエンジンではなく、社内固有のルールで通信を止めたい場合の手順と、実際に動かした結果をまとめます。 先に結論挿す先使える拡張ボディ結果Agent Gateway（Egress）authz 拡張（REQUEST_AUTHZ）渡らない効く（実測）。403 を確認Agent Gateway（Ingress）egress と同じ渡らない効かない。入口が発行されない自前 ALBトラフィック拡張渡る。...]]></content:encoded>
+            <author>佐藤慧太</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--9dTCTGDw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Service%2520Extensions%2520%25E3%2581%25A7%25E8%2587%25AA%25E5%2589%258D%2520gRPC%2520%25E3%2581%25AE%25E3%2582%25AC%25E3%2583%25BC%25E3%2583%2589%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%2592%2520Agent%2520Gateway%2520%25E3%2581%25AB%25E6%258C%25BF%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E4%25BD%2590%25E8%2597%25A4%25E6%2585%25A7%25E5%25A4%25AA%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzc1ZGYwYWQzOGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Service Extensions で自前 gRPC のガードレールを Agent Gateway に挿す</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Agent Gateway と Model Armor で AI エージェントの通信を統制する | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/satohjohn/articles/agent-gateway-model-armor-guide</link>
+            <guid isPermaLink="false">https://zenn.dev/satohjohn/articles/agent-gateway-model-armor-guide</guid>
+            <pubDate>Sat, 12 Sep 2026 05:22:55 GMT</pubDate>
+            <description><![CDATA[はじめに最近 Model Armor と Agent Gateway について調べたのでまとめます。仕事などで見ていると AI Agent のセキュリティやガバナンスの観点から以下のような課題が見えてきています。プロンプトインジェクションや Jailbreak 攻撃によるエージェントの乗っ取りMCPやA2Aでのエージェントが外部ツールやデータベースを実行する際の個人情報（PII）や機密情報の漏洩,]]></description>
+            <content:encoded><![CDATA[はじめに最近 Model Armor と Agent Gateway について調べたのでまとめます。仕事などで見ていると AI Agent のセキュリティやガバナンスの観点から以下のような課題が見えてきています。プロンプトインジェクションや Jailbreak 攻撃によるエージェントの乗っ取りMCPやA2Aでのエージェントが外部ツールやデータベースを実行する際の個人情報（PII）や機密情報の漏洩,SSRF的な話。エージェントの無限ループや過剰な API 呼び出しによるコスト高騰シャドー AI や未承認ツール（MCP サーバー）の勝手な利用Google Cloud...]]></content:encoded>
+            <author>佐藤慧太</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--C4JVDmKG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Agent%2520Gateway%2520%25E3%2581%25A8%2520Model%2520Armor%2520%25E3%2581%25A7%2520AI%2520%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AE%25E9%2580%259A%25E4%25BF%25A1%25E3%2582%2592%25E7%25B5%25B1%25E5%2588%25B6%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E4%25BD%2590%25E8%2597%25A4%25E6%2585%25A7%25E5%25A4%25AA%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzc1ZGYwYWQzOGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Agent Gateway と Model Armor で AI エージェントの通信を統制する</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[「委託先のセキュリティ、ちゃんと見てる？」と聞かれたときに、最初に決めること | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/gangy/articles/515251fc55712d</link>
+            <guid isPermaLink="false">https://zenn.dev/gangy/articles/515251fc55712d</guid>
+            <pubDate>Sat, 12 Sep 2026 04:18:11 GMT</pubDate>
+            <description><![CDATA[「委託先のセキュリティ、ちゃんと確認してる？」監査や取引先から指摘されて、ある日こう降ってきます。そして情シスが担当になる。ここで他社のひな形をそのまま全社に配ると、集めて終わりになります。回答は集まる。ファイルは増える。でも、それを見て何かが変わることはない。この記事は、そうならないために送る前に決めることの整理です。 なぜ今これを言われるのか背景を押さえておくと、社内説明が楽になります。IPA]]></description>
+            <content:encoded><![CDATA[「委託先のセキュリティ、ちゃんと確認してる？」監査や取引先から指摘されて、ある日こう降ってきます。そして情シスが担当になる。ここで他社のひな形をそのまま全社に配ると、集めて終わりになります。回答は集まる。ファイルは増える。でも、それを見て何かが変わることはない。この記事は、そうならないために送る前に決めることの整理です。 なぜ今これを言われるのか背景を押さえておくと、社内説明が楽になります。IPAの「情報セキュリティ10大脅威 2026」（組織編）では、サプライチェーンや委託先を狙った攻撃が2位です。1位のランサムウェアと合わせて、この1〜2位は2023年以降4年連続で変わ...]]></content:encoded>
+            <author>ガン爺</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s---iTyJWEA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258C%25E5%25A7%2594%25E8%25A8%2597%25E5%2585%2588%25E3%2581%25AE%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E3%2580%2581%25E3%2581%25A1%25E3%2582%2583%25E3%2582%2593%25E3%2581%25A8%25E8%25A6%258B%25E3%2581%25A6%25E3%2582%258B%25EF%25BC%259F%25E3%2580%258D%25E3%2581%25A8%25E8%2581%259E%25E3%2581%258B%25E3%2582%258C%25E3%2581%259F%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AB%25E3%2580%2581%25E6%259C%2580%25E5%2588%259D%25E3%2581%25AB%25E6%25B1%25BA%25E3%2582%2581%25E3%2582%258B%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25AC%25E3%2583%25B3%25E7%2588%25BA%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzdkN2RlNWJhZjIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>「委託先のセキュリティ、ちゃんと見てる？」と聞かれたときに、最初に決めること</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[監視スクリプトに root を1コマンドだけ渡す ― visudoで壊さないsudoers設計 | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/bokuwalily/articles/dasd-guard-scoped-sudo</link>
+            <guid isPermaLink="false">https://zenn.dev/bokuwalily/articles/dasd-guard-scoped-sudo</guid>
+            <pubDate>Sat, 12 Sep 2026 02:47:01 GMT</pubDate>
+            <description><![CDATA[前回、「孤児Chrome」だけを見分けて刈る話を書きました。今回はその隣の監視スクリプト、mem-hog-guard.shが検知はできるのにkillする権限がなくて通知止まりだった話と、その権限を「壊れたら詰む」形ではなく検証込みで渡した設計の話です。 困りごと：検知はできるのに手が出せないmem-hog-guard.shの冒頭コメントに、事の発端が書いてあります。# なぜ要るか（2026-08-]]></description>
+            <content:encoded><![CDATA[前回、「孤児Chrome」だけを見分けて刈る話を書きました。今回はその隣の監視スクリプト、mem-hog-guard.shが検知はできるのにkillする権限がなくて通知止まりだった話と、その権限を「壊れたら詰む」形ではなく検証込みで渡した設計の話です。 困りごと：検知はできるのに手が出せないmem-hog-guard.shの冒頭コメントに、事の発端が書いてあります。# なぜ要るか（2026-08-09）:# macOSの dasd(Duet Activity Scheduler) が RSS 264MB のまま MEM 47GB / CMPRS 46GB を# 抱え、swap...]]></content:encoded>
+            <author>Lily</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--sNT2J70P--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%259B%25A3%25E8%25A6%2596%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AB%2520root%2520%25E3%2582%25921%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2581%25A0%25E3%2581%2591%25E6%25B8%25A1%25E3%2581%2599%2520%25E2%2580%2595%2520visudo%25E3%2581%25A7%25E5%25A3%258A%25E3%2581%2595%25E3%2581%25AA%25E3%2581%2584sudoers%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Lily%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E3NTc3MjdhNzguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>監視スクリプトに root を1コマンドだけ渡す ― visudoで壊さないsudoers設計</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[攻撃側の手法から、AI Native なオペレーションを学ぶ | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/yottayoshida/articles/ai-native-ops-from-attackers</link>
+            <guid isPermaLink="false">https://zenn.dev/yottayoshida/articles/ai-native-ops-from-attackers</guid>
+            <pubDate>Fri, 11 Sep 2026 23:34:35 GMT</pubDate>
+            <description><![CDATA[Anthropic が2026年9月に出した脅威インテリジェンスレポートに、攻撃者が Claude をどう組み込んでいたかが書かれている。検知されたらマルウェアを書き換えて再配備し、検知されなくなるまで反復するワークフロー。セッションをまたいでターゲット一覧と進行状態を持ち越す作戦。運用者が離れている間も回り続ける13体の収集エージェント、などなど。セキュリティの資料として読むのが本筋だが、ここに]]></description>
+            <content:encoded><![CDATA[Anthropic が2026年9月に出した脅威インテリジェンスレポートに、攻撃者が Claude をどう組み込んでいたかが書かれている。検知されたらマルウェアを書き換えて再配備し、検知されなくなるまで反復するワークフロー。セッションをまたいでターゲット一覧と進行状態を持ち越す作戦。運用者が離れている間も回り続ける13体の収集エージェント、などなど。セキュリティの資料として読むのが本筋だが、ここに記録された作戦を運用設計として読むと、その多くが既存の工程を前提にせず目的から逆算して組まれているように見える。!数字と引用はすべて原文から取っている。事例の帰属も数字も Anthropi...]]></content:encoded>
+            <author>yotta</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--GNjwtVXo--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2594%25BB%25E6%2592%2583%25E5%2581%25B4%25E3%2581%25AE%25E6%2589%258B%25E6%25B3%2595%25E3%2581%258B%25E3%2582%2589%25E3%2580%2581AI%2520Native%2520%25E3%2581%25AA%25E3%2582%25AA%25E3%2583%259A%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%2592%25E5%25AD%25A6%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yotta%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSzNFeG9fM3BXaEhaNjFkN2RWMHhoY1MyemNpN1Z1VktzXzdhQzR2aVZiZXVhZGhKUFRLZz1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>攻撃側の手法から、AI Native なオペレーションを学ぶ</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[42日でバックエンドエンジニアの基礎を完全に理解する #31 - CSRF / XSS対策 | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/kipcop/articles/b42-go-31-csrf-xss</link>
+            <guid isPermaLink="false">https://zenn.dev/kipcop/articles/b42-go-31-csrf-xss</guid>
+            <pubDate>Fri, 11 Sep 2026 14:28:39 GMT</pubDate>
+            <description><![CDATA[この記事で学ぶこと#26 から #30 まで、トークンとセッションをどう堅く作るかをやってきました。鍵は長く、alg は固定し、iss と aud まで検証する。認証の本丸はかなり守れるようになったはずです。ところが、トークンをどれだけ堅牢に作っても残る穴があります。攻撃の舞台がサーバーではなく、ユーザーのブラウザに移る場合です。#30 で state パラメータを「CSRF 対策」と一言で流しま]]></description>
+            <content:encoded><![CDATA[この記事で学ぶこと#26 から #30 まで、トークンとセッションをどう堅く作るかをやってきました。鍵は長く、alg は固定し、iss と aud まで検証する。認証の本丸はかなり守れるようになったはずです。ところが、トークンをどれだけ堅牢に作っても残る穴があります。攻撃の舞台がサーバーではなく、ユーザーのブラウザに移る場合です。#30 で state パラメータを「CSRF 対策」と一言で流しました。今回その CSRF と、Web の定番脆弱性である XSS の正体を、また自分の手で攻めて塞ぎます。この2つは OWASP（Web セキュリティの定番ガイド）でも長年の常連で、バッ...]]></content:encoded>
+            <author>k.ike</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--WYBQb4rw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:42%25E6%2597%25A5%25E3%2581%25A7%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E3%2582%2592%25E5%25AE%258C%25E5%2585%25A8%25E3%2581%25AB%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2520%252331%2520-%2520CSRF%2520%252F%2520XSS%25E5%25AF%25BE%25E7%25AD%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:k.ike%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSzB5X0dHdXdYN0R2NUdXamlMU0FaLTI5OHhBcFBSLW9pMEhMY2lEZ2dBSHVVdDdESHM9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>42日でバックエンドエンジニアの基礎を完全に理解する #31 - CSRF / XSS対策</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[KiroだけでIAMレビューはどこまでできる？ IAM Access Analyzerとの77 Run比較で見えた役割分担 | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/nobu_13/articles/fe8e1f1d10de4a</link>
+            <guid isPermaLink="false">https://zenn.dev/nobu_13/articles/fe8e1f1d10de4a</guid>
+            <pubDate>Fri, 11 Sep 2026 14:01:20 GMT</pubDate>
+            <description><![CDATA[KiroだけでIAMレビューはどこまでできる？ IAM Access Analyzerとの77 Run比較で見えた役割分担「KiroでAWS開発ライフサイクルをどこまでAgentic化できるのか」シリーズ第4弾です。これまで、Kiro Specs、Steering、Hooksを使ってCloudFormation開発を検証してきました。第1弾: https://zenn.dev/nobu_13/ar]]></description>
+            <content:encoded><![CDATA[KiroだけでIAMレビューはどこまでできる？ IAM Access Analyzerとの77 Run比較で見えた役割分担「KiroでAWS開発ライフサイクルをどこまでAgentic化できるのか」シリーズ第4弾です。これまで、Kiro Specs、Steering、Hooksを使ってCloudFormation開発を検証してきました。第1弾: https://zenn.dev/nobu_13/articles/2f06f1a8849aac第2弾: https://zenn.dev/nobu_13/articles/72592a2a9e1852第3弾: https://...]]></content:encoded>
+            <author>nobu_13</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--XqFIHr52--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kiro%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25A7IAM%25E3%2583%25AC%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%2593%25E3%2581%25BE%25E3%2581%25A7%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25EF%25BC%259F%2520IAM%2520Access%2520Analyzer%25E3%2581%25A8%25E3%2581%25AE77%2520Run%25E6%25AF%2594%25E8%25BC%2583%25E3%2581%25A7%25E8%25A6%258B%25E3%2581%2588%25E3%2581%259F...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nobu_13%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS00ySEw3blU5bWR5NzBxM0RYOVlkV1hHLW93bk1aNHJUNmJBOEYxcDFUdHU5YVlnPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>KiroだけでIAMレビューはどこまでできる？ IAM Access Analyzerとの77 Run比較で見えた役割分担</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Anthropic社「Fable 5」「Mythos 5」を巡る技術的・地政学的分析：攻撃能力とAI統制の深層 | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/emilia_lab/articles/anthropic-fable5-mythos5-geopolitics</link>
+            <guid isPermaLink="false">https://zenn.dev/emilia_lab/articles/anthropic-fable5-mythos5-geopolitics</guid>
+            <pubDate>Fri, 11 Sep 2026 11:16:32 GMT</pubDate>
+            <description><![CDATA[導入：兵器化するフロンティアAIと地政学的な歴史的転換点2026年6月上旬、世界の人工知能およびサイバーセキュリティの歴史において、最も劇的かつ物議を醸す出来事が発生した。米国サンフランシスコに拠点を置くAI開発企業Anthropicは、同社史上最も強力なAIモデルである「Claude Fable 5」と、その無制限版に位置づけられる「Claude Mythos 5」を同時に発表した。これらの「M]]></description>
+            <content:encoded><![CDATA[導入：兵器化するフロンティアAIと地政学的な歴史的転換点2026年6月上旬、世界の人工知能およびサイバーセキュリティの歴史において、最も劇的かつ物議を醸す出来事が発生した。米国サンフランシスコに拠点を置くAI開発企業Anthropicは、同社史上最も強力なAIモデルである「Claude Fable 5」と、その無制限版に位置づけられる「Claude Mythos 5」を同時に発表した。これらの「Mythosクラス」と呼ばれる次世代モデル群は、自律的なエージェント機能、長大なコンテキスト処理、そして既存のソフトウェア工学の常識を根底から覆す能力を備えていた。しかし、一般向けモデルで...]]></content:encoded>
+            <author>エミリアラボ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--POmDiQxG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Anthropic%25E7%25A4%25BE%25E3%2580%258CFable%25205%25E3%2580%258D%25E3%2580%258CMythos%25205%25E3%2580%258D%25E3%2582%2592%25E5%25B7%25A1%25E3%2582%258B%25E6%258A%2580%25E8%25A1%2593%25E7%259A%2584%25E3%2583%25BB%25E5%259C%25B0%25E6%2594%25BF%25E5%25AD%25A6%25E7%259A%2584%25E5%2588%2586%25E6%259E%2590%25EF%25BC%259A%25E6%2594%25BB%25E6%2592%2583%25E8%2583%25BD%25E5%258A%259B%25E3%2581%25A8AI%25E7%25B5%25B1%25E5%2588%25B6%25E3%2581%25AE%25E6%25B7%25B1%25E5%25B1%25A4%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25A8%25E3%2583%259F%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25A9%25E3%2583%259C%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2VSb2prb3BSbUJNNDRIX3JOYkZNaEV1TWlURG03ZXJLTmthOFRRTmMwNGg4ODFtTnM9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Anthropic社「Fable 5」「Mythos 5」を巡る技術的・地政学的分析：攻撃能力とAI統制の深層</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[ゼロから学ぶ「信用できる」セキュリティ検証 #10 — 「何もない」は一種類ではない | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/schutzz/articles/98987a3ba23110</link>
+            <guid isPermaLink="false">https://zenn.dev/schutzz/articles/98987a3ba23110</guid>
+            <pubDate>Fri, 11 Sep 2026 10:48:26 GMT</pubDate>
+            <description><![CDATA[はじめに前回は、失敗したrunをRetryによって上書きせず、新しいrunとして残す必要があることを考えました。R-001が失敗し、そのあと条件を変更してR-002を実行したのであれば、R-001とR-002は別々の試行として残します。そうすることで、成功したRetryだけを残して過去の失敗を消すのではなく、「何を試し、どこで失敗し、そのあと何を変えたのか」という履歴を辿れるようになりました。ru]]></description>
+            <content:encoded><![CDATA[はじめに前回は、失敗したrunをRetryによって上書きせず、新しいrunとして残す必要があることを考えました。R-001が失敗し、そのあと条件を変更してR-002を実行したのであれば、R-001とR-002は別々の試行として残します。そうすることで、成功したRetryだけを残して過去の失敗を消すのではなく、「何を試し、どこで失敗し、そのあと何を変えたのか」という履歴を辿れるようになりました。runを分けて残せるようになると、今度はrun同士を比較できます。たとえばR-001にはobservation.jsonがなく、R-002には存在していたとします。ここで、ついこう書きたく...]]></content:encoded>
+            <author>Daichi Terayama</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--qeCqEj74--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2581%25B6%25E3%2580%258C%25E4%25BF%25A1%25E7%2594%25A8%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2580%258D%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E6%25A4%259C%25E8%25A8%25BC%2520%252310%2520%25E2%2580%2594%2520%25E3%2580%258C%25E4%25BD%2595%25E3%2582%2582%25E3%2581%25AA%25E3%2581%2584%25E3%2580%258D%25E3%2581%25AF%25E4%25B8%2580%25E7%25A8%25AE%25E9%25A1%259E%25E3%2581%25A7%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Daichi%2520Terayama%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNjOWY3MWZlN2MuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>ゼロから学ぶ「信用できる」セキュリティ検証 #10 — 「何もない」は一種類ではない</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[【HITCON 2026 参加レポート】ハッカーが集うカンファレンスの雰囲気や驚いたこと | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/cscloud_blog/articles/hitcon2026-report01</link>
+            <guid isPermaLink="false">https://zenn.dev/cscloud_blog/articles/hitcon2026-report01</guid>
+            <pubDate>Fri, 11 Sep 2026 08:54:09 GMT</pubDate>
+            <description><![CDATA[はじめにこんにちは、日々セキュリティエンジニアとして従事している新卒2年目です。先日、台湾で開催されたセキュリティカンファレンス「HITCON 2026」に初めて参加してきました。本記事では、驚いたことやセッション全体を通して感じたことなど、HITCONらしさに関する内容をまとめているため技術的な要素は少なめです。セッションの専門的な内容が知りたい方は別の記事にて紹介しようと思いますので、そちらを]]></description>
+            <content:encoded><![CDATA[はじめにこんにちは、日々セキュリティエンジニアとして従事している新卒2年目です。先日、台湾で開催されたセキュリティカンファレンス「HITCON 2026」に初めて参加してきました。本記事では、驚いたことやセッション全体を通して感じたことなど、HITCONらしさに関する内容をまとめているため技術的な要素は少なめです。セッションの専門的な内容が知りたい方は別の記事にて紹介しようと思いますので、そちらを参照してください。Day1 (9月中に公開予定)Day2 (9月中に公開予定) イベント概要HITCONとは Hacks in Taiwan Confere...]]></content:encoded>
+            <author>カンバヤシ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--nw5wnUiD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590HITCON%25202026%2520%25E5%258F%2582%25E5%258A%25A0%25E3%2583%25AC%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2580%2591%25E3%2583%258F%25E3%2583%2583%25E3%2582%25AB%25E3%2583%25BC%25E3%2581%258C%25E9%259B%2586%25E3%2581%2586%25E3%2582%25AB%25E3%2583%25B3%25E3%2583%2595%25E3%2582%25A1%25E3%2583%25AC%25E3%2583%25B3%25E3%2582%25B9%25E3%2581%25AE%25E9%259B%25B0%25E5%259B%25B2%25E6%25B0%2597%25E3%2582%2584%25E9%25A9%259A%25E3%2581%2584%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2582%25AB%25E3%2583%25B3%25E3%2583%2590%25E3%2583%25A4%25E3%2582%25B7%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q0ZTRhMzgzMmEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25A6%25E3%2583%2589%25E3%2580%2580%25E3%2583%2586...%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzkzODYzYmM0ODMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>【HITCON 2026 参加レポート】ハッカーが集うカンファレンスの雰囲気や驚いたこと</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[自律型AIエージェントの認証と最小権限IAM：MCP・トークン委任・Policy-as-Code完全解説 | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/agdexai/articles/ai-agent-iam-auth-least-privilege-2026</link>
+            <guid isPermaLink="false">https://zenn.dev/agdexai/articles/ai-agent-iam-auth-least-privilege-2026</guid>
+            <pubDate>Fri, 11 Sep 2026 08:35:34 GMT</pubDate>
+            <description><![CDATA[2026年、自律型AIエージェントはソースコードの修正、本番データベースの照会、クラウドインフラの自動変更を担う存在となりました。しかし、多くのエンタープライズ実装では依然として管理者権限を持つ静的APIキーが環境変数にベタ書きされており、間接プロンプトインジェクションによる壊滅的な漏洩リスクに晒されています。本稿ではZero-Trust認証、OAuth 2.0 Token Exchange (R]]></description>
+            <content:encoded><![CDATA[2026年、自律型AIエージェントはソースコードの修正、本番データベースの照会、クラウドインフラの自動変更を担う存在となりました。しかし、多くのエンタープライズ実装では依然として管理者権限を持つ静的APIキーが環境変数にベタ書きされており、間接プロンプトインジェクションによる壊滅的な漏洩リスクに晒されています。本稿ではZero-Trust認証、OAuth 2.0 Token Exchange (RFC 8693)、Policy-as-Codeゲートウェイによる防御アーキテクチャを解説します。💡 設計上の重要原則：LLMのプロンプトコンテキスト内に生のBearer Tokenを...]]></content:encoded>
+            <author>agdexai</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--gDb_r7cP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2587%25AA%25E5%25BE%258B%25E5%259E%258BAI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AE%25E8%25AA%258D%25E8%25A8%25BC%25E3%2581%25A8%25E6%259C%2580%25E5%25B0%258F%25E6%25A8%25A9%25E9%2599%2590IAM%25EF%25BC%259AMCP%25E3%2583%25BB%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%25B3%25E5%25A7%2594%25E4%25BB%25BB%25E3%2583%25BBPolicy-as-Code%25E5%25AE%258C%25E5%2585%25A8%25E8%25A7%25A3%25E8%25AA%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:agdexai%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmt6OWlueFg4cFB5bVpOMURwSkw4RDNGU25rY3BaWTRoTkt4Y29uaDE2QS1aeTNBPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>自律型AIエージェントの認証と最小権限IAM：MCP・トークン委任・Policy-as-Code完全解説</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[2026年9月11日のITニュースまとめ：AIエージェント、クラウド、半導体、セキュリティ | Zennの「Security」のフィード]]></title>
+            <link>https://zenn.dev/sponge841841/articles/2026-09-11-it-news-roundup</link>
+            <guid isPermaLink="false">https://zenn.dev/sponge841841/articles/2026-09-11-it-news-roundup</guid>
+            <pubDate>Fri, 11 Sep 2026 08:35:31 GMT</pubDate>
+            <description><![CDATA[2026年9月11日（日本時間）時点で確認できた主要ITニュースをまとめます。今回は、企業の一次情報・公的機関の発表を優先し、必要に応じてReutersの報道でも内容を突き合わせています。発表日時が米国時間の9月10日でも、日本では9月11日にあたるものを含みます。 1. OpenAIが「Agents API」を発表。クラウド上でCodex系エージェントを実行可能にOpenAIは9月10日、クラウ]]></description>
+            <content:encoded><![CDATA[2026年9月11日（日本時間）時点で確認できた主要ITニュースをまとめます。今回は、企業の一次情報・公的機関の発表を優先し、必要に応じてReutersの報道でも内容を突き合わせています。発表日時が米国時間の9月10日でも、日本では9月11日にあたるものを含みます。 1. OpenAIが「Agents API」を発表。クラウド上でCodex系エージェントを実行可能にOpenAIは9月10日、クラウド上でAIエージェントを構築・実行するための「Agents API」を発表しました。Agents APIでは、Codexのエージェント実行基盤をマネージドサービスとして利用でき、Ope...]]></content:encoded>
+            <author>ちっち</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--TbXfnGHZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:2026%25E5%25B9%25B49%25E6%259C%258811%25E6%2597%25A5%25E3%2581%25AEIT%25E3%2583%258B%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25EF%25BC%259AAI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2580%2581%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25A6%25E3%2583%2589%25E3%2580%2581%25E5%258D%258A%25E5%25B0%258E%25E4%25BD%2593%25E3%2580%2581%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A1%25E3%2581%25A3%25E3%2581%25A1%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzgzMDYyMzRhYzguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>2026年9月11日のITニュースまとめ：AIエージェント、クラウド、半導体、セキュリティ</originalTitle>
+                <blogTitle>Zennの「Security」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/security</blogLink>
+                <blogLinkMd5Hash>241aaab326af1f60710afd6bbc79e573</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+    </channel>
+</rss>

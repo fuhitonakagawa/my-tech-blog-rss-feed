@@ -1,0 +1,677 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Security Advisory｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/feed.json",
+    "description": "Security Advisoryセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://github.com/advisories/GHSA-325j-mg25-8q58",
+            "content_html": "SummaryStore/LegacyStore key internal lookup tables by the type, id, and relationship names from a JSON:API document. Because these were plain objects, a document with type: \"__proto__\" writes onto Object.prototype, polluting every object in the process.SeveritySuggested CVSS v3.1 AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H (8.1). The guaranteed impact is process-wide DoS / logic corruption; escalation to authorization bypass or RCE is dependent on gadgets in the consuming application.Affected / Patched",
+            "url": "https://github.com/advisories/GHSA-325j-mg25-8q58",
+            "title": "[yayson] yayson: Prototype pollution in Store/LegacyStore deserialization | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryStore/LegacyStore key internal lookup tables by the type, id, and relationship names from a JSON:API document. Because these were plain objects, a document with type: \"__proto__\" writes onto Ob",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "yayson: Prototype pollution in Store/LegacyStore deserialization",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T22:11:38.000Z",
+            "date_published": "2026-09-11T22:11:38.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[yayson] yayson: Prototype pollution in Store/LegacyStore deserialization",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-rqx4-3f6q-3x2v",
+            "content_html": "SummaryMockoon's admin API (commons-server/src/libs/server/admin-api.ts) is mounted on the same Express listener as the user-defined mock routes, enabled by default in every shipped runtime (commons-server, CLI, serverless), serves Access-Control-Allow-Origin: * on every endpoint with all HTTP methods allowed including PUT/POST/PATCH/DELETE/PURGE and Content-Type in Access-Control-Allow-Headers, and has zero authentication of any kind (no token, no shared secret, no MOCKOON_ADMIN_TOKEN env var —",
+            "url": "https://github.com/advisories/GHSA-rqx4-3f6q-3x2v",
+            "title": "[@mockoon/cli] @Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryMockoon's admin API (commons-server/src/libs/server/admin-api.ts) is mounted on the same Express listener as the user-defined mock routes, enabled by default in every shipped runtime (commons-s",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "@Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T22:04:42.000Z",
+            "date_published": "2026-09-11T22:04:42.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@mockoon/cli] @Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-rqx4-3f6q-3x2v",
+            "content_html": "SummaryMockoon's admin API (commons-server/src/libs/server/admin-api.ts) is mounted on the same Express listener as the user-defined mock routes, enabled by default in every shipped runtime (commons-server, CLI, serverless), serves Access-Control-Allow-Origin: * on every endpoint with all HTTP methods allowed including PUT/POST/PATCH/DELETE/PURGE and Content-Type in Access-Control-Allow-Headers, and has zero authentication of any kind (no token, no shared secret, no MOCKOON_ADMIN_TOKEN env var —",
+            "url": "https://github.com/advisories/GHSA-rqx4-3f6q-3x2v",
+            "title": "[@mockoon/commons-server] @Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryMockoon's admin API (commons-server/src/libs/server/admin-api.ts) is mounted on the same Express listener as the user-defined mock routes, enabled by default in every shipped runtime (commons-s",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "@Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T22:04:42.000Z",
+            "date_published": "2026-09-11T22:04:42.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@mockoon/commons-server] @Mockoon/commons-server: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8wqc-v2q8-vff2",
+            "content_html": "SummaryA FILE response whose filePath embeds request data (e.g. \"/srv/public/{{queryParam 'name'}}\", the documented way to let the client pick a file) is confined by getSafeFilePath with resolvedPath.startsWith(staticBaseDir). That prefix test has no path-separator boundary, so a ../-escaped path whose absolute form string-prefixes the base directory passes. An unauthenticated client reads files from sibling paths outside the served directory.Detailspackages/commons-server/src/libs/server/server",
+            "url": "https://github.com/advisories/GHSA-8wqc-v2q8-vff2",
+            "title": "[@mockoon/cli] @Mockoon/commons-server: Path traversal in templated `filePath` lets a request escape the served directory (prefix-only base check) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryA FILE response whose filePath embeds request data (e.g. \"/srv/public/{{queryParam 'name'}}\", the documented way to let the client pick a file) is confined by getSafeFilePath with resolvedPath.",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "@Mockoon/commons-server: Path traversal in templated `filePath` lets a request escape the served directory (prefix-only base check)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T22:04:32.000Z",
+            "date_published": "2026-09-11T22:04:32.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@mockoon/cli] @Mockoon/commons-server: Path traversal in templated `filePath` lets a request escape the served directory (prefix-only base check)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8wqc-v2q8-vff2",
+            "content_html": "SummaryA FILE response whose filePath embeds request data (e.g. \"/srv/public/{{queryParam 'name'}}\", the documented way to let the client pick a file) is confined by getSafeFilePath with resolvedPath.startsWith(staticBaseDir). That prefix test has no path-separator boundary, so a ../-escaped path whose absolute form string-prefixes the base directory passes. An unauthenticated client reads files from sibling paths outside the served directory.Detailspackages/commons-server/src/libs/server/server",
+            "url": "https://github.com/advisories/GHSA-8wqc-v2q8-vff2",
+            "title": "[@mockoon/commons-server] @Mockoon/commons-server: Path traversal in templated `filePath` lets a request escape the served directory (prefix-only base check) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryA FILE response whose filePath embeds request data (e.g. \"/srv/public/{{queryParam 'name'}}\", the documented way to let the client pick a file) is confined by getSafeFilePath with resolvedPath.",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "@Mockoon/commons-server: Path traversal in templated `filePath` lets a request escape the served directory (prefix-only base check)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T22:04:32.000Z",
+            "date_published": "2026-09-11T22:04:32.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@mockoon/commons-server] @Mockoon/commons-server: Path traversal in templated `filePath` lets a request escape the served directory (prefix-only base check)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
+            "content_html": "SummaryThe published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external $ref dereferencing, but the latest patched dependency mcp-from-openapi 2.3.0 still makes backend-origin requests to loopback when the target is reached through hostname resolution, redirects, or IPv4-mapped IPv6 syntax.FrontMCP latest release v1.2.1 and current main still call OpenAPIToolGenerator.fromURL() and OpenAPIToolGenerator.fromJSON() from mcp-from-openapi 2.3.0 when lo",
+            "url": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
+            "title": "[frontmcp] FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external $ref dereferencing, but the latest patched dependency mcp-from-openapi 2.3.0 sti",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T22:02:04.000Z",
+            "date_published": "2026-09-11T22:02:04.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[frontmcp] FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
+            "content_html": "SummaryThe published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external $ref dereferencing, but the latest patched dependency mcp-from-openapi 2.3.0 still makes backend-origin requests to loopback when the target is reached through hostname resolution, redirects, or IPv4-mapped IPv6 syntax.FrontMCP latest release v1.2.1 and current main still call OpenAPIToolGenerator.fromURL() and OpenAPIToolGenerator.fromJSON() from mcp-from-openapi 2.3.0 when lo",
+            "url": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
+            "title": "[@frontmcp/adapters] FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external $ref dereferencing, but the latest patched dependency mcp-from-openapi 2.3.0 sti",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T22:02:04.000Z",
+            "date_published": "2026-09-11T22:02:04.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@frontmcp/adapters] FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
+            "content_html": "SummaryThe published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external $ref dereferencing, but the latest patched dependency mcp-from-openapi 2.3.0 still makes backend-origin requests to loopback when the target is reached through hostname resolution, redirects, or IPv4-mapped IPv6 syntax.FrontMCP latest release v1.2.1 and current main still call OpenAPIToolGenerator.fromURL() and OpenAPIToolGenerator.fromJSON() from mcp-from-openapi 2.3.0 when lo",
+            "url": "https://github.com/advisories/GHSA-65h7-9wrw-629c",
+            "title": "[mcp-from-openapi] FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe published fix for GHSA-v6ph-xcq9-qxxj / CVE-2026-39885 added a direct hostname denylist for OpenAPI external $ref dereferencing, but the latest patched dependency mcp-from-openapi 2.3.0 sti",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T22:02:04.000Z",
+            "date_published": "2026-09-11T22:02:04.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[mcp-from-openapi] FrontMCP and mcp-from-openapi have bypass of OpenAPI external $ref SSRF fix",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-h8m9-jgf8-vwvp",
+            "content_html": "SAML Tenant Binding Enables Cross-Tenant Account TakeoverSummaryProwler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token. A malicious tenant with its own SAML configuration and a self-controlled IdP could complete a valid SAML flow for its own configured domain, while asserting an email address from another configured domain.In the vulnerable flow, the ACS finish logic later derived the tenant from the assert",
+            "url": "https://github.com/advisories/GHSA-h8m9-jgf8-vwvp",
+            "title": "[prowler-cloud] Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SAML Tenant Binding Enables Cross-Tenant Account TakeoverSummaryProwler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the fin",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T21:38:24.000Z",
+            "date_published": "2026-09-11T21:38:24.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[prowler-cloud] Prowler: SAML Domain Claiming Enables Cross-Tenant Account Takeover",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-rqfv-2mw9-78g2",
+            "content_html": "SummaryIn SSE/HTTP transport mode, mysql_mcp_server constructs SseServerTransport without passing security_settings. As a result, the MCP Python SDK's DNS-rebinding protection (Origin/Host header validation) is disabled; the Starlette application has no CORS or TrustedHost middleware; and the service binds to 0.0.0.0 by default with no authentication on any route.Trigger condition: MCP_TRANSPORT=sse. The default stdio mode is not affected.Attack ScenariosScenario A — Direct exposure: Any network",
+            "url": "https://github.com/advisories/GHSA-rqfv-2mw9-78g2",
+            "title": "[mysql-mcp-server] MySQL MCP Server: Missing Origin/Host Validation in SSE Transport Enables Unauthenticated SQL Execution (DNS Rebinding / Direct Exposure) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryIn SSE/HTTP transport mode, mysql_mcp_server constructs SseServerTransport without passing security_settings. As a result, the MCP Python SDK's DNS-rebinding protection (Origin/Host header vali",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "MySQL MCP Server: Missing Origin/Host Validation in SSE Transport Enables Unauthenticated SQL Execution (DNS Rebinding / Direct Exposure)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T20:35:42.000Z",
+            "date_published": "2026-09-11T20:35:42.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[mysql-mcp-server] MySQL MCP Server: Missing Origin/Host Validation in SSE Transport Enables Unauthenticated SQL Execution (DNS Rebinding / Direct Exposure)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-wvm9-9g5j-623f",
+            "content_html": "SummaryOpen WebUI's OAuth token exchange endpoint issues a session for a provider access token without running the OAuth role management that the normal OAuth login callback runs. A user whose provider roles the login callback would refuse, or would demote, could still obtain a working session at their existing role through this endpoint.PreconditionsENABLE_OAUTH_TOKEN_EXCHANGE=True. It is disabled by default, so a default deployment is not affected.ENABLE_OAUTH_ROLE_MANAGEMENT=True together wit",
+            "url": "https://github.com/advisories/GHSA-wvm9-9g5j-623f",
+            "title": "[open-webui] Open WebUI: Users denied by the OAuth role policy can still sign in via token exchange | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryOpen WebUI's OAuth token exchange endpoint issues a session for a provider access token without running the OAuth role management that the normal OAuth login callback runs. A user whose provide",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Open WebUI: Users denied by the OAuth role policy can still sign in via token exchange",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T23:04:57.000Z",
+            "date_published": "2026-09-10T23:04:57.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[open-webui] Open WebUI: Users denied by the OAuth role policy can still sign in via token exchange",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3g9q-v48f-hh9w",
+            "content_html": "SummaryThe OIDC back-channel logout endpoint is unauthenticated by design, because the identity provider calls it without a browser session. Before checking whether the submitted logout token was genuine, the handler fetched the provider's discovery document and its signing keys over the network, and repeated both fetches on every request because nothing was cached. The signing-key fetch also ran as a blocking call inside the async event loop. A small number of requests carrying a worthless toke",
+            "url": "https://github.com/advisories/GHSA-3g9q-v48f-hh9w",
+            "title": "[open-webui] Open WebUI: Unauthenticated requests can stall the server via uncached OIDC fetches in back-channel logout | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe OIDC back-channel logout endpoint is unauthenticated by design, because the identity provider calls it without a browser session. Before checking whether the submitted logout token was genu",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Open WebUI: Unauthenticated requests can stall the server via uncached OIDC fetches in back-channel logout",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T22:44:42.000Z",
+            "date_published": "2026-09-10T22:44:42.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[open-webui] Open WebUI: Unauthenticated requests can stall the server via uncached OIDC fetches in back-channel logout",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-v39v-59xw-j98g",
+            "content_html": "Any authenticated user can suppress calendar alerts instance-wide via a non-numeric alert valueSummaryCalendar events carry a free-form meta object that is stored exactly as submitted, with no validation of the values inside it. The scheduler reads the per-event alert offset out of that object in a single pass that covers every user's upcoming events, and compares it numerically without checking that it is a number. Any verified user could store a text value there, which made the comparison rais",
+            "url": "https://github.com/advisories/GHSA-v39v-59xw-j98g",
+            "title": "[open-webui] Open WebUI: Any authenticated user can suppress calendar alerts instance-wide via a non-numeric alert value | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Any authenticated user can suppress calendar alerts instance-wide via a non-numeric alert valueSummaryCalendar events carry a free-form meta object that is stored exactly as submitted, with no validat",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Open WebUI: Any authenticated user can suppress calendar alerts instance-wide via a non-numeric alert value",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T22:42:48.000Z",
+            "date_published": "2026-09-10T22:42:48.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[open-webui] Open WebUI: Any authenticated user can suppress calendar alerts instance-wide via a non-numeric alert value",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8r35-5x5r-hv74",
+            "content_html": "SummaryAny authenticated user can move one of their own folders under itself, leaving a loop in their folder tree. The re-parent endpoint performed no check that the new parent was not the folder itself or one of its own subfolders, and the folder tree walks did not track which folders they had already visited. A single request against a folder in a loop therefore never finishes.PreconditionsFolders must be enabled (ENABLE_FOLDERS, default true) and the acting user's role must hold the folders f",
+            "url": "https://github.com/advisories/GHSA-8r35-5x5r-hv74",
+            "title": "[open-webui] Open WebUI: Any authenticated user can start a non-terminating request via a folder parent cycle | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryAny authenticated user can move one of their own folders under itself, leaving a loop in their folder tree. The re-parent endpoint performed no check that the new parent was not the folder itse",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Open WebUI: Any authenticated user can start a non-terminating request via a folder parent cycle",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T22:42:25.000Z",
+            "date_published": "2026-09-10T22:42:25.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[open-webui] Open WebUI: Any authenticated user can start a non-terminating request via a folder parent cycle",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-wjwr-xfp9-r66p",
+            "content_html": "SummaryA user who is demoted from admin by an identity provider keeps admin-level read and write access to every user's notes, over any Socket.IO connection that was already open when the demotion happened. Open WebUI caches the user's role on the socket at connection time, and the two SSO role-sync paths, the reverse-proxy trusted role header and OAuth role mapping, changed the role in the database without tearing that cached session down. Only the admin user-management endpoints invalidated se",
+            "url": "https://github.com/advisories/GHSA-wjwr-xfp9-r66p",
+            "title": "[open-webui] Open WebUI: Admin demoted through SSO role sync keeps read and write access to all users' notes | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryA user who is demoted from admin by an identity provider keeps admin-level read and write access to every user's notes, over any Socket.IO connection that was already open when the demotion hap",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Open WebUI: Admin demoted through SSO role sync keeps read and write access to all users' notes",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T22:41:34.000Z",
+            "date_published": "2026-09-10T22:41:34.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[open-webui] Open WebUI: Admin demoted through SSO role sync keeps read and write access to all users' notes",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4qpv-39hg-f7fx",
+            "content_html": "Alt Text Endpoint Authorization Bypass via Payload Local API overrideAccess OmissionSummary@jhb.software/payload-alt-text-plugin v0.7.0 exposes custom Payload CMS endpoints (POST /api/alt-text-plugin/generate and /bulk) that call the Payload Local API (findByID and update) without setting overrideAccess: false. Because Payload's internal logic evaluates shouldOverrideAccess = overrideAccess !== false, omitting the parameter causes it to default to true, silently bypassing all collection-level ac",
+            "url": "https://github.com/advisories/GHSA-4qpv-39hg-f7fx",
+            "title": "[@jhb.software/payload-alt-text-plugin] @jhb.software/payload-alt-text-plugin: Alt Text Endpoint Authorization Bypass via Payload Local API `overrideAccess` Omission | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Alt Text Endpoint Authorization Bypass via Payload Local API overrideAccess OmissionSummary@jhb.software/payload-alt-text-plugin v0.7.0 exposes custom Payload CMS endpoints (POST /api/alt-text-plugin/",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "@jhb.software/payload-alt-text-plugin: Alt Text Endpoint Authorization Bypass via Payload Local API `overrideAccess` Omission",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T22:39:14.000Z",
+            "date_published": "2026-09-10T22:39:14.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@jhb.software/payload-alt-text-plugin] @jhb.software/payload-alt-text-plugin: Alt Text Endpoint Authorization Bypass via Payload Local API `overrideAccess` Omission",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4x45-gxvp-6283",
+            "content_html": "CI Branch Name OS Command Injection in @argos-ci/coreSummary@argos-ci/core@6.2.0 passes attacker-controlled CI branch/ref strings directly into an execSync() template literal in packages/core/src/ci-environment/git.ts:89. When a CI project has hasRemoteContentAccess: false, the Argos upload flow calls getMergeBaseCommitSha(), which invokes gitFetch() with the unsanitized branch name. Because execSync() passes the command string to /bin/sh -c, shell metacharacters such as $() command substitution",
+            "url": "https://github.com/advisories/GHSA-4x45-gxvp-6283",
+            "title": "[@argos-ci/core] @argos-ci/core: CI Branch Name OS Command Injection | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "CI Branch Name OS Command Injection in @argos-ci/coreSummary@argos-ci/core@6.2.0 passes attacker-controlled CI branch/ref strings directly into an execSync() template literal in packages/core/src/ci-e",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "@argos-ci/core: CI Branch Name OS Command Injection",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T22:34:17.000Z",
+            "date_published": "2026-09-10T22:34:17.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@argos-ci/core] @argos-ci/core: CI Branch Name OS Command Injection",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-p78m-89r6-pgf7",
+            "content_html": "SummaryWhen more than one external tool server is reachable in the same request, a tool call to a server configured for bearer authentication can arrive carrying the calling user's Open WebUI session cookies alongside that server's own key. The cookie jar is built per connection, but the callable that performs the request reads it late instead of per connection, so every tool callable built in the same pass sends the cookies belonging to whichever connection was processed last. An administrator ",
+            "url": "https://github.com/advisories/GHSA-p78m-89r6-pgf7",
+            "title": "[open-webui] Open WebUI: A user's session cookies are sent to tool servers configured for bearer authentication | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryWhen more than one external tool server is reachable in the same request, a tool call to a server configured for bearer authentication can arrive carrying the calling user's Open WebUI session ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Open WebUI: A user's session cookies are sent to tool servers configured for bearer authentication",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:23:44.000Z",
+            "date_published": "2026-09-10T21:23:44.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[open-webui] Open WebUI: A user's session cookies are sent to tool servers configured for bearer authentication",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-wpmr-8h3q-fwj7",
+            "content_html": "SummaryOn SQLite deployments, the lookup that maps an external identity to a local account does a substring match instead of an exact match. A subject value containing SQL wildcard characters therefore matches accounts the value was never issued for, and the sign-in binds to whichever account the database returns first, which can be an administrator. The same defect affects SCIM external-ID resolution. PostgreSQL deployments are not affected, because they take a separate and correct code path.Pr",
+            "url": "https://github.com/advisories/GHSA-wpmr-8h3q-fwj7",
+            "title": "[open-webui] Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryOn SQLite deployments, the lookup that maps an external identity to a local account does a substring match instead of an exact match. A subject value containing SQL wildcard characters therefor",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:23:25.000Z",
+            "date_published": "2026-09-10T21:23:25.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[open-webui] Open WebUI: Sign-in as another user via wildcard characters in the OAuth subject claim on SQLite",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-hf57-cqmx-p4gr",
+            "content_html": "2. SummaryPOST /api/acp/agents registers a custom ACP agent. The endpoint accepts user-controlledbinary and versionCommand values. After saving the custom agent, the same request callsrefreshAgentCache(), which triggers agent version detection. The version probe eventually runs:execFileSync(probe.command, probe.args, ...)The only validation is resolveVersionProbe(binary, versionCommand, true), which checks that thefirst token of versionCommand matches the request-provided binary. Because binary ",
+            "url": "https://github.com/advisories/GHSA-hf57-cqmx-p4gr",
+            "title": "[omniroute]  OmniRoute ACP Custom-Agent Remote Code Execution (RCE) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "2. SummaryPOST /api/acp/agents registers a custom ACP agent. The endpoint accepts user-controlledbinary and versionCommand values. After saving the custom agent, the same request callsrefreshAgentCach",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": " OmniRoute ACP Custom-Agent Remote Code Execution (RCE)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:22:12.000Z",
+            "date_published": "2026-09-10T21:22:12.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[omniroute]  OmniRoute ACP Custom-Agent Remote Code Execution (RCE)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-cw9w-vv67-hf73",
+            "content_html": "ImpactThe OAuth token endpoint bound an authorization code's first access token to the consented resource, but not its refresh token. Refreshing only checked that the requested resource was registered, not that it matched the original grant. An OAuth client approved for one workflow could refresh with a different workflow's URL and get a valid, unapproved token for it. The patch binds refresh tokens to the granted resource and rejects mismatches.Exploitation requires the attacker to register an ",
+            "url": "https://github.com/advisories/GHSA-cw9w-vv67-hf73",
+            "title": "[n8n] n8n: Per-Resource OAuth Consent Bypass via Unbound Refresh Token Resource Substitution | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactThe OAuth token endpoint bound an authorization code's first access token to the consented resource, but not its refresh token. Refreshing only checked that the requested resource was registered",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "n8n: Per-Resource OAuth Consent Bypass via Unbound Refresh Token Resource Substitution",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:21:49.000Z",
+            "date_published": "2026-09-10T21:21:49.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[n8n] n8n: Per-Resource OAuth Consent Bypass via Unbound Refresh Token Resource Substitution",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-cw9w-vv67-hf73",
+            "content_html": "ImpactThe OAuth token endpoint bound an authorization code's first access token to the consented resource, but not its refresh token. Refreshing only checked that the requested resource was registered, not that it matched the original grant. An OAuth client approved for one workflow could refresh with a different workflow's URL and get a valid, unapproved token for it. The patch binds refresh tokens to the granted resource and rejects mismatches.Exploitation requires the attacker to register an ",
+            "url": "https://github.com/advisories/GHSA-cw9w-vv67-hf73",
+            "title": "[n8n] n8n: Per-Resource OAuth Consent Bypass via Unbound Refresh Token Resource Substitution | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactThe OAuth token endpoint bound an authorization code's first access token to the consented resource, but not its refresh token. Refreshing only checked that the requested resource was registered",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "n8n: Per-Resource OAuth Consent Bypass via Unbound Refresh Token Resource Substitution",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:21:49.000Z",
+            "date_published": "2026-09-10T21:21:49.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[n8n] n8n: Per-Resource OAuth Consent Bypass via Unbound Refresh Token Resource Substitution",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-q5wm-mgqx-fv2f",
+            "content_html": "ImpactInstance AI credential setup accepted a credential test/verification URL without checking it matched the workflow node's origin. Exfiltration required the user to actively inject an attacker-controlled URL into the setup flow. The patch derives the credential destination from the node's own URL and confines authenticated requests, redirects and probes to that origin.PatchesThe issue has been fixed in n8n versions 2.38.2 and 2.37.7. Users should upgrade to one of these versions or later to ",
+            "url": "https://github.com/advisories/GHSA-q5wm-mgqx-fv2f",
+            "title": "[n8n] n8n: Instance AI Credential Setup Accepts Unvalidated Probe URL from Fetched Content | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactInstance AI credential setup accepted a credential test/verification URL without checking it matched the workflow node's origin. Exfiltration required the user to actively inject an attacker-con",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "n8n: Instance AI Credential Setup Accepts Unvalidated Probe URL from Fetched Content",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:18:48.000Z",
+            "date_published": "2026-09-10T21:18:48.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[n8n] n8n: Instance AI Credential Setup Accepts Unvalidated Probe URL from Fetched Content",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-q5wm-mgqx-fv2f",
+            "content_html": "ImpactInstance AI credential setup accepted a credential test/verification URL without checking it matched the workflow node's origin. Exfiltration required the user to actively inject an attacker-controlled URL into the setup flow. The patch derives the credential destination from the node's own URL and confines authenticated requests, redirects and probes to that origin.PatchesThe issue has been fixed in n8n versions 2.38.2 and 2.37.7. Users should upgrade to one of these versions or later to ",
+            "url": "https://github.com/advisories/GHSA-q5wm-mgqx-fv2f",
+            "title": "[n8n] n8n: Instance AI Credential Setup Accepts Unvalidated Probe URL from Fetched Content | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactInstance AI credential setup accepted a credential test/verification URL without checking it matched the workflow node's origin. Exfiltration required the user to actively inject an attacker-con",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "n8n: Instance AI Credential Setup Accepts Unvalidated Probe URL from Fetched Content",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:18:48.000Z",
+            "date_published": "2026-09-10T21:18:48.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[n8n] n8n: Instance AI Credential Setup Accepts Unvalidated Probe URL from Fetched Content",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qgpw-8g46-w95v",
+            "content_html": "ImpactThe Git node validated the repository that a fetch or pull targeted, but setUpstream wrote a branch.&lt;name&gt;.remote value into the repository's own configuration without validating it. A subsequent fetch or pull resolved the remote from that configuration rather than from the checked parameter, so an authenticated user with workflow-edit permission could point it at any local repository the n8n process could read and receive its contents. The patch validates the branch remote configuration o",
+            "url": "https://github.com/advisories/GHSA-qgpw-8g46-w95v",
+            "title": "[n8n] n8n: Git Node branch.&lt;name&gt;.remote Config Key Bypasses Sandbox Path Restriction, Enabling Local Git Repository Read | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactThe Git node validated the repository that a fetch or pull targeted, but setUpstream wrote a branch.&lt;name&gt;.remote value into the repository's own configuration without validating it. A subsequen",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "n8n: Git Node branch.&lt;name&gt;.remote Config Key Bypasses Sandbox Path Restriction, Enabling Local Git Repository Read",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:16:36.000Z",
+            "date_published": "2026-09-10T21:16:36.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[n8n] n8n: Git Node branch.&lt;name&gt;.remote Config Key Bypasses Sandbox Path Restriction, Enabling Local Git Repository Read",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qgpw-8g46-w95v",
+            "content_html": "ImpactThe Git node validated the repository that a fetch or pull targeted, but setUpstream wrote a branch.&lt;name&gt;.remote value into the repository's own configuration without validating it. A subsequent fetch or pull resolved the remote from that configuration rather than from the checked parameter, so an authenticated user with workflow-edit permission could point it at any local repository the n8n process could read and receive its contents. The patch validates the branch remote configuration o",
+            "url": "https://github.com/advisories/GHSA-qgpw-8g46-w95v",
+            "title": "[n8n] n8n: Git Node branch.&lt;name&gt;.remote Config Key Bypasses Sandbox Path Restriction, Enabling Local Git Repository Read | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactThe Git node validated the repository that a fetch or pull targeted, but setUpstream wrote a branch.&lt;name&gt;.remote value into the repository's own configuration without validating it. A subsequen",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "n8n: Git Node branch.&lt;name&gt;.remote Config Key Bypasses Sandbox Path Restriction, Enabling Local Git Repository Read",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:16:36.000Z",
+            "date_published": "2026-09-10T21:16:36.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[n8n] n8n: Git Node branch.&lt;name&gt;.remote Config Key Bypasses Sandbox Path Restriction, Enabling Local Git Repository Read",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qgpw-8g46-w95v",
+            "content_html": "ImpactThe Git node validated the repository that a fetch or pull targeted, but setUpstream wrote a branch.&lt;name&gt;.remote value into the repository's own configuration without validating it. A subsequent fetch or pull resolved the remote from that configuration rather than from the checked parameter, so an authenticated user with workflow-edit permission could point it at any local repository the n8n process could read and receive its contents. The patch validates the branch remote configuration o",
+            "url": "https://github.com/advisories/GHSA-qgpw-8g46-w95v",
+            "title": "[n8n] n8n: Git Node branch.&lt;name&gt;.remote Config Key Bypasses Sandbox Path Restriction, Enabling Local Git Repository Read | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactThe Git node validated the repository that a fetch or pull targeted, but setUpstream wrote a branch.&lt;name&gt;.remote value into the repository's own configuration without validating it. A subsequen",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "n8n: Git Node branch.&lt;name&gt;.remote Config Key Bypasses Sandbox Path Restriction, Enabling Local Git Repository Read",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:16:36.000Z",
+            "date_published": "2026-09-10T21:16:36.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[n8n] n8n: Git Node branch.&lt;name&gt;.remote Config Key Bypasses Sandbox Path Restriction, Enabling Local Git Repository Read",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-cqr2-h44g-v75v",
+            "content_html": "ImpactThe endpoints /rest/roles/:slug/assignments and /rest/roles/:slug/assignments/:projectId/members checked only that the caller could manage the role type, not that they could see the project named in the request. A user holding role-management permission could therefore name any project on the instance and read back its members' names and email addresses. The patch adds a project-access check to both routes, hiding projects the caller cannot see and returning not-found for a project it cann",
+            "url": "https://github.com/advisories/GHSA-cqr2-h44g-v75v",
+            "title": "[n8n] n8n: Cross-Tenant Project-Member PII Disclosure via Missing Per-Project Scope Check on Role Assignment Endpoints | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactThe endpoints /rest/roles/:slug/assignments and /rest/roles/:slug/assignments/:projectId/members checked only that the caller could manage the role type, not that they could see the project name",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "n8n: Cross-Tenant Project-Member PII Disclosure via Missing Per-Project Scope Check on Role Assignment Endpoints",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:13:24.000Z",
+            "date_published": "2026-09-10T21:13:24.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[n8n] n8n: Cross-Tenant Project-Member PII Disclosure via Missing Per-Project Scope Check on Role Assignment Endpoints",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-cqr2-h44g-v75v",
+            "content_html": "ImpactThe endpoints /rest/roles/:slug/assignments and /rest/roles/:slug/assignments/:projectId/members checked only that the caller could manage the role type, not that they could see the project named in the request. A user holding role-management permission could therefore name any project on the instance and read back its members' names and email addresses. The patch adds a project-access check to both routes, hiding projects the caller cannot see and returning not-found for a project it cann",
+            "url": "https://github.com/advisories/GHSA-cqr2-h44g-v75v",
+            "title": "[n8n] n8n: Cross-Tenant Project-Member PII Disclosure via Missing Per-Project Scope Check on Role Assignment Endpoints | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactThe endpoints /rest/roles/:slug/assignments and /rest/roles/:slug/assignments/:projectId/members checked only that the caller could manage the role type, not that they could see the project name",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "n8n: Cross-Tenant Project-Member PII Disclosure via Missing Per-Project Scope Check on Role Assignment Endpoints",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:13:24.000Z",
+            "date_published": "2026-09-10T21:13:24.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[n8n] n8n: Cross-Tenant Project-Member PII Disclosure via Missing Per-Project Scope Check on Role Assignment Endpoints",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        }
+    ]
+}

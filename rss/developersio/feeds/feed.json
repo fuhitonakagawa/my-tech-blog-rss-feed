@@ -1,0 +1,752 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "DevelopersIO｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/feeds/feed.json",
+    "description": "DevelopersIOセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "KXhJ2FTLnPdFpwSbDoLd0",
+            "content_html": "AWS Lambda の S3 Files マウントで、ファイルの読み取り経路を明示的に選べる DirectS3Read がサポートされました。この読み取り経路は、これまでメモリ 512MB を境に自動で決まっていました。メモリ 256MB と 3072MB の関数で、既定と逆の設定にしたときの読み取り性能を実測しました。",
+            "url": "https://dev.classmethod.jp/articles/lambda-s3files-direct-read/",
+            "title": "Lambda の S3 Files でダイレクトリードを設定できるようになったので効果を測ってみた | DevelopersIO",
+            "summary": "AWS Lambda の S3 Files マウントで、ファイルの読み取り経路を明示的に選べる DirectS3Read がサポートされました。この読み取り経路は、これまでメモリ 512MB を境に自動で決まっていました。メモリ 256MB と 3072MB の関数で、既定と逆の設定にしたときの読み取り性能を実測しました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-484d8afca1cbe50513cd4d6738af2960/fa0838fa40f247093d532945fc785e88/aws-lambda"
+            },
+            "date_modified": "2026-09-13T04:38:07.000Z",
+            "date_published": "2026-09-13T04:38:07.000Z",
+            "author": {
+                "name": "suzuki.ryo"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Lambda の S3 Files でダイレクトリードを設定できるようになったので効果を測ってみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "2CcYNrk0nnKE9JrZe9Lshy",
+            "content_html": "VPC外の Lambda 関数のネットワーク帯域幅が、デフォルトの 625 Mbps から最大 3,000 Mbps まで、申請により拡張できるようになりました。Lambda のメモリを変えながら、iperf3 と S3 からのダウンロードでスループットを比較しました。",
+            "url": "https://dev.classmethod.jp/articles/lambda-network-bandwidth-3000mbps/",
+            "title": "Lambda のネットワーク帯域幅を Service Quotas で 3,000 Mbps に引き上げて実測してみた | DevelopersIO",
+            "summary": "VPC外の Lambda 関数のネットワーク帯域幅が、デフォルトの 625 Mbps から最大 3,000 Mbps まで、申請により拡張できるようになりました。Lambda のメモリを変えながら、iperf3 と S3 からのダウンロードでスループットを比較しました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-484d8afca1cbe50513cd4d6738af2960/fa0838fa40f247093d532945fc785e88/aws-lambda"
+            },
+            "date_modified": "2026-09-13T04:01:52.000Z",
+            "date_published": "2026-09-13T04:01:52.000Z",
+            "author": {
+                "name": "suzuki.ryo"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Lambda のネットワーク帯域幅を Service Quotas で 3,000 Mbps に引き上げて実測してみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "4n7iU0JIcQElJiGJ8QX9ft",
+            "content_html": "Amazon DynamoDBのベクトル検索がGAになったので、既存で使っているAmazon S3 Vectorsと同じデータを両方に入れて、仕様表では見落としやすい差を実機で確認してみました。",
+            "url": "https://dev.classmethod.jp/articles/dynamodb-vector-s3vectors-diff/",
+            "title": "S3 VectorsからDynamoDBのベクトル検索に寄せられるか実機で確かめてみる | DevelopersIO",
+            "summary": "Amazon DynamoDBのベクトル検索がGAになったので、既存で使っているAmazon S3 Vectorsと同じデータを両方に入れて、仕様表では見落としやすい差を実機で確認してみました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-8e5149b9e16d885e7f81fee054898d99/ff93e85e9dd30e05398e5f8175186192/amazon-dynamodb"
+            },
+            "date_modified": "2026-09-13T02:00:09.000Z",
+            "date_published": "2026-09-13T02:00:09.000Z",
+            "author": {
+                "name": "kobayashi.m"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "S3 VectorsからDynamoDBのベクトル検索に寄せられるか実機で確かめてみる",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "13ewUco2qY4f5NCi7HF7FU",
+            "content_html": "Amazon Quickのモバイルアプリでアクティビティフィードが使えるようになったので、iPhoneで実際に触ってみました。デスクトップとスマホでタスクやフィードが同期され、外出先でも同じ文脈で作業を続けられるようになった様子をご紹介します。",
+            "url": "https://dev.classmethod.jp/articles/amazon-quick-activity-feed-mobile/",
+            "title": "【アップデート】Amazon Quickのモバイルアプリが登場したのでアクティビティフィード機能をiPhoneで触ってみた | DevelopersIO",
+            "summary": "Amazon Quickのモバイルアプリでアクティビティフィードが使えるようになったので、iPhoneで実際に触ってみました。デスクトップとスマホでタスクやフィードが同期され、外出先でも同じ文脈で作業を続けられるようになった様子をご紹介します。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-13T01:47:42.000Z",
+            "date_published": "2026-09-13T01:47:42.000Z",
+            "author": {
+                "name": "こーへい"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【アップデート】Amazon Quickのモバイルアプリが登場したのでアクティビティフィード機能をiPhoneで触ってみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "57mvd6PyHphcx8VgjC028m",
+            "content_html": "Amazon Quickの S3 ナレッジベースに実装されたドキュメントレベルの ACL（アクセスコントロールリスト）について、実際に検証してみました。グローバル ACL 方式とメタデータ方式の設定方法から、チャットでの権限検証まで、詳しく試してみたので紹介します。",
+            "url": "https://dev.classmethod.jp/articles/20260911-amazon-quick-s3-acl/",
+            "title": "Amazon Quick の S3 ナレッジベースのドキュメントレベル ACL を検証してみた - ユーザーごとに機密文書を出し分ける | DevelopersIO",
+            "summary": "Amazon Quickの S3 ナレッジベースに実装されたドキュメントレベルの ACL（アクセスコントロールリスト）について、実際に検証してみました。グローバル ACL 方式とメタデータ方式の設定方法から、チャットでの権限検証まで、詳しく試してみたので紹介します。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-13T00:13:20.000Z",
+            "date_published": "2026-09-13T00:13:20.000Z",
+            "author": {
+                "name": "石川覚"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Quick の S3 ナレッジベースのドキュメントレベル ACL を検証してみた - ユーザーごとに機密文書を出し分ける",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "5AKYCcaskPepiUKE7BbC5e",
+            "content_html": "V3だけだがレスポンスも対象に検索できるようになった。というか今までできなかったのか。",
+            "url": "https://dev.classmethod.jp/articles/kiro-cli-v3-sessions-search-mode/",
+            "title": "[アップデート] Kiro CLI v3 のセッション検索がエージェントの応答も対象にできるようになったので試してみた | DevelopersIO",
+            "summary": "V3だけだがレスポンスも対象に検索できるようになった。というか今までできなかったのか。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/4uTbTE9O9jUJCOs80dZ0Ao/e2da592b5eaaad0f5993d6ff64a12467/aws-kiro.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-12T22:54:38.000Z",
+            "date_published": "2026-09-12T22:54:38.000Z",
+            "author": {
+                "name": "いわさ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[アップデート] Kiro CLI v3 のセッション検索がエージェントの応答も対象にできるようになったので試してみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "6RsbOyxQD3RkLB42pZpJs8",
+            "content_html": "Claude Enterprise プランでモバイルアプリの利用制御がどのように機能するのか、実際に確認してみました。Chat、Cowork、Code それぞれの設定の違いと制御可能な範囲について、検証結果をお伝えします。",
+            "url": "https://dev.classmethod.jp/articles/slug-claude-enterprise-mobile-desktop-web/",
+            "title": "Claude Enterprise プランでモバイルアプリに対してどれだけ制御できるか確認してみた | DevelopersIO",
+            "summary": "Claude Enterprise プランでモバイルアプリの利用制御がどのように機能するのか、実際に確認してみました。Chat、Cowork、Code それぞれの設定の違いと制御可能な範囲について、検証結果をお伝えします。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-12T14:47:53.000Z",
+            "date_published": "2026-09-12T14:47:53.000Z",
+            "author": {
+                "name": "長澤 陸"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Claude Enterprise プランでモバイルアプリに対してどれだけ制御できるか確認してみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "6zpFPFXlppiEtmpCyjUHi2",
+            "content_html": "Amazon QuickのデスクトップアプリがGA（一般提供）になりました。プレビューからの変更点を中心にご紹介します。",
+            "url": "https://dev.classmethod.jp/articles/amazon-quick-desktop-app-ga/",
+            "title": "【アップデート】Amazon QuickのデスクトップアプリがGAになったのでプレビューからの変更点をまとめてみた | DevelopersIO",
+            "summary": "Amazon QuickのデスクトップアプリがGA（一般提供）になりました。プレビューからの変更点を中心にご紹介します。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-12T14:40:17.000Z",
+            "date_published": "2026-09-12T14:40:17.000Z",
+            "author": {
+                "name": "こーへい"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【アップデート】Amazon QuickのデスクトップアプリがGAになったのでプレビューからの変更点をまとめてみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "10HpukyNB563k37ajamwhA",
+            "content_html": "Claude Code v2.1.269 がリリースされました。98 件の変更のうち、プラグイン周りの新機能とセキュリティ修正が大きな特徴です。今日は、プラグイン（スキル）が実際に効いているか採点して数値にするコマンド claude plugin eval を試してみました。",
+            "url": "https://dev.classmethod.jp/articles/20260912-cc-updates-v2-1-269/",
+            "title": "Claude Code v2.1.269 の主要アップデート - claude plugin eval の追加と権限ルールの適用漏れ修正 | DevelopersIO",
+            "summary": "Claude Code v2.1.269 がリリースされました。98 件の変更のうち、プラグイン周りの新機能とセキュリティ修正が大きな特徴です。今日は、プラグイン（スキル）が実際に効いているか採点して数値にするコマンド claude plugin eval を試してみました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-12T07:07:59.000Z",
+            "date_published": "2026-09-12T07:07:59.000Z",
+            "author": {
+                "name": "石川覚"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Claude Code v2.1.269 の主要アップデート - claude plugin eval の追加と権限ルールの適用漏れ修正",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "3eI1tKZywdjjyOYXrquN6I",
+            "content_html": "M5StickS3のIMUデータをIoT Core経由でS3に保存し、AthenaとGrafanaで可視化するまでの実装を紹介します。筋トレデータの分析に向けて、Basic Ingestとローカル環境でコスト効率よく実現する方法をまとめました。",
+            "url": "https://dev.classmethod.jp/articles/m5sticks3-iot-core-firehose-athena-grafana/",
+            "title": "筋トレの分析をするために、M5StickS3のIMUデータを収集して可視化するパイプラインを作ってみた | DevelopersIO",
+            "summary": "M5StickS3のIMUデータをIoT Core経由でS3に保存し、AthenaとGrafanaで可視化するまでの実装を紹介します。筋トレデータの分析に向けて、Basic Ingestとローカル環境でコスト効率よく実現する方法をまとめました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-06e039aecab973a68134b7db69ff9ffd/bd37c8691e5a1f5e3b239f6e8a3888af/aws-iot-core"
+            },
+            "date_modified": "2026-09-12T07:04:19.000Z",
+            "date_published": "2026-09-12T07:04:19.000Z",
+            "author": {
+                "name": "はすと ( sasaki hasuto )"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "筋トレの分析をするために、M5StickS3のIMUデータを収集して可視化するパイプラインを作ってみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "2UEBSzi71yt6qI9bP027Sp",
+            "content_html": "AWS ParallelCluster 3.16.1 でクラスターを作成し、Slurm の CVE 対応版である 25.11.8 が正しく動作するか確認してみました。",
+            "url": "https://dev.classmethod.jp/articles/aws-parallelcluster-3-16-1-slurm-cve-fixed/",
+            "title": "AWS ParallelCluster 3.16.1 がリリースされ Slurm の CVE 問題が解消したので確認してみた | DevelopersIO",
+            "summary": "AWS ParallelCluster 3.16.1 でクラスターを作成し、Slurm の CVE 対応版である 25.11.8 が正しく動作するか確認してみました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-b7a97109267e33040a02666309325eb5/0ce782e59c1b66fe6bdad2e6c8370893/aws-parallelcluster"
+            },
+            "date_modified": "2026-09-12T05:58:12.000Z",
+            "date_published": "2026-09-12T05:58:12.000Z",
+            "author": {
+                "name": "大村 保貴"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS ParallelCluster 3.16.1 がリリースされ Slurm の CVE 問題が解消したので確認してみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "JdzXAZNKqBv40EkfcUseh",
+            "content_html": "Microsoft Copilot Studio で社内問い合わせ対応エージェントを作ってみました。ナレッジ、ツール、認証が揃った環境で、コード不要でチャットボットを公開できる手軽さが魅力です。作り方から公開まで、実践的に解説します。",
+            "url": "https://dev.classmethod.jp/articles/shoma-tried-building-internal-faq-inquiry-agent-with-microsoft-copilot-studio/",
+            "title": "Microsoft Copilot Studio で社内のFAQ問い合わせエージェントを作ってみた | DevelopersIO",
+            "summary": "Microsoft Copilot Studio で社内問い合わせ対応エージェントを作ってみました。ナレッジ、ツール、認証が揃った環境で、コード不要でチャットボットを公開できる手軽さが魅力です。作り方から公開まで、実践的に解説します。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/1dD7b8HkT2sbiJzUIewMTD/e5cdc6f33c4fdd9d798f11a4564612ff/eyecatch_developersio_darktone_1200x630.jpg",
+                "type": "jpg"
+            },
+            "date_modified": "2026-09-12T02:22:40.000Z",
+            "date_published": "2026-09-12T02:22:40.000Z",
+            "author": {
+                "name": "小林翔馬"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Microsoft Copilot Studio で社内のFAQ問い合わせエージェントを作ってみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "5vu3S44AM68LZ0qplmO93T",
+            "content_html": "Kiro 無料プラン + Claude Code 有料プランとかで使えるかもしれない",
+            "url": "https://dev.classmethod.jp/articles/kiro-crew-0_6-agentbackend-claudecode/",
+            "title": "[アップデート] Kiro Crew 0.6 のエージェントバックエンドに Claude Code / Codex / KAS が追加されたので試してみた | DevelopersIO",
+            "summary": "Kiro 無料プラン + Claude Code 有料プランとかで使えるかもしれない",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/4uTbTE9O9jUJCOs80dZ0Ao/e2da592b5eaaad0f5993d6ff64a12467/aws-kiro.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T23:49:26.000Z",
+            "date_published": "2026-09-11T23:49:26.000Z",
+            "author": {
+                "name": "いわさ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[アップデート] Kiro Crew 0.6 のエージェントバックエンドに Claude Code / Codex / KAS が追加されたので試してみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "4qbDjm8PIcR3S5pMqV9MvK",
+            "content_html": "2026年9月のアップデートで、dbt Projects on Snowflake の Slim CI と Defer to Production が一般提供となりました。本番アーティファクトをネイティブに扱える新機能を試してみた内容をまとめます。",
+            "url": "https://dev.classmethod.jp/articles/dbt-projectss-on-snowflake-slim-ci-defer-to-prod-ga/",
+            "title": "[新機能]dbt Projects on Snowflake で Slim CI / Defer to Production が一般提供になりました | DevelopersIO",
+            "summary": "2026年9月のアップデートで、dbt Projects on Snowflake の Slim CI と Defer to Production が一般提供となりました。本番アーティファクトをネイティブに扱える新機能を試してみた内容をまとめます。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake"
+            },
+            "date_modified": "2026-09-11T17:34:33.000Z",
+            "date_published": "2026-09-11T17:34:33.000Z",
+            "author": {
+                "name": "安原朋紀"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[新機能]dbt Projects on Snowflake で Slim CI / Defer to Production が一般提供になりました",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "2t80qTAomly5c8sVRvGYfE",
+            "content_html": "CEOのスリダール・ラマスワミが登壇し、エンタープライズAIの未来と企業が「Agentic Enterprise」へと踏み出すための経営論点を解説。CoWorkやCoCoといった最新エージェント機能がもたらす可能性をお届けします。 国内事例としては、全部門のデータを統合した「単一信頼情報源」を確立し、Snowflake CoCoの活用で業務効率を飛躍的に改善させた三井住友トラスト・アセットマネジメントと、全社規模でMCP基盤を展開し、Native AppsやCortex等の活用でデータドリブン経営を体現されているサイバーエージェントが登場。AI活用の今と今後の方向性を知る上で必見です。※SNOWFLAKE WORLD TOUR 2026 イベントサイトより抜粋",
+            "url": "https://dev.classmethod.jp/articles/snowflake-world-tour-2026-tokyo-day2-keynote-swttokyo26/",
+            "title": "[レポート]SNOWFLAKE WORLD TOUR 2026 - TOKYO：Day2 KEYNOTE #SWTTokyo26 | DevelopersIO",
+            "summary": "CEOのスリダール・ラマスワミが登壇し、エンタープライズAIの未来と企業が「Agentic Enterprise」へと踏み出すための経営論点を解説。CoWorkやCoCoといった最新エージェント機能がもたらす可能性をお届けします。 国内事例としては、全部門のデータを統合した「単一信頼情報源」を確立し、Snowflake CoCoの活用で業務効率を飛躍的に改善させた三井住友トラスト・アセットマネジメ",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/4kFYCMTvi9ucEtpiAfvm01/b605f81aa314b1fdbc86f8fee275fb43/eyecatch_snowflakeworldtourtokyo2026.webp",
+                "type": "webp"
+            },
+            "date_modified": "2026-09-11T15:51:49.000Z",
+            "date_published": "2026-09-11T15:51:49.000Z",
+            "author": {
+                "name": "かわばた"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[レポート]SNOWFLAKE WORLD TOUR 2026 - TOKYO：Day2 KEYNOTE #SWTTokyo26",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "351WyzE2IuhBQl5uCoPNVq",
+            "content_html": "AWS公式のOSS「RAPID」が自治体業務の効率化にどう役立つのか、実例と法制度の観点から調べてみました。",
+            "url": "https://dev.classmethod.jp/articles/rapid_localgovernment/",
+            "title": "「AI書類審査ソリューションRAPID」で自治体業務は効率化されるのか考えてみた | DevelopersIO",
+            "summary": "AWS公式のOSS「RAPID」が自治体業務の効率化にどう役立つのか、実例と法制度の観点から調べてみました。",
+            "image": {
+                "url": "https://devio2024-media.developers.io/image/upload/v1786351974/user-gen-eyecatch/r1tvbxhoefiw8ascwgtp.jpg",
+                "type": "jpg"
+            },
+            "date_modified": "2026-09-11T13:24:29.000Z",
+            "date_published": "2026-09-11T13:24:29.000Z",
+            "author": {
+                "name": "fukata"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "「AI書類審査ソリューションRAPID」で自治体業務は効率化されるのか考えてみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "7BGswDRc66N9v9hGacZv9Y",
+            "content_html": "dbt Projects on Snowflakeの新機能**並行実行機能**を試してみました。これまで複数の実行を同時に走らせるにはdbt project objectを複製する必要がありましたが、今回のアップデートで1つのプロジェクトをデプロイしたまま複数のコマンドを並列実行できるようになります。その仕組みと実装パターンを紹介します。",
+            "url": "https://dev.classmethod.jp/articles/dbt-projects-on-snowflake-run-one-project-concurrently/",
+            "title": "[新機能]dbt Projects on Snowflakeで同一プロジェクトオブジェクトに対してdbtコマンドの並列実行が可能となりました | DevelopersIO",
+            "summary": "dbt Projects on Snowflakeの新機能**並行実行機能**を試してみました。これまで複数の実行を同時に走らせるにはdbt project objectを複製する必要がありましたが、今回のアップデートで1つのプロジェクトをデプロイしたまま複数のコマンドを並列実行できるようになります。その仕組みと実装パターンを紹介します。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake"
+            },
+            "date_modified": "2026-09-11T13:06:38.000Z",
+            "date_published": "2026-09-11T13:06:38.000Z",
+            "author": {
+                "name": "さがら"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[新機能]dbt Projects on Snowflakeで同一プロジェクトオブジェクトに対してdbtコマンドの並列実行が可能となりました",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "346EvOcA4smk76B4IPsGpy",
+            "content_html": "チーム RAG と Web 検索の 2 つの知識の入口を、同じ sandbox で両立させる方法をご紹介します。ビルドの課題から認証の設計、エージェントの信頼境界まで、実装の細部を詰めた知見をまとめました。",
+            "url": "https://dev.classmethod.jp/articles/reona-04-dgx-spark-team-rag-web-search/",
+            "title": "NemoHermes にチーム共通 RAG と Web 検索をつないで、知見を溜めながら外の情報も取りに行かせる | DevelopersIO",
+            "summary": "チーム RAG と Web 検索の 2 つの知識の入口を、同じ sandbox で両立させる方法をご紹介します。ビルドの課題から認証の設計、エージェントの信頼境界まで、実装の細部を詰めた知見をまとめました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/10swzj0rqeP1btTynCAOIv/8ed3f14fdedc076f8131d07cbed1429d/hermes.webp",
+                "type": "webp"
+            },
+            "date_modified": "2026-09-11T09:55:28.000Z",
+            "date_published": "2026-09-11T09:55:28.000Z",
+            "author": {
+                "name": "嶋田怜央成 / Reona Shimada"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "NemoHermes にチーム共通 RAG と Web 検索をつないで、知見を溜めながら外の情報も取りに行かせる",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "7EFtnQXTCHDKa2z8SeEuBc",
+            "content_html": "LogTapeのマスキング機能を試してみました。API KeyやJWTなどの秘匿情報をログから隠蔽する方法について、Pattern-based redactionとField-based redactionの2つのアプローチを紹介します。",
+            "url": "https://dev.classmethod.jp/articles/log-masking-on-logtape/",
+            "title": "JS, TSのロギングライブラリLogTapeでログのマスキングをする | DevelopersIO",
+            "summary": "LogTapeのマスキング機能を試してみました。API KeyやJWTなどの秘匿情報をログから隠蔽する方法について、Pattern-based redactionとField-based redactionの2つのアプローチを紹介します。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-f5b43fd73ea26db8c8d57676329f642d/727663a08e672b6ae67535ad308566e6/javascript.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T09:30:03.000Z",
+            "date_published": "2026-09-11T09:30:03.000Z",
+            "author": {
+                "name": "夏目祐樹"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "JS, TSのロギングライブラリLogTapeでログのマスキングをする",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "5h9olkBPCst1Bg5qgkauIL",
+            "content_html": "Amazon Connectで双方向SMSを本番運用する際、AWS End User Messaging SMS側で確認すべきポイントを整理しました。サンドボックスモードからの移行、ショートコードの状態確認、使用クォータ、オプトアウト設定といった本番移行前のチェックリストから、送信制限や無効電話番号への対策まで、実装に必要な知識をまとめています。",
+            "url": "https://dev.classmethod.jp/articles/amazon-connect-two-way-sms-end-user-messaging-checkpoints/",
+            "title": "Amazon Connect 双方向SMSを本番運用する前に確認したいAWS End User Messaging SMSのポイントを整理してみた | DevelopersIO",
+            "summary": "Amazon Connectで双方向SMSを本番運用する際、AWS End User Messaging SMS側で確認すべきポイントを整理しました。サンドボックスモードからの移行、ショートコードの状態確認、使用クォータ、オプトアウト設定といった本番移行前のチェックリストから、送信制限や無効電話番号への対策まで、実装に必要な知識をまとめています。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/3Lcrvwg7ezBnn4PbW46dIA/f0ed66c275da40c98de533264073d11f/End-User-Messaging.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T05:41:04.000Z",
+            "date_published": "2026-09-11T05:41:04.000Z",
+            "author": {
+                "name": "平井裕二"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Connect 双方向SMSを本番運用する前に確認したいAWS End User Messaging SMSのポイントを整理してみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "pBYiILpYjG2GRHgLwzNFn",
+            "content_html": "CloudFormation のテンプレートの先頭に記載されているAWSTemplateFormatVersion について気になったので、実際に検証してみました。",
+            "url": "https://dev.classmethod.jp/articles/cloudformation-awstemplateformatversion-explained/",
+            "title": "template.yamlのAWSTemplateFormatVersionとは何か | DevelopersIO",
+            "summary": "CloudFormation のテンプレートの先頭に記載されているAWSTemplateFormatVersion について気になったので、実際に検証してみました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-dcbaa2123fec72b4fafe12edd4285aaf/178121bca8a805d8af9e86e4e4bbe732/aws-cloudformation"
+            },
+            "date_modified": "2026-09-11T05:33:43.000Z",
+            "date_published": "2026-09-11T05:33:43.000Z",
+            "author": {
+                "name": "山本 翔大"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "template.yamlのAWSTemplateFormatVersionとは何か",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "5zF9AZ0nLZaQBnvUsaWAo8",
+            "content_html": "Claude Code v2.1.268がリリースされました。96件の変更が入った今回は、権限ルールのセキュリティ修正やタスク管理ツールのモデル別提供など、設定見直しが必要な変更も含まれています。主要なアップデート内容をご紹介します。今日は、新しい plugin --json を試してみました。",
+            "url": "https://dev.classmethod.jp/articles/20260911-cc-updates-v2-1-268/",
+            "title": "Claude Code v2.1.268 の主要アップデート - タスク管理ツールのモデル別提供と権限ルールのセキュリティ修正 | DevelopersIO",
+            "summary": "Claude Code v2.1.268がリリースされました。96件の変更が入った今回は、権限ルールのセキュリティ修正やタスク管理ツールのモデル別提供など、設定見直しが必要な変更も含まれています。主要なアップデート内容をご紹介します。今日は、新しい plugin --json を試してみました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T05:29:21.000Z",
+            "date_published": "2026-09-11T05:29:21.000Z",
+            "author": {
+                "name": "石川覚"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Claude Code v2.1.268 の主要アップデート - タスク管理ツールのモデル別提供と権限ルールのセキュリティ修正",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "16MJWLK3Isq6SbvvMe4oJx",
+            "content_html": ".NET、ATX CLI対応してなかったのか",
+            "url": "https://dev.classmethod.jp/articles/aws-transform-dotnet-cli/",
+            "title": "[アップデート] AWS Transform for .NET のモダナイゼーションが GA となり CLI でも実行できるようになりました | DevelopersIO",
+            "summary": ".NET、ATX CLI対応してなかったのか",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/6sr6qXoJHrSGCktI3d56Hk/4504fc5f0b23d1e8430dfc948c18f606/aws-transform.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T23:57:09.000Z",
+            "date_published": "2026-09-10T23:57:09.000Z",
+            "author": {
+                "name": "いわさ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[アップデート] AWS Transform for .NET のモダナイゼーションが GA となり CLI でも実行できるようになりました",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "62A2c96UumowvFdj11PB3q",
+            "content_html": "iOS 27 RC / Xcode 27 RCのリリースノートをBeta 4から比較し、iPhone Duoの発表に伴う開発者向け変更もまとめた。MetricKitの破壊的変更、iPadリサイズ動作の変更、UIScreen.main移行の必須化など、GA前に押さえておきたい変更を整理した。",
+            "url": "https://dev.classmethod.jp/articles/ios-dev-weekly-changes-20260911/",
+            "title": "iOSアプリ開発の気になる変更まとめ（2026/09/10） | DevelopersIO",
+            "summary": "iOS 27 RC / Xcode 27 RCのリリースノートをBeta 4から比較し、iPhone Duoの発表に伴う開発者向け変更もまとめた。MetricKitの破壊的変更、iPadリサイズ動作の変更、UIScreen.main移行の必須化など、GA前に押さえておきたい変更を整理した。",
+            "image": {
+                "url": "https://devio2024-media.developers.io/image/upload/v1789068422/user-gen-eyecatch/p4wg5hgwfghwqhoq7x6g.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T19:45:23.000Z",
+            "date_published": "2026-09-10T19:45:23.000Z",
+            "author": {
+                "name": "和田 健司"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "iOSアプリ開発の気になる変更まとめ（2026/09/10）",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "eyCVQxQJcX2UzR0oQYv7P",
+            "content_html": "Amazon QuickのアプリにAI推論を組み込んでみたところ、埋め込みダッシュボードのデータは分析できないという制限があることがわかりました。その理由と、AI推論に渡せるデータについて紹介します。",
+            "url": "https://dev.classmethod.jp/articles/amazon-quick-apps-ai-inference-dashboard/",
+            "title": "【小ネタ】Amazon QuickのAI推論はApp Storageのデータ分析は可能でダッシュボード分析は出来ませんでした | DevelopersIO",
+            "summary": "Amazon QuickのアプリにAI推論を組み込んでみたところ、埋め込みダッシュボードのデータは分析できないという制限があることがわかりました。その理由と、AI推論に渡せるデータについて紹介します。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T15:30:00.000Z",
+            "date_published": "2026-09-10T15:30:00.000Z",
+            "author": {
+                "name": "こーへい"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【小ネタ】Amazon QuickのAI推論はApp Storageのデータ分析は可能でダッシュボード分析は出来ませんでした",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "4b8J3nz6ivFqkNlRaMS6fw",
+            "content_html": "プロダクト責任者クリスチャン・クライナマンが、最新のAI・データビジョンと戦略をデモを交えてご紹介。国内事例として日産自動車がビジネス価値創出に直結するAI・データの実践像を、富士フイルムが全社的なAI-ready基盤構築とガバナンス主導のDX事例を語ります。さらにスペシャルゲストとしてAnthropic社でAPACのApplied AIを率いるNatalie Meadが来日。対談を通じ、スピードと安全性のバランスや両社の強力なパートナーシップが拓く企業AIの展望など、企業のAI活用に関する最先端のトレンドをお届けします。※SNOWFLAKE WORLD TOUR 2026 イベントサイトより抜粋",
+            "url": "https://dev.classmethod.jp/articles/snowflake-world-tour-2026-tokyo-day1-keynote-swttokyo26/",
+            "title": "[レポート]SNOWFLAKE WORLD TOUR 2026 - TOKYO：Day1 KEYNOTE #SWTTokyo26 | DevelopersIO",
+            "summary": "プロダクト責任者クリスチャン・クライナマンが、最新のAI・データビジョンと戦略をデモを交えてご紹介。国内事例として日産自動車がビジネス価値創出に直結するAI・データの実践像を、富士フイルムが全社的なAI-ready基盤構築とガバナンス主導のDX事例を語ります。さらにスペシャルゲストとしてAnthropic社でAPACのApplied AIを率いるNatalie Meadが来日。対談を通じ、スピード",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/4kFYCMTvi9ucEtpiAfvm01/b605f81aa314b1fdbc86f8fee275fb43/eyecatch_snowflakeworldtourtokyo2026.webp",
+                "type": "webp"
+            },
+            "date_modified": "2026-09-10T15:24:15.000Z",
+            "date_published": "2026-09-10T15:24:15.000Z",
+            "author": {
+                "name": "かわばた"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[レポート]SNOWFLAKE WORLD TOUR 2026 - TOKYO：Day1 KEYNOTE #SWTTokyo26",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "tGkGgwqhK9ogUxUoqzE1D",
+            "content_html": "SQL Server のバージョンアップに伴うレガシーコードからの SQL 抽出は、数千ファイル規模だと現実的ではありません。そこで、Claude などの LLM をヘッドレス実行でバッチ化し、Java/VB.NET から SQL を漏れなく自動抽出できるか検証してみました。",
+            "url": "https://dev.classmethod.jp/articles/claude-code-headless-legacy-code-sql-extraction/",
+            "title": "レガシーコード500本からSQLを自動抽出できるのか試してみた 〜Claude Codeのヘッドレス実行とHaiku/Sonnet/Opusの比較〜 | DevelopersIO",
+            "summary": "SQL Server のバージョンアップに伴うレガシーコードからの SQL 抽出は、数千ファイル規模だと現実的ではありません。そこで、Claude などの LLM をヘッドレス実行でバッチ化し、Java/VB.NET から SQL を漏れなく自動抽出できるか検証してみました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T15:00:10.000Z",
+            "date_published": "2026-09-10T15:00:10.000Z",
+            "author": {
+                "name": "田中聖也"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "レガシーコード500本からSQLを自動抽出できるのか試してみた 〜Claude Codeのヘッドレス実行とHaiku/Sonnet/Opusの比較〜",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "0HiBtlC9tplrt9yr2CHOu",
+            "content_html": "運用の文脈を明確にし、チーム全体で共通の「型」を用いてSkillを構築するアプローチについて、勉強会での登壇内容をご紹介します。",
+            "url": "https://dev.classmethod.jp/articles/20260908-opsmethod4-agent-skills-for-operation/",
+            "title": "【登壇レポート】 勉強会 opsmethod#4 「増え続ける運用を、Skill 化する\"型\"でさばく」というタイトルで登壇しました！ | DevelopersIO",
+            "summary": "運用の文脈を明確にし、チーム全体で共通の「型」を用いてSkillを構築するアプローチについて、勉強会での登壇内容をご紹介します。",
+            "image": {
+                "url": "https://devio2024-media.developers.io/image/upload/v1789045270/user-gen-eyecatch/b2zgccqtgvtmd53f6twg.webp",
+                "type": "webp"
+            },
+            "date_modified": "2026-09-10T13:16:20.000Z",
+            "date_published": "2026-09-10T13:16:20.000Z",
+            "author": {
+                "name": "森あかり"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【登壇レポート】 勉強会 opsmethod#4 「増え続ける運用を、Skill 化する\"型\"でさばく」というタイトルで登壇しました！",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "30hvs5lChtADZowdJHdHK5",
+            "content_html": "Quickのアプリ機能を使用して、ダッシュボードのメモを共有・相談までをノーコードで完結させる流れを紹介します。",
+            "url": "https://dev.classmethod.jp/articles/amazon-quick-apps-slack-connector/",
+            "title": "Amazon Quickのアプリでスコアの対応メモをSlackに投稿してみた | DevelopersIO",
+            "summary": "Quickのアプリ機能を使用して、ダッシュボードのメモを共有・相談までをノーコードで完結させる流れを紹介します。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T13:12:14.000Z",
+            "date_published": "2026-09-10T13:12:14.000Z",
+            "author": {
+                "name": "こーへい"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Quickのアプリでスコアの対応メモをSlackに投稿してみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        },
+        {
+            "id": "6dn9O7JI0ofJo7V2HChUUX",
+            "content_html": "gain と mixing の性能は、通常演算とほぼ同じでした。dot product が 2.75〜6.94 倍、64 タップ FIR が約 3.5 倍になりました。一方で、高速化と引き換えに通常演算との差が生じました。",
+            "url": "https://dev.classmethod.jp/articles/rust-1-98-algebraic-float-audio-dsp/",
+            "title": "Rust 1.98 の algebraic_* でオーディオ DSP は速くなるのか検証してみた | DevelopersIO",
+            "summary": "gain と mixing の性能は、通常演算とほぼ同じでした。dot product が 2.75〜6.94 倍、64 タップ FIR が約 3.5 倍になりました。一方で、高速化と引き換えに通常演算との差が生じました。",
+            "image": {
+                "url": "https://images.ctfassets.net/ct0aopd36mqt/4u1gqKpsvlSCxsWDlEyXiJ/36c9da357c4278091af22c281a79ddca/rust-eyecatch.png",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T11:13:35.000Z",
+            "date_published": "2026-09-10T11:13:35.000Z",
+            "author": {
+                "name": "越井 琢巳 (Koshii Takumi)"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Rust 1.98 の algebraic_* でオーディオ DSP は速くなるのか検証してみた",
+                "blogTitle": "DevelopersIO",
+                "blogLink": "https://dev.classmethod.jp",
+                "blogLinkMd5Hash": "770b01d8ca2a23067d741da04837a791",
+                "favicon": "https://dev.classmethod.jp/favicon.ico"
+            }
+        }
+    ]
+}

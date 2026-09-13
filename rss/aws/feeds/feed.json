@@ -1,0 +1,2651 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "AWS｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws/feeds/feed.json",
+    "description": "AWSセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "03cf9f557835d387319151c7bd0d8bc6569849ce",
+            "content_html": "Amazon MWAA Serverless で PythonOperator と BashOperator が使えるようになり、カスタムの Python 関数やシェルスクリプトをサーバーレスランタイム上で直接実行できます。AWS Lambda 関数や Amazon ECS タスクでコードをラップする必要はありません。本記事では、コードバンドルの仕組みと実行モデルを解説し、PythonOperator で CSV を JSON に変換し BashOperator で出力を検証するパイプラインを AWS CLI で構築します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/pythonoperator-and-bashoperator-now-available-on-amazon-managed-workflows-for-apache-airflow-amazon-mwaa-serverless/",
+            "title": "Amazon MWAA Serverless で PythonOperator と BashOperator が利用可能に | Amazon Web Services ブログ",
+            "summary": "Amazon MWAA Serverless で PythonOperator と BashOperator が使えるようになり、カスタムの Python 関数やシェルスクリプトをサーバーレスランタイム上で直接実行できます。AWS Lambda 関数や Amazon ECS タスクでコードをラップする必要はありません。本記事では、コードバンドルの仕組みと実行モデルを解説し、PythonOperat",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/09/06/pythonoperator-and-bashoperator-now-available-on-amazon-managed-workflows-for-apache-airflow-amazon-mwaa-serverless_BDB-6131-featured-image-1.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-12T14:43:12.000Z",
+            "date_published": "2026-09-12T14:43:12.000Z",
+            "author": {
+                "name": "Kazushi Yamamoto"
+            },
+            "tags": [
+                "Amazon Managed Workflows for Apache Airflow (Amazon MWAA)",
+                "Analytics",
+                "Announcements",
+                "Intermediate (200)"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon MWAA Serverless で PythonOperator と BashOperator が利用可能に",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "d0ad6a64884c0a66162dfa690f4921db9a541ac8",
+            "content_html": "Apache Airflow 3.0 の Asset Watcher と Amazon SQS を組み合わせて、複数の Amazon MWAA 環境や AWS アカウントをまたぐイベント駆動のオーケストレーションを実現する方法を解説します。ポーリングベースのセンサーをイベント駆動のトリガーに置き換えることで、環境間オーケストレーションのレイテンシーを数分から数秒に短縮できます。クロスアカウント IAM、triggerer の健全性、Amazon VPC のネットワーク、DAG 設計のベストプラクティスも紹介します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/event-driven-pipeline-orchestration-with-amazon-mwaa-and-airflow-3-0/",
+            "title": "Amazon MWAA と Airflow 3.0 によるイベント駆動のパイプラインオーケストレーション | Amazon Web Services ブログ",
+            "summary": "Apache Airflow 3.0 の Asset Watcher と Amazon SQS を組み合わせて、複数の Amazon MWAA 環境や AWS アカウントをまたぐイベント駆動のオーケストレーションを実現する方法を解説します。ポーリングベースのセンサーをイベント駆動のトリガーに置き換えることで、環境間オーケストレーションのレイテンシーを数分から数秒に短縮できます。クロスアカウント I",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/08/07/event-driven-pipeline-orchestration-with-amazon-mwaa-and-airflow-3-0_BDB-5627-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-12T14:41:43.000Z",
+            "date_published": "2026-09-12T14:41:43.000Z",
+            "author": {
+                "name": "Kazushi Yamamoto"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Managed Workflows for Apache Airflow (Amazon MWAA)",
+                "Analytics",
+                "Best Practices"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon MWAA と Airflow 3.0 によるイベント駆動のパイプラインオーケストレーション",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "21941b8ce19a9b893a78898b1200a4a95ed15ee8",
+            "content_html": "Past-due balances are easy to see and hard to explain. The AWS Management Console shows the amount, but not the failed payment or the reason for decline. Previously, finding the reason required opening a support case. With payment capabilities in Amazon Q, now available in the AWS Management Console, you can investigate a past-due balance, understand why a payment failed, and take the corrective action in a single conversation. If you work in accounts payable or FinOps, you can eliminate most of",
+            "url": "https://aws.amazon.com/blogs/aws-cloud-financial-management/introducing-payment-capabilities-in-amazon-q-to-resolve-past-due-balances/",
+            "title": "Introducing payment capabilities in Amazon Q to resolve past-due balances | AWS Cloud Financial Management",
+            "summary": "Past-due balances are easy to see and hard to explain. The AWS Management Console shows the amount, but not the failed payment or the reason for decline. Previously, finding the reason required openin",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2026/09/02/q_balances-1120x630.png",
+                "width": "1120",
+                "type": "png"
+            },
+            "date_modified": "2026-09-12T00:53:44.000Z",
+            "date_published": "2026-09-12T00:53:44.000Z",
+            "author": {
+                "name": "Abhinav Sharma"
+            },
+            "tags": [
+                "Amazon Q",
+                "Artificial Intelligence",
+                "AWS Cloud Financial Management",
+                "Billing &amp; Account Management"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Introducing payment capabilities in Amazon Q to resolve past-due balances",
+                "blogTitle": "AWS Cloud Financial Management",
+                "blogLink": "https://aws.amazon.com/blogs/aws-cloud-financial-management/",
+                "blogLinkMd5Hash": "fe7924d9f139baaa6434e912f054ca7f",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "76e4cf0a997bbdc50deff3f0fc1751a934a8854a",
+            "content_html": "In this post, we show how to design a system of domain specialized AI agents, each mirroring a role in the financial services three lines of defense model. This is a risk governance model most financial institutions run on: the first line (business and technology teams) owns and manages risk day to day, the second line (risk and compliance) sets policy and independently oversees that risk, and the third line (internal audit) provides independent assurance that both are working.",
+            "url": "https://aws.amazon.com/blogs/industries/mirroring-your-organization-with-multi-agent-ai-for-fsi-risk-assessment/",
+            "title": "Mirroring Your Organization with Multi-Agent AI for FSI Risk Assessment | AWS for Industries",
+            "summary": "In this post, we show how to design a system of domain specialized AI agents, each mirroring a role in the financial services three lines of defense model. This is a risk governance model most financi",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/08/Mirroring-Your-Organization-with-Multi-Agent-AI-for-FSI-Risk-Assessment.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T20:36:22.000Z",
+            "date_published": "2026-09-11T20:36:22.000Z",
+            "author": {
+                "name": "Ali Ghomi"
+            },
+            "tags": [
+                "Financial Services",
+                "Industries"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Mirroring Your Organization with Multi-Agent AI for FSI Risk Assessment",
+                "blogTitle": "AWS for Industries",
+                "blogLink": "https://aws.amazon.com/blogs/industries/",
+                "blogLinkMd5Hash": "3118df046087bf1ec047b09f94ee7a59",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "c06cda7ba12a839be441ec0c7bc1d82bc839d14d",
+            "content_html": "Organizations that receive files from external partners through SFTP face a persistent operational challenge: routing each file to the correct downstream system. Invoices, contracts, images, CSVs, and reports all arrive in a single landing zone, and each requires a different destination. The traditional approach—pattern-matching on file names with regular expressions—is inherently fragile. It relies on […]",
+            "url": "https://aws.amazon.com/blogs/storage/build-ai-powered-file-classification-with-aws-transfer-family/",
+            "title": "Build AI-powered file classification with AWS Transfer Family | AWS Storage Blog",
+            "summary": "Organizations that receive files from external partners through SFTP face a persistent operational challenge: routing each file to the correct downstream system. Invoices, contracts, images, CSVs, and",
+            "image": {
+                "height": "628",
+                "url": "https://d2908q01vomqb2.cloudfront.net/e1822db470e60d090affd0956d743cb0e7cdf113/2022/05/25/AWS-Transfer-Family-Featured-Image-e1653504864558.png",
+                "width": "1200",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T19:56:57.000Z",
+            "date_published": "2026-09-11T19:56:57.000Z",
+            "author": {
+                "name": "Erasmo Fabio Acrani"
+            },
+            "tags": [
+                "Amazon Bedrock",
+                "Amazon CloudWatch",
+                "Amazon EventBridge",
+                "Amazon Simple Notification Service (SNS)",
+                "Amazon Simple Queue Service (SQS)",
+                "Amazon Simple Storage Service (S3)",
+                "Amazon Textract",
+                "AWS Lambda",
+                "AWS Transfer Family",
+                "Expert (400)",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Build AI-powered file classification with AWS Transfer Family",
+                "blogTitle": "AWS Storage Blog",
+                "blogLink": "https://aws.amazon.com/blogs/storage/",
+                "blogLinkMd5Hash": "44580394cc2c50a146ca9eaa6da2c852",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "5e28998cefe6c8b32175a381f9a8b26da51b1ff8",
+            "content_html": "In this post, we compare four AWS storage options for P4 depot volumes: Amazon Elastic Block Store (Amazon EBS), Amazon FSx for NetApp ONTAP, Amazon Elastic File System (Amazon EFS), and Amazon Simple Storage Service (Amazon S3) archive depots. We evaluate each against real-world game development workloads and provide a decision framework to help you choose.",
+            "url": "https://aws.amazon.com/blogs/gametech/choosing-the-right-aws-storage-backend-for-perforce-p4-in-game-development/",
+            "title": "Choosing the right AWS storage backend for Perforce P4 in game development | AWS for Games Blog",
+            "summary": "In this post, we compare four AWS storage options for P4 depot volumes: Amazon Elastic Block Store (Amazon EBS), Amazon FSx for NetApp ONTAP, Amazon Elastic File System (Amazon EFS), and Amazon Simple",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/91032ad7bbcb6cf72875e8e8207dcfba80173f7c/2026/09/03/Choosing-the-right-AWS-storage-backend-for-Perforce-P4-in-game-development.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T18:50:45.000Z",
+            "date_published": "2026-09-11T18:50:45.000Z",
+            "author": {
+                "name": "Dan Backhaus"
+            },
+            "tags": [
+                "Amazon EC2",
+                "Amazon Elastic Block Store (Amazon EBS)",
+                "Amazon Elastic File System (EFS)",
+                "Amazon Simple Storage Service (S3)",
+                "Games",
+                "Industries",
+                "Uncategorized"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Choosing the right AWS storage backend for Perforce P4 in game development",
+                "blogTitle": "AWS for Games Blog",
+                "blogLink": "https://aws.amazon.com/blogs/gametech/",
+                "blogLinkMd5Hash": "630bef224b4a31c87108cdfd51d59754",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "7da594333c4aa92fb7ec5f8fc69d70f8683c9e21",
+            "content_html": "The Amazon Web Services (AWS) Open Data Sponsorship Program has hosted the Common Crawl open repository of web data at no cost since January 2012. It has become one of the most important sources of training data for the large language models (LLMs) reshaping industries. This is the story of a 14-year collaboration between a small nonprofit and AWS, and how open data infrastructure became the foundation of the AI era.",
+            "url": "https://aws.amazon.com/blogs/publicsector/how-common-crawl-and-aws-open-data-built-the-foundation-for-the-ai-revolution/",
+            "title": "How Common Crawl and AWS Open Data built the foundation for the AI revolution | AWS Public Sector Blog",
+            "summary": "The Amazon Web Services (AWS) Open Data Sponsorship Program has hosted the Common Crawl open repository of web data at no cost since January 2012. It has become one of the most important sources of tr",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2026/09/11/How-Common-Crawl-and-AWS-Open-Data-built-the-foundation-for-the-AI-revolution.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T18:37:33.000Z",
+            "date_published": "2026-09-11T18:37:33.000Z",
+            "author": {
+                "name": "Rich Skrenta"
+            },
+            "tags": [
+                "Amazon Athena",
+                "Amazon CloudFront",
+                "Amazon EMR",
+                "Amazon SageMaker",
+                "Amazon Simple Storage Service (S3)",
+                "AWS Lambda",
+                "Public Sector",
+                "open data"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How Common Crawl and AWS Open Data built the foundation for the AI revolution",
+                "blogTitle": "AWS Public Sector Blog",
+                "blogLink": "https://aws.amazon.com/blogs/publicsector/",
+                "blogLinkMd5Hash": "f7f3acdce7471e6504655f5ceeb86708",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "9da22a53a45cf214e154c67bafd0a4bd7eefa26b",
+            "content_html": "Multi-agent systems fail in ways traditional monitoring misses. This post presents a dual-layer approach to monitoring production agents: Amazon Bedrock AgentCore Evaluations for continuous quality scoring and AWS DevOps Agent for autonomous infrastructure investigation, shown on a four-agent airline reservation system.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/",
+            "title": "Monitoring production agent lifecycle with AWS DevOps Agent and AgentCore Evaluations | Artificial Intelligence",
+            "summary": "Multi-agent systems fail in ways traditional monitoring misses. This post presents a dual-layer approach to monitoring production agents: Amazon Bedrock AgentCore Evaluations for continuous quality sc",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/31/ML-20434-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T18:26:38.000Z",
+            "date_published": "2026-09-11T18:26:38.000Z",
+            "author": {
+                "name": "Meghana Ashok"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Bedrock AgentCore",
+                "Best Practices",
+                "DevOps"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Monitoring production agent lifecycle with AWS DevOps Agent and AgentCore Evaluations",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "4fe7cafaba3f92f547e3e291a89c2e4e2100f953",
+            "content_html": "Comparing models on dollars per million tokens misses what production workloads actually pay for: outcomes. This post shares an open-source benchmarking harness that measures cost per correct answer, agent trajectory cost, and rubric-graded deliverable quality across OpenAI models on Amazon Bedrock.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/",
+            "title": "Beyond the price per token: Choosing the right OpenAI model on Amazon Bedrock for your workload | Artificial Intelligence",
+            "summary": "Comparing models on dollars per million tokens misses what production workloads actually pay for: outcomes. This post shares an open-source benchmarking harness that measures cost per correct answer, ",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/09/ML-21634-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T18:24:38.000Z",
+            "date_published": "2026-09-11T18:24:38.000Z",
+            "author": {
+                "name": "Nick McCarthy"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Bedrock",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Beyond the price per token: Choosing the right OpenAI model on Amazon Bedrock for your workload",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "1b81a239f751889181ea1d02ab731440b400b140",
+            "content_html": "Learn how to build and deploy an MCP App with interactive HTML widgets on Amazon Bedrock AgentCore. Because MCP Apps is a host-agnostic standard, the same server delivers the same rich experience across AI hosts like ChatGPT and Claude that support the extension.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/",
+            "title": "Build interactive MCP Apps using Amazon Bedrock AgentCore | Artificial Intelligence",
+            "summary": "Learn how to build and deploy an MCP App with interactive HTML widgets on Amazon Bedrock AgentCore. Because MCP Apps is a host-agnostic standard, the same server delivers the same rich experience acro",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/09/ML-20314-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T18:23:17.000Z",
+            "date_published": "2026-09-11T18:23:17.000Z",
+            "author": {
+                "name": "Dantis Stephen"
+            },
+            "tags": [
+                "Amazon Bedrock AgentCore",
+                "Intermediate (200)",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Build interactive MCP Apps using Amazon Bedrock AgentCore",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "8a5a6dbc6692d5f64754a81dfe77e9f54ee83984",
+            "content_html": "Learn how a major UK energy retailer partnered with Gorilla, an AWS Partner, to transform its residential pricebook process from a 10 to 14 day manual workflow into an automated, cloud-native solution that delivers updated pricing in under one hour, achieving a 95% reduction in cycle time, 75% fewer pricing errors, and full Market-wide Half Hourly Settlement (MHHS) compliance, all without replacing its existing SAP IS-U infrastructure.",
+            "url": "https://aws.amazon.com/blogs/apn/from-weeks-to-hours-how-a-uk-energy-retailer-transformed-residential-pricebooks-with-gorilla-on-aws/",
+            "title": "From weeks to hours: How a UK energy retailer transformed residential pricebooks with Gorilla on AWS | AWS Partner Network (APN) Blog",
+            "summary": "Learn how a major UK energy retailer partnered with Gorilla, an AWS Partner, to transform its residential pricebook process from a 10 to 14 day manual workflow into an automated, cloud-native solution",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/77de68daecd823babbb58edb1c8e14d7106e83bb/2026/08/23/Gorilla-APN-Blog-2026-1190x630.png",
+                "width": "1190",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T17:34:23.000Z",
+            "date_published": "2026-09-11T17:34:23.000Z",
+            "author": {
+                "name": "John Gray"
+            },
+            "tags": [
+                "Amazon EC2",
+                "Amazon Quick Suite",
+                "Analytics",
+                "AWS Glue",
+                "AWS Partner Network",
+                "Energy",
+                "Foundational (100)",
+                "Partner solutions",
+                "Power &amp; Utilities",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "From weeks to hours: How a UK energy retailer transformed residential pricebooks with Gorilla on AWS",
+                "blogTitle": "AWS Partner Network (APN) Blog",
+                "blogLink": "https://aws.amazon.com/blogs/apn/",
+                "blogLinkMd5Hash": "53e5d69b1d7371e68af7a85eaf20ed76",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "f7978de47bd847c922a223b9a216d890bf9ef964",
+            "content_html": "This post documents a working system. Five KYC/KYB checks, each with its own agent architecture, prompt methodology, and failure modes. We built it, ran it, broke it, fixed it, and are publishing the full method so you can build your own.",
+            "url": "https://aws.amazon.com/blogs/industries/from-days-to-minutes-how-we-built-multi-agent-kyc-kyb-on-aws/",
+            "title": "From Days to Minutes: How we built Multi-Agent KYC/KYB on AWS | AWS for Industries",
+            "summary": "This post documents a working system. Five KYC/KYB checks, each with its own agent architecture, prompt methodology, and failure modes. We built it, ran it, broke it, fixed it, and are publishing the ",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/08/From-Days-to-Minutes.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T16:45:19.000Z",
+            "date_published": "2026-09-11T16:45:19.000Z",
+            "author": {
+                "name": "Dogus Gucsav"
+            },
+            "tags": [
+                "Amazon Bedrock AgentCore",
+                "Amazon Bedrock Knowledge Bases",
+                "Amazon DynamoDB",
+                "Amazon EventBridge",
+                "Amazon Simple Storage Service (S3)",
+                "AWS AppSync",
+                "AWS Lambda",
+                "AWS Step Functions",
+                "Financial Services",
+                "Industries",
+                "Strands Agents"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "From Days to Minutes: How we built Multi-Agent KYC/KYB on AWS",
+                "blogTitle": "AWS for Industries",
+                "blogLink": "https://aws.amazon.com/blogs/industries/",
+                "blogLinkMd5Hash": "3118df046087bf1ec047b09f94ee7a59",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "007bbcf34cf805af2a0f01c280a78985d4de5680",
+            "content_html": "Run ad hoc SQL analytics on your Amazon DynamoDB data with DuckDB. A zero-ETL integration replicates your table into Apache Iceberg tables on Amazon S3 Tables, and an AWS Lambda function running DuckDB serves SQL queries through an IAM-authorized function URL.",
+            "url": "https://aws.amazon.com/blogs/database/run-duckdb-analytics-on-your-amazon-dynamodb-data-with-zero-etl/",
+            "title": "Run DuckDB analytics on your Amazon DynamoDB data with zero-ETL | AWS Database Blog",
+            "summary": "Run ad hoc SQL analytics on your Amazon DynamoDB data with DuckDB. A zero-ETL integration replicates your table into Apache Iceberg tables on Amazon S3 Tables, and an AWS Lambda function running DuckD",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/09/10/DBBLOG-5967-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T14:53:57.000Z",
+            "date_published": "2026-09-11T14:53:57.000Z",
+            "author": {
+                "name": "Lee Hannigan"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon DynamoDB",
+                "Technical How-to",
+                "DuckDB"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Run DuckDB analytics on your Amazon DynamoDB data with zero-ETL",
+                "blogTitle": "AWS Database Blog",
+                "blogLink": "https://aws.amazon.com/blogs/database/",
+                "blogLinkMd5Hash": "bb1722625fdf714a637ed3e7b397ae23",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "1f0df4e4c049d39dfc1a0bf702f9dd3ff3ec7b79",
+            "content_html": "Semiconductor verification teams run thousands of simulation jobs every night using Electronic Design Automation (EDA) tools. A large verification environment can generate logs from 100,000 or more test executions per night. A single regression cycle produces simulation logs, compilation logs, and scheduler logs. For a regression with dozens of failures, manual triage typically takes 45–60 […]",
+            "url": "https://aws.amazon.com/blogs/storage/enable-zero-copy-access-to-aws-services-on-amazon-fsx-for-netapp-ontap-with-amazon-s3-access-points/",
+            "title": "Enable zero-copy access to AWS services on Amazon FSx for NetApp ONTAP with Amazon S3 Access Points | AWS Storage Blog",
+            "summary": "Semiconductor verification teams run thousands of simulation jobs every night using Electronic Design Automation (EDA) tools. A large verification environment can generate logs from 100,000 or more te",
+            "image": {
+                "height": "400",
+                "url": "https://d2908q01vomqb2.cloudfront.net/e1822db470e60d090affd0956d743cb0e7cdf113/2026/05/22/Arch_Amazon-FSx-for-NetApp-ONTAP_64@5x.png",
+                "width": "400",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T14:27:23.000Z",
+            "date_published": "2026-09-11T14:27:23.000Z",
+            "author": {
+                "name": "Vinayak Datar"
+            },
+            "tags": [
+                "Amazon Bedrock AgentCore",
+                "Amazon FSx for NetApp ONTAP",
+                "Amazon Quick Suite",
+                "Amazon Simple Storage Service (S3)",
+                "Intermediate (200)",
+                "Semiconductor",
+                "Technical How-to",
+                "Amazon S3 Access Points",
+                "AWS Cloud Storage"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Enable zero-copy access to AWS services on Amazon FSx for NetApp ONTAP with Amazon S3 Access Points",
+                "blogTitle": "AWS Storage Blog",
+                "blogLink": "https://aws.amazon.com/blogs/storage/",
+                "blogLinkMd5Hash": "44580394cc2c50a146ca9eaa6da2c852",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "b3d811007dba109422cf57f9148a494b3144ee73",
+            "content_html": "Combine zero-shot forecasting with Amazon Chronos2 and multi-agent orchestration on Amazon Bedrock AgentCore to turn demand forecasts into validated purchase orders. No per-product model training, with business rules, auditability, and cost that scales to zero.",
+            "url": "https://aws.amazon.com/blogs/architecture/from-zero-shot-forecast-to-purchase-order-with-amazon-bedrock-agentcore/",
+            "title": "From zero-shot forecast to purchase order with Amazon Bedrock AgentCore | AWS Architecture Blog",
+            "summary": "Combine zero-shot forecasting with Amazon Chronos2 and multi-agent orchestration on Amazon Bedrock AgentCore to turn demand forecasts into validated purchase orders. No per-product model training, wit",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/09/03/ARCHBLOG-1461-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T14:08:01.000Z",
+            "date_published": "2026-09-11T14:08:01.000Z",
+            "author": {
+                "name": "Hyunsoo Kim, Ph.D."
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Bedrock",
+                "Amazon Bedrock AgentCore",
+                "Best Practices"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "From zero-shot forecast to purchase order with Amazon Bedrock AgentCore",
+                "blogTitle": "AWS Architecture Blog",
+                "blogLink": "https://aws.amazon.com/blogs/architecture/",
+                "blogLinkMd5Hash": "47a992219ac22699a359a79a1d458476",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "07463544470aa33c56d412268f6ba7e0d1865cd8",
+            "content_html": "人工知能 (AI) に投資した 1 ドルごとに 2 ドルのリターンが得られるのであれば、コストの増加は非効率で […]",
+            "url": "https://aws.amazon.com/jp/blogs/news/calculating-the-roi-of-ai/",
+            "title": "AI の投資収益率 (ROI) を算出する | Amazon Web Services ブログ",
+            "summary": "人工知能 (AI) に投資した 1 ドルごとに 2 ドルのリターンが得られるのであれば、コストの増加は非効率で […]",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/09/06/roi_of_ai-1120x630-1.png",
+                "width": "1120",
+                "type": "png"
+            },
+            "date_modified": "2026-09-11T01:03:21.000Z",
+            "date_published": "2026-09-11T01:03:21.000Z",
+            "author": {
+                "name": "Miyuki Nishimura"
+            },
+            "tags": [
+                "Amazon Bedrock",
+                "AWS Cloud Financial Management",
+                "Cloud Cost Optimization",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 45,
+                "originalTitle": "AI の投資収益率 (ROI) を算出する",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "32206d53293b6830e987ee4659338e8d02374647",
+            "content_html": "Amazon SageMaker Inference now offers prefix-aware routing, a routing strategy that sends requests sharing the same prompt prefix to the same instance so the KV cache stays warm. In benchmarks on Llama 3.1 70B, it reduced P50 time-to-first-token by up to 77% and raised KV cache hit rates from about 25% to over 80%.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference/",
+            "title": "Reduce LLM latency with prefix-aware routing on Amazon SageMaker Inference | Artificial Intelligence",
+            "summary": "Amazon SageMaker Inference now offers prefix-aware routing, a routing strategy that sends requests sharing the same prompt prefix to the same instance so the KV cache stays warm. In benchmarks on Llam",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/10/ML-21885-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:58:09.000Z",
+            "date_published": "2026-09-10T21:58:09.000Z",
+            "author": {
+                "name": "Kareem Syed-Mohammed"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon SageMaker AI",
+                "Announcements"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Reduce LLM latency with prefix-aware routing on Amazon SageMaker Inference",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "3b91429cf30acb250cd56430f226e5855e1f213f",
+            "content_html": "Amazon SageMaker HyperPod now supports model caching for inference, which pre-loads model weights and container images onto cluster nodes so pods read from local NVMe storage instead of downloading over the network. Learn how model caching cuts cold starts from tens of minutes to seconds, how it works, and how to enable it.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/reduce-inference-cold-starts-on-amazon-sagemaker-hyperpod-with-model-caching/",
+            "title": "Reduce inference cold starts on Amazon SageMaker HyperPod with model caching | Artificial Intelligence",
+            "summary": "Amazon SageMaker HyperPod now supports model caching for inference, which pre-loads model weights and container images onto cluster nodes so pods read from local NVMe storage instead of downloading ov",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/08/ML-21820-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:37:49.000Z",
+            "date_published": "2026-09-10T21:37:49.000Z",
+            "author": {
+                "name": "Kareem Syed-Mohammed"
+            },
+            "tags": [
+                "Amazon SageMaker HyperPod",
+                "Announcements",
+                "Expert (400)"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Reduce inference cold starts on Amazon SageMaker HyperPod with model caching",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "fc8628826e3a4de39ea612edabd4828bd56fe198",
+            "content_html": "TwelveLabs Marengo Embed 3.0 is now generally available as an embedding model in Amazon Bedrock Knowledge Bases, bringing fully managed natural language search to video, image, and audio content. This walkthrough shows how to build a knowledge base powered by Marengo 3.0 and run semantic queries against your media.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/video-and-image-search-in-amazon-bedrock-knowledge-base-using-marengo-3-0/",
+            "title": "Video and image search in Amazon Bedrock Knowledge Base using Marengo 3.0 | Artificial Intelligence",
+            "summary": "TwelveLabs Marengo Embed 3.0 is now generally available as an embedding model in Amazon Bedrock Knowledge Bases, bringing fully managed natural language search to video, image, and audio content. This",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/10/ML-21835-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T21:15:39.000Z",
+            "date_published": "2026-09-10T21:15:39.000Z",
+            "author": {
+                "name": "Eric Kim"
+            },
+            "tags": [
+                "Amazon Bedrock",
+                "Amazon Bedrock Knowledge Bases",
+                "Announcements",
+                "Intermediate (200)"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Video and image search in Amazon Bedrock Knowledge Base using Marengo 3.0",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "89c128c43f77cee84a4fcd44fdd056d88783fcf8",
+            "content_html": "In this post, learn how to implement fixed-rate and tiered SaaS subscription pricing in AWS Marketplace with sample Python code for accurate usage metering and billing.",
+            "url": "https://aws.amazon.com/blogs/awsmarketplace/implementing-saas-subscription-pricing-models-in-aws-marketplace/",
+            "title": "Implementing SaaS subscription pricing models in AWS Marketplace | AWS Marketplace",
+            "summary": "In this post, learn how to implement fixed-rate and tiered SaaS subscription pricing in AWS Marketplace with sample Python code for accurate usage metering and billing.",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/761f22b2c1593d0bb87e0b606f990ba4974706de/2026/09/08/social-1200x62713-1-1206x630.jpg",
+                "width": "1206",
+                "type": "jpg"
+            },
+            "date_modified": "2026-09-10T20:21:07.000Z",
+            "date_published": "2026-09-10T20:21:07.000Z",
+            "author": {
+                "name": "Kevin Kennedy"
+            },
+            "tags": [
+                "Advanced (300)",
+                "AWS Marketplace",
+                "AWS Partner Network",
+                "Best Practices",
+                "How-To",
+                "SaaS",
+                "Software",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Implementing SaaS subscription pricing models in AWS Marketplace",
+                "blogTitle": "AWS Marketplace",
+                "blogLink": "https://aws.amazon.com/blogs/awsmarketplace/",
+                "blogLinkMd5Hash": "ff01601479040880a023131c64a429d3",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "668589f9b70ecec12628c303c477da5c2cf18a3f",
+            "content_html": "AWS introduced the FinOps Agent (currently in public preview) at FinOps X 2026. FinOps automation is still relatively new, and given the sensitivity around cloud and AI cost management, it's understandable if you're hesitant to go all-in on autonomous FinOps right away. In this post, we'll share our mental model for FinOps automation, the four tiers of automation you can follow, and the four built-in trust levers you can rely on to stay in control as automation scales.",
+            "url": "https://aws.amazon.com/blogs/aws-cloud-financial-management/automation-and-trust-in-finops/",
+            "title": "How AWS thinks about FinOps Automation and Trust | AWS Cloud Financial Management",
+            "summary": "AWS introduced the FinOps Agent (currently in public preview) at FinOps X 2026. FinOps automation is still relatively new, and given the sensitivity around cloud and AI cost management, it's understan",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/2e01e17467891f7c933dbaa00e1459d23db3fe4f/2026/09/10/automation-and-trust-in-finops-1120x630.jpg",
+                "width": "1120",
+                "type": "jpg"
+            },
+            "date_modified": "2026-09-10T19:13:51.000Z",
+            "date_published": "2026-09-10T19:13:51.000Z",
+            "author": {
+                "name": "Bowen Wang"
+            },
+            "tags": [
+                "Amazon Q Developer",
+                "Artificial Intelligence",
+                "AWS Cloud Financial Management",
+                "AWS Cost and Usage Report",
+                "AWS Cost Explorer",
+                "Best Practices",
+                "Cloud Cost Optimization",
+                "Integration &amp; Automation",
+                "Thought Leadership",
+                "FinOps"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How AWS thinks about FinOps Automation and Trust",
+                "blogTitle": "AWS Cloud Financial Management",
+                "blogLink": "https://aws.amazon.com/blogs/aws-cloud-financial-management/",
+                "blogLinkMd5Hash": "fe7924d9f139baaa6434e912f054ca7f",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "c1f75d66c914c6fe8b9295185924b2c213bc6e1a",
+            "content_html": "This post shows how to build that on Amazon Web Services (AWS) using Amazon Bedrock, deployed in AWS GovCloud (US). You’ll deploy a working multi-agent workload, see how a supervisor coordinates specialized agents through the Converse API in Amazon Bedrock, and learn which AWS GovCloud (US) details break patterns copied from commercial Regions.",
+            "url": "https://aws.amazon.com/blogs/publicsector/building-supply-chain-multi-agent-workloads-in-aws-govcloud-us/",
+            "title": "Building supply chain multi-agent workloads in AWS GovCloud (US) | AWS Public Sector Blog",
+            "summary": "This post shows how to build that on Amazon Web Services (AWS) using Amazon Bedrock, deployed in AWS GovCloud (US). You’ll deploy a working multi-agent workload, see how a supervisor coordinates speci",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2026/09/03/Building-supply-chain-multi-agent-workloads-in-AWS-GovCloud-US.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T18:25:58.000Z",
+            "date_published": "2026-09-10T18:25:58.000Z",
+            "author": {
+                "name": "Francisco Zabala"
+            },
+            "tags": [
+                "Amazon Athena",
+                "Amazon Bedrock",
+                "Amazon Bedrock Guardrails",
+                "Amazon Cognito",
+                "Amazon DynamoDB",
+                "Amazon SageMaker AI",
+                "Amazon Simple Queue Service (SQS)",
+                "Amazon Simple Storage Service (S3)",
+                "AWS Batch",
+                "AWS Certificate Manager",
+                "AWS GovCloud (US)",
+                "AWS Identity and Access Management (IAM)",
+                "AWS Lambda",
+                "Public Sector"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Building supply chain multi-agent workloads in AWS GovCloud (US)",
+                "blogTitle": "AWS Public Sector Blog",
+                "blogLink": "https://aws.amazon.com/blogs/publicsector/",
+                "blogLinkMd5Hash": "f7f3acdce7471e6504655f5ceeb86708",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "b314cd1706ad2c7ceef463fc85ef7a3c2bc45a00",
+            "content_html": "Your teams get an AI assistant that handles real work while your data stays in your environment and your conversations stay private Today, the Amazon Quick desktop application is generally available on macOS and Windows. We’re also adding a new activity feed to the mobile experience on iOS and Android that consolidates email, calendar, CRM, […]",
+            "url": "https://aws.amazon.com/blogs/machine-learning/amazon-quick-is-now-generally-available-on-desktop/",
+            "title": "Amazon Quick is now generally available on desktop | Artificial Intelligence",
+            "summary": "Your teams get an AI assistant that handles real work while your data stays in your environment and your conversations stay private Today, the Amazon Quick desktop application is generally available o",
+            "image": {
+                "height": "360",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/10/Amazon-Quick-is-now-generally-available-on-desktop.png",
+                "width": "720",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T18:16:37.000Z",
+            "date_published": "2026-09-10T18:16:37.000Z",
+            "author": {
+                "name": "Spencer Martenson"
+            },
+            "tags": [
+                "Amazon Quick Suite",
+                "Announcements",
+                "Artificial Intelligence"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Quick is now generally available on desktop",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "e80ba765852a275e648b3690d469ab3e875ece2e",
+            "content_html": "Real-time streaming workers that hold hundreds of persistent WebSocket connections lose data when a worker fails. Learn how to build a WebSocket fleet management system on Amazon ECS and AWS Fargate that uses Amazon DynamoDB conditional writes as a distributed lease to track ownership, fail over automatically, and deploy with low downtime.",
+            "url": "https://aws.amazon.com/blogs/architecture/building-resilient-real-time-streaming-workers-with-amazon-dynamodb-leases/",
+            "title": "Building resilient real-time streaming workers with Amazon DynamoDB leases | AWS Architecture Blog",
+            "summary": "Real-time streaming workers that hold hundreds of persistent WebSocket connections lose data when a worker fails. Learn how to build a WebSocket fleet management system on Amazon ECS and AWS Fargate t",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/09/08/ARCHBLOG-1505-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T16:14:22.000Z",
+            "date_published": "2026-09-10T16:14:22.000Z",
+            "author": {
+                "name": "Siddhesh Tiwari"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon DynamoDB",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Building resilient real-time streaming workers with Amazon DynamoDB leases",
+                "blogTitle": "AWS Architecture Blog",
+                "blogLink": "https://aws.amazon.com/blogs/architecture/",
+                "blogLinkMd5Hash": "47a992219ac22699a359a79a1d458476",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "c7589b0f40b52eb8334f11f9000d87654f7f0e92",
+            "content_html": "Learn how to build an end-to-end RFI questionnaire workflow with Amazon Quick Automate. Read a multi-tab RFI workbook from Amazon S3, use natural-language prompts to extract and structure the questionnaire data, refine the workflow through conversation, and write clean CSV output back to Amazon S3 — cutting development from days to hours.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/build-an-end-to-end-rfi-questionnaire-workflow-using-amazon-quick-automate/",
+            "title": "Build an end-to-end RFI questionnaire workflow using Amazon Quick Automate | Artificial Intelligence",
+            "summary": "Learn how to build an end-to-end RFI questionnaire workflow with Amazon Quick Automate. Read a multi-tab RFI workbook from Amazon S3, use natural-language prompts to extract and structure the question",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/09/ML-20411-featured-image-1.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T16:08:57.000Z",
+            "date_published": "2026-09-10T16:08:57.000Z",
+            "author": {
+                "name": "Chaytanya Kumar"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Quick Suite",
+                "Amazon Simple Storage Service (S3)",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Build an end-to-end RFI questionnaire workflow using Amazon Quick Automate",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "bf777f5bab542f56a24f05e05d9b0c2ad22ded30",
+            "content_html": "Learn how to migrate an Amazon CloudSearch domain to Amazon OpenSearch Serverless: assess your configuration, create a collection with explicit index mappings, convert your documents and queries to the OpenSearch query DSL, configure security, load data with Amazon OpenSearch Ingestion, and validate before cutover.",
+            "url": "https://aws.amazon.com/blogs/big-data/how-to-migrate-from-amazon-cloudsearch-to-amazon-opensearch-serverless/",
+            "title": "How to migrate from Amazon CloudSearch to Amazon OpenSearch Serverless | AWS Big Data Blog",
+            "summary": "Learn how to migrate an Amazon CloudSearch domain to Amazon OpenSearch Serverless: assess your configuration, create a collection with explicit index mappings, convert your documents and queries to th",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/09/BDB-5903-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T16:06:42.000Z",
+            "date_published": "2026-09-10T16:06:42.000Z",
+            "author": {
+                "name": "Prasad Nadig"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon CloudSearch",
+                "Amazon OpenSearch Serverless",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How to migrate from Amazon CloudSearch to Amazon OpenSearch Serverless",
+                "blogTitle": "AWS Big Data Blog",
+                "blogLink": "https://aws.amazon.com/blogs/big-data/",
+                "blogLinkMd5Hash": "acb36d483a3f1166274b7c10aba46741",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "f7504fce8cffe082d1e3efae9f5e5c99384ec13e",
+            "content_html": "Accelerate slow, repetitive Apache Spark analytical queries on Apache Iceberg tables without rewriting any SQL. This post shows how automatic query rewrite in Amazon EMR and AWS Glue uses Iceberg materialized views in the AWS Glue Data Catalog to transparently substitute matching query plans, and how to design materialized views for the best speedup.",
+            "url": "https://aws.amazon.com/blogs/big-data/accelerating-spark-queries-with-iceberg-materialized-views/",
+            "title": "Accelerating Spark queries with Iceberg materialized views | AWS Big Data Blog",
+            "summary": "Accelerate slow, repetitive Apache Spark analytical queries on Apache Iceberg tables without rewriting any SQL. This post shows how automatic query rewrite in Amazon EMR and AWS Glue uses Iceberg mate",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/08/17/BDB-5950-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T16:05:45.000Z",
+            "date_published": "2026-09-10T16:05:45.000Z",
+            "author": {
+                "name": "Yuzhou Sun"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon EMR",
+                "AWS Glue",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Accelerating Spark queries with Iceberg materialized views",
+                "blogTitle": "AWS Big Data Blog",
+                "blogLink": "https://aws.amazon.com/blogs/big-data/",
+                "blogLinkMd5Hash": "acb36d483a3f1166274b7c10aba46741",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "4c4240b0ba11b392a9635e42bce173f72181033c",
+            "content_html": "A configurable, model-agnostic detector that turns any large language model on Amazon Bedrock into a PII detector. Because the entities to detect live in a prompt rather than in code, one detector adapts to new entity types without retraining, and it outperforms an off-the-shelf tool across five public corpora and nine LLM-based detectors.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/model-agnostic-pii-detection-with-llms/",
+            "title": "Model-agnostic PII detection with LLMs | Artificial Intelligence",
+            "summary": "A configurable, model-agnostic detector that turns any large language model on Amazon Bedrock into a PII detector. Because the entities to detect live in a prompt rather than in code, one detector ada",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/08/ML-21255-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T16:02:16.000Z",
+            "date_published": "2026-09-10T16:02:16.000Z",
+            "author": {
+                "name": "Christophe Dupuy"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Bedrock",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Model-agnostic PII detection with LLMs",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "18e4d03ebf5093118e44ba60e36ce92f79a55710",
+            "content_html": "Give an agent a task actually worth delegating and you’ll be waiting a while. Ask it what needs your attention this morning and it has to read your mail, your messages, and your task list before it can answer. Then it stops halfway, because one step needs your approval. Meanwhile you’re watching a chat window […]",
+            "url": "https://aws.amazon.com/blogs/opensource/introducing-pizza-bot-an-open-source-inbox-for-ai-agents-that-work-in-the-background/",
+            "title": "Introducing Pizza Bot, an open source inbox for AI agents that work in the background | AWS Open Source Blog",
+            "summary": "Give an agent a task actually worth delegating and you’ll be waiting a while. Ask it what needs your attention this morning and it has to read your mail, your messages, and your task list before it ca",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/ca3512f4dfa95a03169c5a670a4c91a19b3077b4/2026/09/09/pizza-bot-featured-1144x630.png",
+                "width": "1144",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T16:01:44.000Z",
+            "date_published": "2026-09-10T16:01:44.000Z",
+            "author": {
+                "name": "Joseph Dolivo"
+            },
+            "tags": [
+                "Announcements",
+                "Open Source",
+                "Artificial Intelligence"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Introducing Pizza Bot, an open source inbox for AI agents that work in the background",
+                "blogTitle": "AWS Open Source Blog",
+                "blogLink": "https://aws.amazon.com/blogs/opensource/",
+                "blogLinkMd5Hash": "8c152a663c72fc6e8ac9e184b7a57f64",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "d22d0d2e761e9e5191fef2c68e7f3e0287f67732",
+            "content_html": "Multi-turn agents fail in ways single-turn evaluation misses: one early mistake corrupts every later turn. This post introduces the Agent Evaluation Metric (AEM), a decomposable, turn-level way to measure agent quality, applied to its first dimension, correctness, to pinpoint the turn that caused a failure and separate it from the turns that inherited it.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/agent-evaluation-metric-for-multi-turn-conversations/",
+            "title": "Agent Evaluation Metric for multi-turn conversations | Artificial Intelligence",
+            "summary": "Multi-turn agents fail in ways single-turn evaluation misses: one early mistake corrupts every later turn. This post introduces the Agent Evaluation Metric (AEM), a decomposable, turn-level way to mea",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/03/ML-20819-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T15:55:41.000Z",
+            "date_published": "2026-09-10T15:55:41.000Z",
+            "author": {
+                "name": "Surafel Lakew"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Quick Suite",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Agent Evaluation Metric for multi-turn conversations",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "3a3d6d9806280d7f62975dd9e8cdb72b83dcc5d1",
+            "content_html": "AvioBook, a Thales Group Company, prototyped Connected Analytics on Amazon Bedrock AgentCore to turn AvioBook Connect's operational data into plain-language, evidence-based answers for airline managers and dispatchers, helping them find and act on the causes of flight turnaround delays.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/how-aviobook-uses-generative-ai-to-drive-airline-turnaround-insights/",
+            "title": "How AvioBook builds turnaround insights from operational data with Amazon Bedrock AgentCore | Artificial Intelligence",
+            "summary": "AvioBook, a Thales Group Company, prototyped Connected Analytics on Amazon Bedrock AgentCore to turn AvioBook Connect's operational data into plain-language, evidence-based answers for airline manager",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/13/ML-21410-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T15:53:05.000Z",
+            "date_published": "2026-09-10T15:53:05.000Z",
+            "author": {
+                "name": "Petra Lafond"
+            },
+            "tags": [
+                "Amazon Bedrock AgentCore",
+                "Customer Solutions"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How AvioBook builds turnaround insights from operational data with Amazon Bedrock AgentCore",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "bfcb19e5913c73719fbbf22751605789aa04153a",
+            "content_html": "AWS is announcing the AWS Data Analytics plugin for the new Data agent in ChatGPT Work. Teams can ask questions in natural language, analyze governed data across their Amazon Redshift data warehouse and data lakes, and build shareable dashboards, all from a conversation in ChatGPT Work.",
+            "url": "https://aws.amazon.com/blogs/big-data/every-team-is-a-data-team-bring-amazon-redshift-analytics-to-chatgpt-work/",
+            "title": "Every team is a data team — bring Amazon Redshift analytics to ChatGPT Work | AWS Big Data Blog",
+            "summary": "AWS is announcing the AWS Data Analytics plugin for the new Data agent in ChatGPT Work. Teams can ask questions in natural language, analyze governed data across their Amazon Redshift data warehouse a",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/09/BDB-6266-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T15:14:01.000Z",
+            "date_published": "2026-09-10T15:14:01.000Z",
+            "author": {
+                "name": "Naresh Chainani"
+            },
+            "tags": [
+                "Amazon Redshift",
+                "Announcements"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Every team is a data team — bring Amazon Redshift analytics to ChatGPT Work",
+                "blogTitle": "AWS Big Data Blog",
+                "blogLink": "https://aws.amazon.com/blogs/big-data/",
+                "blogLinkMd5Hash": "acb36d483a3f1166274b7c10aba46741",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "df7c058f342949b98d9db9f1c7c023096bee719b",
+            "content_html": "Reducing unplanned downtime in automotive paint shops requires unifying siloed operational data into a contextualized fabric that enables AI-driven root cause analysis and anomaly detection. Today, when a paint shop line goes down, the industrial engineer must manually correlate data across Supervisory Control and Data Acquisition (SCADA) systems, Manufacturing Execution Systems (MES) platforms, downtime logs, […]",
+            "url": "https://aws.amazon.com/blogs/industries/reducing-paint-shop-downtime-with-industrial-data-fabric-on-aws/",
+            "title": "Reducing paint shop downtime with Industrial Data Fabric on AWS | AWS for Industries",
+            "summary": "Reducing unplanned downtime in automotive paint shops requires unifying siloed operational data into a contextualized fabric that enables AI-driven root cause analysis and anomaly detection. Today, wh",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/08/Screenshot-2026-09-08-150808-1260x630.png",
+                "width": "1260",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T14:49:01.000Z",
+            "date_published": "2026-09-10T14:49:01.000Z",
+            "author": {
+                "name": "Anindya Bhattacharya"
+            },
+            "tags": [
+                "*Post Types",
+                "Amazon Bedrock",
+                "Amazon Bedrock AgentCore",
+                "Artificial Intelligence",
+                "Best Practices",
+                "Customer Solutions",
+                "Industries",
+                "Manufacturing"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Reducing paint shop downtime with Industrial Data Fabric on AWS",
+                "blogTitle": "AWS for Industries",
+                "blogLink": "https://aws.amazon.com/blogs/industries/",
+                "blogLinkMd5Hash": "3118df046087bf1ec047b09f94ee7a59",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "05765c564d3eaf0d18071c8cd029b779441a9cba",
+            "content_html": "This post was co-written with Harsh Vardhan, Global Head of the Digital Innovation Hub, from Apollo Tyres Ltd. Every recipe change on a tyre extrusion line triggers a stabilization period—minutes of off-spec material that must be reworked or scrapped. For high-mix manufacturers running 30–35 setup changes per day, this adds up to 5–6% of total […]",
+            "url": "https://aws.amazon.com/blogs/industries/how-apollo-tyres-uses-ai-driven-apc-for-first-time-right-tyre-extrusion/",
+            "title": "How Apollo Tyres Uses AI-Driven APC for First Time Right Tyre Extrusion | AWS for Industries",
+            "summary": "This post was co-written with Harsh Vardhan, Global Head of the Digital Innovation Hub, from Apollo Tyres Ltd. Every recipe change on a tyre extrusion line triggers a stabilization period—minutes of o",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/10/Screenshot-2026-09-10-103731-1260x630.png",
+                "width": "1260",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T14:36:54.000Z",
+            "date_published": "2026-09-10T14:36:54.000Z",
+            "author": {
+                "name": "Harsh Vardhan"
+            },
+            "tags": [
+                "*Post Types",
+                "Amazon Bedrock",
+                "Artificial Intelligence",
+                "Customer Solutions",
+                "Industries",
+                "Manufacturing"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How Apollo Tyres Uses AI-Driven APC for First Time Right Tyre Extrusion",
+                "blogTitle": "AWS for Industries",
+                "blogLink": "https://aws.amazon.com/blogs/industries/",
+                "blogLinkMd5Hash": "3118df046087bf1ec047b09f94ee7a59",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "bcd85367f236526a5b8f825af84fa2002347aba9",
+            "content_html": "We're announcing four new capabilities across AWS Elemental that bring AI, personalization, and intelligent monetization to the live video workflow, launching in time for IBC 2026 in Amsterdam.",
+            "url": "https://aws.amazon.com/blogs/media/personalize-live-viewing-monetize-every-impression-and-reach-every-device-with-aws-elemental-at-ibc-2026-2/",
+            "title": "Personalize live viewing, monetize every impression, and reach every device with AWS Elemental at IBC 2026 | AWS for M&amp;E Blog",
+            "summary": "We're announcing four new capabilities across AWS Elemental that bring AI, personalization, and intelligent monetization to the live video workflow, launching in time for IBC 2026 in Amsterdam.",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/fb644351560d8296fe6da332236b1f8d61b2828a/2026/09/02/Personalize-live-viewing-monetize-every-impression-and-reach-every-device-with-AWS-Elemental-at-IBC-2026.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T12:24:02.000Z",
+            "date_published": "2026-09-10T12:24:02.000Z",
+            "author": {
+                "name": "Kali Ridley"
+            },
+            "tags": [
+                "AWS Elemental Appliances &amp; Software",
+                "AWS Elemental MediaLive",
+                "AWS Elemental MediaPackage",
+                "Industries",
+                "Media &amp; Entertainment"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Personalize live viewing, monetize every impression, and reach every device with AWS Elemental at IBC 2026",
+                "blogTitle": "AWS for M&amp;E Blog",
+                "blogLink": "https://aws.amazon.com/blogs/media/",
+                "blogLinkMd5Hash": "2e240933bee36b0020400bfbf23c95e5",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "9babcf40b929c6da99ce479f0b618db89e717974",
+            "content_html": "AWS AI Security Framework は、適切なコントロールを適切なユースケース・レイヤー・フェーズに対応づけ、AI をプロトタイプから本番、そしてスケールまで安全に進めるための体系的なモデルです。多層防御を「インフラストラクチャ」「アイデンティティとデータ」「AI アプリケーション」の 3 レイヤーに整理し、Foundational / Enhanced / Advanced の 3 フェーズで段階的にセキュリティを強化する方法を解説します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/the-aws-ai-security-framework-securing-ai-with-the-right-controls-at-the-right-layers-at-the-right-phases/",
+            "title": "AWS AI セキュリティフレームワーク: レイヤーとフェーズに応じた適切なセキュリティコントロール | Amazon Web Services ブログ",
+            "summary": "AWS AI Security Framework は、適切なコントロールを適切なユースケース・レイヤー・フェーズに対応づけ、AI をプロトタイプから本番、そしてスケールまで安全に進めるための体系的なモデルです。多層防御を「インフラストラクチャ」「アイデンティティとデータ」「AI アプリケーション」の 3 レイヤーに整理し、Foundational / Enhanced / Advanced の ",
+            "image": {
+                "height": "512",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/09/07/AWS-AI-Security-Framework-1024x512-1.jpg",
+                "width": "1024",
+                "type": "jpg"
+            },
+            "date_modified": "2026-09-10T11:16:48.000Z",
+            "date_published": "2026-09-10T11:16:48.000Z",
+            "author": {
+                "name": "Suda Satoru"
+            },
+            "tags": [
+                "Artificial Intelligence",
+                "Best Practices",
+                "Intermediate (200)",
+                "Security, Identity, &amp; Compliance",
+                "Security Blog"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "AWS AI セキュリティフレームワーク: レイヤーとフェーズに応じた適切なセキュリティコントロール",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "6cb561ba4249481650a3d3b2160c65767091c4ba",
+            "content_html": "本ブログは Umios 株式会社様と Amazon Web Services Japan が共同で執筆いたしま […]",
+            "url": "https://aws.amazon.com/jp/blogs/news/umios-chronos2/",
+            "title": "Umios(旧マルハニチロ) が時系列基盤モデル Chronos-2 で実現する販売計画 AI – 作業4,200時間削減への裏側 | Amazon Web Services ブログ",
+            "summary": "本ブログは Umios 株式会社様と Amazon Web Services Japan が共同で執筆いたしま […]",
+            "image": {
+                "height": "385",
+                "url": "https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png",
+                "width": "768",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T06:20:03.000Z",
+            "date_published": "2026-09-10T06:20:03.000Z",
+            "author": {
+                "name": "Hiroki Tsuji"
+            },
+            "tags": [
+                "General"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Umios(旧マルハニチロ) が時系列基盤モデル Chronos-2 で実現する販売計画 AI – 作業4,200時間削減への裏側",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "44ac870770913fdc89b3644338583e5fd1114c09",
+            "content_html": "2026 年 8 月 21 日、AWS は中高生女子向けプログラム「Girls Meet STEM」に参加し、麻布台ヒルズの新オフィスにて生成 AI 体験ワークショップ、オフィスツアー、パネルディスカッションを開催しました。",
+            "url": "https://aws.amazon.com/jp/blogs/news/girls-meet-stem-event-2026summer/",
+            "title": "【開催報告】Girls Meet STEM in AWS 2026 を開催しました | Amazon Web Services ブログ",
+            "summary": "2026 年 8 月 21 日、AWS は中高生女子向けプログラム「Girls Meet STEM」に参加し、麻布台ヒルズの新オフィスにて生成 AI 体験ワークショップ、オフィスツアー、パネルディスカッションを開催しました。",
+            "image": {
+                "height": "385",
+                "url": "https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png",
+                "width": "768",
+                "type": "png"
+            },
+            "date_modified": "2026-09-10T01:04:27.000Z",
+            "date_published": "2026-09-10T01:04:27.000Z",
+            "author": {
+                "name": "守田 凜々佳"
+            },
+            "tags": [
+                "General"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【開催報告】Girls Meet STEM in AWS 2026 を開催しました",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "67f531791a79882f1a8548d2252c2e12bbe3208e",
+            "content_html": "AWS Shield Advanced は、アプリケーションレイヤー (L7) DDoS 保護のデフォルトとして AWS WAF Anti-DDoS マネージドルールグループを採用し、将来的には唯一の保護機能とします。2026 年 7 月 27 日から、対象のウェブ ACL への Count モードでのルールグループの追加が始まります。既存の L7 自動緩和と並行して動作するため、トラフィックへの影響はありません。この記事では、Anti-DDoS マネージドルールグループの機能、2027 年 1 月 1 日の Shield Advanced アプリケーションレイヤー自動緩和の終了までの 5 つのフェーズ、請求、モニタリングとメトリクスの変更点、IaC や AWS Firewall Manager ポリシーの更新など、移行に向けた準備方法を解説します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/aws-shield-advanced-is-embracing-the-aws-waf-anti-ddos-managed-rule-group-what-changes-and-how-to-prepare/",
+            "title": "AWS Shield Advanced が AWS WAF Anti-DDoS マネージドルールグループを採用: 変更点と準備方法 | Amazon Web Services ブログ",
+            "summary": "AWS Shield Advanced は、アプリケーションレイヤー (L7) DDoS 保護のデフォルトとして AWS WAF Anti-DDoS マネージドルールグループを採用し、将来的には唯一の保護機能とします。2026 年 7 月 27 日から、対象のウェブ ACL への Count モードでのルールグループの追加が始まります。既存の L7 自動緩和と並行して動作するため、トラフィックへの",
+            "image": {
+                "height": "600",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/08/29/hero-candidate-A-full-1200x600-1.jpg",
+                "width": "1200",
+                "type": "jpg"
+            },
+            "date_modified": "2026-09-10T00:47:18.000Z",
+            "date_published": "2026-09-10T00:47:18.000Z",
+            "author": {
+                "name": "Hideo Matsumoto"
+            },
+            "tags": [
+                "Announcements",
+                "AWS Shield",
+                "AWS WAF",
+                "Intermediate (200)",
+                "Security, Identity, &amp; Compliance",
+                "AWS Shield Advanced",
+                "DDoS",
+                "Security Blog"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS Shield Advanced が AWS WAF Anti-DDoS マネージドルールグループを採用: 変更点と準備方法",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "f77e7215fd0543f78477d28303cf5bad2f6436c8",
+            "content_html": "AWS が 3 つの認定試験を更新します。MLA-C02 のベータ登録はすでに開始しており、SAP-C03 と DVA-C03 は 2026 年 10 月 27 日より登録開始予定です。生成 AI・エージェンティック AI への対応や AI 支援開発など、今日のクラウドエンジニアに求められるスキルを反映した各試験の変更内容と重要な日程をお伝えします。",
+            "url": "https://aws.amazon.com/jp/blogs/news/september-2026-new-offerings/",
+            "title": "AWS 認定資格 (MLA、SAP、DVA) に関するアップデート: 2026 年 9 月 | Amazon Web Services ブログ",
+            "summary": "AWS が 3 つの認定試験を更新します。MLA-C02 のベータ登録はすでに開始しており、SAP-C03 と DVA-C03 は 2026 年 10 月 27 日より登録開始予定です。生成 AI・エージェンティック AI への対応や AI 支援開発など、今日のクラウドエンジニアに求められるスキルを反映した各試験の変更内容と重要な日程をお伝えします。",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/09/08/aws-certification-updates-mla-sap-dva-sep2026-1120x630.png",
+                "width": "1120",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T23:48:07.000Z",
+            "date_published": "2026-09-09T23:48:07.000Z",
+            "author": {
+                "name": "Hirokazu Murohashi"
+            },
+            "tags": [
+                "AWS Training and Certification",
+                "General",
+                "News"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS 認定資格 (MLA、SAP、DVA) に関するアップデート: 2026 年 9 月",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "11804c9f98508b1bc1561231cc420556cf309fb2",
+            "content_html": "Amazon API Gateway execution logs help you trace request processing step by step through your REST API stages. They capture authorization results, integration latency, mapping template output, and error details that are otherwise invisible at the API surface. When a production request fails in a way the access log cannot explain, the execution log is […]",
+            "url": "https://aws.amazon.com/blogs/compute/customize-amazon-api-gateway-destinations-for-execution-logs/",
+            "title": "Customize Amazon API Gateway destinations for execution logs | AWS Compute Blog",
+            "summary": "Amazon API Gateway execution logs help you trace request processing step by step through your REST API stages. They capture authorization results, integration latency, mapping template output, and err",
+            "image": {
+                "height": "360",
+                "url": "https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/07/14/custom-api-destinations-featured-image.png",
+                "width": "720",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T22:35:42.000Z",
+            "date_published": "2026-09-09T22:35:42.000Z",
+            "author": {
+                "name": "Giedrius Praspaliauskas"
+            },
+            "tags": [
+                "Amazon API Gateway",
+                "Announcements",
+                "Intermediate (200)"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Customize Amazon API Gateway destinations for execution logs",
+                "blogTitle": "AWS Compute Blog",
+                "blogLink": "https://aws.amazon.com/blogs/compute/",
+                "blogLinkMd5Hash": "b62a16fa1aad8b9a592a4cecec7c4511",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "6973e0078540c7d789cc946cb3c7e1fd791a8c2f",
+            "content_html": "Learn how to deploy Qwen3.8-2.4T-A95B, a 2.4-trillion-parameter open-weight model, on Amazon SageMaker HyperPod with vLLM. This walkthrough covers cluster provisioning, NVFP4 quantization, and an OpenAI-compatible endpoint with built-in reasoning, tool calling, and native MTP speculative decoding.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/deploying-qwen3-8-2-4t-a95b-on-amazon-sagemaker-hyperpod-with-vllm/",
+            "title": "Deploying Qwen3.8-2.4T-A95B on Amazon SageMaker HyperPod with vLLM | Artificial Intelligence",
+            "summary": "Learn how to deploy Qwen3.8-2.4T-A95B, a 2.4-trillion-parameter open-weight model, on Amazon SageMaker HyperPod with vLLM. This walkthrough covers cluster provisioning, NVFP4 quantization, and an Open",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/09/ML-21725-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T22:26:29.000Z",
+            "date_published": "2026-09-09T22:26:29.000Z",
+            "author": {
+                "name": "Dmitry Soldatkin"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon SageMaker HyperPod",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Deploying Qwen3.8-2.4T-A95B on Amazon SageMaker HyperPod with vLLM",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "a7eafcc0229cd1fa7f057426d064a4eca2d0738b",
+            "content_html": "AWS introduces Amazon EBS Volume Clones with cross-account copy, so you can create copies of your EBS volumes into other AWS accounts and optionally re-encrypt them with an AWS Key Management Service (AWS KMS) key in the target account.",
+            "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-ebs-volume-clones-across-aws-accounts/",
+            "title": "Introducing Amazon EBS Volume Clones across AWS accounts | AWS News Blog",
+            "summary": "AWS introduces Amazon EBS Volume Clones with cross-account copy, so you can create copies of your EBS volumes into other AWS accounts and optionally re-encrypt them with an AWS Key Management Service ",
+            "image": {
+                "height": "400",
+                "url": "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2025/10/14/EBS-Thumbnail-03b.png",
+                "width": "800",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T22:01:47.000Z",
+            "date_published": "2026-09-09T22:01:47.000Z",
+            "author": {
+                "name": "Channy Yun (윤석찬)"
+            },
+            "tags": [
+                "Amazon Elastic Block Store (Amazon EBS)",
+                "Launch",
+                "News",
+                "Storage"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Introducing Amazon EBS Volume Clones across AWS accounts",
+                "blogTitle": "AWS News Blog",
+                "blogLink": "https://aws.amazon.com/blogs/aws/",
+                "blogLinkMd5Hash": "60cc55670b7a03aa630d6c812f6d0ce7",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "a0b33820c0272b6c8f5a55af98ae45e8da62656d",
+            "content_html": "Learn how to use AWS Fault Injection Service and AWS Systems Manager Automation to run progressive chaos experiments against Amazon SQS queues. Validate that your retry logic, circuit breakers, and dead-letter queues actually work under failure before a real outage hits production.",
+            "url": "https://aws.amazon.com/blogs/architecture/testing-application-resilience-with-amazon-sqs-and-aws-fault-injection-service/",
+            "title": "Testing application resilience with Amazon SQS and AWS Fault Injection Service | AWS Architecture Blog",
+            "summary": "Learn how to use AWS Fault Injection Service and AWS Systems Manager Automation to run progressive chaos experiments against Amazon SQS queues. Validate that your retry logic, circuit breakers, and de",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/08/18/ARCHBLOG-1426-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T21:33:59.000Z",
+            "date_published": "2026-09-09T21:33:59.000Z",
+            "author": {
+                "name": "Richard Whitworth"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Simple Queue Service (SQS)",
+                "AWS Fault Injection Service (FIS)",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Testing application resilience with Amazon SQS and AWS Fault Injection Service",
+                "blogTitle": "AWS Architecture Blog",
+                "blogLink": "https://aws.amazon.com/blogs/architecture/",
+                "blogLinkMd5Hash": "47a992219ac22699a359a79a1d458476",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "a407526979b70b94a801af92b401656e5712788d",
+            "content_html": "Learn how AWS, HashiCorp, and Athenahealth designed and chaos-tested a multi-Region disaster recovery strategy for Terraform Enterprise on AWS. This post walks through three-phase AWS Fault Injection Service experiments across Amazon EC2, Aurora, and Amazon S3, the 12-14 minute recovery times achieved, and the state file dependency pitfall to avoid.",
+            "url": "https://aws.amazon.com/blogs/architecture/validating-multi-region-dr-for-terraform-enterprise-with-aws-fis/",
+            "title": "Validating multi-Region DR for Terraform Enterprise with AWS FIS | AWS Architecture Blog",
+            "summary": "Learn how AWS, HashiCorp, and Athenahealth designed and chaos-tested a multi-Region disaster recovery strategy for Terraform Enterprise on AWS. This post walks through three-phase AWS Fault Injection ",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/09/08/ARCHBLOG-1480-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T21:05:02.000Z",
+            "date_published": "2026-09-09T21:05:02.000Z",
+            "author": {
+                "name": "Frenil Randeria"
+            },
+            "tags": [
+                "Advanced (300)",
+                "AWS Fault Injection Service (FIS)",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Validating multi-Region DR for Terraform Enterprise with AWS FIS",
+                "blogTitle": "AWS Architecture Blog",
+                "blogLink": "https://aws.amazon.com/blogs/architecture/",
+                "blogLinkMd5Hash": "47a992219ac22699a359a79a1d458476",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "240c3ccd31c7821f7ac620ebf0edd729bbf63855",
+            "content_html": "When AI initiatives stall, the instinct is to look at the model, the data, or the team. But more often, the constraint is underneath all of those — in the infrastructure itself. And running in the cloud doesn’t automatically remove that constraint. If the architecture was designed around pre-AI assumptions, it carries the same limitations […]",
+            "url": "https://aws.amazon.com/blogs/migration-and-modernization/why-legacy-infrastructure-blocks-ai-success/",
+            "title": "Why Legacy Infrastructure Blocks AI Success | Migration &amp; Modernization",
+            "summary": "When AI initiatives stall, the instinct is to look at the model, the data, or the team. But more often, the constraint is underneath all of those — in the infrastructure itself. And running in the clo",
+            "image": {
+                "height": "400",
+                "url": "https://d2908q01vomqb2.cloudfront.net/1f1362ea41d1bc65be321c0a378a20159f9a26d0/2026/09/04/BKM_Cloud_Feature_Image_small.jpg",
+                "width": "717",
+                "type": "jpg"
+            },
+            "date_modified": "2026-09-09T21:04:46.000Z",
+            "date_published": "2026-09-09T21:04:46.000Z",
+            "author": {
+                "name": "Bob Kellogg"
+            },
+            "tags": [
+                "Artificial Intelligence",
+                "Migration Solutions",
+                "Thought Leadership"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Why Legacy Infrastructure Blocks AI Success",
+                "blogTitle": "Migration &amp; Modernization",
+                "blogLink": "https://aws.amazon.com/blogs/migration-and-modernization/",
+                "blogLinkMd5Hash": "bdce5f785aedd13b5e81be8e7d99d3b6",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "b14a5da53460da33e759016ab3c8e646369c9580",
+            "content_html": "Enterprises who need to migrate business-critical Windows Communication Foundation (WCF) services to ASP.NET Core Web API sometimes struggle with the scope of the change. These services still run on .NET Framework, the pool of engineers fluent in service contracts keep shrinking, and modern .NET does not support WCF. The community CoreWCF project (a .NET Foundation […]",
+            "url": "https://aws.amazon.com/blogs/dotnet/modernize-your-legacy-wcf-services-automated-migration-to-asp-net-core-web-api-using-aws-transform-custom/",
+            "title": "Modernize your legacy WCF services: Automated migration to ASP.NET Core Web API using AWS Transform custom | .NET on AWS Blog",
+            "summary": "Enterprises who need to migrate business-critical Windows Communication Foundation (WCF) services to ASP.NET Core Web API sometimes struggle with the scope of the change. These services still run on .",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b4c96d80854dd27e76d8cc9e21960eebda52e962/2026/09/09/modernize-wcf-to-web-api-using-atx-custom-1257x630.png",
+                "width": "1257",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T20:40:56.000Z",
+            "date_published": "2026-09-09T20:40:56.000Z",
+            "author": {
+                "name": "Vishwanath Uppala"
+            },
+            "tags": [
+                ".NET",
+                "AWS Transform"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Modernize your legacy WCF services: Automated migration to ASP.NET Core Web API using AWS Transform custom",
+                "blogTitle": ".NET on AWS Blog",
+                "blogLink": "https://aws.amazon.com/blogs/dotnet/",
+                "blogLinkMd5Hash": "101b16160e59b2d249a4f89160120991",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "02c8c6840ad8d0b9f7270e4215277d9d55dca65d",
+            "content_html": "Organizations with geographically distributed workforces face a trade-off between security and low-latency access. This post explores how to use AWS Local Zones and Secure Access Service Edge (SASE) solutions to deploy virtual security appliances closer to end users, covering key design principles, capacity planning, and traffic routing.",
+            "url": "https://aws.amazon.com/blogs/compute/architecting-sase-solutions-using-aws-local-zones/",
+            "title": "Architecting SASE solutions using AWS Local Zones | AWS Compute Blog",
+            "summary": "Organizations with geographically distributed workforces face a trade-off between security and low-latency access. This post explores how to use AWS Local Zones and Secure Access Service Edge (SASE) s",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/09/08/ComputeBlog-2397-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T20:36:09.000Z",
+            "date_published": "2026-09-09T20:36:09.000Z",
+            "author": {
+                "name": "Lakshmi VP"
+            },
+            "tags": [
+                "Advanced (300)",
+                "AWS Local Zones",
+                "Best Practices"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Architecting SASE solutions using AWS Local Zones",
+                "blogTitle": "AWS Compute Blog",
+                "blogLink": "https://aws.amazon.com/blogs/compute/",
+                "blogLinkMd5Hash": "b62a16fa1aad8b9a592a4cecec7c4511",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "5a4826a00b8c3e2362294bd88790a97f7dfeae72",
+            "content_html": "A recap of August 2026 launches for AI builders across Amazon Bedrock, Amazon Bedrock AgentCore, and Strands: million-token context for OpenAI models, cross-Region inference, agents that run for up to 14 days on dedicated compute, expanded AWS GovCloud availability, and Strands Robots for physical deployment.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-august-2026/",
+            "title": "ICYMI: What landed for AI builders in August 2026 | Artificial Intelligence",
+            "summary": "A recap of August 2026 launches for AI builders across Amazon Bedrock, Amazon Bedrock AgentCore, and Strands: million-token context for OpenAI models, cross-Region inference, agents that run for up to",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/08/ML-21781-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T20:01:03.000Z",
+            "date_published": "2026-09-09T20:01:03.000Z",
+            "author": {
+                "name": "Tanvi Girinath"
+            },
+            "tags": [
+                "Amazon Bedrock",
+                "Amazon Bedrock AgentCore",
+                "Announcements",
+                "Intermediate (200)"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "ICYMI: What landed for AI builders in August 2026",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "510e06db3117364f35b271b43cc2a90afde0934b",
+            "content_html": "Security teams are starting to actively use AI for security work, including vulnerability triage, penetration testing, threat modeling, incident response, and code review. The promise is speed, but a security tool that moves fast and raises too many false alarms doesn’t save time. Engineers spend time on false alarms, on-call is noisier, and teams distrust […]",
+            "url": "https://aws.amazon.com/blogs/security/the-state-of-ai-for-security-measuring-what-matters-most-for-building-trust/",
+            "title": "The state of AI for security: Measuring what matters most for building trust | AWS Security Blog",
+            "summary": "Security teams are starting to actively use AI for security work, including vulnerability triage, penetration testing, threat modeling, incident response, and code review. The promise is speed, but a ",
+            "image": {
+                "height": "600",
+                "url": "https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2026/09/09/Blog-Thumbnail-Deception-Benchmark-V2.jpg",
+                "width": "1200",
+                "type": "jpg"
+            },
+            "date_modified": "2026-09-09T19:09:14.000Z",
+            "date_published": "2026-09-09T19:09:14.000Z",
+            "author": {
+                "name": "Anshumali Shrivastava"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Artificial Intelligence",
+                "Generative AI",
+                "Security, Identity, &amp; Compliance",
+                "Thought Leadership",
+                "AI",
+                "artificial intelligence",
+                "Machine learning",
+                "Open source",
+                "Security Blog",
+                "Vulnerability management"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "The state of AI for security: Measuring what matters most for building trust",
+                "blogTitle": "AWS Security Blog",
+                "blogLink": "https://aws.amazon.com/blogs/security/",
+                "blogLinkMd5Hash": "33f773162a50adc0d76a46072bb7f7ec",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "4cf63fdfce0783e4e432dbac88fece3b77e1837a",
+            "content_html": "AWS Lambda now supports a 90-minute function timeout for asynchronous and event source mapping (ESM) invocations on Lambda Managed Instances, a 6x increase from the previous 15-minute limit. Data processing, media transcoding, AI inference, and batch workloads can now run on Lambda without re-architecting.",
+            "url": "https://aws.amazon.com/blogs/compute/announcing-90-minute-function-timeout-on-aws-lambda-managed-instances/",
+            "title": "Announcing 90-minute function timeout on AWS Lambda Managed Instances | AWS Compute Blog",
+            "summary": "AWS Lambda now supports a 90-minute function timeout for asynchronous and event source mapping (ESM) invocations on Lambda Managed Instances, a 6x increase from the previous 15-minute limit. Data proc",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/09/09/ComputeBlog-2727-featured-image-2.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T19:08:14.000Z",
+            "date_published": "2026-09-09T19:08:14.000Z",
+            "author": {
+                "name": "Tarun Rai Madan"
+            },
+            "tags": [
+                "Announcements",
+                "AWS Lambda",
+                "Foundational (100)"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Announcing 90-minute function timeout on AWS Lambda Managed Instances",
+                "blogTitle": "AWS Compute Blog",
+                "blogLink": "https://aws.amazon.com/blogs/compute/",
+                "blogLinkMd5Hash": "b62a16fa1aad8b9a592a4cecec7c4511",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "d1074237a270f53ea2a698254fcb534f7b935ee9",
+            "content_html": "As more organizations move to remote and distributed work, builders and development teams face growing challenges in sharing files securely. Without a central file system, these teams deal with version control problems, unclear access permissions, and security risks from scattered storage locations. Central IT becomes a bottleneck when handling every permission change, yet granting full […]",
+            "url": "https://aws.amazon.com/blogs/storage/secure-team-file-sharing-on-amazon-workspaces-with-amazon-efs/",
+            "title": "Secure team file sharing on Amazon WorkSpaces with Amazon EFS | AWS Storage Blog",
+            "summary": "As more organizations move to remote and distributed work, builders and development teams face growing challenges in sharing files securely. Without a central file system, these teams deal with versio",
+            "image": {
+                "height": "385",
+                "url": "https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png",
+                "width": "768",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T19:01:22.000Z",
+            "date_published": "2026-09-09T19:01:22.000Z",
+            "author": {
+                "name": "Mikhail Vladimirov"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Elastic File System (EFS)",
+                "Amazon WorkSpaces",
+                "AWS IAM Identity Center",
+                "Storage",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Secure team file sharing on Amazon WorkSpaces with Amazon EFS",
+                "blogTitle": "AWS Storage Blog",
+                "blogLink": "https://aws.amazon.com/blogs/storage/",
+                "blogLinkMd5Hash": "44580394cc2c50a146ca9eaa6da2c852",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "8b2b6f1fc936da150ec6ba65d555af391dc31a8e",
+            "content_html": "Learn how Heurist built Heurist Finance, a conversational AI investment workbench, on Amazon Bedrock AgentCore. This customer story shows how AgentCore payments, Identity, Memory, Code Interpreter, and Observability let a small team buy premium market data per query, isolate analysis in a sandbox, and keep every action auditable.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/how-heurist-finance-built-an-ai-native-investment-workbench-on-amazon-bedrock-agentcore/",
+            "title": "How Heurist Finance built an AI-native investment workbench on Amazon Bedrock AgentCore | Artificial Intelligence",
+            "summary": "Learn how Heurist built Heurist Finance, a conversational AI investment workbench, on Amazon Bedrock AgentCore. This customer story shows how AgentCore payments, Identity, Memory, Code Interpreter, an",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/27/ML-21623-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T18:11:12.000Z",
+            "date_published": "2026-09-09T18:11:12.000Z",
+            "author": {
+                "name": "JW Wang"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Bedrock AgentCore",
+                "Customer Solutions"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How Heurist Finance built an AI-native investment workbench on Amazon Bedrock AgentCore",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "fc8fc732ee4aa2580d6500a61a8577ae03e7fc35",
+            "content_html": "AWS Glue 6.0 introduces Spark Declarative Pipelines. In this post, you build a single declarative AWS Glue 6.0 job that turns raw order records into validated, aggregated tables through a bronze, silver, and gold sequence, without writing any orchestration logic.",
+            "url": "https://aws.amazon.com/blogs/big-data/build-declarative-etl-pipelines-with-aws-glue-6-0/",
+            "title": "Build declarative ETL pipelines with AWS Glue 6.0 | AWS Big Data Blog",
+            "summary": "AWS Glue 6.0 introduces Spark Declarative Pipelines. In this post, you build a single declarative AWS Glue 6.0 job that turns raw order records into validated, aggregated tables through a bronze, silv",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/03/BDB-6104-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T17:38:22.000Z",
+            "date_published": "2026-09-09T17:38:22.000Z",
+            "author": {
+                "name": "Syed Humair"
+            },
+            "tags": [
+                "Advanced (300)",
+                "AWS Glue",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Build declarative ETL pipelines with AWS Glue 6.0",
+                "blogTitle": "AWS Big Data Blog",
+                "blogLink": "https://aws.amazon.com/blogs/big-data/",
+                "blogLinkMd5Hash": "acb36d483a3f1166274b7c10aba46741",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "573c39a05bfad55eebd1dbb1197a58a1e7df202a",
+            "content_html": "Learn how Forseti, a public safety technology company, built the Honest Assessment Response Tool (HART) to meet survivors in that moment. Running on Amazon Web Services (AWS), HART digitizes on-scene domestic violence risk screening, connects survivors to services in real time, and gives state agencies population-level visibility into intimate partner violence patterns.",
+            "url": "https://aws.amazon.com/blogs/publicsector/how-forseti-and-aws-connect-domestic-violence-survivors-to-services-in-real-time/",
+            "title": "How Forseti and AWS connect domestic violence survivors to services in real time | AWS Public Sector Blog",
+            "summary": "Learn how Forseti, a public safety technology company, built the Honest Assessment Response Tool (HART) to meet survivors in that moment. Running on Amazon Web Services (AWS), HART digitizes on-scene ",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2026/09/08/How-Forseti-and-AWS-connect-domestic-violence-survivors-to-services-in-real-time.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T16:04:34.000Z",
+            "date_published": "2026-09-09T16:04:34.000Z",
+            "author": {
+                "name": "Dr. Dawn Heisey-Grove"
+            },
+            "tags": [
+                "AWS GovCloud (US)",
+                "Industries",
+                "Public Safety",
+                "Public Sector"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How Forseti and AWS connect domestic violence survivors to services in real time",
+                "blogTitle": "AWS Public Sector Blog",
+                "blogLink": "https://aws.amazon.com/blogs/publicsector/",
+                "blogLinkMd5Hash": "f7f3acdce7471e6504655f5ceeb86708",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "ecf61c2d8ed044150a9b686cfaa1c5aa00c10acf",
+            "content_html": "This post demonstrates on Massive Multitask Language Understanding (MMLU) [Hendrycks et al., 2021], an open-source multiple-choice benchmark accessible via Hugging Face Hub, selecting four business-relevant subjects.",
+            "url": "https://aws.amazon.com/blogs/industries/monitoring-llm-uncertainty-in-financial-services-on-aws/",
+            "title": "Monitoring LLM Uncertainty in Financial Services on AWS | AWS for Industries",
+            "summary": "This post demonstrates on Massive Multitask Language Understanding (MMLU) [Hendrycks et al., 2021], an open-source multiple-choice benchmark accessible via Hugging Face Hub, selecting four business-re",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/07/Monitoring-LLM-Uncertainty-in-Financial-Services-on-AWS.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T16:02:46.000Z",
+            "date_published": "2026-09-09T16:02:46.000Z",
+            "author": {
+                "name": "Thomas Bonnier, PhD"
+            },
+            "tags": [
+                "Amazon CloudWatch",
+                "Amazon SageMaker AI",
+                "Amazon Simple Notification Service (SNS)",
+                "Amazon Simple Storage Service (S3)",
+                "AWS CloudFormation",
+                "AWS Key Management Service",
+                "Financial Services",
+                "Industries"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Monitoring LLM Uncertainty in Financial Services on AWS",
+                "blogTitle": "AWS for Industries",
+                "blogLink": "https://aws.amazon.com/blogs/industries/",
+                "blogLinkMd5Hash": "3118df046087bf1ec047b09f94ee7a59",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "40560bc1165354abd0304d5c35c0cd427ba27c99",
+            "content_html": "TorchServe is no longer maintained, leaving teams to own the entire GPU inference stack. The AWS Ray Serve Deep Learning Container is a supported, pre-tested container with the framework, GPU drivers, and serving layer already assembled. This post walks through deploying a vision-language model on Amazon EKS using the Ray Serve DLC on a single GPU node.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/simplify-and-support-your-torchserve-workloads-using-ray-serve-deep-learning-containers/",
+            "title": "Simplify and support your TorchServe workloads using Ray Serve Deep Learning Containers | Artificial Intelligence",
+            "summary": "TorchServe is no longer maintained, leaving teams to own the entire GPU inference stack. The AWS Ray Serve Deep Learning Container is a supported, pre-tested container with the framework, GPU drivers,",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/08/ML-21647-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T15:51:29.000Z",
+            "date_published": "2026-09-09T15:51:29.000Z",
+            "author": {
+                "name": "Ananth Raghavendra"
+            },
+            "tags": [
+                "Intermediate (200)",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Simplify and support your TorchServe workloads using Ray Serve Deep Learning Containers",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "a77ad5a4cc8d539af020eba9f19a5636de04f505",
+            "content_html": "Amazon Quick custom permissions let you enforce least-privilege access by toggling features per user. This post walks through four patterns to automate custom permissions across the user lifecycle: a RegisterUser API parameter, account and role defaults, event-driven Amazon EventBridge and AWS Lambda automation, and a retroactive batch update script.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/automate-user-level-custom-permissions-for-amazon-quick/",
+            "title": "Automate user-level custom permissions for Amazon Quick | Artificial Intelligence",
+            "summary": "Amazon Quick custom permissions let you enforce least-privilege access by toggling features per user. This post walks through four patterns to automate custom permissions across the user lifecycle: a ",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/02/ML-21102-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T15:45:24.000Z",
+            "date_published": "2026-09-09T15:45:24.000Z",
+            "author": {
+                "name": "Ashok Dasineni"
+            },
+            "tags": [
+                "Amazon Quick Suite",
+                "Intermediate (200)",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Automate user-level custom permissions for Amazon Quick",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "d355db7173e5233dbf2bce5d3fa79013c7aaa910",
+            "content_html": "Picture a finance analyst asking an AI assistant, “which of my customer invoices are overdue?” and getting an answer straight from SAP. Enterprises want exactly this, but connecting an AI agent to a system of record raises a hard question: when the agent reaches SAP, who is making the request? Many early integrations route every […]",
+            "url": "https://aws.amazon.com/blogs/awsforsap/achieving-single-sign-on-agentic-access-to-sap-with-aws-for-sap-mcp-server/",
+            "title": "Achieving Single-Sign-On Agentic access to SAP with AWS for SAP MCP Server | AWS for SAP",
+            "summary": "Picture a finance analyst asking an AI assistant, “which of my customer invoices are overdue?” and getting an answer straight from SAP. Enterprises want exactly this, but connecting an AI agent to a s",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/17ba0791499db908433b80f37c5fbc89b870084b/2026/08/05/OBO_Figure2-2-1234x630.png",
+                "width": "1234",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T15:41:17.000Z",
+            "date_published": "2026-09-09T15:41:17.000Z",
+            "author": {
+                "name": "Rengarajan Sridharan"
+            },
+            "tags": [
+                "Amazon Bedrock AgentCore",
+                "SAP on AWS",
+                "Security, Identity, &amp; Compliance",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Achieving Single-Sign-On Agentic access to SAP with AWS for SAP MCP Server",
+                "blogTitle": "AWS for SAP",
+                "blogLink": "https://aws.amazon.com/blogs/awsforsap/",
+                "blogLinkMd5Hash": "23173e8e73de1b0280ab8b8cf8fe354b",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "c7af5a75941bdcc859b98b92674082a0ba28db6e",
+            "content_html": "Build a high-concurrency async Python rideshare application with Tortoise ORM and Amazon Aurora DSQL. This post walks through the key adaptations: UUID primary keys, IAM-authenticated asyncpg connections with a connection-pool patch, individual DDL execution, and optimistic concurrency control (OCC) retry logic.",
+            "url": "https://aws.amazon.com/blogs/database/building-async-python-applications-with-tortoise-orm-and-amazon-aurora-dsql/",
+            "title": "Building async Python applications with Tortoise ORM and Amazon Aurora DSQL | AWS Database Blog",
+            "summary": "Build a high-concurrency async Python rideshare application with Tortoise ORM and Amazon Aurora DSQL. This post walks through the key adaptations: UUID primary keys, IAM-authenticated asyncpg connecti",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/09/03/DBBLOG-5654-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T15:27:43.000Z",
+            "date_published": "2026-09-09T15:27:43.000Z",
+            "author": {
+                "name": "Lasita Bhattacharya"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon Aurora",
+                "DSQL",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Building async Python applications with Tortoise ORM and Amazon Aurora DSQL",
+                "blogTitle": "AWS Database Blog",
+                "blogLink": "https://aws.amazon.com/blogs/database/",
+                "blogLinkMd5Hash": "bb1722625fdf714a637ed3e7b397ae23",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "b2230bcfec6bed259a4d532ac2290b3b94f40361",
+            "content_html": "Learn how to build a tiered alerting strategy for Amazon DocumentDB by organizing CloudWatch metrics into Critical, Warning, and Advisory tiers, diagnosing slow queries through three complementary lenses, and monitoring garbage collection health before it becomes a cluster-wide incident.",
+            "url": "https://aws.amazon.com/blogs/database/from-noise-to-signal-monitoring-amazon-documentdb-like-a-pro/",
+            "title": "From noise to signal: Monitoring Amazon DocumentDB like a pro | AWS Database Blog",
+            "summary": "Learn how to build a tiered alerting strategy for Amazon DocumentDB by organizing CloudWatch metrics into Critical, Warning, and Advisory tiers, diagnosing slow queries through three complementary len",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/09/01/DBBLOG-5724-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T15:23:20.000Z",
+            "date_published": "2026-09-09T15:23:20.000Z",
+            "author": {
+                "name": "Deepak Deepesh"
+            },
+            "tags": [
+                "Amazon DocumentDB",
+                "Best Practices",
+                "Expert (400)"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "From noise to signal: Monitoring Amazon DocumentDB like a pro",
+                "blogTitle": "AWS Database Blog",
+                "blogLink": "https://aws.amazon.com/blogs/database/",
+                "blogLinkMd5Hash": "bb1722625fdf714a637ed3e7b397ae23",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "4633cf43dcd51c393096f4483062939749362563",
+            "content_html": "Emerging sustainability reporting requirements demand standardized, auditable processes with flexibility to adapt to evolving frameworks. For many organizations, the challenge isn’t data availability, it’s synthesizing fragmented information into coherent, audit-ready disclosures. Sustainability data resides across facility management systems, procurement platforms, HR tools, carbon accounting solutions, and operational databases. Many traditional business intelligence tools are not […]",
+            "url": "https://aws.amazon.com/blogs/industries/manage-esg-data-and-simplify-sustainability-reporting-with-amazon-quick/",
+            "title": "Manage ESG data and simplify Sustainability reporting with Amazon Quick | AWS for Industries",
+            "summary": "Emerging sustainability reporting requirements demand standardized, auditable processes with flexibility to adapt to evolving frameworks. For many organizations, the challenge isn’t data availability,",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/08/Screenshot-2026-09-08-144926-1260x630.png",
+                "width": "1260",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T14:45:45.000Z",
+            "date_published": "2026-09-09T14:45:45.000Z",
+            "author": {
+                "name": "Ankur Dang"
+            },
+            "tags": [
+                "*Post Types",
+                "Amazon Quick Suite",
+                "Analytics",
+                "Artificial Intelligence",
+                "Best Practices",
+                "Industries",
+                "Manufacturing",
+                "sustainability"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Manage ESG data and simplify Sustainability reporting with Amazon Quick",
+                "blogTitle": "AWS for Industries",
+                "blogLink": "https://aws.amazon.com/blogs/industries/",
+                "blogLinkMd5Hash": "3118df046087bf1ec047b09f94ee7a59",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "e1ababb693adac2d9c5583343291c4974a485c51",
+            "content_html": "Nubank, one of the world’s largest digital banks, runs entirely on AWS while serving 119 million customers. Nubank achieved over $15 million in verified annualized savings by partnering with PointFive and using Amazon DynamoDB pricing economics. This post explores how AWS, PointFive, and Nubank collaborated to turn cloud efficiency into a funding engine for resilience and AI innovation.",
+            "url": "https://aws.amazon.com/blogs/apn/how-nubank-saved-15m-on-amazon-dynamodb-costs-with-pointfive/",
+            "title": "How Nubank saved $15M on Amazon DynamoDB costs with PointFive | AWS Partner Network (APN) Blog",
+            "summary": "Nubank, one of the world’s largest digital banks, runs entirely on AWS while serving 119 million customers. Nubank achieved over $15 million in verified annualized savings by partnering with PointFive",
+            "image": {
+                "height": "625",
+                "url": "https://d2908q01vomqb2.cloudfront.net/77de68daecd823babbb58edb1c8e14d7106e83bb/2026/08/27/PointFive-Featured-Image-1.jpg",
+                "width": "1250",
+                "type": "jpg"
+            },
+            "date_modified": "2026-09-09T14:36:32.000Z",
+            "date_published": "2026-09-09T14:36:32.000Z",
+            "author": {
+                "name": "Amir Hazoom"
+            },
+            "tags": [
+                "Amazon DynamoDB",
+                "AWS Marketplace",
+                "AWS Partner Network",
+                "Cloud Cost Optimization",
+                "Financial Services",
+                "Foundational (100)",
+                "Partner solutions",
+                "Cost Optimization"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How Nubank saved $15M on Amazon DynamoDB costs with PointFive",
+                "blogTitle": "AWS Partner Network (APN) Blog",
+                "blogLink": "https://aws.amazon.com/blogs/apn/",
+                "blogLinkMd5Hash": "53e5d69b1d7371e68af7a85eaf20ed76",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "eebbeca8087fcb4c6fd34c507e597d2a474df984",
+            "content_html": "In this blog, learn how new research from Coresight Research reveals a five-pillar framework for AI-powered personalization, and why brands that act now will lead the future of customer engagement.",
+            "url": "https://aws.amazon.com/blogs/industries/how-ai-is-reshaping-retail-marketing-personalization/",
+            "title": "How AI Is Reshaping Retail Marketing Personalization | AWS for Industries",
+            "summary": "In this blog, learn how new research from Coresight Research reveals a five-pillar framework for AI-powered personalization, and why brands that act now will lead the future of customer engagement.",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/02/How-AI-Is-Reshaping-Retail-Marketing-Personalization.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T13:05:03.000Z",
+            "date_published": "2026-09-09T13:05:03.000Z",
+            "author": {
+                "name": "Austin Willis"
+            },
+            "tags": [
+                "Industries",
+                "Retail"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How AI Is Reshaping Retail Marketing Personalization",
+                "blogTitle": "AWS for Industries",
+                "blogLink": "https://aws.amazon.com/blogs/industries/",
+                "blogLinkMd5Hash": "3118df046087bf1ec047b09f94ee7a59",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "7b3de6d72275702406986b2faeda30c2010b2b94",
+            "content_html": "はじめに 生成 AI は、いまやあらゆる産業に新たな価値創出の機会をもたらす基盤技術になりつつあります。文章の […]",
+            "url": "https://aws.amazon.com/jp/blogs/news/codas-1/",
+            "title": "CODAS によるデータ秘匿性を考慮した産業特化型 AI 基盤の研究開発と実装検証に関する取り組み | Amazon Web Services ブログ",
+            "summary": "はじめに 生成 AI は、いまやあらゆる産業に新たな価値創出の機会をもたらす基盤技術になりつつあります。文章の […]",
+            "image": {
+                "height": "385",
+                "url": "https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png",
+                "width": "768",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T07:07:19.000Z",
+            "date_published": "2026-09-09T07:07:19.000Z",
+            "author": {
+                "name": "Ren Kurosawa"
+            },
+            "tags": [
+                "General"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "CODAS によるデータ秘匿性を考慮した産業特化型 AI 基盤の研究開発と実装検証に関する取り組み",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "1e205086c6366583de1a30a212dc6aaedd64c934",
+            "content_html": "Oracle Database@AWS のオンボーディングを、サービスの選定と調達から OCI テナンシのリンク、AWS と OCI 両側の IAM 設定まで 5 つのステップで解説します。ADB-S と ExaDB-XS のパブリックオファー経路、ExaDB-D と ADB-D のプライベートオファー経路の両方を扱います。購入者アカウントの選び方、ネットワーク計画、SCP の注意点、ジョブの分離まで、プロビジョニング前に押さえておくべきポイントをまとめました。",
+            "url": "https://aws.amazon.com/jp/blogs/news/getting-started-with-oracle-databaseaws-a-complete-onboarding-guide/",
+            "title": "Oracle Database@AWS を始める: オンボーディング完全ガイド | Amazon Web Services ブログ",
+            "summary": "Oracle Database@AWS のオンボーディングを、サービスの選定と調達から OCI テナンシのリンク、AWS と OCI 両側の IAM 設定まで 5 つのステップで解説します。ADB-S と ExaDB-XS のパブリックオファー経路、ExaDB-D と ADB-D のプライベートオファー経路の両方を扱います。購入者アカウントの選び方、ネットワーク計画、SCP の注意点、ジョブの分離",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/09/09/getting-started-with-oracle-databaseaws-a-complete-onboarding-guide_DBBLOG-5568-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-09T06:42:02.000Z",
+            "date_published": "2026-09-09T06:42:02.000Z",
+            "author": {
+                "name": "Satoru Yagi"
+            },
+            "tags": [
+                "Best Practices",
+                "Intermediate (200)",
+                "Oracle Database@AWS"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Oracle Database@AWS を始める: オンボーディング完全ガイド",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "68d48019de714857964056351fc4d79e51c3ab9f",
+            "content_html": "GPT-6 Astra from OpenAI is now generally available on Amazon Bedrock. It brings deeper reasoning and sharper judgment to your most demanding tasks, running on the Amazon Bedrock inference engine built for high performance, security, and scale.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/take-on-your-most-ambitious-work-with-gpt-6-astra-on-amazon-bedrock/",
+            "title": "Take on your most ambitious work with GPT-6 Astra on Amazon Bedrock | Artificial Intelligence",
+            "summary": "GPT-6 Astra from OpenAI is now generally available on Amazon Bedrock. It brings deeper reasoning and sharper judgment to your most demanding tasks, running on the Amazon Bedrock inference engine built",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/03/ML-21849-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T22:06:58.000Z",
+            "date_published": "2026-09-08T22:06:58.000Z",
+            "author": {
+                "name": "Tanvi Girinath"
+            },
+            "tags": [
+                "Amazon Bedrock",
+                "Announcements",
+                "Intermediate (200)"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Take on your most ambitious work with GPT-6 Astra on Amazon Bedrock",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "aefa41ad59da632a3771c6831f7d2b0ebe00b502",
+            "content_html": "Enterprises that use Amazon API Gateway often want to bring their own client certificate for backend mutual TLS (mTLS) authentication. With API Gateway, you can now use a third-party or AWS Private CA-issued client certificate for the outbound mTLS handshake. In this post, you build a REST API with an outbound mTLS connection to an Amazon ECS backend.",
+            "url": "https://aws.amazon.com/blogs/compute/bring-your-own-client-certificate-for-backend-mtls-in-amazon-api-gateway/",
+            "title": "Bring your own client certificate for backend mTLS in Amazon API Gateway | AWS Compute Blog",
+            "summary": "Enterprises that use Amazon API Gateway often want to bring their own client certificate for backend mutual TLS (mTLS) authentication. With API Gateway, you can now use a third-party or AWS Private CA",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/09/08/ComputeBlog-2657-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T21:46:39.000Z",
+            "date_published": "2026-09-08T21:46:39.000Z",
+            "author": {
+                "name": "Biswanath Mukherjee"
+            },
+            "tags": [
+                "Amazon API Gateway",
+                "Announcements",
+                "Intermediate (200)"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Bring your own client certificate for backend mTLS in Amazon API Gateway",
+                "blogTitle": "AWS Compute Blog",
+                "blogLink": "https://aws.amazon.com/blogs/compute/",
+                "blogLinkMd5Hash": "b62a16fa1aad8b9a592a4cecec7c4511",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "057a1cd9923678f41eed0d52e66d55193a899de0",
+            "content_html": "AI assistants can stand up an app or website that runs on AWS in minutes. Getting to a production-ready version you would put in front of real customers is still the hard part. Security, observability, type-safety, and resilience are non-negotiable for production. An assistant rarely gets all of that right in one pass, and hardening […]",
+            "url": "https://aws.amazon.com/blogs/opensource/build-full-stack-aws-applications-in-minutes-with-ai-powered-scaffolding/",
+            "title": "Build full-stack AWS applications in minutes with AI-powered scaffolding | AWS Open Source Blog",
+            "summary": "AI assistants can stand up an app or website that runs on AWS in minutes. Getting to a production-ready version you would put in front of real customers is still the hard part. Security, observability",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/ca3512f4dfa95a03169c5a670a4c91a19b3077b4/2026/09/08/Screenshot-2026-09-08-at-2.22.36 PM-1132x630.png",
+                "width": "1132",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T21:24:59.000Z",
+            "date_published": "2026-09-08T21:24:59.000Z",
+            "author": {
+                "name": "Jack Stevenson"
+            },
+            "tags": [
+                "Announcements",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 2,
+                "originalTitle": "Build full-stack AWS applications in minutes with AI-powered scaffolding",
+                "blogTitle": "AWS Open Source Blog",
+                "blogLink": "https://aws.amazon.com/blogs/opensource/",
+                "blogLinkMd5Hash": "8c152a663c72fc6e8ac9e184b7a57f64",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "fd1c06522a8cc8fb67e3daf2a87a946fce7671d9",
+            "content_html": "Immutability is a foundational data protection control, protecting data in place against unintended changes and deletions by authorized users, and changes by unauthorized users. In many cases, however, it isn’t clear at the time data is written how long it needs to stay immutable, or when that period should begin. A signed contract might need […]",
+            "url": "https://aws.amazon.com/blogs/storage/flexibly-control-amazon-s3-object-lock-retention-based-on-real-business-events/",
+            "title": "Flexibly control Amazon S3 Object Lock retention based on real business events | AWS Storage Blog",
+            "summary": "Immutability is a foundational data protection control, protecting data in place against unintended changes and deletions by authorized users, and changes by unauthorized users. In many cases, however",
+            "image": {
+                "height": "400",
+                "url": "https://d2908q01vomqb2.cloudfront.net/e1822db470e60d090affd0956d743cb0e7cdf113/2024/03/26/SiteMerch-S3-Object_Lock_SocialMedia_2.png",
+                "width": "800",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T21:14:31.000Z",
+            "date_published": "2026-09-08T21:14:31.000Z",
+            "author": {
+                "name": "Ed Gummett"
+            },
+            "tags": [
+                "Amazon Simple Storage Service (S3)",
+                "AWS CLI",
+                "AWS CloudTrail",
+                "Intermediate (200)",
+                "Technical How-to",
+                "Amazon S3 Inventory",
+                "Amazon S3 Lifecycle",
+                "Amazon Simple Storage Service (Amazon S3)",
+                "AWS Cloud Storage",
+                "AWS Command Line Interface (AWS CLI)"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Flexibly control Amazon S3 Object Lock retention based on real business events",
+                "blogTitle": "AWS Storage Blog",
+                "blogLink": "https://aws.amazon.com/blogs/storage/",
+                "blogLinkMd5Hash": "44580394cc2c50a146ca9eaa6da2c852",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "7b62a76bc3853bd9ada742693ec9cd3b09d199a8",
+            "content_html": "Pathway's Baby Dragon Hatchling (BDH) is a brain-inspired, post-transformer architecture that reasons in latent space instead of emitting chain-of-thought tokens. See how Pathway develops and scales BDH on Amazon SageMaker HyperPod, and how BDH-CQ set a new cost-efficiency mark on the ARC-AGI-1 benchmark.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/pathway-s-brain-inspired-architecture-development-on-amazon-sagemaker-hyperpod/",
+            "title": "Pathway’s brain-inspired architecture development on Amazon SageMaker HyperPod | Artificial Intelligence",
+            "summary": "Pathway's Baby Dragon Hatchling (BDH) is a brain-inspired, post-transformer architecture that reasons in latent space instead of emitting chain-of-thought tokens. See how Pathway develops and scales B",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/02/ML-21697-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T19:12:51.000Z",
+            "date_published": "2026-09-08T19:12:51.000Z",
+            "author": {
+                "name": "Paulo Aragão"
+            },
+            "tags": [
+                "Amazon SageMaker HyperPod",
+                "Announcements",
+                "Intermediate (200)",
+                "Amazon SageMaker",
+                "distributed training",
+                "PyTorch"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Pathway’s brain-inspired architecture development on Amazon SageMaker HyperPod",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "0f5a9f1262554e1b03a2d99ef4ac29e067c92d3c",
+            "content_html": "In this post, we describe how, on top of that pipeline, 5 built a browser-based console where a single remote operator can run a live pop-up event (with monitoring, input switching, ad signaling, and graphics) using the control capabilities of AWS Elemental MediaLive. Because these events arrive on an international feed shared with other broadcasters, the console also has to supply what a viewer would normally get from a produced channel: holding slates between segments, and on-screen messaging ",
+            "url": "https://aws.amazon.com/blogs/media/how-5-runs-live-pop-up-events-from-a-browser-with-aws-elemental-medialive/",
+            "title": "How 5 runs live pop-up events from a browser with AWS Elemental MediaLive | AWS for M&amp;E Blog",
+            "summary": "In this post, we describe how, on top of that pipeline, 5 built a browser-based console where a single remote operator can run a live pop-up event (with monitoring, input switching, ad signaling, and ",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/fb644351560d8296fe6da332236b1f8d61b2828a/2026/09/08/How-5-runs-live-pop-up-events-from-a-browser-with-AWS-Elemental-MediaLive.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T18:59:28.000Z",
+            "date_published": "2026-09-08T18:59:28.000Z",
+            "author": {
+                "name": "Roman Chekmazov"
+            },
+            "tags": [
+                "Advanced (300)",
+                "AWS Elemental MediaConnect",
+                "AWS Elemental MediaLive",
+                "AWS Elemental MediaPackage",
+                "Industries",
+                "Media &amp; Entertainment",
+                "Uncategorized"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How 5 runs live pop-up events from a browser with AWS Elemental MediaLive",
+                "blogTitle": "AWS for M&amp;E Blog",
+                "blogLink": "https://aws.amazon.com/blogs/media/",
+                "blogLinkMd5Hash": "2e240933bee36b0020400bfbf23c95e5",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "ea7f9667a432b227c77a23d10cd0038932138567",
+            "content_html": "Amazon SageMaker Feature Store now supports feature-level writes. With the new UpdateRecord API, you can update one or more feature values in a single call without reading or rewriting the entire record. It is available for both the Standard (Amazon DynamoDB) and In-Memory (Amazon ElastiCache) online store tiers.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-feature-store-introduces-updaterecord-for-feature-level-writes/",
+            "title": "Amazon SageMaker Feature Store introduces UpdateRecord for feature-level writes | Artificial Intelligence",
+            "summary": "Amazon SageMaker Feature Store now supports feature-level writes. With the new UpdateRecord API, you can update one or more feature values in a single call without reading or rewriting the entire reco",
+            "image": {
+                "height": "360",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/08/Amazon-SageMaker-Feature-Store-introduces-UpdateRecord-for-feature-level-writes.png",
+                "width": "720",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T18:29:15.000Z",
+            "date_published": "2026-09-08T18:29:15.000Z",
+            "author": {
+                "name": "Mona Mona"
+            },
+            "tags": [
+                "Amazon Machine Learning",
+                "Amazon SageMaker AI",
+                "Announcements",
+                "Artificial Intelligence",
+                "Intermediate (200)",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon SageMaker Feature Store introduces UpdateRecord for feature-level writes",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "88667284f4eb315a303e44d42f1cb0df350f772a",
+            "content_html": "Governing models across accounts is the next step after automatic model registration. This post extends managed MLflow and Amazon SageMaker AI Model Registry sync to two cross-account governance topologies: a hub-and-spoke pattern that centralizes governance with AWS RAM, and a hybrid pattern that keeps development accounts isolated.",
+            "url": "https://aws.amazon.com/blogs/machine-learning/govern-models-with-mlflow-and-amazon-sagemaker-ai-model-registry-sync-part-2/",
+            "title": "Govern models with MLflow and Amazon SageMaker AI Model Registry sync: Part 2 | Artificial Intelligence",
+            "summary": "Governing models across accounts is the next step after automatic model registration. This post extends managed MLflow and Amazon SageMaker AI Model Registry sync to two cross-account governance topol",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/31/ML-21407-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T17:03:50.000Z",
+            "date_published": "2026-09-08T17:03:50.000Z",
+            "author": {
+                "name": "Melanie Li"
+            },
+            "tags": [
+                "Amazon SageMaker AI",
+                "Announcements",
+                "Intermediate (200)"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Govern models with MLflow and Amazon SageMaker AI Model Registry sync: Part 2",
+                "blogTitle": "Artificial Intelligence",
+                "blogLink": "https://aws.amazon.com/blogs/machine-learning/",
+                "blogLinkMd5Hash": "b6f74bd376791d8422d09336054382db",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "f6d6a644797d8a7dba78b6d09361879b6d39fda3",
+            "content_html": "A practical, step-by-step guide to getting Oracle Database@AWS up and running. It covers the five procurement and onboarding steps, from securing your AWS Marketplace offer through validating prerequisites, linking your OCI tenancy, and configuring IAM, so you can move from purchase to a provisioning-ready environment.",
+            "url": "https://aws.amazon.com/blogs/database/getting-started-with-oracle-databaseaws-a-complete-onboarding-guide/",
+            "title": "Getting started with Oracle Database@AWS: A complete onboarding guide | AWS Database Blog",
+            "summary": "A practical, step-by-step guide to getting Oracle Database@AWS up and running. It covers the five procurement and onboarding steps, from securing your AWS Marketplace offer through validating prerequi",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/09/02/DBBLOG-5568-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T16:59:29.000Z",
+            "date_published": "2026-09-08T16:59:29.000Z",
+            "author": {
+                "name": "Raghu Soma"
+            },
+            "tags": [
+                "Best Practices",
+                "Intermediate (200)",
+                "Oracle Database@AWS"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Getting started with Oracle Database@AWS: A complete onboarding guide",
+                "blogTitle": "AWS Database Blog",
+                "blogLink": "https://aws.amazon.com/blogs/database/",
+                "blogLinkMd5Hash": "bb1722625fdf714a637ed3e7b397ae23",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "37151ac424ba52cd649c40924134a74925bb36b6",
+            "content_html": "On September 1, Gartner published its Magic Quadrant for Strategic Cloud Platform Services (SCPS). Amazon Web Services (AWS) is the longest-running Leader in this Magic Quadrant, with Gartner naming AWS a Leader for the sixteenth consecutive year. In the report, Gartner once again placed AWS highest on the Ability to Execute axis. We believe this reflects our commitment to help customers innovate faster, operate more securely, and build at any scale, particularly as agentic AI drives the need fo",
+            "url": "https://aws.amazon.com/blogs/big-data/aws-recognized-as-a-leader-in-the-2026-gartner-magic-quadrant-for-strategic-cloud-platform-services-for-the-16th-consecutive-year/",
+            "title": "AWS recognized as a Leader in the 2026 Gartner Magic Quadrant for Strategic Cloud Platform Services for the 16th consecutive year | AWS Big Data Blog",
+            "summary": "On September 1, Gartner published its Magic Quadrant for Strategic Cloud Platform Services (SCPS). Amazon Web Services (AWS) is the longest-running Leader in this Magic Quadrant, with Gartner naming A",
+            "image": {
+                "height": "360",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/03/AWS-recognized-as-a-Leader-in-the-2026-Gartner-Magic-Quadrant-for-Strategic-Cloud-Platform-Services-for-the-16th-consecutive-year.png",
+                "width": "720",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T16:46:49.000Z",
+            "date_published": "2026-09-08T16:46:49.000Z",
+            "author": {
+                "name": "Erika Ehrli"
+            },
+            "tags": [
+                "Thought Leadership"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS recognized as a Leader in the 2026 Gartner Magic Quadrant for Strategic Cloud Platform Services for the 16th consecutive year",
+                "blogTitle": "AWS Big Data Blog",
+                "blogLink": "https://aws.amazon.com/blogs/big-data/",
+                "blogLinkMd5Hash": "acb36d483a3f1166274b7c10aba46741",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "0f1624b04e49f41793c895b8f3e582ded7e31e0c",
+            "content_html": "Real-time data analytics is transforming how streaming platforms serve their audiences. Learn how Sony LIV built a comprehensive, real-time streaming analytics solution on AWS using Amazon Kinesis Data Streams, Amazon EMR, and Apache Iceberg.",
+            "url": "https://aws.amazon.com/blogs/big-data/how-sony-liv-built-real-time-video-streaming-analytics-with-aws/",
+            "title": "How Sony LIV built real-time video streaming analytics with AWS | AWS Big Data Blog",
+            "summary": "Real-time data analytics is transforming how streaming platforms serve their audiences. Learn how Sony LIV built a comprehensive, real-time streaming analytics solution on AWS using Amazon Kinesis Dat",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/08/26/BDB-5907-featured-image.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T16:43:05.000Z",
+            "date_published": "2026-09-08T16:43:05.000Z",
+            "author": {
+                "name": "Rahul Sureka"
+            },
+            "tags": [
+                "Amazon Kinesis",
+                "Customer Solutions",
+                "Media &amp; Entertainment"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How Sony LIV built real-time video streaming analytics with AWS",
+                "blogTitle": "AWS Big Data Blog",
+                "blogLink": "https://aws.amazon.com/blogs/big-data/",
+                "blogLinkMd5Hash": "acb36d483a3f1166274b7c10aba46741",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "3c8feb6624adc508191a8b88192d01851f4cfe07",
+            "content_html": "Without generated standalone types, a service that publishes events ends up with the payload defined manually in several places. The service has its own definition, and every consumer has their own definition. This is tedious, error-prone busywork for consumers. And as the service evolves, changes to events can expose bugs. A missing field or changed […]",
+            "url": "https://aws.amazon.com/blogs/developer/generate-standalone-types-with-smithy/",
+            "title": "Generate standalone types with Smithy | AWS Developer Tools Blog",
+            "summary": "Without generated standalone types, a service that publishes events ends up with the payload defined manually in several places. The service has its own definition, and every consumer has their own de",
+            "image": {
+                "height": "360",
+                "url": "https://d2908q01vomqb2.cloudfront.net/0716d9708d321ffb6a00818614779e779925365c/2026/09/03/2026-smithy-standalone-types.png",
+                "width": "720",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T16:03:12.000Z",
+            "date_published": "2026-09-08T16:03:12.000Z",
+            "author": {
+                "name": "Jordon Phillips"
+            },
+            "tags": [
+                "Announcements",
+                "Developer Tools",
+                "aws-sdk",
+                "smithy"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Generate standalone types with Smithy",
+                "blogTitle": "AWS Developer Tools Blog",
+                "blogLink": "https://aws.amazon.com/blogs/developer/",
+                "blogLinkMd5Hash": "8642726426da40a8339cba23e398241f",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "9feb200c80001aa37d2a6d34db0defaebbe0954a",
+            "content_html": "Learn how Amazon PreDepart has successfully met the technical requirements of the Universal Postal Union (UPU) TechCert Programme for information technology integration and interoperability with UPU technology.",
+            "url": "https://aws.amazon.com/blogs/publicsector/ai-powered-customs-classification-duty-calculation-and-pre-departure-collection-now-available-to-postal-operators-across-192-nations/",
+            "title": "AI-powered customs classification, duty calculation, and pre-departure collection now available to postal operators across 192 nations | AWS Public Sector Blog",
+            "summary": "Learn how Amazon PreDepart has successfully met the technical requirements of the Universal Postal Union (UPU) TechCert Programme for information technology integration and interoperability with UPU t",
+            "image": {
+                "height": "576",
+                "url": "https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2026/09/02/AI-powered-customs-classification-duty-calculation-and-pre-departure-collection-now-available-to-postal-operators-across-192-nations.png",
+                "width": "1152",
+                "type": "png"
+            },
+            "date_modified": "2026-09-08T15:18:35.000Z",
+            "date_published": "2026-09-08T15:18:35.000Z",
+            "author": {
+                "name": "Mike Lentine"
+            },
+            "tags": [
+                "Industries",
+                "Public Sector"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AI-powered customs classification, duty calculation, and pre-departure collection now available to postal operators across 192 nations",
+                "blogTitle": "AWS Public Sector Blog",
+                "blogLink": "https://aws.amazon.com/blogs/publicsector/",
+                "blogLinkMd5Hash": "f7f3acdce7471e6504655f5ceeb86708",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "bd7e863a13091bede2374f2ed4b4748927b1e862",
+            "content_html": "Last week, Claude Fable 5.1 became available on AWS. According to Anthropic, Claude Fable 5.1 delivers frontier intelligence for ambitious tasks across coding, scientific research, and enterprise workflows. Claude Fable 5.1 is built for long-running, high-stakes work that runs for hours and spans many applications. It can own more of a software project on its […]",
+            "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-fable-5-1-on-aws-amazon-linux-2027-preview-aws-certified-ai-business-strategist-and-more-september-7-2026/",
+            "title": "AWS Weekly Roundup: Claude Fable 5.1 on AWS, Amazon Linux 2027 preview, AWS Certified AI Business Strategist, and more (September 7, 2026) | AWS News Blog",
+            "summary": "Last week, Claude Fable 5.1 became available on AWS. According to Anthropic, Claude Fable 5.1 delivers frontier intelligence for ambitious tasks across coding, scientific research, and enterprise work",
+            "image": {
+                "height": "400",
+                "url": "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/06/08/2026-aws-anthropic.png",
+                "width": "800",
+                "type": "png"
+            },
+            "date_modified": "2026-09-07T14:24:08.000Z",
+            "date_published": "2026-09-07T14:24:08.000Z",
+            "author": {
+                "name": "Channy Yun (윤석찬)"
+            },
+            "tags": [
+                "Amazon Bedrock",
+                "Amazon EC2",
+                "Amazon Redshift",
+                "AWS Lambda",
+                "AWS Training and Certification",
+                "News",
+                "Security, Identity, &amp; Compliance",
+                "Week in Review"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS Weekly Roundup: Claude Fable 5.1 on AWS, Amazon Linux 2027 preview, AWS Certified AI Business Strategist, and more (September 7, 2026)",
+                "blogTitle": "AWS News Blog",
+                "blogLink": "https://aws.amazon.com/blogs/aws/",
+                "blogLinkMd5Hash": "60cc55670b7a03aa630d6c812f6d0ce7",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "b58ee0a1ef706b68baceba6c55a1028c082a4a27",
+            "content_html": "Healthcare organizations migrating regulated workloads to AWS must maintain security and privacy controls at every phase, including replication, testing, and cutover, not just after workloads reach production. This post shows how to layer HIPAA controls onto the proven multi-account AWS Transform MGN (formerly AWS Application Migration Service) migration architecture using AWS Resource Access Manager, covering encrypted private replication, audit continuity, and evidence collection. […]",
+            "url": "https://aws.amazon.com/blogs/migration-and-modernization/maintaining-hipaa-compliance-when-migrating-with-aws-transform-mgn/",
+            "title": "Maintaining HIPAA compliance when migrating with AWS Transform MGN | Migration &amp; Modernization",
+            "summary": "Healthcare organizations migrating regulated workloads to AWS must maintain security and privacy controls at every phase, including replication, testing, and cutover, not just after workloads reach pr",
+            "image": {
+                "height": "630",
+                "url": "https://d2908q01vomqb2.cloudfront.net/1f1362ea41d1bc65be321c0a378a20159f9a26d0/2026/09/01/Screenshot-2026-09-01-at-5.03.04 PM-1127x630.png",
+                "width": "1127",
+                "type": "png"
+            },
+            "date_modified": "2026-09-07T07:11:02.000Z",
+            "date_published": "2026-09-07T07:11:02.000Z",
+            "author": {
+                "name": "Diya"
+            },
+            "tags": [
+                "Advanced (300)",
+                "AWS Application Migration Service",
+                "AWS Transform",
+                "Healthcare",
+                "Technical How-to"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Maintaining HIPAA compliance when migrating with AWS Transform MGN",
+                "blogTitle": "Migration &amp; Modernization",
+                "blogLink": "https://aws.amazon.com/blogs/migration-and-modernization/",
+                "blogLinkMd5Hash": "bdce5f785aedd13b5e81be8e7d99d3b6",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        }
+    ]
+}

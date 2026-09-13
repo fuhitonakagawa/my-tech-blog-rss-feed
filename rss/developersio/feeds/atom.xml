@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/</id>
+    <title>DevelopersIO｜企業テックブログRSS</title>
+    <updated>2026-09-13T05:08:28.046Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/feeds/atom.xml"/>
+    <subtitle>DevelopersIOセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[Lambda の S3 Files でダイレクトリードを設定できるようになったので効果を測ってみた | DevelopersIO]]></title>
+        <id>KXhJ2FTLnPdFpwSbDoLd0</id>
+        <link href="https://dev.classmethod.jp/articles/lambda-s3files-direct-read/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-484d8afca1cbe50513cd4d6738af2960/fa0838fa40f247093d532945fc785e88/aws-lambda" type="image//ct0aopd36mqt/wp-thumbnail-484d8afca1cbe50513cd4d6738af2960/fa0838fa40f247093d532945fc785e88/aws-lambda"/>
+        <updated>2026-09-13T04:38:07.000Z</updated>
+        <summary type="html"><![CDATA[AWS Lambda の S3 Files マウントで、ファイルの読み取り経路を明示的に選べる DirectS3Read がサポートされました。この読み取り経路は、これまでメモリ 512MB を境に自動で決まっていました。メモリ 256MB と 3072MB の関数で、既定と逆の設定にしたときの読み取り性能を実測しました。]]></summary>
+        <content type="html"><![CDATA[AWS Lambda の S3 Files マウントで、ファイルの読み取り経路を明示的に選べる DirectS3Read がサポートされました。この読み取り経路は、これまでメモリ 512MB を境に自動で決まっていました。メモリ 256MB と 3072MB の関数で、既定と逆の設定にしたときの読み取り性能を実測しました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-09-13T04:38:07.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lambda のネットワーク帯域幅を Service Quotas で 3,000 Mbps に引き上げて実測してみた | DevelopersIO]]></title>
+        <id>2CcYNrk0nnKE9JrZe9Lshy</id>
+        <link href="https://dev.classmethod.jp/articles/lambda-network-bandwidth-3000mbps/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-484d8afca1cbe50513cd4d6738af2960/fa0838fa40f247093d532945fc785e88/aws-lambda" type="image//ct0aopd36mqt/wp-thumbnail-484d8afca1cbe50513cd4d6738af2960/fa0838fa40f247093d532945fc785e88/aws-lambda"/>
+        <updated>2026-09-13T04:01:52.000Z</updated>
+        <summary type="html"><![CDATA[VPC外の Lambda 関数のネットワーク帯域幅が、デフォルトの 625 Mbps から最大 3,000 Mbps まで、申請により拡張できるようになりました。Lambda のメモリを変えながら、iperf3 と S3 からのダウンロードでスループットを比較しました。]]></summary>
+        <content type="html"><![CDATA[VPC外の Lambda 関数のネットワーク帯域幅が、デフォルトの 625 Mbps から最大 3,000 Mbps まで、申請により拡張できるようになりました。Lambda のメモリを変えながら、iperf3 と S3 からのダウンロードでスループットを比較しました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-09-13T04:01:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[S3 VectorsからDynamoDBのベクトル検索に寄せられるか実機で確かめてみる | DevelopersIO]]></title>
+        <id>4n7iU0JIcQElJiGJ8QX9ft</id>
+        <link href="https://dev.classmethod.jp/articles/dynamodb-vector-s3vectors-diff/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-8e5149b9e16d885e7f81fee054898d99/ff93e85e9dd30e05398e5f8175186192/amazon-dynamodb" type="image//ct0aopd36mqt/wp-thumbnail-8e5149b9e16d885e7f81fee054898d99/ff93e85e9dd30e05398e5f8175186192/amazon-dynamodb"/>
+        <updated>2026-09-13T02:00:09.000Z</updated>
+        <summary type="html"><![CDATA[Amazon DynamoDBのベクトル検索がGAになったので、既存で使っているAmazon S3 Vectorsと同じデータを両方に入れて、仕様表では見落としやすい差を実機で確認してみました。]]></summary>
+        <content type="html"><![CDATA[Amazon DynamoDBのベクトル検索がGAになったので、既存で使っているAmazon S3 Vectorsと同じデータを両方に入れて、仕様表では見落としやすい差を実機で確認してみました。]]></content>
+        <author>
+            <name>kobayashi.m</name>
+        </author>
+        <published>2026-09-13T02:00:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【アップデート】Amazon Quickのモバイルアプリが登場したのでアクティビティフィード機能をiPhoneで触ってみた | DevelopersIO]]></title>
+        <id>13ewUco2qY4f5NCi7HF7FU</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-quick-activity-feed-mobile/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png" type="image/png"/>
+        <updated>2026-09-13T01:47:42.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Quickのモバイルアプリでアクティビティフィードが使えるようになったので、iPhoneで実際に触ってみました。デスクトップとスマホでタスクやフィードが同期され、外出先でも同じ文脈で作業を続けられるようになった様子をご紹介します。]]></summary>
+        <content type="html"><![CDATA[Amazon Quickのモバイルアプリでアクティビティフィードが使えるようになったので、iPhoneで実際に触ってみました。デスクトップとスマホでタスクやフィードが同期され、外出先でも同じ文脈で作業を続けられるようになった様子をご紹介します。]]></content>
+        <author>
+            <name>こーへい</name>
+        </author>
+        <published>2026-09-13T01:47:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Quick の S3 ナレッジベースのドキュメントレベル ACL を検証してみた - ユーザーごとに機密文書を出し分ける | DevelopersIO]]></title>
+        <id>57mvd6PyHphcx8VgjC028m</id>
+        <link href="https://dev.classmethod.jp/articles/20260911-amazon-quick-s3-acl/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png" type="image/png"/>
+        <updated>2026-09-13T00:13:20.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Quickの S3 ナレッジベースに実装されたドキュメントレベルの ACL（アクセスコントロールリスト）について、実際に検証してみました。グローバル ACL 方式とメタデータ方式の設定方法から、チャットでの権限検証まで、詳しく試してみたので紹介します。]]></summary>
+        <content type="html"><![CDATA[Amazon Quickの S3 ナレッジベースに実装されたドキュメントレベルの ACL（アクセスコントロールリスト）について、実際に検証してみました。グローバル ACL 方式とメタデータ方式の設定方法から、チャットでの権限検証まで、詳しく試してみたので紹介します。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-09-13T00:13:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Kiro CLI v3 のセッション検索がエージェントの応答も対象にできるようになったので試してみた | DevelopersIO]]></title>
+        <id>5AKYCcaskPepiUKE7BbC5e</id>
+        <link href="https://dev.classmethod.jp/articles/kiro-cli-v3-sessions-search-mode/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/4uTbTE9O9jUJCOs80dZ0Ao/e2da592b5eaaad0f5993d6ff64a12467/aws-kiro.png" type="image/png"/>
+        <updated>2026-09-12T22:54:38.000Z</updated>
+        <summary type="html"><![CDATA[V3だけだがレスポンスも対象に検索できるようになった。というか今までできなかったのか。]]></summary>
+        <content type="html"><![CDATA[V3だけだがレスポンスも対象に検索できるようになった。というか今までできなかったのか。]]></content>
+        <author>
+            <name>いわさ</name>
+        </author>
+        <published>2026-09-12T22:54:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Enterprise プランでモバイルアプリに対してどれだけ制御できるか確認してみた | DevelopersIO]]></title>
+        <id>6RsbOyxQD3RkLB42pZpJs8</id>
+        <link href="https://dev.classmethod.jp/articles/slug-claude-enterprise-mobile-desktop-web/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png" type="image/png"/>
+        <updated>2026-09-12T14:47:53.000Z</updated>
+        <summary type="html"><![CDATA[Claude Enterprise プランでモバイルアプリの利用制御がどのように機能するのか、実際に確認してみました。Chat、Cowork、Code それぞれの設定の違いと制御可能な範囲について、検証結果をお伝えします。]]></summary>
+        <content type="html"><![CDATA[Claude Enterprise プランでモバイルアプリの利用制御がどのように機能するのか、実際に確認してみました。Chat、Cowork、Code それぞれの設定の違いと制御可能な範囲について、検証結果をお伝えします。]]></content>
+        <author>
+            <name>長澤 陸</name>
+        </author>
+        <published>2026-09-12T14:47:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【アップデート】Amazon QuickのデスクトップアプリがGAになったのでプレビューからの変更点をまとめてみた | DevelopersIO]]></title>
+        <id>6zpFPFXlppiEtmpCyjUHi2</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-quick-desktop-app-ga/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png" type="image/png"/>
+        <updated>2026-09-12T14:40:17.000Z</updated>
+        <summary type="html"><![CDATA[Amazon QuickのデスクトップアプリがGA（一般提供）になりました。プレビューからの変更点を中心にご紹介します。]]></summary>
+        <content type="html"><![CDATA[Amazon QuickのデスクトップアプリがGA（一般提供）になりました。プレビューからの変更点を中心にご紹介します。]]></content>
+        <author>
+            <name>こーへい</name>
+        </author>
+        <published>2026-09-12T14:40:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code v2.1.269 の主要アップデート - claude plugin eval の追加と権限ルールの適用漏れ修正 | DevelopersIO]]></title>
+        <id>10HpukyNB563k37ajamwhA</id>
+        <link href="https://dev.classmethod.jp/articles/20260912-cc-updates-v2-1-269/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png" type="image/png"/>
+        <updated>2026-09-12T07:07:59.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code v2.1.269 がリリースされました。98 件の変更のうち、プラグイン周りの新機能とセキュリティ修正が大きな特徴です。今日は、プラグイン（スキル）が実際に効いているか採点して数値にするコマンド claude plugin eval を試してみました。]]></summary>
+        <content type="html"><![CDATA[Claude Code v2.1.269 がリリースされました。98 件の変更のうち、プラグイン周りの新機能とセキュリティ修正が大きな特徴です。今日は、プラグイン（スキル）が実際に効いているか採点して数値にするコマンド claude plugin eval を試してみました。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-09-12T07:07:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[筋トレの分析をするために、M5StickS3のIMUデータを収集して可視化するパイプラインを作ってみた | DevelopersIO]]></title>
+        <id>3eI1tKZywdjjyOYXrquN6I</id>
+        <link href="https://dev.classmethod.jp/articles/m5sticks3-iot-core-firehose-athena-grafana/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-06e039aecab973a68134b7db69ff9ffd/bd37c8691e5a1f5e3b239f6e8a3888af/aws-iot-core" type="image//ct0aopd36mqt/wp-thumbnail-06e039aecab973a68134b7db69ff9ffd/bd37c8691e5a1f5e3b239f6e8a3888af/aws-iot-core"/>
+        <updated>2026-09-12T07:04:19.000Z</updated>
+        <summary type="html"><![CDATA[M5StickS3のIMUデータをIoT Core経由でS3に保存し、AthenaとGrafanaで可視化するまでの実装を紹介します。筋トレデータの分析に向けて、Basic Ingestとローカル環境でコスト効率よく実現する方法をまとめました。]]></summary>
+        <content type="html"><![CDATA[M5StickS3のIMUデータをIoT Core経由でS3に保存し、AthenaとGrafanaで可視化するまでの実装を紹介します。筋トレデータの分析に向けて、Basic Ingestとローカル環境でコスト効率よく実現する方法をまとめました。]]></content>
+        <author>
+            <name>はすと ( sasaki hasuto )</name>
+        </author>
+        <published>2026-09-12T07:04:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS ParallelCluster 3.16.1 がリリースされ Slurm の CVE 問題が解消したので確認してみた | DevelopersIO]]></title>
+        <id>2UEBSzi71yt6qI9bP027Sp</id>
+        <link href="https://dev.classmethod.jp/articles/aws-parallelcluster-3-16-1-slurm-cve-fixed/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-b7a97109267e33040a02666309325eb5/0ce782e59c1b66fe6bdad2e6c8370893/aws-parallelcluster" type="image//ct0aopd36mqt/wp-thumbnail-b7a97109267e33040a02666309325eb5/0ce782e59c1b66fe6bdad2e6c8370893/aws-parallelcluster"/>
+        <updated>2026-09-12T05:58:12.000Z</updated>
+        <summary type="html"><![CDATA[AWS ParallelCluster 3.16.1 でクラスターを作成し、Slurm の CVE 対応版である 25.11.8 が正しく動作するか確認してみました。]]></summary>
+        <content type="html"><![CDATA[AWS ParallelCluster 3.16.1 でクラスターを作成し、Slurm の CVE 対応版である 25.11.8 が正しく動作するか確認してみました。]]></content>
+        <author>
+            <name>大村 保貴</name>
+        </author>
+        <published>2026-09-12T05:58:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft Copilot Studio で社内のFAQ問い合わせエージェントを作ってみた | DevelopersIO]]></title>
+        <id>JdzXAZNKqBv40EkfcUseh</id>
+        <link href="https://dev.classmethod.jp/articles/shoma-tried-building-internal-faq-inquiry-agent-with-microsoft-copilot-studio/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/1dD7b8HkT2sbiJzUIewMTD/e5cdc6f33c4fdd9d798f11a4564612ff/eyecatch_developersio_darktone_1200x630.jpg" type="image/jpg"/>
+        <updated>2026-09-12T02:22:40.000Z</updated>
+        <summary type="html"><![CDATA[Microsoft Copilot Studio で社内問い合わせ対応エージェントを作ってみました。ナレッジ、ツール、認証が揃った環境で、コード不要でチャットボットを公開できる手軽さが魅力です。作り方から公開まで、実践的に解説します。]]></summary>
+        <content type="html"><![CDATA[Microsoft Copilot Studio で社内問い合わせ対応エージェントを作ってみました。ナレッジ、ツール、認証が揃った環境で、コード不要でチャットボットを公開できる手軽さが魅力です。作り方から公開まで、実践的に解説します。]]></content>
+        <author>
+            <name>小林翔馬</name>
+        </author>
+        <published>2026-09-12T02:22:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Kiro Crew 0.6 のエージェントバックエンドに Claude Code / Codex / KAS が追加されたので試してみた | DevelopersIO]]></title>
+        <id>5vu3S44AM68LZ0qplmO93T</id>
+        <link href="https://dev.classmethod.jp/articles/kiro-crew-0_6-agentbackend-claudecode/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/4uTbTE9O9jUJCOs80dZ0Ao/e2da592b5eaaad0f5993d6ff64a12467/aws-kiro.png" type="image/png"/>
+        <updated>2026-09-11T23:49:26.000Z</updated>
+        <summary type="html"><![CDATA[Kiro 無料プラン + Claude Code 有料プランとかで使えるかもしれない]]></summary>
+        <content type="html"><![CDATA[Kiro 無料プラン + Claude Code 有料プランとかで使えるかもしれない]]></content>
+        <author>
+            <name>いわさ</name>
+        </author>
+        <published>2026-09-11T23:49:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[新機能]dbt Projects on Snowflake で Slim CI / Defer to Production が一般提供になりました | DevelopersIO]]></title>
+        <id>4qbDjm8PIcR3S5pMqV9MvK</id>
+        <link href="https://dev.classmethod.jp/articles/dbt-projectss-on-snowflake-slim-ci-defer-to-prod-ga/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake" type="image//ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake"/>
+        <updated>2026-09-11T17:34:33.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月のアップデートで、dbt Projects on Snowflake の Slim CI と Defer to Production が一般提供となりました。本番アーティファクトをネイティブに扱える新機能を試してみた内容をまとめます。]]></summary>
+        <content type="html"><![CDATA[2026年9月のアップデートで、dbt Projects on Snowflake の Slim CI と Defer to Production が一般提供となりました。本番アーティファクトをネイティブに扱える新機能を試してみた内容をまとめます。]]></content>
+        <author>
+            <name>安原朋紀</name>
+        </author>
+        <published>2026-09-11T17:34:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[レポート]SNOWFLAKE WORLD TOUR 2026 - TOKYO：Day2 KEYNOTE #SWTTokyo26 | DevelopersIO]]></title>
+        <id>2t80qTAomly5c8sVRvGYfE</id>
+        <link href="https://dev.classmethod.jp/articles/snowflake-world-tour-2026-tokyo-day2-keynote-swttokyo26/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/4kFYCMTvi9ucEtpiAfvm01/b605f81aa314b1fdbc86f8fee275fb43/eyecatch_snowflakeworldtourtokyo2026.webp" type="image/webp"/>
+        <updated>2026-09-11T15:51:49.000Z</updated>
+        <summary type="html"><![CDATA[CEOのスリダール・ラマスワミが登壇し、エンタープライズAIの未来と企業が「Agentic Enterprise」へと踏み出すための経営論点を解説。CoWorkやCoCoといった最新エージェント機能がもたらす可能性をお届けします。 国内事例としては、全部門のデータを統合した「単一信頼情報源」を確立し、Snowflake CoCoの活用で業務効率を飛躍的に改善させた三井住友トラスト・アセットマネジメ]]></summary>
+        <content type="html"><![CDATA[CEOのスリダール・ラマスワミが登壇し、エンタープライズAIの未来と企業が「Agentic Enterprise」へと踏み出すための経営論点を解説。CoWorkやCoCoといった最新エージェント機能がもたらす可能性をお届けします。 国内事例としては、全部門のデータを統合した「単一信頼情報源」を確立し、Snowflake CoCoの活用で業務効率を飛躍的に改善させた三井住友トラスト・アセットマネジメントと、全社規模でMCP基盤を展開し、Native AppsやCortex等の活用でデータドリブン経営を体現されているサイバーエージェントが登場。AI活用の今と今後の方向性を知る上で必見です。※SNOWFLAKE WORLD TOUR 2026 イベントサイトより抜粋]]></content>
+        <author>
+            <name>かわばた</name>
+        </author>
+        <published>2026-09-11T15:51:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「AI書類審査ソリューションRAPID」で自治体業務は効率化されるのか考えてみた | DevelopersIO]]></title>
+        <id>351WyzE2IuhBQl5uCoPNVq</id>
+        <link href="https://dev.classmethod.jp/articles/rapid_localgovernment/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/v1786351974/user-gen-eyecatch/r1tvbxhoefiw8ascwgtp.jpg" type="image/jpg"/>
+        <updated>2026-09-11T13:24:29.000Z</updated>
+        <summary type="html"><![CDATA[AWS公式のOSS「RAPID」が自治体業務の効率化にどう役立つのか、実例と法制度の観点から調べてみました。]]></summary>
+        <content type="html"><![CDATA[AWS公式のOSS「RAPID」が自治体業務の効率化にどう役立つのか、実例と法制度の観点から調べてみました。]]></content>
+        <author>
+            <name>fukata</name>
+        </author>
+        <published>2026-09-11T13:24:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[新機能]dbt Projects on Snowflakeで同一プロジェクトオブジェクトに対してdbtコマンドの並列実行が可能となりました | DevelopersIO]]></title>
+        <id>7BGswDRc66N9v9hGacZv9Y</id>
+        <link href="https://dev.classmethod.jp/articles/dbt-projects-on-snowflake-run-one-project-concurrently/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake" type="image//ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake"/>
+        <updated>2026-09-11T13:06:38.000Z</updated>
+        <summary type="html"><![CDATA[dbt Projects on Snowflakeの新機能**並行実行機能**を試してみました。これまで複数の実行を同時に走らせるにはdbt project objectを複製する必要がありましたが、今回のアップデートで1つのプロジェクトをデプロイしたまま複数のコマンドを並列実行できるようになります。その仕組みと実装パターンを紹介します。]]></summary>
+        <content type="html"><![CDATA[dbt Projects on Snowflakeの新機能**並行実行機能**を試してみました。これまで複数の実行を同時に走らせるにはdbt project objectを複製する必要がありましたが、今回のアップデートで1つのプロジェクトをデプロイしたまま複数のコマンドを並列実行できるようになります。その仕組みと実装パターンを紹介します。]]></content>
+        <author>
+            <name>さがら</name>
+        </author>
+        <published>2026-09-11T13:06:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NemoHermes にチーム共通 RAG と Web 検索をつないで、知見を溜めながら外の情報も取りに行かせる | DevelopersIO]]></title>
+        <id>346EvOcA4smk76B4IPsGpy</id>
+        <link href="https://dev.classmethod.jp/articles/reona-04-dgx-spark-team-rag-web-search/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/10swzj0rqeP1btTynCAOIv/8ed3f14fdedc076f8131d07cbed1429d/hermes.webp" type="image/webp"/>
+        <updated>2026-09-11T09:55:28.000Z</updated>
+        <summary type="html"><![CDATA[チーム RAG と Web 検索の 2 つの知識の入口を、同じ sandbox で両立させる方法をご紹介します。ビルドの課題から認証の設計、エージェントの信頼境界まで、実装の細部を詰めた知見をまとめました。]]></summary>
+        <content type="html"><![CDATA[チーム RAG と Web 検索の 2 つの知識の入口を、同じ sandbox で両立させる方法をご紹介します。ビルドの課題から認証の設計、エージェントの信頼境界まで、実装の細部を詰めた知見をまとめました。]]></content>
+        <author>
+            <name>嶋田怜央成 / Reona Shimada</name>
+        </author>
+        <published>2026-09-11T09:55:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JS, TSのロギングライブラリLogTapeでログのマスキングをする | DevelopersIO]]></title>
+        <id>7EFtnQXTCHDKa2z8SeEuBc</id>
+        <link href="https://dev.classmethod.jp/articles/log-masking-on-logtape/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-f5b43fd73ea26db8c8d57676329f642d/727663a08e672b6ae67535ad308566e6/javascript.png" type="image/png"/>
+        <updated>2026-09-11T09:30:03.000Z</updated>
+        <summary type="html"><![CDATA[LogTapeのマスキング機能を試してみました。API KeyやJWTなどの秘匿情報をログから隠蔽する方法について、Pattern-based redactionとField-based redactionの2つのアプローチを紹介します。]]></summary>
+        <content type="html"><![CDATA[LogTapeのマスキング機能を試してみました。API KeyやJWTなどの秘匿情報をログから隠蔽する方法について、Pattern-based redactionとField-based redactionの2つのアプローチを紹介します。]]></content>
+        <author>
+            <name>夏目祐樹</name>
+        </author>
+        <published>2026-09-11T09:30:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Connect 双方向SMSを本番運用する前に確認したいAWS End User Messaging SMSのポイントを整理してみた | DevelopersIO]]></title>
+        <id>5h9olkBPCst1Bg5qgkauIL</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-connect-two-way-sms-end-user-messaging-checkpoints/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3Lcrvwg7ezBnn4PbW46dIA/f0ed66c275da40c98de533264073d11f/End-User-Messaging.png" type="image/png"/>
+        <updated>2026-09-11T05:41:04.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Connectで双方向SMSを本番運用する際、AWS End User Messaging SMS側で確認すべきポイントを整理しました。サンドボックスモードからの移行、ショートコードの状態確認、使用クォータ、オプトアウト設定といった本番移行前のチェックリストから、送信制限や無効電話番号への対策まで、実装に必要な知識をまとめています。]]></summary>
+        <content type="html"><![CDATA[Amazon Connectで双方向SMSを本番運用する際、AWS End User Messaging SMS側で確認すべきポイントを整理しました。サンドボックスモードからの移行、ショートコードの状態確認、使用クォータ、オプトアウト設定といった本番移行前のチェックリストから、送信制限や無効電話番号への対策まで、実装に必要な知識をまとめています。]]></content>
+        <author>
+            <name>平井裕二</name>
+        </author>
+        <published>2026-09-11T05:41:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[template.yamlのAWSTemplateFormatVersionとは何か | DevelopersIO]]></title>
+        <id>pBYiILpYjG2GRHgLwzNFn</id>
+        <link href="https://dev.classmethod.jp/articles/cloudformation-awstemplateformatversion-explained/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-dcbaa2123fec72b4fafe12edd4285aaf/178121bca8a805d8af9e86e4e4bbe732/aws-cloudformation" type="image//ct0aopd36mqt/wp-thumbnail-dcbaa2123fec72b4fafe12edd4285aaf/178121bca8a805d8af9e86e4e4bbe732/aws-cloudformation"/>
+        <updated>2026-09-11T05:33:43.000Z</updated>
+        <summary type="html"><![CDATA[CloudFormation のテンプレートの先頭に記載されているAWSTemplateFormatVersion について気になったので、実際に検証してみました。]]></summary>
+        <content type="html"><![CDATA[CloudFormation のテンプレートの先頭に記載されているAWSTemplateFormatVersion について気になったので、実際に検証してみました。]]></content>
+        <author>
+            <name>山本 翔大</name>
+        </author>
+        <published>2026-09-11T05:33:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code v2.1.268 の主要アップデート - タスク管理ツールのモデル別提供と権限ルールのセキュリティ修正 | DevelopersIO]]></title>
+        <id>5zF9AZ0nLZaQBnvUsaWAo8</id>
+        <link href="https://dev.classmethod.jp/articles/20260911-cc-updates-v2-1-268/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png" type="image/png"/>
+        <updated>2026-09-11T05:29:21.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code v2.1.268がリリースされました。96件の変更が入った今回は、権限ルールのセキュリティ修正やタスク管理ツールのモデル別提供など、設定見直しが必要な変更も含まれています。主要なアップデート内容をご紹介します。今日は、新しい plugin --json を試してみました。]]></summary>
+        <content type="html"><![CDATA[Claude Code v2.1.268がリリースされました。96件の変更が入った今回は、権限ルールのセキュリティ修正やタスク管理ツールのモデル別提供など、設定見直しが必要な変更も含まれています。主要なアップデート内容をご紹介します。今日は、新しい plugin --json を試してみました。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-09-11T05:29:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] AWS Transform for .NET のモダナイゼーションが GA となり CLI でも実行できるようになりました | DevelopersIO]]></title>
+        <id>16MJWLK3Isq6SbvvMe4oJx</id>
+        <link href="https://dev.classmethod.jp/articles/aws-transform-dotnet-cli/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/6sr6qXoJHrSGCktI3d56Hk/4504fc5f0b23d1e8430dfc948c18f606/aws-transform.png" type="image/png"/>
+        <updated>2026-09-10T23:57:09.000Z</updated>
+        <summary type="html"><![CDATA[.NET、ATX CLI対応してなかったのか]]></summary>
+        <content type="html"><![CDATA[.NET、ATX CLI対応してなかったのか]]></content>
+        <author>
+            <name>いわさ</name>
+        </author>
+        <published>2026-09-10T23:57:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iOSアプリ開発の気になる変更まとめ（2026/09/10） | DevelopersIO]]></title>
+        <id>62A2c96UumowvFdj11PB3q</id>
+        <link href="https://dev.classmethod.jp/articles/ios-dev-weekly-changes-20260911/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/v1789068422/user-gen-eyecatch/p4wg5hgwfghwqhoq7x6g.png" type="image/png"/>
+        <updated>2026-09-10T19:45:23.000Z</updated>
+        <summary type="html"><![CDATA[iOS 27 RC / Xcode 27 RCのリリースノートをBeta 4から比較し、iPhone Duoの発表に伴う開発者向け変更もまとめた。MetricKitの破壊的変更、iPadリサイズ動作の変更、UIScreen.main移行の必須化など、GA前に押さえておきたい変更を整理した。]]></summary>
+        <content type="html"><![CDATA[iOS 27 RC / Xcode 27 RCのリリースノートをBeta 4から比較し、iPhone Duoの発表に伴う開発者向け変更もまとめた。MetricKitの破壊的変更、iPadリサイズ動作の変更、UIScreen.main移行の必須化など、GA前に押さえておきたい変更を整理した。]]></content>
+        <author>
+            <name>和田 健司</name>
+        </author>
+        <published>2026-09-10T19:45:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【小ネタ】Amazon QuickのAI推論はApp Storageのデータ分析は可能でダッシュボード分析は出来ませんでした | DevelopersIO]]></title>
+        <id>eyCVQxQJcX2UzR0oQYv7P</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-quick-apps-ai-inference-dashboard/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png" type="image/png"/>
+        <updated>2026-09-10T15:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Amazon QuickのアプリにAI推論を組み込んでみたところ、埋め込みダッシュボードのデータは分析できないという制限があることがわかりました。その理由と、AI推論に渡せるデータについて紹介します。]]></summary>
+        <content type="html"><![CDATA[Amazon QuickのアプリにAI推論を組み込んでみたところ、埋め込みダッシュボードのデータは分析できないという制限があることがわかりました。その理由と、AI推論に渡せるデータについて紹介します。]]></content>
+        <author>
+            <name>こーへい</name>
+        </author>
+        <published>2026-09-10T15:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[レポート]SNOWFLAKE WORLD TOUR 2026 - TOKYO：Day1 KEYNOTE #SWTTokyo26 | DevelopersIO]]></title>
+        <id>4b8J3nz6ivFqkNlRaMS6fw</id>
+        <link href="https://dev.classmethod.jp/articles/snowflake-world-tour-2026-tokyo-day1-keynote-swttokyo26/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/4kFYCMTvi9ucEtpiAfvm01/b605f81aa314b1fdbc86f8fee275fb43/eyecatch_snowflakeworldtourtokyo2026.webp" type="image/webp"/>
+        <updated>2026-09-10T15:24:15.000Z</updated>
+        <summary type="html"><![CDATA[プロダクト責任者クリスチャン・クライナマンが、最新のAI・データビジョンと戦略をデモを交えてご紹介。国内事例として日産自動車がビジネス価値創出に直結するAI・データの実践像を、富士フイルムが全社的なAI-ready基盤構築とガバナンス主導のDX事例を語ります。さらにスペシャルゲストとしてAnthropic社でAPACのApplied AIを率いるNatalie Meadが来日。対談を通じ、スピード]]></summary>
+        <content type="html"><![CDATA[プロダクト責任者クリスチャン・クライナマンが、最新のAI・データビジョンと戦略をデモを交えてご紹介。国内事例として日産自動車がビジネス価値創出に直結するAI・データの実践像を、富士フイルムが全社的なAI-ready基盤構築とガバナンス主導のDX事例を語ります。さらにスペシャルゲストとしてAnthropic社でAPACのApplied AIを率いるNatalie Meadが来日。対談を通じ、スピードと安全性のバランスや両社の強力なパートナーシップが拓く企業AIの展望など、企業のAI活用に関する最先端のトレンドをお届けします。※SNOWFLAKE WORLD TOUR 2026 イベントサイトより抜粋]]></content>
+        <author>
+            <name>かわばた</name>
+        </author>
+        <published>2026-09-10T15:24:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[レガシーコード500本からSQLを自動抽出できるのか試してみた 〜Claude Codeのヘッドレス実行とHaiku/Sonnet/Opusの比較〜 | DevelopersIO]]></title>
+        <id>tGkGgwqhK9ogUxUoqzE1D</id>
+        <link href="https://dev.classmethod.jp/articles/claude-code-headless-legacy-code-sql-extraction/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png" type="image/png"/>
+        <updated>2026-09-10T15:00:10.000Z</updated>
+        <summary type="html"><![CDATA[SQL Server のバージョンアップに伴うレガシーコードからの SQL 抽出は、数千ファイル規模だと現実的ではありません。そこで、Claude などの LLM をヘッドレス実行でバッチ化し、Java/VB.NET から SQL を漏れなく自動抽出できるか検証してみました。]]></summary>
+        <content type="html"><![CDATA[SQL Server のバージョンアップに伴うレガシーコードからの SQL 抽出は、数千ファイル規模だと現実的ではありません。そこで、Claude などの LLM をヘッドレス実行でバッチ化し、Java/VB.NET から SQL を漏れなく自動抽出できるか検証してみました。]]></content>
+        <author>
+            <name>田中聖也</name>
+        </author>
+        <published>2026-09-10T15:00:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【登壇レポート】 勉強会 opsmethod#4 「増え続ける運用を、Skill 化する"型"でさばく」というタイトルで登壇しました！ | DevelopersIO]]></title>
+        <id>0HiBtlC9tplrt9yr2CHOu</id>
+        <link href="https://dev.classmethod.jp/articles/20260908-opsmethod4-agent-skills-for-operation/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/v1789045270/user-gen-eyecatch/b2zgccqtgvtmd53f6twg.webp" type="image/webp"/>
+        <updated>2026-09-10T13:16:20.000Z</updated>
+        <summary type="html"><![CDATA[運用の文脈を明確にし、チーム全体で共通の「型」を用いてSkillを構築するアプローチについて、勉強会での登壇内容をご紹介します。]]></summary>
+        <content type="html"><![CDATA[運用の文脈を明確にし、チーム全体で共通の「型」を用いてSkillを構築するアプローチについて、勉強会での登壇内容をご紹介します。]]></content>
+        <author>
+            <name>森あかり</name>
+        </author>
+        <published>2026-09-10T13:16:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Quickのアプリでスコアの対応メモをSlackに投稿してみた | DevelopersIO]]></title>
+        <id>30hvs5lChtADZowdJHdHK5</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-quick-apps-slack-connector/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png" type="image/png"/>
+        <updated>2026-09-10T13:12:14.000Z</updated>
+        <summary type="html"><![CDATA[Quickのアプリ機能を使用して、ダッシュボードのメモを共有・相談までをノーコードで完結させる流れを紹介します。]]></summary>
+        <content type="html"><![CDATA[Quickのアプリ機能を使用して、ダッシュボードのメモを共有・相談までをノーコードで完結させる流れを紹介します。]]></content>
+        <author>
+            <name>こーへい</name>
+        </author>
+        <published>2026-09-10T13:12:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rust 1.98 の algebraic_* でオーディオ DSP は速くなるのか検証してみた | DevelopersIO]]></title>
+        <id>6dn9O7JI0ofJo7V2HChUUX</id>
+        <link href="https://dev.classmethod.jp/articles/rust-1-98-algebraic-float-audio-dsp/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/4u1gqKpsvlSCxsWDlEyXiJ/36c9da357c4278091af22c281a79ddca/rust-eyecatch.png" type="image/png"/>
+        <updated>2026-09-10T11:13:35.000Z</updated>
+        <summary type="html"><![CDATA[gain と mixing の性能は、通常演算とほぼ同じでした。dot product が 2.75〜6.94 倍、64 タップ FIR が約 3.5 倍になりました。一方で、高速化と引き換えに通常演算との差が生じました。]]></summary>
+        <content type="html"><![CDATA[gain と mixing の性能は、通常演算とほぼ同じでした。dot product が 2.75〜6.94 倍、64 タップ FIR が約 3.5 倍になりました。一方で、高速化と引き換えに通常演算との差が生じました。]]></content>
+        <author>
+            <name>越井 琢巳 (Koshii Takumi)</name>
+        </author>
+        <published>2026-09-10T11:13:35.000Z</published>
+    </entry>
+</feed>
