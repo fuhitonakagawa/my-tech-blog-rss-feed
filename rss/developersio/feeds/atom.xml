@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/</id>
+    <title>DevelopersIO｜企業テックブログRSS</title>
+    <updated>2026-09-15T23:12:47.185Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/feeds/atom.xml"/>
+    <subtitle>DevelopersIOセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[[新機能]Snowflakeで期間の管理・比較ができるデータ型「PERIOD」を試してみた | DevelopersIO]]></title>
+        <id>6SBBvaUGfJEkK7tLTL9h1p</id>
+        <link href="https://dev.classmethod.jp/articles/snowflake-try-period/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake" type="image//ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake"/>
+        <updated>2026-09-15T21:15:35.000Z</updated>
+        <summary type="html"><![CDATA[Snowflakeの10.32リリースで正式リリースされたPERIODデータ型を使って、顧客の料金プラン履歴管理を試してみました。開始日・終了日の2カラムではなく1つの値で時間範囲を表現でき、期間の重複判定や指定日時点の契約確認が簡潔に実装できます。]]></summary>
+        <content type="html"><![CDATA[Snowflakeの10.32リリースで正式リリースされたPERIODデータ型を使って、顧客の料金プラン履歴管理を試してみました。開始日・終了日の2カラムではなく1つの値で時間範囲を表現でき、期間の重複判定や指定日時点の契約確認が簡潔に実装できます。]]></content>
+        <author>
+            <name>さがら</name>
+        </author>
+        <published>2026-09-15T21:15:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kiro の GPT-5.6 が 1M トークンのコンテキストウィンドウに対応。新しいクレジット倍率も確認してみた | DevelopersIO]]></title>
+        <id>5ie6QBtnD4VZVHfr5rdW4Z</id>
+        <link href="https://dev.classmethod.jp/articles/kiro-gpt-5-6-1m-context-window/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/4uTbTE9O9jUJCOs80dZ0Ao/e2da592b5eaaad0f5993d6ff64a12467/aws-kiro.png" type="image/png"/>
+        <updated>2026-09-15T21:13:31.000Z</updated>
+        <summary type="html"><![CDATA[Kiro の GPT-5.6 が、最大 1M トークンのコンテキストウィンドウをサポートしました。一方で、272K トークンを超えるリクエストには新しいクレジット倍率が適用されます。Kiro CLI を使い、長い入力を扱えることと、境界前後のクレジット消費の変化を確認しました。]]></summary>
+        <content type="html"><![CDATA[Kiro の GPT-5.6 が、最大 1M トークンのコンテキストウィンドウをサポートしました。一方で、272K トークンを超えるリクエストには新しいクレジット倍率が適用されます。Kiro CLI を使い、長い入力を扱えることと、境界前後のクレジット消費の変化を確認しました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-09-15T21:13:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CDKで既存ログを残したままロググループ名を変える方法を確かめてみた | DevelopersIO]]></title>
+        <id>2D3ZxDS4IWUOYFu047pFuM</id>
+        <link href="https://dev.classmethod.jp/articles/cdk-loggroup-rename-keep-old-logs/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-d6a3bc85cad6419960fbda152152cd8c/ba5841cea06b96f4933878762028b090/amazon-cloudwatch" type="image//ct0aopd36mqt/wp-thumbnail-d6a3bc85cad6419960fbda152152cd8c/ba5841cea06b96f4933878762028b090/amazon-cloudwatch"/>
+        <updated>2026-09-15T13:13:38.000Z</updated>
+        <summary type="html"><![CDATA[既存ログを残したままロググループ名を変える方法を検証しました。既存の Construct には手を付けず、新しい名前のロググループを別の Construct として定義します。あわせて、すでに管理外になったロググループを cdk import で取り込む手順も紹介します。]]></summary>
+        <content type="html"><![CDATA[既存ログを残したままロググループ名を変える方法を検証しました。既存の Construct には手を付けず、新しい名前のロググループを別の Construct として定義します。あわせて、すでに管理外になったロググループを cdk import で取り込む手順も紹介します。]]></content>
+        <author>
+            <name>はすと ( sasaki hasuto )</name>
+        </author>
+        <published>2026-09-15T13:13:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TiDB CloudのデータをTiDB Cloud Lakeへ移してみた | DevelopersIO]]></title>
+        <id>3i0UyhDQF5Ab7HCi5bB3Px</id>
+        <link href="https://dev.classmethod.jp/articles/tidb-cloud-lake-migrate-from-tidb/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-07051db95b75464ccdf45673e64b1034/6a4af753421ceac3fd046bcac0216205/eyecatch_TiDBCloud" type="image//ct0aopd36mqt/wp-thumbnail-07051db95b75464ccdf45673e64b1034/6a4af753421ceac3fd046bcac0216205/eyecatch_TiDBCloud"/>
+        <updated>2026-09-15T12:28:47.000Z</updated>
+        <summary type="html"><![CDATA[TiDB CloudのデータをTiDB Cloud Lakeへ移行することに挑戦してみました。Dumplingを使ったエクスポートから取り込み、データ検証までの全プロセスと、コンソール機能では取り込めなかった理由を詳しく紹介します。]]></summary>
+        <content type="html"><![CDATA[TiDB CloudのデータをTiDB Cloud Lakeへ移行することに挑戦してみました。Dumplingを使ったエクスポートから取り込み、データ検証までの全プロセスと、コンソール機能では取り込めなかった理由を詳しく紹介します。]]></content>
+        <author>
+            <name>sora</name>
+        </author>
+        <published>2026-09-15T12:28:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code の /goal は何を根拠に「終わった」と判断するのか、複数の指示で検証してみた | DevelopersIO]]></title>
+        <id>3ARRiSwxbM3o5Gl1h8u75q</id>
+        <link href="https://dev.classmethod.jp/articles/reona-claude-code-goal-stop-condition/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png" type="image/png"/>
+        <updated>2026-09-15T11:44:52.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code の `/goal` コマンドで条件を渡すと、別のモデルが評価者となって満たされるまでループが回ります。この記事では、終了条件をどう書けば評価者が正しく判定できるのか、7 通りの条件を検証した結果をお伝えします。]]></summary>
+        <content type="html"><![CDATA[Claude Code の `/goal` コマンドで条件を渡すと、別のモデルが評価者となって満たされるまでループが回ります。この記事では、終了条件をどう書けば評価者が正しく判定できるのか、7 通りの条件を検証した結果をお伝えします。]]></content>
+        <author>
+            <name>嶋田怜央成 / Reona Shimada</name>
+        </author>
+        <published>2026-09-15T11:44:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[レポート]複雑なデータ移動不要！Snowflake PostgresとUnistoreによるリアルタイムデータのAI活用 #SWTTokyo26 | DevelopersIO]]></title>
+        <id>ymwT3Zs7Z2S9tdqYbq4Ku</id>
+        <link href="https://dev.classmethod.jp/articles/snowflake-postgres-unistore-realtime-ai-swttokyo26/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/4kFYCMTvi9ucEtpiAfvm01/b605f81aa314b1fdbc86f8fee275fb43/eyecatch_snowflakeworldtourtokyo2026.webp" type="image/webp"/>
+        <updated>2026-09-15T10:27:52.000Z</updated>
+        <summary type="html"><![CDATA[リアルタイムなアプリケーションやAIを支えるには、従来OLTP（業務）とOLAP（分析）の間で複雑なデータ移動やパイプラインが必要でした。本セッションでは、Snowflake Postgres、Unistore（ハイブリッドテーブル）、Postgresデータミラーリングなどの最新機能により、データ移動を最小化しつつリアルタイムなデータ活用を実現する方法を、デモを交えて解説します。低遅延化・アーキテ]]></summary>
+        <content type="html"><![CDATA[リアルタイムなアプリケーションやAIを支えるには、従来OLTP（業務）とOLAP（分析）の間で複雑なデータ移動やパイプラインが必要でした。本セッションでは、Snowflake Postgres、Unistore（ハイブリッドテーブル）、Postgresデータミラーリングなどの最新機能により、データ移動を最小化しつつリアルタイムなデータ活用を実現する方法を、デモを交えて解説します。低遅延化・アーキテクチャの簡素化・AIネイティブなユースケースの迅速な立ち上げをご紹介します。※SNOWFLAKE WORLD TOUR 2026 イベントサイトより抜粋]]></content>
+        <author>
+            <name>かわばた</name>
+        </author>
+        <published>2026-09-15T10:27:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Starlink Mini の衛星ハンドオーバーを実際に確認してみた | DevelopersIO]]></title>
+        <id>7kWU8Zr4j8RZYQivhgqUFq</id>
+        <link href="https://dev.classmethod.jp/articles/starlink-mini-15-second-handover/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-259f80d83577f5af7283d217c4e5ebef/f2f84120322230ad3ebd5a922bd3517a/starlink_eyecatch.jpg" type="image/jpg"/>
+        <updated>2026-09-15T09:10:57.000Z</updated>
+        <summary type="html"><![CDATA[Starlink Mini で通信状況を計測して、15 秒周期の衛星切り替えが通信に与える影響を実際に確認してみました。]]></summary>
+        <content type="html"><![CDATA[Starlink Mini で通信状況を計測して、15 秒周期の衛星切り替えが通信に与える影響を実際に確認してみました。]]></content>
+        <author>
+            <name>Guri / Hajime Oguri</name>
+        </author>
+        <published>2026-09-15T09:10:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Quick on Desktop から Windows 共有フォルダとネットワークドライブのファイルを参照する方式を検証してみた | DevelopersIO]]></title>
+        <id>189Com7TLYUIqq2KXzsTzD</id>
+        <link href="https://dev.classmethod.jp/articles/20260915-amazon-quick-on-desktop-windows-share/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/2x7muHjvW69fxuVNSKWZHp/b37e05a972fc8125e9214abd764928fa/amazon-quick.png" type="image/png"/>
+        <updated>2026-09-15T08:43:22.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Quick デスクトップ版で Windows 共有フォルダを参照できるかを検証しました。UNC パスとネットワークドライブの両方で共有フォルダのファイルにアクセスでき、Windows 側のアクセス権がそのまま反映される仕組みを確認しました。]]></summary>
+        <content type="html"><![CDATA[Amazon Quick デスクトップ版で Windows 共有フォルダを参照できるかを検証しました。UNC パスとネットワークドライブの両方で共有フォルダのファイルにアクセスでき、Windows 側のアクセス権がそのまま反映される仕組みを確認しました。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-09-15T08:43:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[public previewのTiDB Cloud Lakeを触ってみた | DevelopersIO]]></title>
+        <id>4r2OHUjbOVXFbYuPIYOY1L</id>
+        <link href="https://dev.classmethod.jp/articles/tidb-cloud-lake-trial/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-07051db95b75464ccdf45673e64b1034/6a4af753421ceac3fd046bcac0216205/eyecatch_TiDBCloud" type="image//ct0aopd36mqt/wp-thumbnail-07051db95b75464ccdf45673e64b1034/6a4af753421ceac3fd046bcac0216205/eyecatch_TiDBCloud"/>
+        <updated>2026-09-15T08:18:20.000Z</updated>
+        <summary type="html"><![CDATA[TiDB Cloudが分析ワークロード向けのデータウェアハウスサービス「TiDB Cloud Lake」をpublic previewで公開しました。S3のファイルをロードせずにSQLで直接読み込める特徴や、TiDB Cloudクラスタとは独立したスタックで動く仕組みについて、実際に触ってみた結果をご紹介します。]]></summary>
+        <content type="html"><![CDATA[TiDB Cloudが分析ワークロード向けのデータウェアハウスサービス「TiDB Cloud Lake」をpublic previewで公開しました。S3のファイルをロードせずにSQLで直接読み込める特徴や、TiDB Cloudクラスタとは独立したスタックで動く仕組みについて、実際に触ってみた結果をご紹介します。]]></content>
+        <author>
+            <name>sora</name>
+        </author>
+        <published>2026-09-15T08:18:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code v2.1.270〜v2.1.272 の主要アップデート - サブエージェントの omitClaudeMd と権限まわりの修正 | DevelopersIO]]></title>
+        <id>5L2i5UJhY5sPDtQGXonAIv</id>
+        <link href="https://dev.classmethod.jp/articles/20260915-cc-updates-v2-1-272/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png" type="image/png"/>
+        <updated>2026-09-15T08:10:14.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code の v2.1.270 〜 v2.1.272 のアップデート内容をまとめました。権限まわりの変更が多く、特に Bash の権限チェック修正と auto mode の新機能に注目です。本日は、指定したサブエージェントが CLAUDE.md を読まずに済むomitClaudeMd を試してみました。]]></summary>
+        <content type="html"><![CDATA[Claude Code の v2.1.270 〜 v2.1.272 のアップデート内容をまとめました。権限まわりの変更が多く、特に Bash の権限チェック修正と auto mode の新機能に注目です。本日は、指定したサブエージェントが CLAUDE.md を読まずに済むomitClaudeMd を試してみました。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-09-15T08:10:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lambda MicroVMsでeBPFプログラムを実行してみた | DevelopersIO]]></title>
+        <id>Gam91XfUd4i12zKpyBzyL</id>
+        <link href="https://dev.classmethod.jp/articles/run-ebpf-on-lambda-micro-vms/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-484d8afca1cbe50513cd4d6738af2960/fa0838fa40f247093d532945fc785e88/aws-lambda" type="image//ct0aopd36mqt/wp-thumbnail-484d8afca1cbe50513cd4d6738af2960/fa0838fa40f247093d532945fc785e88/aws-lambda"/>
+        <updated>2026-09-15T07:06:18.000Z</updated>
+        <summary type="html"><![CDATA[イメージビルド時のオプションで全Linuxケーパビリティを付与できますが、カーネルオプションのCONFIG_DEBUG_INFO_BTFが無効化されているなど、eBPFプログラムの実行にはハードルが高い環境となっていました]]></summary>
+        <content type="html"><![CDATA[イメージビルド時のオプションで全Linuxケーパビリティを付与できますが、カーネルオプションのCONFIG_DEBUG_INFO_BTFが無効化されているなど、eBPFプログラムの実行にはハードルが高い環境となっていました]]></content>
+        <author>
+            <name>岩田智哉</name>
+        </author>
+        <published>2026-09-15T07:06:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VM을 AWS로 마이그레이션할 때 실제로 고민해야 하는 것들 | DevelopersIO]]></title>
+        <id>1mELSKmpAGpljb5mHr01y6</id>
+        <link href="https://dev.classmethod.jp/articles/things-to-actually-consider-when-migrating-a-vm-to-aws/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/1dD7b8HkT2sbiJzUIewMTD/e5cdc6f33c4fdd9d798f11a4564612ff/eyecatch_developersio_darktone_1200x630.jpg" type="image/jpg"/>
+        <updated>2026-09-15T06:56:28.000Z</updated>
+        <summary type="html"><![CDATA[VirtualBox VM을 AWS Transform MGN으로 옮겨본 경험을 바탕으로, 실제 서비스 이행에서는 무엇을 추가로 준비하고 확인해야 하는지 살펴봅니다.]]></summary>
+        <content type="html"><![CDATA[VirtualBox VM을 AWS Transform MGN으로 옮겨본 경험을 바탕으로, 실제 서비스 이행에서는 무엇을 추가로 준비하고 확인해야 하는지 살펴봅니다.]]></content>
+        <author>
+            <name>Lee Sujae</name>
+        </author>
+        <published>2026-09-15T06:56:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Marketplace の購入者を SCP で制限する方法と Private Marketplace の違いを整理してみた | DevelopersIO]]></title>
+        <id>6R6ntjYkhnnfR0jPGHuM0V</id>
+        <link href="https://dev.classmethod.jp/articles/aws-marketplace-scp-private-marketplace-comparison/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-2eddd7f989fa67416ea2d27b4223cc32/8f5b157eb82ee11cc288225119e0c290/aws-organizations" type="image//ct0aopd36mqt/wp-thumbnail-2eddd7f989fa67416ea2d27b4223cc32/8f5b157eb82ee11cc288225119e0c290/aws-organizations"/>
+        <updated>2026-09-15T04:52:25.000Z</updated>
+        <summary type="html"><![CDATA[AWS Marketplace の購入制限には SCP と Private Marketplace という 2 つの方法があります。この記事では、それぞれの違いや使い分けについて整理します。]]></summary>
+        <content type="html"><![CDATA[AWS Marketplace の購入制限には SCP と Private Marketplace という 2 つの方法があります。この記事では、それぞれの違いや使い分けについて整理します。]]></content>
+        <author>
+            <name>平井裕二</name>
+        </author>
+        <published>2026-09-15T04:52:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CodeCommitのPRマージをCodeBuildの成功だけで承認させ、手動承認を防ぐ構成を構築した | DevelopersIO]]></title>
+        <id>5fKenMcqEsxHPRG5EBX7QP</id>
+        <link href="https://dev.classmethod.jp/articles/2026-09-15-codecommit-ci-only-approval-pool/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-01f645e8cf038bf4c6e0796c7773a747/32d5c9fa1719514412fb335fe859d09c/aws-codecommit" type="image//ct0aopd36mqt/wp-thumbnail-01f645e8cf038bf4c6e0796c7773a747/32d5c9fa1719514412fb335fe859d09c/aws-codecommit"/>
+        <updated>2026-09-15T04:26:13.000Z</updated>
+        <summary type="html"><![CDATA[AWS CodeCommitの承認ルールで、承認プールをCodeBuildのサービスロールに限定し、人の承認を挟まずにCIが成功したPRだけマージできる構成を検証し、あわせて、承認ルールの上書きによる迂回をIAMのDenyで防げることも紹介しています。]]></summary>
+        <content type="html"><![CDATA[AWS CodeCommitの承認ルールで、承認プールをCodeBuildのサービスロールに限定し、人の承認を挟まずにCIが成功したPRだけマージできる構成を検証し、あわせて、承認ルールの上書きによる迂回をIAMのDenyで防げることも紹介しています。]]></content>
+        <author>
+            <name>asano haruki</name>
+        </author>
+        <published>2026-09-15T04:26:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] AgentCore Memoryの長期記憶にデータを直接取り込めるIngestData APIを試してみた | DevelopersIO]]></title>
+        <id>67WF0dqlgPBDnxcnDtR3Oq</id>
+        <link href="https://dev.classmethod.jp/articles/agentcore-memory-ingest-data-api/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/7M0d5bjsd0K4Et30cVFvB6/5b2095750cc8bf73f04f63ed0d4b3546/AgentCore2.png" type="image/png"/>
+        <updated>2026-09-15T04:00:31.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Bedrock AgentCoreに追加されたIngestData APIを試してみました。このAPIを使うと、外部で収集したデータを短期記憶を経由せず直接長期記憶に取り込めます！]]></summary>
+        <content type="html"><![CDATA[Amazon Bedrock AgentCoreに追加されたIngestData APIを試してみました。このAPIを使うと、外部で収集したデータを短期記憶を経由せず直接長期記憶に取り込めます！]]></content>
+        <author>
+            <name>神野 雄大</name>
+        </author>
+        <published>2026-09-15T04:00:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Copilot Studioの専用エージェントで見積比較業務を効率化できるか試してみた | DevelopersIO]]></title>
+        <id>DKiuJrrILTMmppr6qy5CZ</id>
+        <link href="https://dev.classmethod.jp/articles/copilot-studio-mitsumori-hikaku/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-00eddef75cb5ee39286e0aa370a96e4f/040bbf127b84da0ee2c483485da1dd29/microsoft-eyecatch.jpg" type="image/jpg"/>
+        <updated>2026-09-15T01:16:52.000Z</updated>
+        <summary type="html"><![CDATA[PDF・Excel・Wordとバラバラのフォーマットで届く3社分の見積書を、Microsoft 365 Copilotに読み取らせて比較表を自動生成できるか検証してみました。まず素のCopilotで比較させてみて、次に確認観点をまとめた基準ファイルを持たせたCopilot Studioの専用エージェントを作る、という2段階の記録です。SharePointの権限エラーでつまずいた話や、明細のないWo]]></summary>
+        <content type="html"><![CDATA[PDF・Excel・Wordとバラバラのフォーマットで届く3社分の見積書を、Microsoft 365 Copilotに読み取らせて比較表を自動生成できるか検証してみました。まず素のCopilotで比較させてみて、次に確認観点をまとめた基準ファイルを持たせたCopilot Studioの専用エージェントを作る、という2段階の記録です。SharePointの権限エラーでつまずいた話や、明細のないWord見積書に対してエージェントが内訳を捏造せず「記載なし」と返してきたところまで書きます。]]></content>
+        <author>
+            <name>田中聖也</name>
+        </author>
+        <published>2026-09-15T01:16:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[レポート]沖縄の小売業が挑んだデータ基盤内製化 〜データエンジニア未経験者のSnowflake AI活用事例〜 #SWTTokyo26 | DevelopersIO]]></title>
+        <id>yjy2Z5FrWTNsTP1H9EER9</id>
+        <link href="https://dev.classmethod.jp/articles/snowflake-sana-swttokyo26/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/v1789103677/user-gen-eyecatch/do514ejkf20gs4ztdc2z.webp" type="image/webp"/>
+        <updated>2026-09-15T00:50:13.000Z</updated>
+        <summary type="html"><![CDATA[SNOWFLAKE WORLD TOUR 2026で紹介された、沖縄の小売大手サンエーがSnowflakeとAIの力を活用してデータ基盤を内製化した実例をレポートします。データエンジニア未経験のベテランエンジニアが9ヶ月で成し遂げた変革の秘訣に迫ります。]]></summary>
+        <content type="html"><![CDATA[SNOWFLAKE WORLD TOUR 2026で紹介された、沖縄の小売大手サンエーがSnowflakeとAIの力を活用してデータ基盤を内製化した実例をレポートします。データエンジニア未経験のベテランエンジニアが9ヶ月で成し遂げた変革の秘訣に迫ります。]]></content>
+        <author>
+            <name>shimada-rika</name>
+        </author>
+        <published>2026-09-15T00:50:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hugging Face のモデルをそのまま学習できる NeMo AutoModel を DGX Spark で動かしてみた | DevelopersIO]]></title>
+        <id>4jgzW9k97JOSKWEoFzWoek</id>
+        <link href="https://dev.classmethod.jp/articles/nvidia-nemo-automodel-dgx-spark-first-touch/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/1dD7b8HkT2sbiJzUIewMTD/e5cdc6f33c4fdd9d798f11a4564612ff/eyecatch_developersio_darktone_1200x630.jpg" type="image/jpg"/>
+        <updated>2026-09-15T00:43:00.000Z</updated>
+        <summary type="html"><![CDATA[NeMo AutoModel の位置付けと DGX Spark 対応の現状を整理し、公式コンテナで Qwen3-8B の LoRA と full SFT を 1 台で回しました。full SFT は 77.70 GiB で 6 時間完走し、BF16 の full SFT は 8B クラスまでが目安になりそうです。]]></summary>
+        <content type="html"><![CDATA[NeMo AutoModel の位置付けと DGX Spark 対応の現状を整理し、公式コンテナで Qwen3-8B の LoRA と full SFT を 1 台で回しました。full SFT は 77.70 GiB で 6 時間完走し、BF16 の full SFT は 8B クラスまでが目安になりそうです。]]></content>
+        <author>
+            <name>森茂洋 / Hiroshi Morishige</name>
+        </author>
+        <published>2026-09-15T00:43:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon Lightsail のディストリビューションでプライベートバケットをオリジンにできるようになりました | DevelopersIO]]></title>
+        <id>1c8L10vxHVVUWavd0SRzPP</id>
+        <link href="https://dev.classmethod.jp/articles/lightsail-privatebucket-distribution/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-fa410506a858dc9244cc2631570b82d3/bbcb1ae519d46d2d304f32e4c77a763e/amazon-lightsail" type="image//ct0aopd36mqt/wp-thumbnail-fa410506a858dc9244cc2631570b82d3/bbcb1ae519d46d2d304f32e4c77a763e/amazon-lightsail"/>
+        <updated>2026-09-14T20:41:45.000Z</updated>
+        <summary type="html"><![CDATA[出来なかったのか]]></summary>
+        <content type="html"><![CDATA[出来なかったのか]]></content>
+        <author>
+            <name>いわさ</name>
+        </author>
+        <published>2026-09-14T20:41:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【iOS27】AFM3連載目次 | DevelopersIO]]></title>
+        <id>6HFGfOpVnUGMsPul4OFH3m</id>
+        <link href="https://dev.classmethod.jp/articles/afm3-index/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/v1789377825/user-gen-eyecatch/nr8o6h4ks5xqkjiyfrra.webp" type="image/webp"/>
+        <updated>2026-09-14T17:00:11.000Z</updated>
+        <summary type="html"><![CDATA[WWDC26で発表されたApple Intelligence の新基盤「AFM 3」について、技術とビジネスの2つの視点から解説した記事をまとめています。端末内処理の実務的な意味から、各業界での活用事例まで、私たちが調べたことをご紹介します。]]></summary>
+        <content type="html"><![CDATA[WWDC26で発表されたApple Intelligence の新基盤「AFM 3」について、技術とビジネスの2つの視点から解説した記事をまとめています。端末内処理の実務的な意味から、各業界での活用事例まで、私たちが調べたことをご紹介します。]]></content>
+        <author>
+            <name>Yahiro</name>
+        </author>
+        <published>2026-09-14T17:00:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【iOS 27】Private Cloud Compute とは何か | DevelopersIO]]></title>
+        <id>bF5UHLub7wFCLt3APh74Y</id>
+        <link href="https://dev.classmethod.jp/articles/afm3-pcc/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/5GE8BuqUQlfRgh6CFp8AYT/f548f3dc7760e4d0268db860b4153fe6/iOS27-Retail-AppleIntelligence.webp" type="image/webp"/>
+        <updated>2026-09-14T17:00:11.000Z</updated>
+        <summary type="html"><![CDATA[iOS 27 と AFM 3 の登場で話題になった Private Cloud Compute（PCC）について、Apple の公開情報を元に調べてみました。端末の中のモデルとの使い分け方から、実装時に必要な条件まで、詳しく紹介します。]]></summary>
+        <content type="html"><![CDATA[iOS 27 と AFM 3 の登場で話題になった Private Cloud Compute（PCC）について、Apple の公開情報を元に調べてみました。端末の中のモデルとの使い分け方から、実装時に必要な条件まで、詳しく紹介します。]]></content>
+        <author>
+            <name>Yahiro</name>
+        </author>
+        <published>2026-09-14T17:00:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【iOS 27】Evaluationsフレームワークで品質を測る | DevelopersIO]]></title>
+        <id>49NFqq4Qf0fx7dATSPOCVf</id>
+        <link href="https://dev.classmethod.jp/articles/afm3-evaluations/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/5GE8BuqUQlfRgh6CFp8AYT/f548f3dc7760e4d0268db860b4153fe6/iOS27-Retail-AppleIntelligence.webp" type="image/webp"/>
+        <updated>2026-09-14T17:00:11.000Z</updated>
+        <summary type="html"><![CDATA[オンデバイスAIの実装が進む一方で、予測不能な挙動をする機能の品質をどう測るかが課題です。iOS 27で登場したEvaluationsフレームワークを使って、AIの品質を定量的に評価する方法を紹介します。]]></summary>
+        <content type="html"><![CDATA[オンデバイスAIの実装が進む一方で、予測不能な挙動をする機能の品質をどう測るかが課題です。iOS 27で登場したEvaluationsフレームワークを使って、AIの品質を定量的に評価する方法を紹介します。]]></content>
+        <author>
+            <name>Yahiro</name>
+        </author>
+        <published>2026-09-14T17:00:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【iOS 27】Attachment で画像をプロンプトに添付する — Foundation Models の画像入力 | DevelopersIO]]></title>
+        <id>6a6m3lUYTVeEcJcADol6Kh</id>
+        <link href="https://dev.classmethod.jp/articles/afm3-image/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/5GE8BuqUQlfRgh6CFp8AYT/f548f3dc7760e4d0268db860b4153fe6/iOS27-Retail-AppleIntelligence.webp" type="image/webp"/>
+        <updated>2026-09-14T17:00:11.000Z</updated>
+        <summary type="html"><![CDATA[iOS 27のFoundation Modelsフレームワークで、写真をプロンプトに添えて質問できるようになりました。画像の前処理が不要になった一方、サイズによるトークン消費の注意点があります。その仕組みと使い方をご紹介します。]]></summary>
+        <content type="html"><![CDATA[iOS 27のFoundation Modelsフレームワークで、写真をプロンプトに添えて質問できるようになりました。画像の前処理が不要になった一方、サイズによるトークン消費の注意点があります。その仕組みと使い方をご紹介します。]]></content>
+        <author>
+            <name>Yahiro</name>
+        </author>
+        <published>2026-09-14T17:00:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【iOS 27】AI にツールを持たせる — OCRTool・バーコード・端末内検索 | DevelopersIO]]></title>
+        <id>rSF9DggJ9nSFTyjLTfCPX</id>
+        <link href="https://dev.classmethod.jp/articles/afm3-tool/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/5GE8BuqUQlfRgh6CFp8AYT/f548f3dc7760e4d0268db860b4153fe6/iOS27-Retail-AppleIntelligence.webp" type="image/webp"/>
+        <updated>2026-09-14T17:00:10.000Z</updated>
+        <summary type="html"><![CDATA[iOS 27で新しく追加されたFoundation Modelsのシステムツール3つについて、その仕組みと活用方法を紹介します。AIに「ツール」を持たせることで、アプリの実装がどう変わり、何ができるようになるのかをまとめました。]]></summary>
+        <content type="html"><![CDATA[iOS 27で新しく追加されたFoundation Modelsのシステムツール3つについて、その仕組みと活用方法を紹介します。AIに「ツール」を持たせることで、アプリの実装がどう変わり、何ができるようになるのかをまとめました。]]></content>
+        <author>
+            <name>Yahiro</name>
+        </author>
+        <published>2026-09-14T17:00:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【iOS 27】処方箋を撮って送る患者に、受付の項目まで埋めてもらう（薬局・ドラッグストアのアプリ設計） | DevelopersIO]]></title>
+        <id>3QjeWuUATlp4YcRRYwpFrQ</id>
+        <link href="https://dev.classmethod.jp/articles/apple-intelligence-pharmacy-prescription-photo/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/5GE8BuqUQlfRgh6CFp8AYT/f548f3dc7760e4d0268db860b4153fe6/iOS27-Retail-AppleIntelligence.webp" type="image/webp"/>
+        <updated>2026-09-14T17:00:10.000Z</updated>
+        <summary type="html"><![CDATA[処方箋を撮って薬局に送るアプリは便利ですが、受け取った薬局側での手入力作業はまだ残っています。iPhone内のAIで処方箋を読み取り、患者が送信前に内容を確認できる設計を考えてみました。]]></summary>
+        <content type="html"><![CDATA[処方箋を撮って薬局に送るアプリは便利ですが、受け取った薬局側での手入力作業はまだ残っています。iPhone内のAIで処方箋を読み取り、患者が送信前に内容を確認できる設計を考えてみました。]]></content>
+        <author>
+            <name>かめだしんいち</name>
+        </author>
+        <published>2026-09-14T17:00:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kiro のアクティビティレポートを OpenTelemetry でエクスポートして PromQL で集計してみた | DevelopersIO]]></title>
+        <id>4VkCGi0fwwhW7IjHwRu7F</id>
+        <link href="https://dev.classmethod.jp/articles/kiro-activity-report-otel-promql/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/4uTbTE9O9jUJCOs80dZ0Ao/e2da592b5eaaad0f5993d6ff64a12467/aws-kiro.png" type="image/png"/>
+        <updated>2026-09-14T16:40:36.000Z</updated>
+        <summary type="html"><![CDATA[Kiro のアクティビティレポートを OpenTelemetry で CloudWatch へエクスポートし、PromQL でどこまで集計できるかを実測しました。同じ日のデータで、S3 に出力される CSV レポートと同じ値が取れることを確認したうえで、クライアント種別やモデル別の内訳、ダッシュボード化、月間集計までの手順と制約をまとめています。]]></summary>
+        <content type="html"><![CDATA[Kiro のアクティビティレポートを OpenTelemetry で CloudWatch へエクスポートし、PromQL でどこまで集計できるかを実測しました。同じ日のデータで、S3 に出力される CSV レポートと同じ値が取れることを確認したうえで、クライアント種別やモデル別の内訳、ダッシュボード化、月間集計までの手順と制約をまとめています。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-09-14T16:40:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CDKでCloudWatch Logsのロググループ名を変えると既存ログがどうなるのか検証してみた | DevelopersIO]]></title>
+        <id>Ef39YgLcN3GW9OqnxFMED</id>
+        <link href="https://dev.classmethod.jp/articles/cdk-loggroup-rename-removal-policy/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-d6a3bc85cad6419960fbda152152cd8c/ba5841cea06b96f4933878762028b090/amazon-cloudwatch" type="image//ct0aopd36mqt/wp-thumbnail-d6a3bc85cad6419960fbda152152cd8c/ba5841cea06b96f4933878762028b090/amazon-cloudwatch"/>
+        <updated>2026-09-14T14:11:43.000Z</updated>
+        <summary type="html"><![CDATA[CDK でロググループ名を変更すると、既存のログがどうなるのかを3つのパターンで検証してみました。名前の変更時に起こる意外な挙動と、気をつけるべきポイントをまとめています。]]></summary>
+        <content type="html"><![CDATA[CDK でロググループ名を変更すると、既存のログがどうなるのかを3つのパターンで検証してみました。名前の変更時に起こる意外な挙動と、気をつけるべきポイントをまとめています。]]></content>
+        <author>
+            <name>はすと ( sasaki hasuto )</name>
+        </author>
+        <published>2026-09-14T14:11:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft Copilot Studio のエージェントを自作の Web アプリに組み込んでみた | DevelopersIO]]></title>
+        <id>7swTsfMCKnbJjw5NpF9BoY</id>
+        <link href="https://dev.classmethod.jp/articles/shoma-embed-microsoft-copilot-studio-agent-in-custom-web-app/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/1dD7b8HkT2sbiJzUIewMTD/e5cdc6f33c4fdd9d798f11a4564612ff/eyecatch_developersio_darktone_1200x630.jpg" type="image/jpg"/>
+        <updated>2026-09-14T13:50:33.000Z</updated>
+        <summary type="html"><![CDATA[Copilot Studio のエージェントを自作アプリに組み込み、Agents SDK を使ってバックエンド経由で呼び出す実装に挑戦してみました。実装そのものより、ハーネスの選択が組み込み方に大きく影響することを学びました。]]></summary>
+        <content type="html"><![CDATA[Copilot Studio のエージェントを自作アプリに組み込み、Agents SDK を使ってバックエンド経由で呼び出す実装に挑戦してみました。実装そのものより、ハーネスの選択が組み込み方に大きく影響することを学びました。]]></content>
+        <author>
+            <name>小林翔馬</name>
+        </author>
+        <published>2026-09-14T13:50:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[新機能]Snowflake から AWS Secrets Manager などのシークレットを直接参照できるようになりました | DevelopersIO]]></title>
+        <id>Yyxc66npqqhJRfSLHsWrv</id>
+        <link href="https://dev.classmethod.jp/articles/snowflake-external-secret-providers-aws-secrets-manager-pupr/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake" type="image//ct0aopd36mqt/wp-thumbnail-37f4322e7cca0bb66380be0a31ceace4/0886455fd66594d3e7d8947c9c7c844d/eyecatch_snowflake"/>
+        <updated>2026-09-14T13:44:50.000Z</updated>
+        <summary type="html"><![CDATA[Snowflakeの外部シークレットプロバイダー機能を、AWS Secrets Managerとの連携で試してみました。セキュリティ統合の設定からdbt platformのAPI呼び出しまで、実際の設定手順をまとめます。]]></summary>
+        <content type="html"><![CDATA[Snowflakeの外部シークレットプロバイダー機能を、AWS Secrets Managerとの連携で試してみました。セキュリティ統合の設定からdbt platformのAPI呼び出しまで、実際の設定手順をまとめます。]]></content>
+        <author>
+            <name>安原朋紀</name>
+        </author>
+        <published>2026-09-14T13:44:50.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[登壇レポート] 夏の怪談、CloudTrailに知らない人が というタイトルで登壇しました | DevelopersIO]]></title>
+        <id>H1w4LpyGBw9MYQ36WhYWZ</id>
+        <link href="https://dev.classmethod.jp/articles/opsmethod3-cloudtrail-kaidan/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/v1789305614/user-gen-eyecatch/var7kw7upnwzglwnbqif.jpg" type="image/jpg"/>
+        <updated>2026-09-14T12:54:02.000Z</updated>
+        <summary type="html"><![CDATA[opsmethod#3でLT登壇した際のスライドについてシェアします。]]></summary>
+        <content type="html"><![CDATA[opsmethod#3でLT登壇した際のスライドについてシェアします。]]></content>
+        <author>
+            <name>maeda yusei</name>
+        </author>
+        <published>2026-09-14T12:54:02.000Z</published>
+    </entry>
+</feed>
