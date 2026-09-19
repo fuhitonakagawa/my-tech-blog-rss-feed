@@ -1,0 +1,792 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Security Advisory｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/feed.json",
+    "description": "Security Advisoryセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://github.com/advisories/GHSA-xcw4-53cc-hv32",
+            "content_html": "SummaryThe Mnemosyne sync server's authentication check decoded JWT bearer tokens but never verified their HMAC-SHA256 signatures. Any well-formed token was accepted, allowing an unauthenticated attacker to impersonate any user and read or modify their sync data.Severity: CriticalCVSS 3.1: AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N = 9.1Assumes the sync server endpoint is network-reachable. If your deployment is localhost-only, the score drops substantially and severity becomes High or Medium depending",
+            "url": "https://github.com/advisories/GHSA-xcw4-53cc-hv32",
+            "title": "[mnemosyne-memory] Mnemosyne has JWT signature verification bypass sync server that allows authentication bypass | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe Mnemosyne sync server's authentication check decoded JWT bearer tokens but never verified their HMAC-SHA256 signatures. Any well-formed token was accepted, allowing an unauthenticated attac",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Mnemosyne has JWT signature verification bypass sync server that allows authentication bypass",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:54:26.000Z",
+            "date_published": "2026-09-18T17:54:26.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[mnemosyne-memory] Mnemosyne has JWT signature verification bypass sync server that allows authentication bypass",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3753-m2x2-q623",
+            "content_html": "SummaryBefore 2.3.1, the legacy .doc renderer emitted document hyperlink targets after HTML escaping but without a URL-scheme allowlist. A crafted .doc could therefore render a live javascript:, vbscript:, data:, or similarly unsafe link. Script could execute in the embedding origin if a viewer clicked it.ImpactApplications rendering untrusted legacy .doc files with @file-viewer/doc or the msdoc-viewer compatibility package could expose their origin to attacker-controlled script after link inter",
+            "url": "https://github.com/advisories/GHSA-3753-m2x2-q623",
+            "title": "[msdoc-viewer] File Viewer: DOM XSS via unsafe hyperlink schemes in the legacy DOC renderer | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryBefore 2.3.1, the legacy .doc renderer emitted document hyperlink targets after HTML escaping but without a URL-scheme allowlist. A crafted .doc could therefore render a live javascript:, vbscr",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "File Viewer: DOM XSS via unsafe hyperlink schemes in the legacy DOC renderer",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:19:42.000Z",
+            "date_published": "2026-09-18T17:19:42.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[msdoc-viewer] File Viewer: DOM XSS via unsafe hyperlink schemes in the legacy DOC renderer",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3753-m2x2-q623",
+            "content_html": "SummaryBefore 2.3.1, the legacy .doc renderer emitted document hyperlink targets after HTML escaping but without a URL-scheme allowlist. A crafted .doc could therefore render a live javascript:, vbscript:, data:, or similarly unsafe link. Script could execute in the embedding origin if a viewer clicked it.ImpactApplications rendering untrusted legacy .doc files with @file-viewer/doc or the msdoc-viewer compatibility package could expose their origin to attacker-controlled script after link inter",
+            "url": "https://github.com/advisories/GHSA-3753-m2x2-q623",
+            "title": "[@file-viewer/doc] File Viewer: DOM XSS via unsafe hyperlink schemes in the legacy DOC renderer | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryBefore 2.3.1, the legacy .doc renderer emitted document hyperlink targets after HTML escaping but without a URL-scheme allowlist. A crafted .doc could therefore render a live javascript:, vbscr",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "File Viewer: DOM XSS via unsafe hyperlink schemes in the legacy DOC renderer",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:19:42.000Z",
+            "date_published": "2026-09-18T17:19:42.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@file-viewer/doc] File Viewer: DOM XSS via unsafe hyperlink schemes in the legacy DOC renderer",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-7q85-xj36-vmfc",
+            "content_html": "Summaryadm-zip allocates an entry's output buffer from the declared uncompressed size (central-directory size field) before validating it against the actual data. A tiny crafted ZIP that declares a huge uncompressed size forces a multi-gigabyte allocation from a few bytes.ImpactOn adm-zip 0.5.17 (latest), Node 24, a 105-byte ZIP with one stored entry declaring size = 1,774,399,200 makes new AdmZip(buf).getEntries()[0].getData() commit ~1.8 GB of resident memory in ~4.4 s before throwing Error: A",
+            "url": "https://github.com/advisories/GHSA-7q85-xj36-vmfc",
+            "title": "[adm-zip] adm-zip: Uncontrolled memory allocation via the declared uncompressed size (DoS) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summaryadm-zip allocates an entry's output buffer from the declared uncompressed size (central-directory size field) before validating it against the actual data. A tiny crafted ZIP that declares a hu",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "adm-zip: Uncontrolled memory allocation via the declared uncompressed size (DoS)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:18:01.000Z",
+            "date_published": "2026-09-18T17:18:01.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[adm-zip] adm-zip: Uncontrolled memory allocation via the declared uncompressed size (DoS)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3rm2-h79c-8qw6",
+            "content_html": "SummaryMdPreview interpolates a fenced-code language into HTML attributes without escaping it. A crafted info string therefore executes JavaScript even when the shipped XSSPlugin is enabled.DetailsuseMarkdownIt() (packages/MdEditor/layouts/Content/composition/useMarkdownIt.ts:206) registers a highlight callback whose final return inserts language into both class=\"language-${language}\" and an unquoted language=${language} attribute without escaping. Both highlighting paths reach this return. XSSP",
+            "url": "https://github.com/advisories/GHSA-3rm2-h79c-8qw6",
+            "title": "[md-editor-v3] md-editor-v3: XSS via fenced-code language rendering bypass | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryMdPreview interpolates a fenced-code language into HTML attributes without escaping it. A crafted info string therefore executes JavaScript even when the shipped XSSPlugin is enabled.Detailsuse",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "md-editor-v3: XSS via fenced-code language rendering bypass",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:17:36.000Z",
+            "date_published": "2026-09-18T17:17:36.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[md-editor-v3] md-editor-v3: XSS via fenced-code language rendering bypass",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3w57-8xmc-8v26",
+            "content_html": "AnyIO 4.14.0 accepts the POSIX extra_groups argument on anyio.run_process() and anyio.open_process(), but open_process() forwards the wrong variable to the backend: when extra_groups is not None, it assigns kwargs[\"extra_groups\"] = group instead of extra_groups. As a result, callers cannot reliably clear or set supplementary groups for child processes. In a disposable Linux container, Python's subprocess.run(..., extra_groups=[]) clears a synthetic parent supplementary group list, while anyio.ru",
+            "url": "https://github.com/advisories/GHSA-3w57-8xmc-8v26",
+            "title": "[anyio] AnyIO run_process/open_process ignores extra_groups and can retain parent supplementary groups | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "AnyIO 4.14.0 accepts the POSIX extra_groups argument on anyio.run_process() and anyio.open_process(), but open_process() forwards the wrong variable to the backend: when extra_groups is not None, it a",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "AnyIO run_process/open_process ignores extra_groups and can retain parent supplementary groups",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:17:23.000Z",
+            "date_published": "2026-09-18T17:17:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[anyio] AnyIO run_process/open_process ignores extra_groups and can retain parent supplementary groups",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-82r6-8w77-94w6",
+            "content_html": "ImpactServices using internationalized (non-ASCII) domain names are potentially vulnerable to TLS connections made from AnyIO's connect_tcp() or directly via TLSStream.wrap() where the connection has (through other means) been hijacked and redirected to a malicious server. The attacker would obtain a legitimate certificate using the IDNA 2003 encoded version of the domain name and offer it to the connecting client, making the certificate validate properly on the client's end.PatchesThe vulnerabi",
+            "url": "https://github.com/advisories/GHSA-82r6-8w77-94w6",
+            "title": "[anyio] AnyIO: TLSStream IDNA 2003 host name encoding enables potential TLS certificate spoofing | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactServices using internationalized (non-ASCII) domain names are potentially vulnerable to TLS connections made from AnyIO's connect_tcp() or directly via TLSStream.wrap() where the connection has ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "AnyIO: TLSStream IDNA 2003 host name encoding enables potential TLS certificate spoofing",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:17:18.000Z",
+            "date_published": "2026-09-18T17:17:18.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[anyio] AnyIO: TLSStream IDNA 2003 host name encoding enables potential TLS certificate spoofing",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5p39-cfhj-2xmp",
+            "content_html": "ImpactAnyIO starts process-pool workers with stderr connected to a pipe but never drains that pipe. The worker redirects stdin and stdout to /dev/null to protect its protocol, but does not redirect stderr even though the documentation says all three standard streams are redirected. Worker code that writes enough attacker-influenced data to stderr can fill the pipe, block before returning the stdout protocol response, and wedge the awaiting process-pool call.Anyone who runs untrusted or faulty co",
+            "url": "https://github.com/advisories/GHSA-5p39-cfhj-2xmp",
+            "title": "[anyio] AnyIO process-pool workers can block indefinitely on undrained stderr | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactAnyIO starts process-pool workers with stderr connected to a pipe but never drains that pipe. The worker redirects stdin and stdout to /dev/null to protect its protocol, but does not redirect st",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "AnyIO process-pool workers can block indefinitely on undrained stderr",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:17:10.000Z",
+            "date_published": "2026-09-18T17:17:10.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[anyio] AnyIO process-pool workers can block indefinitely on undrained stderr",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-39wr-7q6h-cf68",
+            "content_html": "SummaryThe URL checking logic in lmdeploy has a logical flaw that could be bypassed by attackers, leading to SSRF attacks.DetailsThe current lmdeploy project uses _is_safe_url to validate the input URL. The main logic is to perform security checks on the host portion of the URL extracted by urlparse to prevent SSRF attacks.However, there are indeed differences in parsing between urlparse and the library that actually sends the request. Currently, almost all application scenarios in this project ",
+            "url": "https://github.com/advisories/GHSA-39wr-7q6h-cf68",
+            "title": "[lmdeploy] LMDeploy has an SSRF bypass | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe URL checking logic in lmdeploy has a logical flaw that could be bypassed by attackers, leading to SSRF attacks.DetailsThe current lmdeploy project uses _is_safe_url to validate the input UR",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "LMDeploy has an SSRF bypass",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:14:06.000Z",
+            "date_published": "2026-09-18T17:14:06.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[lmdeploy] LMDeploy has an SSRF bypass",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3hmm-rh5q-gwwr",
+            "content_html": "Summarylmdeploy &lt;= latest contains a code injection vulnerability in lmdeploy/pytorch/config.py line 620 that allows an attacker to execute arbitrary Python code by publishing a malicious HuggingFace model with a crafted quantization_config.quant_dtype value. When a user loads the model with lmdeploy, the quant_dtype is passed to eval(f'torch.{quant_dtype}') without any validation.DetailsVulnerable code (permalink):quant_dtype = eval(f'torch.{quant_dtype}') # line 620The quant_dtype value comes ",
+            "url": "https://github.com/advisories/GHSA-3hmm-rh5q-gwwr",
+            "title": "[lmdeploy] LMDeploy vulnerable to arbitrary code execution via eval() of untrusted quant_dtype in model config loading | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Summarylmdeploy &lt;= latest contains a code injection vulnerability in lmdeploy/pytorch/config.py line 620 that allows an attacker to execute arbitrary Python code by publishing a malicious HuggingFace ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "LMDeploy vulnerable to arbitrary code execution via eval() of untrusted quant_dtype in model config loading",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:04:01.000Z",
+            "date_published": "2026-09-18T17:04:01.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[lmdeploy] LMDeploy vulnerable to arbitrary code execution via eval() of untrusted quant_dtype in model config loading",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2vh9-42vm-xmv2",
+            "content_html": "SummaryLMDeploy's PyTorch DistServe/PD-disaggregation control plane usedrecv_pyobj() to deserialize messages received through a ZeroMQ PULLsocket. PyZMQ implements recv_pyobj() using Python pickledeserialization, which can execute arbitrary code while reconstructingan object.The peer address used by the receiver was supplied through thePOST /distserve/p2p_connect HTTP endpoint. An attacker who could reachan affected DistServe API server could cause the server to connect to anattacker-controlled ",
+            "url": "https://github.com/advisories/GHSA-2vh9-42vm-xmv2",
+            "title": "[lmdeploy] LMDeploy has Remote Code Execution by Pickle Deserialization via handle_zmq_recv in lmdeploy/lmdeploy/pytorch/disagg/conn/engine_conn.py | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryLMDeploy's PyTorch DistServe/PD-disaggregation control plane usedrecv_pyobj() to deserialize messages received through a ZeroMQ PULLsocket. PyZMQ implements recv_pyobj() using Python pickledese",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "LMDeploy has Remote Code Execution by Pickle Deserialization via handle_zmq_recv in lmdeploy/lmdeploy/pytorch/disagg/conn/engine_conn.py",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T17:03:56.000Z",
+            "date_published": "2026-09-18T17:03:56.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[lmdeploy] LMDeploy has Remote Code Execution by Pickle Deserialization via handle_zmq_recv in lmdeploy/lmdeploy/pytorch/disagg/conn/engine_conn.py",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-m6c8-jcw2-5r25",
+            "content_html": "SummaryThe Opencast Paella player renders caption cue text into innerHTML without escaping. The captions canvas clears _captionsContainer.innerHTML and then appends each active cue with _captionsContainer.innerHTML += cue, so HTML inside a WebVTT or DFXP cue becomes live DOM and executes in the Opencast origin.The caption track is read from any media package element with a captions/* flavor and is served, with the player manifest, to anonymous viewers through /search/episode.json. The caption pl",
+            "url": "https://github.com/advisories/GHSA-m6c8-jcw2-5r25",
+            "title": "[paella-core] Opencast: Stored XSS in Paella player via WebVTT/DFXP caption cue text | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe Opencast Paella player renders caption cue text into innerHTML without escaping. The captions canvas clears _captionsContainer.innerHTML and then appends each active cue with _captionsConta",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Opencast: Stored XSS in Paella player via WebVTT/DFXP caption cue text",
+                "type": "png"
+            },
+            "date_modified": "2026-09-18T13:11:59.000Z",
+            "date_published": "2026-09-18T13:11:59.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[paella-core] Opencast: Stored XSS in Paella player via WebVTT/DFXP caption cue text",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-gjv8-xp57-g29c",
+            "content_html": "Summarysoupsieve compiles CSS selector strings with a set of hand-written regular expressions. The shared IDENTIFIER sub-pattern (also embedded in VALUE, and therefore in attribute selectors) places two adjacent quantified groups over overlapping character classes: (?:[classA]|ESC)+(?:[classB]|ESC)*, where both classes match ordinary identifier characters such as a. When a selector contains a long identifier/value run that must ultimately fail to match (e.g. an attribute value with no closing ],",
+            "url": "https://github.com/advisories/GHSA-gjv8-xp57-g29c",
+            "title": "[soupsieve] Soup Sieve: Polynomial-time ReDoS (O(n²)) in the `IDENTIFIER` / `VALUE` selector sub-patterns | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Summarysoupsieve compiles CSS selector strings with a set of hand-written regular expressions. The shared IDENTIFIER sub-pattern (also embedded in VALUE, and therefore in attribute selectors) places t",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Soup Sieve: Polynomial-time ReDoS (O(n²)) in the `IDENTIFIER` / `VALUE` selector sub-patterns",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T20:32:58.000Z",
+            "date_published": "2026-09-17T20:32:58.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[soupsieve] Soup Sieve: Polynomial-time ReDoS (O(n²)) in the `IDENTIFIER` / `VALUE` selector sub-patterns",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-j934-xhv5-fg8f",
+            "content_html": "SummaryBefore tokenizing, selector_iter trims leading/trailing whitespace and comments by running two regexes over the whole raw selector with .search(). The trailing one, RE_WS_END = re.compile(r'{WSC}*$'), is anchored only at the end ($), not the start. Because .search() retries the pattern at every offset, a long run of whitespace or CSS comments that is not sitting exactly at the end of the string makes each retry greedily consume the run and then fail $, producing O(n²) time. This triggers ",
+            "url": "https://github.com/advisories/GHSA-j934-xhv5-fg8f",
+            "title": "[soupsieve] Soup Sieve: Polynomial-time ReDoS (O(n²)) in the whitespace/comment trimming regex `RE_WS_END` (triggers on VALID selectors) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryBefore tokenizing, selector_iter trims leading/trailing whitespace and comments by running two regexes over the whole raw selector with .search(). The trailing one, RE_WS_END = re.compile(r'{WS",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Soup Sieve: Polynomial-time ReDoS (O(n²)) in the whitespace/comment trimming regex `RE_WS_END` (triggers on VALID selectors)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T20:32:53.000Z",
+            "date_published": "2026-09-17T20:32:53.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[soupsieve] Soup Sieve: Polynomial-time ReDoS (O(n²)) in the whitespace/comment trimming regex `RE_WS_END` (triggers on VALID selectors)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qrfj-mgw8-j9c6",
+            "content_html": "SummaryHTML strings passed to Plate's core deserialization APIs were parsed in the active document. Certain HTML attributes could therefore trigger browser behavior during parsing, before the content was converted into editor nodes.Applications that deserialize HTML from untrusted or cross-user sources may be affected.ImpactAn attacker who can control HTML later deserialized in another user's browser may be able to execute script in that application's origin.RemediationUpgrade to @platejs/core 5",
+            "url": "https://github.com/advisories/GHSA-qrfj-mgw8-j9c6",
+            "title": "[@platejs/core] @platejs/core HTML deserialization can trigger browser behavior during parsing | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryHTML strings passed to Plate's core deserialization APIs were parsed in the active document. Certain HTML attributes could therefore trigger browser behavior during parsing, before the content ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "@platejs/core HTML deserialization can trigger browser behavior during parsing",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T20:32:47.000Z",
+            "date_published": "2026-09-17T20:32:47.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@platejs/core] @platejs/core HTML deserialization can trigger browser behavior during parsing",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qrfj-mgw8-j9c6",
+            "content_html": "SummaryHTML strings passed to Plate's core deserialization APIs were parsed in the active document. Certain HTML attributes could therefore trigger browser behavior during parsing, before the content was converted into editor nodes.Applications that deserialize HTML from untrusted or cross-user sources may be affected.ImpactAn attacker who can control HTML later deserialized in another user's browser may be able to execute script in that application's origin.RemediationUpgrade to @platejs/core 5",
+            "url": "https://github.com/advisories/GHSA-qrfj-mgw8-j9c6",
+            "title": "[@platejs/core] @platejs/core HTML deserialization can trigger browser behavior during parsing | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryHTML strings passed to Plate's core deserialization APIs were parsed in the active document. Certain HTML attributes could therefore trigger browser behavior during parsing, before the content ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "@platejs/core HTML deserialization can trigger browser behavior during parsing",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T20:32:47.000Z",
+            "date_published": "2026-09-17T20:32:47.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@platejs/core] @platejs/core HTML deserialization can trigger browser behavior during parsing",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xjw9-38cr-6372",
+            "content_html": "A context safety grant was inherited by a template binding that never earned it, so rebinding a name the view had marked safe left the mark attached to the new, attacker-controlled value.djust's context safety channel is keyed by name, not by value. Every bind copied the value and left the grant in place:view marks p = mark_safe('&lt;b&gt;trusted&lt;/b&gt;')template {% with p=user_input %}{{ p }}{% endwith %} djust '&lt;img src=x onerror=alert(1)&gt;' &lt;- executes django '&amp;lt;img src=x onerror=alert(1)&amp;gt;'Affecte",
+            "url": "https://github.com/advisories/GHSA-xjw9-38cr-6372",
+            "title": "[djust] djust: A template binding inherits a context safety grant it never earned (XSS) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "A context safety grant was inherited by a template binding that never earned it, so rebinding a name the view had marked safe left the mark attached to the new, attacker-controlled value.djust's conte",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "djust: A template binding inherits a context safety grant it never earned (XSS)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T20:31:48.000Z",
+            "date_published": "2026-09-17T20:31:48.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[djust] djust: A template binding inherits a context safety grant it never earned (XSS)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-9395-2g46-rj3f",
+            "content_html": "Five independent defects in djust's template auto-escaping cause attacker-controlled input to be rendered as live markup where Django escapes it. All four are present in shipped 1.1.0 and are fixed in 1.1.1.They share one shape: a filter or grant that escapes nothing itself and relies on the render-time auto-escape, which something downstream then removes. They are grouped into a single advisory because the mitigation is identical — upgrade to 1.1.1 — and because no single one of them is meaning",
+            "url": "https://github.com/advisories/GHSA-9395-2g46-rj3f",
+            "title": "[djust] djust: Six template-layer defects emit attacker-controlled markup unescaped (XSS) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Five independent defects in djust's template auto-escaping cause attacker-controlled input to be rendered as live markup where Django escapes it. All four are present in shipped 1.1.0 and are fixed in",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "djust: Six template-layer defects emit attacker-controlled markup unescaped (XSS)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T20:31:43.000Z",
+            "date_published": "2026-09-17T20:31:43.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[djust] djust: Six template-layer defects emit attacker-controlled markup unescaped (XSS)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-c3mw-737p-c7g2",
+            "content_html": "SummaryWhen a request returns a 500, jupyter_server/log.py logs a small JSON block of request headers. The Referer header was copied into it as-is, so a token in the Referer URL ended up in the logs in plain text.ImpactAnyone who can read the server logs can pick tokens out of these 500 entries. Tokens end up in the Referer during normal token-based login and launch flows.Affected: all versions before 2.21.0.PoCAny malformed request that returns a 500 works:curl -i -X POST \\ -H 'Content-Type: ap",
+            "url": "https://github.com/advisories/GHSA-c3mw-737p-c7g2",
+            "title": "[jupyter_server] Jupyter Server: 5xx request logging leaks token-bearing Referer header values | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryWhen a request returns a 500, jupyter_server/log.py logs a small JSON block of request headers. The Referer header was copied into it as-is, so a token in the Referer URL ended up in the logs i",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Jupyter Server: 5xx request logging leaks token-bearing Referer header values",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T20:28:55.000Z",
+            "date_published": "2026-09-17T20:28:55.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[jupyter_server] Jupyter Server: 5xx request logging leaks token-bearing Referer header values",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-9rgm-9g3h-6x36",
+            "content_html": "Impactdevalue.parse prior to version 5.9.2 fails to reject out-of-bounds indices. Specially-crafted payloads can exploit this to cause devalue to alternate between different array representations, resulting in work that is quadratic with payload size.Applications are potentially affected if they call devalue.parse with untrusted data.PatchesThe bug is fixed in devalue@5.9.2.Referenceshttps://github.com/sveltejs/devalue/security/advisories/GHSA-9rgm-9g3h-6x36https://nvd.nist.gov/vuln/detail/CVE-2",
+            "url": "https://github.com/advisories/GHSA-9rgm-9g3h-6x36",
+            "title": "[devalue] Svelte devalue: DoS via malformed input | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Impactdevalue.parse prior to version 5.9.2 fails to reject out-of-bounds indices. Specially-crafted payloads can exploit this to cause devalue to alternate between different array representations, res",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Svelte devalue: DoS via malformed input",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T20:28:21.000Z",
+            "date_published": "2026-09-17T20:28:21.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[devalue] Svelte devalue: DoS via malformed input",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vrf4-mx87-p53w",
+            "content_html": "Summary@libp2p/peer-store accepts a signed PeerRecord whose envelope is signed by one peer but whose payload claims a different peer ID. The vulnerable consumePeerRecord path verifies the envelope signature, but does not verify that the envelope signer is the same peer as the wrapped PeerRecord.peerId. As a result, an attacker can sign a record with their own key while placing a victim peer ID in the payload, causing attacker-controlled multiaddrs to be stored as certified addresses for the vict",
+            "url": "https://github.com/advisories/GHSA-vrf4-mx87-p53w",
+            "title": "[@libp2p/peer-store] libp2p: PeerStore accepts attacker-signed PeerRecords for a victim peer ID and stores certified attacker addresses | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summary@libp2p/peer-store accepts a signed PeerRecord whose envelope is signed by one peer but whose payload claims a different peer ID. The vulnerable consumePeerRecord path verifies the envelope sig",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "libp2p: PeerStore accepts attacker-signed PeerRecords for a victim peer ID and stores certified attacker addresses",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T18:01:38.000Z",
+            "date_published": "2026-09-17T18:01:38.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@libp2p/peer-store] libp2p: PeerStore accepts attacker-signed PeerRecords for a victim peer ID and stores certified attacker addresses",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-c3gv-825q-fvmp",
+            "content_html": "Summary@libp2p/gossipsub StrictSign validation does not bind a supplied message public key to the claimed from peer ID when from is an RSA-style peer ID that does not inline its public key. An attacker can set from to a victim RSA peer ID, sign the message with the attacker's own private key, include the attacker's public key in msg.key, and have the message accepted as a valid signed message from the victim.DetailsThe vulnerable code is in packages/gossipsub/src/utils/buildRawMessage.ts inside ",
+            "url": "https://github.com/advisories/GHSA-c3gv-825q-fvmp",
+            "title": "[@libp2p/gossipsub] libp2p: Gossipsub StrictSign accepts attacker-signed messages as a victim RSA peer ID | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summary@libp2p/gossipsub StrictSign validation does not bind a supplied message public key to the claimed from peer ID when from is an RSA-style peer ID that does not inline its public key. An attacke",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "libp2p: Gossipsub StrictSign accepts attacker-signed messages as a victim RSA peer ID",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T17:29:31.000Z",
+            "date_published": "2026-09-17T17:29:31.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@libp2p/gossipsub] libp2p: Gossipsub StrictSign accepts attacker-signed messages as a victim RSA peer ID",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8pw2-6jv3-mj5j",
+            "content_html": "SummaryCurrent vLLM main lets an inference request choose the PyNvVideoCodec GPU video decoder through media_io_kwargs.video.video_backend, but engine GPU memory reservation is computed only from static startup configuration and VLLM_VIDEO_LOADER_BACKEND. If the server starts with the default OpenCV/software backend and no --mm-ipc-gpu-memory-gb budget, a client can still route a video request into the PyNvVideoCodec path after startup, causing frontend CUDA-context, decoder-surface, and decoded",
+            "url": "https://github.com/advisories/GHSA-8pw2-6jv3-mj5j",
+            "title": "[vllm] vLLM: Request-selected PyNvVideoCodec GPU decode bypasses static VRAM reservation | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryCurrent vLLM main lets an inference request choose the PyNvVideoCodec GPU video decoder through media_io_kwargs.video.video_backend, but engine GPU memory reservation is computed only from stat",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "vLLM: Request-selected PyNvVideoCodec GPU decode bypasses static VRAM reservation",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T17:17:39.000Z",
+            "date_published": "2026-09-17T17:17:39.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[vllm] vLLM: Request-selected PyNvVideoCodec GPU decode bypasses static VRAM reservation",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-pq59-9fq7-m886",
+            "content_html": "ImpactPython's string format functionality allows someone controlling the format string to \"read\" objects accessible (recursively) via attribute access and subscription from accessible objects. Those attribute accesses and subscriptions use Python's full blown getattr and getitem, not the policy restricted AccessControl variants _getattr_ and _getitem_. This can lead to critical information disclosure.The AccessControl package already guards against direct access to the formatting functions on s",
+            "url": "https://github.com/advisories/GHSA-pq59-9fq7-m886",
+            "title": "[AccessControl] Zope AccessControl vulnerable to information disclosure through Python string `format` and `format_map` functions | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactPython's string format functionality allows someone controlling the format string to \"read\" objects accessible (recursively) via attribute access and subscription from accessible objects. Those ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Zope AccessControl vulnerable to information disclosure through Python string `format` and `format_map` functions",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T16:30:37.000Z",
+            "date_published": "2026-09-17T16:30:37.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[AccessControl] Zope AccessControl vulnerable to information disclosure through Python string `format` and `format_map` functions",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-hp3v-5vw7-fx9w",
+            "content_html": "ImpactRestrictedPython could allow a sandbox escape when a policy exposes the standard library string module, or otherwise exposes string.Formatter, to restricted code.string.Formatter field resolution methods such as get_field can perform attribute and item traversal internally and return live object references. This can bypass RestrictedPython's normal attribute guards and may allow access to sensitive objects such as function globals, builtins, file access, or code execution primitives.Users ",
+            "url": "https://github.com/advisories/GHSA-hp3v-5vw7-fx9w",
+            "title": "[RestrictedPython] RestrictedPython vulnerable to sandbox escape via string.Formatter field resolution | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactRestrictedPython could allow a sandbox escape when a policy exposes the standard library string module, or otherwise exposes string.Formatter, to restricted code.string.Formatter field resolutio",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "RestrictedPython vulnerable to sandbox escape via string.Formatter field resolution",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T16:30:22.000Z",
+            "date_published": "2026-09-17T16:30:22.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[RestrictedPython] RestrictedPython vulnerable to sandbox escape via string.Formatter field resolution",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-pj96-35fp-cfcc",
+            "content_html": "SummaryExifReader 4.41.0 is vulnerable to denial of service through a crafted HEIC or AVIF file with a malicious iloc box. When offsetSize, lengthSize, and baseOffsetSize are set to zero in the iloc header, the extent-parsing loop allocates an unbounded number of JavaScript objects - up to itemCount × extentCount (65535 × 65535 = 4.3 billion) - without advancing the buffer offset. A 652-byte file causes 400MB of heap growth; a 6KB file exhausts all system memory and crashes the Node.js process w",
+            "url": "https://github.com/advisories/GHSA-pj96-35fp-cfcc",
+            "title": "[exifreader] ExifReader: DoS via Crafted HEIC/AVIF iloc Box - Memory Exhaustion | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryExifReader 4.41.0 is vulnerable to denial of service through a crafted HEIC or AVIF file with a malicious iloc box. When offsetSize, lengthSize, and baseOffsetSize are set to zero in the iloc h",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "ExifReader: DoS via Crafted HEIC/AVIF iloc Box - Memory Exhaustion",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T16:30:00.000Z",
+            "date_published": "2026-09-17T16:30:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[exifreader] ExifReader: DoS via Crafted HEIC/AVIF iloc Box - Memory Exhaustion",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-wmj6-g64g-j7q5",
+            "content_html": "DescriptionSanic's HTTP/1.1 chunked-body handling does not fully consume the trailer-part after the terminating 0\\r\\n chunk. Because of that, attacker-controlled bytes left in the connection buffer after the first chunked request can be interpreted as the start of a new HTTP request on the same keep-alive connection. In the attached verified proof, a single outer POST / request that correctly returns 405 Method Not Allowed is followed, within the same TCP send, by a hidden second request smuggle",
+            "url": "https://github.com/advisories/GHSA-wmj6-g64g-j7q5",
+            "title": "[sanic] sanic chunked trailer request smuggling allows hidden second request execution | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "DescriptionSanic's HTTP/1.1 chunked-body handling does not fully consume the trailer-part after the terminating 0\\r\\n chunk. Because of that, attacker-controlled bytes left in the connection buffer af",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "sanic chunked trailer request smuggling allows hidden second request execution",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T14:59:16.000Z",
+            "date_published": "2026-09-17T14:59:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[sanic] sanic chunked trailer request smuggling allows hidden second request execution",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-wmj6-g64g-j7q5",
+            "content_html": "DescriptionSanic's HTTP/1.1 chunked-body handling does not fully consume the trailer-part after the terminating 0\\r\\n chunk. Because of that, attacker-controlled bytes left in the connection buffer after the first chunked request can be interpreted as the start of a new HTTP request on the same keep-alive connection. In the attached verified proof, a single outer POST / request that correctly returns 405 Method Not Allowed is followed, within the same TCP send, by a hidden second request smuggle",
+            "url": "https://github.com/advisories/GHSA-wmj6-g64g-j7q5",
+            "title": "[sanic] sanic chunked trailer request smuggling allows hidden second request execution | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "DescriptionSanic's HTTP/1.1 chunked-body handling does not fully consume the trailer-part after the terminating 0\\r\\n chunk. Because of that, attacker-controlled bytes left in the connection buffer af",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "sanic chunked trailer request smuggling allows hidden second request execution",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T14:59:16.000Z",
+            "date_published": "2026-09-17T14:59:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[sanic] sanic chunked trailer request smuggling allows hidden second request execution",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-g74q-6g2f-874x",
+            "content_html": "Summary@tinacms/auth's isAuthorized(req) decides authorization by validating the caller's bearer token against https://identity.tinajs.io/v2/apps/${req.query.clientID}/currentUser, where the clientID comes from the request and is never compared to the site's own configured TinaCloud app id. The function answers \"is this token a verified user of whatever app the caller named?\" instead of \"is this token a verified user of THIS site?\"Any TinaCloud user can create their own free app, get a valid tok",
+            "url": "https://github.com/advisories/GHSA-g74q-6g2f-874x",
+            "title": "[next-tinacms-azure] Tina: [Broken Access Control] letting any TinaCloud user authorize against any self-hosted site | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summary@tinacms/auth's isAuthorized(req) decides authorization by validating the caller's bearer token against https://identity.tinajs.io/v2/apps/${req.query.clientID}/currentUser, where the clientID ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Tina: [Broken Access Control] letting any TinaCloud user authorize against any self-hosted site",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T14:59:00.000Z",
+            "date_published": "2026-09-17T14:59:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[next-tinacms-azure] Tina: [Broken Access Control] letting any TinaCloud user authorize against any self-hosted site",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-g74q-6g2f-874x",
+            "content_html": "Summary@tinacms/auth's isAuthorized(req) decides authorization by validating the caller's bearer token against https://identity.tinajs.io/v2/apps/${req.query.clientID}/currentUser, where the clientID comes from the request and is never compared to the site's own configured TinaCloud app id. The function answers \"is this token a verified user of whatever app the caller named?\" instead of \"is this token a verified user of THIS site?\"Any TinaCloud user can create their own free app, get a valid tok",
+            "url": "https://github.com/advisories/GHSA-g74q-6g2f-874x",
+            "title": "[@tinacms/auth] Tina: [Broken Access Control] letting any TinaCloud user authorize against any self-hosted site | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summary@tinacms/auth's isAuthorized(req) decides authorization by validating the caller's bearer token against https://identity.tinajs.io/v2/apps/${req.query.clientID}/currentUser, where the clientID ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Tina: [Broken Access Control] letting any TinaCloud user authorize against any self-hosted site",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T14:59:00.000Z",
+            "date_published": "2026-09-17T14:59:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tinacms/auth] Tina: [Broken Access Control] letting any TinaCloud user authorize against any self-hosted site",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-657c-g7qc-r9j2",
+            "content_html": "ImpactAn OpenAPI or AsyncAPI description could make the split command writefiles outside the chosen output directory, on the machine of anyone who runssplit against it. The write is constrained rather than a free file-writeprimitive: component data is emitted only as YAML/JSON, and code-sample files arenamed after the HTTP method, so an attacker can place or overwrite files at anunintended path but has limited control over their name and contents.PatchesFixed in @redocly/cli v2.33.2.WorkaroundsD",
+            "url": "https://github.com/advisories/GHSA-657c-g7qc-r9j2",
+            "title": "[@redocly/cli] Redocly CLI: Path traversal when using `split` command | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAn OpenAPI or AsyncAPI description could make the split command writefiles outside the chosen output directory, on the machine of anyone who runssplit against it. The write is constrained rather",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Redocly CLI: Path traversal when using `split` command",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T14:58:50.000Z",
+            "date_published": "2026-09-17T14:58:50.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@redocly/cli] Redocly CLI: Path traversal when using `split` command",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-657c-g7qc-r9j2",
+            "content_html": "ImpactAn OpenAPI or AsyncAPI description could make the split command writefiles outside the chosen output directory, on the machine of anyone who runssplit against it. The write is constrained rather than a free file-writeprimitive: component data is emitted only as YAML/JSON, and code-sample files arenamed after the HTTP method, so an attacker can place or overwrite files at anunintended path but has limited control over their name and contents.PatchesFixed in @redocly/cli v2.33.2.WorkaroundsD",
+            "url": "https://github.com/advisories/GHSA-657c-g7qc-r9j2",
+            "title": "[@redocly/cli] Redocly CLI: Path traversal when using `split` command | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAn OpenAPI or AsyncAPI description could make the split command writefiles outside the chosen output directory, on the machine of anyone who runssplit against it. The write is constrained rather",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Redocly CLI: Path traversal when using `split` command",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T14:58:50.000Z",
+            "date_published": "2026-09-17T14:58:50.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@redocly/cli] Redocly CLI: Path traversal when using `split` command",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-rw4j-r22c-9gc3",
+            "content_html": "SummaryA malicious SSH server can wedge an AsyncSSH client, and an authenticatedclient can wedge an AsyncSSH server, by sending a channel maximum packet size of 0 in SSH_MSG_CHANNEL_OPEN_CONFIRMATION (server→client) orSSH_MSG_CHANNEL_OPEN (client→server). AsyncSSH stores the peer-supplied valueverbatim with no lower-bound check; the first time channel data is written,SSHChannel._flush_send_buf enters a synchronous infinite loop that cannotbe interrupted by asyncio.wait_for or any timeout. The lo",
+            "url": "https://github.com/advisories/GHSA-rw4j-r22c-9gc3",
+            "title": "[asyncssh] AsyncSSH: asyncio event-loop freeze via SSH maximum packet size = 0 in SSH_MSG_CHANNEL_OPEN / OPEN_CONFIRMATION | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryA malicious SSH server can wedge an AsyncSSH client, and an authenticatedclient can wedge an AsyncSSH server, by sending a channel maximum packet size of 0 in SSH_MSG_CHANNEL_OPEN_CONFIRMATION ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "AsyncSSH: asyncio event-loop freeze via SSH maximum packet size = 0 in SSH_MSG_CHANNEL_OPEN / OPEN_CONFIRMATION",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T14:53:01.000Z",
+            "date_published": "2026-09-17T14:53:01.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[asyncssh] AsyncSSH: asyncio event-loop freeze via SSH maximum packet size = 0 in SSH_MSG_CHANNEL_OPEN / OPEN_CONFIRMATION",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-hx8v-g79f-8w5f",
+            "content_html": "SummaryA server-side request forgery in LiteLLM Proxy lets an authenticated caller redirect theproxy's outbound request to a host of their choosing by smuggling an api_base inside theuser_config request body, bypassing the existing parameter guard.DetailsLiteLLM Proxy validates request bodies with is_request_body_safe, which blocks theapi_base and base_url parameters but does not cover user_config. The user_configobject is used to build the outbound router for a request, so a caller can place an",
+            "url": "https://github.com/advisories/GHSA-hx8v-g79f-8w5f",
+            "title": "[litellm] LiteLLM Proxy has server-side request forgery via the `user_config` request parameter | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryA server-side request forgery in LiteLLM Proxy lets an authenticated caller redirect theproxy's outbound request to a host of their choosing by smuggling an api_base inside theuser_config reque",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "LiteLLM Proxy has server-side request forgery via the `user_config` request parameter",
+                "type": "png"
+            },
+            "date_modified": "2026-09-17T14:51:21.000Z",
+            "date_published": "2026-09-17T14:51:21.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[litellm] LiteLLM Proxy has server-side request forgery via the `user_config` request parameter",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        }
+    ]
+}

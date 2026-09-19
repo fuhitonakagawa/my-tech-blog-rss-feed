@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Platform｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/</link>
+        <description>Platformセクションのブログ更新をまとめたRSSフィード</description>
+        <lastBuildDate>Sat, 19 Sep 2026 15:05:30 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+        <language>ja</language>
+        <image>
+            <title>Platform｜企業テックブログRSS</title>
+            <url>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</url>
+            <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/</link>
+        </image>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[viable/strict/1789822279: [FSDP2] Extract copy preparation helpers (#197372) | Release notes from pytorch]]></title>
+            <link>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789822279</link>
+            <guid isPermaLink="false">https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789822279</guid>
+            <pubDate>Sat, 19 Sep 2026 09:05:17 GMT</pubDate>
+            <description><![CDATA[pure code refactoring - no perf inidication, no new feature#197372https://github.com/anijain2305, https://github.com/anshul-si#197459]]></description>
+            <content:encoded><![CDATA[pure code refactoring - no perf inidication, no new feature#197372https://github.com/anijain2305, https://github.com/anshul-si#197459]]></content:encoded>
+            <enclosure length="0" type="image//3585034bf084d1a84a09b93f0318da380a86a136756d3683494f29bd44f11532/pytorch/pytorch" height="600" url="https://opengraph.githubassets.com/3585034bf084d1a84a09b93f0318da380a86a136756d3683494f29bd44f11532/pytorch/pytorch" width="1200" alt="pure code refactoring - no perf inidication, no new feature
+the goal is to let user register custom Ag/RS copy fn in next PR for better Shard(1) perf
+Pull Request resolved: #197372
+Approved by: htt..."/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>viable/strict/1789822279: [FSDP2] Extract copy preparation helpers (#197372)</originalTitle>
+                <blogTitle>Release notes from pytorch</blogTitle>
+                <blogLink>https://github.com/pytorch/pytorch/releases</blogLink>
+                <blogLinkMd5Hash>7f928bf9da2700b207cd82372d3b3e1e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[viable/strict/1789818637 | Release notes from pytorch]]></title>
+            <link>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789818637</link>
+            <guid isPermaLink="false">https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789818637</guid>
+            <pubDate>Sat, 19 Sep 2026 07:57:43 GMT</pubDate>
+            <description><![CDATA[[distributed] Reuse workers for checkpoint state-dict utility tests (…]]></description>
+            <content:encoded><![CDATA[[distributed] Reuse workers for checkpoint state-dict utility tests (…]]></content:encoded>
+            <enclosure length="0" type="image//3585034bf084d1a84a09b93f0318da380a86a136756d3683494f29bd44f11532/pytorch/pytorch" height="600" url="https://opengraph.githubassets.com/3585034bf084d1a84a09b93f0318da380a86a136756d3683494f29bd44f11532/pytorch/pytorch" width="1200" alt="[distributed] Reuse workers for checkpoint state-dict utility tests (…"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>viable/strict/1789818637</originalTitle>
+                <blogTitle>Release notes from pytorch</blogTitle>
+                <blogLink>https://github.com/pytorch/pytorch/releases</blogLink>
+                <blogLinkMd5Hash>7f928bf9da2700b207cd82372d3b3e1e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[viable/strict/1789816992: [dynamo] Match CPython semantics in operator.length_hint (#196901) | Release notes from pytorch]]></title>
+            <link>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789816992</link>
+            <guid isPermaLink="false">https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789816992</guid>
+            <pubDate>Sat, 19 Sep 2026 07:28:16 GMT</pubDate>
+            <description><![CDATA[SummaryFixes silent divergences between eager and torch.compile in operator.length_hint, which is used on the hot path by list.extend, list.__init__, deque, and _PyList_AppendTakeRef-style preallocati]]></description>
+            <content:encoded><![CDATA[SummaryFixes silent divergences between eager and torch.compile in operator.length_hint, which is used on the hot path by list.extend, list.__init__, deque, and _PyList_AppendTakeRef-style preallocation. (#195901)DivergencesDynamo's BuiltinVariable.call_length_hint returned the raw __length_hint__ result and did not implement the post-processing of CPython's PyObject_LengthHint (Objects/abstract.c). Four cases produced silently wrong answers rather than falling back:a hint of NotImplemented was ]]></content:encoded>
+            <enclosure length="0" type="image//3585034bf084d1a84a09b93f0318da380a86a136756d3683494f29bd44f11532/pytorch/pytorch" height="600" url="https://opengraph.githubassets.com/3585034bf084d1a84a09b93f0318da380a86a136756d3683494f29bd44f11532/pytorch/pytorch" width="1200" alt="Summary
+Fixes silent divergences between eager and torch.compile in operator.length_hint, which is used on the hot path by list.extend, list.__init__, deque, and _PyList_AppendTakeRef-style preallo..."/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>viable/strict/1789816992: [dynamo] Match CPython semantics in operator.length_hint (#196901)</originalTitle>
+                <blogTitle>Release notes from pytorch</blogTitle>
+                <blogLink>https://github.com/pytorch/pytorch/releases</blogLink>
+                <blogLinkMd5Hash>7f928bf9da2700b207cd82372d3b3e1e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[viable/strict/1789811432: [distributed] Resolve checkpoint test futures without sleeping (#197638) | Release notes from pytorch]]></title>
+            <link>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789811432</link>
+            <guid isPermaLink="false">https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789811432</guid>
+            <pubDate>Sat, 19 Sep 2026 05:37:14 GMT</pubDate>
+            <description><![CDATA[The Future-state-dict test creates a worker thread solely to delay a result by 100ms. Pass an unresolved Future to write(), then resolve it explicitly. Retain the checkpoint-file assertion without the]]></description>
+            <content:encoded><![CDATA[The Future-state-dict test creates a worker thread solely to delay a result by 100ms. Pass an unresolved Future to write(), then resolve it explicitly. Retain the checkpoint-file assertion without the sleeping executor.Test plan:#197638https://github.com/pytorchgreenlight]]></content:encoded>
+            <enclosure length="0" type="image//aebc36c791375b5a3b6e6822d03734588eb3a284c5107088cf1e3366d3c313bc/pytorch/pytorch" height="600" url="https://opengraph.githubassets.com/aebc36c791375b5a3b6e6822d03734588eb3a284c5107088cf1e3366d3c313bc/pytorch/pytorch" width="1200" alt="The Future-state-dict test creates a worker thread solely to delay a result by 100ms. Pass an unresolved Future to write(), then resolve it explicitly. Retain the checkpoint-file assertion without ..."/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>viable/strict/1789811432: [distributed] Resolve checkpoint test futures without sleeping (#197638)</originalTitle>
+                <blogTitle>Release notes from pytorch</blogTitle>
+                <blogLink>https://github.com/pytorch/pytorch/releases</blogLink>
+                <blogLinkMd5Hash>7f928bf9da2700b207cd82372d3b3e1e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[viable/strict/1789809976: [distributed] Shrink all-gather layout test tensors (#197639) | Release notes from pytorch]]></title>
+            <link>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789809976</link>
+            <guid isPermaLink="false">https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789809976</guid>
+            <pubDate>Sat, 19 Sep 2026 04:47:50 GMT</pubDate>
+            <description><![CDATA[Three redistribution tests allocate 8192x6144 tensors to check view versus split/cat behavior. Use 32x24 instead; keep batch sizes, the four-rank mesh, shard placements, operation checks, and value as]]></description>
+            <content:encoded><![CDATA[Three redistribution tests allocate 8192x6144 tensors to check view versus split/cat behavior. Use 32x24 instead; keep batch sizes, the four-rank mesh, shard placements, operation checks, and value assertions unchanged. The layout decision does not depend on tensor byte size.Test plan:#197639https://github.com/pytorchgreenlight]]></content:encoded>
+            <enclosure length="0" type="image//aebc36c791375b5a3b6e6822d03734588eb3a284c5107088cf1e3366d3c313bc/pytorch/pytorch" height="600" url="https://opengraph.githubassets.com/aebc36c791375b5a3b6e6822d03734588eb3a284c5107088cf1e3366d3c313bc/pytorch/pytorch" width="1200" alt="Three redistribution tests allocate 8192x6144 tensors to check view versus split/cat behavior. Use 32x24 instead; keep batch sizes, the four-rank mesh, shard placements, operation checks, and value..."/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>viable/strict/1789809976: [distributed] Shrink all-gather layout test tensors (#197639)</originalTitle>
+                <blogTitle>Release notes from pytorch</blogTitle>
+                <blogLink>https://github.com/pytorch/pytorch/releases</blogLink>
+                <blogLinkMd5Hash>7f928bf9da2700b207cd82372d3b3e1e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[viable/strict/1789807810: [vision hash update] update the pinned vision hash (#197178) | Release notes from pytorch]]></title>
+            <link>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789807810</link>
+            <guid isPermaLink="false">https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789807810</guid>
+            <pubDate>Sat, 19 Sep 2026 04:42:45 GMT</pubDate>
+            <description><![CDATA[This PR is auto-generated nightly by this action.#197178https://github.com/pytorchbot]]></description>
+            <content:encoded><![CDATA[This PR is auto-generated nightly by this action.#197178https://github.com/pytorchbot]]></content:encoded>
+            <enclosure length="0" type="image//937a89a46bc90d7b546ecdcf18365cfeb262fc2f82415ee2dd147364705635b9/pytorch/pytorch" height="600" url="https://opengraph.githubassets.com/937a89a46bc90d7b546ecdcf18365cfeb262fc2f82415ee2dd147364705635b9/pytorch/pytorch" width="1200" alt="This PR is auto-generated nightly by this action.
+Update the pinned vision hash.
+Pull Request resolved: #197178
+Approved by: https://github.com/pytorchbot"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>viable/strict/1789807810: [vision hash update] update the pinned vision hash (#197178)</originalTitle>
+                <blogTitle>Release notes from pytorch</blogTitle>
+                <blogLink>https://github.com/pytorch/pytorch/releases</blogLink>
+                <blogLinkMd5Hash>7f928bf9da2700b207cd82372d3b3e1e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[viable/strict/1789802803: [distributed] Shorten deleted-key store timeout (#197631) | Release notes from pytorch]]></title>
+            <link>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789802803</link>
+            <guid isPermaLink="false">https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789802803</guid>
+            <pubDate>Sat, 19 Sep 2026 03:38:28 GMT</pubDate>
+            <description><![CDATA[Use a one-millisecond timeout only for the get on a deleted key. Restore the original two-second budget before successful operations, preserving assertions and both TCP backends.Test plan:#197631https]]></description>
+            <content:encoded><![CDATA[Use a one-millisecond timeout only for the get on a deleted key. Restore the original two-second budget before successful operations, preserving assertions and both TCP backends.Test plan:#197631https://github.com/pytorchgreenlight#197629, #197630]]></content:encoded>
+            <enclosure length="0" type="image//937a89a46bc90d7b546ecdcf18365cfeb262fc2f82415ee2dd147364705635b9/pytorch/pytorch" height="600" url="https://opengraph.githubassets.com/937a89a46bc90d7b546ecdcf18365cfeb262fc2f82415ee2dd147364705635b9/pytorch/pytorch" width="1200" alt="Use a one-millisecond timeout only for the get on a deleted key. Restore the original two-second budget before successful operations, preserving assertions and both TCP backends.
+Test plan:
+Source ..."/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>viable/strict/1789802803: [distributed] Shorten deleted-key store timeout (#197631)</originalTitle>
+                <blogTitle>Release notes from pytorch</blogTitle>
+                <blogLink>https://github.com/pytorch/pytorch/releases</blogLink>
+                <blogLinkMd5Hash>7f928bf9da2700b207cd82372d3b3e1e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[viable/strict/1789800981: Add annotation_config["key_by"]="auto" (#197577) | Release notes from pytorch]]></title>
+            <link>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789800981</link>
+            <guid isPermaLink="false">https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789800981</guid>
+            <pubDate>Sat, 19 Sep 2026 02:48:10 GMT</pubDate>
+            <description><![CDATA["source" raises on a stack that cannot report source node ids, so a caller that"exec" stays the default. The capability that should pick the key space is notTest Plan:LD_LIBRARY_PATH=/usr/local/cuda-1]]></description>
+            <content:encoded><![CDATA["source" raises on a stack that cannot report source node ids, so a caller that"exec" stays the default. The capability that should pick the key space is notTest Plan:LD_LIBRARY_PATH=/usr/local/cuda-13.4/compat python test/test_cuda_graph_utils.py121 tests pass on a GB200 with CUDA driver 615.71.09. The added test capturesThis commit was authored with the assistance of an AI coding agent (Claude Code).#197577https://github.com/dolpm#197131]]></content:encoded>
+            <enclosure length="0" type="image//bf3b7447210932c5b200d4e7abbacdfd0c8644c2fbe5fb5e41612a12da6807a6/pytorch/pytorch" height="600" url="https://opengraph.githubassets.com/bf3b7447210932c5b200d4e7abbacdfd0c8644c2fbe5fb5e41612a12da6807a6/pytorch/pytorch" width="1200" alt="&amp;quot;source&amp;quot; raises on a stack that cannot report source node ids, so a caller that
+just wants the best available keying has to probe the driver itself before
+choosing. &amp;quot;auto&amp;quot; makes that the capture's ..."/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>viable/strict/1789800981: Add annotation_config["key_by"]="auto" (#197577)</originalTitle>
+                <blogTitle>Release notes from pytorch</blogTitle>
+                <blogLink>https://github.com/pytorch/pytorch/releases</blogLink>
+                <blogLinkMd5Hash>7f928bf9da2700b207cd82372d3b3e1e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[viable/strict/1789797031: [ci test] Require CPU Triton for user-kernel codegen test (#197476) | Release notes from pytorch]]></title>
+            <link>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789797031</link>
+            <guid isPermaLink="false">https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789797031</guid>
+            <pubDate>Sat, 19 Sep 2026 01:56:58 GMT</pubDate>
+            <description><![CDATA[Fix inductor periodic test on hud: https://hud.pytorch.org/hud/pytorch/pytorch/main/1?per_page=50test/inductor/test_codegen_triton.py TestCodegenTriton.test_user_defined_triton_kernel_python_float_arg]]></description>
+            <content:encoded><![CDATA[Fix inductor periodic test on hud: https://hud.pytorch.org/hud/pytorch/pytorch/main/1?per_page=50test/inductor/test_codegen_triton.py TestCodegenTriton.test_user_defined_triton_kernel_python_float_arg_signature_matches_triton "RuntimeError: 0 active drivers ([]). There should only be one."The Python-float-signature and non-builtin-constexpr tests allowed CPUUse the existing TRITON_HAS_CPU check in both skip conditions. This skipsAuthored with assistance from Codex, an AI assistant.Test PlanciPul]]></content:encoded>
+            <enclosure length="0" type="image//bf3b7447210932c5b200d4e7abbacdfd0c8644c2fbe5fb5e41612a12da6807a6/pytorch/pytorch" height="600" url="https://opengraph.githubassets.com/bf3b7447210932c5b200d4e7abbacdfd0c8644c2fbe5fb5e41612a12da6807a6/pytorch/pytorch" width="1200" alt="Fix inductor periodic test on hud: https://hud.pytorch.org/hud/pytorch/pytorch/main/1?per_page=50
+test/inductor/test_codegen_triton.py TestCodegenTriton.test_user_defined_triton_kernel_python_float..."/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>viable/strict/1789797031: [ci test] Require CPU Triton for user-kernel codegen test (#197476)</originalTitle>
+                <blogTitle>Release notes from pytorch</blogTitle>
+                <blogLink>https://github.com/pytorch/pytorch/releases</blogLink>
+                <blogLinkMd5Hash>7f928bf9da2700b207cd82372d3b3e1e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[viable/strict/1789793444 | Release notes from pytorch]]></title>
+            <link>https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789793444</link>
+            <guid isPermaLink="false">https://github.com/pytorch/pytorch/releases/tag/viable%2Fstrict%2F1789793444</guid>
+            <pubDate>Sat, 19 Sep 2026 00:42:18 GMT</pubDate>
+            <description><![CDATA[[cuspy] Render GPU-side annotations on the lane their kernels actuall…]]></description>
+            <content:encoded><![CDATA[[cuspy] Render GPU-side annotations on the lane their kernels actuall…]]></content:encoded>
+            <enclosure length="0" type="image//b30e3be9b55d6d79d2ea695ea099ebde30aaee24ef0f848315daa29dccf3b496/pytorch/pytorch" height="600" url="https://opengraph.githubassets.com/b30e3be9b55d6d79d2ea695ea099ebde30aaee24ef0f848315daa29dccf3b496/pytorch/pytorch" width="1200" alt="[cuspy] Render GPU-side annotations on the lane their kernels actuall…"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>viable/strict/1789793444</originalTitle>
+                <blogTitle>Release notes from pytorch</blogTitle>
+                <blogLink>https://github.com/pytorch/pytorch/releases</blogLink>
+                <blogLinkMd5Hash>7f928bf9da2700b207cd82372d3b3e1e</blogLinkMd5Hash>
+                <favicon>https://github.githubassets.com/favicons/favicon.svg</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Spend Management expands to Enterprise Flexible Commitment plans | Vercel News]]></title>
+            <link>https://vercel.com/changelog/spend-management-enterprise-flex</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/spend-management-enterprise-flex</guid>
+            <pubDate>Fri, 18 Sep 2026 20:00:00 GMT</pubDate>
+            <description><![CDATA[Enterprise teams on Flexible Commitment plans can now use , already , at no additional cost.Spend Managementavailable on ProYou can set a budget at any time in .Spend Management settingsSet a budget p]]></description>
+            <content:encoded><![CDATA[Enterprise teams on Flexible Commitment plans can now use , already , at no additional cost.Spend Managementavailable on ProYou can set a budget at any time in .Spend Management settingsSet a budget per billing cycle, and when your team's metered usage approaches or crosses it, Spend Management can send email notifications, trigger a webhook, or pause the production deployments of all projects. The amount governs the metered usage that draws down from your prepaid balance. Setting an amount does]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4SfHTm0qqNy0mvxo38hOVy/26ca8cdc9291133abe204d10f96c34e9/image__36_.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Spend Management expands to Enterprise Flexible Commitment plans</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[WebMCP support now available in mcp-handler | Vercel News]]></title>
+            <link>https://vercel.com/changelog/webmcp-mcp-handler</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/webmcp-mcp-handler</guid>
+            <pubDate>Fri, 18 Sep 2026 18:00:00 GMT</pubDate>
+            <description><![CDATA[now has experimental support for , the proposed web standard for exposing tools to in-browser agents. Add a single script tag to your site, and your existing MCP tools become available there too.mcp-h]]></description>
+            <content:encoded><![CDATA[now has experimental support for , the proposed web standard for exposing tools to in-browser agents. Add a single script tag to your site, and your existing MCP tools become available there too.mcp-handlerWebMCPOpt tools in by adding them to the object:experimental_webMcpThen load the script from your MCP endpoint with the parameter:?webmcp-scriptThe script registers those tools with the page and proxies each call back to your MCP server as the signed-in user, so authenticated tools work withou]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1wrmQM9L89OzdOeYDnamED/87d05274eb7a09b0950980b9bfde89cd/image.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>WebMCP support now available in mcp-handler</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Build for iPhone Duo with new resources | Latest News - Apple Developer]]></title>
+            <link>https://developer.apple.com/news/?id=nyuppv9r</link>
+            <guid isPermaLink="false">https://developer.apple.com/news/?id=nyuppv9r</guid>
+            <pubDate>Fri, 18 Sep 2026 17:00:57 GMT</pubDate>
+            <description><![CDATA[Get Xcode 27.1 beta.View downloads and release notesGet Figma and Sketch design kits for iPhone Duo from the Apple Design Resources.Download design kits from the Apple Design ResourcesSign up for work]]></description>
+            <content:encoded><![CDATA[Get Xcode 27.1 beta.View downloads and release notesGet Figma and Sketch design kits for iPhone Duo from the Apple Design Resources.Download design kits from the Apple Design ResourcesSign up for workshops around the world to learn how to optimize your app and build customized experiences for all screen sizes.Explore workshopsFind out more about preparing your app for iPhone Duo.Learn more about iPhone Duo]]></content:encoded>
+            <enclosure length="0" type="jpg" url="https://developer.apple.com/news/images/og/iphone-duo-og.jpg"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Build for iPhone Duo with new resources</originalTitle>
+                <blogTitle>Latest News - Apple Developer</blogTitle>
+                <blogLink>https://developer.apple.com/news/</blogLink>
+                <blogLinkMd5Hash>a9b153323871c343ebedb8da4424c7a9</blogLinkMd5Hash>
+                <favicon>https://developer.apple.com/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[v0 now reads npm credentials from shared environment variables | Vercel News]]></title>
+            <link>https://vercel.com/changelog/v0-now-reads-npm-credentials-from-shared-environment-variables</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/v0-now-reads-npm-credentials-from-shared-environment-variables</guid>
+            <pubDate>Fri, 18 Sep 2026 17:00:00 GMT</pubDate>
+            <description><![CDATA[now installs private packages from npm and custom registries using credentials stored as shared environment variables on Vercel.v0This makes it easier for teams to build with their existing design sys]]></description>
+            <content:encoded><![CDATA[now installs private packages from npm and custom registries using credentials stored as shared environment variables on Vercel.v0This makes it easier for teams to build with their existing design systems, component libraries, and internal packages directly in v0.To get started, add one of the following as a on Vercel, scoped to Development and/or Preview:shared environment variable supports scoped registries and references to other environment variables. For example, configure an organization s]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/czVykfPFuY95oRifQwYAf/4774cc727b297305cb1051ff8dd83efb/image__34_.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>v0 now reads npm credentials from shared environment variables</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Jev is the fastest-adopted model in AI Gateway history | Vercel News]]></title>
+            <link>https://vercel.com/blog/ai-gateway-jev-model-launch</link>
+            <guid isPermaLink="false">https://vercel.com/blog/ai-gateway-jev-model-launch</guid>
+            <pubDate>Fri, 18 Sep 2026 07:00:00 GMT</pubDate>
+            <description><![CDATA[Within 24 hours of launching on AI Gateway, reached more than twice as many paid teams as any previous model launch, making it the fastest-adopted model in gateway history.Jev from TypeSafe AIJev pass]]></description>
+            <content:encoded><![CDATA[Within 24 hours of launching on AI Gateway, reached more than twice as many paid teams as any previous model launch, making it the fastest-adopted model in gateway history.Jev from TypeSafe AIJev passed every other comparison model in its first twelve hours and continued to widen its lead for the rest of the day. By hour 24, it was being used by nearly 13% of paid teams. That’s 2x as many as the GPT-5.6 family and over 6x as many as Fable 5.1.Jev’s launch shows how quickly a specialized model ca]]></content:encoded>
+            <enclosure length="0" type="jpg" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/22MYVE2v97ZfHKIqNx5Sw6/d0e7b0b67c61e51ff3b8ca27ce16cf87/sep-og-blog-jev-launch_2x.jpg"/>
+            <_custom>
+                <hatenaCount>1</hatenaCount>
+                <originalTitle>Jev is the fastest-adopted model in AI Gateway history</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[SNAP payment error detection: how Elastic helps US states beat the FY2028 penalty | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+            <link>https://www.elastic.co/blog/snap-error-fy2028-penalty</link>
+            <guid isPermaLink="false">https://www.elastic.co/blog/snap-error-fy2028-penalty</guid>
+            <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Detecting SNAP fraud requires a layered approach, where rules catch what agencies know to look for, machine learning surfaces what rules miss, and conversational investigation helps analysts act on wh]]></description>
+            <content:encoded><![CDATA[Detecting SNAP fraud requires a layered approach, where rules catch what agencies know to look for, machine learning surfaces what rules miss, and conversational investigation helps analysts act on what the data reveals. Elastic delivers all three.]]></content:encoded>
+            <author>Adam Vielbaum</author>
+            <enclosure length="0" type="jpeg" url="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt2c169a0e9381ba52/6aaa9833dcc13f1205527b38/SNAP-fraud-blog.jpeg"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>SNAP payment error detection: how Elastic helps US states beat the FY2028 penalty</originalTitle>
+                <blogTitle>Elastic Blog - Elasticsearch, Kibana, and ELK Stack</blogTitle>
+                <blogLink>https://www.elastic.co</blogLink>
+                <blogLinkMd5Hash>b82fa705cb0bce86fa0138055a46f9ae</blogLinkMd5Hash>
+                <favicon>https://www.elastic.co/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Securing the software factory at machine speed | GitLab]]></title>
+            <link>https://about.gitlab.com/blog/securing-the-software-factory-at-machine-speed/</link>
+            <guid isPermaLink="false">https://about.gitlab.com/blog/securing-the-software-factory-at-machine-speed/</guid>
+            <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[I joined GitLab at a moment when the way teams build and secure software has been changing rapidly. GitLab CEO Bill Staples recently framed that shift in When Code Is Abundant. When code is no longer ]]></description>
+            <content:encoded><![CDATA[I joined GitLab at a moment when the way teams build and secure software has been changing rapidly. GitLab CEO Bill Staples recently framed that shift in When Code Is Abundant. When code is no longer the bottleneck, trust becomes scarce, and that constraint shows up first in what reaches production.As a CISO accountable for the same decisions as my peers, my operating thesis is simple: Agentic software development stays trustworthy only when security, governance, and guardrails sit in the path f]]></content:encoded>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/about-gitlab-com/image/upload/v1759320418/xjmqcozxzt4frx0hori3.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Securing the software factory at machine speed</originalTitle>
+                <blogTitle>GitLab</blogTitle>
+                <blogLink>https://about.gitlab.com/blog</blogLink>
+                <blogLinkMd5Hash>31f5e0e0d69f479b04aee9830f78e661</blogLinkMd5Hash>
+                <favicon>https://about.gitlab.com/images/ico/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Reproducing, disclosing, and fixing the libheif vulnerability with Hacktron and the maintainers | Vercel News]]></title>
+            <link>https://vercel.com/blog/reproducing-disclosing-and-fixing-the-libheif-vulnerability-with-hacktron-and-the-maintainers</link>
+            <guid isPermaLink="false">https://vercel.com/blog/reproducing-disclosing-and-fixing-the-libheif-vulnerability-with-hacktron-and-the-maintainers</guid>
+            <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[In August 2026, reported what looked like a remote code execution (RCE) vulnerability in Next.js image optimization. Their investigation found that the vulnerable code was not in Next.js itself, but u]]></description>
+            <content:encoded><![CDATA[In August 2026, reported what looked like a remote code execution (RCE) vulnerability in Next.js image optimization. Their investigation found that the vulnerable code was not in Next.js itself, but upstream in libheif, an AVIF image decoder used by Next.js, , , , and much of the web. HacktronImageMagickWordPresssharpShortly after Hacktron notified us, we worked with them to reproduce the RCE against a current Next.js build and disclose it to the maintainers of sharp, libvips, and libheif. We th]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7Bt9946bsWXWHAGsvYp3iJ/dadf67ce708c0e7471e4aac36fde09f3/image__1_.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Reproducing, disclosing, and fixing the libheif vulnerability with Hacktron and the maintainers</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[GLM 5.3 FlashX now available on AI Gateway | Vercel News]]></title>
+            <link>https://vercel.com/changelog/glm-5-3-flashx-now-available-on-ai-gateway</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/glm-5-3-flashx-now-available-on-ai-gateway</guid>
+            <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[is now available on AI Gateway.GLM 5.3 FlashXGLM 5.3 FlashX is a high-speed serving option for Z.ai's multimodal coding model, delivering inference at ~200 tokens per second for faster streamed respon]]></description>
+            <content:encoded><![CDATA[is now available on AI Gateway.GLM 5.3 FlashXGLM 5.3 FlashX is a high-speed serving option for Z.ai's multimodal coding model, delivering inference at ~200 tokens per second for faster streamed responses.The higher serving speed is useful for coding agents, tool loops, and interactive applications where users wait on generated output.Use across API formats and in coding agents:zai/glm-5.3-flashxTo use it in a coding agent, see the , then run to create a key and configure your supported agents. S]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2yBj9453MO9LixivM0F6hJ/44c649339c3861343d50f4820f7230bc/image__86_.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>GLM 5.3 FlashX now available on AI Gateway</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Sub-second artifact deployments are now supported in Vercel CLI | Vercel News]]></title>
+            <link>https://vercel.com/changelog/sub-second-artifact-deployments-are-now-supported-in-vercel-cli</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/sub-second-artifact-deployments-are-now-supported-in-vercel-cli</guid>
+            <pubDate>Thu, 17 Sep 2026 22:00:00 GMT</pubDate>
+            <description><![CDATA[You and your agents can now deploy static artifacts to Vercel in under one second through Vercel CLI. Run to share a prototype, publish an HTML report, or preview a page created by your coding agent. ]]></description>
+            <content:encoded><![CDATA[You and your agents can now deploy static artifacts to Vercel in under one second through Vercel CLI. Run to share a prototype, publish an HTML report, or preview a page created by your coding agent. vercel deployVercel automatically detects eligible deployments, and valid artifacts will skip the build step, immediately returning a live URL.Instant deployments support directories with: Supported file extension include , , and .html.htm.md.Update to Vercel CLI version or later to get started, and]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/763qztDrYFJ1zybVqMB8h7/88d8ed58023e02ea0f25456a33bd3e74/image__2_.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Sub-second artifact deployments are now supported in Vercel CLI</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Turbo build machines can now be enabled per deployment | Vercel News]]></title>
+            <link>https://vercel.com/changelog/turbo-build-machines-can-now-be-enabled-per-deployment</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/turbo-build-machines-can-now-be-enabled-per-deployment</guid>
+            <pubDate>Thu, 17 Sep 2026 20:00:00 GMT</pubDate>
+            <description><![CDATA[You can now opt into Turbo build machines on any individual deployment. This is useful when you need to increase resources temporarily without changing project settings. You can do this in three ways:]]></description>
+            <content:encoded><![CDATA[You can now opt into Turbo build machines on any individual deployment. This is useful when you need to increase resources temporarily without changing project settings. You can do this in three ways:Learn more in the .managing builds documentationRead moreInclude in your Git commit message before pushing to GitHub#VERCEL_BUILD_MACHINE=TURBOUse (Vercel CLI 59.20.0 or later)vc deploy --turboSet to when creating a deployment with buildMachineturbothe REST API]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/NstLDicGC3eAiCuF8nQnp/3ebd35c1218cf3726c85069e0d7d2171/image__35_.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Turbo build machines can now be enabled per deployment</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Run Terminal-Bench and other Harbor evals on Vercel Sandbox | Vercel News]]></title>
+            <link>https://vercel.com/changelog/run-terminal-bench-and-other-harbor-evals-on-vercel-sandbox</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/run-terminal-bench-and-other-harbor-evals-on-vercel-sandbox</guid>
+            <pubDate>Thu, 17 Sep 2026 19:00:00 GMT</pubDate>
+            <description><![CDATA[You can now run Harbor evals on Vercel Sandbox. is the open-source harness behind , whose registry includes many other benchmarks such as SWE-bench, tau3-bench and OSWorld. Pass to and each trial exec]]></description>
+            <content:encoded><![CDATA[You can now run Harbor evals on Vercel Sandbox. is the open-source harness behind , whose registry includes many other benchmarks such as SWE-bench, tau3-bench and OSWorld. Pass to and each trial executes in its own isolated Firecracker microVM, so you can parallelize far beyond what your local machine is capable of. HarborTerminal-Bench--env vercelharbor runA task's network policy is enforced at the sandbox firewall, outside the VM. Optional credential injection attaches secrets to matching out]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4mmJhm9MYPUkjkDKiQUm5Y/2c9262744324662f11c080859fc3b610/image.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Run Terminal-Bench and other Harbor evals on Vercel Sandbox</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[The skills CLI now supports Notion hosted skills | Vercel News]]></title>
+            <link>https://vercel.com/changelog/skills-cli-notion-skills</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/skills-cli-notion-skills</guid>
+            <pubDate>Thu, 17 Sep 2026 18:00:00 GMT</pubDate>
+            <description><![CDATA[adds as an install source for agent skills .skills@1.7.0Notion skills databasesNotion skills are reusable agent skills written as Notion pages. Teams author, review, and update them in the workspace t]]></description>
+            <content:encoded><![CDATA[adds as an install source for agent skills .skills@1.7.0Notion skills databasesNotion skills are reusable agent skills written as Notion pages. Teams author, review, and update them in the workspace they already use, then install them into any agent the skills CLI supports. No Git repository required.To browse your Notion workspace's skills, run:The CLI lists the skill packs shared with you and installs every skill in the packs you select.To install a single skill, pass its Notion page URL:Both ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/77Jo7eNAjeDGbARKvCncxz/d62544001bab91d6dd500cb46de4e2c5/image.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>The skills CLI now supports Notion hosted skills</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Simplify compliance with the native pre-written policy experience in HCP Terraform  | HashiCorp Blog]]></title>
+            <link>https://www.hashicorp.com/blog/simplify-compliance-with-a-native-pre-written-policy-experience-in-terraform</link>
+            <guid isPermaLink="false">https://www.hashicorp.com/blog/simplify-compliance-with-a-native-pre-written-policy-experience-in-terraform</guid>
+            <pubDate>Thu, 17 Sep 2026 16:00:00 GMT</pubDate>
+            <description><![CDATA[Teams can now browse HashiCorp-managed pre-written policies, add them to a policy set, and apply common compliance guardrails directly in HCP Terraform.]]></description>
+            <content:encoded><![CDATA[Teams can now browse HashiCorp-managed pre-written policies, add them to a policy set, and apply common compliance guardrails directly in HCP Terraform.]]></content:encoded>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Simplify compliance with the native pre-written policy experience in HCP Terraform </originalTitle>
+                <blogTitle>HashiCorp Blog</blogTitle>
+                <blogLink>https://hashicorp.com/blog</blogLink>
+                <blogLinkMd5Hash>693ef95e8b922870e5e6d2dc4f57f75d</blogLinkMd5Hash>
+                <favicon/>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[HCP Vagrant deprecation: important dates and migration guidance | HashiCorp Blog]]></title>
+            <link>https://www.hashicorp.com/blog/hcp-vagrant-deprecation-important-dates-and-migration-guidance</link>
+            <guid isPermaLink="false">https://www.hashicorp.com/blog/hcp-vagrant-deprecation-important-dates-and-migration-guidance</guid>
+            <pubDate>Thu, 17 Sep 2026 16:00:00 GMT</pubDate>
+            <description><![CDATA[HCP Vagrant will be deprecated in 2026. Users should begin planning migrations as box creation, support, and operations are phased out.]]></description>
+            <content:encoded><![CDATA[HCP Vagrant will be deprecated in 2026. Users should begin planning migrations as box creation, support, and operations are phased out.]]></content:encoded>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>HCP Vagrant deprecation: important dates and migration guidance</originalTitle>
+                <blogTitle>HashiCorp Blog</blogTitle>
+                <blogLink>https://hashicorp.com/blog</blogLink>
+                <blogLinkMd5Hash>693ef95e8b922870e5e6d2dc4f57f75d</blogLinkMd5Hash>
+                <favicon/>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[WebKit Features for Safari 27.0 | WebKit]]></title>
+            <link>https://webkit.org/blog/18325/webkit-features-for-safari-27-0/</link>
+            <guid isPermaLink="false">https://webkit.org/?p=18325</guid>
+            <pubDate>Thu, 17 Sep 2026 11:30:41 GMT</pubDate>
+            <description><![CDATA[Our Safari release notes have never been as long as they are for this version.]]></description>
+            <content:encoded><![CDATA[Our Safari release notes have never been as long as they are for this version.]]></content:encoded>
+            <category>News</category>
+            <enclosure length="0" type="png" url="https://webkit.org/wp-content/uploads/Safari27-piechart-1024x575.png"/>
+            <_custom>
+                <hatenaCount>2</hatenaCount>
+                <originalTitle>WebKit Features for Safari 27.0</originalTitle>
+                <blogTitle>WebKit</blogTitle>
+                <blogLink>https://webkit.org</blogLink>
+                <blogLinkMd5Hash>b730832646f3d89d16cb1f1d637b0261</blogLinkMd5Hash>
+                <favicon>https://webkit.org/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Open-weight models take 56% of token volume, Astra doubles Fable 5.1 spend | Vercel News]]></title>
+            <link>https://vercel.com/blog/ai-gateway-production-index-september-2026</link>
+            <guid isPermaLink="false">https://vercel.com/blog/ai-gateway-production-index-september-2026</guid>
+            <pubDate>Thu, 17 Sep 2026 07:00:00 GMT</pubDate>
+            <description><![CDATA[AI Gateway Production Index — September 2026Every month, routes tens of trillions of tokens between production applications and AI labs. That traffic gives us a view of what AI usage actually looks li]]></description>
+            <content:encoded><![CDATA[AI Gateway Production Index — September 2026Every month, routes tens of trillions of tokens between production applications and AI labs. That traffic gives us a view of what AI usage actually looks like in today's enterprise, and we publish it here monthly. See the Production Index reports from , , and .AI GatewayJuneJulyAugustThe September index reports on AI Gateway data collected through August 2026.The monthly report covers data through August. We add notable developments here between editio]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1ieqqoFnOd2waNOEP6q4jt/bccb775b80d37c26c484e36d7e7ee35d/sep-og-blog-bars-ghost_2x.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Open-weight models take 56% of token volume, Astra doubles Fable 5.1 spend</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Australia's AI opportunity starts with data | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+            <link>https://www.elastic.co/blog/australia-parliamentary-ai-showcase</link>
+            <guid isPermaLink="false">https://www.elastic.co/blog/australia-parliamentary-ai-showcase</guid>
+            <pubDate>Thu, 17 Sep 2026 01:00:00 GMT</pubDate>
+            <description><![CDATA[Elastic, a Founding Partner at Australia's first Parliamentary AI Industry Showcase, highlights that data, not just models, is the key to deploying safe, effective, and trusted AI.]]></description>
+            <content:encoded><![CDATA[Elastic, a Founding Partner at Australia's first Parliamentary AI Industry Showcase, highlights that data, not just models, is the key to deploying safe, effective, and trusted AI.]]></content:encoded>
+            <author>Sean MacKirdy</author>
+            <enclosure length="0" type="jpg" url="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt5a47246f25f291b7/6aaaa056e96fa6d3527b6360/unnamed.jpg"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Australia's AI opportunity starts with data</originalTitle>
+                <blogTitle>Elastic Blog - Elasticsearch, Kibana, and ELK Stack</blogTitle>
+                <blogLink>https://www.elastic.co</blogLink>
+                <blogLinkMd5Hash>b82fa705cb0bce86fa0138055a46f9ae</blogLinkMd5Hash>
+                <favicon>https://www.elastic.co/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Rate limits on GitLab.com are changing | GitLab]]></title>
+            <link>https://about.gitlab.com/blog/rate-limit-change-2026/</link>
+            <guid isPermaLink="false">https://about.gitlab.com/blog/rate-limit-change-2026/</guid>
+            <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[GitLab.com hosts millions of projects for teams of every size that need a platform they can rely on. Demand is climbing quickly, and we expect platform load to grow several times over this year. Predi]]></description>
+            <content:encoded><![CDATA[GitLab.com hosts millions of projects for teams of every size that need a platform they can rely on. Demand is climbing quickly, and we expect platform load to grow several times over this year. Predictable limits are what keep GitLab.com fast for everyone on it, including the automation and agent workloads teams are building on the platform.To hold that as we scale, we're updating how rate limits work. Starting October 19, 2026, rate limits on GitLab.com will align with your subscription tier. ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/about-gitlab-com/image/upload/v1785336708/ww4mlighwlvvzgnmbe6w.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Rate limits on GitLab.com are changing</originalTitle>
+                <blogTitle>GitLab</blogTitle>
+                <blogLink>https://about.gitlab.com/blog</blogLink>
+                <blogLinkMd5Hash>31f5e0e0d69f479b04aee9830f78e661</blogLinkMd5Hash>
+                <favicon>https://about.gitlab.com/images/ico/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Optimize your team's price-performance with hosted open weight models | GitLab]]></title>
+            <link>https://about.gitlab.com/blog/optimize-with-open-weight-models/</link>
+            <guid isPermaLink="false">https://about.gitlab.com/blog/optimize-with-open-weight-models/</guid>
+            <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[There’s no single best model for every software development task. Implementing a new feature, diagnosing a failed pipeline, and resolving security vulnerabilities all place different demands on the mo]]></description>
+            <content:encoded><![CDATA[There’s no single best model for every software development task. Implementing a new feature, diagnosing a failed pipeline, and resolving security vulnerabilities all place different demands on the model handling them. GitLab Duo Agent Platform is expanding GitLab-managed model choice with three hosted open weight models: Kimi K3, GLM 5.3, and MiniMax M3.Together with the frontier models already available in GitLab, your team now has more control over how you optimize for quality, latency, and c]]></content:encoded>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/about-gitlab-com/image/upload/v1789480051/yl5u9r9o48evmmdjiygl.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Optimize your team's price-performance with hosted open weight models</originalTitle>
+                <blogTitle>GitLab</blogTitle>
+                <blogLink>https://about.gitlab.com/blog</blogLink>
+                <blogLinkMd5Hash>31f5e0e0d69f479b04aee9830f78e661</blogLinkMd5Hash>
+                <favicon>https://about.gitlab.com/images/ico/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[See who spent your AI credits and set fair caps per team | GitLab]]></title>
+            <link>https://about.gitlab.com/blog/new-usage-caps-2026/</link>
+            <guid isPermaLink="false">https://about.gitlab.com/blog/new-usage-caps-2026/</guid>
+            <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Scaling AI across your organization depends on knowing where the budget is going and who’s using it. While a subscription cap keeps your total spend within budget, it can’t tell you how much AI was us]]></description>
+            <content:encoded><![CDATA[Scaling AI across your organization depends on knowing where the budget is going and who’s using it. While a subscription cap keeps your total spend within budget, it can’t tell you how much AI was used by individual teams. And predicting future budget needs ahead of business needs gets more challenging as teams grow. Without per-user data you can’t set a fair cap on AI spend, explain a spike, or show a department what it consumed.GitLab 19.4 makes GitLab Credits manageable per user: Set individ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/about-gitlab-com/image/upload/v1789480051/evgeumxt5qkdgzlc9e27.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>See who spent your AI credits and set fair caps per team</originalTitle>
+                <blogTitle>GitLab</blogTitle>
+                <blogLink>https://about.gitlab.com/blog</blogLink>
+                <blogLinkMd5Hash>31f5e0e0d69f479b04aee9830f78e661</blogLinkMd5Hash>
+                <favicon>https://about.gitlab.com/images/ico/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[New MCP tools help platform teams scale automation safely | GitLab]]></title>
+            <link>https://about.gitlab.com/blog/new-mcp-tools-for-automation/</link>
+            <guid isPermaLink="false">https://about.gitlab.com/blog/new-mcp-tools-for-automation/</guid>
+            <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Agentic tools are moving fast past code completion into running pipelines, opening merge requests, and triaging work on a team's behalf. The Model Context Protocol (MCP) has become the common way thes]]></description>
+            <content:encoded><![CDATA[Agentic tools are moving fast past code completion into running pipelines, opening merge requests, and triaging work on a team's behalf. The Model Context Protocol (MCP) has become the common way these agents reach into a team's existing tools, which means the agents touching an organization's software delivery pipeline are no longer only the ones a platform team chose and configured themselves.That reach is also where automation typically stalls. The more an agent can do, the more a platform te]]></content:encoded>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/about-gitlab-com/image/upload/v1789480051/evgeumxt5qkdgzlc9e27.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>New MCP tools help platform teams scale automation safely</originalTitle>
+                <blogTitle>GitLab</blogTitle>
+                <blogLink>https://about.gitlab.com/blog</blogLink>
+                <blogLinkMd5Hash>31f5e0e0d69f479b04aee9830f78e661</blogLinkMd5Hash>
+                <favicon>https://about.gitlab.com/images/ico/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[GitLab Duo CLI takes a task from goal to done | GitLab]]></title>
+            <link>https://about.gitlab.com/blog/gitlab-duo-cli-drives-automation/</link>
+            <guid isPermaLink="false">https://about.gitlab.com/blog/gitlab-duo-cli-drives-automation/</guid>
+            <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Complex tasks hit a wall at the end of every chat turn. Developers already know what they're trying to accomplish. What stalls the work is the handoff back and forth between each step. Without a pre-d]]></description>
+            <content:encoded><![CDATA[Complex tasks hit a wall at the end of every chat turn. Developers already know what they're trying to accomplish. What stalls the work is the handoff back and forth between each step. Without a pre-defined definition of success, the agent stops and waits for direction or clarification, so you end up re-prompting it step by step, effectively acting as its continue button until the task is done.Depending on the team, that handoff can mean minutes of back-and-forth, or it can mean the request sits]]></content:encoded>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/about-gitlab-com/image/upload/v1789480051/evgeumxt5qkdgzlc9e27.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>GitLab Duo CLI takes a task from goal to done</originalTitle>
+                <blogTitle>GitLab</blogTitle>
+                <blogLink>https://about.gitlab.com/blog</blogLink>
+                <blogLinkMd5Hash>31f5e0e0d69f479b04aee9830f78e661</blogLinkMd5Hash>
+                <favicon>https://about.gitlab.com/images/ico/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[GPT-Live 1 now available on AI Gateway | Vercel News]]></title>
+            <link>https://vercel.com/changelog/gpt-live-1-now-available-on-ai-gateway</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/gpt-live-1-now-available-on-ai-gateway</guid>
+            <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[is now available on AI Gateway. GPT-Live 1 from OpenAIGPT-Live 1 is a full-duplex voice model and can listen and speak at the same time. Many voice models use turn detection to respond. Full duplex re]]></description>
+            <content:encoded><![CDATA[is now available on AI Gateway. GPT-Live 1 from OpenAIGPT-Live 1 is a full-duplex voice model and can listen and speak at the same time. Many voice models use turn detection to respond. Full duplex removes that boundary, so a user can pause, interrupt, or add detail while GPT-Live is speaking.GPT-Live 1 also supports client delegation. Client delegation lets you choose the background model independently from GPT-Live 1. A basic session runs only the voice model. When deeper work is needed, your ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2SwiRCJ2yQI6jiStpqx4n4/f327115564457532b4d646d8b597a55f/Vercel_x_OpenAI.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>GPT-Live 1 now available on AI Gateway</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Native Marketplace integrations now support custom environments | Vercel News]]></title>
+            <link>https://vercel.com/changelog/custom-environments-support-for-marketplace-integrations</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/custom-environments-support-for-marketplace-integrations</guid>
+            <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[You can now connect native Marketplace resources to . Previously, resource connections could only target production, preview, and development environments.custom environmentsChoose custom environments]]></description>
+            <content:encoded><![CDATA[You can now connect native Marketplace resources to . Previously, resource connections could only target production, preview, and development environments.custom environmentsChoose custom environments when connecting a resource from the Vercel dashboard, Vercel CLI, or REST API. Vercel scopes the environment variables created by the connection to the selected environments.For example, from the CLI:Existing deployments do not change. Create a new deployment after connecting a resource or changing]]></content:encoded>
+            <enclosure length="0" type="image//api/dynamic-og" url="https://vercel.com/api/dynamic-og?title=Native%20Marketplace%20integrations%20now%20support%20custom%20environments&amp;format=changelog"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Native Marketplace integrations now support custom environments</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Kubernetes v1.37: Hardening Container Storage with Bind Mount Options and EmptyDir Permissions | Kubernetes Blog]]></title>
+            <link>https://kubernetes.io/blog/2026/09/16/kubernetes-v1-37-hardening-container-storage/</link>
+            <guid isPermaLink="false">https://kubernetes.io/blog/2026/09/16/kubernetes-v1-37-hardening-container-storage/</guid>
+            <pubDate>Wed, 16 Sep 2026 18:30:00 GMT</pubDate>
+            <description><![CDATA[Kubernetes v1.37 brings important storage security features: emptyDir permission modes and bind mount options. They help application programmers and security professionals implement rigorous security ]]></description>
+            <content:encoded><![CDATA[Kubernetes v1.37 brings important storage security features: emptyDir permission modes and bind mount options. They help application programmers and security professionals implement rigorous security policies, for example, prohibiting deletion of files across containers or execution of arbitrary binaries from writable volumes, directly in Kubernetes without any complicated circumvention.Linux storage and permission fundamentalsBefore diving into the new Kubernetes features, let us briefly review]]></content:encoded>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Kubernetes v1.37: Hardening Container Storage with Bind Mount Options and EmptyDir Permissions</originalTitle>
+                <blogTitle>Kubernetes Blog</blogTitle>
+                <blogLink>https://kubernetes.io/</blogLink>
+                <blogLinkMd5Hash>5af58f236178ea35a0dd937ff57a09f4</blogLinkMd5Hash>
+                <favicon>https://kubernetes.io/images/kubernetes.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Hobby projects now retain fewer deployments to free up storage | Vercel News]]></title>
+            <link>https://vercel.com/changelog/hobby-projects-now-retain-fewer-deployments-to-free-up-storage</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/hobby-projects-now-retain-fewer-deployments-to-free-up-storage</guid>
+            <pubDate>Wed, 16 Sep 2026 18:00:00 GMT</pubDate>
+            <description><![CDATA[Hobby projects now retain fewer deployments past the 30-day retention window. Hobby teams get 10GB of . Every deployment you keep uses some of it, and going over the limit can block you from deploying]]></description>
+            <content:encoded><![CDATA[Hobby projects now retain fewer deployments past the 30-day retention window. Hobby teams get 10GB of . Every deployment you keep uses some of it, and going over the limit can block you from deploying until you free some up. for Hobby teams now deletes old deployments sooner, so dormant projects stop holding storage that your active projects need.Deployment StorageDeployment RetentionEach Hobby project now keeps its 3 most recent production deployments, plus its 3 most recent deployments of any ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5HanVCrAoKad2puIKXSN2j/f540ecb6ed91b136c3d1e10dee756152/image__33_.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Hobby projects now retain fewer deployments to free up storage</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Get ready with the latest beta releases | Latest News - Apple Developer]]></title>
+            <link>https://developer.apple.com/news/?id=rfb1rooi</link>
+            <guid isPermaLink="false">https://developer.apple.com/news/?id=rfb1rooi</guid>
+            <pubDate>Wed, 16 Sep 2026 17:03:39 GMT</pubDate>
+            <description><![CDATA[The beta versions of iOS 27.2, iPadOS 27.2, macOS 27.2, tvOS 27.2, visionOS 27.2, and watchOS 27.2 are now available. Get your apps ready by confirming they work as expected on these releases. And mak]]></description>
+            <content:encoded><![CDATA[The beta versions of iOS 27.2, iPadOS 27.2, macOS 27.2, tvOS 27.2, visionOS 27.2, and watchOS 27.2 are now available. Get your apps ready by confirming they work as expected on these releases. And make sure to build and test with Xcode 27.2 to take advantage of the advancements in the latest SDKs.Note about iOS 27.1 and iPhone DuoWhen iPhone Duo becomes available on October 23, it will run iOS 27.1. This version builds on the foundation of iOS 27 and introduces features that were purpose-built f]]></content:encoded>
+            <enclosure length="0" type="png" url="https://developer.apple.com/news/images/og/sdk-27-og.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Get ready with the latest beta releases</originalTitle>
+                <blogTitle>Latest News - Apple Developer</blogTitle>
+                <blogLink>https://developer.apple.com/news/</blogLink>
+                <blogLinkMd5Hash>a9b153323871c343ebedb8da4424c7a9</blogLinkMd5Hash>
+                <favicon>https://developer.apple.com/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Get your subscriptions ready for iOS 27 | Latest News - Apple Developer]]></title>
+            <link>https://developer.apple.com/news/?id=likeohx4</link>
+            <guid isPermaLink="false">https://developer.apple.com/news/?id=likeohx4</guid>
+            <pubDate>Wed, 16 Sep 2026 17:02:58 GMT</pubDate>
+            <description><![CDATA[Discover how you can expand the reach of your subscriptions with new features in iOS 27. You can start preparing today by making sure your apps use StoreKit 2 to handle your Apple In-App Purchases. Re]]></description>
+            <content:encoded><![CDATA[Discover how you can expand the reach of your subscriptions with new features in iOS 27. You can start preparing today by making sure your apps use StoreKit 2 to handle your Apple In-App Purchases. Request access to Bundles and SuitesOffer multiple subscriptions as a single Apple In-App Purchase in your apps with new Bundles and Suites capabilities. With Bundles, people can access multiple subscriptions in one purchase — across a single app, multiple apps from the same developer, or even spannin]]></content:encoded>
+            <enclosure length="0" type="png" url="https://developer.apple.com/news/images/og/app-store-connect-og.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Get your subscriptions ready for iOS 27</originalTitle>
+                <blogTitle>Latest News - Apple Developer</blogTitle>
+                <blogLink>https://developer.apple.com/news/</blogLink>
+                <blogLinkMd5Hash>a9b153323871c343ebedb8da4424c7a9</blogLinkMd5Hash>
+                <favicon>https://developer.apple.com/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Updates to App Tracking Transparency in the European Union | Latest News - Apple Developer]]></title>
+            <link>https://developer.apple.com/news/?id=idsft9ai</link>
+            <guid isPermaLink="false">https://developer.apple.com/news/?id=idsft9ai</guid>
+            <pubDate>Wed, 16 Sep 2026 17:00:11 GMT</pubDate>
+            <description><![CDATA[As part of agreements with select European competition authorities, Apple is introducing changes to its App Tracking Transparency framework in the European Union. Beginning with iOS 27.2 and iPadOS 27]]></description>
+            <content:encoded><![CDATA[As part of agreements with select European competition authorities, Apple is introducing changes to its App Tracking Transparency framework in the European Union. Beginning with iOS 27.2 and iPadOS 27.2, developers will have the option to use an alternative version of the App Tracking Transparency system prompt in the EU. The requirements for when you must seek permission to track users will remain the same. Due to legal requirements, only the alternative version of the system prompt is availabl]]></content:encoded>
+            <enclosure length="0" type="png" url="https://developer.apple.com/news/images/og/app-store-og.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Updates to App Tracking Transparency in the European Union</originalTitle>
+                <blogTitle>Latest News - Apple Developer</blogTitle>
+                <blogLink>https://developer.apple.com/news/</blogLink>
+                <blogLinkMd5Hash>a9b153323871c343ebedb8da4424c7a9</blogLinkMd5Hash>
+                <favicon>https://developer.apple.com/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Secure Compute and Static IP builds start 64% faster | Vercel News]]></title>
+            <link>https://vercel.com/changelog/secure-compute-and-static-ip-builds-start-64-faster</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/secure-compute-and-static-ip-builds-start-64-faster</guid>
+            <pubDate>Wed, 16 Sep 2026 17:00:00 GMT</pubDate>
+            <description><![CDATA[Builds using or now start 64% faster, with the average time from deployment creation to build start dropping from 6.7 seconds to 2.4 seconds.Secure ComputeStatic IPsPreviously, each build waited for a]]></description>
+            <content:encoded><![CDATA[Builds using or now start 64% faster, with the average time from deployment creation to build start dropping from 6.7 seconds to 2.4 seconds.Secure ComputeStatic IPsPreviously, each build waited for a new build container to boot with its network configuration. These builds now use prewarmed build containers, with your network configuration attached when the build starts.The improvement is applied automatically to builds using Secure Compute or Static IPs, with no configuration changes required.L]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6JPrfn2h1BPOlbfgqOlmN8/b2ba4cbfffc044ad01ce6fb6e74eee03/image__32_.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Secure Compute and Static IP builds start 64% faster</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Mem0 joins the Vercel Marketplace | Vercel News]]></title>
+            <link>https://vercel.com/changelog/mem0-joins-the-vercel-marketplace</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/mem0-joins-the-vercel-marketplace</guid>
+            <pubDate>Wed, 16 Sep 2026 17:00:00 GMT</pubDate>
+            <description><![CDATA[is now available as a native integration on the , giving your AI agents and apps long-term memory. Mem0 remembers user preferences, facts, and context across sessions, so your app stops starting from ]]></description>
+            <content:encoded><![CDATA[is now available as a native integration on the , giving your AI agents and apps long-term memory. Mem0 remembers user preferences, facts, and context across sessions, so your app stops starting from scratch.Mem0Vercel MarketplaceTo see it end to end, deploy the , an eve agent with long-term memory powered by Mem0.eve Memory Agent templateGet started with on the Vercel Marketplace or through the , available to customers on all plans.Mem0Vercel CLIRead moreInstall from the Marketplace with integr]]></content:encoded>
+            <enclosure length="0" type="jpg" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6yO20AECjF3zHFaa5yHqwm/54c65512b6d58c841a404291d713dadb/mem0_is_now_available_in_the_vercel_marketplace_og_card__1_.jpg"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Mem0 joins the Vercel Marketplace</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[CISA's Logging Reference Architecture for OMB M-26-14: What federal agencies should do next  | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+            <link>https://www.elastic.co/blog/cisa-logging-omb-m-26-14</link>
+            <guid isPermaLink="false">https://www.elastic.co/blog/cisa-logging-omb-m-26-14</guid>
+            <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Now that CISA has released its Logging Reference Architecture (LRA) for OMB M-26-14, federal agencies tasked to complete their logging plans. In this blog, we walk you through the most important aspec]]></description>
+            <content:encoded><![CDATA[Now that CISA has released its Logging Reference Architecture (LRA) for OMB M-26-14, federal agencies tasked to complete their logging plans. In this blog, we walk you through the most important aspects of the LRA guidance.]]></content:encoded>
+            <author>Woody Walton</author>
+            <enclosure length="0" type="jpeg" url="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt0e2950ebdce8d839/6aa447ff7d925c87efaf8134/government-1.jpeg"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>CISA's Logging Reference Architecture for OMB M-26-14: What federal agencies should do next </originalTitle>
+                <blogTitle>Elastic Blog - Elasticsearch, Kibana, and ELK Stack</blogTitle>
+                <blogLink>https://www.elastic.co</blogLink>
+                <blogLinkMd5Hash>b82fa705cb0bce86fa0138055a46f9ae</blogLinkMd5Hash>
+                <favicon>https://www.elastic.co/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Elastic announces GA of cross-project search on Serverless, enabling teams to query across all linked projects without moving a byte | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+            <link>https://www.elastic.co/blog/cross-project-search-elastic-serverless-ga</link>
+            <guid isPermaLink="false">https://www.elastic.co/blog/cross-project-search-elastic-serverless-ga</guid>
+            <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Cross-project search is now GA on Elastic Cloud Serverless. Link multiple projects and query all of them from a single Discover or ES|QL session: no certificates, no remote cluster config, and three c]]></description>
+            <content:encoded><![CDATA[Cross-project search is now GA on Elastic Cloud Serverless. Link multiple projects and query all of them from a single Discover or ES|QL session: no certificates, no remote cluster config, and three clicks to set up. Available from September 1, 2026.]]></content:encoded>
+            <author>Jordi Mon Companys,Lucy Wang</author>
+            <enclosure length="0" type="png" url="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltce2522fc51f6d08b/6aa988328f2cd73129e52e02/blog-cross-project-search-720x420-2x.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Elastic announces GA of cross-project search on Serverless, enabling teams to query across all linked projects without moving a byte</originalTitle>
+                <blogTitle>Elastic Blog - Elasticsearch, Kibana, and ELK Stack</blogTitle>
+                <blogLink>https://www.elastic.co</blogLink>
+                <blogLinkMd5Hash>b82fa705cb0bce86fa0138055a46f9ae</blogLinkMd5Hash>
+                <favicon>https://www.elastic.co/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[When to use SAST versus an LLM security scanner | GitLab]]></title>
+            <link>https://about.gitlab.com/blog/sast-vs-llm-security-scanner/</link>
+            <guid isPermaLink="false">https://about.gitlab.com/blog/sast-vs-llm-security-scanner/</guid>
+            <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[You're probably running some version of this experiment already: Point a frontier model at a merge request and ask it to double as a vulnerability scanner. On a single merge request, it often works we]]></description>
+            <content:encoded><![CDATA[You're probably running some version of this experiment already: Point a frontier model at a merge request and ask it to double as a vulnerability scanner. On a single merge request, it often works well. The model reads the code, reasons about what it's supposed to do, and catches real issues, sometimes ones a pattern-based scanner misses entirely.So the next thought is reasonable: If a model reviews one merge request this well, why not let it replace the scanner across your whole pipeline? That]]></content:encoded>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/about-gitlab-com/image/upload/v1756989645/fojzxakmfdea6jfqjkrl.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>When to use SAST versus an LLM security scanner</originalTitle>
+                <blogTitle>GitLab</blogTitle>
+                <blogLink>https://about.gitlab.com/blog</blogLink>
+                <blogLinkMd5Hash>31f5e0e0d69f479b04aee9830f78e661</blogLinkMd5Hash>
+                <favicon>https://about.gitlab.com/images/ico/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[TypeSafe AI's Jev now available on AI Gateway | Vercel News]]></title>
+            <link>https://vercel.com/changelog/typesafe-ai-jev-now-available-on-ai-gateway</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/typesafe-ai-jev-now-available-on-ai-gateway</guid>
+            <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[is now available on .Jev from TypeSafe AIAI GatewayJev is a probabilistic decision model for software: state goes in, typed Choice, Score, and Boolean answers come out.Regular language models generate]]></description>
+            <content:encoded><![CDATA[is now available on .Jev from TypeSafe AIAI GatewayJev is a probabilistic decision model for software: state goes in, typed Choice, Score, and Boolean answers come out.Regular language models generate text one token at a time, which the application then parses and validates. Jev evaluates all declared questions in parallel and returns typed answers plus probabilities directly. That removes unnecessary text generation and makes it straightforward to automate clear cases while routing uncertain on]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/69YLGxKpc3pTIH8tHrLFgo/51d3f9dc460bf3e7b1c4fdd7a4d757f1/image__104_.png"/>
+            <_custom>
+                <hatenaCount>1</hatenaCount>
+                <originalTitle>TypeSafe AI's Jev now available on AI Gateway</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Is Agentic now tailors its audit by site type | Vercel News]]></title>
+            <link>https://vercel.com/changelog/is-agentic-report-categories</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/is-agentic-report-categories</guid>
+            <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[reports now let you view your checks through one of four site types: Docs &amp;amp; content, Business, App, or Commerce.Is AgenticFor example, the Commerce view highlights payment and checkout standards like ]]></description>
+            <content:encoded><![CDATA[reports now let you view your checks through one of four site types: Docs &amp;amp; content, Business, App, or Commerce.Is AgenticFor example, the Commerce view highlights payment and checkout standards like x402, UCP, and ACP, while the App view highlights API discovery, authentication, error handling, and SDK support.Your score stays the same in every view, and you can change views on an existing report without rescanning. Only the highlighted checks change, so you can focus on what matters for your k]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1oPy99EFZfNuP37Ikbif4I/0c924cdcdc6017b979aec3b8f18246ee/image.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Is Agentic now tailors its audit by site type</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta | Kubernetes Blog]]></title>
+            <link>https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/</link>
+            <guid isPermaLink="false">https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/</guid>
+            <pubDate>Tue, 15 Sep 2026 18:30:00 GMT</pubDate>
+            <description><![CDATA[With the release of Kubernetes v1.37, the Pod-Level Resource Managersfeature has graduated to Beta status (disabled by default)!First introduced as an Alpha feature inKubernetes v1.36,this enhancement]]></description>
+            <content:encoded><![CDATA[With the release of Kubernetes v1.37, the Pod-Level Resource Managersfeature has graduated to Beta status (disabled by default)!First introduced as an Alpha feature inKubernetes v1.36,this enhancement builds onPod-Level Resources byequipping Kubelet's Topology Manager, CPU Manager, and Memory Manager to usePod-level resource declarations (.spec.resources) directly when makinghardware placement decisions.Bringing pod-level resources to node managersBefore this feature, obtaining exclusive NUMA-al]]></content:encoded>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta</originalTitle>
+                <blogTitle>Kubernetes Blog</blogTitle>
+                <blogLink>https://kubernetes.io/</blogLink>
+                <blogLinkMd5Hash>5af58f236178ea35a0dd937ff57a09f4</blogLinkMd5Hash>
+                <favicon>https://kubernetes.io/images/kubernetes.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Simplifying Terraform for IBM Z with intent-driven workflows  | HashiCorp Blog]]></title>
+            <link>https://www.hashicorp.com/blog/simplifying-terraform-for-ibm-z-with-intent-driven-workflows</link>
+            <guid isPermaLink="false">https://www.hashicorp.com/blog/simplifying-terraform-for-ibm-z-with-intent-driven-workflows</guid>
+            <pubDate>Tue, 15 Sep 2026 16:00:00 GMT</pubDate>
+            <description><![CDATA[Learn how intent-driven workflows introduce a new interaction model for IBM Terraform for Z and LinuxONE, helping organizations modernize infrastructure operations through guided, repeatable agentic w]]></description>
+            <content:encoded><![CDATA[Learn how intent-driven workflows introduce a new interaction model for IBM Terraform for Z and LinuxONE, helping organizations modernize infrastructure operations through guided, repeatable agentic workflows.]]></content:encoded>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Simplifying Terraform for IBM Z with intent-driven workflows </originalTitle>
+                <blogTitle>HashiCorp Blog</blogTitle>
+                <blogLink>https://hashicorp.com/blog</blogLink>
+                <blogLinkMd5Hash>693ef95e8b922870e5e6d2dc4f57f75d</blogLinkMd5Hash>
+                <favicon/>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[The AI Hurricane Is Here | Blog RSS Feed | Snyk]]></title>
+            <link>https://snyk.io/blog/ai-hurricane-is-here/</link>
+            <guid isPermaLink="false">https://snyk.io/blog/ai-hurricane-is-here/</guid>
+            <pubDate>Tue, 15 Sep 2026 04:00:00 GMT</pubDate>
+            <description><![CDATA[AI is accelerating software creation and cyberattacks alike. Leaders must secure agents and code at inception, enforce controls at runtime, and validate defenses independently.]]></description>
+            <content:encoded><![CDATA[AI is accelerating software creation and cyberattacks alike. Leaders must secure agents and code at inception, enforce controls at runtime, and validate defenses independently.]]></content:encoded>
+            <enclosure length="0" type="png" height="628" url="https://res.cloudinary.com/snyk/image/upload/v1690813497/illustration-hero-ai.png" width="1200" alt="illustration hero ai"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>The AI Hurricane Is Here</originalTitle>
+                <blogTitle>Blog RSS Feed | Snyk</blogTitle>
+                <blogLink>https://snyk.io/</blogLink>
+                <blogLinkMd5Hash>b642d7e9918bfa01b6b8f48a03b7385d</blogLinkMd5Hash>
+                <favicon/>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[How Delphi ships 100 times a day with its Python backend on Vercel | Vercel News]]></title>
+            <link>https://vercel.com/blog/how-delphi-ships-100-times-a-day-with-its-python-backend-on-vercel</link>
+            <guid isPermaLink="false">https://vercel.com/blog/how-delphi-ships-100-times-a-day-with-its-python-backend-on-vercel</guid>
+            <pubDate>Tue, 15 Sep 2026 04:00:00 GMT</pubDate>
+            <description><![CDATA[Delphi on VercelThe backend slowed every changePreview deployments are how agents check their work10 engineers with no dedicated infrastructure roleEveryone ships code, including product and design100]]></description>
+            <content:encoded><![CDATA[Delphi on VercelThe backend slowed every changePreview deployments are how agents check their work10 engineers with no dedicated infrastructure roleEveryone ships code, including product and design100+ production deploys a day behind feature flags builds digital minds. They capture what someone has written, recorded, and taught, so anyone can tap that expertise on demand. Delphi is “a destination where you can find and interact with interesting minds,” says founding engineer Spencer Schoeben.Del]]></content:encoded>
+            <enclosure length="0" type="jpg" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1FUnpzVz9ALNEYmTfhi8Zi/f28b1184cb2c0eda4af4b7ebfcdea0c2/customer_story_og_image_og_card.jpg"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>How Delphi ships 100 times a day with its Python backend on Vercel</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Elastic Stack 9.4.7 released | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+            <link>https://www.elastic.co/blog/elastic-stack-9-4-7-released</link>
+            <guid isPermaLink="false">https://www.elastic.co/blog/elastic-stack-9-4-7-released</guid>
+            <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Version 9.4.7 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 9.4.7 over the previous versions 9.4.6For details of the issues that have been fixe]]></description>
+            <content:encoded><![CDATA[Version 9.4.7 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 9.4.7 over the previous versions 9.4.6For details of the issues that have been fixed and a full list of changes for each product in this version, please refer to the release notes.]]></content:encoded>
+            <author>adrian brown</author>
+            <enclosure length="0" type="png" url="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt8a6654f0ad2bbb8d/6aa996852433e2563dd7de90/Blog_Header_Templates.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Elastic Stack 9.4.7 released</originalTitle>
+                <blogTitle>Elastic Blog - Elasticsearch, Kibana, and ELK Stack</blogTitle>
+                <blogLink>https://www.elastic.co</blogLink>
+                <blogLinkMd5Hash>b82fa705cb0bce86fa0138055a46f9ae</blogLinkMd5Hash>
+                <favicon>https://www.elastic.co/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Elastic Stack 9.5.4 released | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+            <link>https://www.elastic.co/blog/elastic-stack-9-5-4-released</link>
+            <guid isPermaLink="false">https://www.elastic.co/blog/elastic-stack-9-5-4-released</guid>
+            <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Version 9.5.4 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 9.5.4 over the previous versions 9.5.3For details of the issues that have been fixe]]></description>
+            <content:encoded><![CDATA[Version 9.5.4 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 9.5.4 over the previous versions 9.5.3For details of the issues that have been fixed and a full list of changes for each product in this version, please refer to the release notes.]]></content:encoded>
+            <author>adrian brown</author>
+            <enclosure length="0" type="png" url="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt5eb78ed34876318b/6aa99656b15ff9674ccc5a50/Blog_Header_Templates_(1).png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Elastic Stack 9.5.4 released</originalTitle>
+                <blogTitle>Elastic Blog - Elasticsearch, Kibana, and ELK Stack</blogTitle>
+                <blogLink>https://www.elastic.co</blogLink>
+                <blogLinkMd5Hash>b82fa705cb0bce86fa0138055a46f9ae</blogLinkMd5Hash>
+                <favicon>https://www.elastic.co/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[The only perfect Endpoint Prevention and Response (EPR) score in 2026 belongs to Elastic | Elastic Blog - Elasticsearch, Kibana, and ELK Stack]]></title>
+            <link>https://www.elastic.co/blog/av-comparatives-epr-test-2026</link>
+            <guid isPermaLink="false">https://www.elastic.co/blog/av-comparatives-epr-test-2026</guid>
+            <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Elastic sits at the very top of this year’s AV-Comparatives' CyberRisk Quadrant within the 2026 Endpoint Prevention and Response (EPR) test with the highest protection scores at 100%. Learn more.]]></description>
+            <content:encoded><![CDATA[Elastic sits at the very top of this year’s AV-Comparatives' CyberRisk Quadrant within the 2026 Endpoint Prevention and Response (EPR) test with the highest protection scores at 100%. Learn more.]]></content:encoded>
+            <author>Mia LaVada</author>
+            <enclosure length="0" type="png" url="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt02bba6f4c3f9d9ef/6aa96130afd9a81e3712168e/thumb-the-only-perfect-av-comparatives-epr-score-2026-elastic.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>The only perfect Endpoint Prevention and Response (EPR) score in 2026 belongs to Elastic</originalTitle>
+                <blogTitle>Elastic Blog - Elasticsearch, Kibana, and ELK Stack</blogTitle>
+                <blogLink>https://www.elastic.co</blogLink>
+                <blogLinkMd5Hash>b82fa705cb0bce86fa0138055a46f9ae</blogLinkMd5Hash>
+                <favicon>https://www.elastic.co/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Gemini 3.8 Live models now available on AI Gateway | Vercel News]]></title>
+            <link>https://vercel.com/changelog/gemini-3-8-live-models-now-available-on-ai-gateway</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/gemini-3-8-live-models-now-available-on-ai-gateway</guid>
+            <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[and from Google are now available on AI Gateway.Gemini 3.8 LiveGemini 3.8 Live Extended ThinkingBoth models support real-time spoken interactions for voice assistants, conversational experiences, and ]]></description>
+            <content:encoded><![CDATA[and from Google are now available on AI Gateway.Gemini 3.8 LiveGemini 3.8 Live Extended ThinkingBoth models support real-time spoken interactions for voice assistants, conversational experiences, and applications that respond through audio.Use either model through the AI SDK's realtime API. Install the Gateway provider and a WebSocket client:Mint a short-lived token, open the WebSocket, and use the model adapter to serialize and parse realtime events:See the for more details on realtime events a]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/38lhFWswSQd6xdOwRCNNKC/9d4006e436aba2c29c165b60f58e816a/image.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Gemini 3.8 Live models now available on AI Gateway</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[AI SDK harness layer now supports native subscription authentication | Vercel News]]></title>
+            <link>https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication</link>
+            <guid isPermaLink="false">https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication</guid>
+            <pubDate>Mon, 14 Sep 2026 21:28:00 GMT</pubDate>
+            <description><![CDATA[The now supports authenticating harnesses through their native subscriptions, where the underlying harness supports them. The harness layer runs different coding agents through the same interface, so ]]></description>
+            <content:encoded><![CDATA[The now supports authenticating harnesses through their native subscriptions, where the underlying harness supports them. The harness layer runs different coding agents through the same interface, so you can switch agents without changing your application code.AI SDK harness layerHarnessAgentNo code changes or new settings are required. The authentication mode uses explicit provider environment credentials when they are present, and otherwise a native subscription found on the host. The default ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/wwRasdrHvgxzL6bA5vhXH/56fe4ea9ce0a8b74c413c063f38d3f6b/image.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AI SDK harness layer now supports native subscription authentication</originalTitle>
+                <blogTitle>Vercel News</blogTitle>
+                <blogLink>https://vercel.com/atom</blogLink>
+                <blogLinkMd5Hash>7ed6df025d104b7c70047ef463c232e3</blogLinkMd5Hash>
+                <favicon>https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Kubernetes Changed Block Tracking API - Beta Differences | Kubernetes Blog]]></title>
+            <link>https://kubernetes.io/blog/2026/09/14/csi-changed-block-tracking-beta/</link>
+            <guid isPermaLink="false">https://kubernetes.io/blog/2026/09/14/csi-changed-block-tracking-beta/</guid>
+            <pubDate>Mon, 14 Sep 2026 18:30:00 GMT</pubDate>
+            <description><![CDATA[Changed Block Tracking (CBT) support for CSI driversshipped as Alpha inSeptember 2025. With the March 2026 v1.0.0 release of theexternal-snapshot-metadataproject, the feature moved to Beta.If you aren]]></description>
+            <content:encoded><![CDATA[Changed Block Tracking (CBT) support for CSI driversshipped as Alpha inSeptember 2025. With the March 2026 v1.0.0 release of theexternal-snapshot-metadataproject, the feature moved to Beta.If you aren't yet familiar with changed block tracking for storage inKubernetes, theAlpha announcement coversthe motivation, the three primary components (the CSI SnapshotMetadatagRPC service, the SnapshotMetadataService CRD, and theexternal-snapshot-metadata sidecar), and a walkthrough of how to use theAPI. C]]></content:encoded>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Kubernetes Changed Block Tracking API - Beta Differences</originalTitle>
+                <blogTitle>Kubernetes Blog</blogTitle>
+                <blogLink>https://kubernetes.io/</blogLink>
+                <blogLinkMd5Hash>5af58f236178ea35a0dd937ff57a09f4</blogLinkMd5Hash>
+                <favicon>https://kubernetes.io/images/kubernetes.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Kubernetes v1.37: Memory QoS Graduates to Beta | Kubernetes Blog]]></title>
+            <link>https://kubernetes.io/blog/2026/09/14/kubernetes-v1-37-memory-qos-graduates-to-beta/</link>
+            <guid isPermaLink="false">https://kubernetes.io/blog/2026/09/14/kubernetes-v1-37-memory-qos-graduates-to-beta/</guid>
+            <pubDate>Mon, 14 Sep 2026 18:30:00 GMT</pubDate>
+            <description><![CDATA[Memory QoS has graduated to Beta in Kubernetes v1.37 and is now enabled bydefault. On Linux nodes running cgroup v2, the feature uses the memory controllerto give the kernel better guidance on how to ]]></description>
+            <content:encoded><![CDATA[Memory QoS has graduated to Beta in Kubernetes v1.37 and is now enabled bydefault. On Linux nodes running cgroup v2, the feature uses the memory controllerto give the kernel better guidance on how to treat container memory. It was first introduced asAlpha in v1.22, and expanded in v1.36 with tiered memory reservation.This post covers what changed in v1.37, what the Beta promotion means forcluster operators, and how to configure the feature.What changed in v1.37Memory QoS is Beta and enabled by d]]></content:encoded>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Kubernetes v1.37: Memory QoS Graduates to Beta</originalTitle>
+                <blogTitle>Kubernetes Blog</blogTitle>
+                <blogLink>https://kubernetes.io/</blogLink>
+                <blogLinkMd5Hash>5af58f236178ea35a0dd937ff57a09f4</blogLinkMd5Hash>
+                <favicon>https://kubernetes.io/images/kubernetes.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Digital Experience Monitoring with Grafana Cloud: Session Replay, synthetic checks, and faster investigations | Grafana Labs blog on Grafana Labs]]></title>
+            <link>https://grafana.com/blog/digital-experience-monitoring-with-grafana-cloud-session-replay-synthetic-checks-and-faster-investigations/</link>
+            <guid isPermaLink="false">https://grafana.com/blog/digital-experience-monitoring-with-grafana-cloud-session-replay-synthetic-checks-and-faster-investigations/</guid>
+            <pubDate>Mon, 14 Sep 2026 18:02:58 GMT</pubDate>
+            <description><![CDATA[When something breaks in production, the questions that matter most are also the toughest to answer from metrics alone: who was affected, what did they actually see, and is this worth waking someone u]]></description>
+            <content:encoded><![CDATA[When something breaks in production, the questions that matter most are also the toughest to answer from metrics alone: who was affected, what did they actually see, and is this worth waking someone up for? Answering those questions requires a fuller picture of the issue and its impact on your users. That’s where Digital Experience Monitoring (DEM) in Grafana Cloud comes in. By combining Frontend Observability and Synthetic Monitoring, DEM connects real user experiences with proactive testing, h]]></content:encoded>
+            <author>Bukola Ayodele</author>
+            <enclosure length="0" type="image/png/m/1200x630/filters:quality(80)/" height="630" url="https://a-us.storyblok.com/f/1022730/1200x628/06c2016f36/dem-in-grafana-cloud-meta.png/m/1200x630/filters:quality(80)/" width="1200" alt="Grafana Labs Open Graph"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Digital Experience Monitoring with Grafana Cloud: Session Replay, synthetic checks, and faster investigations</originalTitle>
+                <blogTitle>Grafana Labs blog on Grafana Labs</blogTitle>
+                <blogLink>https://grafana.com/blog/</blogLink>
+                <blogLinkMd5Hash>dd9c7fb7f400c5d5e3be535011dd5ad0</blogLinkMd5Hash>
+                <favicon>https://grafana.com/favicon.ico?67f0da79a12facce</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[GitLab Dedicated: Compliance for a new regulatory era | GitLab]]></title>
+            <link>https://about.gitlab.com/blog/gitlab-dedicated-compliance/</link>
+            <guid isPermaLink="false">https://about.gitlab.com/blog/gitlab-dedicated-compliance/</guid>
+            <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Enforcements such as NIS2 are no longer a future planning consideration. The European Union Agency for Cybersecurity's (ENISA) NIS360 report confirms that supervisory authorities are actively assessin]]></description>
+            <content:encoded><![CDATA[Enforcements such as NIS2 are no longer a future planning consideration. The European Union Agency for Cybersecurity's (ENISA) NIS360 report confirms that supervisory authorities are actively assessing cybersecurity maturity across critical sectors. The agency is moving from guidance and consultation into active oversight, scrutiny, and accountability. This is the regulatory environment European enterprises now operate in.Multi-tenant cloud platforms remove operational overhead but place source ]]></content:encoded>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/about-gitlab-com/image/upload/v1756122536/akivvcnafog9c4dhhzkp.png"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>GitLab Dedicated: Compliance for a new regulatory era</originalTitle>
+                <blogTitle>GitLab</blogTitle>
+                <blogLink>https://about.gitlab.com/blog</blogLink>
+                <blogLinkMd5Hash>31f5e0e0d69f479b04aee9830f78e661</blogLinkMd5Hash>
+                <favicon>https://about.gitlab.com/images/ico/favicon.ico</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Kubernetes v1.37: Native Histograms Graduates to Beta | Kubernetes Blog]]></title>
+            <link>https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/</link>
+            <guid isPermaLink="false">https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/</guid>
+            <pubDate>Fri, 11 Sep 2026 18:30:00 GMT</pubDate>
+            <description><![CDATA[I'm excited to announce that native histogram support for Kubernetes metrics is graduating to Beta and is enabled by default in Kubernetes v1.37!Native histograms (previously introduced as Alpha in Ku]]></description>
+            <content:encoded><![CDATA[I'm excited to announce that native histogram support for Kubernetes metrics is graduating to Beta and is enabled by default in Kubernetes v1.37!Native histograms (previously introduced as Alpha in Kubernetes v1.36 under KEP-5808)bring high-resolution, low-cardinality observability to Kubernetes metrics.By adopting Prometheus Native Histograms, Kubernetes components now expose latency and duration metrics with far greater accuracy while significantly reducing telemetry storage and scraping overh]]></content:encoded>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Kubernetes v1.37: Native Histograms Graduates to Beta</originalTitle>
+                <blogTitle>Kubernetes Blog</blogTitle>
+                <blogLink>https://kubernetes.io/</blogLink>
+                <blogLinkMd5Hash>5af58f236178ea35a0dd937ff57a09f4</blogLinkMd5Hash>
+                <favicon>https://kubernetes.io/images/kubernetes.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Release Notes for Safari Technology Preview 252 | WebKit]]></title>
+            <link>https://webkit.org/blog/18304/release-notes-for-safari-technology-preview-252/</link>
+            <guid isPermaLink="false">https://webkit.org/?p=18304</guid>
+            <pubDate>Fri, 11 Sep 2026 17:02:22 GMT</pubDate>
+            <description><![CDATA[Safari Technology Preview Release 252 is now available for download for macOS Golden Gate and macOS Tahoe.]]></description>
+            <content:encoded><![CDATA[Safari Technology Preview Release 252 is now available for download for macOS Golden Gate and macOS Tahoe.]]></content:encoded>
+            <category>Safari Technology Preview</category>
+            <enclosure length="0" type="jpg" url="https://webkit.org/wp-content/themes/webkit/images/preview-card.jpg"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Release Notes for Safari Technology Preview 252</originalTitle>
+                <blogTitle>WebKit</blogTitle>
+                <blogLink>https://webkit.org</blogLink>
+                <blogLinkMd5Hash>b730832646f3d89d16cb1f1d637b0261</blogLinkMd5Hash>
+                <favicon>https://webkit.org/favicon.ico</favicon>
+            </_custom>
+        </item>
+    </channel>
+</rss>
