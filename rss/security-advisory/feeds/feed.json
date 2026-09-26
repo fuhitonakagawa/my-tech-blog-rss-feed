@@ -1,0 +1,746 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Security Advisory｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/feed.json",
+    "description": "Security Advisoryセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://github.com/advisories/GHSA-q986-4x7x-gx39",
+            "content_html": "SummaryThe AetherBrowser API server (scripts/aetherbrowser/api_server.py) exposes the POST /api/ops/check-email endpoint without any authentication. Any remote attacker can call this endpoint and trigger execution of the email_reader.py subprocess, which connects to configured ProtonMail or Gmail accounts via IMAP and returns email metadata (sender, subject, body snippet) in the JSON response. The server binds to 0.0.0.0:8100 by default with CORS set to allow_origins=[\"*\"], making it reachable f",
+            "url": "https://github.com/advisories/GHSA-q986-4x7x-gx39",
+            "title": "[scbe-aethermoore] SCBE-AETHERMOORE Unauthenticated AetherBrowser Ops API Exposes Operator Email Digests | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe AetherBrowser API server (scripts/aetherbrowser/api_server.py) exposes the POST /api/ops/check-email endpoint without any authentication. Any remote attacker can call this endpoint and trig",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "SCBE-AETHERMOORE Unauthenticated AetherBrowser Ops API Exposes Operator Email Digests",
+                "type": "png"
+            },
+            "date_modified": "2026-09-25T21:48:03.000Z",
+            "date_published": "2026-09-25T21:48:03.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[scbe-aethermoore] SCBE-AETHERMOORE Unauthenticated AetherBrowser Ops API Exposes Operator Email Digests",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-62mm-xwmv-crhg",
+            "content_html": "SummaryThe /home/{file_path:path} endpoint in web_client.py serves static files by directly concatenating the user-supplied file_path with the home_directory constant. There is no path traversal filtering, no path normalization check, and no authentication required. An attacker can use ../ sequences to read arbitrary files from the server filesystem.DetailsVulnerable code — src/khoj/routers/web_client.py lines 46-49:@web_client.get(\"/home/{file_path:path}\", response_class=FileResponse)def home_s",
+            "url": "https://github.com/advisories/GHSA-62mm-xwmv-crhg",
+            "title": "[khoj] khoj has an unauthenticated path traversal in /home/ endpoint that allows file read from server filesystem | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe /home/{file_path:path} endpoint in web_client.py serves static files by directly concatenating the user-supplied file_path with the home_directory constant. There is no path traversal filte",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "khoj has an unauthenticated path traversal in /home/ endpoint that allows file read from server filesystem",
+                "type": "png"
+            },
+            "date_modified": "2026-09-25T21:38:15.000Z",
+            "date_published": "2026-09-25T21:38:15.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[khoj] khoj has an unauthenticated path traversal in /home/ endpoint that allows file read from server filesystem",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-9gfj-28hw-jchp",
+            "content_html": "OverviewVerified. Multiple Unrestricted Path Traversal vulnerabilities exist in the Knowns MCP docs and memory tools, allowing arbitrary file read, write, and deletion operations outside the project sandbox. The storage layer functions (Get, Create, Update, Rename, Delete) in both doc_store.go and memory_store.go concatenate user-controlled paths with filepath.Join() without any containment validation. Additionally, the docs.update action with a newPath parameter performs a file deletion via Ren",
+            "url": "https://github.com/advisories/GHSA-9gfj-28hw-jchp",
+            "title": "[knowns] Knowns Unrestricted Path Traversal leading to out-of-bounds arbitrary .md file read, write, and deletion in MCP Docs + Memory Tools | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "OverviewVerified. Multiple Unrestricted Path Traversal vulnerabilities exist in the Knowns MCP docs and memory tools, allowing arbitrary file read, write, and deletion operations outside the project s",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Knowns Unrestricted Path Traversal leading to out-of-bounds arbitrary .md file read, write, and deletion in MCP Docs + Memory Tools",
+                "type": "png"
+            },
+            "date_modified": "2026-09-25T19:32:05.000Z",
+            "date_published": "2026-09-25T19:32:05.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[knowns] Knowns Unrestricted Path Traversal leading to out-of-bounds arbitrary .md file read, write, and deletion in MCP Docs + Memory Tools",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-29h2-jr22-frmh",
+            "content_html": "ImpactTwo locations consume an encrypted handle returned by an untrusted external party and use it without verifying that the party is ACL-authorized on it.VestingWalletConfidentialMalicious users can call release with a malicious token. This token could return an alternative handle on confidentialBalanceOf, which represents the balance of the vesting wallet on an alternative ERC-7984 token (or any other handle that the vesting wallet has access to). The vesting wallet does not check that the to",
+            "url": "https://github.com/advisories/GHSA-29h2-jr22-frmh",
+            "title": "[@openzeppelin/confidential-contracts] OpenZeppelin Confidential Contracts `VestingWalletConfidential`: a malicious ERC-7984 token is able to extract private data from the vesting wallet | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactTwo locations consume an encrypted handle returned by an untrusted external party and use it without verifying that the party is ACL-authorized on it.VestingWalletConfidentialMalicious users can",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "OpenZeppelin Confidential Contracts `VestingWalletConfidential`: a malicious ERC-7984 token is able to extract private data from the vesting wallet",
+                "type": "png"
+            },
+            "date_modified": "2026-09-25T19:31:08.000Z",
+            "date_published": "2026-09-25T19:31:08.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@openzeppelin/confidential-contracts] OpenZeppelin Confidential Contracts `VestingWalletConfidential`: a malicious ERC-7984 token is able to extract private data from the vesting wallet",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-29h2-jr22-frmh",
+            "content_html": "ImpactTwo locations consume an encrypted handle returned by an untrusted external party and use it without verifying that the party is ACL-authorized on it.VestingWalletConfidentialMalicious users can call release with a malicious token. This token could return an alternative handle on confidentialBalanceOf, which represents the balance of the vesting wallet on an alternative ERC-7984 token (or any other handle that the vesting wallet has access to). The vesting wallet does not check that the to",
+            "url": "https://github.com/advisories/GHSA-29h2-jr22-frmh",
+            "title": "[@openzeppelin/confidential-contracts] OpenZeppelin Confidential Contracts `VestingWalletConfidential`: a malicious ERC-7984 token is able to extract private data from the vesting wallet | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactTwo locations consume an encrypted handle returned by an untrusted external party and use it without verifying that the party is ACL-authorized on it.VestingWalletConfidentialMalicious users can",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "OpenZeppelin Confidential Contracts `VestingWalletConfidential`: a malicious ERC-7984 token is able to extract private data from the vesting wallet",
+                "type": "png"
+            },
+            "date_modified": "2026-09-25T19:31:08.000Z",
+            "date_published": "2026-09-25T19:31:08.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@openzeppelin/confidential-contracts] OpenZeppelin Confidential Contracts `VestingWalletConfidential`: a malicious ERC-7984 token is able to extract private data from the vesting wallet",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-29h2-jr22-frmh",
+            "content_html": "ImpactTwo locations consume an encrypted handle returned by an untrusted external party and use it without verifying that the party is ACL-authorized on it.VestingWalletConfidentialMalicious users can call release with a malicious token. This token could return an alternative handle on confidentialBalanceOf, which represents the balance of the vesting wallet on an alternative ERC-7984 token (or any other handle that the vesting wallet has access to). The vesting wallet does not check that the to",
+            "url": "https://github.com/advisories/GHSA-29h2-jr22-frmh",
+            "title": "[@openzeppelin/confidential-contracts] OpenZeppelin Confidential Contracts `VestingWalletConfidential`: a malicious ERC-7984 token is able to extract private data from the vesting wallet | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactTwo locations consume an encrypted handle returned by an untrusted external party and use it without verifying that the party is ACL-authorized on it.VestingWalletConfidentialMalicious users can",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "OpenZeppelin Confidential Contracts `VestingWalletConfidential`: a malicious ERC-7984 token is able to extract private data from the vesting wallet",
+                "type": "png"
+            },
+            "date_modified": "2026-09-25T19:31:08.000Z",
+            "date_published": "2026-09-25T19:31:08.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@openzeppelin/confidential-contracts] OpenZeppelin Confidential Contracts `VestingWalletConfidential`: a malicious ERC-7984 token is able to extract private data from the vesting wallet",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vqg6-3fw6-j9jg",
+            "content_html": "ImpactThe partial-pipeline resume mechanism accepted partial_token as a bearer credential without binding it to the browser session that created it.Applications using resumable partial pipeline steps could allow an attacker to start an authentication flow, obtain a valid partial token and verification data, and cause a victim's browser to resume that attacker-controlled flow. This could authenticate the victim's browser as the attacker's account.The issue affects applications using partial pipel",
+            "url": "https://github.com/advisories/GHSA-vqg6-3fw6-j9jg",
+            "title": "[social-auth-core] social-auth-core has a Session Fixation issue | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactThe partial-pipeline resume mechanism accepted partial_token as a bearer credential without binding it to the browser session that created it.Applications using resumable partial pipeline steps ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "social-auth-core has a Session Fixation issue",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:58:14.000Z",
+            "date_published": "2026-09-24T19:58:14.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[social-auth-core] social-auth-core has a Session Fixation issue",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3c93-f73f-qc9h",
+            "content_html": "ImpactThe vk-app backend accepted VK application callback data without verifying the callback signature when the auth_key parameter was omitted.Applications using this backend could treat unsigned attacker-controlled data as a verified VK identity. An attacker could choose callback fields such as viewer_id, access_token, api_id, and api_result, potentially allowing authentication as an arbitrary VK user ID.The issue affects only applications using the vk-app backend.PatchesThe issue has been fix",
+            "url": "https://github.com/advisories/GHSA-3c93-f73f-qc9h",
+            "title": "[social-auth-core] social-auth-core: VK App backend accepts unsigned callback data when auth_key is missing | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactThe vk-app backend accepted VK application callback data without verifying the callback signature when the auth_key parameter was omitted.Applications using this backend could treat unsigned att",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "social-auth-core: VK App backend accepts unsigned callback data when auth_key is missing",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:57:22.000Z",
+            "date_published": "2026-09-24T19:57:22.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[social-auth-core] social-auth-core: VK App backend accepts unsigned callback data when auth_key is missing",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-x7qq-23vw-7pfg",
+            "content_html": "ImpactThe LoginRadius backend did not validate OAuth state during the authentication flow.Applications using this backend were vulnerable to login CSRF. An attacker could cause a victim's browser session to complete authentication using an attacker-controlled LoginRadius token, making the victim authenticated as the attacker's LoginRadius identity.The issue affects only applications using the LoginRadius backend.PatchesThe issue has been fixed by enabling callback state validation for the LoginR",
+            "url": "https://github.com/advisories/GHSA-x7qq-23vw-7pfg",
+            "title": "[social-auth-core] social-auth-core has Login CSRF via Missing State Parameter in LoginRadius Backend | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactThe LoginRadius backend did not validate OAuth state during the authentication flow.Applications using this backend were vulnerable to login CSRF. An attacker could cause a victim's browser sess",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "social-auth-core has Login CSRF via Missing State Parameter in LoginRadius Backend",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:56:39.000Z",
+            "date_published": "2026-09-24T19:56:39.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[social-auth-core] social-auth-core has Login CSRF via Missing State Parameter in LoginRadius Backend",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-fp7w-m676-w7gc",
+            "content_html": "ImpactThe Vend OAuth2 backend used only the numeric Vend user_id as the social-auth UID.When multiple Vend shops authenticate through the same application, users from different shops with the same internal Vend user ID could collide in the social-auth association table. A user from one shop could then be authenticated as the local account previously associated with the same numeric user ID from another shop.The issue affects applications using the Vend OAuth2 backend with more than one Vend shop",
+            "url": "https://github.com/advisories/GHSA-fp7w-m676-w7gc",
+            "title": "[social-auth-core] social-auth-core Vulnerable to Account Takeover via Identity Binding Flaw in Vend Backend | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactThe Vend OAuth2 backend used only the numeric Vend user_id as the social-auth UID.When multiple Vend shops authenticate through the same application, users from different shops with the same int",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "social-auth-core Vulnerable to Account Takeover via Identity Binding Flaw in Vend Backend",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:55:57.000Z",
+            "date_published": "2026-09-24T19:55:57.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[social-auth-core] social-auth-core Vulnerable to Account Takeover via Identity Binding Flaw in Vend Backend",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vq6g-g6c7-5f2j",
+            "content_html": "ImpactThe SAML backend accepted SAML responses on the Assertion Consumer Service endpoint without verifying that they matched a previously issued AuthnRequest.Applications using SAML account association could allow an attacker with a valid account on a trusted IdP to link the attacker's SAML identity to a logged-in victim's local account. The attacker could then authenticate through SAML and gain access to the victim's account.The issue affects applications using the SAML backend together with a",
+            "url": "https://github.com/advisories/GHSA-vq6g-g6c7-5f2j",
+            "title": "[social-auth-core] social-auth-core has an Improper Authentication issue | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactThe SAML backend accepted SAML responses on the Assertion Consumer Service endpoint without verifying that they matched a previously issued AuthnRequest.Applications using SAML account associati",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "social-auth-core has an Improper Authentication issue",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:54:48.000Z",
+            "date_published": "2026-09-24T19:54:48.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[social-auth-core] social-auth-core has an Improper Authentication issue",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-r4vp-3vw6-r2x5",
+            "content_html": "At a glanceActor: attacker who controls the -o/--output argument to trestle author {catalog,profile,ssp}-generate (e.g. via a CI pipeline that derives the output directory from repository-controlled data)Primitive: attacker-controlled --output value reaches trestle_root / args.output write sink with only is_directory_name_allowed() (parts[0]-only task-name-collision check), not the PathSecurityValidator.validate_local_path() guard added by the CVE-2026-46345 fixImpact: arbitrary-location file wr",
+            "url": "https://github.com/advisories/GHSA-r4vp-3vw6-r2x5",
+            "title": "[compliance-trestle] Trestle is vulnerable to arbitrary file write via path traversal in author generate commands (Incomplete fix of CVE-2026-46345) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "At a glanceActor: attacker who controls the -o/--output argument to trestle author {catalog,profile,ssp}-generate (e.g. via a CI pipeline that derives the output directory from repository-controlled d",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Trestle is vulnerable to arbitrary file write via path traversal in author generate commands (Incomplete fix of CVE-2026-46345)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:52:34.000Z",
+            "date_published": "2026-09-24T19:52:34.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[compliance-trestle] Trestle is vulnerable to arbitrary file write via path traversal in author generate commands (Incomplete fix of CVE-2026-46345)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-r4vp-3vw6-r2x5",
+            "content_html": "At a glanceActor: attacker who controls the -o/--output argument to trestle author {catalog,profile,ssp}-generate (e.g. via a CI pipeline that derives the output directory from repository-controlled data)Primitive: attacker-controlled --output value reaches trestle_root / args.output write sink with only is_directory_name_allowed() (parts[0]-only task-name-collision check), not the PathSecurityValidator.validate_local_path() guard added by the CVE-2026-46345 fixImpact: arbitrary-location file wr",
+            "url": "https://github.com/advisories/GHSA-r4vp-3vw6-r2x5",
+            "title": "[compliance-trestle] Trestle is vulnerable to arbitrary file write via path traversal in author generate commands (Incomplete fix of CVE-2026-46345) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "At a glanceActor: attacker who controls the -o/--output argument to trestle author {catalog,profile,ssp}-generate (e.g. via a CI pipeline that derives the output directory from repository-controlled d",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Trestle is vulnerable to arbitrary file write via path traversal in author generate commands (Incomplete fix of CVE-2026-46345)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:52:34.000Z",
+            "date_published": "2026-09-24T19:52:34.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[compliance-trestle] Trestle is vulnerable to arbitrary file write via path traversal in author generate commands (Incomplete fix of CVE-2026-46345)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mr95-65j8-9mxp",
+            "content_html": "Reporter: Cavan Loughran, Celvex Group Inc.SummaryThe fix for CVE-2026-46439 (3.12.2 / 4.0.3) removed the recursive re-render loop in trestle/core/commands/author/jinja.py render_template, but the custom include tags in trestle/core/jinja/tags.py (MDSectionInclude, MDCleanInclude) still re-parse the CONTENT of an included markdown file as a Jinja2 template via Parser(self.environment, ).parse() in a plain (non-sandboxed) jinja2.Environment. Because the trestle markdown writers (ssp_io.py SSPMark",
+            "url": "https://github.com/advisories/GHSA-mr95-65j8-9mxp",
+            "title": "[compliance-trestle] Trestle SSTI in Jinja2 include tags allows arbitrary code execution (Incomplete fix of CVE-2026-46439) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Reporter: Cavan Loughran, Celvex Group Inc.SummaryThe fix for CVE-2026-46439 (3.12.2 / 4.0.3) removed the recursive re-render loop in trestle/core/commands/author/jinja.py render_template, but the cus",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Trestle SSTI in Jinja2 include tags allows arbitrary code execution (Incomplete fix of CVE-2026-46439)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:50:27.000Z",
+            "date_published": "2026-09-24T19:50:27.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[compliance-trestle] Trestle SSTI in Jinja2 include tags allows arbitrary code execution (Incomplete fix of CVE-2026-46439)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mr95-65j8-9mxp",
+            "content_html": "Reporter: Cavan Loughran, Celvex Group Inc.SummaryThe fix for CVE-2026-46439 (3.12.2 / 4.0.3) removed the recursive re-render loop in trestle/core/commands/author/jinja.py render_template, but the custom include tags in trestle/core/jinja/tags.py (MDSectionInclude, MDCleanInclude) still re-parse the CONTENT of an included markdown file as a Jinja2 template via Parser(self.environment, ).parse() in a plain (non-sandboxed) jinja2.Environment. Because the trestle markdown writers (ssp_io.py SSPMark",
+            "url": "https://github.com/advisories/GHSA-mr95-65j8-9mxp",
+            "title": "[compliance-trestle] Trestle SSTI in Jinja2 include tags allows arbitrary code execution (Incomplete fix of CVE-2026-46439) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Reporter: Cavan Loughran, Celvex Group Inc.SummaryThe fix for CVE-2026-46439 (3.12.2 / 4.0.3) removed the recursive re-render loop in trestle/core/commands/author/jinja.py render_template, but the cus",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Trestle SSTI in Jinja2 include tags allows arbitrary code execution (Incomplete fix of CVE-2026-46439)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:50:27.000Z",
+            "date_published": "2026-09-24T19:50:27.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[compliance-trestle] Trestle SSTI in Jinja2 include tags allows arbitrary code execution (Incomplete fix of CVE-2026-46439)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3cj3-hqcr-g934",
+            "content_html": "SummaryThe Cline Hub dashboard server (@cline/cline-hub), launched via the cline dashboard CLI command, accepts WebSocket connections on the /browser endpoint without validating the HTTP Origin header. When ROOM_SECRET is not set—the default for local (127.0.0.1) binds—isAuthorizedBrowserRequest() returns true unconditionally, allowing any website a developer visits to open a cross-origin WebSocket to ws://127.0.0.1:8787/browser. An attacker-controlled page can then send desktopCommand frames to",
+            "url": "https://github.com/advisories/GHSA-3cj3-hqcr-g934",
+            "title": "[cline] Cline: Cross-Origin WebSocket Hijacking in Cline Hub Dashboard (`/browser` endpoint) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe Cline Hub dashboard server (@cline/cline-hub), launched via the cline dashboard CLI command, accepts WebSocket connections on the /browser endpoint without validating the HTTP Origin header",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Cline: Cross-Origin WebSocket Hijacking in Cline Hub Dashboard (`/browser` endpoint)",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:48:34.000Z",
+            "date_published": "2026-09-24T19:48:34.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[cline] Cline: Cross-Origin WebSocket Hijacking in Cline Hub Dashboard (`/browser` endpoint)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8v8h-hg4w-mvq2",
+            "content_html": "ImpactUsers of the python-hyper/hpack library, most commonly used as downstream dependency of the python-hyper/h2 library (an HTTP/2 client and server implementation). Unbounded variable integer decoding can cause run-away computation on malformed input leading to O(n^2) runtime, effectively blocking further processing with large enough unsanitized input.PatchesA fix is available in python-hyper/hpack v4.2.0 to restricted variable integer decoding to uint32 to prevent run-away computation.Workar",
+            "url": "https://github.com/advisories/GHSA-8v8h-hg4w-mvq2",
+            "title": "[hpack] hpack: Unbounded variable integer decoding can cause run-away computation on malformed input | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactUsers of the python-hyper/hpack library, most commonly used as downstream dependency of the python-hyper/h2 library (an HTTP/2 client and server implementation). Unbounded variable integer decod",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "hpack: Unbounded variable integer decoding can cause run-away computation on malformed input",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:43:26.000Z",
+            "date_published": "2026-09-24T19:43:26.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[hpack] hpack: Unbounded variable integer decoding can cause run-away computation on malformed input",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jmg2-rcxh-w8q3",
+            "content_html": "SummaryThe default Rsdoctor report HTTP server started by @rsdoctor/rspack-plugin binds to all network interfaces (0.0.0.0) and serves a POST /api/data/key endpoint with no authentication and wildcard CORS (Access-Control-Allow-Origin: *). Any network-adjacent or remote attacker can send a single unauthenticated request to retrieve the full source code of all compiled JavaScript modules (moduleCodeMap), serialized build configuration (configs), error details, and other sensitive build metadata. ",
+            "url": "https://github.com/advisories/GHSA-jmg2-rcxh-w8q3",
+            "title": "[@rsdoctor/rspack-plugin] @rsdoctor/rspack-plugin has Unauthenticated HTTP API that Exposes Project Source Code and Build Metadata | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe default Rsdoctor report HTTP server started by @rsdoctor/rspack-plugin binds to all network interfaces (0.0.0.0) and serves a POST /api/data/key endpoint with no authentication and wildcard",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "@rsdoctor/rspack-plugin has Unauthenticated HTTP API that Exposes Project Source Code and Build Metadata",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:42:10.000Z",
+            "date_published": "2026-09-24T19:42:10.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@rsdoctor/rspack-plugin] @rsdoctor/rspack-plugin has Unauthenticated HTTP API that Exposes Project Source Code and Build Metadata",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mwwr-p57h-56pf",
+            "content_html": "SummarySetting readonly = true on the execute_sql tool does not make the connection read-only. The connectors are written to set PostgreSQL default_transaction_read_only=on (and open SQLite in readOnly mode), but that code is gated on a config value that is never populated, so it never runs. The only thing left enforcing read-only is a classifier that inspects the first keyword of each statement. Any SELECT that writes or has side effects through a function call passes it. With an ordinary role ",
+            "url": "https://github.com/advisories/GHSA-mwwr-p57h-56pf",
+            "title": "[@bytebase/dbhub] @bytebase/dbhub's read-only mode does not prevent database writes | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummarySetting readonly = true on the execute_sql tool does not make the connection read-only. The connectors are written to set PostgreSQL default_transaction_read_only=on (and open SQLite in readOnl",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "@bytebase/dbhub's read-only mode does not prevent database writes",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:37:59.000Z",
+            "date_published": "2026-09-24T19:37:59.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@bytebase/dbhub] @bytebase/dbhub's read-only mode does not prevent database writes",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-fm8p-53ww-hf6w",
+            "content_html": "SummaryDBHub 0.21.2 exposes an unauthenticated HTTP MCP endpoint when started with the documented HTTP transport mode, for example --transport http --port 8080.The HTTP server attempts to protect browser-origin access by checking whether the Origin hostname equals the Host hostname, then reflecting the validated Origin into Access-Control-Allow-Origin. This does not stop DNS rebinding. After an attacker-controlled hostname rebinds to a victim-accessible DBHub HTTP server, both Origin and Host ca",
+            "url": "https://github.com/advisories/GHSA-fm8p-53ww-hf6w",
+            "title": "[@bytebase/dbhub] DBHub HTTP transport DNS rebinding allows unauthenticated browser-origin SQL execution | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryDBHub 0.21.2 exposes an unauthenticated HTTP MCP endpoint when started with the documented HTTP transport mode, for example --transport http --port 8080.The HTTP server attempts to protect brow",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "DBHub HTTP transport DNS rebinding allows unauthenticated browser-origin SQL execution",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:36:57.000Z",
+            "date_published": "2026-09-24T19:36:57.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@bytebase/dbhub] DBHub HTTP transport DNS rebinding allows unauthenticated browser-origin SQL execution",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-j8r4-32c5-33rc",
+            "content_html": "xhtml-purifier does not HTML-entity-encode attribute values when serializing its sanitized output. In attributeString() (XHTMLPurifier.js, around line 148) the attribute value is concatenated directly into a double-quoted attribute without encoding. As a result, an attacker-controlled value in any allowed attribute (class, style, title, alt, src, href) can include a double-quote character to break out of the attribute and inject an additional attribute, such as a JavaScript event handler (for ex",
+            "url": "https://github.com/advisories/GHSA-j8r4-32c5-33rc",
+            "title": "[xhtml-purifier] xhtml-purifier has HTML attribute-injection (sanitizer bypass) that leads to XSS | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "xhtml-purifier does not HTML-entity-encode attribute values when serializing its sanitized output. In attributeString() (XHTMLPurifier.js, around line 148) the attribute value is concatenated directly",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "xhtml-purifier has HTML attribute-injection (sanitizer bypass) that leads to XSS",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:33:23.000Z",
+            "date_published": "2026-09-24T19:33:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[xhtml-purifier] xhtml-purifier has HTML attribute-injection (sanitizer bypass) that leads to XSS",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-36f9-7rg5-cpf8",
+            "content_html": "Reported by @echennells (Eric Chennells). Migrated from public issue #191 to a private advisory.Affected: @bsv/wallet-toolbox / -client / -mobile. Verified in 2.1.21 and 2.1.21-parity-fix.2; the relevant code is the same at current HEADSummary:When createAction runs against a remote StorageClient, the storage server returns the outputs to build. buildSignableTransaction takes each non-change output's lockingScript from the storage response and signs it, without comparing it to the lockingScript ",
+            "url": "https://github.com/advisories/GHSA-36f9-7rg5-cpf8",
+            "title": "[@bsv/wallet-toolbox-mobile] `@bsv/wallet-toolbox` / `-client` / `-mobile` don't verify storage-supplied recipient output scripts against caller-requested outputs in createAction | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Reported by @echennells (Eric Chennells). Migrated from public issue #191 to a private advisory.Affected: @bsv/wallet-toolbox / -client / -mobile. Verified in 2.1.21 and 2.1.21-parity-fix.2; the relev",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "`@bsv/wallet-toolbox` / `-client` / `-mobile` don't verify storage-supplied recipient output scripts against caller-requested outputs in createAction",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:32:00.000Z",
+            "date_published": "2026-09-24T19:32:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@bsv/wallet-toolbox-mobile] `@bsv/wallet-toolbox` / `-client` / `-mobile` don't verify storage-supplied recipient output scripts against caller-requested outputs in createAction",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-36f9-7rg5-cpf8",
+            "content_html": "Reported by @echennells (Eric Chennells). Migrated from public issue #191 to a private advisory.Affected: @bsv/wallet-toolbox / -client / -mobile. Verified in 2.1.21 and 2.1.21-parity-fix.2; the relevant code is the same at current HEADSummary:When createAction runs against a remote StorageClient, the storage server returns the outputs to build. buildSignableTransaction takes each non-change output's lockingScript from the storage response and signs it, without comparing it to the lockingScript ",
+            "url": "https://github.com/advisories/GHSA-36f9-7rg5-cpf8",
+            "title": "[@bsv/wallet-toolbox-client] `@bsv/wallet-toolbox` / `-client` / `-mobile` don't verify storage-supplied recipient output scripts against caller-requested outputs in createAction | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Reported by @echennells (Eric Chennells). Migrated from public issue #191 to a private advisory.Affected: @bsv/wallet-toolbox / -client / -mobile. Verified in 2.1.21 and 2.1.21-parity-fix.2; the relev",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "`@bsv/wallet-toolbox` / `-client` / `-mobile` don't verify storage-supplied recipient output scripts against caller-requested outputs in createAction",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:32:00.000Z",
+            "date_published": "2026-09-24T19:32:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@bsv/wallet-toolbox-client] `@bsv/wallet-toolbox` / `-client` / `-mobile` don't verify storage-supplied recipient output scripts against caller-requested outputs in createAction",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-36f9-7rg5-cpf8",
+            "content_html": "Reported by @echennells (Eric Chennells). Migrated from public issue #191 to a private advisory.Affected: @bsv/wallet-toolbox / -client / -mobile. Verified in 2.1.21 and 2.1.21-parity-fix.2; the relevant code is the same at current HEADSummary:When createAction runs against a remote StorageClient, the storage server returns the outputs to build. buildSignableTransaction takes each non-change output's lockingScript from the storage response and signs it, without comparing it to the lockingScript ",
+            "url": "https://github.com/advisories/GHSA-36f9-7rg5-cpf8",
+            "title": "[@bsv/wallet-toolbox] `@bsv/wallet-toolbox` / `-client` / `-mobile` don't verify storage-supplied recipient output scripts against caller-requested outputs in createAction | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Reported by @echennells (Eric Chennells). Migrated from public issue #191 to a private advisory.Affected: @bsv/wallet-toolbox / -client / -mobile. Verified in 2.1.21 and 2.1.21-parity-fix.2; the relev",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "`@bsv/wallet-toolbox` / `-client` / `-mobile` don't verify storage-supplied recipient output scripts against caller-requested outputs in createAction",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:32:00.000Z",
+            "date_published": "2026-09-24T19:32:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@bsv/wallet-toolbox] `@bsv/wallet-toolbox` / `-client` / `-mobile` don't verify storage-supplied recipient output scripts against caller-requested outputs in createAction",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-g28h-2cmm-rj9x",
+            "content_html": "Summarylangchain-nvidia-ai-endpoints versions before 1.4.2 accepted local filesystem paths as image inputs for Vision Language Model (VLM) requests. If an application passed attacker-controlled image input to ChatNVIDIA or VLM reranking APIs, an attacker could cause files readable by the application process to be read and included in the outbound request to the configured NVIDIA/NIM model endpoint.ImpactApplications are affected if they use VLM image inputs with ChatNVIDIA or NVIDIARerank and al",
+            "url": "https://github.com/advisories/GHSA-g28h-2cmm-rj9x",
+            "title": "[langchain-nvidia-ai-endpoints] langchain-nvidia-ai-endpoints has local file disclosure through VLM image inputs | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Summarylangchain-nvidia-ai-endpoints versions before 1.4.2 accepted local filesystem paths as image inputs for Vision Language Model (VLM) requests. If an application passed attacker-controlled image ",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "langchain-nvidia-ai-endpoints has local file disclosure through VLM image inputs",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:25:36.000Z",
+            "date_published": "2026-09-24T19:25:36.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[langchain-nvidia-ai-endpoints] langchain-nvidia-ai-endpoints has local file disclosure through VLM image inputs",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-fx6f-382r-j72c",
+            "content_html": "On 5 June 2026 CyberChef received a security vulnerability report from @hyuunnn detailing a vulnerability in the Series Chart operation, where malicious input could result in prototype pollution of the data structures outputted from the operation.Other operations following Series Chart could have their behaviour manipulated by the attacker-controlled prototype, for example, injecting malicious content into their HTML output.In this case, a demonstration was provided that chained the Series Chart",
+            "url": "https://github.com/advisories/GHSA-fx6f-382r-j72c",
+            "title": "[cyberchef] CyberChef: Prototype pollution in Series Chart operation | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "On 5 June 2026 CyberChef received a security vulnerability report from @hyuunnn detailing a vulnerability in the Series Chart operation, where malicious input could result in prototype pollution of th",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "CyberChef: Prototype pollution in Series Chart operation",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:24:30.000Z",
+            "date_published": "2026-09-24T19:24:30.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[cyberchef] CyberChef: Prototype pollution in Series Chart operation",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-g5f9-3xfg-p9mf",
+            "content_html": "SummaryDecepticon wraps web crawl results — the output of agent reconnaissance against target services — into LLM messages without neutralizing ChatML special-token literals. Under the BYOK (Bring Your Own Key) deployment model, users configure their own LLM credentials to any OpenAI-compatible endpoint. Most open-source and self-deployed model providers (vLLM, SGLang, Ollama, LM Studio, text-generation-webui, etc.) do not filter special-token literals from user content in their default configur",
+            "url": "https://github.com/advisories/GHSA-g5f9-3xfg-p9mf",
+            "title": "[decepticon-sdk] Decepticon: Role-boundary forgery via ChatML special-token literals in web crawl output composed into LLM context | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryDecepticon wraps web crawl results — the output of agent reconnaissance against target services — into LLM messages without neutralizing ChatML special-token literals. Under the BYOK (Bring You",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Decepticon: Role-boundary forgery via ChatML special-token literals in web crawl output composed into LLM context",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:17:49.000Z",
+            "date_published": "2026-09-24T19:17:49.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[decepticon-sdk] Decepticon: Role-boundary forgery via ChatML special-token literals in web crawl output composed into LLM context",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-g5f9-3xfg-p9mf",
+            "content_html": "SummaryDecepticon wraps web crawl results — the output of agent reconnaissance against target services — into LLM messages without neutralizing ChatML special-token literals. Under the BYOK (Bring Your Own Key) deployment model, users configure their own LLM credentials to any OpenAI-compatible endpoint. Most open-source and self-deployed model providers (vLLM, SGLang, Ollama, LM Studio, text-generation-webui, etc.) do not filter special-token literals from user content in their default configur",
+            "url": "https://github.com/advisories/GHSA-g5f9-3xfg-p9mf",
+            "title": "[decepticon] Decepticon: Role-boundary forgery via ChatML special-token literals in web crawl output composed into LLM context | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryDecepticon wraps web crawl results — the output of agent reconnaissance against target services — into LLM messages without neutralizing ChatML special-token literals. Under the BYOK (Bring You",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Decepticon: Role-boundary forgery via ChatML special-token literals in web crawl output composed into LLM context",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:17:49.000Z",
+            "date_published": "2026-09-24T19:17:49.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[decepticon] Decepticon: Role-boundary forgery via ChatML special-token literals in web crawl output composed into LLM context",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-g5f9-3xfg-p9mf",
+            "content_html": "SummaryDecepticon wraps web crawl results — the output of agent reconnaissance against target services — into LLM messages without neutralizing ChatML special-token literals. Under the BYOK (Bring Your Own Key) deployment model, users configure their own LLM credentials to any OpenAI-compatible endpoint. Most open-source and self-deployed model providers (vLLM, SGLang, Ollama, LM Studio, text-generation-webui, etc.) do not filter special-token literals from user content in their default configur",
+            "url": "https://github.com/advisories/GHSA-g5f9-3xfg-p9mf",
+            "title": "[decepticon-core] Decepticon: Role-boundary forgery via ChatML special-token literals in web crawl output composed into LLM context | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryDecepticon wraps web crawl results — the output of agent reconnaissance against target services — into LLM messages without neutralizing ChatML special-token literals. Under the BYOK (Bring You",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Decepticon: Role-boundary forgery via ChatML special-token literals in web crawl output composed into LLM context",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:17:49.000Z",
+            "date_published": "2026-09-24T19:17:49.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[decepticon-core] Decepticon: Role-boundary forgery via ChatML special-token literals in web crawl output composed into LLM context",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-6v3r-4p5c-mrp5",
+            "content_html": "SummaryLanguage Servers for AWS (the aws/language-servers project) provides the Language Server Protocol implementations that power AWS developer tooling, including the Amazon Q Developer agentic chat experience, across IDEs such as VS Code, JetBrains, Visual Studio, and Eclipse.Missing symlink validation in Language Servers for AWS may allow an arbitrary file write outside of the workspace trust boundary. This may occur when a local user opens a workspace containing a maliciously crafted symlin",
+            "url": "https://github.com/advisories/GHSA-6v3r-4p5c-mrp5",
+            "title": "[@aws/lsp-codewhisperer] Language Servers for AWS vulnerable to arbitrary file write | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryLanguage Servers for AWS (the aws/language-servers project) provides the Language Server Protocol implementations that power AWS developer tooling, including the Amazon Q Developer agentic chat",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Language Servers for AWS vulnerable to arbitrary file write",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:15:39.000Z",
+            "date_published": "2026-09-24T19:15:39.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@aws/lsp-codewhisperer] Language Servers for AWS vulnerable to arbitrary file write",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xhcr-j4j9-3gh7",
+            "content_html": "SummaryLanguage Servers for AWS (the aws/language-servers project) provide the underlying language-server runtime that powers Amazon Q Developer's AI coding assistance across its IDE plugins (Visual Studio Code, JetBrains, Eclipse, andVisual Studio).Improper trust boundary enforcement in Language Servers for AWS may allow for arbitrary code execution. If a local user opens a maliciously crafted workspace, any commands within the project configuration files may be automaticallyexecuted.ImpactWhen",
+            "url": "https://github.com/advisories/GHSA-xhcr-j4j9-3gh7",
+            "title": "[@aws/lsp-codewhisperer] Language Servers for AWS Vulnerable to Arbitrary Code Execution | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryLanguage Servers for AWS (the aws/language-servers project) provide the underlying language-server runtime that powers Amazon Q Developer's AI coding assistance across its IDE plugins (Visual S",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Language Servers for AWS Vulnerable to Arbitrary Code Execution",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T19:13:53.000Z",
+            "date_published": "2026-09-24T19:13:53.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@aws/lsp-codewhisperer] Language Servers for AWS Vulnerable to Arbitrary Code Execution",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vf2x-4v53-pm7v",
+            "content_html": "SummaryHTTPSession mounts a FileAdapter for the file:// scheme and inherits redirect handlingunchanged from requests.Session. requests does not check for scheme downgrades orcross-protocol transitions when it follows a redirect, so any http(s) request Streamlink makes canbe redirected by the remote server into file:///... and the local file is returned as theresponse body.GHSA-hgqw-6m45-hw5f / CVE-2026-44353 fixed direct file:// segment and playlist URIs in HLSplaylists and DASH manifests. Those",
+            "url": "https://github.com/advisories/GHSA-vf2x-4v53-pm7v",
+            "title": "[streamlink] Streamlink: HTTPSession follows HTTP redirects into file:// URLs, reading local files | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryHTTPSession mounts a FileAdapter for the file:// scheme and inherits redirect handlingunchanged from requests.Session. requests does not check for scheme downgrades orcross-protocol transitions",
+            "image": {
+                "url": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+                "alt": "Streamlink: HTTPSession follows HTTP redirects into file:// URLs, reading local files",
+                "type": "png"
+            },
+            "date_modified": "2026-09-24T14:58:04.000Z",
+            "date_published": "2026-09-24T14:58:04.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[streamlink] Streamlink: HTTPSession follows HTTP redirects into file:// URLs, reading local files",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        }
+    ]
+}

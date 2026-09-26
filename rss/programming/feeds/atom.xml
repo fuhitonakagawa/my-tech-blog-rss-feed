@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming/</id>
+    <title>Programming｜企業テックブログRSS</title>
+    <updated>2026-09-26T15:06:03.941Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming/feeds/atom.xml"/>
+    <subtitle>Programmingセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[Platform-independent SIMD in Go | The Go Blog]]></title>
+        <id>https://go.dev/blog/simd-experiment</id>
+        <link href="https://go.dev/blog/simd-experiment"/>
+        <link rel="enclosure" href="https://go.dev/doc/gopher/gopher5logo.jpg" type="image/jpg"/>
+        <updated>2026-09-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Go 1.27 adds an experimental platform-agnostic SIMD API]]></summary>
+        <content type="html"><![CDATA[Go 1.27 adds an experimental platform-agnostic SIMD API]]></content>
+        <published>2026-09-24T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Node.js 22.23.3 (LTS) | Node.js Blog]]></title>
+        <id>/blog/release/v22.23.3?1790187760940</id>
+        <link href="https://nodejs.org/en/blog/release/v22.23.3"/>
+        <link rel="enclosure" href="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.23.3%20(LTS)" type="image/3%20(LTS)"/>
+        <updated>2026-09-23T18:22:40.000Z</updated>
+        <published>2026-09-23T18:22:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Python documentation is now available in Persian | Python Insider]]></title>
+        <id>https://blog.python.org/2026/09/the-python-documentation-is-now-available-in-persian/</id>
+        <link href="https://blog.python.org/2026/09/the-python-documentation-is-now-available-in-persian/"/>
+        <link rel="enclosure" href="https://blog.python.org/og/the-python-documentation-is-now-available-in-persian.png" type="image/png"/>
+        <updated>2026-09-23T00:00:00.000Z</updated>
+        <author>
+            <name>Stan Ulbrych</name>
+        </author>
+        <category label="docs"/>
+        <published>2026-09-23T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Node.js 26.10.0 (Current) | Node.js Blog]]></title>
+        <id>/blog/release/v26.10.0?1790067829095</id>
+        <link href="https://nodejs.org/en/blog/release/v26.10.0"/>
+        <link rel="enclosure" href="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2026.10.0%20(Current)" type="image/0%20(Current)"/>
+        <updated>2026-09-22T09:03:49.000Z</updated>
+        <published>2026-09-22T09:03:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Announcing a Maintainer in Residence: Scott Schafer for the Cargo team | Rust Blog]]></title>
+        <id>https://blog.rust-lang.org/2026/09/22/announcing-a-maintainer-in-residence-scott-schafer-for-the-cargo-team/</id>
+        <link href="https://blog.rust-lang.org/2026/09/22/announcing-a-maintainer-in-residence-scott-schafer-for-the-cargo-team/"/>
+        <link rel="enclosure" href="https://www.rust-lang.org/static/images/rust-social-wide.jpg" type="image/jpg"/>
+        <updated>2026-09-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[At the end of August, we announced our first Maintainers in Residence, Rust Project contributors who are funded for their upstream contributions and maintenance work from the Rust Foundation Maintaine]]></summary>
+        <content type="html"><![CDATA[At the end of August, we announced our first Maintainers in Residence, Rust Project contributors who are funded for their upstream contributions and maintenance work from the Rust Foundation Maintainers Fund (RFMF). Since then, the Rust Leadership Council has dedicated more funds from its Project Priorities budget to RFMF, and together with AWS also providing additional funds, this allowed us to open a new full-time Maintainer in Residence (MiR) position to support the Cargo team. We would like ]]></content>
+        <published>2026-09-22T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub Actions leaking secrets when Miri output is cached | Rust Blog]]></title>
+        <id>https://blog.rust-lang.org/2026/09/21/github-actions-leaking-secrets-when-miri-output-is-cached/</id>
+        <link href="https://blog.rust-lang.org/2026/09/21/github-actions-leaking-secrets-when-miri-output-is-cached/"/>
+        <link rel="enclosure" href="https://www.rust-lang.org/static/images/rust-social-wide.jpg" type="image/jpg"/>
+        <updated>2026-09-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Rust Security Response Team was notified that Miri stores all environment variables to target/, allowing secrets to persist in caches.While not necessary a vulnerability in and of itself, when pai]]></summary>
+        <content type="html"><![CDATA[The Rust Security Response Team was notified that Miri stores all environment variables to target/, allowing secrets to persist in caches.While not necessary a vulnerability in and of itself, when paired with GitHub Actions caching behavior, it is possible for this to expose secrets to PRs.OverviewGitHub Actions makes it possible to cache directories between runs. Typical setups allow CI runs on main (and other branches) to write to cache, and PRs can only read from cache (preventing cache poiso]]></content>
+        <published>2026-09-21T00:00:00.000Z</published>
+    </entry>
+</feed>

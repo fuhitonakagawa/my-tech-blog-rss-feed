@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Zenn Cloud｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-cloud/</link>
+        <description>Zenn Cloudセクションのブログ更新をまとめたRSSフィード</description>
+        <lastBuildDate>Sat, 26 Sep 2026 15:06:04 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+        <language>ja</language>
+        <image>
+            <title>Zenn Cloud｜企業テックブログRSS</title>
+            <url>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</url>
+            <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-cloud/</link>
+        </image>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-cloud/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[AWS アカウント作成後にやるべき初期設定10個 | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/akinori901/articles/20260827-plan004</link>
+            <guid isPermaLink="false">https://zenn.dev/akinori901/articles/20260827-plan004</guid>
+            <pubDate>Sat, 26 Sep 2026 09:00:02 GMT</pubDate>
+            <description><![CDATA[AWS アカウント作成後にやるべき初期設定10個 概要AWS アカウントを新規作成した直後は、ルートユーザーがメールアドレスとパスワードだけで全権限を持つ「無防備な状態」です。ここで初期設定を怠ると、アクセスキー漏洩による不正利用や、想定外の高額請求といった事故につながります。この記事では、アカウント作成直後にやっておくべき初期設定を10個、ハンズオン形式でまとめます。すべて AWS の公開情報（]]></description>
+            <content:encoded><![CDATA[AWS アカウント作成後にやるべき初期設定10個 概要AWS アカウントを新規作成した直後は、ルートユーザーがメールアドレスとパスワードだけで全権限を持つ「無防備な状態」です。ここで初期設定を怠ると、アクセスキー漏洩による不正利用や、想定外の高額請求といった事故につながります。この記事では、アカウント作成直後にやっておくべき初期設定を10個、ハンズオン形式でまとめます。すべて AWS の公開情報（公式ドキュメント・Well-Architected の考え方）に基づく一般的なプラクティスです。実際の画面遷移はコンソール更新で変わることがあるため、要点と CLI 例を中心に記載し...]]></content:encoded>
+            <author>Akinori901</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--NDA4fKGt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520%25E3%2582%25A2%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%2588%25E4%25BD%259C%25E6%2588%2590%25E5%25BE%258C%25E3%2581%25AB%25E3%2582%2584%25E3%2582%258B%25E3%2581%25B9%25E3%2581%258D%25E5%2588%259D%25E6%259C%259F%25E8%25A8%25AD%25E5%25AE%259A10%25E5%2580%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Akinori901%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTEx5WU00czh1TEhKUmM3dllzS3UwdEZGWnRjejZpNWFzY3g3Y1dWWGdwTFBJb2pTUks9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AWS アカウント作成後にやるべき初期設定10個</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Azure DevOps 変更管理証跡 長期保管基盤を実装した | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/yutakaosada/articles/0074bf13ad073a</link>
+            <guid isPermaLink="false">https://zenn.dev/yutakaosada/articles/0074bf13ad073a</guid>
+            <pubDate>Sat, 26 Sep 2026 08:01:42 GMT</pubDate>
+            <description><![CDATA[はじめに生成AIやCoding Agentの普及で、コードを書いてテストし、Pull Requestを出すまでの「Dev」の工程は急速に速くなっています。一方で、変更の数と速度が増えるほど、次のような「Ops」側の問いが重くなります。この変更は誰が行い、誰がレビュー・承認したのかどのパイプラインを経てリリースされたのか承認前に本番へ反映されていないか数年後にその変更を説明できるかAzure Dev]]></description>
+            <content:encoded><![CDATA[はじめに生成AIやCoding Agentの普及で、コードを書いてテストし、Pull Requestを出すまでの「Dev」の工程は急速に速くなっています。一方で、変更の数と速度が増えるほど、次のような「Ops」側の問いが重くなります。この変更は誰が行い、誰がレビュー・承認したのかどのパイプラインを経てリリースされたのか承認前に本番へ反映されていないか数年後にその変更を説明できるかAzure DevOpsで変更管理プロセスを検討したところ、標準のAuditing（監査ログ）だけでは、こうした証跡を一貫した形で長期保管するには足りないことが分かりました。そこで、Azur...]]></content:encoded>
+            <author>yutakaosada</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--PJpRq3Kb--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520DevOps%2520%25E5%25A4%2589%25E6%259B%25B4%25E7%25AE%25A1%25E7%2590%2586%25E8%25A8%25BC%25E8%25B7%25A1%2520%25E9%2595%25B7%25E6%259C%259F%25E4%25BF%259D%25E7%25AE%25A1%25E5%259F%25BA%25E7%259B%25A4%25E3%2582%2592%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yutakaosada%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzY0MDVkM2JjZjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Azure DevOps 変更管理証跡 長期保管基盤を実装した</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[ログに出してよい内容をどう管理するか ― ログの構造の検査と例外の扱いに苦労した話 | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/yook/articles/logging-policy-for-incident-investigation</link>
+            <guid isPermaLink="false">https://zenn.dev/yook/articles/logging-policy-for-incident-investigation</guid>
+            <pubDate>Sat, 26 Sep 2026 07:28:55 GMT</pubDate>
+            <description><![CDATA[はじめに以前、アプリケーションのセキュリティ対策をしておかなければと思い、AIに自分のコードベースをレビューさせたことがありました。そのとき、ログにも出してはいけない情報があり、出さないようにしたほうがよいと知りました。ただ、当時は指摘の内容を十分に理解しないまま、提案された対策をそのまま適用しました。どのような実装が入ったのかも、よく分かっていませんでした。その後もアプリケーションの開発を続け、]]></description>
+            <content:encoded><![CDATA[はじめに以前、アプリケーションのセキュリティ対策をしておかなければと思い、AIに自分のコードベースをレビューさせたことがありました。そのとき、ログにも出してはいけない情報があり、出さないようにしたほうがよいと知りました。ただ、当時は指摘の内容を十分に理解しないまま、提案された対策をそのまま適用しました。どのような実装が入ったのかも、よく分かっていませんでした。その後もアプリケーションの開発を続け、AWSにデプロイした後、Fargateで動いていた処理をSQSとLambdaを使う構成に変えました。構成を変えた後、うまく動いていない処理の原因を調べようとしたところで、必要なロ...]]></content:encoded>
+            <author>yook</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--95gpbMbt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AD%25E3%2582%25B0%25E3%2581%25AB%25E5%2587%25BA%25E3%2581%2597%25E3%2581%25A6%25E3%2582%2588%25E3%2581%2584%25E5%2586%2585%25E5%25AE%25B9%25E3%2582%2592%25E3%2581%25A9%25E3%2581%2586%25E7%25AE%25A1%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%25E3%2581%258B%2520%25E2%2580%2595%2520%25E3%2583%25AD%25E3%2582%25B0%25E3%2581%25AE%25E6%25A7%258B%25E9%2580%25A0%25E3%2581%25AE%25E6%25A4%259C%25E6%259F%25BB%25E3%2581%25A8%25E4%25BE%258B%25E5%25A4%2596%25E3%2581%25AE%25E6%2589%25B1%25E3%2581%2584%25E3%2581%25AB%25E8%258B%25A6%25E5%258A%25B4%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yook%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzU4OThiZWRkZTQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>ログに出してよい内容をどう管理するか ― ログの構造の検査と例外の扱いに苦労した話</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[AWS 基本セキュリティ設定: Security Hub の AI 向け標準を有効化する | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/aws_japan/articles/bedrock-security-hub-ai-standard</link>
+            <guid isPermaLink="false">https://zenn.dev/aws_japan/articles/bedrock-security-hub-ai-standard</guid>
+            <pubDate>Sat, 26 Sep 2026 05:38:36 GMT</pubDate>
+            <description><![CDATA[はじめにCloudTrail、GuardDuty、Inspector、Access Analyzer といったサービスは個別に適用して AWS アカウントのセキュリティを向上してくれます。しかし、一つ一つの画面を毎日/毎週/毎月周回するのは非常に手間です。問題のある設定だけを検出して、必要に応じて個別に対処できると便利ですよね。AWS Security Hub CSPM は、こうした検出結果を 1]]></description>
+            <content:encoded><![CDATA[はじめにCloudTrail、GuardDuty、Inspector、Access Analyzer といったサービスは個別に適用して AWS アカウントのセキュリティを向上してくれます。しかし、一つ一つの画面を毎日/毎週/毎月周回するのは非常に手間です。問題のある設定だけを検出して、必要に応じて個別に対処できると便利ですよね。AWS Security Hub CSPM は、こうした検出結果を 1 か所に集め、あわせてアカウントの設定そのものを「セキュリティ基準」に照らして採点してくれるサービスです。Security Hub の基準には 2026 年時点で「AI Security...]]></content:encoded>
+            <author>Hikotty / Hikoto Iseda</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--KldmWgbF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520%25E5%259F%25BA%25E6%259C%25AC%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E8%25A8%25AD%25E5%25AE%259A%253A%2520Security%2520Hub%2520%25E3%2581%25AE%2520AI%2520%25E5%2590%2591%25E3%2581%2591%25E6%25A8%2599%25E6%25BA%2596%25E3%2582%2592%25E6%259C%2589%25E5%258A%25B9%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hikotty%2520%252F%2520Hikoto%2520I...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q5ZTY0MmNkYTMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AWS 基本セキュリティ設定: Security Hub の AI 向け標準を有効化する</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Amazon Bedrock の基本セキュリティ設定: GuardDuty AI Protection で不正な呼び出しを検知する | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/aws_japan/articles/bedrock-security-guardduty-ai-protection</link>
+            <guid isPermaLink="false">https://zenn.dev/aws_japan/articles/bedrock-security-guardduty-ai-protection</guid>
+            <pubDate>Sat, 26 Sep 2026 05:33:15 GMT</pubDate>
+            <description><![CDATA[はじめにBedrock を呼び出す認証情報が漏れたとき、典型的に発生する挙動としていつもと違う場所から呼び出されたり、いつもと異なるトラフィックパターンが発生する、といったものが挙げられますです。これを人がログを眺めて見つけるのは現実的ではありません。そこで、Amazon GuardDuty の AI Protection を使いましょう。Amazon GuardDuty AI Protectio]]></description>
+            <content:encoded><![CDATA[はじめにBedrock を呼び出す認証情報が漏れたとき、典型的に発生する挙動としていつもと違う場所から呼び出されたり、いつもと異なるトラフィックパターンが発生する、といったものが挙げられますです。これを人がログを眺めて見つけるのは現実的ではありません。そこで、Amazon GuardDuty の AI Protection を使いましょう。Amazon GuardDuty AI Protection は、2026 年 7 月に GA した新しい保護プランで、Bedrock の呼び出しパターンを学習し、そこから外れた呼び出しを検出結果として上げてくれます。この記事では、AI Pro...]]></content:encoded>
+            <author>Hikotty / Hikoto Iseda</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--UU7f0jeS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Amazon%2520Bedrock%2520%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E8%25A8%25AD%25E5%25AE%259A%253A%2520GuardDuty%2520AI%2520Protection%2520%25E3%2581%25A7%25E4%25B8%258D%25E6%25AD%25A3%25E3%2581%25AA%25E5%2591%25BC...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hikotty%2520%252F%2520Hikoto%2520I...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q5ZTY0MmNkYTMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Amazon Bedrock の基本セキュリティ設定: GuardDuty AI Protection で不正な呼び出しを検知する</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[TerraformによるPCI DSS検証ラボ構築（3）後編 ～ SIEM検知ルール発火検証とCloudWatchLogs取り込み遅延 ～ | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/nyondev/articles/pcidss-aws-part3-back</link>
+            <guid isPermaLink="false">https://zenn.dev/nyondev/articles/pcidss-aws-part3-back</guid>
+            <pubDate>Sat, 26 Sep 2026 04:52:51 GMT</pubDate>
+            <description><![CDATA[はじめに前編では、閉域の Splunk に CDE の監査ログを集め、Scheduled Alert の正テストまでを行った。AWS 側の監視イベント（GuardDuty、CloudTrail StopLogging、Security Group 変更、VPC Flow Logs）は CloudWatch Logs に着弾させるところまでで止まり、Splunk への取り込みとアラート化は「未完了」]]></description>
+            <content:encoded><![CDATA[はじめに前編では、閉域の Splunk に CDE の監査ログを集め、Scheduled Alert の正テストまでを行った。AWS 側の監視イベント（GuardDuty、CloudTrail StopLogging、Security Group 変更、VPC Flow Logs）は CloudWatch Logs に着弾させるところまでで止まり、Splunk への取り込みとアラート化は「未完了」として残した。後編では、その残りを埋める。AWS 側で「監視や境界そのものが操作された」ことを、Splunk のアラートとして鳴らせるか。結論から書くと、4系統のうち3系統は S...]]></content:encoded>
+            <author>NyonDev</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--9dIZUMmg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Terraform%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BPCI%2520DSS%25E6%25A4%259C%25E8%25A8%25BC%25E3%2583%25A9%25E3%2583%259C%25E6%25A7%258B%25E7%25AF%2589%25EF%25BC%25883%25EF%25BC%2589%25E5%25BE%258C%25E7%25B7%25A8%2520%25EF%25BD%259E%2520SIEM%25E6%25A4%259C%25E7%259F%25A5%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%25AB%25E7%2599%25BA%25E7%2581%25AB%25E6%25A4%259C%25E8%25A8%25BC%25E3%2581%25A8CloudWatch...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NyonDev%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzgwYWU1YTQ1N2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>TerraformによるPCI DSS検証ラボ構築（3）後編 ～ SIEM検知ルール発火検証とCloudWatchLogs取り込み遅延 ～</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Azure API Management で 2 つの Microsoft Foundry に負荷分散してみる | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/headwaters/articles/7f3af51eb21c51</link>
+            <guid isPermaLink="false">https://zenn.dev/headwaters/articles/7f3af51eb21c51</guid>
+            <pubDate>Sat, 26 Sep 2026 04:40:57 GMT</pubDate>
+            <description><![CDATA[執筆日2026/9/26 はじめにAzure OpenAI（Microsoft Foundry Models）を本番で使っていると、どこかで 429 Too Many Requests にぶつかります。対策の定番は、Azure API Management（以下 APIM）を前段に置き、複数の Foundry リソースに負荷分散する構成です。この記事では、1 つのサブスクリプションの中に Foun]]></description>
+            <content:encoded><![CDATA[執筆日2026/9/26 はじめにAzure OpenAI（Microsoft Foundry Models）を本番で使っていると、どこかで 429 Too Many Requests にぶつかります。対策の定番は、Azure API Management（以下 APIM）を前段に置き、複数の Foundry リソースに負荷分散する構成です。この記事では、1 つのサブスクリプションの中に Foundry リソースを 2 つ作り、同じモデルをデプロイして、APIM のバックエンドプールで負荷分散するところまでを検証します。本来は別々のサブスクリプションに Foundry...]]></content:encoded>
+            <author>takekawa tomoki</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--YpiCOIkS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520API%2520Management%2520%25E3%2581%25A7%25202%2520%25E3%2581%25A4%25E3%2581%25AE%2520Microsoft%2520Foundry%2520%25E3%2581%25AB%25E8%25B2%25A0%25E8%258D%25B7%25E5%2588%2586%25E6%2595%25A3%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:takekawa%2520tomoki%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzA2ZjBlNjkxMDkuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Azure API Management で 2 つの Microsoft Foundry に負荷分散してみる</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Amazon Bedrock の基本セキュリティ設定: モデル呼び出しログでプロンプトと応答を残す | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/aws_japan/articles/bedrock-security-invocation-logging</link>
+            <guid isPermaLink="false">https://zenn.dev/aws_japan/articles/bedrock-security-invocation-logging</guid>
+            <pubDate>Sat, 26 Sep 2026 04:16:15 GMT</pubDate>
+            <description><![CDATA[はじめにAmazon Bedrock には、モデルに送ったプロンプトと返ってきた応答を、そのまま CloudWatch Logs や S3 に書き出す「モデル呼び出しのログ記録」（Model invocation logging）という設定があります。CloudTrail の証跡がモデルを呼んだ日時と主体の記録を残すのに対して、こちらはリクエストとレスポンスの中身の本文を残す機能です。インシデント]]></description>
+            <content:encoded><![CDATA[はじめにAmazon Bedrock には、モデルに送ったプロンプトと返ってきた応答を、そのまま CloudWatch Logs や S3 に書き出す「モデル呼び出しのログ記録」（Model invocation logging）という設定があります。CloudTrail の証跡がモデルを呼んだ日時と主体の記録を残すのに対して、こちらはリクエストとレスポンスの中身の本文を残す機能です。インシデント時に漏れた内容を特定したり、生成 AI アプリの回答品質を後から追ったりするための、リージョン単位の設定です。この記事では、CloudWatch Logs を保存先にした最小構成の有効化...]]></content:encoded>
+            <author>Hikotty / Hikoto Iseda</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--iaWX5Q_n--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Amazon%2520Bedrock%2520%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E8%25A8%25AD%25E5%25AE%259A%253A%2520%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2581%25A7%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E3%2581%25A8%25E5%25BF%259C%25E7%25AD%2594%25E3%2582%2592%25E6%25AE%258B%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hikotty%2520%252F%2520Hikoto%2520I...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q5ZTY0MmNkYTMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Amazon Bedrock の基本セキュリティ設定: モデル呼び出しログでプロンプトと応答を残す</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Gemini 3.8 Flash TTSではじめるテキスト読み上げ生成 | Zennの「Google」のフィード]]></title>
+            <link>https://zenn.dev/sdkfz181tiger/articles/4055b5a5c80a27</link>
+            <guid isPermaLink="false">https://zenn.dev/sdkfz181tiger/articles/4055b5a5c80a27</guid>
+            <pubDate>Sat, 26 Sep 2026 04:07:11 GMT</pubDate>
+            <description><![CDATA[Gemini 3.8 Flash TTSではじめるテキスト読み上げ生成今回は、"Gemini3.8-Flash-TTS"を使ってテキスト読み上げ生成を試してみます。本モデルでは、130以上の言語がサポートされ、音声として30種類の事前構築済みセットがあらかじめ用意されています。単一話者の読み上げだけでなく、複数人での対話の再現や、感情・表現スタイルの細かな指定が可能です。 2種類のモデルとその特徴]]></description>
+            <content:encoded><![CDATA[Gemini 3.8 Flash TTSではじめるテキスト読み上げ生成今回は、"Gemini3.8-Flash-TTS"を使ってテキスト読み上げ生成を試してみます。本モデルでは、130以上の言語がサポートされ、音声として30種類の事前構築済みセットがあらかじめ用意されています。単一話者の読み上げだけでなく、複数人での対話の再現や、感情・表現スタイルの細かな指定が可能です。 2種類のモデルとその特徴TTSでは主に2種類のモデルが用意されています。ここでは、gemini-3.8-flash-lite-ttsを使って読み上げ生成を行います。モデル名強みg...]]></content:encoded>
+            <author>Kajiru</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--hmvXQXiE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gemini%25203.8%2520Flash%2520TTS%25E3%2581%25A7%25E3%2581%25AF%25E3%2581%2598%25E3%2582%2581%25E3%2582%258B%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E8%25AA%25AD%25E3%2581%25BF%25E4%25B8%258A%25E3%2581%2592%25E7%2594%259F%25E6%2588%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kajiru%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2YxM2MwMGU4MGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Gemini 3.8 Flash TTSではじめるテキスト読み上げ生成</originalTitle>
+                <blogTitle>Zennの「Google」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/google</blogLink>
+                <blogLinkMd5Hash>4f2afa8044d173644e6d64c73e24a44a</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Oracle から BigQuery に移行するシミュレーションをしてみた #7 表はそのまま移せる？ 型・制約・ビュー | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/mika_and_coco/articles/oracle-to-bigquery-07-table-design</link>
+            <guid isPermaLink="false">https://zenn.dev/mika_and_coco/articles/oracle-to-bigquery-07-table-design</guid>
+            <pubDate>Sat, 26 Sep 2026 02:30:40 GMT</pubDate>
+            <description><![CDATA[今回の議題前回まで、索引のない BigQuery で読む範囲をどう絞り、どう結合するかを確かめました。仕組みが分かったところで、Oracle エンジニアが次に手を動かしたくなるのは表定義です。「NUMBER や VARCHAR2 はどの型になるの？ 桁や文字コードは指定できるの？」「主キーも外部キーもシーケンスもないなら、一意性はどう守るの？」「Oracle の『空文字は NULL』はどうなる？ ]]></description>
+            <content:encoded><![CDATA[今回の議題前回まで、索引のない BigQuery で読む範囲をどう絞り、どう結合するかを確かめました。仕組みが分かったところで、Oracle エンジニアが次に手を動かしたくなるのは表定義です。「NUMBER や VARCHAR2 はどの型になるの？ 桁や文字コードは指定できるの？」「主キーも外部キーもシーケンスもないなら、一意性はどう守るの？」「Oracle の『空文字は NULL』はどうなる？ ビューやシノニムは？」この連載は、Oracle エンジニアが架空の地方銀行「A 銀行」の情報系（Exadata 上の Oracle 19c、取引明細と残高などで月 2 億件）を...]]></content:encoded>
+            <author>みか あんど ここ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--YZPI7lQi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Oracle%2520%25E3%2581%258B%25E3%2582%2589%2520BigQuery%2520%25E3%2581%25AB%25E7%25A7%25BB%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B7%25E3%2583%259F%25E3%2583%25A5%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%2592%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2520%25237%2520%25E8%25A1%25A8%25E3%2581%25AF%25E3%2581%259D%25E3%2581%25AE%25E3%2581%25BE%25E3%2581%25BE%25E7%25A7%25BB%25E3%2581%259B%25E3%2582%258B%25EF%25BC%259F%2520%25E5%259E%258B%25E3%2583%25BB%25E5%2588%25B6%25E7%25B4%2584%25E3%2583%25BB%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25BF%25E3%2581%258B%2520%25E3%2581%2582%25E3%2582%2593%25E3%2581%25A9%2520%25E3%2581%2593%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZkNjRjNGU5ZGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Oracle から BigQuery に移行するシミュレーションをしてみた #7 表はそのまま移せる？ 型・制約・ビュー</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Azure IoT Central、2029年9月20日にサービス終了 | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/matsujirushi/articles/d347c9e3e9e400</link>
+            <guid isPermaLink="false">https://zenn.dev/matsujirushi/articles/d347c9e3e9e400</guid>
+            <pubDate>Sat, 26 Sep 2026 01:58:33 GMT</pubDate>
+            <description><![CDATA[昨夜、Microsoft Azureからメールが来た。Microsoft Internet of Things Blogにも記事がありました。https://techcommunity.microsoft.com/blog/iotblog/azure-iot-central-is-evolving-what-you-need-to-know/4554570重要な点はこれ。Azure IoT Cen]]></description>
+            <content:encoded><![CDATA[昨夜、Microsoft Azureからメールが来た。Microsoft Internet of Things Blogにも記事がありました。https://techcommunity.microsoft.com/blog/iotblog/azure-iot-central-is-evolving-what-you-need-to-know/4554570重要な点はこれ。Azure IoT Centralは、2029年9月20日にサービス終了。2026年9月23日以降は、Azure IoT Centralアプリケーションは作成できなくなる。（なった）どうしてもAzure...]]></content:encoded>
+            <author>matsujirushi</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--q0PmzZQn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520IoT%2520Central%25E3%2580%25812029%25E5%25B9%25B49%25E6%259C%258820%25E6%2597%25A5%25E3%2581%25AB%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%25E7%25B5%2582%25E4%25BA%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:matsujirushi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNmNDYwYzEwMTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Azure IoT Central、2029年9月20日にサービス終了</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[「検出 - インデックス未登録」は、選ばれなかったのではなかった — Search Console の読み違いを 2 回した記録 | Zennの「Google」のフィード]]></title>
+            <link>https://zenn.dev/ukintech/articles/gsc-discovered-not-indexed-request</link>
+            <guid isPermaLink="false">https://zenn.dev/ukintech/articles/gsc-discovered-not-indexed-request</guid>
+            <pubDate>Sat, 26 Sep 2026 01:56:21 GMT</pubDate>
+            <description><![CDATA[個人サイトの一部のページが、Google にいつまでも登録されませんでした。Search Console の分類は「検出 - インデックス未登録」です。私はこれを「Google に見つかったが、中身が薄いので選ばれなかった」と読みました。違いました。 登録をリクエストしたら、その日のうちに全件クロールされて登録されました。しかも、先に登録されたのは中身の薄いほうのページでした。小さなサイトで同じ状]]></description>
+            <content:encoded><![CDATA[個人サイトの一部のページが、Google にいつまでも登録されませんでした。Search Console の分類は「検出 - インデックス未登録」です。私はこれを「Google に見つかったが、中身が薄いので選ばれなかった」と読みました。違いました。 登録をリクエストしたら、その日のうちに全件クロールされて登録されました。しかも、先に登録されたのは中身の薄いほうのページでした。小さなサイトで同じ状態に困っている人向けに、実測の数字と、読み違えた経緯を残します。 前提: どんなサイトか自分のサイトの一角に、技術書を「対象レベル・鮮度・読む順番」で整理するページ群があります（技術書...]]></content:encoded>
+            <author>ukintech</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--BPhY8iIh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258C%25E6%25A4%259C%25E5%2587%25BA%2520-%2520%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2587%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25B9%25E6%259C%25AA%25E7%2599%25BB%25E9%258C%25B2%25E3%2580%258D%25E3%2581%25AF%25E3%2580%2581%25E9%2581%25B8%25E3%2581%25B0%25E3%2582%258C%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%2520%25E2%2580%2594%2520Search%2520Console%2520%25E3%2581%25AE%25E8%25AA%25AD%25E3%2581%25BF%25E9%2581%2595%25E3%2581%2584%25E3%2582%2592%2520...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ukintech%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2FlYWQ3YzgxNmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>「検出 - インデックス未登録」は、選ばれなかったのではなかった — Search Console の読み違いを 2 回した記録</originalTitle>
+                <blogTitle>Zennの「Google」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/google</blogLink>
+                <blogLinkMd5Hash>4f2afa8044d173644e6d64c73e24a44a</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[機械学習を試したいがデータが無い — 正解が勝手に降ってくる場所を探した | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/horibe/articles/ml-training-data-for-free</link>
+            <guid isPermaLink="false">https://zenn.dev/horibe/articles/ml-training-data-for-free</guid>
+            <pubDate>Sat, 26 Sep 2026 01:34:40 GMT</pubDate>
+            <description><![CDATA[機械学習を自分で一度やってみたい、と思ったときに最初にぶつかるのはアルゴリズムでもGPUでもなく、教師データが無いことだった。入門記事は大抵 Titanic か MNIST で、それは「もう誰かが正解を付けてくれたデータ」だ。自分の題材でやろうとすると、まず何百件も正解を手で付けるところから始まる。そこで力尽きる。自分のアプリの中に、正解が自動で降ってくる場所が埋まっていた話を書く。まだモデルは作]]></description>
+            <content:encoded><![CDATA[機械学習を自分で一度やってみたい、と思ったときに最初にぶつかるのはアルゴリズムでもGPUでもなく、教師データが無いことだった。入門記事は大抵 Titanic か MNIST で、それは「もう誰かが正解を付けてくれたデータ」だ。自分の題材でやろうとすると、まず何百件も正解を手で付けるところから始まる。そこで力尽きる。自分のアプリの中に、正解が自動で降ってくる場所が埋まっていた話を書く。まだモデルは作っていない。データが貯まる仕組みを作ったところまでの記録。 探し方：外部APIが正解を返しているところTOEIC学習用のPWAを作っていて、発音採点に Azure Speech ...]]></content:encoded>
+            <author>Horibe</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--tUQFBwrx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%25E3%2581%258C%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%258C%25E7%2584%25A1%25E3%2581%2584%2520%25E2%2580%2594%2520%25E6%25AD%25A3%25E8%25A7%25A3%25E3%2581%258C%25E5%258B%259D%25E6%2589%258B%25E3%2581%25AB%25E9%2599%258D%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%258F%25E3%2582%258B%25E5%25A0%25B4%25E6%2589%2580%25E3%2582%2592%25E6%258E%25A2%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Horibe%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1p2UGt5M29mR0dUNzhUaHJlOXFuU3NEWkg3T2tubHBCX1ZuUjNLVXVNYk5NQjd3PXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>機械学習を試したいがデータが無い — 正解が勝手に降ってくる場所を探した</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[DynamoDB Streamsを本番で扱う：順序・重複・失敗処理の設計 | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/mkymdk/articles/dynamodb-streams-basics</link>
+            <guid isPermaLink="false">https://zenn.dev/mkymdk/articles/dynamodb-streams-basics</guid>
+            <pubDate>Sat, 26 Sep 2026 01:24:40 GMT</pubDate>
+            <description><![CDATA[DynamoDB Streamsを本番で扱う：順序・重複・失敗処理の設計DynamoDB StreamsからLambdaへ変更を渡すときは、レコードの形式を知るだけでは足りません。同じ変更をLambdaが再処理する場合や、処理できないレコードがシャード内の後続レコードを止める場合まで考える必要があります。ここでは、注文ステータスの変更を別システムへ反映する例で、ビュータイプから失敗時の復旧まで設計]]></description>
+            <content:encoded><![CDATA[DynamoDB Streamsを本番で扱う：順序・重複・失敗処理の設計DynamoDB StreamsからLambdaへ変更を渡すときは、レコードの形式を知るだけでは足りません。同じ変更をLambdaが再処理する場合や、処理できないレコードがシャード内の後続レコードを止める場合まで考える必要があります。ここでは、注文ステータスの変更を別システムへ反映する例で、ビュータイプから失敗時の復旧まで設計します。 NEW_AND_OLD_IMAGESで変更レコードを読む注文テーブルの項目 order-001 が PENDING から CONFIRMED に変わったとします。テーブルで...]]></content:encoded>
+            <author>Mukaiyama</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--2eYEuauI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:DynamoDB%2520Streams%25E3%2582%2592%25E6%259C%25AC%25E7%2595%25AA%25E3%2581%25A7%25E6%2589%25B1%25E3%2581%2586%25EF%25BC%259A%25E9%25A0%2586%25E5%25BA%258F%25E3%2583%25BB%25E9%2587%258D%25E8%25A4%2587%25E3%2583%25BB%25E5%25A4%25B1%25E6%2595%2597%25E5%2587%25A6%25E7%2590%2586%25E3%2581%25AE%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mukaiyama%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzRjOTQyMjgwY2QuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>DynamoDB Streamsを本番で扱う：順序・重複・失敗処理の設計</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[AIF合格。何気に苦戦したので最終的に効いた4つの判断軸 | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/yasutomo7974/articles/aif-passed-four-decision-axes</link>
+            <guid isPermaLink="false">https://zenn.dev/yasutomo7974/articles/aif-passed-four-decision-axes</guid>
+            <pubDate>Fri, 25 Sep 2026 23:40:18 GMT</pubDate>
+            <description><![CDATA[おはようございます、YASUです。AWS Certified AI Practitioner(AIF)、合格しました。以前このブログで何度か学習ノートをまとめてきましたが、今日はその集大成として、最終的に整理できたポイントを振り返っておきます。 結論AIFは「基礎レベル」という位置づけですが、単なる用語の暗記では太刀打ちできない、シナリオベースの応用問題が多く出題される試験でした。最終的に効いたの]]></description>
+            <content:encoded><![CDATA[おはようございます、YASUです。AWS Certified AI Practitioner(AIF)、合格しました。以前このブログで何度か学習ノートをまとめてきましたが、今日はその集大成として、最終的に整理できたポイントを振り返っておきます。 結論AIFは「基礎レベル」という位置づけですが、単なる用語の暗記では太刀打ちできない、シナリオベースの応用問題が多く出題される試験でした。最終的に効いたのは、個別の知識を覚えることよりも、いくつかの「判断軸」を自分の中に持っておくことでした。 判断軸1:モデルの説明可能性は、性能と逆相関する「説明可能性が高いモデルを選べ」という問題...]]></content:encoded>
+            <author>YASU</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--zIhbtRPh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AIF%25E5%2590%2588%25E6%25A0%25BC%25E3%2580%2582%25E4%25BD%2595%25E6%25B0%2597%25E3%2581%25AB%25E8%258B%25A6%25E6%2588%25A6%25E3%2581%2597%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E6%259C%2580%25E7%25B5%2582%25E7%259A%2584%25E3%2581%25AB%25E5%258A%25B9%25E3%2581%2584%25E3%2581%259F4%25E3%2581%25A4%25E3%2581%25AE%25E5%2588%25A4%25E6%2596%25AD%25E8%25BB%25B8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:YASU%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTC1BUmZvYm9BN0RhV1FjNlVDS0tQSllOSEtWR3BlOEF2cXJXXy1XSFM0REJtRFNVaz1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AIF合格。何気に苦戦したので最終的に効いた4つの判断軸</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Lambdaの二重実行を防ぐ：Javaで冪等性を実装するPowertools入門 | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/sponge841841/articles/2026-09-23-lambda-java-idempotency-powertools</link>
+            <guid isPermaLink="false">https://zenn.dev/sponge841841/articles/2026-09-23-lambda-java-idempotency-powertools</guid>
+            <pubDate>Fri, 25 Sep 2026 20:58:38 GMT</pubDate>
+            <description><![CDATA[AWS Lambdaを使っていると、「同じイベントがもう一度届いたらどうするか」を考える必要があります。たとえば注文処理でLambdaが決済APIを呼び出した直後、レスポンスを返す前にタイムアウトしたとします。呼び出し元から見ると処理結果が分からないため再試行される可能性があります。そのとき何も対策していなければ、同じ注文を2回処理してしまうかもしれません。このような問題を避けるために重要なのが*]]></description>
+            <content:encoded><![CDATA[AWS Lambdaを使っていると、「同じイベントがもう一度届いたらどうするか」を考える必要があります。たとえば注文処理でLambdaが決済APIを呼び出した直後、レスポンスを返す前にタイムアウトしたとします。呼び出し元から見ると処理結果が分からないため再試行される可能性があります。そのとき何も対策していなければ、同じ注文を2回処理してしまうかもしれません。このような問題を避けるために重要なのが**冪等性（idempotency）**です。冪等性とは、同じ操作を複数回実行しても、追加の副作用が発生しない性質です。この記事では、JavaのLambdaでAWS Lambda Power...]]></content:encoded>
+            <author>ちっち</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--EN5epNmz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Lambda%25E3%2581%25AE%25E4%25BA%258C%25E9%2587%258D%25E5%25AE%259F%25E8%25A1%258C%25E3%2582%2592%25E9%2598%25B2%25E3%2581%2590%25EF%25BC%259AJava%25E3%2581%25A7%25E5%2586%25AA%25E7%25AD%2589%25E6%2580%25A7%25E3%2582%2592%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258BPowertools%25E5%2585%25A5%25E9%2596%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A1%25E3%2581%25A3%25E3%2581%25A1%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzgzMDYyMzRhYzguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Lambdaの二重実行を防ぐ：Javaで冪等性を実装するPowertools入門</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[42日でバックエンドエンジニアの基礎を完全に理解する #40 - 設計演習② インフラ構成設計 | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/kipcop/articles/b42-go-40-design-infra</link>
+            <guid isPermaLink="false">https://zenn.dev/kipcop/articles/b42-go-40-design-infra</guid>
+            <pubDate>Fri, 25 Sep 2026 20:26:49 GMT</pubDate>
+            <description><![CDATA[この記事で学ぶこと前回 #39 では、勉強会の予約サービスを題材に、要件の文章からテーブル設計と API 仕様を作りました。今回はその続きです。同じサービスを「どこで、どう動かすか」。渡されるのは今回も短い要件だけで、そこから VPC・ECS・RDS・IAM・監視の構成図と、それをコードに落とす Terraform の方針までを自分で決めます。#32〜#38 の AWS 編と、付録の Terraf]]></description>
+            <content:encoded><![CDATA[この記事で学ぶこと前回 #39 では、勉強会の予約サービスを題材に、要件の文章からテーブル設計と API 仕様を作りました。今回はその続きです。同じサービスを「どこで、どう動かすか」。渡されるのは今回も短い要件だけで、そこから VPC・ECS・RDS・IAM・監視の構成図と、それをコードに落とす Terraform の方針までを自分で決めます。#32〜#38 の AWS 編と、付録の Terraform 回・セキュリティ回で学んだ部品を、初めて「選ぶ側」として使います。個々のサービスの説明は各回に譲り、この記事は「要件からどう判断を積み上げるか」に集中します。この記事を終えると...]]></content:encoded>
+            <author>k.ike</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--h2YCT0pF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:42%25E6%2597%25A5%25E3%2581%25A7%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E3%2582%2592%25E5%25AE%258C%25E5%2585%25A8%25E3%2581%25AB%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2520%252340%2520-%2520%25E8%25A8%25AD%25E8%25A8%2588%25E6%25BC%2594%25E7%25BF%2592%25E2%2591%25A1%2520%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2595%25E3%2583%25A9%25E6%25A7%258B%25E6%2588%2590%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:k.ike%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSzB5X0dHdXdYN0R2NUdXamlMU0FaLTI5OHhBcFBSLW9pMEhMY2lEZ2dBSHVVdDdESHM9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>42日でバックエンドエンジニアの基礎を完全に理解する #40 - 設計演習② インフラ構成設計</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[ライセンスの境界と Sentinel の取り込み費用 | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/oscart/articles/purview-label-license-cost</link>
+            <guid isPermaLink="false">https://zenn.dev/oscart/articles/purview-label-license-cost</guid>
+            <pubDate>Fri, 25 Sep 2026 17:50:45 GMT</pubDate>
+            <description><![CDATA[!連載「秘密度ラベルを付けたファイルは、どこまで追えるのか」全4回の第4回です。 ライセンスの境界と、Sentinel に流したときの取り込み費用を試算します。 この記事で分かること機能とライセンスの対応。どこまでが E3 で、どこから E5 かSentinel でラベルを追うとき、どのテーブルが無償でどれが課金か実価格での月額試算（東日本、2026年9月取得）無償で届く範囲が意外に広いこと 前提]]></description>
+            <content:encoded><![CDATA[!連載「秘密度ラベルを付けたファイルは、どこまで追えるのか」全4回の第4回です。 ライセンスの境界と、Sentinel に流したときの取り込み費用を試算します。 この記事で分かること機能とライセンスの対応。どこまでが E3 で、どこから E5 かSentinel でラベルを追うとき、どのテーブルが無償でどれが課金か実価格での月額試算（東日本、2026年9月取得）無償で届く範囲が意外に広いこと 前提価格はすべて2026年9月21日時点の取得値。種別取得元ライセンス単価microsoft.com の日本語価格ページ（税抜・年払い）Sent...]]></content:encoded>
+            <author>Oscar | 海外で働くITコンサルタント / PM</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--hjE0kMmK--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A9%25E3%2582%25A4%25E3%2582%25BB%25E3%2583%25B3%25E3%2582%25B9%25E3%2581%25AE%25E5%25A2%2583%25E7%2595%258C%25E3%2581%25A8%2520Sentinel%2520%25E3%2581%25AE%25E5%258F%2596%25E3%2582%258A%25E8%25BE%25BC%25E3%2581%25BF%25E8%25B2%25BB%25E7%2594%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Oscar%2520%257C%2520%25E6%25B5%25B7%25E5%25A4%2596%25E3%2581%25A7%25E5%2583%258D%25E3%2581%258FIT%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25B5...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFkNGQ4ZDU3YTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>ライセンスの境界と Sentinel の取り込み費用</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[GitHub Actions × OIDC × SSMでAWSへのCI/CDを構築してみた | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/sakuyaxx21/articles/github-actions-oidc-ssm</link>
+            <guid isPermaLink="false">https://zenn.dev/sakuyaxx21/articles/github-actions-oidc-ssm</guid>
+            <pubDate>Fri, 25 Sep 2026 14:07:03 GMT</pubDate>
+            <description><![CDATA[はじめにポートフォリオ「Dev-Portfolio」として、Terraformで構築したAWS基盤上に、FastAPIを用いた社内向け申請管理システムを動かしています。GitHub Actionsからのデプロイには、OIDCによるAWS認証とSystems Manager（SSM）Run Commandによるコンテナ更新を組み合わせました。AWSの長期アクセスキーをGitHubへ保存せず、EC2の]]></description>
+            <content:encoded><![CDATA[はじめにポートフォリオ「Dev-Portfolio」として、Terraformで構築したAWS基盤上に、FastAPIを用いた社内向け申請管理システムを動かしています。GitHub Actionsからのデプロイには、OIDCによるAWS認証とSystems Manager（SSM）Run Commandによるコンテナ更新を組み合わせました。AWSの長期アクセスキーをGitHubへ保存せず、EC2のSSHポートも開けない構成にしています。第1記事「Terraformでdev/prodを分離したAWS Webアプリ基盤を構築してみた」では、基盤の構成と環境差分を扱いました。本記...]]></content:encoded>
+            <author>荒殿 咲弥</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--L9Cznjrl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GitHub%2520Actions%2520%25C3%2597%2520OIDC%2520%25C3%2597%2520SSM%25E3%2581%25A7AWS%25E3%2581%25B8%25E3%2581%25AECI%252FCD%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E8%258D%2592%25E6%25AE%25BF%2520%25E5%2592%25B2%25E5%25BC%25A5%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3R4REdURWt1MG9aRk9MRkNiVmVqaF81MWp5ajRCODVUNi1KZEJaSzBnOHRmN3FfWT1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>GitHub Actions × OIDC × SSMでAWSへのCI/CDを構築してみた</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[GoogleスライドにGASで任意のフォントを追加する | Zennの「Google」のフィード]]></title>
+            <link>https://zenn.dev/rayfiyo/articles/20240522_add-fonts-to-google-slides</link>
+            <guid isPermaLink="false">https://zenn.dev/rayfiyo/articles/20240522_add-fonts-to-google-slides</guid>
+            <pubDate>Fri, 25 Sep 2026 13:19:09 GMT</pubDate>
+            <description><![CDATA[概要Google スライド (Google slides) に Google Apps Script を用いて任意のフォントを追加する方法を記した． 背景Google スライドにNoto Serif JP がなく困ったから． 対象読者スクリプトキディ以上の能力を持つ人． 本論 スクリプトを書き込む準備任意の Google スライドを開き，上部のタブ（リボン？）から以下を選択拡張機能 -&amp;gt; Apps]]></description>
+            <content:encoded><![CDATA[概要Google スライド (Google slides) に Google Apps Script を用いて任意のフォントを追加する方法を記した． 背景Google スライドにNoto Serif JP がなく困ったから． 対象読者スクリプトキディ以上の能力を持つ人． 本論 スクリプトを書き込む準備任意の Google スライドを開き，上部のタブ（リボン？）から以下を選択拡張機能 -&amp;gt; Apps Script スクリプトの記述以下を記述するfunction NewFonts() { var presentation = Slides...]]></content:encoded>
+            <author>rayfiyo</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--MvVTJjmC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%25E3%2582%25B9%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2589%25E3%2581%25ABGAS%25E3%2581%25A7%25E4%25BB%25BB%25E6%2584%258F%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E8%25BF%25BD%25E5%258A%25A0%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:rayfiyo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y29nS2t3aGZsYkVlaktXem5xcWJVS195S1RnNkZuSmtVRk5iQ1pBPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>GoogleスライドにGASで任意のフォントを追加する</originalTitle>
+                <blogTitle>Zennの「Google」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/google</blogLink>
+                <blogLinkMd5Hash>4f2afa8044d173644e6d64c73e24a44a</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[【全公開】個人開発アプリ3本をFirebaseで1ヶ月動かした請求額は、¥22だった。しかも実際に払ったのは¥0 | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/yk_studio/articles/cloud-cost-zero-yen</link>
+            <guid isPermaLink="false">https://zenn.dev/yk_studio/articles/cloud-cost-zero-yen</guid>
+            <pubDate>Fri, 25 Sep 2026 11:30:08 GMT</pubDate>
+            <description><![CDATA[Firebaseの「Blazeプラン（従量課金）にアップグレードしますか？」というボタンを、自分は3週間くらい押せませんでした。寝ている間に請求が爆発する話を読みすぎたせいです。Cloud Functionsが無限ループして朝起きたら数十万円、みたいなやつ。個人開発でそれをやったら普通に生活が終わります。結局押しました。3本のアプリを実際に1ヶ月動かして、請求書を見ました。発生した費用は3本合計で]]></description>
+            <content:encoded><![CDATA[Firebaseの「Blazeプラン（従量課金）にアップグレードしますか？」というボタンを、自分は3週間くらい押せませんでした。寝ている間に請求が爆発する話を読みすぎたせいです。Cloud Functionsが無限ループして朝起きたら数十万円、みたいなやつ。個人開発でそれをやったら普通に生活が終わります。結局押しました。3本のアプリを実際に1ヶ月動かして、請求書を見ました。発生した費用は3本合計で¥22。実際に払った金額は¥0でした。内訳と、なぜ0円になるのかの仕組みを全部出します。 実測データ（2026年8月1日〜8月26日）アプリ発生した費用無料枠による相殺...]]></content:encoded>
+            <author>YK Studio</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s---pchxckA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E5%2585%25A8%25E5%2585%25AC%25E9%2596%258B%25E3%2580%2591%25E5%2580%258B%25E4%25BA%25BA%25E9%2596%258B%25E7%2599%25BA%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA3%25E6%259C%25AC%25E3%2582%2592Firebase%25E3%2581%25A71%25E3%2583%25B6%25E6%259C%2588%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%259F%25E8%25AB%258B%25E6%25B1%2582%25E9%25A1%258D%25E3%2581%25AF%25E3%2580%2581%25C2%25A522%25E3%2581%25A0%25E3%2581%25A3%25E3%2581%259F%25E3%2580%2582%25E3%2581%2597%25E3%2581%258B%25E3%2582%2582%25E5%25AE%259F%25E9%259A%259B%25E3%2581%25AB%25E6%2589%2595%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25AF%25C2%25A50%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:YK%2520Studio%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzQ3MDYwY2Q1NWIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>【全公開】個人開発アプリ3本をFirebaseで1ヶ月動かした請求額は、¥22だった。しかも実際に払ったのは¥0</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[AI.CLASSIFYでGROUP BYする — 分類軸を自然言語で定義する | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/web_benriya/articles/bigquery-ai-classify-group-by</link>
+            <guid isPermaLink="false">https://zenn.dev/web_benriya/articles/bigquery-ai-classify-group-by</guid>
+            <pubDate>Fri, 25 Sep 2026 10:20:39 GMT</pubDate>
+            <description><![CDATA[はじめにシリーズ第9回です。前回（第8回）では AI.IF を使い、WHERE句に自然言語の条件を埋め込む「セマンティックフィルタ」を解説しました。今回は AI.CLASSIFY を取り上げます。AI.CLASSIFY はテキストを指定したラベルのいずれかに分類する関数です。AI.IF が「この行は条件を満たすか／満たさないか」のBool判定だとすれば、AI.CLASSIFY は「この行はAかBか]]></description>
+            <content:encoded><![CDATA[はじめにシリーズ第9回です。前回（第8回）では AI.IF を使い、WHERE句に自然言語の条件を埋め込む「セマンティックフィルタ」を解説しました。今回は AI.CLASSIFY を取り上げます。AI.CLASSIFY はテキストを指定したラベルのいずれかに分類する関数です。AI.IF が「この行は条件を満たすか／満たさないか」のBool判定だとすれば、AI.CLASSIFY は「この行はAかBかCか」の多クラス振り分けです。GROUP BY と組み合わせることで、事前に固定したラベル体系によるカテゴリ集計を自然言語で実現できます。!本記事は 2026年9月時点で確認できた...]]></content:encoded>
+            <author>ウェブの便利屋</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--kp40fgAM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI.CLASSIFY%25E3%2581%25A7GROUP%2520BY%25E3%2581%2599%25E3%2582%258B%2520%25E2%2580%2594%2520%25E5%2588%2586%25E9%25A1%259E%25E8%25BB%25B8%25E3%2582%2592%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25A7%25E5%25AE%259A%25E7%25BE%25A9%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%25E3%2581%25AE%25E4%25BE%25BF%25E5%2588%25A9%25E5%25B1%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I5NDI4N2NkMTcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AI.CLASSIFYでGROUP BYする — 分類軸を自然言語で定義する</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Amplify Gen 2 の新機能「セルフマネージドホスティング」を試してマネージドとの使い分けを考えてみた | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/trust/articles/amplify-gen2-self-managed-hosting</link>
+            <guid isPermaLink="false">https://zenn.dev/trust/articles/amplify-gen2-self-managed-hosting</guid>
+            <pubDate>Fri, 25 Sep 2026 09:04:18 GMT</pubDate>
+            <description><![CDATA[はじめに株式会社トラストでエンジニアをやっている黒澤です。普段の業務で AWS Amplify を使っているのですが、2026年9月に Amplify Gen 2 向けの新しいパッケージ @aws-amplify/hosting が公開され、社内でも少し話題になりました。フロントエンドを Amplify Hosting（コンソールで管理するマネージドなホスティング）ではなく、自分の AWS アカウ]]></description>
+            <content:encoded><![CDATA[はじめに株式会社トラストでエンジニアをやっている黒澤です。普段の業務で AWS Amplify を使っているのですが、2026年9月に Amplify Gen 2 向けの新しいパッケージ @aws-amplify/hosting が公開され、社内でも少し話題になりました。フロントエンドを Amplify Hosting（コンソールで管理するマネージドなホスティング）ではなく、自分の AWS アカウント内の CloudFront・S3・Lambda にデプロイできるというものです。https://docs.amplify.aws/react/deploy-and-host/sel...]]></content:encoded>
+            <author>くろさわ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--JA7O1aI3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Amplify%2520Gen%25202%2520%25E3%2581%25AE%25E6%2596%25B0%25E6%25A9%259F%25E8%2583%25BD%25E3%2580%258C%25E3%2582%25BB%25E3%2583%25AB%25E3%2583%2595%25E3%2583%259E%25E3%2583%258D%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%2589%25E3%2583%259B%25E3%2582%25B9%25E3%2583%2586%25E3%2582%25A3%25E3%2583%25B3%25E3%2582%25B0%25E3%2580%258D%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2583%259E%25E3%2583%258D%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%2589%25E3%2581%25A8%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E5%2588%2586%25E3%2581%2591%25E3%2582%2592%25E8%2580%2583%25E3%2581%2588%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%258F%25E3%2582%258D%25E3%2581%2595%25E3%2582%258F%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzcwMTk3OTQ4YjEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:TRUST%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJlOWIxMDcwZDQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Amplify Gen 2 の新機能「セルフマネージドホスティング」を試してマネージドとの使い分けを考えてみた</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[[AWS資格]SOAの反省を活かしてDOPに合格した話 〜ドメイン別正答率90%を目標にAIで弱点を潰した合格体験記〜 | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/kh_penzen/articles/56952848fb1d42</link>
+            <guid isPermaLink="false">https://zenn.dev/kh_penzen/articles/56952848fb1d42</guid>
+            <pubDate>Fri, 25 Sep 2026 07:48:12 GMT</pubDate>
+            <description><![CDATA[はじめに普段はフルスタックエンジニア（4年目）として、インフラ構築からバックエンド・フロントエンド開発まで幅広く担当しています。前回の記事では、SOA-C03（現 CloudOps）に3週間で合格した話を書きました。https://zenn.dev/kh_penzen/articles/1167849749d684今回はその続編として、AWS Certified DevOps Engineer -]]></description>
+            <content:encoded><![CDATA[はじめに普段はフルスタックエンジニア（4年目）として、インフラ構築からバックエンド・フロントエンド開発まで幅広く担当しています。前回の記事では、SOA-C03（現 CloudOps）に3週間で合格した話を書きました。https://zenn.dev/kh_penzen/articles/1167849749d684今回はその続編として、AWS Certified DevOps Engineer - Professional（DOP-C02） に合格したので、その学習方法をまとめます。これで CLF / SAA / SAP / DVA / SCS / SOA / DOP のAW...]]></content:encoded>
+            <author>kh_penzen</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--X6T7OwEG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BAWS%25E8%25B3%2587%25E6%25A0%25BC%255DSOA%25E3%2581%25AE%25E5%258F%258D%25E7%259C%2581%25E3%2582%2592%25E6%25B4%25BB%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6DOP%25E3%2581%25AB%25E5%2590%2588%25E6%25A0%25BC%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2520%25E3%2580%259C%25E3%2583%2589%25E3%2583%25A1%25E3%2582%25A4%25E3%2583%25B3%25E5%2588%25A5%25E6%25AD%25A3%25E7%25AD%2594%25E7%258E%258790%2525%25E3%2582%2592%25E7%259B%25AE%25E6%25A8%2599%25E3%2581%25ABAI%25E3%2581%25A7%25E5%25BC%25B1%25E7%2582%25B9%25E3%2582%2592%25E6%25BD%25B0%25E3%2581%2597%25E3%2581%259F%25E5%2590%2588%25E6%25A0%25BC%25E4%25BD%2593%25E9%25A8%2593%25E8%25A8%2598%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kh_penzen%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWdYUjlXWkU1a1hBMnBYSEJ5LUxneFRXLVRsZ0VzeGNwaWNfdkdkeE5LRDNyMFpGZz1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>[AWS資格]SOAの反省を活かしてDOPに合格した話 〜ドメイン別正答率90%を目標にAIで弱点を潰した合格体験記〜</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[社内での価値観共有のために、ワークショップの設計と開催をしてみた話〜Webアプリケーションを添えて〜 | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/yesodco/articles/c1e260544ec437</link>
+            <guid isPermaLink="false">https://zenn.dev/yesodco/articles/c1e260544ec437</guid>
+            <pubDate>Fri, 25 Sep 2026 07:20:12 GMT</pubDate>
+            <description><![CDATA[はじめに株式会社イエソドのプロダクト開発部でエンジニアをしているみしなです。みなさんは社内スローガンやミッションを浸透させる活動をしたことはありますか？私は入社してから初めてこういった取り組みをしましたが、ワークショップを通して色々とリアクションや学びがあったので、これから取り組まれる方に少しでも参考になればいいなと思いこの記事を書いています。 イエソドにおけるVision,Mission,Val]]></description>
+            <content:encoded><![CDATA[はじめに株式会社イエソドのプロダクト開発部でエンジニアをしているみしなです。みなさんは社内スローガンやミッションを浸透させる活動をしたことはありますか？私は入社してから初めてこういった取り組みをしましたが、ワークショップを通して色々とリアクションや学びがあったので、これから取り組まれる方に少しでも参考になればいいなと思いこの記事を書いています。 イエソドにおけるVision,Mission,Valueとは？企業活動の根幹となる“人・組織データOS”をプロダクトとして提供するYESODでは、プロダクトの提供に向けて一丸となって進むために「最高のチームとは何か」「どんな価値観...]]></content:encoded>
+            <author>novem347</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--Qgo1fEVu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25A4%25BE%25E5%2586%2585%25E3%2581%25A7%25E3%2581%25AE%25E4%25BE%25A1%25E5%2580%25A4%25E8%25A6%25B3%25E5%2585%25B1%25E6%259C%2589%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AB%25E3%2580%2581%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%2583%25E3%2583%2597%25E3%2581%25AE%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%25A8%25E9%2596%258B%25E5%2582%25AC%25E3%2582%2592%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E8%25A9%25B1%25E3%2580%259CWeb%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%2592%25E6%25B7%25BB%25E3%2581%2588%25E3%2581%25A6%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:novem347%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2IwNGQ0YzY1YWUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A4%25E3%2582%25A8%25E3%2582%25BD%25E3%2583%2589%2520%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2JZTDdjaDRmTnRSQTRBZmxkMTRSQ0xlR0dncXhMSkl1TG5TMFRLU2o2dmJYSG9BPXMyNTAtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>社内での価値観共有のために、ワークショップの設計と開催をしてみた話〜Webアプリケーションを添えて〜</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[MoE の all-to-all を支える層: DeepEP、NCCL GIN、aws-ofi-nccl、EFA | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/tosshi/articles/a0f5ff21eed405</link>
+            <guid isPermaLink="false">https://zenn.dev/tosshi/articles/a0f5ff21eed405</guid>
+            <pubDate>Fri, 25 Sep 2026 04:21:11 GMT</pubDate>
+            <description><![CDATA[はじめにMoE のモデルを複数の GPU で動かすと、GPU どうしがトークンを送り合います。この記事では、その送り合いに関わるソフトウェアの層が、それぞれ何を受け持っているかを図で見ていきます。コードには踏み込みません。全体の流れは次の動画にまとめています。記事の図は、この動画から切り出したものです。 登場する層1 台の GPU ノードには、下から 3 つの段が載っています。段中身入れる場所EC]]></description>
+            <content:encoded><![CDATA[はじめにMoE のモデルを複数の GPU で動かすと、GPU どうしがトークンを送り合います。この記事では、その送り合いに関わるソフトウェアの層が、それぞれ何を受け持っているかを図で見ていきます。コードには踏み込みません。全体の流れは次の動画にまとめています。記事の図は、この動画から切り出したものです。 登場する層1 台の GPU ノードには、下から 3 つの段が載っています。段中身入れる場所EC2 インスタンスGPU と、ノードの外へ送る EFA機器そのものDLAMIUbuntu と、EFA と GPU のドライバ、gdrcopy の...]]></content:encoded>
+            <author>littlemex</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--5xslETb3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:MoE%2520%25E3%2581%25AE%2520all-to-all%2520%25E3%2582%2592%25E6%2594%25AF%25E3%2581%2588%25E3%2582%258B%25E5%25B1%25A4%253A%2520DeepEP%25E3%2580%2581NCCL%2520GIN%25E3%2580%2581aws-ofi-nccl%25E3%2580%2581EFA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:littlemex%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2ZhYTJhMjUzZjQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>MoE の all-to-all を支える層: DeepEP、NCCL GIN、aws-ofi-nccl、EFA</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[TerraformによるPCI DSS検証ラボ構築（3）前編 ～ 閉域SplunkによるCDE監査ログ検知とAWS側監視経路 ～ | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/nyondev/articles/pcidss-aws-part3</link>
+            <guid isPermaLink="false">https://zenn.dev/nyondev/articles/pcidss-aws-part3</guid>
+            <pubDate>Fri, 25 Sep 2026 04:14:56 GMT</pubDate>
+            <description><![CDATA[はじめに第1回では CDE（カード会員データ環境）を分離する境界を Terraform で作り、第2回ではその境界が実際に効いていることを VPC Flow Logs の REJECT で確かめ、OpenVAS で内部脆弱性スキャンを回した。第1回: CDE分離・監査ログ・OpenVAS環境と、休止までのIaC管理第2回: VPC Flow Logsによる分離検証とOpenVAS内部脆弱性スキャン]]></description>
+            <content:encoded><![CDATA[はじめに第1回では CDE（カード会員データ環境）を分離する境界を Terraform で作り、第2回ではその境界が実際に効いていることを VPC Flow Logs の REJECT で確かめ、OpenVAS で内部脆弱性スキャンを回した。第1回: CDE分離・監査ログ・OpenVAS環境と、休止までのIaC管理第2回: VPC Flow Logsによる分離検証とOpenVAS内部脆弱性スキャンただ、第2回の Flow Logs 確認は、時刻を絞って手でクエリを書き、あとから REJECT を探したものだった。これは「あとから調べれば分かる」状態であって、「起きたと...]]></content:encoded>
+            <author>NyonDev</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--6e5qFjfy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Terraform%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BPCI%2520DSS%25E6%25A4%259C%25E8%25A8%25BC%25E3%2583%25A9%25E3%2583%259C%25E6%25A7%258B%25E7%25AF%2589%25EF%25BC%25883%25EF%25BC%2589%25E5%2589%258D%25E7%25B7%25A8%2520%25EF%25BD%259E%2520%25E9%2596%2589%25E5%259F%259FSplunk%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BCDE%25E7%259B%25A3%25E6%259F%25BB%25E3%2583%25AD%25E3%2582%25B0%25E6%25A4%259C%25E7%259F%25A5%25E3%2581%25A8AWS...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NyonDev%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzgwYWU1YTQ1N2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>TerraformによるPCI DSS検証ラボ構築（3）前編 ～ 閉域SplunkによるCDE監査ログ検知とAWS側監視経路 ～</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[新資格「Professional Agentic Architect」に向けて！Agent Development Kit (ADK) 入門 | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/deloitte_jp_eng/articles/af1c5af7c138f2</link>
+            <guid isPermaLink="false">https://zenn.dev/deloitte_jp_eng/articles/af1c5af7c138f2</guid>
+            <pubDate>Fri, 25 Sep 2026 04:00:05 GMT</pubDate>
+            <description><![CDATA[こんにちは、合同会社デロイト トーマツの原田です。先日、Professional Agentic Architectという新たな資格のベータ版が公開されました。Professional Agentic Architectの試験ガイドには、カスタムエージェントの開発やエージェント型ワークフローの評価・デプロイが含まれています。本記事では、その関連技術の一つであるAgent Development K]]></description>
+            <content:encoded><![CDATA[こんにちは、合同会社デロイト トーマツの原田です。先日、Professional Agentic Architectという新たな資格のベータ版が公開されました。Professional Agentic Architectの試験ガイドには、カスタムエージェントの開発やエージェント型ワークフローの評価・デプロイが含まれています。本記事では、その関連技術の一つであるAgent Development Kit（ADK）を取り上げます。Windows 11のローカル環境でサンプルエージェントを作成し、Web UIから実行するまでを確認します。 1. はじめに：新資格の登場とADKとの関係性...]]></content:encoded>
+            <author>原田貴之</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--_7K9RZo8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2596%25B0%25E8%25B3%2587%25E6%25A0%25BC%25E3%2580%258CProfessional%2520Agentic%2520Architect%25E3%2580%258D%25E3%2581%25AB%25E5%2590%2591%25E3%2581%2591%25E3%2581%25A6%25EF%25BC%2581Agent%2520Development...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E5%258E%259F%25E7%2594%25B0%25E8%25B2%25B4%25E4%25B9%258B%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzY1NTMwMzBmNzYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2587%25E3%2583%25AD%25E3%2582%25A4%25E3%2583%2588%25E3%2583%2588%25E3%2583%25BC%25E3%2583%259E%25E3%2583%2584%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2580%2580%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSTJnMXhWbjdoUjBFYnFvcUVoWFZ1eXR6OGN3WGZqdVBmVGVRMWFaWDBXTzJJUExRPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>新資格「Professional Agentic Architect」に向けて！Agent Development Kit (ADK) 入門</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[オンプレ→AWS移行を「サーバ移動」で考えると失敗する｜7Rsと用途別の移行パターンを整理 | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/koounosuke/articles/42a66f48b42526</link>
+            <guid isPermaLink="false">https://zenn.dev/koounosuke/articles/42a66f48b42526</guid>
+            <pubDate>Fri, 25 Sep 2026 03:32:58 GMT</pubDate>
+            <description><![CDATA[オンプレミスで動いているシステムをAWSへ移行するとき、「今あるサーバをEC2に移せばよいのでは？」と考えてしまいがちです。しかし、実際のAWS移行ではそう単純ではありません。Webサーバ、Application Server、Database、Redis、ファイルサーバ、Batch、認証基盤など、それぞれが異なる役割を持っています。そのため移行では、「サーバを何に置き換えるか」ではなく、「現在そ]]></description>
+            <content:encoded><![CDATA[オンプレミスで動いているシステムをAWSへ移行するとき、「今あるサーバをEC2に移せばよいのでは？」と考えてしまいがちです。しかし、実際のAWS移行ではそう単純ではありません。Webサーバ、Application Server、Database、Redis、ファイルサーバ、Batch、認証基盤など、それぞれが異なる役割を持っています。そのため移行では、「サーバを何に置き換えるか」ではなく、「現在そのサーバが担っている機能を、AWS上でどう実現するか」という視点が重要になります。本記事では、オンプレミスからAWSへ移行する際の全体の流れから、Rehost / Repla...]]></content:encoded>
+            <author>岸太郎</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--ezvfJp5---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AA%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AC%25E2%2586%2592AWS%25E7%25A7%25BB%25E8%25A1%258C%25E3%2582%2592%25E3%2580%258C%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E7%25A7%25BB%25E5%258B%2595%25E3%2580%258D%25E3%2581%25A7%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%25E3%2581%25A8%25E5%25A4%25B1%25E6%2595%2597%25E3%2581%2599%25E3%2582%258B%25EF%25BD%259C7Rs%25E3%2581%25A8%25E7%2594%25A8%25E9%2580%2594%25E5%2588%25A5%25E3%2581%25AE%25E7%25A7%25BB%25E8%25A1%258C%25E3%2583%2591%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%2592%25E6%2595%25B4%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E5%25B2%25B8%25E5%25A4%25AA%25E9%2583%258E%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHBqUDlLS2pjOGRlQ050RUQyVmYyOEZZVUU0TWFkQVZoRS1GNXpDLXd3YmJnYXZnPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>オンプレ→AWS移行を「サーバ移動」で考えると失敗する｜7Rsと用途別の移行パターンを整理</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Physical AI、この1年で何が変わった？ VLA・世界モデル・小型化をざっくり整理 | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/headwaters/articles/b952fa58aaf2c3</link>
+            <guid isPermaLink="false">https://zenn.dev/headwaters/articles/b952fa58aaf2c3</guid>
+            <pubDate>Fri, 25 Sep 2026 02:30:29 GMT</pubDate>
+            <description><![CDATA[ロボットが洗濯物をたたんだり、コーヒーをいれたり。Physical AI関連の動画を見ていると、「本当にできるのかな？」「2年後には一家に一台とかあるかも、、でもスペースがなー」「成田ユウスケの弟のしまえるやついいなー」とか思っています。技術的な進化を追うと、SLM、VLA、世界モデル、さらにWAM・・と、略語がどんどん増えます。今回は、2025年秋から2026年9月にかけての動きを、「何が変わっ]]></description>
+            <content:encoded><![CDATA[ロボットが洗濯物をたたんだり、コーヒーをいれたり。Physical AI関連の動画を見ていると、「本当にできるのかな？」「2年後には一家に一台とかあるかも、、でもスペースがなー」「成田ユウスケの弟のしまえるやついいなー」とか思っています。技術的な進化を追うと、SLM、VLA、世界モデル、さらにWAM・・と、略語がどんどん増えます。今回は、2025年秋から2026年9月にかけての動きを、「何が変わってきたのか」中心にざっくり、簡単に整理した記事です。 まず、VLA・SLM・世界モデルは別の分類最初にここだけ整理しておくと、ニュースが読みやすくなります。用語ざっくり言うと...]]></content:encoded>
+            <author>koki takeishi</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--p0nTm-e9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Physical%2520AI%25E3%2580%2581%25E3%2581%2593%25E3%2581%25AE1%25E5%25B9%25B4%25E3%2581%25A7%25E4%25BD%2595%25E3%2581%258C%25E5%25A4%2589%25E3%2582%258F%25E3%2581%25A3%25E3%2581%259F%25EF%25BC%259F%2520VLA%25E3%2583%25BB%25E4%25B8%2596%25E7%2595%258C%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2583%25BB%25E5%25B0%258F%25E5%259E%258B%25E5%258C%2596%25E3%2582%2592%25E3%2581%2596%25E3%2581%25A3%25E3%2581%258F%25E3%2582%258A%25E6%2595%25B4%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:koki%2520takeishi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzQ3M2E2MGRhNDcuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Physical AI、この1年で何が変わった？ VLA・世界モデル・小型化をざっくり整理</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Codex on Bedrock や ChatGPT desktop on Bedrock を試してみる | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/aws_japan/articles/4158efc6ca2b5d</link>
+            <guid isPermaLink="false">https://zenn.dev/aws_japan/articles/4158efc6ca2b5d</guid>
+            <pubDate>Fri, 25 Sep 2026 01:24:16 GMT</pubDate>
+            <description><![CDATA[最近、Codex や GPT-5.6、GPT-6 Astra がけっこう良いのではないかと個人的に感じ始めました。そこで Codex や ChatGPT desktop を、ふだん自分がよく使用している Amazon Bedrock と組み合わせて使う方法を実際に試してみました。この記事の内容は、2026年9月12日に検証した結果をベースにしています。ちなみにこの記事は AI を使わず書いています]]></description>
+            <content:encoded><![CDATA[最近、Codex や GPT-5.6、GPT-6 Astra がけっこう良いのではないかと個人的に感じ始めました。そこで Codex や ChatGPT desktop を、ふだん自分がよく使用している Amazon Bedrock と組み合わせて使う方法を実際に試してみました。この記事の内容は、2026年9月12日に検証した結果をベースにしています。ちなみにこの記事は AI を使わず書いていますので、もし文章が稚拙だったらごめんなさい💦 参考情報Codex や ChatGPT desktop を Amazon Bedrock と組み合わせて使うにあたり、下記を参考にしまし...]]></content:encoded>
+            <author>のべ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--c3MiLlKr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Codex%2520on%2520Bedrock%2520%25E3%2582%2584%2520ChatGPT%2520desktop%2520on%2520Bedrock%2520%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%25AE%25E3%2581%25B9%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlpXSS1EWi1iUWxkY2V1aDlibFVXU1BFcXZLczhzVGVaNDBrY0hXbVItRWludld6VT1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Codex on Bedrock や ChatGPT desktop on Bedrock を試してみる</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Spanner へのバルク書き込みの手法比較と高速化の原理 | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/google_cloud_jp/articles/7aad16e9b5760d</link>
+            <guid isPermaLink="false">https://zenn.dev/google_cloud_jp/articles/7aad16e9b5760d</guid>
+            <pubDate>Fri, 25 Sep 2026 01:21:39 GMT</pubDate>
+            <description><![CDATA[はじめにSpanner に対して大量のデータを一括書き込みを行うとき、書き方の違いによって処理時間は大きく変化します。同じ 100,000 行（500,000 mutations） のデータを書き込む処理であっても、1行ずつコミットする最も素朴な実装では約 988 秒（約 16 分半）を要するのに対し、Spanner のアーキテクチャに沿った手法を選択すれば 0.86 秒〜2.44 秒（約 404]]></description>
+            <content:encoded><![CDATA[はじめにSpanner に対して大量のデータを一括書き込みを行うとき、書き方の違いによって処理時間は大きく変化します。同じ 100,000 行（500,000 mutations） のデータを書き込む処理であっても、1行ずつコミットする最も素朴な実装では約 988 秒（約 16 分半）を要するのに対し、Spanner のアーキテクチャに沿った手法を選択すれば 0.86 秒〜2.44 秒（約 404〜1,150 倍高速） で完了します。本記事では、東京リージョンの 1000 PU（1 Node）実機環境において Go SDK（cloud.google.com/go/spanner）...]]></content:encoded>
+            <author>Yasui Michitaka</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--2aOya5kV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Spanner%2520%25E3%2581%25B8%25E3%2581%25AE%25E3%2583%2590%25E3%2583%25AB%25E3%2582%25AF%25E6%259B%25B8%25E3%2581%258D%25E8%25BE%25BC%25E3%2581%25BF%25E3%2581%25AE%25E6%2589%258B%25E6%25B3%2595%25E6%25AF%2594%25E8%25BC%2583%25E3%2581%25A8%25E9%25AB%2598%25E9%2580%259F%25E5%258C%2596%25E3%2581%25AE%25E5%258E%259F%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Yasui%2520Michitaka%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzA1OTIyZmJmYTMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Google%2520Cloud%2520Japan%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q5OTYzYzg2Y2YuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>2</hatenaCount>
+                <originalTitle>Spanner へのバルク書き込みの手法比較と高速化の原理</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Strands Agents SDK のマルチエージェント（Workflow / Graph / Swarm）を試してみた | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/aws_japan/articles/b3e3de075209f8</link>
+            <guid isPermaLink="false">https://zenn.dev/aws_japan/articles/b3e3de075209f8</guid>
+            <pubDate>Fri, 25 Sep 2026 01:19:32 GMT</pubDate>
+            <description><![CDATA[仕事上、これまで生成 AI の基礎学習のトレーニングや、Amazon Bedrock の API を使用してシンプルな生成 AI アプリケーションを構築するトレーニングを数多く実施してきましたが、最近では「AI エージェント」に関するトレーニングを実施する機会が増えてきました。そのため、Kiro や Amazon Quick、Claude Code などの完成形の AI エージェントを使いこなすた]]></description>
+            <content:encoded><![CDATA[仕事上、これまで生成 AI の基礎学習のトレーニングや、Amazon Bedrock の API を使用してシンプルな生成 AI アプリケーションを構築するトレーニングを数多く実施してきましたが、最近では「AI エージェント」に関するトレーニングを実施する機会が増えてきました。そのため、Kiro や Amazon Quick、Claude Code などの完成形の AI エージェントを使いこなすためのカリキュラムや、AI エージェントそのものを構築するカリキュラムを数多く検討しています。その中で、AI エージェントの構築というトピックにおいては、「マルチエージェントの設計」というとこ...]]></content:encoded>
+            <author>のべ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--yQ35oCYu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Strands%2520Agents%2520SDK%2520%25E3%2581%25AE%25E3%2583%259E%25E3%2583%25AB%25E3%2583%2581%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25EF%25BC%2588Workflow%2520%252F%2520Graph%2520%252F%2520Swarm%25EF%25BC%2589%25E3%2582%2592%25E8%25A9%25A6...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%25AE%25E3%2581%25B9%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlpXSS1EWi1iUWxkY2V1aDlibFVXU1BFcXZLczhzVGVaNDBrY0hXbVItRWludld6VT1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Strands Agents SDK のマルチエージェント（Workflow / Graph / Swarm）を試してみた</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Google発！Open Agentic OrchestratorでマルチAIエージェントを制御する | Zennの「Google」のフィード]]></title>
+            <link>https://zenn.dev/ament3/articles/ai-digest-2026-09-20-2355</link>
+            <guid isPermaLink="false">https://zenn.dev/ament3/articles/ai-digest-2026-09-20-2355</guid>
+            <pubDate>Fri, 25 Sep 2026 00:20:12 GMT</pubDate>
+            <description><![CDATA[はじめに近年、単一のLLM（大規模言語モデル）の呼び出しにとどまらず、複数のAIエージェントを協調させて高度なタスクを解決する**「マルチエージェント・オーケストレーション」**が急速に注目を集めています。そんな中、Googleからオープンソースのエージェントオーケストレーター「Open Agentic Orchestrator（Agent Executor）」が登場し、Hacker Newsなど]]></description>
+            <content:encoded><![CDATA[はじめに近年、単一のLLM（大規模言語モデル）の呼び出しにとどまらず、複数のAIエージェントを協調させて高度なタスクを解決する**「マルチエージェント・オーケストレーション」**が急速に注目を集めています。そんな中、Googleからオープンソースのエージェントオーケストレーター「Open Agentic Orchestrator（Agent Executor）」が登場し、Hacker Newsなどの海外コミュニティで大きな話題を呼んでいます。本記事では、このツールの概要、注目されている背景、そして具体的なコード例を用いた実用例について解説します。 概要と注目されている背景...]]></content:encoded>
+            <author>田中根小介</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--1oUVgk0s--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%25E7%2599%25BA%25EF%25BC%2581Open%2520Agentic%2520Orchestrator%25E3%2581%25A7%25E3%2583%259E%25E3%2583%25AB%25E3%2583%2581AI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E5%2588%25B6%25E5%25BE%25A1%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%2594%25B0%25E4%25B8%25AD%25E6%25A0%25B9%25E5%25B0%258F%25E4%25BB%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2ZJTlVWMXNGNFFjSFpoSkNrbTBOMGJENEo3Y2dMNHZMMjRvdjJIam01akRnNXlLeHU9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Google発！Open Agentic OrchestratorでマルチAIエージェントを制御する</originalTitle>
+                <blogTitle>Zennの「Google」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/google</blogLink>
+                <blogLinkMd5Hash>4f2afa8044d173644e6d64c73e24a44a</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Azure API×生成AIでレポート解析を自動化する設計パターンと注意点 | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/sidejob/articles/a49446b3578fbfc74</link>
+            <guid isPermaLink="false">https://zenn.dev/sidejob/articles/a49446b3578fbfc74</guid>
+            <pubDate>Fri, 25 Sep 2026 00:15:09 GMT</pubDate>
+            <description><![CDATA[業務レポートを生成AIで解析し、要点をまとめる仕組みは、大企業のデジタル化推進の中でも実務的な効果が見えやすいテーマの一つだ。Power Automateで収集したレポートをAzure API経由で生成AIに渡し、要約・異常値抽出を自動化する構成を組む企業も増えてきた。本業でこの種の設計に関わっている立場から、実務でよく問題になるポイントを整理しておく。 設計の基本：「AIに何を判断させるか」の切]]></description>
+            <content:encoded><![CDATA[業務レポートを生成AIで解析し、要点をまとめる仕組みは、大企業のデジタル化推進の中でも実務的な効果が見えやすいテーマの一つだ。Power Automateで収集したレポートをAzure API経由で生成AIに渡し、要約・異常値抽出を自動化する構成を組む企業も増えてきた。本業でこの種の設計に関わっている立場から、実務でよく問題になるポイントを整理しておく。 設計の基本：「AIに何を判断させるか」の切り分けが最重要単純な要約であれば生成AIに任せやすい。ただし「この数値は異常か」という判断には、業務コンテキストを理解した人の目が必要になる場面が多い。AIの出力はあくまで一次スクリー...]]></content:encoded>
+            <author>AIを真剣に考える</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--1Ny115Rm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520API%25C3%2597%25E7%2594%259F%25E6%2588%2590AI%25E3%2581%25A7%25E3%2583%25AC%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E8%25A7%25A3%25E6%259E%2590%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%25E8%25A8%25AD%25E8%25A8%2588%25E3%2583%2591%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%25E3%2581%25A8%25E6%25B3%25A8%25E6%2584%258F%25E7%2582%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:AI%25E3%2582%2592%25E7%259C%259F%25E5%2589%25A3%25E3%2581%25AB%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Azure API×生成AIでレポート解析を自動化する設計パターンと注意点</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Azure API×生成AIでレポート解析を自動化する設計パターンと注意点 | Zennの「Microsoft」のフィード]]></title>
+            <link>https://zenn.dev/sidejob/articles/a49446b3578fbfc74</link>
+            <guid isPermaLink="false">https://zenn.dev/sidejob/articles/a49446b3578fbfc74</guid>
+            <pubDate>Fri, 25 Sep 2026 00:15:09 GMT</pubDate>
+            <description><![CDATA[業務レポートを生成AIで解析し、要点をまとめる仕組みは、大企業のデジタル化推進の中でも実務的な効果が見えやすいテーマの一つだ。Power Automateで収集したレポートをAzure API経由で生成AIに渡し、要約・異常値抽出を自動化する構成を組む企業も増えてきた。本業でこの種の設計に関わっている立場から、実務でよく問題になるポイントを整理しておく。 設計の基本：「AIに何を判断させるか」の切]]></description>
+            <content:encoded><![CDATA[業務レポートを生成AIで解析し、要点をまとめる仕組みは、大企業のデジタル化推進の中でも実務的な効果が見えやすいテーマの一つだ。Power Automateで収集したレポートをAzure API経由で生成AIに渡し、要約・異常値抽出を自動化する構成を組む企業も増えてきた。本業でこの種の設計に関わっている立場から、実務でよく問題になるポイントを整理しておく。 設計の基本：「AIに何を判断させるか」の切り分けが最重要単純な要約であれば生成AIに任せやすい。ただし「この数値は異常か」という判断には、業務コンテキストを理解した人の目が必要になる場面が多い。AIの出力はあくまで一次スクリー...]]></content:encoded>
+            <author>AIを真剣に考える</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--1Ny115Rm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520API%25C3%2597%25E7%2594%259F%25E6%2588%2590AI%25E3%2581%25A7%25E3%2583%25AC%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E8%25A7%25A3%25E6%259E%2590%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%25E8%25A8%25AD%25E8%25A8%2588%25E3%2583%2591%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%25E3%2581%25A8%25E6%25B3%25A8%25E6%2584%258F%25E7%2582%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:AI%25E3%2582%2592%25E7%259C%259F%25E5%2589%25A3%25E3%2581%25AB%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Azure API×生成AIでレポート解析を自動化する設計パターンと注意点</originalTitle>
+                <blogTitle>Zennの「Microsoft」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/microsoft</blogLink>
+                <blogLinkMd5Hash>6c06b9d72e6fe20c8e3a884363f84d75</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Oracle から BigQuery に移行するシミュレーションをしてみた #6 索引がないのに、結合はどうなる？ | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/mika_and_coco/articles/oracle-to-bigquery-06-join-and-plan</link>
+            <guid isPermaLink="false">https://zenn.dev/mika_and_coco/articles/oracle-to-bigquery-06-join-and-plan</guid>
+            <pubDate>Thu, 24 Sep 2026 23:06:04 GMT</pubDate>
+            <description><![CDATA[今回の議題前回、索引のない BigQuery では、冊の分け方（パーティション）と綴じ順（クラスタリング）で読む範囲を絞る、と確かめました。Oracle で実行計画を読んできた方なら、次に気になるのは結合です。「索引がないのに、結合は遅くならないの？ ネステッドループはどうなるの？」「クラスタ列ではない列で JOIN したら、どうなるの？」「実行計画は見られるの？ ヒントは効くの？」この連載は、O]]></description>
+            <content:encoded><![CDATA[今回の議題前回、索引のない BigQuery では、冊の分け方（パーティション）と綴じ順（クラスタリング）で読む範囲を絞る、と確かめました。Oracle で実行計画を読んできた方なら、次に気になるのは結合です。「索引がないのに、結合は遅くならないの？ ネステッドループはどうなるの？」「クラスタ列ではない列で JOIN したら、どうなるの？」「実行計画は見られるの？ ヒントは効くの？」この連載は、Oracle エンジニアが架空の地方銀行「A 銀行」の情報系（Exadata 上の Oracle 19c、取引明細と残高などで月 2 億件）を題材に、BigQuery に移すと「...]]></content:encoded>
+            <author>みか あんど ここ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--d97YE2Ut--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Oracle%2520%25E3%2581%258B%25E3%2582%2589%2520BigQuery%2520%25E3%2581%25AB%25E7%25A7%25BB%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B7%25E3%2583%259F%25E3%2583%25A5%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%2592%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2520%25236%2520%25E7%25B4%25A2%25E5%25BC%2595%25E3%2581%258C%25E3%2581%25AA%25E3%2581%2584%25E3%2581%25AE%25E3%2581%25AB%25E3%2580%2581%25E7%25B5%2590%25E5%2590%2588%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%2586%25E3%2581%25AA%25E3%2582%258B%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25BF%25E3%2581%258B%2520%25E3%2581%2582%25E3%2582%2593%25E3%2581%25A9%2520%25E3%2581%2593%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZkNjRjNGU5ZGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Oracle から BigQuery に移行するシミュレーションをしてみた #6 索引がないのに、結合はどうなる？</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[ISUCONの素振り用ポータルサイトを Cloudflare Workers で作った | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/ntk221/articles/ecc80f3006ef97</link>
+            <guid isPermaLink="false">https://zenn.dev/ntk221/articles/ecc80f3006ef97</guid>
+            <pubDate>Thu, 24 Sep 2026 21:32:18 GMT</pubDate>
+            <description><![CDATA[ISUCONの練習を好きなタイミングで始めたいISUCONの素振りをするためのポータルサイトを作りました。https://suburi.dev/欲しかったのは1人から複数人までのチームがそれぞれ好きなタイミングでISUCONの練習ができる場所です。環境の用意、ベンチの実行、パフォーマンスの改善という一連の作業を始めやすくしたいというモチベーションで作っています。使い方としては、GitHubでログイ]]></description>
+            <content:encoded><![CDATA[ISUCONの練習を好きなタイミングで始めたいISUCONの素振りをするためのポータルサイトを作りました。https://suburi.dev/欲しかったのは1人から複数人までのチームがそれぞれ好きなタイミングでISUCONの練習ができる場所です。環境の用意、ベンチの実行、パフォーマンスの改善という一連の作業を始めやすくしたいというモチベーションで作っています。使い方としては、GitHubでログインし練習する問題とメンバーを決めると練習用の環境を作るCloudFormationテンプレートを取得できます。テンプレートから自分やチームのAWSアカウントで環境を作れば、あとはポー...]]></content:encoded>
+            <author>ntk</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--6hYoo-uj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ISUCON%25E3%2581%25AE%25E7%25B4%25A0%25E6%258C%25AF%25E3%2582%258A%25E7%2594%25A8%25E3%2583%259D%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25AB%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2588%25E3%2582%2592%2520Cloudflare%2520Workers%2520%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ntk%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I0MmZiYzVlOTkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>ISUCONの素振り用ポータルサイトを Cloudflare Workers で作った</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[【ハンズオン：#3-4】AWSを実際に操作してみた（VPC関連） | Zennの「AWS」のフィード]]></title>
+            <link>https://zenn.dev/hitakaha/articles/e6d95c9e415e43</link>
+            <guid isPermaLink="false">https://zenn.dev/hitakaha/articles/e6d95c9e415e43</guid>
+            <pubDate>Thu, 24 Sep 2026 15:29:05 GMT</pubDate>
+            <description><![CDATA[はじめにこんにちは、hitakahaです。シルバーウィークが終わりましたが、久しぶりに6連休を取得できました。連休中は、母校である大学を訪れたり、サモエドカフェに初挑戦したりなどをしつつ過ごしました。現職ではまとまった休日を確保する機会も少ないため、今回はかなりゆったりと過ごすことができ、その分ハンズオンも一気に進めることができました。さて、前回に引き続きハンズオンで学んだことや感じたことを、復習]]></description>
+            <content:encoded><![CDATA[はじめにこんにちは、hitakahaです。シルバーウィークが終わりましたが、久しぶりに6連休を取得できました。連休中は、母校である大学を訪れたり、サモエドカフェに初挑戦したりなどをしつつ過ごしました。現職ではまとまった休日を確保する機会も少ないため、今回はかなりゆったりと過ごすことができ、その分ハンズオンも一気に進めることができました。さて、前回に引き続きハンズオンで学んだことや感じたことを、復習と後で見直すための材料を兼ねてアウトプットしていきます。▼前回記事https://zenn.dev/hitakaha/articles/bfd0b5b6273d4b!～このハ...]]></content:encoded>
+            <author>hitakaha</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--On73HiTj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E3%2583%258F%25E3%2583%25B3%25E3%2582%25BA%25E3%2582%25AA%25E3%2583%25B3%25EF%25BC%259A%25233-4%25E3%2580%2591AWS%25E3%2582%2592%25E5%25AE%259F%25E9%259A%259B%25E3%2581%25AB%25E6%2593%258D%25E4%25BD%259C%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2588VPC%25E9%2596%25A2%25E9%2580%25A3%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hitakaha%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzU1MmQyNzg0M2EuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>【ハンズオン：#3-4】AWSを実際に操作してみた（VPC関連）</originalTitle>
+                <blogTitle>Zennの「AWS」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/aws</blogLink>
+                <blogLinkMd5Hash>629114a9d20e630235d93d8eb3ba1e66</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[追えなくなる境界 | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/oscart/articles/purview-label-tracking-limits</link>
+            <guid isPermaLink="false">https://zenn.dev/oscart/articles/purview-label-tracking-limits</guid>
+            <pubDate>Thu, 24 Sep 2026 14:46:01 GMT</pubDate>
+            <description><![CDATA[!連載「秘密度ラベルを付けたファイルは、どこまで追えるのか」全4回の第3回です。 追跡が切れる境界——社外配布・オフライン・SharePoint 経由を扱います。 この記事で分かること社外に出た暗号化ファイルの開封は、どこまで・どこで見えるのかオフラインアクセスが失効を最大30日遅らせることSharePoint を経由すると追跡の識別子が切れること画面キャプチャは防止されないと公式に書いてあること]]></description>
+            <content:encoded><![CDATA[!連載「秘密度ラベルを付けたファイルは、どこまで追えるのか」全4回の第3回です。 追跡が切れる境界——社外配布・オフライン・SharePoint 経由を扱います。 この記事で分かること社外に出た暗号化ファイルの開封は、どこまで・どこで見えるのかオフラインアクセスが失効を最大30日遅らせることSharePoint を経由すると追跡の識別子が切れること画面キャプチャは防止されないと公式に書いてあること 境界は「テナントの外」ではない「社外に出たら追えない」という説明はよく聞くが、正確ではない。境界は組織の外側ではなく、Azure RMS へ使用ライセンスの要求が飛ぶ...]]></content:encoded>
+            <author>Oscar | 海外で働くITコンサルタント / PM</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--5SGpAKKE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25BF%25BD%25E3%2581%2588%25E3%2581%25AA%25E3%2581%258F%25E3%2581%25AA%25E3%2582%258B%25E5%25A2%2583%25E7%2595%258C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Oscar%2520%257C%2520%25E6%25B5%25B7%25E5%25A4%2596%25E3%2581%25A7%25E5%2583%258D%25E3%2581%258FIT%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25B5...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFkNGQ4ZDU3YTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>追えなくなる境界</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[M365 Copilotが定着しない悩みは、生成AI活用を阻む「情報分散」という見えない壁を見直して | Zennの「Microsoft」のフィード]]></title>
+            <link>https://zenn.dev/syoshida07/articles/63c297e0da599f</link>
+            <guid isPermaLink="false">https://zenn.dev/syoshida07/articles/63c297e0da599f</guid>
+            <pubDate>Thu, 24 Sep 2026 11:46:14 GMT</pubDate>
+            <description><![CDATA[Microsoft 365 Copilotを導入する企業は年々増えています。実際に利用を開始すると、議事録の要約、メール作成、資料のたたき台作成などで効果を実感する利用者も少なくありません。しかし、多くの企業で共通する現象があります、それは最初は使われるが、その後利用頻度が下がるという現象です。色々な企業様と会話していくなかで感じたのは、情シスからみて現場側は「思ったほど役に立たない」「欲しい情報]]></description>
+            <content:encoded><![CDATA[Microsoft 365 Copilotを導入する企業は年々増えています。実際に利用を開始すると、議事録の要約、メール作成、資料のたたき台作成などで効果を実感する利用者も少なくありません。しかし、多くの企業で共通する現象があります、それは最初は使われるが、その後利用頻度が下がるという現象です。色々な企業様と会話していくなかで感じたのは、情シスからみて現場側は「思ったほど役に立たない」「欲しい情報が出てこない」「結局自分で探した方が早い」といった声が聞こえてくるようです。筆者は当初、この原因をプロンプト教育不足やユーザーの習熟度の問題だと考えていましたが、最近はもっと根本的な原因が...]]></content:encoded>
+            <author>satoshi yoshida - 思考アトリエの遊び場</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--BEK0nNVD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:M365%2520Copilot%25E3%2581%258C%25E5%25AE%259A%25E7%259D%2580%25E3%2581%2597%25E3%2581%25AA%25E3%2581%2584%25E6%2582%25A9%25E3%2581%25BF%25E3%2581%25AF%25E3%2580%2581%25E7%2594%259F%25E6%2588%2590AI%25E6%25B4%25BB%25E7%2594%25A8%25E3%2582%2592%25E9%2598%25BB%25E3%2582%2580%25E3%2580%258C%25E6%2583%2585%25E5%25A0%25B1%25E5%2588%2586%25E6%2595%25A3%25E3%2580%258D%25E3%2581%25A8%25E3%2581%2584%25E3%2581%2586%25E8%25A6%258B%25E3%2581%2588%25E3%2581%25AA%25E3%2581%2584%25E5%25A3%2581%25E3%2582%2592%25E8%25A6%258B%25E7%259B%25B4%25E3%2581%2597%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:satoshi%2520yoshida%2520-%2520...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlp2aXh2cTdVMmFMYUhDSHJTcTBiSGJWWWcwZjVqTEZLajRCMVVmOXpyV2ZPSTJOOD1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>M365 Copilotが定着しない悩みは、生成AI活用を阻む「情報分散」という見えない壁を見直して</originalTitle>
+                <blogTitle>Zennの「Microsoft」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/microsoft</blogLink>
+                <blogLinkMd5Hash>6c06b9d72e6fe20c8e3a884363f84d75</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[GPT-Live-1への言い直しがアプリの動作にどう届くのかをゲームで可視化してみた | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/yukurash/articles/d119e6ac6e1626</link>
+            <guid isPermaLink="false">https://zenn.dev/yukurash/articles/d119e6ac6e1626</guid>
+            <pubDate>Thu, 24 Sep 2026 10:26:43 GMT</pubDate>
+            <description><![CDATA[なぜ今、GPT-Live-1？2026年9月10日にAPI公開されたGPT-Live-1は、話しながら聞ける音声モデルです。推論やツール選択は別のバックエンドに任せ、処理を待つ間も会話を続けられます。おもしろいのは公式資料に「音声への割込みは、バックエンドの仕事を自動キャンセルしない」とあること。「待って」で声が止まっても、頼んだ操作まで止まるとは限りません。つまり、どこまで処理が止まり、どの処理]]></description>
+            <content:encoded><![CDATA[なぜ今、GPT-Live-1？2026年9月10日にAPI公開されたGPT-Live-1は、話しながら聞ける音声モデルです。推論やツール選択は別のバックエンドに任せ、処理を待つ間も会話を続けられます。おもしろいのは公式資料に「音声への割込みは、バックエンドの仕事を自動キャンセルしない」とあること。「待って」で声が止まっても、頼んだ操作まで止まるとは限りません。つまり、どこまで処理が止まり、どの処理は止まらないのか、といったところの境目がとても気になりました。そこで、赤い箱を運んでいる途中に「赤じゃなく青にして」と言えるゲームを作りました。新しい音声APIを会話だけで試すのでは...]]></content:encoded>
+            <author>yukurash</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--FUZaTUkd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GPT-Live-1%25E3%2581%25B8%25E3%2581%25AE%25E8%25A8%2580%25E3%2581%2584%25E7%259B%25B4%25E3%2581%2597%25E3%2581%258C%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25AE%25E5%258B%2595%25E4%25BD%259C%25E3%2581%25AB%25E3%2581%25A9%25E3%2581%2586%25E5%25B1%258A%25E3%2581%258F%25E3%2581%25AE%25E3%2581%258B%25E3%2582%2592%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%25A0%25E3%2581%25A7%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yukurash%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzMyNzQxZTc3OTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>GPT-Live-1への言い直しがアプリの動作にどう届くのかをゲームで可視化してみた</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[リアルタイムメディアを扱う通信で Web Proxy を使わないほうがよい理由 | Zennの「Google」のフィード]]></title>
+            <link>https://zenn.dev/hiropon71010548/articles/1450265712cad4</link>
+            <guid isPermaLink="false">https://zenn.dev/hiropon71010548/articles/1450265712cad4</guid>
+            <pubDate>Thu, 24 Sep 2026 09:51:36 GMT</pubDate>
+            <description><![CDATA[先のエントリーでも書いていますが、Web会議・ビデオ会議・IP電話のトラフィックは、Web-Proxy を経由させず、(必要であれば)ファイアウォールで宛先を許可して直接通信させる。これが主要サービス、ベンダーの共通した推奨です。この記事では、その理由を一般的な観点から整理します。文中では雑多な引用をしていますが、リアルタイムメディアを扱うサービスとデバイスは同様の考え方だととらえてください。 こ]]></description>
+            <content:encoded><![CDATA[先のエントリーでも書いていますが、Web会議・ビデオ会議・IP電話のトラフィックは、Web-Proxy を経由させず、(必要であれば)ファイアウォールで宛先を許可して直接通信させる。これが主要サービス、ベンダーの共通した推奨です。この記事では、その理由を一般的な観点から整理します。文中では雑多な引用をしていますが、リアルタイムメディアを扱うサービスとデバイスは同様の考え方だととらえてください。 この記事の対象とはいえ、この記事作成にあたって参考にした機器やサービスは以下の通り。私のアンテナが低いがゆえに時代遅れなことを書いていてしまっているとしたらお恥ずかしい限り。対象となる...]]></content:encoded>
+            <author>The meeting are not dancing!</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--HiZriDzn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25A0%25E3%2583%25A1%25E3%2583%2587%25E3%2582%25A3%25E3%2582%25A2%25E3%2582%2592%25E6%2589%25B1%25E3%2581%2586%25E9%2580%259A%25E4%25BF%25A1%25E3%2581%25A7%2520Web%2520Proxy%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2582%258F%25E3%2581%25AA%25E3%2581%2584%25E3%2581%25BB%25E3%2581%2586%25E3%2581%258C%25E3%2582%2588%25E3%2581%2584%25E7%2590%2586%25E7%2594%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:The%2520meeting%2520are%2520no...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzY4YjUwOTdiMzYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>リアルタイムメディアを扱う通信で Web Proxy を使わないほうがよい理由</originalTitle>
+                <blogTitle>Zennの「Google」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/google</blogLink>
+                <blogLinkMd5Hash>4f2afa8044d173644e6d64c73e24a44a</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[API ManagementのAIゲートウェイで飲み放題の居酒屋を作ってみた | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/microsoft/articles/4ab393616e91ec</link>
+            <guid isPermaLink="false">https://zenn.dev/microsoft/articles/4ab393616e91ec</guid>
+            <pubDate>Thu, 24 Sep 2026 09:49:08 GMT</pubDate>
+            <description><![CDATA[はじめにAzure API Managementは、組織の共通基盤として導入されることの多い製品です。普段アプリケーションを書く立場だと、なかなか直接触る機会がないかもしれません。さまざまなAPIへのアクセスを管理するゲートウェイとしての役割を持つPaaSなのですが、説明を読んだだけでは、具体的に何ができるかつかみにくいところがあります。さらに最近は、API ManagementをAIゲートウェイ]]></description>
+            <content:encoded><![CDATA[はじめにAzure API Managementは、組織の共通基盤として導入されることの多い製品です。普段アプリケーションを書く立場だと、なかなか直接触る機会がないかもしれません。さまざまなAPIへのアクセスを管理するゲートウェイとしての役割を持つPaaSなのですが、説明を読んだだけでは、具体的に何ができるかつかみにくいところがあります。さらに最近は、API ManagementをAIゲートウェイとして使う構成も見かけるようになりました。 AIゲートウェイとはAIアプリケーションや開発ツールと、AIモデルやMCPサーバーの間に入り、アクセスや利用量をまとめて管理する仕組...]]></content:encoded>
+            <author>JK</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--9-IN6Tbt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:API%2520Management%25E3%2581%25AEAI%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%2588%25E3%2582%25A6%25E3%2582%25A7%25E3%2582%25A4%25E3%2581%25A7%25E9%25A3%25B2%25E3%2581%25BF%25E6%2594%25BE%25E9%25A1%258C%25E3%2581%25AE%25E5%25B1%2585%25E9%2585%2592%25E5%25B1%258B%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:JK%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSjJ0Q1NGUU9xWVNHRFprOHhfa19fV2tjbEhvbTVMeFRvVWludXJEdS1XdXQ4dFNLdUU9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>API ManagementのAIゲートウェイで飲み放題の居酒屋を作ってみた</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[ヤニねこの街のモデル・相模原市で、喫煙可能室の条例対応をAIで行う | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/numekudi/articles/6a5e416855e68d</link>
+            <guid isPermaLink="false">https://zenn.dev/numekudi/articles/6a5e416855e68d</guid>
+            <pubDate>Thu, 24 Sep 2026 09:05:05 GMT</pubDate>
+            <description><![CDATA[!この記事は第5回 Agentic AI Hackathonに提出予定のWebアプリに関する記事です。今回のハッカソンではZenn記事の作成は任意ですが、ヤニねこ最終回付近で一足先に公開する予定です。そのため、提出内容と若干の差異がある可能性があります。記事にいいねをいただけると非常に励みになります！https://www.youtube.com/watch?v=rgq-TAurH58 はじめに今]]></description>
+            <content:encoded><![CDATA[!この記事は第5回 Agentic AI Hackathonに提出予定のWebアプリに関する記事です。今回のハッカソンではZenn記事の作成は任意ですが、ヤニねこ最終回付近で一足先に公開する予定です。そのため、提出内容と若干の差異がある可能性があります。記事にいいねをいただけると非常に励みになります！https://www.youtube.com/watch?v=rgq-TAurH58 はじめに今期の覇権アニメと噂される「ヤニねこ」、見ていますか？舞台は「にゃがみ原市」。相模原市がモチーフで、横浜線沿いが聖地です。筆者は相模原駅と町田駅の間にある麻布大学の生命・環...]]></content:encoded>
+            <author>numekudi</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--_cL5cU6S--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A4%25E3%2583%258B%25E3%2581%25AD%25E3%2581%2593%25E3%2581%25AE%25E8%25A1%2597%25E3%2581%25AE%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2583%25BB%25E7%259B%25B8%25E6%25A8%25A1%25E5%258E%259F%25E5%25B8%2582%25E3%2581%25A7%25E3%2580%2581%25E5%2596%25AB%25E7%2585%2599%25E5%258F%25AF%25E8%2583%25BD%25E5%25AE%25A4%25E3%2581%25AE%25E6%259D%25A1%25E4%25BE%258B%25E5%25AF%25BE%25E5%25BF%259C%25E3%2582%2592AI%25E3%2581%25A7%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:numekudi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzc3Nzg0YTRkOWQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>ヤニねこの街のモデル・相模原市で、喫煙可能室の条例対応をAIで行う</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Gemini Omni で「喋る短尺ドラマ」を自動生成してハマり倒した記録 ― $300クーポンを溶かしながら | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/naiki9982/articles/dacd91b004b206</link>
+            <guid isPermaLink="false">https://zenn.dev/naiki9982/articles/dacd91b004b206</guid>
+            <pubDate>Thu, 24 Sep 2026 08:40:28 GMT</pubDate>
+            <description><![CDATA[はじめにみなさん、$300のクーポンはもらいましたよね？ 全部使わないともったいないのですよね。使い方の例を教えて差し上げます。皆様、ごきげんよう。名古屋の繊維商社のDX担当者のないきです。Zennの「第5回 Agentic AI Hackathon with Google Cloud」にエントリーすると、1人あたり $300のGoogle Cloudクーポンがもらえます（登録から2ヶ月有効）。で]]></description>
+            <content:encoded><![CDATA[はじめにみなさん、$300のクーポンはもらいましたよね？ 全部使わないともったいないのですよね。使い方の例を教えて差し上げます。皆様、ごきげんよう。名古屋の繊維商社のDX担当者のないきです。Zennの「第5回 Agentic AI Hackathon with Google Cloud」にエントリーすると、1人あたり $300のGoogle Cloudクーポンがもらえます（登録から2ヶ月有効）。ですが、いざ使おうとすると テキスト生成と画像生成だけでは$300はなかなか減りません。GeminiのテキストもNano Bananaの画像も、個人開発で叩くくらいでは数ドル〜十数ドルの...]]></content:encoded>
+            <author>naiki9982</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--f-wX4Fzw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gemini%2520Omni%2520%25E3%2581%25A7%25E3%2580%258C%25E5%2596%258B%25E3%2582%258B%25E7%259F%25AD%25E5%25B0%25BA%25E3%2583%2589%25E3%2583%25A9%25E3%2583%259E%25E3%2580%258D%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E7%2594%259F%25E6%2588%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2583%258F%25E3%2583%259E%25E3%2582%258A%25E5%2580%2592%25E3%2581%2597%25E3%2581%259F%25E8%25A8%2598%25E9%258C%25B2%2520%25E2%2580%2595%2520%2524300%25E3%2582%25AF%25E3%2583%25BC%25E3%2583%259D%25E3%2583%25B3%25E3%2582%2592%25E6%25BA%25B6%25E3%2581%258B%25E3%2581%2597%25E3%2581%25AA%25E3%2581%258C%25E3%2582%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:naiki9982%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS0FfV2dDd2s1ZkdoLTdQMjgzTGk2TE1ZUnM4YkdQbUw4Z3RwUTYtX2FQWFpWS3o2RT1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Gemini Omni で「喋る短尺ドラマ」を自動生成してハマり倒した記録 ― $300クーポンを溶かしながら</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[「テーマを一言与えるだけで診断が丸ごと生まれる」を1日で作った ― 第5回 Agentic AI Hackathon 大阪ミニハッカソン参加 | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/naiki9982/articles/1c4ec03f1c4b30</link>
+            <guid isPermaLink="false">https://zenn.dev/naiki9982/articles/1c4ec03f1c4b30</guid>
+            <pubDate>Thu, 24 Sep 2026 08:18:45 GMT</pubDate>
+            <description><![CDATA[はじめに皆様、初めまして、ごきげんよう。名古屋の繊維商社のDX担当者の内木です。普段はアパレル・繊維商社で社内のDX推進をしていますが、休みの日は趣味で個人開発をしています。先日、2026/9/18（金）〜9/19（土）に開催された 大阪ミニハッカソン（Zenn主催「第5回 Agentic AI Hackathon with Google Cloud」のサテライトイベント）に参加してきたので、その]]></description>
+            <content:encoded><![CDATA[はじめに皆様、初めまして、ごきげんよう。名古屋の繊維商社のDX担当者の内木です。普段はアパレル・繊維商社で社内のDX推進をしていますが、休みの日は趣味で個人開発をしています。先日、2026/9/18（金）〜9/19（土）に開催された 大阪ミニハッカソン（Zenn主催「第5回 Agentic AI Hackathon with Google Cloud」のサテライトイベント）に参加してきたので、その参加記と、当日〜その後で得た技術的な知見を共有します。「Google Cloud の生成AI（Gemini / Nano Banana）で何か作ってみたい」「ハッカソンに出てみたいけ...]]></content:encoded>
+            <author>naiki9982</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--p2qRjPSr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258C%25E3%2583%2586%25E3%2583%25BC%25E3%2583%259E%25E3%2582%2592%25E4%25B8%2580%25E8%25A8%2580%25E4%25B8%258E%25E3%2581%2588%25E3%2582%258B%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25A7%25E8%25A8%25BA%25E6%2596%25AD%25E3%2581%258C%25E4%25B8%25B8%25E3%2581%2594%25E3%2581%25A8%25E7%2594%259F%25E3%2581%25BE%25E3%2582%258C%25E3%2582%258B%25E3%2580%258D%25E3%2582%25921%25E6%2597%25A5%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%2520%25E2%2580%2595%2520%25E7%25AC%25AC5%25E5%259B%259E%2520Agentic%2520AI%2520Hackatho...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:naiki9982%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS0FfV2dDd2s1ZkdoLTdQMjgzTGk2TE1ZUnM4YkdQbUw4Z3RwUTYtX2FQWFpWS3o2RT1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>「テーマを一言与えるだけで診断が丸ごと生まれる」を1日で作った ― 第5回 Agentic AI Hackathon 大阪ミニハッカソン参加</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[会議・調査・資料作成をAgentに任せる：Microsoft環境で始めるプロジェクトLLM Wiki | Zennの「Microsoft」のフィード]]></title>
+            <link>https://zenn.dev/mkj/articles/agent-native-project-work-with-llm-wiki</link>
+            <guid isPermaLink="false">https://zenn.dev/mkj/articles/agent-native-project-work-with-llm-wiki</guid>
+            <pubDate>Thu, 24 Sep 2026 02:50:05 GMT</pubDate>
+            <description><![CDATA[松尾研究所でシニアデータサイエンティストをしている大岡です。AI戦国時代と言われるなか、多くのサービスがVertical AIの勝ち筋を探しています。特定の業界や業務で、人間が続けてきた営みを、どうエージェントネイティブに作り直すか。その試行錯誤が始まっています。2026年4月にAndrej Karpathyが、資料や会話の原文はそのまま保管し、LLMがそこから知識を整理・更新し続ける仕組み「LL]]></description>
+            <content:encoded><![CDATA[松尾研究所でシニアデータサイエンティストをしている大岡です。AI戦国時代と言われるなか、多くのサービスがVertical AIの勝ち筋を探しています。特定の業界や業務で、人間が続けてきた営みを、どうエージェントネイティブに作り直すか。その試行錯誤が始まっています。2026年4月にAndrej Karpathyが、資料や会話の原文はそのまま保管し、LLMがそこから知識を整理・更新し続ける仕組み「LLM Wiki」を公開しました[1]。それから4か月ほど複数のプロジェクトで試して感じたのは、LLM Wikiが、ビジネス職の「プロジェクトワーク」に対するVertical AI的な解になりう...]]></content:encoded>
+            <author>Y. O.</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--xofxhJyt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BC%259A%25E8%25AD%25B0%25E3%2583%25BB%25E8%25AA%25BF%25E6%259F%25BB%25E3%2583%25BB%25E8%25B3%2587%25E6%2596%2599%25E4%25BD%259C%25E6%2588%2590%25E3%2582%2592Agent%25E3%2581%25AB%25E4%25BB%25BB%25E3%2581%259B%25E3%2582%258B%25EF%25BC%259AMicrosoft%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A7%25E5%25A7%258B%25E3%2582%2581%25E3%2582%258B%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588LLM%2520Wiki%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Y.%2520O.%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2NGM3ZTBkMzIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%259D%25BE%25E5%25B0%25BE%25E7%25A0%2594%25E7%25A9%25B6%25E6%2589%2580%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2NlZjRhN2U1N2MuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>2</hatenaCount>
+                <originalTitle>会議・調査・資料作成をAgentに任せる：Microsoft環境で始めるプロジェクトLLM Wiki</originalTitle>
+                <blogTitle>Zennの「Microsoft」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/microsoft</blogLink>
+                <blogLinkMd5Hash>6c06b9d72e6fe20c8e3a884363f84d75</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[【消し方】Android Pulseとは？勝手に入った理由と削除・通知オフ手順 | Zennの「Google」のフィード]]></title>
+            <link>https://zenn.dev/aiasoby/articles/asoby-tech-1200</link>
+            <guid isPermaLink="false">https://zenn.dev/aiasoby/articles/asoby-tech-1200</guid>
+            <pubDate>Thu, 24 Sep 2026 01:48:13 GMT</pubDate>
+            <description><![CDATA[💡 本記事について本記事は、AIの実験・活用メディア「大人のAIアソビ」の技術サテライト版です。キャラクター（武将クマの「ぷれい」＆青髪AI美少女「ジェミー」）による軽快な掛け合い・オチ対話劇の全文は、👉 本館の元記事 にて公開しています。 📌 3行でわかるこの記事の要点【正体】Google公式の安全な診断ツール： 怪しいスパイウェアやウイルスではありません。GoogleがOSの不具合やバッテリー]]></description>
+            <content:encoded><![CDATA[💡 本記事について本記事は、AIの実験・活用メディア「大人のAIアソビ」の技術サテライト版です。キャラクター（武将クマの「ぷれい」＆青髪AI美少女「ジェミー」）による軽快な掛け合い・オチ対話劇の全文は、👉 本館の元記事 にて公開しています。 📌 3行でわかるこの記事の要点【正体】Google公式の安全な診断ツール： 怪しいスパイウェアやウイルスではありません。GoogleがOSの不具合やバッテリー異常を検知・予防するために自動配信している正規コンポーネントです。【消せる？】通常アンインストールは不可： システムの深層部品のため削除ボタンはありませんが、容量・電池消費は...]]></content:encoded>
+            <author>大人のAIアソビ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--6naP5xbr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E6%25B6%2588%25E3%2581%2597%25E6%2596%25B9%25E3%2580%2591Android%2520Pulse%25E3%2581%25A8%25E3%2581%25AF%25EF%25BC%259F%25E5%258B%259D%25E6%2589%258B%25E3%2581%25AB%25E5%2585%25A5%25E3%2581%25A3%25E3%2581%259F%25E7%2590%2586%25E7%2594%25B1%25E3%2581%25A8%25E5%2589%258A%25E9%2599%25A4%25E3%2583%25BB%25E9%2580%259A%25E7%259F%25A5%25E3%2582%25AA%25E3%2583%2595%25E6%2589%258B%25E9%25A0%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E5%25A4%25A7%25E4%25BA%25BA%25E3%2581%25AEAI%25E3%2582%25A2%25E3%2582%25BD%25E3%2583%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTDY1WnRwbndoOGZVNGV5dVBIMWdXSS04dXdEZ0lIWVVqVDNzZEhrd0JJMHM1UEFiSW4tQT1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>【消し方】Android Pulseとは？勝手に入った理由と削除・通知オフ手順</originalTitle>
+                <blogTitle>Zennの「Google」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/google</blogLink>
+                <blogLinkMd5Hash>4f2afa8044d173644e6d64c73e24a44a</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[GoogleのセキュリティAIはあえて小型、Gemini 3.5 Flash Cyber | Zennの「Google」のフィード]]></title>
+            <link>https://zenn.dev/okssusucha/articles/20260723-gemini-3-5-flash-cyber</link>
+            <guid isPermaLink="false">https://zenn.dev/okssusucha/articles/20260723-gemini-3-5-flash-cyber</guid>
+            <pubDate>Thu, 24 Sep 2026 00:10:00 GMT</pubDate>
+            <description><![CDATA[セキュリティ向けの新モデルと聞くと、普通は「一番賢い最上位モデルを出してきた」と想像する。ところがGoogle DeepMindが7月21日に公開したGemini 3.5 Flash Cyberは逆で、あえて安価な小型モデル（Flash系）をベースにしている。しかも脆弱性発見のベンチマークで、上位モデルであるはずのClaude Opus 4.6を上回った。なぜ小さいほうが勝つのか。ここに、脆弱性ス]]></description>
+            <content:encoded><![CDATA[セキュリティ向けの新モデルと聞くと、普通は「一番賢い最上位モデルを出してきた」と想像する。ところがGoogle DeepMindが7月21日に公開したGemini 3.5 Flash Cyberは逆で、あえて安価な小型モデル（Flash系）をベースにしている。しかも脆弱性発見のベンチマークで、上位モデルであるはずのClaude Opus 4.6を上回った。なぜ小さいほうが勝つのか。ここに、脆弱性スキャンという仕事の本質が出ている。 なぜ「大きいほど強い」が通じないのか脆弱性の自動探索でボトルネックになるのは、モデル1回あたりの賢さより「どれだけ回数を回せるか」だ。コードベースは巨大...]]></content:encoded>
+            <author>とうもろこし茶</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--Khnq9EjG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%25E3%2581%25AE%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3AI%25E3%2581%25AF%25E3%2581%2582%25E3%2581%2588%25E3%2581%25A6%25E5%25B0%258F%25E5%259E%258B%25E3%2580%2581Gemini%25203.5%2520Flash%2520Cyber%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2581%2586%25E3%2582%2582%25E3%2582%258D%25E3%2581%2593%25E3%2581%2597%25E8%258C%25B6%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSW96UXYxMFhOSmoybmNYTlZkQzFRV1IxV2UxZHVyMy1FeHlhd19tTno1MkZJT3NyRzFzQT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>GoogleのセキュリティAIはあえて小型、Gemini 3.5 Flash Cyber</originalTitle>
+                <blogTitle>Zennの「Google」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/google</blogLink>
+                <blogLinkMd5Hash>4f2afa8044d173644e6d64c73e24a44a</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Oracle から BigQuery に移行するシミュレーションをしてみた #5 索引がないのに、どう絞り込む？ | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/mika_and_coco/articles/oracle-to-bigquery-05-pruning</link>
+            <guid isPermaLink="false">https://zenn.dev/mika_and_coco/articles/oracle-to-bigquery-05-pruning</guid>
+            <pubDate>Wed, 23 Sep 2026 23:05:31 GMT</pubDate>
+            <description><![CDATA[今回の議題前回までで、BigQuery には索引がなく、かわりにパーティションとクラスタリングがある、と書きました。Oracle で索引を設計してきた方なら、ここが一番落ち着かないところだと思います。「索引がないなら、WHERE で絞っても全部読むの？」「クラスタリングは何列まで指定できる？ 複合索引のように列の順序は効くの？」「索引列に関数をかけると索引が使われない、にあたる落とし穴はあるの？」]]></description>
+            <content:encoded><![CDATA[今回の議題前回までで、BigQuery には索引がなく、かわりにパーティションとクラスタリングがある、と書きました。Oracle で索引を設計してきた方なら、ここが一番落ち着かないところだと思います。「索引がないなら、WHERE で絞っても全部読むの？」「クラスタリングは何列まで指定できる？ 複合索引のように列の順序は効くの？」「索引列に関数をかけると索引が使われない、にあたる落とし穴はあるの？」この連載は、Oracle エンジニアが架空の地方銀行「A 銀行」の情報系（Exadata 上の Oracle 19c、取引明細と残高などで月 2 億件）を題材に、BigQuer...]]></content:encoded>
+            <author>みか あんど ここ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--n9L5dq9Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Oracle%2520%25E3%2581%258B%25E3%2582%2589%2520BigQuery%2520%25E3%2581%25AB%25E7%25A7%25BB%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B7%25E3%2583%259F%25E3%2583%25A5%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%2592%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2520%25235%2520%25E7%25B4%25A2%25E5%25BC%2595%25E3%2581%258C%25E3%2581%25AA%25E3%2581%2584%25E3%2581%25AE%25E3%2581%25AB%25E3%2580%2581%25E3%2581%25A9%25E3%2581%2586%25E7%25B5%259E%25E3%2582%258A%25E8%25BE%25BC%25E3%2582%2580%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25BF%25E3%2581%258B%2520%25E3%2581%2582%25E3%2582%2593%25E3%2581%25A9%2520%25E3%2581%2593%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZkNjRjNGU5ZGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Oracle から BigQuery に移行するシミュレーションをしてみた #5 索引がないのに、どう絞り込む？</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[DiffusionGemma-JevをCloud Runで動かし、日本語の問い合わせ50件を分類してみた | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/hogehogetaro/articles/diffusiongemma-jev-cloud-run-inquiry</link>
+            <guid isPermaLink="false">https://zenn.dev/hogehogetaro/articles/diffusiongemma-jev-cloud-run-inquiry</guid>
+            <pubDate>Wed, 23 Sep 2026 15:13:25 GMT</pubDate>
+            <description><![CDATA[DiffusionGemma-JevをCloud Runのシンガポールリージョンで動かしました。日本語の問い合わせ50件を分類してみました。1回のリクエストで担当部署、緊急度、人手対応の要否の3項目を判定します。同一リージョンのVMから呼ぶと、応答時間の中央値は71.2msでした。正解ラベルとの一致率は、担当部署88%、緊急度84%、人手対応80%です。ただし、PCの膨張を訴える問い合わせを99.]]></description>
+            <content:encoded><![CDATA[DiffusionGemma-JevをCloud Runのシンガポールリージョンで動かしました。日本語の問い合わせ50件を分類してみました。1回のリクエストで担当部署、緊急度、人手対応の要否の3項目を判定します。同一リージョンのVMから呼ぶと、応答時間の中央値は71.2msでした。正解ラベルとの一致率は、担当部署88%、緊急度84%、人手対応80%です。ただし、PCの膨張を訴える問い合わせを99.4%の確率で「急ぎではない」と判定したケースもありました。応答の速さと、判断を自動化できるかどうかは分けて考える必要があります。※ 2026年9月23日の検証です。日本からの応答...]]></content:encoded>
+            <author>hogehogetaro</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--DBHH00UR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:DiffusionGemma-Jev%25E3%2582%2592Cloud%2520Run%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2580%2581%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2581%25AE%25E5%2595%258F%25E3%2581%2584%25E5%2590%2588%25E3%2582%258F%25E3%2581%259B50%25E4%25BB%25B6%25E3%2582%2592%25E5%2588%2586%25E9%25A1%259E%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hogehogetaro%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E2ZjNjNDBmMDEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>DiffusionGemma-JevをCloud Runで動かし、日本語の問い合わせ50件を分類してみた</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[GCP Workload Identity Federation設計：CI/CDの認証を堅牢にする3つの鉄則 | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/fd_ai_teacher/articles/tech-20260922150338-1</link>
+            <guid isPermaLink="false">https://zenn.dev/fd_ai_teacher/articles/tech-20260922150338-1</guid>
+            <pubDate>Wed, 23 Sep 2026 11:52:32 GMT</pubDate>
+            <description><![CDATA[CI/CDのGCP認証、まだサービスアカウントキー使って消耗してませんか？多くの開発者がCI/CDパイプラインからGCPリソースへアクセスする際、サービスアカウントキーの管理に頭を悩ませています。キーの漏洩はセキュリティインシデントに直結し、その運用コストも無視できません。この記事では、GCP Workload Identity Federation（WIF）を活用し、サービスアカウントキーを使わ]]></description>
+            <content:encoded><![CDATA[CI/CDのGCP認証、まだサービスアカウントキー使って消耗してませんか？多くの開発者がCI/CDパイプラインからGCPリソースへアクセスする際、サービスアカウントキーの管理に頭を悩ませています。キーの漏洩はセキュリティインシデントに直結し、その運用コストも無視できません。この記事では、GCP Workload Identity Federation（WIF）を活用し、サービスアカウントキーを使わずにGitHub ActionsやGitLab CI/CDからGCPに安全に認証するための具体的な設計指針と、堅牢なCI/CD認証を実現する3つの鉄則を解説します。これを読めば、あなたの...]]></content:encoded>
+            <author>FD_teacher</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--qD6Luv57--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GCP%2520Workload%2520Identity%2520Federation%25E8%25A8%25AD%25E8%25A8%2588%25EF%25BC%259ACI%252FCD%25E3%2581%25AE%25E8%25AA%258D%25E8%25A8%25BC%25E3%2582%2592%25E5%25A0%2585%25E7%2589%25A2%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B3%25E3%2581%25A4%25E3%2581%25AE%25E9%2589%2584%25E5%2589%2587%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:FD_teacher%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzc3MTBkZTQ0YjcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>GCP Workload Identity Federation設計：CI/CDの認証を堅牢にする3つの鉄則</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[AI.GENERATE_BOOL / INT / DOUBLEで型付きの判定をSQLに埋め込む | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/web_benriya/articles/bigquery-ai-generate-typed-functions</link>
+            <guid isPermaLink="false">https://zenn.dev/web_benriya/articles/bigquery-ai-generate-typed-functions</guid>
+            <pubDate>Wed, 23 Sep 2026 10:24:09 GMT</pubDate>
+            <description><![CDATA[はじめにシリーズ第7回です。前回（第6回）では AI.GENERATE_TABLE を使って非構造化テキストを複数列の構造化データに変換する方法を整理しました。今回は AI.GENERATE_BOOL / AI.GENERATE_INT / AI.GENERATE_DOUBLE の3関数を取り上げます。AI.GENERATE は文字列を返すため、「ポジティブか否か」「スコアは何点か」のような判定結]]></description>
+            <content:encoded><![CDATA[はじめにシリーズ第7回です。前回（第6回）では AI.GENERATE_TABLE を使って非構造化テキストを複数列の構造化データに変換する方法を整理しました。今回は AI.GENERATE_BOOL / AI.GENERATE_INT / AI.GENERATE_DOUBLE の3関数を取り上げます。AI.GENERATE は文字列を返すため、「ポジティブか否か」「スコアは何点か」のような判定結果を後続の SQL で使うには、文字列パースの手間が発生します。型付きの判定関数を使えば、その変換ステップを省いて WHERE や ORDER BY、集計にそのまま組み込めます。!...]]></content:encoded>
+            <author>ウェブの便利屋</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--gXd3HuM6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI.GENERATE_BOOL%2520%252F%2520INT%2520%252F%2520DOUBLE%25E3%2581%25A7%25E5%259E%258B%25E4%25BB%2598%25E3%2581%258D%25E3%2581%25AE%25E5%2588%25A4%25E5%25AE%259A%25E3%2582%2592SQL%25E3%2581%25AB%25E5%259F%258B%25E3%2582%2581%25E8%25BE%25BC%25E3%2582%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%25E3%2581%25AE%25E4%25BE%25BF%25E5%2588%25A9%25E5%25B1%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I5NDI4N2NkMTcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AI.GENERATE_BOOL / INT / DOUBLEで型付きの判定をSQLに埋め込む</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Azure Container Appsのイメージ更新をTerraformから分離してみた。App Configurationは必要か？ | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/gritio28tech/articles/e412826c92b6b8</link>
+            <guid isPermaLink="false">https://zenn.dev/gritio28tech/articles/e412826c92b6b8</guid>
+            <pubDate>Wed, 23 Sep 2026 09:57:03 GMT</pubDate>
+            <description><![CDATA[はじめに去年、Cloud PraticaのCI/CDコースで、ecspressoを使ってAWS ECSのアプリ更新をTerraformから分ける構成を学びました。https://cloud-pratica.com/courses/cicd-pipelineそこでは、更新頻度の高いアプリのデプロイをアプリ側のCDで完結させ、インフラの変更と切り分けていました。では、Azureではどう分けるのか。調べ]]></description>
+            <content:encoded><![CDATA[はじめに去年、Cloud PraticaのCI/CDコースで、ecspressoを使ってAWS ECSのアプリ更新をTerraformから分ける構成を学びました。https://cloud-pratica.com/courses/cicd-pipelineそこでは、更新頻度の高いアプリのデプロイをアプリ側のCDで完結させ、インフラの変更と切り分けていました。では、Azureではどう分けるのか。調べる中で見つけたのがAzure App Configurationでした。AWS Systems Manager Parameter Storeに近い用途で使えるリソースなら、イメー...]]></content:encoded>
+            <author>しゃま</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--eoOIzth5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520Container%2520Apps%25E3%2581%25AE%25E3%2582%25A4%25E3%2583%25A1%25E3%2583%25BC%25E3%2582%25B8%25E6%259B%25B4%25E6%2596%25B0%25E3%2582%2592Terraform%25E3%2581%258B%25E3%2582%2589%25E5%2588%2586%25E9%259B%25A2%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582App%2520Configu...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%2583%25E3%2581%25BE%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzgwNmU3OTQwMWQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>1</hatenaCount>
+                <originalTitle>Azure Container Appsのイメージ更新をTerraformから分離してみた。App Configurationは必要か？</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[MIT×Googleの大型調査が示す「AI導入後に詰まるのは、あなたが思っている場所じゃない」 | Zennの「Google」のフィード]]></title>
+            <link>https://zenn.dev/syoshida07/articles/b4fb4390150ef3</link>
+            <guid isPermaLink="false">https://zenn.dev/syoshida07/articles/b4fb4390150ef3</guid>
+            <pubDate>Wed, 23 Sep 2026 09:56:40 GMT</pubDate>
+            <description><![CDATA[生成AIは、論文執筆、コード生成、データ解析、仮説生成など、科学研究の多くの工程を高速化すると言われてきた。しかしこれまでの議論は期待や事例紹介が中心であり、科学者が実際にどの作業でAIを使い、どれだけ時間を節約し、研究プロセス全体がどう変化したのかを、体系的に示す発表データが少ない印象ではないだろうか。MIT FutureTech と Google / Google DeepMind の研究者ら]]></description>
+            <content:encoded><![CDATA[生成AIは、論文執筆、コード生成、データ解析、仮説生成など、科学研究の多くの工程を高速化すると言われてきた。しかしこれまでの議論は期待や事例紹介が中心であり、科学者が実際にどの作業でAIを使い、どれだけ時間を節約し、研究プロセス全体がどう変化したのかを、体系的に示す発表データが少ない印象ではないだろうか。MIT FutureTech と Google / Google DeepMind の研究者らは、このギャップを埋めるために、科学研究におけるAI利用の実態を世界最大規模のデータで分析する研究を実施した。生成AIが科学研究の構造そのものをどう変えるかを示す、興味深い内容を考察してみ...]]></content:encoded>
+            <author>satoshi yoshida - 思考アトリエの遊び場</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--Vti6r3gT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:MIT%25C3%2597Google%25E3%2581%25AE%25E5%25A4%25A7%25E5%259E%258B%25E8%25AA%25BF%25E6%259F%25BB%25E3%2581%258C%25E7%25A4%25BA%25E3%2581%2599%25E3%2580%258CAI%25E5%25B0%258E%25E5%2585%25A5%25E5%25BE%258C%25E3%2581%25AB%25E8%25A9%25B0%25E3%2581%25BE%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25AF%25E3%2580%2581%25E3%2581%2582%25E3%2581%25AA%25E3%2581%259F%25E3%2581%258C%25E6%2580%259D%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E5%25A0%25B4%25E6%2589%2580%25E3%2581%2598%25E3%2582%2583%25E3%2581%25AA%25E3%2581%2584%25E3%2580%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:satoshi%2520yoshida%2520-%2520...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlp2aXh2cTdVMmFMYUhDSHJTcTBiSGJWWWcwZjVqTEZLajRCMVVmOXpyV2ZPSTJOOD1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>MIT×Googleの大型調査が示す「AI導入後に詰まるのは、あなたが思っている場所じゃない」</originalTitle>
+                <blogTitle>Zennの「Google」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/google</blogLink>
+                <blogLinkMd5Hash>4f2afa8044d173644e6d64c73e24a44a</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[IAM Deny Policyを試したらDeny Adminはプロジェクトに付与できなかった | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/hogehogetaro/articles/iam-deny-admin-organization-scope</link>
+            <guid isPermaLink="false">https://zenn.dev/hogehogetaro/articles/iam-deny-admin-organization-scope</guid>
+            <pubDate>Wed, 23 Sep 2026 06:09:25 GMT</pubDate>
+            <description><![CDATA[検証結果のまとめCloud Storageのオブジェクト削除をIAM Deny Policyで防ぐ検証を行いました。検証用サービスアカウントにStorage Object Adminを付与したまま、storage.objects.delete のみを拒否する構成です。Deny Policy設定前のオブジェクト一覧、参照、削除は成功しました。しかし、Deny Policyの作成は iam.denyp]]></description>
+            <content:encoded><![CDATA[検証結果のまとめCloud Storageのオブジェクト削除をIAM Deny Policyで防ぐ検証を行いました。検証用サービスアカウントにStorage Object Adminを付与したまま、storage.objects.delete のみを拒否する構成です。Deny Policy設定前のオブジェクト一覧、参照、削除は成功しました。しかし、Deny Policyの作成は iam.denypolicies.create の不足により失敗しました。Deny Adminロール（roles/iam.denyAdmin）を検証用プロジェクトへ付与する操作も、INVALID_A...]]></content:encoded>
+            <author>hogehogetaro</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--BnaXB7wB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:IAM%2520Deny%2520Policy%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589Deny%2520Admin%25E3%2581%25AF%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AB%25E4%25BB%2598%25E4%25B8%258E%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hogehogetaro%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E2ZjNjNDBmMDEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>IAM Deny Policyを試したらDeny Adminはプロジェクトに付与できなかった</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[秘密度ラベルは何であって、何でないか | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/oscart/articles/purview-sensitivity-labels</link>
+            <guid isPermaLink="false">https://zenn.dev/oscart/articles/purview-sensitivity-labels</guid>
+            <pubDate>Wed, 23 Sep 2026 02:40:50 GMT</pubDate>
+            <description><![CDATA[!連載「秘密度ラベルを付けたファイルは、どこまで追えるのか」全4回の第1回です。 ラベルの正体と、機能ごとのライセンス境界から入ります。 この記事で分かること秘密度ラベルの正体。メタデータと暗号化は別の層にあるラベルを付ける側が4系統に分かれていることAIP から Purview への移行で踏む地雷手動ラベルは E3、自動ラベルは E5 という最初の境界 「ラベルを付ける」で2つのことが同時に起き]]></description>
+            <content:encoded><![CDATA[!連載「秘密度ラベルを付けたファイルは、どこまで追えるのか」全4回の第1回です。 ラベルの正体と、機能ごとのライセンス境界から入ります。 この記事で分かること秘密度ラベルの正体。メタデータと暗号化は別の層にあるラベルを付ける側が4系統に分かれていることAIP から Purview への移行で踏む地雷手動ラベルは E3、自動ラベルは E5 という最初の境界 「ラベルを付ける」で2つのことが同時に起きている秘密度ラベルの話が噛み合わなくなる原因は、たいてい最初のここにある。ラベルそのものは識別子でしかない。暗号化はラベルに付けられる設定の一つで、別物だ。二層構造に...]]></content:encoded>
+            <author>Oscar | 海外で働くITコンサルタント / PM</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--p-17XWih--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25A7%2598%25E5%25AF%2586%25E5%25BA%25A6%25E3%2583%25A9%25E3%2583%2599%25E3%2583%25AB%25E3%2581%25AF%25E4%25BD%2595%25E3%2581%25A7%25E3%2581%2582%25E3%2581%25A3%25E3%2581%25A6%25E3%2580%2581%25E4%25BD%2595%25E3%2581%25A7%25E3%2581%25AA%25E3%2581%2584%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Oscar%2520%257C%2520%25E6%25B5%25B7%25E5%25A4%2596%25E3%2581%25A7%25E5%2583%258D%25E3%2581%258FIT%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25B5...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFkNGQ4ZDU3YTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>秘密度ラベルは何であって、何でないか</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[文章を書かないJevをGoogle Cloudで作れるか | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/acntechjp/articles/zenn-jev-on-google-cloud</link>
+            <guid isPermaLink="false">https://zenn.dev/acntechjp/articles/zenn-jev-on-google-cloud</guid>
+            <pubDate>Wed, 23 Sep 2026 02:29:36 GMT</pubDate>
+            <description><![CDATA[3行でまとめ判定と確率だけを返すAI「Jev」と同じものを Google Cloud で3方式作り、8,453試行で測った。確率を校正しても、人手なしで捌ける割合はほとんど増えなかった0.3〜0.7秒で返る速い方式は4〜8割しか当たらない。正確なのは思考ありの Gemini 3.8 Flash だけで、中央値3秒、コストは Jev 公称の約87倍判断の分かれる言い回しが5%混ざるだけで、人手なしで]]></description>
+            <content:encoded><![CDATA[3行でまとめ判定と確率だけを返すAI「Jev」と同じものを Google Cloud で3方式作り、8,453試行で測った。確率を校正しても、人手なしで捌ける割合はほとんど増えなかった0.3〜0.7秒で返る速い方式は4〜8割しか当たらない。正確なのは思考ありの Gemini 3.8 Flash だけで、中央値3秒、コストは Jev 公称の約87倍判断の分かれる言い回しが5%混ざるだけで、人手なしで捌ける割合は76%→4%と崩れた（事後の分析）。3.8 Flash も、規程から付けた正解と逆の判定を確信度100で返した 「文章を書かないAI」が話題になっているType...]]></content:encoded>
+            <author>Shinya Koike</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--G0ta2keU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2596%2587%25E7%25AB%25A0%25E3%2582%2592%25E6%259B%25B8%25E3%2581%258B%25E3%2581%25AA%25E3%2581%2584Jev%25E3%2582%2592Google%2520Cloud%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258C%25E3%2582%258B%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Shinya%2520Koike%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2ZDA4MDY5ODcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Accenture%2520Japan%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzdiOGRmZDQ3YzMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>文章を書かないJevをGoogle Cloudで作れるか</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[API Managementのサブスクリプションキーを用途別に分割する | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/headwaters/articles/554f69b7e83c83</link>
+            <guid isPermaLink="false">https://zenn.dev/headwaters/articles/554f69b7e83c83</guid>
+            <pubDate>Wed, 23 Sep 2026 00:23:53 GMT</pubDate>
+            <description><![CDATA[執筆日2026/9/23 まずAPI Managementを使いAPIの管理を今後していこうと思っています。その際に、サブスクリプションキーで認証をしています。その際に、Build-in-all-access-subscriptionの主キーで認証をしています。ただ、今後APIが増えてきた際に、全てのAPIに対して同じサブスクリプションキーを使いたくないなと思っています。分けたいです。 分ける方法]]></description>
+            <content:encoded><![CDATA[執筆日2026/9/23 まずAPI Managementを使いAPIの管理を今後していこうと思っています。その際に、サブスクリプションキーで認証をしています。その際に、Build-in-all-access-subscriptionの主キーで認証をしています。ただ、今後APIが増えてきた際に、全てのAPIに対して同じサブスクリプションキーを使いたくないなと思っています。分けたいです。 分ける方法はあるのか？ある 分ける方法API Managementを開くAPIs&amp;gt;サブスクリプションを開く+サブスクリプションの追加をクリックスコー...]]></content:encoded>
+            <author>takekawa tomoki</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--h9ZJpstu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:API%2520Management%25E3%2581%25AE%25E3%2582%25B5%25E3%2583%2596%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25AD%25E3%2583%25BC%25E3%2582%2592%25E7%2594%25A8%25E9%2580%2594%25E5%2588%25A5%25E3%2581%25AB%25E5%2588%2586%25E5%2589%25B2%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:takekawa%2520tomoki%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzA2ZjBlNjkxMDkuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>API Managementのサブスクリプションキーを用途別に分割する</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[AI.GENERATE_TABLEで非構造化テキストを構造化データに変換する | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/web_benriya/articles/bigquery-ai-generate-table-structuring</link>
+            <guid isPermaLink="false">https://zenn.dev/web_benriya/articles/bigquery-ai-generate-table-structuring</guid>
+            <pubDate>Tue, 22 Sep 2026 10:19:48 GMT</pubDate>
+            <description><![CDATA[はじめにシリーズ第6回です。前回（第5回）では AI.GENERATE の引数・戻り値の STRUCT・実務パターンを整理しました。今回は AI.GENERATE_TABLE を取り上げます。EC 事業をデータで動かしているとき、非構造化データが分析の障壁になる場面は多くあります。商品レビュー・CS 問い合わせ・フォーム自由記述・SNS コメント――これらを集計しようとすると、まず「テキストをどう]]></description>
+            <content:encoded><![CDATA[はじめにシリーズ第6回です。前回（第5回）では AI.GENERATE の引数・戻り値の STRUCT・実務パターンを整理しました。今回は AI.GENERATE_TABLE を取り上げます。EC 事業をデータで動かしているとき、非構造化データが分析の障壁になる場面は多くあります。商品レビュー・CS 問い合わせ・フォーム自由記述・SNS コメント――これらを集計しようとすると、まず「テキストをどう列にバラすか」という前処理が必要です。AI.GENERATE でも実現できますが、JSON を出力させてパースする手順が面倒です。AI.GENERATE_TABLE はその工程をまとめ...]]></content:encoded>
+            <author>ウェブの便利屋</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--G9pe1eGl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI.GENERATE_TABLE%25E3%2581%25A7%25E9%259D%259E%25E6%25A7%258B%25E9%2580%25A0%25E5%258C%2596%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E6%25A7%258B%25E9%2580%25A0%25E5%258C%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%25E3%2581%25AE%25E4%25BE%25BF%25E5%2588%25A9%25E5%25B1%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I5NDI4N2NkMTcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AI.GENERATE_TABLEで非構造化テキストを構造化データに変換する</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Azure SQL DatabaseのCPU使用率の履歴を後から見る｜15秒刻みは約1時間で消える | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/soloselife/articles/e87d49dd7adfa1</link>
+            <guid isPermaLink="false">https://zenn.dev/soloselife/articles/e87d49dd7adfa1</guid>
+            <pubDate>Tue, 22 Sep 2026 10:00:05 GMT</pubDate>
+            <description><![CDATA[Azure SQL Database が重くなったとき、あとから原因を調べようとして、データが残っていないことに気づきました。CPU 使用率の細かい記録は、約1時間で消えます。席を外している間に起きたスパイクは、戻ってきたときにはもう存在しません。 取得先は2つ。粒度と保持期間が逆取得先接続先粒度保持期間sys.dm_db_resource_stats対象のデータベース15秒約1時間sys.res]]></description>
+            <content:encoded><![CDATA[Azure SQL Database が重くなったとき、あとから原因を調べようとして、データが残っていないことに気づきました。CPU 使用率の細かい記録は、約1時間で消えます。席を外している間に起きたスパイクは、戻ってきたときにはもう存在しません。 取得先は2つ。粒度と保持期間が逆取得先接続先粒度保持期間sys.dm_db_resource_stats対象のデータベース15秒約1時間sys.resource_statsmaster5分14日細かく見える方は1時間で消え、長く残る方は5分平均なので、短いスパイクが均されて見えなくなります...]]></content:encoded>
+            <author>そろ丸｜ひとり情シス</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s---I1j1tTh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520SQL%2520Database%25E3%2581%25AECPU%25E4%25BD%25BF%25E7%2594%25A8%25E7%258E%2587%25E3%2581%25AE%25E5%25B1%25A5%25E6%25AD%25B4%25E3%2582%2592%25E5%25BE%258C%25E3%2581%258B%25E3%2582%2589%25E8%25A6%258B%25E3%2582%258B%25EF%25BD%259C15%25E7%25A7%2592%25E5%2588%25BB%25E3%2581%25BF%25E3%2581%25AF%25E7%25B4%25841%25E6%2599%2582%25E9%2596%2593%25E3%2581%25A7%25E6%25B6%2588%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259D%25E3%2582%258D%25E4%25B8%25B8%25EF%25BD%259C%25E3%2581%25B2%25E3%2581%25A8%25E3%2582%258A%25E6%2583%2585%25E3%2582%25B7%25E3%2582%25B9%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzUxZWIyZGU0ZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Azure SQL DatabaseのCPU使用率の履歴を後から見る｜15秒刻みは約1時間で消える</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Oracle から BigQuery に移行するシミュレーションをしてみた #4 列指向は Exadata と同じ？ | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/mika_and_coco/articles/oracle-to-bigquery-04-columnar-vs-exadata</link>
+            <guid isPermaLink="false">https://zenn.dev/mika_and_coco/articles/oracle-to-bigquery-04-columnar-vs-exadata</guid>
+            <pubDate>Tue, 22 Sep 2026 08:14:39 GMT</pubDate>
+            <description><![CDATA[今回の議題前回、BigQuery は「項目別帳簿」＝列指向で保存していると書きました。Exadata を運用している方なら、こう思うはずです。「HCC も Database In-Memory も Smart Scan も、必要な列だけ読む仕組みだ。何が違うの？」「Exadata で列指向ができているなら、移す意味はどこにあるの？」この連載は、Oracle エンジニアが架空の地方銀行「A 銀行」の]]></description>
+            <content:encoded><![CDATA[今回の議題前回、BigQuery は「項目別帳簿」＝列指向で保存していると書きました。Exadata を運用している方なら、こう思うはずです。「HCC も Database In-Memory も Smart Scan も、必要な列だけ読む仕組みだ。何が違うの？」「Exadata で列指向ができているなら、移す意味はどこにあるの？」この連載は、Oracle エンジニアが架空の地方銀行「A 銀行」の情報系（Exadata 上の Oracle 19c、取引明細と残高などで月 2 億件）を題材に、BigQuery に移すと「どれくらいのことができて、どのくらい安くなるのか」を机...]]></content:encoded>
+            <author>みか あんど ここ</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--_Fb9n0dW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Oracle%2520%25E3%2581%258B%25E3%2582%2589%2520BigQuery%2520%25E3%2581%25AB%25E7%25A7%25BB%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B7%25E3%2583%259F%25E3%2583%25A5%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%2592%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2520%25234%2520%25E5%2588%2597%25E6%258C%2587%25E5%2590%2591%25E3%2581%25AF%2520Exadata%2520%25E3%2581%25A8%25E5%2590%258C%25E3%2581%2598%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25BF%25E3%2581%258B%2520%25E3%2581%2582%25E3%2582%2593%25E3%2581%25A9%2520%25E3%2581%2593%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZkNjRjNGU5ZGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Oracle から BigQuery に移行するシミュレーションをしてみた #4 列指向は Exadata と同じ？</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[AI-103に合格したので、勉強法と反省点をまとめる | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/a_1ro/articles/ai-103-study</link>
+            <guid isPermaLink="false">https://zenn.dev/a_1ro/articles/ai-103-study</guid>
+            <pubDate>Tue, 22 Sep 2026 07:36:50 GMT</pubDate>
+            <description><![CDATA[Exam AI-103: Developing AI Apps and Agents on Azure を受験し、740点で合格しました。受験を終えて一番強く感じたのは、AI-103は単純なAzure AIの知識試験ではなく、「AIソリューションを実際に実装できるか」をかなり問われる試験だったということです。私はMicrosoft Learnのラーニングパスを一通り学習し、Practice Ass]]></description>
+            <content:encoded><![CDATA[Exam AI-103: Developing AI Apps and Agents on Azure を受験し、740点で合格しました。受験を終えて一番強く感じたのは、AI-103は単純なAzure AIの知識試験ではなく、「AIソリューションを実際に実装できるか」をかなり問われる試験だったということです。私はMicrosoft Learnのラーニングパスを一通り学習し、Practice Assessmentも3周しました。それでも本番を受けたあと、Practice Assessmentを3周した後は「一問一答」ではなく「一問一実装」をやるべきだったと感じました。...]]></content:encoded>
+            <author>Eiichiro Iriguchi</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--Hgi3ECsw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI-103%25E3%2581%25AB%25E5%2590%2588%25E6%25A0%25BC%25E3%2581%2597%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E3%2580%2581%25E5%258B%2589%25E5%25BC%25B7%25E6%25B3%2595%25E3%2581%25A8%25E5%258F%258D%25E7%259C%2581%25E7%2582%25B9%25E3%2582%2592%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Eiichiro%2520Iriguchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Y4ODI2ZGJlMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AI-103に合格したので、勉強法と反省点をまとめる</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[AI-103に合格したので、勉強法と反省点をまとめる | Zennの「Microsoft」のフィード]]></title>
+            <link>https://zenn.dev/a_1ro/articles/ai-103-study</link>
+            <guid isPermaLink="false">https://zenn.dev/a_1ro/articles/ai-103-study</guid>
+            <pubDate>Tue, 22 Sep 2026 07:36:50 GMT</pubDate>
+            <description><![CDATA[Exam AI-103: Developing AI Apps and Agents on Azure を受験し、740点で合格しました。受験を終えて一番強く感じたのは、AI-103は単純なAzure AIの知識試験ではなく、「AIソリューションを実際に実装できるか」をかなり問われる試験だったということです。私はMicrosoft Learnのラーニングパスを一通り学習し、Practice Ass]]></description>
+            <content:encoded><![CDATA[Exam AI-103: Developing AI Apps and Agents on Azure を受験し、740点で合格しました。受験を終えて一番強く感じたのは、AI-103は単純なAzure AIの知識試験ではなく、「AIソリューションを実際に実装できるか」をかなり問われる試験だったということです。私はMicrosoft Learnのラーニングパスを一通り学習し、Practice Assessmentも3周しました。それでも本番を受けたあと、Practice Assessmentを3周した後は「一問一答」ではなく「一問一実装」をやるべきだったと感じました。...]]></content:encoded>
+            <author>Eiichiro Iriguchi</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--Hgi3ECsw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI-103%25E3%2581%25AB%25E5%2590%2588%25E6%25A0%25BC%25E3%2581%2597%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E3%2580%2581%25E5%258B%2589%25E5%25BC%25B7%25E6%25B3%2595%25E3%2581%25A8%25E5%258F%258D%25E7%259C%2581%25E7%2582%25B9%25E3%2582%2592%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Eiichiro%2520Iriguchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Y4ODI2ZGJlMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AI-103に合格したので、勉強法と反省点をまとめる</originalTitle>
+                <blogTitle>Zennの「Microsoft」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/microsoft</blogLink>
+                <blogLinkMd5Hash>6c06b9d72e6fe20c8e3a884363f84d75</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Google CloudのAIエージェント開発をマネージドからコードファーストまで整理する | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/ymd65536/articles/google_agentic_skills</link>
+            <guid isPermaLink="false">https://zenn.dev/ymd65536/articles/google_agentic_skills</guid>
+            <pubDate>Tue, 22 Sep 2026 07:35:10 GMT</pubDate>
+            <description><![CDATA[記事のポイントGoogle CloudにはGemini Enterprise appからADKまで、AIエージェントを構築するための複数の選択肢があるGemini Enterprise Agent Platformではエージェントの構築、実行、状態管理、セキュリティ、評価、オブザーバビリティまで一連のライフサイクルを扱えるマネージドなサービスほどGoogle Cloudに任せられる範囲が広く、コー]]></description>
+            <content:encoded><![CDATA[記事のポイントGoogle CloudにはGemini Enterprise appからADKまで、AIエージェントを構築するための複数の選択肢があるGemini Enterprise Agent Platformではエージェントの構築、実行、状態管理、セキュリティ、評価、オブザーバビリティまで一連のライフサイクルを扱えるマネージドなサービスほどGoogle Cloudに任せられる範囲が広く、コードファーストに近づくほど自分たちの設計責任が広がる はじめにGoogle Skillsを使って、Google CloudのProfessional Agentic Archi...]]></content:encoded>
+            <author>Kento.Yamada</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--g3yRmARc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520Cloud%25E3%2581%25AEAI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E9%2596%258B%25E7%2599%25BA%25E3%2582%2592%25E3%2583%259E%25E3%2583%258D%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%2589%25E3%2581%258B%25E3%2582%2589%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2583%2595%25E3%2582%25A1%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25BE%25E3%2581%25A7%25E6%2595%25B4%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kento.Yamada%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzM0YWVmY2Y5YWUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Google CloudのAIエージェント開発をマネージドからコードファーストまで整理する</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[PostgreSQL / Cloud SQLでSELECT FOR UPDATEによる悲観ロックを使う | Zennの「Google Cloud」のフィード]]></title>
+            <link>https://zenn.dev/tazzae999jp/articles/c48597a1b4348a</link>
+            <guid isPermaLink="false">https://zenn.dev/tazzae999jp/articles/c48597a1b4348a</guid>
+            <pubDate>Tue, 22 Sep 2026 03:06:09 GMT</pubDate>
+            <description><![CDATA[まずここ：目的別の読み方この記事は、最初から最後まで全部読むことを前提にはしていません。Oracleで SELECT ... FOR UPDATE を使った悲観ロックに慣れている人が、PostgreSQLやGCP Cloud SQL for PostgreSQLでも同じ考え方を使えるのかを、目的別に素早く確認できるようにしています。結論だけ知りたい人最初に結論：PostgreSQLでも行ロックによ]]></description>
+            <content:encoded><![CDATA[まずここ：目的別の読み方この記事は、最初から最後まで全部読むことを前提にはしていません。Oracleで SELECT ... FOR UPDATE を使った悲観ロックに慣れている人が、PostgreSQLやGCP Cloud SQL for PostgreSQLでも同じ考え方を使えるのかを、目的別に素早く確認できるようにしています。結論だけ知りたい人最初に結論：PostgreSQLでも行ロックによる悲観排他はできるOracleの FOR UPDATE がPostgreSQLでどう対応するか知りたい人OracleとPostgreSQLの対応表ロック解除...]]></content:encoded>
+            <author>たつお</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--2mDvBAgg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PostgreSQL%2520%252F%2520Cloud%2520SQL%25E3%2581%25A7SELECT%2520FOR%2520UPDATE%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%2582%25B2%25E8%25A6%25B3%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%25A4%25E3%2581%258A%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzEwZmVjMjAxYTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>PostgreSQL / Cloud SQLでSELECT FOR UPDATEによる悲観ロックを使う</originalTitle>
+                <blogTitle>Zennの「Google Cloud」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/googlecloud</blogLink>
+                <blogLinkMd5Hash>3011d612a26632efab83261da71ef7d6</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Sentinel と Defender、EDR、運用監視ツールの棲み分け | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/oscart/articles/sentinel-defender-boundaries</link>
+            <guid isPermaLink="false">https://zenn.dev/oscart/articles/sentinel-defender-boundaries</guid>
+            <pubDate>Mon, 21 Sep 2026 19:18:08 GMT</pubDate>
+            <description><![CDATA[!連載「Microsoft Sentinel の構造と棲み分け」全4回の第4回です。 Sentinel / Defender / EDR / 運用監視ツールの境界線を整理します。 この記事で分かることEDR / XDR / Defender ポータルの違いSentinel と Defender XDR の境界。両方要るのか既存の EDR や運用監視ツールと、どこで線を引くか「AI が自動で対処する]]></description>
+            <content:encoded><![CDATA[!連載「Microsoft Sentinel の構造と棲み分け」全4回の第4回です。 Sentinel / Defender / EDR / 運用監視ツールの境界線を整理します。 この記事で分かることEDR / XDR / Defender ポータルの違いSentinel と Defender XDR の境界。両方要るのか既存の EDR や運用監視ツールと、どこで線を引くか「AI が自動で対処する」の実体はどこにあるのか 「SIEM を入れれば全部見える」わけではないSIEM を提案すると、何でも1画面で見えるようになる、という期待を持たれることが多い。実際に...]]></content:encoded>
+            <author>Oscar | 海外で働くITコンサルタント / PM</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--03s2U1uT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Sentinel%2520%25E3%2581%25A8%2520Defender%25E3%2580%2581EDR%25E3%2580%2581%25E9%2581%258B%25E7%2594%25A8%25E7%259B%25A3%25E8%25A6%2596%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%25AE%25E6%25A3%25B2%25E3%2581%25BF%25E5%2588%2586%25E3%2581%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Oscar%2520%257C%2520%25E6%25B5%25B7%25E5%25A4%2596%25E3%2581%25A7%25E5%2583%258D%25E3%2581%258FIT%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25B5...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFkNGQ4ZDU3YTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Sentinel と Defender、EDR、運用監視ツールの棲み分け</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Sentinel のデータ置き場は3つある — 単価が86倍変わる話 | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/oscart/articles/sentinel-data-tiers</link>
+            <guid isPermaLink="false">https://zenn.dev/oscart/articles/sentinel-data-tiers</guid>
+            <pubDate>Mon, 21 Sep 2026 19:18:07 GMT</pubDate>
+            <description><![CDATA[!連載「Microsoft Sentinel の構造と棲み分け」全4回の第2回です。 構築手順ではなく、データをどこに置くかでコストがどう変わるかを書きます。 この記事で分かることSentinel でデータを置ける3つの場所と、それぞれの単価安い置き場所で「できなくなること」同じログを条件で振り分けるには何が必要か 「何GB取り込むか」だけでは足りなくなったSentinel のコストは取り込み量で]]></description>
+            <content:encoded><![CDATA[!連載「Microsoft Sentinel の構造と棲み分け」全4回の第2回です。 構築手順ではなく、データをどこに置くかでコストがどう変わるかを書きます。 この記事で分かることSentinel でデータを置ける3つの場所と、それぞれの単価安い置き場所で「できなくなること」同じログを条件で振り分けるには何が必要か 「何GB取り込むか」だけでは足りなくなったSentinel のコストは取り込み量で決まる、と説明されることが多い。それ自体は正しいが、2026年時点ではもう一段深い話になっている。同じ1GB でも、どこに置くかで単価が86倍変わる。 その前に —...]]></content:encoded>
+            <author>Oscar | 海外で働くITコンサルタント / PM</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--DdYmiXle--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Sentinel%2520%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E7%25BD%25AE%25E3%2581%258D%25E5%25A0%25B4%25E3%2581%25AF3%25E3%2581%25A4%25E3%2581%2582%25E3%2582%258B%2520%25E2%2580%2594%2520%25E5%258D%2598%25E4%25BE%25A1%25E3%2581%258C86%25E5%2580%258D%25E5%25A4%2589%25E3%2582%258F%25E3%2582%258B%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Oscar%2520%257C%2520%25E6%25B5%25B7%25E5%25A4%2596%25E3%2581%25A7%25E5%2583%258D%25E3%2581%258FIT%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25B5...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFkNGQ4ZDU3YTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Sentinel のデータ置き場は3つある — 単価が86倍変わる話</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[ログが Sentinel に届くまで — AMA と DCR、そして「Deprecated」の読み方 | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/oscart/articles/sentinel-ama-dcr-connectors</link>
+            <guid isPermaLink="false">https://zenn.dev/oscart/articles/sentinel-ama-dcr-connectors</guid>
+            <pubDate>Mon, 21 Sep 2026 19:18:07 GMT</pubDate>
+            <description><![CDATA[!連載「Microsoft Sentinel の構造と棲み分け」全4回の第3回です。 ログが Sentinel に届くまでの経路——AMA・DCR・コネクタを扱います。 この記事で分かることAMA と DCR がそれぞれ何をしているのかコネクタの3類型と、製品ごとにどれを使うことになるか公式ドキュメントの「Deprecated」を「使えない」と読み違えないために 設計で一番手間がかかるのは検知ルー]]></description>
+            <content:encoded><![CDATA[!連載「Microsoft Sentinel の構造と棲み分け」全4回の第3回です。 ログが Sentinel に届くまでの経路——AMA・DCR・コネクタを扱います。 この記事で分かることAMA と DCR がそれぞれ何をしているのかコネクタの3類型と、製品ごとにどれを使うことになるか公式ドキュメントの「Deprecated」を「使えない」と読み違えないために 設計で一番手間がかかるのは検知ルールではないSentinel の構築で時間を食うのは、実は分析ルールの作り込みではなくログの収集経路だと思う。Microsoft 製品はクリックで繋がるので楽なのだが、F...]]></content:encoded>
+            <author>Oscar | 海外で働くITコンサルタント / PM</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--QVPcNjde--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AD%25E3%2582%25B0%25E3%2581%258C%2520Sentinel%2520%25E3%2581%25AB%25E5%25B1%258A%25E3%2581%258F%25E3%2581%25BE%25E3%2581%25A7%2520%25E2%2580%2594%2520AMA%2520%25E3%2581%25A8%2520DCR%25E3%2580%2581%25E3%2581%259D%25E3%2581%2597%25E3%2581%25A6%25E3%2580%258CDeprecated%25E3%2580%258D%25E3%2581%25AE%25E8%25AA%25AD%25E3%2581%25BF%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Oscar%2520%257C%2520%25E6%25B5%25B7%25E5%25A4%2596%25E3%2581%25A7%25E5%2583%258D%25E3%2581%258FIT%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25B5...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFkNGQ4ZDU3YTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>ログが Sentinel に届くまで — AMA と DCR、そして「Deprecated」の読み方</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Microsoft Sentinel は何であって、何でないか — Log Analytics との関係 | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/oscart/articles/sentinel-vs-log-analytics</link>
+            <guid isPermaLink="false">https://zenn.dev/oscart/articles/sentinel-vs-log-analytics</guid>
+            <pubDate>Mon, 21 Sep 2026 17:55:26 GMT</pubDate>
+            <description><![CDATA[!連載「Microsoft Sentinel の構造と棲み分け」全4回の第1回です。構築手順ではなく、構造と境界線から Sentinel を説明します。 この記事で分かることSentinel と Log Analytics ワークスペースがどういう関係にあるかSentinel を有効化すると料金がどう変わるか「まずログを集めて、後から Sentinel」が高くつく理由 最初に引っかかるところSen]]></description>
+            <content:encoded><![CDATA[!連載「Microsoft Sentinel の構造と棲み分け」全4回の第1回です。構築手順ではなく、構造と境界線から Sentinel を説明します。 この記事で分かることSentinel と Log Analytics ワークスペースがどういう関係にあるかSentinel を有効化すると料金がどう変わるか「まずログを集めて、後から Sentinel」が高くつく理由 最初に引っかかるところSentinel を調べ始めて最初に混乱するのが、Log Analytics との関係だと思う。「Log Analytics にログを集めて、それを Sentinel に連携...]]></content:encoded>
+            <author>Oscar | 海外で働くITコンサルタント / PM</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--EpNijYa8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Microsoft%2520Sentinel%2520%25E3%2581%25AF%25E4%25BD%2595%25E3%2581%25A7%25E3%2581%2582%25E3%2581%25A3%25E3%2581%25A6%25E3%2580%2581%25E4%25BD%2595%25E3%2581%25A7%25E3%2581%25AA%25E3%2581%2584%25E3%2581%258B%2520%25E2%2580%2594%2520Log%2520Analytics%2520%25E3%2581%25A8%25E3%2581%25AE%25E9%2596%25A2%25E4%25BF%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Oscar%2520%257C%2520%25E6%25B5%25B7%25E5%25A4%2596%25E3%2581%25A7%25E5%2583%258D%25E3%2581%258FIT%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25B5...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFkNGQ4ZDU3YTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Microsoft Sentinel は何であって、何でないか — Log Analytics との関係</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Security Copilot × Logic Apps で Defender インシデントの通知・誤検知判断を自動化する | Zennの「Azure」のフィード]]></title>
+            <link>https://zenn.dev/microsoft/articles/d53372e5c265e0</link>
+            <guid isPermaLink="false">https://zenn.dev/microsoft/articles/d53372e5c265e0</guid>
+            <pubDate>Mon, 21 Sep 2026 07:28:36 GMT</pubDate>
+            <description><![CDATA[はじめにMicrosoft Defender XDR のインシデントを、人が見る前にSecurity Copiotで要約&amp;amp;誤検知判断・Teams 通知・誤検知タグ付けする Logic App を作りました。この仕組みが実際にやってくれるのは、次の 3 つです。Security Copilot が作った要約（判定・根拠・推奨アクション）を、Defender インシデントのコメントに自動で書き込むその]]></description>
+            <content:encoded><![CDATA[はじめにMicrosoft Defender XDR のインシデントを、人が見る前にSecurity Copiotで要約&amp;amp;誤検知判断・Teams 通知・誤検知タグ付けする Logic App を作りました。この仕組みが実際にやってくれるのは、次の 3 つです。Security Copilot が作った要約（判定・根拠・推奨アクション）を、Defender インシデントのコメントに自動で書き込むその内容を Teams に通知する（MSSP 用・顧客用で宛先を振り分け）誤検知候補を自動で分類して、インシデントにタグ（FP候補）を付ける内部では、Advanced...]]></content:encoded>
+            <author>ymatsushima</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--voStb1HX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Security%2520Copilot%2520%25C3%2597%2520Logic%2520Apps%2520%25E3%2581%25A7%2520Defender%2520%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%2587%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AE%25E9%2580%259A%25E7%259F%25A5%25E3%2583%25BB%25E8%25AA%25A4%25E6%25A4%259C%25E7%259F%25A5%25E5%2588%25A4%25E6%2596%25AD%25E3%2582%2592...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ymatsushima%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGYxZ19vdXFlYnY3S1VzY2FNU3RWZDNwQ3prYXBZdE80WFQ5S3lob1dsMENuUk53PXMyNTAtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Security Copilot × Logic Apps で Defender インシデントの通知・誤検知判断を自動化する</originalTitle>
+                <blogTitle>Zennの「Azure」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/azure</blogLink>
+                <blogLinkMd5Hash>a2b9bf68cdf4acf4118cd8c7f98373e4</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[AIが書いたコードをツール呼び出しごとに使い捨てVMへ隔離するCodeAct | Zennの「Microsoft」のフィード]]></title>
+            <link>https://zenn.dev/okssusucha/articles/20260722-maf-hyperlight-codeact</link>
+            <guid isPermaLink="false">https://zenn.dev/okssusucha/articles/20260722-maf-hyperlight-codeact</guid>
+            <pubDate>Mon, 21 Sep 2026 04:43:54 GMT</pubDate>
+            <description><![CDATA[ツールを使うAIエージェントの中身は、意外なほど単純なループでできている。モデルが「この関数をこの引数で呼べ」というJSONを吐き、ハーネス(モデルの周りを固める実行基盤)がそれを実行し、結果をまた文脈に戻す。次の一手をモデルに考えさせて、また呼ぶ。これを延々と繰り返す。問題は、多段の作業ほどこの往復が効いてくることだ。5都市の天気を引いて、雨の街だけ拾って、平均気温を出す。人間ならコードで一気に]]></description>
+            <content:encoded><![CDATA[ツールを使うAIエージェントの中身は、意外なほど単純なループでできている。モデルが「この関数をこの引数で呼べ」というJSONを吐き、ハーネス(モデルの周りを固める実行基盤)がそれを実行し、結果をまた文脈に戻す。次の一手をモデルに考えさせて、また呼ぶ。これを延々と繰り返す。問題は、多段の作業ほどこの往復が効いてくることだ。5都市の天気を引いて、雨の街だけ拾って、平均気温を出す。人間ならコードで一気に書く処理を、従来のツール呼び出しは1ステップ1往復に分解する。往復のたびにツールのスキーマも中間結果も文脈へ積み直されるので、トークンは膨らみ、レイテンシも伸びる。MicrosoftがAge...]]></content:encoded>
+            <author>とうもろこし茶</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--kQzniz8b--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2581%258C%25E6%259B%25B8%25E3%2581%2584%25E3%2581%259F%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2597%25E3%2581%2594%25E3%2581%25A8%25E3%2581%25AB%25E4%25BD%25BF%25E3%2581%2584%25E6%258D%25A8%25E3%2581%25A6VM%25E3%2581%25B8%25E9%259A%2594%25E9%259B%25A2%25E3%2581%2599%25E3%2582%258BCodeAct%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2581%2586%25E3%2582%2582%25E3%2582%258D%25E3%2581%2593%25E3%2581%2597%25E8%258C%25B6%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSW96UXYxMFhOSmoybmNYTlZkQzFRV1IxV2UxZHVyMy1FeHlhd19tTno1MkZJT3NyRzFzQT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>AIが書いたコードをツール呼び出しごとに使い捨てVMへ隔離するCodeAct</originalTitle>
+                <blogTitle>Zennの「Microsoft」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/microsoft</blogLink>
+                <blogLinkMd5Hash>6c06b9d72e6fe20c8e3a884363f84d75</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Zenn Agentic AI ミニハッカソン with Google Cloudの感想 | Zennの「Google」のフィード]]></title>
+            <link>https://zenn.dev/eryndis/articles/a219bcd7adb108</link>
+            <guid isPermaLink="false">https://zenn.dev/eryndis/articles/a219bcd7adb108</guid>
+            <pubDate>Mon, 21 Sep 2026 02:18:05 GMT</pubDate>
+            <description><![CDATA[本記事をご覧いただきありがとうございますまず、本プロジェクトを主催されているクラスメソッド株式会社様オフィスならびに環境のご提供をいただきまして、ありがとうございました協賛、Google Cloud Japan合同会社様そして、スポンサー企業の株式会社ヴァル研究所様、パーフェクト株式会社様、GMICloud様、トレンドマイクロ株式会社様、ご提供いただきありがとうございますさて、本サービスのご提供を]]></description>
+            <content:encoded><![CDATA[本記事をご覧いただきありがとうございますまず、本プロジェクトを主催されているクラスメソッド株式会社様オフィスならびに環境のご提供をいただきまして、ありがとうございました協賛、Google Cloud Japan合同会社様そして、スポンサー企業の株式会社ヴァル研究所様、パーフェクト株式会社様、GMICloud様、トレンドマイクロ株式会社様、ご提供いただきありがとうございますさて、本サービスのご提供を簡単にご説明します。駅すぱあと API MCPサーバー: 生成AI（LLM）やAIエージェントから「駅すぱあと」の経路検索などの交通データ機能を、自然言語で直接呼び出せるMCPサーバ...]]></content:encoded>
+            <author>Eryndis</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--DwfqB85q--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Zenn%2520Agentic%2520AI%2520%25E3%2583%259F%25E3%2583%258B%25E3%2583%258F%25E3%2583%2583%25E3%2582%25AB%25E3%2582%25BD%25E3%2583%25B3%2520with%2520Google%2520Cloud%25E3%2581%25AE%25E6%2584%259F%25E6%2583%25B3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Eryndis%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzRiYmVlYmQ3ZTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Zenn Agentic AI ミニハッカソン with Google Cloudの感想</originalTitle>
+                <blogTitle>Zennの「Google」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/google</blogLink>
+                <blogLinkMd5Hash>4f2afa8044d173644e6d64c73e24a44a</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+        <item>
+            <title><![CDATA[Claudeが共通指示に対応、AIに任せる前の新常識 | Zennの「Google」のフィード]]></title>
+            <link>https://zenn.dev/sugawara_ai/articles/ai-news-20260919</link>
+            <guid isPermaLink="false">https://zenn.dev/sugawara_ai/articles/ai-news-20260919</guid>
+            <pubDate>Sat, 19 Sep 2026 06:56:09 GMT</pubDate>
+            <description><![CDATA[2026年9月19日（土）のAIニュース完全解説版。図解を見れば本文を読まなくても分かる形にしています。先に結論を言います。今日のニュースは、AIに何を任せ、どこを人が確かめるか、という話です。Claudeの共通指示対応から、学習素材を巡る訴訟、誤情報や履歴送信の問題、家庭の予定を支えるGoogleの取り組みまで。便利になるほど、任せ方が大事なんですよ。僕と一緒に、集客や売上につなげたい経営者も、]]></description>
+            <content:encoded><![CDATA[2026年9月19日（土）のAIニュース完全解説版。図解を見れば本文を読まなくても分かる形にしています。先に結論を言います。今日のニュースは、AIに何を任せ、どこを人が確かめるか、という話です。Claudeの共通指示対応から、学習素材を巡る訴訟、誤情報や履歴送信の問題、家庭の予定を支えるGoogleの取り組みまで。便利になるほど、任せ方が大事なんですよ。僕と一緒に、集客や売上につなげたい経営者も、副業や学び直しを始めたい個人も、次の動きを考えていきましょう。 1. Claudeの共通指示対応は条件付き図解（完全解説版）ここなんですよ。AIを使い分けるたびに、同じお願いを説明...]]></content:encoded>
+            <author>菅原友和</author>
+            <enclosure length="0" type="png" url="https://res.cloudinary.com/zenn/image/upload/s--norxF-Lm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%25E3%2581%258C%25E5%2585%25B1%25E9%2580%259A%25E6%258C%2587%25E7%25A4%25BA%25E3%2581%25AB%25E5%25AF%25BE%25E5%25BF%259C%25E3%2580%2581AI%25E3%2581%25AB%25E4%25BB%25BB%25E3%2581%259B%25E3%2582%258B%25E5%2589%258D%25E3%2581%25AE%25E6%2596%25B0%25E5%25B8%25B8%25E8%25AD%2598%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E8%258F%2585%25E5%258E%259F%25E5%258F%258B%25E5%2592%258C%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSUJfd2tWRGJ6UktoZC11RldsQUxwZU5lTUpaUGxGWXAyeWJpRTdIamlDbWNPMTgwT3M9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+            <_custom>
+                <hatenaCount>0</hatenaCount>
+                <originalTitle>Claudeが共通指示に対応、AIに任せる前の新常識</originalTitle>
+                <blogTitle>Zennの「Google」のフィード</blogTitle>
+                <blogLink>https://zenn.dev/topics/google</blogLink>
+                <blogLinkMd5Hash>4f2afa8044d173644e6d64c73e24a44a</blogLinkMd5Hash>
+                <favicon>https://static.zenn.studio/images/logo-transparent.png</favicon>
+            </_custom>
+        </item>
+    </channel>
+</rss>
