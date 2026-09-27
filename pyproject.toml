@@ -1,13 +1,13 @@
 [project]
 name = "rss-feed-translation"
 version = "0.1.0"
-description = "RSSフィード用のローカル翻訳ブリッジ"
+description = "RSSフィード用の翻訳ブリッジ"
 license = "GPL-3.0-or-later"
 license-files = ["LICENSE.txt", "LICENSES/MIT-upstream.txt"]
 requires-python = "==3.12.*"
 dependencies = [
     "argostranslate==1.9.6",
-    "python-dotenv==1.2.3",
+    "boto3==1.43.103",
     "structlog==26.1.0",
     "torch==2.14.0",
 ]
@@ -34,7 +34,7 @@ python_version = "3.12"
 strict = true
 
 [[tool.mypy.overrides]]
-module = ["argostranslate.*", "stanza.*"]
+module = ["argostranslate.*", "stanza.*", "boto3.*", "botocore.*"]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]

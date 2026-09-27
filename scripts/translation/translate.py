@@ -1,32 +1,16 @@
-"""標準入力のテキスト集合をArgosで翻訳し、標準出力にJSONを返す。"""
+"""標準入力のテキスト集合を選択した翻訳機で翻訳し、標準出力にJSONを返す。"""
 
 import contextlib
-import importlib.metadata
 import json
 import logging
-import os
 import sys
-from pathlib import Path
-from typing import Protocol
 
-from offline_sentence_splitter import configure_sentence_splitter
-from runtime import (
-    configure_environment,
-    configure_logging,
-    load_model_definition,
-    provider_id,
-)
+from provider_factory import create_provider, describe_provider
+from provider_protocol import TextTranslator
+from runtime import configure_logging
 
 LOGGER = logging.getLogger(__name__)
 MAX_INPUT_BYTES = 32 * 1024 * 1024
-
-
-class LocalTranslation(Protocol):
-    """Argosの翻訳オブジェクトが提供する最小インターフェース。"""
-
-    def translate(self, input_text: str) -> str:
-        """入力テキストの翻訳を返す。"""
-        ...
 
 
 def parse_request(value: object) -> list[str]:
@@ -41,33 +25,7 @@ def parse_request(value: object) -> list[str]:
     return [str(text) for text in texts]
 
 
-def load_translation(model: dict[str, str]) -> LocalTranslation:
-    """検証済みのバージョンに一致する英日翻訳モデルを取得する。"""
-    if importlib.metadata.version("argostranslate") != model["argosVersion"]:
-        raise ValueError("Argosのバージョンが一致しません")
-    marker = Path(os.environ["ARGOS_PACKAGES_DIR"]) / "verified-model.json"
-    if json.loads(marker.read_text()) != {"providerId": provider_id(model)}:
-        raise ValueError("検証済みのモデルがありません")
-    import argostranslate.package
-    import argostranslate.translate
-
-    configure_sentence_splitter()
-
-    packages = argostranslate.package.get_installed_packages()
-    if not any(
-        package.from_code == "en"
-        and package.to_code == "ja"
-        and str(package.package_version) == model["packageVersion"]
-        for package in packages
-    ):
-        raise ValueError("英日翻訳モデルがありません")
-    translation: LocalTranslation = argostranslate.translate.get_translation_from_codes(
-        "en", "ja"
-    )
-    return translation
-
-
-def translate_texts(texts: list[str], translation: LocalTranslation) -> list[str]:
+def translate_texts(texts: list[str], translation: TextTranslator) -> list[str]:
     """入力順に翻訳し、個別の失敗は空文字として返す。"""
     results: list[str] = []
     for index, text in enumerate(texts, start=1):
@@ -95,17 +53,16 @@ def main() -> int:
     """JSONプロトコルで一括翻訳を実行する。"""
     try:
         configure_logging()
-        configure_environment()
         raw = sys.stdin.buffer.read(MAX_INPUT_BYTES + 1)
         if len(raw) > MAX_INPUT_BYTES:
             raise ValueError("翻訳リクエストが上限を超えています")
         texts = parse_request(json.loads(raw))
-        model = load_model_definition()
+        descriptor = describe_provider()
         with contextlib.redirect_stdout(sys.stderr):
-            results = translate_texts(texts, load_translation(model))
+            results = translate_texts(texts, create_provider())
         print(
             json.dumps(
-                {"providerId": provider_id(model), "translations": results},
+                {"providerId": descriptor["providerId"], "translations": results},
                 ensure_ascii=False,
             )
         )

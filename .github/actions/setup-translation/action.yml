@@ -1,5 +1,13 @@
-name: Setup local translation
-description: Prepare the locked Python environment and verified English-Japanese model
+name: Setup translation
+description: Prepare the configured translation provider and optional AWS OIDC session
+
+inputs:
+  allow-aws:
+    description: Allow OIDC only in the publishing workflow on main
+    default: 'false'
+  require-argos-model:
+    description: Prepare the local model for Argos integration tests
+    default: 'false'
 
 runs:
   using: composite
@@ -16,22 +24,45 @@ runs:
       id: install
       continue-on-error: true
       shell: bash
-      run: |
-        test -f .env || cp .env.example .env
-        uv sync --frozen
+      run: uv sync --frozen
+    - name: Read translation configuration
+      id: config
+      if: steps.install.outcome == 'success'
+      continue-on-error: true
+      shell: bash
+      run: uv run --frozen --no-sync python scripts/translation/workflow_config.py
     - name: Restore translation model
+      if: steps.config.outputs.provider == 'argos' || inputs.require-argos-model == 'true'
       continue-on-error: true
       uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: .argos
-        key: ${{ runner.os }}-argos-${{ hashFiles('uv.lock', 'scripts/translation/model.json') }}
+        key: ${{ runner.os }}-argos-${{ hashFiles('uv.lock', 'scripts/translation/model.json', 'scripts/translation/config.py') }}
     - name: Verify English-Japanese model
       id: model
-      if: steps.install.outcome == 'success'
+      if: steps.install.outcome == 'success' && (steps.config.outputs.provider == 'argos' || inputs.require-argos-model == 'true')
       continue-on-error: true
       shell: bash
       run: uv run --frozen --no-sync python scripts/translation/setup_model.py
+    - name: Obtain AWS credentials with OIDC
+      id: aws
+      if: >-
+        inputs.allow-aws == 'true' && steps.config.outputs.aws-enabled == 'true' &&
+        github.workflow == 'Generate feeds and site' && github.ref == 'refs/heads/main' &&
+        (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+      continue-on-error: true
+      uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 # v5
+      with:
+        role-to-assume: ${{ steps.config.outputs.aws-role-arn }}
+        aws-region: ${{ steps.config.outputs.aws-region }}
+        role-session-name: rss-translation-${{ github.run_id }}
+        role-duration-seconds: 3600
+        unset-current-credentials: true
+        retry-max-attempts: 2
     - name: Report unavailable translation
-      if: steps.install.outcome != 'success' || steps.model.outcome != 'success'
+      if: >-
+        steps.install.outcome != 'success' || steps.config.outcome != 'success' ||
+        steps.model.outcome == 'failure' || steps.aws.outcome == 'failure' ||
+        (steps.config.outputs.provider != 'argos' && steps.aws.outcome != 'success')
       shell: bash
-      run: echo '::warning::Local translation setup failed. Derived feeds will retain original text; check the translation steps.'
+      run: echo '::warning::Translation is unavailable in this job. Uncached articles retain original text.'

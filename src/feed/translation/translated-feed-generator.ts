@@ -52,7 +52,7 @@ export const generateTranslatedFeeds = async (
       constants.maxFeedContentLength,
       {
         title: `${definition.title}｜${constants.feedTitle}`,
-        description: `${definition.title.replace(/-JP$/, '')}カテゴリの英語記事を日本語に翻訳してまとめたRSSフィード`,
+        description: `${definition.title}：英語記事を日本語に翻訳してまとめたRSSフィード`,
         language: definition.targetLanguage,
         pageUrl: sectionPageUrl(definition.id),
         feedUrls: sectionFeedUrls(definition.id),

@@ -4,17 +4,17 @@ import type { Translator } from './translator';
 
 const MAX_OUTPUT_BYTES = 32 * 1024 * 1024;
 
-export interface ArgosTranslatorOptions {
+export interface PythonTranslatorOptions {
   providerId: string;
   projectDirectory: string;
   timeoutMs: number;
 }
 
-/** 1バッチをローカルPythonへ渡すArgosプロバイダー */
-export class ArgosTranslator implements Translator {
+/** 1バッチをPythonの翻訳機へ渡すプロバイダー */
+export class PythonTranslator implements Translator {
   public readonly id: string;
 
-  constructor(private readonly options: ArgosTranslatorOptions) {
+  constructor(private readonly options: PythonTranslatorOptions) {
     this.id = options.providerId;
   }
 
@@ -27,7 +27,7 @@ export class ArgosTranslator implements Translator {
       '.venv',
       process.platform === 'win32' ? 'Scripts/python.exe' : 'bin/python',
     );
-    const script = path.join(this.options.projectDirectory, 'scripts/translation/argos_translate.py');
+    const script = path.join(this.options.projectDirectory, 'scripts/translation/translate.py');
     return new Promise((resolve, reject) => {
       const child = spawn(executable, [script], {
         cwd: this.options.projectDirectory,
@@ -38,13 +38,13 @@ export class ArgosTranslator implements Translator {
       let outputBytes = 0;
       const timer = setTimeout(() => {
         child.kill('SIGKILL');
-        reject(new Error('Argosの翻訳がタイムアウトしました'));
+        reject(new Error('翻訳がタイムアウトしました'));
       }, this.options.timeoutMs);
       child.stdout.on('data', (chunk: Buffer) => {
         outputBytes += chunk.length;
         if (outputBytes > MAX_OUTPUT_BYTES) {
           child.kill('SIGKILL');
-          reject(new Error('Argosの出力が上限を超えています'));
+          reject(new Error('翻訳の出力が上限を超えています'));
         } else {
           chunks.push(chunk);
         }
@@ -58,12 +58,12 @@ export class ArgosTranslator implements Translator {
       child.stdin.on('error', () => {
         child.kill('SIGKILL');
         clearTimeout(timer);
-        reject(new Error('Argosへ翻訳リクエストを送信できません'));
+        reject(new Error('Pythonへ翻訳リクエストを送信できません'));
       });
       child.on('close', (code) => {
         clearTimeout(timer);
         if (code !== 0) {
-          reject(new Error('ArgosのPythonブリッジが失敗しました'));
+          reject(new Error('翻訳のPythonブリッジが失敗しました'));
           return;
         }
         try {
@@ -78,7 +78,7 @@ export class ArgosTranslator implements Translator {
             response.translations.length !== texts.length ||
             response.translations.some((text: unknown) => typeof text !== 'string')
           ) {
-            throw new Error('Argosのレスポンスが不正です');
+            throw new Error('翻訳のレスポンスが不正です');
           }
           resolve(response.translations);
         } catch (error) {

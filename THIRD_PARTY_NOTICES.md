@@ -15,7 +15,7 @@
 | パッケージ | バージョン | 配布元のライセンス表示 |
 | --- | --- | --- |
 | [argostranslate](https://pypi.org/project/argostranslate/1.9.6/) | 1.9.6 | MIT |
-| [python-dotenv](https://pypi.org/project/python-dotenv/1.2.3/) | 1.2.3 | BSD-3-Clause |
+| [boto3](https://pypi.org/project/boto3/1.43.103/) | 1.43.103 | Apache-2.0 |
 | [structlog](https://pypi.org/project/structlog/26.1.0/) | 26.1.0 | MIT OR Apache-2.0 |
 | [torch](https://pypi.org/project/torch/2.14.0/) | 2.14.0 | Apache-2.0、Apache-2.0 WITH LLVM-exception、BSD-2-Clause、BSD-3-Clause、BSL-1.0、MITの組み合わせ |
 | [ctranslate2](https://pypi.org/project/ctranslate2/4.8.2/) | 4.8.2 | MIT |

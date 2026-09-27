@@ -36,7 +36,7 @@ describe('翻訳対象の定義', () => {
   });
 
   it('翻訳定義のIDをファイル名から読み込む', () => {
-    const value = { title: 'AI-JP', sourceSectionId: 'ai', sourceLanguage: 'en', targetLanguage: 'ja' };
+    const value = { title: 'AI-translated-jp', sourceSectionId: 'ai', sourceLanguage: 'en', targetLanguage: 'ja' };
     expect(parseTranslatedFeedFile('ai-jp.json', value)).toEqual({ ...value, id: 'ai-jp' });
     expect(() => parseTranslatedFeedFile('ai-jp.json', { ...value, id: 'other' })).toThrow('ファイル名');
     expect(() => parseTranslatedFeedFile('../ai-jp.json', value)).toThrow('ファイル名');
@@ -48,7 +48,7 @@ describe('翻訳対象の定義', () => {
     (overrides) => {
       const definition = {
         id: 'ai-jp',
-        title: 'AI-JP',
+        title: 'AI-translated-jp',
         sourceSectionId: 'ai',
         sourceLanguage: 'en',
         targetLanguage: 'ja',

@@ -20,13 +20,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # 外部フィードを処理するビルドは読み取り専用の権限で実行し、書き込み権限を持つデプロイと分離する
+  # ビルドにはソース参照と翻訳用OIDC、デプロイには公開先への書き込みを許可する
   build:
     name: Build Site
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     permissions:
       contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -46,6 +47,8 @@ jobs:
           cache: npm
       - run: npm ci
       - uses: ./.github/actions/setup-translation
+        with:
+          allow-aws: 'true'
       - uses: ./.github/actions/restore-feed-cache
       - run: npm run cache-prune
       - run: npm run feed-generate

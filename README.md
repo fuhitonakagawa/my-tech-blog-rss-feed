@@ -74,7 +74,6 @@ node --version
 npm --version
 npm ci
 uv sync --frozen
-test -f .env || cp .env.example .env
 uv run --frozen python scripts/translation/setup_model.py
 npm run feed-generate
 npm run site-prepare
@@ -119,16 +118,33 @@ Indexing APIへの通知には、生成済みブログデータ、対象サイ�
 | Eleventyの入力・出力・配信ファイル | [サイト設定（`eleventy.config.ts`）](eleventy.config.ts) |
 | 定期更新・公開先ブランチ | [更新ワークフロー（`.github/workflows/generate-feed.yml`）](.github/workflows/generate-feed.yml) |
 
-通常フィードの設定は共通設定とJSON定義を参照します。翻訳処理の必須環境変数は [環境設定テンプレート（`.env.example`）](.env.example) に記載しています。既存の環境変数は`.env`の値より優先します。フォーク先で配信する場合は、共通設定のサイトURL、リポジトリURL、著者、画像、任意のアクセス解析設定を配信先に合わせます。
+通常フィードの設定は共通設定とJSON定義を参照します。翻訳の非機密設定は [翻訳設定（`scripts/translation/config.py`）](scripts/translation/config.py) の `CONFIG = TranslationConfig(...)` で指定し、Gitで管理します。Argosの実行に`.env`の作成は不要です。AWSの短期認証情報はActionsが実行中だけ環境変数へ設定します。フォーク先では、共通設定のサイトURL、リポジトリURL、著者、画像、任意のアクセス解析設定を配信先に合わせます。
 
-| 翻訳用設定 | 用途 |
+| Python設定 | 用途・既定値 |
 | --- | --- |
-| `TRANSLATION_PROVIDER` | `argos`。プロバイダーの選択 |
-| `TRANSLATION_TIMEOUT_MS` | 翻訳バッチの制限時間（ミリ秒） |
-| `TRANSLATION_CPU_THREADS` | CPU推論のスレッド数 |
-| `ARGOS_PACKAGES_DIR` | 検証済み英日モデルの保存先 |
-| `ARGOS_RUNTIME_DIR` | Argosの補助データ・設定・取得キャッシュの保存先 |
-| `LOG_LEVEL` | PythonブリッジのJSONログレベル。標準エラーへ出力 |
+| `provider` | `argos` / `bedrock` / `amazon-translate`。既定は `argos` |
+| `timeout_ms` | 翻訳バッチの制限時間。1,200,000ミリ秒 |
+| `cpu_threads` | ArgosのCPU推論スレッド数。2 |
+| `packages_dir` / `runtime_dir` | モデル `.argos/packages` / 補助データ `.argos/runtime` |
+| `log_level` | PythonブリッジのJSONログレベル。`INFO`、標準エラーへ出力 |
+| `aws_region` / `aws_role_arn` | リージョン / OIDCで引き受けるIAMロールARN。空欄 |
+| `bedrock_model_id` | Converse対応のモデルIDまたは推論プロファイルID。空欄 |
+| `bedrock_max_tokens` / `bedrock_temperature` | 出力上限4,096 / temperature 0.0 |
+| `aws_request_timeout_seconds` / `aws_max_attempts` | AWS読込タイムアウト60秒 / 最大試行回数2 |
+| `max_input_bytes` | AWSに渡す1テキストのUTF-8上限。10,000バイト |
+
+AWS翻訳を使う場合の非機密設定例です。リージョン・ロール・モデルは自分のAWS環境に合わせて指定します。
+
+```python
+CONFIG = TranslationConfig(
+    provider="bedrock",
+    aws_region="ap-northeast-1",
+    aws_role_arn="arn:aws:iam::123456789012:role/rss-translation",
+    bedrock_model_id="利用するConverse対応モデルID",
+)
+```
+
+Amazon Translateは`provider="amazon-translate"`とリージョン・ロールを指定します。Bedrockはこれに加えてモデルIDが必須です。必須設定が空ならOIDC認証・AWS APIを開始せず、未翻訳の記事を原文で配信します。アクセスキーをコード、`.env`、GitHub Secrets / Variablesへ登録する必要はありません。
 
 <a id="サイトの追加方法"></a>
 
@@ -251,6 +267,18 @@ CSS方式では`itemSelector`、`titleSelector`、`linkSelector`、`dateSelector
 
 生成元ごとの基点は`/feeds/generated/<生成フィードID>/`です。
 
+このリポジトリの公開サイトでのURL例です。購読用RSSはサイトごとに独立しています。
+
+| 生成フィード | 購読用RSS |
+| --- | --- |
+| Serverless Operations | [https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/serverless-operations/rss.xml](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/serverless-operations/rss.xml) |
+| Anthropic Newsroom | [https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/anthropic-news/rss.xml](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/anthropic-news/rss.xml) |
+| Claude Product announcements | [https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/claude-announcements/rss.xml](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/claude-announcements/rss.xml) |
+| Claude Code Blog | [https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/claude-code-blog/rss.xml](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/claude-code-blog/rss.xml) |
+
+Anthropic Newsroomの [Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/anthropic-news/atom.xml)、[JSON Feed](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/anthropic-news/feed.json)、[生成状態（status.json）](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/anthropic-news/status.json) も同じ基点から参照できます。
+
+
 | ファイル | 内容 |
 | --- | --- |
 | `rss.xml`・`atom.xml`・`feed.json` | 購読用のRSS・Atom・JSON Feed |
@@ -275,26 +303,26 @@ CSS方式では`itemSelector`、`titleSelector`、`linkSelector`、`dateSelector
 
 翻訳派生フィードは、カテゴリ内の英語ソースの記事を1つにまとめたRSSです。タイトルとRSS内の概要文を日本語に翻訳し、元記事のURL・GUID・公開日時・著者・カテゴリ・ブログ名・画像・ブックマーク数を保持します。元ページの本文取得、全文翻訳、要約は対象外です。
 
-| 元セクション | 日本語派生ID | 表示名 |
-| --- | --- | --- |
-| `ai` | `ai-jp` | AI-JP |
-| `aws` | `aws-jp` | AWS-JP |
-| `azure` | `azure-jp` | Azure-JP |
-| `google-cloud` | `google-cloud-jp` | Google Cloud-JP |
-| `db` | `db-jp` | Database-JP |
-| `engineering` | `engineering-jp` | Engineering-JP |
-| `platform` | `platform-jp` | Platform-JP |
-| `programming` | `programming-jp` | Programming-JP |
-| `robotics` | `robotics-jp` | Robotics-JP |
-| `security-advisory` | `security-advisory-jp` | Security Advisory-JP |
-| `security` | `security-jp` | Security-JP |
-| `techcrunch` | `techcrunch-jp` | TechCrunch-JP |
+| 元セクション | 日本語派生ID | 表示名 | 閲覧ページ | 購読用RSS |
+| --- | --- | --- | --- | --- |
+| `ai` | `ai-jp` | AI-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml) |
+| `aws` | `aws-jp` | AWS-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/feeds/rss.xml) |
+| `azure` | `azure-jp` | Azure-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/feeds/rss.xml) |
+| `google-cloud` | `google-cloud-jp` | Google Cloud-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/feeds/rss.xml) |
+| `db` | `db-jp` | Database-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/feeds/rss.xml) |
+| `engineering` | `engineering-jp` | Engineering-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/feeds/rss.xml) |
+| `platform` | `platform-jp` | Platform-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/feeds/rss.xml) |
+| `programming` | `programming-jp` | Programming-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/feeds/rss.xml) |
+| `robotics` | `robotics-jp` | Robotics-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/feeds/rss.xml) |
+| `security-advisory` | `security-advisory-jp` | Security Advisory-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml) |
+| `security` | `security-jp` | Security-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml) |
+| `techcrunch` | `techcrunch-jp` | TechCrunch-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/feeds/rss.xml) |
 
-定義元は [翻訳フィード専用ディレクトリ（`src/resources/translated-feeds/`）](src/resources/translated-feeds/) です。1カテゴリにつき1ファイルで、ファイル名が日本語派生IDになります。例えば [AI-JPの定義（`ai-jp.json`）](src/resources/translated-feeds/ai-jp.json) は次の形式です。
+定義元は [翻訳フィード専用ディレクトリ（`src/resources/translated-feeds/`）](src/resources/translated-feeds/) です。1カテゴリにつき1ファイルで、ファイル名が日本語派生IDになります。例えば [AI-translated-jpの定義（`ai-jp.json`）](src/resources/translated-feeds/ai-jp.json) は次の形式です。
 
 ```json
 {
-  "title": "AI-JP",
+  "title": "AI-translated-jp",
   "sourceSectionId": "ai",
   "sourceLanguage": "en",
   "targetLanguage": "ja"
@@ -303,13 +331,24 @@ CSS方式では`itemSelector`、`titleSelector`、`linkSelector`、`dateSelector
 
 通常カテゴリの定義は`src/resources/sections/`、翻訳フィードの定義は`src/resources/translated-feeds/`で管理します。翻訳結果は`src/site/translated-feeds/<日本語派生ID>/feeds/`へ出力し、通常カテゴリの生成物である`src/site/section-feeds/`とは保存先を分けます。
 
-配信先は`/rss/<日本語派生ID>/feeds/rss.xml`、`atom.xml`、`feed.json`、閲覧ページは`/rss/<日本語派生ID>/`です。AI-JPのRSSは`/rss/ai-jp/feeds/rss.xml`となります。対象記事がない場合も空のフィードとページを出力します。
+配信先は`/rss/<日本語派生ID>/feeds/rss.xml`、`atom.xml`、`feed.json`、閲覧ページは`/rss/<日本語派生ID>/`です。AI-translated-jpのRSSは`/rss/ai-jp/feeds/rss.xml`となります。対象記事がない場合も空のフィードとページを出力します。
+
+AIの翻訳フィードのURL例です。表示名の`-translated-jp`と、購読URLのID `ai-jp` は別に管理します。
+
+- **閲覧ページ**: [https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/)
+- **購読用RSS**: [https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml)
+- **Atom**: [AI翻訳フィードのAtom](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/atom.xml)
+- **JSON Feed**: [AI翻訳フィードのJSON](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/feed.json)
+
+翻訳フィードのローカル保存先は`translated-feeds/`、公開URLは`/rss/`配下です。HTML由来の単独フィードは`/feeds/generated/`配下となります。フォーク先では、URL先頭を自分の公開サイトの基点に置き換えます。
 
 各派生フィードは、指定元セクションかつ`language: en`のソースだけを対象とします。日本語・混在・言語未指定のソースは含めません。記事の集約期間は通常フィードと同じで、取得記事に公開日時がなければ翻訳対象にも入りません。
 
-翻訳器はローカルのArgos Translateを使用し、外部翻訳APIの契約・キーを必要としません。英日モデルは固定バージョンとSHA-256で検証し、`.argos/`に保持します。モデルとPython環境は公開サイトやGitには含めません。モデルに同梱された文分割器を使い、翻訳時のモデル自動取得を禁止します。
+既定の翻訳器はローカルのArgos Translateを使用し、外部翻訳APIの契約・キーを必要としません。英日モデルは固定バージョンとSHA-256で検証し、`.argos/`に保持します。モデルとPython環境は公開サイトやGitには含めません。モデルに同梱された文分割器を使い、翻訳時のモデル自動取得を禁止します。
 
-`.cache/translations/`にはテキスト単位の翻訳結果を保存します。キーにはエンジン・モデル・Python依存関係のバージョン、翻訳方向、原文を含みます。タイトルと概要を別々に扱うため、概要だけの変更でタイトルを再翻訳することはありません。
+`.cache/translations/`にはテキスト単位の翻訳結果を保存します。キーにはプロバイダー・翻訳方向・原文を含みます。ArgosはモデルとPythonロックファイル、AWSは接続リージョン・モデル・推論設定・翻訳指示も識別子に含めます。タイトルと概要を別々に扱うため、概要だけの変更でタイトルを再翻訳することはありません。
+
+AWS翻訳は公開用の`Generate feeds and site`ワークフローのmainブランチで実行します。PR、通常CI、ローカルではAWSを呼び出しません。AWS APIへ送るのは翻訳対象のタイトル・概要だけです。入力上限超過、APIエラー、空の応答、Bedrockの出力打ち切りやJSON形式違反は翻訳失敗として扱います。Bedrockのモデルはsystem指示、`temperature`、Converse APIへの対応が必要です。AWS実行には利用料金が発生します。
 
 翻訳は補助処理です。設定・Python・モデル・翻訳器が利用できない場合や、記事のタイトルまたは概要の翻訳に失敗した場合、その記事の両フィールドを原文で配信します。失敗した結果は翻訳キャッシュへ保存しません。通常フィードの内容と生成処理は維持されます。
 
@@ -355,7 +394,10 @@ npm audit --audit-level=moderate
 
 buildジョブは読み取り権限でサイトを生成し、成果物をdeployジョブへ渡します。deployジョブが`gh-pages`へ配信内容を保存し、GitHub Pagesの公開処理へつながります。フォーク先でも、GitHub Pagesの公開元を`gh-pages`のルートに設定します。
 
-[翻訳環境のセットアップ（`.github/actions/setup-translation/action.yml`）](.github/actions/setup-translation/action.yml) がPython・uv・モデルを準備します。モデルキャッシュはOS、モデル定義、Pythonロックファイルをキーとして分離します。セットアップが失敗した場合は警告を出し、フィード生成は原文へのフォールバックで継続します。
+[翻訳環境のセットアップ（`.github/actions/setup-translation/action.yml`）](.github/actions/setup-translation/action.yml) がPython・uv・選択された翻訳機を準備します。Argosではモデルを検証し、AWSでは公開ジョブだけがOIDC短期セッションを取得します。モデルキャッシュはOS、モデル定義、Python設定、Pythonロックファイルをキーとして分離します。セットアップが失敗した場合は警告を出し、フィード生成は原文へのフォールバックで継続します。
+
+AWS側にはGitHubのOIDC ProviderとIAMロールが必要です。信頼ポリシーではaudienceを`sts.amazonaws.com`、subjectを`repo:<所有者>/<リポジトリ>:ref:refs/heads/main`に限定します。公開buildジョブの`id-token: write`はOIDC用、`contents: read`はソース参照用です。deployジョブだけが`contents: write`を持ちます。ロールの許可はAmazon Translateなら`translate:TranslateText`、Bedrockなら使用するモデル・推論プロファイルに対する`bedrock:InvokeModel`へ限定します。クロスリージョン推論では宛先モデルにも権限が必要です。設定・OIDC認証に失敗しても通常RSSの生成と公開は継続します。
+
 
 同じ更新グループの実行が重なる場合は、先行する実行がキャンセルされます。deployは一時的な失敗に対して最大3回試行します。
 
@@ -380,7 +422,7 @@ TypeScriptを`tsx`で実行し、Eleventyが静的HTMLを出力します。RSS�
 | `src/feed/` | 外部取得、解析、集約、配信形式への変換、保存 |
 | `src/feed/generated/` | HTML抽出、記事保持、前回状態の復元、単独フィード生成 |
 | `src/feed/translation/` | テキスト単位の翻訳、プロバイダー境界、キャッシュ、カテゴリ統合 |
-| `scripts/translation/` | ローカルPythonブリッジ、固定モデルの検証とインストール |
+| `scripts/translation/` | Python翻訳ブリッジ、プロバイダー設定、AWS境界、固定モデルの検証 |
 | `src/common/` | 共通設定、URL・接続先検証、Eleventy用処理 |
 | `src/site/` | テンプレート、画面データ、スタイル、画像 |
 | `tests/` | 内部テスト、実サイトテスト、テスト用データ |
@@ -409,7 +451,7 @@ flowchart TD
     remote["外部RSS・Atomの取得"]
     parse["共通のXML検証・フィード解析"]
     recent["公開日時が過去8日間の記事を抽出"]
-    translation["対象セクションの英語記事だけを翻訳<br/>キャッシュ利用・失敗した記事は原文"]
+    translation["対象セクションの英語記事だけを翻訳<br/>config.pyでArgos・Bedrock・Amazon Translateを選択<br/>キャッシュ利用・設定不足や失敗した記事は原文"]
     translated["カテゴリ単位の日本語派生フィード"]
     metadata["記事・購読元のOGPとはてな情報を取得"]
     aggregated["全体・セクションのRSS・Atom・JSON Feedを生成・検証"]
@@ -484,7 +526,13 @@ flowchart TD
 │   └── MIT-upstream.txt  # フォーク元のMIT本文・著作権表示
 ├── scripts/
 │   └── translation/
-│       ├── argos_translate.py
+│       ├── argos_provider.py
+│       ├── aws_provider.py
+│       ├── config.py
+│       ├── provider_factory.py
+│       ├── provider_protocol.py
+│       ├── translate.py
+│       ├── workflow_config.py
 │       ├── model.json
 │       ├── offline_sentence_splitter.py
 │       ├── runtime.py
@@ -516,7 +564,8 @@ flowchart TD
 │   │   │   ├── state-store.ts
 │   │   │   └── types.ts
 │   │   ├── translation/
-│   │   │   ├── argos-translator.ts
+│   │   ├── test_providers.py
+│   │   │   ├── python-translator.ts
 │   │   │   ├── translated-feed-generator.ts
 │   │   │   ├── translation-cache.ts
 │   │   │   ├── translation-service.ts
@@ -662,13 +711,15 @@ flowchart TD
 │   │   │   ├── anthropic-news.test.ts
 │   │   │   └── claude-announcements.test.ts
 │   │   └── translation/
-│   │       ├── argos-translator.test.ts
+│   │       ├── python-translator.test.ts
 │   │       ├── translated-feed-generator.test.ts
-│   │       └── translation-service.test.ts
+│   │       ├── translation-service.test.ts
+│   │       └── translator-factory.test.ts
 │   ├── helpers/
 │   │   ├── site-data-fixtures.ts
 │   │   └── translation-fixtures.ts
 │   ├── translation/
+│   │   ├── test_providers.py
 │   │   ├── test_bridge.py
 │   │   └── test_offline_splitter.py
 │   ├── blog-feeds.test.ts
@@ -698,7 +749,7 @@ flowchart TD
 │   ├── translated-feed-list.test.ts
 │   └── url-guard.test.ts
 ├── .editorconfig
-├── .env.example  # 翻訳処理の必須設定テンプレート
+├── .env.example  # 設定とOIDC認証情報の取り扱い
 ├── .gitignore
 ├── .node-version
 ├── .playwright-mcp/

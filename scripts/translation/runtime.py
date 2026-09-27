@@ -11,7 +11,7 @@ from uuid import uuid4
 from zoneinfo import ZoneInfo
 
 import structlog
-from dotenv import load_dotenv
+from config import CONFIG, TranslationConfig
 from structlog.typing import EventDict, Processor, WrappedLogger
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -36,34 +36,15 @@ ALLOWED_EVENTS = {
 }
 
 
-def required_environment(name: str) -> str:
-    """必須の環境変数を返す。
-
-    Args:
-        name: 環境変数名。
-
-    Returns:
-        空でない設定値。
-
-    Raises:
-        ValueError: 環境変数が未設定の場合。
-    """
-    value = os.environ.get(name, "").strip()
-    if not value:
-        raise ValueError(f"必須設定がありません: {name}")
-    return value
-
-
-def configure_environment() -> None:
+def configure_environment(config: TranslationConfig = CONFIG) -> None:
     """環境設定を検証し、Argosの保存先をプロジェクト配下へ設定する。"""
-    load_dotenv(PROJECT_ROOT / ".env")
-    threads = required_environment("TRANSLATION_CPU_THREADS")
+    threads = str(config.cpu_threads)
     if int(threads) <= 0:
-        raise ValueError("TRANSLATION_CPU_THREADSには正の整数が必要です")
+        raise ValueError("cpu_threadsには正の整数が必要です")
     os.environ["OMP_NUM_THREADS"] = threads
     os.environ["MKL_NUM_THREADS"] = threads
-    packages = (PROJECT_ROOT / required_environment("ARGOS_PACKAGES_DIR")).resolve()
-    runtime = (PROJECT_ROOT / required_environment("ARGOS_RUNTIME_DIR")).resolve()
+    packages = (PROJECT_ROOT / config.packages_dir).resolve()
+    runtime = (PROJECT_ROOT / config.runtime_dir).resolve()
     os.environ["ARGOS_PACKAGES_DIR"] = str(packages)
     for variable, directory in (
         ("XDG_DATA_HOME", "data"),
@@ -89,7 +70,6 @@ def safe_event(_logger: WrappedLogger, _method: str, event: EventDict) -> EventD
 
 def configure_logging() -> None:
     """stdlibとstructlogを標準エラーの1行JSONへ統一する。"""
-    load_dotenv(PROJECT_ROOT / ".env")
     structlog.contextvars.bind_contextvars(correlation_id=str(uuid4()))
     processors: list[Processor] = [
         structlog.contextvars.merge_contextvars,
@@ -118,10 +98,10 @@ def configure_logging() -> None:
         )
     )
     logging.basicConfig(level=logging.ERROR, handlers=[handler], force=True)
-    level_name = required_environment("LOG_LEVEL").upper()
+    level_name = CONFIG.log_level.upper()
     level = logging.getLevelNamesMapping().get(level_name)
     if level is None:
-        raise ValueError("LOG_LEVELが不正です")
+        raise ValueError("log_levelが不正です")
     logging.getLogger().setLevel(level)
     logging.captureWarnings(True)
 

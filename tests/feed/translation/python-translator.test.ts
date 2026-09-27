@@ -2,7 +2,7 @@ import * as fs from 'node:fs/promises';
 import * as os from 'node:os';
 import * as path from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { ArgosTranslator } from '../../../src/feed/translation/argos-translator';
+import { PythonTranslator } from '../../../src/feed/translation/python-translator';
 
 let directory: string;
 beforeEach(async () => {
@@ -14,12 +14,12 @@ afterEach(async () => {
 });
 
 /** 子プロセス境界のJSON応答を再現するテスト用実行ファイルを作る */
-const provider = async (body: string, timeoutMs = 5000): Promise<ArgosTranslator> => {
+const provider = async (body: string, timeoutMs = 5000): Promise<PythonTranslator> => {
   await fs.writeFile(path.join(directory, '.venv/bin/python'), `#!/usr/bin/env node\n${body}`, { mode: 0o755 });
-  return new ArgosTranslator({ projectDirectory: directory, providerId: 'test:v1', timeoutMs });
+  return new PythonTranslator({ projectDirectory: directory, providerId: 'test:v1', timeoutMs });
 };
 
-describe('ArgosTranslatorのプロセス境界', () => {
+describe('PythonTranslatorのプロセス境界', () => {
   it('一括入力をstdinへ送り、stdoutの入力順の結果を返す', async () => {
     const translator = await provider(`
       let input = '';
@@ -49,7 +49,7 @@ describe('ArgosTranslatorのプロセス境界', () => {
   });
 
   it('Pythonが存在しない場合も失敗を通知する', async () => {
-    const translator = new ArgosTranslator({ projectDirectory: directory, providerId: 'test:v1', timeoutMs: 1000 });
+    const translator = new PythonTranslator({ projectDirectory: directory, providerId: 'test:v1', timeoutMs: 1000 });
     await expect(translator.translateMany(['one'], 'en', 'ja')).rejects.toThrow();
   });
 });

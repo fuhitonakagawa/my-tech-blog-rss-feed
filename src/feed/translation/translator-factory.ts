@@ -1,46 +1,45 @@
-import { createHash } from 'node:crypto';
-import * as fs from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ArgosTranslator } from './argos-translator';
+import { PythonTranslator } from './python-translator';
 import type { Translator } from './translator';
 
 const PROJECT_DIRECTORY = fileURLToPath(new URL('../../../', import.meta.url));
 
-/** 環境設定と固定モデル情報から翻訳プロバイダーを作る */
+/** Pythonの管理対象設定から翻訳機とキャッシュ識別子を取得する */
 export const createTranslator = (): Translator => {
-  const envPath = path.join(PROJECT_DIRECTORY, '.env');
-  if (fs.existsSync(envPath)) {
-    process.loadEnvFile(envPath);
-  }
-  if (process.env.TRANSLATION_PROVIDER !== 'argos') {
-    throw new Error('TRANSLATION_PROVIDERにはargosの指定が必要です');
-  }
-  const timeoutMs = Number(process.env.TRANSLATION_TIMEOUT_MS);
-  if (!Number.isSafeInteger(timeoutMs) || timeoutMs <= 0) {
-    throw new Error('TRANSLATION_TIMEOUT_MSには正の整数が必要です');
-  }
-  const model: unknown = JSON.parse(
-    fs.readFileSync(path.join(PROJECT_DIRECTORY, 'scripts/translation/model.json'), 'utf-8'),
+  const executable = path.join(
+    PROJECT_DIRECTORY,
+    '.venv',
+    process.platform === 'win32' ? 'Scripts/python.exe' : 'bin/python',
+  );
+  const descriptor: unknown = JSON.parse(
+    execFileSync(executable, ['scripts/translation/provider_factory.py'], {
+      cwd: PROJECT_DIRECTORY,
+      timeout: 10_000,
+      maxBuffer: 64 * 1024,
+      encoding: 'utf-8',
+      stdio: ['ignore', 'pipe', 'pipe'],
+    }),
   );
   if (
-    model === null ||
-    typeof model !== 'object' ||
-    !('argosVersion' in model) ||
-    typeof model.argosVersion !== 'string' ||
-    !('packageVersion' in model) ||
-    typeof model.packageVersion !== 'string' ||
-    !('sha256' in model) ||
-    typeof model.sha256 !== 'string' ||
-    !/^[a-f0-9]{64}$/.test(model.sha256)
+    descriptor === null ||
+    typeof descriptor !== 'object' ||
+    !('configured' in descriptor) ||
+    descriptor.configured !== true ||
+    !('providerId' in descriptor) ||
+    typeof descriptor.providerId !== 'string' ||
+    !descriptor.providerId ||
+    !('timeoutMs' in descriptor) ||
+    typeof descriptor.timeoutMs !== 'number' ||
+    !Number.isSafeInteger(descriptor.timeoutMs) ||
+    descriptor.timeoutMs <= 0
   ) {
-    throw new Error('Argosのモデル定義が不正です');
+    throw new Error('翻訳設定が不足しているか不正です');
   }
-  return new ArgosTranslator({
+  return new PythonTranslator({
     projectDirectory: PROJECT_DIRECTORY,
-    timeoutMs,
-    providerId: `argos:${model.argosVersion}:en-ja:${model.packageVersion}:${model.sha256}:${createHash('sha256')
-      .update(fs.readFileSync(path.join(PROJECT_DIRECTORY, 'uv.lock')))
-      .digest('hex')}`,
+    timeoutMs: descriptor.timeoutMs,
+    providerId: descriptor.providerId,
   });
 };

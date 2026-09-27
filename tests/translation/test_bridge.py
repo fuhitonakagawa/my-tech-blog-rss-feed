@@ -7,9 +7,9 @@ import zipfile
 from pathlib import Path
 
 import pytest
-from argos_translate import parse_request, translate_texts
 from runtime import safe_event
 from setup_model import installed_files_match, reset_package_directories, verify_archive
+from translate import parse_request, translate_texts
 
 
 class FakeTranslation:

@@ -29,6 +29,8 @@ jobs:
           cache: npm
       - run: npm ci
       - uses: ./.github/actions/setup-translation
+        with:
+          require-argos-model: 'true'
       - uses: ./.github/actions/restore-feed-cache
 
       - name: Run external tests
