@@ -2,6 +2,7 @@ import { type CheerioAPI, load } from 'cheerio';
 import { isPublishableHttpUrl } from '../../common/url-guard';
 import { normalizeArticleUrl, removeInvalidUnicode } from '../common-util';
 import { logger } from '../logger';
+import { parseEnglishPublicationDate } from './publication-date';
 import type { CssGeneratedFeedExtractorConfig, GeneratedFeedDefinition, GeneratedFeedItem } from './types';
 
 type HtmlSelection = ReturnType<CheerioAPI>;
@@ -37,7 +38,8 @@ const extractTextList = (item: HtmlSelection, selector?: string): string[] => {
 
 /** 日付と時刻をタイムゾーン付きISO 8601へ変換する */
 const toIsoDate = (dateValue: string, timeValue: string, timeZoneOffset: string): string => {
-  let dateTimeValue = timeValue ? `${dateValue}T${timeValue}` : dateValue;
+  const normalizedDate = /^[A-Za-z]/.test(dateValue) ? parseEnglishPublicationDate(dateValue).slice(0, 10) : dateValue;
+  let dateTimeValue = timeValue ? `${normalizedDate}T${timeValue}` : normalizedDate;
   if (ISO_DATE_PATTERN.test(dateTimeValue)) {
     dateTimeValue = `${dateTimeValue}T00:00:00`;
   }

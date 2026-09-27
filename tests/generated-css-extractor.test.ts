@@ -75,6 +75,15 @@ describe('extractCssGeneratedFeedItems', () => {
     expect(items[0].publishedAt).toBe('2026-09-04T15:00:00.000Z');
   });
 
+  it.each(['September 5, 2026', 'Sep 5, 2026'])(
+    '英語の掲載日にも指定の時刻とタイムゾーンを適用する: %s',
+    (dateValue) => {
+      const html = createHtml().replace('datetime="2026-09-05"', `datetime="${dateValue}"`);
+      const items = extractCssGeneratedFeedItems(definition, html, extractor);
+      expect(items[0].publishedAt).toBe('2026-09-05T03:34:56.000Z');
+    },
+  );
+
   it('記事要素を取得できない場合はエラーにする', () => {
     expect(() => extractCssGeneratedFeedItems(definition, '<main></main>', extractor)).toThrow(
       '生成フィード「テストブログ」の記事を取得できません',

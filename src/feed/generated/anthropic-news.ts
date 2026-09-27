@@ -2,6 +2,7 @@ import { type CheerioAPI, load } from 'cheerio';
 import { isPublishableHttpUrl } from '../../common/url-guard';
 import { normalizeArticleUrl, removeInvalidUnicode } from '../common-util';
 import { logger } from '../logger';
+import { parseEnglishPublicationDate } from './publication-date';
 import type { GeneratedFeedDefinition, GeneratedFeedItem } from './types';
 
 type HtmlSelection = ReturnType<CheerioAPI>;
@@ -14,27 +15,10 @@ const ARTICLE_SELECTOR = [
 const TITLE_SELECTOR = 'h2, h3, h4, [class*="PublicationList"][class*="__title"]';
 const CATEGORY_SELECTOR =
   '[class*="PublicationList"][class*="__subject"], [class*="FeaturedGrid"][class*="__meta"] > span';
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 /** 記事内の指定要素のテキストを1行に正規化する */
 const extractText = (article: HtmlSelection, selector: string): string => {
   return removeInvalidUnicode(article.find(selector).first().text()).replace(/\s+/g, ' ').trim();
-};
-
-/** 時刻のない英語表記の掲載日をUTCの午前0時として返す */
-const parsePublicationDate = (value: string): string => {
-  const match = /^([A-Z][a-z]{2}) (\d{1,2}), (\d{4})$/.exec(value);
-  if (!match) {
-    throw new Error('公開日の形式が不正です');
-  }
-  const month = MONTHS.indexOf(match[1]);
-  const day = Number(match[2]);
-  const year = Number(match[3]);
-  const date = new Date(Date.UTC(year, month, day));
-  if (month < 0 || date.getUTCFullYear() !== year || date.getUTCMonth() !== month || date.getUTCDate() !== day) {
-    throw new Error('公開日が存在しません');
-  }
-  return date.toISOString();
 };
 
 /** タイトル・Anthropic内の公開URL・掲載日が有効な記事を返す */
@@ -53,7 +37,7 @@ const extractArticle = (definition: GeneratedFeedDefinition, article: HtmlSelect
     id: url,
     title,
     url,
-    publishedAt: parsePublicationDate(extractText(article, 'time')),
+    publishedAt: parseEnglishPublicationDate(extractText(article, 'time')),
     summary: extractText(article, 'p'),
     creator: '',
     categories: category ? [category] : [],

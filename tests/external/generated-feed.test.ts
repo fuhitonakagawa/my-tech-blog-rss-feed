@@ -16,6 +16,7 @@ afterAll(async () => {
 describe.each([
   { id: 'serverless-operations', sectionId: 'jp-tech-blog', articlePrefix: 'https://serverless.co.jp/blog/' },
   { id: 'anthropic-news', sectionId: 'ai', articlePrefix: 'https://www.anthropic.com/' },
+  { id: 'claude-announcements', sectionId: 'ai', articlePrefix: 'https://claude.com/blog/' },
 ])('$idの生成フィード', ({ id, sectionId, articlePrefix }) => {
   it('単独RSSと所属セクションの記事を同じXMLから生成する', async () => {
     const definition = GENERATED_FEED_DEFINITION_MAP.get(id);

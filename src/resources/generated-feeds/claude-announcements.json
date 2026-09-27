@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "label": "Claude Product announcements",
+  "pageUrl": "https://claude.com/blog-category/announcements",
+  "language": "en",
+  "extractor": {
+    "type": "css",
+    "itemSelector": "main .blog_cms_grid > .blog_cms_item",
+    "titleSelector": "[fs-list-field=\"heading\"]",
+    "linkSelector": "a[fs-list-element=\"item-link\"]",
+    "dateSelector": "[fs-list-field=\"date\"]",
+    "timeZoneOffset": "+00:00",
+    "categorySelector": "[fs-list-field=\"category\"]"
+  },
+  "pollIntervalMinutes": 60,
+  "maxItems": 50
+}
