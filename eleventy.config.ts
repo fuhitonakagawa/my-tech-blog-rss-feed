@@ -15,8 +15,14 @@ module.exports = (eleventyConfig: any) => {
   // static assets
   eleventyConfig.addPassthroughCopy('src/site/images');
   eleventyConfig.addPassthroughCopy('src/site/feeds');
+  eleventyConfig.addPassthroughCopy({
+    'LICENSE.txt': 'LICENSE.txt',
+    LICENSES: 'LICENSES',
+    'THIRD_PARTY_NOTICES.md': 'THIRD_PARTY_NOTICES.md',
+  });
   // セクションフィード: src/site/section-feeds/<id>/feeds/* を /rss/<id>/feeds/* として配信
   eleventyConfig.addPassthroughCopy({ 'src/site/section-feeds': constants.sectionRootPath });
+  eleventyConfig.addPassthroughCopy({ 'src/site/translated-feeds': constants.sectionRootPath });
 
   // images
   eleventyConfig.addNunjucksAsyncShortcode('imageThumbnail', imageThumbnailShortcode);

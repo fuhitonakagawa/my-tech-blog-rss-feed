@@ -1,7 +1,7 @@
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import * as url from 'node:url';
-import { FEED_SECTION_LIST } from '../../resources/feed-info-list';
+import { DISPLAY_SECTION_LIST } from '../../resources/translated-feed-list';
 import { dayjs } from './lib/dayjs-setup';
 import { computeFeedItemsChunks } from './lib/feed-items-chunks';
 import { computeLastModifiedBlogsDate } from './lib/last-modified-blogs-date';
@@ -16,8 +16,8 @@ const dirName = url.fileURLToPath(new URL('.', import.meta.url));
 export default async () => {
   const sections = [];
 
-  for (const section of FEED_SECTION_LIST) {
-    const feedJsonPath = path.join(dirName, '../section-feeds', section.id, 'feeds/feed.json');
+  for (const section of DISPLAY_SECTION_LIST) {
+    const feedJsonPath = path.join(dirName, '..', section.feedDirectory, section.id, 'feeds/feed.json');
     const feedData = JSON.parse(await fs.readFile(feedJsonPath, 'utf-8'));
     const feedItems = feedData.items ?? [];
 

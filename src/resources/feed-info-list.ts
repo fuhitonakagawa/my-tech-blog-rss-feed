@@ -3,6 +3,7 @@ import * as path from 'node:path';
 import * as url from 'node:url';
 import { generatedFeedUrls } from '../common/constants';
 import { isValidHttpUrl } from '../common/url-guard';
+import { type FeedLanguage, generatedFeedLanguage, parseFeedLanguage } from './feed-language';
 import { GENERATED_FEED_DEFINITION_MAP } from './generated-feed-list';
 
 type ValidUrl = `${'http' | 'https'}://${string}.${string}`;
@@ -26,6 +27,7 @@ export interface FeedInfo {
   label: string;
   url: ValidUrl;
   sectionId: string;
+  language: FeedLanguage;
   pageUrl?: ValidUrl;
   input: FeedInput;
 }
@@ -97,6 +99,7 @@ const toFeedInfo = (fileName: string, sectionId: string, value: unknown): FeedIn
       label: feed.label,
       url: feed.url as ValidUrl,
       sectionId,
+      language: parseFeedLanguage(feed.language),
       input: {
         kind: 'remote',
         url: feed.url as ValidUrl,
@@ -115,6 +118,7 @@ const toFeedInfo = (fileName: string, sectionId: string, value: unknown): FeedIn
       url: generatedFeedUrls(definition.id).rss as ValidUrl,
       pageUrl: definition.pageUrl as ValidUrl,
       sectionId,
+      language: generatedFeedLanguage(definition.language),
       input: {
         kind: 'generated',
         id: definition.id,

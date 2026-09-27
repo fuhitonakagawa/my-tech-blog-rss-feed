@@ -38,6 +38,7 @@ describe('FEED_SECTION_LIST', () => {
       url: 'https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/serverless-operations/rss.xml',
       pageUrl: 'https://serverless.co.jp/blog/',
       sectionId: 'jp-tech-blog',
+      language: 'ja',
       input: {
         kind: 'generated',
         id: 'serverless-operations',

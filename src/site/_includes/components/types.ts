@@ -23,6 +23,7 @@ export interface EleventyPage {
 export interface FeedJsonItemCustom {
   hatenaCount: number;
   originalTitle: string;
+  translatedTitle?: string;
   blogTitle: string;
   blogLink: string;
   blogLinkMd5Hash: string;

@@ -16,6 +16,7 @@ export interface FeedDistributionSet {
  */
 export interface AggregatedFeedMeta {
   title: string;
+  language?: string;
   description: string;
   /** フィードに対応するページのURL。末尾スラッシュ付き */
   pageUrl: string;
@@ -78,7 +79,7 @@ export class FeedGenerator {
     const outputFeed = new Feed({
       title: feedMeta.title,
       description: feedMeta.description,
-      language: constants.feedLanguage,
+      language: feedMeta.language ?? constants.feedLanguage,
       id: feedMeta.pageUrl,
       link: feedMeta.pageUrl,
       feedLinks: feedMeta.feedUrls,
@@ -142,7 +143,10 @@ export class FeedGenerator {
             name: '_custom',
             objects: {
               hatenaCount: allFeedItemHatenaCountMap.get(feedItem.link) || 0,
-              originalTitle: escapeTextForXml(feedItem.title ?? ''),
+              originalTitle: escapeTextForXml(feedItem.originalTitle ?? feedItem.title ?? ''),
+              ...(feedItem.originalTitle !== undefined
+                ? { translatedTitle: escapeTextForXml(feedItem.title ?? '') }
+                : {}),
               blogTitle: escapeTextForXml(feedItem.blogTitle),
               blogLink: feedItem.blogLink,
               blogLinkMd5Hash: textToMd5Hash(feedItem.blogLink),

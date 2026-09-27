@@ -21,6 +21,8 @@ describe('renderFeedListDialog', () => {
     expect(html).toContain('Publickey');
     expect(html).toContain('https://www.publickey1.jp/atom.xml');
     expect(html).toContain('href="../../rss/publickey/"');
+    expect(html).toContain('href="../../rss/ai-jp/">AI-JP</a>');
+    expect(html).toContain('/rss/ai-jp/feeds/rss.xml');
   });
 
   it('利用可能な生成フィードは元ページと購読URLを表示する', () => {

@@ -36,8 +36,25 @@ afterEach(() => {
 });
 
 describe('FeedCrawler', () => {
+  it.each(['en', 'ja', 'mixed', 'unknown'] as const)('言語指定を記事へ伝える: %s', (language) => {
+    const feedInfo: FeedInfo = {
+      label: 'Source',
+      url: 'https://example.com/feed',
+      sectionId: 'ai',
+      language,
+      input: { kind: 'remote', url: 'https://example.com/feed' },
+    };
+    const feed = {
+      title: 'Source',
+      link: 'https://example.com/',
+      items: [{ title: 'Title', link: 'https://example.com/article' }],
+    } as CustomRssParserFeed;
+    const result = postProcessFeed(feedInfo, feed);
+    expect(result.items[0].sourceLanguage).toBe(language);
+  });
   it('生成フィードはHTTP取得せず内部レジストリのXMLを解析する', async () => {
     const feedInfo: FeedInfo = {
+      language: 'unknown',
       label: '生成ブログ',
       url: 'https://example.com/feeds/generated/test/rss.xml',
       pageUrl: 'https://example.com/blog/',
@@ -69,6 +86,7 @@ describe('FeedCrawler', () => {
 
   it('内部レジストリにない生成フィードはエラーにする', async () => {
     const feedInfo: FeedInfo = {
+      language: 'unknown',
       label: '生成ブログ',
       url: 'https://example.com/feeds/generated/test/rss.xml',
       sectionId: 'engineering',
@@ -108,6 +126,7 @@ describe('FeedCrawler', () => {
 
   it('Speaker Deck のカテゴリフィードはカテゴリページをブログURLにする', () => {
     const feedInfo: FeedInfo = {
+      language: 'unknown',
       label: 'Programming - Speaker Deck',
       url: 'https://speakerdeck.com/c/programming.atom',
       sectionId: 'speakerdeck',
@@ -136,6 +155,7 @@ describe('FeedCrawler', () => {
 
   it('Qiita のタグフィードはタグページをブログURLにする', () => {
     const feedInfo: FeedInfo = {
+      language: 'unknown',
       label: 'Qiita - AIエージェント',
       url: 'https://qiita.com/tags/AIエージェント/feed',
       sectionId: 'ai',
@@ -175,6 +195,7 @@ describe('FeedCrawler', () => {
     ] as const;
     const results = sources.map(({ url, pageUrl }, index) => {
       const feedInfo: FeedInfo = {
+        language: 'unknown',
         label: `ビジネス＋IT ${index}`,
         url,
         sectionId: 'business-it',
@@ -203,6 +224,7 @@ describe('FeedCrawler', () => {
 
   it('creator が author オブジェクトの場合は名前を文字列として扱う', () => {
     const feedInfo: FeedInfo = {
+      language: 'unknown',
       label: 'Google Cloud',
       url: 'https://cloudblog.withgoogle.com/products/gcp/rss',
       sectionId: 'google-cloud',
@@ -234,6 +256,7 @@ describe('FeedCrawler', () => {
 
   it('記事URLが http / https でない記事を取り込まない', () => {
     const feedInfo: FeedInfo = {
+      language: 'unknown',
       label: 'テストブログ',
       url: 'https://example.com/feed',
       sectionId: 'engineering',
@@ -272,6 +295,7 @@ describe('FeedCrawler', () => {
 
   it('記事識別用クエリを保持し、追跡用クエリだけを除外する', () => {
     const feedInfo: FeedInfo = {
+      language: 'unknown',
       label: 'テストブログ',
       url: 'https://example.com/feed',
       sectionId: 'engineering',
@@ -307,6 +331,7 @@ describe('FeedCrawler', () => {
 
   it('記事URLが相対パスならブログURLを基準に絶対URLへ解決する', () => {
     const feedInfo: FeedInfo = {
+      language: 'unknown',
       label: 'テストブログ',
       url: 'https://example.com/feed',
       sectionId: 'engineering',
@@ -334,6 +359,7 @@ describe('FeedCrawler', () => {
 
   it('ブログURLが http / https でなければ空文字にする', () => {
     const feedInfo: FeedInfo = {
+      language: 'unknown',
       label: 'テストブログ',
       url: 'https://example.com/feed',
       sectionId: 'engineering',
@@ -362,6 +388,7 @@ describe('FeedCrawler', () => {
 
   it('ブログURLに認証情報が含まれる場合は空文字にする', () => {
     const feedInfo: FeedInfo = {
+      language: 'unknown',
       label: 'テストブログ',
       url: 'https://example.com/feed',
       sectionId: 'engineering',

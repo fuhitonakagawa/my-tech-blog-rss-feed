@@ -46,7 +46,7 @@ export const renderFeedItem = async (
         ${ogImage}
     </a>
     <div class='ui-feed-item__content'>
-        <a class='ui-feed-item__title' href='${feedItemUrl}'>${escapeHtml(feedItem._custom.originalTitle)}</a>
+        <a class='ui-feed-item__title' href='${feedItemUrl}'>${escapeHtml(feedItem._custom.translatedTitle ?? feedItem._custom.originalTitle)}</a>
         ${hatenaCount}
         <a class='ui-feed-item__blog-title ui-feed-item__blog-title--link' href='${relativeUrl}blogs/${escapeHtml(feedItem._custom.blogLinkMd5Hash)}'>
           ${favicon}

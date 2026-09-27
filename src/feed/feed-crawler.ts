@@ -14,6 +14,7 @@ import {
   publicNetworkDispatcher,
 } from '../common/url-guard';
 import type { FeedInfo } from '../resources/feed-info-list';
+import type { FeedLanguage } from '../resources/feed-language';
 import {
   exponentialBackoff,
   fetchHatenaCountMap,
@@ -38,6 +39,8 @@ export type CustomRssParserItem = RssParser.Item & {
   blogTitle: string;
   blogLink: string;
   sectionId: string;
+  sourceLanguage: FeedLanguage;
+  originalTitle?: string;
 };
 export type CustomRssParserFeed = RssParser.Output<CustomRssParserItem> & {
   link: string;
@@ -402,6 +405,7 @@ export class FeedCrawler {
 
       // セクション分割用
       feedItem.sectionId = feedInfo.sectionId;
+      feedItem.sourceLanguage = feedInfo.language;
     }
 
     // 記事URLはリンクとして描画し、OG情報の取得にも使うため http / https のみ扱う

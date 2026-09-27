@@ -1,0 +1,49 @@
+[project]
+name = "rss-feed-translation"
+version = "0.1.0"
+description = "RSSフィード用のローカル翻訳ブリッジ"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE.txt", "LICENSES/MIT-upstream.txt"]
+requires-python = "==3.12.*"
+dependencies = [
+    "argostranslate==1.9.6",
+    "python-dotenv==1.2.3",
+    "structlog==26.1.0",
+    "torch==2.14.0",
+]
+
+[tool.uv]
+package = false
+# モデル読込・トークン化には脆弱性修正版を使用する。
+override-dependencies = ["stanza==1.14.0", "sentencepiece==0.2.2"]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["argostranslate.*", "stanza.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests/translation"]
+pythonpath = ["scripts/translation"]
+
+[dependency-groups]
+dev = [
+    "mypy==2.3.1",
+    "pytest==9.1.1",
+    "ruff==0.16.9",
+]

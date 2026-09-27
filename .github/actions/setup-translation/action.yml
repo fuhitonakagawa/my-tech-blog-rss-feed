@@ -1,0 +1,37 @@
+name: Setup local translation
+description: Prepare the locked Python environment and verified English-Japanese model
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+      continue-on-error: true
+      with:
+        python-version: '3.12'
+    - uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff # v6
+      continue-on-error: true
+      with:
+        version: '0.7.8'
+    - name: Install translation environment
+      id: install
+      continue-on-error: true
+      shell: bash
+      run: |
+        test -f .env || cp .env.example .env
+        uv sync --frozen
+    - name: Restore translation model
+      continue-on-error: true
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      with:
+        path: .argos
+        key: ${{ runner.os }}-argos-${{ hashFiles('uv.lock', 'scripts/translation/model.json') }}
+    - name: Verify English-Japanese model
+      id: model
+      if: steps.install.outcome == 'success'
+      continue-on-error: true
+      shell: bash
+      run: uv run --frozen --no-sync python scripts/translation/setup_model.py
+    - name: Report unavailable translation
+      if: steps.install.outcome != 'success' || steps.model.outcome != 'success'
+      shell: bash
+      run: echo '::warning::Local translation setup failed. Derived feeds will retain original text; check the translation steps.'

@@ -1,9 +1,10 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import constants from '../../../common/constants';
+import constants, { sectionFeedUrls } from '../../../common/constants';
 import { relativeUrlFilter } from '../../../common/eleventy-utils';
 import { FEED_SECTION_LIST, type FeedInfo } from '../../../resources/feed-info-list';
+import { TRANSLATED_FEED_DEFINITION_LIST } from '../../../resources/translated-feed-list';
 import { escapeHtml } from './html-utils';
 import type { EleventyPage } from './types';
 
@@ -90,12 +91,28 @@ export const renderFeedListDialog = (
       })
       .join('\n');
 
+    const translatedFeeds = TRANSLATED_FEED_DEFINITION_LIST.filter(
+      (definition) => definition.sourceSectionId === section.id,
+    )
+      .map((definition) => {
+        const feedUrl = escapeHtml(sectionFeedUrls(definition.id).rss);
+        return `<li class="ui-feed-list-dialog__feed">
+            <div class="ui-feed-list-dialog__feed-heading">
+                <a class="ui-feed-list-dialog__feed-label" href="${relativeUrl}${escapeHtml(constants.sectionRootPath)}/${escapeHtml(definition.id)}/">${escapeHtml(definition.title)}</a>
+                <span>英語記事の日本語翻訳</span>
+            </div>
+            <a class="ui-feed-list-dialog__feed-url" href="${feedUrl}">${feedUrl}</a>
+        </li>`;
+      })
+      .join('\n');
+
     return `<section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-section-${escapeHtml(section.id)}">
                 <h3 id="feed-list-section-${escapeHtml(section.id)}" class="ui-feed-list-dialog__section-title">
                     <a href="${relativeUrl}${escapeHtml(sectionPath)}">${escapeHtml(section.title)}</a>
                 </h3>
                 <ul class="ui-feed-list-dialog__feeds">
                     ${feedItems}
+                    ${translatedFeeds}
                 </ul>
             </section>`;
   }).join('\n');

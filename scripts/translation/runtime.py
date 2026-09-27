@@ -1,0 +1,153 @@
+"""翻訳プロセスの設定と秘密情報を含まない診断ログ。"""
+
+import hashlib
+import json
+import logging
+import os
+import sys
+from datetime import datetime
+from pathlib import Path
+from uuid import uuid4
+from zoneinfo import ZoneInfo
+
+import structlog
+from dotenv import load_dotenv
+from structlog.typing import EventDict, Processor, WrappedLogger
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ALLOWED_FIELDS = {
+    "event",
+    "logger",
+    "level",
+    "timestamp",
+    "correlation_id",
+    "error_type",
+    "processed",
+    "total",
+}
+ALLOWED_EVENTS = {
+    "model_ready",
+    "translation_complete",
+    "translation_progress",
+    "translation_item_failed",
+    "translation_failed",
+    "model_setup_failed",
+    "library_log",
+}
+
+
+def required_environment(name: str) -> str:
+    """必須の環境変数を返す。
+
+    Args:
+        name: 環境変数名。
+
+    Returns:
+        空でない設定値。
+
+    Raises:
+        ValueError: 環境変数が未設定の場合。
+    """
+    value = os.environ.get(name, "").strip()
+    if not value:
+        raise ValueError(f"必須設定がありません: {name}")
+    return value
+
+
+def configure_environment() -> None:
+    """環境設定を検証し、Argosの保存先をプロジェクト配下へ設定する。"""
+    load_dotenv(PROJECT_ROOT / ".env")
+    threads = required_environment("TRANSLATION_CPU_THREADS")
+    if int(threads) <= 0:
+        raise ValueError("TRANSLATION_CPU_THREADSには正の整数が必要です")
+    os.environ["OMP_NUM_THREADS"] = threads
+    os.environ["MKL_NUM_THREADS"] = threads
+    packages = (PROJECT_ROOT / required_environment("ARGOS_PACKAGES_DIR")).resolve()
+    runtime = (PROJECT_ROOT / required_environment("ARGOS_RUNTIME_DIR")).resolve()
+    os.environ["ARGOS_PACKAGES_DIR"] = str(packages)
+    for variable, directory in (
+        ("XDG_DATA_HOME", "data"),
+        ("XDG_CACHE_HOME", "cache"),
+        ("XDG_CONFIG_HOME", "config"),
+    ):
+        os.environ[variable] = str(runtime / directory)
+    os.environ["ARGOS_DEVICE_TYPE"] = "cpu"
+    os.environ["ARGOS_DEBUG"] = "0"
+    os.environ["ARGOS_MODEL_PROVIDER"] = "OPENNMT"
+    os.environ["ARGOS_STANZA_AVAILABLE"] = "1"
+    os.environ["HF_HUB_OFFLINE"] = "1"
+    os.environ["HF_HUB_DISABLE_TELEMETRY"] = "1"
+
+
+def safe_event(_logger: WrappedLogger, _method: str, event: EventDict) -> EventDict:
+    """許可した診断項目だけを出力し、ライブラリの本文をマスクする。"""
+    if not isinstance(event.get("event"), str) or event["event"] not in ALLOWED_EVENTS:
+        event["event"] = "library_log"
+    event["timestamp"] = datetime.now(ZoneInfo("Asia/Tokyo")).isoformat()
+    return {key: value for key, value in event.items() if key in ALLOWED_FIELDS}
+
+
+def configure_logging() -> None:
+    """stdlibとstructlogを標準エラーの1行JSONへ統一する。"""
+    load_dotenv(PROJECT_ROOT / ".env")
+    structlog.contextvars.bind_contextvars(correlation_id=str(uuid4()))
+    processors: list[Processor] = [
+        structlog.contextvars.merge_contextvars,
+        structlog.stdlib.add_logger_name,
+        structlog.stdlib.add_log_level,
+        structlog.stdlib.ExtraAdder(allow=["error_type", "processed", "total"]),
+        structlog.processors.dict_tracebacks,
+    ]
+    structlog.configure(
+        processors=[
+            *processors,
+            structlog.stdlib.ProcessorFormatter.wrap_for_formatter,
+        ],
+        logger_factory=structlog.stdlib.LoggerFactory(),
+        wrapper_class=structlog.stdlib.BoundLogger,
+    )
+    handler = logging.StreamHandler(sys.stderr)
+    handler.setFormatter(
+        structlog.stdlib.ProcessorFormatter(
+            foreign_pre_chain=processors,
+            processors=[
+                structlog.stdlib.ProcessorFormatter.remove_processors_meta,
+                safe_event,
+                structlog.processors.JSONRenderer(ensure_ascii=False),
+            ],
+        )
+    )
+    logging.basicConfig(level=logging.ERROR, handlers=[handler], force=True)
+    level_name = required_environment("LOG_LEVEL").upper()
+    level = logging.getLevelNamesMapping().get(level_name)
+    if level is None:
+        raise ValueError("LOG_LEVELが不正です")
+    logging.getLogger().setLevel(level)
+    logging.captureWarnings(True)
+
+
+def load_model_definition() -> dict[str, str]:
+    """固定モデルのバージョン・取得元・検証用ハッシュを返す。"""
+    value: object = json.loads((Path(__file__).parent / "model.json").read_text())
+    keys = {
+        "argosVersion",
+        "packageVersion",
+        "sourceLanguage",
+        "targetLanguage",
+        "url",
+        "sha256",
+    }
+    if not isinstance(value, dict) or set(value) != keys:
+        raise ValueError("モデル定義が不正です")
+    if not all(isinstance(item, str) and item for item in value.values()):
+        raise ValueError("モデル定義の値が不正です")
+    return {str(key): str(item) for key, item in value.items()}
+
+
+def provider_id(model: dict[str, str]) -> str:
+    """エンジン・翻訳方向・モデルのハッシュを含む識別子を返す。"""
+    return (
+        f"argos:{model['argosVersion']}:en-ja:"
+        f"{model['packageVersion']}:{model['sha256']}:"
+        f"{hashlib.sha256((PROJECT_ROOT / 'uv.lock').read_bytes()).hexdigest()}"
+    )

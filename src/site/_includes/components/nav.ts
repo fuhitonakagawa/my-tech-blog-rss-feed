@@ -1,6 +1,6 @@
 import constants from '../../../common/constants';
 import { relativeUrlFilter } from '../../../common/eleventy-utils';
-import { FEED_SECTION_LIST } from '../../../resources/feed-info-list';
+import { DISPLAY_SECTION_LIST } from '../../../resources/translated-feed-list';
 import { escapeHtml } from './html-utils';
 import type { EleventyPage } from './types';
 
@@ -11,7 +11,7 @@ export const renderNav = (page: EleventyPage): string => {
   const relativeUrl = escapeHtml(relativeUrlFilter(page.url));
   const feedActive = ['/'].includes(page.url) ? 'ui-section-nav__link--active' : '';
 
-  const sectionLinks = FEED_SECTION_LIST.map((section) => {
+  const sectionLinks = DISPLAY_SECTION_LIST.map((section) => {
     const sectionPath = `${constants.sectionRootPath}/${section.id}/`;
     const sectionActive = page.url === `/${sectionPath}` ? 'ui-section-nav__link--active' : '';
     return `<a class='ui-section-nav__link ${sectionActive}' href='${relativeUrl}${escapeHtml(sectionPath)}'>${escapeHtml(section.title)}</a>`;

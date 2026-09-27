@@ -7,14 +7,17 @@ import { FeedStorer } from '../feed/feed-storer';
 import { FeedValidator } from '../feed/feed-validator';
 import { GeneratedFeedService } from '../feed/generated/generated-feed-service';
 import { logger } from '../feed/logger';
+import { generateTranslatedFeeds } from '../feed/translation/translated-feed-generator';
 import { FEED_INFO_LIST, FEED_SECTION_LIST, type FeedSection } from '../resources/feed-info-list';
 import { GENERATED_FEED_DEFINITION_LIST } from '../resources/generated-feed-list';
+import { TRANSLATED_FEED_DEFINITION_LIST } from '../resources/translated-feed-list';
 
 const dirName = url.fileURLToPath(new URL('.', import.meta.url));
 
 const STORE_FEEDS_DIR_PATH = path.join(dirName, '../site/feeds');
 const STORE_BLOG_FEEDS_DIR_PATH = path.join(dirName, '../site/blog-feeds');
 const STORE_SECTION_FEEDS_DIR_PATH = path.join(dirName, '../site/section-feeds');
+const STORE_TRANSLATED_FEEDS_DIR_PATH = path.join(dirName, '../site/translated-feeds');
 const STORE_GENERATED_FEEDS_DIR_PATH = path.join(dirName, '../site/feeds/generated');
 const PREVIOUS_GENERATED_FEEDS_DIR_PATH = path.join(dirName, '../../.previous-site/feeds/generated');
 
@@ -91,6 +94,13 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     sectionFeedDistributionSets.set(section.id, sectionGenerateFeedsResult.feedDistributionSet);
   }
 
+  const translatedFeeds = await generateTranslatedFeeds(
+    crawlFeedsResult.feedItems,
+    TRANSLATED_FEED_DEFINITION_LIST,
+    ogObjectMap,
+    crawlFeedsResult.feedItemHatenaCountMap,
+  );
+
   // ファイル出力
   try {
     await feedStorer.storeFeeds(
@@ -102,6 +112,7 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
       STORE_BLOG_FEEDS_DIR_PATH,
     );
     await feedStorer.storeSectionFeeds(sectionFeedDistributionSets, STORE_SECTION_FEEDS_DIR_PATH);
+    await feedStorer.storeSectionFeeds(translatedFeeds, STORE_TRANSLATED_FEEDS_DIR_PATH);
   } catch (e) {
     const error = new Error('Failed to store feeds', {
       cause: e,
@@ -119,7 +130,7 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     await feedValidator.assertXmlFeed('rss', generateFeedsResult.feedDistributionSet.rss);
 
     // セクションフィードは記事が無い期間もあり得るため、XMLとして妥当かのみ検証する
-    for (const [sectionId, feedDistributionSet] of sectionFeedDistributionSets) {
+    for (const [sectionId, feedDistributionSet] of [...sectionFeedDistributionSets, ...translatedFeeds]) {
       await feedValidator.assertXmlFeed(`${sectionId}-atom`, feedDistributionSet.atom);
       await feedValidator.assertXmlFeed(`${sectionId}-rss`, feedDistributionSet.rss);
     }

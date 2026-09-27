@@ -89,6 +89,11 @@ jobs:
         node-version-file: .tool-versions
         cache: npm
     - run: npm ci
+    - uses: ./.github/actions/setup-translation
+    - run: uv run --frozen pytest
+    - run: uv run --frozen ruff check scripts/translation tests/translation
+    - run: uv run --frozen ruff format --check scripts/translation tests/translation
+    - run: uv run --frozen mypy scripts/translation tests/translation
     - run: npm run test-coverage
 
   generate:
@@ -104,6 +109,7 @@ jobs:
           node-version-file: .tool-versions
           cache: npm
       - run: npm ci
+      - uses: ./.github/actions/setup-translation
       - uses: ./.github/actions/restore-feed-cache
       - run: npm run feed-generate
       - run: npm run site-prepare
