@@ -1,3 +1,4 @@
+import { extractAnthropicNews } from './anthropic-news';
 import { extractCssGeneratedFeedItems } from './css-extractor';
 import type {
   CssGeneratedFeedExtractorConfig,
@@ -31,6 +32,7 @@ const extractServerlessOperations: GeneratedFeedExtractor = (
 };
 
 const GENERATED_FEED_ADAPTERS: ReadonlyMap<string, GeneratedFeedExtractor> = new Map([
+  ['anthropic-news', extractAnthropicNews],
   ['serverless-operations', extractServerlessOperations],
 ]);
 
