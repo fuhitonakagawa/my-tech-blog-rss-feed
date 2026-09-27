@@ -12,8 +12,14 @@ import type { TranslatedFeedDefinition } from '../../../src/resources/translated
 import { makeSourceItem } from '../../helpers/translation-fixtures';
 
 const definitions: TranslatedFeedDefinition[] = [
-  { id: 'ai-jp', title: 'AI-translated-jp', sourceSectionId: 'ai', sourceLanguage: 'en', targetLanguage: 'ja' },
-  { id: 'aws-jp', title: 'AWS-translated-jp', sourceSectionId: 'aws', sourceLanguage: 'en', targetLanguage: 'ja' },
+  { id: 'ai-jp', title: 'AI - Translated Japanese', sourceSectionId: 'ai', sourceLanguage: 'en', targetLanguage: 'ja' },
+  {
+    id: 'aws-jp',
+    title: 'AWS - Translated Japanese',
+    sourceSectionId: 'aws',
+    sourceLanguage: 'en',
+    targetLanguage: 'ja',
+  },
 ];
 
 afterEach(() => {
@@ -42,7 +48,7 @@ describe('generateTranslatedFeeds', () => {
     expect(translateItems.mock.calls[0][0].map((item) => item.title)).toEqual(['Old', 'New', 'AWS']);
     const ai = JSON.parse(result.get('ai-jp')?.json ?? '');
     const aws = JSON.parse(result.get('aws-jp')?.json ?? '');
-    expect(ai.title).toBe('AI-translated-jp｜企業テックブログRSS');
+    expect(ai.title).toBe('AI - Translated Japanese｜企業テックブログRSS');
     expect(result.get('ai-jp')?.rss).toContain('<language>ja</language>');
     expect(ai.items.map((item: { title: string }) => item.title)).toEqual([
       '翻訳:New | Source Blog',

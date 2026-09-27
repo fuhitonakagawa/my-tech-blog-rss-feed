@@ -305,24 +305,25 @@ Anthropic Newsroomの [Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-f
 
 | 元セクション | 日本語派生ID | 表示名 | 閲覧ページ | 購読用RSS |
 | --- | --- | --- | --- | --- |
-| `ai` | `ai-jp` | AI-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml) |
-| `aws` | `aws-jp` | AWS-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/feeds/rss.xml) |
-| `azure` | `azure-jp` | Azure-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/feeds/rss.xml) |
-| `google-cloud` | `google-cloud-jp` | Google Cloud-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/feeds/rss.xml) |
-| `db` | `db-jp` | Database-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/feeds/rss.xml) |
-| `engineering` | `engineering-jp` | Engineering-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/feeds/rss.xml) |
-| `platform` | `platform-jp` | Platform-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/feeds/rss.xml) |
-| `programming` | `programming-jp` | Programming-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/feeds/rss.xml) |
-| `robotics` | `robotics-jp` | Robotics-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/feeds/rss.xml) |
-| `security-advisory` | `security-advisory-jp` | Security Advisory-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml) |
-| `security` | `security-jp` | Security-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml) |
-| `techcrunch` | `techcrunch-jp` | TechCrunch-translated-jp | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/feeds/rss.xml) |
+| `ai` | `ai-jp` | AI - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml) |
+| `aws` | `aws-jp` | AWS - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/feeds/rss.xml) |
+| `azure` | `azure-jp` | Azure - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/feeds/rss.xml) |
+| `google-cloud` | `google-cloud-jp` | Google Cloud - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/feeds/rss.xml) |
+| `hacker-news` | `hacker-news-jp` | Hacker News - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/feeds/rss.xml) |
+| `db` | `db-jp` | Database - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/feeds/rss.xml) |
+| `engineering` | `engineering-jp` | Engineering - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/feeds/rss.xml) |
+| `platform` | `platform-jp` | Platform - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/feeds/rss.xml) |
+| `programming` | `programming-jp` | Programming - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/feeds/rss.xml) |
+| `robotics` | `robotics-jp` | Robotics - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/feeds/rss.xml) |
+| `security-advisory` | `security-advisory-jp` | Security Advisory - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml) |
+| `security` | `security-jp` | Security - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml) |
+| `techcrunch` | `techcrunch-jp` | TechCrunch - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/feeds/rss.xml) |
 
-定義元は [翻訳フィード専用ディレクトリ（`src/resources/translated-feeds/`）](src/resources/translated-feeds/) です。1カテゴリにつき1ファイルで、ファイル名が日本語派生IDになります。例えば [AI-translated-jpの定義（`ai-jp.json`）](src/resources/translated-feeds/ai-jp.json) は次の形式です。
+定義元は [翻訳フィード専用ディレクトリ（`src/resources/translated-feeds/`）](src/resources/translated-feeds/) です。1カテゴリにつき1ファイルで、ファイル名が日本語派生IDになります。例えば [AI - Translated Japaneseの定義（`ai-jp.json`）](src/resources/translated-feeds/ai-jp.json) は次の形式です。
 
 ```json
 {
-  "title": "AI-translated-jp",
+  "title": "AI - Translated Japanese",
   "sourceSectionId": "ai",
   "sourceLanguage": "en",
   "targetLanguage": "ja"
@@ -331,9 +332,9 @@ Anthropic Newsroomの [Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-f
 
 通常カテゴリの定義は`src/resources/sections/`、翻訳フィードの定義は`src/resources/translated-feeds/`で管理します。翻訳結果は`src/site/translated-feeds/<日本語派生ID>/feeds/`へ出力し、通常カテゴリの生成物である`src/site/section-feeds/`とは保存先を分けます。
 
-配信先は`/rss/<日本語派生ID>/feeds/rss.xml`、`atom.xml`、`feed.json`、閲覧ページは`/rss/<日本語派生ID>/`です。AI-translated-jpのRSSは`/rss/ai-jp/feeds/rss.xml`となります。対象記事がない場合も空のフィードとページを出力します。
+配信先は`/rss/<日本語派生ID>/feeds/rss.xml`、`atom.xml`、`feed.json`、閲覧ページは`/rss/<日本語派生ID>/`です。AI - Translated JapaneseのRSSは`/rss/ai-jp/feeds/rss.xml`となります。対象記事がない場合も空のフィードとページを出力します。
 
-AIの翻訳フィードのURL例です。表示名の`-translated-jp`と、購読URLのID `ai-jp` は別に管理します。
+AIの翻訳フィードのURL例です。表示名の` - Translated Japanese`と、購読URLのID `ai-jp` は別に管理します。
 
 - **閲覧ページ**: [https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/)
 - **購読用RSS**: [https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml)
@@ -341,6 +342,8 @@ AIの翻訳フィードのURL例です。表示名の`-translated-jp`と、購�
 - **JSON Feed**: [AI翻訳フィードのJSON](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/feed.json)
 
 翻訳フィードのローカル保存先は`translated-feeds/`、公開URLは`/rss/`配下です。HTML由来の単独フィードは`/feeds/generated/`配下となります。フォーク先では、URL先頭を自分の公開サイトの基点に置き換えます。
+
+Hacker Newsの取得元は [Hacker News - Japanese](https://hevinxx.github.io/hn-summary-and-translate/rss-ja.xml) です。取得元の名前とURLは日本語版ですが、実際のタイトル・概要が英語のため、登録言語は`en`とします。`hacker-news`は取得元の記事、`hacker-news-jp`は本リポジトリの翻訳機による日本語の記事を配信します。
 
 各派生フィードは、指定元セクションかつ`language: en`のソースだけを対象とします。日本語・混在・言語未指定のソースは含めません。記事の集約期間は通常フィードと同じで、取得記事に公開日時がなければ翻訳対象にも入りません。
 
@@ -632,6 +635,7 @@ flowchart TD
 │   │   │   ├── db-jp.json
 │   │   │   ├── engineering-jp.json
 │   │   │   ├── google-cloud-jp.json
+│   │   │   ├── hacker-news-jp.json
 │   │   │   ├── platform-jp.json
 │   │   │   ├── programming-jp.json
 │   │   │   ├── robotics-jp.json

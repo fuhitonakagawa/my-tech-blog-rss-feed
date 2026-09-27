@@ -28,7 +28,7 @@ describe('翻訳対象の定義', () => {
   });
 
   it('派生フィードを取得元リストに含めず表示先だけに含める', () => {
-    expect(TRANSLATED_FEED_DEFINITION_LIST).toHaveLength(12);
+    expect(TRANSLATED_FEED_DEFINITION_LIST).toHaveLength(13);
     expect(FEED_SECTION_LIST.some((section) => section.id === 'ai-jp')).toBe(false);
     expect(DISPLAY_SECTION_LIST.some((section) => section.id === 'ai-jp')).toBe(true);
     expect(DISPLAY_SECTION_LIST.find((section) => section.id === 'ai')?.feedDirectory).toBe('section-feeds');
@@ -36,7 +36,12 @@ describe('翻訳対象の定義', () => {
   });
 
   it('翻訳定義のIDをファイル名から読み込む', () => {
-    const value = { title: 'AI-translated-jp', sourceSectionId: 'ai', sourceLanguage: 'en', targetLanguage: 'ja' };
+    const value = {
+      title: 'AI - Translated Japanese',
+      sourceSectionId: 'ai',
+      sourceLanguage: 'en',
+      targetLanguage: 'ja',
+    };
     expect(parseTranslatedFeedFile('ai-jp.json', value)).toEqual({ ...value, id: 'ai-jp' });
     expect(() => parseTranslatedFeedFile('ai-jp.json', { ...value, id: 'other' })).toThrow('ファイル名');
     expect(() => parseTranslatedFeedFile('../ai-jp.json', value)).toThrow('ファイル名');
@@ -48,7 +53,7 @@ describe('翻訳対象の定義', () => {
     (overrides) => {
       const definition = {
         id: 'ai-jp',
-        title: 'AI-translated-jp',
+        title: 'AI - Translated Japanese',
         sourceSectionId: 'ai',
         sourceLanguage: 'en',
         targetLanguage: 'ja',

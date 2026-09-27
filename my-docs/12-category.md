@@ -112,3 +112,88 @@ RSS取得・画像取得・サイトビルドは別の時間です。毎回す�
 - [Security Advisory-translated-jp](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml)
 - [Security-translated-jp](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml)
 - [TechCrunch-translated-jp](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/feeds/rss.xml)
+
+
+---
+
+
+現状のargosでは今の設定が最大精度ですか？パラメータ変えて精度上げるとかはできない？
+
+
+-----
+
+
+
+**最大精度に調整した設定ではありません。パラメータ調整の余地はありますが、大きくすれば必ず精度が上がるわけではありません。**
+
+現在はArgosの標準設定で、主に次の値を使っています。[Argosの実装](https://github.com/argosopentech/argos-translate/blob/v1.9.6/argostranslate/translate.py)
+
+| 設定 | 現在値 | 調整の効果 |
+|---|---:|---|
+| `beam_size`：翻訳候補を探索する幅 | 4 | 増やすと別の訳が選ばれる可能性。処理量も増える |
+| `length_penalty`：訳文の長さに関する評価 | 0.2 | 訳抜け・冗長さに影響し得る。比較検証が必要 |
+| CPUスレッド数 | 2 | 主に速度に関係し、意味の正確さを改善する設定ではない |
+
+長さの評価などは、内部の[CTranslate2で調整できます](https://opennmt.net/CTranslate2/python/ctranslate2.Translator.html)。ただし、現状の`config.py`にはArgosの精度調整項目を公開していないため、対応するコード変更が必要です。
+
+**試しに、問題のあった見出し6件で `beam_size=4 → 8` を比較しました。**
+
+- 2件は訳文が変わりましたが、明確な品質改善とは言い切れません。
+- `robotaxis → ロボット軸` は変わりませんでした。
+- `compromised → 妥協された` も残りました。
+- TEEsやGoが訳文から抜ける問題も残りました。
+
+また、[公式のモデル一覧](https://github.com/argosopentech/argospm-index/blob/main/index.json)では英日モデルは現在使用中と同じ **1.1** でした。
+
+私のおすすめは、**Argosで改善を試すなら、beam幅と長さの評価を組み合わせて50件程度で比較すること**です。ただ、今回の専門用語の誤訳を見る限り、パラメータ調整だけで大幅に改善するとは期待しすぎない方がよさそうです。
+
+今回は比較実験だけで、リポジトリの設定や配信キャッシュは変更していません。
+
+
+
+----
+
+hacker-newsは？英語のままじゃない？
+
+
+
+----
+
+
+はい。公開フィードを確認したところ、Hacker Newsは英語のままです。翻訳対象から漏れています。
+
+登録元は Hacker News - Japanese という名前で、RSSの言語指定も ja ですが、実際のタイトル・概要は英語でした。
+
+リポジトリ側では言語未指定で、今回の12カテゴリの翻訳対象にも含まれていません。
+
+こちらで日本語化するには、取得元の言語設定を見直し、hacker-news-jp の翻訳フィードを追加する必要があります。
+
+
+
+
+----
+
+
+対応しましょう
+
+いや、もとのRSS URLは
+https://hevinxx.github.io/hn-summary-and-translate/rss-ja.xml
+のままでいいです。ここは変えないで。ただしJAなのに実体はENなので、languageはenとしておきます
+
+----
+
+
+
+
+Hacker News-translated-jp
+よりも、
+Hacker News - Translated Japanese
+とかのほうがカテゴリの書き方として洗練されてない？
+他のもそうしてほしい
+
+生成URLは変わらない？
+
+
+----
+
+

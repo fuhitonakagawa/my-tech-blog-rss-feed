@@ -10,6 +10,6 @@ describe('renderNav', () => {
     expect(html).not.toContain('ブログ一覧');
     expect(html).not.toContain("href='../../blogs/'");
     expect(html).toContain('Speaker Deck');
-    expect(html).toContain("href='../../rss/ai-jp/'>AI-translated-jp</a>");
+    expect(html).toContain("href='../../rss/ai-jp/'>AI - Translated Japanese</a>");
   });
 });
