@@ -183,8 +183,6 @@ https://hevinxx.github.io/hn-summary-and-translate/rss-ja.xml
 ----
 
 
-
-
 Hacker News-translated-jp
 よりも、
 Hacker News - Translated Japanese
@@ -193,7 +191,17 @@ Hacker News - Translated Japanese
 
 生成URLは変わらない？
 
+pushしておきました
+
 
 ----
 
 
+公開を確認しました。CI・外部テスト・[生成とデプロイ](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36346468256)はすべて成功しています。
+
+- 全13カテゴリを `○○ - Translated Japanese` に統一。
+- **既存の購読URLは変更なし。**
+- Hacker Newsは `rss-ja.xml` を維持し、10記事の日本語化を確認。
+- PyTorchリリースノートの除外も公開版で確認済み。
+
+Hacker News翻訳版：**[閲覧ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/) ／ [購読用RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/feeds/rss.xml)**
