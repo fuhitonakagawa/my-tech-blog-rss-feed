@@ -232,3 +232,19 @@ image: "https://example.com/image.png"
 ----
 
 pushしたので、gha正常に走るか見届けて
+
+
+----
+
+
+**正常完了しました。** マージコミット `d1b631d` のCI・外部テスト・生成／デプロイ・GitHub Pagesは、すべて成功です。[実行結果](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36372729074)
+
+公開先でも確認しました。
+
+- 翻訳13カテゴリ・358記事のRSS／Atom／JSONが正常
+- HTML由来の4フィードはすべて`ok`
+- 新しい画像形式とダークモード用HTMLが反映済み
+- Hacker Newsは配信元の4記事すべてを日本語化
+- PyTorchリリースノートは除外済み
+
+キャッシュの復元・保存も成功し、今回の「生成・保存・検証」区間は約3.2秒でした。
