@@ -4,7 +4,7 @@ import { to } from 'await-to-js';
 import dayjs from 'dayjs';
 import { create as flatCacheCreate } from 'flat-cache';
 import { default as ogs } from 'open-graph-scraper';
-import type { ImageObject, OgObject, OpenGraphScraperOptions } from 'open-graph-scraper/types/lib/types';
+import type { ImageObject, OgObject, OpenGraphScraperOptions } from 'open-graph-scraper/types';
 import RssParser from 'rss-parser';
 import constants from '../common/constants';
 import {
@@ -127,13 +127,26 @@ const normalizeFeedItemCreator = (creator: unknown): string => {
   return '';
 };
 
+/** RSSの文字列カテゴリと、属性付きカテゴリ要素を公開用テキストに揃える。 */
+const normalizeFeedItemCategory = (category: unknown): string => {
+  if (typeof category === 'string') return removeInvalidUnicode(category);
+  if (category === null || typeof category !== 'object') return '';
+  if ('_' in category && typeof category._ === 'string') return removeInvalidUnicode(category._);
+  if ('$' in category && category.$ !== null && typeof category.$ === 'object') {
+    const attributes = category.$;
+    if ('label' in attributes && typeof attributes.label === 'string') return removeInvalidUnicode(attributes.label);
+    if ('term' in attributes && typeof attributes.term === 'string') return removeInvalidUnicode(attributes.term);
+  }
+  return '';
+};
+
 export class FeedCrawler {
-  private rssParser: RssParser;
+  private rssParser: RssParser<CustomRssParserFeed, CustomRssParserItem>;
   private feedValidator: FeedValidator;
   private generatedFeedRegistry: GeneratedFeedRegistry;
 
   constructor(generatedFeedRegistry: GeneratedFeedRegistry = new Map()) {
-    this.rssParser = new RssParser({
+    this.rssParser = new RssParser<CustomRssParserFeed, CustomRssParserItem>({
       maxRedirects: 5,
       timeout: 1000 * 10,
       headers: {
@@ -292,8 +305,7 @@ export class FeedCrawler {
 
   /** フィードXMLを検証して解析する */
   private async parseFeedXml(feedXml: string): Promise<CustomRssParserFeed> {
-    await this.feedValidator.assertXmlFeed('fetched-feed', feedXml);
-    return this.rssParser.parseString(feedXml) as Promise<CustomRssParserFeed>;
+    return this.feedValidator.assertXmlFeed('fetched-feed', feedXml, this.rssParser);
   }
 
   /**
@@ -397,7 +409,9 @@ export class FeedCrawler {
       feedItem.content = feedItem.content ? removeInvalidUnicode(feedItem.content) : '';
       feedItem.contentSnippet = feedItem.contentSnippet ? removeInvalidUnicode(feedItem.contentSnippet) : '';
       feedItem.creator = normalizeFeedItemCreator(feedItem.creator);
-      feedItem.categories = feedItem.categories?.map(removeInvalidUnicode) || [];
+      feedItem.categories = Array.isArray(feedItem.categories)
+        ? feedItem.categories.map(normalizeFeedItemCategory).filter((category) => category.trim() !== '')
+        : [];
 
       // view用
       feedItem.blogTitle = customFeed.title || '';
@@ -657,19 +671,22 @@ export class FeedCrawler {
       feedItemCounter++;
     }
 
-    for (const feedItemUrls of feedItemUrlsChunks) {
-      const [error, hatenaCountMap] = await to(fetchHatenaCountMap(feedItemUrls));
+    // チャンクごとに並列で取得。失敗したチャンクはスキップして他のチャンクは続行する
+    await PromisePool.for(feedItemUrlsChunks)
+      .withConcurrency(constants.hatenaCountFetchConcurrency)
+      .process(async (feedItemUrls) => {
+        const [error, hatenaCountMap] = await to(fetchHatenaCountMap(feedItemUrls));
 
-      if (error) {
-        logger.error('[fetch-feed-item-hatena-count] error');
-        logger.trace(error);
-        continue;
-      }
+        if (error) {
+          logger.error('[fetch-feed-item-hatena-count] error');
+          logger.trace(error);
+          return;
+        }
 
-      for (const feedItemUrl in hatenaCountMap) {
-        feedItemHatenaCountMap.set(feedItemUrl, hatenaCountMap[feedItemUrl]);
-      }
-    }
+        for (const feedItemUrl in hatenaCountMap) {
+          feedItemHatenaCountMap.set(feedItemUrl, hatenaCountMap[feedItemUrl]);
+        }
+      });
 
     logger.info('[fetch-feed-item-hatena-count] fetched', feedItemHatenaCountMap);
 

@@ -1,3 +1,4 @@
+import RssParser from 'rss-parser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { type CustomOgObject, type CustomRssParserFeed, FeedCrawler } from '../src/feed/feed-crawler';
 import { logger } from '../src/feed/logger';
@@ -407,4 +408,55 @@ describe('FeedCrawler', () => {
 
     expect(result.link).toBe('');
   });
+});
+
+it('属性付きカテゴリでも記事を保持し、文字列以外の不正値だけを除く', () => {
+  const info: FeedInfo = {
+    language: 'en',
+    label: 'Source',
+    sectionId: 'ai',
+    url: 'https://example.com/rss',
+    input: { kind: 'remote', url: 'https://example.com/rss' },
+  };
+  const input = {
+    title: 'Source',
+    link: 'https://example.com',
+    items: [
+      {
+        title: 'Article',
+        link: 'https://example.com/article',
+        isoDate: '2026-09-27T00:00:00Z',
+        categories: [
+          'AI',
+          { _: 'Cloud', $: { domain: 'https://example.com' } },
+          { $: { term: 'ML' } },
+          { $: { label: 'Security', term: 'sec' } },
+          null,
+          42,
+          {},
+        ],
+      },
+    ],
+  } as unknown as CustomRssParserFeed;
+  const result = postProcessFeed(info, input);
+  expect(result.items).toHaveLength(1);
+  expect(result.items[0].categories).toEqual(['AI', 'Cloud', 'ML', 'Security']);
+  expect(result.items[0].sourceLanguage).toBe('en');
+});
+
+it('内部生成RSSも検証した解析結果を使い、同じXMLを二度解析しない', async () => {
+  const xml =
+    '<?xml version="1.0"?><rss version="2.0"><channel><title>Source</title><link>https://example.com/</link><description>Source</description></channel></rss>';
+  const parse = vi.spyOn(RssParser.prototype, 'parseString');
+  const crawler = new FeedCrawler(new Map([['example', xml]]));
+  const info: FeedInfo = {
+    language: 'en',
+    label: 'Source',
+    sectionId: 'ai',
+    url: 'https://example.com/rss',
+    input: { kind: 'generated', id: 'example' },
+  };
+  const result = await fetchSourceFeed(crawler, info);
+  expect(result.title).toBe('Source');
+  expect(parse).toHaveBeenCalledTimes(1);
 });

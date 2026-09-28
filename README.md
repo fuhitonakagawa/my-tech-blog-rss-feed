@@ -34,6 +34,7 @@
 - **カテゴリ別表示**: セクションごとの新着記事、購読リンク、ナビゲーションを提供します。
 - **記事情報**: タイトル、概要、元記事URL、公開日時、取得可能なOG画像・はてなブックマーク数を表示します。
 - **登録フィード一覧**: ヘッダーの一覧ボタンから、セクションごとの購読元を確認できます。
+- **表示テーマ**: OSの明暗設定に従い、ヘッダーの「ダークモード」ボタンで切り替えられます。OSと同じテーマへ戻すとOS設定への追従になり、選択はブラウザーに保存されます。保存が使えない場合も、そのページ内では切り替えられます。
 - **HTML由来のフィード**: 元サイトにRSSがなくても、定義した記事一覧から単独フィードを配信できます。
 
 公開サイトの基点は `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed` です。次のパスはこの基点からの相対パスです。
@@ -61,7 +62,7 @@
 ### 2.1. 必要な環境
 
 - **ランタイム**: Node.js 24以上。CIの使用バージョンは [ランタイム指定（`.tool-versions`）](.tool-versions) を参照してください。
-- **パッケージ管理**: npm。依存関係は [パッケージ定義（`package.json`）](package.json) と [ロックファイル（`package-lock.json`）](package-lock.json) で管理します。
+- **パッケージ管理**: npm 11.19.1以上。依存関係は [パッケージ定義（`package.json`）](package.json) と [ロックファイル（`package-lock.json`）](package-lock.json) で管理します。
 - **ローカル翻訳**: Python 3.12とuv。依存関係は [Pythonパッケージ定義（`pyproject.toml`）](pyproject.toml) と [Pythonロックファイル（`uv.lock`）](uv.lock) で固定します。
 - **接続先**: パッケージレジストリ、外部RSS・HTML・画像の公開URLにアクセスできる環境が必要です。
 
@@ -72,6 +73,7 @@
 ```bash
 node --version
 npm --version
+npm install --global npm@11.19.1
 npm ci
 uv sync --frozen
 uv run --frozen python scripts/translation/setup_model.py
@@ -80,7 +82,7 @@ npm run site-prepare
 npm run site-build
 ```
 
-`npm ci`はロックファイルの依存関係をインストールします。フィード取得・生成の中間ファイルはサイト入力ディレクトリに、配信用の静的ファイルは `public/` に出力されます。
+`npm ci`はロックファイルの依存関係をインストールします。依存のインストールスクリプトは、`package.json`の`allowScripts`で許可したパッケージ・バージョンを実行対象とします。フィード取得・生成の中間ファイルはサイト入力ディレクトリに、配信用の静的ファイルは `public/` に出力されます。
 
 ### 2.3. ローカルでの閲覧
 
@@ -303,6 +305,9 @@ Anthropic Newsroomの [Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-f
 
 翻訳派生フィードは、カテゴリ内の英語ソースの記事を1つにまとめたRSSです。タイトルとRSS内の概要文を日本語に翻訳し、元記事のURL・GUID・公開日時・著者・カテゴリ・ブログ名・画像・ブックマーク数を保持します。元ページの本文取得、全文翻訳、要約は対象外です。
 
+通常・翻訳の集約フィードは、RSS・JSONでは元の文字列GUIDを保持します。AtomのIDは公開可能なHTTP(S) URLとし、それ以外のGUIDでは記事URLを使います。JSON Feedの`title`・`summary`・`_custom`はプレーンテキスト、`content_html`はHTMLとして配信し、`image`は画像URLの文字列です。
+
+
 | 元セクション | 日本語派生ID | 表示名 | 閲覧ページ | 購読用RSS |
 | --- | --- | --- | --- | --- |
 | `ai` | `ai-jp` | AI - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml) |
@@ -395,7 +400,7 @@ npm audit --audit-level=moderate
 
 [更新ワークフロー（`generate-feed.yml`）](.github/workflows/generate-feed.yml) は、`main`へのpush、手動実行、定期スケジュールで起動します。スケジュールはUTCで定義され、JSTの朝から深夜を対象とする平日1時間間隔・週末2時間間隔の設定です。曜日の判定もUTCです。実際の起動時刻には遅延があり得ます。
 
-buildジョブは読み取り権限でサイトを生成し、成果物をdeployジョブへ渡します。deployジョブが`gh-pages`へ配信内容を保存し、GitHub Pagesの公開処理へつながります。フォーク先でも、GitHub Pagesの公開元を`gh-pages`のルートに設定します。
+buildジョブは`contents: read`と翻訳用の`id-token: write`でサイトを生成し、成果物をdeployジョブへ渡します。deployジョブが`gh-pages`へ配信内容を保存し、GitHub Pagesの公開処理へつながります。フォーク先でも、GitHub Pagesの公開元を`gh-pages`のルートに設定します。
 
 [翻訳環境のセットアップ（`.github/actions/setup-translation/action.yml`）](.github/actions/setup-translation/action.yml) がPython・uv・選択された翻訳機を準備します。Argosではモデルを検証し、AWSでは公開ジョブだけがOIDC短期セッションを取得します。モデルキャッシュはOS、モデル定義、Python設定、Pythonロックファイルをキーとして分離します。セットアップが失敗した場合は警告を出し、フィード生成は原文へのフォールバックで継続します。
 
@@ -542,9 +547,11 @@ flowchart TD
 │       └── setup_model.py
 ├── src/
 │   ├── @types/
+│   │   ├── eleventy.d.ts
 │   │   ├── eleventy-fetch.d.ts
 │   │   └── undici-dispatcher.d.ts
 │   ├── cli/
+│   │   ├── build-site-command.ts
 │   │   ├── generate-feed-command.ts
 │   │   ├── prepare-site-command.ts
 │   │   ├── prune-cache-command.ts
@@ -676,7 +683,9 @@ flowchart TD
 │       │   ├── scripts/
 │       │   │   ├── feed-list-dialog.ts
 │       │   │   ├── index.ts
-│       │   │   └── relative-time.ts
+│       │   │   ├── relative-time.ts
+│       │   │   ├── theme-init.ts
+│       │   │   └── theme-toggle.ts
 │       │   └── styles/
 │       │       ├── vendor/
 │       │       │   ├── base.css
@@ -750,6 +759,7 @@ flowchart TD
 │   ├── prune-cache.test.ts
 │   ├── test-setup.ts
 │   ├── top-section.test.ts
+│   ├── theme.test.ts
 │   ├── translated-feed-list.test.ts
 │   └── url-guard.test.ts
 ├── .editorconfig

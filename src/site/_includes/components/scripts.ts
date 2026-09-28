@@ -7,11 +7,7 @@ import { fileURLToPath } from 'node:url';
  */
 export const indexScript = fs.readFileSync(fileURLToPath(new URL('../scripts/index.ts', import.meta.url)), 'utf-8');
 
-/**
- * Client script that recomputes relative dates ("◯分前") against the viewer's
- * current time. Included by the shared layout (layouts/main.11ty.ts) so it
- * applies to every page.
- */
+/** 閲覧時点からの記事の相対日時を全ページで表示するスクリプト。 */
 export const relativeTimeScript = fs.readFileSync(
   fileURLToPath(new URL('../scripts/relative-time.ts', import.meta.url)),
   'utf-8',
@@ -22,5 +18,17 @@ export const relativeTimeScript = fs.readFileSync(
  */
 export const feedListDialogScript = fs.readFileSync(
   fileURLToPath(new URL('../scripts/feed-list-dialog.ts', import.meta.url)),
+  'utf-8',
+);
+
+/** 保存されたテーマを初期表示へ適用するスクリプト。 */
+export const themeInitScript = fs.readFileSync(
+  fileURLToPath(new URL('../scripts/theme-init.ts', import.meta.url)),
+  'utf-8',
+);
+
+/** ヘッダーのテーマ選択を全ページで利用するスクリプト。 */
+export const themeToggleScript = fs.readFileSync(
+  fileURLToPath(new URL('../scripts/theme-toggle.ts', import.meta.url)),
   'utf-8',
 );
