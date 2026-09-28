@@ -1,70 +1,19 @@
-import { createHash } from 'node:crypto';
-import { isPublishableHttpUrl } from '../../common/url-guard';
-import type { FeedSection } from '../../resources/feed-info-list';
-import { normalizeArticleUrl } from '../common-util';
 import type { CustomRssParserItem } from '../feed-crawler';
 import { statisticsConfig } from './config';
-import { dayStart, isIsoDate, jstDay, shiftDay } from './dates';
+import { dayStart, jstDay, shiftDay } from './dates';
+import { type StatisticsSection, mergeObservations } from './observations';
 import type { ArticleObservation, CategoryCount, DailyReport, StatisticsState } from './types';
-
-type StatisticsSection = Pick<FeedSection, 'id' | 'title'>;
-
-/** 元カテゴリの有効な記事だけを取得記録へ変換する。 */
-const observeArticle = (
-  item: CustomRssParserItem,
-  sections: ReadonlyMap<string, string>,
-  now: string,
-): ArticleObservation | null => {
-  const title = sections.get(item.sectionId);
-  if (!title || !isIsoDate(item.isoDate) || item.isoDate > now || typeof item.link !== 'string') return null;
-  const articleUrl = normalizeArticleUrl(item.link);
-  if (!isPublishableHttpUrl(articleUrl)) return null;
-  return {
-    articleId: createHash('sha256').update(articleUrl).digest('hex'),
-    sectionId: item.sectionId,
-    sectionTitle: title,
-    publishedAt: item.isoDate,
-  };
-};
-
-/** 同じカテゴリ・記事の公開日時を保持し、表示名は現在の定義を使う。 */
-const mergeObservations = (
-  previous: readonly ArticleObservation[],
-  items: readonly CustomRssParserItem[],
-  sections: readonly StatisticsSection[],
-  cutoff: string,
-  now: string,
-): ArticleObservation[] => {
-  const sectionTitles = new Map(sections.map((section) => [section.id, section.title]));
-  const byArticle = new Map(
-    previous.map((item) => [
-      `${item.sectionId}:${item.articleId}`,
-      { ...item, sectionTitle: sectionTitles.get(item.sectionId) ?? item.sectionTitle },
-    ]),
-  );
-  const savedKeys = new Set(byArticle.keys());
-  for (const item of items) {
-    const observation = observeArticle(item, sectionTitles, now);
-    if (!observation) continue;
-    const key = `${observation.sectionId}:${observation.articleId}`;
-    const existing = byArticle.get(key);
-    if (!savedKeys.has(key) && (!existing || observation.publishedAt < existing.publishedAt))
-      byArticle.set(key, observation);
-  }
-  return [...byArticle.values()]
-    .filter((item) => jstDay(item.publishedAt) >= cutoff)
-    .sort(
-      (a, b) =>
-        a.publishedAt.localeCompare(b.publishedAt) ||
-        a.sectionId.localeCompare(b.sectionId) ||
-        a.articleId.localeCompare(b.articleId),
-    );
-};
 
 /** 日付ごとにカテゴリ内の重複を除いた件数を返す。 */
 const countByDay = (observations: readonly ArticleObservation[]): Map<string, CategoryCount[]> => {
   const days = new Map<string, Map<string, CategoryCount>>();
+  const unique = new Map<string, ArticleObservation>();
   for (const item of observations) {
+    const key = `${item.sectionId}:${item.articleId}`;
+    const saved = unique.get(key);
+    if (!saved || item.publishedAt < saved.publishedAt) unique.set(key, item);
+  }
+  for (const item of unique.values()) {
     const date = jstDay(item.publishedAt);
     const categories = days.get(date) ?? new Map<string, CategoryCount>();
     const category = categories.get(item.sectionId) ?? {
@@ -85,7 +34,12 @@ const countByDay = (observations: readonly ArticleObservation[]): Map<string, Ca
 };
 
 /** 終了した日だけを集計し、同じ内容の更新日時を維持する。 */
-const buildReports = (state: StatisticsState, firstDay: string, today: string): DailyReport[] => {
+const buildReports = (
+  state: StatisticsState,
+  firstDay: string,
+  today: string,
+  sections: readonly StatisticsSection[],
+): DailyReport[] => {
   const counts = countByDay(state.observations);
   const previous = new Map(state.reports.map((report) => [report.date, report]));
   const collectedDays = new Set(state.collectionDays);
@@ -97,6 +51,11 @@ const buildReports = (state: StatisticsState, firstDay: string, today: string): 
         ? 'partial'
         : 'observed';
     const categories = counts.get(date) ?? [];
+    const present = new Set(categories.map((category) => category.sectionId));
+    for (const section of sections) {
+      if (!present.has(section.id)) categories.push({ sectionId: section.id, title: section.title, count: 0 });
+    }
+    categories.sort((a, b) => b.count - a.count || a.sectionId.localeCompare(b.sectionId));
     const old = previous.get(date);
     reports.push({
       date,
@@ -127,13 +86,13 @@ export const updateStatistics = (
   const cutoffDay = shiftDay(today, -statisticsConfig.retentionDays);
   const firstDay = startedDay > cutoffDay ? startedDay : cutoffDay;
   const state: StatisticsState = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     startedAt,
     lastCollectedAt: now,
     collectionDays: [...new Set([...(previous?.collectionDays ?? []), today])].filter((day) => day >= firstDay).sort(),
     observations: mergeObservations(previous?.observations ?? [], items, sections, firstDay, now),
     reports: previous?.reports ?? [],
   };
-  state.reports = buildReports(state, firstDay, today);
+  state.reports = buildReports(state, firstDay, today, sections);
   return state;
 };

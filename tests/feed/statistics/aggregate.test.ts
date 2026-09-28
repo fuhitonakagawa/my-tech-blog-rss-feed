@@ -51,7 +51,10 @@ describe('日次統計の集計', () => {
     expect(after.reports[0]).toMatchObject({
       date: '2026-09-27',
       coverage: 'partial',
-      categories: [{ sectionId: 'ai', title: 'AI', count: 2 }],
+      categories: [
+        { sectionId: 'ai', title: 'AI', count: 2 },
+        { sectionId: 'aws', title: 'AWS', count: 0 },
+      ],
     });
     expect(after.observations).toHaveLength(3);
   });
@@ -106,8 +109,8 @@ describe('日次統計の集計', () => {
       new Date('2026-09-30T00:00:00.000Z'),
     );
     expect(result.reports.map((report) => report.date)).toEqual(['2026-09-29', '2026-09-28', '2026-09-27']);
-    expect(result.reports[0]).toMatchObject({ coverage: 'unobserved', categories: [] });
-    expect(result.reports[1]).toMatchObject({ coverage: 'unobserved', categories: [{ count: 1 }] });
+    expect(result.reports[0]).toMatchObject({ coverage: 'unobserved', categories: [{ count: 0 }, { count: 0 }] });
+    expect(result.reports[1]).toMatchObject({ coverage: 'unobserved', categories: [{ count: 1 }, { count: 0 }] });
   });
 
   it('同一実行内の入力順に依存せず、重複URLの最も早い日時を採用する', () => {

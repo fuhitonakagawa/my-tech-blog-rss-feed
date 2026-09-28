@@ -4,6 +4,7 @@ import * as path from 'node:path';
 import { removeInvalidUnicode } from '../common-util';
 import { statisticsConfig } from './config';
 import { dayStart, isDay, isIsoDate, jstDay, shiftDay } from './dates';
+import { observationKey } from './observations';
 import type { ArticleObservation, CategoryCount, DailyReport, StatisticsState } from './types';
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
@@ -12,10 +13,13 @@ const isId = (value: unknown): value is string => typeof value === 'string' && /
 const isTitle = (value: unknown): value is string =>
   typeof value === 'string' && value.trim() !== '' && value.length <= 200 && removeInvalidUnicode(value) === value;
 
-const isObservation = (value: unknown): value is ArticleObservation =>
+const isObservation = (value: unknown, schemaVersion: number): value is ArticleObservation =>
   isRecord(value) &&
   typeof value.articleId === 'string' &&
   /^[a-f0-9]{64}$/.test(value.articleId) &&
+  (schemaVersion === 1 ||
+    value.sourceId === null ||
+    (typeof value.sourceId === 'string' && /^[a-f0-9]{64}$/.test(value.sourceId))) &&
   isId(value.sectionId) &&
   isTitle(value.sectionTitle) &&
   isIsoDate(value.publishedAt);
@@ -26,7 +30,7 @@ const isCount = (value: unknown): value is CategoryCount =>
   isTitle(value.title) &&
   Number.isSafeInteger(value.count) &&
   typeof value.count === 'number' &&
-  value.count > 0;
+  value.count >= 0;
 
 const isReport = (value: unknown): value is DailyReport =>
   isRecord(value) &&
@@ -50,28 +54,34 @@ export const parseStatisticsState = (json: string): StatisticsState => {
   }
   if (
     !isRecord(value) ||
-    value.schemaVersion !== 1 ||
+    (value.schemaVersion !== 1 && value.schemaVersion !== 2) ||
     !isIsoDate(value.startedAt) ||
     !isIsoDate(value.lastCollectedAt) ||
     value.startedAt > value.lastCollectedAt ||
     !Array.isArray(value.collectionDays) ||
     !value.collectionDays.every(isDay) ||
     !Array.isArray(value.observations) ||
-    !value.observations.every(isObservation) ||
+    !value.observations.every((item) => isObservation(item, value.schemaVersion as number)) ||
     !Array.isArray(value.reports) ||
     !value.reports.every(isReport)
   ) {
     throw new Error('日次統計の保存履歴が不正です');
   }
-  const state = value as unknown as StatisticsState;
+  const state = {
+    ...value,
+    schemaVersion: 2,
+    observations: (value.observations as ArticleObservation[]).map((item) => ({
+      ...item,
+      sourceId: value.schemaVersion === 1 ? null : item.sourceId,
+    })),
+  } as unknown as StatisticsState;
   const startDay = jstDay(state.startedAt);
   const lastDay = jstDay(state.lastCollectedAt);
   if (
     state.reports.length > 365 ||
     state.collectionDays.length > 366 ||
     new Set(state.collectionDays).size !== state.collectionDays.length ||
-    new Set(state.observations.map((item) => `${item.sectionId}:${item.articleId}`)).size !==
-      state.observations.length ||
+    new Set(state.observations.map(observationKey)).size !== state.observations.length ||
     new Set(state.reports.map((report) => report.date)).size !== state.reports.length ||
     state.collectionDays.some((day) => day < startDay || day > lastDay) ||
     state.observations.some(
@@ -84,12 +94,13 @@ export const parseStatisticsState = (json: string): StatisticsState => {
     throw new Error('日次統計の保存履歴に重複または日時の不整合があります');
   }
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     startedAt: state.startedAt,
     lastCollectedAt: state.lastCollectedAt,
     collectionDays: state.collectionDays,
-    observations: state.observations.map(({ articleId, sectionId, sectionTitle, publishedAt }) => ({
+    observations: state.observations.map(({ articleId, sourceId, sectionId, sectionTitle, publishedAt }) => ({
       articleId,
+      sourceId,
       sectionId,
       sectionTitle,
       publishedAt,

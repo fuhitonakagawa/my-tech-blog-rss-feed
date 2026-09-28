@@ -6,6 +6,7 @@ import RssParser from 'rss-parser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { logger } from '../../../src/feed/logger';
 import { statisticsFeedUrls, statisticsPageUrl } from '../../../src/feed/statistics/config';
+import type { StatisticsSection } from '../../../src/feed/statistics/observations';
 import { generateStatistics } from '../../../src/feed/statistics/service';
 import { readStatisticsState } from '../../../src/feed/statistics/state-store';
 import { render as renderStatisticsPage } from '../../../src/site/statistics.11ty';
@@ -32,6 +33,58 @@ afterEach(async () => {
 });
 
 describe('日次統計の保存と配信', () => {
+  it('公開履歴とキャッシュを統合しても移動前のカテゴリへ重複計上しない', async () => {
+    const sourceUrl = 'https://example.com/rss';
+    const sourceItem = { ...item, sourceFeedUrl: sourceUrl };
+    const firstSections: StatisticsSection[] = [{ id: 'ai', title: 'AI', feedInfoList: [{ url: sourceUrl }] }];
+    const movedSections: StatisticsSection[] = [
+      { id: 'ai', title: 'AI', feedInfoList: [] },
+      { id: 'jvn', title: 'JVN', feedInfoList: [{ url: sourceUrl }] },
+    ];
+    await generateStatistics([sourceItem], firstSections, published, output, firstTime);
+    await fs.cp(output, published, { recursive: true });
+    const cached = await generateStatistics([], movedSections, published, output, nextDay);
+    const merged = await generateStatistics([], movedSections, published, output, new Date('2026-09-27T16:00:00.000Z'));
+    expect(merged.observations).toHaveLength(1);
+    expect(merged.observations[0].sectionId).toBe('jvn');
+    expect(merged.reports).toEqual(cached.reports);
+  });
+
+  it('0件のカテゴリもRSSとページへ表示し、投稿のあるカテゴリ数には含めない', async () => {
+    const allSections = [...sections, { id: 'empty', title: '0件カテゴリ' }];
+    await generateStatistics([item], allSections, published, output, firstTime);
+    const state = await generateStatistics([], allSections, published, output, nextDay);
+    const rss = await new RssParser().parseString(await fs.readFile(path.join(output, 'rss.xml'), 'utf-8'));
+    expect(rss.items[0]['content:encoded']).toContain('0件カテゴリ</a>：0件');
+    expect(rss.items[0].content).toContain('1カテゴリで記事を取得');
+    const page = load(renderStatisticsPage({ page: { url: '/statistics/daily/' }, statistics: state }));
+    expect(page('tbody tr').last().text()).toContain('0件カテゴリ');
+    expect(page('tbody td').last().text()).toBe('0件');
+    expect(page('.ui-statistics-metrics dd').last().text()).toBe('1カテゴリ');
+  });
+
+  it('取得元不明の公開履歴を復元しても補正済みキャッシュから旧所属を復活させない', async () => {
+    const first = await generateStatistics([item], sections, published, output, firstTime);
+    await fs.mkdir(published);
+    await fs.writeFile(path.join(published, 'state.json'), JSON.stringify({ ...first, schemaVersion: 1 }));
+    const currentSections: StatisticsSection[] = [
+      ...sections,
+      { id: 'jvn', title: 'JVN', feedInfoList: [{ url: 'https://example.com/jvn.rss' }] },
+    ];
+    const moved = { ...item, sectionId: 'jvn', sourceFeedUrl: 'https://example.com/jvn.rss' };
+    const corrected = await generateStatistics([moved], currentSections, published, output, nextDay);
+    const repeated = await generateStatistics(
+      [],
+      currentSections,
+      published,
+      output,
+      new Date('2026-09-27T16:00:00.000Z'),
+    );
+    expect(repeated.observations).toEqual(corrected.observations);
+    expect(repeated.reports).toEqual(corrected.reports);
+    expect(repeated.observations.map((observation) => observation.sectionId)).toEqual(['jvn']);
+  });
+
   it('公開履歴を復元し、RSS・Atom・JSONと閲覧ページで同じ日付・カテゴリを配信する', async () => {
     const first = await generateStatistics([item], sections, published, output, firstTime);
     expect(first.reports).toEqual([]);

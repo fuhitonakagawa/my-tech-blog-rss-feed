@@ -45,14 +45,6 @@ export function render(data: MainLayoutData): string {
         </script>`
     : '';
 
-  const howToAddSite = constants.howToAddSiteLink
-    ? `<p class='ui-text-note'>
-                        追加したいブログがある場合は<br>
-                        <a href='${escapeHtml(constants.howToAddSiteLink)}' target="_blank" rel="noopener noreferrer">サイトの追加方法</a>
-                        をご参照ください。
-                    </p>`
-    : '';
-
   return `<!doctype html>
 <html lang="ja">
 <head>
@@ -141,16 +133,6 @@ export function render(data: MainLayoutData): string {
     </main>
 
     <footer role="contentinfo" class="ui-section-footer">
-        <div class="ui-layout-container">
-            <div class="ui-layout-column-6 ui-layout-column-center">
-                <div class="ui-component-cta ui-layout-flex ui-section-footer__site-info">
-                    <p class="ui-text-note">
-                        このサイトは<br>記事を読んでその企業の技術・カルチャーを知れることや<br>質の高い技術情報を得られることを目的としています。
-                    </p>
-                    ${howToAddSite}
-                </div>
-            </div>
-        </div>
         <div class="ui-layout-container">
             <div class="ui-section-footer__layout ui-layout-flex">
                 <p class="ui-section-footer--copyright ui-text-note">

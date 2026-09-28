@@ -42,7 +42,7 @@ export const render = ({ page, statistics }: StatisticsPageData): string => {
     <p class="ui-statistics-subscriptions"><a href="${escapeHtml(statisticsFeedUrls.rss)}">RSSを購読</a><a href="${escapeHtml(statisticsFeedUrls.atom)}">Atom</a><a href="${escapeHtml(statisticsFeedUrls.json)}">JSON Feed</a></p>
     </header>
     ${content}
-    <p class="ui-statistics-footnote">件数の多いカテゴリから表示し、投稿が0件のカテゴリは省略しています。翻訳版と同一カテゴリ内の重複記事は除いています。カテゴリをまたぐ同じ記事は、それぞれで数えるため、合計は延べ件数です。</p>
+    <p class="ui-statistics-footnote">件数の多いカテゴリから表示しています。0件は対象日の記事を取得できていないことを示します。翻訳版と同一カテゴリ内の重複記事は除いています。カテゴリをまたぐ同じ記事は、それぞれで数えるため、合計は延べ件数です。</p>
     </div></section>
     <script>${indexScript}</script>`;
 };

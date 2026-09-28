@@ -31,6 +31,8 @@ it('記事・日付の重複と不正な日時を拒否する', () => {
     { ...state, collectionDays: ['2026-09-27', '2026-09-27'] },
     { ...state, startedAt: '2026-10-01T00:00:00.000Z' },
     { ...state, observations: [{ ...state.observations[0], sectionId: '../escape' }] },
+    { ...state, observations: [{ ...state.observations[0], sourceId: 'https://private.example.com/feed' }] },
+    { ...state, observations: [{ ...state.observations[0], sourceId: undefined }] },
     { ...state, observations: [{ ...state.observations[0], publishedAt: '2026-02-30T00:00:00.000Z' }] },
   ])
     expect(() => parseStatisticsState(JSON.stringify(malformed))).toThrow();

@@ -1,10 +1,10 @@
-import type { FeedSection } from '../../resources/feed-info-list';
 import type { CustomRssParserItem } from '../feed-crawler';
 import { FeedValidator } from '../feed-validator';
 import { logger } from '../logger';
 import { updateStatistics } from './aggregate';
 import { statisticsConfig } from './config';
 import { buildStatisticsFeed } from './feed-builder';
+import { type StatisticsSection, observationKey } from './observations';
 import { parseStatisticsState, readStatisticsState, writeStatisticsFile } from './state-store';
 import type { StatisticsState } from './types';
 
@@ -12,7 +12,7 @@ import type { StatisticsState } from './types';
 const combineHistory = (published: StatisticsState, cached: StatisticsState): StatisticsState => {
   if (published.startedAt !== cached.startedAt || cached.lastCollectedAt <= published.lastCollectedAt) return published;
   const observations = new Map(
-    [...cached.observations, ...published.observations].map((item) => [`${item.sectionId}:${item.articleId}`, item]),
+    [...cached.observations, ...published.observations].map((item) => [observationKey(item), item]),
   );
   const reports = new Map(published.reports.map((report) => [report.date, report]));
   for (const report of cached.reports) {
@@ -57,7 +57,7 @@ const restoreStatistics = async (
 /** 通常の取得結果から履歴と日次フィードを生成する。 */
 export const generateStatistics = async (
   items: readonly CustomRssParserItem[],
-  sections: readonly Pick<FeedSection, 'id' | 'title'>[],
+  sections: readonly StatisticsSection[],
   publishedDirectory: string,
   outputDirectory: string,
   currentDate = new Date(),

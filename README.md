@@ -204,6 +204,8 @@ Amazon Translateは`provider="amazon-translate"`とリージョン・ロール�
 
 `zenn`は「Zenn トレンド」、`qiita`は「Qiita 人気記事」で、各サービスのトレンド・人気記事RSSを対象にします。タグ別のカテゴリとは別の取得元です。表示名の変更でカテゴリIDや購読URLは変わりません。
 
+Zenn・Qiitaの「AI関連タグ」は12個、「Cloud関連タグ」は6個のタグのRSSをまとめます。「Securityタグ」は各サービスのSecurityタグ1個を対象にします。
+
 ### 4.3. RSS非対応ページ
 
 `src/resources/generated-feeds/<生成フィードID>.json`に生成元を定義します。IDの文字制約はセクションIDと同じです。次はClaudeの記事一覧に対するCSS抽出設定です。
@@ -336,7 +338,7 @@ JVNの脆弱性情報は専用カテゴリ`jvn`で扱います。取得元はJVN
 | `platform` | `platform-jp` | Platform - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/feeds/rss.xml) |
 | `programming` | `programming-jp` | Programming - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/feeds/rss.xml) |
 | `robotics` | `robotics-jp` | Robotics - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/feeds/rss.xml) |
-| `security-advisory` | `security-advisory-jp` | Security Advisory - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml) |
+| `security-advisory` | `security-advisory-jp` | GitHub Security Advisory - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml) |
 | `security-en` | `security-jp` | Security - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml) |
 | `techcrunch` | `techcrunch-jp` | TechCrunch - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/feeds/rss.xml) |
 
@@ -410,9 +412,11 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 - **対象**: 通常カテゴリ内の日本語・英語などの記事です。HTML由来の生成フィードも所属カテゴリで集計します。翻訳カテゴリと統計フィードは集計元に含めません。
 - **重複**: 同じカテゴリ内では、追跡パラメーターを除いた同一記事URLを1件として扱います。複数カテゴリへの掲載はそれぞれのカテゴリで数えます。
 - **公開日**: 同一記事を繰り返し取得した場合、保存した最初の有効な公開日時を維持します。公開日が不明・不正・未来の記事と、公開できないURLは対象外です。
-- **本文**: 件数の多いカテゴリから表示し、0件のカテゴリは省略します。カテゴリ一覧には通常フィードの文字数上限を適用しません。
+- **本文**: 件数の多いカテゴリから表示し、0件の通常カテゴリも末尾に表示します。0件は対象日の記事を取得できていないことを表し、配信元に投稿がなかったことを保証しません。「投稿のあるカテゴリ」は1件以上のカテゴリ数です。カテゴリ一覧には通常フィードの文字数上限を適用しません。
 
 取得履歴は通常巡回ごとに蓄積します。配信元RSSから記事が消えても、保存期間内の取得記録は集計に使用します。初回は当日から収集し、日本時間で翌日になってから最初の日次記事を配信します。それまでは記事が0件の有効なRSSと、収集中であることを示す閲覧ページを出力します。
+
+取得元RSSの所属カテゴリを変更した場合は、保存済みの記事も現在の所属へ振り分けて再集計します。異なるRSSに同じ記事がある場合は、それぞれの所属を保持し、カテゴリ内で重複を除きます。取得元を特定できない履歴は記事IDの一致から取得元を解決し、照合できない記事は保存済みの所属を保持します。再分類では元記事の公開日時・日次記事のIDを維持します。
 
 毎日0:00（日本時間、UTCの15:00）の定期実行で前日までを集計します。通常巡回や手動実行でも、収集開始後・保持期間内の未生成の日を補完します。GitHub Actionsの起動と公開には遅延があり得ます。収集開始日は部分集計、巡回記録がない日は後日の取得分に基づく集計であることを本文に記載します。
 
@@ -426,7 +430,7 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 | JSON Feed | [日次統計JSON Feed](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/feed.json) |
 | 復元用の取得履歴 | [日次統計のstate.json](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/state.json) |
 
-保存先は`src/site/feeds/statistics/daily/`です。取得履歴には記事URLのハッシュ、カテゴリID・表示名、公開日時を保存します。記事本文・元記事URLを保存するためのフィールドはありません。公開済み`gh-pages`を主経路、Actions Cacheを副経路として復元し、通常の14日キャッシュ削除とは別に保持期間を管理します。同じ収集開始日時を持つキャッシュの未公開取得分も履歴に含めます。履歴の上限は20 MiBです。`gh-pages`が存在しない初回は履歴を初期化します。公開済みブランチの確認・取得に通信エラーがある場合はビルドエラーとし、履歴の初期化と区別します。保存履歴が不正で正常な復元元もない場合はビルドエラーとして公開を停止します。
+保存先は`src/site/feeds/statistics/daily/`です。取得履歴（schemaVersion: 2）には記事URLと取得元RSSのハッシュ、カテゴリID・表示名、公開日時を保存します。記事本文・元記事URLを保存するためのフィールドはありません。公開済み`gh-pages`を主経路、Actions Cacheを副経路として復元し、通常の14日キャッシュ削除とは別に保持期間を管理します。同じ収集開始日時を持つキャッシュの未公開取得分も履歴に含めます。履歴の上限は20 MiBです。`gh-pages`が存在しない初回は履歴を初期化します。公開済みブランチの確認・取得に通信エラーがある場合はビルドエラーとし、履歴の初期化と区別します。保存履歴が不正で正常な復元元もない場合はビルドエラーとして公開を停止します。
 
 
 <a id="validation"></a>
@@ -650,6 +654,7 @@ flowchart TD
 │   │   │   ├── config.ts
 │   │   │   ├── dates.ts
 │   │   │   ├── feed-builder.ts
+│   │   │   ├── observations.ts
 │   │   │   ├── presentation.ts
 │   │   │   ├── service.ts
 │   │   │   ├── state-store.ts
@@ -817,6 +822,7 @@ flowchart TD
 │   │   │   └── claude-announcements.test.ts
 │   │   ├── statistics/
 │   │   │   ├── aggregate.test.ts
+│   │   │   ├── reclassification.test.ts
 │   │   │   ├── service.test.ts
 │   │   │   └── state.test.ts
 │   │   └── translation/

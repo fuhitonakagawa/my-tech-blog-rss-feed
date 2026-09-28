@@ -1,6 +1,8 @@
 /** 記事本文やURLを含まないカテゴリ別の取得記録。 */
 export interface ArticleObservation {
   articleId: string;
+  /** 取得元RSSの識別子。取得元を特定できない保存履歴ではnull。 */
+  sourceId: string | null;
   sectionId: string;
   sectionTitle: string;
   publishedAt: string;
@@ -23,7 +25,7 @@ export interface DailyReport {
 
 /** 公開済み履歴と次回集計用の取得記録。 */
 export interface StatisticsState {
-  schemaVersion: 1;
+  schemaVersion: 2;
   startedAt: string;
   lastCollectedAt: string;
   collectionDays: string[];

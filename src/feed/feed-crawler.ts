@@ -40,6 +40,7 @@ export type CustomRssParserItem = RssParser.Item & {
   blogLink: string;
   sectionId: string;
   sourceLanguage: FeedLanguage;
+  sourceFeedUrl?: string;
   originalTitle?: string;
 };
 export type CustomRssParserFeed = RssParser.Output<CustomRssParserItem> & {
@@ -420,6 +421,7 @@ export class FeedCrawler {
       // セクション分割用
       feedItem.sectionId = feedInfo.sectionId;
       feedItem.sourceLanguage = feedInfo.language;
+      feedItem.sourceFeedUrl = feedInfo.url;
     }
 
     // 記事URLはリンクとして描画し、OG情報の取得にも使うため http / https のみ扱う

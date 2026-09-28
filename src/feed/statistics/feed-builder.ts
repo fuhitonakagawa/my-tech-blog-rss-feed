@@ -28,7 +28,7 @@ export const buildStatisticsFeed = (state: StatisticsState): FeedDistributionSet
       guid: url,
       link: url,
       title: dailyReportTitle(report.date),
-      description: `${report.date}（日本時間）のカテゴリ別投稿数。${report.categories.length}カテゴリで記事を取得しました。`,
+      description: `${report.date}（日本時間）のカテゴリ別投稿数。${report.categories.filter((category) => category.count > 0).length}カテゴリで記事を取得しました。`,
       content: renderDailyReport(report),
       published: new Date(report.publishedAt),
       date: new Date(report.updatedAt),

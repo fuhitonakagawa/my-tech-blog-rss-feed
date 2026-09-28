@@ -54,6 +54,7 @@ const renderCoverageNote = (report: DailyReport): string => {
 /** 日付・延べ件数・カテゴリ内訳をひとまとまりに表示する。 */
 export const renderStatisticsReport = (report: DailyReport): string => {
   const total = report.categories.reduce((sum, category) => sum + category.count, 0);
+  const activeCategories = report.categories.filter((category) => category.count > 0).length;
   return `<article class="ui-statistics-report" id="${escapeHtml(report.date)}">
     <header class="ui-statistics-report__header">
       <div><p class="ui-statistics-eyebrow">集計対象日・日本時間</p>
@@ -61,7 +62,7 @@ export const renderStatisticsReport = (report: DailyReport): string => {
       </div>
       <dl class="ui-statistics-metrics">
         <div><dt>カテゴリ合計（延べ）</dt><dd>${total.toLocaleString('ja-JP')}<span class="ui-statistics-unit">件</span></dd></div>
-        <div><dt>投稿のあるカテゴリ</dt><dd>${report.categories.length}<span class="ui-statistics-unit">カテゴリ</span></dd></div>
+        <div><dt>投稿のあるカテゴリ</dt><dd>${activeCategories}<span class="ui-statistics-unit">カテゴリ</span></dd></div>
       </dl>
     </header>
     ${renderCoverageNote(report)}

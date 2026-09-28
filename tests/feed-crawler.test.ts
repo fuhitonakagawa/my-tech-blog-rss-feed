@@ -52,6 +52,7 @@ describe('FeedCrawler', () => {
     } as CustomRssParserFeed;
     const result = postProcessFeed(feedInfo, feed);
     expect(result.items[0].sourceLanguage).toBe(language);
+    expect(result.items[0].sourceFeedUrl).toBe(feedInfo.url);
   });
   it('生成フィードはHTTP取得せず内部レジストリのXMLを解析する', async () => {
     const feedInfo: FeedInfo = {
