@@ -1,0 +1,82 @@
+import type { FeedSection } from '../../resources/feed-info-list';
+import type { CustomRssParserItem } from '../feed-crawler';
+import { FeedValidator } from '../feed-validator';
+import { logger } from '../logger';
+import { updateStatistics } from './aggregate';
+import { statisticsConfig } from './config';
+import { buildStatisticsFeed } from './feed-builder';
+import { parseStatisticsState, readStatisticsState, writeStatisticsFile } from './state-store';
+import type { StatisticsState } from './types';
+
+/** 同じ収集履歴の未公開取得分を保持し、公開済みの記事情報を優先する。 */
+const combineHistory = (published: StatisticsState, cached: StatisticsState): StatisticsState => {
+  if (published.startedAt !== cached.startedAt || cached.lastCollectedAt <= published.lastCollectedAt) return published;
+  const observations = new Map(
+    [...cached.observations, ...published.observations].map((item) => [`${item.sectionId}:${item.articleId}`, item]),
+  );
+  const reports = new Map(published.reports.map((report) => [report.date, report]));
+  for (const report of cached.reports) {
+    const old = reports.get(report.date);
+    if (!old || report.updatedAt > old.updatedAt) reports.set(report.date, report);
+  }
+  return {
+    ...published,
+    lastCollectedAt: cached.lastCollectedAt,
+    collectionDays: [...new Set([...published.collectionDays, ...cached.collectionDays])],
+    observations: [...observations.values()],
+    reports: [...reports.values()],
+  };
+};
+
+/** 公開済み履歴を基準に、正常なキャッシュから取得記録を復元する。 */
+const restoreStatistics = async (
+  publishedDirectory: string,
+  outputDirectory: string,
+): Promise<StatisticsState | null> => {
+  let failure: unknown;
+  const states: (StatisticsState | null)[] = [];
+  for (const [source, directory] of [
+    ['published', publishedDirectory],
+    ['cache', outputDirectory],
+  ]) {
+    try {
+      states.push(await readStatisticsState(directory));
+    } catch (error) {
+      failure = error;
+      states.push(null);
+      logger.warn('[statistics] invalid-state', { source });
+    }
+  }
+  const [published, cached] = states;
+  if (published && cached) return combineHistory(published, cached);
+  if (published || cached) return published || cached;
+  if (failure) throw new Error('日次統計の履歴を復元できません', { cause: failure });
+  return null;
+};
+
+/** 通常の取得結果から履歴と日次フィードを生成する。 */
+export const generateStatistics = async (
+  items: readonly CustomRssParserItem[],
+  sections: readonly Pick<FeedSection, 'id' | 'title'>[],
+  publishedDirectory: string,
+  outputDirectory: string,
+  currentDate = new Date(),
+): Promise<StatisticsState> => {
+  const previous = await restoreStatistics(publishedDirectory, outputDirectory);
+  const state = updateStatistics(previous, items, sections, currentDate);
+  const json = `${JSON.stringify(state)}\n`;
+  if (Buffer.byteLength(json) > statisticsConfig.maxStateBytes) throw new Error('日次統計の保存上限を超えています');
+  parseStatisticsState(json);
+  const feeds = buildStatisticsFeed(state);
+  const validator = new FeedValidator();
+  await validator.assertXmlFeed('daily-statistics-rss', feeds.rss);
+  await validator.assertXmlFeed('daily-statistics-atom', feeds.atom);
+  await Promise.all([
+    writeStatisticsFile(outputDirectory, 'rss.xml', feeds.rss),
+    writeStatisticsFile(outputDirectory, 'atom.xml', feeds.atom),
+    writeStatisticsFile(outputDirectory, 'feed.json', feeds.json),
+  ]);
+  await writeStatisticsFile(outputDirectory, 'state.json', json);
+  logger.info('[statistics] generated', { reports: state.reports.length, observations: state.observations.length });
+  return state;
+};

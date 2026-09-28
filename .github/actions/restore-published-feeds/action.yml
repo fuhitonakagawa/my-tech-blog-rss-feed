@@ -1,0 +1,28 @@
+name: Restore published feed history
+description: 公開済みの生成フィードと統計履歴を復元する
+
+runs:
+  using: composite
+  steps:
+    - name: Check published branch
+      id: published
+      uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+      with:
+        script: |
+          try {
+            await github.rest.repos.getBranch({ ...context.repo, branch: 'gh-pages' });
+            core.setOutput('exists', 'true');
+          } catch (error) {
+            if (error.status !== 404) throw error;
+            core.setOutput('exists', 'false');
+          }
+    - name: Restore published history
+      if: steps.published.outputs.exists == 'true'
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      with:
+        ref: gh-pages
+        path: .previous-site
+        persist-credentials: false
+        sparse-checkout: |
+          feeds/generated
+          feeds/statistics

@@ -34,6 +34,7 @@
 - **カテゴリ別表示**: セクションごとの新着記事、購読リンク、ナビゲーションを提供します。
 - **記事情報**: タイトル、概要、元記事URL、公開日時、取得可能なOG画像・はてなブックマーク数を表示します。
 - **登録フィード一覧**: ヘッダーの一覧ボタンから、セクションごとの購読元を確認できます。
+- **日次投稿統計**: 日本時間の前日までに公開され、取得できた記事数をカテゴリ別にまとめた統計RSSを配信します。
 - **表示テーマ**: OSの明暗設定に従い、ヘッダーの「ダークモード」ボタンで切り替えられます。OSと同じテーマへ戻すとOS設定への追従になり、選択はブラウザーに保存されます。保存が使えない場合も、そのページ内では切り替えられます。
 - **HTML由来のフィード**: 元サイトにRSSがなくても、定義した記事一覧から単独フィードを配信できます。
 
@@ -117,6 +118,7 @@ Indexing APIへの通知には、生成済みブログデータ、対象サイ�
 | サイトURL・タイトル・説明・著者・集約期間・取得上限 | [共通設定（`src/common/constants.ts`）](src/common/constants.ts) |
 | セクションの表示順・表示名・所属フィード | [セクション定義（`src/resources/sections/`）](src/resources/sections/) |
 | HTML由来の生成元・抽出設定 | [生成元定義（`src/resources/generated-feeds/`）](src/resources/generated-feeds/) |
+| 日次統計の表示名・集計時間帯・保持期間 | [統計定義（`src/resources/stats/daily.json`）](src/resources/stats/daily.json) |
 | Eleventyの入力・出力・配信ファイル | [サイト設定（`eleventy.config.ts`）](eleventy.config.ts) |
 | 定期更新・公開先ブランチ | [更新ワークフロー（`.github/workflows/generate-feed.yml`）](.github/workflows/generate-feed.yml) |
 
@@ -366,6 +368,46 @@ AWS翻訳は公開用の`Generate feeds and site`ワークフローのmainブラ
 
 Pythonの依存バージョンはロックファイルで固定し、トークン化・モデル読込の補助ライブラリには脆弱性修正版の上書き指定があります。間接依存やモデルのライセンス条件は [第三者ライセンス情報](THIRD_PARTY_NOTICES.md) を参照してください。
 
+### 5.5. カテゴリ別の日次投稿統計
+
+日次統計は、取得できた記事のカテゴリ別件数を1日1件のRSS記事として配信します。集計日には元記事の公開日時を使用し、日本時間の0:00以上・翌日0:00未満を1日として扱います。取得日時の属する日への振り分けとは異なります。
+
+定義は [統計用JSON（`src/resources/stats/daily.json`）](src/resources/stats/daily.json) です。
+
+```json
+{
+  "schemaVersion": 1,
+  "title": "日次投稿統計",
+  "timeZone": "Asia/Tokyo",
+  "retentionDays": 90
+}
+```
+
+- **表示名**: `title`はフィードと閲覧ページに使用します。
+- **タイムゾーン**: `Asia/Tokyo`を指定します。日次集計は日本時間を対象とします。
+- **保持期間**: `retentionDays`は1〜365日の整数です。公開する日次記事と取得記録の保持期間を表します。
+- **対象**: 通常カテゴリ内の日本語・英語などの記事です。HTML由来の生成フィードも所属カテゴリで集計します。翻訳カテゴリと統計フィードは集計元に含めません。
+- **重複**: 同じカテゴリ内では、追跡パラメーターを除いた同一記事URLを1件として扱います。複数カテゴリへの掲載はそれぞれのカテゴリで数えます。
+- **公開日**: 同一記事を繰り返し取得した場合、保存した最初の有効な公開日時を維持します。公開日が不明・不正・未来の記事と、公開できないURLは対象外です。
+- **本文**: 件数の多いカテゴリから表示し、0件のカテゴリは省略します。カテゴリ一覧には通常フィードの文字数上限を適用しません。
+
+取得履歴は通常巡回ごとに蓄積します。配信元RSSから記事が消えても、保存期間内の取得記録は集計に使用します。初回は当日から収集し、日本時間で翌日になってから最初の日次記事を配信します。それまでは記事が0件の有効なRSSと、収集中であることを示す閲覧ページを出力します。
+
+毎日0:00（日本時間、UTCの15:00）の定期実行で前日までを集計します。通常巡回や手動実行でも、収集開始後・保持期間内の未生成の日を補完します。GitHub Actionsの起動と公開には遅延があり得ます。収集開始日は部分集計、巡回記録がない日は後日の取得分に基づく集計であることを本文に記載します。
+
+日次記事のIDは対象日で固定し、公開日時は対象日の翌日0:00（日本時間）とします。遅れて取得した記事は同じIDの記事へ反映し、件数などの内容が変わったときだけ更新日時を変更します。配信元の反映遅延・取得失敗・巡回の間にRSSから消えた記事があるため、件数は「このサイトで取得できた記事数」です。
+
+| 用途 | 公開URL |
+| --- | --- |
+| 閲覧ページ | [日次投稿統計](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/statistics/daily/) |
+| RSS | [日次統計RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/rss.xml) |
+| Atom | [日次統計Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/atom.xml) |
+| JSON Feed | [日次統計JSON Feed](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/feed.json) |
+| 復元用の取得履歴 | [日次統計のstate.json](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/state.json) |
+
+保存先は`src/site/feeds/statistics/daily/`です。取得履歴には記事URLのハッシュ、カテゴリID・表示名、公開日時を保存します。記事本文・元記事URLを保存するためのフィールドはありません。公開済み`gh-pages`を主経路、Actions Cacheを副経路として復元し、通常の14日キャッシュ削除とは別に保持期間を管理します。同じ収集開始日時を持つキャッシュの未公開取得分も履歴に含めます。履歴の上限は20 MiBです。`gh-pages`が存在しない初回は履歴を初期化します。公開済みブランチの確認・取得に通信エラーがある場合はビルドエラーとし、履歴の初期化と区別します。保存履歴が不正で正常な復元元もない場合はビルドエラーとして公開を停止します。
+
+
 <a id="validation"></a>
 
 ## 🧪 6. 検証コマンド
@@ -429,6 +471,7 @@ TypeScriptを`tsx`で実行し、Eleventyが静的HTMLを出力します。RSS�
 | `src/resources/` | セクション・生成元の設定とその検証 |
 | `src/feed/` | 外部取得、解析、集約、配信形式への変換、保存 |
 | `src/feed/generated/` | HTML抽出、記事保持、前回状態の復元、単独フィード生成 |
+| `src/feed/statistics/` | 日本時間の日次集計、取得履歴、統計フィード |
 | `src/feed/translation/` | テキスト単位の翻訳、プロバイダー境界、キャッシュ、カテゴリ統合 |
 | `scripts/translation/` | Python翻訳ブリッジ、プロバイダー設定、AWS境界、固定モデルの検証 |
 | `src/common/` | 共通設定、URL・接続先検証、Eleventy用処理 |
@@ -478,6 +521,11 @@ flowchart TD
     parse --> recent
     parse --> metadata
     recent --> metadata
+    statistics["通常カテゴリの記事履歴を保存<br/>日本時間の前日までを日次集計"]
+    statisticsFeeds["統計RSS・Atom・JSON Feedと履歴"]
+    parse --> statistics
+    statistics --> statisticsFeeds
+    statisticsFeeds --> site
     recent --> translation
     translation --> translated
     translated --> site
@@ -507,6 +555,8 @@ flowchart TD
 │       └── base.mdc
 ├── .github/  # CI・公開ワークフロー
 │   ├── actions/
+│   │   ├── restore-published-feeds/
+│   │   │   └── action.yml
 │   │   ├── restore-feed-cache/
 │   │   │   └── action.yml
 │   │   ├── save-feed-cache/
@@ -573,8 +623,16 @@ flowchart TD
 │   │   │   ├── publication-date.ts
 │   │   │   ├── state-store.ts
 │   │   │   └── types.ts
+│   │   ├── statistics/
+│   │   │   ├── aggregate.ts
+│   │   │   ├── config.ts
+│   │   │   ├── dates.ts
+│   │   │   ├── feed-builder.ts
+│   │   │   ├── presentation.ts
+│   │   │   ├── service.ts
+│   │   │   ├── state-store.ts
+│   │   │   └── types.ts
 │   │   ├── translation/
-│   │   ├── test_providers.py
 │   │   │   ├── python-translator.ts
 │   │   │   ├── translated-feed-generator.ts
 │   │   │   ├── translation-cache.ts
@@ -635,6 +693,8 @@ flowchart TD
 │   │   │   ├── zenn-cloud.json
 │   │   │   ├── zenn-security.json
 │   │   │   └── zenn.json
+│   │   ├── stats/
+│   │   │   └── daily.json
 │   │   ├── translated-feeds/  # 翻訳カテゴリ統合フィードの定義
 │   │   │   ├── ai-jp.json
 │   │   │   ├── aws-jp.json
@@ -667,7 +727,8 @@ flowchart TD
 │       │   ├── feedItemsChunks.js
 │       │   ├── feedItemsHot.js
 │       │   ├── lastModifiedBlogsDate.js
-│       │   └── sections.js
+│       │   ├── sections.js
+│       │   └── statistics.js
 │       ├── _includes/
 │       │   ├── components/
 │       │   │   ├── feed-item.ts
@@ -710,6 +771,7 @@ flowchart TD
 │       ├── blogs.11ty.ts
 │       ├── hot.11ty.ts
 │       ├── index.11ty.ts
+│       ├── statistics.11ty.ts
 │       ├── section.11ty.ts
 │       ├── site.11ty.ts
 │       └── sitemap.11ty.ts
@@ -723,6 +785,10 @@ flowchart TD
 │   │   ├── generated/
 │   │   │   ├── anthropic-news.test.ts
 │   │   │   └── claude-announcements.test.ts
+│   │   ├── statistics/
+│   │   │   ├── aggregate.test.ts
+│   │   │   ├── service.test.ts
+│   │   │   └── state.test.ts
 │   │   └── translation/
 │   │       ├── python-translator.test.ts
 │   │       ├── translated-feed-generator.test.ts

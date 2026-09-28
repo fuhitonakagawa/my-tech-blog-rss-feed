@@ -3,6 +3,7 @@ import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import constants, { sectionFeedUrls } from '../../../common/constants';
 import { relativeUrlFilter } from '../../../common/eleventy-utils';
+import { statisticsConfig, statisticsFeedUrls } from '../../../feed/statistics/config';
 import { FEED_SECTION_LIST, type FeedInfo } from '../../../resources/feed-info-list';
 import { TRANSLATED_FEED_DEFINITION_LIST } from '../../../resources/translated-feed-list';
 import { escapeHtml } from './html-utils';
@@ -126,6 +127,10 @@ export const renderFeedListDialog = (
             </div>
             <div class="ui-feed-list-dialog__body">
                 ${sectionGroups}
+                <section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-statistics">
+                    <h3 id="feed-list-statistics" class="ui-feed-list-dialog__section-title"><a href="${relativeUrl}${statisticsConfig.pagePath}">${escapeHtml(statisticsConfig.title)}</a></h3>
+                    <ul class="ui-feed-list-dialog__feeds"><li class="ui-feed-list-dialog__feed"><a class="ui-feed-list-dialog__feed-url" href="${escapeHtml(statisticsFeedUrls.rss)}">${escapeHtml(statisticsFeedUrls.rss)}</a></li></ul>
+                </section>
             </div>
         </div>
     </div>`;

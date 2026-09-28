@@ -7,6 +7,8 @@ import { FeedStorer } from '../feed/feed-storer';
 import { FeedValidator } from '../feed/feed-validator';
 import { GeneratedFeedService } from '../feed/generated/generated-feed-service';
 import { logger } from '../feed/logger';
+import { statisticsConfig } from '../feed/statistics/config';
+import { generateStatistics } from '../feed/statistics/service';
 import { generateTranslatedFeeds } from '../feed/translation/translated-feed-generator';
 import { FEED_INFO_LIST, FEED_SECTION_LIST, type FeedSection } from '../resources/feed-info-list';
 import { GENERATED_FEED_DEFINITION_LIST } from '../resources/generated-feed-list';
@@ -63,6 +65,13 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     constants.feedFetchConcurrency,
     constants.feedOgFetchConcurrency,
     new Date(Date.now() - constants.aggregateFeedDurationInHours * 60 * 60 * 1000),
+  );
+
+  await generateStatistics(
+    crawlFeedsResult.feeds.flatMap((feed) => feed.items),
+    FEED_SECTION_LIST,
+    path.join(dirName, '../../.previous-site', statisticsConfig.feedPath),
+    path.join(dirName, '../site', statisticsConfig.feedPath),
   );
 
   // まとめフィード作成 + ファイル出力 + バリデーション

@@ -10,6 +10,7 @@ runs:
         path: |
           .cache
           src/site/feeds/generated
+          src/site/feeds/statistics
           public/images/feed-thumbnails
           public/images/feed-icons
         key: ${{ runner.os }}-feed-${{ github.run_id }}
