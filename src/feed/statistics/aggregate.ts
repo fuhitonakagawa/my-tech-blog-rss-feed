@@ -27,7 +27,7 @@ const observeArticle = (
   };
 };
 
-/** 同じカテゴリ・記事は最初の有効な公開日時を保持する。 */
+/** 同じカテゴリ・記事の公開日時を保持し、表示名は現在の定義を使う。 */
 const mergeObservations = (
   previous: readonly ArticleObservation[],
   items: readonly CustomRssParserItem[],
@@ -36,7 +36,12 @@ const mergeObservations = (
   now: string,
 ): ArticleObservation[] => {
   const sectionTitles = new Map(sections.map((section) => [section.id, section.title]));
-  const byArticle = new Map(previous.map((item) => [`${item.sectionId}:${item.articleId}`, item]));
+  const byArticle = new Map(
+    previous.map((item) => [
+      `${item.sectionId}:${item.articleId}`,
+      { ...item, sectionTitle: sectionTitles.get(item.sectionId) ?? item.sectionTitle },
+    ]),
+  );
   const savedKeys = new Set(byArticle.keys());
   for (const item of items) {
     const observation = observeArticle(item, sectionTitles, now);

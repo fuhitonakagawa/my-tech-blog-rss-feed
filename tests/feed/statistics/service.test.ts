@@ -1,6 +1,7 @@
 import * as fs from 'node:fs/promises';
 import * as os from 'node:os';
 import * as path from 'node:path';
+import { load } from 'cheerio';
 import RssParser from 'rss-parser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { logger } from '../../../src/feed/logger';
@@ -53,7 +54,14 @@ describe('日次統計の保存と配信', () => {
     expect(json.items[0].content_html).toContain('1件');
     const html = renderStatisticsPage({ page: { url: '/statistics/daily/' }, statistics: state });
     expect(html).toContain('id="2026-09-27"');
-    expect(html).toContain(json.items[0].content_html);
+    const page = load(html);
+    const report = page('article[id="2026-09-27"]');
+    expect(report.find('time').attr('datetime')).toBe('2026-09-27');
+    expect(report.find('tbody th a').text()).toBe('AI & <安全>');
+    expect(report.find('tbody td').text()).toBe('1件');
+    expect(report.find('tbody th').attr('scope')).toBe('row');
+    expect(report.find('tbody th 安全')).toHaveLength(0);
+    expect(report.find('.ui-statistics-notice').text()).toContain('収集開始日');
     expect(html).toContain(statisticsFeedUrls.rss);
     const saved = await fs.readFile(path.join(output, 'state.json'), 'utf-8');
     expect(saved).not.toContain(item.link);
@@ -89,10 +97,19 @@ describe('日次統計の保存と配信', () => {
     }));
     const articles = categories.map((section) => ({ ...item, sectionId: section.id }));
     await generateStatistics(articles, categories, published, output, firstTime);
-    await generateStatistics([], categories, published, output, nextDay);
+    const state = await generateStatistics([], categories, published, output, nextDay);
     const json = JSON.parse(await fs.readFile(path.join(output, 'feed.json'), 'utf-8'));
     expect(json.items[0].content_html.length).toBeGreaterThan(500);
     for (const section of categories) expect(json.items[0].content_html).toContain(section.title);
+    const page = load(renderStatisticsPage({ page: { url: '/statistics/daily/' }, statistics: state }));
+    expect(page('.ui-statistics-table')).toHaveLength(2);
+    expect(page('.ui-statistics-table tbody tr')).toHaveLength(40);
+    expect(
+      page('.ui-statistics-table tbody th a')
+        .map((_, element) => page(element).text())
+        .get(),
+    ).toEqual(state.reports[0].categories.map((category) => category.title));
+    expect(page('.ui-statistics-metrics dd').first().text()).toBe('40件');
   });
 
   it('公開済み履歴をキャッシュより優先する', async () => {

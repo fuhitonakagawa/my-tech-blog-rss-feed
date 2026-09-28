@@ -5,7 +5,7 @@ import type { DailyReport } from './types';
 /** 日次記事の見出し。 */
 export const dailyReportTitle = (date: string): string => `【日次統計】${date}のカテゴリ別投稿数`;
 
-/** RSSと閲覧ページに共通する、全カテゴリ分の本文。 */
+/** 統計フィードで配信する、全カテゴリ分の本文。 */
 export const renderDailyReport = (report: DailyReport): string => {
   const [year, month, day] = report.date.split('-');
   const counts =

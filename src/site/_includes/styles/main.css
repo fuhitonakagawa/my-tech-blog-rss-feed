@@ -493,6 +493,140 @@ img {
   text-align: left;
   font-size: 0.9em;
 }
+
+/* 日次統計の表はカテゴリ名と件数の読み順を維持する。 */
+.ui-statistics {
+  text-align: left;
+}
+.ui-statistics .ui-layout-container {
+  max-width: 64rem;
+  margin-inline: auto;
+}
+.ui-statistics h1,
+.ui-statistics h2 {
+  text-wrap: balance;
+}
+.ui-statistics p {
+  text-wrap: pretty;
+}
+.ui-statistics-heading {
+  margin-bottom: 2rem;
+}
+.ui-statistics-heading h1 {
+  margin-bottom: 0.75rem;
+}
+.ui-statistics-subscriptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+}
+.ui-statistics a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.ui-statistics a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.ui-statistics-report {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--toggle-track-border-color);
+  border-radius: 0.5rem;
+  background: var(--base-background);
+  scroll-margin-top: 1rem;
+}
+.ui-statistics-report__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-bottom: 1.5rem;
+}
+.ui-statistics-report__header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.ui-statistics-eyebrow,
+.ui-statistics-metrics dt {
+  margin: 0 0 0.25rem;
+  color: var(--base-color);
+  font-size: 0.875rem;
+}
+.ui-statistics-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+.ui-statistics-metrics dd {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+}
+.ui-statistics-unit {
+  margin-left: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+.ui-statistics-tables {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+.ui-statistics-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+.ui-statistics-table th,
+.ui-statistics-table td {
+  padding: 0.625rem 0.5rem;
+  border-bottom: 1px solid var(--toggle-track-border-color);
+  vertical-align: top;
+}
+.ui-statistics-table thead {
+  background: var(--ui-color-form-input);
+}
+.ui-statistics-table th {
+  text-align: left;
+}
+.ui-statistics-table tbody th {
+  font-weight: normal;
+  overflow-wrap: anywhere;
+}
+.ui-statistics-table td,
+.ui-statistics-table thead th:last-child {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.ui-statistics-table tbody tr:hover,
+.ui-statistics-table tbody tr:focus-within {
+  background: var(--yellow-background-lighter);
+}
+.ui-statistics-notice,
+.ui-statistics-empty {
+  padding: 1rem;
+  background: var(--yellow-background-lighter);
+  border-left: 3px solid var(--base-color-lighter);
+  font-size: 0.9375rem;
+}
+.ui-statistics-footnote {
+  color: var(--base-color);
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 48rem) {
+  .ui-statistics-report {
+    padding: 1.5rem;
+  }
+  .ui-statistics-tables {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 .ui-container-feed {
   text-align: left;
   margin-top: 1em;

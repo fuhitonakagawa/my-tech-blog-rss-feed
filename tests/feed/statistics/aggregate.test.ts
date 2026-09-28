@@ -12,6 +12,26 @@ const article = (url: string, isoDate: string, sectionId = 'ai') => makeSourceIt
 const initial = () => updateStatistics(null, [], sections, new Date('2026-09-27T00:00:00.000Z'));
 
 describe('日次統計の集計', () => {
+  it('カテゴリ名の変更を保存済み統計へ反映し、記事数・所属・公開日時を保持する', () => {
+    const first = updateStatistics(
+      initial(),
+      [article('https://example.com/article', '2026-09-27T01:00:00.000Z')],
+      sections,
+      new Date('2026-09-27T15:00:00.000Z'),
+    );
+    const before = structuredClone(first);
+    const renamed = [{ id: 'ai', title: 'AI 公式ブログ' }];
+    const result = updateStatistics(first, [], renamed, new Date('2026-09-27T16:00:00.000Z'));
+    expect(result.observations).toEqual([{ ...first.observations[0], sectionTitle: 'AI 公式ブログ' }]);
+    expect(result.reports[0]).toEqual({
+      ...first.reports[0],
+      updatedAt: '2026-09-27T16:00:00.000Z',
+      categories: [{ sectionId: 'ai', title: 'AI 公式ブログ', count: 1 }],
+    });
+    expect(first).toEqual(before);
+    expect(updateStatistics(result, [], renamed, new Date('2026-09-27T17:00:00.000Z')).reports).toEqual(result.reports);
+  });
+
   it('初回は当日分を収集し、JSTの日付境界で前日分だけ配信する', () => {
     const items = [
       article('https://example.com/before', '2026-09-26T14:59:59.999Z'),
