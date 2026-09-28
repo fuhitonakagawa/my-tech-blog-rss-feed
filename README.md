@@ -305,6 +305,18 @@ Anthropic Newsroomの [Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-f
 
 ### 5.4. 日本語翻訳のカテゴリ統合フィード
 
+日本語原文と英語原文のカテゴリは次の区分です。`aws`・`google-cloud`は英語、`security`は日本語中心の配信元を扱います。`security`には日英混在の配信元も含まれます。
+
+| カテゴリID | 表示名 | 対象 | 購読用RSS |
+| --- | --- | --- | --- |
+| `aws-ja` | AWS 日本語 | AWS の最新情報・Amazon Web Services ブログの日本語RSS | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-ja/feeds/rss.xml) |
+| `google-cloud-ja` | Google Cloud 日本語 | Google Cloud 日本語ブログ | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-ja/feeds/rss.xml) |
+| `security-en` | Security English | GitHub Security・Microsoft Security・Trail of Bitsの英語RSS | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-en/feeds/rss.xml) |
+
+`*-ja`は日本語原文、`*-jp`は英語からの日本語翻訳です。翻訳版`security-jp`の入力元は`security-en`です。
+
+JVNの脆弱性情報は専用カテゴリ`jvn`で扱います。取得元はJVNRSSとJVNDBの2本で、Slackの`#jvn-feed`に対応します。[JVNの購読用RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/jvn/feeds/rss.xml)は通常の集約フィードです。
+
 翻訳派生フィードは、カテゴリ内の英語ソースの記事を1つにまとめたRSSです。タイトルとRSS内の概要文を日本語に翻訳し、元記事のURL・GUID・公開日時・著者・カテゴリ・ブログ名・画像・ブックマーク数を保持します。元ページの本文取得、全文翻訳、要約は対象外です。
 
 通常・翻訳の集約フィードは、RSS・JSONでは元の文字列GUIDを保持します。AtomのIDは公開可能なHTTP(S) URLとし、それ以外のGUIDでは記事URLを使います。JSON Feedの`title`・`summary`・`_custom`はプレーンテキスト、`content_html`はHTMLとして配信し、`image`は画像URLの文字列です。
@@ -323,7 +335,7 @@ Anthropic Newsroomの [Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-f
 | `programming` | `programming-jp` | Programming - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/feeds/rss.xml) |
 | `robotics` | `robotics-jp` | Robotics - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/feeds/rss.xml) |
 | `security-advisory` | `security-advisory-jp` | Security Advisory - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml) |
-| `security` | `security-jp` | Security - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml) |
+| `security-en` | `security-jp` | Security - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml) |
 | `techcrunch` | `techcrunch-jp` | TechCrunch - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/feeds/rss.xml) |
 
 定義元は [翻訳フィード専用ディレクトリ（`src/resources/translated-feeds/`）](src/resources/translated-feeds/) です。1カテゴリにつき1ファイルで、ファイル名が日本語派生IDになります。例えば [AI - Translated Japaneseの定義（`ai-jp.json`）](src/resources/translated-feeds/ai-jp.json) は次の形式です。
@@ -371,6 +383,8 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 ### 5.5. カテゴリ別の日次投稿統計
 
 日次統計は、取得できた記事のカテゴリ別件数を1日1件のRSS記事として配信します。集計日には元記事の公開日時を使用し、日本時間の0:00以上・翌日0:00未満を1日として扱います。取得日時の属する日への振り分けとは異なります。
+
+閲覧ページの上部には、通常カテゴリと同じSlack用コマンドとRSS URLのコピー欄があります。Atom・JSON Feedも統計本文の上にあるリンクから購読できます。
 
 定義は [統計用JSON（`src/resources/stats/daily.json`）](src/resources/stats/daily.json) です。
 
@@ -656,6 +670,7 @@ flowchart TD
 │   │   │   ├── ai-news.json
 │   │   │   ├── ai.json
 │   │   │   ├── autonomous-driving.json
+│   │   │   ├── aws-ja.json
 │   │   │   ├── aws.json
 │   │   │   ├── azure.json
 │   │   │   ├── business-it.json
@@ -665,6 +680,7 @@ flowchart TD
 │   │   │   ├── engineering.json
 │   │   │   ├── gigazine.json
 │   │   │   ├── gihyo.json
+│   │   │   ├── google-cloud-ja.json
 │   │   │   ├── google-cloud.json
 │   │   │   ├── hacker-news.json
 │   │   │   ├── hatena.json
@@ -672,6 +688,7 @@ flowchart TD
 │   │   │   ├── itmedia.json
 │   │   │   ├── jp-tech-blog.json
 │   │   │   ├── jpcert.json
+│   │   │   ├── jvn.json
 │   │   │   ├── menthas.json
 │   │   │   ├── my-tech-blog-solo.json
 │   │   │   ├── platform.json
@@ -683,6 +700,7 @@ flowchart TD
 │   │   │   ├── qiita.json
 │   │   │   ├── robotics.json
 │   │   │   ├── security-advisory.json
+│   │   │   ├── security-en.json
 │   │   │   ├── security.json
 │   │   │   ├── speakerdeck.json
 │   │   │   ├── tech-book.json

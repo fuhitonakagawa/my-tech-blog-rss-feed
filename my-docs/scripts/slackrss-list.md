@@ -5,34 +5,21 @@ Qiita - 人気の記事	https://qiita.com/popular-items/feed	#qiita-trend-feed
 AWS Architecture Blog	https://aws.amazon.com/blogs/architecture/feed	#aws-feed
 Google Cloud	https://cloudblog.withgoogle.com/products/gcp/rss	#googlecloud-feed
 Azure service updates	https://www.microsoft.com/releasecommunications/api/v2/azure/rss	#azure-feed
-DevelopersIO	http://dev.classmethod.jp/feed/	#developersio-feed
 企業テックブログRSS	https://yamadashy.github.io/tech-blog-rss-feed/feeds/rss.xml	#company-tech-blog-feed
 AI情報RSS	https://karaage0703.github.io/tech-blog-rss-feed/feeds/rss.xml	#ai-news-feed
 メルカリエンジニアリングブログ	https://engineering.mercari.com/blog/feed.xml	#my-tech-blog-jp-feed
-さくらのナレッジ	http://knowledge.sakura.ad.jp/feed/	#my-tech-blog-jp-feed
 インフラエンジニアway - Powered by HEARTBEATS	http://heartbeats.jp/hbblog/atom.xml	#my-tech-blog-jp-feed
 DSAS開発者の部屋	http://dsas.blog.klab.org/index.rdf	#my-tech-blog-jp-feed
-CARTA TECH BLOG	http://techlog.voyagegroup.com/rss	#my-tech-blog-jp-feed
-Google Developers Japan	http://feeds.feedburner.com/GoogleJapanDeveloperRelationsBlog?format=xml	#my-tech-blog-jp-feed
 LINEヤフー Tech Blog (LY Corporation Tech Blog	https://engineering.linecorp.com/ja/feed/	#my-tech-blog-jp-feed
 DeNA Engineering on DeNA Engineering	https://engineer.dena.com/index.xml	#my-tech-blog-jp-feed
-GREE Engineering	http://labs.gree.jp/blog/feed/	#my-tech-blog-jp-feed
 CyberAgent Developers Blog | サイバーエージェント デベロッパーズブログ	https://developers.cyberagent.co.jp/blog/feed/	#my-tech-blog-jp-feed
-クックパッド開発者ブログ	http://techlife.cookpad.com/rss	#my-tech-blog-jp-feed
-Hatena Developer Blog	http://developer.hatenastaff.com/rss	#my-tech-blog-jp-feed
 MIXI DEVELOPERS - Medium	https://medium.com/feed/mixi-developers	#my-tech-blog-jp-feed
-FLINTERS Engineer's Blog	http://labs.septeni.co.jp/rss	#my-tech-blog-jp-feed
-Nulab (Japanese)	http://nulab-inc.com/ja/feed/	#my-tech-blog-jp-feed
 GMO Developers	https://developers.gmo.jp/feed/	#my-tech-blog-jp-feed
 TECHSCORE BLOG	http://www.techscore.com/blog/feed/	#my-tech-blog-jp-feed
-LINEヤフー Tech Blog (LY Corporation Tech Blog	http://techblog.yahoo.co.jp/atom.xml	#my-tech-blog-jp-feed
-Wantedly Engineer Blog	http://engineer.wantedly.com/feed	#my-tech-blog-jp-feed
-Amazon Web Services ブログ	https://aws.amazon.com/jp/blogs/news/feed/	#aws-feed
 AWS News Blog	https://aws.amazon.com/blogs/aws/feed/	#aws-feed
-TechCrunch	https://techcrunch.com/feed/	#tech-crunch-feed
+TechCrunch	https://techcrunch.com/feed/	#techcrunch-feed
 Hacker News - Japanese	https://hevinxx.github.io/hn-summary-and-translate/rss-ja.xml	#hacker-news-feed
 IPAセキュリティセンター:重要なセキュリティ情報	https://www.ipa.go.jp/security/rss/alert.rdf	#security-feed
-JPCERT/CC RSS Feed	https://www.jpcert.or.jp/rss/jpcert.rdf	#security-feed
 piyolog	https://piyolog.hatenadiary.jp/rss	#security-feed
 セキュリティのアレ	https://www.tsujileaks.com/?feed=podcast	#security-feed
 徳丸浩の日記	https://blog.tokumaru.org/feeds/posts/default	#security-feed
@@ -40,8 +27,6 @@ piyolog	https://piyolog.hatenadiary.jp/rss	#security-feed
 Security NEXT	https://www.security-next.com/feed	#security-feed
 AI Security Daily Digest	https://futabato.github.io/rss/feed.xml	#security-feed
 ITmedia 総合記事一覧	https://rss.itmedia.co.jp/rss/2.0/itmedia_all.xml	#it-media-feed
-JVNRSS Feed - Update Entry	https://jvn.jp/rss/jvn.rdf	#security-feed
-JVNDB RSS Feed - New Entry	https://jvndb.jvn.jp/ja/rss/jvndb_new.rdf	#security-feed
 ITmedia NEWS セキュリティ 最新記事一覧	https://rss.itmedia.co.jp/rss/2.0/news_security.xml	#security-feed
 ITmedia エンタープライズ「セキュリティ」 最新記事一覧	https://rss.itmedia.co.jp/rss/2.0/ep_snews.xml	#security-feed
 セキュリティ － TechTargetジャパン 最新記事一覧	https://rss.itmedia.co.jp/rss/2.0/tt_security.xml	#security-feed
@@ -76,22 +61,22 @@ Apple Machine Learning Research	https://machinelearning.apple.com/rss.xml	#my-te
 NVIDIA Technical Blog	https://developer.nvidia.com/blog/feed/	#my-tech-blog-ai-feed
 Hugging Face - Blog	https://huggingface.co/blog/feed.xml	#my-tech-blog-ai-feed
 The Berkeley Artificial Intelligence Research Blog	https://bair.berkeley.edu/blog/feed.xml	#my-tech-blog-ai-feed
-Netflix TechBlog - Medium	https://netflixtechblog.com/feed	#my-tech-blog-eng-feed
-The latest from GitHub's engineering team - The GitHub Blog	https://github.blog/engineering/feed/	#my-tech-blog-eng-feed
-Airbnb Engineering & Data Science	https://airbnb.tech/feed/	#my-tech-blog-eng-feed
-Engineering at Slack	https://slack.engineering/feed/	#my-tech-blog-eng-feed
-The Cloudflare Blog	https://blog.cloudflare.com/rss/	#my-tech-blog-eng-feed
-Spotify Engineering	https://engineering.atspotify.com/feed/	#my-tech-blog-eng-feed
-Dropbox Tech Blog	https://dropbox.tech/feed	#my-tech-blog-eng-feed
-Pinterest Engineering Blog - Medium	https://medium.com/feed/pinterest-engineering	#my-tech-blog-eng-feed
-Stripe Blog	https://stripe.com/blog/feed.rss	#my-tech-blog-eng-feed
-Discord Blog	https://discord.com/blog/rss.xml	#my-tech-blog-eng-feed
-Etsy Engineering | Code as Craft	https://www.etsy.com/codeascraft/rss	#my-tech-blog-eng-feed
-tech-at-instacart - Medium	https://tech.instacart.com/feed	#my-tech-blog-eng-feed
-RedditEng	https://www.reddit.com/r/RedditEng/.rss	#my-tech-blog-eng-feed
-Salesforce Engineering Blog	https://engineering.salesforce.com/feed/	#my-tech-blog-eng-feed
-Inside Atlassian	https://www.atlassian.com/engineering/feed	#my-tech-blog-eng-feed
-Yelp Engineering and Product Blog	https://engineeringblog.yelp.com/feed.xml	#my-tech-blog-eng-feed
+Netflix TechBlog - Medium	https://netflixtechblog.com/feed	#my-tech-blog-engineering-feed
+The latest from GitHub's engineering team - The GitHub Blog	https://github.blog/engineering/feed/	#my-tech-blog-engineering-feed
+Airbnb Engineering & Data Science	https://airbnb.tech/feed/	#my-tech-blog-engineering-feed
+Engineering at Slack	https://slack.engineering/feed/	#my-tech-blog-engineering-feed
+The Cloudflare Blog	https://blog.cloudflare.com/rss/	#my-tech-blog-engineering-feed
+Spotify Engineering	https://engineering.atspotify.com/feed/	#my-tech-blog-engineering-feed
+Dropbox Tech Blog	https://dropbox.tech/feed	#my-tech-blog-engineering-feed
+Pinterest Engineering Blog - Medium	https://medium.com/feed/pinterest-engineering	#my-tech-blog-engineering-feed
+Stripe Blog	https://stripe.com/blog/feed.rss	#my-tech-blog-engineering-feed
+Discord Blog	https://discord.com/blog/rss.xml	#my-tech-blog-engineering-feed
+Etsy Engineering | Code as Craft	https://www.etsy.com/codeascraft/rss	#my-tech-blog-engineering-feed
+tech-at-instacart - Medium	https://tech.instacart.com/feed	#my-tech-blog-engineering-feed
+RedditEng	https://www.reddit.com/r/RedditEng/.rss	#my-tech-blog-engineering-feed
+Salesforce Engineering Blog	https://engineering.salesforce.com/feed/	#my-tech-blog-engineering-feed
+Inside Atlassian	https://www.atlassian.com/engineering/feed	#my-tech-blog-engineering-feed
+Yelp Engineering and Product Blog	https://engineeringblog.yelp.com/feed.xml	#my-tech-blog-engineering-feed
 Artificial Intelligence	https://aws.amazon.com/blogs/machine-learning/feed/	#aws-feed
 AWS Big Data Blog	https://aws.amazon.com/blogs/big-data/feed/	#aws-feed
 Containers	https://aws.amazon.com/blogs/containers/feed/	#aws-feed
@@ -114,17 +99,14 @@ Datadog | Engineering blog	https://www.datadoghq.com/blog/engineering/index.xml	
 Grafana Labs blog on Grafana Labs	https://grafana.com/blog/index.xml	#my-tech-blog-platform-feed
 Elastic Blog - Elasticsearch, Kibana, and ELK Stack	https://www.elastic.co/blog/feed	#my-tech-blog-platform-feed
 HashiCorp Blog	https://www.hashicorp.com/blog/feed.xml	#my-tech-blog-platform-feed
-The latest security news for developers - The GitHub Blog	https://github.blog/security/feed/	#security-feed
-Microsoft Security Blog	https://www.microsoft.com/en-us/security/blog/feed/	#security-feed
-The Trail of Bits Blog	https://blog.trailofbits.com/feed/	#security-feed
 Blog RSS Feed | Snyk	https://snyk.io/blog/feed/	#my-tech-blog-platform-feed
 Google DeepMind News	https://deepmind.google/blog/rss.xml	#my-tech-blog-ai-feed
 WebKit	https://webkit.org/feed/	#my-tech-blog-platform-feed
-Node.js Blog	https://nodejs.org/en/feed/blog.xml	#my-tech-blog-programming
-React Blog	https://react.dev/rss.xml	#my-tech-blog-programming
-Python Insider	https://blog.python.org/rss.xml	#my-tech-blog-programming
-Rust Blog	https://blog.rust-lang.org/feed.xml	#my-tech-blog-programming
-The Go Blog	https://go.dev/blog/feed.atom	#my-tech-blog-programming
+Node.js Blog	https://nodejs.org/en/feed/blog.xml	#my-tech-blog-programming-feed
+React Blog	https://react.dev/rss.xml	#my-tech-blog-programming-feed
+Python Insider	https://blog.python.org/rss.xml	#my-tech-blog-programming-feed
+Rust Blog	https://blog.rust-lang.org/feed.xml	#my-tech-blog-programming-feed
+The Go Blog	https://go.dev/blog/feed.atom	#my-tech-blog-programming-feed
 AWS Cloud Operations Blog	https://aws.amazon.com/blogs/mt/feed/	#aws-feed
 AWS Insights	https://aws.amazon.com/blogs/aws-insights/feed/	#aws-feed
 AWS Executive in Residence Blog	https://aws.amazon.com/blogs/enterprise-strategy/feed/	#aws-feed
@@ -166,7 +148,6 @@ Blog — Neon Docs	https://neon.com/blog/rss.xml	#my-tech-blog-db-feed
 Changelog — Neon Docs	https://neon.com/docs/changelog/rss.xml	#my-tech-blog-db-feed
 Supabase Blog	https://supabase.com/rss.xml	#my-tech-blog-db-feed
 Redis Blog	https://redis.io/blog/feed/	#my-tech-blog-db-feed
-Elastic Blog - Elasticsearch, Kibana, and ELK Stack	https://www.elastic.co/blog/feed	#my-tech-blog-db-feed
 ClickHouse Blog	https://clickhouse.com/rss.xml	#my-tech-blog-db-feed
 DuckDB	https://www.duckdb.org/feed.xml	#my-tech-blog-db-feed
 Databricks	https://www.databricks.com/feed	#my-tech-blog-db-feed
@@ -232,11 +213,9 @@ LayerXのフィード	https://zenn.dev/p/layerx/feed	#my-tech-blog-jp-feed
 npaka	https://note.com/npaka/rss	#my-tech-blog-solo
 kun432さんのフィード	https://zenn.dev/kun432/feed?include_scraps=1	#my-tech-blog-solo
 じゃあ、おうちで学べる	https://syu-m-5151.hatenablog.com/rss	#my-tech-blog-solo
-Google Cloud	https://cloudblog.withgoogle.com/ja/products/gcp/rss/	#googlecloud-feed
 Google Cloud Platform (GCP) - Release notes	https://cloud.google.com/feeds/gcp-release-notes.xml	#googlecloud-feed
 Cloud Ace Tech Blogのフィード	https://zenn.dev/p/cloud_ace_jp/feed	#my-tech-blog-jp-feed
 奥村 龍晃@AI整体師	https://note.com/redcord/rss	#my-tech-blog-solo
-最近の発表	https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/	#aws-feed
 ソフトバンク テックブログ（公式）のフィード	https://zenn.dev/p/softbank/feed	#my-tech-blog-jp-feed
 ITmedia AI＋ 最新記事一覧	https://rss.itmedia.co.jp/rss/2.0/aiplus.xml	#it-media-feed
 10X Product Blog	https://product.10x.co.jp/feed	#my-tech-blog-jp-feed
@@ -304,3 +283,48 @@ Claudeタグが付けられた新着記事 - Qiita	https://qiita.com/tags/claude
 codexタグが付けられた新着記事 - Qiita	https://qiita.com/tags/codex/feed	#qiita-ai-feed
 Securityタグが付けられた新着記事 - Qiita	https://qiita.com/tags/security/feed	#qiita-security-feed
 Amazonタグが付けられた新着記事 - Qiita	https://qiita.com/tags/amazon/feed	#qiita-cloud-feed
+Serverless Operations	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/serverless-operations/rss.xml	#my-tech-blog-jp-feed
+自動運転ラボ	https://jidounten-lab.com/feed/	#autonomous-driving-feed
+技術情報	https://www.ariseanalytics.com/tech-info/tag/tech-blog/rss.xml	#my-tech-blog-jp-feed
+ビジネス+IT HotTopics	https://www.sbbit.jp/rss/HotTopics.rss	#business-plus-it-feed
+ビジネス+IT 最新ニュース	https://www.sbbit.jp/rss/pheedo2.rss	#business-plus-it-feed
+JVNRSS Feed - Update Entry	https://jvn.jp/rss/jvn.rdf	#jvn-feed
+JVNDB RSS Feed - New Entry	https://jvndb.jvn.jp/ja/rss/jvndb_new.rdf	#jvn-feed
+JPCERT/CC RSS Feed	https://www.jpcert.or.jp/rss/jpcert.rdf	#jpcert-feed
+karaage. [からあげ]	https://karaage.hatenadiary.jp/rss	#my-tech-blog-solo
+GIGAZINE	https://gigazine.net/news/rss_2.0/	#gigazine-feed
+Anthropic Newsroom	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/anthropic-news/rss.xml	#my-tech-blog-ai-feed
+Google Developers Blog	https://developers.googleblog.com/feeds/posts/default	#my-tech-blog-ai-feed
+OpenAI Developers	https://developers.openai.com/rss.xml	#my-tech-blog-ai-feed
+Claude Code Blog	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/claude-code-blog/rss.xml	#my-tech-blog-ai-feed
+Claude Product announcements	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/claude-announcements/rss.xml	#my-tech-blog-ai-feed
+AI - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml	#my-tech-blog-ai-feed-translated-jp
+AWS - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/feeds/rss.xml	#aws-feed-translated-jp
+Azure - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/feeds/rss.xml	#azure-feed-translated-jp
+Google Cloud - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/feeds/rss.xml	#googlecloud-feed-translated-jp
+Database - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/feeds/rss.xml	#my-tech-blog-db-feed-translated-jp
+Engineering - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/feeds/rss.xml	#my-tech-blog-engineering-feed-translated-jp
+Platform - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/feeds/rss.xml	#my-tech-blog-platform-feed-translated-jp
+Programming - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/feeds/rss.xml	#my-tech-blog-programming-feed-translated-jp
+Robotics - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/feeds/rss.xml	#my-tech-blog-robotics-translated-jp
+Security Advisory - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml	#security-github-feed-translated-jp
+Security - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml	#security-feed-translated-jp
+TechCrunch - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/feeds/rss.xml	#techcrunch-feed-translated-jp
+Hacker News - Translated Japanese｜企業テックブログRSS	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/feeds/rss.xml	#hacker-news-feed-translated-jp
+Amazon Web Services ブログ	https://aws.amazon.com/jp/blogs/news/feed/	#aws-ja-feed
+最近の発表	https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/	#aws-ja-feed
+Google Cloud	https://cloudblog.withgoogle.com/ja/products/gcp/rss/	#googlecloud-ja-feed
+The latest security news for developers - The GitHub Blog	https://github.blog/security/feed/	#security-en-feed
+Microsoft Security Blog	https://www.microsoft.com/en-us/security/blog/feed/	#security-en-feed
+The Trail of Bits Blog	https://blog.trailofbits.com/feed/	#security-en-feed
+FLINTERS BLOGのフィード	https://zenn.dev/p/flinters_blog/feed	#my-tech-blog-jp-feed
+DevelopersIO	https://dev.classmethod.jp/feed/	#developersio-feed
+Google Developers Japan	https://feeds.feedburner.com/GoogleJapanDeveloperRelationsBlog?format=xml	#my-tech-blog-jp-feed
+CARTA TECH BLOG	https://techblog.cartaholdings.co.jp/rss	#my-tech-blog-jp-feed
+Nulab (Japanese)	https://nulab.com/ja/feed/	#my-tech-blog-jp-feed
+LINEヤフー Tech Blog (LY Corporation Tech Blog	https://techblog.lycorp.co.jp/ja/feed/index.xml	#my-tech-blog-jp-feed
+さくらのナレッジ	https://knowledge.sakura.ad.jp/feed/	#my-tech-blog-jp-feed
+GREE Engineering	https://labs.gree.jp/blog/feed/	#my-tech-blog-jp-feed
+クックパッド開発者ブログ	https://techlife.cookpad.com/rss	#my-tech-blog-jp-feed
+Hatena Developer Blog	https://developer.hatenastaff.com/rss	#my-tech-blog-jp-feed
+Wantedly Engineer Blog	https://engineer.wantedly.com/feed	#my-tech-blog-jp-feed

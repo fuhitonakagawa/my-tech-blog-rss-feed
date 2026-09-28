@@ -3,6 +3,8 @@ import { dailyReportTitle, renderDailyReport } from '../feed/statistics/presenta
 import type { StatisticsState } from '../feed/statistics/types';
 import { escapeHtml } from './_includes/components/html-utils';
 import { renderNav } from './_includes/components/nav';
+import { indexScript } from './_includes/components/scripts';
+import { renderTopSection } from './_includes/components/top-section';
 import { type EleventyPage, SITE_PAGE_DATE } from './_includes/components/types';
 
 interface StatisticsPageData {
@@ -37,9 +39,11 @@ export const render = ({ page, statistics }: StatisticsPageData): string => {
           )
           .join('\n')
       : '<p>記事の取得履歴を収集中です。日本時間で収集開始日の翌日から日次統計を配信します。</p>';
-  return `${renderNav(page)}<section class="ui-section-content"><div class="ui-layout-container">
-    <h1>${escapeHtml(statisticsConfig.title)}</h1>
+  return `${renderTopSection(page, statisticsFeedUrls.rss)}
+    ${renderNav(page)}<section class="ui-section-content ui-section-feed"><div class="ui-layout-container">
+    <h1 class="ui-typography-heading">${escapeHtml(statisticsConfig.title)}</h1>
     <p><a href="${escapeHtml(statisticsFeedUrls.rss)}">日次統計のRSSを購読</a>・<a href="${escapeHtml(statisticsFeedUrls.atom)}">Atom</a>・<a href="${escapeHtml(statisticsFeedUrls.json)}">JSON Feed</a></p>
     <p>日本時間の前日までに公開され、このサイトで取得できた記事をカテゴリ別に集計しています。</p>
-    ${content}</div></section>`;
+    ${content}</div></section>
+    <script>${indexScript}</script>`;
 };

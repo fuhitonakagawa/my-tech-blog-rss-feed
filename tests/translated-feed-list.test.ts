@@ -14,8 +14,24 @@ describe('翻訳対象の定義', () => {
     expect(ai).toHaveLength(20);
     expect(ai.every((feed) => feed.language === 'en')).toBe(true);
     const aws = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'aws');
-    expect(aws.filter((feed) => feed.language === 'en')).toHaveLength(44);
-    expect(aws.filter((feed) => feed.url.includes('/jp/')).every((feed) => feed.language === 'ja')).toBe(true);
+    expect(aws).toHaveLength(44);
+    expect(aws.every((feed) => feed.language === 'en')).toBe(true);
+    const awsJapanese = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'aws-ja');
+    expect(awsJapanese).toHaveLength(2);
+    expect(awsJapanese.every((feed) => feed.language === 'ja' && feed.url.includes('/jp/'))).toBe(true);
+    const googleCloudJapanese = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'google-cloud-ja');
+    expect(googleCloudJapanese).toHaveLength(1);
+    expect(googleCloudJapanese.every((feed) => feed.language === 'ja')).toBe(true);
+    expect(
+      FEED_INFO_LIST.filter((feed) => feed.sectionId === 'google-cloud').every((feed) => feed.language === 'en'),
+    ).toBe(true);
+    const securityEnglish = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'security-en');
+    expect(securityEnglish).toHaveLength(3);
+    expect(securityEnglish.every((feed) => feed.language === 'en')).toBe(true);
+    expect(FEED_INFO_LIST.some((feed) => feed.sectionId === 'security' && feed.language === 'en')).toBe(false);
+    expect(TRANSLATED_FEED_DEFINITION_LIST.find((feed) => feed.id === 'security-jp')?.sourceSectionId).toBe(
+      'security-en',
+    );
     expect(
       FEED_INFO_LIST.filter((feed) => feed.sectionId === 'zenn').every((feed) => feed.language === 'unknown'),
     ).toBe(true);
