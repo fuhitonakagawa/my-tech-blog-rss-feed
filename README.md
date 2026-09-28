@@ -388,6 +388,8 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 
 閲覧ページの上部には、通常カテゴリと同じSlack用コマンドとRSS URLのコピー欄があります。Atom・JSON Feedも統計本文の上にあるリンクから購読できます。
 
+共通CSSの読み込みURLには内容に対応する識別子が付きます。スタイルの内容が変わるとURLも変わり、更新後のページは新しいCSSを読み込みます。
+
 日付ごとの表示には、カテゴリ合計の延べ件数と投稿のあるカテゴリ数を示します。カテゴリ別件数は名前を左揃え、数値を右揃えの表とし、広い画面では左右2列、狭い画面では縦1列で表示します。カテゴリをまたぐ同じ記事は各カテゴリで数えるため、合計はサイト全体のユニーク記事数とは異なります。部分集計や巡回記録がない日の注記は、表の上に表示します。
 
 定義は [統計用JSON（`src/resources/stats/daily.json`）](src/resources/stats/daily.json) です。
@@ -629,6 +631,7 @@ flowchart TD
 │   │   ├── constants.ts
 │   │   ├── eleventy-cache-option.ts
 │   │   ├── eleventy-utils.ts
+│   │   ├── site-styles.ts
 │   │   └── url-guard.ts
 │   ├── feed/
 │   │   ├── generated/
@@ -751,7 +754,8 @@ flowchart TD
 │       │   ├── feedItemsHot.js
 │       │   ├── lastModifiedBlogsDate.js
 │       │   ├── sections.js
-│       │   └── statistics.js
+│       │   ├── statistics.js
+│       │   └── stylesheet.js
 │       ├── _includes/
 │       │   ├── components/
 │       │   │   ├── feed-item.ts
@@ -800,6 +804,8 @@ flowchart TD
 │       ├── site.11ty.ts
 │       └── sitemap.11ty.ts
 ├── tests/
+│   ├── common/
+│   │   └── site-styles.test.ts
 │   ├── external/
 │   │   ├── argos-translator.test.ts
 │   │   ├── feed-availability.test.ts

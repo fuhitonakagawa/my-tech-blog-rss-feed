@@ -4,7 +4,6 @@ import constants from './src/common/constants';
 import {
   imageIconShortcode,
   imageThumbnailShortcode,
-  minifyCssFilter,
   minifyHtmlTransform,
   relativeUrlFilter,
 } from './src/common/eleventy-utils';
@@ -36,9 +35,6 @@ module.exports = (eleventyConfig: any) => {
 
   // relative path
   eleventyConfig.addFilter('relativeUrl', relativeUrlFilter);
-
-  // minify css
-  eleventyConfig.addFilter('minifyCss', minifyCssFilter);
 
   // TypeScript テンプレート（*.11ty.ts）を JavaScript テンプレート（11ty.js）として扱う
   eleventyConfig.addTemplateFormats('11ty.ts');

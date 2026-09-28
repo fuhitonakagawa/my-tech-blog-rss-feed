@@ -1,5 +1,6 @@
 import constants from '../../../common/constants';
 import { relativeUrlFilter } from '../../../common/eleventy-utils';
+import { siteStylesheet } from '../../../common/site-styles';
 import { renderFeedListButton, renderFeedListDialog } from '../components/feed-list-dialog';
 import { escapeHtml } from '../components/html-utils';
 import { feedListDialogScript, relativeTimeScript, themeInitScript, themeToggleScript } from '../components/scripts';
@@ -19,6 +20,7 @@ interface MainLayoutData {
 export function render(data: MainLayoutData): string {
   const { content, pageTitle, page } = data;
   const relativeUrl = escapeHtml(relativeUrlFilter(page.url));
+  const stylesheetUrl = `${relativeUrl}${escapeHtml(siteStylesheet.path)}`;
   const feedDir = escapeHtml(data.feedDir ?? 'feeds/');
   const escapedPageTitle = escapeHtml(pageTitle);
   const canonicalUrl = escapeHtml(`${constants.siteUrlStem}${page.url}`);
@@ -84,7 +86,7 @@ export function render(data: MainLayoutData): string {
     <meta name="thumbnail" content="${escapeHtml(constants.siteUrl)}images/og-image.png" />
 
     <link rel="canonical" href="${canonicalUrl}">
-    <link rel="preload" href="${relativeUrl}styles/bundle.css" as="style">
+    <link rel="preload" href="${stylesheetUrl}" as="style">
 
     ${googleSiteVerification}
 
@@ -94,7 +96,7 @@ export function render(data: MainLayoutData): string {
     <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="${relativeUrl}${feedDir}rss.xml" />
     <link rel="alternate" type="application/json" href="${relativeUrl}${feedDir}feed.json" />
 
-    <link rel="stylesheet" type="text/css" href="${relativeUrl}styles/bundle.css" />
+    <link rel="stylesheet" type="text/css" href="${stylesheetUrl}" />
 
     ${globalSiteTag}
 
