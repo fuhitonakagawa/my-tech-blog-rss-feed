@@ -26,6 +26,8 @@ module.exports = (eleventyConfig: any) => {
   eleventyConfig.addPassthroughCopy({ 'src/site/section-feeds': constants.sectionRootPath });
   eleventyConfig.addPassthroughCopy({ 'src/site/translated-feeds': constants.sectionRootPath });
 
+  eleventyConfig.addPassthroughCopy({ 'src/site/deduplicated-feeds': constants.sectionRootPath });
+
   // images
   eleventyConfig.addNunjucksAsyncShortcode('imageThumbnail', imageThumbnailShortcode);
   eleventyConfig.addNunjucksAsyncShortcode('imageIcon', imageIconShortcode);

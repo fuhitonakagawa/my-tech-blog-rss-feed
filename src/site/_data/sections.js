@@ -1,7 +1,7 @@
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import * as url from 'node:url';
-import { DISPLAY_SECTION_LIST } from '../../resources/translated-feed-list';
+import { DISPLAY_SECTION_LIST } from '../../resources/display-section-list';
 import { dayjs } from './lib/dayjs-setup';
 import { computeFeedItemsChunks } from './lib/feed-items-chunks';
 import { computeLastModifiedBlogsDate } from './lib/last-modified-blogs-date';

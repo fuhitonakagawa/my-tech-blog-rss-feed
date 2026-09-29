@@ -23,8 +23,8 @@ export const slackSourcePath = (rssUrl: string): string => {
 /** 公開URLに対応するローカル出力先だけを許可する。 */
 export const validateRssOutputPath = (rssUrl: string, output: string): void => {
   const published = slackSourcePath(rssUrl);
-  if (published.startsWith('rss/') && !/^(section-feeds|translated-feeds)\//.test(output))
+  if (published.startsWith('rss/') && !/^(section-feeds|translated-feeds|deduplicated-feeds)\//.test(output))
     throw new Error('カテゴリRSSの出力ディレクトリが不正です');
-  const local = output.replace(/^(?:section-feeds|translated-feeds)\//, 'rss/');
+  const local = output.replace(/^(?:section-feeds|translated-feeds|deduplicated-feeds)\//, 'rss/');
   if (local !== published) throw new Error('RSSの出力先が公開URLに対応していません');
 };

@@ -38,6 +38,7 @@ const combineHistory = (published: StatisticsState, cached: StatisticsState): St
 const restoreStatistics = async (
   publishedDirectory: string,
   outputDirectory: string,
+  publishedOnlySectionIds: readonly string[],
 ): Promise<StatisticsState | null> => {
   let failure: unknown;
   const states: (StatisticsState | null)[] = [];
@@ -46,7 +47,15 @@ const restoreStatistics = async (
     ['cache', outputDirectory],
   ]) {
     try {
-      states.push(await readStatisticsState(directory));
+      const state = await readStatisticsState(directory);
+      states.push(
+        state && source === 'cache'
+          ? {
+              ...state,
+              observations: state.observations.filter((item) => !publishedOnlySectionIds.includes(item.sectionId)),
+            }
+          : state,
+      );
     } catch (error) {
       failure = error;
       states.push(null);
@@ -69,8 +78,9 @@ export const generateStatistics = async (
   currentDate = new Date(),
   translations: readonly TranslatedFeedDefinition[] = [],
   translatedItems: readonly CustomRssParserItem[] = [],
+  publishedOnlySectionIds: readonly string[] = [],
 ): Promise<StatisticsState> => {
-  const previous = await restoreStatistics(publishedDirectory, outputDirectory);
+  const previous = await restoreStatistics(publishedDirectory, outputDirectory, publishedOnlySectionIds);
   const state = updateStatistics(previous, items, sections, currentDate, translations, translatedItems);
   const json = `${JSON.stringify(state)}\n`;
   if (Buffer.byteLength(json) > statisticsConfig.maxStateBytes) throw new Error('日次統計の保存上限を超えています');

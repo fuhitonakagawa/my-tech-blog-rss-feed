@@ -79,15 +79,3 @@ const loadTranslatedFeeds = (): TranslatedFeedDefinition[] => {
 };
 
 export const TRANSLATED_FEED_DEFINITION_LIST = loadTranslatedFeeds();
-
-export interface DisplaySection extends Pick<FeedSection, 'id' | 'title'> {
-  feedDirectory: 'section-feeds' | 'translated-feeds';
-}
-
-/** 通常セクションの直後にその日本語派生セクションを配置する */
-export const DISPLAY_SECTION_LIST: DisplaySection[] = FEED_SECTION_LIST.flatMap((section): DisplaySection[] => [
-  { id: section.id, title: section.title, feedDirectory: 'section-feeds' },
-  ...TRANSLATED_FEED_DEFINITION_LIST.filter((definition) => definition.sourceSectionId === section.id).map(
-    ({ id, title }): DisplaySection => ({ id, title, feedDirectory: 'translated-feeds' }),
-  ),
-]);

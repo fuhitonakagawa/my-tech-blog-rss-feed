@@ -1,7 +1,7 @@
 import constants from '../../../common/constants';
 import { relativeUrlFilter } from '../../../common/eleventy-utils';
 import { statisticsConfig } from '../../../feed/statistics/config';
-import { DISPLAY_SECTION_LIST } from '../../../resources/translated-feed-list';
+import { DISPLAY_SECTION_LIST } from '../../../resources/display-section-list';
 import { escapeHtml } from './html-utils';
 import type { EleventyPage } from './types';
 

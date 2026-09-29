@@ -1,6 +1,7 @@
 import * as path from 'node:path';
 import * as url from 'node:url';
 import constants, { sectionFeedUrls, sectionPageUrl } from '../common/constants';
+import { deduplicatedStatisticsSections, generateDeduplicatedFeeds } from '../feed/deduplication/service';
 import { FeedCrawler } from '../feed/feed-crawler';
 import { type AggregatedFeedMeta, type FeedDistributionSet, FeedGenerator } from '../feed/feed-generator';
 import { FeedStorer } from '../feed/feed-storer';
@@ -13,6 +14,7 @@ import { statisticsConfig } from '../feed/statistics/config';
 import { generateStatistics } from '../feed/statistics/service';
 import { collectTranslatedStatisticsItems } from '../feed/statistics/translated-items';
 import { generateTranslatedFeeds } from '../feed/translation/translated-feed-generator';
+import { DEDUPLICATED_FEED_DEFINITION_LIST } from '../resources/deduplicated-feed-list';
 import { FEED_INFO_LIST, FEED_SECTION_LIST, type FeedSection } from '../resources/feed-info-list';
 import { GENERATED_FEED_DEFINITION_LIST } from '../resources/generated-feed-list';
 import { TRANSLATED_FEED_DEFINITION_LIST } from '../resources/translated-feed-list';
@@ -22,6 +24,7 @@ const dirName = url.fileURLToPath(new URL('.', import.meta.url));
 const STORE_FEEDS_DIR_PATH = path.join(dirName, '../site/feeds');
 const STORE_BLOG_FEEDS_DIR_PATH = path.join(dirName, '../site/blog-feeds');
 const STORE_SECTION_FEEDS_DIR_PATH = path.join(dirName, '../site/section-feeds');
+const STORE_DEDUPLICATED_FEEDS_DIR_PATH = path.join(dirName, '../site/deduplicated-feeds');
 const STORE_TRANSLATED_FEEDS_DIR_PATH = path.join(dirName, '../site/translated-feeds');
 const STORE_GENERATED_FEEDS_DIR_PATH = path.join(dirName, '../site/feeds/generated');
 const PREVIOUS_GENERATED_FEEDS_DIR_PATH = path.join(dirName, '../../.previous-site/feeds/generated');
@@ -107,6 +110,16 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     crawlFeedsResult.feedItemHatenaCountMap,
   );
 
+  const deduplicated = await generateDeduplicatedFeeds(
+    crawlFeedsResult.feedItems,
+    DEDUPLICATED_FEED_DEFINITION_LIST,
+    ogObjectMap,
+    crawlFeedsResult.feedItemHatenaCountMap,
+    path.join(dirName, '../../.previous-site'),
+    path.join(dirName, '../site'),
+    collectedAt,
+  );
+
   // ファイル出力
   try {
     await feedStorer.storeFeeds(
@@ -119,6 +132,7 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     );
     await feedStorer.storeSectionFeeds(sectionFeedDistributionSets, STORE_SECTION_FEEDS_DIR_PATH);
     await feedStorer.storeSectionFeeds(translatedFeeds, STORE_TRANSLATED_FEEDS_DIR_PATH);
+    await feedStorer.storeSectionFeeds(deduplicated.feeds, STORE_DEDUPLICATED_FEEDS_DIR_PATH);
   } catch (e) {
     const error = new Error('Failed to store feeds', {
       cause: e,
@@ -136,7 +150,11 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     await feedValidator.assertXmlFeed('rss', generateFeedsResult.feedDistributionSet.rss);
 
     // セクションフィードは記事が無い期間もあり得るため、XMLとして妥当かのみ検証する
-    for (const [sectionId, feedDistributionSet] of [...sectionFeedDistributionSets, ...translatedFeeds]) {
+    for (const [sectionId, feedDistributionSet] of [
+      ...sectionFeedDistributionSets,
+      ...translatedFeeds,
+      ...deduplicated.feeds,
+    ]) {
       await feedValidator.assertXmlFeed(`${sectionId}-atom`, feedDistributionSet.atom);
       await feedValidator.assertXmlFeed(`${sectionId}-rss`, feedDistributionSet.rss);
     }
@@ -151,13 +169,14 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
   }
 
   await generateStatistics(
-    crawlFeedsResult.feeds.flatMap((feed) => feed.items),
-    FEED_SECTION_LIST,
+    [...crawlFeedsResult.feeds.flatMap((feed) => feed.items), ...deduplicated.statisticsItems],
+    [...FEED_SECTION_LIST, ...deduplicatedStatisticsSections(DEDUPLICATED_FEED_DEFINITION_LIST)],
     path.join(dirName, '../../.previous-site', statisticsConfig.feedPath),
     path.join(dirName, '../site', statisticsConfig.feedPath),
     collectedAt,
     TRANSLATED_FEED_DEFINITION_LIST,
     collectTranslatedStatisticsItems(crawlFeedsResult.feedItems, TRANSLATED_FEED_DEFINITION_LIST, translatedFeeds),
+    deduplicated.usePublishedHistory ? DEDUPLICATED_FEED_DEFINITION_LIST.map((definition) => definition.id) : [],
   );
 
   await generateSlackFeeds(

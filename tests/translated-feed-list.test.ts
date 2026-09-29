@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
+import { DISPLAY_SECTION_LIST } from '../src/resources/display-section-list';
 import { FEED_INFO_LIST, FEED_SECTION_LIST } from '../src/resources/feed-info-list';
 import { parseFeedLanguage } from '../src/resources/feed-language';
 import {
-  DISPLAY_SECTION_LIST,
   TRANSLATED_FEED_DEFINITION_LIST,
   parseTranslatedFeedFile,
   parseTranslatedFeeds,

@@ -21,7 +21,7 @@ export interface CategoryCount {
   sectionId: string;
   title: string;
   count: number;
-  kind: 'source' | 'translated';
+  kind: 'source' | 'translated' | 'deduplicated';
   feeds: SourceCount[];
 }
 

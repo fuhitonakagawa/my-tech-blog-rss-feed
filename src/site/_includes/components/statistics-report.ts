@@ -73,6 +73,9 @@ export const renderStatisticsReport = (report: DailyReport): string => {
   const translated = report.categories
     .filter((category) => category.kind === 'translated')
     .reduce((sum, category) => sum + category.count, 0);
+  const deduplicated = report.categories
+    .filter((category) => category.kind === 'deduplicated')
+    .reduce((sum, category) => sum + category.count, 0);
   const activeCategories = report.categories.filter((category) => category.count > 0).length;
   return `<article class="ui-statistics-report" id="${escapeHtml(report.date)}">
     <header class="ui-statistics-report__header">
@@ -85,6 +88,7 @@ export const renderStatisticsReport = (report: DailyReport): string => {
         <div><dt>投稿のあるカテゴリ</dt><dd>${activeCategories}<span class="ui-statistics-unit">カテゴリ</span></dd></div>
       </dl>
     </header>
+    <p class="ui-text-note">重複除外版の掲載：${deduplicated.toLocaleString('ja-JP')}件（原文カテゴリ合計には含みません）</p>
     ${renderCoverageNote(report)}
     ${renderCategoryCounts(report)}
   </article>`;

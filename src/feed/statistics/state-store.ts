@@ -46,7 +46,7 @@ const isCount = (value: unknown, schemaVersion: number): value is CategoryCount 
   typeof value.count === 'number' &&
   value.count >= 0 &&
   (schemaVersion < 3 ||
-    ((value.kind === 'source' || value.kind === 'translated') &&
+    ((value.kind === 'source' || value.kind === 'translated' || value.kind === 'deduplicated') &&
       Array.isArray(value.feeds) &&
       value.feeds.every(isSourceCount) &&
       new Set(value.feeds.map((feed) => feed.url)).size === value.feeds.length));

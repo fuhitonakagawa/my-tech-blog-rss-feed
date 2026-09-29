@@ -288,3 +288,64 @@ slackで配信しているもののうち、
 そして今回の変更で、このリポ由来Feedも通知漏れは起きなくなったという理解で良い？
 
 
+----
+
+`slackrss-list.md`の330本中、**このリポジトリ由来は18本**です。
+
+| フィード | 投稿先 |
+|---|---|
+| Serverless Operations | `#my-tech-blog-jp-feed` |
+| Anthropic Newsroom | `#my-tech-blog-ai-feed` |
+| Claude Code Blog | `#my-tech-blog-ai-feed` |
+| Claude Product announcements | `#my-tech-blog-ai-feed` |
+| 日次投稿統計 | `#daily-stats` |
+| 翻訳版13本 | 各`*-translated-jp`チャンネル |
+
+翻訳版13本は、**AI、AWS、Azure、Google Cloud、Database、Engineering、Platform、Programming、Robotics、Security Advisory、Security、TechCrunch、Hacker News**です。
+
+**配信元のRSSを直接購読していても、日時による通知漏れは起こり得ます。**
+
+配信元が古い公開日時の記事を後からRSSへ追加した場合、Slackは通知済みの記事より古いとして除外する可能性があります。これは集約RSSだけの問題ではありません。[Slack公式仕様](https://slack.com/help/articles/218688467-Add-RSS-feeds-to-Slack)
+
+また、残り312本には、karaageのAI情報・企業テックブログRSS・Hacker Newsまとめなど、**他者が生成する集約フィード**も含まれます。
+
+**今回の修正で防ぐのは、「取得して掲載した記事が、古い公開日時のためSlackに通知されない」という漏れです。** このリポ由来の18本も、公開後はその対策が適用されます。URL変更は不要です。
+
+ただし、以下まで「必ず届く」とは保証できません。
+
+- 元RSSから取得できなかった記事
+- Slack側の取得失敗や配信制限
+- 保持期間を超えてSlackが取得しなかった記事
+- 修正前にすでに通知対象外になった記事の遡及通知
+
+したがって、**今回判明した日時逆転の問題には対策済み。ただし、あらゆる通知漏れを保証する仕組みではない**、という理解が正確です。
+
+
+
+----
+
+
+変更はpushしたので、再生成されるページで日時が修正されていることを確認監視してください
+
+
+----
+
+
+
+
+**公開反映まで確認できました。** コミット`8199ca6`の[後続実行](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36524653359)とPagesは成功しています。
+
+公開RSSで確認した実例です（日本時間）。
+
+| 項目 | 日時 |
+|---|---|
+| 元記事の公開日時 | 9/28 22:30:54 |
+| RSSの通知日時 | **9/29 14:04:28** |
+| 本文先頭 | 元記事公開：9/28 22:30:54 |
+
+- **全63本・5,672項目**のRSSを解析して確認
+- JSON・Atom・ページ表示・日次統計は元記事日時を維持
+- 後続の再生成でも、掲載済み項目の通知日時・GUIDは変化なし
+- 購読URLも変更なし
+
+push実行はデプロイ成功後に定期実行へ切り替わってキャンセル表示ですが、同じコミットの後続実行・公開まで正常に完了しています。

@@ -7,6 +7,7 @@ import { isIsoDate, jstDay } from './dates';
 import type { ArticleObservation } from './types';
 
 export type StatisticsSection = Pick<FeedSection, 'id' | 'title'> & {
+  kind?: 'source' | 'deduplicated';
   feedInfoList?: readonly (Pick<FeedInfo, 'url'> & Partial<Pick<FeedInfo, 'label' | 'language' | 'input'>>)[];
 };
 

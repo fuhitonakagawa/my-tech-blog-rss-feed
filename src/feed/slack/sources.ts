@@ -1,8 +1,8 @@
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import constants, { generatedFeedUrls, sectionFeedUrls } from '../../common/constants';
+import { DISPLAY_SECTION_LIST } from '../../resources/display-section-list';
 import { GENERATED_FEED_DEFINITION_MAP } from '../../resources/generated-feed-list';
-import { DISPLAY_SECTION_LIST } from '../../resources/translated-feed-list';
 import { statisticsFeedUrls } from '../statistics/config';
 import type { SlackSource } from './types';
 

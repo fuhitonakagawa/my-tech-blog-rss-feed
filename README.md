@@ -35,6 +35,7 @@
 - **記事情報**: タイトル、概要、元記事URL、公開日時、取得可能なOG画像・はてなブックマーク数を表示します。
 - **登録フィード一覧**: ヘッダーの一覧ボタンから、セクションごとの購読元を確認できます。
 - **日次投稿統計**: 日本時間の前日までに公開され、取得できた記事数をカテゴリ別にまとめた統計RSSを配信します。
+- **重複除外フィード**: 企業ブログ系・Zenn・Qiitaの3本に統合し、3本を横断して記事の初回配信先を保持します。詳しくは[重複除外フィード](#deduplicated-feeds)を参照してください。
 - **RSSの通知日時**: このサイトが生成するRSSの`pubDate`には、記事を初めて配信した日時を使います。元記事の公開日時は本文の先頭に表示します。
 - **表示テーマ**: OSの明暗設定に従い、ヘッダーの「ダークモード」ボタンで切り替えられます。OSと同じテーマへ戻すとOS設定への追従になり、選択はブラウザーに保存されます。保存が使えない場合も、そのページ内では切り替えられます。
 - **HTML由来のフィード**: 元サイトにRSSがなくても、定義した記事一覧から単独フィードを配信できます。
@@ -438,13 +439,13 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 
 ### 5.6. RSSの通知日時と元記事日時
 
-全体・通常カテゴリ・翻訳カテゴリ・HTML由来RSS・日次統計のRSSは、初回掲載順に配信します。配信先は[配信URL一覧](#overview)を参照してください。ページ上部のSlackコマンド欄とRSS URL欄は、同じRSS配信先を示します。
+全体・通常カテゴリ・翻訳カテゴリ・重複除外カテゴリ・HTML由来RSS・日次統計のRSSは、初回掲載順に配信します。配信先は[配信URL一覧](#overview)を参照してください。ページ上部のSlackコマンド欄とRSS URL欄は、同じRSS配信先を示します。
 
 ここでいう「初回掲載日時」は、記事をこのサイトの当該RSSへ初めて載せる生成処理の時刻です。記事ごと・RSSごとに固定し、サイト全体を再生成した時刻では上書きしません。例えば、元記事が04:00公開でも、当該RSSに初めて掲載する処理が12:00ならRSSの`pubDate`は12:00です。次の13:00の生成でも12:00を維持し、本文先頭には元記事公開の04:00を表示します。
 
 | 配信形式・利用箇所 | 使用する記事日時 |
 | --- | --- |
-| 全体・通常カテゴリ・翻訳カテゴリのRSS | 当該RSSへの初回掲載日時 |
+| 全体・通常カテゴリ・翻訳カテゴリ・重複除外カテゴリのRSS | 当該RSSへの初回掲載日時 |
 | HTML由来の単独RSS | 当該RSSへの初回掲載日時 |
 | 日次統計RSS | 当該日次記事の初回掲載日時 |
 | 各フィードのAtom・JSON Feed | 元記事の公開日時。日次統計記事は対象日の翌日0:00（日本時間） |
@@ -461,6 +462,39 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 - **生成順序**: 元記事日時のJSON Feed・Atom・集約・統計を生成した後、RSSだけを通知日時の形式で保存します。自サイトの公開RSSをHTTPで読み直しません。通知履歴の上限は64 MiBです。
 
 既にSlackが通知対象外と判断した記事を、自動で遡及送信するものではありません。記事公開日の逆転による取りこぼしを防ぐ形式であり、Slack側の取得失敗・配信制限や保持期間を超える未取得まで保証するものではありません。
+
+<a id="deduplicated-feeds"></a>
+
+### 5.7. カテゴリ横断の重複除外フィード
+
+複数の入力カテゴリを3本へ統合し、同じ記事URLの配信先を3本のうち1本に固定します。定義は`src/resources/deduplicated-feeds/`のJSONです。`sourceSectionIds`は通常カテゴリのID、`priority`は同じ生成回で初めて見つかった記事の優先度で、小さい数値を優先します。ファイル名が配信IDです。通常・翻訳カテゴリとIDを共有できず、同じ入力カテゴリを複数の重複除外フィードに指定することもできません。
+
+| 配信名・ID | 入力カテゴリ | 優先度 |
+| --- | --- | ---: |
+| 企業TechBlog dedup・`tech-blog-dedup` | `jp-tech-blog`、`company-tech-blog`、`ai-news` | 0 |
+| Zenn dedup・`zenn-dedup` | `zenn`、`zenn-ai`、`zenn-cloud`、`zenn-security` | 1 |
+| Qiita dedup・`qiita-dedup` | `qiita`、`qiita-ai`、`qiita-cloud`、`qiita-security` | 1 |
+
+企業TechBlogにはkaraageAI情報経由の個人記事やメディア記事も含みます。入力には同一実行で取得した元記事データを使い、自サイトの集約RSSを再取得しません。
+
+- **先着の基準**: 元記事の公開日時ではなく、3本のうちいずれかに初めて記事を載せた生成回です。Zennで先に配信した記事が後から企業ブログの入力に現れても、配信先はZennのままです。
+- **同時生成の優先度**: 同じ生成回で未配信の記事が重なった場合だけ、企業TechBlogを優先します。ZennとQiitaは同順位です。同じURLが両方に現れる場合も1本へ割り当て、同順位の割り当ては記事URLと配信IDに対して一定です。ネットワーク応答順や定義の読み込み順で変わりません。
+- **記事の識別**: 記事URLの追跡パラメーターとフラグメントを除いて比較します。本文の類似性や転載は判定せず、HTTP/HTTPSや異なる記事パスの同一性も推測しません。
+- **履歴**: 初回配信先・GUID・通知日時は公開済み`feeds/delivery/state.json`を基準とします。どの入力カテゴリで再取得しても、保持期間内は初回の配信先へ掲載します。配信物と既知記事の保持期間は5.6の14日・90日です。対象の履歴が部分的に欠ける場合、二重所属がある場合、公開済み重複除外RSSの履歴がない場合は生成を停止します。
+- **日時と件数**: RSSは初回掲載日時、Atom・JSON Feed・ページ・日次統計は元記事公開日時です。日次統計には重複除外後の3カテゴリと出力RSS単位の件数を表示し、0件も表示します。原文カテゴリ合計には加算しません。
+- **初回配信**: 初回は取得できた過去8日以内の記事を対象とします。他のRSSやSlackチャンネルの既読状況は引き継ぎません。
+- **対象範囲**: 重複排除の範囲はこの3本です。はてブ・Menthas・翻訳RSSなどを別途購読する場合、その間の重複は残ります。元の個別RSSと重複除外RSSの両方を購読すると同じ記事が届くため、Slackでは対象の購読を3本へ置き換えて使用します。
+- **取得間隔と制約**: 通常の生成ワークフローと同じ間隔です。元RSSから巡回前に消えた記事、取得失敗、日時欠落、過去8日間の対象外は取得・掲載を保証できません。外部の集約RSSについては、その取得間隔や収録範囲の影響も受けます。
+
+公開時の配信先は以下です。Atom・JSON Feedは末尾の`rss.xml`を`atom.xml`・`feed.json`へ置き換えます。閲覧ページは`/rss/<ID>/`です。
+
+| 配信名 | RSS URL |
+| --- | --- |
+| 企業TechBlog dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/tech-blog-dedup/feeds/rss.xml` |
+| Zenn dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-dedup/feeds/rss.xml` |
+| Qiita dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/qiita-dedup/feeds/rss.xml` |
+
+生成物の保存先は`src/site/deduplicated-feeds/<ID>/feeds/`です。公開時に`/rss/<ID>/feeds/`へ配置します。
 
 <a id="validation"></a>
 
@@ -525,6 +559,7 @@ TypeScriptを`tsx`で実行し、Eleventyが静的HTMLを出力します。RSS�
 | `src/resources/` | セクション・生成元の設定とその検証 |
 | `src/feed/` | 外部取得、解析、集約、配信形式への変換、保存 |
 | `src/feed/generated/` | HTML抽出、記事保持、前回状態の復元、単独フィード生成 |
+| `src/feed/deduplication/` | 記事の初回配信先の判定、横断重複除外、統計用の掲載記録 |
 | `src/feed/statistics/` | 日本時間の日次集計、取得履歴、統計フィード |
 | `src/feed/translation/` | テキスト単位の翻訳、プロバイダー境界、キャッシュ、カテゴリ統合 |
 | `scripts/translation/` | Python翻訳ブリッジ、プロバイダー設定、AWS境界、固定モデルの検証 |
@@ -533,6 +568,7 @@ TypeScriptを`tsx`で実行し、Eleventyが静的HTMLを出力します。RSS�
 | `tests/` | 内部テスト、実サイトテスト、テスト用データ |
 | `src/site/feeds/` | 全体フィードと`generated/`配下の単独フィード・状態 |
 | `src/site/section-feeds/` | セクション別フィードの中間出力 |
+| `src/site/deduplicated-feeds/` | 重複除外フィードの中間出力 |
 | `src/site/translated-feeds/` | 翻訳カテゴリ統合フィードの中間出力 |
 | `src/site/blog-feeds/` | ブログ別ページの入力データ |
 | `public/` | GitHub Pages向けの配信ファイル |
@@ -581,6 +617,10 @@ flowchart TD
     translated --> statistics
     statistics --> statisticsFeeds
     statisticsFeeds --> site
+    dedup["企業ブログ系・Zenn・Qiitaの入力を統合<br/>公開済みの配信先を優先し、新規記事だけ同時生成の優先度で割り当て"]
+    recent --> dedup
+    dedup --> statistics
+    dedup --> site
     recent --> translation
     translation --> translated
     translated --> site
@@ -668,6 +708,9 @@ flowchart TD
 │   │   ├── site-styles.ts
 │   │   └── url-guard.ts
 │   ├── feed/
+│   │   ├── deduplication/
+│   │   │   ├── selection.ts
+│   │   │   └── service.ts
 │   │   ├── generated/
 │   │   │   ├── adapter-registry.ts
 │   │   │   ├── anthropic-news.ts
@@ -680,6 +723,7 @@ flowchart TD
 │   │   │   ├── state-store.ts
 │   │   │   └── types.ts
 │   │   ├── slack/
+│   │   │   ├── history.ts
 │   │   │   ├── config.ts
 │   │   │   ├── model.ts
 │   │   │   ├── service.ts
@@ -765,6 +809,12 @@ flowchart TD
 │   │   │   └── zenn.json
 │   │   ├── stats/
 │   │   │   └── daily.json
+│   │   ├── deduplicated-feeds/  # 重複除外フィードの定義
+│   │   │   ├── tech-blog-dedup.json
+│   │   │   ├── zenn-dedup.json
+│   │   │   └── qiita-dedup.json
+│   │   ├── deduplicated-feed-list.ts
+│   │   ├── display-section-list.ts
 │   │   ├── translated-feeds/  # 翻訳カテゴリ統合フィードの定義
 │   │   │   ├── ai-jp.json
 │   │   │   ├── aws-jp.json
@@ -856,6 +906,8 @@ flowchart TD
 │   │   ├── generate-feed.test.ts
 │   │   └── generated-feed.test.ts
 │   ├── feed/
+│   │   ├── deduplication/
+│   │   │   └── service.test.ts
 │   │   ├── generated/
 │   │   │   ├── anthropic-news.test.ts
 │   │   │   └── claude-announcements.test.ts
@@ -905,6 +957,7 @@ flowchart TD
 │   ├── test-setup.ts
 │   ├── top-section.test.ts
 │   ├── theme.test.ts
+│   ├── deduplicated-feed-list.test.ts
 │   ├── translated-feed-list.test.ts
 │   └── url-guard.test.ts
 ├── .editorconfig

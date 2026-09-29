@@ -62,7 +62,7 @@ export const countCategories = (
     categories.push({
       sectionId: section.id,
       title: section.title,
-      kind: 'source',
+      kind: section.kind ?? 'source',
       count: uniqueCount(items),
       feeds: countSources(section, items),
     });

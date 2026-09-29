@@ -4,8 +4,9 @@ import * as path from 'node:path';
 import { FeedValidator } from '../feed-validator';
 import { logger } from '../logger';
 import { slackFeedConfig, slackSourcePath, validateRssOutputPath } from './config';
+import { loadDeliveryHistory } from './history';
 import { bootstrapSlackFeed, buildSlackRss, updateSlackFeed } from './model';
-import { parseSlackState, readSlackState } from './state-store';
+import { parseSlackState } from './state-store';
 import type { SlackFeedState, SlackSource } from './types';
 
 /** RSSと履歴を、ファイルごとに完全な内容へ置き換える。 */
@@ -17,18 +18,6 @@ const writeOutput = async (file: string, content: string): Promise<void> => {
     await fs.rename(temporary, file);
   } finally {
     await fs.rm(temporary, { force: true });
-  }
-};
-
-/** 公開チェックアウトがある場合は、その履歴だけを通知日時の基準とする。 */
-const hasDirectory = async (directory: string): Promise<boolean> => {
-  try {
-    const info = await fs.lstat(directory);
-    if (!info.isDirectory()) throw new Error('公開履歴のディレクトリが不正です');
-    return true;
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') return false;
-    throw error;
   }
 };
 
@@ -56,11 +45,8 @@ export const generateSlackFeeds = async (
   outputDirectory: string,
   now = new Date(),
 ): Promise<SlackFeedState> => {
-  const usePublished = await hasDirectory(publishedDirectory);
+  const { usePublished, previous } = await loadDeliveryHistory(publishedDirectory, outputDirectory, now);
   const historyPath = path.join(outputDirectory, 'feeds/delivery');
-  const previous = await readSlackState(usePublished ? path.join(publishedDirectory, 'feeds/delivery') : historyPath);
-  if (previous && Date.parse(previous.updatedAt) > now.getTime() + 60_000)
-    throw new Error('Slack配信履歴より実行時刻が古くなっています');
   const state: SlackFeedState = {
     schemaVersion: 1,
     updatedAt: new Date(Math.max(now.getTime(), previous ? Date.parse(previous.updatedAt) : 0)).toISOString(),
