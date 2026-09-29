@@ -689,3 +689,207 @@ https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hatena-dedup/feeds/rs
 ページ・日次統計も対応し、テスト361件、lint・依存監査・サイトビルドが通っています。公開データを使った移行検証でも、入力944記事の重複・割り当て漏れは0件でした。
 
 公開確認後、Slackの元RSS登録を上記へ置き換えてください。
+
+
+
+----
+
+
+
+pushしたのでjob監視してください
+
+
+
+----
+
+
+
+
+**生成・デプロイ・Pages公開まで成功しました。** [対象ジョブ](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36544098359)
+
+新しいRSSも公開されています。
+
+| RSS | 掲載件数 |
+|---|---:|
+| [ITmedia dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/itmedia-dedup/feeds/rss.xml) | 42 |
+| [Menthas dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/menthas-dedup/feeds/rss.xml) | 16 |
+| [はてブ dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hatena-dedup/feeds/rss.xml) | 21 |
+
+確認結果：
+
+- 今回取得したユニーク記事**926件を、漏れ・重複なく6本へ配信**。
+- 既存869記事の**配信先・通知日時・GUIDを維持**。
+- ナビの並び順、購読リンク、日次統計も反映。
+- CI・外部テストも成功。
+
+Slackでは、元のITmedia・Menthas・はてブの登録を上記RSSへ置き換えられます。
+
+
+
+----
+
+
+
+これで、dedupがまだ不十分なカテゴリってある？
+
+
+
+----
+
+
+
+はい。**6本のdedup内では重複0件ですが、対象外のカテゴリとの重複が残っています。**
+
+公開中のRSSを比較したところ、次の4カテゴリで確認できました。
+
+| カテゴリ | dedup版と共通する記事数 | 重複先 |
+|---|---:|---|
+| **テクノエッジ** | **25件** | 企業TechBlog dedup |
+| **個人ブログ** | **17件** | 企業TechBlog・はてブ dedup |
+| **GIGAZINE** | **4件** | はてブ・Menthas dedup |
+| **セキュリティ** | **4件** | はてブ・Menthas dedup |
+
+※18:09 JST更新分の掲載記事で比較。過去の保持分も含み、当日の通知回数ではありません。
+
+特に注意したいのは、**ITmediaのセキュリティ系RSSは「セキュリティ」カテゴリにあり、ITmedia dedupの入力には含まれていない**点です。現在のITmedia dedupは「総合・AI＋」を対象としています。
+
+ほかにも、対象外カテゴリ同士で以下を確認しています。
+
+- AI ↔ Hacker News：1件
+- Engineering ↔ Hacker News：1件
+- セキュリティ内：AI Security Daily DigestとSecurity NEXT・piyologに共通記事あり
+
+**次に共通dedupへ加えるなら、テクノエッジ・個人ブログ・GIGAZINE・セキュリティの4カテゴリが優先候補です。** 原文RSSと翻訳RSSを両方購読した場合の重複は、これとは別に残ります。
+
+
+---
+
+
+it media セキュリティって
+slack listもそうだっけ？
+
+----
+
+
+
+はい。[Slack登録一覧](/Users/fuhitonakagawa/my-tech-blog-rss-feed/my-docs/scripts/slackrss-list.md:29)でも、リポジトリと同じ区分です。
+
+| RSS | Slack投稿先 |
+|---|---|
+| ITmedia 総合 | `#it-media-feed` |
+| ITmedia AI＋ | `#it-media-feed` |
+| ITmedia NEWS セキュリティ | `#security-feed` |
+| ITmedia エンタープライズ「セキュリティ」 | `#security-feed` |
+| TechTargetジャパン セキュリティ | `#security-feed` |
+| ＠IT Security&Trust | `#security-feed` |
+
+したがって、**ITmedia dedupだけでは、`#security-feed`側との重複は除外されません。**
+
+
+
+----
+
+
+ちなみに、いまのslack listから、dedupに置き換える事ができるチャンネルの対応を知りたいです
+それらが完全に抜けもれなくカバーされることは確認してください
+
+
+
+----
+
+
+
+確認しました。**登録定義上は、対象14チャンネルの140本をすべてカバーしています。** 対応は以下です。
+
+| 現在のSlackチャンネル | 登録RSS数 | 置き換え先 |
+|---|---:|---|
+| `#my-tech-blog-jp-feed`<br>`#company-tech-blog-feed`<br>`#karaage-ai-news-feed` | 94＋1＋1＝**96本** | [企業TechBlog dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/tech-blog-dedup/feeds/rss.xml) |
+| `#zenn-trend-feed`<br>`#zenn-ai-feed`<br>`#zenn-cloud-feed`<br>`#zenn-security-feed` | **20本** | [Zenn dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-dedup/feeds/rss.xml) |
+| `#qiita-trend-feed`<br>`#qiita-ai-feed`<br>`#qiita-cloud-feed`<br>`#qiita-security-feed` | **20本** | [Qiita dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/qiita-dedup/feeds/rss.xml) |
+| `#it-media-feed` | **2本** | [ITmedia dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/itmedia-dedup/feeds/rss.xml) |
+| `#menthas-feed` | **1本** | [Menthas dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/menthas-dedup/feeds/rss.xml) |
+| `#hatenab-feed` | **1本** | [はてブ dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hatena-dedup/feeds/rss.xml) |
+
+各行を1つのチャンネルにまとめ、対応するdedup RSSを1本登録する構成です。
+
+確認結果は次のとおりです。
+
+- Slack一覧とdedup入力を双方向に照合し、**登録元の不足・余分ともに0本**。
+- HTTP→HTTPSの転送、日本語URLのエンコード差も照合済み。
+- 公開済みの取得対象記事**926件→926件**で、割り当て漏れ・重複ともに0件。
+
+ただし、**カバーするのは6本全体です。** 例えばITmediaの記事が企業TechBlogで先に配信されていれば、ITmedia dedupでは再配信しません。
+
+また、メルカリ・HEARTBEATS・Preferred Networksには元RSSの取得失敗があります。巡回前にRSSから消えた記事や集約対象の8日間を超える記事もあるため、**登録元140本の網羅は確認済みですが、全記事の通知を完全に保証するものではありません。**
+
+
+
+----
+
+
+
+dedup系は1時間おきバッチで数件投稿してますか？
+何件くらい来てます？
+
+
+
+-----
+
+
+
+はい。**基本は平日1時間おき・週末2時間おきに生成し、新着を1記事ずつ配信**します。JST 0時にも実行し、1〜7時台は定期実行がありません。Slackには、その後の巡回でまとまって届く形です。
+
+初回の大量掲載を除いた、**今日18〜22時台の直近5回**では以下でした。
+
+| dedup RSS | 1回あたり平均 | 最少〜最多 |
+|---|---:|---:|
+| 企業TechBlog | 4件 | 0〜10件 |
+| Zenn | 7件 | 0〜21件 |
+| Qiita | 5.2件 | 0〜14件 |
+| ITmedia | 1.8件 | 0〜7件 |
+| Menthas | 0.6件 | 0〜2件 |
+| はてブ | 1.8件 | 0〜5件 |
+| **6本合計** | **20.4件** | **0〜40件** |
+
+合計は順に **11 → 20 → 31 → 40 → 0件**でした。固定件数ではなく、その回に初めて見つかった記事数です。
+
+※これは**RSS上の新規配信件数**で、Slackの実測通知数ではありません。まだ5回分なので、長期的な平均とは分けて見てください。
+
+
+
+---
+
+2時間おきの時間帯を1時間に変えても、コストは変わらない？無料のまま？なら、いつでも1時間おきに変えたい
+
+
+----
+
+
+**実行時間は無料のままです。** 公開リポジトリ＋標準Ubuntuランナーが対象です。[GitHub公式](https://docs.github.com/en/actions/reference/runners/github-hosted-runners)
+
+**全曜日・24時間、毎時0分（1日24回）**に変更しました。深夜・週末も通常・翻訳・dedupフィードを生成します。実際の起動には遅延があります。
+
+テスト361件、lint、ワークフロー検証、依存監査は通過済みです。**push後に有効になります。**
+
+なお、成果物・キャッシュの保存量は増えます。実行時間の無料条件とは別で、有料の容量拡張設定は変更していません。
+
+
+
+----
+
+これはいってますか？
+https://tech.akariinc.co.jp
+
+
+
+----
+
+
+はい。**yamadashy版経由で、企業TechBlog dedupの対象に入っています。**
+
+- 登録名：**燈**
+- 元RSS：`https://tech.akariinc.co.jp/feed`
+- このリポジトリへの単体登録：なし
+- [yamadashy版の登録定義](https://github.com/yamadashy/tech-blog-rss-feed/blob/main/src/resources/feed-info-list.ts)
+
+現在の最新記事は**8月24日公開**で、集約対象の過去8日間から外れているため、今の配信記事には表示されていません。
