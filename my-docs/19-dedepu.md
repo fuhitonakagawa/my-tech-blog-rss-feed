@@ -893,3 +893,155 @@ https://tech.akariinc.co.jp
 - [yamadashy版の登録定義](https://github.com/yamadashy/tech-blog-rss-feed/blob/main/src/resources/feed-info-list.ts)
 
 現在の最新記事は**8月24日公開**で、集約対象の過去8日間から外れているため、今の配信記事には表示されていません。
+
+
+----
+
+
+
+hacker newsに以下のslack rssがありましたが、translated jpがありません
+
+Hacker News - Japanese  [21:19]
+New Cyber-OSINT model released
+:memo: Md Ismail Šojal :spider:@0x0SojalSecThe Cyber-OSINT model that You can run locally. Md Ismail Šojal :spider:@0x0SojalSec11ha 7B cyber model that fits on locally 8GB GPU. Most security model are a system prompt.
+
+:link: Read more: https://twitter.com/0x0SojalSec/status/2104736980768866439
+Md Ismail Šojal :spider: (@0x0SojalSec) on XThe Cyber-OSINT model that You can run locally.
+
+- MoE (26B total, 4B active, 262K ctx) trained on 6,500 OSINT/CTI instructions.
+- SFT for cyber threat intel and investigative work.
+- Threat-actor attribution. 
+- IoC pivoting. Geolocation. 
+- Admiralty source grading.
+- 262K context.x.com[21:19]US sanctions force The Netherlands off Microsoft and toward alternative NixOS
+:memo: It was then that the Dutch government decided that it was time to make plans that would reduce its reliance on software and services that were made or based in the United States. That system is built around NixOS, with three service providers tasked with the job. That alone means that the setup is incredibly easy to reproduce across multiple machines, something that is an obvious benefit when dealing with different facets of a government.
+
+:link: Read more:...
+Tom's HardwareUS sanctions force The Netherlands off Microsoft and toward alternative NixOS-based software ecosystem — trial programs running now, first release expected at end of 2027The U.S. imposed sanctions on the International Criminal Court, preventing it from using ubiquitous U.S.-based software.Tom's Hardware | 今日の02:00[21:19]Evan Doorbell's Phone Tapes – Brought to You by Telephone World
+:memo: Evan Doorbell’s Phone Tapes Evan Doorbell’s Phone Tapes are a well known “documentary” of how the phone system used to be like in the 1970s. This material is copyrighted by Evan Doorbell. Production Tapes Production tapes are phone trip tapes that Evan Doorbell has narrated with full descriptions.
+
+:link: Read more: https://evan-doorbell.com/
+[21:19]Startup Nights 2026 is comming up on 5-6 Nov. in Switzerland
+:memo: What to expect at Startup Nights Startup Nights is the annual meetup of the Swiss startup ecosystem. Get Your Tickets Now Don’t miss out on Startup Nights 2026. Secure your spot today.
+
+:link: Read more: https://www.startup-nights.ch/event/
+startup-nights.chStartup Nights – The biggest startup event in SwitzerlandStartup Nights is the annual meetup of the Swiss startup family. Expect two packed days full of keynotes, workshops, pitchstartup-nights.ch[21:19]500k facial scans at UK stations yield no arrests, 1 false positive
+:memo: More than half a million faces were scanned in some of the capital’s busiest transport hubs during the trial. More than half a million faces were scanned between February and July this year in some of the capital’s busiest transport hubs during the British Transport Police (BTP) trial of the surveillance technology, which aimed to help catch offenders and people breaching court orders. Success for the police trying to catch people means people being caught.
+
+:link: Read more:...
+the GuardianTrial of live facial recognition in London stations leads to a false positive and no arrestsFreedom of information request finds six-month trial cost £320,000, used almost 100 police hours and led to just one – incorrect – alertthe Guardian | 今日の18:48[21:19]Using any C++ library in Godot
+:memo: 0, a single godot-cpp release works with any Godot version from 4. An extension built for Godot 4. debug = "res://bin/libgdexample.
+
+:link: Read more: https://blog.conan.io/cpp/conan/gamedev/godot/cmake/2026/09/29/Using-Any-Cpp-Library-In-Godot.html
+blog.conan.ioUsing any C++ library in GodotHow Godot's GDExtension system and the godot-cpp bindings work, and how to use Conan to bring C and C++ libraries into a Godot game, with a flecs example that simulates 100,000 particles.blog.conan.io[21:19]Jeeves. Reasoning improves Jev-like decision models
+:memo: Jeeves – Reasoning improves Jev-like decision models A reasoning Jev-style classifier with a diffusion drafter, trained with SFT and CISPO. 746 JevBench overall (231 public items) 0. 055 JevBench hard (111 public items) 0.
+
+:link: Read more: https://github.com/PostHog/jeeves
+GitHubGitHub - PostHog/jeeves: Jeeves – Reasoning improves Jev-like decision modelsJeeves – Reasoning improves Jev-like decision models - PostHog/jeevesGitHub[21:19]AI companies leak data to advertisers [pdf]
+:memo: ;��|>�m��T�߰����@�-q� ���&�3 OB$�fqj^q�4�MtuK�x������B��� W��@�p(Į�D��O�Kn> stream x��[ߓ���~�_᷋��  /���nN�$'�dr~T��͌���50��_��-.
+
+:link: Read more: https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf
+[21:19]You Are No Longer Invited to Dinner
+:memo: Until 1975, half of Americans said they entertained guests at their home every month. Americans stopped throwing parties. The share of Americans saying they never entertained people at home tripled.
+
+:link: Read more: https://www.derekthompson.org/p/the-death-of-the-american-hostderekthompson.orgYou Are No Longer Invited to DinnerWe’re witnessing the death of hosting in America. The share of adults who say they regularly have friends over has declined 70 percent since 1975derekthompson.org
+
+
+
+
+----
+
+
+確認しました。**提示された9記事は、翻訳RSSに掲載されていません。Slack側ではなく、このリポジトリでの取り込みが原因です。**
+
+原因は2段階ありました。
+
+1. **キャッシュによる遅延**
+   21:11に取得した後、元RSSが21:13に更新。22:10の取得では1時間キャッシュが約36秒残っていたため、古い内容を再利用しました。
+
+2. **再取得時の検証エラー**
+   22:54の実行では再取得しましたが、PDF記事「AI companies leak data to advertisers」の文字化けした概要に、制御文字 **`U+007F`が2個**含まれていました。これにより、**正常な8記事も含めてRSS全体が拒否**されています。[該当ジョブ](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36578554890)
+
+つまり、**毎時実行にして待つだけでは解消しません。**
+
+対処としては、不正な概要を切り離してタイトル・URLと正常な記事を取り込めるようにすることと、毎時実行に対して長すぎるRSSキャッシュを短縮することが必要です。
+
+
+
+----
+
+
+はい、バグを除いてください。そのほか類似でエラーになりそうなところはバリエーション考えて、対処してください
+
+
+
+----
+
+
+修正しました。**提示された9記事すべてを、ローカルで翻訳RSS・ページへ出力できることを確認しています。**
+
+- 壊れた概要・本文だけを除き、タイトル・URL・GUID・公開日時を保持。
+- URLやGUIDなどが壊れた場合は、その記事だけを除外。
+- CDATA、文字参照、Atom、RSS 1.0などの類似ケースにも対応。
+- XML構造の検証は維持。
+- RSSキャッシュを**60分→15分**へ短縮し、破損キャッシュは再取得。
+
+内部テスト**404件**、lint・型チェック・依存監査、全体生成・サイトビルドが通っています。READMEとAGENTS.mdにも仕様を記載しました。
+
+**公開反映にはpushが必要です。**
+
+
+----
+
+platform enでは今日のslack rss投稿は以下です
+
+GitLab  [03:18]
+What's new in Git 2.56.0?
+The Git project recently released Git 2.56.0. Let's look at some of the highlights of the release, including contributions from the Git team at GitLab.What's covered:<a href="https://about.gitlab.com/blog/whats-new-in-git-2-56-0/#git-merge-2026-and-schedule-for-git-30">Git Merge 2026 and schedule for...GitLabWhat's new in Git 2.56.0?Learn about the new features and changes in the latest Git release, including a new git-history(1) drop command, git-refs(1) getting new subcommands to modify refs, linearizing history with git-replay(1), and more.GitLab | 昨日の09:00The GitLab HandbookGit TeamMission statement The Git team is responsible for building, maintaining and providing expertise on the Git version control system. Its main responsibilities include:
+Upstream development of the Git version control system. Provide expertise to other teams at GitLab. Foster the Git community. Ensure the long-term viability of the Git project. Upstream development The Git team is responsible for driving the upstream development of Git both in accordance with the goals of the community and to address GitLab-specific needs as raised by other teams. This falls into the following broad categories:The GitLab Handbook
+
+
+
+一方trans jpは以下です
+
+Platform - Translated Japanese｜企業テックブログRSS  [17:25]
+HashiCorp Boundaryの安全なAIエージェント | HashiCorp Blog
+元記事公開：2026/9/29 16:00:00（日本時間）
+
+企業のアイデンティティ、アクセス、および監査制御内での運用中に、AIエージェントがリソースを安全にアクセスできるようにします。
+
+
+
+
+roboticsカテゴリfeedは
+
+The Robot Report  [03:21]
+Gecko Robotics works with NVIDIA to add AI agent security and control
+Gecko Robotics is using the new NVIDIA Open Agent Safety Platform to ensure the secure autonomous control of systems.
+The post Gecko Robotics works with NVIDIA to add AI agent security and control appeared first on The Robot Report.
+The Robot ReportGecko Robotics works with NVIDIA to add AI agent security and control - The Robot ReportGecko Robotics is using the new NVIDIA Open Agent Safety Platform to ensure the secure autonomous control of systems.Written byEugene DemaitreEst. reading time6 minutesThe Robot Report | 今日の02:41IEEE Spectrum  [07:18]
+A Day in the Life of a Roboticist: Charlie Kemp
+Building useful robots starts with understanding the people who use them. For Charlie Kemp, cofounder and chief technology officer of Hello Robot, that means developing assistive robots that can help people with everyday tasks and support greater independence.In this Robots Guide profile, Kemp shares his path from studying artificial intelligence at MIT to building Stretch, explains how working with people with disabilities has shaped his...ROBOTS: Your Guide to the World of RoboticsBuilding Assistive Robots to Help People Live IndependentlyDiscover how Hello Robot develops assistive robots to improve quality of life, what inspires the work, and advice for aspiring roboticists.ROBOTS: Your Guide to the World of Roboticsrobotsguide.comROBOTS: Your Guide to the World of RoboticsThe world's largest catalog of robots, drones, and self-driving cars, with thousands of photos, videos, tech specs, news, and information on how to get into robotics. Brought to you by IEEE Spectrum.robotsguide.com
+
+
+
+translated jpは
+Robotics - Translated Japanese｜企業テックブログRSS  [09:00]
+閾値のロボノミクス: 経済自律性、スマートシティ、およびヒューマノイドのための暗号財布 | The Robot Report
+経済は、ロボットのインペータスと制約の両方で、システムが通りに送ったり、家庭で雑把にしたりするからです。 閾値のロボノミクス: 経済自律性、スマートシティ、ヒューマノイドの暗号財布は、最初にロボットレポートに登場しました。[09:00]Gecko Roboticsは、AIエージェントのセキュリティと制御を追加するNVIDIAと連携 | The Robot Report
+Gecko Robotics は、新しい NVIDIA Open Agent Safety Platform を使用して、安全な自動制御システムを保証します。 Gecko ロボティクスは、NVIDIA と連携して、AI エージェントのセキュリティと制御を初めてロボット レポートに追加します。[09:00]ロボティクスの人生の日: チャーリー・ケンプ | IEEE Spectrum
+便利なロボットの構築は、使い慣れた人達の理解から始まります。 ハローロボットの共同創業者兼チーフ・テクノロジー・オフィサーであるチャーリー・ケンプは、日常のタスクで人々を助け、より大きな独立性をサポートする補助ロボットを開発することを意味する。 このロボットガイドのプロファイルでは、MITで人工知能を勉強し、ストレッチを構築するための彼の道を共有し、障害のある人々との作業がどのように彼のアプローチROBOTS: Your Guide to the World of RoboticsBuilding Assistive Robots to Help People Live IndependentlyDiscover how Hello Robot develops assistive robots to improve quality of life, what inspires the work, and advice for aspiring roboticists.ROBOTS: Your Guide to the World of RoboticsRobotics - Translated Japanese｜企業テックブログRSS  [23:10]
+製造業におけるロボットの状態 | The Robot Report
+元記事公開：2026/9/29 22:22:56（日本時間）
+
+製造中のロボティクスの製造ロボットの進歩は、自動車製造ラインの厳しいプログラミングロボットアームの時代から進化しています。 ロボットモデルは、産業オートメーションの多様化、広範なアプリケーションは、知覚、自律性、行動の改善と変化しています。 また、熟練労働者の不足は、多岐に渡ります。 製造業のロボットのポストの状態は、ロボットレポートで最初に登場しました。The Robot ReportState of Robots in Manufacturing - The Robot ReportReport looks at advances in robots for manufacturing Robotics in manufacturing has evolved from the days of rigidly programmed robot arms on automotiveWritten byThe Robot Report StaffEst. reading time2 minutesThe Robot Report | 今日の22:22
+
+
+なにがどうなってるの？
+
+
+
+----
+
+
+

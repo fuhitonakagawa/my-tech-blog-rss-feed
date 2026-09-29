@@ -58,6 +58,22 @@
 
 登録フィード一覧には通常RSSの購読元を表示します。登録やXMLの取得に成功しても、新着集約の記事数が0件になることがあります。ブログ別ページの入力データと生成元ごとの単独フィードには、新着集約より古い記事も含まれます。
 
+### 1.3. 外部RSSの不正データと取得キャッシュ
+
+外部RSS・AtomはXML構造を検証し、記事の表示項目の破損を次の範囲で扱います。内部で生成するフィードは厳格な検証の対象です。
+
+| 入力の状態 | 挙動 |
+| --- | --- |
+| 概要・本文に不正な制御文字または文字化けの置換文字（U+FFFD）がある | その概要・本文を空にし、正常なタイトル・記事URL・GUID・公開日時を保持する |
+| タイトルに不正な制御文字がある | 制御文字を除く。空のタイトルになった記事は除外する |
+| 記事URL・GUID・属性・その他の項目に制御文字が残る | 該当記事を除外し、正常な他の記事を取り込む。識別情報を補正して別のURLやIDとして配信しない |
+| XML構造・文字参照が不正、RSSではない応答、配信元メタデータに修復対象外の破損がある | 取得元単位のエラーにする |
+| 補正・記事除外がある | 配信元の登録名と件数を警告ログへ出す。破損した本文や記事の識別情報はログへ含めない |
+
+RSS・Atom・RSS 1.0の概要、CDATA、HTML形式の本文、文字参照から復元された文字も検査します。通常の改行・タブ・日本語・絵文字は概要の破損として扱いません。記事本文の自然さや内容の正確性を判定するものではありません。
+
+通常RSSの取得キャッシュの有効時間は15分です。定期巡回は毎時ですが、短時間のpush・再実行では取得結果を共有できます。破損したXMLキャッシュは破棄して再取得し、補正・検証済みの応答を保存します。取得失敗時に期限切れデータを新着として扱いません。OGPの24時間キャッシュ、翻訳結果、翻訳モデル、配信済み記事の履歴はそれぞれ独立した保持方針です。
+
 <a id="setup"></a>
 
 ## 🚀 2. 導入と実行
@@ -761,6 +777,7 @@ flowchart TD
 │   │   ├── feed-generator.ts
 │   │   ├── feed-storer.ts
 │   │   ├── feed-validator.ts
+│   │   ├── remote-feed-input.ts
 │   │   ├── logger.ts
 │   │   └── prune-cache.ts
 │   ├── resources/
@@ -945,6 +962,7 @@ flowchart TD
 │   ├── blog-feeds.test.ts
 │   ├── common-util.test.ts
 │   ├── eleventy-utils.test.ts
+│   ├── feed-cache.test.ts
 │   ├── feed-crawler.test.ts
 │   ├── feed-generator.test.ts
 │   ├── feed-info-list.test.ts
@@ -954,6 +972,7 @@ flowchart TD
 │   ├── feed-list-dialog.test.ts
 │   ├── feed-storer.test.ts
 │   ├── feed-validator.test.ts
+│   ├── remote-feed-input.test.ts
 │   ├── generated-adapter-registry.test.ts
 │   ├── generated-css-extractor.test.ts
 │   ├── generated-feed-list.test.ts

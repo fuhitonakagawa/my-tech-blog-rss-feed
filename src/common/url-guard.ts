@@ -106,6 +106,8 @@ for (const [address, prefix] of NON_PUBLIC_IPV6_SUBNETS) {
  * URLとして解釈できない文字列は false を返す
  */
 export const isValidHttpUrl = (url: string): boolean => {
+  // biome-ignore lint/suspicious/noControlCharactersInRegex: URLパーサーによる制御文字の黙示的な除去を許可しない
+  if (/[\x00-\x1F\x7F-\x9F\uFFFD]/.test(url)) return false;
   let urlObject: URL;
 
   try {

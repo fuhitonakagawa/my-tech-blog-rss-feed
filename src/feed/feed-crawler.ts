@@ -26,6 +26,7 @@ import {
 import { FeedValidator } from './feed-validator';
 import type { GeneratedFeedRegistry } from './generated/types';
 import { logger } from './logger';
+import { parseRemoteFeed } from './remote-feed-input';
 
 export type CustomOgObject = OgObject & {
   // 画像は一つだけとする
@@ -270,22 +271,29 @@ export class FeedCrawler {
       return this.parseFeedXml(generatedFeedXml);
     }
 
-    const feedCacheKey = `feed-${textToMd5Hash(feedInfo.input.url)}`;
+    const feedCacheKey = `feed-${constants.fetchedFeedCacheDurationInMinutes}m-${textToMd5Hash(feedInfo.input.url)}`;
     const feedCache = flatCacheCreate({
       cacheId: feedCacheKey,
-      ttl: constants.fetchedFeedCacheDurationInHours * 60 * 60 * 1000,
+      ttl: constants.fetchedFeedCacheDurationInMinutes * 60 * 1000,
     });
     const cachedData = feedCache.get<string>(feedCacheKey);
     if (cachedData) {
       logger.trace('[fetch-feed] cache hit', feedInfo.label, feedInfo.url);
-      return this.parseFeedXml(cachedData);
+      try {
+        return (await parseRemoteFeed(cachedData, this.rssParser, feedInfo.label)).feed;
+      } catch {
+        // 破損したキャッシュを再利用せず、同じ公開ネットワーク検証経路で再取得する。
+        feedCache.delete(feedCacheKey);
+        feedCache.save();
+        logger.warn('[fetch-feed] invalid-cache', { label: feedInfo.label });
+      }
     }
 
     const feedXml = await this.requestRemoteFeedXml(feedInfo.input.url);
-    const feed = await this.parseFeedXml(feedXml);
-    feedCache.set(feedCacheKey, feedXml);
+    const result = await parseRemoteFeed(feedXml, this.rssParser, feedInfo.label);
+    feedCache.set(feedCacheKey, result.xml);
     feedCache.save();
-    return feed;
+    return result.feed;
   }
 
   /** 外部サイトが配信するフィードXMLを取得する */

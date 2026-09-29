@@ -57,6 +57,11 @@ export const removeInvalidUnicode = (text: string) => {
   return text.replace(/[\x00-\x1F\x7F-\x9F]/g, '');
 };
 
+/** XMLの改行・タブを保持し、表示や識別に使えない制御文字を検出する。 */
+export const hasInvalidControlCharacters = (text: string): boolean =>
+  // biome-ignore lint/suspicious/noControlCharactersInRegex: XMLで許容する空白以外の制御文字を検出する
+  /[\x00-\x08\x0B-\x0C\x0E-\x1F\x7F-\x9F]/.test(text);
+
 export const exponentialBackoff = async <A>(
   retrier: (attemptCount: number) => Promise<A>,
   baseWaitMs = 1000,

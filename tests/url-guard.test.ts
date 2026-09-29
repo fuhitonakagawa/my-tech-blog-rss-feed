@@ -11,6 +11,13 @@ import {
 } from '../src/common/url-guard';
 
 describe('isValidHttpUrl', () => {
+  it.each(['\n', '\t', '\u0000', '\u007F', '\u0085', '\uFFFD'])(
+    'URLの制御文字を暗黙に除去して別URLを許可しない: %j',
+    (character) => {
+      expect(isValidHttpUrl(`https://exa${character}mple.com/path`)).toBe(false);
+      expect(isPublishableHttpUrl(`https://example.com/path${character}`)).toBe(false);
+    },
+  );
   it('http / https のURLを許可する', () => {
     expect(isValidHttpUrl('http://example.com/feed')).toBe(true);
     expect(isValidHttpUrl('https://example.com/feed')).toBe(true);

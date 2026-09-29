@@ -3,6 +3,14 @@ import { describe, expect, it } from 'vitest';
 import { FeedValidator } from '../src/feed/feed-validator';
 
 describe('FeedValidator', () => {
+  it('出力XMLでは文字参照を使った制御文字も拒否する', async () => {
+    await expect(
+      new FeedValidator().assertXmlFeed(
+        'test',
+        '<rss version="2.0"><channel><title>T</title><item><title>bad&#127;</title></item></channel></rss>',
+      ),
+    ).rejects.toThrow('制御文字');
+  });
   it('正しいXMLフィード1', async () => {
     const feedValidator = new FeedValidator();
     const [error] = await to(
