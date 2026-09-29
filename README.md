@@ -35,7 +35,7 @@
 - **記事情報**: タイトル、概要、元記事URL、公開日時、取得可能なOG画像・はてなブックマーク数を表示します。
 - **登録フィード一覧**: ヘッダーの一覧ボタンから、セクションごとの購読元を確認できます。
 - **日次投稿統計**: 日本時間の前日までに公開され、取得できた記事数をカテゴリ別にまとめた統計RSSを配信します。
-- **重複除外フィード**: 企業ブログ系・Zenn・Qiitaの3本に統合し、3本を横断して記事の初回配信先を保持します。詳しくは[重複除外フィード](#deduplicated-feeds)を参照してください。
+- **重複除外フィード**: 企業ブログ系・Zenn・Qiita・ITmedia・Menthas・はてブの6本に統合し、6本を横断して記事の初回配信先を保持します。詳しくは[重複除外フィード](#deduplicated-feeds)を参照してください。
 - **RSSの通知日時**: このサイトが生成するRSSの`pubDate`には、記事を初めて配信した日時を使います。元記事の公開日時は本文の先頭に表示します。
 - **表示テーマ**: OSの明暗設定に従い、ヘッダーの「ダークモード」ボタンで切り替えられます。OSと同じテーマへ戻すとOS設定への追従になり、選択はブラウザーに保存されます。保存が使えない場合も、そのページ内では切り替えられます。
 - **HTML由来のフィード**: 元サイトにRSSがなくても、定義した記事一覧から単独フィードを配信できます。
@@ -118,7 +118,8 @@ Indexing APIへの通知には、生成済みブログデータ、対象サイ�
 | 設定対象 | 定義元 |
 | --- | --- |
 | サイトURL・タイトル・説明・著者・集約期間・取得上限 | [共通設定（`src/common/constants.ts`）](src/common/constants.ts) |
-| セクションの表示順・表示名・所属フィード | [セクション定義（`src/resources/sections/`）](src/resources/sections/) |
+| カテゴリナビ・登録フィード一覧の表示順 | [表示カテゴリ一覧（`src/resources/display-section-list.ts`）](src/resources/display-section-list.ts) |
+| セクションの表示名・所属フィード・基本順 | [セクション定義（`src/resources/sections/`）](src/resources/sections/) |
 | HTML由来の生成元・抽出設定 | [生成元定義（`src/resources/generated-feeds/`）](src/resources/generated-feeds/) |
 | 日次統計の表示名・集計時間帯・保持期間 | [統計定義（`src/resources/stats/daily.json`）](src/resources/stats/daily.json) |
 | Eleventyの入力・出力・配信ファイル | [サイト設定（`eleventy.config.ts`）](eleventy.config.ts) |
@@ -200,7 +201,7 @@ Amazon Translateは`provider="amazon-translate"`とリージョン・ロール�
 ```
 
 - **ID**: ファイル名の拡張子を除いた部分です。先頭は英小文字または数字、以降は英小文字・数字・ハイフンを使用します。
-- **表示順**: `order`の昇順です。同値の場合はID順です。登録時は原則として10刻みの未使用値を選びます。
+- **表示順**: カテゴリナビと登録フィード一覧は`display-section-list.ts`の`SECTION_DISPLAY_ORDER`を参照します。dedupの6本、企業・個人ブログ、AI・開発、クラウド、セキュリティ、Zenn・Qiita、ニュース・メディア、資料・書籍の順で、翻訳版は原文カテゴリの直後です。表示順に未指定の通常カテゴリは末尾へ`order`の昇順・同値ではID順で並びます。`order`は原則として10刻みの未使用値を選びます。表示順はdedupの配信優先度と独立しています。
 - **表示名**: `title`がナビゲーション、ページ見出し、集約フィードのタイトルに使用されます。
 - **生成物**: ページ、RSS・Atom・JSON Feed、ナビゲーション、サイトマップが定義から生成されます。
 
@@ -467,23 +468,26 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 
 ### 5.7. カテゴリ横断の重複除外フィード
 
-複数の入力カテゴリを3本へ統合し、同じ記事URLの配信先を3本のうち1本に固定します。定義は`src/resources/deduplicated-feeds/`のJSONです。`sourceSectionIds`は通常カテゴリのID、`priority`は同じ生成回で初めて見つかった記事の優先度で、小さい数値を優先します。ファイル名が配信IDです。通常・翻訳カテゴリとIDを共有できず、同じ入力カテゴリを複数の重複除外フィードに指定することもできません。
+複数の入力カテゴリを6本へ統合し、同じ記事URLの配信先を6本のうち1本に固定します。定義は`src/resources/deduplicated-feeds/`のJSONです。`sourceSectionIds`は通常カテゴリのID、`priority`は同じ生成回で初めて見つかった記事の優先度で、小さい数値を優先します。ファイル名が配信IDです。通常・翻訳カテゴリとIDを共有できず、同じ入力カテゴリを複数の重複除外フィードに指定することもできません。
 
 | 配信名・ID | 入力カテゴリ | 優先度 |
 | --- | --- | ---: |
 | 企業TechBlog dedup・`tech-blog-dedup` | `jp-tech-blog`、`company-tech-blog`、`ai-news` | 0 |
 | Zenn dedup・`zenn-dedup` | `zenn`、`zenn-ai`、`zenn-cloud`、`zenn-security` | 1 |
 | Qiita dedup・`qiita-dedup` | `qiita`、`qiita-ai`、`qiita-cloud`、`qiita-security` | 1 |
+| ITmedia dedup・`itmedia-dedup` | `itmedia`（総合・AI＋） | 1 |
+| Menthas dedup・`menthas-dedup` | `menthas` | 1 |
+| はてブ dedup・`hatena-dedup` | `hatena` | 1 |
 
 企業TechBlogにはkaraageAI情報経由の個人記事やメディア記事も含みます。入力には同一実行で取得した元記事データを使い、自サイトの集約RSSを再取得しません。
 
-- **先着の基準**: 元記事の公開日時ではなく、3本のうちいずれかに初めて記事を載せた生成回です。Zennで先に配信した記事が後から企業ブログの入力に現れても、配信先はZennのままです。
-- **同時生成の優先度**: 同じ生成回で未配信の記事が重なった場合だけ、企業TechBlogを優先します。ZennとQiitaは同順位です。同じURLが両方に現れる場合も1本へ割り当て、同順位の割り当ては記事URLと配信IDに対して一定です。ネットワーク応答順や定義の読み込み順で変わりません。
+- **先着の基準**: 元記事の公開日時ではなく、6本のうちいずれかに初めて記事を載せた生成回です。Zennで先に配信した記事が後から企業ブログの入力に現れても、配信先はZennのままです。
+- **同時生成の優先度**: 同じ生成回で未配信の記事が重なった場合だけ、企業TechBlogを優先します。Zenn・Qiita・ITmedia・Menthas・はてブは同順位です。同じURLが複数の入力に現れる場合も1本へ割り当て、同順位の割り当ては記事URLと配信IDに対して一定です。ネットワーク応答順や定義の読み込み順で変わりません。
 - **記事の識別**: 記事URLの追跡パラメーターとフラグメントを除いて比較します。本文の類似性や転載は判定せず、HTTP/HTTPSや異なる記事パスの同一性も推測しません。
-- **履歴**: 初回配信先・GUID・通知日時は公開済み`feeds/delivery/state.json`を基準とします。どの入力カテゴリで再取得しても、保持期間内は初回の配信先へ掲載します。配信物と既知記事の保持期間は5.6の14日・90日です。対象の履歴が部分的に欠ける場合、二重所属がある場合、公開済み重複除外RSSの履歴がない場合は生成を停止します。
-- **日時と件数**: RSSは初回掲載日時、Atom・JSON Feed・ページ・日次統計は元記事公開日時です。日次統計には重複除外後の3カテゴリと出力RSS単位の件数を表示し、0件も表示します。原文カテゴリ合計には加算しません。
+- **履歴**: 初回配信先・GUID・通知日時は公開済み`feeds/delivery/state.json`を基準とします。どの入力カテゴリで再取得しても、保持期間内は初回の配信先へ掲載します。配信物と既知記事の保持期間は5.6の14日・90日です。二重所属がある場合や公開済み重複除外RSSに対応する履歴がない場合は生成を停止します。公開RSSが存在しない定義は初回配信として扱い、他の重複除外フィードの配信履歴を共有します。
+- **日時と件数**: RSSは初回掲載日時、Atom・JSON Feed・ページ・日次統計は元記事公開日時です。日次統計には重複除外後の6カテゴリと出力RSS単位の件数を表示し、0件も表示します。原文カテゴリ合計には加算しません。
 - **初回配信**: 初回は取得できた過去8日以内の記事を対象とします。他のRSSやSlackチャンネルの既読状況は引き継ぎません。
-- **対象範囲**: 重複排除の範囲はこの3本です。はてブ・Menthas・翻訳RSSなどを別途購読する場合、その間の重複は残ります。元の個別RSSと重複除外RSSの両方を購読すると同じ記事が届くため、Slackでは対象の購読を3本へ置き換えて使用します。
+- **対象範囲**: 重複排除の範囲はこの6本です。翻訳RSSやその他の通常カテゴリを別途購読する場合、その間の重複は残ります。元の個別RSSと重複除外RSSの両方を購読すると同じ記事が届くため、Slackでは対象の購読を6本へ置き換えて使用します。
 - **取得間隔と制約**: 通常の生成ワークフローと同じ間隔です。元RSSから巡回前に消えた記事、取得失敗、日時欠落、過去8日間の対象外は取得・掲載を保証できません。外部の集約RSSについては、その取得間隔や収録範囲の影響も受けます。
 
 公開時の配信先は以下です。Atom・JSON Feedは末尾の`rss.xml`を`atom.xml`・`feed.json`へ置き換えます。閲覧ページは`/rss/<ID>/`です。
@@ -493,6 +497,9 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 | 企業TechBlog dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/tech-blog-dedup/feeds/rss.xml` |
 | Zenn dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-dedup/feeds/rss.xml` |
 | Qiita dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/qiita-dedup/feeds/rss.xml` |
+| ITmedia dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/itmedia-dedup/feeds/rss.xml` |
+| Menthas dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/menthas-dedup/feeds/rss.xml` |
+| はてブ dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hatena-dedup/feeds/rss.xml` |
 
 生成物の保存先は`src/site/deduplicated-feeds/<ID>/feeds/`です。公開時に`/rss/<ID>/feeds/`へ配置します。
 
@@ -617,7 +624,7 @@ flowchart TD
     translated --> statistics
     statistics --> statisticsFeeds
     statisticsFeeds --> site
-    dedup["企業ブログ系・Zenn・Qiitaの入力を統合<br/>公開済みの配信先を優先し、新規記事だけ同時生成の優先度で割り当て"]
+    dedup["企業ブログ系・Zenn・Qiita・ITmedia・Menthas・はてブの入力を統合<br/>公開済みの配信先を優先し、新規記事だけ同時生成の優先度で割り当て"]
     recent --> dedup
     dedup --> statistics
     dedup --> site
@@ -812,7 +819,10 @@ flowchart TD
 │   │   ├── deduplicated-feeds/  # 重複除外フィードの定義
 │   │   │   ├── tech-blog-dedup.json
 │   │   │   ├── zenn-dedup.json
-│   │   │   └── qiita-dedup.json
+│   │   │   ├── qiita-dedup.json
+│   │   │   ├── itmedia-dedup.json
+│   │   │   ├── menthas-dedup.json
+│   │   │   └── hatena-dedup.json
 │   │   ├── deduplicated-feed-list.ts
 │   │   ├── display-section-list.ts
 │   │   ├── translated-feeds/  # 翻訳カテゴリ統合フィードの定義

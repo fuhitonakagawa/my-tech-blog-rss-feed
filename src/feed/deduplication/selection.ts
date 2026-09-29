@@ -16,11 +16,6 @@ const previousOwners = (
 ): Map<string, string> => {
   const owners = new Map<string, string>();
   const cutoff = now.getTime() - slackFeedConfig.seenRetentionDays * 86_400_000;
-  const histories = definitions.filter(
-    (definition) => state?.feeds[slackSourcePath(sectionFeedUrls(definition.id).rss)],
-  );
-  if (histories.length !== 0 && histories.length !== definitions.length)
-    throw new Error('重複除外フィードの配信履歴が一部欠落しています');
   for (const definition of definitions) {
     const history = state?.feeds[slackSourcePath(sectionFeedUrls(definition.id).rss)];
     for (const [key, seen] of Object.entries(history?.seen ?? {})) {

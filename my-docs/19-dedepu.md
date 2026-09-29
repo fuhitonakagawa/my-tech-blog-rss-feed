@@ -476,3 +476,216 @@ https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/qiita-dedup/feeds/rss
 
 
 pushしたので、ちゃんとマージ・dedupされてできてくるか、監視してください
+
+
+----
+
+
+**生成・デプロイ・Pages公開まで成功し、公開RSSでマージと重複排除を確認しました。**
+
+| RSS | 掲載件数 |
+|---|---:|
+| [企業TechBlog dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/tech-blog-dedup/feeds/rss.xml) | 563 |
+| [Zenn dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-dedup/feeds/rss.xml) | 223 |
+| [Qiita dedup](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/qiita-dedup/feeds/rss.xml) | 83 |
+
+- 入力のユニーク記事**869件＝出力869件**。割り当て漏れ・3本間の重複は**0件**。
+- 企業TechBlogとZennで重なる**75記事は企業TechBlogだけに掲載**。
+- RSSの通知日時、本文の元記事日時、購読ページ、日次統計も確認済みです。
+
+[対象GHA](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36535555250)、CI、外部テストはいずれも成功しています。
+
+ただし、元RSSではメルカリが403、HEARTBEATSが404、Preferred Networksが解析エラーでした。**漏れ0件は、今回取得できた集約対象記事の範囲です。**
+
+
+---
+
+
+dedup前後でどれくらい削減したか、おしえて
+
+
+
+----
+
+今回確認した生成分では、**延べ1,102件 → 869件となり、233件・21.1%削減**できています。
+
+| 統合先 | dedup前 | dedup後 | 削減件数 | 削減率 |
+|---|---:|---:|---:|---:|
+| 企業TechBlog | 650 | 563 | **87** | 13.4% |
+| Zenn | 349 | 223 | **126** | 36.1% |
+| Qiita | 103 | 83 | **20** | 19.4% |
+| **合計** | **1,102** | **869** | **233** | **21.1%** |
+
+Zennの126件の内訳は、**Zenn内の重複51件＋企業TechBlog側に配信した75件**です。
+
+記事そのものは削っておらず、ユニーク記事869件はすべて残っています。なお、これは生成時の入力カテゴリとの比較で、Slackの実測通知回数ではありません。
+
+
+
+----
+
+
+
+dedupの履歴は何日前まで見てくれるの？
+
+
+----
+
+
+**最後に取得してから90日間**、重複判定の履歴を保持します。
+
+- 同じ記事を再取得すると、そこからさらに90日間保持します。
+- その間は、別タグや別カテゴリに登場しても、最初の配信先・通知日時を維持します。
+- 90日間取得されず履歴が消えた後に再登場すると、新着扱いになる可能性があります。
+
+なお、**RSSへの掲載保持は別**で、入力から消えた記事も最後の取得から14日間残します。
+
+
+---
+
+
+履歴はどこで持ってるの？
+
+
+---
+
+
+
+公開サイトの **[`feeds/delivery/state.json`](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/delivery/state.json)** に保存しています。GitHubの`gh-pages`ブランチで保持されます。
+
+保存するのは、記事URLの識別キー、配信先RSS、初回掲載日時、最終取得日時、GUIDなどです。
+
+次のGHAでは公開済みの履歴を復元して重複判定し、更新した履歴をRSSと一緒に公開します。**Actions Cacheは重複判定の正本には使いません。**
+
+
+----
+
+
+ghaの無料枠とか大丈夫？
+
+
+
+----
+
+
+**実行時間の無料枠は大丈夫です。ただし、キャッシュ容量は整理した方がよい状態です。**
+
+このリポジトリは**Public＋標準Ubuntuランナー**なので、実行時間は無料です。Private向けの「月2,000分」を気にする必要はありません。[GitHub公式](https://docs.github.com/en/actions/reference/runners/github-hosted-runners)
+
+確認できた使用状況は以下です。
+
+| 項目 | 現状 |
+|---|---|
+| 直近の生成・デプロイ | ランナー稼働約4分15秒 |
+| フィード生成処理 | 約39秒。翻訳・dedupを含む |
+| 配信履歴全体 | 約9.9 MB |
+| Actions Cache | **約10.15 GiB・27個** |
+| 保存中の成果物 | 約6.4 GiB・48個。保持期間1日 |
+
+キャッシュは標準上限の10 GiB付近です。通常は古いキャッシュが自動削除されます。上限を有料で拡張した場合は超過分が課金対象です。[キャッシュの公式仕様](https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching#usage-limits-and-eviction-policy)
+
+容量の主因は、**実行ごとに保存するフィード・画像キャッシュ23世代、約9.7 GiB**です。dedupの90日履歴は`gh-pages`に保存する小さなファイルなので、主因ではありません。
+
+おすすめは、**フィードキャッシュを直近2〜3世代に整理する仕組み**です。翻訳モデル用キャッシュと配信履歴は保持します。
+
+なお、請求額はBillingの参照権限不足で確認できていないため、アカウント全体の請求がゼロとは断言していません。設定変更や削除は行っていません。
+
+
+
+-----
+
+
+キャッシュは追加課金される？
+
+
+
+
+-----
+
+
+
+**有料でキャッシュ上限を10 GiBより大きく設定した場合に、10 GiB超過分が課金されます。**
+
+標準上限のままなら、容量が増えると古いキャッシュが自動削除されます。**先ほどの約10.15 GiBという表示だけでは、追加課金されているとは判断できません。** 削除処理が追いつくまで、一時的に上限を超えることがあります。[GitHub公式](https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching#usage-limits-and-eviction-policy)
+
+このリポジトリの有料拡張設定はAPIで確認できませんでしたが、こちらでは上限変更を行っていません。
+
+
+
+
+----
+
+
+
+このカテゴリの並び順、整理したい
+my-docs/CleanShot 2026-09-29 at 17.05.33@2x.png
+
+
+
+----
+
+
+ナビと登録フィード一覧を、次の順に整理しました。
+
+**ALL → dedup3本 → 企業・個人ブログ → AI・開発 → クラウド → セキュリティ → Zenn・Qiita → ニュース → 資料・書籍 → 日次統計**
+
+翻訳版は原文カテゴリの直後です。
+
+テスト358件、lint・依存監査・サイトビルドが通っています。push後に公開ページへ反映されます。
+
+
+
+---
+
+
+
+it mediaも重複する可能性ある？
+
+
+----
+
+
+
+はい。**ITmedia内でも、他カテゴリとの間でも重複します。**
+
+以前の取得履歴の調査では、以下を確認しています。
+
+| 組み合わせ | 共通記事数 |
+|---|---:|
+| ITmedia総合RSS × ITmedia AI＋ | 14件 |
+| ITmediaカテゴリ × karaageAI情報 | 28件 |
+| ITmediaカテゴリ × Menthas | 11件 |
+| ITmediaカテゴリ × はてブ | 9件 |
+
+現在、karaageAI情報は**企業TechBlog dedup**に含まれるため、**企業TechBlog dedupとITmediaを両方購読すると、同じ記事が届く可能性があります。** ITmediaは現在の3本の共通重複排除には含まれていません。
+
+なお、ITmedia内の重複だけなら、個別RSSをこのリポのITmedia集約RSS1本へ置き換えることで除外できます。企業TechBlogとの重複もなくすには、ITmediaも共通の配信履歴で判定する対象に加える必要があります。
+
+
+
+
+------
+
+menthas、はてぶも加えましょう
+it media内のマージ・dedup rss
+mentas dedup
+はてブ dedup
+をつくって、共通dedup判定に載せましょう
+
+
+-----
+
+
+追加しました。**6本で共通のdedup判定**を行います。既存の配信先・日時・GUIDも引き継ぎます。
+
+push後に公開される新RSSは以下です。
+
+```text
+https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/itmedia-dedup/feeds/rss.xml
+https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/menthas-dedup/feeds/rss.xml
+https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hatena-dedup/feeds/rss.xml
+```
+
+ページ・日次統計も対応し、テスト361件、lint・依存監査・サイトビルドが通っています。公開データを使った移行検証でも、入力944記事の重複・割り当て漏れは0件でした。
+
+公開確認後、Slackの元RSS登録を上記へ置き換えてください。

@@ -5,6 +5,7 @@ import constants, { sectionFeedUrls } from '../../../common/constants';
 import { relativeUrlFilter } from '../../../common/eleventy-utils';
 import { statisticsConfig, statisticsFeedUrls } from '../../../feed/statistics/config';
 import { DEDUPLICATED_FEED_DEFINITION_LIST } from '../../../resources/deduplicated-feed-list';
+import { DISPLAY_SECTION_LIST } from '../../../resources/display-section-list';
 import { FEED_SECTION_LIST, type FeedInfo } from '../../../resources/feed-info-list';
 import { TRANSLATED_FEED_DEFINITION_LIST } from '../../../resources/translated-feed-list';
 import { escapeHtml } from './html-utils';
@@ -78,37 +79,40 @@ export const renderFeedListDialog = (
 ): string => {
   const relativeUrl = escapeHtml(relativeUrlFilter(page.url));
 
-  const sectionGroups = FEED_SECTION_LIST.map((section) => {
-    const sectionPath = `${constants.sectionRootPath}/${section.id}/`;
-    const feedItems = section.feedInfoList
-      .filter((feedInfo) => isAvailableFeed(feedInfo, generatedFeedStatuses))
-      .map((feedInfo) => {
-        return `<li class="ui-feed-list-dialog__feed">
+  const sectionGroups = new Map(
+    FEED_SECTION_LIST.map((section): [string, string] => {
+      const sectionPath = `${constants.sectionRootPath}/${section.id}/`;
+      const feedItems = section.feedInfoList
+        .filter((feedInfo) => isAvailableFeed(feedInfo, generatedFeedStatuses))
+        .map((feedInfo) => {
+          return `<li class="ui-feed-list-dialog__feed">
                     <div class="ui-feed-list-dialog__feed-heading">
                         <a class="ui-feed-list-dialog__feed-label" href="${escapeHtml(feedInfo.pageUrl ?? feedInfo.url)}">${escapeHtml(feedInfo.label)}</a>
                         ${renderGeneratedFeedStatus(feedInfo, generatedFeedStatuses)}
                     </div>
                     <a class="ui-feed-list-dialog__feed-url" href="${escapeHtml(feedInfo.url)}">${escapeHtml(feedInfo.url)}</a>
                 </li>`;
-      })
-      .join('\n');
+        })
+        .join('\n');
 
-    const translatedFeeds = TRANSLATED_FEED_DEFINITION_LIST.filter(
-      (definition) => definition.sourceSectionId === section.id,
-    )
-      .map((definition) => {
-        const feedUrl = escapeHtml(sectionFeedUrls(definition.id).rss);
-        return `<li class="ui-feed-list-dialog__feed">
+      const translatedFeeds = TRANSLATED_FEED_DEFINITION_LIST.filter(
+        (definition) => definition.sourceSectionId === section.id,
+      )
+        .map((definition) => {
+          const feedUrl = escapeHtml(sectionFeedUrls(definition.id).rss);
+          return `<li class="ui-feed-list-dialog__feed">
             <div class="ui-feed-list-dialog__feed-heading">
                 <a class="ui-feed-list-dialog__feed-label" href="${relativeUrl}${escapeHtml(constants.sectionRootPath)}/${escapeHtml(definition.id)}/">${escapeHtml(definition.title)}</a>
                 <span>英語記事の日本語翻訳</span>
             </div>
             <a class="ui-feed-list-dialog__feed-url" href="${feedUrl}">${feedUrl}</a>
         </li>`;
-      })
-      .join('\n');
+        })
+        .join('\n');
 
-    return `<section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-section-${escapeHtml(section.id)}">
+      return [
+        section.id,
+        `<section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-section-${escapeHtml(section.id)}">
                 <h3 id="feed-list-section-${escapeHtml(section.id)}" class="ui-feed-list-dialog__section-title">
                     <a href="${relativeUrl}${escapeHtml(sectionPath)}">${escapeHtml(section.title)}</a>
                 </h3>
@@ -116,20 +120,30 @@ export const renderFeedListDialog = (
                     ${feedItems}
                     ${translatedFeeds}
                 </ul>
-            </section>`;
-  }).join('\n');
+            </section>`,
+      ];
+    }),
+  );
 
-  const deduplicatedGroups = DEDUPLICATED_FEED_DEFINITION_LIST.map((definition) => {
-    const feedUrl = escapeHtml(sectionFeedUrls(definition.id).rss);
-    const inputs = definition.sourceSectionIds.map(
-      (id) => FEED_SECTION_LIST.find((section) => section.id === id)?.title ?? id,
-    );
-    return `<section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-section-${escapeHtml(definition.id)}">
+  const deduplicatedGroups = new Map(
+    DEDUPLICATED_FEED_DEFINITION_LIST.map((definition): [string, string] => {
+      const feedUrl = escapeHtml(sectionFeedUrls(definition.id).rss);
+      const inputs = definition.sourceSectionIds.map(
+        (id) => FEED_SECTION_LIST.find((section) => section.id === id)?.title ?? id,
+      );
+      return [
+        definition.id,
+        `<section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-section-${escapeHtml(definition.id)}">
       <h3 id="feed-list-section-${escapeHtml(definition.id)}" class="ui-feed-list-dialog__section-title"><a href="${relativeUrl}${escapeHtml(constants.sectionRootPath)}/${escapeHtml(definition.id)}/">${escapeHtml(definition.title)}</a></h3>
-      <p>${escapeHtml(inputs.join('・'))}を統合。3本の重複除外RSSで記事の配信先を共有します。</p>
+      <p>${escapeHtml(inputs.join('・'))}を統合。${DEDUPLICATED_FEED_DEFINITION_LIST.length}本の重複除外RSSで記事の配信先を共有します。</p>
       <ul class="ui-feed-list-dialog__feeds"><li class="ui-feed-list-dialog__feed"><a class="ui-feed-list-dialog__feed-url" href="${feedUrl}">${feedUrl}</a></li></ul>
-    </section>`;
-  }).join('\n');
+    </section>`,
+      ];
+    }),
+  );
+
+  const groups = new Map([...sectionGroups, ...deduplicatedGroups]);
+  const orderedGroups = DISPLAY_SECTION_LIST.map((section) => groups.get(section.id) ?? '').join('\n');
 
   return `<div id="feed-list-dialog" class="ui-feed-list-dialog" role="dialog" aria-modal="true" aria-labelledby="feed-list-dialog-title" hidden>
         <div class="ui-feed-list-dialog__backdrop" data-feed-list-dialog-close></div>
@@ -139,8 +153,7 @@ export const renderFeedListDialog = (
                 <button type="button" class="ui-feed-list-dialog__close" aria-label="登録フィード一覧を閉じる" data-feed-list-dialog-close>×</button>
             </div>
             <div class="ui-feed-list-dialog__body">
-                ${sectionGroups}
-                ${deduplicatedGroups}
+                ${orderedGroups}
                 <section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-statistics">
                     <h3 id="feed-list-statistics" class="ui-feed-list-dialog__section-title"><a href="${relativeUrl}${statisticsConfig.pagePath}">${escapeHtml(statisticsConfig.title)}</a></h3>
                     <ul class="ui-feed-list-dialog__feeds"><li class="ui-feed-list-dialog__feed"><a class="ui-feed-list-dialog__feed-url" href="${escapeHtml(statisticsFeedUrls.rss)}">${escapeHtml(statisticsFeedUrls.rss)}</a></li></ul>
