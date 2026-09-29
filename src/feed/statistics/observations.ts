@@ -7,11 +7,14 @@ import { isIsoDate, jstDay } from './dates';
 import type { ArticleObservation } from './types';
 
 export type StatisticsSection = Pick<FeedSection, 'id' | 'title'> & {
-  feedInfoList?: readonly Pick<FeedInfo, 'url'>[];
+  feedInfoList?: readonly (Pick<FeedInfo, 'url'> & Partial<Pick<FeedInfo, 'label' | 'language' | 'input'>>)[];
 };
 
 /** 公開履歴にはURLそのものを含めず、照合用ハッシュを保存する。 */
 const hashIdentity = (value: string): string => createHash('sha256').update(value).digest('hex');
+
+/** RSSの表記を正規化した取得元識別子。 */
+export const statisticsSourceId = (url: string): string => hashIdentity(new URL(url).href);
 
 /** 取得元が判明している記事は、カテゴリ移動前後で同じキーになる。 */
 export const observationKey = (item: ArticleObservation): string =>
@@ -30,7 +33,8 @@ const observeArticle = (
   if (item.sourceFeedUrl !== undefined && !isPublishableHttpUrl(item.sourceFeedUrl)) return null;
   return {
     articleId: hashIdentity(url),
-    sourceId: item.sourceFeedUrl ? hashIdentity(new URL(item.sourceFeedUrl).href) : null,
+    sourceId: item.sourceFeedUrl ? statisticsSourceId(item.sourceFeedUrl) : null,
+    inTranslatedFeed: false,
     sectionId: item.sectionId,
     sectionTitle: title,
     publishedAt: item.isoDate,
@@ -41,7 +45,10 @@ const observeArticle = (
 const keepEarliest = (records: Map<string, ArticleObservation>, item: ArticleObservation): void => {
   const key = observationKey(item);
   const saved = records.get(key);
-  if (!saved || item.publishedAt < saved.publishedAt) records.set(key, item);
+  records.set(key, {
+    ...(saved && saved.publishedAt <= item.publishedAt ? saved : item),
+    inTranslatedFeed: item.inTranslatedFeed || saved?.inTranslatedFeed === true,
+  });
 };
 
 /** 取得元が不明な保存履歴を、記事IDが一致する取得元へ結び付ける。 */
@@ -69,11 +76,12 @@ export const mergeObservations = (
   sections: readonly StatisticsSection[],
   cutoff: string,
   now: string,
+  translatedItems: readonly CustomRssParserItem[] = [],
 ): ArticleObservation[] => {
   const titles = new Map(sections.map((section) => [section.id, section.title]));
   const sources = new Map(
     sections.flatMap((section) =>
-      (section.feedInfoList ?? []).map((feed) => [hashIdentity(new URL(feed.url).href), section] as const),
+      (section.feedInfoList ?? []).map((feed) => [statisticsSourceId(feed.url), section] as const),
     ),
   );
   const records = new Map<string, ArticleObservation>();
@@ -97,6 +105,12 @@ export const mergeObservations = (
     if (!observed || savedKeys.has(observationKey(observed))) continue;
     const publishedAt = savedDates.get(`${observed.sectionId}:${observed.articleId}`) ?? observed.publishedAt;
     keepEarliest(records, { ...observed, publishedAt });
+  }
+  for (const item of translatedItems) {
+    const observed = observeArticle(item, titles, now);
+    if (!observed) continue;
+    const saved = records.get(observationKey(observed));
+    if (saved) records.set(observationKey(saved), { ...saved, inTranslatedFeed: true });
   }
   resolveUnattributed(records);
   return [...records.values()]

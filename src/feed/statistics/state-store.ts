@@ -1,11 +1,12 @@
 import { randomUUID } from 'node:crypto';
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
+import { isPublishableHttpUrl } from '../../common/url-guard';
 import { removeInvalidUnicode } from '../common-util';
 import { statisticsConfig } from './config';
 import { dayStart, isDay, isIsoDate, jstDay, shiftDay } from './dates';
 import { observationKey } from './observations';
-import type { ArticleObservation, CategoryCount, DailyReport, StatisticsState } from './types';
+import type { ArticleObservation, CategoryCount, DailyReport, SourceCount, StatisticsState } from './types';
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -17,6 +18,7 @@ const isObservation = (value: unknown, schemaVersion: number): value is ArticleO
   isRecord(value) &&
   typeof value.articleId === 'string' &&
   /^[a-f0-9]{64}$/.test(value.articleId) &&
+  (schemaVersion < 3 || typeof value.inTranslatedFeed === 'boolean') &&
   (schemaVersion === 1 ||
     value.sourceId === null ||
     (typeof value.sourceId === 'string' && /^[a-f0-9]{64}$/.test(value.sourceId))) &&
@@ -24,15 +26,32 @@ const isObservation = (value: unknown, schemaVersion: number): value is ArticleO
   isTitle(value.sectionTitle) &&
   isIsoDate(value.publishedAt);
 
-const isCount = (value: unknown): value is CategoryCount =>
+const isSourceCount = (value: unknown): value is SourceCount =>
+  isRecord(value) &&
+  isTitle(value.title) &&
+  Number.isSafeInteger(value.count) &&
+  typeof value.count === 'number' &&
+  value.count >= 0 &&
+  (value.kind === 'unresolved'
+    ? value.url === null
+    : (value.kind === 'remote' || value.kind === 'generated') &&
+      typeof value.url === 'string' &&
+      isPublishableHttpUrl(value.url));
+
+const isCount = (value: unknown, schemaVersion: number): value is CategoryCount =>
   isRecord(value) &&
   isId(value.sectionId) &&
   isTitle(value.title) &&
   Number.isSafeInteger(value.count) &&
   typeof value.count === 'number' &&
-  value.count >= 0;
+  value.count >= 0 &&
+  (schemaVersion < 3 ||
+    ((value.kind === 'source' || value.kind === 'translated') &&
+      Array.isArray(value.feeds) &&
+      value.feeds.every(isSourceCount) &&
+      new Set(value.feeds.map((feed) => feed.url)).size === value.feeds.length));
 
-const isReport = (value: unknown): value is DailyReport =>
+const isReport = (value: unknown, schemaVersion: number): value is DailyReport =>
   isRecord(value) &&
   isDay(value.date) &&
   isIsoDate(value.publishedAt) &&
@@ -41,7 +60,7 @@ const isReport = (value: unknown): value is DailyReport =>
   value.updatedAt >= value.publishedAt &&
   ['observed', 'partial', 'unobserved'].includes(String(value.coverage)) &&
   Array.isArray(value.categories) &&
-  value.categories.every(isCount) &&
+  value.categories.every((category) => isCount(category, schemaVersion)) &&
   new Set(value.categories.map((category) => category.sectionId)).size === value.categories.length;
 
 /** 公開済み統計を外部入力として検証し、重複や不正な日時を拒否する。 */
@@ -54,7 +73,7 @@ export const parseStatisticsState = (json: string): StatisticsState => {
   }
   if (
     !isRecord(value) ||
-    (value.schemaVersion !== 1 && value.schemaVersion !== 2) ||
+    (value.schemaVersion !== 1 && value.schemaVersion !== 2 && value.schemaVersion !== 3) ||
     !isIsoDate(value.startedAt) ||
     !isIsoDate(value.lastCollectedAt) ||
     value.startedAt > value.lastCollectedAt ||
@@ -63,16 +82,25 @@ export const parseStatisticsState = (json: string): StatisticsState => {
     !Array.isArray(value.observations) ||
     !value.observations.every((item) => isObservation(item, value.schemaVersion as number)) ||
     !Array.isArray(value.reports) ||
-    !value.reports.every(isReport)
+    !value.reports.every((report) => isReport(report, value.schemaVersion as number))
   ) {
     throw new Error('日次統計の保存履歴が不正です');
   }
   const state = {
     ...value,
-    schemaVersion: 2,
+    schemaVersion: 3,
     observations: (value.observations as ArticleObservation[]).map((item) => ({
       ...item,
       sourceId: value.schemaVersion === 1 ? null : item.sourceId,
+      inTranslatedFeed: value.schemaVersion === 3 ? item.inTranslatedFeed : false,
+    })),
+    reports: (value.reports as DailyReport[]).map((report) => ({
+      ...report,
+      categories: report.categories.map((category) => ({
+        ...category,
+        kind: value.schemaVersion === 3 ? category.kind : 'source',
+        feeds: value.schemaVersion === 3 ? category.feeds : [],
+      })),
     })),
   } as unknown as StatisticsState;
   const startDay = jstDay(state.startedAt);
@@ -94,23 +122,32 @@ export const parseStatisticsState = (json: string): StatisticsState => {
     throw new Error('日次統計の保存履歴に重複または日時の不整合があります');
   }
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     startedAt: state.startedAt,
     lastCollectedAt: state.lastCollectedAt,
     collectionDays: state.collectionDays,
-    observations: state.observations.map(({ articleId, sourceId, sectionId, sectionTitle, publishedAt }) => ({
-      articleId,
-      sourceId,
-      sectionId,
-      sectionTitle,
-      publishedAt,
-    })),
+    observations: state.observations.map(
+      ({ articleId, sourceId, sectionId, sectionTitle, publishedAt, inTranslatedFeed }) => ({
+        articleId,
+        sourceId,
+        sectionId,
+        sectionTitle,
+        publishedAt,
+        inTranslatedFeed,
+      }),
+    ),
     reports: state.reports.map(({ date, publishedAt, updatedAt, coverage, categories }) => ({
       date,
       publishedAt,
       updatedAt,
       coverage,
-      categories: categories.map(({ sectionId, title, count }) => ({ sectionId, title, count })),
+      categories: categories.map(({ sectionId, title, count, kind, feeds }) => ({
+        sectionId,
+        title,
+        count,
+        kind,
+        feeds: feeds.map(({ title, url, count, kind }) => ({ title, url, count, kind })),
+      })),
     })),
   };
 };

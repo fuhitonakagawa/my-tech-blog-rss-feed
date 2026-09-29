@@ -9,6 +9,7 @@ import { GeneratedFeedService } from '../feed/generated/generated-feed-service';
 import { logger } from '../feed/logger';
 import { statisticsConfig } from '../feed/statistics/config';
 import { generateStatistics } from '../feed/statistics/service';
+import { collectTranslatedStatisticsItems } from '../feed/statistics/translated-items';
 import { generateTranslatedFeeds } from '../feed/translation/translated-feed-generator';
 import { FEED_INFO_LIST, FEED_SECTION_LIST, type FeedSection } from '../resources/feed-info-list';
 import { GENERATED_FEED_DEFINITION_LIST } from '../resources/generated-feed-list';
@@ -66,13 +67,7 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     constants.feedOgFetchConcurrency,
     new Date(Date.now() - constants.aggregateFeedDurationInHours * 60 * 60 * 1000),
   );
-
-  await generateStatistics(
-    crawlFeedsResult.feeds.flatMap((feed) => feed.items),
-    FEED_SECTION_LIST,
-    path.join(dirName, '../../.previous-site', statisticsConfig.feedPath),
-    path.join(dirName, '../site', statisticsConfig.feedPath),
-  );
+  const collectedAt = new Date();
 
   // まとめフィード作成 + ファイル出力 + バリデーション
   const generateStoreValidateStartTime = Date.now();
@@ -152,6 +147,16 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     console.error(error);
     throw error;
   }
+
+  await generateStatistics(
+    crawlFeedsResult.feeds.flatMap((feed) => feed.items),
+    FEED_SECTION_LIST,
+    path.join(dirName, '../../.previous-site', statisticsConfig.feedPath),
+    path.join(dirName, '../site', statisticsConfig.feedPath),
+    collectedAt,
+    TRANSLATED_FEED_DEFINITION_LIST,
+    collectTranslatedStatisticsItems(crawlFeedsResult.feedItems, TRANSLATED_FEED_DEFINITION_LIST, translatedFeeds),
+  );
 
   logger.info(
     '[phase] generate + store + validate feeds',

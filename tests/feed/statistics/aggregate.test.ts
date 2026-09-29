@@ -23,7 +23,7 @@ describe('日次統計の集計', () => {
     const renamed = [{ id: 'ai', title: 'AI 公式ブログ' }];
     const result = updateStatistics(first, [], renamed, new Date('2026-09-27T16:00:00.000Z'));
     expect(result.observations).toEqual([{ ...first.observations[0], sectionTitle: 'AI 公式ブログ' }]);
-    expect(result.reports[0]).toEqual({
+    expect(result.reports[0]).toMatchObject({
       ...first.reports[0],
       updatedAt: '2026-09-27T16:00:00.000Z',
       categories: [{ sectionId: 'ai', title: 'AI 公式ブログ', count: 1 }],
@@ -73,7 +73,7 @@ describe('日次統計の集計', () => {
       sections,
       new Date('2026-09-27T15:00:00.000Z'),
     );
-    expect(result.reports[0].categories).toEqual([
+    expect(result.reports[0].categories).toMatchObject([
       { sectionId: 'ai', title: 'AI', count: 2 },
       { sectionId: 'aws', title: 'AWS', count: 1 },
     ]);

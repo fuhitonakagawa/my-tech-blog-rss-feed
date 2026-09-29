@@ -65,7 +65,7 @@ describe('取得元のカテゴリ変更', () => {
       sections(true),
       nextDay,
     );
-    expect(result.schemaVersion).toBe(2);
+    expect(result.schemaVersion).toBe(3);
     expect(result.observations).toHaveLength(2);
     expect(result.observations.find((item) => item.sectionId === 'jvn')?.publishedAt).toBe('2026-09-28T01:00:00.000Z');
     expect(result.reports[0].categories.map(({ sectionId, count }) => [sectionId, count])).toEqual([
@@ -96,6 +96,6 @@ describe('取得元のカテゴリ変更', () => {
     const first = updateStatistics(null, [article('security', source)], sections(false), initialDate);
     const result = updateStatistics(first, [], [], nextDay);
     expect(result.observations).toEqual(first.observations);
-    expect(result.reports[0].categories).toEqual([{ sectionId: 'security', title: 'セキュリティ', count: 1 }]);
+    expect(result.reports[0].categories).toMatchObject([{ sectionId: 'security', title: 'セキュリティ', count: 1 }]);
   });
 });

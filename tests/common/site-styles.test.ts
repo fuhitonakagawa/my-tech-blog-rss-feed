@@ -18,6 +18,6 @@ describe('共通CSSのキャッシュ更新', () => {
     expect(new URL(stylesheetUrl ?? '', `https://example.com/project${url}`).href).toBe(
       `https://example.com/project/${siteStylesheet.path}`,
     );
-    expect(siteStylesheet.css).toContain('.ui-statistics-table');
+    expect(siteStylesheet.css).toContain('.ui-statistics-category');
   });
 });

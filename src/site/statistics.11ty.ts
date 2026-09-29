@@ -42,7 +42,7 @@ export const render = ({ page, statistics }: StatisticsPageData): string => {
     <p class="ui-statistics-subscriptions"><a href="${escapeHtml(statisticsFeedUrls.rss)}">RSSを購読</a><a href="${escapeHtml(statisticsFeedUrls.atom)}">Atom</a><a href="${escapeHtml(statisticsFeedUrls.json)}">JSON Feed</a></p>
     </header>
     ${content}
-    <p class="ui-statistics-footnote">件数の多いカテゴリから表示しています。0件は対象日の記事を取得できていないことを示します。翻訳版と同一カテゴリ内の重複記事は除いています。カテゴリをまたぐ同じ記事は、それぞれで数えるため、合計は延べ件数です。</p>
+    <p class="ui-statistics-footnote">カテゴリを開くとRSS別の件数を確認できます。元記事の公開日で集計し、0件も表示します。カテゴリ内の重複記事は除きますが、複数RSSに同じ記事が載る場合、内訳の合計とカテゴリ件数は一致しません。原文カテゴリ合計はカテゴリ間の重複を含む延べ件数で、翻訳版は含めません。翻訳版の掲載件数には原文フォールバックも含みます。</p>
     </div></section>
     <script>${indexScript}</script>`;
 };

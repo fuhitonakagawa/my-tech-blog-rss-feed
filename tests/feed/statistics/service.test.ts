@@ -9,6 +9,7 @@ import { statisticsFeedUrls, statisticsPageUrl } from '../../../src/feed/statist
 import type { StatisticsSection } from '../../../src/feed/statistics/observations';
 import { generateStatistics } from '../../../src/feed/statistics/service';
 import { readStatisticsState } from '../../../src/feed/statistics/state-store';
+import type { TranslatedFeedDefinition } from '../../../src/resources/translated-feed-list';
 import { render as renderStatisticsPage } from '../../../src/site/statistics.11ty';
 import { makeSourceItem } from '../../helpers/translation-fixtures';
 
@@ -33,6 +34,40 @@ afterEach(async () => {
 });
 
 describe('日次統計の保存と配信', () => {
+  it('公開履歴より新しいキャッシュの翻訳掲載記録を保持する', async () => {
+    const source = { ...item, sourceFeedUrl: 'https://example.com/rss' };
+    const currentSections: StatisticsSection[] = [
+      {
+        id: 'ai',
+        title: 'AI',
+        feedInfoList: [{ url: 'https://example.com/rss', label: 'Source', language: 'en' }],
+      },
+    ];
+    const translations: TranslatedFeedDefinition[] = [
+      {
+        id: 'ai-jp',
+        title: 'AI 翻訳',
+        sourceSectionId: 'ai',
+        sourceLanguage: 'en',
+        targetLanguage: 'ja',
+      },
+    ];
+    await generateStatistics([source], currentSections, published, output, firstTime, translations);
+    await fs.cp(output, published, { recursive: true });
+    const cached = await generateStatistics([], currentSections, published, output, nextDay, translations, [source]);
+    const restored = await generateStatistics(
+      [],
+      currentSections,
+      published,
+      output,
+      new Date(nextDay.getTime() + 1000),
+      translations,
+    );
+    expect(restored.observations[0].inTranslatedFeed).toBe(true);
+    expect(restored.reports).toEqual(cached.reports);
+    expect(restored.reports[0].categories.find((category) => category.kind === 'translated')?.count).toBe(1);
+  });
+
   it('公開履歴とキャッシュを統合しても移動前のカテゴリへ重複計上しない', async () => {
     const sourceUrl = 'https://example.com/rss';
     const sourceItem = { ...item, sourceFeedUrl: sourceUrl };
@@ -58,8 +93,8 @@ describe('日次統計の保存と配信', () => {
     expect(rss.items[0]['content:encoded']).toContain('0件カテゴリ</a>：0件');
     expect(rss.items[0].content).toContain('1カテゴリで記事を取得');
     const page = load(renderStatisticsPage({ page: { url: '/statistics/daily/' }, statistics: state }));
-    expect(page('tbody tr').last().text()).toContain('0件カテゴリ');
-    expect(page('tbody td').last().text()).toBe('0件');
+    expect(page('.ui-statistics-category').last().text()).toContain('0件カテゴリ');
+    expect(page('.ui-statistics-category > details > summary .ui-statistics-count').last().text()).toBe('0件');
     expect(page('.ui-statistics-metrics dd').last().text()).toBe('1カテゴリ');
   });
 
@@ -110,10 +145,10 @@ describe('日次統計の保存と配信', () => {
     const page = load(html);
     const report = page('article[id="2026-09-27"]');
     expect(report.find('time').attr('datetime')).toBe('2026-09-27');
-    expect(report.find('tbody th a').text()).toBe('AI & <安全>');
-    expect(report.find('tbody td').text()).toBe('1件');
-    expect(report.find('tbody th').attr('scope')).toBe('row');
-    expect(report.find('tbody th 安全')).toHaveLength(0);
+    expect(report.find('.ui-statistics-category-title').text()).toBe('AI & <安全>');
+    expect(report.find('summary .ui-statistics-count').text()).toBe('1件');
+    expect(report.find('details > summary')).toHaveLength(1);
+    expect(report.find('.ui-statistics-category-title 安全')).toHaveLength(0);
     expect(report.find('.ui-statistics-notice').text()).toContain('収集開始日');
     expect(html).toContain(statisticsFeedUrls.rss);
     const saved = await fs.readFile(path.join(output, 'state.json'), 'utf-8');
@@ -155,10 +190,10 @@ describe('日次統計の保存と配信', () => {
     expect(json.items[0].content_html.length).toBeGreaterThan(500);
     for (const section of categories) expect(json.items[0].content_html).toContain(section.title);
     const page = load(renderStatisticsPage({ page: { url: '/statistics/daily/' }, statistics: state }));
-    expect(page('.ui-statistics-table')).toHaveLength(2);
-    expect(page('.ui-statistics-table tbody tr')).toHaveLength(40);
+    expect(page('.ui-statistics-categories')).toHaveLength(2);
+    expect(page('.ui-statistics-category')).toHaveLength(40);
     expect(
-      page('.ui-statistics-table tbody th a')
+      page('.ui-statistics-category-title')
         .map((_, element) => page(element).text())
         .get(),
     ).toEqual(state.reports[0].categories.map((category) => category.title));

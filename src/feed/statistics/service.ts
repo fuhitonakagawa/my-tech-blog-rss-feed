@@ -1,3 +1,4 @@
+import type { TranslatedFeedDefinition } from '../../resources/translated-feed-list';
 import type { CustomRssParserItem } from '../feed-crawler';
 import { FeedValidator } from '../feed-validator';
 import { logger } from '../logger';
@@ -6,14 +7,19 @@ import { statisticsConfig } from './config';
 import { buildStatisticsFeed } from './feed-builder';
 import { type StatisticsSection, observationKey } from './observations';
 import { parseStatisticsState, readStatisticsState, writeStatisticsFile } from './state-store';
-import type { StatisticsState } from './types';
+import type { ArticleObservation, StatisticsState } from './types';
 
 /** 同じ収集履歴の未公開取得分を保持し、公開済みの記事情報を優先する。 */
 const combineHistory = (published: StatisticsState, cached: StatisticsState): StatisticsState => {
   if (published.startedAt !== cached.startedAt || cached.lastCollectedAt <= published.lastCollectedAt) return published;
-  const observations = new Map(
-    [...cached.observations, ...published.observations].map((item) => [observationKey(item), item]),
-  );
+  const observations = new Map<string, ArticleObservation>();
+  for (const item of [...cached.observations, ...published.observations]) {
+    const key = observationKey(item);
+    observations.set(key, {
+      ...item,
+      inTranslatedFeed: item.inTranslatedFeed || observations.get(key)?.inTranslatedFeed === true,
+    });
+  }
   const reports = new Map(published.reports.map((report) => [report.date, report]));
   for (const report of cached.reports) {
     const old = reports.get(report.date);
@@ -61,9 +67,11 @@ export const generateStatistics = async (
   publishedDirectory: string,
   outputDirectory: string,
   currentDate = new Date(),
+  translations: readonly TranslatedFeedDefinition[] = [],
+  translatedItems: readonly CustomRssParserItem[] = [],
 ): Promise<StatisticsState> => {
   const previous = await restoreStatistics(publishedDirectory, outputDirectory);
-  const state = updateStatistics(previous, items, sections, currentDate);
+  const state = updateStatistics(previous, items, sections, currentDate, translations, translatedItems);
   const json = `${JSON.stringify(state)}\n`;
   if (Buffer.byteLength(json) > statisticsConfig.maxStateBytes) throw new Error('日次統計の保存上限を超えています');
   parseStatisticsState(json);
