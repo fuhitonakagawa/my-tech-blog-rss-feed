@@ -7,6 +7,8 @@ import { FeedStorer } from '../feed/feed-storer';
 import { FeedValidator } from '../feed/feed-validator';
 import { GeneratedFeedService } from '../feed/generated/generated-feed-service';
 import { logger } from '../feed/logger';
+import { generateSlackFeeds } from '../feed/slack/service';
+import { loadSlackSources } from '../feed/slack/sources';
 import { statisticsConfig } from '../feed/statistics/config';
 import { generateStatistics } from '../feed/statistics/service';
 import { collectTranslatedStatisticsItems } from '../feed/statistics/translated-items';
@@ -156,6 +158,12 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     collectedAt,
     TRANSLATED_FEED_DEFINITION_LIST,
     collectTranslatedStatisticsItems(crawlFeedsResult.feedItems, TRANSLATED_FEED_DEFINITION_LIST, translatedFeeds),
+  );
+
+  await generateSlackFeeds(
+    await loadSlackSources(path.join(dirName, '../site'), [...generatedFeedRegistry.keys()]),
+    path.join(dirName, '../../.previous-site'),
+    path.join(dirName, '../site'),
   );
 
   logger.info(

@@ -25,7 +25,7 @@ export const renderTopSection = (page: EleventyPage, rssFeedUrl: string): string
                     <code id='feed-url-slack' class="ui-component-copy-value">${escapedSlackFeedCommand}</code>
                     <button type="button" class="ui-component-button ui-component-button-medium ui-component-button-primary feed-url-copy-button" data-copy-value="${escapedSlackFeedCommand}" aria-label="Slack用フィードURLをコピー">コピー</button>
                 </form>
-                <p class="ui-text-note"><small>Slackに貼り付けると更新を受け取ることができます</small></p>
+                <p class="ui-text-note"><small>初回掲載順に通知し、元記事の公開日時を本文に表示します</small></p>
                 <form class="ui-component-form ui-layout-grid">
                     <span class='ui-component-form__label'>
                         <span>RSS URL</span>

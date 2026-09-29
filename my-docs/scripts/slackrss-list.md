@@ -6,7 +6,7 @@ AWS Architecture Blog	https://aws.amazon.com/blogs/architecture/feed	#aws-feed
 Google Cloud	https://cloudblog.withgoogle.com/products/gcp/rss	#googlecloud-feed
 Azure service updates	https://www.microsoft.com/releasecommunications/api/v2/azure/rss	#azure-feed
 企業テックブログRSS	https://yamadashy.github.io/tech-blog-rss-feed/feeds/rss.xml	#company-tech-blog-feed
-AI情報RSS	https://karaage0703.github.io/tech-blog-rss-feed/feeds/rss.xml	#ai-news-feed
+AI情報RSS	https://karaage0703.github.io/tech-blog-rss-feed/feeds/rss.xml	#karaage-ai-news-feed
 メルカリエンジニアリングブログ	https://engineering.mercari.com/blog/feed.xml	#my-tech-blog-jp-feed
 インフラエンジニアway - Powered by HEARTBEATS	http://heartbeats.jp/hbblog/atom.xml	#my-tech-blog-jp-feed
 DSAS開発者の部屋	http://dsas.blog.klab.org/index.rdf	#my-tech-blog-jp-feed
@@ -328,3 +328,4 @@ GREE Engineering	https://labs.gree.jp/blog/feed/	#my-tech-blog-jp-feed
 クックパッド開発者ブログ	https://techlife.cookpad.com/rss	#my-tech-blog-jp-feed
 Hatena Developer Blog	https://developer.hatenastaff.com/rss	#my-tech-blog-jp-feed
 Wantedly Engineer Blog	https://engineer.wantedly.com/feed	#my-tech-blog-jp-feed
+日次投稿統計	https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/rss.xml	#daily-stats
