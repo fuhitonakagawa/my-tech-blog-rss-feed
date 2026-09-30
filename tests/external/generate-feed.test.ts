@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import constants from '../../src/common/constants';
 import { FeedCrawler } from '../../src/feed/feed-crawler';
 import { FeedGenerator } from '../../src/feed/feed-generator';
+import { FeedValidator } from '../../src/feed/feed-validator';
 import { FEED_INFO_LIST } from '../../src/resources/feed-info-list';
 
 const FEED_FETCH_CONCURRENCY = 50;
@@ -14,7 +15,7 @@ const feedCrawler = new FeedCrawler();
 const feedGenerator = new FeedGenerator();
 
 describe('フィード生成', async () => {
-  it('フィードを正しく生成できるか', async () => {
+  it('取得できた記事の集約RSS・Atomを厳格に解析できる', async () => {
     // 30個ランダムに取得
     const shuffledFeedInfoList = FEED_INFO_LIST.filter((feedInfo) => feedInfo.input.kind === 'remote').sort(
       () => 0.5 - Math.random(),
@@ -45,14 +46,13 @@ describe('フィード生成', async () => {
       },
     );
 
-    // 一つでもimageがあればok
-    let isImageFound = false;
-    for (const item of generateFeedsResult.aggregatedFeed.items) {
-      if (item.image) {
-        isImageFound = true;
-        break;
-      }
-    }
-    expect(isImageFound).toBeTruthy();
+    const validator = new FeedValidator();
+    const { rss, atom, json } = generateFeedsResult.feedDistributionSet;
+    const parsedRss = await validator.assertXmlFeed('rss', rss);
+    const parsedAtom = await validator.assertXmlFeed('atom', atom);
+    const items: { url: string }[] = JSON.parse(json).items;
+    expect(crawlFeedsResult.feeds.length).toBeGreaterThan(0);
+    expect(parsedRss.items.map((item) => item.link)).toEqual(items.map((item) => item.url));
+    expect(parsedAtom.items.map((item) => item.link)).toEqual(items.map((item) => item.url));
   });
 });

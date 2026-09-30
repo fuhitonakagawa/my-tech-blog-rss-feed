@@ -579,7 +579,7 @@ export class FeedCrawler {
     } else {
       const options: OpenGraphScraperOptions = {
         url: url,
-        timeout: 10 * 1000,
+        timeout: constants.externalFetchTimeoutMs / 1000,
         fetchOptions: {
           headers: {
             'user-agent': constants.requestUserAgent,

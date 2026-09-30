@@ -14,6 +14,34 @@ beforeEach(() => vi.spyOn(logger, 'warn').mockImplementation(() => undefined));
 afterEach(() => vi.restoreAllMocks());
 
 describe('外部RSSの破損した表示項目', () => {
+  it.each(['not-a-date', ' ', '2026-02-30T00:00:00Z', '2026-13-01T00:00:00Z'])(
+    'Atomの不正日時の記事だけを隔離し前後の記事のID・日時を保持する: %s',
+    async (date) => {
+      const entry = (id: string, dates: string): string =>
+        `<entry><title>${id}</title><id>${id}</id><link href="https://example.com/${id}"/>${dates}</entry>`;
+      for (const field of ['published', 'updated']) {
+        const xml = `<feed xmlns="http://www.w3.org/2005/Atom"><title>Source</title><id>source</id>${entry('before', '<updated>2026-09-28T10:00:00Z</updated>')}${entry('bad', `<${field}>${date}</${field}>`)}${entry('after', '<updated>2026-09-29T10:00:00Z</updated>')}</feed>`;
+        const result = await parse(xml);
+        expect(result.feed.items.map((item) => [item.link, item.isoDate])).toEqual([
+          ['https://example.com/before', '2026-09-28T10:00:00.000Z'],
+          ['https://example.com/after', '2026-09-29T10:00:00.000Z'],
+        ]);
+        expect((await parse(result.xml)).feed.items).toEqual(result.feed.items);
+      }
+    },
+  );
+
+  it('日時が欠落したAtom記事に取得日時を捏造せず、内部の不正日時は拒否する', async () => {
+    const xml =
+      '<feed xmlns="http://www.w3.org/2005/Atom"><title>Source</title><entry><title>Missing</title><id>missing</id></entry></feed>';
+    expect((await parse(xml)).feed.items[0].isoDate).toBeUndefined();
+    await expect(
+      new FeedValidator().assertXmlFeed('internal', xml.replace('</entry>', '<updated>bad</updated></entry>')),
+    ).rejects.toThrow();
+    await expect(
+      parse(xml.replace('</entry>', '<updated>bad</updated><summary>&unknown;</summary></entry>')),
+    ).rejects.toThrow();
+  });
   it.each(['\u0000', '\u000B', '\u007F', '\u0085', '\u009F', '\uFFFD', '&#127;', '&#x7F;'])(
     '概要の破損を除いて記事URL・GUID・日時と他の記事を保持する: %j',
     async (bad) => {

@@ -24,6 +24,41 @@ AWS_CONFIG = TranslationConfig(
 )
 
 
+def test_batch_limits_are_described_without_changing_cache_identity() -> None:
+    """バッチの運用上限は翻訳内容のキャッシュ識別子と独立する。"""
+    changed = replace(
+        AWS_CONFIG,
+        batch_max_texts=4,
+        batch_max_bytes=32768,
+        text_max_bytes=8192,
+        batch_timeout_ms=30000,
+    )
+    descriptor = describe_provider(changed)
+    assert descriptor["limits"] == {
+        "totalTimeoutMs": 1200000,
+        "batchTimeoutMs": 30000,
+        "maxBatchTexts": 4,
+        "maxBatchBytes": 32768,
+        "maxTextBytes": 8192,
+    }
+    assert descriptor["providerId"] == describe_provider(AWS_CONFIG)["providerId"]
+
+
+@pytest.mark.parametrize(
+    "config",
+    [
+        replace(AWS_CONFIG, batch_max_texts=0),
+        replace(AWS_CONFIG, batch_timeout_ms=1200001),
+        replace(AWS_CONFIG, batch_max_bytes=32 * 1024 * 1024 + 1),
+        replace(AWS_CONFIG, text_max_bytes=128 * 1024 + 1),
+    ],
+)
+def test_invalid_batch_limits_are_rejected(config: TranslationConfig) -> None:
+    """不正な入力・時間上限では翻訳機を作成しない。"""
+    with pytest.raises(ValueError):
+        describe_provider(config)
+
+
 class FakeClient:
     """呼び出しの記録と指定レスポンスを返すAPI代替。"""
 

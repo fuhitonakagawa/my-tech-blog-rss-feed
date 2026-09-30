@@ -19,6 +19,10 @@ def validate_config(config: TranslationConfig) -> None:
             value <= 0
             for value in (
                 config.timeout_ms,
+                config.batch_timeout_ms,
+                config.batch_max_texts,
+                config.batch_max_bytes,
+                config.text_max_bytes,
                 config.cpu_threads,
                 config.bedrock_max_tokens,
                 config.aws_request_timeout_seconds,
@@ -29,6 +33,12 @@ def validate_config(config: TranslationConfig) -> None:
         or not 0 <= config.bedrock_temperature <= 1
     ):
         raise ValueError("翻訳の実行上限が不正です")
+    if (
+        config.batch_timeout_ms > config.timeout_ms
+        or config.text_max_bytes > config.batch_max_bytes
+        or config.batch_max_bytes > 32 * 1024 * 1024
+    ):
+        raise ValueError("翻訳バッチの上限が不正です")
     if config.aws_region and not re.fullmatch(
         r"[a-z]{2}(?:-[a-z]+)+-\d+", config.aws_region
     ):
@@ -61,6 +71,10 @@ def describe_provider(config: TranslationConfig = CONFIG) -> dict[str, object]:
             "log_level",
             "cpu_threads",
             "timeout_ms",
+            "batch_timeout_ms",
+            "batch_max_texts",
+            "batch_max_bytes",
+            "text_max_bytes",
         ):
             settings.pop(key)
         settings["prompt"] = (
@@ -73,7 +87,13 @@ def describe_provider(config: TranslationConfig = CONFIG) -> dict[str, object]:
     return {
         "provider": config.provider,
         "providerId": identity,
-        "timeoutMs": config.timeout_ms,
+        "limits": {
+            "totalTimeoutMs": config.timeout_ms,
+            "batchTimeoutMs": config.batch_timeout_ms,
+            "maxBatchTexts": config.batch_max_texts,
+            "maxBatchBytes": config.batch_max_bytes,
+            "maxTextBytes": config.text_max_bytes,
+        },
         "configured": configured,
         "awsRegion": config.aws_region,
         "awsRoleArn": config.aws_role_arn,

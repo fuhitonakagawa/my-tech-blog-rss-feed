@@ -145,7 +145,6 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
   try {
     logger.info('フィードのバリデーション開始');
 
-    await feedValidator.assertFeed(generateFeedsResult.aggregatedFeed);
     await feedValidator.assertXmlFeed('atom', generateFeedsResult.feedDistributionSet.atom);
     await feedValidator.assertXmlFeed('rss', generateFeedsResult.feedDistributionSet.rss);
 

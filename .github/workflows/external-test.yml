@@ -82,7 +82,7 @@ jobs:
               body += `\n</details>\n\n`;
             }
 
-            body += `> ℹ️ 外部テストはRSSフィードの取得可否を検証しています。失敗はフィード提供元の問題であり、コードの問題ではありません。\n`;
+            body += `> ℹ️ 外部テストには配信元への通信、フィード生成処理、翻訳モデルの検証が含まれます。失敗したテストとログから原因を確認してください。\n`;
 
             // 既存のコメントを探して更新、なければ新規作成
             const comments = await github.paginate(github.rest.issues.listComments, {

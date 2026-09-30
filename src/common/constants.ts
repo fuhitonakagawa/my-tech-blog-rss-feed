@@ -36,6 +36,8 @@ export default {
 
   // フィードの取得などに使う UserAgent
   requestUserAgent: 'facebookexternalhit/1.1; fuhitonakagawa/my-tech-blog-rss-feed',
+  externalFetchTimeoutMs: 10_000,
+  externalFetchMaxResponseBytes: 10 * 1024 * 1024,
 
   // セクションのURLプレフィックス
   sectionRootPath: sectionRootPath,

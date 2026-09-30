@@ -2,7 +2,7 @@ import { removeInvalidUnicode } from '../common-util';
 import type { CustomRssParserItem } from '../feed-crawler';
 import { logger } from '../logger';
 import { type TranslationCache, translationCacheKey } from './translation-cache';
-import type { Translator } from './translator';
+import type { TranslationLimits, Translator } from './translator';
 
 /** 記事がフィードに使用する概要文を返す */
 const sourceSummary = (item: CustomRssParserItem): string => item.summary || item.contentSnippet || '';
@@ -14,6 +14,32 @@ const validTranslation = (text: string | undefined): string | undefined => {
   }
   const normalized = removeInvalidUnicode(text.replace(/[\r\n\t]/g, ' '));
   return normalized.trim() === '' ? undefined : normalized;
+};
+
+/** JSON通信量と件数が上限内のテキスト集合だけを返す。 */
+const translationBatches = (texts: string[], source: string, target: string, limits: TranslationLimits): string[][] => {
+  const overhead = Buffer.byteLength(JSON.stringify({ sourceLanguage: source, targetLanguage: target, texts: [] }));
+  const batches: string[][] = [];
+  let batch: string[] = [];
+  let bytes = overhead;
+  let oversized = 0;
+  for (const text of texts) {
+    const size = Buffer.byteLength(JSON.stringify(text));
+    if (Buffer.byteLength(text) > limits.maxTextBytes || overhead + size > limits.maxBatchBytes) {
+      oversized++;
+      continue;
+    }
+    if (batch.length && (batch.length >= limits.maxBatchTexts || bytes + size + 1 > limits.maxBatchBytes)) {
+      batches.push(batch);
+      batch = [];
+      bytes = overhead;
+    }
+    bytes += size + (batch.length ? 1 : 0);
+    batch.push(text);
+  }
+  if (batch.length) batches.push(batch);
+  if (oversized) logger.warn('[translate] input-too-large', { count: oversized });
+  return batches;
 };
 
 /** 原文を変更せず、キャッシュとプロバイダーから翻訳記事を組み立てる */
@@ -58,6 +84,7 @@ export class TranslationService {
 
   /** 同一原文は一度だけ翻訳し、有効な結果のみキャッシュする */
   private async translateTexts(texts: string[], source: string, target: string): Promise<Map<string, string>> {
+    const deadline = Date.now() + this.translator.limits.totalTimeoutMs;
     const translations = new Map<string, string>();
     const missing: string[] = [];
     for (const text of texts) {
@@ -70,15 +97,29 @@ export class TranslationService {
         missing.push(text);
       }
     }
-    if (missing.length === 0) {
-      return translations;
+    for (const batch of translationBatches(missing, source, target, this.translator.limits)) {
+      if (Date.now() + this.translator.limits.batchTimeoutMs > deadline) {
+        logger.warn('[translate] time-budget-exhausted', { provider: this.translator.id });
+        break;
+      }
+      await this.translateBatch(batch, source, target, translations);
     }
+    return translations;
+  }
+
+  /** 成功結果を保存し、失敗の影響を当該バッチへ限定する。 */
+  private async translateBatch(
+    texts: string[],
+    source: string,
+    target: string,
+    translations: Map<string, string>,
+  ): Promise<void> {
     try {
-      const translated = await this.translator.translateMany(missing, source, target);
-      if (translated.length !== missing.length || translated.some((value) => typeof value !== 'string')) {
+      const translated = await this.translator.translateMany(texts, source, target);
+      if (translated.length !== texts.length || translated.some((value) => typeof value !== 'string')) {
         throw new Error('翻訳結果の件数または型が不正です');
       }
-      for (const [index, text] of missing.entries()) {
+      for (const [index, text] of texts.entries()) {
         const translation = validTranslation(translated[index]);
         if (translation === undefined) {
           continue;
@@ -86,10 +127,9 @@ export class TranslationService {
         translations.set(text, translation);
         await this.cache.write(translationCacheKey(this.translator.id, source, target, text), translation);
       }
-      logger.info('[translate] batch', { provider: this.translator.id, requested: missing.length });
+      logger.info('[translate] batch', { provider: this.translator.id, requested: texts.length });
     } catch {
-      logger.warn('[translate] provider-failed', { provider: this.translator.id, requested: missing.length });
+      logger.warn('[translate] provider-failed', { provider: this.translator.id, requested: texts.length });
     }
-    return translations;
   }
 }

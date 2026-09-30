@@ -81,11 +81,17 @@ describe('Slack用の初回掲載日時', () => {
     expect(after.contentSnippet).toContain('更新内容');
   });
 
-  it('同じ秒に実行しても後着記事の日時を前回より進める', () => {
+  it('同じ秒に実行しても後着記事のRSS日時を前回より進める', async () => {
     const now = new Date('2026-09-29T07:00:00.123Z');
     const first = updateSlackFeed(source([article('https://example.com/one')]), undefined, now);
     const second = updateSlackFeed(source([article('https://example.com/two')]), first, now);
-    expect(Date.parse(second.lastIssuedAt)).toBeGreaterThan(Date.parse(first.lastIssuedAt));
+    const parser = new Parser();
+    const before = await parser.parseString(buildSlackRss(rssUrl, first));
+    const after = await parser.parseString(buildSlackRss(rssUrl, second));
+    const bookmark = Math.max(...before.items.map((item) => Date.parse(item.pubDate ?? '')));
+    expect(after.items.filter((item) => Date.parse(item.pubDate ?? '') > bookmark).map((item) => item.link)).toEqual([
+      'https://example.com/two',
+    ]);
   });
 
   it('取得元から消えた記事を14日保持し、既知の過去記事が戻っても再通知しない', () => {

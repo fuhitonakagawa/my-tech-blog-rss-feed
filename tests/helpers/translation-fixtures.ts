@@ -1,4 +1,13 @@
 import type { CustomRssParserItem } from '../../src/feed/feed-crawler';
+import type { TranslationLimits } from '../../src/feed/translation/translator';
+
+export const testTranslationLimits: TranslationLimits = {
+  totalTimeoutMs: 60_000,
+  batchTimeoutMs: 5000,
+  maxBatchTexts: 8,
+  maxBatchBytes: 4096,
+  maxTextBytes: 2048,
+};
 
 /** 元記事情報を持つ英語記事を返す */
 export const makeSourceItem = (overrides: Partial<CustomRssParserItem> = {}): CustomRssParserItem => ({

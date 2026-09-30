@@ -2,9 +2,29 @@ import { execFileSync } from 'node:child_process';
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PythonTranslator } from './python-translator';
-import type { Translator } from './translator';
+import type { TranslationLimits, Translator } from './translator';
 
 const PROJECT_DIRECTORY = fileURLToPath(new URL('../../../', import.meta.url));
+
+/** バッチ制限を欠落・非整数・プロトコル上限超過なく読み込む。 */
+const parseLimits = (value: unknown): TranslationLimits => {
+  if (!value || typeof value !== 'object') throw new Error('翻訳設定の実行上限が不正です');
+  const fields = value as Record<string, unknown>;
+  const limits = {} as TranslationLimits;
+  for (const key of ['totalTimeoutMs', 'batchTimeoutMs', 'maxBatchTexts', 'maxBatchBytes', 'maxTextBytes'] as const) {
+    const number = fields[key];
+    if (typeof number !== 'number' || !Number.isSafeInteger(number) || number <= 0)
+      throw new Error('翻訳設定の実行上限が不正です');
+    limits[key] = number;
+  }
+  if (
+    limits.batchTimeoutMs > limits.totalTimeoutMs ||
+    limits.maxTextBytes > limits.maxBatchBytes ||
+    limits.maxBatchBytes > 32 * 1024 * 1024
+  )
+    throw new Error('翻訳設定のバッチ上限が不正です');
+  return limits;
+};
 
 /** Pythonの管理対象設定から翻訳機とキャッシュ識別子を取得する */
 export const createTranslator = (): Translator => {
@@ -30,16 +50,13 @@ export const createTranslator = (): Translator => {
     !('providerId' in descriptor) ||
     typeof descriptor.providerId !== 'string' ||
     !descriptor.providerId ||
-    !('timeoutMs' in descriptor) ||
-    typeof descriptor.timeoutMs !== 'number' ||
-    !Number.isSafeInteger(descriptor.timeoutMs) ||
-    descriptor.timeoutMs <= 0
+    !('limits' in descriptor)
   ) {
     throw new Error('翻訳設定が不足しているか不正です');
   }
   return new PythonTranslator({
     projectDirectory: PROJECT_DIRECTORY,
-    timeoutMs: descriptor.timeoutMs,
+    limits: parseLimits(descriptor.limits),
     providerId: descriptor.providerId,
   });
 };

@@ -10,5 +10,9 @@ export const imageCacheOptions: EleventyImage.CacheOptions = {
       'User-Agent': constants.requestUserAgent,
     },
     dispatcher: publicNetworkDispatcher,
+    // 待機キューや別の画像取得と期限を共有しない。
+    get signal(): AbortSignal {
+      return AbortSignal.timeout(constants.externalFetchTimeoutMs);
+    },
   },
 };

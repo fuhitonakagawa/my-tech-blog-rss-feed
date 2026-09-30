@@ -9,6 +9,8 @@
 import { type LookupAllOptions, lookup as dnsLookup } from 'node:dns';
 import { BlockList, type LookupFunction, isIP } from 'node:net';
 import { Agent, buildConnector } from 'undici';
+import constants from './constants';
+import { limitResponseSize } from './response-limit';
 
 /** 取得・リンクを許可するURLスキーム */
 const ALLOWED_URL_PROTOCOLS = new Set(['http:', 'https:']);
@@ -238,4 +240,13 @@ const publicAddressConnector: buildConnector.connector = (options, callback) => 
  * 公開インターネット上のホストへの接続だけを許可する undici Dispatcher。
  * `fetch` の `dispatcher` に渡すと、リダイレクト先も含めて接続ごとに検査される
  */
-export const publicNetworkDispatcher = new Agent({ connect: publicAddressConnector });
+const publicNetworkAgent = new Agent({
+  connect: publicAddressConnector,
+  maxResponseSize: constants.externalFetchMaxResponseBytes,
+});
+
+/** 接続時の公開IP検証と指定した受信量の上限を持つ取得経路。 */
+export const createPublicNetworkDispatcher = (maxBytes: number): ReturnType<typeof limitResponseSize> =>
+  limitResponseSize(publicNetworkAgent, maxBytes);
+
+export const publicNetworkDispatcher = createPublicNetworkDispatcher(constants.externalFetchMaxResponseBytes);

@@ -3,6 +3,7 @@ import * as path from 'node:path';
 import constants from '../../common/constants';
 import { isPublishableHttpUrl, isValidImageDataUrl } from '../../common/url-guard';
 import { removeInvalidUnicode } from '../common-util';
+import { feedItemLimits } from '../feed-item-policy';
 import { slackFeedConfig, slackSourcePath } from './config';
 import { isSlackDate, slackArticleKey } from './model';
 import type { SeenArticle, SlackArticle, SlackFeedHistory, SlackFeedState } from './types';
@@ -23,7 +24,7 @@ const parseArticle = (value: unknown): SlackArticle => {
   if (
     typeof item.key !== 'string' ||
     !validKey(item.key) ||
-    !validText(item.guid, 8192) ||
+    !validText(item.guid, feedItemLimits.guidLength) ||
     !item.guid ||
     typeof item.url !== 'string' ||
     !isPublishableHttpUrl(item.url) ||
@@ -37,7 +38,7 @@ const parseArticle = (value: unknown): SlackArticle => {
     ) ||
     !(item.creator === null || validText(item.creator, 2000)) ||
     !Array.isArray(item.tags) ||
-    !item.tags.every((tag) => validText(tag, 2000)) ||
+    !item.tags.every((tag) => validText(tag, feedItemLimits.tagLength)) ||
     !isSlackDate(item.originalPublishedAt) ||
     !isSlackDate(item.firstSeenAt)
   ) {
@@ -64,7 +65,7 @@ const parseSeen = (value: unknown, updatedAt: string): Record<string, SeenArticl
       const item = record(value);
       if (
         !validKey(key) ||
-        !validText(item.guid, 8192) ||
+        !validText(item.guid, feedItemLimits.guidLength) ||
         !item.guid ||
         !isSlackDate(item.firstSeenAt) ||
         !isSlackDate(item.lastSeenAt) ||

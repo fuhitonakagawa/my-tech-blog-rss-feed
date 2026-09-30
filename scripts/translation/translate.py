@@ -5,6 +5,7 @@ import json
 import logging
 import sys
 
+from config import CONFIG
 from provider_factory import create_provider, describe_provider
 from provider_protocol import TextTranslator
 from runtime import configure_logging
@@ -33,6 +34,8 @@ def translate_texts(texts: list[str], translation: TextTranslator) -> list[str]:
             results.append(text)
             continue
         try:
+            if len(text.encode("utf-8")) > CONFIG.text_max_bytes:
+                raise ValueError("翻訳テキストが上限を超えています")
             result = translation.translate(text)
             if not isinstance(result, str) or not result.strip():
                 raise ValueError("翻訳結果が空です")

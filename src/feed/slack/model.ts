@@ -5,6 +5,7 @@ import constants from '../../common/constants';
 import { isPublishableHttpUrl, isValidImageDataUrl } from '../../common/url-guard';
 import { escapeHtml } from '../../site/_includes/components/html-utils';
 import { normalizeArticleUrl, removeInvalidUnicode } from '../common-util';
+import { feedItemLimits, normalizeFeedItemTags } from '../feed-item-policy';
 import { slackFeedConfig, slackSourcePath } from './config';
 import type { SlackArticle, SlackFeedHistory, SlackSource } from './types';
 
@@ -51,7 +52,7 @@ const parseSource = (
       !isSlackDate(item.date_published) ||
       typeof item.id !== 'string' ||
       !item.id ||
-      item.id.length > 8192 ||
+      item.id.length > feedItemLimits.guidLength ||
       removeInvalidUnicode(item.id) !== item.id
     ) {
       throw new Error('Slack用の記事URL・タイトル・公開日時が不正です');
@@ -71,9 +72,7 @@ const parseSource = (
           ? item.image
           : null,
       creator: typeof author.name === 'string' ? removeInvalidUnicode(author.name).slice(0, 2000) : null,
-      tags: Array.isArray(item.tags)
-        ? item.tags.filter((tag): tag is string => typeof tag === 'string').map(removeInvalidUnicode)
-        : [],
+      tags: normalizeFeedItemTags(item.tags),
       originalPublishedAt: item.date_published,
     };
   });

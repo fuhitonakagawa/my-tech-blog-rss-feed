@@ -1,6 +1,8 @@
 import constants from '../../common/constants';
-import { publicNetworkDispatcher } from '../../common/url-guard';
+import { createPublicNetworkDispatcher } from '../../common/url-guard';
 import type { GeneratedFeedDefinition } from './types';
+
+const pageDispatcher = createPublicNetworkDispatcher(constants.generatedFeedMaxResponseBytes);
 
 /** 生成元ページのHTMLを取得する関数 */
 export type GeneratedFeedPageFetcher = (definition: GeneratedFeedDefinition) => Promise<string>;
@@ -14,7 +16,7 @@ export const fetchGeneratedFeedPage: GeneratedFeedPageFetcher = async (
       'user-agent': constants.requestUserAgent,
     },
     signal: AbortSignal.timeout(constants.generatedFeedFetchTimeoutMs),
-    dispatcher: publicNetworkDispatcher,
+    dispatcher: pageDispatcher,
   });
   if (!response.ok) {
     throw new Error(`HTTP Error: ${response.status}`);

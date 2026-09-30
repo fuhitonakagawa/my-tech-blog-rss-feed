@@ -10,6 +10,10 @@ class TranslationConfig:
 
     provider: Literal["argos", "bedrock", "amazon-translate"] = "argos"
     timeout_ms: int = 1_200_000
+    batch_timeout_ms: int = 120_000
+    batch_max_texts: int = 16
+    batch_max_bytes: int = 128 * 1024
+    text_max_bytes: int = 64 * 1024
     cpu_threads: int = 2
     packages_dir: str = ".argos/packages"
     runtime_dir: str = ".argos/runtime"

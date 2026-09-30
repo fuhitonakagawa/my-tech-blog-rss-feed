@@ -1,21 +1,23 @@
 import { spawn } from 'node:child_process';
 import * as path from 'node:path';
-import type { Translator } from './translator';
+import type { TranslationLimits, Translator } from './translator';
 
 const MAX_OUTPUT_BYTES = 32 * 1024 * 1024;
 
 export interface PythonTranslatorOptions {
   providerId: string;
   projectDirectory: string;
-  timeoutMs: number;
+  limits: TranslationLimits;
 }
 
 /** 1バッチをPythonの翻訳機へ渡すプロバイダー */
 export class PythonTranslator implements Translator {
   public readonly id: string;
+  public readonly limits: TranslationLimits;
 
   constructor(private readonly options: PythonTranslatorOptions) {
     this.id = options.providerId;
+    this.limits = options.limits;
   }
 
   public async translateMany(texts: string[], sourceLanguage: string, targetLanguage: string): Promise<string[]> {
@@ -39,7 +41,7 @@ export class PythonTranslator implements Translator {
       const timer = setTimeout(() => {
         child.kill('SIGKILL');
         reject(new Error('翻訳がタイムアウトしました'));
-      }, this.options.timeoutMs);
+      }, this.limits.batchTimeoutMs);
       child.stdout.on('data', (chunk: Buffer) => {
         outputBytes += chunk.length;
         if (outputBytes > MAX_OUTPUT_BYTES) {

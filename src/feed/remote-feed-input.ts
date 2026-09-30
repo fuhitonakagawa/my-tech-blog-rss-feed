@@ -22,6 +22,23 @@ const damagedIdentity = (text: string): boolean =>
   // biome-ignore lint/suspicious/noControlCharactersInRegex: 識別子内の制御文字を検出する
   /[\x00-\x1F\x7F-\x9F\uFFFD]/.test(text.trim());
 
+/** Atomの日時不正と、存在しない日付の自動繰り上がりを拒否する。 */
+const invalidAtomDate = (document: CheerioAPI, item: XmlSelection): boolean => {
+  if (!item.is('entry')) return false;
+  return item
+    .children('published,updated')
+    .toArray()
+    .some((element) => {
+      const value = document(element).text();
+      if (value === '') return false;
+      if (!Number.isFinite(Date.parse(value))) return true;
+      const date = /^(\d{4}-\d{2}-\d{2})(?:T|\s|$)/.exec(value.trim())?.[1];
+      if (!date) return false;
+      const midnight = new Date(`${date}T00:00:00.000Z`);
+      return !Number.isFinite(midnight.getTime()) || midnight.toISOString().slice(0, 10) !== date;
+    });
+};
+
 /** 表示文の破損は表示文だけへ閉じ込め、URL・属性・GUIDを補正しない。 */
 const repairTextFields = (document: CheerioAPI, parent: XmlSelection, repairs: InputRepairs): void => {
   parent.children().each((_, element) => {
@@ -61,7 +78,7 @@ const repairFeedDocument = (xml: string): { xml: string; repairs: InputRepairs }
   document('rss > channel > item, rdf\\:RDF > item, feed > entry').each((_, element) => {
     const item = document(element);
     repairTextFields(document, item, repairs);
-    if (damagedItem(document, item)) {
+    if (damagedItem(document, item) || invalidAtomDate(document, item)) {
       const about = item.attr('rdf:about');
       if (about) {
         document('rdf\\:li')
@@ -85,13 +102,9 @@ export const parseRemoteFeed = async <F, T extends RssParser.Item>(
   label: string,
 ): Promise<{ xml: string; feed: F & RssParser.Output<T> }> => {
   const validator = new FeedValidator();
-  const parsed = await validator.assertXmlStructure('remote-feed', xml, parser);
+  validator.assertXmlSyntax('remote-feed', xml);
   const result = repairFeedDocument(xml);
-  if (result.xml === xml) {
-    validator.assertControlCharacters('remote-feed', xml, parsed);
-    return { xml, feed: parsed };
-  }
   const feed = await validator.assertXmlFeed('normalized-remote-feed', result.xml, parser);
-  logger.warn('[feed-input] repaired', { label, ...result.repairs });
+  if (result.xml !== xml) logger.warn('[feed-input] repaired', { label, ...result.repairs });
   return { xml: result.xml, feed };
 };

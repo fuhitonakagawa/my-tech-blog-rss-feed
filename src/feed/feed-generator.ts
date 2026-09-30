@@ -1,8 +1,9 @@
 import { Feed, type FeedOptions } from 'feed';
 import constants from '../common/constants.js';
 import { isPublishableHttpUrl, isValidImageDataUrl } from '../common/url-guard';
-import { textToMd5Hash, textTruncate } from './common-util';
+import { removeInvalidUnicode, textToMd5Hash, textTruncate } from './common-util';
 import type { CustomRssParserItem, FeedItemHatenaCountMap, OgObjectMap } from './feed-crawler';
+import { feedItemLimits, normalizeFeedItemTags } from './feed-item-policy';
 import { logger } from './logger';
 
 export interface FeedDistributionSet {
@@ -123,6 +124,10 @@ export class FeedGenerator {
       }
       const guid = typeof feedItem.guid === 'string' ? feedItem.guid : '';
       const feedItemId = guid && (!/^https?:/i.test(guid) || isPublishableHttpUrl(guid)) ? guid : feedItem.link;
+      if (feedItemId.length > feedItemLimits.guidLength) {
+        logger.warn('[feed-item] identifier-too-long', { length: feedItemId.length });
+        continue;
+      }
       const feedItemContent = (feedItem.summary || feedItem.contentSnippet || '').replace(/(\n|\t+|\s+)/g, ' ');
 
       const ogObject = feedItemOgObjectMap.get(feedItem.link);
@@ -142,7 +147,7 @@ export class FeedGenerator {
         description: textTruncate(feedItemContent, maxFeedDescriptionLength),
         content: textTruncate(feedItemContent, maxFeedContentLength),
         link: feedItem.link,
-        categories: feedItem.categories || [],
+        categories: normalizeFeedItemTags(feedItem.categories),
         creator: feedItem.creator && typeof feedItem.creator === 'string' ? feedItem.creator : undefined,
         image: feedItemImage,
         date: new Date(feedItem.isoDate),
@@ -186,7 +191,10 @@ export class FeedGenerator {
     for (const preparedFeedItem of preparedFeedItems) {
       // alt は RSS の enclosure 属性にそのまま出るので常にエスケープする（JSON Feed には出ない）
       const image = preparedFeedItem.image
-        ? { ...preparedFeedItem.image, alt: preparedFeedItem.image.alt && escapeTextForXml(preparedFeedItem.image.alt) }
+        ? {
+            ...preparedFeedItem.image,
+            alt: preparedFeedItem.image.alt && escapeTextForXml(removeInvalidUnicode(preparedFeedItem.image.alt)),
+          }
         : undefined;
 
       outputFeed.addItem({

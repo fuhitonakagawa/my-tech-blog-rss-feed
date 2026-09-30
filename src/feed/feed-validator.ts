@@ -1,7 +1,7 @@
 import { to } from 'await-to-js';
 import { XMLValidator } from 'fast-xml-parser';
-import type { Feed } from 'feed';
 import RssParser from 'rss-parser';
+import { parser as createXmlParser } from 'sax';
 import { hasInvalidControlCharacters } from './common-util';
 
 /** 文字参照から復元された制御文字も出力へ含めない。 */
@@ -15,20 +15,6 @@ const containsInvalidText = (value: unknown): boolean => {
  * フィードのバリデーション
  */
 export class FeedValidator {
-  public async assertFeed(feed: Feed): Promise<void> {
-    // 一つでもimageがあればok
-    let isImageFound = false;
-    for (const item of feed.items) {
-      if (item.image) {
-        isImageFound = true;
-        break;
-      }
-    }
-    if (!isImageFound) {
-      throw new Error('フィードに画像情報が一つもありません');
-    }
-  }
-
   /**
    * XMLの形式・制御文字を検証し、指定した型の解析結果を返す。
    */
@@ -48,7 +34,7 @@ export class FeedValidator {
     feedXml: string,
     rssParser: RssParser<F, T> = new RssParser<F, T>(),
   ): Promise<F & RssParser.Output<T>> {
-    // rss-parser で変換してみてエラーが出ないか確認
+    this.assertXmlSyntax(label, feedXml);
     const [rssParserError, parsedFeed] = await to(rssParser.parseString(feedXml));
     if (rssParserError) {
       throw new Error(
@@ -59,7 +45,12 @@ export class FeedValidator {
       );
     }
 
-    // fast-xml-parser XMLValidator でバリデーション
+    return parsedFeed;
+  }
+
+  /** 記事の日時を解釈せず、XML構文と文字参照の正しさを検証する。 */
+  public assertXmlSyntax(label: string, feedXml: string): void {
+    createXmlParser(true).write(feedXml).close();
     const atomValidateResult = XMLValidator.validate(feedXml);
     if (atomValidateResult !== true) {
       throw new Error(
@@ -69,8 +60,6 @@ export class FeedValidator {
         },
       );
     }
-
-    return parsedFeed;
   }
 
   /** 生XMLと解析後の値の双方に対し、制御文字の混入を拒否する。 */
