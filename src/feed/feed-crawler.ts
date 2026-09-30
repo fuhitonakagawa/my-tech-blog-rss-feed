@@ -29,7 +29,6 @@ import { logger } from './logger';
 import { fillPublicationDates } from './publication-metadata';
 import { QiitaOrganizationSupplement } from './qiita-organization';
 import { QiitaSupplement, qiitaTag } from './qiita-supplement';
-import { mergeRecoveredItems, recoveredFeedItems } from './recovered-articles';
 import { parseRemoteFeed } from './remote-feed-input';
 import { FeedHttpError, SourceRequestQueue } from './source-request';
 
@@ -216,7 +215,6 @@ export class FeedCrawler {
     const { errors } = await PromisePool.for(feedInfoList)
       .withConcurrency(concurrency)
       .process(async (feedInfo) => {
-        const recovered = recoveredFeedItems(feedInfo);
         const [error, feed] = await to(
           exponentialBackoff(
             async (attemptCount: number) => {
@@ -239,7 +237,7 @@ export class FeedCrawler {
             feedInfo.url,
           );
           logger.trace(error);
-          if (!qiitaTag(feedInfo.url) && recovered.length === 0) return;
+          if (!qiitaTag(feedInfo.url)) return;
         }
 
         if (feed) await this.qiitaOrganization.enrich(feed, feedInfo.url);
@@ -253,7 +251,6 @@ export class FeedCrawler {
           },
         );
         await this.qiitaSupplement.enrich(postProcessedFeed, feedInfo.url);
-        mergeRecoveredItems(postProcessedFeed, recovered);
         if (error && postProcessedFeed.items.length === 0) return;
         if (feedInfo.publicationDateSource === 'article-metadata')
           await fillPublicationDates(postProcessedFeed, feedInfo.url);
