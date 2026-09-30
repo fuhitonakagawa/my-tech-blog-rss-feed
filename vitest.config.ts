@@ -20,8 +20,6 @@ export default defineConfig({
         'src/site/_includes/components/sitemap.ts',
         'src/site/_includes/components/top-section.ts',
         'src/site/_includes/components/types.ts',
-        '.eleventy.js',
-        'eslint.config.mjs',
         'vitest.config.ts',
       ],
     },
