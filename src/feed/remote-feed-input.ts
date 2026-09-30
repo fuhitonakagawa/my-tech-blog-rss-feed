@@ -20,7 +20,7 @@ const damagedDescription = (text: string): boolean => damagedText(text) || damag
 /** 識別子に埋め込まれた改行・タブも除去による別URL化を避けるため拒否する。 */
 const damagedIdentity = (text: string): boolean =>
   // biome-ignore lint/suspicious/noControlCharactersInRegex: 識別子内の制御文字を検出する
-  /[\x00-\x1F\x7F-\x9F\uFFFD]/.test(text.trim());
+  /[\x00-\x1F\x7F-\x9F\uD800-\uDFFF\uFFFD-\uFFFF]/u.test(text.trim());
 
 /** Atomの日時不正と、存在しない日付の自動繰り上がりを拒否する。 */
 const invalidAtomDate = (document: CheerioAPI, item: XmlSelection): boolean => {

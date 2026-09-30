@@ -5,7 +5,7 @@ import constants from '../../common/constants';
 import { isPublishableHttpUrl, isValidImageDataUrl } from '../../common/url-guard';
 import { escapeHtml } from '../../site/_includes/components/html-utils';
 import { normalizeArticleUrl, removeInvalidUnicode } from '../common-util';
-import { feedItemLimits, normalizeFeedItemTags } from '../feed-item-policy';
+import { boundedFeedText, feedItemLimits, normalizeFeedItemTags } from '../feed-item-policy';
 import { slackFeedConfig, slackSourcePath } from './config';
 import type { SlackArticle, SlackFeedHistory, SlackSource } from './types';
 
@@ -23,13 +23,13 @@ export const isSlackDate = (value: unknown): value is string =>
 
 /** JSON Feedの本文から、通知で読めるプレーンテキストを得る。 */
 const summaryText = (item: Record<string, unknown>, statistics: boolean): string => {
-  if (!statistics && typeof item.summary === 'string') return removeInvalidUnicode(item.summary).slice(0, 200_000);
-  if (typeof item.content_text === 'string') return removeInvalidUnicode(item.content_text).slice(0, 200_000);
+  if (!statistics && typeof item.summary === 'string') return boundedFeedText(item.summary, 200_000);
+  if (typeof item.content_text === 'string') return boundedFeedText(item.content_text, 200_000);
   if (typeof item.content_html !== 'string') return '';
   const document = load(item.content_html.slice(0, 400_000));
   document('script,style').remove();
   document('p,li,br').append('\n');
-  return document.text().split('\n').map(removeInvalidUnicode).join('\n').trim().slice(0, 200_000);
+  return boundedFeedText(document.text().trim(), 200_000, true);
 };
 
 /** 生成済みJSONから必要な公開情報だけを読む。 */
@@ -65,13 +65,13 @@ const parseSource = (
       key: slackArticleKey(item.url),
       guid: item.id,
       url: item.url,
-      title: removeInvalidUnicode(item.title).slice(0, 2000),
+      title: boundedFeedText(item.title, 2000),
       summary: summaryText(item, source.rssUrl.endsWith('/feeds/statistics/daily/rss.xml')),
       image:
         typeof item.image === 'string' && (isPublishableHttpUrl(item.image) || isValidImageDataUrl(item.image))
           ? item.image
           : null,
-      creator: typeof author.name === 'string' ? removeInvalidUnicode(author.name).slice(0, 2000) : null,
+      creator: typeof author.name === 'string' ? boundedFeedText(author.name, 2000) : null,
       tags: normalizeFeedItemTags(item.tags),
       originalPublishedAt: item.date_published,
     };
@@ -81,7 +81,7 @@ const parseSource = (
       ? feed.home_page_url
       : source.rssUrl;
   return {
-    title: removeInvalidUnicode(feed.title).slice(0, 2000),
+    title: boundedFeedText(feed.title, 2000),
     language: source.language ?? constants.feedLanguage,
     link,
     items,

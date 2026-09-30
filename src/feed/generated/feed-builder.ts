@@ -2,6 +2,7 @@ import { Feed, type FeedOptions } from 'feed';
 import constants, { generatedFeedUrls } from '../../common/constants';
 import { textTruncate } from '../common-util';
 import type { FeedDistributionSet } from '../feed-generator';
+import { isDeliverableIdentifier, normalizeFeedItemTags } from '../feed-item-policy';
 import type { GeneratedFeedDefinition, GeneratedFeedItem } from './types';
 
 const GENERATED_FEED_SUMMARY_MAX_LENGTH = 500;
@@ -26,6 +27,7 @@ export const buildGeneratedFeed = (
   } as FeedOptions);
 
   for (const item of items) {
+    if (!isDeliverableIdentifier(item.id)) continue;
     const summary = textTruncate(item.summary, GENERATED_FEED_SUMMARY_MAX_LENGTH);
     feed.addItem({
       id: item.id,
@@ -34,7 +36,7 @@ export const buildGeneratedFeed = (
       link: item.url,
       description: summary,
       content: summary,
-      category: item.categories.map((category) => ({ name: category })),
+      category: normalizeFeedItemTags(item.categories).map((name) => ({ name })),
       author: item.creator ? [{ name: item.creator }] : undefined,
       published: new Date(item.publishedAt),
       date: new Date(item.publishedAt),

@@ -59,6 +59,49 @@ const generate = async (items: CustomRssParserItem[], date = now, feedDefinition
   return { ...result, state, sources };
 };
 
+it('優先候補のGUIDが不正でも正常候補を配信し、公開済み所属を保持する', async () => {
+  const company = article('my-tech-blog-jp');
+  const qiita = { ...article('qiita-ai'), guid: 'valid-qiita' };
+  const invalid = { ...company, guid: 'x'.repeat(8193) };
+  const fresh = await generate([invalid, qiita]);
+  expect(fresh.state.feeds[historyKey('qiita-dedup')].items).toHaveLength(1);
+  expect(fresh.state.feeds[historyKey('my-tech-blog-jp-dedup')].items).toHaveLength(0);
+  await fs.rm(output, { recursive: true });
+  const first = await generate([company]);
+  await fs.cp(output, published, { recursive: true });
+  const later = await generate([invalid, qiita], new Date(now.getTime() + 3600_000));
+  expect(later.state.feeds[historyKey('my-tech-blog-jp-dedup')].items[0]).toMatchObject({
+    guid: first.state.feeds[historyKey('my-tech-blog-jp-dedup')].items[0].guid,
+    firstSeenAt: first.state.feeds[historyKey('my-tech-blog-jp-dedup')].items[0].firstSeenAt,
+  });
+  expect(later.state.feeds[historyKey('qiita-dedup')].items).toHaveLength(0);
+});
+
+it('Physical AIの両タグを含め、企業・既存タグとの重複を除いて固有記事を配信する', async () => {
+  const shared = 'https://example.com/company';
+  const tagged = 'https://zenn.dev/example/articles/tagged';
+  const items = [
+    article('my-tech-blog-jp', shared),
+    article('zenn-physical-ai', shared),
+    article('qiita-physical-ai', shared),
+    article('zenn-ai', tagged),
+    article('zenn-physical-ai', tagged),
+    article('zenn-physical-ai', 'https://zenn.dev/example/articles/unique'),
+    article('qiita-physical-ai', 'https://qiita.com/example/items/unique'),
+  ];
+  items.push({ ...items[6], sourceFeedUrl: 'https://qiita.com/tags/robotics/feed', guid: 'other-tag' });
+  const result = await generate(items);
+  const urls = (id: string): string[] => result.state.feeds[historyKey(id)].items.map((item) => item.url).sort();
+  expect(urls('my-tech-blog-jp-dedup')).toEqual([shared]);
+  expect(urls('zenn-dedup')).toEqual([tagged, 'https://zenn.dev/example/articles/unique']);
+  expect(urls('qiita-dedup')).toEqual(['https://qiita.com/example/items/unique']);
+  await fs.cp(output, published, { recursive: true });
+  const next = await generate([...items].reverse(), new Date(now.getTime() + 3600_000));
+  for (const id of ['my-tech-blog-jp-dedup', 'zenn-dedup', 'qiita-dedup']) {
+    expect(next.state.feeds[historyKey(id)].items).toEqual(result.state.feeds[historyKey(id)].items);
+  }
+});
+
 it('同時生成では企業を優先し、タグ・集約元間の重複を除いて元データを変更しない', async () => {
   const items = [
     'zenn-trend',

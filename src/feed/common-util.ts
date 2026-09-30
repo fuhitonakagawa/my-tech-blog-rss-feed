@@ -1,13 +1,11 @@
 import * as crypto from 'node:crypto';
-import * as v8 from 'node:v8';
 import { to } from 'await-to-js';
 import axios from 'axios';
 
 type HatenaCountMap = Record<string, number>;
 
 export const objectDeepCopy = <T>(data: T): T => {
-  // TODO: Node.js 17 以上にしたら structuredClone 使う
-  return v8.deserialize(v8.serialize(data));
+  return structuredClone(data);
 };
 
 export const textToMd5Hash = (text: string): string => {
@@ -61,15 +59,16 @@ export const normalizeArticleUrl = (url: string): string => {
   return changed ? urlObject.toString() : url;
 };
 
-export const removeInvalidUnicode = (text: string) => {
-  // biome-ignore lint/suspicious/noControlCharactersInRegex: This is intentional
-  return text.replace(/[\x00-\x1F\x7F-\x9F]/g, '');
+/** XML禁止文字と表示用制御文字を除き、正常な補助平面文字は保持する。 */
+export const removeInvalidUnicode = (text: string): string => {
+  // biome-ignore lint/suspicious/noControlCharactersInRegex: XML禁止文字と表示用制御文字を除く
+  return text.replace(/[\x00-\x1F\x7F-\x9F\uD800-\uDFFF\uFFFE\uFFFF]/gu, '');
 };
 
 /** XMLの改行・タブを保持し、表示や識別に使えない制御文字を検出する。 */
 export const hasInvalidControlCharacters = (text: string): boolean =>
   // biome-ignore lint/suspicious/noControlCharactersInRegex: XMLで許容する空白以外の制御文字を検出する
-  /[\x00-\x08\x0B-\x0C\x0E-\x1F\x7F-\x9F]/.test(text);
+  /[\x00-\x08\x0B-\x0C\x0E-\x1F\x7F-\x9F\uD800-\uDFFF\uFFFE\uFFFF]/u.test(text);
 
 export const exponentialBackoff = async <A>(
   retrier: (attemptCount: number) => Promise<A>,
@@ -104,7 +103,7 @@ export const exponentialBackoff = async <A>(
 };
 
 export const fetchHatenaCountMap = async (urls: string[]): Promise<HatenaCountMap> => {
-  const params = urls.map((url) => `url=${url}`).join('&');
+  const params = new URLSearchParams(urls.map((url) => ['url', url]));
   const response = await axios.get<HatenaCountMap>(`https://bookmark.hatenaapis.com/count/entries?${params}`, {
     timeout: 1000 * 10,
   });

@@ -1,5 +1,5 @@
 import { type Server, createServer } from 'node:http';
-import { gzipSync } from 'node:zlib';
+import { brotliCompressSync, gzipSync } from 'node:zlib';
 import { Agent, fetch as undiciFetch } from 'undici';
 import { afterEach, beforeEach, expect, it } from 'vitest';
 import { limitResponseSize } from '../../src/common/response-limit';
@@ -13,6 +13,16 @@ beforeEach(async () => {
     if (name.startsWith('good-')) {
       response.setHeader('content-encoding', 'gzip');
       response.end(gzipSync(Buffer.alloc(Number(name.slice(5)), 65)));
+    } else if (name === 'error-gzip' || name === 'brotli') {
+      response.statusCode = name === 'error-gzip' ? 503 : 200;
+      response.setHeader('content-encoding', name === 'brotli' ? 'br' : 'gzip');
+      response.end((name === 'brotli' ? brotliCompressSync : gzipSync)(Buffer.alloc(2048)));
+    } else if (name === 'broken-gzip') {
+      response.setHeader('content-encoding', 'gzip');
+      response.end(Buffer.from('invalid gzip bytes'));
+    } else if (name === 'truncated-gzip') {
+      response.setHeader('content-encoding', 'gzip');
+      response.end(gzipSync(Buffer.from('healthy text')).subarray(0, 12));
     } else if (name === 'gzip' || name === 'nested-gzip') {
       response.setHeader('content-encoding', name === 'gzip' ? 'gzip' : 'gzip, gzip');
       const body = gzipSync(Buffer.alloc(2048));
@@ -44,7 +54,7 @@ it.each(['native', 'undici'])(
         client === 'native' ? await fetch(`${base}/${path}`, options) : await undiciFetch(`${base}/${path}`, options);
       return response.arrayBuffer();
     };
-    for (const name of ['plain', 'oversized-header', 'gzip', 'nested-gzip']) {
+    for (const name of ['plain', 'oversized-header', 'gzip', 'nested-gzip', 'error-gzip', 'brotli']) {
       try {
         await fetchBytes(name);
         throw new Error(`上限超過が受理されました: ${name}`);
@@ -52,6 +62,10 @@ it.each(['native', 'undici'])(
         const cause = error instanceof Error ? error.cause : undefined;
         expect(cause ?? error, name).toHaveProperty('code', 'UND_ERR_RES_EXCEEDED_MAX_SIZE');
       }
+    }
+    for (const name of ['broken-gzip', 'truncated-gzip']) {
+      await expect(fetchBytes(name)).rejects.toThrow();
+      expect(Buffer.from(await fetchBytes('good-16'))).toEqual(Buffer.alloc(16, 65));
     }
     for (const bytes of [1023, 1024]) {
       expect(Buffer.from(await fetchBytes(`good-${bytes}`))).toEqual(Buffer.alloc(bytes, 65));

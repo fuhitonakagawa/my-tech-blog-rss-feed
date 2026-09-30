@@ -3,6 +3,8 @@ import RssParser from 'rss-parser';
 import { describe, expect, it } from 'vitest';
 import type { CustomRssParserItem, OgObjectMap } from '../src/feed/feed-crawler';
 import { type AggregatedFeedMeta, FeedGenerator } from '../src/feed/feed-generator';
+import { FeedValidator } from '../src/feed/feed-validator';
+import { makeSourceItem } from './helpers/translation-fixtures';
 
 const testFeedMeta: AggregatedFeedMeta = {
   title: 'テストフィード',
@@ -16,6 +18,26 @@ const testFeedMeta: AggregatedFeedMeta = {
 };
 
 describe('FeedGenerator', () => {
+  it.each(['https://example.com/\uFFFE.ico', 'data:image/svg+xml,<svg>\uFFFF</svg>'])(
+    'OGP由来faviconの禁止文字で正常記事のRSSを壊さない: %j',
+    async (favicon) => {
+      const item = makeSourceItem();
+      const result = new FeedGenerator().generateFeeds(
+        [item],
+        new Map([[item.link, { favicon }]]),
+        new Map(),
+        200,
+        500,
+        testFeedMeta,
+      );
+      for (const format of ['rss', 'atom'] as const) {
+        const feed = await new FeedValidator().assertXmlFeed(format, result.feedDistributionSet[format]);
+        expect(feed.items).toHaveLength(1);
+        expect(feed.items[0].link).toBe(item.link);
+      }
+      expect(JSON.parse(result.feedDistributionSet.json).items[0]._custom.favicon).toBeUndefined();
+    },
+  );
   it('不正なOG画像URLは画像なしとしてフィード生成できる', () => {
     const feedItem = {
       title: 'テスト記事',

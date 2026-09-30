@@ -103,13 +103,14 @@ for (const [address, prefix] of NON_PUBLIC_IPV6_SUBNETS) {
   nonPublicAddressBlockList.addSubnet(address, prefix, 'ipv6');
 }
 
-/**
- * URLのスキームが http / https かを判定する。
- * URLとして解釈できない文字列は false を返す
- */
-export const isValidHttpUrl = (url: string): boolean => {
+/** URLの暗黙的な文字置換と、公開XMLに使えない文字を拒否する。 */
+const hasInvalidUrlCharacters = (url: string): boolean =>
   // biome-ignore lint/suspicious/noControlCharactersInRegex: URLパーサーによる制御文字の黙示的な除去を許可しない
-  if (/[\x00-\x1F\x7F-\x9F\uFFFD]/.test(url)) return false;
+  /[\x00-\x1F\x7F-\x9F\uD800-\uDFFF\uFFFD-\uFFFF]/u.test(url);
+
+/** 文字が正常で、HTTP(S)として解釈できるURLだけを許可する。 */
+export const isValidHttpUrl = (url: string): boolean => {
+  if (hasInvalidUrlCharacters(url)) return false;
   let urlObject: URL;
 
   try {
@@ -161,7 +162,7 @@ export const sanitizeHttpUrl = (url: string | null | undefined): string => {
  * `data:text/html` などスクリプトを持ち込めるメディアタイプを除外する
  */
 export const isValidImageDataUrl = (url: string): boolean => {
-  return /^data:image\/[a-z0-9.+-]+[;,]/i.test(url);
+  return !hasInvalidUrlCharacters(url) && /^data:image\/[a-z0-9.+-]+[;,]/i.test(url);
 };
 
 /**

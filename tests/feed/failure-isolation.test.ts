@@ -9,6 +9,7 @@ import { type CustomOgObject, type CustomRssParserItem, FeedCrawler } from '../.
 import { FeedGenerator } from '../../src/feed/feed-generator';
 import { FeedValidator } from '../../src/feed/feed-validator';
 import { logger } from '../../src/feed/logger';
+import { parseRemoteFeed } from '../../src/feed/remote-feed-input';
 import { generateSlackFeeds } from '../../src/feed/slack/service';
 import { parseSlackState } from '../../src/feed/slack/state-store';
 import { generateTranslatedFeeds } from '../../src/feed/translation/translated-feed-generator';
@@ -58,6 +59,57 @@ afterEach(async () => {
   vi.restoreAllMocks();
   vi.useRealTimers();
   await fs.rm(location.directory, { recursive: true, force: true });
+});
+
+it.each([
+  '\u000B',
+  '\u0085',
+  '&#127;',
+  '<![CDATA[<p>PDF&#x7F;本文</p>]]>',
+  '&#xFFFE;',
+  '\uFFFF',
+  '<![CDATA[<p>PDF&#xFFFF;本文</p>]]>',
+])('壊れた概要を外部入力で隔離し、翻訳・通知・履歴再読込まで正常記事を保持する: %j', async (damaged) => {
+  const input = xml('damaged', 'stable-id').replace(
+    '<description>Summary</description>',
+    `<description>${damaged}</description>`,
+  );
+  const { feed } = await parseRemoteFeed(input, new Parser(), 'damaged');
+  const parsed = feed.items[0];
+  if (!parsed.link || !parsed.isoDate) throw new Error('正常記事のURL・日時が失われました');
+  const items = [
+    makeSourceItem({ ...parsed, link: parsed.link, isoDate: parsed.isoDate, summary: parsed.summary ?? '' }),
+    makeSourceItem({ title: '日本語 😀 e\u0301', guid: 'healthy-id', link: 'https://example.com/healthy' }),
+  ];
+  expect(items[0].contentSnippet ?? '').toBe('');
+  const translated = await generateTranslatedFeeds(items, [definition], new Map(), new Map(), () => ({
+    translateItems: async (source) =>
+      source.map((item) => ({ ...item, originalTitle: item.title, title: `翻訳:${item.title}` })),
+  }));
+  const distribution = translated.get('ai-jp');
+  if (!distribution) throw new Error('翻訳フィードがありません');
+  for (const format of ['rss', 'atom'] as const) {
+    const result = await new FeedValidator().assertXmlFeed(format, distribution[format]);
+    expect(result.items.map((item) => item.link).sort()).toEqual([
+      'https://example.com/damaged/article',
+      'https://example.com/healthy',
+    ]);
+    expect(result.items.find((item) => item.link?.endsWith('/healthy'))?.title).toContain('日本語 😀 e\u0301');
+  }
+  const output = path.join(location.directory, 'output');
+  const source = {
+    json: distribution.json,
+    rssUrl: sectionFeedUrls('ai-jp').rss,
+    rssPath: 'translated-feeds/ai-jp/feeds/rss.xml',
+  };
+  const state = await generateSlackFeeds([source], path.join(location.directory, 'published'), output, now);
+  expect(parseSlackState(JSON.stringify(state))).toEqual(state);
+  const published = await new FeedValidator().assertXmlFeed(
+    'published',
+    await fs.readFile(path.join(output, source.rssPath), 'utf8'),
+  );
+  expect(published.items).toHaveLength(2);
+  expect(published.items.find((item) => item.link?.includes('/damaged/'))?.guid).toBe('stable-id');
 });
 
 it('画像0件でも通常・翻訳・通知RSSを配信できる', async () => {

@@ -397,7 +397,8 @@ export class FeedCrawler {
     // ブログURLはリンクとして描画し、OG情報の取得にも使うため http / https のみ扱う
     if (!isPublishableHttpUrl(customFeed.link)) {
       logger.warn('取得したフィードのURLが正しくありません。 ', feedInfo.label, customFeed.link);
-      customFeed.link = '';
+      if (!isPublishableHttpUrl(feedInfo.url)) throw new Error('公開できるブログURL・取得元RSS URLがありません');
+      customFeed.link = feedInfo.url;
     }
 
     if (customFeed.items.length === 0) {
@@ -489,10 +490,11 @@ export class FeedCrawler {
 
   private async fetchFeedItemOgObjectMap(feedItems: CustomRssParserItem[], concurrency: number): Promise<OgObjectMap> {
     const feedItemOgObjectMap: OgObjectMap = new Map();
-    const feedItemsLength = feedItems.length;
+    const uniqueItems = [...new Map(feedItems.map((item) => [item.link, item])).values()];
+    const feedItemsLength = uniqueItems.length;
     let fetchProcessCounter = 1;
 
-    await PromisePool.for(feedItems)
+    await PromisePool.for(uniqueItems)
       .withConcurrency(concurrency)
       .process(async (feedItem) => {
         const [error, ogObject] = await to(

@@ -8,10 +8,14 @@ import json
 import logging
 import os
 import shutil
+import socket
 import sys
+import threading
+import time
 import urllib.parse
 import zipfile
 from pathlib import Path, PurePosixPath
+from typing import BinaryIO
 
 from runtime import (
     configure_environment,
@@ -22,6 +26,39 @@ from runtime import (
 
 LOGGER = logging.getLogger(__name__)
 MAX_MODEL_BYTES = 512 * 1024 * 1024
+MODEL_DOWNLOAD_TIMEOUT_SECONDS = 180
+
+
+def interrupt_download(transport: socket.socket) -> None:
+    """総期限でヘッダー待ち・本文受信を中断する。閉じた接続は対象外。"""
+    try:
+        transport.shutdown(socket.SHUT_RDWR)
+    except OSError:
+        return
+
+
+def receive_model(
+    connection: http.client.HTTPSConnection,
+    request_path: str,
+    output: BinaryIO,
+    deadline: float,
+) -> None:
+    """期限と受信量を満たすモデル本文だけを保存する。"""
+    connection.request("GET", request_path)
+    response = connection.getresponse()
+    if response.status != 200:
+        raise ValueError("モデルの取得に失敗しました")
+    total = 0
+    while True:
+        chunk = response.read1(1024 * 1024)
+        if time.monotonic() >= deadline:
+            raise TimeoutError("モデル取得の総期限を超えました")
+        if not chunk:
+            return
+        total += len(chunk)
+        if total > MAX_MODEL_BYTES:
+            raise ValueError("モデルのサイズが上限を超えています")
+        output.write(chunk)
 
 
 def verify_archive(archive: Path, model: dict[str, str]) -> None:
@@ -49,23 +86,35 @@ def download_model(archive: Path, model: dict[str, str]) -> None:
     ):
         raise ValueError("モデルの配信元が不正です")
     temporary = archive.with_suffix(".download")
+    deadline = time.monotonic() + MODEL_DOWNLOAD_TIMEOUT_SECONDS
     try:
         with (
             contextlib.closing(
-                http.client.HTTPSConnection("argos-net.com", timeout=60)
+                http.client.HTTPSConnection(
+                    "argos-net.com", timeout=min(60, MODEL_DOWNLOAD_TIMEOUT_SECONDS)
+                )
             ) as connection,
             temporary.open("wb") as output,
         ):
-            connection.request("GET", url.path)
-            response = connection.getresponse()
-            if response.status != 200:
-                raise ValueError("モデルの取得に失敗しました")
-            total = 0
-            while chunk := response.read(1024 * 1024):
-                total += len(chunk)
-                if total > MAX_MODEL_BYTES:
-                    raise ValueError("モデルのサイズが上限を超えています")
-                output.write(chunk)
+            connection.connect()
+            if connection.sock is None:
+                raise ConnectionError("モデル配信元に接続できません")
+            timer = threading.Timer(
+                max(0, deadline - time.monotonic()),
+                interrupt_download,
+                args=(connection.sock,),
+            )
+            timer.daemon = True
+            timer.start()
+            try:
+                receive_model(connection, url.path, output, deadline)
+            except OSError as error:
+                if time.monotonic() >= deadline:
+                    raise TimeoutError("モデル取得の総期限を超えました") from error
+                raise
+            finally:
+                timer.cancel()
+                timer.join()
         verify_archive(temporary, model)
         temporary.replace(archive)
     finally:

@@ -76,7 +76,7 @@ const extractItem = (
   itemIndex: number,
 ): GeneratedFeedItem | null => {
   const title = extractValue(item, config.titleSelector);
-  const relativeUrl = extractValue(item, config.linkSelector, 'href');
+  const relativeUrl = item.find(config.linkSelector).first().attr('href')?.trim() ?? '';
   const dateValue = extractValue(item, config.dateSelector, config.dateAttribute);
   const timeValue = config.timeSelector ? extractValue(item, config.timeSelector, config.timeAttribute) : '';
 
@@ -92,6 +92,9 @@ const extractItem = (
   }
 
   try {
+    if (removeInvalidUnicode(relativeUrl) !== relativeUrl || relativeUrl.includes('\uFFFD')) {
+      throw new Error('記事URLに不正な文字があります');
+    }
     const articleUrl = normalizeArticleUrl(new URL(relativeUrl, definition.pageUrl).toString());
     if (!isPublishableHttpUrl(articleUrl)) {
       logger.warn('[generated-feed] 公開できないURLの記事を除外します', definition.id, itemIndex + 1);

@@ -1,6 +1,13 @@
+import * as fs from 'node:fs/promises';
+import * as os from 'node:os';
+import * as path from 'node:path';
 import RssParser from 'rss-parser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import constants from '../src/common/constants';
+import { textToMd5Hash } from '../src/feed/common-util';
 import { type CustomOgObject, type CustomRssParserFeed, FeedCrawler } from '../src/feed/feed-crawler';
+import { FeedGenerator } from '../src/feed/feed-generator';
+import { type BlogFeed, FeedStorer } from '../src/feed/feed-storer';
 import { logger } from '../src/feed/logger';
 import type { FeedInfo } from '../src/resources/feed-info-list';
 
@@ -34,9 +41,98 @@ beforeEach(() => {
 
 afterEach(() => {
   vi.restoreAllMocks();
+  vi.useRealTimers();
 });
 
 describe('FeedCrawler', () => {
+  it('サイトURLが欠落した別々のAtomも正常記事を失わず取得する', async () => {
+    const ids = ['one', 'two'];
+    const registry = new Map(
+      ids.map((id) => [
+        id,
+        `<feed xmlns="http://www.w3.org/2005/Atom"><title>${id}</title>
+      <entry><id>${id}</id><title>${id}</title><link href="https://example.com/${id}"/><updated>2026-09-29T00:00:00Z</updated></entry></feed>`,
+      ]),
+    );
+    const feeds: FeedInfo[] = ids.map((id) => ({
+      label: id,
+      sectionId: id,
+      language: 'en',
+      url: `https://example.com/${id}/rss.xml`,
+      input: { kind: 'generated', id },
+    }));
+    const crawler = new FeedCrawler(registry) as unknown as {
+      fetchFeedsAsync(feeds: FeedInfo[], concurrency: number): Promise<CustomRssParserFeed[]>;
+    };
+    const result = await crawler.fetchFeedsAsync(feeds, 2);
+    expect(result.map((feed) => feed.link).sort()).toEqual(feeds.map((feed) => feed.url).sort());
+    expect(new Set(result.map((feed) => textToMd5Hash(feed.link))).size).toBe(2);
+    for (const feed of result) expect(feed.items[0].blogLink).toBe(feed.link);
+    expect(result.flatMap((feed) => feed.items.map((item) => item.link)).sort()).toEqual([
+      'https://example.com/one',
+      'https://example.com/two',
+    ]);
+    const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'missing-blog-link-'));
+    try {
+      const distribution = new FeedGenerator().generateFeeds(
+        result.flatMap((feed) => feed.items),
+        new Map(),
+        new Map(),
+        200,
+        500,
+        { title: 'Test', description: 'Test', pageUrl: constants.siteUrl, feedUrls: constants.feedUrls },
+      ).feedDistributionSet;
+      await new FeedStorer().storeFeeds(
+        distribution,
+        path.join(directory, 'feeds'),
+        result,
+        new Map(),
+        new Map(),
+        path.join(directory, 'blogs'),
+      );
+      const blogs: BlogFeed[] = JSON.parse(await fs.readFile(path.join(directory, 'blogs/blog-feeds.json'), 'utf8'));
+      expect(new Set(blogs.map((blog) => blog.linkMd5Hash)).size).toBe(2);
+      const json: { items: { _custom: { blogLink: string; blogLinkMd5Hash: string } }[] } = JSON.parse(
+        distribution.json,
+      );
+      for (const entry of json.items) {
+        expect(blogs.find((blog) => blog.link === entry._custom.blogLink)?.linkMd5Hash).toBe(
+          entry._custom.blogLinkMd5Hash,
+        );
+      }
+    } finally {
+      await fs.rm(directory, { recursive: true, force: true });
+    }
+  });
+
+  it('同じ記事のOGPは1つのリトライ系列で取得し、他の記事と元カテゴリを保持する', async () => {
+    vi.useFakeTimers();
+    const fetcher = FeedCrawler as unknown as { fetchOgObject(url: string): Promise<CustomOgObject> };
+    let sharedAttempts = 0;
+    const fetch = vi.spyOn(fetcher, 'fetchOgObject').mockImplementation(async (url) => {
+      if (url.endsWith('/shared') && sharedAttempts++ === 0) throw new Error('temporary');
+      return { ogTitle: url };
+    });
+    const crawler = new FeedCrawler() as unknown as {
+      fetchFeedItemOgObjectMap(
+        items: CustomRssParserFeed['items'],
+        concurrency: number,
+      ): Promise<Map<string, CustomOgObject>>;
+    };
+    const items = Array.from({ length: 8 }, (_, index) => ({
+      link: 'https://example.com/shared',
+      title: 'Shared',
+      sectionId: `section-${index}`,
+    })) as CustomRssParserFeed['items'];
+    items.push({ ...items[0], link: 'https://example.com/other' });
+    const before = structuredClone(items);
+    const pending = crawler.fetchFeedItemOgObjectMap(items, 20);
+    await vi.runAllTimersAsync();
+    const result = await pending;
+    expect(fetch).toHaveBeenCalledTimes(3);
+    expect([...result.keys()].sort()).toEqual(['https://example.com/other', 'https://example.com/shared']);
+    expect(items).toEqual(before);
+  });
   it.each(['en', 'ja', 'mixed', 'unknown'] as const)('言語指定を記事へ伝える: %s', (language) => {
     const feedInfo: FeedInfo = {
       label: 'Source',
@@ -359,7 +455,7 @@ describe('FeedCrawler', () => {
     expect(result.items[0].link).toBe('https://example.com/articles/1?id=100');
   });
 
-  it('ブログURLが http / https でなければ空文字にする', () => {
+  it('ブログURLが http / https でなければ公開可能な取得元RSS URLで識別する', () => {
     const feedInfo: FeedInfo = {
       language: 'unknown',
       label: 'テストブログ',
@@ -384,11 +480,11 @@ describe('FeedCrawler', () => {
 
     const result = postProcessFeed(feedInfo, feed);
 
-    expect(result.link).toBe('');
-    expect(result.items[0].blogLink).toBe('');
+    expect(result.link).toBe(feedInfo.url);
+    expect(result.items[0].blogLink).toBe(feedInfo.url);
   });
 
-  it('ブログURLに認証情報が含まれる場合は空文字にする', () => {
+  it('ブログURLに認証情報が含まれる場合は公開可能な取得元RSS URLを使う', () => {
     const feedInfo: FeedInfo = {
       language: 'unknown',
       label: 'テストブログ',
@@ -407,7 +503,7 @@ describe('FeedCrawler', () => {
 
     const result = postProcessFeed(feedInfo, feed);
 
-    expect(result.link).toBe('');
+    expect(result.link).toBe(feedInfo.url);
   });
 });
 

@@ -28,6 +28,7 @@ const extractArticle = (definition: GeneratedFeedDefinition, article: HtmlSelect
   if (!title || !href) {
     throw new Error('タイトルまたは記事URLがありません');
   }
+  if (removeInvalidUnicode(href) !== href || href.includes('\uFFFD')) throw new Error('記事URLに不正な文字があります');
   const url = normalizeArticleUrl(new URL(href, definition.pageUrl).toString());
   if (!isPublishableHttpUrl(url) || new URL(url).origin !== new URL(definition.pageUrl).origin) {
     throw new Error('公開できない記事URLです');

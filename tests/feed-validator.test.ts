@@ -5,6 +5,17 @@ import { describe, expect, it } from 'vitest';
 import { FeedValidator } from '../src/feed/feed-validator';
 
 describe('FeedValidator', () => {
+  it.each(['\uFFFE', '\uFFFF', '\uD800', '\uDC00', '&#xFFFE;', '&#xFFFF;', '&#xD800;'])(
+    '内部XMLでは禁止文字を補正せず拒否する: %j',
+    async (invalid) => {
+      await expect(
+        new FeedValidator().assertXmlFeed(
+          'internal',
+          `<rss version="2.0"><channel><title>T</title><item><title>Bad${invalid}</title></item></channel></rss>`,
+        ),
+      ).rejects.toThrow();
+    },
+  );
   it('CLIと同じNode・tsx環境で読み込み、画像なしの記事を検証できる', async () => {
     const moduleUrl = new URL('../src/feed/feed-validator.ts', import.meta.url).href;
     const program = `import { FeedValidator } from ${JSON.stringify(moduleUrl)};

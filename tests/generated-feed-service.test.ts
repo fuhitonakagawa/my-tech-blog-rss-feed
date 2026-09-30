@@ -3,9 +3,11 @@ import * as os from 'node:os';
 import * as path from 'node:path';
 import RssParser from 'rss-parser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { generatedFeedUrls } from '../src/common/constants';
 import { GeneratedFeedService } from '../src/feed/generated/generated-feed-service';
 import type { GeneratedFeedDefinition, GeneratedFeedStatus } from '../src/feed/generated/types';
 import { logger } from '../src/feed/logger';
+import { generateSlackFeeds } from '../src/feed/slack/service';
 
 const temporaryDirectories: string[] = [];
 
@@ -62,6 +64,34 @@ afterEach(async () => {
 });
 
 describe('GeneratedFeedService', () => {
+  it('長すぎる記事URLだけを除外し、正常記事を単独RSSと通知履歴へ配信する', async () => {
+    const directories = await createDirectories();
+    const html =
+      createHtml('x'.repeat(8193), '長すぎるID', '2026-09-05T12:00:00Z') +
+      createHtml('good', '正常😀&#xFFFE;', '2026-09-05T12:00:00Z');
+    const date = new Date('2026-09-06T00:00:00Z');
+    await new GeneratedFeedService(
+      async () => html,
+      () => date,
+    ).generate([definition], directories.previous, directories.output);
+    const directory = path.join(directories.output, definition.id);
+    const snapshot = JSON.parse(await fs.readFile(path.join(directory, 'snapshot.json'), 'utf8'));
+    expect(snapshot.items.map((item: { url: string }) => item.url)).toEqual(['https://example.com/articles/good']);
+    const state = await generateSlackFeeds(
+      [
+        {
+          rssUrl: generatedFeedUrls(definition.id).rss,
+          rssPath: `feeds/generated/${definition.id}/rss.xml`,
+          json: await fs.readFile(path.join(directory, 'feed.json'), 'utf8'),
+        },
+      ],
+      directories.previous,
+      path.join(directories.output, 'site'),
+      date,
+    );
+    expect(Object.values(state.feeds)[0].items).toHaveLength(1);
+    expect(Object.values(state.feeds)[0].items[0].title).toBe('正常😀');
+  });
   it('単独RSSを保存し、同じXMLを内部レジストリへ登録する', async () => {
     const directories = await createDirectories();
     const pageFetcher = vi.fn(async () => createHtml('first', '最初の記事', '2026-09-05T12:00:00Z'));

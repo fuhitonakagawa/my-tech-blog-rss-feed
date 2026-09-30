@@ -43,7 +43,7 @@ runs:
       if: steps.install.outcome == 'success' && (steps.config.outputs.provider == 'argos' || inputs.require-argos-model == 'true')
       continue-on-error: true
       shell: bash
-      run: uv run --frozen --no-sync python scripts/translation/setup_model.py
+      run: timeout --signal=TERM --kill-after=10s 5m uv run --frozen --no-sync python scripts/translation/setup_model.py
     - name: Obtain AWS credentials with OIDC
       id: aws
       if: >-

@@ -1,6 +1,7 @@
 import { randomUUID } from 'node:crypto';
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
+import { generatedFeedUrls } from '../../common/constants';
 import { FeedValidator } from '../feed-validator';
 import { logger } from '../logger';
 import { slackFeedConfig, slackSourcePath, validateRssOutputPath } from './config';
@@ -8,6 +9,32 @@ import { loadDeliveryHistory } from './history';
 import { bootstrapSlackFeed, buildSlackRss, updateSlackFeed } from './model';
 import { parseSlackState } from './state-store';
 import type { SlackFeedState, SlackSource } from './types';
+
+/** 定義が残る一時的な生成不能フィードの正常履歴を、保持期限内で引き継ぐ。 */
+const retainUnavailableHistories = (
+  state: SlackFeedState,
+  previous: SlackFeedState | null,
+  generatedIds: readonly string[],
+  now: Date,
+): void => {
+  for (const id of new Set(generatedIds)) {
+    const rssUrl = generatedFeedUrls(id).rss;
+    const key = slackSourcePath(rssUrl);
+    if (state.feeds[key]) throw new Error('生成不能フィードが配信元と重複しています');
+    const history = previous?.feeds[key];
+    if (!history) continue;
+    state.feeds[key] = updateSlackFeed(
+      {
+        rssUrl,
+        rssPath: key,
+        language: history.language,
+        json: JSON.stringify({ title: history.title, home_page_url: history.link, items: [] }),
+      },
+      history,
+      now,
+    );
+  }
+};
 
 /** RSSと履歴を、ファイルごとに完全な内容へ置き換える。 */
 const writeOutput = async (file: string, content: string): Promise<void> => {
@@ -44,6 +71,7 @@ export const generateSlackFeeds = async (
   publishedDirectory: string,
   outputDirectory: string,
   now = new Date(),
+  unavailableGeneratedIds: readonly string[] = [],
 ): Promise<SlackFeedState> => {
   const { usePublished, previous } = await loadDeliveryHistory(publishedDirectory, outputDirectory, now);
   const historyPath = path.join(outputDirectory, 'feeds/delivery');
@@ -70,6 +98,7 @@ export const generateSlackFeeds = async (
     await validator.assertXmlFeed(`slack-${key}`, xml);
     outputs.set(source.rssPath, xml);
   }
+  retainUnavailableHistories(state, previous, unavailableGeneratedIds, now);
   const json = `${JSON.stringify(state)}\n`;
   if (Buffer.byteLength(json) > slackFeedConfig.maxStateBytes) throw new Error('Slack配信履歴の保存上限を超えています');
   parseSlackState(json);

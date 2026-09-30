@@ -182,6 +182,10 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     await loadSlackSources(path.join(dirName, '../site'), [...generatedFeedRegistry.keys()]),
     path.join(dirName, '../../.previous-site'),
     path.join(dirName, '../site'),
+    new Date(),
+    GENERATED_FEED_DEFINITION_LIST.filter((definition) => !generatedFeedRegistry.has(definition.id)).map(
+      (definition) => definition.id,
+    ),
   );
 
   logger.info(

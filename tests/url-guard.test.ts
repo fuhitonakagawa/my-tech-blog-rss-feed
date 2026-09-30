@@ -11,11 +11,12 @@ import {
 } from '../src/common/url-guard';
 
 describe('isValidHttpUrl', () => {
-  it.each(['\n', '\t', '\u0000', '\u007F', '\u0085', '\uFFFD'])(
+  it.each(['\n', '\t', '\u0000', '\u007F', '\u0085', '\uFFFD', '\uFFFE', '\uFFFF', '\uD800', '\uDC00'])(
     'URLの制御文字を暗黙に除去して別URLを許可しない: %j',
     (character) => {
       expect(isValidHttpUrl(`https://exa${character}mple.com/path`)).toBe(false);
       expect(isPublishableHttpUrl(`https://example.com/path${character}`)).toBe(false);
+      expect(isValidImageDataUrl(`data:image/svg+xml,<svg>${character}</svg>`)).toBe(false);
     },
   );
   it('http / https のURLを許可する', () => {

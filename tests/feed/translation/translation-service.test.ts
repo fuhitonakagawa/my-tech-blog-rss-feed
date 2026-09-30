@@ -20,6 +20,21 @@ afterEach(async () => {
 });
 
 describe('TranslationService', () => {
+  it('翻訳器と保存キャッシュの禁止文字を表示から除き、正常な絵文字を保持する', async () => {
+    const cache = new TranslationCache(directory);
+    const item = makeSourceItem();
+    await cache.write(translationCacheKey('fake:v1', 'en', 'ja', item.title ?? ''), 'キャッシュ\uFFFE😀');
+    const service = new TranslationService(
+      {
+        id: 'fake:v1',
+        limits: testTranslationLimits,
+        translateMany: async (texts) => texts.map(() => '翻訳\uFFFF\uD800😀'),
+      },
+      cache,
+    );
+    const [result] = await service.translateItems([item], 'en', 'ja');
+    expect(result).toMatchObject({ title: 'キャッシュ😀', summary: '翻訳😀', guid: item.guid, link: item.link });
+  });
   it('失敗バッチの前後を翻訳し、成功分は別プロセス相当の再実行でもキャッシュする', async () => {
     const cache = new TranslationCache(directory);
     const translateMany = vi.fn(async (texts: string[]): Promise<string[]> => {
@@ -220,6 +235,43 @@ describe('TranslationService', () => {
 });
 
 describe('TranslationCache', () => {
+  it.each([null, [], {}, { translation: 123 }, { translation: '  ' }])(
+    '構文が正常でも値が不正なキャッシュを再取得する: %j',
+    async (value) => {
+      const key = translationCacheKey('fake:v1', 'en', 'ja', 'Title');
+      await fs.writeFile(path.join(directory, `${key}.json`), JSON.stringify(value));
+      const cache = new TranslationCache(directory);
+      expect(await cache.read(key)).toBeUndefined();
+      expect(logger.warn).toHaveBeenCalledWith('[translate] cache-read-failed');
+      await cache.write(key, 'タイトル');
+      expect(await cache.read(key)).toBe('タイトル');
+    },
+  );
+
+  it('キャッシュを書けない場合も翻訳記事を保持し、保存失敗を警告する', async () => {
+    const blocked = path.join(directory, 'not-a-directory');
+    await fs.writeFile(blocked, 'occupied');
+    const translateMany = vi.fn(async (texts: string[]) => texts.map((text) => `訳:${text}`));
+    const service = new TranslationService(
+      { id: 'fake:v1', limits: testTranslationLimits, translateMany },
+      new TranslationCache(blocked),
+    );
+    const [result] = await service.translateItems([makeSourceItem()], 'en', 'ja');
+    expect(result).toMatchObject({ title: '訳:New API', summary: '訳:Build apps' });
+    expect(logger.warn).toHaveBeenCalledWith('[translate] cache-write-failed');
+    expect(await fs.readFile(blocked, 'utf8')).toBe('occupied');
+    expect(await fs.readdir(directory)).toEqual(['not-a-directory']);
+  });
+
+  it('同じキーの同時保存は完全なJSONになり、一時ファイルを残さない', async () => {
+    const cache = new TranslationCache(directory);
+    const key = translationCacheKey('fake:v1', 'en', 'ja', 'Title');
+    const translations = ['日本語😀'.repeat(5000), '別の訳'.repeat(5000)];
+    await Promise.all(translations.map((text) => cache.write(key, text)));
+    expect(translations).toContain(await cache.read(key));
+    expect(await fs.readdir(directory)).toEqual([`${key}.json`]);
+  });
+
   it('壊れたキャッシュをmissとして扱い、正しい結果で置き換えられる', async () => {
     const key = translationCacheKey('fake:v1', 'en', 'ja', 'Title');
     await fs.writeFile(path.join(directory, `${key}.json`), 'broken');

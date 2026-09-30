@@ -25,6 +25,49 @@ const provider = async (body: string, timeoutMs = 5000): Promise<PythonTranslato
 };
 
 describe('PythonTranslatorのプロセス境界', () => {
+  it('入力が空ならPython未導入でもプロセスを起動しない', async () => {
+    const translator = new PythonTranslator({
+      projectDirectory: directory,
+      providerId: 'test:v1',
+      limits: testTranslationLimits,
+    });
+    await expect(translator.translateMany([], 'en', 'ja')).resolves.toEqual([]);
+  });
+
+  it('複数チャンクに分かれたUTF-8応答でも日本語と絵文字を保持する', async () => {
+    const translator = await provider(`
+      process.stdin.resume();
+      process.stdin.on('end', () => {
+        const body = Buffer.from(JSON.stringify({providerId: 'test:v1', translations: ['日本語😀']}));
+        let index = 0;
+        const timer = setInterval(() => {
+          process.stdout.write(body.subarray(index, ++index));
+          if (index === body.length) clearInterval(timer);
+        }, 1);
+      });
+    `);
+    await expect(translator.translateMany(['Japanese'], 'en', 'ja')).resolves.toEqual(['日本語😀']);
+  });
+
+  it('巨大な応答を中断し、次のバッチでは正常な応答を受け取れる', async () => {
+    const translator = await provider(`
+      process.stdin.resume();
+      process.stdin.on('end', () => {
+        const chunk = Buffer.alloc(1024 * 1024, 65);
+        const send = () => {
+          if (process.stdout.write(chunk)) setImmediate(send);
+          else process.stdout.once('drain', send);
+        };
+        send();
+      });
+    `);
+    await expect(translator.translateMany(['one'], 'en', 'ja')).rejects.toThrow('出力が上限');
+    const healthy = await provider(`process.stdin.resume(); process.stdin.on('end', () => {
+      process.stdout.write(JSON.stringify({providerId: 'test:v1', translations: ['復帰']}));
+    });`);
+    await expect(healthy.translateMany(['one'], 'en', 'ja')).resolves.toEqual(['復帰']);
+  });
+
   it('一括入力をstdinへ送り、stdoutの入力順の結果を返す', async () => {
     const translator = await provider(`
       let input = '';

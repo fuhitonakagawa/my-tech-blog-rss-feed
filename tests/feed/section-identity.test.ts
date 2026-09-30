@@ -78,9 +78,26 @@ it('全セクションの保存・読み込み・通知が固定パスで一致�
     await fs.writeFile(path.join(site, file), empty);
   }
   const sources = await loadSlackSources(site, []);
+  const expected = DISPLAY_SECTION_LIST.map((section) => ({
+    rssUrl: sectionFeedUrls(section.id).rss,
+    rssPath: `${section.feedDirectory}/${sectionPathId(section.id)}/feeds/rss.xml`,
+  }));
+  expected.push(
+    { rssUrl: `${constants.siteUrl}feeds/rss.xml`, rssPath: 'feeds/rss.xml' },
+    { rssUrl: `${constants.siteUrl}feeds/statistics/daily/rss.xml`, rssPath: 'feeds/statistics/daily/rss.xml' },
+  );
+  expect(
+    sources.map(({ rssUrl, rssPath }) => ({ rssUrl, rssPath })).sort((a, b) => a.rssUrl.localeCompare(b.rssUrl)),
+  ).toEqual(expected.sort((a, b) => a.rssUrl.localeCompare(b.rssUrl)));
   expect(sources.some((source) => source.rssUrl === `${constants.siteUrl}rss/ai-jp/feeds/rss.xml`)).toBe(true);
   expect(sources.some((source) => source.rssPath === 'deduplicated-feeds/tech-blog-dedup/feeds/rss.xml')).toBe(true);
   const first = await generateSlackFeeds(sources, published, site, new Date('2026-09-29T00:00:00.000Z'));
+  expect(Object.keys(first.feeds).sort()).toEqual(
+    expected.map((source) => source.rssUrl.slice(constants.siteUrl.length)).sort(),
+  );
+  for (const source of expected) {
+    expect(await fs.readFile(path.join(site, source.rssPath), 'utf8')).toContain('<rss');
+  }
   await fs.cp(site, published, { recursive: true });
   const next = await generateSlackFeeds(
     await loadSlackSources(site, []),

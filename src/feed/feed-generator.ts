@@ -3,7 +3,7 @@ import constants from '../common/constants.js';
 import { isPublishableHttpUrl, isValidImageDataUrl } from '../common/url-guard';
 import { removeInvalidUnicode, textToMd5Hash, textTruncate } from './common-util';
 import type { CustomRssParserItem, FeedItemHatenaCountMap, OgObjectMap } from './feed-crawler';
-import { feedItemLimits, normalizeFeedItemTags } from './feed-item-policy';
+import { feedItemIdentifier, isDeliverableIdentifier, normalizeFeedItemTags } from './feed-item-policy';
 import { logger } from './logger';
 
 export interface FeedDistributionSet {
@@ -122,12 +122,8 @@ export class FeedGenerator {
         logger.warn('[feed-item] フィードのリンクが不正です。', feedItem.link, feedItem.title);
         continue;
       }
-      const guid = typeof feedItem.guid === 'string' ? feedItem.guid : '';
-      const feedItemId = guid && (!/^https?:/i.test(guid) || isPublishableHttpUrl(guid)) ? guid : feedItem.link;
-      if (feedItemId.length > feedItemLimits.guidLength) {
-        logger.warn('[feed-item] identifier-too-long', { length: feedItemId.length });
-        continue;
-      }
+      const feedItemId = feedItemIdentifier(feedItem.link, feedItem.guid);
+      if (!isDeliverableIdentifier(feedItemId)) continue;
       const feedItemContent = (feedItem.summary || feedItem.contentSnippet || '').replace(/(\n|\t+|\s+)/g, ' ');
 
       const ogObject = feedItemOgObjectMap.get(feedItem.link);

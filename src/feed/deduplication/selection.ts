@@ -5,6 +5,7 @@ import type { DeduplicatedFeedDefinition } from '../../resources/deduplicated-fe
 import { sectionPathId } from '../../resources/section-paths';
 import { normalizeArticleUrl } from '../common-util';
 import type { CustomRssParserItem } from '../feed-crawler';
+import { feedItemIdentifier, isDeliverableIdentifier } from '../feed-item-policy';
 import { slackFeedConfig, slackSourcePath } from '../slack/config';
 import { slackArticleKey } from '../slack/model';
 import type { SlackFeedState } from '../slack/types';
@@ -63,6 +64,7 @@ export const selectDeduplicatedItems = (
   for (const source of items) {
     const definition = inputs.get(source.sectionId);
     if (!definition) continue;
+    if (!isDeliverableIdentifier(feedItemIdentifier(source.link, source.guid))) continue;
     const link = normalizeArticleUrl(source.link);
     if (
       !isPublishableHttpUrl(link) ||

@@ -1,5 +1,33 @@
-import { describe, expect, it } from 'vitest';
-import { normalizeArticleUrl, removeInvalidUnicode } from '../src/feed/common-util';
+import axios from 'axios';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import {
+  fetchHatenaCountMap,
+  hasInvalidControlCharacters,
+  normalizeArticleUrl,
+  removeInvalidUnicode,
+} from '../src/feed/common-util';
+
+afterEach(() => vi.restoreAllMocks());
+
+it.each(['\uFFFE', '\uFFFF', '\uD800', '\uDC00'])('XML禁止文字を除き正常なサロゲートペアを保持する: %j', (invalid) => {
+  expect(hasInvalidControlCharacters(`前${invalid}後`)).toBe(true);
+  expect(removeInvalidUnicode(`前${invalid}後😀𠮷`)).toBe('前後😀𠮷');
+  expect(hasInvalidControlCharacters('日本語😀𠮷\n\t')).toBe(false);
+});
+
+it('はてな件数APIでアンカー・複数クエリ・日本語と後続記事を欠落させない', async () => {
+  const urls = [
+    'https://docs.cloud.google.com/release-notes#September_29_2026',
+    'https://example.com/article?id=1&view=full',
+    'https://example.com/日本語?q=a+b',
+    'https://example.com/after',
+  ];
+  const request = vi.spyOn(axios, 'get').mockResolvedValue({ data: Object.fromEntries(urls.map((url) => [url, 3])) });
+  expect(await fetchHatenaCountMap(urls)).toEqual(Object.fromEntries(urls.map((url) => [url, 3])));
+  const url = new URL(request.mock.calls[0][0]);
+  expect(url.hash).toBe('');
+  expect(url.searchParams.getAll('url')).toEqual(urls);
+});
 
 describe('normalizeArticleUrl', () => {
   it('記事識別に必要なクエリパラメーターを保持する', () => {

@@ -42,27 +42,39 @@ describe('外部RSSの破損した表示項目', () => {
       parse(xml.replace('</entry>', '<updated>bad</updated><summary>&unknown;</summary></entry>')),
     ).rejects.toThrow();
   });
-  it.each(['\u0000', '\u000B', '\u007F', '\u0085', '\u009F', '\uFFFD', '&#127;', '&#x7F;'])(
-    '概要の破損を除いて記事URL・GUID・日時と他の記事を保持する: %j',
-    async (bad) => {
-      const input = rss(item('bad', `<description>PDFの文字化け${bad}内容</description>`) + item('good'));
-      const { xml, feed } = await parse(input);
-      expect(feed.items).toHaveLength(2);
-      expect(feed.items[0]).toMatchObject({
-        title: '記事bad',
-        link: 'https://example.com/bad',
-        guid: 'bad',
-        isoDate: '2026-09-29T10:00:00.000Z',
-      });
-      expect(feed.items[0].contentSnippet ?? '').toBe('');
-      expect(feed.items[1].contentSnippet).toBe('正常な概要');
-      await expect(new FeedValidator().assertXmlFeed('output', xml)).resolves.toBeDefined();
-      expect(logger.warn).toHaveBeenCalledWith(
-        '[feed-input] repaired',
-        expect.objectContaining({ clearedDescriptions: 1, droppedItems: 0 }),
-      );
-    },
-  );
+  it.each([
+    '\u0000',
+    '\u000B',
+    '\u007F',
+    '\u0085',
+    '\u009F',
+    '\uFFFD',
+    '&#127;',
+    '&#x7F;',
+    '\uFFFE',
+    '\uFFFF',
+    '&#xFFFE;',
+    '&#xFFFF;',
+    '\uD800',
+    '\uDC00',
+  ])('概要の破損を除いて記事URL・GUID・日時と他の記事を保持する: %j', async (bad) => {
+    const input = rss(item('bad', `<description>PDFの文字化け${bad}内容</description>`) + item('good'));
+    const { xml, feed } = await parse(input);
+    expect(feed.items).toHaveLength(2);
+    expect(feed.items[0]).toMatchObject({
+      title: '記事bad',
+      link: 'https://example.com/bad',
+      guid: 'bad',
+      isoDate: '2026-09-29T10:00:00.000Z',
+    });
+    expect(feed.items[0].contentSnippet ?? '').toBe('');
+    expect(feed.items[1].contentSnippet).toBe('正常な概要');
+    await expect(new FeedValidator().assertXmlFeed('output', xml)).resolves.toBeDefined();
+    expect(logger.warn).toHaveBeenCalledWith(
+      '[feed-input] repaired',
+      expect.objectContaining({ clearedDescriptions: 1, droppedItems: 0 }),
+    );
+  });
 
   it('CDATA内の壊れた本文とHTML文字参照を隔離する', async () => {
     const input = rss(
@@ -97,6 +109,9 @@ describe('外部RSSの破損した表示項目', () => {
     '<link>https://example.com/a&#x9;b</link>',
     '<guid>original\u007F-id</guid>',
     '<guid>original&#127;-id</guid>',
+    '<guid>original&#xFFFE;-id</guid>',
+    '<guid>original\uD800-id</guid>',
+    '<link>https://example.com/a&#xFFFF;b</link>',
     '<enclosure url="https://example.com/a&#127;.png"/>',
     '<category>壊れた\u0085分類</category>',
   ])('識別情報や未対応項目の破損は該当記事だけ除外する: %j', async (field) => {

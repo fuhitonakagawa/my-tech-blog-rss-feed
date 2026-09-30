@@ -1,14 +1,25 @@
 import { randomUUID } from 'node:crypto';
 import * as fs from 'node:fs/promises';
+import { createServer } from 'node:http';
 import * as os from 'node:os';
 import * as path from 'node:path';
 import EleventyFetch from '@11ty/eleventy-fetch';
+import { Agent, type Dispatcher } from 'undici';
 import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import { imageCacheOptions } from '../../src/common/eleventy-cache-option';
 import { publicNetworkDispatcher } from '../../src/common/url-guard';
 import { type CustomOgObject, FeedCrawler } from '../../src/feed/feed-crawler';
 
 const location = vi.hoisted(() => ({ directory: '' }));
+vi.mock('../../src/common/url-guard', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('../../src/common/url-guard')>();
+  return {
+    ...actual,
+    publicNetworkDispatcher: {
+      dispatch: (...args: Parameters<Dispatcher['dispatch']>) => actual.publicNetworkDispatcher.dispatch(...args),
+    },
+  };
+});
 vi.mock('flat-cache', async (importOriginal) => {
   const actual = await importOriginal<typeof import('flat-cache')>();
   return {
@@ -29,14 +40,45 @@ afterEach(async () => {
   await fs.rm(location.directory, { recursive: true, force: true });
 });
 
-it('OGPの実ライブラリへ渡す期限は本文を含む10秒である', async () => {
-  const timeout = vi.spyOn(AbortSignal, 'timeout').mockImplementation(() => {
-    throw new Error('ネットワーク送信前の期限確認');
+it('OGPの本文停止を期限で中断し、後続取得と同じURLの再試行が成功する', async () => {
+  let requests = 0;
+  let bodyStarted = false;
+  const server = createServer((_request, response) => {
+    response.setHeader('content-type', 'text/html');
+    if (++requests === 1) {
+      response.write('<html><head>');
+      bodyStarted = true;
+    } else {
+      response.end('<html><head><meta property="og:title" content="Healthy"></head><body>ok</body></html>');
+    }
   });
+  await new Promise<void>((resolve) => server.listen(0, '127.0.0.1', resolve));
+  const address = server.address();
+  if (!address || typeof address === 'string') throw new Error('テストサーバーのアドレスが不正です');
+  const agent = new Agent();
+  // HTTPと本文処理は実ライブラリを通し、接続先だけを隔離したテストサーバーへ向ける。
+  const dispatch = vi
+    .spyOn(publicNetworkDispatcher, 'dispatch')
+    .mockImplementation((options, handler) =>
+      agent.dispatch({ ...options, origin: `http://127.0.0.1:${address.port}` }, handler),
+    );
+  const originalTimeout = AbortSignal.timeout.bind(AbortSignal);
+  const timeout = vi.spyOn(AbortSignal, 'timeout').mockImplementation(() => originalTimeout(500));
   const crawler = FeedCrawler as unknown as { fetchOgObject(url: string): Promise<CustomOgObject> };
-  await expect(crawler.fetchOgObject('https://example.com/timeout')).rejects.toThrow('OGの取得に失敗');
-  expect(timeout).toHaveBeenCalledWith(10_000);
-});
+  try {
+    await expect(crawler.fetchOgObject('https://example.com/slow')).rejects.toThrow('OGの取得に失敗');
+    expect(bodyStarted).toBe(true);
+    expect(timeout).toHaveBeenCalledWith(10_000);
+    expect((await crawler.fetchOgObject('https://example.com/healthy')).ogTitle).toBe('Healthy');
+    expect((await crawler.fetchOgObject('https://example.com/slow')).ogTitle).toBe('Healthy');
+    expect(requests).toBe(3);
+  } finally {
+    dispatch.mockRestore();
+    server.closeAllConnections();
+    await agent.destroy();
+    await new Promise<void>((resolve, reject) => server.close((error) => (error ? reject(error) : resolve())));
+  }
+}, 10_000);
 
 it('画像本文の停止を中断し、待機キューの後続画像と同じURLの再試行には新しい期限を使う', async () => {
   vi.useFakeTimers();
