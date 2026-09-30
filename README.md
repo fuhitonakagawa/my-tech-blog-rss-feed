@@ -255,7 +255,7 @@ Amazon Translateは`provider="amazon-translate"`とリージョン・ロール�
 - **ID**: ファイル名の拡張子を除いた部分です。先頭は英小文字または数字、以降は英小文字・数字・ハイフンを使用します。
 - **公開パス**: [公開パス対応（`src/resources/section-paths.json`）](src/resources/section-paths.json)は、管理用IDと固定の公開パスIDを対応付けます。未指定のIDは同じ文字列を公開パスに使います。例えば`my-tech-blog-ai-translated-jp`の公開パスIDは`ai-jp`で、RSSは`/rss/ai-jp/feeds/rss.xml`です。公開URLを識別子とする通知履歴・重複除外の配信先も同じ対応を使います。
 - **Slackとの対応**: 管理用IDはSlackチャンネル名の`#`と、末尾または`-translated-jp`・`-dedup`の直前にある`-feed`を除いた値です。例えば`#my-tech-blog-ai-feed-translated-jp`は`my-tech-blog-ai-translated-jp`、`#my-tech-blog-jp-feed-dedup`は`my-tech-blog-jp-dedup`です。日次統計の定義ファイルは`daily-stats.json`です。画面の表示名は`title`、閲覧・配信・保存先は公開パスIDで決まります。
-- **表示順**: 表示順の正本は`display-section-list.ts`の`SECTION_DISPLAY_ORDER`です。登録フィード一覧ではdedup、企業・個人ブログ、AI・開発、クラウド、セキュリティ、Zenn・Qiita、ニュース・メディア、資料・書籍の順で、翻訳版は原文カテゴリの直後です。カテゴリナビは重複除外・日本語翻訳・カテゴリ別の3群を常時表示します。PCでは記事の左側に配置し、カテゴリ一覧を独立して縦スクロールできます。スマホでは記事の上に高さを抑えて配置します。現在のカテゴリを一覧上部とリンクの強調で示し、JavaScriptなしで利用できます。表示順に未指定の通常カテゴリは末尾へ`order`の昇順・同値ではID順で並びます。`order`は原則として10刻みの未使用値を選びます。表示順はdedupの配信優先度と独立しています。
+- **表示順**: 表示順の正本は`display-section-list.ts`の`SECTION_DISPLAY_ORDER`です。登録フィード一覧ではdedup、企業・個人ブログ、AI・開発、クラウド、セキュリティ、Zenn・Qiita、ニュース・メディア、資料・書籍の順で、翻訳版は原文カテゴリの直後です。カテゴリナビは重複除外・日本語翻訳・カテゴリ別の3群を常時表示します。PCでは画面左端で高さ全体を使い、カテゴリ一覧を独立して縦スクロールできます。ロゴ・タイトル・記事・フッターは右側に配置し、購読URLのコピーフォームは右側のコンテンツ幅を使います。スマホではヘッダーの下、記事の上に高さを抑えて一覧を配置します。現在のカテゴリを一覧上部とリンクの強調で示し、JavaScriptなしで利用できます。表示順に未指定の通常カテゴリは末尾へ`order`の昇順・同値ではID順で並びます。`order`は原則として10刻みの未使用値を選びます。表示順はdedupの配信優先度と独立しています。
 - **表示名**: `title`がナビゲーション、ページ見出し、集約フィードのタイトルに使用されます。
 - **生成物**: ページ、RSS・Atom・JSON Feed、ナビゲーション、サイトマップが定義から生成されます。
 

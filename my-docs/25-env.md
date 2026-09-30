@@ -165,3 +165,25 @@ rm .agents/rules/base.md
 
 ----
 
+.github/actions
+.github/workflows
+
+これの違いって何？
+
+
+----
+
+
+`.ag`が`.agents/`のことなら、違いは次のとおりです。
+
+| 場所 | 役割 | このリポジトリでの用途 |
+|---|---|---|
+| `.agents/` | AIエージェント向けの指示・スキルなど | 旧AIルールが入っていました。現在はディレクトリごと削除されています |
+| `.github/workflows/` | GitHub上で**いつ・何を実行するか**を定義 | push時のCI、外部テスト、定期的なフィード生成・公開 |
+| `.github/actions/` | ワークフローから呼び出す**共通の処理部品** | 翻訳環境の準備、キャッシュの保存・復元、公開済み履歴の復元 |
+
+例えば、`workflows/generate-feed.yml`が全体の流れを定義し、その中から`actions/setup-translation/action.yml`を呼んで翻訳環境を準備します。
+
+**`.github/actions/`と`.github/workflows/`は両方とも現役で必要です。** Codex用の`AGENTS.md`とは別に、サイトの自動更新を動かしています。
+
+

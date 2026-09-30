@@ -97,6 +97,8 @@ export function render(data: MainLayoutData): string {
 </head>
 <body>
 
+    ${renderFeedListDialog(page)}
+    <div class="ui-browse-layout">
     <header role="banner" class="ui-section-header">
         <div class="ui-layout-container">
             <div class="ui-section-header__layout ui-layout-flex">
@@ -128,12 +130,9 @@ export function render(data: MainLayoutData): string {
         </div>
     </header>
 
-    <main role="main">
-        ${renderFeedListDialog(page)}
-        <div class="ui-browse-layout">
-            ${renderNav(page)}
-            <div class="ui-browse-content">${content}</div>
-        </div>
+    ${renderNav(page)}
+    <main role="main" class="ui-browse-content">
+        ${content}
     </main>
 
     <footer role="contentinfo" class="ui-section-footer">
@@ -146,6 +145,7 @@ export function render(data: MainLayoutData): string {
             </div>
         </div>
     </footer>
+    </div>
 
     <script>
     ${relativeTimeScript}
