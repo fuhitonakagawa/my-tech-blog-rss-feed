@@ -26,7 +26,7 @@ describe('翻訳対象の定義', () => {
       FEED_INFO_LIST.filter((feed) => feed.sectionId === 'googlecloud').every((feed) => feed.language === 'en'),
     ).toBe(true);
     const securityEnglish = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'security-en');
-    expect(securityEnglish).toHaveLength(3);
+    expect(securityEnglish).toHaveLength(5);
     expect(securityEnglish.every((feed) => feed.language === 'en')).toBe(true);
     expect(FEED_INFO_LIST.some((feed) => feed.sectionId === 'security' && feed.language === 'en')).toBe(false);
     expect(TRANSLATED_FEED_DEFINITION_LIST.find((feed) => feed.id === 'security-translated-jp')?.sourceSectionId).toBe(

@@ -336,7 +336,7 @@ Anthropic Newsroomの [Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-f
 | --- | --- | --- | --- |
 | `aws-ja` | AWS 日本語 | AWS の最新情報・Amazon Web Services ブログの日本語RSS | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-ja/feeds/rss.xml) |
 | `googlecloud-ja` | Google Cloud 日本語 | Google Cloud 日本語ブログ | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-ja/feeds/rss.xml) |
-| `security-en` | Security English | GitHub Security・Microsoft Security・Trail of Bitsの英語RSS | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-en/feeds/rss.xml) |
+| `security-en` | Security English | GitHub Security・Microsoft Security・Trail of Bits・Wiz・Aikidoの英語RSS | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-en/feeds/rss.xml) |
 
 `*-ja`は日本語原文、`*-jp`は英語からの日本語翻訳です。翻訳版`security-translated-jp`の入力元は`security-en`です。
 
