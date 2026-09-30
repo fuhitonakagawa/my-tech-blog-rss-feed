@@ -65,7 +65,7 @@ it('同時生成では企業を優先し、タグ・集約元間の重複を除�
     'qiita-ai',
     'ai-news',
     'company-tech-blog',
-    'jp-tech-blog',
+    'my-tech-blog-jp',
     'itmedia',
     'menthas',
     'hatena',
@@ -85,7 +85,7 @@ it('先にZennで公開した記事は、後から企業入力だけに現れて
   const first = await generate([article('zenn-ai')]);
   await fs.cp(output, published, { recursive: true });
   const nextDate = new Date('2026-09-29T10:00:00.000Z');
-  const later = await generate([{ ...article('jp-tech-blog'), guid: 'another-guid' }], nextDate);
+  const later = await generate([{ ...article('my-tech-blog-jp'), guid: 'another-guid' }], nextDate);
   const previous = first.state.feeds[historyKey('zenn-dedup')].items[0];
   const current = later.state.feeds[historyKey('zenn-dedup')].items[0];
   expect(current.firstSeenAt).toBe(previous.firstSeenAt);
@@ -141,7 +141,7 @@ it('配信先を増やしても既存の所属・日時・GUIDを維持し、新
   }
   await fs.cp(output, published, { recursive: true });
   const later = await generate(
-    [article('jp-tech-blog', 'https://example.com/hatena')],
+    [article('my-tech-blog-jp', 'https://example.com/hatena')],
     new Date(nextDate.getTime() + 3_600_000),
   );
   expect(later.state.feeds[historyKey('tech-blog-dedup')].items).toEqual([]);
@@ -167,7 +167,7 @@ it('同順位の投稿サービス・ニュース間では入力順に依存せ�
 it('元記事日時が古くても最初に取得した生成回を優先し、対象外カテゴリには干渉しない', () => {
   const items = [
     article('zenn-ai'),
-    { ...article('jp-tech-blog'), isoDate: '2026-09-20T00:00:00.000Z' },
+    { ...article('my-tech-blog-jp'), isoDate: '2026-09-20T00:00:00.000Z' },
     article('gigazine', 'https://example.com/other'),
   ];
   const selected = selectDeduplicatedItems(items, definitions, null, now);
@@ -191,7 +191,7 @@ it('ZennとQiitaは同順位で、取得順や定義順を変えても同じ配�
 it('公開失敗した生成の所属を引き継がず、公開済み履歴から再判定する', async () => {
   await fs.mkdir(published);
   await generate([article('zenn')]);
-  const result = await generate([article('zenn'), article('jp-tech-blog')], new Date('2026-09-28T11:00:00.000Z'));
+  const result = await generate([article('zenn'), article('my-tech-blog-jp')], new Date('2026-09-28T11:00:00.000Z'));
   expect(result.state.feeds[historyKey('tech-blog-dedup')].items).toHaveLength(1);
   expect(result.state.feeds[historyKey('zenn-dedup')].items).toEqual([]);
 });
@@ -199,14 +199,14 @@ it('公開失敗した生成の所属を引き継がず、公開済み履歴か�
 it('入力から消えても90日以内の再登場は所属を維持し、90日を超えた履歴は再判定する', async () => {
   const first = await generate([article('zenn')]);
   const retained = selectDeduplicatedItems(
-    [article('jp-tech-blog')],
+    [article('my-tech-blog-jp')],
     definitions,
     first.state,
     new Date('2026-12-01T00:00:00.000Z'),
   );
   expect(retained.get('zenn-dedup')).toHaveLength(1);
   const expired = selectDeduplicatedItems(
-    [article('jp-tech-blog')],
+    [article('my-tech-blog-jp')],
     definitions,
     first.state,
     new Date('2027-01-01T00:00:00.000Z'),
@@ -233,7 +233,7 @@ it('元RSSだけの掲載履歴を重複除外RSSの配信済み履歴と混同�
   const first = await generate([article('zenn')]);
   const state = { ...first.state, feeds: { [historyKey('zenn')]: first.state.feeds[historyKey('zenn-dedup')] } };
   expect(
-    selectDeduplicatedItems([article('jp-tech-blog')], definitions, state, now).get('tech-blog-dedup'),
+    selectDeduplicatedItems([article('my-tech-blog-jp')], definitions, state, now).get('tech-blog-dedup'),
   ).toHaveLength(1);
   expect(Object.keys(first.state.feeds[historyKey('zenn-dedup')].seen)).toEqual([
     slackArticleKey(article('zenn').link),
@@ -266,7 +266,7 @@ it('公開失敗時の統計キャッシュから別の配信先の掲載件数�
   expect(failed.usePublishedHistory).toBe(true);
   await generateStatistics(failed.statisticsItems, sections, publishedStats, outputStats, failedTime, [], [], ids);
   const nextTime = new Date('2026-09-28T15:00:00.000Z');
-  const next = await generate([article('jp-tech-blog')], nextTime);
+  const next = await generate([article('my-tech-blog-jp')], nextTime);
   const stats = await generateStatistics(
     next.statisticsItems,
     sections,
@@ -282,7 +282,7 @@ it('公開失敗時の統計キャッシュから別の配信先の掲載件数�
 });
 
 it('全カテゴリの0件と重複除外後の統計を保存し、原文合計には加算しない', async () => {
-  const result = await generate([article('jp-tech-blog'), article('zenn-ai')]);
+  const result = await generate([article('my-tech-blog-jp'), article('zenn-ai')]);
   const sections = deduplicatedStatisticsSections(definitions);
   const first = updateStatistics(null, result.statisticsItems, sections, now);
   const state = updateStatistics(first, [], sections, new Date('2026-09-28T15:00:00.000Z'));

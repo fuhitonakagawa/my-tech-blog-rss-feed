@@ -29,7 +29,7 @@
 
 ## 追加先と取得方式の判断
 
-- 会話中の「tech blog ai」「#my-tech-blog-ai-feed」は既存の`ai`セクションを指す。`ai-news`は「karaageAI情報」で別の購読元。ベンダー名が出ただけでセクションを新設しない。
+- 会話中の「tech blog ai」「#my-tech-blog-ai-feed」は既存の`my-tech-blog-ai`セクションを指す。`ai-news`は「karaageAI情報」で別の購読元。ベンダー名が出ただけでセクションを新設しない。
 - 登録有無は`src/resources/sections/`と`src/resources/generated-feeds/`を正とする。`docs/`や`my-docs/`の一覧だけで判断しない。
 - URL比較では追跡用パラメーターを区別材料にしない。RSSのリダイレクト先とフィード内のサイトURLも確認する。登録URLが異なっても、解析後のフィードのサイトURLが同じ場合はクローラーで片方が除外される。
 - 通常RSS・Atomを取得して記事を解析できる場合は通常フィードを選ぶ。生成フィードのアダプターは、既存CSS抽出だけでは必要な記事を表現できない場合に選ぶ。

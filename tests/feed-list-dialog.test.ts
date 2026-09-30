@@ -26,7 +26,7 @@ describe('renderFeedListDialog', () => {
   });
 
   it('利用可能な生成フィードは元ページと購読URLを表示する', () => {
-    const html = renderFeedListDialog({ url: '/rss/jp-tech-blog/' }, new Map([['serverless-operations', 'ok']]));
+    const html = renderFeedListDialog({ url: '/rss/my-tech-blog-jp/' }, new Map([['serverless-operations', 'ok']]));
 
     expect(html).toContain('href="https://serverless.co.jp/blog/">Serverless Operations</a>');
     expect(html).toContain(
@@ -36,13 +36,13 @@ describe('renderFeedListDialog', () => {
   });
 
   it('生成元の取得に失敗した場合は前回データ利用中と表示する', () => {
-    const html = renderFeedListDialog({ url: '/rss/jp-tech-blog/' }, new Map([['serverless-operations', 'stale']]));
+    const html = renderFeedListDialog({ url: '/rss/my-tech-blog-jp/' }, new Map([['serverless-operations', 'stale']]));
 
     expect(html).toContain('data-status="stale">前回正常データを配信中</span>');
   });
 
   it('RSSを生成できない生成フィードは購読リンクを表示しない', () => {
-    const html = renderFeedListDialog({ url: '/rss/jp-tech-blog/' }, new Map());
+    const html = renderFeedListDialog({ url: '/rss/my-tech-blog-jp/' }, new Map());
 
     expect(html).not.toContain('Serverless Operations');
   });

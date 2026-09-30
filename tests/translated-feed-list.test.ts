@@ -10,7 +10,7 @@ import {
 
 describe('翻訳対象の定義', () => {
   it('通常フィードと生成フィードの英語指定を解決する', () => {
-    const ai = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'ai');
+    const ai = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'my-tech-blog-ai');
     expect(ai).toHaveLength(20);
     expect(ai.every((feed) => feed.language === 'en')).toBe(true);
     const aws = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'aws');
@@ -47,14 +47,16 @@ describe('翻訳対象の定義', () => {
     expect(TRANSLATED_FEED_DEFINITION_LIST).toHaveLength(13);
     expect(FEED_SECTION_LIST.some((section) => section.id === 'ai-jp')).toBe(false);
     expect(DISPLAY_SECTION_LIST.some((section) => section.id === 'ai-jp')).toBe(true);
-    expect(DISPLAY_SECTION_LIST.find((section) => section.id === 'ai')?.feedDirectory).toBe('section-feeds');
+    expect(DISPLAY_SECTION_LIST.find((section) => section.id === 'my-tech-blog-ai')?.feedDirectory).toBe(
+      'section-feeds',
+    );
     expect(DISPLAY_SECTION_LIST.find((section) => section.id === 'ai-jp')?.feedDirectory).toBe('translated-feeds');
   });
 
   it('翻訳定義のIDをファイル名から読み込む', () => {
     const value = {
       title: 'AI - Translated Japanese',
-      sourceSectionId: 'ai',
+      sourceSectionId: 'my-tech-blog-ai',
       sourceLanguage: 'en',
       targetLanguage: 'ja',
     };
@@ -64,20 +66,23 @@ describe('翻訳対象の定義', () => {
     expect(() => parseTranslatedFeedFile('ai-jp.json', [value])).toThrow('オブジェクト');
   });
 
-  it.each([{ id: '../escape' }, { id: 'ai' }, { sourceSectionId: 'missing' }, { targetLanguage: 'en' }, { title: '' }])(
-    '不正な参照や衝突する定義を拒否する: %o',
-    (overrides) => {
-      const definition = {
-        id: 'ai-jp',
-        title: 'AI - Translated Japanese',
-        sourceSectionId: 'ai',
-        sourceLanguage: 'en',
-        targetLanguage: 'ja',
-        ...overrides,
-      };
-      expect(() => parseTranslatedFeeds([definition], FEED_SECTION_LIST)).toThrow();
-    },
-  );
+  it.each([
+    { id: '../escape' },
+    { id: 'my-tech-blog-ai' },
+    { sourceSectionId: 'missing' },
+    { targetLanguage: 'en' },
+    { title: '' },
+  ])('不正な参照や衝突する定義を拒否する: %o', (overrides) => {
+    const definition = {
+      id: 'ai-jp',
+      title: 'AI - Translated Japanese',
+      sourceSectionId: 'my-tech-blog-ai',
+      sourceLanguage: 'en',
+      targetLanguage: 'ja',
+      ...overrides,
+    };
+    expect(() => parseTranslatedFeeds([definition], FEED_SECTION_LIST)).toThrow();
+  });
 
   it('同じカテゴリの派生を重複定義できない', () => {
     const definition = TRANSLATED_FEED_DEFINITION_LIST[0];

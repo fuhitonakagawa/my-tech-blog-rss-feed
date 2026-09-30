@@ -1,7 +1,7 @@
 import { to } from 'await-to-js';
 import { XMLValidator } from 'fast-xml-parser';
 import RssParser from 'rss-parser';
-import { parser as createXmlParser } from 'sax';
+import sax from 'sax';
 import { hasInvalidControlCharacters } from './common-util';
 
 /** 文字参照から復元された制御文字も出力へ含めない。 */
@@ -50,7 +50,7 @@ export class FeedValidator {
 
   /** 記事の日時を解釈せず、XML構文と文字参照の正しさを検証する。 */
   public assertXmlSyntax(label: string, feedXml: string): void {
-    createXmlParser(true).write(feedXml).close();
+    sax.parser(true).write(feedXml).close();
     const atomValidateResult = XMLValidator.validate(feedXml);
     if (atomValidateResult !== true) {
       throw new Error(

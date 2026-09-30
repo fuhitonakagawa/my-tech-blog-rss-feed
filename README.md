@@ -2,7 +2,7 @@
 
 企業の技術ブログ、AI・クラウド・セキュリティなどの更新を、カテゴリ別のWebページとRSS・Atom・JSON Feedで配信する静的サイトです。通常のRSS・Atomと、HTMLの記事一覧から生成するフィードを扱います。
 
-[公開サイト](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/) ／ [AIカテゴリ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai/)
+[公開サイト](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/) ／ [AIカテゴリ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/my-tech-blog-ai/)
 
 このリポジトリは [yamadashy/tech-blog-rss-feed](https://github.com/yamadashy/tech-blog-rss-feed) のフォークです。開発者エージェントの作業方針・調査上の注意点は [AGENTS.md](AGENTS.md) に記載しています。
 
@@ -175,7 +175,7 @@ Amazon Translateは`provider="amazon-translate"`とリージョン・ロール�
 
 ### 4.1. 通常のRSS・Atom
 
-対象セクションの`feeds`へ、表示名とフィードURLを登録します。次は [AIセクションの定義（`ai.json`）](src/resources/sections/ai.json) にある通常RSSです。
+対象セクションの`feeds`へ、表示名とフィードURLを登録します。次は [AIセクションの定義（`my-tech-blog-ai.json`）](src/resources/sections/my-tech-blog-ai.json) にある通常RSSです。
 
 ```json
 {
@@ -217,6 +217,7 @@ Amazon Translateは`provider="amazon-translate"`とリージョン・ロール�
 ```
 
 - **ID**: ファイル名の拡張子を除いた部分です。先頭は英小文字または数字、以降は英小文字・数字・ハイフンを使用します。
+- **Slackとの対応**: `my-tech-blog-`系の通常カテゴリは、Slackチャンネル名の末尾の`-feed`を除いたIDを使います。対象は`my-tech-blog-jp`・`my-tech-blog-ai`・`my-tech-blog-db`・`my-tech-blog-engineering`・`my-tech-blog-platform`・`my-tech-blog-programming`・`my-tech-blog-robotics`・`my-tech-blog-solo`です。画面の表示名は`title`、通常カテゴリの閲覧・配信パスはIDで決まります。翻訳版とdedup版のID・購読URLは独立しています。
 - **表示順**: カテゴリナビと登録フィード一覧は`display-section-list.ts`の`SECTION_DISPLAY_ORDER`を参照します。dedupの6本、企業・個人ブログ、AI・開発、クラウド、セキュリティ、Zenn・Qiita、ニュース・メディア、資料・書籍の順で、翻訳版は原文カテゴリの直後です。表示順に未指定の通常カテゴリは末尾へ`order`の昇順・同値ではID順で並びます。`order`は原則として10刻みの未使用値を選びます。表示順はdedupの配信優先度と独立しています。
 - **表示名**: `title`がナビゲーション、ページ見出し、集約フィードのタイトルに使用されます。
 - **生成物**: ページ、RSS・Atom・JSON Feed、ナビゲーション、サイトマップが定義から生成されます。
@@ -273,10 +274,10 @@ CSS方式では`itemSelector`、`titleSelector`、`linkSelector`、`dateSelector
 
 | 生成フィードID | 表示名 | セクション | 抽出方式 |
 | --- | --- | --- | --- |
-| `serverless-operations` | Serverless Operations | `jp-tech-blog` | `serverless-operations`アダプター |
-| `anthropic-news` | Anthropic Newsroom | `ai` | `anthropic-news`アダプター |
-| `claude-announcements` | Claude Product announcements | `ai` | CSS |
-| `claude-code-blog` | Claude Code Blog | `ai` | CSS |
+| `serverless-operations` | Serverless Operations | `my-tech-blog-jp` | `serverless-operations`アダプター |
+| `anthropic-news` | Anthropic Newsroom | `my-tech-blog-ai` | `anthropic-news`アダプター |
+| `claude-announcements` | Claude Product announcements | `my-tech-blog-ai` | CSS |
+| `claude-code-blog` | Claude Code Blog | `my-tech-blog-ai` | CSS |
 
 <a id="generated-feeds"></a>
 
@@ -353,16 +354,16 @@ RSS・OGP・画像の応答は圧縮前後とも10 MiB、HTML由来フィード�
 
 | 元セクション | 日本語派生ID | 表示名 | 閲覧ページ | 購読用RSS |
 | --- | --- | --- | --- | --- |
-| `ai` | `ai-jp` | AI - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml) |
+| `my-tech-blog-ai` | `ai-jp` | AI - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml) |
 | `aws` | `aws-jp` | AWS - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/feeds/rss.xml) |
 | `azure` | `azure-jp` | Azure - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/feeds/rss.xml) |
 | `google-cloud` | `google-cloud-jp` | Google Cloud - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/feeds/rss.xml) |
 | `hacker-news` | `hacker-news-jp` | Hacker News - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/feeds/rss.xml) |
-| `db` | `db-jp` | Database - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/feeds/rss.xml) |
-| `engineering` | `engineering-jp` | Engineering - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/feeds/rss.xml) |
-| `platform` | `platform-jp` | Platform - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/feeds/rss.xml) |
-| `programming` | `programming-jp` | Programming - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/feeds/rss.xml) |
-| `robotics` | `robotics-jp` | Robotics - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/feeds/rss.xml) |
+| `my-tech-blog-db` | `db-jp` | Database - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/feeds/rss.xml) |
+| `my-tech-blog-engineering` | `engineering-jp` | Engineering - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/feeds/rss.xml) |
+| `my-tech-blog-platform` | `platform-jp` | Platform - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/feeds/rss.xml) |
+| `my-tech-blog-programming` | `programming-jp` | Programming - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/feeds/rss.xml) |
+| `my-tech-blog-robotics` | `robotics-jp` | Robotics - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/feeds/rss.xml) |
 | `security-advisory` | `security-advisory-jp` | GitHub Security Advisory - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml) |
 | `security-en` | `security-jp` | Security - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml) |
 | `techcrunch` | `techcrunch-jp` | TechCrunch - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/feeds/rss.xml) |
@@ -372,7 +373,7 @@ RSS・OGP・画像の応答は圧縮前後とも10 MiB、HTML由来フィード�
 ```json
 {
   "title": "AI - Translated Japanese",
-  "sourceSectionId": "ai",
+  "sourceSectionId": "my-tech-blog-ai",
   "sourceLanguage": "en",
   "targetLanguage": "ja"
 }
@@ -496,7 +497,7 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 
 | 配信名・ID | 入力カテゴリ | 優先度 |
 | --- | --- | ---: |
-| 企業TechBlog dedup・`tech-blog-dedup` | `jp-tech-blog`、`company-tech-blog`、`ai-news` | 0 |
+| 企業TechBlog dedup・`tech-blog-dedup` | `my-tech-blog-jp`、`company-tech-blog`、`ai-news` | 0 |
 | Zenn dedup・`zenn-dedup` | `zenn`、`zenn-ai`、`zenn-cloud`、`zenn-security` | 1 |
 | Qiita dedup・`qiita-dedup` | `qiita`、`qiita-ai`、`qiita-cloud`、`qiita-security` | 1 |
 | ITmedia dedup・`itmedia-dedup` | `itmedia`（総合・AI＋） | 1 |
@@ -796,16 +797,16 @@ flowchart TD
 │   │   │   └── serverless-operations.json
 │   │   ├── sections/  # 通常カテゴリの定義
 │   │   │   ├── ai-news.json
-│   │   │   ├── ai.json
+│   │   │   ├── my-tech-blog-ai.json
 │   │   │   ├── autonomous-driving.json
 │   │   │   ├── aws-ja.json
 │   │   │   ├── aws.json
 │   │   │   ├── azure.json
 │   │   │   ├── business-it.json
 │   │   │   ├── company-tech-blog.json
-│   │   │   ├── db.json
+│   │   │   ├── my-tech-blog-db.json
 │   │   │   ├── developersio.json
-│   │   │   ├── engineering.json
+│   │   │   ├── my-tech-blog-engineering.json
 │   │   │   ├── gigazine.json
 │   │   │   ├── gihyo.json
 │   │   │   ├── google-cloud-ja.json
@@ -814,19 +815,19 @@ flowchart TD
 │   │   │   ├── hatena.json
 │   │   │   ├── infoq.json
 │   │   │   ├── itmedia.json
-│   │   │   ├── jp-tech-blog.json
+│   │   │   ├── my-tech-blog-jp.json
 │   │   │   ├── jpcert.json
 │   │   │   ├── jvn.json
 │   │   │   ├── menthas.json
 │   │   │   ├── my-tech-blog-solo.json
-│   │   │   ├── platform.json
-│   │   │   ├── programming.json
+│   │   │   ├── my-tech-blog-platform.json
+│   │   │   ├── my-tech-blog-programming.json
 │   │   │   ├── publickey.json
 │   │   │   ├── qiita-ai.json
 │   │   │   ├── qiita-cloud.json
 │   │   │   ├── qiita-security.json
 │   │   │   ├── qiita.json
-│   │   │   ├── robotics.json
+│   │   │   ├── my-tech-blog-robotics.json
 │   │   │   ├── security-advisory.json
 │   │   │   ├── security-en.json
 │   │   │   ├── security.json

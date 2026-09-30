@@ -669,9 +669,90 @@ src/resources/sections/jp-tech-blog.json
 
 
 
+すみません、やっぱりまだチャンネル名の変更は行いません。そして、yamadashyは無視して、karaageのみマージします
 
 
 ----
+
+karaageの企業RSS32本を照合すると、30本は既存登録済み相当で、残る2本（AI Shift・Preferred NetworksのPLaMo）は現在404でした。この2本はどう扱いますか？
+
+- 有効なRSSを確認できるまで保留（推奨）
+- 代替の取得元やHTMLからのRSS生成で補う
+```
+• Model interrupted to submit steer instructions.
+```
+いれなくていいか  
+
+
+ちなみにkaraageの企業rss以外は何が入っているの？  
+
+----
+
+
+
+企業ブログ以外は8本で、ZennのAI関連タグ5本、ニュースメディア2本、個人ブログ1本です。404だった企業RSS2本は追加せず、名称変更とyamadashy由来の追加も取り消します。
+
+
+
+-----
+
+企業ブログ以外は、次の**8本**です。[karaageの元定義](https://github.com/karaage0703/tech-blog-rss-feed/blob/main/src/resources/feed-info-list.ts)
+
+| 種類 | 名前 | RSS |
+|---|---|---|
+| Zennタグ | 機械学習 | [RSS](https://zenn.dev/topics/機械学習/feed) |
+| Zennタグ | AI | [RSS](https://zenn.dev/topics/ai/feed) |
+| Zennタグ | 生成AI | [RSS](https://zenn.dev/topics/生成ai/feed) |
+| Zennタグ | ディープラーニング | [RSS](https://zenn.dev/topics/deeplearning/feed) |
+| Zennタグ | LLM | [RSS](https://zenn.dev/topics/llm/feed) |
+| ニュースメディア | ITmedia AI＋ | [RSS](https://rss.itmedia.co.jp/rss/2.0/aiplus.xml) |
+| ニュースメディア | テクノエッジ | [RSS](https://www.techno-edge.net/rss20/index.rdf) |
+| 個人ブログ | npaka | [RSS](https://note.com/npaka/rss) |
+
+**7本は本リポにも登録済みです。** 機械学習だけは、本リポでは`machinelearning/feed`を使っており、karaageの`機械学習/feed`とはURLが異なります。
+
+404の企業RSS2本は追加せず、名称変更・yamadashy由来の追加も取り消しました。
+
+先ほどの不具合修正は、ローカルで431テスト・69本のRSS生成・サイト生成まで確認できました。
+
+
+----
+
+
+さきほどの修正を入れたコードのCI落ちたので確認して
+
+
+
+
+-----
+
+
+原因は、私が追加した`sax`の読み込み方です。[失敗したCI](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36668566644)で、次のエラーを確認しました。
+
+```text
+SyntaxError: 'sax' does not provide an export named 'parser'
+```
+
+テスト環境では通りましたが、実際のNode実行で失敗していました。**CIと公開ワークフローは同じ原因**で、公開処理は実行されていません。
+
+手元では既に修正し、実際のNode・tsxで読み込む回帰テストも追加しています。431テスト、69本のRSS生成、サイト生成が成功しています。
+
+**修正版はステージ済みですが、まだコミット・pushされていません。** 現在の修正を含めてpushすれば、修正版でCIが実行されます。
+
+
+---
+
+
+section名について、slackのチャンネル名と合わせたい
+とくにmy-tech-blog-がついていないものはつけたい
+ほかは大体一致していそうだけど、不一致があれば直さずに教えて
+
+あと、もともとtmpにおいていたyamadashyのjsonは復元してください
+
+translatedとか、dailyもかな
+
+----
+
 
 
 

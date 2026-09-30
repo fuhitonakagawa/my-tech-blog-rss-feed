@@ -80,7 +80,7 @@ describe('Claude Product announcementsの生成フィード', () => {
     expect(feeds).toHaveLength(1);
     expect(feeds[0]).toMatchObject({
       label: 'Claude Product announcements',
-      sectionId: 'ai',
+      sectionId: 'my-tech-blog-ai',
       pageUrl: definition.pageUrl,
     });
   });

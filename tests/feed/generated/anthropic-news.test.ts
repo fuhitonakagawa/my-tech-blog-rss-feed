@@ -92,6 +92,10 @@ describe('Anthropic Newsroomの抽出', () => {
   it('AIセクションだけに所属する', () => {
     const feeds = FEED_INFO_LIST.filter((feed) => feed.input.kind === 'generated' && feed.input.id === definition.id);
     expect(feeds).toHaveLength(1);
-    expect(feeds[0]).toMatchObject({ label: 'Anthropic Newsroom', sectionId: 'ai', pageUrl: definition.pageUrl });
+    expect(feeds[0]).toMatchObject({
+      label: 'Anthropic Newsroom',
+      sectionId: 'my-tech-blog-ai',
+      pageUrl: definition.pageUrl,
+    });
   });
 });

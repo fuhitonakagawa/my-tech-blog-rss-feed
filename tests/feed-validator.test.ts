@@ -1,8 +1,22 @@
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import to from 'await-to-js';
 import { describe, expect, it } from 'vitest';
 import { FeedValidator } from '../src/feed/feed-validator';
 
 describe('FeedValidator', () => {
+  it('CLIと同じNode・tsx環境で読み込み、画像なしの記事を検証できる', async () => {
+    const moduleUrl = new URL('../src/feed/feed-validator.ts', import.meta.url).href;
+    const program = `import { FeedValidator } from ${JSON.stringify(moduleUrl)};
+      const feed = await new FeedValidator().assertXmlFeed('runtime', '<rss version="2.0"><channel><title>Source</title><item><title>Text only</title><link>https://example.com/article</link></item></channel></rss>');
+      process.stdout.write(JSON.stringify(feed.items.map(item => item.link)));`;
+    const { stdout } = await promisify(execFile)(
+      process.execPath,
+      ['--import', 'tsx', '--input-type=module', '-e', program],
+      { timeout: 10_000 },
+    );
+    expect(JSON.parse(stdout)).toEqual(['https://example.com/article']);
+  });
   it('出力XMLでは文字参照を使った制御文字も拒否する', async () => {
     await expect(
       new FeedValidator().assertXmlFeed(

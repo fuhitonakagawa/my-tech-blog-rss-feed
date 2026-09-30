@@ -8,7 +8,7 @@ it('入力の和集合と優先度を定義し、取得元には自己参照を�
   expect(definitions).toHaveLength(6);
   expect(definitions.find((item) => item.id === 'tech-blog-dedup')).toMatchObject({
     priority: 0,
-    sourceSectionIds: ['jp-tech-blog', 'company-tech-blog', 'ai-news'],
+    sourceSectionIds: ['my-tech-blog-jp', 'company-tech-blog', 'ai-news'],
   });
   expect(definitions.find((item) => item.id === 'zenn-dedup')?.priority).toBe(
     definitions.find((item) => item.id === 'qiita-dedup')?.priority,
