@@ -172,3 +172,23 @@ pushしたので、あらためてCI監視して、問題なく全feedが出て�
 
 MySQLの403・手元のZennの429は配信元側の制限が残っています。また、旧RSSを個別購読している場合の変更先は[README](/Users/fuhitonakagawa/my-tech-blog-rss-feed/README.md)に記載しました。カテゴリ・翻訳・dedupの購読URLは変わりません。
 
+----
+
+
+**最新pushのCI・生成・Pages公開は成功しました。** 対象は`8fa471c`です。
+
+- 内部テスト537件・Python41件：合格
+- 公開RSS 73本：すべてHTTP 200・XML解析成功
+- [CI結果](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36707721822)／[公開結果](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36708349542)
+
+ただし、**外部テストは318件成功・7件タイムアウト**でした。失敗を許容する設定のため、ワークフローは緑になっています。[外部テスト結果](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36707721777)
+
+本番生成でも、以下5配信元は403で取得できていません。
+
+- メルカリ
+- Learning and Control
+- MySQL
+- セキュリティ対策Lab
+- kawarimidoll.com
+
+外部テストで失敗したInfoQとQiitaの3タグは、本番では取得成功しています。**公開処理は正常ですが、取得元の網羅性には上記5件の制限が残っています。**
