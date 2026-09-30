@@ -5,6 +5,7 @@ import type { TranslatedFeedDefinition } from '../../resources/translated-feed-l
 import type { CustomRssParserItem, FeedItemHatenaCountMap, OgObjectMap } from '../feed-crawler';
 import { type FeedDistributionSet, FeedGenerator } from '../feed-generator';
 import { logger } from '../logger';
+import { formatGoogleCloudReleaseNotes } from './google-cloud-release-notes';
 import { TranslationCache } from './translation-cache';
 import { TranslationService } from './translation-service';
 import { createTranslator } from './translator-factory';
@@ -43,6 +44,11 @@ export const generateTranslatedFeeds = async (
   for (const definition of definitions) {
     const sectionItems = translatedItems
       .filter((item) => item.sectionId === definition.sourceSectionId)
+      .map((item) =>
+        definition.sourceSectionId === 'googlecloud' && definition.targetLanguage === 'ja'
+          ? formatGoogleCloudReleaseNotes(item)
+          : item,
+      )
       .sort((left, right) => right.isoDate.localeCompare(left.isoDate) || left.link.localeCompare(right.link));
     const result = generator.generateFeeds(
       sectionItems,

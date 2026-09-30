@@ -397,19 +397,21 @@ Hacker Newsの取得元は [Hacker News - Japanese](https://hevinxx.github.io/hn
 
 各派生フィードは、指定元セクションかつ`language: en`のソースだけを対象とします。日本語・混在・言語未指定のソースは含めません。記事の集約期間は通常フィードと同じで、取得記事に公開日時がなければ翻訳対象にも入りません。
 
+Google Cloudの日本語派生では、Google Cloud Release Notes（`https://cloud.google.com/feeds/gcp-release-notes.xml`）に限り、サービス名を原文表記でタイトルに含めます。タイトルは`Google Cloud更新：API Gateway、BigQuery、Cloud Interconnectほか（2026-09-29）`の形式で、先頭3サービスと元記事の公開日（UTC）を表示します。本文先頭には重複を除いた全サービス名を付け、その後に翻訳概要を1回掲載します。通常の概要・本文の文字数上限は適用されるため、配信内容は末尾が省略される場合があります。サービス見出しがない記事は通常の翻訳表示です。翻訳器を利用できない場合もサービス名の表示形式は共通で、概要は原文になります。元の通常カテゴリ、原文タイトル、記事の単位・ID・URL・公開日時、購読URLは保持します。
+
 既定の翻訳器はローカルのArgos Translateを使用し、外部翻訳APIの契約・キーを必要としません。英日モデルは固定バージョンとSHA-256で検証し、`.argos/`に保持します。モデルとPython環境は公開サイトやGitには含めません。モデルに同梱された文分割器を使い、翻訳時のモデル自動取得を禁止します。
 
 `.cache/translations/`にはテキスト単位の翻訳結果を保存します。キーにはプロバイダー・翻訳方向・原文を含みます。ArgosはモデルとPythonロックファイル、AWSは接続リージョン・モデル・推論設定・翻訳指示も識別子に含めます。タイトルと概要を別々に扱うため、概要だけの変更でタイトルを再翻訳することはありません。
 
 AWS翻訳は公開用の`Generate feeds and site`ワークフローのmainブランチで実行します。PR、通常CI、ローカルではAWSを呼び出しません。AWS APIへ送るのは翻訳対象のタイトル・概要だけです。入力上限超過、APIエラー、空の応答、Bedrockの出力打ち切りやJSON形式違反は翻訳失敗として扱います。Bedrockのモデルはsystem指示、`temperature`、Converse APIへの対応が必要です。AWS実行には利用料金が発生します。
 
-翻訳は補助処理です。設定・Python・モデル・翻訳器が利用できない場合や、記事のタイトルまたは概要の翻訳に失敗した場合、その記事の両フィールドを原文で配信します。失敗した結果は翻訳キャッシュへ保存しません。通常フィードの内容と生成処理は維持されます。
+翻訳は補助処理です。設定・Python・モデル・翻訳器が利用できない場合や、記事のタイトルまたは概要の翻訳に失敗した場合、その記事の両フィールドを原文で配信します。Google Cloud Release Notesのサービス名表示は、原文フォールバックにも適用します。失敗した結果は翻訳キャッシュへ保存しません。通常フィードの内容と生成処理は維持されます。
 
 翻訳のバッチ上限も`scripts/translation/config.py`で管理します。1テキスト64 KiB（`text_max_bytes`）、1バッチ16テキスト（`batch_max_texts`）かつJSON通信量128 KiB（`batch_max_bytes`）、1バッチ120秒（`batch_timeout_ms`）です。全バッチの実行予算は20分（`timeout_ms`）で、残り時間が1バッチの期限を下回れば未処理分を原文で配信します。成功したバッチの結果はその都度キャッシュへ保存し、失敗・タイムアウトは当該バッチの未翻訳部分に限定します。サイズ超過のテキストは翻訳器へ渡さず、他の記事の翻訳を継続します。バッチの運用上限だけの変更では翻訳キャッシュの識別子は変わりません。
 
 翻訳の自然さや技術用語の品質は、公開後にRSSを利用して評価します。公開前の検証では、日本語への変換、メタデータの保持、出力形式、失敗時の原文配信を確認します。
 
-配信メタデータの`_custom.originalTitle`は原文タイトル、`_custom.translatedTitle`は翻訳版の表示タイトルです。翻訳ページは表示タイトルを使用します。翻訳失敗時の表示タイトルは原文となります。
+配信メタデータの`_custom.originalTitle`は原文タイトル、`_custom.translatedTitle`は翻訳版の表示タイトルです。翻訳ページは表示タイトルを使用します。翻訳失敗時の表示タイトルは原文となります。ただし、Google Cloud Release Notesは原文のサービス名による表示タイトルを使用します。
 
 Pythonの依存バージョンはロックファイルで固定し、トークン化・モデル読込の補助ライブラリには脆弱性修正版の上書き指定があります。間接依存やモデルのライセンス条件は [第三者ライセンス情報](THIRD_PARTY_NOTICES.md) を参照してください。
 
@@ -499,8 +501,8 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 | 配信名・ID | 入力カテゴリ | 優先度 |
 | --- | --- | ---: |
 | 企業TechBlog dedup・`my-tech-blog-jp-dedup` | `my-tech-blog-jp`、`company-tech-blog`、`karaage-ai-news` | 0 |
-| Zenn dedup・`zenn-dedup` | `zenn-trend`、`zenn-ai`、`zenn-cloud`、`zenn-security` | 1 |
-| Qiita dedup・`qiita-dedup` | `qiita-trend`、`qiita-ai`、`qiita-cloud`、`qiita-security` | 1 |
+| Zenn dedup・`zenn-dedup` | `zenn-trend`、`zenn-ai`、`zenn-physical-ai`、`zenn-cloud`、`zenn-security` | 1 |
+| Qiita dedup・`qiita-dedup` | `qiita-trend`、`qiita-ai`、`qiita-physical-ai`、`qiita-cloud`、`qiita-security` | 1 |
 | ITmedia dedup・`it-media-dedup` | `it-media`（総合・AI＋） | 1 |
 | Menthas dedup・`menthas-dedup` | `menthas` | 1 |
 | はてブ dedup・`hatenab-dedup` | `hatenab` | 1 |
@@ -827,6 +829,7 @@ flowchart TD
 │   │   │   ├── my-tech-blog-programming.json
 │   │   │   ├── publickey.json
 │   │   │   ├── qiita-ai.json
+│   │   │   ├── qiita-physical-ai.json
 │   │   │   ├── qiita-cloud.json
 │   │   │   ├── qiita-security.json
 │   │   │   ├── qiita-trend.json
@@ -840,6 +843,7 @@ flowchart TD
 │   │   │   ├── technoedge.json
 │   │   │   ├── thinkit.json
 │   │   │   ├── zenn-ai.json
+│   │   │   ├── zenn-physical-ai.json
 │   │   │   ├── zenn-cloud.json
 │   │   │   ├── zenn-security.json
 │   │   │   └── zenn-trend.json
