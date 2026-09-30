@@ -16,6 +16,27 @@ describe('normalizeArticleUrl', () => {
   it('URLとして解釈できない値は変更しない', () => {
     expect(normalizeArticleUrl('not-a-url')).toBe('not-a-url');
   });
+
+  it.each([
+    'https://docs.cloud.google.com/release-notes#September_29_2026',
+    'https://cloud.google.com/release-notes#September_28_2026',
+    'https://docs.cloud.google.com/bigquery/docs/release-notes#January_01_2026',
+    'https://cloud.google.com/compute/docs/release-notes/#December_9_2026',
+  ])('リリースノートの日付アンカーを追跡情報の除去後も保持する: %s', (url) => {
+    const tracked = new URL(url);
+    tracked.search = '?utm_source=rss&fbclid=test';
+    expect(normalizeArticleUrl(url)).toBe(url);
+    expect(normalizeArticleUrl(tracked.href)).toBe(url);
+  });
+
+  it.each([
+    'https://docs.cloud.google.com/release-notes#heading',
+    'https://example.com/release-notes#September_29_2026',
+    'https://docs.cloud.google.com.example.com/release-notes#September_29_2026',
+    'https://docs.cloud.google.com/blog/article#September_29_2026',
+  ])('通常の見出しアンカーは重複判定から除外する: %s', (url) => {
+    expect(normalizeArticleUrl(url)).toBe(url.split('#')[0]);
+  });
 });
 
 describe('removeInvalidUnicode', () => {

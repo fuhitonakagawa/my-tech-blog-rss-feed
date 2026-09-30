@@ -30,7 +30,16 @@ const TRACKING_QUERY_PARAMETER_NAMES = new Set([
   'msclkid',
 ]);
 
-/** 記事識別に影響しない追跡用パラメーターとフラグメントを取り除く */
+/** Google Cloudのリリースノートで日別記事を識別するアンカーか判定する。 */
+const isReleaseNoteDateFragment = (url: URL): boolean => {
+  if (!['cloud.google.com', 'docs.cloud.google.com'].includes(url.hostname)) return false;
+  if (!/\/release-notes\/?$/.test(url.pathname)) return false;
+  return /^#(?:January|February|March|April|May|June|July|August|September|October|November|December)_\d{1,2}_\d{4}$/.test(
+    url.hash,
+  );
+};
+
+/** 日別記事のアンカーを保持し、追跡情報と通常の見出しアンカーを取り除く。 */
 export const normalizeArticleUrl = (url: string): string => {
   let urlObject: URL;
   try {
@@ -39,8 +48,8 @@ export const normalizeArticleUrl = (url: string): string => {
     return url;
   }
 
-  let changed = urlObject.hash !== '';
-  urlObject.hash = '';
+  let changed = urlObject.hash !== '' && !isReleaseNoteDateFragment(urlObject);
+  if (changed) urlObject.hash = '';
   for (const parameterName of [...urlObject.searchParams.keys()]) {
     const normalizedName = parameterName.toLowerCase();
     if (normalizedName.startsWith('utm_') || TRACKING_QUERY_PARAMETER_NAMES.has(normalizedName)) {

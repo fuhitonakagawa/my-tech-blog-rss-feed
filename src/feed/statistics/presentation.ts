@@ -12,7 +12,7 @@ const renderCategory = (category: CategoryCount): string => {
       return `<li>${title}${feed.kind === 'generated' ? '（生成RSS）' : ''}：${feed.count}件</li>`;
     })
     .join('');
-  return `<li><a href="${escapeHtml(sectionFeedUrls(category.sectionId).rss)}">${escapeHtml(category.title)}</a>：${category.count}件${sources ? `<ul>${sources}</ul>` : ''}</li>`;
+  return `<li><a href="${escapeHtml(sectionFeedUrls(category.sectionId).rss)}">${escapeHtml(category.title)}</a>：${category.count}件${sources ? `<br><ul>${sources}</ul>` : ''}</li>`;
 };
 
 /** 日次記事の見出し。 */
