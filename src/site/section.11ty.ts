@@ -2,7 +2,6 @@ import constants, { sectionFeedUrls } from '../common/constants';
 import { sectionPathId } from '../resources/section-paths';
 import { renderFeedItem } from './_includes/components/feed-item';
 import { escapeHtml } from './_includes/components/html-utils';
-import { renderNav } from './_includes/components/nav';
 import { indexScript } from './_includes/components/scripts';
 import { renderTopSection } from './_includes/components/top-section';
 import { type EleventyPage, type FeedSectionPageData, SITE_PAGE_DATE } from './_includes/components/types';
@@ -50,7 +49,7 @@ export async function render(data: SectionData): Promise<string> {
 
   return `${renderTopSection(page, sectionFeedUrls(section.id).rss)}
 
-${renderNav(page)}
+
 
 <section class="ui-section-content ui-section-feed">
     <div class="ui-layout-container">

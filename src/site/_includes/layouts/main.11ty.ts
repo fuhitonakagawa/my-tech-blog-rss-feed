@@ -3,6 +3,7 @@ import { relativeUrlFilter } from '../../../common/eleventy-utils';
 import { siteStylesheet } from '../../../common/site-styles';
 import { renderFeedListButton, renderFeedListDialog } from '../components/feed-list-dialog';
 import { escapeHtml } from '../components/html-utils';
+import { renderNav } from '../components/nav';
 import { feedListDialogScript, relativeTimeScript, themeInitScript, themeToggleScript } from '../components/scripts';
 import type { EleventyPage } from '../components/types';
 
@@ -129,7 +130,10 @@ export function render(data: MainLayoutData): string {
 
     <main role="main">
         ${renderFeedListDialog(page)}
-        ${content}
+        <div class="ui-browse-layout">
+            ${renderNav(page)}
+            <div class="ui-browse-content">${content}</div>
+        </div>
     </main>
 
     <footer role="contentinfo" class="ui-section-footer">

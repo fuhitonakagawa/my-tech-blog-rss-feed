@@ -1,7 +1,6 @@
 import { statisticsConfig, statisticsFeedUrls } from '../feed/statistics/config';
 import type { StatisticsState } from '../feed/statistics/types';
 import { escapeHtml } from './_includes/components/html-utils';
-import { renderNav } from './_includes/components/nav';
 import { indexScript } from './_includes/components/scripts';
 import { renderStatisticsReport } from './_includes/components/statistics-report';
 import { renderTopSection } from './_includes/components/top-section';
@@ -35,7 +34,7 @@ export const render = ({ page, statistics }: StatisticsPageData): string => {
       ? reports.map(renderStatisticsReport).join('\n')
       : '<p class="ui-statistics-empty">記事の取得履歴を収集中です。日本時間で収集開始日の翌日から日次統計を配信します。上のRSS URLから購読できます。</p>';
   return `${renderTopSection(page, statisticsFeedUrls.rss)}
-    ${renderNav(page)}<section class="ui-section-content ui-section-feed ui-statistics"><div class="ui-layout-container">
+    <section class="ui-section-content ui-section-feed ui-statistics"><div class="ui-layout-container">
     <header class="ui-statistics-heading">
     <h1 class="ui-typography-heading">${escapeHtml(statisticsConfig.title)}</h1>
     <p>日本時間の前日までに公開され、このサイトで取得できた記事をカテゴリ別に集計しています。</p>

@@ -1,6 +1,5 @@
 import constants from '../common/constants';
 import { renderFeedItem } from './_includes/components/feed-item';
-import { renderNav } from './_includes/components/nav';
 import { indexScript } from './_includes/components/scripts';
 import { type EleventyPage, type FeedJsonItem, SITE_PAGE_DATE } from './_includes/components/types';
 
@@ -26,7 +25,7 @@ export async function render(data: HotData): Promise<string> {
     feedItemsHot.map((feedItem, index) => renderFeedItem(feedItem, page, index < 4 ? 'eager' : 'lazy')),
   );
 
-  return `${renderNav(page)}
+  return `
 
 <section class="ui-section-content ui-section-feed">
     <div class="ui-layout-container">

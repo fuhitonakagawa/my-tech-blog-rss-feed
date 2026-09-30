@@ -1,3 +1,4 @@
+import { load } from 'cheerio';
 import { expect, it } from 'vitest';
 import constants, { generatedFeedUrls, sectionFeedUrls } from '../../src/common/constants';
 import { statisticsFeedUrls } from '../../src/feed/statistics/config';
@@ -39,7 +40,9 @@ it.each([
 it('日次統計の購読先と現在のナビゲーションを保持する', () => {
   expect(statisticsFeedUrls.rss).toBe(`${constants.siteUrl}feeds/statistics/daily/rss.xml`);
   const nav = renderNav({ url: '/rss/ai/' });
-  expect(nav).toContain("ui-section-nav__link--active' href='../../rss/ai/'>AI</a>");
+  const $ = load(nav);
+  expect($('a[aria-current="page"]').attr('href')).toBe('../../rss/ai/');
+  expect($('a[aria-current="page"]').hasClass('ui-section-nav__link--active')).toBe(true);
   expect(nav).toContain("href='../../rss/ai-jp/'>AI - Translated Japanese</a>");
 });
 

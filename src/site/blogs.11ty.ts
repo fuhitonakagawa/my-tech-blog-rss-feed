@@ -2,7 +2,6 @@ import constants from '../common/constants';
 import { imageThumbnailShortcode } from '../common/eleventy-utils';
 import { sanitizeHttpUrl } from '../common/url-guard';
 import { escapeHtml, truncateNunjucks } from './_includes/components/html-utils';
-import { renderNav } from './_includes/components/nav';
 import { type EleventyPage, SITE_PAGE_DATE, type SiteBlogFeed } from './_includes/components/types';
 
 interface BlogsData {
@@ -54,7 +53,7 @@ export async function render(data: BlogsData): Promise<string> {
     }),
   );
 
-  return `${renderNav(page)}
+  return `
 
 <section class="ui-section-content ui-section-blog">
     <div class="ui-layout-container">
