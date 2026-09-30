@@ -7,6 +7,8 @@ import { type AggregatedFeedMeta, type FeedDistributionSet, FeedGenerator } from
 import { FeedStorer } from '../feed/feed-storer';
 import { FeedValidator } from '../feed/feed-validator';
 import { GeneratedFeedService } from '../feed/generated/generated-feed-service';
+import { checkFeedCoverage } from '../feed/health/coverage';
+import { buildHealthReport, writeFeedHealth } from '../feed/health/service';
 import { logger } from '../feed/logger';
 import { generateSlackFeeds } from '../feed/slack/service';
 import { loadSlackSources } from '../feed/slack/sources';
@@ -66,11 +68,12 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
   const availableFeedInfoList = FEED_INFO_LIST.filter((feedInfo) => {
     return feedInfo.input.kind === 'remote' || generatedFeedRegistry.has(feedInfo.input.id);
   });
+  const aggregateFeedStartAt = new Date(Date.now() - constants.aggregateFeedDurationInHours * 60 * 60 * 1000);
   const crawlFeedsResult = await feedCrawler.crawlFeeds(
     availableFeedInfoList,
     constants.feedFetchConcurrency,
     constants.feedOgFetchConcurrency,
-    new Date(Date.now() - constants.aggregateFeedDurationInHours * 60 * 60 * 1000),
+    aggregateFeedStartAt,
   );
   const collectedAt = new Date();
 
@@ -178,13 +181,31 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
     deduplicated.usePublishedHistory ? DEDUPLICATED_FEED_DEFINITION_LIST.map((definition) => definition.id) : [],
   );
 
-  await generateSlackFeeds(
+  const deliveryState = await generateSlackFeeds(
     await loadSlackSources(path.join(dirName, '../site'), [...generatedFeedRegistry.keys()]),
     path.join(dirName, '../../.previous-site'),
     path.join(dirName, '../site'),
     new Date(),
     GENERATED_FEED_DEFINITION_LIST.filter((definition) => !generatedFeedRegistry.has(definition.id)).map(
       (definition) => definition.id,
+    ),
+  );
+
+  const coverage = checkFeedCoverage(
+    crawlFeedsResult.feedItems,
+    deliveryState,
+    TRANSLATED_FEED_DEFINITION_LIST,
+    DEDUPLICATED_FEED_DEFINITION_LIST,
+  );
+  await writeFeedHealth(path.join(dirName, '../../.previous-site'), path.join(dirName, '../site'), (previous) =>
+    buildHealthReport(
+      FEED_INFO_LIST,
+      crawlFeedsResult.sourceObservations,
+      crawlFeedsResult.feeds.flatMap((feed) => feed.items),
+      coverage,
+      previous,
+      aggregateFeedStartAt,
+      collectedAt,
     ),
   );
 

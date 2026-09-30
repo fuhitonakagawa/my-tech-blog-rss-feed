@@ -102,7 +102,7 @@ it('公開条件を満たさない記事を隔離し、API失敗でも保存済�
   vi.setSystemTime('2026-09-30T13:00:00Z');
   fetch.mockResolvedValueOnce(new Response('', { status: 429 }));
   const second = feed();
-  await new QiitaSupplement().enrich(second, 'https://qiita.com/tags/ai/feed');
+  expect(await new QiitaSupplement().enrich(second, 'https://qiita.com/tags/ai/feed')).toBe(false);
   expect(second.items).toEqual(first.items);
   vi.setSystemTime('2026-10-10T13:00:00Z');
   fetch.mockResolvedValueOnce(new Response('[]'));

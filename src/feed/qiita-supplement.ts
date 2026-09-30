@@ -104,9 +104,9 @@ export class QiitaSupplement {
   private deadline = 0;
   private readonly queue = new SourceRequestQueue();
 
-  public async enrich(feed: CustomRssParserFeed, sourceUrl: string): Promise<void> {
+  public async enrich(feed: CustomRssParserFeed, sourceUrl: string): Promise<boolean> {
     const tag = qiitaTag(sourceUrl);
-    if (!tag) return;
+    if (!tag) return true;
     if (!this.deadline) this.deadline = Date.now() + qiitaSupplementConfig.budgetMs;
     const now = new Date().toISOString();
     const cutoff = new Date(Date.now() - constants.aggregateFeedDurationInHours * 3600_000).toISOString();
@@ -186,5 +186,6 @@ export class QiitaSupplement {
       added++;
     }
     logger.info('[qiita-supplement] collected', { sourceUrl, added, complete });
+    return complete;
   }
 }

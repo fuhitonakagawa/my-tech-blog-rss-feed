@@ -82,6 +82,8 @@ QiitaのタグRSSは、同じタグ・集約対象期間の記事を公式APIで
 
 Qiita企業フィードは20ページまで、全企業合計120秒の範囲で後続ページを取得します。公開・更新日時の両方が対象期間より古いページ、空ページ、重複ページで終了します。途中失敗や上限では取得済み記事を保持し、`[qiita-organization] incomplete`を警告します。取得元RSSのURLとカテゴリ所属は維持します。
 
+メルカリのRSS取得に失敗した場合は、公式ブログ一覧のHTMLに含まれる記事URL・タイトル・公開時刻を取得します。公開時刻は日本時間として解釈し、元のRSS URLとカテゴリを維持します。HTMLに掲載されている記事だけが対象で、概要は補作しません。HTMLも取得できない場合は取得失敗として扱います。
+
 `publicationDateSource: "article-metadata"`を指定した取得元は、RSSの公開日時がない記事だけ、同一サイトのHTMLメタデータ（Articleの`datePublished`または`article:published_time`）を確認します。Google Developers Blogに適用されます。日付のみはUTC 0時とし、異なる公開日候補がある場合・日付不正・取得失敗では補いません。1回50記事・合計60秒まで、確認した公開日を14日キャッシュします。既存の公開日を上書きせず、更新日や取得時刻も代用しません。
 
 HEARTBEATSの取得元は`https://heartbeats.jp/feed/?post_type=hbblog`です。Preferred NetworksとMongoDBは公開ブログページから単独RSSを生成し、各カテゴリへ取り込みます。公開パスはそれぞれ`/feeds/generated/preferred-networks/rss.xml`、`/feeds/generated/mongodb-blog/rss.xml`です。元のRSSをSlackへ直接登録している場合は、購読先も変更する必要があります。カテゴリ・翻訳・dedupの購読URLは共通です。
@@ -549,6 +551,21 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 
 生成物の保存先は`src/site/deduplicated-feeds/<公開パスID>/feeds/`です。公開時に`/rss/<公開パスID>/feeds/`へ配置します。
 
+### 5.8. 取得・掲載の診断
+
+各生成実行は、配信元の取得結果と、取得済み対象記事の通知用RSSへの掲載を照合します。診断用JSONの配置先は以下です。
+
+| 出力 | 公開時のURL |
+| --- | --- |
+| 最新の診断 | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/health/status.json` |
+| 直近48回の公開済み実行 | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/health/history.json` |
+
+- **配信元の状態**: `ok`は取得正常、`fallback`は元RSS取得失敗時の補助経路、`partial`は補完処理の途中失敗・上限到達、`error`は取得不能です。取得できた空フィードは`ok`で件数0として区別します。HTTPエラーのステータス、最後に`ok`となった時刻、連続して`ok`でなかった公開実行数を保持します。
+- **取得・除外件数**: `received`は入力検証・補完後の取得件数、`eligible`は集約対象件数です。日時欠落・不正、期間外、未来、識別子不正の除外件数を区別します。XML解析前の破損や記事隔離は取得ログで確認します。
+- **掲載照合**: 通常カテゴリ、英語記事に対応する翻訳カテゴリ、全dedupの和集合を対象にします。別のdedupへ割り当てられた記事は掲載済みです。未掲載記事はURLのSHA-256キーで記録し、通知履歴の`key`と照合できます。同じ記事の通常・翻訳両方が欠けた場合は検査ごとに数えるため、警告数はユニーク記事数ではありません。
+- **警告**: 取得の異常や掲載不一致はGHAの警告と実行サマリーに出力します。正常な他のフィードの公開は継続します。履歴は公開済みサイトから復元し、診断履歴の破損は警告して読み飛ばします。
+- **限界**: 取得前に元RSSから消えた記事の存在、Slackアプリの受信・投稿、翻訳文の品質は判定できません。日時欠落を取得時刻で補う機能や、過去の未通知記事を個別に再送する機能は含みません。
+
 <a id="validation"></a>
 
 ## 🧪 6. 検証コマンド
@@ -777,6 +794,12 @@ flowchart TD
 │   │   │   ├── publication-date.ts
 │   │   │   ├── state-store.ts
 │   │   │   └── types.ts
+│   │   ├── health/  # 取得状態・通知RSSの掲載照合
+│   │   │   ├── coverage.ts
+│   │   │   ├── service.ts
+│   │   │   ├── state-store.ts
+│   │   │   └── types.ts
+│   │   ├── mercari-fallback.ts  # RSS取得不能時の公式記事一覧
 │   │   ├── slack/
 │   │   │   ├── history.ts
 │   │   │   ├── config.ts

@@ -66,9 +66,11 @@ it('ページが繰り返された場合は止まり、途中の取得失敗で�
   expect(fetch).toHaveBeenCalledTimes(2);
   fetch.mockReset().mockResolvedValueOnce(atom('good')).mockRejectedValueOnce(new Error('timeout'));
   const partial = feed();
-  await new QiitaOrganizationSupplement(queue).enrich(
-    partial,
-    'https://qiita.com/organizations/another/activities.atom',
-  );
+  expect(
+    await new QiitaOrganizationSupplement(queue).enrich(
+      partial,
+      'https://qiita.com/organizations/another/activities.atom',
+    ),
+  ).toBe(false);
   expect(partial.items).toHaveLength(1);
 });

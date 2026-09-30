@@ -18,8 +18,8 @@ export class QiitaOrganizationSupplement {
 
   constructor(private readonly queue: SourceRequestQueue) {}
 
-  public async enrich(feed: CustomRssParserFeed, sourceUrl: string): Promise<void> {
-    if (!/^https:\/\/qiita\.com\/organizations\/[^/?#]+\/activities\.atom$/.test(sourceUrl)) return;
+  public async enrich(feed: CustomRssParserFeed, sourceUrl: string): Promise<boolean> {
+    if (!/^https:\/\/qiita\.com\/organizations\/[^/?#]+\/activities\.atom$/.test(sourceUrl)) return true;
     if (!this.deadline) this.deadline = Date.now() + 120_000;
     const cutoff = Date.now() - constants.aggregateFeedDurationInHours * 3600_000;
     const seen = new Set(feed.items.map((item) => item.link));
@@ -46,9 +46,9 @@ export class QiitaOrganizationSupplement {
           }
         }
         const items = result.feed.items;
-        if (!items.length) return;
+        if (!items.length) return true;
         const unseen = items.filter((item) => item.link && !seen.has(item.link));
-        if (!unseen.length) return;
+        if (!unseen.length) return true;
         for (const item of unseen) {
           feed.items.push(item);
           seen.add(item.link);
@@ -60,12 +60,13 @@ export class QiitaOrganizationSupplement {
             return dates.length > 0 && Math.max(...dates) < cutoff;
           })
         )
-          return;
+          return true;
       } catch {
         logger.warn('[qiita-organization] request-failed', { sourceUrl, page });
         break;
       }
     }
     logger.warn('[qiita-organization] incomplete', { sourceUrl, added });
+    return false;
   }
 }

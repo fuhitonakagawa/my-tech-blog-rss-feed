@@ -25,7 +25,9 @@ import {
 } from './common-util';
 import { FeedValidator } from './feed-validator';
 import type { GeneratedFeedRegistry } from './generated/types';
+import type { SourceFetchObservation } from './health/types';
 import { logger } from './logger';
+import { fetchMercariFallback, mercariFeedUrl } from './mercari-fallback';
 import { fillPublicationDates } from './publication-metadata';
 import { QiitaOrganizationSupplement } from './qiita-organization';
 import { QiitaSupplement, qiitaTag } from './qiita-supplement';
@@ -55,6 +57,7 @@ export type CustomRssParserFeed = RssParser.Output<CustomRssParserItem> & {
 };
 
 export interface ClawlFeedsResult {
+  sourceObservations: SourceFetchObservation[];
   feeds: CustomRssParserFeed[];
   feedItems: CustomRssParserItem[];
   feedItemOgObjectMap: OgObjectMap;
@@ -147,6 +150,7 @@ const normalizeFeedItemCategory = (category: unknown): string => {
 };
 
 export class FeedCrawler {
+  private readonly sourceObservations = new Map<string, SourceFetchObservation>();
   private readonly sourceRequests = new SourceRequestQueue();
   private readonly qiitaSupplement = new QiitaSupplement();
   private readonly qiitaOrganization = new QiitaOrganizationSupplement(this.sourceRequests);
@@ -172,6 +176,7 @@ export class FeedCrawler {
     feedOgFetchConcurrency: number,
     aggregateFeedStartAt: Date,
   ): Promise<ClawlFeedsResult> {
+    this.sourceObservations.clear();
     // フィード取得してまとめる
     const fetchFeedsStartTime = Date.now();
     const feeds = await this.fetchFeedsAsync(feedInfoList, feedFetchConcurrency);
@@ -193,6 +198,7 @@ export class FeedCrawler {
     }
 
     return {
+      sourceObservations: [...this.sourceObservations.values()],
       feeds: feeds,
       feedItems: allFeedItems,
       feedItemOgObjectMap: results[0],
@@ -215,7 +221,8 @@ export class FeedCrawler {
     const { errors } = await PromisePool.for(feedInfoList)
       .withConcurrency(concurrency)
       .process(async (feedInfo) => {
-        const [error, feed] = await to(
+        this.sourceObservations.set(feedInfo.url, { sourceUrl: feedInfo.url, status: 'error', httpStatus: null });
+        const [error, sourceFeed] = await to(
           exponentialBackoff(
             async (attemptCount: number) => {
               if (attemptCount > 0) {
@@ -229,18 +236,35 @@ export class FeedCrawler {
             (error) => !(error instanceof FeedHttpError) || error.retryable,
           ),
         );
+        let feed = sourceFeed;
+        let sourceKind: 'rss' | 'html' = 'rss';
         if (error) {
+          this.sourceObservations.set(feedInfo.url, {
+            sourceUrl: feedInfo.url,
+            status: 'error',
+            httpStatus: error instanceof FeedHttpError ? error.status : null,
+          });
           logger.error(
             '[fetch-feed] error',
-            `${fetchProcessCounter++}/${feedInfoListLength}`,
+            `${fetchProcessCounter}/${feedInfoListLength}`,
             feedInfo.label,
             feedInfo.url,
           );
           logger.trace(error);
-          if (!qiitaTag(feedInfo.url)) return;
+          if (feedInfo.url === mercariFeedUrl) {
+            const [fallbackError, fallback] = await to(fetchMercariFallback(this.sourceRequests));
+            if (!fallbackError) {
+              feed = fallback;
+              sourceKind = 'html';
+            } else logger.warn('[fetch-feed] html-fallback-failed', { label: feedInfo.label });
+          }
+          if (!feed && !qiitaTag(feedInfo.url)) {
+            fetchProcessCounter++;
+            return;
+          }
         }
 
-        if (feed) await this.qiitaOrganization.enrich(feed, feedInfo.url);
+        const organizationComplete = feed ? await this.qiitaOrganization.enrich(feed, feedInfo.url) : true;
         const postProcessedFeed = FeedCrawler.postProcessFeed(
           feedInfo,
           feed ?? {
@@ -249,13 +273,22 @@ export class FeedCrawler {
             sectionId: feedInfo.sectionId,
             items: [],
           },
+          sourceKind,
         );
-        await this.qiitaSupplement.enrich(postProcessedFeed, feedInfo.url);
-        if (error && postProcessedFeed.items.length === 0) return;
+        const tagComplete = await this.qiitaSupplement.enrich(postProcessedFeed, feedInfo.url);
+        if (error && postProcessedFeed.items.length === 0) {
+          fetchProcessCounter++;
+          return;
+        }
         if (feedInfo.publicationDateSource === 'article-metadata')
           await fillPublicationDates(postProcessedFeed, feedInfo.url);
 
         feeds.set(feedInfo.url, postProcessedFeed);
+        this.sourceObservations.set(feedInfo.url, {
+          sourceUrl: feedInfo.url,
+          status: error ? 'fallback' : organizationComplete && tagComplete ? 'ok' : 'partial',
+          httpStatus: error instanceof FeedHttpError ? error.status : null,
+        });
         logger.info('[fetch-feed] fetched', `${fetchProcessCounter++}/${feedInfoListLength}`, feedInfo.label);
       });
 
@@ -368,15 +401,19 @@ export class FeedCrawler {
   /**
    * 取得したフィードの調整
    */
-  private static postProcessFeed(feedInfo: FeedInfo, feed: CustomRssParserFeed): CustomRssParserFeed {
+  private static postProcessFeed(
+    feedInfo: FeedInfo,
+    feed: CustomRssParserFeed,
+    sourceKind: 'rss' | 'html' = 'rss',
+  ): CustomRssParserFeed {
     const customFeed = feed as CustomRssParserFeed;
     customFeed.sectionId = feedInfo.sectionId;
 
     // ブログごとの調整
     switch (feedInfo.label) {
       case 'メルカリエンジニアリングブログ':
-        // 9時間ずれているので調整
-        FeedCrawler.subtractFeedItemsDateHour(customFeed, 9);
+        // RSSは日本時間をUTCとして配信するため補正する。HTMLの公開時刻は解析時に日本時間を解釈する。
+        if (sourceKind === 'rss') FeedCrawler.subtractFeedItemsDateHour(customFeed, 9);
         customFeed.link = 'https://engineering.mercari.com/blog/';
         break;
       case 'さくらのナレッジ':

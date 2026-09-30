@@ -9,6 +9,7 @@ import { type CustomOgObject, type CustomRssParserItem, FeedCrawler } from '../.
 import { FeedGenerator } from '../../src/feed/feed-generator';
 import { FeedValidator } from '../../src/feed/feed-validator';
 import { logger } from '../../src/feed/logger';
+import { mercariFeedUrl } from '../../src/feed/mercari-fallback';
 import { parseRemoteFeed } from '../../src/feed/remote-feed-input';
 import { generateSlackFeeds } from '../../src/feed/slack/service';
 import { parseSlackState } from '../../src/feed/slack/state-store';
@@ -59,6 +60,40 @@ afterEach(async () => {
   vi.restoreAllMocks();
   vi.useRealTimers();
   await fs.rm(location.directory, { recursive: true, force: true });
+});
+
+it('メルカリRSSの403時は公式一覧へ切り替え、公開日を二重補正せず後続フィードも取得する', async () => {
+  const mercari: FeedInfo = {
+    label: 'メルカリエンジニアリングブログ',
+    url: mercariFeedUrl,
+    sectionId: 'company',
+    language: 'ja',
+    input: { kind: 'remote', url: mercariFeedUrl },
+  };
+  const props = JSON.stringify({
+    posts: [1, [[0, { slug: [0, 'test-article'], title: [0, '記事'], published: [0, '2026-09-30T10:00:00'] }]]],
+  });
+  const fetch = vi.spyOn(globalThis, 'fetch').mockImplementation(async (url) => {
+    if (String(url) === mercariFeedUrl) return new Response('Forbidden', { status: 403 });
+    if (String(url) === 'https://engineering.mercari.com/blog/')
+      return new Response(`<astro-island props='${props}'></astro-island>`);
+    return new Response(xml('after', 'after'));
+  });
+  const crawler = new FeedCrawler();
+  const result = await (
+    crawler as unknown as {
+      fetchFeedsAsync(infos: FeedInfo[], concurrency: number): Promise<{ items: CustomRssParserItem[] }[]>;
+    }
+  ).fetchFeedsAsync([mercari, info('after')], 2);
+  expect(result).toHaveLength(2);
+  expect(result[0].items[0]).toMatchObject({
+    isoDate: '2026-09-30T01:00:00.000Z',
+    sourceFeedUrl: mercariFeedUrl,
+    sectionId: 'company',
+  });
+  expect(fetch).toHaveBeenCalledTimes(3);
+  const observations = (crawler as unknown as { sourceObservations: Map<string, unknown> }).sourceObservations;
+  expect(observations.get(mercariFeedUrl)).toMatchObject({ status: 'fallback', httpStatus: 403 });
 });
 
 it.each([
