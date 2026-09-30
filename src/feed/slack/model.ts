@@ -11,6 +11,46 @@ import type { SlackArticle, SlackFeedHistory, SlackSource } from './types';
 
 const DAY_MS = 86_400_000;
 
+/** 配信元がGUIDを再利用しても別記事を混同しないよう、公開日とサイトも照合する。 */
+const guidIdentity = (item: Pick<SlackArticle, 'url' | 'guid' | 'originalPublishedAt'>): string =>
+  createHash('sha256')
+    .update(JSON.stringify([new URL(item.url).origin, item.guid, item.originalPublishedAt]))
+    .digest('hex');
+
+/** 現在の入力が1つのURLを指すときだけ、同一記事の旧URL履歴を返す。 */
+const urlAliases = (
+  input: Omit<SlackArticle, 'firstSeenAt'>[],
+  retained: SlackArticle[],
+  ambiguous: Record<string, string>,
+  now: Date,
+): Map<string, SlackArticle[]> => {
+  const currentUrls = new Map<string, Set<string>>();
+  for (const item of input) {
+    const identity = guidIdentity(item);
+    const urls = currentUrls.get(identity) ?? new Set<string>();
+    urls.add(item.key);
+    currentUrls.set(identity, urls);
+  }
+  const aliases = new Map<string, SlackArticle[]>();
+  for (const [identity, urls] of currentUrls) {
+    if (urls.size > 1 || ambiguous[identity]) ambiguous[identity] = now.toISOString();
+  }
+  for (const item of retained) {
+    const identity = guidIdentity(item);
+    if (currentUrls.get(identity)?.size !== 1 || ambiguous[identity]) continue;
+    const group = aliases.get(identity) ?? [];
+    group.push(item);
+    aliases.set(identity, group);
+  }
+  for (const [identity, group] of aliases) {
+    if (group.length > 1 && new Set(group.map((item) => item.firstSeenAt)).size === 1) {
+      ambiguous[identity] = now.toISOString();
+      aliases.delete(identity);
+    }
+  }
+  return aliases;
+};
+
 /** 統計記事の日付フラグメントを保持して記事を識別する。 */
 export const slackArticleKey = (url: string): string => {
   const normalized = new URL(normalizeArticleUrl(url));
@@ -136,8 +176,19 @@ export const updateSlackFeed = (
   const nextDate = new Date(
     Math.max(Math.floor(nowMs / 1000) * 1000, previous ? Date.parse(lastIssuedAt) + 1000 : 0),
   ).toISOString();
+  const ambiguous = Object.fromEntries(
+    Object.entries(previous?.ambiguousGuids ?? {}).filter(([, date]) => Date.parse(date) >= seenCutoff),
+  );
+  const aliases = urlAliases(input.items, [...items.values()], ambiguous, now);
   for (const item of input.items) {
-    const known = seen[item.key];
+    const priorUrls = aliases.get(guidIdentity(item)) ?? [];
+    const earliest = priorUrls
+      .map((prior) => seen[prior.key])
+      .filter((prior) => prior !== undefined)
+      .sort((a, b) => a.firstSeenAt.localeCompare(b.firstSeenAt))[0];
+    const current = seen[item.key];
+    const known = earliest && (!current || earliest.firstSeenAt < current.firstSeenAt) ? earliest : current;
+    for (const prior of priorUrls) if (prior.key !== item.key) items.delete(prior.key);
     const firstSeenAt = known?.firstSeenAt ?? nextDate;
     seen[item.key] = {
       guid: known?.guid ?? item.guid,
@@ -155,6 +206,7 @@ export const updateSlackFeed = (
     link: input.link,
     lastIssuedAt,
     seen,
+    ...(Object.keys(ambiguous).length ? { ambiguousGuids: ambiguous } : {}),
     items: [...items.values()].sort((a, b) => b.firstSeenAt.localeCompare(a.firstSeenAt) || a.key.localeCompare(b.key)),
   };
 };

@@ -74,3 +74,101 @@ push済みの版は、[CI](https://github.com/fuhitonakagawa/my-tech-blog-rss-fe
 - 出力XML 144ファイルを別パーサーでも検証成功
 
 公開への反映はpush後です。
+
+
+
+
+----
+
+
+
+pushしたので、あらためてCI監視して、問題なく全feedが出ていること、自家製Feedは元Feedから抜け漏れないか、など包括的に見てください
+
+
+
+----
+
+
+**CI・デプロイは成功しました。ただし、元フィードの取り込み段階に欠落があり、「全部漏れなく配信できている」とは言えません。**
+
+対象は`f81dd7e9`です。[CI](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36692217100)・[生成／デプロイ](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36692217228)・[Pages公開](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36692630680)まで成功を確認しました。
+
+**正常だった部分**
+
+| 確認対象 | 結果 |
+|---|---|
+| 公開RSS 71本 | 全てHTTP 200・XML正常・公開コミットと内容一致 |
+| 翻訳13本 | 取得済み元カテゴリの472記事とURLが一致。欠落なし |
+| dedup 6本 | 入力1,389件→ユニーク1,069件。欠落・横断重複なし |
+| dedupの保持履歴込み | 1,734記事。横断重複なし |
+| HTML由来4本 | 全て正常。現在の元ページ掲載記事にも欠落なし |
+| 通知日時・GUID | 公開された配信履歴との不一致なし |
+
+**見つかった問題**
+
+1. **Qiita企業フィード22本が誤って重複扱い**
+   
+   各フィードのサイトURLが共通の`https://qiita.com`なので、別企業の記事まで除外されています。今回のカテゴリ集約に22記事が不足し、過去の掲載履歴を含めても、以下の**11記事は全体RSS・dedupの両方にありません**。
+
+   | 企業 | 未掲載 |
+   |---|---:|
+   | IBM | 3 |
+   | Microsoft | 2 |
+   | NTTデータ先端技術 | 2 |
+   | データブリックス | 3 |
+   | GMOコネクト | 1 |
+
+2. **Neon BlogもChangelogとの重複判定で除外**
+   
+   今回のDBカテゴリと翻訳版からブログ4記事が抜けています。過去に掲載した記事は通知RSSの履歴に残っていますが、新規取得の欠落につながる判定です。
+
+3. **生成時に6配信元の取得が失敗**
+
+   | 配信元 | 原因 |
+   |---|---|
+   | メルカリ | 403。対象期間の2記事が公開RSSにも未掲載 |
+   | HEARTBEATS | 404 |
+   | Learning and Control | 403 |
+   | MySQL | 403 |
+   | MongoDB | 404 |
+   | Preferred Networks | タイムアウト |
+
+4. **Google Developers Blogは20記事すべて公開日なし**
+   
+   現行仕様では日時のない記事は集約対象外なので、登録済みでも新着に入りません。
+
+また、TechCrunchとDevelopersIOでは、同一GUIDでURLが変わった記事が通知履歴に二重に残っています。通知への影響は別途確認が必要です。
+
+手元からのZenn再取得は56本が429だったため、元RSSとの独立照合は未完了です。GHA側での取得と、カテゴリからdedupへの包含は確認できています。
+
+[詳細結果・未掲載記事URL一覧](/Users/fuhitonakagawa/my-tech-blog-rss-feed/my-docs/tmp/push-feed-audit-f81dd7e9/summary.json)を保存しました。**最優先は、サイトURLが同じだけでRSS全体を除外する判定の修正です。**
+
+
+
+----
+
+
+
+修正してください。そのほか潜在的な問題も修正してください
+修正すれば今まで非通知だったものが再通知されますか？
+
+
+
+-----
+
+**コード側の欠落を修正しました。** 公開済み履歴を使った検証で、前回未掲載だったQiita企業の記事11件が、新しい掲載日時でRSSに入ることを確認しました。既存1,734記事のGUID・通知日時は維持しています。
+
+主な修正：
+
+- Qiita企業・Neonなど、同じサイトの別RSSを誤って除外する処理
+- Google Developers Blogの公開日欠落
+- HEARTBEATSの取得先、MongoDB・Preferred NetworksのHTML由来RSS生成
+- URL変更時の重複通知、GUID競合の誤統合
+- Unicode URLのキャッシュ衝突、429時の過剰な再取得
+
+**push後、元RSSに残っていて過去8日間の対象となる未掲載記事は、通知対象になります。** ただし、すでにRSSへ掲載済みでSlackだけ未通知だった記事の再送や、期間外の記事の遡及通知は行いません。
+
+537テスト・実サイト6件・lint・依存監査が成功し、RSS 73本とサイトの生成、XML 148ファイルの解析も確認しました。
+
+MySQLの403・手元のZennの429は配信元側の制限が残っています。また、旧RSSを個別購読している場合の変更先は[README](/Users/fuhitonakagawa/my-tech-blog-rss-feed/README.md)に記載しました。カテゴリ・翻訳・dedupの購読URLは変わりません。
+

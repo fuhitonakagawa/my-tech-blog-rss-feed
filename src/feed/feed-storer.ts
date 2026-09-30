@@ -82,11 +82,11 @@ export class FeedStorer {
     await fs.rm(storeDirPath, { recursive: true, force: true });
     await fs.mkdir(storeDirPath, { recursive: true });
 
-    const blogFeeds: BlogFeed[] = [];
+    const blogFeeds = new Map<string, BlogFeed>();
 
     for (const feed of feeds) {
       const blogOgImageUrl = ogObjectMap.get(feed.link)?.customOgImage?.url || '';
-      const customFeed: BlogFeed = {
+      const customFeed: BlogFeed = blogFeeds.get(feed.link) ?? {
         title: feed.title,
         link: feed.link,
         linkMd5Hash: textToMd5Hash(feed.link),
@@ -109,10 +109,18 @@ export class FeedStorer {
         });
       }
 
-      blogFeeds.push(customFeed);
+      blogFeeds.set(feed.link, customFeed);
     }
-
-    await fs.writeFile(path.join(storeDirPath, 'blog-feeds.json'), JSON.stringify(blogFeeds, null, 2), 'utf-8');
+    for (const feed of blogFeeds.values()) {
+      feed.items = [...new Map(feed.items.map((item) => [item.link, item])).values()].sort(
+        (a, b) => (b.isoDate ?? '').localeCompare(a.isoDate ?? '') || a.link.localeCompare(b.link),
+      );
+    }
+    await fs.writeFile(
+      path.join(storeDirPath, 'blog-feeds.json'),
+      JSON.stringify([...blogFeeds.values()], null, 2),
+      'utf-8',
+    );
 
     logger.info('[store-blog-feeds] finished');
   }

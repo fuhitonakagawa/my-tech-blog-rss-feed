@@ -29,6 +29,7 @@ export interface FeedInfo {
   sectionId: string;
   language: FeedLanguage;
   pageUrl?: ValidUrl;
+  publicationDateSource?: 'article-metadata';
   input: FeedInput;
 }
 
@@ -94,12 +95,18 @@ const toFeedInfo = (fileName: string, sectionId: string, value: unknown): FeedIn
     if (!isValidHttpUrl(feed.url)) {
       throw new Error(`セクション定義「${fileName}」のフィード「${feed.label}」のURLが不正です: ${feed.url}`);
     }
+    if (feed.publicationDateSource !== undefined && feed.publicationDateSource !== 'article-metadata') {
+      throw new Error(`セクション定義「${fileName}」の publicationDateSource が不正です`);
+    }
 
     return {
       label: feed.label,
       url: feed.url as ValidUrl,
       sectionId,
       language: parseFeedLanguage(feed.language),
+      ...(feed.publicationDateSource === 'article-metadata'
+        ? { publicationDateSource: 'article-metadata' as const }
+        : {}),
       input: {
         kind: 'remote',
         url: feed.url as ValidUrl,

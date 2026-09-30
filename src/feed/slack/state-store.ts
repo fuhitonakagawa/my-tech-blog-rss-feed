@@ -93,6 +93,13 @@ const parseHistory = (value: unknown, updatedAt: string): SlackFeedHistory => {
     throw new Error('Slack配信履歴のフィードが不正です');
   const items = feed.items.map(parseArticle);
   const seen = parseSeen(feed.seen, updatedAt);
+  const ambiguousGuids = feed.ambiguousGuids === undefined ? {} : record(feed.ambiguousGuids);
+  const ambiguous: Record<string, string> = {};
+  for (const [key, date] of Object.entries(ambiguousGuids)) {
+    if (!validKey(key) || !isSlackDate(date) || date > updatedAt)
+      throw new Error('Slack配信履歴のGUID競合記録が不正です');
+    ambiguous[key] = date;
+  }
   const lastIssuedAt = feed.lastIssuedAt;
   if (
     new Set(items.map((item) => item.key)).size !== items.length ||
@@ -100,7 +107,15 @@ const parseHistory = (value: unknown, updatedAt: string): SlackFeedHistory => {
     items.some((item) => seen[item.key]?.firstSeenAt !== item.firstSeenAt || seen[item.key]?.guid !== item.guid)
   )
     throw new Error('Slack配信履歴の既知記事が不整合です');
-  return { title: feed.title, language: feed.language, link: feed.link, lastIssuedAt: feed.lastIssuedAt, items, seen };
+  return {
+    title: feed.title,
+    language: feed.language,
+    link: feed.link,
+    lastIssuedAt: feed.lastIssuedAt,
+    items,
+    seen,
+    ...(Object.keys(ambiguous).length ? { ambiguousGuids: ambiguous } : {}),
+  };
 };
 
 /** 外部入力として公開済み履歴を検証し、未知のフィールドを捨てる。 */

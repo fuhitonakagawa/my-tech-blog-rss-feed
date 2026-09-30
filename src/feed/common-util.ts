@@ -74,6 +74,7 @@ export const exponentialBackoff = async <A>(
   retrier: (attemptCount: number) => Promise<A>,
   baseWaitMs = 1000,
   retries = 3,
+  shouldRetry: (error: unknown) => boolean = () => true,
 ) => {
   let attemptLimitReached = false;
   let attemptCount = 0;
@@ -86,6 +87,7 @@ export const exponentialBackoff = async <A>(
   while (!attemptLimitReached) {
     const [error, result] = await to(retrier(attemptCount));
     if (error) {
+      if (!shouldRetry(error)) throw error;
       attemptCount++;
       attemptLimitReached = attemptCount > retries;
 

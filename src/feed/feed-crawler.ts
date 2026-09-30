@@ -26,7 +26,9 @@ import {
 import { FeedValidator } from './feed-validator';
 import type { GeneratedFeedRegistry } from './generated/types';
 import { logger } from './logger';
+import { fillPublicationDates } from './publication-metadata';
 import { parseRemoteFeed } from './remote-feed-input';
+import { FeedHttpError, SourceRequestQueue } from './source-request';
 
 export type CustomOgObject = OgObject & {
   // 画像は一つだけとする
@@ -143,6 +145,7 @@ const normalizeFeedItemCategory = (category: unknown): string => {
 };
 
 export class FeedCrawler {
+  private readonly sourceRequests = new SourceRequestQueue();
   private rssParser: RssParser<CustomRssParserFeed, CustomRssParserItem>;
   private feedValidator: FeedValidator;
   private generatedFeedRegistry: GeneratedFeedRegistry;
@@ -203,8 +206,7 @@ export class FeedCrawler {
     const feedInfoListLength = feedInfoList.length;
     let fetchProcessCounter = 1;
 
-    const feeds: CustomRssParserFeed[] = [];
-    const feedLinkSet = new Set<string>();
+    const feeds = new Map<string, CustomRssParserFeed>();
 
     const { errors } = await PromisePool.for(feedInfoList)
       .withConcurrency(concurrency)
@@ -220,6 +222,7 @@ export class FeedCrawler {
             },
             1000,
             constants.feedFetchRetryCount,
+            (error) => !(error instanceof FeedHttpError) || error.retryable,
           ),
         );
         if (error) {
@@ -234,15 +237,10 @@ export class FeedCrawler {
         }
 
         const postProcessedFeed = FeedCrawler.postProcessFeed(feedInfo, feed);
+        if (feedInfo.publicationDateSource === 'article-metadata')
+          await fillPublicationDates(postProcessedFeed, feedInfo.url);
 
-        // フィードのリンクの重複チェック。すでにあったらスキップ
-        if (feedLinkSet.has(postProcessedFeed.link)) {
-          logger.warn('フィードのリンクが重複しているのでスキップしました ', feedInfo.label, postProcessedFeed.link);
-          return;
-        }
-        feedLinkSet.add(postProcessedFeed.link);
-
-        feeds.push(postProcessedFeed);
+        feeds.set(feedInfo.url, postProcessedFeed);
         logger.info('[fetch-feed] fetched', `${fetchProcessCounter++}/${feedInfoListLength}`, feedInfo.label);
       });
 
@@ -258,7 +256,10 @@ export class FeedCrawler {
 
     logger.info('[fetch-feed] finished');
 
-    return feeds;
+    return feedInfoList.flatMap((info) => {
+      const feed = feeds.get(info.url);
+      return feed ? [feed] : [];
+    });
   }
 
   /** 入力URLから検証済みのフィードデータを取得する */
@@ -298,18 +299,7 @@ export class FeedCrawler {
 
   /** 外部サイトが配信するフィードXMLを取得する */
   private async requestRemoteFeedXml(feedUrl: string): Promise<string> {
-    const response = await fetch(feedUrl, {
-      headers: {
-        'user-agent': constants.requestUserAgent,
-      },
-      signal: AbortSignal.timeout(1000 * 10),
-      dispatcher: publicNetworkDispatcher,
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP Error: ${response.status}`);
-    }
-
-    return response.text();
+    return this.sourceRequests.fetchXml(feedUrl);
   }
 
   /** フィードXMLを検証して解析する */
@@ -388,6 +378,8 @@ export class FeedCrawler {
     if (qiitaTagPageUrl) {
       customFeed.link = qiitaTagPageUrl;
     }
+    const qiitaOrganization = /^https:\/\/qiita\.com\/organizations\/([^/]+)\/activities\.atom$/.exec(feedInfo.url);
+    if (qiitaOrganization) customFeed.link = `https://qiita.com/organizations/${qiitaOrganization[1]}`;
 
     const businessItPageUrl = toBusinessItPageUrl(feedInfo.url);
     if (businessItPageUrl) {

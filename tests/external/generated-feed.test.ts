@@ -14,6 +14,8 @@ afterAll(async () => {
 });
 
 describe.each([
+  { id: 'preferred-networks', sectionId: 'my-tech-blog-jp', articlePrefix: 'https://www.preferred.jp/ja/blog/tech/' },
+  { id: 'mongodb-blog', sectionId: 'my-tech-blog-db', articlePrefix: 'https://www.mongodb.com/company/blog/' },
   { id: 'serverless-operations', sectionId: 'my-tech-blog-jp', articlePrefix: 'https://serverless.co.jp/blog/' },
   { id: 'anthropic-news', sectionId: 'my-tech-blog-ai', articlePrefix: 'https://www.anthropic.com/' },
   { id: 'claude-announcements', sectionId: 'my-tech-blog-ai', articlePrefix: 'https://claude.com/blog/' },

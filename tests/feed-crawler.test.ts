@@ -45,6 +45,67 @@ afterEach(() => {
 });
 
 describe('FeedCrawler', () => {
+  it('同じサイトの複数RSSをすべて取得し、ブログページだけを記事の和集合にする', async () => {
+    const registry = new Map(
+      ['one', 'two'].map((id) => [
+        id,
+        `<rss version="2.0"><channel><title>${id}</title><link>https://example.com/</link><item><title>${id}</title><guid>${id}</guid><link>https://example.com/${id}</link><pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate></item></channel></rss>`,
+      ]),
+    );
+    const definitions: FeedInfo[] = ['one', 'two'].map((id) => ({
+      label: id,
+      sectionId: id,
+      language: 'en',
+      url: `https://example.com/${id}/feed`,
+      input: { kind: 'generated', id },
+    }));
+    const crawler = new FeedCrawler(registry) as unknown as {
+      fetchFeedsAsync(feeds: FeedInfo[], concurrency: number): Promise<CustomRssParserFeed[]>;
+    };
+    const result = await crawler.fetchFeedsAsync(definitions, 2);
+    expect(result.map((feed) => feed.sectionId)).toEqual(['one', 'two']);
+    const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'shared-blog-page-'));
+    try {
+      const dist = new FeedGenerator().generateFeeds(
+        result.flatMap((feed) => feed.items),
+        new Map(),
+        new Map(),
+        200,
+        500,
+        { title: 'Test', description: 'Test', pageUrl: constants.siteUrl, feedUrls: constants.feedUrls },
+      ).feedDistributionSet;
+      await new FeedStorer().storeFeeds(
+        dist,
+        path.join(directory, 'feeds'),
+        result,
+        new Map(),
+        new Map(),
+        path.join(directory, 'blogs'),
+      );
+      const blogs: BlogFeed[] = JSON.parse(await fs.readFile(path.join(directory, 'blogs/blog-feeds.json'), 'utf8'));
+      expect(blogs).toHaveLength(1);
+      expect(blogs[0].items.map((item) => item.link)).toEqual(['https://example.com/one', 'https://example.com/two']);
+      expect(JSON.parse(dist.json).items).toHaveLength(2);
+    } finally {
+      await fs.rm(directory, { recursive: true, force: true });
+    }
+  });
+
+  it('Qiitaの企業フィードは企業ページをブログ識別に使う', () => {
+    const info: FeedInfo = {
+      label: 'Company',
+      url: 'https://qiita.com/organizations/example/activities.atom',
+      sectionId: 'my-tech-blog-jp',
+      language: 'unknown',
+      input: { kind: 'remote', url: 'https://qiita.com/organizations/example/activities.atom' },
+    };
+    const result = postProcessFeed(info, {
+      title: 'Company',
+      link: 'https://qiita.com',
+      items: [],
+    } as unknown as CustomRssParserFeed);
+    expect(result.link).toBe('https://qiita.com/organizations/example');
+  });
   it('サイトURLが欠落した別々のAtomも正常記事を失わず取得する', async () => {
     const ids = ['one', 'two'];
     const registry = new Map(

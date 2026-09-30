@@ -1,5 +1,6 @@
 import { extractAnthropicNews } from './anthropic-news';
 import { extractCssGeneratedFeedItems } from './css-extractor';
+import { extractMongoDbBlog } from './mongodb-blog';
 import type {
   CssGeneratedFeedExtractorConfig,
   GeneratedFeedDefinition,
@@ -32,6 +33,7 @@ const extractServerlessOperations: GeneratedFeedExtractor = (
 };
 
 const GENERATED_FEED_ADAPTERS: ReadonlyMap<string, GeneratedFeedExtractor> = new Map([
+  ['mongodb-blog', extractMongoDbBlog],
   ['anthropic-news', extractAnthropicNews],
   ['serverless-operations', extractServerlessOperations],
 ]);

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "label": "Preferred Networks Tech Blog",
+  "pageUrl": "https://www.preferred.jp/ja/blog/tech",
+  "language": "ja",
+  "extractor": {
+    "type": "css",
+    "itemSelector": "article:has(a[href^='/ja/blog/tech/'])",
+    "titleSelector": "h2",
+    "linkSelector": "a[href^='/ja/blog/tech/']",
+    "dateSelector": "time",
+    "dateAttribute": "datetime",
+    "timeZoneOffset": "+09:00"
+  },
+  "pollIntervalMinutes": 60,
+  "maxItems": 50
+}

@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import constants from '../../../src/common/constants';
 import { slackSourcePath } from '../../../src/feed/slack/config';
 import { buildSlackRss, slackArticleKey, updateSlackFeed } from '../../../src/feed/slack/model';
+import { parseSlackState } from '../../../src/feed/slack/state-store';
 import type { SlackSource } from '../../../src/feed/slack/types';
 
 const rssUrl = `${constants.siteUrl}rss/ai-jp/feeds/rss.xml`;
@@ -20,6 +21,49 @@ const source = (items: ReturnType<typeof article>[]): SlackSource => ({
 });
 
 describe('Slack用の初回掲載日時', () => {
+  it('同時掲載されたGUID競合の記事は、片方が消えて再登場しても別記事のまま保持する', () => {
+    const one = { ...article('https://example.com/one'), id: 'reused-guid' };
+    const two = { ...article('https://example.com/two'), id: 'reused-guid' };
+    const first = updateSlackFeed(source([one, two]), undefined, new Date('2026-09-29T07:00:00Z'));
+    const key = slackSourcePath(rssUrl);
+    const restored = parseSlackState(
+      JSON.stringify({ schemaVersion: 1, updatedAt: '2026-09-29T07:00:00.000Z', feeds: { [key]: first } }),
+    ).feeds[key];
+    const next = updateSlackFeed(source([two]), restored, new Date('2026-09-29T08:00:00Z'));
+    expect(next.items).toHaveLength(2);
+    const returned = updateSlackFeed(source([one, two]), next, new Date('2026-09-29T09:00:00Z'));
+    expect(returned.items.map((item) => [item.url, item.firstSeenAt])).toEqual(
+      first.items.map((item) => [item.url, item.firstSeenAt]),
+    );
+  });
+  it('同じGUID・配信元・公開日のURL変更は、最初の通知日時とGUIDを維持する', async () => {
+    const first = { ...article('https://example.com/old-slug'), id: 'stable-guid' };
+    const initial = updateSlackFeed(source([first]), undefined, new Date('2026-09-29T07:00:00Z'));
+    const moved = { ...first, url: 'https://example.com/new-slug', title: '修正後タイトル' };
+    const result = updateSlackFeed(source([moved]), initial, new Date('2026-09-29T08:00:00Z'));
+    expect(result.items).toHaveLength(1);
+    expect(result.items[0]).toMatchObject({
+      url: moved.url,
+      guid: 'stable-guid',
+      firstSeenAt: initial.items[0].firstSeenAt,
+    });
+    expect(result.lastIssuedAt).toBe(initial.lastIssuedAt);
+    expect(result.seen[slackArticleKey(first.url)]).toEqual(initial.seen[slackArticleKey(first.url)]);
+    const parsed = await new Parser().parseString(buildSlackRss(rssUrl, result));
+    expect(parsed.items[0].isoDate).toBe(initial.items[0].firstSeenAt);
+    const republished = updateSlackFeed(
+      source([{ ...moved, url: 'https://example.com/another', date_published: '2026-09-30T06:00:00.000Z' }]),
+      result,
+      new Date('2026-09-30T07:00:00Z'),
+    );
+    expect(republished.items).toHaveLength(2);
+    const otherOrigin = updateSlackFeed(
+      source([{ ...moved, url: 'https://other.example.com/another' }]),
+      result,
+      new Date('2026-09-30T07:00:00Z'),
+    );
+    expect(otherOrigin.items).toHaveLength(2);
+  });
   it('記事のGUID・著者・画像・カテゴリを保持する', async () => {
     const value = {
       ...article('https://example.com/article'),

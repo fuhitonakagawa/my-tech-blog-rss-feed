@@ -31,6 +31,7 @@ export interface SlackFeedHistory {
   lastIssuedAt: string;
   items: SlackArticle[];
   seen: Record<string, SeenArticle>;
+  ambiguousGuids?: Record<string, string>;
 }
 
 export interface SlackFeedState {
