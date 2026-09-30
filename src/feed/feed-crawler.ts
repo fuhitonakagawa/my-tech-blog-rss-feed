@@ -27,6 +27,9 @@ import { FeedValidator } from './feed-validator';
 import type { GeneratedFeedRegistry } from './generated/types';
 import { logger } from './logger';
 import { fillPublicationDates } from './publication-metadata';
+import { QiitaOrganizationSupplement } from './qiita-organization';
+import { QiitaSupplement, qiitaTag } from './qiita-supplement';
+import { mergeRecoveredItems, recoveredFeedItems } from './recovered-articles';
 import { parseRemoteFeed } from './remote-feed-input';
 import { FeedHttpError, SourceRequestQueue } from './source-request';
 
@@ -146,6 +149,8 @@ const normalizeFeedItemCategory = (category: unknown): string => {
 
 export class FeedCrawler {
   private readonly sourceRequests = new SourceRequestQueue();
+  private readonly qiitaSupplement = new QiitaSupplement();
+  private readonly qiitaOrganization = new QiitaOrganizationSupplement(this.sourceRequests);
   private rssParser: RssParser<CustomRssParserFeed, CustomRssParserItem>;
   private feedValidator: FeedValidator;
   private generatedFeedRegistry: GeneratedFeedRegistry;
@@ -211,6 +216,7 @@ export class FeedCrawler {
     const { errors } = await PromisePool.for(feedInfoList)
       .withConcurrency(concurrency)
       .process(async (feedInfo) => {
+        const recovered = recoveredFeedItems(feedInfo);
         const [error, feed] = await to(
           exponentialBackoff(
             async (attemptCount: number) => {
@@ -233,10 +239,22 @@ export class FeedCrawler {
             feedInfo.url,
           );
           logger.trace(error);
-          return;
+          if (!qiitaTag(feedInfo.url) && recovered.length === 0) return;
         }
 
-        const postProcessedFeed = FeedCrawler.postProcessFeed(feedInfo, feed);
+        if (feed) await this.qiitaOrganization.enrich(feed, feedInfo.url);
+        const postProcessedFeed = FeedCrawler.postProcessFeed(
+          feedInfo,
+          feed ?? {
+            title: feedInfo.label,
+            link: feedInfo.url.replace(/\/feed$/, ''),
+            sectionId: feedInfo.sectionId,
+            items: [],
+          },
+        );
+        await this.qiitaSupplement.enrich(postProcessedFeed, feedInfo.url);
+        mergeRecoveredItems(postProcessedFeed, recovered);
+        if (error && postProcessedFeed.items.length === 0) return;
         if (feedInfo.publicationDateSource === 'article-metadata')
           await fillPublicationDates(postProcessedFeed, feedInfo.url);
 
@@ -299,7 +317,7 @@ export class FeedCrawler {
 
   /** 外部サイトが配信するフィードXMLを取得する */
   private async requestRemoteFeedXml(feedUrl: string): Promise<string> {
-    return this.sourceRequests.fetchXml(feedUrl);
+    return this.sourceRequests.fetchText(feedUrl);
   }
 
   /** フィードXMLを検証して解析する */

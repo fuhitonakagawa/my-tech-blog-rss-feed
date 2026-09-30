@@ -78,6 +78,12 @@ RSS・Atom・RSS 1.0の概要、CDATA、HTML形式の本文、文字参照から
 
 同一サイトの複数RSSも独立して取得し、カテゴリ所属・取得元記録を保持します。ブログ詳細ページは同じサイトの記事の和集合を表示します。Qiitaの企業フィードはOrganizationページで識別します。同じ配信元へのRSS取得は直列で、開始間隔を500ミリ秒以上空けます。429の`Retry-After`中は同じホストへの再送を止め、後続巡回へ委ねます。403・404は同じ実行内で再試行せず、5xx・408・通信障害は既定の再試行対象です。
 
+QiitaのタグRSSは、同じタグ・集約対象期間の記事を公式APIで補完します。1ページ100件、1タグ10ページ、全タグ合計45リクエスト・120秒を上限とします。公開日には`created_at`を使い、非公開・不正データ・期間外の記事は含めません。15分以内の再実行では取得結果を再利用し、期間内に取得した記事は先頭ページから消えても保持します。APIエラーや予算切れでは取得済みの記事と元RSSを配信し、`[qiita-supplement] incomplete`を警告します。人気フィードや企業フィードへタグAPIの集合を混ぜません。
+
+Qiita企業フィードは20ページまで、全企業合計120秒の範囲で後続ページを取得します。公開・更新日時の両方が対象期間より古いページ、空ページ、重複ページで終了します。途中失敗や上限では取得済み記事を保持し、`[qiita-organization] incomplete`を警告します。取得元RSSのURLとカテゴリ所属は維持します。
+
+元のRSSや記事ページで公開日時を確認できた未掲載記事は、`src/resources/recovered-articles.json`から元カテゴリへ補えます。通常の集約期間内だけを対象とし、取得できた元RSSを優先します。本文は補作せず、公開済みの通知履歴を初期化しません。削除済みで日時を確認できない記事や、RSSには掲載済みでSlack投稿だけ未確認の記事を自動で再通知する機能ではありません。
+
 `publicationDateSource: "article-metadata"`を指定した取得元は、RSSの公開日時がない記事だけ、同一サイトのHTMLメタデータ（Articleの`datePublished`または`article:published_time`）を確認します。Google Developers Blogに適用されます。日付のみはUTC 0時とし、異なる公開日候補がある場合・日付不正・取得失敗では補いません。1回50記事・合計60秒まで、確認した公開日を14日キャッシュします。既存の公開日を上書きせず、更新日や取得時刻も代用しません。
 
 HEARTBEATSの取得元は`https://heartbeats.jp/feed/?post_type=hbblog`です。Preferred NetworksとMongoDBは公開ブログページから単独RSSを生成し、各カテゴリへ取り込みます。公開パスはそれぞれ`/feeds/generated/preferred-networks/rss.xml`、`/feeds/generated/mongodb-blog/rss.xml`です。元のRSSをSlackへ直接登録している場合は、購読先も変更する必要があります。カテゴリ・翻訳・dedupの購読URLは共通です。

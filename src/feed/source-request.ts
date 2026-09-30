@@ -16,7 +16,7 @@ export class SourceRequestQueue {
   private readonly nextStart = new Map<string, number>();
   private readonly blockedUntil = new Map<string, number>();
 
-  public async fetchXml(url: string): Promise<string> {
+  public async fetchText(url: string, options: { accept?: string; deadline?: number } = {}): Promise<string> {
     const origin = new URL(url).origin;
     const prior = this.queues.get(origin) ?? Promise.resolve();
     const { promise: gate, resolve: release } = Promise.withResolvers<void>();
@@ -25,14 +25,22 @@ export class SourceRequestQueue {
     try {
       if ((this.blockedUntil.get(origin) ?? 0) > Date.now()) throw new FeedHttpError(429);
       const wait = (this.nextStart.get(origin) ?? 0) - Date.now();
+      if (options.deadline !== undefined && Date.now() + Math.max(wait, 0) >= options.deadline)
+        throw new Error('取得予算を超えました');
       if (wait > 0) await new Promise<void>((resolve) => setTimeout(resolve, wait));
       this.nextStart.set(origin, Date.now() + 500);
       const response = await fetch(url, {
         headers: {
           'user-agent': constants.requestUserAgent,
-          accept: 'application/atom+xml, application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.5',
+          accept:
+            options.accept ?? 'application/atom+xml, application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.5',
         },
-        signal: AbortSignal.timeout(constants.externalFetchTimeoutMs),
+        signal: AbortSignal.timeout(
+          Math.min(
+            constants.externalFetchTimeoutMs,
+            Math.max(1, (options.deadline ?? Number.POSITIVE_INFINITY) - Date.now()),
+          ),
+        ),
         dispatcher: publicNetworkDispatcher,
       });
       if (!response.ok) {
