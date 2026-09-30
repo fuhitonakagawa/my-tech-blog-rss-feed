@@ -22,7 +22,7 @@ module.exports = (eleventyConfig: any) => {
     LICENSES: 'LICENSES',
     'THIRD_PARTY_NOTICES.md': 'THIRD_PARTY_NOTICES.md',
   });
-  // セクションフィード: src/site/section-feeds/<id>/feeds/* を /rss/<id>/feeds/* として配信
+  // セクションフィードの保存先・公開先には固定の公開パスIDを使う。
   eleventyConfig.addPassthroughCopy({ 'src/site/section-feeds': constants.sectionRootPath });
   eleventyConfig.addPassthroughCopy({ 'src/site/translated-feeds': constants.sectionRootPath });
 

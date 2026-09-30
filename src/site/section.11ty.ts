@@ -1,4 +1,5 @@
 import constants, { sectionFeedUrls } from '../common/constants';
+import { sectionPathId } from '../resources/section-paths';
 import { renderFeedItem } from './_includes/components/feed-item';
 import { escapeHtml } from './_includes/components/html-utils';
 import { renderNav } from './_includes/components/nav';
@@ -20,13 +21,13 @@ export const data = {
     alias: 'section',
     addAllPagesToCollections: true,
   },
-  permalink: (data: SectionData) => `${constants.sectionRootPath}/${data.section.id}/`,
+  permalink: (data: SectionData) => `${constants.sectionRootPath}/${sectionPathId(data.section.id)}/`,
   eleventyComputed: {
     // エスケープはレイアウト側（main.11ty.ts）で行うため、ここでは生の文字列を渡す
     pageTitle: (data: SectionData) => `${data.section.title}｜${constants.siteTitle}`,
     lastUpdated: (data: SectionData) => data.section.lastModified,
     // レイアウトの alternate リンクをこのセクションのフィードに向ける
-    feedDir: (data: SectionData) => `${constants.sectionRootPath}/${data.section.id}/feeds/`,
+    feedDir: (data: SectionData) => `${constants.sectionRootPath}/${sectionPathId(data.section.id)}/feeds/`,
   },
 };
 

@@ -751,11 +751,83 @@ section名について、slackのチャンネル名と合わせたい
 
 translatedとか、dailyもかな
 
+
+
+----
+
+
+
+翻訳版・日次統計・dedupも比較対象に含めます。翻訳版はID変更がSlackの購読URLにも影響するため、変更範囲を確認しつつ、全体の対応表を整理します。
+翻訳版・日次統計・dedupについては、「ほかの不一致は直さず教えて」の対象として差分を報告する形ですか？それともIDもSlack名へ揃えますか？翻訳版・dedupのID変更には、Slackでの購読URL変更も伴います。
+
+- 差分だけ報告する（推奨）
+- my-tech-blog系だけIDも変更する
+- すべてのIDをSlack名へ揃える
+
+
+
+----
+
+
+最新の失敗も、**修正前の`063a292f1`で動いた[毎時生成ジョブ](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/actions/runs/36671449006)**です。同じ`sax`読み込みエラーでした。
+
+修正版は手元でステージ済みですが、GitHubには未反映です。**現在の修正をcommit・pushする必要があります。**
+
+命名については、通常7セクションへの`my-tech-blog-`付与と、[yamadashyを含む調査JSONの復元](/Users/fuhitonakagawa/my-tech-blog-rss-feed/my-docs/tmp/company-feed-sources.json)を済ませています。431テスト・外部4テスト・lintは通過しています。
+
+追加で確認した不一致は以下です。**これらは変更していません。** Slack名は比較用に`#`と`-feed`を除いています。
+
+| 現在のID | Slack側 |
+|---|---|
+| `ai-news` | `karaage-ai-news` |
+| `business-it` | `business-plus-it` |
+| `google-cloud` / `google-cloud-ja` | `googlecloud` / `googlecloud-ja` |
+| `hatena` | `hatenab` |
+| `itmedia` | `it-media` |
+| `qiita` | `qiita-trend` |
+| `security-advisory` | `security-github` |
+| `tech-book` | `my-tech-book` |
+| `techno-edge` | `technoedge` |
+| `zenn` | `zenn-trend` |
+| `tech-blog-dedup` | `my-tech-blog-jp-dedup` |
+| `itmedia-dedup` | `it-media-dedup` |
+| `hatena-dedup` | `hatenab-dedup` |
+| `daily`（統計定義名） | `daily-stats` |
+
+翻訳版13本も、IDの`-jp`とSlackの`-translated-jp`が異なります。特にAI・DB・Engineering・Platform・Programming・Roboticsの6本は、Slack側だけに`my-tech-blog-`が付いています。こちらの追加変更は、先ほどの選択への回答待ちです。
+
+
+----
+
+
+変えときましょう
+
+
 ----
 
 
 
 
+通常・翻訳・dedup・日次統計の管理用IDと定義ファイル名を、Slack名に揃えました。
+
+**購読URL69本は維持しているため、Slackでの再登録は不要です。** 既読履歴・通知日時・dedupの配信先も維持します。
+
+447テスト、lint・型検査、RSS生成・サイト生成が成功しました。
+
+[yamadashyを含む調査JSON](/Users/fuhitonakagawa/my-tech-blog-rss-feed/my-docs/tmp/company-feed-sources.json)も復元済みです。
+
+
+
+
+
+
+
+
+
+----
+
+
+まだCI落ちてましたが、これはslack通知もヌケモレが発生してしまう？エラーに鳴ったところで未通知のところはちゃんと最新実行で成功したら通知される？それとも通知とは関係ないCIエラー？
 
 
 

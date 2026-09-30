@@ -1,5 +1,6 @@
 import { DEDUPLICATED_FEED_DEFINITION_LIST } from './deduplicated-feed-list';
 import { FEED_SECTION_LIST, type FeedSection } from './feed-info-list';
+import { validateSectionPaths } from './section-paths';
 import { TRANSLATED_FEED_DEFINITION_LIST } from './translated-feed-list';
 
 export interface DisplaySection extends Pick<FeedSection, 'id' | 'title'> {
@@ -8,19 +9,19 @@ export interface DisplaySection extends Pick<FeedSection, 'id' | 'title'> {
 
 /** 購読用の統合フィードを先頭に置き、関連するカテゴリを隣接させる。 */
 const SECTION_DISPLAY_ORDER = [
-  'tech-blog-dedup',
+  'my-tech-blog-jp-dedup',
   'zenn-dedup',
   'qiita-dedup',
-  'itmedia-dedup',
+  'it-media-dedup',
   'menthas-dedup',
-  'hatena-dedup',
+  'hatenab-dedup',
   // 企業・個人ブログ
   'my-tech-blog-jp',
   'company-tech-blog',
   'my-tech-blog-solo',
   // AI・開発
   'my-tech-blog-ai',
-  'ai-news',
+  'karaage-ai-news',
   'my-tech-blog-engineering',
   'my-tech-blog-platform',
   'my-tech-blog-programming',
@@ -30,41 +31,41 @@ const SECTION_DISPLAY_ORDER = [
   // クラウド
   'aws',
   'aws-ja',
-  'google-cloud',
-  'google-cloud-ja',
+  'googlecloud',
+  'googlecloud-ja',
   'azure',
   // セキュリティ
   'security',
   'security-en',
-  'security-advisory',
+  'security-github',
   'jvn',
   'jpcert',
   // 投稿サービス
-  'zenn',
+  'zenn-trend',
   'zenn-ai',
   'zenn-cloud',
   'zenn-security',
-  'qiita',
+  'qiita-trend',
   'qiita-ai',
   'qiita-cloud',
   'qiita-security',
   // ニュース・メディア
-  'hatena',
+  'hatenab',
   'menthas',
   'publickey',
   'infoq',
   'thinkit',
   'developersio',
   'gihyo',
-  'itmedia',
-  'techno-edge',
+  'it-media',
+  'technoedge',
   'gigazine',
   'techcrunch',
   'hacker-news',
-  'business-it',
+  'business-plus-it',
   // 資料・書籍
   'speakerdeck',
-  'tech-book',
+  'my-tech-book',
 ];
 
 /** 翻訳版は原文カテゴリとひとまとまりにして扱う。 */
@@ -93,3 +94,5 @@ if (
 export const DISPLAY_SECTION_LIST: DisplaySection[] = [
   ...new Set([...SECTION_DISPLAY_ORDER, ...sectionGroups.keys()]),
 ].flatMap((id) => sectionGroups.get(id) ?? []);
+
+validateSectionPaths(DISPLAY_SECTION_LIST.map((section) => section.id));

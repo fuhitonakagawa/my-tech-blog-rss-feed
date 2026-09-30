@@ -2,7 +2,7 @@
 
 企業の技術ブログ、AI・クラウド・セキュリティなどの更新を、カテゴリ別のWebページとRSS・Atom・JSON Feedで配信する静的サイトです。通常のRSS・Atomと、HTMLの記事一覧から生成するフィードを扱います。
 
-[公開サイト](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/) ／ [AIカテゴリ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/my-tech-blog-ai/)
+[公開サイト](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/) ／ [AIカテゴリ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai/)
 
 このリポジトリは [yamadashy/tech-blog-rss-feed](https://github.com/yamadashy/tech-blog-rss-feed) のフォークです。開発者エージェントの作業方針・調査上の注意点は [AGENTS.md](AGENTS.md) に記載しています。
 
@@ -46,8 +46,8 @@
 | --- | --- |
 | 全体の新着ページ | `/` |
 | 全体の集約フィード | `/feeds/rss.xml`、`/feeds/atom.xml`、`/feeds/feed.json` |
-| セクションページ | `/rss/<セクションID>/` |
-| セクションの集約フィード | `/rss/<セクションID>/feeds/rss.xml`、`atom.xml`、`feed.json` |
+| セクションページ | `/rss/<公開パスID>/` |
+| セクションの集約フィード | `/rss/<公開パスID>/feeds/rss.xml`、`atom.xml`、`feed.json` |
 | ブログ一覧・ブログ別ページ | `/blogs/`、`/blogs/<ブログURLのハッシュ>/` |
 | 人気記事ページ | `/hot/` |
 | サイトマップ | `/sitemap.xml`、`/site.xml` |
@@ -137,7 +137,7 @@ Indexing APIへの通知には、生成済みブログデータ、対象サイ�
 | カテゴリナビ・登録フィード一覧の表示順 | [表示カテゴリ一覧（`src/resources/display-section-list.ts`）](src/resources/display-section-list.ts) |
 | セクションの表示名・所属フィード・基本順 | [セクション定義（`src/resources/sections/`）](src/resources/sections/) |
 | HTML由来の生成元・抽出設定 | [生成元定義（`src/resources/generated-feeds/`）](src/resources/generated-feeds/) |
-| 日次統計の表示名・集計時間帯・保持期間 | [統計定義（`src/resources/stats/daily.json`）](src/resources/stats/daily.json) |
+| 日次統計の表示名・集計時間帯・保持期間 | [統計定義（`src/resources/stats/daily-stats.json`）](src/resources/stats/daily-stats.json) |
 | Eleventyの入力・出力・配信ファイル | [サイト設定（`eleventy.config.ts`）](eleventy.config.ts) |
 | 定期更新・公開先ブランチ | [更新ワークフロー（`.github/workflows/generate-feed.yml`）](.github/workflows/generate-feed.yml) |
 
@@ -217,12 +217,13 @@ Amazon Translateは`provider="amazon-translate"`とリージョン・ロール�
 ```
 
 - **ID**: ファイル名の拡張子を除いた部分です。先頭は英小文字または数字、以降は英小文字・数字・ハイフンを使用します。
-- **Slackとの対応**: `my-tech-blog-`系の通常カテゴリは、Slackチャンネル名の末尾の`-feed`を除いたIDを使います。対象は`my-tech-blog-jp`・`my-tech-blog-ai`・`my-tech-blog-db`・`my-tech-blog-engineering`・`my-tech-blog-platform`・`my-tech-blog-programming`・`my-tech-blog-robotics`・`my-tech-blog-solo`です。画面の表示名は`title`、通常カテゴリの閲覧・配信パスはIDで決まります。翻訳版とdedup版のID・購読URLは独立しています。
+- **公開パス**: [公開パス対応（`src/resources/section-paths.json`）](src/resources/section-paths.json)は、管理用IDと固定の公開パスIDを対応付けます。未指定のIDは同じ文字列を公開パスに使います。例えば`my-tech-blog-ai-translated-jp`の公開パスIDは`ai-jp`で、RSSは`/rss/ai-jp/feeds/rss.xml`です。公開URLを識別子とする通知履歴・重複除外の配信先も同じ対応を使います。
+- **Slackとの対応**: 管理用IDはSlackチャンネル名の`#`と、末尾または`-translated-jp`・`-dedup`の直前にある`-feed`を除いた値です。例えば`#my-tech-blog-ai-feed-translated-jp`は`my-tech-blog-ai-translated-jp`、`#my-tech-blog-jp-feed-dedup`は`my-tech-blog-jp-dedup`です。日次統計の定義ファイルは`daily-stats.json`です。画面の表示名は`title`、閲覧・配信・保存先は公開パスIDで決まります。
 - **表示順**: カテゴリナビと登録フィード一覧は`display-section-list.ts`の`SECTION_DISPLAY_ORDER`を参照します。dedupの6本、企業・個人ブログ、AI・開発、クラウド、セキュリティ、Zenn・Qiita、ニュース・メディア、資料・書籍の順で、翻訳版は原文カテゴリの直後です。表示順に未指定の通常カテゴリは末尾へ`order`の昇順・同値ではID順で並びます。`order`は原則として10刻みの未使用値を選びます。表示順はdedupの配信優先度と独立しています。
 - **表示名**: `title`がナビゲーション、ページ見出し、集約フィードのタイトルに使用されます。
 - **生成物**: ページ、RSS・Atom・JSON Feed、ナビゲーション、サイトマップが定義から生成されます。
 
-`zenn`は「Zenn トレンド」、`qiita`は「Qiita 人気記事」で、各サービスのトレンド・人気記事RSSを対象にします。タグ別のカテゴリとは別の取得元です。表示名の変更でカテゴリIDや購読URLは変わりません。
+`zenn-trend`は「Zenn トレンド」、`qiita-trend`は「Qiita 人気記事」で、各サービスのトレンド・人気記事RSSを対象にします。タグ別のカテゴリとは別の取得元です。表示名の変更でカテゴリIDや購読URLは変わりません。
 
 Zenn・Qiitaの「AI関連タグ」は12個、「Cloud関連タグ」は6個のタグのRSSをまとめます。「Securityタグ」は各サービスのSecurityタグ1個を対象にします。
 
@@ -329,15 +330,15 @@ Anthropic Newsroomの [Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-f
 
 ### 5.4. 日本語翻訳のカテゴリ統合フィード
 
-日本語原文と英語原文のカテゴリは次の区分です。`aws`・`google-cloud`は英語、`security`は日本語中心の配信元を扱います。`security`には日英混在の配信元も含まれます。
+日本語原文と英語原文のカテゴリは次の区分です。`aws`・`googlecloud`は英語、`security`は日本語中心の配信元を扱います。`security`には日英混在の配信元も含まれます。
 
 | カテゴリID | 表示名 | 対象 | 購読用RSS |
 | --- | --- | --- | --- |
 | `aws-ja` | AWS 日本語 | AWS の最新情報・Amazon Web Services ブログの日本語RSS | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-ja/feeds/rss.xml) |
-| `google-cloud-ja` | Google Cloud 日本語 | Google Cloud 日本語ブログ | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-ja/feeds/rss.xml) |
+| `googlecloud-ja` | Google Cloud 日本語 | Google Cloud 日本語ブログ | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-ja/feeds/rss.xml) |
 | `security-en` | Security English | GitHub Security・Microsoft Security・Trail of Bitsの英語RSS | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-en/feeds/rss.xml) |
 
-`*-ja`は日本語原文、`*-jp`は英語からの日本語翻訳です。翻訳版`security-jp`の入力元は`security-en`です。
+`*-ja`は日本語原文、`*-jp`は英語からの日本語翻訳です。翻訳版`security-translated-jp`の入力元は`security-en`です。
 
 JVNの脆弱性情報は専用カテゴリ`jvn`で扱います。取得元はJVNRSSとJVNDBの2本で、Slackの`#jvn-feed`に対応します。[JVNの購読用RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/jvn/feeds/rss.xml)は通常の集約フィードです。
 
@@ -354,21 +355,21 @@ RSS・OGP・画像の応答は圧縮前後とも10 MiB、HTML由来フィード�
 
 | 元セクション | 日本語派生ID | 表示名 | 閲覧ページ | 購読用RSS |
 | --- | --- | --- | --- | --- |
-| `my-tech-blog-ai` | `ai-jp` | AI - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml) |
-| `aws` | `aws-jp` | AWS - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/feeds/rss.xml) |
-| `azure` | `azure-jp` | Azure - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/feeds/rss.xml) |
-| `google-cloud` | `google-cloud-jp` | Google Cloud - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/feeds/rss.xml) |
-| `hacker-news` | `hacker-news-jp` | Hacker News - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/feeds/rss.xml) |
-| `my-tech-blog-db` | `db-jp` | Database - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/feeds/rss.xml) |
-| `my-tech-blog-engineering` | `engineering-jp` | Engineering - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/feeds/rss.xml) |
-| `my-tech-blog-platform` | `platform-jp` | Platform - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/feeds/rss.xml) |
-| `my-tech-blog-programming` | `programming-jp` | Programming - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/feeds/rss.xml) |
-| `my-tech-blog-robotics` | `robotics-jp` | Robotics - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/feeds/rss.xml) |
-| `security-advisory` | `security-advisory-jp` | GitHub Security Advisory - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml) |
-| `security-en` | `security-jp` | Security - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml) |
-| `techcrunch` | `techcrunch-jp` | TechCrunch - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/feeds/rss.xml) |
+| `my-tech-blog-ai` | `my-tech-blog-ai-translated-jp` | AI - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml) |
+| `aws` | `aws-translated-jp` | AWS - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/feeds/rss.xml) |
+| `azure` | `azure-translated-jp` | Azure - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/azure-jp/feeds/rss.xml) |
+| `googlecloud` | `googlecloud-translated-jp` | Google Cloud - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/google-cloud-jp/feeds/rss.xml) |
+| `hacker-news` | `hacker-news-translated-jp` | Hacker News - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hacker-news-jp/feeds/rss.xml) |
+| `my-tech-blog-db` | `my-tech-blog-db-translated-jp` | Database - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/feeds/rss.xml) |
+| `my-tech-blog-engineering` | `my-tech-blog-engineering-translated-jp` | Engineering - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/engineering-jp/feeds/rss.xml) |
+| `my-tech-blog-platform` | `my-tech-blog-platform-translated-jp` | Platform - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform-jp/feeds/rss.xml) |
+| `my-tech-blog-programming` | `my-tech-blog-programming-translated-jp` | Programming - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/programming-jp/feeds/rss.xml) |
+| `my-tech-blog-robotics` | `my-tech-blog-robotics-translated-jp` | Robotics - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-jp/feeds/rss.xml) |
+| `security-github` | `security-github-translated-jp` | GitHub Security Advisory - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml) |
+| `security-en` | `security-translated-jp` | Security - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-jp/feeds/rss.xml) |
+| `techcrunch` | `techcrunch-translated-jp` | TechCrunch - Translated Japanese | [ページ](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/) | [RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/techcrunch-jp/feeds/rss.xml) |
 
-定義元は [翻訳フィード専用ディレクトリ（`src/resources/translated-feeds/`）](src/resources/translated-feeds/) です。1カテゴリにつき1ファイルで、ファイル名が日本語派生IDになります。例えば [AI - Translated Japaneseの定義（`ai-jp.json`）](src/resources/translated-feeds/ai-jp.json) は次の形式です。
+定義元は [翻訳フィード専用ディレクトリ（`src/resources/translated-feeds/`）](src/resources/translated-feeds/) です。1カテゴリにつき1ファイルで、ファイル名が日本語派生IDになります。例えば [AI - Translated Japaneseの定義（`my-tech-blog-ai-translated-jp.json`）](src/resources/translated-feeds/my-tech-blog-ai-translated-jp.json) は次の形式です。
 
 ```json
 {
@@ -379,11 +380,11 @@ RSS・OGP・画像の応答は圧縮前後とも10 MiB、HTML由来フィード�
 }
 ```
 
-通常カテゴリの定義は`src/resources/sections/`、翻訳フィードの定義は`src/resources/translated-feeds/`で管理します。翻訳結果は`src/site/translated-feeds/<日本語派生ID>/feeds/`へ出力し、通常カテゴリの生成物である`src/site/section-feeds/`とは保存先を分けます。
+通常カテゴリの定義は`src/resources/sections/`、翻訳フィードの定義は`src/resources/translated-feeds/`で管理します。翻訳結果は`src/site/translated-feeds/<公開パスID>/feeds/`へ出力し、通常カテゴリの生成物である`src/site/section-feeds/`とは保存先を分けます。
 
-配信先は`/rss/<日本語派生ID>/feeds/rss.xml`、`atom.xml`、`feed.json`、閲覧ページは`/rss/<日本語派生ID>/`です。AI - Translated JapaneseのRSSは`/rss/ai-jp/feeds/rss.xml`となります。対象記事がない場合も空のフィードとページを出力します。
+配信先は`/rss/<公開パスID>/feeds/rss.xml`、`atom.xml`、`feed.json`、閲覧ページは`/rss/<公開パスID>/`です。AI - Translated JapaneseのRSSは`/rss/ai-jp/feeds/rss.xml`となります。対象記事がない場合も空のフィードとページを出力します。
 
-AIの翻訳フィードのURL例です。表示名の` - Translated Japanese`と、購読URLのID `ai-jp` は別に管理します。
+AIの翻訳フィードのURL例です。管理用IDは`my-tech-blog-ai-translated-jp`、公開パスIDは`ai-jp`です。表示名の` - Translated Japanese`とも別に管理します。
 
 - **閲覧ページ**: [https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/)
 - **購読用RSS**: [https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/ai-jp/feeds/rss.xml)
@@ -392,7 +393,7 @@ AIの翻訳フィードのURL例です。表示名の` - Translated Japanese`と
 
 翻訳フィードのローカル保存先は`translated-feeds/`、公開URLは`/rss/`配下です。HTML由来の単独フィードは`/feeds/generated/`配下となります。フォーク先では、URL先頭を自分の公開サイトの基点に置き換えます。
 
-Hacker Newsの取得元は [Hacker News - Japanese](https://hevinxx.github.io/hn-summary-and-translate/rss-ja.xml) です。取得元の名前とURLは日本語版ですが、実際のタイトル・概要が英語のため、登録言語は`en`とします。`hacker-news`は取得元の記事、`hacker-news-jp`は本リポジトリの翻訳機による日本語の記事を配信します。
+Hacker Newsの取得元は [Hacker News - Japanese](https://hevinxx.github.io/hn-summary-and-translate/rss-ja.xml) です。取得元の名前とURLは日本語版ですが、実際のタイトル・概要が英語のため、登録言語は`en`とします。`hacker-news`は取得元の記事、`hacker-news-translated-jp`は本リポジトリの翻訳機による日本語の記事を配信します。
 
 各派生フィードは、指定元セクションかつ`language: en`のソースだけを対象とします。日本語・混在・言語未指定のソースは含めません。記事の集約期間は通常フィードと同じで、取得記事に公開日時がなければ翻訳対象にも入りません。
 
@@ -422,7 +423,7 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 
 日付ごとに、原文カテゴリ合計の延べ件数・翻訳版の掲載件数・投稿のあるカテゴリ数を示します。カテゴリ名を開くと、取得元RSSの名前・URL・件数を階層表示します。広い画面では左右2列、狭い画面では縦1列です。原文カテゴリ合計はカテゴリ間の重複を含み、翻訳版の件数は加算しません。部分集計や巡回記録がない日の注記は一覧の上に表示します。
 
-定義は [統計用JSON（`src/resources/stats/daily.json`）](src/resources/stats/daily.json) です。
+定義は [統計用JSON（`src/resources/stats/daily-stats.json`）](src/resources/stats/daily-stats.json) です。
 
 ```json
 {
@@ -493,16 +494,16 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 
 ### 5.7. カテゴリ横断の重複除外フィード
 
-複数の入力カテゴリを6本へ統合し、同じ記事URLの配信先を6本のうち1本に固定します。定義は`src/resources/deduplicated-feeds/`のJSONです。`sourceSectionIds`は通常カテゴリのID、`priority`は同じ生成回で初めて見つかった記事の優先度で、小さい数値を優先します。ファイル名が配信IDです。通常・翻訳カテゴリとIDを共有できず、同じ入力カテゴリを複数の重複除外フィードに指定することもできません。
+複数の入力カテゴリを6本へ統合し、同じ記事URLの配信先を6本のうち1本に固定します。定義は`src/resources/deduplicated-feeds/`のJSONです。`sourceSectionIds`は通常カテゴリのID、`priority`は同じ生成回で初めて見つかった記事の優先度で、小さい数値を優先します。ファイル名が管理用IDです。通常・翻訳カテゴリとIDや公開パスを共有できず、同じ入力カテゴリを複数の重複除外フィードに指定することもできません。
 
 | 配信名・ID | 入力カテゴリ | 優先度 |
 | --- | --- | ---: |
-| 企業TechBlog dedup・`tech-blog-dedup` | `my-tech-blog-jp`、`company-tech-blog`、`ai-news` | 0 |
-| Zenn dedup・`zenn-dedup` | `zenn`、`zenn-ai`、`zenn-cloud`、`zenn-security` | 1 |
-| Qiita dedup・`qiita-dedup` | `qiita`、`qiita-ai`、`qiita-cloud`、`qiita-security` | 1 |
-| ITmedia dedup・`itmedia-dedup` | `itmedia`（総合・AI＋） | 1 |
+| 企業TechBlog dedup・`my-tech-blog-jp-dedup` | `my-tech-blog-jp`、`company-tech-blog`、`karaage-ai-news` | 0 |
+| Zenn dedup・`zenn-dedup` | `zenn-trend`、`zenn-ai`、`zenn-cloud`、`zenn-security` | 1 |
+| Qiita dedup・`qiita-dedup` | `qiita-trend`、`qiita-ai`、`qiita-cloud`、`qiita-security` | 1 |
+| ITmedia dedup・`it-media-dedup` | `it-media`（総合・AI＋） | 1 |
 | Menthas dedup・`menthas-dedup` | `menthas` | 1 |
-| はてブ dedup・`hatena-dedup` | `hatena` | 1 |
+| はてブ dedup・`hatenab-dedup` | `hatenab` | 1 |
 
 企業TechBlogにはkaraageAI情報経由の個人記事やメディア記事も含みます。入力には同一実行で取得した元記事データを使い、自サイトの集約RSSを再取得しません。
 
@@ -515,7 +516,7 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 - **対象範囲**: 重複排除の範囲はこの6本です。翻訳RSSやその他の通常カテゴリを別途購読する場合、その間の重複は残ります。元の個別RSSと重複除外RSSの両方を購読すると同じ記事が届くため、Slackでは対象の購読を6本へ置き換えて使用します。
 - **取得間隔と制約**: 通常の生成ワークフローと同じ間隔です。元RSSから巡回前に消えた記事、取得失敗、日時欠落、過去8日間の対象外は取得・掲載を保証できません。外部の集約RSSについては、その取得間隔や収録範囲の影響も受けます。
 
-公開時の配信先は以下です。Atom・JSON Feedは末尾の`rss.xml`を`atom.xml`・`feed.json`へ置き換えます。閲覧ページは`/rss/<ID>/`です。
+公開時の配信先は以下です。Atom・JSON Feedは末尾の`rss.xml`を`atom.xml`・`feed.json`へ置き換えます。閲覧ページは`/rss/<公開パスID>/`です。
 
 | 配信名 | RSS URL |
 | --- | --- |
@@ -526,7 +527,7 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 | Menthas dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/menthas-dedup/feeds/rss.xml` |
 | はてブ dedup | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/hatena-dedup/feeds/rss.xml` |
 
-生成物の保存先は`src/site/deduplicated-feeds/<ID>/feeds/`です。公開時に`/rss/<ID>/feeds/`へ配置します。
+生成物の保存先は`src/site/deduplicated-feeds/<公開パスID>/feeds/`です。公開時に`/rss/<公開パスID>/feeds/`へ配置します。
 
 <a id="validation"></a>
 
@@ -795,26 +796,28 @@ flowchart TD
 │   │   │   ├── claude-announcements.json
 │   │   │   ├── claude-code-blog.json
 │   │   │   └── serverless-operations.json
+│   │   ├── section-paths.json  # 管理用IDと固定公開パスの対応
+│   │   ├── section-paths.ts  # 公開パス検証とIDの解決
 │   │   ├── sections/  # 通常カテゴリの定義
-│   │   │   ├── ai-news.json
+│   │   │   ├── karaage-ai-news.json
 │   │   │   ├── my-tech-blog-ai.json
 │   │   │   ├── autonomous-driving.json
 │   │   │   ├── aws-ja.json
 │   │   │   ├── aws.json
 │   │   │   ├── azure.json
-│   │   │   ├── business-it.json
+│   │   │   ├── business-plus-it.json
 │   │   │   ├── company-tech-blog.json
 │   │   │   ├── my-tech-blog-db.json
 │   │   │   ├── developersio.json
 │   │   │   ├── my-tech-blog-engineering.json
 │   │   │   ├── gigazine.json
 │   │   │   ├── gihyo.json
-│   │   │   ├── google-cloud-ja.json
-│   │   │   ├── google-cloud.json
+│   │   │   ├── googlecloud-ja.json
+│   │   │   ├── googlecloud.json
 │   │   │   ├── hacker-news.json
-│   │   │   ├── hatena.json
+│   │   │   ├── hatenab.json
 │   │   │   ├── infoq.json
-│   │   │   ├── itmedia.json
+│   │   │   ├── it-media.json
 │   │   │   ├── my-tech-blog-jp.json
 │   │   │   ├── jpcert.json
 │   │   │   ├── jvn.json
@@ -826,45 +829,45 @@ flowchart TD
 │   │   │   ├── qiita-ai.json
 │   │   │   ├── qiita-cloud.json
 │   │   │   ├── qiita-security.json
-│   │   │   ├── qiita.json
+│   │   │   ├── qiita-trend.json
 │   │   │   ├── my-tech-blog-robotics.json
-│   │   │   ├── security-advisory.json
+│   │   │   ├── security-github.json
 │   │   │   ├── security-en.json
 │   │   │   ├── security.json
 │   │   │   ├── speakerdeck.json
-│   │   │   ├── tech-book.json
+│   │   │   ├── my-tech-book.json
 │   │   │   ├── techcrunch.json
-│   │   │   ├── techno-edge.json
+│   │   │   ├── technoedge.json
 │   │   │   ├── thinkit.json
 │   │   │   ├── zenn-ai.json
 │   │   │   ├── zenn-cloud.json
 │   │   │   ├── zenn-security.json
-│   │   │   └── zenn.json
+│   │   │   └── zenn-trend.json
 │   │   ├── stats/
-│   │   │   └── daily.json
+│   │   │   └── daily-stats.json
 │   │   ├── deduplicated-feeds/  # 重複除外フィードの定義
-│   │   │   ├── tech-blog-dedup.json
+│   │   │   ├── my-tech-blog-jp-dedup.json
 │   │   │   ├── zenn-dedup.json
 │   │   │   ├── qiita-dedup.json
-│   │   │   ├── itmedia-dedup.json
+│   │   │   ├── it-media-dedup.json
 │   │   │   ├── menthas-dedup.json
-│   │   │   └── hatena-dedup.json
+│   │   │   └── hatenab-dedup.json
 │   │   ├── deduplicated-feed-list.ts
 │   │   ├── display-section-list.ts
 │   │   ├── translated-feeds/  # 翻訳カテゴリ統合フィードの定義
-│   │   │   ├── ai-jp.json
-│   │   │   ├── aws-jp.json
-│   │   │   ├── azure-jp.json
-│   │   │   ├── db-jp.json
-│   │   │   ├── engineering-jp.json
-│   │   │   ├── google-cloud-jp.json
-│   │   │   ├── hacker-news-jp.json
-│   │   │   ├── platform-jp.json
-│   │   │   ├── programming-jp.json
-│   │   │   ├── robotics-jp.json
-│   │   │   ├── security-advisory-jp.json
-│   │   │   ├── security-jp.json
-│   │   │   └── techcrunch-jp.json
+│   │   │   ├── my-tech-blog-ai-translated-jp.json
+│   │   │   ├── aws-translated-jp.json
+│   │   │   ├── azure-translated-jp.json
+│   │   │   ├── my-tech-blog-db-translated-jp.json
+│   │   │   ├── my-tech-blog-engineering-translated-jp.json
+│   │   │   ├── googlecloud-translated-jp.json
+│   │   │   ├── hacker-news-translated-jp.json
+│   │   │   ├── my-tech-blog-platform-translated-jp.json
+│   │   │   ├── my-tech-blog-programming-translated-jp.json
+│   │   │   ├── my-tech-blog-robotics-translated-jp.json
+│   │   │   ├── security-github-translated-jp.json
+│   │   │   ├── security-translated-jp.json
+│   │   │   └── techcrunch-translated-jp.json
 │   │   ├── feed-info-list.ts
 │   │   ├── feed-language.ts
 │   │   ├── generated-feed-list.ts

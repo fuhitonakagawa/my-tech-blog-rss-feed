@@ -19,6 +19,7 @@ import { updateStatistics } from '../../../src/feed/statistics/aggregate';
 import { generateStatistics } from '../../../src/feed/statistics/service';
 import { parseStatisticsState } from '../../../src/feed/statistics/state-store';
 import { DEDUPLICATED_FEED_DEFINITION_LIST as definitions } from '../../../src/resources/deduplicated-feed-list';
+import { sectionPathId } from '../../../src/resources/section-paths';
 import { renderStatisticsReport } from '../../../src/site/_includes/components/statistics-report';
 import { makeSourceItem } from '../../helpers/translation-fixtures';
 
@@ -52,7 +53,7 @@ const generate = async (items: CustomRssParserItem[], date = now, feedDefinition
   const sources: SlackSource[] = [...result.feeds].map(([id, feed]) => ({
     json: feed.json,
     rssUrl: sectionFeedUrls(id).rss,
-    rssPath: `deduplicated-feeds/${id}/feeds/rss.xml`,
+    rssPath: `deduplicated-feeds/${sectionPathId(id)}/feeds/rss.xml`,
   }));
   const state = await generateSlackFeeds(sources, published, output, date);
   return { ...result, state, sources };
@@ -60,23 +61,23 @@ const generate = async (items: CustomRssParserItem[], date = now, feedDefinition
 
 it('同時生成では企業を優先し、タグ・集約元間の重複を除いて元データを変更しない', async () => {
   const items = [
-    'zenn',
+    'zenn-trend',
     'zenn-ai',
     'qiita-ai',
-    'ai-news',
+    'karaage-ai-news',
     'company-tech-blog',
     'my-tech-blog-jp',
-    'itmedia',
+    'it-media',
     'menthas',
-    'hatena',
+    'hatenab',
   ].map((id) => article(id));
   items.push(article('zenn-security', 'https://example.com/article?utm_source=tag#heading'));
   const before = structuredClone(items);
   const result = await generate(items);
-  expect(result.state.feeds[historyKey('tech-blog-dedup')].items).toHaveLength(1);
+  expect(result.state.feeds[historyKey('my-tech-blog-jp-dedup')].items).toHaveLength(1);
   expect(result.state.feeds[historyKey('zenn-dedup')].items).toEqual([]);
   expect(result.state.feeds[historyKey('qiita-dedup')].items).toEqual([]);
-  expect(result.statisticsItems[0].sectionId).toBe('tech-blog-dedup');
+  expect(result.statisticsItems[0].sectionId).toBe('my-tech-blog-jp-dedup');
   expect(items).toEqual(before);
   expect(parseSlackState(JSON.stringify(result.state))).toEqual(result.state);
 });
@@ -90,7 +91,7 @@ it('先にZennで公開した記事は、後から企業入力だけに現れて
   const current = later.state.feeds[historyKey('zenn-dedup')].items[0];
   expect(current.firstSeenAt).toBe(previous.firstSeenAt);
   expect(current.guid).toBe(previous.guid);
-  expect(later.state.feeds[historyKey('tech-blog-dedup')].items).toEqual([]);
+  expect(later.state.feeds[historyKey('my-tech-blog-jp-dedup')].items).toEqual([]);
   expect(later.statisticsItems[0].sectionId).toBe('zenn-dedup');
   const xml = await fs.readFile(path.join(output, 'deduplicated-feeds/zenn-dedup/feeds/rss.xml'), 'utf-8');
   const rss = await new Parser().parseString(xml);
@@ -104,20 +105,20 @@ it('先にZennで公開した記事は、後から企業入力だけに現れて
 
 it('配信先を増やしても既存の所属・日時・GUIDを維持し、新しい入力だけの記事を配信する', async () => {
   const existingDefinitions = definitions.filter((definition) =>
-    ['tech-blog-dedup', 'zenn-dedup', 'qiita-dedup'].includes(definition.id),
+    ['my-tech-blog-jp-dedup', 'zenn-dedup', 'qiita-dedup'].includes(definition.id),
   );
-  const first = await generate([article('zenn', 'https://example.com/existing')], now, existingDefinitions);
+  const first = await generate([article('zenn-trend', 'https://example.com/existing')], now, existingDefinitions);
   await fs.cp(output, published, { recursive: true });
   const items = [
-    article('itmedia', 'https://example.com/existing'),
-    article('itmedia', 'https://example.com/itmedia'),
+    article('it-media', 'https://example.com/existing'),
+    article('it-media', 'https://example.com/itmedia'),
     {
-      ...article('itmedia', 'https://example.com/itmedia?utm_source=ai'),
+      ...article('it-media', 'https://example.com/itmedia?utm_source=ai'),
       sourceFeedUrl: 'https://example.com/itmedia-ai/rss',
     },
     article('menthas', 'https://example.com/menthas'),
-    article('hatena', 'https://example.com/hatena'),
-    ...['itmedia', 'menthas', 'hatena'].map((id) => article(id, 'https://example.com/shared')),
+    article('hatenab', 'https://example.com/hatena'),
+    ...['it-media', 'menthas', 'hatenab'].map((id) => article(id, 'https://example.com/shared')),
   ];
   const nextDate = new Date(now.getTime() + 3_600_000);
   const next = await generate(items, nextDate);
@@ -131,10 +132,12 @@ it('配信先を増やしても既存の所属・日時・GUIDを維持し、新
   const outputItems = Object.values(next.state.feeds).flatMap((feed) => feed.items);
   expect(outputItems).toHaveLength(5);
   expect(new Set(outputItems.map((item) => item.key)).size).toBe(5);
-  for (const id of ['itmedia', 'menthas', 'hatena']) {
-    expect(
-      next.state.feeds[historyKey(`${id}-dedup`)].items.some((item) => item.url === `https://example.com/${id}`),
-    ).toBe(true);
+  for (const [id, url] of [
+    ['it-media', 'https://example.com/itmedia'],
+    ['menthas', 'https://example.com/menthas'],
+    ['hatenab', 'https://example.com/hatena'],
+  ]) {
+    expect(next.state.feeds[historyKey(`${id}-dedup`)].items.some((item) => item.url === url)).toBe(true);
     expect(next.state.feeds[historyKey(`${id}-dedup`)].items.some((item) => item.url.endsWith('/existing'))).toBe(
       false,
     );
@@ -144,23 +147,23 @@ it('配信先を増やしても既存の所属・日時・GUIDを維持し、新
     [article('my-tech-blog-jp', 'https://example.com/hatena')],
     new Date(nextDate.getTime() + 3_600_000),
   );
-  expect(later.state.feeds[historyKey('tech-blog-dedup')].items).toEqual([]);
+  expect(later.state.feeds[historyKey('my-tech-blog-jp-dedup')].items).toEqual([]);
   expect(
-    later.state.feeds[historyKey('hatena-dedup')].items.find((item) => item.url.endsWith('/hatena'))?.firstSeenAt,
+    later.state.feeds[historyKey('hatenab-dedup')].items.find((item) => item.url.endsWith('/hatena'))?.firstSeenAt,
   ).toBe(nextDate.toISOString());
 });
 
 it('同順位の投稿サービス・ニュース間では入力順に依存せず1回だけ配信する', () => {
-  const sections = ['zenn', 'qiita', 'itmedia', 'menthas', 'hatena'];
+  const sections = ['zenn-trend', 'qiita-trend', 'it-media', 'menthas', 'hatenab'];
   const items = Array.from({ length: 100 }, (_, index) =>
     sections.map((id) => article(id, `https://example.com/shared-${index}`)),
   ).flat();
   const first = selectDeduplicatedItems(items, definitions, null, now);
   const reverse = selectDeduplicatedItems([...items].reverse(), [...definitions].reverse(), null, now);
   expect([...first.values()].flat()).toHaveLength(100);
-  for (const id of sections) {
-    expect(first.get(`${id}-dedup`)).toEqual(reverse.get(`${id}-dedup`));
-    expect(first.get(`${id}-dedup`)?.length).toBeGreaterThan(0);
+  for (const id of ['zenn-dedup', 'qiita-dedup', 'it-media-dedup', 'menthas-dedup', 'hatenab-dedup']) {
+    expect(first.get(id)).toEqual(reverse.get(id));
+    expect(first.get(id)?.length).toBeGreaterThan(0);
   }
 });
 
@@ -171,13 +174,13 @@ it('元記事日時が古くても最初に取得した生成回を優先し、�
     article('gigazine', 'https://example.com/other'),
   ];
   const selected = selectDeduplicatedItems(items, definitions, null, now);
-  expect(selected.get('tech-blog-dedup')).toHaveLength(1);
+  expect(selected.get('my-tech-blog-jp-dedup')).toHaveLength(1);
   expect([...selected.values()].flat()).toHaveLength(1);
 });
 
 it('ZennとQiitaは同順位で、取得順や定義順を変えても同じ配信先になる', () => {
   const items = Array.from({ length: 40 }, (_, i) =>
-    ['zenn', 'qiita'].map((id) => article(id, `https://example.com/${i}`)),
+    ['zenn-trend', 'qiita-trend'].map((id) => article(id, `https://example.com/${i}`)),
   ).flat();
   const first = selectDeduplicatedItems(items, definitions, null, now);
   const reversed = selectDeduplicatedItems([...items].reverse(), [...definitions].reverse(), null, now);
@@ -190,14 +193,17 @@ it('ZennとQiitaは同順位で、取得順や定義順を変えても同じ配�
 
 it('公開失敗した生成の所属を引き継がず、公開済み履歴から再判定する', async () => {
   await fs.mkdir(published);
-  await generate([article('zenn')]);
-  const result = await generate([article('zenn'), article('my-tech-blog-jp')], new Date('2026-09-28T11:00:00.000Z'));
-  expect(result.state.feeds[historyKey('tech-blog-dedup')].items).toHaveLength(1);
+  await generate([article('zenn-trend')]);
+  const result = await generate(
+    [article('zenn-trend'), article('my-tech-blog-jp')],
+    new Date('2026-09-28T11:00:00.000Z'),
+  );
+  expect(result.state.feeds[historyKey('my-tech-blog-jp-dedup')].items).toHaveLength(1);
   expect(result.state.feeds[historyKey('zenn-dedup')].items).toEqual([]);
 });
 
 it('入力から消えても90日以内の再登場は所属を維持し、90日を超えた履歴は再判定する', async () => {
-  const first = await generate([article('zenn')]);
+  const first = await generate([article('zenn-trend')]);
   const retained = selectDeduplicatedItems(
     [article('my-tech-blog-jp')],
     definitions,
@@ -211,17 +217,17 @@ it('入力から消えても90日以内の再登場は所属を維持し、90日
     first.state,
     new Date('2027-01-01T00:00:00.000Z'),
   );
-  expect(expired.get('tech-blog-dedup')).toHaveLength(1);
+  expect(expired.get('my-tech-blog-jp-dedup')).toHaveLength(1);
 });
 
 it('二重所属・壊れた公開履歴・不正記事で生成を停止する', async () => {
-  const first = await generate([article('zenn')]);
+  const first = await generate([article('zenn-trend')]);
   const corrupt: SlackFeedState = structuredClone(first.state);
   corrupt.feeds[historyKey('qiita-dedup')] = structuredClone(corrupt.feeds[historyKey('zenn-dedup')]);
   expect(() => selectDeduplicatedItems([], definitions, corrupt, now)).toThrow('二重所属');
   for (const item of [
-    article('zenn', 'https://example.com/?access_token=private'),
-    { ...article('zenn'), isoDate: 'invalid' },
+    article('zenn-trend', 'https://example.com/?access_token=private'),
+    { ...article('zenn-trend'), isoDate: 'invalid' },
   ])
     expect(() => selectDeduplicatedItems([item], definitions, null, now)).toThrow('不正');
   await fs.mkdir(path.join(published, 'feeds/delivery'), { recursive: true });
@@ -230,18 +236,18 @@ it('二重所属・壊れた公開履歴・不正記事で生成を停止する'
 });
 
 it('元RSSだけの掲載履歴を重複除外RSSの配信済み履歴と混同しない', async () => {
-  const first = await generate([article('zenn')]);
-  const state = { ...first.state, feeds: { [historyKey('zenn')]: first.state.feeds[historyKey('zenn-dedup')] } };
+  const first = await generate([article('zenn-trend')]);
+  const state = { ...first.state, feeds: { [historyKey('zenn-trend')]: first.state.feeds[historyKey('zenn-dedup')] } };
   expect(
-    selectDeduplicatedItems([article('my-tech-blog-jp')], definitions, state, now).get('tech-blog-dedup'),
+    selectDeduplicatedItems([article('my-tech-blog-jp')], definitions, state, now).get('my-tech-blog-jp-dedup'),
   ).toHaveLength(1);
   expect(Object.keys(first.state.feeds[historyKey('zenn-dedup')].seen)).toEqual([
-    slackArticleKey(article('zenn').link),
+    slackArticleKey(article('zenn-trend').link),
   ]);
 });
 
 it.each(['whole', 'partial'])('公開RSSに対応する履歴の欠落を初期化で隠さない: %s', async (missing) => {
-  const first = await generate([article('zenn')]);
+  const first = await generate([article('zenn-trend')]);
   if (missing === 'partial') {
     const partial = structuredClone(first.state);
     delete partial.feeds[historyKey('zenn-dedup')];
@@ -262,7 +268,7 @@ it('公開失敗時の統計キャッシュから別の配信先の掲載件数�
   await generateStatistics([], sections, publishedStats, outputStats, now);
   await fs.cp(output, published, { recursive: true });
   const failedTime = new Date('2026-09-28T11:00:00.000Z');
-  const failed = await generate([article('zenn')], failedTime);
+  const failed = await generate([article('zenn-trend')], failedTime);
   expect(failed.usePublishedHistory).toBe(true);
   await generateStatistics(failed.statisticsItems, sections, publishedStats, outputStats, failedTime, [], [], ids);
   const nextTime = new Date('2026-09-28T15:00:00.000Z');
@@ -277,7 +283,7 @@ it('公開失敗時の統計キャッシュから別の配信先の掲載件数�
     [],
     ids,
   );
-  expect(stats.reports[0].categories.find((category) => category.sectionId === 'tech-blog-dedup')?.count).toBe(1);
+  expect(stats.reports[0].categories.find((category) => category.sectionId === 'my-tech-blog-jp-dedup')?.count).toBe(1);
   expect(stats.reports[0].categories.find((category) => category.sectionId === 'zenn-dedup')?.count).toBe(0);
 });
 
@@ -293,7 +299,7 @@ it('全カテゴリの0件と重複除外後の統計を保存し、原文合計
   expect(report.categories[0].feeds[0]).toMatchObject({
     kind: 'generated',
     count: 1,
-    url: sectionFeedUrls('tech-blog-dedup').rss,
+    url: sectionFeedUrls('my-tech-blog-jp-dedup').rss,
   });
   expect(parseStatisticsState(JSON.stringify(state))).toEqual(state);
   const html = load(renderStatisticsReport(report));

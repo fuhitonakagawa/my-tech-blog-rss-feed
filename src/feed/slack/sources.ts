@@ -3,6 +3,7 @@ import * as path from 'node:path';
 import constants, { generatedFeedUrls, sectionFeedUrls } from '../../common/constants';
 import { DISPLAY_SECTION_LIST } from '../../resources/display-section-list';
 import { GENERATED_FEED_DEFINITION_MAP } from '../../resources/generated-feed-list';
+import { sectionPathId } from '../../resources/section-paths';
 import { statisticsFeedUrls } from '../statistics/config';
 import type { SlackSource } from './types';
 
@@ -15,7 +16,7 @@ export const loadSlackSources = async (
     { rssUrl: constants.feedUrls.rss, file: 'feeds/feed.json' },
     ...DISPLAY_SECTION_LIST.map((section) => ({
       rssUrl: sectionFeedUrls(section.id).rss,
-      file: `${section.feedDirectory}/${section.id}/feeds/feed.json`,
+      file: `${section.feedDirectory}/${sectionPathId(section.id)}/feeds/feed.json`,
     })),
     ...generatedIds.map((id) => ({
       rssUrl: generatedFeedUrls(id).rss,

@@ -1,3 +1,5 @@
+import { sectionPathId } from '../resources/section-paths';
+
 const siteUrlStem = 'https://fuhitonakagawa.github.io/my-tech-blog-rss-feed';
 const siteUrl = `${siteUrlStem}/`;
 
@@ -64,15 +66,16 @@ export default {
 /**
  * セクションのページURL（末尾スラッシュ付き）を返す
  */
-export const sectionPageUrl = (sectionId: string): string => `${siteUrl}${sectionRootPath}/${sectionId}/`;
+export const sectionPageUrl = (sectionId: string): string =>
+  `${siteUrl}${sectionRootPath}/${sectionPathId(sectionId)}/`;
 
 /**
  * セクションのまとめフィードURL一式を返す
  */
 export const sectionFeedUrls = (sectionId: string): { atom: string; rss: string; json: string } => ({
-  atom: `${siteUrl}${sectionRootPath}/${sectionId}/feeds/atom.xml`,
-  rss: `${siteUrl}${sectionRootPath}/${sectionId}/feeds/rss.xml`,
-  json: `${siteUrl}${sectionRootPath}/${sectionId}/feeds/feed.json`,
+  atom: `${sectionPageUrl(sectionId)}feeds/atom.xml`,
+  rss: `${sectionPageUrl(sectionId)}feeds/rss.xml`,
+  json: `${sectionPageUrl(sectionId)}feeds/feed.json`,
 });
 
 /**

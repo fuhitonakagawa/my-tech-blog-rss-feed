@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { sectionFeedUrls } from '../../common/constants';
 import { isPublishableHttpUrl } from '../../common/url-guard';
 import type { DeduplicatedFeedDefinition } from '../../resources/deduplicated-feed-list';
+import { sectionPathId } from '../../resources/section-paths';
 import { normalizeArticleUrl } from '../common-util';
 import type { CustomRssParserItem } from '../feed-crawler';
 import { slackFeedConfig, slackSourcePath } from '../slack/config';
@@ -28,7 +29,10 @@ const previousOwners = (
 };
 
 /** 同順位では特定カテゴリを常に優遇せず、記事とカテゴリの組から順序を固定する。 */
-const tieRank = (key: string, id: string): string => createHash('sha256').update(`${key}:${id}`).digest('hex');
+const tieRank = (key: string, id: string): string =>
+  createHash('sha256')
+    .update(`${key}:${sectionPathId(id)}`)
+    .digest('hex');
 
 interface Candidate {
   definition: DeduplicatedFeedDefinition;

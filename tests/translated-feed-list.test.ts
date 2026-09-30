@@ -19,21 +19,21 @@ describe('翻訳対象の定義', () => {
     const awsJapanese = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'aws-ja');
     expect(awsJapanese).toHaveLength(2);
     expect(awsJapanese.every((feed) => feed.language === 'ja' && feed.url.includes('/jp/'))).toBe(true);
-    const googleCloudJapanese = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'google-cloud-ja');
+    const googleCloudJapanese = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'googlecloud-ja');
     expect(googleCloudJapanese).toHaveLength(1);
     expect(googleCloudJapanese.every((feed) => feed.language === 'ja')).toBe(true);
     expect(
-      FEED_INFO_LIST.filter((feed) => feed.sectionId === 'google-cloud').every((feed) => feed.language === 'en'),
+      FEED_INFO_LIST.filter((feed) => feed.sectionId === 'googlecloud').every((feed) => feed.language === 'en'),
     ).toBe(true);
     const securityEnglish = FEED_INFO_LIST.filter((feed) => feed.sectionId === 'security-en');
     expect(securityEnglish).toHaveLength(3);
     expect(securityEnglish.every((feed) => feed.language === 'en')).toBe(true);
     expect(FEED_INFO_LIST.some((feed) => feed.sectionId === 'security' && feed.language === 'en')).toBe(false);
-    expect(TRANSLATED_FEED_DEFINITION_LIST.find((feed) => feed.id === 'security-jp')?.sourceSectionId).toBe(
+    expect(TRANSLATED_FEED_DEFINITION_LIST.find((feed) => feed.id === 'security-translated-jp')?.sourceSectionId).toBe(
       'security-en',
     );
     expect(
-      FEED_INFO_LIST.filter((feed) => feed.sectionId === 'zenn').every((feed) => feed.language === 'unknown'),
+      FEED_INFO_LIST.filter((feed) => feed.sectionId === 'zenn-trend').every((feed) => feed.language === 'unknown'),
     ).toBe(true);
   });
 
@@ -45,12 +45,14 @@ describe('翻訳対象の定義', () => {
 
   it('派生フィードを取得元リストに含めず表示先だけに含める', () => {
     expect(TRANSLATED_FEED_DEFINITION_LIST).toHaveLength(13);
-    expect(FEED_SECTION_LIST.some((section) => section.id === 'ai-jp')).toBe(false);
-    expect(DISPLAY_SECTION_LIST.some((section) => section.id === 'ai-jp')).toBe(true);
+    expect(FEED_SECTION_LIST.some((section) => section.id === 'my-tech-blog-ai-translated-jp')).toBe(false);
+    expect(DISPLAY_SECTION_LIST.some((section) => section.id === 'my-tech-blog-ai-translated-jp')).toBe(true);
     expect(DISPLAY_SECTION_LIST.find((section) => section.id === 'my-tech-blog-ai')?.feedDirectory).toBe(
       'section-feeds',
     );
-    expect(DISPLAY_SECTION_LIST.find((section) => section.id === 'ai-jp')?.feedDirectory).toBe('translated-feeds');
+    expect(DISPLAY_SECTION_LIST.find((section) => section.id === 'my-tech-blog-ai-translated-jp')?.feedDirectory).toBe(
+      'translated-feeds',
+    );
   });
 
   it('翻訳定義のIDをファイル名から読み込む', () => {
@@ -60,10 +62,15 @@ describe('翻訳対象の定義', () => {
       sourceLanguage: 'en',
       targetLanguage: 'ja',
     };
-    expect(parseTranslatedFeedFile('ai-jp.json', value)).toEqual({ ...value, id: 'ai-jp' });
-    expect(() => parseTranslatedFeedFile('ai-jp.json', { ...value, id: 'other' })).toThrow('ファイル名');
-    expect(() => parseTranslatedFeedFile('../ai-jp.json', value)).toThrow('ファイル名');
-    expect(() => parseTranslatedFeedFile('ai-jp.json', [value])).toThrow('オブジェクト');
+    expect(parseTranslatedFeedFile('my-tech-blog-ai-translated-jp.json', value)).toEqual({
+      ...value,
+      id: 'my-tech-blog-ai-translated-jp',
+    });
+    expect(() => parseTranslatedFeedFile('my-tech-blog-ai-translated-jp.json', { ...value, id: 'other' })).toThrow(
+      'ファイル名',
+    );
+    expect(() => parseTranslatedFeedFile('../my-tech-blog-ai-translated-jp.json', value)).toThrow('ファイル名');
+    expect(() => parseTranslatedFeedFile('my-tech-blog-ai-translated-jp.json', [value])).toThrow('オブジェクト');
   });
 
   it.each([
@@ -74,7 +81,7 @@ describe('翻訳対象の定義', () => {
     { title: '' },
   ])('不正な参照や衝突する定義を拒否する: %o', (overrides) => {
     const definition = {
-      id: 'ai-jp',
+      id: 'my-tech-blog-ai-translated-jp',
       title: 'AI - Translated Japanese',
       sourceSectionId: 'my-tech-blog-ai',
       sourceLanguage: 'en',

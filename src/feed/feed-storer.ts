@@ -2,6 +2,7 @@ import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import { to } from 'await-to-js';
 import { isPublishableHttpUrl } from '../common/url-guard';
+import { sectionPathId } from '../resources/section-paths';
 import { textToMd5Hash, textTruncate } from './common-util';
 import type { CustomRssParserFeed, FeedItemHatenaCountMap, OgObjectMap } from './feed-crawler';
 import type { FeedDistributionSet } from './feed-generator';
@@ -47,7 +48,7 @@ export class FeedStorer {
   }
 
   /**
-   * セクションごとのまとめフィードを `<出力先>/<セクションID>/feeds/` に出力する。
+   * セクションごとのまとめフィードを `<出力先>/<公開パスID>/feeds/` に出力する。
    * 出力先ディレクトリは毎回作り直し、削除されたセクションの残骸が残らないようにする
    */
   public async storeSectionFeeds(
@@ -57,7 +58,7 @@ export class FeedStorer {
     await fs.rm(storeDirPath, { recursive: true, force: true });
 
     for (const [sectionId, feedDistributionSet] of sectionFeedDistributionSets) {
-      await this.storeArticleFeeds(feedDistributionSet, path.join(storeDirPath, sectionId, 'feeds'));
+      await this.storeArticleFeeds(feedDistributionSet, path.join(storeDirPath, sectionPathId(sectionId), 'feeds'));
     }
 
     logger.info('[store-section-feeds] finished');

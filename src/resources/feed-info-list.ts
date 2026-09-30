@@ -33,8 +33,8 @@ export interface FeedInfo {
 }
 
 /**
- * フィードのセクション。セクションごとに専用ページ（/rss/<id>/）と
- * まとめフィード（/rss/<id>/feeds/atom.xml など）を配信する。
+ * フィードのセクション。管理用IDに対応する公開パスで
+ * 専用ページとまとめフィードを配信する。
  *
  * セクションは resources/sections/<id>.json で1セクション1ファイルで管理する。
  * - ファイル名（拡張子を除く）がセクションIDになる
@@ -42,7 +42,7 @@ export interface FeedInfo {
  * - ラベル・URLはセクションをまたいで重複するとバリデーションエラーになる（同一フィードの複数セクション所属は不可）
  */
 export interface FeedSection {
-  /** URLスラッグ。英小文字・数字・ハイフンのみ */
+  /** 管理用ID。英小文字・数字・ハイフンのみ */
   id: string;
   /** ナビゲーションや見出しに使う表示名 */
   title: string;

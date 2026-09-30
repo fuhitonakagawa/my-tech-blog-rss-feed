@@ -1,3 +1,4 @@
+import { sectionIdFromPath } from '../../resources/section-paths';
 import type { TranslatedFeedDefinition } from '../../resources/translated-feed-list';
 import type { CustomRssParserItem } from '../feed-crawler';
 import { FeedValidator } from '../feed-validator';
@@ -8,6 +9,15 @@ import { buildStatisticsFeed } from './feed-builder';
 import { type StatisticsSection, observationKey } from './observations';
 import { parseStatisticsState, readStatisticsState, writeStatisticsFile } from './state-store';
 import type { ArticleObservation, StatisticsState } from './types';
+
+/** 固定の公開パスで記録されたカテゴリを、現在の管理用IDへ対応付ける。 */
+const resolveSectionIdentities = (state: StatisticsState, activeIds: ReadonlySet<string>): StatisticsState => ({
+  ...state,
+  observations: state.observations.map((item) => {
+    const id = sectionIdFromPath(item.sectionId);
+    return activeIds.has(item.sectionId) || !activeIds.has(id) ? item : { ...item, sectionId: id };
+  }),
+});
 
 /** 同じ収集履歴の未公開取得分を保持し、公開済みの記事情報を優先する。 */
 const combineHistory = (published: StatisticsState, cached: StatisticsState): StatisticsState => {
@@ -39,6 +49,7 @@ const restoreStatistics = async (
   publishedDirectory: string,
   outputDirectory: string,
   publishedOnlySectionIds: readonly string[],
+  activeIds: ReadonlySet<string>,
 ): Promise<StatisticsState | null> => {
   let failure: unknown;
   const states: (StatisticsState | null)[] = [];
@@ -47,7 +58,8 @@ const restoreStatistics = async (
     ['cache', outputDirectory],
   ]) {
     try {
-      const state = await readStatisticsState(directory);
+      const stored = await readStatisticsState(directory);
+      const state = stored && resolveSectionIdentities(stored, activeIds);
       states.push(
         state && source === 'cache'
           ? {
@@ -80,7 +92,12 @@ export const generateStatistics = async (
   translatedItems: readonly CustomRssParserItem[] = [],
   publishedOnlySectionIds: readonly string[] = [],
 ): Promise<StatisticsState> => {
-  const previous = await restoreStatistics(publishedDirectory, outputDirectory, publishedOnlySectionIds);
+  const previous = await restoreStatistics(
+    publishedDirectory,
+    outputDirectory,
+    publishedOnlySectionIds,
+    new Set(sections.map((section) => section.id)),
+  );
   const state = updateStatistics(previous, items, sections, currentDate, translations, translatedItems);
   const json = `${JSON.stringify(state)}\n`;
   if (Buffer.byteLength(json) > statisticsConfig.maxStateBytes) throw new Error('日次統計の保存上限を超えています');

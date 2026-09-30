@@ -2,6 +2,7 @@ import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import * as url from 'node:url';
 import { DISPLAY_SECTION_LIST } from '../../resources/display-section-list';
+import { sectionPathId } from '../../resources/section-paths';
 import { dayjs } from './lib/dayjs-setup';
 import { computeFeedItemsChunks } from './lib/feed-items-chunks';
 import { computeLastModifiedBlogsDate } from './lib/last-modified-blogs-date';
@@ -10,14 +11,13 @@ const dirName = url.fileURLToPath(new URL('.', import.meta.url));
 
 /**
  * セクションページ用のデータ。
- * セクションごとの feed.json を読み込み、表示用のチャンクと最終更新日時を付与して返す。
- * セクションIDはビルド時に決まるため、静的 import ではなくファイル読み込みで取得する
+ * 固定の公開パスの feed.json に、管理用ID・表示用のチャンク・最終更新日時を対応付ける。
  */
 export default async () => {
   const sections = [];
 
   for (const section of DISPLAY_SECTION_LIST) {
-    const feedJsonPath = path.join(dirName, '..', section.feedDirectory, section.id, 'feeds/feed.json');
+    const feedJsonPath = path.join(dirName, '..', section.feedDirectory, sectionPathId(section.id), 'feeds/feed.json');
     const feedData = JSON.parse(await fs.readFile(feedJsonPath, 'utf-8'));
     const feedItems = feedData.items ?? [];
 

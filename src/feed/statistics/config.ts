@@ -1,5 +1,5 @@
 import constants from '../../common/constants';
-import definition from '../../resources/stats/daily.json' with { type: 'json' };
+import definition from '../../resources/stats/daily-stats.json' with { type: 'json' };
 
 export interface StatisticsDefinition {
   schemaVersion: 1;

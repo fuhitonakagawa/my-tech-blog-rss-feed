@@ -7,6 +7,7 @@ import { statisticsConfig, statisticsFeedUrls } from '../../../feed/statistics/c
 import { DEDUPLICATED_FEED_DEFINITION_LIST } from '../../../resources/deduplicated-feed-list';
 import { DISPLAY_SECTION_LIST } from '../../../resources/display-section-list';
 import { FEED_SECTION_LIST, type FeedInfo } from '../../../resources/feed-info-list';
+import { sectionPathId } from '../../../resources/section-paths';
 import { TRANSLATED_FEED_DEFINITION_LIST } from '../../../resources/translated-feed-list';
 import { escapeHtml } from './html-utils';
 import type { EleventyPage } from './types';
@@ -81,7 +82,7 @@ export const renderFeedListDialog = (
 
   const sectionGroups = new Map(
     FEED_SECTION_LIST.map((section): [string, string] => {
-      const sectionPath = `${constants.sectionRootPath}/${section.id}/`;
+      const sectionPath = `${constants.sectionRootPath}/${sectionPathId(section.id)}/`;
       const feedItems = section.feedInfoList
         .filter((feedInfo) => isAvailableFeed(feedInfo, generatedFeedStatuses))
         .map((feedInfo) => {
@@ -102,7 +103,7 @@ export const renderFeedListDialog = (
           const feedUrl = escapeHtml(sectionFeedUrls(definition.id).rss);
           return `<li class="ui-feed-list-dialog__feed">
             <div class="ui-feed-list-dialog__feed-heading">
-                <a class="ui-feed-list-dialog__feed-label" href="${relativeUrl}${escapeHtml(constants.sectionRootPath)}/${escapeHtml(definition.id)}/">${escapeHtml(definition.title)}</a>
+                <a class="ui-feed-list-dialog__feed-label" href="${relativeUrl}${escapeHtml(constants.sectionRootPath)}/${escapeHtml(sectionPathId(definition.id))}/">${escapeHtml(definition.title)}</a>
                 <span>英語記事の日本語翻訳</span>
             </div>
             <a class="ui-feed-list-dialog__feed-url" href="${feedUrl}">${feedUrl}</a>
@@ -134,7 +135,7 @@ export const renderFeedListDialog = (
       return [
         definition.id,
         `<section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-section-${escapeHtml(definition.id)}">
-      <h3 id="feed-list-section-${escapeHtml(definition.id)}" class="ui-feed-list-dialog__section-title"><a href="${relativeUrl}${escapeHtml(constants.sectionRootPath)}/${escapeHtml(definition.id)}/">${escapeHtml(definition.title)}</a></h3>
+      <h3 id="feed-list-section-${escapeHtml(definition.id)}" class="ui-feed-list-dialog__section-title"><a href="${relativeUrl}${escapeHtml(constants.sectionRootPath)}/${escapeHtml(sectionPathId(definition.id))}/">${escapeHtml(definition.title)}</a></h3>
       <p>${escapeHtml(inputs.join('・'))}を統合。${DEDUPLICATED_FEED_DEFINITION_LIST.length}本の重複除外RSSで記事の配信先を共有します。</p>
       <ul class="ui-feed-list-dialog__feeds"><li class="ui-feed-list-dialog__feed"><a class="ui-feed-list-dialog__feed-url" href="${feedUrl}">${feedUrl}</a></li></ul>
     </section>`,
