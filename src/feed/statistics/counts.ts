@@ -24,6 +24,26 @@ export const observationsByDay = (observations: readonly ArticleObservation[]): 
 
 const uniqueCount = (items: readonly ArticleObservation[]): number => new Set(items.map((item) => item.articleId)).size;
 
+/** dedupに実際に載った記事と元カテゴリの所属を照合する。日付差によって所属を失わない。 */
+const countDeduplicatedSources = (
+  section: StatisticsSection,
+  items: readonly ArticleObservation[],
+  history: readonly ArticleObservation[],
+  sections: ReadonlyMap<string, StatisticsSection>,
+): NonNullable<CategoryCount['sourceCategories']> => {
+  const published = new Set(items.map((item) => item.articleId));
+  const attributed = new Set<string>();
+  const counts = (section.sourceSectionIds ?? []).map((sectionId) => {
+    const matches = history.filter((item) => item.sectionId === sectionId && published.has(item.articleId));
+    for (const item of matches) attributed.add(item.articleId);
+    return { sectionId, title: sections.get(sectionId)?.title ?? sectionId, count: uniqueCount(matches) };
+  });
+  const result: NonNullable<CategoryCount['sourceCategories']> = counts;
+  if (attributed.size < published.size)
+    result.push({ sectionId: null, title: '所属不明', count: published.size - attributed.size });
+  return result.sort((a, b) => b.count - a.count || (a.sectionId ?? '').localeCompare(b.sectionId ?? ''));
+};
+
 /** URL別の内訳には同じRSS内の重複を除いた件数を表示する。 */
 const countSources = (section: StatisticsSection, items: readonly ArticleObservation[]): SourceCount[] => {
   const known = new Set<string>();
@@ -51,6 +71,7 @@ export const countCategories = (
   observations: readonly ArticleObservation[],
   sections: readonly StatisticsSection[],
   translations: readonly TranslatedFeedDefinition[],
+  history: readonly ArticleObservation[] = observations,
 ): CategoryCount[] => {
   const current = new Map(sections.map((section) => [section.id, section]));
   for (const item of observations) {
@@ -65,11 +86,24 @@ export const countCategories = (
       kind: section.kind ?? 'source',
       count: uniqueCount(items),
       feeds: countSources(section, items),
+      ...(section.kind === 'deduplicated' && section.sourceSectionIds
+        ? { sourceCategories: countDeduplicatedSources(section, items, history, current) }
+        : {}),
     });
   }
   for (const definition of translations) {
     const section = current.get(definition.sourceSectionId);
     if (!section) continue;
+    const englishSources = new Set(
+      (section.feedInfoList ?? []).filter((feed) => feed.language === 'en').map((feed) => statisticsSourceId(feed.url)),
+    );
+    const original = categories.find((category) => category.sectionId === section.id);
+    if (original)
+      original.englishCount = uniqueCount(
+        observations.filter(
+          (item) => item.sectionId === section.id && item.sourceId !== null && englishSources.has(item.sourceId),
+        ),
+      );
     const excluded = new Set(
       (section.feedInfoList ?? []).filter((feed) => feed.language !== 'en').map((feed) => statisticsSourceId(feed.url)),
     );
@@ -80,6 +114,7 @@ export const countCategories = (
       sectionId: definition.id,
       title: definition.title,
       kind: 'translated',
+      sourceSectionId: section.id,
       count: uniqueCount(items),
       feeds: countSources(
         { ...section, feedInfoList: section.feedInfoList?.filter((feed) => feed.language === 'en') },

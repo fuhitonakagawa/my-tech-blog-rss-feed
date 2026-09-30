@@ -81,6 +81,7 @@ export const deduplicatedStatisticsSections = (
     id: definition.id,
     title: definition.title,
     kind: 'deduplicated',
+    sourceSectionIds: definition.sourceSectionIds,
     feedInfoList: [
       {
         label: definition.title,

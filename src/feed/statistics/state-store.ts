@@ -45,6 +45,27 @@ const isCount = (value: unknown, schemaVersion: number): value is CategoryCount 
   Number.isSafeInteger(value.count) &&
   typeof value.count === 'number' &&
   value.count >= 0 &&
+  (value.englishCount === undefined ||
+    (value.kind === 'source' &&
+      typeof value.englishCount === 'number' &&
+      Number.isSafeInteger(value.englishCount) &&
+      value.englishCount >= 0 &&
+      value.englishCount <= value.count)) &&
+  (value.sourceSectionId === undefined || (value.kind === 'translated' && isId(value.sourceSectionId))) &&
+  (value.sourceCategories === undefined ||
+    (value.kind === 'deduplicated' &&
+      Array.isArray(value.sourceCategories) &&
+      value.sourceCategories.every(
+        (part) =>
+          isRecord(part) &&
+          (part.sectionId === null || isId(part.sectionId)) &&
+          isTitle(part.title) &&
+          typeof part.count === 'number' &&
+          Number.isSafeInteger(part.count) &&
+          part.count >= 0 &&
+          part.count <= Number(value.count),
+      ) &&
+      new Set(value.sourceCategories.map((part) => part.sectionId)).size === value.sourceCategories.length)) &&
   (schemaVersion < 3 ||
     ((value.kind === 'source' || value.kind === 'translated' || value.kind === 'deduplicated') &&
       Array.isArray(value.feeds) &&
@@ -141,13 +162,20 @@ export const parseStatisticsState = (json: string): StatisticsState => {
       publishedAt,
       updatedAt,
       coverage,
-      categories: categories.map(({ sectionId, title, count, kind, feeds }) => ({
-        sectionId,
-        title,
-        count,
-        kind,
-        feeds: feeds.map(({ title, url, count, kind }) => ({ title, url, count, kind })),
-      })),
+      categories: categories.map(
+        ({ sectionId, title, count, kind, feeds, englishCount, sourceSectionId, sourceCategories }) => ({
+          sectionId,
+          title,
+          count,
+          kind,
+          ...(englishCount !== undefined ? { englishCount } : {}),
+          ...(sourceSectionId !== undefined ? { sourceSectionId } : {}),
+          ...(sourceCategories !== undefined
+            ? { sourceCategories: sourceCategories.map(({ sectionId, title, count }) => ({ sectionId, title, count })) }
+            : {}),
+          feeds: feeds.map(({ title, url, count, kind }) => ({ title, url, count, kind })),
+        }),
+      ),
     })),
   };
 };

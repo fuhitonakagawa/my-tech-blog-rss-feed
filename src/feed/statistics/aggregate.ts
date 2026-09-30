@@ -24,7 +24,7 @@ const buildReports = (
       : date === jstDay(state.startedAt) && state.startedAt !== dayStart(date)
         ? 'partial'
         : 'observed';
-    const categories = countCategories(days.get(date) ?? [], sections, translations);
+    const categories = countCategories(days.get(date) ?? [], sections, translations, state.observations);
     const old = previous.get(date);
     reports.push({
       date,

@@ -187,3 +187,68 @@ rm .agents/rules/base.md
 **`.github/actions/`と`.github/workflows/`は両方とも現役で必要です。** Codex用の`AGENTS.md`とは別に、サイトの自動更新を動かしています。
 
 
+-----
+
+
+
+daily statsが以下のようになってますが、
+zenn, qiitaに関してはdedup（ai/cloud/security/...）
+のように書いてほしいです
+
+Zenn dedup：171件（AI XX件 / Cloud YY件 / ...）
+みたいな。
+
+そして、翻訳があるものも、
+
+AWS XX件（en YY件 / translated-jp ZZ件）
+みたいにしたいです
+
+
+日次投稿統計  [00:35]
+【日次統計】2026-09-30のカテゴリ別投稿数
+元記事公開：2026/10/1 0:00:00（日本時間）
+
+2026年09月30日（日本時間）の新着記事をまとめました。
+
+    カテゴリ別投稿数
+Qiita dedup：218件
+Qiita dedup（生成RSS）：218件
+
+Zenn dedup：171件
+Zenn dedup（生成RSS）：171件
+
+Qiita AI関連タグ：157件
+Qiita - AI：77件
+Qiita - Claude Code：40件
+Qiita - 生成AI：35件
+Qiita - AIエージェント：25件
+Qiita - LLM：25件
+Qiita - OpenAI：20件
+Qiita - Claude：17件
+Qiita - ChatGPT：14件
+Qiita - Codex：11件
+Qiita - Anthropic：7件
+Qiita - 機械学習：7件
+Qiita - Deep Learning：1件
+
+Zenn AI関連タグ：157件
+Zenn - AI：87件
+Zenn - Claude Code：38件
+Zenn - 大規模言語モデル（LLM）：35件
+Zenn -...
+
+
+
+
+----
+
+変更しました。
+
+- **Zenn／Qiita**：dedupの総数＋AI・Cloud・Securityなどの内訳
+- **翻訳付きカテゴリ**：`AWS：27件（en 27件 / translated-jp 27件）`
+
+複数所属の記事は各内訳で数え、個別RSSの詳細はWebで展開できます。
+
+[ローカルの日次統計](http://127.0.0.1:8080/statistics/daily/)で確認できます。テスト560件・lint・ビルド確認済みです。
+
+Slackの過去投稿は変わらず、デプロイ後の新しい日次投稿から新形式になります。

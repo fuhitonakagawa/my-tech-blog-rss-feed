@@ -8,6 +8,7 @@ import type { ArticleObservation } from './types';
 
 export type StatisticsSection = Pick<FeedSection, 'id' | 'title'> & {
   kind?: 'source' | 'deduplicated';
+  sourceSectionIds?: readonly string[];
   feedInfoList?: readonly (Pick<FeedInfo, 'url'> & Partial<Pick<FeedInfo, 'label' | 'language' | 'input'>>)[];
 };
 

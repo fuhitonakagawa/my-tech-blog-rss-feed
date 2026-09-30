@@ -23,6 +23,12 @@ export interface CategoryCount {
   count: number;
   kind: 'source' | 'translated' | 'deduplicated';
   feeds: SourceCount[];
+  /** 原文カテゴリで、英語と確認できる取得元の記事数。 */
+  englishCount?: number;
+  /** 翻訳カテゴリの原文側の管理用ID。 */
+  sourceSectionId?: string;
+  /** dedup掲載記事の元カテゴリ所属。複数所属の記事は各内訳に含む。 */
+  sourceCategories?: { sectionId: string | null; title: string; count: number }[];
 }
 
 /** 同じ日付の統計は固定IDで配信し、遅延取得時は内容を更新する。 */

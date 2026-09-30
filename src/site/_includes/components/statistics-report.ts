@@ -1,4 +1,9 @@
 import { sectionFeedUrls, sectionPageUrl } from '../../../common/constants';
+import {
+  type StatisticsDisplayRow,
+  statisticsBreakdownText,
+  statisticsDisplayRows,
+} from '../../../feed/statistics/display-rows';
 import type { CategoryCount, DailyReport, SourceCount } from '../../../feed/statistics/types';
 import { escapeHtml } from './html-utils';
 
@@ -17,25 +22,39 @@ const renderSourceCount = (feed: SourceCount): string => {
     <span class="ui-statistics-count">${feed.count.toLocaleString('ja-JP')}件</span></li>`;
 };
 
+/** 元カテゴリのRSS別件数を、省略せず展開領域へ表示する。 */
+const renderSourceList = (category: CategoryCount): string =>
+  category.feeds.length
+    ? `<ul class="ui-statistics-sources">${category.feeds.map(renderSourceCount).join('')}</ul>`
+    : '<p>取得元の内訳はありません。</p>';
+
+/** グループに含めた元カテゴリ・翻訳カテゴリの購読先と取得元を保持する。 */
+const renderChildCategory = (category: CategoryCount): string => `<section class="ui-statistics-child-category">
+  <p><a href="${escapeHtml(sectionPageUrl(category.sectionId))}">${escapeHtml(category.title)}</a>：${category.count.toLocaleString('ja-JP')}件
+  <a href="${escapeHtml(sectionFeedUrls(category.sectionId).rss)}">カテゴリRSS</a></p>
+  ${renderSourceList(category)}</section>`;
+
 /** カテゴリを展開すると全取得元の件数と購読リンクを確認できる。 */
-const renderCategoryGroup = (categories: readonly CategoryCount[], label: string): string =>
+const renderCategoryGroup = (categories: readonly StatisticsDisplayRow[], label: string): string =>
   `<ul class="ui-statistics-categories" aria-label="${escapeHtml(label)}">${categories
-    .map(
-      (category) => `
+    .map((row) => {
+      const { category } = row;
+      return `
     <li class="ui-statistics-category" data-section="${escapeHtml(category.sectionId)}">
       <details class="ui-statistics-details">
-        <summary><span class="ui-statistics-category-title">${escapeHtml(category.title)}</span>
+        <summary><span class="ui-statistics-category-title">${escapeHtml(category.title)}${row.parts.length ? `<small class="ui-statistics-inline-breakdown">${escapeHtml(statisticsBreakdownText(row))}</small>` : ''}</span>
           <span class="ui-statistics-count">${category.count.toLocaleString('ja-JP')}件</span>
           <span class="ui-statistics-toggle" aria-hidden="true"></span></summary>
         <div class="ui-statistics-breakdown">
           <p class="ui-statistics-category-links"><a href="${escapeHtml(sectionPageUrl(category.sectionId))}">カテゴリページ</a>
             <a href="${escapeHtml(sectionFeedUrls(category.sectionId).rss)}">カテゴリRSS</a></p>
           ${category.kind === 'translated' ? '<p class="ui-statistics-source-kind">翻訳元RSSごとの掲載件数</p>' : ''}
-          ${category.feeds.length ? `<ul class="ui-statistics-sources">${category.feeds.map(renderSourceCount).join('')}</ul>` : '<p>取得元の内訳はありません。</p>'}
+          ${row.grouped && category.kind === 'deduplicated' ? '<p class="ui-statistics-source-kind">上の内訳はdedup掲載記事の所属です。以下は元カテゴリ全体の取得件数で、他のdedupに割り当てた記事も含みます。</p>' : renderSourceList(category)}
+          ${row.children.map(renderChildCategory).join('')}
         </div>
       </details>
-    </li>`,
-    )
+    </li>`;
+    })
     .join('')}</ul>`;
 
 /** 件数順の全カテゴリを、広い画面では左右の列に分ける。 */
@@ -43,10 +62,9 @@ const renderCategoryCounts = (report: DailyReport): string => {
   if (report.categories.length === 0) {
     return '<p class="ui-statistics-empty">対象日に公開された記事は取得できませんでした。</p>';
   }
-  const middle = Math.ceil(report.categories.length / 2);
-  const groups = [report.categories.slice(0, middle), report.categories.slice(middle)].filter(
-    (group) => group.length > 0,
-  );
+  const rows = statisticsDisplayRows(report.categories);
+  const middle = Math.ceil(rows.length / 2);
+  const groups = [rows.slice(0, middle), rows.slice(middle)].filter((group) => group.length > 0);
   return `<div class="ui-statistics-columns">${groups
     .map((group, index) =>
       renderCategoryGroup(group, `${reportDateLabel(report.date)}のカテゴリ別投稿数・${index + 1}`),
@@ -76,7 +94,9 @@ export const renderStatisticsReport = (report: DailyReport): string => {
   const deduplicated = report.categories
     .filter((category) => category.kind === 'deduplicated')
     .reduce((sum, category) => sum + category.count, 0);
-  const activeCategories = report.categories.filter((category) => category.count > 0).length;
+  const activeCategories = statisticsDisplayRows(report.categories).filter(
+    (row) => row.category.count > 0 || row.parts.some((part) => part.count > 0),
+  ).length;
   return `<article class="ui-statistics-report" id="${escapeHtml(report.date)}">
     <header class="ui-statistics-report__header">
       <div><p class="ui-statistics-eyebrow">集計対象日・日本時間</p>

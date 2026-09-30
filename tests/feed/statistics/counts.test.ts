@@ -50,6 +50,13 @@ const start = new Date('2026-09-28T10:00:00.000Z');
 const midnight = new Date('2026-09-28T15:00:00.000Z');
 
 describe('カテゴリと取得元の内訳', () => {
+  it('原文と翻訳が各1件でも、同じ記事を総数2件として表示しない', () => {
+    const initial = updateStatistics(null, [items[0]], sections, start, definitions, [items[0]]);
+    const state = updateStatistics(initial, [], sections, midnight, definitions);
+    const rss = load(renderDailyReport(state.reports[0]));
+    expect(rss.text()).toContain('AI：1件（en 1件 / translated-jp 1件）');
+  });
+
   it('通常・独自生成・翻訳と0件を網羅し、同じ記事のRSS間の重複を区別する', () => {
     const source = updateStatistics(null, items, sections, start, definitions, items.slice(0, 2));
     const state = updateStatistics(source, [], sections, midnight, definitions);
@@ -57,6 +64,7 @@ describe('カテゴリと取得元の内訳', () => {
     const normal = report.categories.find((category) => category.sectionId === 'ai');
     const translated = report.categories.find((category) => category.sectionId === 'ai-jp');
     expect(normal?.count).toBe(2);
+    expect(normal?.englishCount).toBe(1);
     expect(normal?.feeds).toHaveLength(4);
     expect(normal?.feeds.reduce((sum, feed) => sum + feed.count, 0)).toBe(3);
     expect(normal?.feeds.find((feed) => feed.kind === 'generated')).toMatchObject({ title: '独自RSS', count: 1 });
@@ -65,13 +73,14 @@ describe('カテゴリと取得元の内訳', () => {
     expect(translated?.feeds).toHaveLength(3);
     expect(translated?.feeds.some((feed) => feed.title === '日本語RSS')).toBe(false);
     const html = load(renderStatisticsReport(report));
-    expect(html('details > summary')).toHaveLength(2);
+    expect(html('details > summary')).toHaveLength(1);
+    expect(html('.ui-statistics-inline-breakdown').text()).toBe('（en 1件 / translated-jp 1件）');
     expect(html('.ui-statistics-metrics dd').eq(0).text()).toBe('2件');
     expect(html('.ui-statistics-metrics dd').eq(1).text()).toBe('1件');
     expect(html('a[href="https://example.com/generated/rss"]')).toHaveLength(2);
     const rssBody = load(renderDailyReport(report));
-    expect(rssBody('li > ul')).toHaveLength(2);
-    expect(rssBody('a[href="https://example.com/generated/rss"]')).toHaveLength(2);
+    expect(rssBody('li > ul')).toHaveLength(0);
+    expect(rssBody.text()).toContain('AI：2件（en 1件 / translated-jp 1件）');
     expect(parseStatisticsState(JSON.stringify(state))).toEqual(state);
   });
 

@@ -2,6 +2,7 @@ import { Feed } from 'feed';
 import constants from '../../common/constants';
 import type { FeedDistributionSet } from '../feed-generator';
 import { statisticsConfig, statisticsFeedUrls, statisticsPageUrl } from './config';
+import { statisticsDisplayRows } from './display-rows';
 import { dailyReportTitle, renderDailyReport } from './presentation';
 import type { StatisticsState } from './types';
 
@@ -28,7 +29,7 @@ export const buildStatisticsFeed = (state: StatisticsState): FeedDistributionSet
       guid: url,
       link: url,
       title: dailyReportTitle(report.date),
-      description: `${report.date}（日本時間）のカテゴリ別投稿数。${report.categories.filter((category) => category.count > 0).length}カテゴリで記事を取得しました。`,
+      description: `${report.date}（日本時間）のカテゴリ別投稿数。${statisticsDisplayRows(report.categories).filter((row) => row.category.count > 0 || row.parts.some((part) => part.count > 0)).length}カテゴリで記事を取得しました。`,
       content: renderDailyReport(report),
       published: new Date(report.publishedAt),
       date: new Date(report.updatedAt),
