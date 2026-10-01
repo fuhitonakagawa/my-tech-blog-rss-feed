@@ -5,6 +5,7 @@ import json
 import re
 from dataclasses import asdict
 from itertools import pairwise
+from typing import TypedDict
 
 from config import CONFIG, TranslationConfig
 from provider_protocol import TextTranslator
@@ -14,6 +15,27 @@ from runtime import (
     provider_id,
     translation_route,
 )
+
+
+class TranslationLimits(TypedDict):
+    """翻訳ブリッジが通知する時間・件数・通信量の上限。"""
+
+    totalTimeoutMs: int
+    batchTimeoutMs: int
+    maxBatchTexts: int
+    maxBatchBytes: int
+    maxTextBytes: int
+
+
+class ProviderDescriptor(TypedDict):
+    """TypeScriptとワークフローへ渡す検証済み翻訳設定。"""
+
+    provider: str
+    providerIds: dict[str, str]
+    limits: TranslationLimits
+    configured: bool
+    awsRegion: str
+    awsRoleArn: str
 
 
 def validate_config(config: TranslationConfig) -> None:
@@ -111,7 +133,7 @@ def translation_identity(config: TranslationConfig, source: str) -> str:
     return identity
 
 
-def describe_provider(config: TranslationConfig = CONFIG) -> dict[str, object]:
+def describe_provider(config: TranslationConfig = CONFIG) -> ProviderDescriptor:
     """通信せず、設定の有効性と翻訳キャッシュの識別子を返す。"""
     validate_config(config)
     configured = config.provider == "argos" or bool(

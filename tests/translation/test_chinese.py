@@ -1,5 +1,6 @@
 """中国語経由翻訳とモデル・言語境界を検証する。"""
 
+import hashlib
 from dataclasses import replace
 from typing import cast
 
@@ -8,7 +9,7 @@ from argos_provider import PipelineTranslator
 from aws_provider import AmazonTranslateTranslator, TranslateClient
 from config import TranslationConfig
 from provider_factory import translation_identity, validate_config
-from runtime import load_model_definition, provider_id
+from runtime import PROJECT_ROOT, load_model_definition
 from translate import parse_request, translate_texts
 
 
@@ -32,7 +33,11 @@ def test_cache_identity_tracks_both_models_without_resetting_english(
     config = TranslationConfig()
     english = translation_identity(config, "en")
     chinese = translation_identity(config, "zh")
-    assert english == provider_id(load_model_definition())
+    model = load_model_definition()
+    assert english == (
+        f"argos:{model['argosVersion']}:en-ja:{model['packageVersion']}:"
+        f"{model['sha256']}:{hashlib.sha256((PROJECT_ROOT / 'uv.lock').read_bytes()).hexdigest()}"
+    )
     original = load_model_definition
 
     def changed(source: str = "en", target: str = "ja") -> dict[str, str]:
@@ -41,6 +46,15 @@ def test_cache_identity_tracks_both_models_without_resetting_english(
 
     monkeypatch.setattr("provider_factory.load_model_definition", changed)
     assert translation_identity(config, "en") == english
+    assert translation_identity(config, "zh") != chinese
+
+    def changed_english(source: str = "en", target: str = "ja") -> dict[str, str]:
+        """共通の英日モデルだけが異なる定義を返す。"""
+        model = original(source, target)
+        return {**model, "sha256": "1" * 64} if source == "en" else model
+
+    monkeypatch.setattr("provider_factory.load_model_definition", changed_english)
+    assert translation_identity(config, "en") != english
     assert translation_identity(config, "zh") != chinese
 
 
