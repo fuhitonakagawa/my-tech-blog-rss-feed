@@ -179,3 +179,22 @@ qiitaもzennは時間が経てば解決される系ですか？
 
 
 
+時間経ったけど、どうかな？
+
+
+----
+
+
+
+**前回未掲載だった20件は、すべて公開RSSに反映されています。** 10月1日20:15（日本時間）に確認しました。
+
+| 対象 | 反映状況 | RSSの初回掲載日時（日本時間） |
+|---|---|---|
+| Qiita | **9件すべて掲載** | 9:05 |
+| Zenn | **11件すべて掲載** | 9:05〜11:17 |
+
+Qiitaの1件は、横断重複除外のルールにより「企業TechBlog dedup」に掲載されています。残り8件はQiita dedup、Zennの11件はZenn dedupです。[Qiita RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/qiita-dedup/feeds/rss.xml)・[企業TechBlog RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/tech-blog-dedup/feeds/rss.xml)・[Zenn RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-dedup/feeds/rss.xml)
+
+最新20:04の診断でも、両サービス各22本の取得元はすべて正常で、取得済み対象記事のdedup掲載漏れは0件です。[公開診断](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/health/status.json)
+
+**今回の未反映分は、後続の巡回で解消したと確認できました。** Slackへの投稿は別途確認が必要です。
