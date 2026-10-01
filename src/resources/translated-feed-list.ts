@@ -6,7 +6,7 @@ export interface TranslatedFeedDefinition {
   id: string;
   title: string;
   sourceSectionId: string;
-  sourceLanguage: 'en';
+  sourceLanguage: 'en' | 'zh';
   targetLanguage: 'ja';
 }
 
@@ -33,7 +33,7 @@ export const parseTranslatedFeeds = (
       definition.title.trim() === '' ||
       typeof definition.sourceSectionId !== 'string' ||
       !sourceIds.has(definition.sourceSectionId) ||
-      definition.sourceLanguage !== 'en' ||
+      (definition.sourceLanguage !== 'en' && definition.sourceLanguage !== 'zh') ||
       definition.targetLanguage !== 'ja'
     ) {
       throw new Error('翻訳セクションのID・表示名・参照元・翻訳方向が不正です');
@@ -47,7 +47,7 @@ export const parseTranslatedFeeds = (
       id: definition.id,
       title: definition.title,
       sourceSectionId: definition.sourceSectionId,
-      sourceLanguage: 'en',
+      sourceLanguage: definition.sourceLanguage,
       targetLanguage: 'ja',
     };
   });

@@ -42,11 +42,17 @@ const translationBatches = (texts: string[], source: string, target: string, lim
   return batches;
 };
 
+export interface TranslationBudget {
+  startedAt?: number;
+  deadline?: number;
+}
+
 /** 原文を変更せず、キャッシュとプロバイダーから翻訳記事を組み立てる */
 export class TranslationService {
   constructor(
     private readonly translator: Translator,
     private readonly cache: TranslationCache,
+    private readonly budget: TranslationBudget = {},
   ) {}
 
   public async translateItems(
@@ -84,7 +90,8 @@ export class TranslationService {
 
   /** 同一原文は一度だけ翻訳し、有効な結果のみキャッシュする */
   private async translateTexts(texts: string[], source: string, target: string): Promise<Map<string, string>> {
-    const deadline = Date.now() + this.translator.limits.totalTimeoutMs;
+    this.budget.deadline ??= (this.budget.startedAt ?? Date.now()) + this.translator.limits.totalTimeoutMs;
+    const deadline = this.budget.deadline;
     const translations = new Map<string, string>();
     const missing: string[] = [];
     for (const text of texts) {
@@ -97,6 +104,7 @@ export class TranslationService {
         missing.push(text);
       }
     }
+    logger.info('[translate] planned', { source, target, cached: translations.size, pending: missing.length });
     for (const batch of translationBatches(missing, source, target, this.translator.limits)) {
       if (Date.now() + this.translator.limits.batchTimeoutMs > deadline) {
         logger.warn('[translate] time-budget-exhausted', { provider: this.translator.id });

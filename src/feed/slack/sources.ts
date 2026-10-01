@@ -2,6 +2,8 @@ import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import constants, { generatedFeedUrls, sectionFeedUrls } from '../../common/constants';
 import { DISPLAY_SECTION_LIST } from '../../resources/display-section-list';
+import { FEED_SECTION_LIST } from '../../resources/feed-info-list';
+import { sectionFeedLanguage } from '../../resources/feed-language';
 import { GENERATED_FEED_DEFINITION_MAP } from '../../resources/generated-feed-list';
 import { sectionPathId } from '../../resources/section-paths';
 import { statisticsFeedUrls } from '../statistics/config';
@@ -17,6 +19,7 @@ export const loadSlackSources = async (
     ...DISPLAY_SECTION_LIST.map((section) => ({
       rssUrl: sectionFeedUrls(section.id).rss,
       file: `${section.feedDirectory}/${sectionPathId(section.id)}/feeds/feed.json`,
+      language: sectionFeedLanguage(FEED_SECTION_LIST.find((source) => source.id === section.id)?.feedInfoList ?? []),
     })),
     ...generatedIds.map((id) => ({
       rssUrl: generatedFeedUrls(id).rss,

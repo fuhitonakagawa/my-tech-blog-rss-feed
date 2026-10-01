@@ -5,7 +5,10 @@ import { promisify } from 'node:util';
 import { describe, expect, it } from 'vitest';
 
 describe('Argosのローカル翻訳', () => {
-  it('モデル導入後は外部通信なしで翻訳できる', async () => {
+  it.each([
+    ['en', 'Introducing a new API for developers'],
+    ['zh', '机器人可以在复杂环境中安全地工作。'],
+  ])('モデル導入後は外部通信なしで翻訳できる: %s', async (language, text) => {
     const root = fileURLToPath(new URL('../../', import.meta.url));
     const python = path.join(root, '.venv', process.platform === 'win32' ? 'Scripts/python.exe' : 'bin/python');
     const program = `
@@ -14,7 +17,9 @@ import socket
 import sys
 sys.path.insert(0, 'scripts/translation')
 from runtime import configure_environment, configure_logging, load_model_definition
-from argos_provider import load_translation
+from provider_factory import create_provider
+from config import CONFIG
+from dataclasses import replace
 configure_logging()
 configure_environment()
 network_attempts: list[None] = []
@@ -24,12 +29,16 @@ def deny_network(*args: object, **kwargs: object) -> None:
 socket.socket.connect = deny_network
 socket.socket.connect_ex = deny_network
 socket.getaddrinfo = deny_network
-translated = load_translation(load_model_definition()).translate('Introducing a new API for developers')
+translated = create_provider(replace(CONFIG, provider='argos'), source_language=sys.argv[1]).translate(sys.argv[2])
 print(json.dumps({'translated': translated, 'networkAttempts': len(network_attempts)}, ensure_ascii=False))
 `;
-    const { stdout } = await promisify(execFile)(python, ['-c', program], { cwd: root, timeout: 60_000 });
+    const { stdout } = await promisify(execFile)(python, ['-c', program, language, text], {
+      cwd: root,
+      timeout: 60_000,
+    });
     const response = JSON.parse(stdout) as { translated: string; networkAttempts: number };
-    expect(response.translated).toMatch(/[ぁ-んァ-ヶ一-龯]/);
+    expect(response.translated).toMatch(/[ぁ-んァ-ヶ]/);
+    expect(response.translated).not.toBe(text);
     expect(response.networkAttempts).toBe(0);
   });
   it('英日モデルで複数テキストを翻訳し有効なJSON応答を返す', async () => {

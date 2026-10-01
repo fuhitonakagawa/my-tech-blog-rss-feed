@@ -28,12 +28,62 @@ afterEach(() => {
 });
 
 describe('generateTranslatedFeeds', () => {
+  it('任意の中国語カテゴリをzhで翻訳し、他言語の失敗と原文への変更を分離する', async () => {
+    const chineseDefinition: TranslatedFeedDefinition = {
+      id: 'research-zh-jp',
+      title: 'Research translated',
+      sourceSectionId: 'research-zh',
+      sourceLanguage: 'zh',
+      targetLanguage: 'ja',
+    };
+    const chinese = makeSourceItem({
+      title: '机器人研究',
+      sectionId: 'research-zh',
+      sourceLanguage: 'zh',
+      link: 'https://example.com/chinese',
+    });
+    const english = makeSourceItem();
+    const source = [
+      english,
+      makeSourceItem({ title: 'Another', link: 'https://example.com/other', guid: 'other' }),
+      chinese,
+    ];
+    const before = structuredClone(source);
+    const budgets: unknown[] = [];
+    const languages: string[] = [];
+    const result = await generateTranslatedFeeds(
+      source,
+      [...definitions, chineseDefinition],
+      new Map(),
+      new Map(),
+      (language, budget) => {
+        budgets.push(budget);
+        languages.push(language);
+        return {
+          translateItems: async (items, requested) => {
+            expect(requested).toBe(language);
+            if (language === 'en') throw new Error('English unavailable');
+            return items.map((item) => ({ ...item, originalTitle: item.title, title: 'ロボット研究' }));
+          },
+        };
+      },
+    );
+    expect(budgets[0]).toBe(budgets[1]);
+    expect(languages).toEqual(['zh', 'en']);
+    expect(JSON.parse(result.get('research-zh-jp')?.json ?? '').items[0]).toMatchObject({
+      url: chinese.link,
+      title: 'ロボット研究 | Source Blog',
+    });
+    expect(JSON.parse(result.get('ai-jp')?.json ?? '').items[0].title).toContain(english.title);
+    expect(source).toEqual(before);
+  });
   it('英語記事だけを翻訳し、カテゴリを分離して元の公開日時順で配信する', async () => {
     const items = [
       makeSourceItem({ title: 'Old', link: 'https://example.com/old' }),
       makeSourceItem({ title: 'New', link: 'https://example.com/new', isoDate: '2026-09-21T12:00:00.000Z' }),
       makeSourceItem({ title: 'AWS', sectionId: 'aws', link: 'https://example.com/aws' }),
       makeSourceItem({ title: '日本語', sourceLanguage: 'ja' }),
+      makeSourceItem({ title: '机器人新闻', sourceLanguage: 'zh' }),
       makeSourceItem({ title: 'Mixed', sourceLanguage: 'mixed' }),
       makeSourceItem({ title: 'Unknown', sourceLanguage: 'unknown' }),
       makeSourceItem({ title: 'Other section', sectionId: 'zenn' }),

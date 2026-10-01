@@ -12,7 +12,7 @@
 
 フォーク元由来の部分には引き続きMITライセンスが適用され、その本文と著作権表示は [LICENSES/MIT-upstream.txt](LICENSES/MIT-upstream.txt) に保持しています。フォーク元形式のREADMEにあるMIT表記は、本フォーク全体の配布条件を示すものではありません。第三者依存・翻訳モデル・取得コンテンツの適用範囲は [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) に記載しています。
 
-公開サイトにも`/LICENSE.txt`、`/LICENSES/MIT-upstream.txt`、`/LICENSES/Argos-en-ja-MODEL-NOTICES.md`、`/THIRD_PARTY_NOTICES.md`を同梱します。ソースコードはサイト内のGitHubリンクから参照できます。
+公開サイトにも`/LICENSE.txt`、`/LICENSES/MIT-upstream.txt`、`/LICENSES/Argos-en-ja-MODEL-NOTICES.md`、`/LICENSES/Argos-zh-en-MODEL-NOTICES.md`、`/THIRD_PARTY_NOTICES.md`を同梱します。ソースコードはサイト内のGitHubリンクから参照できます。
 
 ## 目次
 
@@ -231,7 +231,7 @@ Amazon Translateは`provider="amazon-translate"`とリージョン・ロール�
 
 通常RSSのURLは外部の購読元です。HTML由来の生成フィード用ディレクトリへの定義は不要です。フィード名とURLはセクションをまたいで一意にします。
 
-英語の翻訳対象には`"language": "en"`を指定します。指定可能な値は`ja`・`en`・`mixed`・`unknown`で、未指定は`unknown`です。生成フィードは生成元定義の言語を使用します。
+英語の翻訳対象には`"language": "en"`を指定します。指定可能な値は`ja`・`en`・`zh`・`mixed`・`unknown`で、未指定は`unknown`です。中国語には`zh`を使います。生成フィードは生成元定義の言語を使用します。全取得元が同じ既知言語の通常カテゴリは、その言語をRSSに設定します。翻訳定義の`sourceLanguage`と一致するソースが対象です。`en`は英日、`zh`は中日翻訳を使用します。
 
 企業の技術ブログに加え、AIの公式開発者ブログ・製品情報など、セクションの対象に合う配信元を扱います。投稿サービス上の企業ブログも、運営主体と内容を確認して登録します。
 
@@ -315,6 +315,23 @@ CSS方式では`itemSelector`、`titleSelector`、`linkSelector`、`dateSelector
 | `anthropic-news` | Anthropic Newsroom | `my-tech-blog-ai` | `anthropic-news`アダプター |
 | `claude-announcements` | Claude Product announcements | `my-tech-blog-ai` | CSS |
 | `claude-code-blog` | Claude Code Blog | `my-tech-blog-ai` | CSS |
+| `mongodb-blog` | MongoDB Blog | `my-tech-blog-db` | `mongodb-blog`アダプター |
+| `preferred-networks` | Preferred Networks Tech Blog | `my-tech-blog-jp` | CSS |
+| `lerobot-tutorial-updates` | Robot Learning: A Tutorial（教材更新） | `my-tech-blog-robotics` | `huggingface-commits`アダプター |
+| `leaderobot-news` | 机器人大讲堂（ロボット大講堂） | `my-tech-blog-robotics-zh` | `leaderobot-news`アダプター |
+
+Roboticsの教材更新は、ETH講義の[公式教材リポジトリのAtom](https://github.com/mees-robot-learning-course/ethz-course-2026/commits/main.atom)と、Hugging Faceの[教材変更履歴](https://huggingface.co/spaces/lerobot/robot-learning-tutorial/commits/main)を対象とします。記事はコミットのタイトル・URL・日時で識別します。講義の開催日や動画公開日は別のイベントです。教材自体の入口は[ETH講義ページ](https://cvg.ethz.ch/lectures/Robot-Learning/)と[Robot Learning: A Tutorial](https://huggingface.co/spaces/lerobot/robot-learning-tutorial)です。IEEE Video Fridayは既存のIEEE Spectrum Robotics RSSに含まれます。
+
+机器人大讲堂は「Robotics（中国語）」に分類し、公式記事一覧の公開済みデータからタイトル・URL・概要を生成します。公開日は`publishTime`の日付を中国標準時（UTC+08:00）の午前0時として扱い、作成日時・更新日時を代用しません。一覧1ページの取得分と保存済み記事を統合します。
+
+| 購読先 | 公開時のRSS URL |
+| --- | --- |
+| 教材更新を含むRobotics | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics/feeds/rss.xml` |
+| Robotics（中国語） | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/robotics-zh/feeds/rss.xml` |
+| Robot Learning教材の変更履歴 | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/lerobot-tutorial-updates/rss.xml` |
+| 机器人大讲堂 | `https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/generated/leaderobot-news/rss.xml` |
+
+教材の変更履歴も通常カテゴリでは過去8日以内の更新が対象です。単独生成フィードには設定件数までの過去の変更履歴を保持するため、単独フィードの記事数と通常カテゴリの新着数は異なります。
 
 <a id="generated-feeds"></a>
 
@@ -378,7 +395,7 @@ Anthropic Newsroomの [Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-f
 
 JVNの脆弱性情報は専用カテゴリ`jvn`で扱います。取得元はJVNRSSとJVNDBの2本で、Slackの`#jvn-feed`に対応します。[JVNの購読用RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/jvn/feeds/rss.xml)は通常の集約フィードです。
 
-翻訳派生フィードは、カテゴリ内の英語ソースの記事を1つにまとめたRSSです。タイトルとRSS内の概要文を日本語に翻訳し、元記事のURL・GUID・公開日時・著者・カテゴリ・ブログ名・画像・ブックマーク数を保持します。元ページの本文取得、全文翻訳、要約は対象外です。
+翻訳派生フィードは、カテゴリ内の英語または中国語ソースの記事を1つにまとめたRSSです。タイトルとRSS内の概要文を日本語に翻訳し、元記事のURL・GUID・公開日時・著者・カテゴリ・ブログ名・画像・ブックマーク数を保持します。元ページの本文取得、全文翻訳、要約は対象外です。
 
 通常・翻訳の集約フィードは、RSS・JSONでは元の文字列GUIDを保持します。AtomのIDは公開可能なHTTP(S) URLとし、それ以外のGUIDでは記事URLを使います。JSON Feedの`title`・`summary`・`_custom`はプレーンテキスト、`content_html`はHTMLとして配信し、`image`は画像URLの文字列です。
 
@@ -418,6 +435,19 @@ RSS・OGP・画像の応答は圧縮前後とも10 MiB、HTML由来フィード�
 }
 ```
 
+中国語RSSは取得元へ`"language": "zh"`を指定します。`my-tech-blog-robotics-zh`に登録した中国語ソースは、共通の中日翻訳処理へ自動で含まれます。ブログごとの翻訳コードは不要です。別の中国語カテゴリを作る場合は、次の形式で翻訳定義を置きます。
+
+```json
+{
+  "title": "Research（中国語） - Translated Japanese",
+  "sourceSectionId": "research-zh",
+  "sourceLanguage": "zh",
+  "targetLanguage": "ja"
+}
+```
+
+Robotics（中国語）の日本語版は、公開時に`/rss/robotics-zh-jp/feeds/rss.xml`、閲覧ページは`/rss/robotics-zh-jp/`となります。原文側は`/rss/robotics-zh/`です。
+
 通常カテゴリの定義は`src/resources/sections/`、翻訳フィードの定義は`src/resources/translated-feeds/`で管理します。翻訳結果は`src/site/translated-feeds/<公開パスID>/feeds/`へ出力し、通常カテゴリの生成物である`src/site/section-feeds/`とは保存先を分けます。
 
 配信先は`/rss/<公開パスID>/feeds/rss.xml`、`atom.xml`、`feed.json`、閲覧ページは`/rss/<公開パスID>/`です。AI - Translated JapaneseのRSSは`/rss/ai-jp/feeds/rss.xml`となります。対象記事がない場合も空のフィードとページを出力します。
@@ -433,15 +463,17 @@ AIの翻訳フィードのURL例です。管理用IDは`my-tech-blog-ai-translat
 
 Hacker Newsの取得元は [Hacker News - Japanese](https://hevinxx.github.io/hn-summary-and-translate/rss-ja.xml) です。取得元の名前とURLは日本語版ですが、実際のタイトル・概要が英語のため、登録言語は`en`とします。`hacker-news`は取得元の記事、`hacker-news-translated-jp`は本リポジトリの翻訳機による日本語の記事を配信します。
 
-各派生フィードは、指定元セクションかつ`language: en`のソースだけを対象とします。日本語・混在・言語未指定のソースは含めません。記事の集約期間は通常フィードと同じで、取得記事に公開日時がなければ翻訳対象にも入りません。
+各派生フィードは、指定元セクションかつ定義の`sourceLanguage`（`en`または`zh`）に一致するソースを対象とします。日本語・混在・言語未指定のソースは含めません。記事の集約期間は通常フィードと同じで、取得記事に公開日時がなければ翻訳対象にも入りません。
 
 Google Cloudの日本語派生では、Google Cloud Release Notes（`https://cloud.google.com/feeds/gcp-release-notes.xml`）に限り、サービス名を原文表記でタイトルに含めます。タイトルは`Google Cloud更新：API Gateway、BigQuery、Cloud Interconnectほか（2026-09-29）`の形式で、先頭3サービスと元記事の公開日（UTC）を表示します。本文先頭には重複を除いた全サービス名を付け、その後に翻訳概要を1回掲載します。通常の概要・本文の文字数上限は適用されるため、配信内容は末尾が省略される場合があります。サービス見出しがない記事は通常の翻訳表示です。翻訳器を利用できない場合もサービス名の表示形式は共通で、概要は原文になります。元の通常カテゴリ、原文タイトル、記事の単位・ID・URL・公開日時、購読URLは保持します。
 
-既定の翻訳器はローカルのArgos Translateを使用し、外部翻訳APIの契約・キーを必要としません。英日モデルは固定バージョンとSHA-256で検証し、`.argos/`に保持します。モデルとPython環境は公開サイトやGitには含めません。モデルに同梱された文分割器を使い、翻訳時のモデル自動取得を禁止します。
+既定の翻訳器はローカルのArgos Translateを使用し、外部翻訳APIの契約・キーを必要としません。英日・中英モデルは固定バージョンとSHA-256で検証し、`.argos/`に保持します。翻訳経路は`config.py`の`translation_routes`で管理し、英語は`en → ja`、中国語（簡体字）は`zh → en → ja`を使います。中国語は同じリクエスト内で2段階を実行し、中間の英語を日本語の結果として配信しません。モデルとPython環境は公開サイトやGitには含めません。モデルに同梱された文分割器を使い、翻訳時のモデル自動取得を禁止します。
 
-モデル取得の通信予算は180秒です。接続後のヘッダー・本文が少量ずつ到着し続けても、残り予算で中断します。失敗したダウンロードは保存済みモデルを上書きせず、一時ファイルを除去します。Actionsのモデル検証・導入ステップ全体は5分を上限とし、モデルを準備できない場合も原文による生成へ進みます。
+モデル取得の通信予算は180秒です。接続後のヘッダー・本文が少量ずつ到着し続けても、残り予算で中断します。失敗したダウンロードは保存済みモデルを上書きせず、一時ファイルを除去します。Actionsのモデル検証・導入ステップ全体は8分を上限とし、モデルを準備できない場合も原文による生成へ進みます。
 
 `.cache/translations/`にはテキスト単位の翻訳結果を保存します。キーにはプロバイダー・翻訳方向・原文を含みます。ArgosはモデルとPythonロックファイル、AWSは接続リージョン・モデル・推論設定・翻訳指示も識別子に含めます。タイトルと概要を別々に扱うため、概要だけの変更でタイトルを再翻訳することはありません。
+
+翻訳キャッシュは原文言語・対象言語・モデル経路・原文テキストで区別します。中日翻訳の識別子には中英・英日両モデルを含み、中英モデルの変更で英語のキャッシュを無効にしません。対象件数が少ない言語から処理します。`[translate] planned`には言語別のキャッシュ利用数と未翻訳数を出力します。英語と中国語の処理は共通の総時間予算を消費し、2段階翻訳も同じバッチ期限に含まれます。AWSプロバイダーでは原文言語をAPIまたは指示文へ渡し、中国語も直接日本語へ翻訳します。
 
 AWS翻訳は公開用の`Generate feeds and site`ワークフローのmainブランチで実行します。PR、通常CI、ローカルではAWSを呼び出しません。AWS APIへ送るのは翻訳対象のタイトル・概要だけです。入力上限超過、APIエラー、空の応答、Bedrockの出力打ち切りやJSON形式違反は翻訳失敗として扱います。Bedrockのモデルはsystem指示、`temperature`、Converse APIへの対応が必要です。AWS実行には利用料金が発生します。
 
@@ -484,7 +516,7 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 - **翻訳版**: 同一実行の翻訳フィードへ出力した記事を、元記事の公開日で集計します。翻訳エラーによる原文フォールバックも掲載件数に含み、翻訳成功率とは区別します。翻訳カテゴリの内訳リンクは翻訳元RSSを指します。出力記録を持たない過去記事は、翻訳版への掲載を確認できるまで翻訳件数に含めません。
 - **取得元**: Webページではカテゴリを展開すると、各RSSの名前・URL・件数を確認できます。HTML由来のものには「生成RSS」と表示し、取得元不明や登録外の保存記事は「取得元を特定できない記事」にまとめます。グループ化した行のRSS本文は括弧内の内訳を表示し、個別RSSの詳細はWebページで表示します。
 - **dedupの内訳**: `Zenn dedup：171件（AI 120件 / Cloud 40件 / Security 20件 / …）`のように、そのdedupへ掲載した記事の元カテゴリ所属を表示します。他のdedupに割り当てた記事は内訳へ含めません。複数カテゴリに属する記事は各内訳へ計上するため、内訳の合計は総数を超える場合があります。所属を確認できない記事は「所属不明」とし、推測で割り当てません。Webで展開する元カテゴリ全体の取得件数とは区別します。
-- **翻訳の内訳**: `AWS：44件（en 44件 / translated-jp 42件）`のように表示します。総数は原文カテゴリ内のユニーク記事数、`en`は英語の取得元の記事数、`translated-jp`は実際の翻訳版掲載数です。英語RSS間の重複も除き、原文と翻訳の件数を足し合わせません。
+- **翻訳の内訳**: `AWS：44件（en 44件 / translated-jp 42件）`のように表示します。総数は原文カテゴリ内のユニーク記事数、`en`・`zh`は該当する原文言語の取得元の記事数、`translated-jp`は実際の翻訳版掲載数です。同じ原文言語のRSS間の重複も除き、原文と翻訳の件数を足し合わせません。
 - **重複**: 同じカテゴリ内では、追跡パラメーターを除いた同一記事URLを1件として扱います。複数カテゴリへの掲載はそれぞれのカテゴリで数えます。RSS別の内訳は各RSS内で重複を除くため、同じ記事が複数RSSに載る場合、内訳の合計はカテゴリ件数より多くなります。
 - **公開日**: 同一記事を繰り返し取得した場合、保存した最初の有効な公開日時を維持します。公開日が不明・不正・未来の記事と、公開できないURLは対象外です。
 - **本文**: グループ化した行の総数が多い順に表示し、0件のカテゴリ・内訳・RSSも表示します。0件は対象日の掲載記事を記録できていないことを表し、配信元に投稿がなかったことを保証しません。「投稿のあるカテゴリ」はグループ化後の行で総数または内訳に1件以上あるものの数です。カテゴリ一覧には通常フィードの文字数上限を適用しません。
@@ -614,7 +646,7 @@ npm audit --audit-level=moderate
 | `uv run --frozen pytest` | Pythonブリッジの入力・例外処理・モデル検証 |
 | `uv run --frozen ruff check scripts/translation tests/translation` | Pythonの静的検査 |
 | `uv run --frozen mypy scripts/translation tests/translation` | Pythonの型検査 |
-| `npm run test-external -- tests/external/argos-translator.test.ts` | 検証済み英日モデルを使うArgosの実翻訳 |
+| `npm run test-external -- tests/external/argos-translator.test.ts` | 英日・中英日モデルを使う通信禁止下の実翻訳 |
 
 生成物の確認は、導入手順と同じ`feed-generate`、`site-prepare`、`site-build`の順序で行います。外部取得を含むコマンドの結果は、プロセス終了コードに加えて対象フィードの出力でも確認してください。
 
@@ -688,7 +720,7 @@ flowchart TD
     remote["外部RSS・Atomの取得"]
     parse["共通のXML検証・フィード解析"]
     recent["公開日時が過去8日間の記事を抽出"]
-    translation["対象セクションの英語記事だけを翻訳<br/>config.pyでArgos・Bedrock・Amazon Translateを選択<br/>キャッシュ利用・設定不足や失敗した記事は原文"]
+    translation["対象セクションの指定言語の記事を翻訳<br/>config.pyでArgos・Bedrock・Amazon Translateを選択<br/>キャッシュ利用・設定不足や失敗した記事は原文"]
     translated["カテゴリ単位の日本語派生フィード"]
     metadata["記事・購読元のOGPとはてな情報を取得"]
     aggregated["全体・セクションのRSS・Atom・JSON Feedを生成・検証"]
@@ -758,7 +790,8 @@ flowchart TD
 │   ├── pull_request_template.md
 │   └── renovate.json5
 ├── LICENSES/  # フォーク元・モデルの通知
-│   ├── Argos-en-ja-MODEL-NOTICES.md  # モデル付属の出典表示
+│   ├── Argos-en-ja-MODEL-NOTICES.md  # 英日モデルの出典表示
+│   ├── Argos-zh-en-MODEL-NOTICES.md  # 中英モデルの出典表示
 │   └── MIT-upstream.txt  # フォーク元のMIT本文・著作権表示
 ├── scripts/
 │   └── translation/
@@ -770,6 +803,8 @@ flowchart TD
 │       ├── translate.py
 │       ├── workflow_config.py
 │       ├── model.json
+│       ├── models/
+│       │   └── zh-en.json
 │       ├── offline_sentence_splitter.py
 │       ├── runtime.py
 │       └── setup_model.py
@@ -801,6 +836,8 @@ flowchart TD
 │   │   │   ├── extractor.ts
 │   │   │   ├── feed-builder.ts
 │   │   │   ├── generated-feed-service.ts
+│   │   │   ├── huggingface-commits.ts
+│   │   │   ├── leaderobot.ts
 │   │   │   ├── page-fetcher.ts
 │   │   │   ├── publication-date.ts
 │   │   │   ├── state-store.ts
@@ -848,6 +885,8 @@ flowchart TD
 │   │   └── prune-cache.ts
 │   ├── resources/
 │   │   ├── generated-feeds/  # HTMLからの生成元定義
+│   │   │   ├── leaderobot-news.json
+│   │   │   ├── lerobot-tutorial-updates.json
 │   │   │   ├── anthropic-news.json
 │   │   │   ├── claude-announcements.json
 │   │   │   ├── claude-code-blog.json
@@ -888,6 +927,7 @@ flowchart TD
 │   │   │   ├── qiita-security.json
 │   │   │   ├── qiita-trend.json
 │   │   │   ├── my-tech-blog-robotics.json
+│   │   │   ├── my-tech-blog-robotics-zh.json
 │   │   │   ├── security-github.json
 │   │   │   ├── security-en.json
 │   │   │   ├── security.json

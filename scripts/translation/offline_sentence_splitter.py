@@ -31,7 +31,7 @@ def prepare_tokenizer_model(source: Path, destination: Path) -> None:
         or not isinstance(checkpoint.get("config"), dict)
         or not isinstance(checkpoint.get("model"), dict)
     ):
-        raise TypeError("英語トークナイザーのモデルが不正です")
+        raise TypeError("トークナイザーのモデルが不正です")
     checkpoint["config"].setdefault("feat_dropout", 0.0)
     checkpoint["config"].setdefault("use_dictionary", False)
     checkpoint["config"].setdefault(
@@ -42,7 +42,7 @@ def prepare_tokenizer_model(source: Path, destination: Path) -> None:
 
 
 def configure_sentence_splitter() -> None:
-    """英語の文分割器を1プロセス内で共有し、モデルの自動取得を禁止する。"""
+    """対応言語の文分割器を1プロセス内で共有し、モデルの自動取得を禁止する。"""
     global _configured
     if _configured:
         return
@@ -52,27 +52,32 @@ def configure_sentence_splitter() -> None:
     register_tokenizer_features()
     pipeline_factory = stanza.Pipeline
 
-    @lru_cache(maxsize=1)
+    @lru_cache(maxsize=4)
     def offline_pipeline(
         lang: str, dir: str, processors: str, use_gpu: bool, logging_level: str
     ) -> object:
-        """固定モデルの英語トークナイザーだけを読み込む。"""
-        if lang != "en" or processors != "tokenize" or use_gpu:
-            raise ValueError("英語CPUトークナイザーだけを利用できます")
+        """固定モデルのトークナイザーだけを読み込む。"""
+        if lang not in {"en", "zh"} or processors != "tokenize" or use_gpu:
+            raise ValueError("対応するCPUトークナイザーだけを利用できます")
+        model_lang, package = ("en", "ewt") if lang == "en" else ("zh-hans", "gsdsimp")
         resources: object = json.loads((Path(dir) / "resources.json").read_text())
-        if not isinstance(resources, dict) or not isinstance(resources.get("en"), dict):
-            raise TypeError("英語トークナイザーの定義が不正です")
-        resources["en"].setdefault("packages", {})
+        if not isinstance(resources, dict) or not isinstance(
+            resources.get(model_lang), dict
+        ):
+            raise TypeError("トークナイザーの定義が不正です")
+        resources[model_lang].setdefault("packages", {})
         with TemporaryDirectory(prefix="argos-resources-") as temporary:
             resource_file = Path(temporary) / "resources.json"
             resource_file.write_text(json.dumps(resources), encoding="utf-8")
             model_file = Path(temporary) / "tokenizer.pt"
-            prepare_tokenizer_model(Path(dir) / "en/tokenize/ewt.pt", model_file)
+            prepare_tokenizer_model(
+                Path(dir) / model_lang / "tokenize" / f"{package}.pt", model_file
+            )
             pipeline: object = pipeline_factory(
-                lang=lang,
+                lang=model_lang,
                 dir=dir,
                 processors=processors,
-                package="ewt",
+                package=package,
                 use_gpu=False,
                 logging_level=logging_level,
                 download_method=None,

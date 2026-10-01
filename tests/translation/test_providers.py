@@ -41,7 +41,10 @@ def test_batch_limits_are_described_without_changing_cache_identity() -> None:
         "maxBatchBytes": 32768,
         "maxTextBytes": 8192,
     }
-    assert descriptor["providerId"] == describe_provider(AWS_CONFIG)["providerId"]
+    assert (
+        descriptor["providerIds"]["en"]
+        == describe_provider(AWS_CONFIG)["providerIds"]["en"]
+    )
 
 
 @pytest.mark.parametrize(
@@ -108,18 +111,25 @@ def test_bedrock_requires_model_and_cache_tracks_translation_settings() -> None:
     config = replace(AWS_CONFIG, provider="bedrock")
     assert describe_provider(config)["configured"] is False
     config = replace(config, bedrock_model_id="model-a")
-    identity = describe_provider(config)["providerId"]
+    identity = describe_provider(config)["providerIds"]["en"]
     assert describe_provider(config)["configured"] is True
     assert (
         identity
-        != describe_provider(replace(config, bedrock_model_id="model-b"))["providerId"]
+        != describe_provider(replace(config, bedrock_model_id="model-b"))[
+            "providerIds"
+        ]["en"]
     )
     assert (
         identity
-        != describe_provider(replace(config, bedrock_temperature=0.5))["providerId"]
+        != describe_provider(replace(config, bedrock_temperature=0.5))["providerIds"][
+            "en"
+        ]
     )
-    assert identity != describe_provider(AWS_CONFIG)["providerId"]
-    assert identity == describe_provider(replace(config, aws_role_arn=""))["providerId"]
+    assert identity != describe_provider(AWS_CONFIG)["providerIds"]["en"]
+    assert (
+        identity
+        == describe_provider(replace(config, aws_role_arn=""))["providerIds"]["en"]
+    )
 
 
 @pytest.mark.parametrize("event", ["pull_request", "pull_request_target", ""])

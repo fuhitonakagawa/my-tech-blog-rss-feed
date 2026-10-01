@@ -25,16 +25,13 @@ class FakeTranslation:
 def test_request_preserves_text_order() -> None:
     """入力順序と空文字を維持する。"""
     texts = ["Title", "Summary", ""]
-    assert (
-        parse_request(
-            {
-                "sourceLanguage": "en",
-                "targetLanguage": "ja",
-                "texts": texts,
-            }
-        )
-        == texts
-    )
+    assert parse_request(
+        {
+            "sourceLanguage": "en",
+            "targetLanguage": "ja",
+            "texts": texts,
+        }
+    ) == ("en", texts)
 
 
 @pytest.mark.parametrize(

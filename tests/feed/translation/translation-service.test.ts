@@ -20,6 +20,29 @@ afterEach(async () => {
 });
 
 describe('TranslationService', () => {
+  it('異なる言語の翻訳も同じ時間予算を消費し、期限後はキャッシュだけを利用する', async () => {
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(0);
+    const budget = {};
+    const cache = new TranslationCache(directory);
+    const englishTranslate = vi.fn(async (texts: string[]) => {
+      vi.setSystemTime(90);
+      return texts.map(() => '英語からの訳');
+    });
+    const chineseTranslate = vi.fn(async (texts: string[]) => texts.map(() => '中国語からの訳'));
+    const limits = { ...testTranslationLimits, totalTimeoutMs: 100, batchTimeoutMs: 20 };
+    await new TranslationService(
+      { id: 'en-model', limits, translateMany: englishTranslate },
+      cache,
+      budget,
+    ).translateItems([makeSourceItem()], 'en', 'ja');
+    const item = makeSourceItem({ title: '中国語', summary: '', sourceLanguage: 'zh' });
+    const service = new TranslationService({ id: 'zh-model', limits, translateMany: chineseTranslate }, cache, budget);
+    expect((await service.translateItems([item], 'zh', 'ja'))[0].title).toBe('中国語');
+    expect(chineseTranslate).not.toHaveBeenCalled();
+    await cache.write(translationCacheKey('zh-model', 'zh', 'ja', '中国語'), '中国語からの訳');
+    expect((await service.translateItems([item], 'zh', 'ja'))[0].title).toBe('中国語からの訳');
+  });
   it('翻訳器と保存キャッシュの禁止文字を表示から除き、正常な絵文字を保持する', async () => {
     const cache = new TranslationCache(directory);
     const item = makeSourceItem();

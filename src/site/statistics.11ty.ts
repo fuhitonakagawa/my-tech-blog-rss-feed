@@ -41,7 +41,7 @@ export const render = ({ page, statistics }: StatisticsPageData): string => {
     <p class="ui-statistics-subscriptions"><a href="${escapeHtml(statisticsFeedUrls.rss)}">RSSを購読</a><a href="${escapeHtml(statisticsFeedUrls.atom)}">Atom</a><a href="${escapeHtml(statisticsFeedUrls.json)}">JSON Feed</a></p>
     </header>
     ${content}
-    <p class="ui-statistics-footnote">カテゴリを開くと元カテゴリ・翻訳カテゴリとRSS別の件数を確認できます。元記事の公開日で集計し、0件も表示します。dedupの内訳は掲載記事の所属で、複数カテゴリに属する記事は各内訳へ計上するため、内訳の合計は総数を超える場合があります。enは英語の取得元の記事数、translated-jpは翻訳版の掲載数です。原文カテゴリ合計はカテゴリ間の重複を含む延べ件数で、翻訳版は含めません。翻訳版の掲載件数には原文フォールバックも含みます。</p>
+    <p class="ui-statistics-footnote">カテゴリを開くと元カテゴリ・翻訳カテゴリとRSS別の件数を確認できます。元記事の公開日で集計し、0件も表示します。dedupの内訳は掲載記事の所属で、複数カテゴリに属する記事は各内訳へ計上するため、内訳の合計は総数を超える場合があります。en・zhは該当する原文言語の取得元の記事数、translated-jpは翻訳版の掲載数です。原文カテゴリ合計はカテゴリ間の重複を含む延べ件数で、翻訳版は含めません。翻訳版の掲載件数には原文フォールバックも含みます。</p>
     </div></section>
     <script>${indexScript}</script>`;
 };

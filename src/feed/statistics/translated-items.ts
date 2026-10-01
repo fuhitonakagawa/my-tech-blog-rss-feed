@@ -19,7 +19,7 @@ export const collectTranslatedStatisticsItems = (
       ...items.filter(
         (item) =>
           item.sectionId === definition.sourceSectionId &&
-          item.sourceLanguage === 'en' &&
+          item.sourceLanguage === definition.sourceLanguage &&
           urls.has(normalizeArticleUrl(item.link)),
       ),
     );

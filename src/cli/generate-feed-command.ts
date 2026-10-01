@@ -18,6 +18,7 @@ import { collectTranslatedStatisticsItems } from '../feed/statistics/translated-
 import { generateTranslatedFeeds } from '../feed/translation/translated-feed-generator';
 import { DEDUPLICATED_FEED_DEFINITION_LIST } from '../resources/deduplicated-feed-list';
 import { FEED_INFO_LIST, FEED_SECTION_LIST, type FeedSection } from '../resources/feed-info-list';
+import { sectionFeedLanguage } from '../resources/feed-language';
 import { GENERATED_FEED_DEFINITION_LIST } from '../resources/generated-feed-list';
 import { TRANSLATED_FEED_DEFINITION_LIST } from '../resources/translated-feed-list';
 
@@ -50,6 +51,7 @@ const createAggregatedFeedMeta = (): AggregatedFeedMeta => ({
  * セクションまとめフィードのメタ情報
  */
 const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
+  language: sectionFeedLanguage(section.feedInfoList),
   title: `${section.title}｜${constants.feedTitle}`,
   description: `${section.title}セクションのブログ更新をまとめたRSSフィード`,
   pageUrl: sectionPageUrl(section.id),

@@ -6,24 +6,27 @@ import logging
 import sys
 
 from config import CONFIG
-from provider_factory import create_provider, describe_provider
+from provider_factory import create_provider, translation_identity
 from provider_protocol import TextTranslator
-from runtime import configure_logging
+from runtime import configure_logging, translation_route
 
 LOGGER = logging.getLogger(__name__)
 MAX_INPUT_BYTES = 32 * 1024 * 1024
 
 
-def parse_request(value: object) -> list[str]:
-    """英日翻訳リクエストの形式とテキストを検証する。"""
+def parse_request(value: object) -> tuple[str, list[str]]:
+    """翻訳リクエストの形式とテキストを検証する。"""
     if not isinstance(value, dict):
         raise TypeError("翻訳リクエストが不正です")
-    if value.get("sourceLanguage") != "en" or value.get("targetLanguage") != "ja":
-        raise ValueError("英日翻訳だけを受け付けます")
+    source = value.get("sourceLanguage")
+    target = value.get("targetLanguage")
+    if not isinstance(source, str) or not isinstance(target, str):
+        raise TypeError("翻訳言語が不正です")
+    translation_route(source, target)
     texts = value.get("texts")
     if not isinstance(texts, list) or not all(isinstance(text, str) for text in texts):
         raise ValueError("textsは文字列の配列が必要です")
-    return [str(text) for text in texts]
+    return source, [str(text) for text in texts]
 
 
 def translate_texts(texts: list[str], translation: TextTranslator) -> list[str]:
@@ -59,13 +62,13 @@ def main() -> int:
         raw = sys.stdin.buffer.read(MAX_INPUT_BYTES + 1)
         if len(raw) > MAX_INPUT_BYTES:
             raise ValueError("翻訳リクエストが上限を超えています")
-        texts = parse_request(json.loads(raw))
-        descriptor = describe_provider()
+        source, texts = parse_request(json.loads(raw))
+        identity = translation_identity(CONFIG, source)
         with contextlib.redirect_stdout(sys.stderr):
-            results = translate_texts(texts, create_provider())
+            results = translate_texts(texts, create_provider(source_language=source))
         print(
             json.dumps(
-                {"providerId": descriptor["providerId"], "translations": results},
+                {"providerId": identity, "translations": results},
                 ensure_ascii=False,
             )
         )

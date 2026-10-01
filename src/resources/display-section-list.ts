@@ -27,6 +27,7 @@ const SECTION_DISPLAY_ORDER = [
   'my-tech-blog-programming',
   'my-tech-blog-db',
   'my-tech-blog-robotics',
+  'my-tech-blog-robotics-zh',
   'autonomous-driving',
   // クラウド
   'aws',

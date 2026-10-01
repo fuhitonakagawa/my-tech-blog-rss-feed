@@ -27,7 +27,7 @@ const parseLimits = (value: unknown): TranslationLimits => {
 };
 
 /** Pythonの管理対象設定から翻訳機とキャッシュ識別子を取得する */
-export const createTranslator = (): Translator => {
+export const createTranslator = (sourceLanguage: 'en' | 'zh' = 'en'): Translator => {
   const executable = path.join(
     PROJECT_DIRECTORY,
     '.venv',
@@ -47,16 +47,19 @@ export const createTranslator = (): Translator => {
     typeof descriptor !== 'object' ||
     !('configured' in descriptor) ||
     descriptor.configured !== true ||
-    !('providerId' in descriptor) ||
-    typeof descriptor.providerId !== 'string' ||
-    !descriptor.providerId ||
+    !('providerIds' in descriptor) ||
+    !descriptor.providerIds ||
+    typeof descriptor.providerIds !== 'object' ||
+    !(sourceLanguage in descriptor.providerIds) ||
     !('limits' in descriptor)
   ) {
     throw new Error('翻訳設定が不足しているか不正です');
   }
+  const providerId = (descriptor.providerIds as Record<string, unknown>)[sourceLanguage];
+  if (typeof providerId !== 'string' || !providerId) throw new Error('翻訳設定の識別子が不正です');
   return new PythonTranslator({
     projectDirectory: PROJECT_DIRECTORY,
     limits: parseLimits(descriptor.limits),
-    providerId: descriptor.providerId,
+    providerId,
   });
 };

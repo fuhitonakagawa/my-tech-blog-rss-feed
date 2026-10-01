@@ -94,18 +94,24 @@ export const countCategories = (
   for (const definition of translations) {
     const section = current.get(definition.sourceSectionId);
     if (!section) continue;
-    const englishSources = new Set(
-      (section.feedInfoList ?? []).filter((feed) => feed.language === 'en').map((feed) => statisticsSourceId(feed.url)),
+    const languageSources = new Set(
+      (section.feedInfoList ?? [])
+        .filter((feed) => feed.language === definition.sourceLanguage)
+        .map((feed) => statisticsSourceId(feed.url)),
     );
     const original = categories.find((category) => category.sectionId === section.id);
     if (original)
-      original.englishCount = uniqueCount(
-        observations.filter(
-          (item) => item.sectionId === section.id && item.sourceId !== null && englishSources.has(item.sourceId),
+      original.languageCounts = {
+        [definition.sourceLanguage]: uniqueCount(
+          observations.filter(
+            (item) => item.sectionId === section.id && item.sourceId !== null && languageSources.has(item.sourceId),
+          ),
         ),
-      );
+      };
     const excluded = new Set(
-      (section.feedInfoList ?? []).filter((feed) => feed.language !== 'en').map((feed) => statisticsSourceId(feed.url)),
+      (section.feedInfoList ?? [])
+        .filter((feed) => feed.language !== definition.sourceLanguage)
+        .map((feed) => statisticsSourceId(feed.url)),
     );
     const items = observations.filter(
       (item) => item.sectionId === section.id && item.inTranslatedFeed && item.sourceId && !excluded.has(item.sourceId),
@@ -117,7 +123,10 @@ export const countCategories = (
       sourceSectionId: section.id,
       count: uniqueCount(items),
       feeds: countSources(
-        { ...section, feedInfoList: section.feedInfoList?.filter((feed) => feed.language === 'en') },
+        {
+          ...section,
+          feedInfoList: section.feedInfoList?.filter((feed) => feed.language === definition.sourceLanguage),
+        },
         items,
       ),
     });

@@ -45,12 +45,17 @@ const isCount = (value: unknown, schemaVersion: number): value is CategoryCount 
   Number.isSafeInteger(value.count) &&
   typeof value.count === 'number' &&
   value.count >= 0 &&
-  (value.englishCount === undefined ||
+  (value.languageCounts === undefined ||
     (value.kind === 'source' &&
-      typeof value.englishCount === 'number' &&
-      Number.isSafeInteger(value.englishCount) &&
-      value.englishCount >= 0 &&
-      value.englishCount <= value.count)) &&
+      isRecord(value.languageCounts) &&
+      Object.entries(value.languageCounts).every(
+        ([language, count]) =>
+          ['en', 'zh'].includes(language) &&
+          typeof count === 'number' &&
+          Number.isSafeInteger(count) &&
+          count >= 0 &&
+          count <= Number(value.count),
+      ))) &&
   (value.sourceSectionId === undefined || (value.kind === 'translated' && isId(value.sourceSectionId))) &&
   (value.sourceCategories === undefined ||
     (value.kind === 'deduplicated' &&
@@ -163,12 +168,12 @@ export const parseStatisticsState = (json: string): StatisticsState => {
       updatedAt,
       coverage,
       categories: categories.map(
-        ({ sectionId, title, count, kind, feeds, englishCount, sourceSectionId, sourceCategories }) => ({
+        ({ sectionId, title, count, kind, feeds, languageCounts, sourceSectionId, sourceCategories }) => ({
           sectionId,
           title,
           count,
           kind,
-          ...(englishCount !== undefined ? { englishCount } : {}),
+          ...(languageCounts !== undefined ? { languageCounts } : {}),
           ...(sourceSectionId !== undefined ? { sourceSectionId } : {}),
           ...(sourceCategories !== undefined
             ? { sourceCategories: sourceCategories.map(({ sectionId, title, count }) => ({ sectionId, title, count })) }

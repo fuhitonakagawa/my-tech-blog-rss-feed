@@ -37,13 +37,13 @@ runs:
       uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: .argos
-        key: ${{ runner.os }}-argos-${{ hashFiles('uv.lock', 'scripts/translation/model.json', 'scripts/translation/config.py') }}
-    - name: Verify English-Japanese model
+        key: ${{ runner.os }}-argos-${{ hashFiles('uv.lock', 'scripts/translation/model.json', 'scripts/translation/models/*.json', 'scripts/translation/config.py') }}
+    - name: Verify translation models
       id: model
       if: steps.install.outcome == 'success' && (steps.config.outputs.provider == 'argos' || inputs.require-argos-model == 'true')
       continue-on-error: true
       shell: bash
-      run: timeout --signal=TERM --kill-after=10s 5m uv run --frozen --no-sync python scripts/translation/setup_model.py
+      run: timeout --signal=TERM --kill-after=10s 8m uv run --frozen --no-sync python scripts/translation/setup_model.py
     - name: Obtain AWS credentials with OIDC
       id: aws
       if: >-

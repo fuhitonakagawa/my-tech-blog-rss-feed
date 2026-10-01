@@ -4,6 +4,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -106,9 +107,16 @@ def configure_logging() -> None:
     logging.captureWarnings(True)
 
 
-def load_model_definition() -> dict[str, str]:
+def load_model_definition(source: str = "en", target: str = "ja") -> dict[str, str]:
     """固定モデルのバージョン・取得元・検証用ハッシュを返す。"""
-    value: object = json.loads((Path(__file__).parent / "model.json").read_text())
+    if not all(re.fullmatch(r"[a-z]{2,3}", code) for code in (source, target)):
+        raise ValueError("モデルの言語コードが不正です")
+    file = (
+        "model.json"
+        if (source, target) == ("en", "ja")
+        else f"models/{source}-{target}.json"
+    )
+    value: object = json.loads((Path(__file__).parent / file).read_text())
     keys = {
         "argosVersion",
         "packageVersion",
@@ -121,13 +129,37 @@ def load_model_definition() -> dict[str, str]:
         raise ValueError("モデル定義が不正です")
     if not all(isinstance(item, str) and item for item in value.values()):
         raise ValueError("モデル定義の値が不正です")
+    if (
+        value["sourceLanguage"] != source
+        or value["targetLanguage"] != target
+        or not re.fullmatch(r"[a-f0-9]{64}", value["sha256"])
+    ):
+        raise ValueError("モデル定義の翻訳方向・ハッシュが不正です")
     return {str(key): str(item) for key, item in value.items()}
 
 
 def provider_id(model: dict[str, str]) -> str:
     """エンジン・翻訳方向・モデルのハッシュを含む識別子を返す。"""
     return (
-        f"argos:{model['argosVersion']}:en-ja:"
+        f"argos:{model['argosVersion']}:{model['sourceLanguage']}-{model['targetLanguage']}:"
         f"{model['packageVersion']}:{model['sha256']}:"
         f"{hashlib.sha256((PROJECT_ROOT / 'uv.lock').read_bytes()).hexdigest()}"
+    )
+
+
+def translation_route(
+    source: str, target: str, config: TranslationConfig = CONFIG
+) -> tuple[str, ...]:
+    """明示的に許可された翻訳経路だけを返す。"""
+    for route in config.translation_routes:
+        if route[0] == source and route[-1] == target:
+            return route
+    raise ValueError("対応していない翻訳方向です")
+
+
+def model_marker(model: dict[str, str]) -> Path:
+    """モデルごとに独立した検証結果の保存先を返す。"""
+    return (
+        Path(os.environ["ARGOS_PACKAGES_DIR"])
+        / f"verified-{model['sourceLanguage']}-{model['targetLanguage']}.json"
     )

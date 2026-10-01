@@ -50,6 +50,25 @@ const start = new Date('2026-09-28T10:00:00.000Z');
 const midnight = new Date('2026-09-28T15:00:00.000Z');
 
 describe('カテゴリと取得元の内訳', () => {
+  it('中国語の原文と翻訳版をzhの件数としてまとめ、英語の件数へ混ぜない', () => {
+    const chineseSections = sections.map((section) => ({
+      ...section,
+      feedInfoList: section.feedInfoList?.map((feed) => ({
+        ...feed,
+        language: feed.language === 'en' ? ('zh' as const) : feed.language,
+      })),
+    }));
+    const chineseDefinitions = definitions.map((definition) => ({ ...definition, sourceLanguage: 'zh' as const }));
+    const chineseItems = items.slice(0, 2).map((item) => ({ ...item, sourceLanguage: 'zh' as const }));
+    const first = updateStatistics(null, chineseItems, chineseSections, start, chineseDefinitions, chineseItems);
+    const state = updateStatistics(first, [], chineseSections, midnight, chineseDefinitions);
+    expect(load(renderDailyReport(state.reports[0])).text()).toContain('AI：1件（zh 1件 / translated-jp 1件）');
+    expect(parseStatisticsState(JSON.stringify(state))).toEqual(state);
+    const feed = new Map([
+      ['ai-jp', { rss: '', atom: '', json: JSON.stringify({ items: [{ url: chineseItems[0].link }] }) }],
+    ]);
+    expect(collectTranslatedStatisticsItems(chineseItems, chineseDefinitions, feed)).toHaveLength(2);
+  });
   it('原文と翻訳が各1件でも、同じ記事を総数2件として表示しない', () => {
     const initial = updateStatistics(null, [items[0]], sections, start, definitions, [items[0]]);
     const state = updateStatistics(initial, [], sections, midnight, definitions);
@@ -64,7 +83,7 @@ describe('カテゴリと取得元の内訳', () => {
     const normal = report.categories.find((category) => category.sectionId === 'ai');
     const translated = report.categories.find((category) => category.sectionId === 'ai-jp');
     expect(normal?.count).toBe(2);
-    expect(normal?.englishCount).toBe(1);
+    expect(normal?.languageCounts?.en).toBe(1);
     expect(normal?.feeds).toHaveLength(4);
     expect(normal?.feeds.reduce((sum, feed) => sum + feed.count, 0)).toBe(3);
     expect(normal?.feeds.find((feed) => feed.kind === 'generated')).toMatchObject({ title: '独自RSS', count: 1 });

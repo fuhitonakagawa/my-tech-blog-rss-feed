@@ -56,3 +56,7 @@
 翻訳ツールのソフトウェアライセンスが、出力されたRSSへ自動的に適用されるとは限りません。一方で、元記事の翻訳・再配信条件は別途適用されます。根拠となる一般的な説明は [GNUの出力に関するFAQ](https://www.gnu.org/licenses/gpl-faq.en.html#WhatCaseIsOutputGPL) にあります。
 
 本書は依存元と適用範囲を整理するための情報です。GPLを含む構成の公開条件やモデルの許諾について、専門家・権利者による個別確認が必要な場合があります。
+
+## 中国語から英語へのモデル
+
+中英モデルの固定情報は[scripts/translation/models/zh-en.json](scripts/translation/models/zh-en.json)にあります。配布元アーカイブのREADMEでは、派生元のOPUSモデルのライセンスをCC-BY 4.0としています。原文の著者・出典表示は[Argos-zh-en-MODEL-NOTICES.md](LICENSES/Argos-zh-en-MODEL-NOTICES.md)に保持します。モデル重みをリポジトリへ同梱せず、利用環境で検証して取得します。

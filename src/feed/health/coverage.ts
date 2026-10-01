@@ -41,7 +41,9 @@ export const checkFeedCoverage = (
     check(
       'translated',
       definition.id,
-      eligible.filter((item) => item.sectionId === definition.sourceSectionId && item.sourceLanguage === 'en'),
+      eligible.filter(
+        (item) => item.sectionId === definition.sourceSectionId && item.sourceLanguage === definition.sourceLanguage,
+      ),
       keys([definition.id]),
     ),
   );

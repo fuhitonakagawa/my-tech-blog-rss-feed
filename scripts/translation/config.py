@@ -9,6 +9,7 @@ class TranslationConfig:
     """翻訳機・実行上限・非機密のAWS接続先。"""
 
     provider: Literal["argos", "bedrock", "amazon-translate"] = "argos"
+    translation_routes: tuple[tuple[str, ...], ...] = (("en", "ja"), ("zh", "en", "ja"))
     timeout_ms: int = 1_200_000
     batch_timeout_ms: int = 120_000
     batch_max_texts: int = 16

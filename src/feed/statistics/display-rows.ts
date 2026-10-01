@@ -32,10 +32,10 @@ export const statisticsDisplayRows = (categories: readonly CategoryCount[]): Sta
     const translation = categories.find(
       (item) => item.kind === 'translated' && item.sourceSectionId === category.sectionId,
     );
-    if (translation && category.englishCount !== undefined) {
+    if (translation && category.languageCounts !== undefined) {
       row.grouped = true;
       row.parts = [
-        { title: 'en', count: category.englishCount },
+        ...Object.entries(category.languageCounts ?? {}).map(([title, count]) => ({ title, count })),
         { title: 'translated-jp', count: translation.count },
       ];
       row.children = [translation];

@@ -7,18 +7,25 @@ import { type FeedDistributionSet, FeedGenerator } from '../feed-generator';
 import { logger } from '../logger';
 import { formatGoogleCloudReleaseNotes } from './google-cloud-release-notes';
 import { TranslationCache } from './translation-cache';
-import { TranslationService } from './translation-service';
+import { type TranslationBudget, TranslationService } from './translation-service';
 import { createTranslator } from './translator-factory';
 
-type TranslationServiceFactory = () => Pick<TranslationService, 'translateItems'>;
+type TranslationServiceFactory = (
+  sourceLanguage: 'en' | 'zh',
+  budget: TranslationBudget,
+) => Pick<TranslationService, 'translateItems'>;
 
 /** 翻訳キャッシュと選択済みプロバイダーを結び付ける */
-const createTranslationService: TranslationServiceFactory = () => {
+const createTranslationService: TranslationServiceFactory = (sourceLanguage, budget) => {
   const root = fileURLToPath(new URL('../../../', import.meta.url));
-  return new TranslationService(createTranslator(), new TranslationCache(path.join(root, '.cache/translations')));
+  return new TranslationService(
+    createTranslator(sourceLanguage),
+    new TranslationCache(path.join(root, '.cache/translations')),
+    budget,
+  );
 };
 
-/** 同じ取得結果から英語記事だけを日本語のセクション別フィードへ派生させる */
+/** 同じ取得結果から設定された言語の記事を日本語のセクション別フィードへ派生させる */
 export const generateTranslatedFeeds = async (
   items: readonly CustomRssParserItem[],
   definitions: readonly TranslatedFeedDefinition[],
@@ -26,18 +33,30 @@ export const generateTranslatedFeeds = async (
   hatenaCounts: FeedItemHatenaCountMap,
   createService: TranslationServiceFactory = createTranslationService,
 ): Promise<Map<string, FeedDistributionSet>> => {
-  const sourceIds = new Set(definitions.map((definition) => definition.sourceSectionId));
-  const sourceItems = items.filter((item) => sourceIds.has(item.sectionId) && item.sourceLanguage === 'en');
-  let translatedItems = sourceItems.map((item) => ({ ...item, originalTitle: item.originalTitle ?? item.title ?? '' }));
-  if (sourceItems.length > 0) {
+  const translatedItems: CustomRssParserItem[] = [];
+  const budget: TranslationBudget = { startedAt: Date.now() };
+  const languages = [...new Set(definitions.map((definition) => definition.sourceLanguage))];
+  const groups = languages
+    .map((language) => {
+      const sourceIds = new Set(
+        definitions
+          .filter((definition) => definition.sourceLanguage === language)
+          .map((definition) => definition.sourceSectionId),
+      );
+      const sourceItems = items.filter((item) => sourceIds.has(item.sectionId) && item.sourceLanguage === language);
+      return { language, sourceItems };
+    })
+    .sort((a, b) => a.sourceItems.length - b.sourceItems.length || a.language.localeCompare(b.language));
+  // 少量の言語も予算内で処理できるよう、対象件数順に共有の期限を使う。
+  for (const { language, sourceItems } of groups) {
+    if (!sourceItems.length) continue;
+    let output = sourceItems;
     try {
-      translatedItems = (await createService().translateItems(sourceItems, 'en', 'ja')).map((item) => ({
-        ...item,
-        originalTitle: item.originalTitle ?? item.title ?? '',
-      }));
+      output = await createService(language, budget).translateItems(sourceItems, language, 'ja');
     } catch {
-      logger.warn('[translate] unavailable; using-originals', { count: sourceItems.length });
+      logger.warn('[translate] unavailable; using-originals', { language, count: sourceItems.length });
     }
+    translatedItems.push(...output.map((item) => ({ ...item, originalTitle: item.originalTitle ?? item.title ?? '' })));
   }
   const generator = new FeedGenerator();
   const feeds = new Map<string, FeedDistributionSet>();
@@ -58,7 +77,7 @@ export const generateTranslatedFeeds = async (
       constants.maxFeedContentLength,
       {
         title: `${definition.title}｜${constants.feedTitle}`,
-        description: `${definition.title}：英語記事を日本語に翻訳してまとめたRSSフィード`,
+        description: `${definition.title}：${definition.sourceLanguage}の記事を日本語に翻訳してまとめたRSSフィード`,
         language: definition.targetLanguage,
         pageUrl: sectionPageUrl(definition.id),
         feedUrls: sectionFeedUrls(definition.id),

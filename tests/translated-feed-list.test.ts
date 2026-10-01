@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { DISPLAY_SECTION_LIST } from '../src/resources/display-section-list';
 import { FEED_INFO_LIST, FEED_SECTION_LIST } from '../src/resources/feed-info-list';
-import { parseFeedLanguage } from '../src/resources/feed-language';
+import { parseFeedLanguage, sectionFeedLanguage } from '../src/resources/feed-language';
 import {
   TRANSLATED_FEED_DEFINITION_LIST,
   parseTranslatedFeedFile,
@@ -40,11 +40,24 @@ describe('翻訳対象の定義', () => {
   it('未指定と不正な言語を区別する', () => {
     expect(parseFeedLanguage(undefined)).toBe('unknown');
     expect(parseFeedLanguage('mixed')).toBe('mixed');
+    expect(parseFeedLanguage('zh')).toBe('zh');
+    expect(
+      FEED_INFO_LIST.find((feed) => feed.input.kind === 'generated' && feed.input.id === 'leaderobot-news')?.language,
+    ).toBe('zh');
+    expect(() => parseFeedLanguage('cn')).toThrow('language');
     expect(() => parseFeedLanguage('EN')).toThrow('language');
   });
 
+  it('単一言語のカテゴリを配信言語へ反映し、混在・未指定を推測しない', () => {
+    expect(sectionFeedLanguage([{ language: 'zh' }])).toBe('zh');
+    expect(sectionFeedLanguage([{ language: 'en' }, { language: 'en' }])).toBe('en');
+    expect(sectionFeedLanguage([{ language: 'en' }, { language: 'zh' }])).toBeUndefined();
+    expect(sectionFeedLanguage([{ language: 'unknown' }])).toBeUndefined();
+    expect(sectionFeedLanguage([])).toBeUndefined();
+  });
+
   it('派生フィードを取得元リストに含めず表示先だけに含める', () => {
-    expect(TRANSLATED_FEED_DEFINITION_LIST).toHaveLength(13);
+    expect(TRANSLATED_FEED_DEFINITION_LIST).toHaveLength(14);
     expect(FEED_SECTION_LIST.some((section) => section.id === 'my-tech-blog-ai-translated-jp')).toBe(false);
     expect(DISPLAY_SECTION_LIST.some((section) => section.id === 'my-tech-blog-ai-translated-jp')).toBe(true);
     expect(DISPLAY_SECTION_LIST.find((section) => section.id === 'my-tech-blog-ai')?.feedDirectory).toBe(

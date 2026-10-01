@@ -1,4 +1,4 @@
-"""固定した英日モデルを検証してArgosへインストールする。"""
+"""翻訳経路に必要な固定モデルを検証してArgosへインストールする。"""
 
 import contextlib
 import hashlib
@@ -14,13 +14,16 @@ import threading
 import time
 import urllib.parse
 import zipfile
+from itertools import pairwise
 from pathlib import Path, PurePosixPath
 from typing import BinaryIO
 
+from config import CONFIG
 from runtime import (
     configure_environment,
     configure_logging,
     load_model_definition,
+    model_marker,
     provider_id,
 )
 
@@ -153,18 +156,20 @@ def reset_package_directories(archive: Path, packages: Path) -> None:
             shutil.rmtree(destination)
 
 
-def setup_model() -> None:
+def setup_package(model: dict[str, str]) -> None:
     """モデルとバージョンが一致する場合は保存済みファイルを利用する。"""
     import argostranslate.package
 
-    model = load_model_definition()
     if importlib.metadata.version("argostranslate") != model["argosVersion"]:
         raise ValueError("Argosのバージョンが一致しません")
     packages = Path(os.environ["ARGOS_PACKAGES_DIR"])
     packages.mkdir(parents=True, exist_ok=True)
-    marker = packages / "verified-model.json"
+    marker = model_marker(model)
     expected = {"providerId": provider_id(model)}
-    archive = packages.parent / "en-ja.argosmodel"
+    archive = (
+        packages.parent
+        / f"{model['sourceLanguage']}-{model['targetLanguage']}.argosmodel"
+    )
     if archive.is_file():
         verify_archive(archive, model)
     else:
@@ -180,6 +185,17 @@ def setup_model() -> None:
     argostranslate.package.install_from_path(archive)
     marker.write_text(json.dumps(expected), encoding="utf-8")
     LOGGER.info("model_ready")
+
+
+def setup_model() -> None:
+    """共有する中間モデルも一度だけ検証する。"""
+    edges = dict.fromkeys(
+        (source, target)
+        for route in CONFIG.translation_routes
+        for source, target in pairwise(route)
+    )
+    for source, target in edges:
+        setup_package(load_model_definition(source, target))
 
 
 def main() -> int:

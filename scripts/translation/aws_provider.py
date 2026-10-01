@@ -16,11 +16,17 @@ BEDROCK_SYSTEM_PROMPT = (
 )
 
 
+def translation_prompt(source: str) -> str:
+    """設定済みの原文言語を固定の指示文へ反映する。"""
+    language = {"en": "English", "zh": "Chinese"}[source]
+    return BEDROCK_SYSTEM_PROMPT.replace("English", language)
+
+
 class TranslateClient(Protocol):
     """Amazon Translateの使用するAPI。"""
 
     def translate_text(self, **kwargs: object) -> dict[str, object]:
-        """英日翻訳レスポンスを返す。"""
+        """日本語翻訳レスポンスを返す。"""
         ...
 
 
@@ -39,17 +45,25 @@ def check_input(text: str, config: TranslationConfig) -> None:
 
 
 class AmazonTranslateTranslator:
-    """Amazon Translateによる英日翻訳。"""
+    """Amazon Translateによる日本語翻訳。"""
 
-    def __init__(self, client: TranslateClient, config: TranslationConfig) -> None:
+    def __init__(
+        self,
+        client: TranslateClient,
+        config: TranslationConfig,
+        source_language: str = "en",
+    ) -> None:
         self.client = client
         self.config = config
+        self.source_language = source_language
 
     def translate(self, input_text: str) -> str:
         """明示した言語間の翻訳だけを要求する。"""
         check_input(input_text, self.config)
         response = self.client.translate_text(
-            Text=input_text, SourceLanguageCode="en", TargetLanguageCode="ja"
+            Text=input_text,
+            SourceLanguageCode=self.source_language,
+            TargetLanguageCode="ja",
         )
         result = response.get("TranslatedText")
         if not isinstance(result, str) or not result.strip():
@@ -58,18 +72,24 @@ class AmazonTranslateTranslator:
 
 
 class BedrockTranslator:
-    """Bedrock Converse対応モデルによる英日翻訳。"""
+    """Bedrock Converse対応モデルによる日本語翻訳。"""
 
-    def __init__(self, client: BedrockClient, config: TranslationConfig) -> None:
+    def __init__(
+        self,
+        client: BedrockClient,
+        config: TranslationConfig,
+        source_language: str = "en",
+    ) -> None:
         self.client = client
         self.config = config
+        self.source_language = source_language
 
     def translate(self, input_text: str) -> str:
         """完結したJSON応答だけを翻訳として受け付ける。"""
         check_input(input_text, self.config)
         response = self.client.converse(
             modelId=self.config.bedrock_model_id,
-            system=[{"text": BEDROCK_SYSTEM_PROMPT}],
+            system=[{"text": translation_prompt(self.source_language)}],
             messages=[
                 {
                     "role": "user",
@@ -112,6 +132,7 @@ def parse_bedrock_response(response: dict[str, object]) -> str:
 
 def create_aws_provider(
     config: TranslationConfig,
+    source_language: str = "en",
 ) -> AmazonTranslateTranslator | BedrockTranslator:
     """認証済みの公開ワークフロー内でだけAWSクライアントを作る。"""
     if (
@@ -145,8 +166,12 @@ def create_aws_provider(
     )
     if config.provider == "amazon-translate":
         return AmazonTranslateTranslator(
-            cast(TranslateClient, session.client("translate", config=options)), config
+            cast(TranslateClient, session.client("translate", config=options)),
+            config,
+            source_language,
         )
     return BedrockTranslator(
-        cast(BedrockClient, session.client("bedrock-runtime", config=options)), config
+        cast(BedrockClient, session.client("bedrock-runtime", config=options)),
+        config,
+        source_language,
     )
