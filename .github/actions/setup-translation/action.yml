@@ -65,4 +65,4 @@ runs:
         steps.model.outcome == 'failure' || steps.aws.outcome == 'failure' ||
         (steps.config.outputs.provider != 'argos' && steps.aws.outcome != 'success')
       shell: bash
-      run: echo '::warning::Translation is unavailable in this job. Uncached articles retain original text.'
+      run: echo '::warning::One or more translation routes are unavailable. Uncached affected articles retain original text.'
