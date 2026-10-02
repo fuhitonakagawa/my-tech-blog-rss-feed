@@ -7,6 +7,8 @@ import { statisticsDisplayRows } from '../../../src/feed/statistics/display-rows
 import type { StatisticsSection } from '../../../src/feed/statistics/observations';
 import { renderDailyReport } from '../../../src/feed/statistics/presentation';
 import { parseStatisticsState } from '../../../src/feed/statistics/state-store';
+import { DEDUPLICATED_FEED_DEFINITION_LIST } from '../../../src/resources/deduplicated-feed-list';
+import { FEED_SECTION_LIST } from '../../../src/resources/feed-info-list';
 import { renderStatisticsReport } from '../../../src/site/_includes/components/statistics-report';
 import { makeSourceItem } from '../../helpers/translation-fixtures';
 
@@ -78,6 +80,52 @@ it('所属を確認できない記事を推測せず、所属不明として表�
   expect(row.category.count).toBe(3);
   expect(row.parts).toContainEqual({ title: '所属不明', count: 1 });
 });
+
+it.each(DEDUPLICATED_FEED_DEFINITION_LIST)(
+  '$titleと元カテゴリを1行にまとめ、取得件数とWebの詳細を保持する',
+  (definition) => {
+    const sources: StatisticsSection[] = definition.sourceSectionIds.map((id) => ({
+      id,
+      title: FEED_SECTION_LIST.find((section) => section.id === id)?.title ?? id,
+      feedInfoList: [{ url: `https://example.com/${id}/rss`, label: `${id} RSS` }],
+    }));
+    const allSections = [...sources, ...deduplicatedStatisticsSections([definition])];
+    const input = allSections.flatMap((section) =>
+      (section.kind === 'deduplicated' ? ['shared'] : ['shared', 'other-owner']).map((id) =>
+        makeSourceItem({
+          link: `https://example.com/${id}`,
+          sectionId: section.id,
+          isoDate: '2026-09-30T00:00:00.000Z',
+          sourceFeedUrl: section.feedInfoList?.[0].url,
+        }),
+      ),
+    );
+    const initial = updateStatistics(null, input, allSections, new Date('2026-09-30T12:00:00.000Z'));
+    const report = updateStatistics(initial, [], allSections, new Date('2026-09-30T15:00:00.000Z')).reports[0];
+    const saved = structuredClone(report);
+    const rows = statisticsDisplayRows(report.categories);
+    expect(rows).toHaveLength(1);
+    expect(rows[0].category.count).toBe(1);
+    expect(rows[0].parts.map((part) => part.count)).toEqual(sources.map(() => 1));
+    expect(rows[0].children.map((child) => child.count)).toEqual(sources.map(() => 2));
+    const rss = load(renderDailyReport(report));
+    expect(rss('ul > li')).toHaveLength(1);
+    expect(rss('li').text()).toContain(`${definition.title}：1件（`);
+    expect(rss.text()).not.toContain('（生成RSS）');
+    const web = load(renderStatisticsReport(report));
+    expect(web('.ui-statistics-category')).toHaveLength(1);
+    expect(web('.ui-statistics-child-category')).toHaveLength(sources.length);
+    expect(web('.ui-statistics-metrics dd').first().text()).toBe(`${sources.length * 2}件`);
+    for (const source of sources) {
+      expect(web(`a[href="https://example.com/${source.id}/rss"]`)).toHaveLength(1);
+      expect(rows[0].children.some((child) => child.sectionId === source.id)).toBe(true);
+    }
+    expect(report).toEqual(saved);
+    const originalOnly = statisticsDisplayRows(report.categories.filter((category) => category.kind === 'source'));
+    expect(originalOnly).toHaveLength(sources.length);
+    expect(originalOnly.every((row) => !row.grouped && row.category.count === 2)).toBe(true);
+  },
+);
 
 it('元カテゴリとdedupの計上日に差があっても、記事の所属を保持する', () => {
   const initial = updateStatistics(null, [], sections, new Date('2026-09-28T15:00:00.000Z'));

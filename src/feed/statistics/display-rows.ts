@@ -7,8 +7,6 @@ export interface StatisticsDisplayRow {
   grouped: boolean;
 }
 
-const groupedDeduplicatedIds = new Set(['zenn-dedup', 'qiita-dedup']);
-
 /** 投稿サービス名とタグの説明を除いた、内訳用の短いカテゴリ名。 */
 const shortTitle = (title: string): string => title.replace(/^(?:Zenn|Qiita)\s+/, '').replace(/(?:関連)?タグ$/, '');
 
@@ -18,7 +16,7 @@ export const statisticsDisplayRows = (categories: readonly CategoryCount[]): Sta
   const hidden = new Set<string>();
   const rows = categories.map((category): StatisticsDisplayRow => {
     const row: StatisticsDisplayRow = { category, parts: [], children: [], grouped: false };
-    if (groupedDeduplicatedIds.has(category.sectionId) && category.sourceCategories) {
+    if (category.kind === 'deduplicated' && category.sourceCategories) {
       row.grouped = true;
       row.parts = category.sourceCategories.map((part) => ({ title: shortTitle(part.title), count: part.count }));
       for (const part of category.sourceCategories) {
