@@ -644,6 +644,7 @@ img {
   overflow-wrap: anywhere;
   line-height: 1.5;
   font-size: 0.875rem;
+  font-weight: bold;
 }
 .ui-section-nav__link:hover,
 .ui-section-nav__link--active {
@@ -651,16 +652,10 @@ img {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
-.ui-section-nav__link--active {
-  font-weight: bold;
-}
 .ui-category-links {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-.ui-category-parent > .ui-section-nav__link {
-  font-weight: bold;
 }
 .ui-category-children {
   list-style: none;
@@ -693,6 +688,7 @@ img {
 .ui-category-children .ui-section-nav__link {
   padding: 0.65rem 0.5rem;
   font-size: 0.8rem;
+  font-weight: normal;
 }
 .ui-nav :is(a, .ui-category-scroll):focus-visible {
   outline: 2px solid var(--base-color);

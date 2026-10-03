@@ -34,7 +34,7 @@ export const renderNav = (page: EleventyPage): string => {
       const childLinks = children
         .map((child) => `<li>${link(child.title, `${constants.sectionRootPath}/${sectionPathId(child.id)}/`)}</li>`)
         .join('');
-      return `<li${children.length ? " class='ui-category-parent'" : ''}>
+      return `<li>
         ${link(section.title, `${constants.sectionRootPath}/${sectionPathId(section.id)}/`)}
         ${children.length ? `<ul class='ui-category-children'>${childLinks}</ul>` : ''}
       </li>`;
