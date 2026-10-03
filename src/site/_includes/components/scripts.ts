@@ -20,15 +20,3 @@ export const feedListDialogScript = fs.readFileSync(
   fileURLToPath(new URL('../scripts/feed-list-dialog.ts', import.meta.url)),
   'utf-8',
 );
-
-/** 保存されたテーマを初期表示へ適用するスクリプト。 */
-export const themeInitScript = fs.readFileSync(
-  fileURLToPath(new URL('../scripts/theme-init.ts', import.meta.url)),
-  'utf-8',
-);
-
-/** ヘッダーのテーマ選択を全ページで利用するスクリプト。 */
-export const themeToggleScript = fs.readFileSync(
-  fileURLToPath(new URL('../scripts/theme-toggle.ts', import.meta.url)),
-  'utf-8',
-);

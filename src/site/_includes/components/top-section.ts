@@ -14,6 +14,7 @@ export const renderTopSection = (page: EleventyPage, rssFeedUrl: string): string
   return `<section class="ui-section-content ui-top-section">
     <div class="ui-layout-container">
         <div class="ui-subscription-panel">
+            <h2 class="ui-subscription-title">フィードを購読</h2>
             <p class="ui-text-intro">
                 企業のテックブログの更新をまとめた<br>RSSフィードを配信しています<br>
             </p>

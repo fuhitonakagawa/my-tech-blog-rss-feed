@@ -1,123 +1,29 @@
 :root {
-  /**
-   * 色参考
-   * @see https://material.io/resources/color/
-   */
-  --material-color-yellow-50: #fffde7;
-  --material-color-yellow-100: #fff9c4;
-  --material-color-orange-500: #ff9800;
-  --material-color-orange-600: #fb8c00;
-
+  color-scheme: only light;
   --base-background: #fff;
-  --base-color: #333;
-  --base-color-lighter: #777;
-  --base-color-muted: #999;
-  --yellow-background: var(--material-color-yellow-100);
-  --yellow-background-lighter: var(--material-color-yellow-50);
-  --orange-background-dark: var(--material-color-orange-500);
-  --orange-background-dark-active: var(--material-color-orange-600);
-
-  --hatena-color: #01a5df;
-
+  --page-background: #fff;
+  --base-color: #161d26;
+  --base-color-lighter: #526170;
+  --base-color-muted: #526170;
+  --border-color: #d7dee5;
+  --accent-color: #0972d3;
+  --link-color: #0066bd;
+  --selection-background: #e9f3ff;
+  --hatena-color: #0078a3;
   --base-font: -apple-system, BlinkMacSystemFont, Helvetica Neue, Yu Gothic, YuGothic, Verdana, Meiryo, "M+ 1p",
     sans-serif;
-
-  /* 上書き */
+  --ui-typography-typeface: var(--base-font);
+  --ui-typography-p: 1rem;
+  --ui-typography-h1: 1.75rem;
+  --ui-typography-h2: 1.5rem;
+  --ui-typography-h3: 1.125rem;
   --ui-gap-content: 2em;
-
-  color-scheme: light;
-
-  /* ライトモードのテーマ切り替えスイッチ・画像フィルタ */
-  --toggle-track-background: #e9e9ec;
-  --toggle-track-border-color: #d0d0d4;
-  --toggle-knob-background: #fff;
-  --toggle-knob-color: #555;
-  --toggle-knob-translate: 0;
-  --toggle-icon-sun-display: block;
-  --toggle-icon-moon-display: none;
-  --header-icon-filter: none;
-  --og-image-filter: none;
-
-  /**
-   * ダークモードのパレット。
-   * :root に定義しておき、下の 2 つのセレクタ（OS 設定 / 明示的な指定）から適用する。
-   */
-  --theme-dark-base-background: #1b1b1f;
-  --theme-dark-base-color: #e4e4e7;
-  --theme-dark-base-color-lighter: #b0b0b6;
-  --theme-dark-base-color-muted: #85858d;
-  --theme-dark-yellow-background: #322e24;
-  --theme-dark-yellow-background-lighter: #232220;
-  --theme-dark-ui-color-brand: #e0e0e4;
-  --theme-dark-ui-color-form-input: #2a2a30;
-  --theme-dark-ui-color-typography-heading: #e0e0e4;
-  --theme-dark-toggle-track-background: #34343a;
-  --theme-dark-toggle-track-border-color: #44444b;
-  --theme-dark-toggle-knob-background: #141417;
-  --theme-dark-toggle-knob-color: #e4e4e7;
-}
-
-/**
- * ダークモード。
- * 保存された設定がなければ OS の設定に従い、data-theme があればそちらを優先する。
- * JS が動く前でも正しい配色になるよう、判定は CSS 側で完結させている。
- */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-
-    --base-background: var(--theme-dark-base-background);
-    --base-color: var(--theme-dark-base-color);
-    --base-color-lighter: var(--theme-dark-base-color-lighter);
-    --base-color-muted: var(--theme-dark-base-color-muted);
-    --yellow-background: var(--theme-dark-yellow-background);
-    --yellow-background-lighter: var(--theme-dark-yellow-background-lighter);
-
-    --ui-color-brand: var(--theme-dark-ui-color-brand);
-    --ui-color-background-primary: var(--theme-dark-base-background);
-    --ui-color-form-input: var(--theme-dark-ui-color-form-input);
-    --ui-color-typography-heading: var(--theme-dark-ui-color-typography-heading);
-    --ui-color-typography-body: var(--theme-dark-base-color);
-    --ui-color-typography-note: var(--theme-dark-base-color-muted);
-
-    --toggle-track-background: var(--theme-dark-toggle-track-background);
-    --toggle-track-border-color: var(--theme-dark-toggle-track-border-color);
-    --toggle-knob-background: var(--theme-dark-toggle-knob-background);
-    --toggle-knob-color: var(--theme-dark-toggle-knob-color);
-    --toggle-knob-translate: 20px;
-    --toggle-icon-sun-display: none;
-    --toggle-icon-moon-display: block;
-    --header-icon-filter: invert(1);
-    --og-image-filter: brightness(0.92);
-  }
-}
-
-:root[data-theme="dark"] {
-  color-scheme: dark;
-
-  --base-background: var(--theme-dark-base-background);
-  --base-color: var(--theme-dark-base-color);
-  --base-color-lighter: var(--theme-dark-base-color-lighter);
-  --base-color-muted: var(--theme-dark-base-color-muted);
-  --yellow-background: var(--theme-dark-yellow-background);
-  --yellow-background-lighter: var(--theme-dark-yellow-background-lighter);
-
-  --ui-color-brand: var(--theme-dark-ui-color-brand);
-  --ui-color-background-primary: var(--theme-dark-base-background);
-  --ui-color-form-input: var(--theme-dark-ui-color-form-input);
-  --ui-color-typography-heading: var(--theme-dark-ui-color-typography-heading);
-  --ui-color-typography-body: var(--theme-dark-base-color);
-  --ui-color-typography-note: var(--theme-dark-base-color-muted);
-
-  --toggle-track-background: var(--theme-dark-toggle-track-background);
-  --toggle-track-border-color: var(--theme-dark-toggle-track-border-color);
-  --toggle-knob-background: var(--theme-dark-toggle-knob-background);
-  --toggle-knob-color: var(--theme-dark-toggle-knob-color);
-  --toggle-knob-translate: 20px;
-  --toggle-icon-sun-display: none;
-  --toggle-icon-moon-display: block;
-  --header-icon-filter: invert(1);
-  --og-image-filter: brightness(0.92);
+  --ui-color-brand: var(--accent-color);
+  --ui-color-background-primary: var(--page-background);
+  --ui-color-form-input: var(--base-background);
+  --ui-color-typography-heading: var(--base-color);
+  --ui-color-typography-body: var(--base-color);
+  --ui-color-typography-note: var(--base-color-muted);
 }
 
 /*
@@ -137,35 +43,59 @@
   padding-bottom: 3.5rem;
 }
 .ui-section-header {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  background: var(--base-background);
+  border-bottom: 1px solid var(--border-color);
 }
 .ui-component-form {
+  background: transparent;
   border-radius: 0;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  padding: 0;
 }
 .ui-component-form .ui-component-button {
-  border-radius: 0;
-  background: var(--orange-background-dark);
-  border-color: var(--orange-background-dark);
+  border: 2px solid var(--accent-color);
+  border-radius: 999px;
+  background: var(--base-background);
+  color: var(--link-color);
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
 }
+.ui-component-form .ui-component-button:hover,
 .ui-component-form .ui-component-button.active {
-  background: var(--orange-background-dark-active);
-  border-color: var(--orange-background-dark-active);
+  background: var(--selection-background);
+}
+.ui-component-form .ui-component-button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
 }
 .ui-component-copy-value {
   align-self: stretch;
   display: flex;
   align-items: center;
   min-width: 0;
-  padding: 0.625rem 1rem 0.75rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
   background-color: var(--ui-color-form-input);
   color: var(--base-color);
-  font-size: 0.8em;
+  font-size: 0.8rem;
   font-family: var(--base-font);
   line-height: 1.35;
   overflow-wrap: anywhere;
   word-break: break-all;
+}
+@media screen and (max-width: 32rem) {
+  .ui-component-form {
+    grid-template-columns: 3rem minmax(0, 1fr);
+  }
+  .ui-component-form .ui-component-button {
+    grid-column: 2;
+    justify-self: end;
+  }
 }
 @media screen and (min-width: 48rem) {
   .ui-layout-grid-3 div:last-of-type {
@@ -183,6 +113,10 @@
  */
 .ui-typography-heading {
   text-align: left;
+  text-wrap: balance;
+}
+a {
+  transition: none;
 }
 
 .ui-typography-heading small {
@@ -224,26 +158,19 @@ img {
   justify-content: center;
   align-items: center;
   width: 36px;
-  height: 24px;
-  opacity: 0.7;
-  transition: opacity .5s;
-}
-.ui-section-header__layout .ui-section-header__links a:hover,
-.ui-section-header__layout .ui-section-header__links button:hover {
-  opacity: 1;
+  height: 44px;
 }
 .ui-section-header__layout .ui-section-header__links .ui-feed-list-button {
   width: auto;
   height: auto;
   min-height: 44px;
   gap: 0.4rem;
-  padding: 0.4rem 0.6rem;
-  border: 1px solid var(--toggle-track-border-color);
-  border-radius: 0.375rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
   font-size: 0.8rem;
   white-space: nowrap;
   color: var(--base-color);
-  opacity: 1;
   transition: none;
   cursor: pointer;
 }
@@ -253,85 +180,8 @@ img {
 .ui-section-header__layout .ui-section-header__links a img {
   width: 20px;
   height: 20px;
-  /* 黒いアイコンなのでダークモードでは反転させる */
-  filter: var(--header-icon-filter);
 }
 
-/**
- * ダークモード切り替えスイッチ
- */
-.ui-section-header__layout .ui-theme-toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: 24px;
-  padding: 0;
-  border: none;
-  background: none;
-  appearance: none;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity .5s;
-}
-.ui-section-header__layout .ui-theme-toggle:hover {
-  opacity: 1;
-}
-.ui-section-header__layout .ui-theme-toggle:focus-visible {
-  outline: 2px solid var(--base-color);
-  outline-offset: 2px;
-  opacity: 1;
-}
-.ui-section-header__layout .ui-section-header__separator {
-  width: 1px;
-  height: 27px;
-  /* 右はアイコンリンク内の余白 8px と合わせて左右 20px に揃える */
-  margin: 0 12px 0 20px;
-  background: var(--base-color-muted);
-  opacity: 0.5;
-}
-.ui-theme-toggle__track {
-  position: relative;
-  display: block;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  width: 46px;
-  height: 26px;
-  border: 1px solid var(--toggle-track-border-color);
-  border-radius: 13px;
-  background: var(--toggle-track-background);
-}
-.ui-theme-toggle__knob {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--toggle-knob-background);
-  color: var(--toggle-knob-color);
-  transform: translateX(var(--toggle-knob-translate));
-  transition: transform .25s ease;
-}
-.ui-theme-toggle__knob svg {
-  width: 14px;
-  height: 14px;
-}
-.ui-theme-toggle__knob .ui-theme-toggle__icon-sun {
-  display: var(--toggle-icon-sun-display);
-}
-.ui-theme-toggle__knob .ui-theme-toggle__icon-moon {
-  display: var(--toggle-icon-moon-display);
-}
-@media (prefers-reduced-motion: reduce) {
-  .ui-section-header__layout .ui-theme-toggle,
-  .ui-theme-toggle__knob {
-    transition: none;
-  }
-}
 .ui-modal-open {
   overflow: hidden;
 }
@@ -342,7 +192,7 @@ img {
   margin: auto;
   padding: 0;
   overflow: hidden;
-  border: 1px solid var(--toggle-track-border-color);
+  border: 1px solid var(--border-color);
   border-radius: 0.75rem;
   background: var(--base-background);
   color: var(--base-color);
@@ -365,7 +215,7 @@ img {
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
-  border-bottom: 1px solid var(--toggle-track-border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 .ui-feed-list-dialog__title {
   margin: 0;
@@ -397,7 +247,7 @@ img {
   padding: 0.5rem 1rem 1rem;
 }
 .ui-feed-list-dialog__section {
-  border-bottom: 1px solid var(--toggle-track-border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 .ui-feed-list-dialog__summary {
   position: relative;
@@ -426,7 +276,7 @@ img {
 .ui-feed-list-dialog__summary:hover,
 .ui-feed-list-dialog__section[open] > summary,
 .ui-feed-list-dialog__close:hover {
-  background: var(--yellow-background-lighter);
+  background: var(--page-background);
 }
 .ui-feed-list-dialog__section-title {
   flex: 1 1 15rem;
@@ -446,7 +296,7 @@ img {
 .ui-feed-list-dialog__subscription {
   margin: 0.5rem 0 1rem;
   padding: 0.75rem;
-  border: 1px solid var(--toggle-track-border-color);
+  border: 1px solid var(--border-color);
   border-radius: 0.375rem;
 }
 .ui-feed-list-dialog__page-link {
@@ -473,7 +323,7 @@ img {
 }
 .ui-feed-list-dialog__feed {
   padding: 0.65rem 0;
-  border-bottom: 1px solid var(--toggle-track-border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 .ui-feed-list-dialog__feed:last-child {
   border: 0;
@@ -491,7 +341,7 @@ img {
 }
 .ui-feed-list-dialog__feed-status {
   padding: 0.1rem 0.35rem;
-  border: 1px solid var(--toggle-track-border-color);
+  border: 1px solid var(--border-color);
   border-radius: 0.25rem;
   color: var(--base-color-lighter);
   font-size: 0.75rem;
@@ -530,8 +380,21 @@ img {
  * トップ
  */
 .ui-top-section {
-  padding-bottom: 2.0em;
+  padding-block: 1.5rem;
 }
+.ui-subscription-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  text-align: left;
+  text-wrap: balance;
+}
+.ui-subscription-panel .ui-text-intro {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--base-color-lighter);
+  text-align: left;
+}
+
 .ui-component-form__label {
   margin-left: 0.2em;
 }
@@ -552,8 +415,8 @@ img {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas: "header" "nav" "content" "footer";
-  gap: 1.5rem;
-  padding: 1rem;
+  gap: 1rem;
+  padding: 0;
   align-items: start;
 }
 .ui-browse-layout > .ui-section-header {
@@ -571,11 +434,17 @@ img {
 .ui-browse-content .ui-layout-container,
 .ui-browse-layout > .ui-section-header .ui-layout-container,
 .ui-browse-layout > .ui-section-footer .ui-layout-container {
+  width: 100%;
+  max-width: none;
   padding-inline: 1rem;
 }
 .ui-subscription-panel {
   width: 100%;
   min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.875rem;
+  background: var(--base-background);
 }
 .ui-subscription-panel .ui-component-cta {
   align-items: stretch;
@@ -593,6 +462,7 @@ img {
 }
 .ui-browse-content .ui-container-feed {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.25rem;
 }
 .ui-browse-content .ui-layout-grid-3 > div:last-of-type {
   left: auto;
@@ -604,14 +474,14 @@ img {
   flex-direction: column;
   height: 20rem;
   min-width: 0;
-  border: 1px solid var(--toggle-track-border-color);
+  border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   background: var(--base-background);
   text-align: left;
 }
 .ui-category-heading {
   padding: 0.85rem 1rem;
-  border-bottom: 1px solid var(--toggle-track-border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 .ui-category-heading__title {
   font-size: 1rem;
@@ -648,7 +518,8 @@ img {
 }
 .ui-section-nav__link:hover,
 .ui-section-nav__link--active {
-  background: var(--yellow-background);
+  background: var(--selection-background);
+  color: var(--link-color);
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
@@ -697,11 +568,11 @@ img {
 @media screen and (min-width: 64rem) {
   .ui-browse-layout {
     grid-template-columns: 17rem minmax(0, 1fr);
-    grid-template-areas: "nav header" "nav content" "nav footer";
+    grid-template-areas: "header header" "nav content" "nav footer";
     grid-template-rows: auto 1fr auto;
     min-height: 100dvh;
     row-gap: 0;
-    padding: 0 1.5rem 0 0;
+    padding: 0;
   }
   .ui-nav {
     position: sticky;
@@ -725,19 +596,18 @@ img {
   margin-top: 1em;
   margin-bottom: 1em;
   padding: 0.4em 0.3em;
-  /*border-left: 0.2em solid var(--base-color-muted);*/
   border-bottom: 1px solid var(--base-color-lighter);
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: var(--yellow-background-lighter);
+  background-color: var(--page-background);
 }
 
 /*
  * フィード
  */
 .ui-section-feed {
-  background: var(--yellow-background-lighter);
+  background: var(--page-background);
 }
 .ui-section-feed .ui-layout-grid {
   align-items: flex-start;
@@ -789,7 +659,7 @@ img {
 .ui-statistics-report {
   margin-bottom: 2rem;
   padding: 1.25rem;
-  border: 1px solid var(--toggle-track-border-color);
+  border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   background: var(--base-background);
   scroll-margin-top: 1rem;
@@ -845,7 +715,7 @@ img {
 .ui-statistics-child-category {
   margin-top: 1rem;
   padding-top: 0.75rem;
-  border-top: 1px solid var(--toggle-track-border-color);
+  border-top: 1px solid var(--border-color);
 }
 .ui-statistics-categories,
 .ui-statistics-sources {
@@ -854,7 +724,7 @@ img {
   margin: 0;
 }
 .ui-statistics-category {
-  border-bottom: 1px solid var(--toggle-track-border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 .ui-statistics-details > summary {
   display: grid;
@@ -871,7 +741,7 @@ img {
 }
 .ui-statistics-details > summary:hover,
 .ui-statistics-details[open] > summary {
-  background: var(--yellow-background-lighter);
+  background: var(--page-background);
 }
 .ui-statistics-details > summary:focus-visible {
   outline: 2px solid currentColor;
@@ -900,7 +770,7 @@ img {
 .ui-statistics-sources {
   margin-left: 0.5rem;
   padding-left: 1rem;
-  border-left: 1px solid var(--toggle-track-border-color);
+  border-left: 1px solid var(--border-color);
 }
 .ui-statistics-sources li {
   display: grid;
@@ -915,7 +785,7 @@ img {
   left: -1rem;
   top: 1.1rem;
   width: 0.5rem;
-  border-top: 1px solid var(--toggle-track-border-color);
+  border-top: 1px solid var(--border-color);
 }
 .ui-statistics-feed-url {
   display: block;
@@ -930,7 +800,7 @@ img {
 .ui-statistics-notice,
 .ui-statistics-empty {
   padding: 1rem;
-  background: var(--yellow-background-lighter);
+  background: var(--page-background);
   border-left: 3px solid var(--base-color-lighter);
   font-size: 0.9375rem;
 }
@@ -956,28 +826,32 @@ img {
   margin-top: 2em;
 }
 .ui-feed-item {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
   color: var(--base-color);
-  grid-template-columns: 8rem 1fr;
-  align-content: start;
-  grid-gap: 0 0.5em;
+  border: 1px solid var(--border-color);
+  border-radius: 0.875rem;
+  overflow: hidden;
+  background: var(--base-background);
 }
 .ui-feed-item .ui-feed-item__og-image {
+  display: block;
 }
 .ui-feed-item .ui-feed-item__og-image img {
-  /* ダークモードで明るいサムネイルが眩しくならないよう少し落とす */
-  filter: var(--og-image-filter);
+  display: block;
   width: 100%;
   height: auto;
-  max-height: 7.0em;
-  /* TODO: aspect-ratio の対応ブラウザが増えたら使う */
-  /*aspect-ratio: 1200 / 630;*/
+  aspect-ratio: 2 / 1;
   object-fit: contain;
-  object-position: center top;
 }
 .ui-feed-item .ui-feed-item__content {
+  padding: 1rem;
 }
 .ui-feed-item .ui-feed-item__title {
+  color: var(--link-color);
+  text-wrap: pretty;
   font-weight: bold;
   font-size: 0.9em;
   -webkit-line-clamp: 3;
@@ -1040,33 +914,11 @@ img {
   font-size: 0.7em;
 }
 
-@media screen and (min-width: 48rem) {
-  .ui-feed-item {
-    display: block;
-  }
-  .ui-feed-item .ui-feed-item__og-image {
-    display: block;
-  }
-  .ui-feed-item .ui-feed-item__og-image img {
-    height: 9.0em;
-    max-height: 9.0em;
-  }
-  .ui-feed-item .ui-feed-item__title {
-    margin-top: 0.5em;
-  }
-}
-@media screen and (min-width: 75rem) {
-  .ui-feed-item .ui-feed-item__og-image img {
-    height: 8.0em;
-    max-height: 8.0em;
-  }
-}
-
 /*
  * ブログ一覧
  */
 .ui-section-blog {
-  background: var(--yellow-background-lighter);
+  background: var(--page-background);
 }
 .ui-container-blog {
   text-align: left;
@@ -1079,20 +931,12 @@ img {
   align-content: start;
   grid-gap: 0 0.5em;
 }
-.ui-blog .ui-blog__og-image {
-}
 .ui-blog .ui-blog__og-image img {
-  /* ダークモードで明るいサムネイルが眩しくならないよう少し落とす */
-  filter: var(--og-image-filter);
   width: 100%;
   height: auto;
   max-height: 7.0em;
-  /* TODO: aspect-ratio の対応ブラウザが増えたら使う */
-  /*aspect-ratio: 1200 / 630;*/
   object-fit: contain;
   object-position: center top;
-}
-.ui-blog .ui-blog__content {
 }
 .ui-blog .ui-blog__title {
   display: block;
