@@ -1,0 +1,816 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "AWS 日本語｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-ja/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-ja/feeds/feed.json",
+    "description": "AWS 日本語セクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "bfa9a888a69dfcdc3aec5aa9a40f0ccd20d2e3d4",
+            "content_html": "深夜のインシデント対応の質は、誰が呼び出されるかによって変わってしまいがちです。AWS DevOps Agent の Skills は、チームの調査ノウハウを再利用可能なプレイブックとして蓄積し、誰が対応しても一貫した調査を行えるようにする仕組みです。本記事では、確実に起動し判断ロジックを持つ Skill を書くためのベストプラクティスとして、エージェント指示との使い分け、起動を左右する description の書き方、調査プレイブックとしての指示の構成、エージェントタイプへの絞り込み、参考資料の活用、複数Skillsの組み合わせ方、メモリストアとの補完関係、そして矛盾・陳腐化・過度な厳格さ・対象範囲の重複といった見落としやすい失敗パターンを紹介します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/best-practices-for-writing-aws-devops-agent-skills/",
+            "title": "AWS DevOps Agent Skills を作成するためのベストプラクティス | Amazon Web Services ブログ",
+            "summary": "深夜のインシデント対応の質は、誰が呼び出されるかによって変わってしまいがちです。AWS DevOps Agent の Skills は、チームの調査ノウハウを再利用可能なプレイブックとして蓄積し、誰が対応しても一貫した調査を行えるようにする仕組みです。本記事では、確実に起動し判断ロジックを持つ Skill を書くためのベストプラクティスとして、エージェント指示との使い分け、起動を左右する desc",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/03/dev-agent-blog.png",
+            "date_modified": "2026-10-03T06:18:08.000Z",
+            "date_published": "2026-10-03T06:18:08.000Z",
+            "author": {
+                "name": "Taiki Hibira"
+            },
+            "tags": [
+                "Best Practices",
+                "DevOps",
+                "General",
+                "Technical How-to",
+                "Best practices",
+                "Cloud Operations"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS DevOps Agent Skills を作成するためのベストプラクティス",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "899399cad4816510207d979e8b2a675fb5703847",
+            "content_html": "8 月と 9 月は、Amazon CloudWatch Omni が一般提供となりました。アラームにはウォームアップ期間とウォールクロック評価ウィンドウが追加されました。データベースのオブザーバビリティは自己管理型 PostgreSQL と Amazon Aurora DSQL にも対応しました。AWS CloudTrail は Amazon Q Console にふだんの言葉で質問できるようになりました。ログ収集は対応範囲を拡大し、またポートフォリオ全体のサービスがより充実したテレメトリを CloudWatch に発行し始めており、その多くは OpenTelemetry を使って構築されています。それでは、Amazon CloudWatch と AWS DevOps Agent の最新情報をご紹介します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/this-month-in-aws-observability-august-september-2026/",
+            "title": "今月の AWS オブザーバビリティ: 2026 年 8 月と 9 月 | Amazon Web Services ブログ",
+            "summary": "8 月と 9 月は、Amazon CloudWatch Omni が一般提供となりました。アラームにはウォームアップ期間とウォールクロック評価ウィンドウが追加されました。データベースのオブザーバビリティは自己管理型 PostgreSQL と Amazon Aurora DSQL にも対応しました。AWS CloudTrail は Amazon Q Console にふだんの言葉で質問できるようにな",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/02/This-Month-in-Observability-Aug-Sept-2026-1024x570-1.png",
+            "date_modified": "2026-10-02T11:22:51.000Z",
+            "date_published": "2026-10-02T11:22:51.000Z",
+            "author": {
+                "name": "Taiki Hibira"
+            },
+            "tags": [
+                "Amazon CloudWatch",
+                "Announcements",
+                "General",
+                "Management & Governance",
+                "Management Tools",
+                "Monitoring and observability"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "今月の AWS オブザーバビリティ: 2026 年 8 月と 9 月",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "2862b501d1b4f5977fa41ef7aeb44440637e6907",
+            "content_html": "Amazon S3 テーブルは、Apache アイスバーグ V3 仕様のすべてのデータタイプをサポートするよう […]",
+            "url": "https://aws.amazon.com/jp/blogs/news/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/",
+            "title": "Amazon S3 Tables では、Apache Iceberg V3 のすべてのデータ型がサポートされるようになりました | Amazon Web Services ブログ",
+            "summary": "Amazon S3 テーブルは、Apache アイスバーグ V3 仕様のすべてのデータタイプをサポートするよう […]",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/02/News-Blog-Featured-Images-15-2.png",
+            "date_modified": "2026-10-02T07:01:32.000Z",
+            "date_published": "2026-10-02T07:01:32.000Z",
+            "author": {
+                "name": "Daniel Abib"
+            },
+            "tags": [
+                "Amazon S3 Tables",
+                "Amazon Simple Storage Service (S3)",
+                "Announcements",
+                "Launch",
+                "News",
+                "Storage"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Amazon S3 Tables では、Apache Iceberg V3 のすべてのデータ型がサポートされるようになりました",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "4b67852d27828a151db28e5145b48801105cc783",
+            "content_html": "2026年8月19日（水）、「AWS Future of Money」を開催しました。銀行・証券・決済など金融 […]",
+            "url": "https://aws.amazon.com/jp/blogs/news/%E3%80%90%E9%96%8B%E5%82%AC%E5%A0%B1%E5%91%8A%E3%80%91aws-future-of-money-%EF%BD%9Eai-x-%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E3%81%8C%E5%89%B5%E3%82%8B/",
+            "title": "【開催報告】AWS Future of Money ～AI × ブロックチェーンが創る新金融エコシステム～ | Amazon Web Services ブログ",
+            "summary": "2026年8月19日（水）、「AWS Future of Money」を開催しました。銀行・証券・決済など金融 […]",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/01/スクリーンショット-2026-10-01-234152-1117x630.png",
+            "date_modified": "2026-10-02T02:57:18.000Z",
+            "date_published": "2026-10-02T02:57:18.000Z",
+            "author": {
+                "name": "yurico"
+            },
+            "tags": [
+                "Blockchain",
+                "Financial Services",
+                "Industries",
+                "Partner solutions",
+                "AI"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "【開催報告】AWS Future of Money ～AI × ブロックチェーンが創る新金融エコシステム～",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "8ec920190479aaad986e39778d9a532ad7227b77",
+            "content_html": "2026 年 9 月 30 日は、皆さんに AWS ヒーロープログラムの最新メンバーをご紹介できることをとても […]",
+            "url": "https://aws.amazon.com/jp/blogs/news/celebrating-our-newest-aws-heroes-september-2026/",
+            "title": "最新の AWS ヒーローたちを讃えて – 2026 年 9 月 | Amazon Web Services ブログ",
+            "summary": "2026 年 9 月 30 日は、皆さんに AWS ヒーロープログラムの最新メンバーをご紹介できることをとても […]",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/02/AWS-Heroes-program_RGB_Social-blog.png",
+            "date_modified": "2026-10-02T01:57:50.000Z",
+            "date_published": "2026-10-02T01:57:50.000Z",
+            "author": {
+                "name": "Taylor Jacobsen"
+            },
+            "tags": [
+                "Announcements",
+                "AWS Heroes",
+                "Launch",
+                "News"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "最新の AWS ヒーローたちを讃えて – 2026 年 9 月",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "b9189cc663f471c9219be406f29dbcd33a40a53f",
+            "content_html": "こんにちは。アマゾン ウェブ サービス ジャパン合同会社 ソリューションアーキテクトの辻林です。2026 年 9 月 15 日に、「AI ペルソナワークショップ — 自社だけの AI ペルソナを作って、試してみよう」を開催しました。マーケティングや事業企画に携わる皆様と、自社のデータから AI ペルソナを作り、実際のビジネス課題にぶつけてみる半日のワークショップです。ご参加くださった皆様に、改めて御礼申し上げます。 本ブログでは、ワークショップの狙いと当日の様子、参加者の皆様の声をお届けします。",
+            "url": "https://aws.amazon.com/jp/blogs/news/ai-persona-workshop-20260915/",
+            "title": "【開催報告】AI ペルソナワークショップ — 自社だけの AI ペルソナを作って、試してみよう | Amazon Web Services ブログ",
+            "summary": "こんにちは。アマゾン ウェブ サービス ジャパン合同会社 ソリューションアーキテクトの辻林です。2026 年 9 月 15 日に、「AI ペルソナワークショップ — 自社だけの AI ペルソナを作って、試してみよう」を開催しました。マーケティングや事業企画に携わる皆様と、自社のデータから AI ペルソナを作り、実際のビジネス課題にぶつけてみる半日のワークショップです。ご参加くださった皆様に、改めて",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/01/aip-op-1133x630.jpg",
+            "date_modified": "2026-10-02T01:57:07.000Z",
+            "date_published": "2026-10-02T01:57:07.000Z",
+            "author": {
+                "name": "Yu Tsujibayashi"
+            },
+            "tags": [
+                "Amazon Bedrock",
+                "AWS Clean Rooms",
+                "Generative AI",
+                "Marketing & Advertising",
+                "開催報告"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "【開催報告】AI ペルソナワークショップ — 自社だけの AI ペルソナを作って、試してみよう",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "6d326decf39fbb36afd682d0c9910877aac50bf1",
+            "content_html": "Kiro ベースのサンプルエージェントを使った SAP モダナイゼーションの6つのユースケースについて、社内ベンチマークとパートナー・お客様の成果を詳しく紹介します。SAP ECC の ABAP コード88オブジェクトを4.5時間で SAP S/4HANA 準拠に変換して工数を87%削減したほか、SAP PI/PO の22インターフェースを約2時間で SAP BTP Integration Suite へ、SAP BW 環境を2.2時間で SAP Datasphere へ変換しました。依存コードの取得、ステアリングファイル、単体テスト、意思決定ログといった、正確性と監査可能性を支えるセーフガードも解説します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/accelerate-your-sap-modernization-with-kiro-benchmarks-and-use-cases/",
+            "title": "Kiro で SAP モダナイゼーションを加速 – ベンチマークとユースケース | Amazon Web Services ブログ",
+            "summary": "Kiro ベースのサンプルエージェントを使った SAP モダナイゼーションの6つのユースケースについて、社内ベンチマークとパートナー・お客様の成果を詳しく紹介します。SAP ECC の ABAP コード88オブジェクトを4.5時間で SAP S/4HANA 準拠に変換して工数を87%削減したほか、SAP PI/PO の22インターフェースを約2時間で SAP BTP Integration Sui",
+            "image": "https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png",
+            "date_modified": "2026-10-01T07:31:17.000Z",
+            "date_published": "2026-10-01T07:31:17.000Z",
+            "author": {
+                "name": "Koshi Matsumoto"
+            },
+            "tags": [
+                "Kiro",
+                "SAP on AWS",
+                "#saponaws",
+                "SAP"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Kiro で SAP モダナイゼーションを加速 – ベンチマークとユースケース",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "421602f6bbbef5b73ad765b25c08825346a892c9",
+            "content_html": "AWS の AI 搭載エンジニアリングエージェント Kiro をベースにしたサンプルエージェントを公開しました。カスタム SAP ABAP プログラム、SAP BW、SAP PI/PO のモダナイゼーションを単一のプロンプトで一括実行でき、社内ベンチマークでは ABAP コードのモダナイゼーション工数を最大87%削減しています。SAP S/4HANA 準拠への変換、クリーンコア化、SAP BTP Integration Suite や SAP Datasphere への移行、仕様書生成、単体テスト自動化といったユースケースと、正確性を担保するセーフガード、始め方を紹介します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/accelerate-your-sap-modernization-with-kiro/",
+            "title": "Kiro で SAP モダナイゼーションを加速 | Amazon Web Services ブログ",
+            "summary": "AWS の AI 搭載エンジニアリングエージェント Kiro をベースにしたサンプルエージェントを公開しました。カスタム SAP ABAP プログラム、SAP BW、SAP PI/PO のモダナイゼーションを単一のプロンプトで一括実行でき、社内ベンチマークでは ABAP コードのモダナイゼーション工数を最大87%削減しています。SAP S/4HANA 準拠への変換、クリーンコア化、SAP BTP ",
+            "image": "https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png",
+            "date_modified": "2026-10-01T07:31:07.000Z",
+            "date_published": "2026-10-01T07:31:07.000Z",
+            "author": {
+                "name": "Koshi Matsumoto"
+            },
+            "tags": [
+                "Kiro",
+                "SAP on AWS",
+                "SAP"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Kiro で SAP モダナイゼーションを加速",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "688804ce9a0170a62d21b737aeeb97b66f3ee305",
+            "content_html": "2026 年 9 月 21 日週を表現するテーマが 1 つあるとすれば、「選択」ではないでしょうか。フロンティ […]",
+            "url": "https://aws.amazon.com/jp/blogs/news/aws-weekly-roundup-gpt-6-sol-and-luna-claude-opus-5-5-on-amazon-bedrock-strands-harness-and-more-september-28-2026/",
+            "title": "AWS Weekly Roundup: Amazon Bedrock の GPT-6 Sol/Luna および Claude Opus 5.5、Strands ハーネスなど (2026 年 9 月 28 日) | Amazon Web Services ブログ",
+            "summary": "2026 年 9 月 21 日週を表現するテーマが 1 つあるとすれば、「選択」ではないでしょうか。フロンティ […]",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/01/2025-deepseek-r1-on-aws-1-andy-keynote-2.jpg",
+            "date_modified": "2026-10-01T05:40:49.000Z",
+            "date_published": "2026-10-01T05:40:49.000Z",
+            "author": {
+                "name": "Daniel Abib"
+            },
+            "tags": [
+                "Amazon Bedrock",
+                "Amazon CloudWatch",
+                "Amazon EventBridge",
+                "Amazon SageMaker AI",
+                "Amazon Simple Email Service (SES)",
+                "Announcements",
+                "Artificial Intelligence",
+                "AWS Lambda",
+                "News"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "AWS Weekly Roundup: Amazon Bedrock の GPT-6 Sol/Luna および Claude Opus 5.5、Strands ハーネスなど (2026 年 9 月 28 日)",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "3da44c9ecd1b3f51ba7949bdb5c7f0503bec3755",
+            "content_html": "世界最大の株式デリバティブ清算機関である The Options Clearing Corporation (OCC)® は、Amazon Bedrock で構築した AI 搭載のセキュリティ調査エージェント「SOC エージェント」を導入しました。本記事では、エージェンティックループによってセキュリティアラートの調査を自動化し、解釈可能かつ監査可能な結果を提供する仕組みを紹介します。また、ヒューマンインザループのフィードバックによって、セキュリティ専門家が主導権を保ちながらエージェンティック AI を活用する方法も説明します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/occ-strengthens-security-operations-with-an-agentic-ai-investigation-solution-built-on-aws/",
+            "title": "OCC が AWS 上に構築したエージェンティック AI 調査ソリューションでセキュリティオペレーションを強化 | Amazon Web Services ブログ",
+            "summary": "世界最大の株式デリバティブ清算機関である The Options Clearing Corporation (OCC)® は、Amazon Bedrock で構築した AI 搭載のセキュリティ調査エージェント「SOC エージェント」を導入しました。本記事では、エージェンティックループによってセキュリティアラートの調査を自動化し、解釈可能かつ監査可能な結果を提供する仕組みを紹介します。また、ヒューマ",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/07/25/aws_logo_all_white_800x400.png",
+            "date_modified": "2026-10-01T04:36:35.000Z",
+            "date_published": "2026-10-01T04:36:35.000Z",
+            "author": {
+                "name": "中島 章博"
+            },
+            "tags": [
+                "Amazon Bedrock",
+                "Announcements",
+                "Artificial Intelligence",
+                "Security, Identity, & Compliance",
+                "cybersecurity",
+                "Security Blog"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "OCC が AWS 上に構築したエージェンティック AI 調査ソリューションでセキュリティオペレーションを強化",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "bb710668f341e87a706e52ab6b054d6fb2c40f01",
+            "content_html": "Amazon RDS で RDS スナップショットのフルスナップショットサイズが表示されるようになりました。この機能強化により、DescribeDBSnapshots API の新しいフィールド FullSnapshotSizeInBytes を利用して、プログラムからフルスナップショットサイズを取得できます。この情報は、コンソールの [フルスナップショットサイズ] 列で確認することもできます。 Amazon RDS スナップショットはインクリメンタルです。このため、あるボリュームのスナップショットを時間の経過とともに複数作成すると、各スナップショットには新しいブロックまたは変更されたブロックのみが保存され、過去のスナップショットから変更されていないブロックへの参照が維持されます。[FullSnapshotSizeInBytes] フィールドには、そのスナップショットで直接保存されたブロックと、過去のスナップショットから参照されるすべてのブロックの両方を含めた、スナップショットの合計ブロックサイズが表示されます。例えば、100 GB のデータベースボリュームに 50 GB のデータがあ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-rds-full-snapshot-size-available/",
+            "title": "Amazon RDS のコンソールと API でフルスナップショットサイズの情報を確認可能に | 最近の発表",
+            "summary": "Amazon RDS で RDS スナップショットのフルスナップショットサイズが表示されるようになりました。この機能強化により、DescribeDBSnapshots API の新しいフィールド FullSnapshotSizeInBytes を利用して、プログラムからフルスナップショットサイズを取得できます。この情報は、コンソールの [フルスナップショットサイズ] 列で確認することもできます。 ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T21:00:23.000Z",
+            "date_published": "2026-09-29T21:00:23.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-rds,marketing:marchitecture/databases"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon RDS のコンソールと API でフルスナップショットサイズの情報を確認可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "298a9382db09f04c8db646f84d681b16a1596934",
+            "content_html": "本日、AWS は、Amazon Bedrock で OpenAI の GPT-6.1 Sol の一般提供を開始したことを発表しました。GPT-6 Sol のアップグレード版である GPT-6.1 Sol は、エージェント型コーディング、コンピュータ操作、および専門的な業務において非常に優れたパフォーマンスを発揮します。OpenAI によると、要求水準の高い各種評価において、GPT-6 Astra に迫る性能を約 5 分の 1 のコストで実現しており、高性能なエージェントを大規模に構築、運用するための余裕が大幅に広がります。 Amazon Bedrock の推論エンジンでは、本番ワークロードに必要なパフォーマンス、セキュリティ、信頼性を確保できます。GPT-6.1 Sol を使用して、機能の構築、問題のデバッグ、ソリューションの反復改善、複数ステップからなるワークフローの実行、複雑なコードベースの調査などが行えます。また、Amazon Bedrock 上での明示的なプロンプトキャッシュもサポートしており、繰り返し発生するリクエスト間でコンテキストを再利用するエージェント型ワークロードにお",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/openai-gpt-6-1-sol-on-amazon-bedrock/",
+            "title": "OpenAI GPT-6.1 Sol が Amazon Bedrock で一般提供開始 | 最近の発表",
+            "summary": "本日、AWS は、Amazon Bedrock で OpenAI の GPT-6.1 Sol の一般提供を開始したことを発表しました。GPT-6 Sol のアップグレード版である GPT-6.1 Sol は、エージェント型コーディング、コンピュータ操作、および専門的な業務において非常に優れたパフォーマンスを発揮します。OpenAI によると、要求水準の高い各種評価において、GPT-6 Astra ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T20:17:00.000Z",
+            "date_published": "2026-09-29T20:17:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/artificial-intelligence,general:products/amazon-bedrock"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "OpenAI GPT-6.1 Sol が Amazon Bedrock で一般提供開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "bf6d1a31d2ed99a6651dc2db56aa571c348cc2a9",
+            "content_html": "Amazon Connect Customer では、管理者がコンタクトセンターの設定を制御する参照データをより多く保存できるようになりました。管理者はデータテーブルを使用して 1 テーブルあたり最大 2 万件の値を格納し、問い合わせフローの分岐を決める設定 (営業時間、エスカレーションルール、AI エージェントプロンプト、キュー割り当てなど) を定義できるようになりました。さらに管理者は、テーブルのエクスポート、数百件のレコードの一括編集、Connect Customer インスタンス間でのテーブルの移動を行ったり、Excel や DynamoDB などのツールやソースを使用して外部システムから参照データを読み込んだりすることも可能になりました。ビジネスチームはこのデータを常に最新の状態に保ち、状況の変化に応じてコンタクトセンターの構成を調整できるため、技術リソースに頼らずに済みます。この機能は、Amazon Connect Customer が提供されているすべての商用 AWS リージョンと AWS GovCloud (米国西部) リージョンでご利用いただけます。詳細については、A",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-connect-manage-data-tables/",
+            "title": "Amazon Connect Customer で参照データの管理機能が拡張され、コンタクトセンターの設定をリアルタイムで変更可能に | 最近の発表",
+            "summary": "Amazon Connect Customer では、管理者がコンタクトセンターの設定を制御する参照データをより多く保存できるようになりました。管理者はデータテーブルを使用して 1 テーブルあたり最大 2 万件の値を格納し、問い合わせフローの分岐を決める設定 (営業時間、エスカレーションルール、AI エージェントプロンプト、キュー割り当てなど) を定義できるようになりました。さらに管理者は、テーブ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T17:00:00.000Z",
+            "date_published": "2026-09-29T17:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-connect,marketing:marchitecture/contact-center,marketing:marchitecture/business-productivity,general:products/aws-govcloud-us"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Connect Customer で参照データの管理機能が拡張され、コンタクトセンターの設定をリアルタイムで変更可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "46a069fea9af381dcc41485c15285d02bfd36371",
+            "content_html": "本日、Amazon WorkSpaces Applications において統合グラフィックスイメージが発表されました。これは、G4dn、G5、G6、G7 などのサポート対象となるすべてのグラフィックスインスタンスファミリーで共通して使える単一のイメージタイプです。これまでは、各グラフィックス世代に対応した専用イメージを個別に用意する必要がありました。今後は、サポートされている任意のグラフィックスインスタンスファミリー上でフリートを作成、管理する際、単一のイメージを使用できるようになります。統合グラフィックスイメージを利用することでイメージ管理の負担が軽減され、新しい世代の GPU が登場した際の切り替えが容易になります。統合グラフィックスイメージを使用してフリートを作成する際、コンソールには互換性のあるすべてのインスタンスタイプが表示されるため、ワークロードに合った料金とパフォーマンスを選択できます。統合グラフィックスイメージで構築されたフリートでは、コンソールまたは UpdateFleet API を使用して、サポートされているファミリー間でインスタンスタイプを変更することもできま",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-workspaces-applications-unified-graphics-images/",
+            "title": "Amazon WorkSpaces Applications が統合グラフィックスイメージを導入 | 最近の発表",
+            "summary": "本日、Amazon WorkSpaces Applications において統合グラフィックスイメージが発表されました。これは、G4dn、G5、G6、G7 などのサポート対象となるすべてのグラフィックスインスタンスファミリーで共通して使える単一のイメージタイプです。これまでは、各グラフィックス世代に対応した専用イメージを個別に用意する必要がありました。今後は、サポートされている任意のグラフィックス",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T17:00:00.000Z",
+            "date_published": "2026-09-29T17:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/security-identity-and-compliance,general:products/amazon-workspaces,marketing:marchitecture/business-productivity,marketing:marchitecture/desktop-and-app-streaming,general:products/amazon-appstream-2-0"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon WorkSpaces Applications が統合グラフィックスイメージを導入",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "0fcb85ad0562df36e6005332909dbe6cfe6e8fa5",
+            "content_html": "以下の AWS のサービスおよび機能に関する提供状況の変更をお知らせします。メンテナンスに移行するサービスメンテナンスに移行するサービスは、2026 年 10 月 29 日以降、新規のお客様にご利用いただけなくなります。これらのサービスおよび機能を既に使用しているお客様は、引き続きご利用いただけます。AWS は引き続き、これらのサービスおよび機能の運用とサポートを行います。お客様には、製品ページやドキュメントで変更内容を確認することをお勧めします。· Amazon Chime SDK SIP メディアアプリケーション· Amazon WorkSpaces Secure Browser廃止されるサービス以下のサービスは廃止されます。サービスの運用とサポートを終了する日程をお知らせいたします。これらのサービスをご利用中のお客様は、以下のリンクをクリックして廃止までのスケジュールをご確認いただき、サービスの最新のウェブページおよびドキュメントで推奨されている代替手段への移行を計画してください。· Amazon Managed Blockchain (2027 年 9 月 29 日にサポート終",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/aws-service-availability/",
+            "title": "AWS サービスの提供状況に関する最新情報 | 最近の発表",
+            "summary": "以下の AWS のサービスおよび機能に関する提供状況の変更をお知らせします。メンテナンスに移行するサービスメンテナンスに移行するサービスは、2026 年 10 月 29 日以降、新規のお客様にご利用いただけなくなります。これらのサービスおよび機能を既に使用しているお客様は、引き続きご利用いただけます。AWS は引き続き、これらのサービスおよび機能の運用とサポートを行います。お客様には、製品ページや",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T16:21:00.000Z",
+            "date_published": "2026-09-29T16:21:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS サービスの提供状況に関する最新情報",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "169e30856c9e46495abbd2a7bef2cbb48ff4610c",
+            "content_html": "Amazon Relational Database Service (RDS) for PostgreSQL で、Amazon RDS 延長サポートのマイナーバージョン 13.23-rds.20260514、12.22-rds.20260514、11.22-rds.20260514 が発表されました。Amazon RDS 延長サポートでは、メジャーバージョンの標準サポート終了日を過ぎた後も、重大な共通脆弱性識別子 (CVE) およびバグに対する修正が最大 3 年間追加で提供されます。これにより、新しいメジャーバージョンへのアップグレードまでの猶予が延びます。データベースのアップグレードは、Amazon RDS ブルー/グリーンデプロイ、インプレースアップグレード、スナップショットからの復元を使用して実行できます。バージョンアップグレードの実行の詳細については、Amazon RDS for PostgreSQL ユーザーガイドを参照してください。 Amazon RDS for PostgreSQL を使用すると、クラウドにデプロイした PostgreSQL を簡単にセットアップ、運用、",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-rds-postgresql-extended-support/",
+            "title": "Amazon RDS for PostgreSQL が延長サポートのマイナーバージョン 13.23-rds.20260514、12.22-rds.20260514、11.22-rds.20260514 を発表 | 最近の発表",
+            "summary": "Amazon Relational Database Service (RDS) for PostgreSQL で、Amazon RDS 延長サポートのマイナーバージョン 13.23-rds.20260514、12.22-rds.20260514、11.22-rds.20260514 が発表されました。Amazon RDS 延長サポートでは、メジャーバージョンの標準サポート終了日を過ぎた後も、重大",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T16:00:00.000Z",
+            "date_published": "2026-09-29T16:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-rds,marketing:marchitecture/databases"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon RDS for PostgreSQL が延長サポートのマイナーバージョン 13.23-rds.20260514、12.22-rds.20260514、11.22-rds.20260514 を発表",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "4fefdb3a052ba605dccc913b178a03b492c4d69d",
+            "content_html": "Amazon Aurora PostgreSQL 互換エディションでは、PostgreSQL バージョン 18.6、17.11、16.15、15.19、14.24 をサポートするようになりました。これらのバージョンには、PostgreSQL コミュニティによるバグ修正と Aurora 固有の機能強化が含まれています。これらの改善点の適用と共通脆弱性識別子 (CVE) への対処のために、最新のマイナーバージョンにアップグレードすることをお勧めします。詳細については、リリースノートを参照してください。 アップグレードロールアウトポリシーを使用して複数のアップグレードを段階的に統制し、重要な環境をアップグレードする前に優先度の低い環境で検証してください。詳細については、「Amazon Aurora PostgreSQL DB クラスターのアップグレード」を参照してください。Amazon Aurora は、PostgreSQL との完全な互換性を備え、世界規模で高いパフォーマンスと可用性を発揮するよう設計されています。ゼロまでスケールできるサーバーレスコンピューティング、マルチリージョンの耐障",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-aurora-postgresql-18-6-17-11-16-15-15-19-14-24/",
+            "title": "Amazon Aurora が PostgreSQL 18.6、17.11、16.15、15.19、14.24 のサポートを開始 | 最近の発表",
+            "summary": "Amazon Aurora PostgreSQL 互換エディションでは、PostgreSQL バージョン 18.6、17.11、16.15、15.19、14.24 をサポートするようになりました。これらのバージョンには、PostgreSQL コミュニティによるバグ修正と Aurora 固有の機能強化が含まれています。これらの改善点の適用と共通脆弱性識別子 (CVE) への対処のために、最新のマイナ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T16:00:00.000Z",
+            "date_published": "2026-09-29T16:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-rds,marketing:marchitecture/databases,general:products/amazon-aurora"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Aurora が PostgreSQL 18.6、17.11、16.15、15.19、14.24 のサポートを開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "65a51f15a798bc66019b85f2c49cc663a55215a3",
+            "content_html": "AWS Transfer Family では、ウェブアプリケーションのユーザーが複数のファイルやフォルダを一度にダウンロードできるようになりました。エンドユーザーは、ファイルとフォルダを自由に組み合わせて選び、1 回の操作でまとめてダウンロードできます。データは ZIP 形式でダウンロードされ、解凍すると元のフォルダ階層がそのまま復元されます。この機能は、任意の場所でファイルやフォルダを選択し、アクションメニューから [ダウンロード] をクリックするだけで使用できます。以前は、一度に 1 つのファイルしかダウンロードできず、フォルダをダウンロードすることはできませんでした。ウェブアプリケーションにはダウンロード対象のファイルとリアルタイムのダウンロード進捗状況が示され、それぞれのファイルに対して成功または失敗のステータスが示されます。Google Chrome、Mozilla Firefox、および Microsoft Edge などの Chromium ベースのブラウザで、複数ファイルのダウンロードが可能です。この機能は現在 Safari でサポートされていないため、引き続きファイル",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/transfer-family-web-apps-download-multiple-files-folders",
+            "title": "AWS Transfer Family がウェブアプリケーションでの複数のファイルおよびフォルダのダウンロードをサポート開始 | 最近の発表",
+            "summary": "AWS Transfer Family では、ウェブアプリケーションのユーザーが複数のファイルやフォルダを一度にダウンロードできるようになりました。エンドユーザーは、ファイルとフォルダを自由に組み合わせて選び、1 回の操作でまとめてダウンロードできます。データは ZIP 形式でダウンロードされ、解凍すると元のフォルダ階層がそのまま復元されます。この機能は、任意の場所でファイルやフォルダを選択し、ア",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T08:00:00.000Z",
+            "date_published": "2026-09-29T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS Transfer Family がウェブアプリケーションでの複数のファイルおよびフォルダのダウンロードをサポート開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "de37f5aa91a275e36c1020dcacfbd9b8a529f398",
+            "content_html": "AWS DataSync は共有仮想プライベートクラウド (VPC) をサポートするようになりました。AWS Resource Access Manager (RAM) を使用して複数の AWS アカウント間で共有されたサブネットを利用し、DataSync エージェントを作成したり転送タスクを実行したりできます。これにより、アカウントごとに個別でサブネットと VPC エンドポイントを用意するのではなく、中央アカウントで管理されている共有のサブネットおよび VPC エンドポイントを経由して、プライベートにデータを転送できるようになります。これまでネットワークを集約的に運用している環境では、AWS PrivateLink 経由でプライベート接続するアカウントごとに、別々の DataSync VPC エンドポイントを作成する必要がありました。エンドポイントが増えるたびに IP アドレスが消費され、複数のアカウントを管理する手間も運用上のオーバーヘッドとなっていました。共有 VPC への対応により、VPC 所有アカウントにエンドポイントを 1 つ用意すれば、サブネットを共有する全アカウントでそ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/aws-datasync-shared-vpcs/",
+            "title": "AWS DataSync が共有 VPC のサポートを開始 | 最近の発表",
+            "summary": "AWS DataSync は共有仮想プライベートクラウド (VPC) をサポートするようになりました。AWS Resource Access Manager (RAM) を使用して複数の AWS アカウント間で共有されたサブネットを利用し、DataSync エージェントを作成したり転送タスクを実行したりできます。これにより、アカウントごとに個別でサブネットと VPC エンドポイントを用意するのでは",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T08:00:00.000Z",
+            "date_published": "2026-09-29T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/aws-datasync,marketing:marchitecture/storage,general:products/aws-privatelink,general:products/amazon-vpc,marketing:marchitecture/migration"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS DataSync が共有 VPC のサポートを開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "91037fb2ffd29f0ec2b47997ca9c25599c6e5e48",
+            "content_html": "AWS Systems Manager では、AWS Resource Access Manager (AWS RAM) を使用して、Systems Manager ドキュメント (SSM ドキュメント) を AWS Organizations の組織全体または特定の組織単位 (OU) と共有できるようになりました。従来は、ドキュメントをパブリックに共有するか、個別のアカウント ID のリストを指定して共有することしかできませんでした。組織や OU とドキュメントを簡単に共有できるようになり、組織や OU においてアカウントが追加または削除された場合でも Systems Manager が共有状態を自動的に最新に保つため、アカウントを手動で追跡および更新する必要がなくなります。ドキュメントを共有するには、AWS RAM リソース共有を作成し、共有する SSM ドキュメントを追加して、共有先の組織または OU を選択します。共有は AWS RAM とリソースベースのポリシーによって管理されるため、標準的な AWS の認可機能によってアクセス権が付与されます。組織外のアカウントとドキュメン",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/systems-manager-sharing-documents-ram/",
+            "title": "AWS Systems Manager が AWS Resource Access Manager を経由したドキュメントの共有をサポート開始 | 最近の発表",
+            "summary": "AWS Systems Manager では、AWS Resource Access Manager (AWS RAM) を使用して、Systems Manager ドキュメント (SSM ドキュメント) を AWS Organizations の組織全体または特定の組織単位 (OU) と共有できるようになりました。従来は、ドキュメントをパブリックに共有するか、個別のアカウント ID のリストを指",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T08:00:00.000Z",
+            "date_published": "2026-09-29T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/aws-resource-access-manager,general:products/aws-systems-manager"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS Systems Manager が AWS Resource Access Manager を経由したドキュメントの共有をサポート開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "7c4ce40856249a1339583e90a814e5017eccb0ad",
+            "content_html": "Amazon ElastiCache Serverless for Valkey はパブリックエンドポイントをサポートするようになりました。これにより、VPN、踏み台ホスト、または SSH トンネルを設定しなくても、ノートパソコン、サーバーレス機能、または AWS 外部で実行されているアプリケーションからキャッシュに直接接続できます。パブリックエンドポイントを使えば、VPC の設定やインフラストラクチャのプロビジョニングを行わなくても、インターネット経由で接続できるフルマネージドキャッシュを 1 分未満で立ち上げることができます。このキャッシュによって、スピーディーにプロトタイプを開発したり、AI コーディングツールと AI エージェントをキャッシュに直接接続したり、VPC に到達できないワークロードにキャッシュ機能を追加したりできます。通信はすべて TLS 1.3 上の IAM 認証によって保護されているため、パスワードを管理したりローテーションしたりする必要はありません。 接続方法としては、ネイティブで IAM に対応した Valkey GLIDE 2.2 以降を使用するか、任意の",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-elasticache-serverless-public-endpoints/",
+            "title": "Amazon ElastiCache Serverless for Valkey がパブリックエンドポイントのサポートを開始 | 最近の発表",
+            "summary": "Amazon ElastiCache Serverless for Valkey はパブリックエンドポイントをサポートするようになりました。これにより、VPN、踏み台ホスト、または SSH トンネルを設定しなくても、ノートパソコン、サーバーレス機能、または AWS 外部で実行されているアプリケーションからキャッシュに直接接続できます。パブリックエンドポイントを使えば、VPC の設定やインフラストラ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T07:00:00.000Z",
+            "date_published": "2026-09-29T07:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon ElastiCache Serverless for Valkey がパブリックエンドポイントのサポートを開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "400c800f1b43ba70aa1203f739c5488d83d07790",
+            "content_html": "​Amazon Route 53 Resolver DNS Firewall による Palo Alto Networks (PANW) Advanced DNS Security のサポートが 32 の AWS リージョンで一般提供されるようになりました。これによりセキュリティチームは、個別のファイアウォールをデプロイしたり VPC 構成を変更したりすることなく、VPC から直接送信される悪意のある DNS トラフィックを PANW Advanced DNS Security ルールを使用して検知およびブロックできます。​AWS Summit New York City でプレビュー公開されたこの機能により、セキュリティ管理者は Palo Alto Networks が提供する DNS 脅威対策 (コマンド &amp; コントロール、マルウェア、フィッシング、新規登録ドメインなど) を Route 53 DNS Firewall ルールから直接適用し、Amazon VPC やハイブリッドクラウド (Route 53 Resolver エンドポイント経由) からの悪意のある DNS クエリトラ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/route-53-dns-firewall-panw-dns-security-generally-available",
+            "title": "Amazon Route 53 Resolver DNS Firewall による Palo Alto Networks Advanced DNS Security のサポートが一般提供 (GA) 開始 | 最近の発表",
+            "summary": "​Amazon Route 53 Resolver DNS Firewall による Palo Alto Networks (PANW) Advanced DNS Security のサポートが 32 の AWS リージョンで一般提供されるようになりました。これによりセキュリティチームは、個別のファイアウォールをデプロイしたり VPC 構成を変更したりすることなく、VPC から直接送信される悪意の",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-29T01:03:00.000Z",
+            "date_published": "2026-09-29T01:03:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/security-identity-and-compliance,general:products/amazon-route-53,marketing:marchitecture/networking-and-content-delivery"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Route 53 Resolver DNS Firewall による Palo Alto Networks Advanced DNS Security のサポートが一般提供 (GA) 開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "ec94627c080e2b5f6686629c1865f2afb763bce1",
+            "content_html": "Amazon EC2 における将来の日付でのキャパシティ予約では、必要なキャパシティ、開始日、および契約期間を指定することで、最大 120 日前から事前にキャパシティを確保できます。提供前に計画が変更された場合、新しいスケジュールに合わせて開始日を遅らせることができるようになりました。開始日を延期すると、EC2 は新しい開始日と必要な契約期間を示す見積もりを提示します。開始日を延期するタイミングによっては、契約期間が長くなる場合があります。見積もりを確認して承認すると、EC2 は新しい開始日で予約を更新します。この機能は、将来の日付でのキャパシティ予約をご利用のすべてのお客様にご利用いただけます。この機能を利用可能なリージョンについては、リージョンごとの AWS 可用性ウェブサイトをご確認ください。詳細については、キャパシティ予約ユーザーガイドを参照してください。",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/ec2-fcr-postpone-start-date/",
+            "title": "Amazon EC2 における将来の日付でのキャパシティ予約で開始日の延期がサポート | 最近の発表",
+            "summary": "Amazon EC2 における将来の日付でのキャパシティ予約では、必要なキャパシティ、開始日、および契約期間を指定することで、最大 120 日前から事前にキャパシティを確保できます。提供前に計画が変更された場合、新しいスケジュールに合わせて開始日を遅らせることができるようになりました。開始日を延期すると、EC2 は新しい開始日と必要な契約期間を示す見積もりを提示します。開始日を延期するタイミングに",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-28T21:17:00.000Z",
+            "date_published": "2026-09-28T21:17:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-ec2,marketing:marchitecture/compute"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon EC2 における将来の日付でのキャパシティ予約で開始日の延期がサポート",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "607805acf579f21f3d2956d87227da1c35a84be5",
+            "content_html": "Amazon Rekognition Face Liveness は、ライブネスチェックのスコアが低くなった理由や、ユーザーがどのようにすれば再試行に成功するかをお客様が理解するのに役立つフィードバックコードを返すようになりました。コードは GetFaceLivenessSessionResults API レスポンスで返され、照明不足、顔の遮蔽、閉じた目、動画の品質不足など、低スコアの原因となった具体的な条件を特定します。お客様はこれらのコードをエンドユーザーに表示することができ、ユーザーは狙いを絞った修正を行い、自信を持って再試行できます。単一のセッションで複数のフィードバックコードを一度に返すことができるため、ユーザーは 1 回の再試行ですべての問題を解決できます。 この機能は、本人確認オンボーディング、再認証フロー、およびアクセシビリティシナリオで特に役に立ちます。Amazon Rekognition Face Liveness は、ガイドに従った短い自撮り動画チェックを通じて、カメラの前にいる人物が本物の生きている人間であり、写真、動画再生、仮面、ディープフェイクなどではない",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/rekognition-liveness-feedback-codes/",
+            "title": "Amazon Rekognition Face Liveness がフィードバックコードを返すように | 最近の発表",
+            "summary": "Amazon Rekognition Face Liveness は、ライブネスチェックのスコアが低くなった理由や、ユーザーがどのようにすれば再試行に成功するかをお客様が理解するのに役立つフィードバックコードを返すようになりました。コードは GetFaceLivenessSessionResults API レスポンスで返され、照明不足、顔の遮蔽、閉じた目、動画の品質不足など、低スコアの原因となっ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-28T20:41:00.000Z",
+            "date_published": "2026-09-28T20:41:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-rekognition,marketing:marchitecture/artificial-intelligence"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Rekognition Face Liveness がフィードバックコードを返すように",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "6cea47503efae2004c7fe196819b2a94f5b97d47",
+            "content_html": "Amazon Bedrock で、コーディング、エージェントタスク、ナレッジワーク向けに構築されたフロンティアモデルである SpaceXAI Grok 4.7 が、US Geo および Global のクロスリージョン推論でサポートされるようになりました。 Grok 4.7 は Grok 4.6 をベースにしており、複合ドキュメント処理の向上、計画立案とエラー回復を備えたリポジトリ規模でのより信頼性の高いコーディング、そしてフォーム入力やポータルナビゲーションを行うブラウザ利用エージェントの機能強化が実現されています。 Amazon Bedrock コンソールで Grok 4.7 の使用を開始することも、サポートされている Amazon Bedrock API を使用するプログラムを通じて使用を開始することもできます。サポートされている AWS リージョン、エンドポイント、API、機能、推論プロファイル、料金については、Amazon Bedrock のドキュメントを参照してください。詳細については、提供開始に関するブログ記事をご覧ください。",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-bedrock-grok-4-7/",
+            "title": "Grok 4.7 が Amazon Bedrock で利用可能に | 最近の発表",
+            "summary": "Amazon Bedrock で、コーディング、エージェントタスク、ナレッジワーク向けに構築されたフロンティアモデルである SpaceXAI Grok 4.7 が、US Geo および Global のクロスリージョン推論でサポートされるようになりました。 Grok 4.7 は Grok 4.6 をベースにしており、複合ドキュメント処理の向上、計画立案とエラー回復を備えたリポジトリ規模でのより信頼",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-28T18:29:00.000Z",
+            "date_published": "2026-09-28T18:29:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-bedrock,marketing:marchitecture/artificial-intelligence"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Grok 4.7 が Amazon Bedrock で利用可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "b2f55a5020da0f7599dd1fe8b9deef2d51198fc4",
+            "content_html": "AWS GovCloud (米国) で、Claude Sonnet 5.5 の提供が開始されました。これはよりスマートで効率的な Sonnet であり、大半の作業においてタスクあたりのコストを抑え、より高速に、コーディングやナレッジワークにおける明確な飛躍的進歩をもたらします。Claude Sonnet 5.5 は、よりスマートで効率的な Sonnet であり、Sonnet 5 からの大きなステップアップとなるため、既に Sonnet を基盤に構築を行っているチームにとって自然なアップグレード対象となります。コーディング機能が強化されており、同一セッション内で Claude とともに機能の構築や修正を行ったり、要件に対して出力を検証したりするなど、より大きなコーディング戦略の一環として範囲の明確なタスクを完了できます。また、1 ページの要約書、図表、要約スライドの作成から、ドキュメントの編集やスプレッドシートの整理まで、すぐに共有可能なナレッジワーク成果物を生成します。Amazon Bedrock では、リージョン内のデータレジデンシーによって AWS インフラストラクチャ内にデータを",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/claude-sonnet-5-5-aws-govcloud-us/",
+            "title": "Claude Sonnet 5.5 が AWS GovCloud (米国) で利用可能に | 最近の発表",
+            "summary": "AWS GovCloud (米国) で、Claude Sonnet 5.5 の提供が開始されました。これはよりスマートで効率的な Sonnet であり、大半の作業においてタスクあたりのコストを抑え、より高速に、コーディングやナレッジワークにおける明確な飛躍的進歩をもたらします。Claude Sonnet 5.5 は、よりスマートで効率的な Sonnet であり、Sonnet 5 からの大きなステッ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-28T15:00:00.000Z",
+            "date_published": "2026-09-28T15:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-bedrock,general:products/aws-govcloud-us"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Claude Sonnet 5.5 が AWS GovCloud (米国) で利用可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "76817841d340406a63408aaf904002a4f5531889",
+            "content_html": "AWS は Claude Sonnet 5.5 の提供を開始しました。これはよりスマートで効率的な Sonnet であり、大半の作業においてタスクあたりのコストを抑え、より高速に、コーディングやナレッジワークにおける明確な飛躍的進歩をもたらします。Claude Sonnet 5.5 は、よりスマートで効率的な Sonnet であり、Sonnet 5 からの大きなステップアップとなるため、既に Sonnet を基盤に構築を行っているチームにとって自然なアップグレード対象となります。コーディング機能が強化されており、同一セッション内で Claude とともに機能の構築や修正を行ったり、要件に対して出力を検証したりするなど、より大きなコーディング戦略の一環として範囲の明確なタスクを完了できます。また、1 ページの要約書、図表、要約スライドの作成から、ドキュメントの編集やスプレッドシートの整理まで、すぐに共有可能なナレッジワーク成果物を生成します。Claude Sonnet 5.5 を利用するには、Amazon Bedrock と Claude Platform on AWS の 2 つの方法",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/claude-sonnet-5-5-aws/",
+            "title": "Claude Sonnet 5.5 が AWS で利用可能に | 最近の発表",
+            "summary": "AWS は Claude Sonnet 5.5 の提供を開始しました。これはよりスマートで効率的な Sonnet であり、大半の作業においてタスクあたりのコストを抑え、より高速に、コーディングやナレッジワークにおける明確な飛躍的進歩をもたらします。Claude Sonnet 5.5 は、よりスマートで効率的な Sonnet であり、Sonnet 5 からの大きなステップアップとなるため、既に So",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-28T15:00:00.000Z",
+            "date_published": "2026-09-28T15:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/artificial-intelligence,general:products/amazon-bedrock"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Claude Sonnet 5.5 が AWS で利用可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "25d0e22190430dd5300fe6d3ace177413a921234",
+            "content_html": "2026 年 9 月 25 日、Amazon は OpenJDK の Amazon Corretto 長期サポート (LTS) および機能リリース (FR) バージョンに対するパッチアップデートを発表しました。現在、Corretto 25.0.4.10.1、21.0.12.11.1、17.0.20.12.1、および 11.0.32.12.1 がダウンロード可能です。Amazon Corretto はマルチプラットフォームで、本番稼働に対応した無料の OpenJDK ディストリビューションです。このパッチには、最新の tzdata 2026d アップデートが含まれています。Corretto のホームページにアクセスして、Corretto 27、Corretto 25、Corretto 21、Corretto 17、Corretto 11、Corretto 8 のいずれかをダウンロードしてください。また、Corretto Apt、Yum、Apk リポジトリを設定することで、お使いの Linux システムでアップデートを入手することもできます。こちらからフィードバックをお寄せいただけますとさ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-corretto-sept-2026-updates/",
+            "title": "Amazon Corretto の 2026 年 9 月パッチアップデート | 最近の発表",
+            "summary": "2026 年 9 月 25 日、Amazon は OpenJDK の Amazon Corretto 長期サポート (LTS) および機能リリース (FR) バージョンに対するパッチアップデートを発表しました。現在、Corretto 25.0.4.10.1、21.0.12.11.1、17.0.20.12.1、および 11.0.32.12.1 がダウンロード可能です。Amazon Corretto ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-28T14:00:00.000Z",
+            "date_published": "2026-09-28T14:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/developer-tools,general:products/amazon-corretto,general:products/aws-govcloud-us"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Corretto の 2026 年 9 月パッチアップデート",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "dd6d31318ea0df0edf4cbd4934782bc0946c004f",
+            "content_html": "Amazon SageMaker Unified Studio が 2 つの接続機能に新たに対応しました。(1) 外部 Apache Iceberg カタログを連携させる Iceberg REST Catalog (IRC) 接続と、(2) Amazon DocumentDB 向けの IAM 認証です。この 2 つの機能により、データチームはガバナンスの効いた多種多様なデータソースへと接続範囲を広げられると同時に、複数のプロジェクト間で認証情報を持たない安全な認証方式を適用できます。Iceberg REST Catalog 接続。 SageMaker Unified Studio は Iceberg REST Catalog (IRC) 接続をサポートするようになり、Iceberg REST 仕様に準拠した外部の Apache Iceberg カタログに接続できるようになりました。サポートされているカタログタイプには、Snowflake Open Catalog (Polaris)、Databricks Unity Catalog、仕様に準拠したその他のカタログ用の Generic I",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/sagemaker-iceberg-rest-iam-documentdb/",
+            "title": "Amazon SageMaker Unified Studio が 2 つの新しい接続機能をサポート開始: Iceberg REST Catalog 接続と Amazon DocumentDB の IAM 認証 | 最近の発表",
+            "summary": "Amazon SageMaker Unified Studio が 2 つの接続機能に新たに対応しました。(1) 外部 Apache Iceberg カタログを連携させる Iceberg REST Catalog (IRC) 接続と、(2) Amazon DocumentDB 向けの IAM 認証です。この 2 つの機能により、データチームはガバナンスの効いた多種多様なデータソースへと接続範囲を広",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-28T08:00:00.000Z",
+            "date_published": "2026-09-28T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-documentdb,general:products/amazon-sagemaker,marketing:marchitecture/databases,marketing:marchitecture/analytics"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon SageMaker Unified Studio が 2 つの新しい接続機能をサポート開始: Iceberg REST Catalog 接続と Amazon DocumentDB の IAM 認証",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "04932bfef0f2df82006b0eba84b98a801108ed60",
+            "content_html": "AWS Backup が Amazon FSx for NetApp ONTAP 向けの論理エアギャップボールトをサポートするようになりました。論理エアギャップボールトは、複数のアカウントや AWS Organizations でバックアップを安全に共有できるタイプの AWS Backup ボールトです。直接復元をサポートしており、データ損失イベントからの復旧時間を短縮します。Amazon FSx for NetApp ONTAP ボリュームを論理エアギャップボールトで保護できるようになりました。論理エアギャップボールトに保存される変更不可能なバックアップは、デフォルトでロックされており、AWS が所有するキーまたはカスタマーマネージドキーを使用して暗号化され分離されています。同じアカウント内または他のアカウントやリージョンにわたって、論理エアギャップボールトに FSx for NetApp ONTAP バックアップを保存できます。これにより、ダウンタイムのリスクを軽減し、ビジネス継続性を確保し、コンプライアンスとディザスタリカバリの要件を満たすことができます。利用を開始するには、AW",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/aws-backup-air-gapped-vault-fsx-ontap/",
+            "title": "AWS Backup が Amazon FSx for NetApp ONTAP 向けの論理エアギャップボールトのサポートを追加 | 最近の発表",
+            "summary": "AWS Backup が Amazon FSx for NetApp ONTAP 向けの論理エアギャップボールトをサポートするようになりました。論理エアギャップボールトは、複数のアカウントや AWS Organizations でバックアップを安全に共有できるタイプの AWS Backup ボールトです。直接復元をサポートしており、データ損失イベントからの復旧時間を短縮します。Amazon FSx",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-28T08:00:00.000Z",
+            "date_published": "2026-09-28T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/aws-backup,general:products/amazon-fsx-netapp-ontap,marketing:marchitecture/storage"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS Backup が Amazon FSx for NetApp ONTAP 向けの論理エアギャップボールトのサポートを追加",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "9ba2dd03910c903c1f03d5a3cc7330f17b8d1414",
+            "content_html": "Amazon DocumentDB (MongoDB 互換) では、マイナーバージョン 8.0.2 以降、再試行可能な書き込み、5 つの新しい集計ステージ、および変更ストリームといった機能強化がサポートされるようになりました。このリリースにより MongoDB API の互換性が拡張され、クエリパフォーマンスが向上したため、アプリケーションコードを変更することなく MongoDB ワークロードを Amazon DocumentDB に移行することがさらに容易になります。バージョン 8.0.2 の主な新機能は次のとおりです。- 再試行可能な書き込み - 挿入、更新、削除の操作は一時的なネットワークエラー発生時に自動的に再試行されるため、フェイルオーバー時のアプリケーションの耐障害性が向上します。 これらの機能は、Amazon DocumentDB 8.0.2 以降、Amazon DocumentDB が利用可能なすべてのリージョンでご利用いただけます。詳細については、サポートされている MongoDB API、オペレーション、およびデータ型、Amazon DocumentDB リリースノ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-documentdb-8-0-2/",
+            "title": "Amazon DocumentDB (MongoDB 互換) がバージョン 8.0.2 で 5 つの MongoDB 集計ステージおよび変更ストリーム機能のサポートを追加 | 最近の発表",
+            "summary": "Amazon DocumentDB (MongoDB 互換) では、マイナーバージョン 8.0.2 以降、再試行可能な書き込み、5 つの新しい集計ステージ、および変更ストリームといった機能強化がサポートされるようになりました。このリリースにより MongoDB API の互換性が拡張され、クエリパフォーマンスが向上したため、アプリケーションコードを変更することなく MongoDB ワークロードを ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-28T08:00:00.000Z",
+            "date_published": "2026-09-28T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-documentdb"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon DocumentDB (MongoDB 互換) がバージョン 8.0.2 で 5 つの MongoDB 集計ステージおよび変更ストリーム機能のサポートを追加",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "4b2a493c01b179746693a387ee84b77538899ed4",
+            "content_html": "MongoDB 互換アプリケーションを構築するデベロッパーにとって、再試行可能な書き込みは、ネットワークの中断やプライマリのフェイルオーバーなどの一時的なエラーの発生時に、アプリケーションの耐障害性を向上させます。Amazon DocumentDB (MongoDB 互換) は、エンジンバージョン 8.0.2 以降で再試行可能な書き込みをサポートするようになり、この機能を有効にする際に追加のコード変更を行う必要がなくなりました。再試行可能な書き込みを使用すると、一時的なエラーが発生した場合に、MongoDB ドライバーが特定の書き込み操作を自動的に 1 回再試行します。最新の MongoDB 互換ドライバーの大半では、デフォルトで再試行可能な書き込みが有効になっています。このリリースにより、Amazon DocumentDB 8.0.2 に接続するアプリケーションは、エラー防止のために接続文字列に retryWrites=false を指定する必要がなくなりました。再試行可能な書き込みは、updateMany と deleteMany、ならびにトランザクションのコミットおよびアボートの",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-documentdb-retryable-writes/",
+            "title": "Amazon DocumentDB (MongoDB 互換) が再試行可能な書き込みのサポートを開始 | 最近の発表",
+            "summary": "MongoDB 互換アプリケーションを構築するデベロッパーにとって、再試行可能な書き込みは、ネットワークの中断やプライマリのフェイルオーバーなどの一時的なエラーの発生時に、アプリケーションの耐障害性を向上させます。Amazon DocumentDB (MongoDB 互換) は、エンジンバージョン 8.0.2 以降で再試行可能な書き込みをサポートするようになり、この機能を有効にする際に追加のコード",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register.3822079bac49f139ae46016a9a99c3eed71fad4a.png",
+            "date_modified": "2026-09-28T08:00:00.000Z",
+            "date_published": "2026-09-28T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-documentdb,marketing:marchitecture/databases"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon DocumentDB (MongoDB 互換) が再試行可能な書き込みのサポートを開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        }
+    ]
+}

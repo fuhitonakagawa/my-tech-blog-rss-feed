@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn/</id>
+    <title>Zenn トレンド｜企業テックブログRSS</title>
+    <updated>2026-10-03T20:45:34.200Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn/feeds/atom.xml"/>
+    <subtitle>Zenn トレンドセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[Windowsで再生中の音声をWhisperで文字起こしする：Meetilyの仕組みを100行未満のRustで再現する | Zennのトレンド]]></title>
+        <id>https://zenn.dev/tmtk/articles/edc992e6a24b65</id>
+        <link href="https://zenn.dev/tmtk/articles/edc992e6a24b65"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--gPrXleoS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%25E3%2581%25A7%25E5%2586%258D%25E7%2594%259F%25E4%25B8%25AD%25E3%2581%25AE%25E9%259F%25B3%25E5%25A3%25B0%25E3%2582%2592Whisper%25E3%2581%25A7%25E6%2596%2587%25E5%25AD%2597%25E8%25B5%25B7%25E3%2581%2593%25E3%2581%2597%25E3%2581%2599%25E3%2582%258B%25EF%25BC%259AMeetily%25E3%2581%25AE%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E3%2582%2592100%25E8%25A1%258C%25E6%259C%25AA%25E6%25BA%2580%25E3%2581%25AERust%25E3%2581%25A7%25E5%2586%258D%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tmtk%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSzVOUXpzaHFiY1h1OTJWT1NoZ2ZKNVc1Tnlsa0pjcEJYcUJXeVB5N3VuQTdzZG5nPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-10-03T08:03:54.000Z</updated>
+        <summary type="html"><![CDATA[はじめにMeetily（会議の録音、文字起こし、要約をすべてPCの中で行うオープンソースの会議アシスタント）のコードを読みました。Windows版のMeetilyは、会議アプリやブラウザが再生している音を「WASAPIのループバック」（PCが再生している音を、そのまま録音するWindowsの仕組み）で取り込み、Whisper（OpenAIが公開している音声認識モデル）などで文字にしています。ただ、]]></summary>
+        <content type="html"><![CDATA[はじめにMeetily（会議の録音、文字起こし、要約をすべてPCの中で行うオープンソースの会議アシスタント）のコードを読みました。Windows版のMeetilyは、会議アプリやブラウザが再生している音を「WASAPIのループバック」（PCが再生している音を、そのまま録音するWindowsの仕組み）で取り込み、Whisper（OpenAIが公開している音声認識モデル）などで文字にしています。ただ、Meetilyは製品なので、マイクとのミックス、ノイズ除去、デバイスの抜き差しへの対応など、音を取って文字にする以外の処理がたくさんあります。最低限どこまであれば動くのかが、コードからは...]]></content>
+        <author>
+            <name>tmtk</name>
+        </author>
+        <published>2026-10-03T08:03:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[UnityでなぜC# 10以降を使うライブラリが動くのか | Zennのトレンド]]></title>
+        <id>https://zenn.dev/s4k1/articles/ba87c0ff3c1d47</id>
+        <link href="https://zenn.dev/s4k1/articles/ba87c0ff3c1d47"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--Gk1Kuanq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Unity%25E3%2581%25A7%25E3%2581%25AA%25E3%2581%259CC%2523%252010%25E4%25BB%25A5%25E9%2599%258D%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%258C%25E5%258B%2595%25E3%2581%258F%25E3%2581%25AE%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:0y0%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2ExMjc3ZjJkODUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-10-03T06:05:15.000Z</updated>
+        <summary type="html"><![CDATA[1. Unity対応ライブラリと「C# 9対応」の食い違いUnityでZLogger、R3、MemoryPackなどのライブラリを使っていると、Unity向けのパッケージと.NET向けの実装が同じリポジトリに並んでいるのを見かけます。そのコードには、C# 10以降で追加された機能も使われています。わかりやすい例がZLoggerです。ログを書き込む次のAPIは、C# 10のカスタム文字列補間ハンドラ]]></summary>
+        <content type="html"><![CDATA[1. Unity対応ライブラリと「C# 9対応」の食い違いUnityでZLogger、R3、MemoryPackなどのライブラリを使っていると、Unity向けのパッケージと.NET向けの実装が同じリポジトリに並んでいるのを見かけます。そのコードには、C# 10以降で追加された機能も使われています。わかりやすい例がZLoggerです。ログを書き込む次のAPIは、C# 10のカスタム文字列補間ハンドラーを利用しています。logger.ZLogInformation($"User {userId} logged in from {ip}");Unity向けの導入手順にも、C# 10...]]></content>
+        <author>
+            <name>0y0</name>
+        </author>
+        <published>2026-10-03T06:05:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Strands Decider 2Bについて理解する | Zennのトレンド]]></title>
+        <id>https://zenn.dev/fusic/articles/db6e62832a4a1f</id>
+        <link href="https://zenn.dev/fusic/articles/db6e62832a4a1f"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--tGj_sker--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Strands%2520Decider%25202B%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:xthixsl_ml%2540%25E3%2583%25AC%25E3%2582%25AA%25E3%2583%258A%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNhNDgxMzQ3YjkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Fusic%2520%25E6%258A%2580%25E8%25A1%2593%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzIzOGE3MzVjMDIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-10-02T13:37:55.000Z</updated>
+        <summary type="html"><![CDATA[はじめにFusicのレオナです。Strands Agentsは、AWSが開発し、オープンソースとして公開しているAIエージェント開発用SDKです。LLMに与える指示と利用可能なツールを定義することで、状況に応じてツールを選び、その実行結果を踏まえながら処理を進めるエージェントを構築できます。AWS専用のSDKではなく、Amazon Bedrock以外のモデルAPIやローカルモデルにも対応しています]]></summary>
+        <content type="html"><![CDATA[はじめにFusicのレオナです。Strands Agentsは、AWSが開発し、オープンソースとして公開しているAIエージェント開発用SDKです。LLMに与える指示と利用可能なツールを定義することで、状況に応じてツールを選び、その実行結果を踏まえながら処理を進めるエージェントを構築できます。AWS専用のSDKではなく、Amazon Bedrock以外のモデルAPIやローカルモデルにも対応しています。今回のブログで取り上げる「Strands Decider 2B」は、Strandsの実験的なプロジェクトを扱うStrands Labsから公開された判断用モデルです。Strands ...]]></content>
+        <author>
+            <name>xthixsl_ml@レオナ</name>
+        </author>
+        <published>2026-10-02T13:37:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Cursor pstack】AIエージェントに開発を任せる環境をつくる ―月2,500件のPRを支えた開発基盤とは？ | Zennのトレンド]]></title>
+        <id>https://zenn.dev/sc30gsw/books/080faba713547b</id>
+        <link href="https://zenn.dev/sc30gsw/books/080faba713547b"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--XurFM321--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci8yZTdiNGE2MTg1LmpwZWc=%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE" type="image/jpg"/>
+        <updated>2026-10-02T13:19:46.000Z</updated>
+        <summary type="html"><![CDATA[AIエージェントに開発を任せるための環境づくりを、Cursorのpstackから学ぶ実践ガイドです。月2,500件のPRを支えた考え方を手がかりに、成果物を検証する仕組みから、pstackに含まれるPlaybook・Principle・Skillといった全項目を解説。さらに、自分のアプリに検証スキルを作る方法から、調査・設計・計画をエージェントと進める方法まで、全39章で扱います。読み終えたとき、]]></summary>
+        <content type="html"><![CDATA[AIエージェントに開発を任せるための環境づくりを、Cursorのpstackから学ぶ実践ガイドです。月2,500件のPRを支えた考え方を手がかりに、成果物を検証する仕組みから、pstackに含まれるPlaybook・Principle・Skillといった全項目を解説。さらに、自分のアプリに検証スキルを作る方法から、調査・設計・計画をエージェントと進める方法まで、全39章で扱います。読み終えたとき、自分のプロジェクトでエージェントに任せる範囲を広げるための環境づくりを始められることを目指します。]]></content>
+        <author>
+            <name>kaito</name>
+        </author>
+        <published>2026-10-02T13:19:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[glibc の strlen は文字列範囲外を読むことで高速に計算する | Zennのトレンド]]></title>
+        <id>https://zenn.dev/peloeil/articles/glibc-strlen-2023</id>
+        <link href="https://zenn.dev/peloeil/articles/glibc-strlen-2023"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--qE46h-Y7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:glibc%2520%25E3%2581%25AE%2520strlen%2520%25E3%2581%25AF%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E7%25AF%2584%25E5%259B%25B2%25E5%25A4%2596%25E3%2582%2592%25E8%25AA%25AD%25E3%2582%2580%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25A7%25E9%25AB%2598%25E9%2580%259F%25E3%2581%25AB%25E8%25A8%2588%25E7%25AE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B7%25E3%2582%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzEyZmIxM2NiZWYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-10-01T17:56:12.000Z</updated>
+        <summary type="html"><![CDATA[はじめにstrlen は、文字列の先頭から終端文字 \0 の直前までの byte 数を返す関数です。自分で実装するなら、1byte ずつ読んで \0 が見つかるまで数えるのが自然だと思います。glibc では、この探索を高速化するために、複数 byte をまとめて読み、ビット演算を使って終端文字を探しています。その読み込みは、文字列の範囲内に収まるとは限りません。このように複数 byte をまとめ]]></summary>
+        <content type="html"><![CDATA[はじめにstrlen は、文字列の先頭から終端文字 \0 の直前までの byte 数を返す関数です。自分で実装するなら、1byte ずつ読んで \0 が見つかるまで数えるのが自然だと思います。glibc では、この探索を高速化するために、複数 byte をまとめて読み、ビット演算を使って終端文字を探しています。その読み込みは、文字列の範囲内に収まるとは限りません。このように複数 byte をまとめて調べる仕組みは、「glibc strlen コードリーディング」(2020年)などでも解説されています。複数 byte を1つの整数として扱い、引き算とビット演算だけで 0 の有無を判...]]></content>
+        <author>
+            <name>ぷる</name>
+        </author>
+        <published>2026-10-01T17:56:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[実務において敵対的レビューはどの程度有効なのか | Zennのトレンド]]></title>
+        <id>https://zenn.dev/edash_tech_blog/articles/4577f7d4780bef</id>
+        <link href="https://zenn.dev/edash_tech_blog/articles/4577f7d4780bef"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--a5iWXFAC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25AE%259F%25E5%258B%2599%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2584%25E3%2581%25A6%25E6%2595%25B5%25E5%25AF%25BE%25E7%259A%2584%25E3%2583%25AC%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%25AE%25E7%25A8%258B%25E5%25BA%25A6%25E6%259C%2589%25E5%258A%25B9%25E3%2581%25AA%25E3%2581%25AE%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:jellyfish1129%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNkZWM5ZjExNTcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:e-dash%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzVkMTYyYTQ4OTguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-10-01T10:48:47.000Z</updated>
+        <summary type="html"><![CDATA[目次背景やったこと検証結果考察付記：レビューと自動修正のループで指摘が収束しない問題感想 1. 背景AI エージェントにコードレビューをさせる手法のひとつとして、敵対的レビューが広まっています。差分を通常どおりレビューして問題を探すだけでなく、「この変更で誤った結果やエラーを起こす入力や状況は何か」を探す役割のエージェントを別に立て、両者の指摘を実コードで確かめてから確定させる方式です。筆者のチー]]></summary>
+        <content type="html"><![CDATA[目次背景やったこと検証結果考察付記：レビューと自動修正のループで指摘が収束しない問題感想 1. 背景AI エージェントにコードレビューをさせる手法のひとつとして、敵対的レビューが広まっています。差分を通常どおりレビューして問題を探すだけでなく、「この変更で誤った結果やエラーを起こす入力や状況は何か」を探す役割のエージェントを別に立て、両者の指摘を実コードで確かめてから確定させる方式です。筆者のチームでも導入しています。一方で、実務で回すと負担が目立ちます。まず時間と token のコストが高いです。複数のエージェントを並列に実行し、各エージェントの指摘をさらに...]]></content>
+        <author>
+            <name>jellyfish1129</name>
+        </author>
+        <published>2026-10-01T10:48:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[オブザーバビリティのAIエージェントをどう評価するか | Zennのトレンド]]></title>
+        <id>https://zenn.dev/ymotongpoo/articles/20261001-agent-eval-loop</id>
+        <link href="https://zenn.dev/ymotongpoo/articles/20261001-agent-eval-loop"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--s2BPhy_r--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B6%25E3%2583%25BC%25E3%2583%2590%25E3%2583%2593%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E3%2581%25AEAI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E3%2581%25A9%25E3%2581%2586%25E8%25A9%2595%25E4%25BE%25A1%25E3%2581%2599%25E3%2582%258B%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yoshi%2520Yamaguchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dMOUN2MU9tRlBwUUcwY0pWOHZUeW1SZ3ViT3VaWnplQ01HUTJjMHRnPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-10-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめにAIエージェントにオブザーバビリティの仕事をさせたとき、その最終応答の品質が上がったのか下がったのかを、どうやって知るのでしょうか。エージェントの最終応答を読んで判断する方法は、早い段階で行き詰まります。正しい応答と、正しく見えるだけの応答が同じ見た目をしているからです。しかも同じ質問に毎回同じ応答が返るわけでもなく、期待する文字列を固定したテストは書けません。この記事では、Grafana]]></summary>
+        <content type="html"><![CDATA[はじめにAIエージェントにオブザーバビリティの仕事をさせたとき、その最終応答の品質が上がったのか下がったのかを、どうやって知るのでしょうか。エージェントの最終応答を読んで判断する方法は、早い段階で行き詰まります。正しい応答と、正しく見えるだけの応答が同じ見た目をしているからです。しかも同じ質問に毎回同じ応答が返るわけでもなく、期待する文字列を固定したテストは書けません。この記事では、Grafana Assistantを開発しているチームが公式のエンジニアリングブログに公開した Building an evaluation loop for Grafana Assistant（Y...]]></content>
+        <author>
+            <name>Yoshi Yamaguchi</name>
+        </author>
+        <published>2026-10-01T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[terraform applyしたら、1ヶ月半前のコードが本番に出ていた | Zennのトレンド]]></title>
+        <id>https://zenn.dev/gonta_ganbareyo/articles/6256bf2008b2ef</id>
+        <link href="https://zenn.dev/gonta_ganbareyo/articles/6256bf2008b2ef"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--R0-911cf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:terraform%2520apply%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589%25E3%2580%25811%25E3%2583%25B6%25E6%259C%2588%25E5%258D%258A%25E5%2589%258D%25E3%2581%25AE%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%258C%25E6%259C%25AC%25E7%2595%25AA%25E3%2581%25AB%25E5%2587%25BA%25E3%2581%25A6%25E3%2581%2584%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:gonta%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzE5NzFlNzc0NzAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-30T23:45:42.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは。gontaです。GCP上でサービスを作っていて、インフラはTerraformで管理しています。先日、使わなくなった環境変数を削除してterraform applyしたところ、本番が落ちました。（まだリリースはしていない）調べてみたら、1ヶ月半前のコンテナイメージが本番で動いていました。原因はTerraformの使い方というか、コンテナをTerraformで扱うときの構造的な話のようです]]></summary>
+        <content type="html"><![CDATA[こんにちは。gontaです。GCP上でサービスを作っていて、インフラはTerraformで管理しています。先日、使わなくなった環境変数を削除してterraform applyしたところ、本番が落ちました。（まだリリースはしていない）調べてみたら、1ヶ月半前のコンテナイメージが本番で動いていました。原因はTerraformの使い方というか、コンテナをTerraformで扱うときの構造的な話のようです。同じ踏み方をする人がいそうなのと、いい解決方法があれば教えていただきたいので書いてみました。!こちら改めて調査をすると、デプロイをしてからterraform applyをしてしまっ...]]></content>
+        <author>
+            <name>gonta</name>
+        </author>
+        <published>2026-09-30T23:45:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI-Slopな日本語を構造レベルで読みやすくするSkill『yomiyasu（よみやす）』を作りました | Zennのトレンド]]></title>
+        <id>https://zenn.dev/algoartis/articles/0b1c731881b25c</id>
+        <link href="https://zenn.dev/algoartis/articles/0b1c731881b25c"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--fBqJdPTf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI-Slop%25E3%2581%25AA%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2582%2592%25E6%25A7%258B%25E9%2580%25A0%25E3%2583%25AC%25E3%2583%2599%25E3%2583%25AB%25E3%2581%25A7%25E8%25AA%25AD%25E3%2581%25BF%25E3%2582%2584%25E3%2581%2599%25E3%2581%258F%25E3%2581%2599%25E3%2582%258BSkill%25E3%2580%258Eyomiyasu%25EF%25BC%2588%25E3%2582%2588%25E3%2581%25BF%25E3%2582%2584%25E3%2581%2599%25EF%25BC%2589%25E3%2580%258F%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258A%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E5%25A4%25A7%25E8%25B3%2580%25E6%2584%259B%25E4%25B8%2580%25E9%2583%258E%25EF%25BC%2588oga_aiichiro%25EF%25BC%2589%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I1M2Y5MDFhMWYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:ALGO%2520ARTIS%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNhMDEwODY1NzkuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-30T18:28:20.000Z</updated>
+        <summary type="html"><![CDATA[TL;DR本日、AI生成された臭くて読みにくい日本語を、自然で読みやすい日本語へ書き直すスキル『yomiyasu（よみやす）』をリリースしました。従来のAI-Slop対策スキルで用いられてきた 「単語を禁止する」手法から改善し、統語構造（=誰が・何を・どうした）の復元と、比喩動詞の具体化に特化していることが特徴です。Claude Code, Codex, Cursorなどの主要なAI Agentで]]></summary>
+        <content type="html"><![CDATA[TL;DR本日、AI生成された臭くて読みにくい日本語を、自然で読みやすい日本語へ書き直すスキル『yomiyasu（よみやす）』をリリースしました。従来のAI-Slop対策スキルで用いられてきた 「単語を禁止する」手法から改善し、統語構造（=誰が・何を・どうした）の復元と、比喩動詞の具体化に特化していることが特徴です。Claude Code, Codex, Cursorなどの主要なAI Agentで/yomiyasuで呼び出せます。// 導入コマンドnpx skills add nanaism/yomiyasuリポジトリは以下です。https://github.com/...]]></content>
+        <author>
+            <name>大賀愛一郎（oga_aiichiro）</name>
+        </author>
+        <published>2026-09-30T18:28:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Web 標準動向 2026年9月版 | Zennのトレンド]]></title>
+        <id>https://zenn.dev/cybozu_frontend/articles/web_standards_trends_202609</id>
+        <link href="https://zenn.dev/cybozu_frontend/articles/web_standards_trends_202609"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--Os2YydvZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Web%2520%25E6%25A8%2599%25E6%25BA%2596%25E5%258B%2595%25E5%2590%2591%25202026%25E5%25B9%25B49%25E6%259C%2588%25E7%2589%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:saku%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2VjOTA1OThlNjEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%259C%25E3%2582%25A6%25E3%2582%25BA%2520%25E3%2583%2595%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2588%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2o0S053NXVMek12cVJjdnlEU3JKQVBJUUNYQWNUTGJsR3pGWUc1cUE9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-30T09:00:08.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは！ サイボウズ株式会社 デザインテクノロジストの saku (@sakupi01) です。 はじめにサイボウズは 2025 年 4 月より、W3C のメンバーに加入しました。https://blog.cybozu.io/entry/joining-w3c標準化プロセスに関わることができるようになるための最初の一歩として、フロントエンドエンジニアの一部のメンバーは積極的に Web 標準のキ]]></summary>
+        <content type="html"><![CDATA[こんにちは！ サイボウズ株式会社 デザインテクノロジストの saku (@sakupi01) です。 はじめにサイボウズは 2025 年 4 月より、W3C のメンバーに加入しました。https://blog.cybozu.io/entry/joining-w3c標準化プロセスに関わることができるようになるための最初の一歩として、フロントエンドエンジニアの一部のメンバーは積極的に Web 標準のキャッチアップを行っています。そこで、毎月メンバーが興味を持った Web 標準に関する話題や、実際に標準化プロセスに関わることができた場合にはその報告などを 1 つの記事としてまとめ、...]]></content>
+        <author>
+            <name>saku</name>
+        </author>
+        <published>2026-09-30T09:00:08.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新規プロダクトのバックエンド自動テスト戦略 ─UT 中心から API テスト中心へ─ | Zennのトレンド]]></title>
+        <id>https://zenn.dev/canary_techblog/articles/348d976da70857</id>
+        <link href="https://zenn.dev/canary_techblog/articles/348d976da70857"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--0BV5CxHT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2596%25B0%25E8%25A6%258F%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2580%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AE%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E8%2587%25AA%25E5%258B%2595%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E6%2588%25A6%25E7%2595%25A5%2520%25E2%2594%2580UT%2520%25E4%25B8%25AD%25E5%25BF%2583%25E3%2581%258B%25E3%2582%2589%2520API%2520%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E4%25B8%25AD%25E5%25BF%2583%25E3%2581%25B8%25E2%2594%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:tom-uchida%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U3NzUwZmNjMzUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Canary%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E4YzQwNWNkMGQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-30T00:45:25.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは！株式会社カナリーで新規プロダクトを開発している tom-uchida です。新規プロダクトのバックエンドでは自動テストをユニットテスト（以下、UT）中心で整備してきたのですが、API 単位で仕様どおりに動作することを保証する仕組みがなかったため、runn による API テストを導入し、品質保証の主軸を UT から API テストへ切り替えました。本記事では、次の 3 点をご紹介できれ]]></summary>
+        <content type="html"><![CDATA[こんにちは！株式会社カナリーで新規プロダクトを開発している tom-uchida です。新規プロダクトのバックエンドでは自動テストをユニットテスト（以下、UT）中心で整備してきたのですが、API 単位で仕様どおりに動作することを保証する仕組みがなかったため、runn による API テストを導入し、品質保証の主軸を UT から API テストへ切り替えました。本記事では、次の 3 点をご紹介できればと思います：切り替えの背景と、新しく定めたテスト戦略API テストのアーキテクチャチームメンバーが品質に自信を持てるようになった変化なお、runn そのものの特徴や使い方につい...]]></content>
+        <author>
+            <name>tom-uchida</name>
+        </author>
+        <published>2026-09-30T00:45:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenAI DevDay 2026 発表まとめ | Zennのトレンド]]></title>
+        <id>https://zenn.dev/schroneko/articles/openai-devday-2026</id>
+        <link href="https://zenn.dev/schroneko/articles/openai-devday-2026"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--z_7FVyRV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%2520DevDay%25202026%2520%25E7%2599%25BA%25E8%25A1%25A8%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AC%25E3%2581%2593%25E3%2581%25AC%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzE4ZDE4NWExYTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-29T17:20:46.000Z</updated>
+        <summary type="html"><![CDATA[!加筆中です。追記していきます。 tl;drOpenAI DevDay 2026 がサンフランシスコで開催されたよサンフランシスコ現地から情報をお送りするよひと通りのリソースをまとめたけど、まずは Recap ページを見るといいよ24 時間常時稼働のエージェント dots が発表されたよGPT-6 Astra に近い性能を低コストで使える GPT-6.1 Sol が公開されたよ高速にトークンを生成]]></summary>
+        <content type="html"><![CDATA[!加筆中です。追記していきます。 tl;drOpenAI DevDay 2026 がサンフランシスコで開催されたよサンフランシスコ現地から情報をお送りするよひと通りのリソースをまとめたけど、まずは Recap ページを見るといいよ24 時間常時稼働のエージェント dots が発表されたよGPT-6 Astra に近い性能を低コストで使える GPT-6.1 Sol が公開されたよ高速にトークンを生成する Ultrafast が使えるようになったよCodex のクラウド環境や CLI、コードレビュー機能が強化されたよAgents API が Computer Use...]]></content>
+        <author>
+            <name>ぬこぬこ</name>
+        </author>
+        <published>2026-09-29T17:20:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[生命科学研究 × AI 活用ハンドブック | Zennのトレンド]]></title>
+        <id>https://zenn.dev/labcode/books/c4f81b6a2d9e37</id>
+        <link href="https://zenn.dev/labcode/books/c4f81b6a2d9e37"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--87a4XG7y--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci9iYmJiYzI2MDNmLnBuZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE" type="image/jpg"/>
+        <updated>2026-09-29T14:29:01.000Z</updated>
+        <summary type="html"><![CDATA[📰 概要「AI で研究時間を取り戻す」ための、生命科学研究者向けの実践ハンドブックです。実験があり、解析があり、事務手続きがあり、そのうえで論文を書かなければならない。指導教員は忙しく、隣に詳しい人がいるとは限らない。そんな状況で研究を続ける研究者たちに取材し、実際にやっていることをそのまま書きました。理論書ではなく、明日から使える手順書です。🪜 最小限の学習コストで、できることを最大化するAI ]]></summary>
+        <content type="html"><![CDATA[📰 概要「AI で研究時間を取り戻す」ための、生命科学研究者向けの実践ハンドブックです。実験があり、解析があり、事務手続きがあり、そのうえで論文を書かなければならない。指導教員は忙しく、隣に詳しい人がいるとは限らない。そんな状況で研究を続ける研究者たちに取材し、実際にやっていることをそのまま書きました。理論書ではなく、明日から使える手順書です。🪜 最小限の学習コストで、できることを最大化するAI の使い方を「対話画面で完結（学習コストほぼゼロ）」「ツールを組み合わせる（30 分・コード不要）」「エージェントに任せる（数日）」の 3 段階に分け、全節に段階を表示しました。第 1 段階だけでも価値の大半は回収できます。難しい章は必要になってから読めば十分です。📮 メール・Slack・議事録から始める最も効果が大きく学習コストが低いのがコミュニケーションです。Gmail の返信文生成、Slack の AI 検索、ChatGPT コネクタでの横断検索、Gemini Notebook での議事録づくりを画面付きで解説。旅費・謝金・兼業届など「メールに埋もれて二度と探せない学内手続き」を掘り出す方]]></content>
+        <author>
+            <name>LabCode（ラボコード）</name>
+        </author>
+        <published>2026-09-29T14:29:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rustで作った自作OS「octox」がサンフランシスコ大学の教材になっていました | Zennのトレンド]]></title>
+        <id>https://zenn.dev/o8vm/articles/3934806424cd85</id>
+        <link href="https://zenn.dev/o8vm/articles/3934806424cd85"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--e0SPjRvZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Rust%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%25E8%2587%25AA%25E4%25BD%259COS%25E3%2580%258Coctox%25E3%2580%258D%25E3%2581%258C%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2595%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25B7%25E3%2582%25B9%25E3%2582%25B3%25E5%25A4%25A7%25E5%25AD%25A6%25E3%2581%25AE%25E6%2595%2599%25E6%259D%2590%25E3%2581%25AB%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:o8vm%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2NiZmU4Y2JiYzMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-29T09:00:05.000Z</updated>
+        <summary type="html"><![CDATA[私が Rust で実装して公開している Unix-like OS「octox」が、サンフランシスコ大学（University of San Francisco）の授業で教材として使用されていることが分かりました。octox 専用のガイドが用意されているだけでなく、講義で実装が解説され、ユーザープログラムやカーネルを拡張する課題も公開されています。[1]もともとは自分が OS を理解するために始めた]]></summary>
+        <content type="html"><![CDATA[私が Rust で実装して公開している Unix-like OS「octox」が、サンフランシスコ大学（University of San Francisco）の授業で教材として使用されていることが分かりました。octox 専用のガイドが用意されているだけでなく、講義で実装が解説され、ユーザープログラムやカーネルを拡張する課題も公開されています。[1]もともとは自分が OS を理解するために始めたプロジェクトなので、こうした形で活用していただけるのは素直にうれしいです。この投稿では、公開されている教材を紹介しながら、サンフランシスコ大学では octox を使って何を学ぶのかを見ていき...]]></content>
+        <author>
+            <name>o8vm</name>
+        </author>
+        <published>2026-09-29T09:00:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI 駆動開発で「設計」はどこに書くのか ― 振る舞いをテストで検証できる「仕様」にしてみる | Zennのトレンド]]></title>
+        <id>https://zenn.dev/softbank/articles/6f98cf7c4ebfd3</id>
+        <link href="https://zenn.dev/softbank/articles/6f98cf7c4ebfd3"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--06P2WhIO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%2520%25E9%25A7%2586%25E5%258B%2595%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25A7%25E3%2580%258C%25E8%25A8%25AD%25E8%25A8%2588%25E3%2580%258D%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%2593%25E3%2581%25AB%25E6%259B%25B8%25E3%2581%258F%25E3%2581%25AE%25E3%2581%258B%2520%25E2%2580%2595%2520%25E6%258C%25AF%25E3%2582%258B%25E8%2588%259E%25E3%2581%2584%25E3%2582%2592%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25A7%25E6%25A4%259C%25E8%25A8%25BC%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2580%258C%25E4%25BB%2595%25E6%25A7%2598%25E3%2580%258D%25E3%2581%25AB%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E7%2594%25B0%25E9%2582%2589%2520%25E5%2584%25AA%25E6%25B1%25B0%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg5M2YzODNlZDIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25BD%25E3%2583%2595%25E3%2583%2588%25E3%2583%2590%25E3%2583%25B3%25E3%2582%25AF%2520%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%25EF%25BC%2588%25E5%2585%25AC%25E5%25BC%258F%25EF%25BC%2589%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZlYTYxNTBmYTEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-29T07:02:41.000Z</updated>
+        <summary type="html"><![CDATA[はじめに日々の開発において、AI にコードを書いてもらうことは日常になってきました。要件を伝えれば既存のコードベースを調査し、その作法に合わせて機能を足してくれます。生成されたコードがいつも正しいわけではありませんが、それでも「コードを書く」という作業そのものは、以前ほど開発のボトルネックではなくなりつつあると感じています。その一方で、AI と一緒に開発していると、「何を実装してもらうか」を決める]]></summary>
+        <content type="html"><![CDATA[はじめに日々の開発において、AI にコードを書いてもらうことは日常になってきました。要件を伝えれば既存のコードベースを調査し、その作法に合わせて機能を足してくれます。生成されたコードがいつも正しいわけではありませんが、それでも「コードを書く」という作業そのものは、以前ほど開発のボトルネックではなくなりつつあると感じています。その一方で、AI と一緒に開発していると、「何を実装してもらうか」を決める時間の比重が増えてきました。この記事では、その実感を出発点に、次の 3 つを順に考えてみました。AI 駆動開発で、設計はどこに書いておくとよいのか既存の設計成果物で、実装されたコ...]]></content>
+        <author>
+            <name>田邉 優汰</name>
+        </author>
+        <published>2026-09-29T07:02:41.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code / Codexで「私のlimit、減りすぎ…？」と思ったときに見る記事 | Zennのトレンド]]></title>
+        <id>https://zenn.dev/tokium_dev/articles/ai-agent-usage-limit-long-sessions</id>
+        <link href="https://zenn.dev/tokium_dev/articles/ai-agent-usage-limit-long-sessions"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--Y3AQZej_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%2520Code%2520%252F%2520Codex%25E3%2581%25A7%25E3%2580%258C%25E7%25A7%2581%25E3%2581%25AElimit%25E3%2580%2581%25E6%25B8%259B%25E3%2582%258A%25E3%2581%2599%25E3%2581%258E%25E2%2580%25A6%25EF%25BC%259F%25E3%2580%258D%25E3%2581%25A8%25E6%2580%259D%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AB%25E8%25A6%258B%25E3%2582%258B%25E8%25A8%2598%25E4%25BA%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:hanafusay%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzViNTEwYjI5ZjEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:TOKIUM%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2580%25E3%2582%25AF%25E3%2583%2588%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%2520%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHVlNkF6SmtuTlMtdWV4dzN0Y0F4bFpmNTNzTTJLV3E3azQ3S1JLNF9TVXdTUFFkeHE9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-29T03:00:09.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは、TOKIUMの花房です。Claude CodeやCodexをサブスクリプションで使っていて、以下のように感じることはないでしょうか。週の半ばで週間上限が尽きる。作業量は先週と変わらないはずなのにSlack botやcron/launchdからエージェントを動かしていて、体感よりもリミット消費が多いプロンプトキャッシュにヒットしているはずなのに、やはり減りが多い気がするCodexの週間上]]></summary>
+        <content type="html"><![CDATA[こんにちは、TOKIUMの花房です。Claude CodeやCodexをサブスクリプションで使っていて、以下のように感じることはないでしょうか。週の半ばで週間上限が尽きる。作業量は先週と変わらないはずなのにSlack botやcron/launchdからエージェントを動かしていて、体感よりもリミット消費が多いプロンプトキャッシュにヒットしているはずなのに、やはり減りが多い気がするCodexの週間上限が急速に減った原因として、私は/goalで一晩動かして自動compact（コンテキストが上限に近づいたとき、エージェントが会話履歴を要約して縮める処理）が何十回も実行されたセッシ...]]></content>
+        <author>
+            <name>hanafusay</name>
+        </author>
+        <published>2026-09-29T03:00:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[３分で読めるトランザクション設計のコツ | Zennのトレンド]]></title>
+        <id>https://zenn.dev/mconfjp/articles/transaction-action-order</id>
+        <link href="https://zenn.dev/mconfjp/articles/transaction-action-order"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--CTvabk1W--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%2593%25E5%2588%2586%25E3%2581%25A7%25E8%25AA%25AD%25E3%2582%2581%25E3%2582%258B%25E3%2583%2588%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25B6%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%25AE%25E3%2582%25B3%25E3%2583%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2582%25E3%2582%258A%25E3%2581%259F%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmduNmRjWi1heEt6c1JkLXQ4UmxGcmRJMi1VV0tnTUpiamZISmQ5T0hqdmI4PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-29T02:45:05.000Z</updated>
+        <summary type="html"><![CDATA[これはなにこんにちは、もりたです。最近Software Designで連載をしています[1]。連載をしているとアホほど資料を読んでめちゃくちゃ学びがあるんですが原稿の進捗がやばすぎてZennに投稿できません[2]。この記事はせめてもの償いとして最近知った便利情報を簡単に皆さんにお伝えします。テーマは「トランザクションの中に処理を書く順番」です。これについて、簡単な指針があるという話をします。 課題]]></summary>
+        <content type="html"><![CDATA[これはなにこんにちは、もりたです。最近Software Designで連載をしています[1]。連載をしているとアホほど資料を読んでめちゃくちゃ学びがあるんですが原稿の進捗がやばすぎてZennに投稿できません[2]。この記事はせめてもの償いとして最近知った便利情報を簡単に皆さんにお伝えします。テーマは「トランザクションの中に処理を書く順番」です。これについて、簡単な指針があるという話をします。 課題：トランザクション処理の順番がわからんトランザクション処理を書いていると、こういう場面に出会います。外部サービスとの連携があって、どこで失敗したらどうなるかを考えないとい...]]></content>
+        <author>
+            <name>もりた</name>
+        </author>
+        <published>2026-09-29T02:45:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[テスト要求仕様（TRS）を書いてみたら、テスト設計が楽になった話 | Zennのトレンド]]></title>
+        <id>https://zenn.dev/edash_tech_blog/articles/0d49bd338b64f0</id>
+        <link href="https://zenn.dev/edash_tech_blog/articles/0d49bd338b64f0"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--_K_Q-f0F--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E8%25A6%2581%25E6%25B1%2582%25E4%25BB%2595%25E6%25A7%2598%25EF%25BC%2588TRS%25EF%25BC%2589%25E3%2582%2592%25E6%259B%25B8%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2582%2589%25E3%2580%2581%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%258C%25E6%25A5%25BD%25E3%2581%25AB%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ueda%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNkZWM5ZjExNTcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:e-dash%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGticmJpbFlheGNFWUROZVJwNURYM05PcnBwcjRpekJHTzJVTWV1YjRTYTNwbS13PXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-29T02:40:05.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは。e-dashでQAエンジニアをしているuedaです。みなさんはテストをするにあたって、どんなドキュメントを用意していますか。e-dash の QA チームでは、テストケースの前に テスト設計書（Test Design） を用意します。直近では、そのさらに前に テスト要求仕様（Test Requirement Spec、以下 TRS） を挟んでいます。テスト対象がどう動くべきかを確定させ]]></summary>
+        <content type="html"><![CDATA[こんにちは。e-dashでQAエンジニアをしているuedaです。みなさんはテストをするにあたって、どんなドキュメントを用意していますか。e-dash の QA チームでは、テストケースの前に テスト設計書（Test Design） を用意します。直近では、そのさらに前に テスト要求仕様（Test Requirement Spec、以下 TRS） を挟んでいます。テスト対象がどう動くべきかを確定させ、その確認に使う因子と水準まで決めておく文書です。これでテスト設計が、想像していたよりずっと楽になりました。何がどう楽になったのかを書きます。 1. これまでどうやってテスト設計をし...]]></content>
+        <author>
+            <name>ueda</name>
+        </author>
+        <published>2026-09-29T02:40:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI開発時代だからこそ、テストの役割を見つめ直す | Zennのトレンド]]></title>
+        <id>https://zenn.dev/ababup1192/articles/77b844dcfc1529</id>
+        <link href="https://zenn.dev/ababup1192/articles/77b844dcfc1529"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--Xs1ErC0V--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E9%2596%258B%25E7%2599%25BA%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25A0%25E3%2581%258B%25E3%2582%2589%25E3%2581%2593%25E3%2581%259D%25E3%2580%2581%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25AE%25E5%25BD%25B9%25E5%2589%25B2%25E3%2582%2592%25E8%25A6%258B%25E3%2581%25A4%25E3%2582%2581%25E7%259B%25B4%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ABAB%25E2%2586%2591%25E2%2586%2593BA%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dqRm84X2NSbjU2WlRqUEpXQmNzQTVCMmZ0c1l6czFnUnAyRUZ5PXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-29T01:00:44.000Z</updated>
+        <summary type="html"><![CDATA[AI がコードを書くようになり、「これからは E2E テストが大事だ」「いや、ユニットテストを厚くすべきだ」という議論をよく見かけます。けれども、テストの種類ごとに検出できる不具合は違い、その役割は AI が来ても変わりません。大事なのは、それぞれの役割を意識して使い分けることです。この記事では、テストの役割の違いと、AI と一緒に開発する時にそれぞれの役割をどう活かすかを整理します。 役割は、検]]></summary>
+        <content type="html"><![CDATA[AI がコードを書くようになり、「これからは E2E テストが大事だ」「いや、ユニットテストを厚くすべきだ」という議論をよく見かけます。けれども、テストの種類ごとに検出できる不具合は違い、その役割は AI が来ても変わりません。大事なのは、それぞれの役割を意識して使い分けることです。この記事では、テストの役割の違いと、AI と一緒に開発する時にそれぞれの役割をどう活かすかを整理します。 役割は、検出できる不具合の種類で決まるテストの種類を比べる時は、「どれが優れているか」ではなく「どの種類の不具合を検出できるか」で見ると整理しやすくなります。ユニットテストは、関数やモジュールのロ...]]></content>
+        <author>
+            <name>ABAB↑↓BA</name>
+        </author>
+        <published>2026-09-29T01:00:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[目を醒ませ 僕らの信頼が生成AIに侵略されてるぞ | Zennのトレンド]]></title>
+        <id>https://zenn.dev/spookies/articles/e70b80a510f5e2</id>
+        <link href="https://zenn.dev/spookies/articles/e70b80a510f5e2"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--7lfggBKQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%259B%25AE%25E3%2582%2592%25E9%2586%2592%25E3%2581%25BE%25E3%2581%259B%2520%25E5%2583%2595%25E3%2582%2589%25E3%2581%25AE%25E4%25BF%25A1%25E9%25A0%25BC%25E3%2581%258C%25E7%2594%259F%25E6%2588%2590AI%25E3%2581%25AB%25E4%25BE%25B5%25E7%2595%25A5%25E3%2581%2595%25E3%2582%258C%25E3%2581%25A6%25E3%2582%258B%25E3%2581%259E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%2599%25E3%2581%259A%25E3%2582%258B%25E3%2582%2593%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJlY2Y5YThhNjQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%25BC%25E3%2582%25BA%25E3%2581%25AE%25E3%2581%25A1%25E3%2582%2587%25E3%2581%25A3%25E3%2581%25A8Tech%25E3%2580%2582%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzBlNWU5OTc4ZWYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-09-29T01:00:08.000Z</updated>
+        <summary type="html"><![CDATA[想定読者2025年度以降にIT業界に参入したエンジニアシステム開発プロジェクトで上流〜中流工程を任されている人自分の仕事がAIに奪われていると感じているエンジニア tl;drMeat Proxyで起きる破綻は、AIのせいではなく「己に対して当然求められている責任を己が放棄した結果」である。生成AIは責任を持てないので、原理的に副操縦士の域をでない。人間の介在価値は意思と責任を持つことにある。エンジ]]></summary>
+        <content type="html"><![CDATA[想定読者2025年度以降にIT業界に参入したエンジニアシステム開発プロジェクトで上流〜中流工程を任されている人自分の仕事がAIに奪われていると感じているエンジニア tl;drMeat Proxyで起きる破綻は、AIのせいではなく「己に対して当然求められている責任を己が放棄した結果」である。生成AIは責任を持てないので、原理的に副操縦士の域をでない。人間の介在価値は意思と責任を持つことにある。エンジニアよ、意思と責任を持て。 はじめに。こんにちは。スプーキーズでOpenCode宣教師をしていたすずるんです。はじめてZennに、それも会社名義で書くわけです...]]></content>
+        <author>
+            <name>すずるん</name>
+        </author>
+        <published>2026-09-29T01:00:08.000Z</published>
+    </entry>
+</feed>

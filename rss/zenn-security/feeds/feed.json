@@ -1,0 +1,450 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Zenn Securityタグ｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/feeds/feed.json",
+    "description": "Zenn Securityタグセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://zenn.dev/nyondev/articles/pcidss-lab-part4",
+            "content_html": "はじめにこの連載では、カード会員データ環境（CDE）を模した小さなネットワークをAWS上に作り、PCI DSSで扱われる技術要素――ネットワークの分離、アクセス制御、ログの収集と確認――を、自分の手で構築・検証してきました。最終回の第4回では、次のことを行います。第3回までSSHポートフォワード経由でしか見られなかったSplunkを、Cloudflare Tunnel + Cloudflare Access で公開する（Splunk側のインバウンド公開なし）Corp Workstation → CDE の不正な通信を4パターン発生させ、VPC Flow Logs の RE...",
+            "url": "https://zenn.dev/nyondev/articles/pcidss-lab-part4",
+            "title": "TerraformによるPCI DSS検証ラボ構築（4）～ Cloudflare Zero TrustとSplunkによる通信制御の実証 ～ | Zennの「Security」のフィード",
+            "summary": "はじめにこの連載では、カード会員データ環境（CDE）を模した小さなネットワークをAWS上に作り、PCI DSSで扱われる技術要素――ネットワークの分離、アクセス制御、ログの収集と確認――を、自分の手で構築・検証してきました。最終回の第4回では、次のことを行います。第3回までSSHポートフォワード経由でしか見られなかったSplunkを、Cloudflare Tunnel + Cloudflare A",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--Ke76TNSE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Terraform%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BPCI%2520DSS%25E6%25A4%259C%25E8%25A8%25BC%25E3%2583%25A9%25E3%2583%259C%25E6%25A7%258B%25E7%25AF%2589%25EF%25BC%25884%25EF%25BC%2589%25EF%25BD%259E%2520Cloudflare%2520Zero%2520Trust%25E3%2581%25A8Splun...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NyonDev%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzgwYWU1YTQ1N2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T15:44:11.000Z",
+            "date_published": "2026-10-03T15:44:11.000Z",
+            "author": {
+                "name": "NyonDev"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "TerraformによるPCI DSS検証ラボ構築（4）～ Cloudflare Zero TrustとSplunkによる通信制御の実証 ～",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/tatsuqumo/articles/dd652df2275508",
+            "content_html": "はじめにGoogle Cloudの新資格、Professional Security Operations Engineer（PSOE）に日本語版が出ていたので、受験しました。勉強に使った教材や出題範囲を網羅した自作のまとめシートをご紹介します。特に、PSOE は2025年9月にGA（一般提供）になった新資格のため、情報量が少ないので、資格受験の際に参考いただければ幸いです。私は、Google Cloudの資格は2025年に全冠し、受験時点で、PSOEを除く全ての資格を保有していました。ただ、Google Cloud自体は、個人的にAI開発でいくつかのサービスを使うぐらいで...",
+            "url": "https://zenn.dev/tatsuqumo/articles/dd652df2275508",
+            "title": "【合格体験記】Professional Security Operations Engineer を10時間で合格するためにしたこと | Zennの「Security」のフィード",
+            "summary": "はじめにGoogle Cloudの新資格、Professional Security Operations Engineer（PSOE）に日本語版が出ていたので、受験しました。勉強に使った教材や出題範囲を網羅した自作のまとめシートをご紹介します。特に、PSOE は2025年9月にGA（一般提供）になった新資格のため、情報量が少ないので、資格受験の際に参考いただければ幸いです。私は、Google C",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--xS1H_bXz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E5%2590%2588%25E6%25A0%25BC%25E4%25BD%2593%25E9%25A8%2593%25E8%25A8%2598%25E3%2580%2591Professional%2520Security%2520Operations%2520Engineer%2520%25E3%2582%259210%25E6%2599%2582%25E9%2596%2593%25E3%2581%25A7%25E5%2590%2588%25E6%25A0%25BC...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:qumo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzQ5Y2M2Y2JiNTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T15:34:45.000Z",
+            "date_published": "2026-10-03T15:34:45.000Z",
+            "author": {
+                "name": "qumo"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【合格体験記】Professional Security Operations Engineer を10時間で合格するためにしたこと",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/tatsuqumo/books/78e9e17d350547",
+            "content_html": "Professional Security Operations Engineer に合格するための知識を詰め込んだ整理ノートです。解説に加え、101問の実践クイズも収録しています。",
+            "url": "https://zenn.dev/tatsuqumo/books/78e9e17d350547",
+            "title": "【完全版】Professional Security Operations Engineer 整理ノート | Zennの「Security」のフィード",
+            "summary": "Professional Security Operations Engineer に合格するための知識を詰め込んだ整理ノートです。解説に加え、101問の実践クイズも収録しています。",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--5oueOy2G--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci8xZGNlOWFhMzExLmpwZWc=%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE",
+            "date_modified": "2026-10-03T15:26:39.000Z",
+            "date_published": "2026-10-03T15:26:39.000Z",
+            "author": {
+                "name": "qumo"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【完全版】Professional Security Operations Engineer 整理ノート",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/hkawase1220/articles/450856fe1c4f47",
+            "content_html": "README初学者の、初学者による、初学者のためのWriteupです。「なぜその判断に至ったのか」「なぜそのコマンドを実行しようと考えたのか」など、各アクションに至った思考回路部分についても触れています。尚、一部正確でない表現が含まれている場合があります。一応実務でもペネトレーションテストをやっているので、（たまに）実務目線のコメントも挟みます。 想定読者HTBなどのCTF/ペネトレーションテスト演習に興味がある初学者Linuxの基本的なコマンド操作、HTTP/SMB/Kerberosなどのプロトコルについてある程度の前提知識がある方(本記事内でも簡単な用語解説...",
+            "url": "https://zenn.dev/hkawase1220/articles/450856fe1c4f47",
+            "title": "[ HTB ] Active | Writeup | Zennの「Security」のフィード",
+            "summary": "README初学者の、初学者による、初学者のためのWriteupです。「なぜその判断に至ったのか」「なぜそのコマンドを実行しようと考えたのか」など、各アクションに至った思考回路部分についても触れています。尚、一部正確でない表現が含まれている場合があります。一応実務でもペネトレーションテストをやっているので、（たまに）実務目線のコメントも挟みます。 想定読者HTBなどのCTF/ペネトレーションテスト",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--dioNz9EW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_72:%255B%2520HTB%2520%255D%2520Active%2520%257C%2520Writeup%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kawase%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzk3NDZkODlkZmIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T13:38:05.000Z",
+            "date_published": "2026-10-03T13:38:05.000Z",
+            "author": {
+                "name": "kawase"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[ HTB ] Active | Writeup",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/coworker_jp/articles/claude-code-loop-engineering-brakes",
+            "content_html": "はじめにCoWorker でセキュリティ技術リードをしている伊藤です。Claude Code に一度依頼して回答を待つだけでなく、作業を繰り返し任せる使い方が当たり前になってきました。PR を出したら CI を見守り、落ちたら直して再 push する複数のサブエージェントを並列に走らせてレビューと実装を分担する/loop やスケジュール実行で、夜のあいだに保守タスクを片付けておくここでは、この使い方をループエンジニアリングと呼びます。プロンプトを 1 回うまく書く技術とは別に、何をきっかけに作業を始め、何をもって完了とし、どこで人間の判断を求めるかを設計する技術です...",
+            "url": "https://zenn.dev/coworker_jp/articles/claude-code-loop-engineering-brakes",
+            "title": "Claude Code で開発ループを回す：auto mode の権限設定と hook による検証 | Zennの「Security」のフィード",
+            "summary": "はじめにCoWorker でセキュリティ技術リードをしている伊藤です。Claude Code に一度依頼して回答を待つだけでなく、作業を繰り返し任せる使い方が当たり前になってきました。PR を出したら CI を見守り、落ちたら直して再 push する複数のサブエージェントを並列に走らせてレビューと実装を分担する/loop やスケジュール実行で、夜のあいだに保守タスクを片付けておくここでは、この使い",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--DcezuSOJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%2520Code%2520%25E3%2581%25A7%25E9%2596%258B%25E7%2599%25BA%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2582%2592%25E5%259B%259E%25E3%2581%2599%25EF%25BC%259Aauto%2520mode%2520%25E3%2581%25AE%25E6%25A8%25A9%25E9%2599%2590%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%25A8%2520hook%2520%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%25A4%259C%25E8%25A8%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:CoWorker%2520%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MyMzY4YTFmYjEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T13:11:10.000Z",
+            "date_published": "2026-10-03T13:11:10.000Z",
+            "author": {
+                "name": "CoWorker 株式会社"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Claude Code で開発ループを回す：auto mode の権限設定と hook による検証",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/tomnori/articles/e6c7925ae639fc",
+            "content_html": "転職し、情シスになって初週を終えた。 知識はあるが、経験がない例えばMFA（二段階認証）は重要認証アプリを用いるパターンを採用する実際に設定するこの時、1と2は「知っている」が、3は手順が分からないので調べるところスタートする具合だ。 ベストプラクティスと現実の乖離例えばMFAよりパスキーの方が安全NISTの最新ガイドラインではパスワードは複雑性よりも長さが重要しかしパスキーよりもMFAが主流だったり、パスワードは長さより複雑なものが好まれたりすることもある。知識だけで動くと理想の押し付けになるので、現実に立って予算や利便性や人間感情とのバランスを探っ...",
+            "url": "https://zenn.dev/tomnori/articles/e6c7925ae639fc",
+            "title": "情シス初週 | Zennの「Security」のフィード",
+            "summary": "転職し、情シスになって初週を終えた。 知識はあるが、経験がない例えばMFA（二段階認証）は重要認証アプリを用いるパターンを採用する実際に設定するこの時、1と2は「知っている」が、3は手順が分からないので調べるところスタートする具合だ。 ベストプラクティスと現実の乖離例えばMFAよりパスキーの方が安全NISTの最新ガイドラインではパスワードは複雑性よりも長さが重要しかしパスキーよりもMFAが主流だっ",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--zuCB1438--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:%25E6%2583%2585%25E3%2582%25B7%25E3%2582%25B9%25E5%2588%259D%25E9%2580%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tomnori%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvdC5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T08:32:22.000Z",
+            "date_published": "2026-10-03T08:32:22.000Z",
+            "author": {
+                "name": "tomnori"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "情シス初週",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/toumorocorn/articles/d306b4abbb7efa",
+            "content_html": "https://alpacahack.com/challenges/whats-nextまずはソースコードを確認。/web/src の中のファイルを見ると、secret.js にフラグがある。ブラウザでそのページにアクセスしたらフラグを見れそうだけど、/secret にアクセスしても、404になってしまう。いつも開いてみるけど特にヒントのない Dockerfile に、以下の記述があった。DockerfileRUN mv src/pages/secret.js src/pages/secret-$(tr -dc 'A-Za-z0-9' &lt;/dev/urandom |...",
+            "url": "https://zenn.dev/toumorocorn/articles/d306b4abbb7efa",
+            "title": "Writeup for What's Next | Zennの「Security」のフィード",
+            "summary": "https://alpacahack.com/challenges/whats-nextまずはソースコードを確認。/web/src の中のファイルを見ると、secret.js にフラグがある。ブラウザでそのページにアクセスしたらフラグを見れそうだけど、/secret にアクセスしても、404になってしまう。いつも開いてみるけど特にヒントのない Dockerfile に、以下の記述があった。Dock",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--QCrdA4Hv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_72:Writeup%2520for%2520What%2527s%2520Next%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2581%2586%25E3%2582%2582%25E3%2582%258D%25E3%2581%2593%25E3%2581%2597%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E5OWE1ZTZlYmMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T08:15:55.000Z",
+            "date_published": "2026-10-03T08:15:55.000Z",
+            "author": {
+                "name": "とうもろこし"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Writeup for What's Next",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/lafine/articles/b43b5d1468fa11",
+            "content_html": "「このユーザーは、どこまで権限を上げられるのか」を、端末の設定から洗い出してくれる分析ツールPathScopeを作りました。MacとLinuxの端末で動いて、一般のユーザーからrootや機密データに届く道を「経路」として出し、どこから直すと効果が大きいかまで教えてくれます。使い方の紹介は、Noteの記事にまとめました。この記事では、その中身を書きます。推論にはPrologを、設定ファイルの読み取りにはLLMを、直す順番の決め方にはファジー推論を使っていて、この三つの分担と、それぞれの境目の作り方が、いちばん書きたいところです。 動機 Prologで解ける形の問題でした私自身、80...",
+            "url": "https://zenn.dev/lafine/articles/b43b5d1468fa11",
+            "title": "権限昇格の経路分析を、Prologで推論し、LLMに読ませ、ファジーで順位づけする | Zennの「Security」のフィード",
+            "summary": "「このユーザーは、どこまで権限を上げられるのか」を、端末の設定から洗い出してくれる分析ツールPathScopeを作りました。MacとLinuxの端末で動いて、一般のユーザーからrootや機密データに届く道を「経路」として出し、どこから直すと効果が大きいかまで教えてくれます。使い方の紹介は、Noteの記事にまとめました。この記事では、その中身を書きます。推論にはPrologを、設定ファイルの読み取り",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--b-8RYGB2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A8%25A9%25E9%2599%2590%25E6%2598%2587%25E6%25A0%25BC%25E3%2581%25AE%25E7%25B5%258C%25E8%25B7%25AF%25E5%2588%2586%25E6%259E%2590%25E3%2582%2592%25E3%2580%2581Prolog%25E3%2581%25A7%25E6%258E%25A8%25E8%25AB%2596%25E3%2581%2597%25E3%2580%2581LLM%25E3%2581%25AB%25E8%25AA%25AD%25E3%2581%25BE%25E3%2581%259B%25E3%2580%2581%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25B8%25E3%2583%25BC%25E3%2581%25A7%25E9%25A0%2586%25E4%25BD%258D%25E3%2581%25A5%25E3%2581%2591%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B5%25E3%2581%2598%25E3%2581%258D%25E3%2580%2580%25E3%2581%25A6%25E3%2581%25A4%25E3%2581%25AF%25E3%2582%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pBdko1VjNBeWQxc3RBd0twTXlGNWNaSHZLZUc5bEtXTWhJUjNJbzFnPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T07:22:41.000Z",
+            "date_published": "2026-10-03T07:22:41.000Z",
+            "author": {
+                "name": "ふじき　てつはる"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "権限昇格の経路分析を、Prologで推論し、LLMに読ませ、ファジーで順位づけする",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/kondonator/articles/9d3f7195895d1c",
+            "content_html": "はじめに前回の記事では、AI Security Labを始める理由と、このLabで何を明らかにしたいのかについて説明しました。AI Security Labを始める ― AIに、どこまで仕事を任せられるのかAIに、どこまで仕事を任せてよいのか？この問いについて、AIを実際に動かし、意図的に条件を変えながら実験していきます。そのためには、実験ごとに環境が変わってしまうと、結果を比較しにくくなります。そこで、AI Security Labでは、できるだけ共通した環境を使って実験を行っています。この記事では、今後の記事で共通して利用する実験環境について説明します。実験そ...",
+            "url": "https://zenn.dev/kondonator/articles/9d3f7195895d1c",
+            "title": "AI Security Labの実験環境 ― OllamaとPythonでLLMの動作を実験する | Zennの「Security」のフィード",
+            "summary": "はじめに前回の記事では、AI Security Labを始める理由と、このLabで何を明らかにしたいのかについて説明しました。AI Security Labを始める ― AIに、どこまで仕事を任せられるのかAIに、どこまで仕事を任せてよいのか？この問いについて、AIを実際に動かし、意図的に条件を変えながら実験していきます。そのためには、実験ごとに環境が変わってしまうと、結果を比較しにくくなります。",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--v4zNV1dz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%2520Security%2520Lab%25E3%2581%25AE%25E5%25AE%259F%25E9%25A8%2593%25E7%2592%25B0%25E5%25A2%2583%2520%25E2%2580%2595%2520Ollama%25E3%2581%25A8Python%25E3%2581%25A7LLM%25E3%2581%25AE%25E5%258B%2595%25E4%25BD%259C%25E3%2582%2592%25E5%25AE%259F%25E9%25A8%2593%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kondonator%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlRma3pLRF94cGdiclpkd19nWGJ1eE1zMW1mTGROa2JZMV9qbHBwV3gtTXBPS0xkZks9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T04:26:34.000Z",
+            "date_published": "2026-10-03T04:26:34.000Z",
+            "author": {
+                "name": "kondonator"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AI Security Labの実験環境 ― OllamaとPythonでLLMの動作を実験する",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/btncon/articles/46d75bb9227958",
+            "content_html": "!本記事は株式会社BTNコンサルティングのブログ記事「SCS評価制度「取引先管理」の要件｜接続システムの把握と機密情報の取り決め」を再構成したものです。最新版は初出記事をご覧ください。https://www.btncon.com/blog/scs-supplier-management大分類2「取引先管理」は、サプライチェーン強化を目的とするSCS評価制度で独立した大分類として設けられている領域です。要求事項は全5件で、★3の対象は3件・評価基準4件です。 ★3で求められる要求事項 2-1-1 取引先とのビジネス又はシステム上の関係2-1-1-1：自社以外の組織（顧客...",
+            "url": "https://zenn.dev/btncon/articles/46d75bb9227958",
+            "title": "SCS評価制度「取引先管理」の要件｜接続システムの把握と機密情報の取り決め | Zennの「Security」のフィード",
+            "summary": "!本記事は株式会社BTNコンサルティングのブログ記事「SCS評価制度「取引先管理」の要件｜接続システムの把握と機密情報の取り決め」を再構成したものです。最新版は初出記事をご覧ください。https://www.btncon.com/blog/scs-supplier-management大分類2「取引先管理」は、サプライチェーン強化を目的とするSCS評価制度で独立した大分類として設けられている領域で",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--lxZlMnqs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SCS%25E8%25A9%2595%25E4%25BE%25A1%25E5%2588%25B6%25E5%25BA%25A6%25E3%2580%258C%25E5%258F%2596%25E5%25BC%2595%25E5%2585%2588%25E7%25AE%25A1%25E7%2590%2586%25E3%2580%258D%25E3%2581%25AE%25E8%25A6%2581%25E4%25BB%25B6%25EF%25BD%259C%25E6%258E%25A5%25E7%25B6%259A%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2581%25AE%25E6%258A%258A%25E6%258F%25A1%25E3%2581%25A8%25E6%25A9%259F%25E5%25AF%2586%25E6%2583%2585%25E5%25A0%25B1%25E3%2581%25AE%25E5%258F%2596%25E3%2582%258A%25E6%25B1%25BA%25E3%2582%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BEBTN%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25B5%25E3%2583%25AB%25E3%2583%2586%25E3%2582%25A3%25E3%2583%25B3%25E3%2582%25B0%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvYi5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T03:49:04.000Z",
+            "date_published": "2026-10-03T03:49:04.000Z",
+            "author": {
+                "name": "株式会社BTNコンサルティング"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "SCS評価制度「取引先管理」の要件｜接続システムの把握と機密情報の取り決め",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/rudy_candy/books/assessment-report-toolkit",
+            "content_html": "📕 概要脆弱性を見つけたあと、手が止まるのは報告書を書く段になってからでした。HighかMediumか。この説明で開発者は直せるか。経営層に何が起きるか伝わるか。この本は、脆弱性診断の報告書を「書いて、判定して、納品する」ための型と部品をまとめた実務書です。読み通すより、案件のたびに開いて使うことを想定しています。・報告書の全体テンプレート（Markdown全文）・エグゼクティブサマリーの3段落の型と総評の文例・自社基準とCVSS v3.1を併記する危険度の付け方と、判定の流れ図・Self-XSSやヘッダ系など、判断が割れやすい指摘の判定集・そのまま貼れるWebの指摘文例35項目（概要・影響・対策・CWE）・画面・機能ごとの診断チェックリスト（OWASP WSTG対応）・報告会の「本当に危ないの？」への答え方、再診断報告書、提出前チェックテンプレートと文例はすべて著者が書き起こしたもので、根拠はIPA・OWASP・CVSS・CWEなどの公開資料で示しています。💪 こんな方におすすめ☆ 報告書を一人で書き始めた診断員1〜3年目の方☆ 後輩の報告書をレビューする立場になった方☆ 社内で脆弱",
+            "url": "https://zenn.dev/rudy_candy/books/assessment-report-toolkit",
+            "title": "脆弱性診断 報告書の書き方と判定基準 | Zennの「Security」のフィード",
+            "summary": "📕 概要脆弱性を見つけたあと、手が止まるのは報告書を書く段になってからでした。HighかMediumか。この説明で開発者は直せるか。経営層に何が起きるか伝わるか。この本は、脆弱性診断の報告書を「書いて、判定して、納品する」ための型と部品をまとめた実務書です。読み通すより、案件のたびに開いて使うことを想定しています。・報告書の全体テンプレート（Markdown全文）・エグゼクティブサマリーの3段落の",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--ZTSM0_dT--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci85YjJhMmZkYWQwLnBuZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE",
+            "date_modified": "2026-10-03T03:30:19.000Z",
+            "date_published": "2026-10-03T03:30:19.000Z",
+            "author": {
+                "name": "rudy_candy"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "脆弱性診断 報告書の書き方と判定基準",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/seekseep/articles/supabase-extension-in-public",
+            "content_html": "Supabaseで pgcrypto や uuid-ossp などの拡張を有効にしたら、Security Advisorに「Extension in Public」という警告が出ました。この記事では、拡張を public スキーマに置くと関数名の衝突が乗っ取りの踏み台になる流れを解説します。Supabaseで拡張を使う方を対象としています。 要点：この警告は何を言っているのかSupabaseのDatabase Advisorsには 0014_extension_in_public というチェックがあります。拡張機能（extension）が public スキーマにインストールされて...",
+            "url": "https://zenn.dev/seekseep/articles/supabase-extension-in-public",
+            "title": "Supabaseの「拡張がpublicスキーマに配置」警告 - 名前衝突が乗っ取りの踏み台になる | Zennの「Security」のフィード",
+            "summary": "Supabaseで pgcrypto や uuid-ossp などの拡張を有効にしたら、Security Advisorに「Extension in Public」という警告が出ました。この記事では、拡張を public スキーマに置くと関数名の衝突が乗っ取りの踏み台になる流れを解説します。Supabaseで拡張を使う方を対象としています。 要点：この警告は何を言っているのかSupabaseのDa",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--wkg0yLjx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Supabase%25E3%2581%25AE%25E3%2580%258C%25E6%258B%25A1%25E5%25BC%25B5%25E3%2581%258Cpublic%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%259E%25E3%2581%25AB%25E9%2585%258D%25E7%25BD%25AE%25E3%2580%258D%25E8%25AD%25A6%25E5%2591%258A%2520-%2520%25E5%2590%258D%25E5%2589%258D%25E8%25A1%259D%25E7%25AA%2581%25E3%2581%258C%25E4%25B9%2597%25E3%2581%25A3%25E5%258F%2596%25E3%2582%258A%25E3%2581%25AE%25E8%25B8%258F%25E3%2581%25BF%25E5%258F%25B0%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2593%25E3%2582%2584%25E3%2581%25BE%25E3%2581%259F%25E3%2581%258F%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dHdVdiR3Z6VEQzRHJJbDNocmJvVVpOZkhtbHZSZHJzRGMzMTRGdV9BPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T02:12:10.000Z",
+            "date_published": "2026-10-03T02:12:10.000Z",
+            "author": {
+                "name": "よこやまたく"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Supabaseの「拡張がpublicスキーマに配置」警告 - 名前衝突が乗っ取りの踏み台になる",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/rudy_candy/articles/disko-2-picoctf-writeup",
+            "content_html": "CyLab Security Academy（旧picoCTF）の DISKO 2 を解きました。前作の DISKO 1 で覚えた手をそのまま使ったら、フラグ候補が125個出てきました。$ strings disko-2.dd | grep -o \"picoCTF{[^}]*}\" | sort -u | wc -l125DISKO 1 は strings を1回かけるだけで終わる問題でした（そのときの記事）。「ディスクイメージはまず strings」は、そこで覚えた順番です。DISKO 2 は、その順番を覚えた人をちょうど狙ってきます。 125個は全部同じ顔をしていたpico...",
+            "url": "https://zenn.dev/rudy_candy/articles/disko-2-picoctf-writeup",
+            "title": "【picoCTF】DISKO 2 — DISKO 1で覚えた「まずstrings」が125個のおとりを連れてきた | Zennの「Security」のフィード",
+            "summary": "CyLab Security Academy（旧picoCTF）の DISKO 2 を解きました。前作の DISKO 1 で覚えた手をそのまま使ったら、フラグ候補が125個出てきました。$ strings disko-2.dd | grep -o \"picoCTF{[^}]*}\" | sort -u | wc -l125DISKO 1 は strings を1回かけるだけで終わる問題でした（そのと",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--qZSYgNhE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590picoCTF%25E3%2580%2591DISKO%25202%2520%25E2%2580%2594%2520DISKO%25201%25E3%2581%25A7%25E8%25A6%259A%25E3%2581%2588%25E3%2581%259F%25E3%2580%258C%25E3%2581%25BE%25E3%2581%259Astrings%25E3%2580%258D%25E3%2581%258C125%25E5%2580%258B%25E3%2581%25AE%25E3%2581%258A%25E3%2581%25A8%25E3%2582%258A%25E3%2582%2592%25E9%2580%25A3%25E3%2582%258C%25E3%2581%25A6%25E3%2581%258D%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:rudy_candy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2M4NzY4ZWFkZTIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T01:26:35.000Z",
+            "date_published": "2026-10-03T01:26:35.000Z",
+            "author": {
+                "name": "rudy_candy"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【picoCTF】DISKO 2 — DISKO 1で覚えた「まずstrings」が125個のおとりを連れてきた",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/luth/articles/e2ee-design-poohma",
+            "content_html": "こんにちは、luthです🐢PoohMa（プーマ）という、家族でカンタンにアカウント情報を共有できるWebアプリを作っています。アプリリンクhttps://poohma.ciderlabs.link＊アプリは開発中のものですので、本記事の設計内容を含め、正式リリース時には変更される場合もあります。GitHubリポジトリhttps://github.com/luthpg/poohma動画配信サービスやWi-Fi、各種サブスクなど、家族で共有しているアカウントは意外と多いのではないでしょうか。でも実際のパスワードをそのままLINEなどで教え合うのは何だかセキュリティ的に怖...",
+            "url": "https://zenn.dev/luth/articles/e2ee-design-poohma",
+            "title": "「知らんサーバーにパスワードを預けたくない」から始めた家族向けE2EE設計 | Zennの「Security」のフィード",
+            "summary": "こんにちは、luthです🐢PoohMa（プーマ）という、家族でカンタンにアカウント情報を共有できるWebアプリを作っています。アプリリンクhttps://poohma.ciderlabs.link＊アプリは開発中のものですので、本記事の設計内容を含め、正式リリース時には変更される場合もあります。GitHubリポジトリhttps://github.com/luthpg/poohma動画配信サービスや",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--oqu7-dOR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258C%25E7%259F%25A5%25E3%2582%2589%25E3%2582%2593%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25AB%25E3%2583%2591%25E3%2582%25B9%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E9%25A0%2590%25E3%2581%2591%25E3%2581%259F%25E3%2581%258F%25E3%2581%25AA%25E3%2581%2584%25E3%2580%258D%25E3%2581%258B%25E3%2582%2589%25E5%25A7%258B%25E3%2582%2581%25E3%2581%259F%25E5%25AE%25B6%25E6%2597%258F%25E5%2590%2591%25E3%2581%2591E2EE%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:luth%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJhNjRjYzI5NGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-03T00:12:07.000Z",
+            "date_published": "2026-10-03T00:12:07.000Z",
+            "author": {
+                "name": "luth"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "「知らんサーバーにパスワードを預けたくない」から始めた家族向けE2EE設計",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/sosa/articles/what-is-sqlinjection",
+            "content_html": "1. はじめに（観測された生ログの提示）個人VPSで運用しているWordPress環境にて、WAF（ModSecurity + OWASP CRS）が検知した実際の攻撃ログです。Fri Oct 2 07:29:46 2026 GET 403 /wp-content/themes/cocoon-master/lib/analytics/access.php?post_id=33844&amp;post_type=page&amp;t=1790890239%29%21important%3Bvisibility%3Ahidden%3Bposition%3Aabs...",
+            "url": "https://zenn.dev/sosa/articles/what-is-sqlinjection",
+            "title": "なぜサイバー攻撃者はサーバーのコードではなくデータベースを狙うのか？SQLインジェクションの本質に迫る! | Zennの「Security」のフィード",
+            "summary": "1. はじめに（観測された生ログの提示）個人VPSで運用しているWordPress環境にて、WAF（ModSecurity + OWASP CRS）が検知した実際の攻撃ログです。Fri Oct 2 07:29:46 2026 GET 403 /wp-content/themes/cocoon-master/lib/analytics/access.php?post_id=33844&post_ty",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--hVA-A4Zv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%25AA%25E3%2581%259C%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E6%2594%25BB%25E6%2592%2583%25E8%2580%2585%25E3%2581%25AF%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25AE%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25A7%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%258F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2599%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%2592%25E7%258B%2599%25E3%2581%2586%25E3%2581%25AE%25E3%2581%258B%25EF%25BC%259FSQL%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2581%25AE%25E6%259C%25AC%25E8%25B3%25AA%25E3%2581%25AB%25E8%25BF%25AB%25E3%2582%258B%2521%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sosa%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U2MTM4YzYyYjAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-02T22:12:08.000Z",
+            "date_published": "2026-10-02T22:12:08.000Z",
+            "author": {
+                "name": "sosa"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "なぜサイバー攻撃者はサーバーのコードではなくデータベースを狙うのか？SQLインジェクションの本質に迫る!",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/yuki7592/articles/cookie-tls-bearer",
+            "content_html": "はじめにWebの認証まわりを学んでいると、こんな疑問を持ったことはないでしょうか。「ログイン状態を保っているCookieって、暗号化されてるの?盗まれたらどうなるの?」そしてその前提として、こんな疑問もあるはずです。「そもそもTLSで暗号化接続できるのはなぜ?そんな暗号鍵、作った覚えがないのに」この記事では、この素朴な疑問を出発点に、TLSの仕組み、Cookieの中身、そして「盗まれたらどうなるか」までを整理します。途中、Qiitaが実際に発行している本物のCookieをcurlで取得して解剖します。教科書的な説明よりも、実物を見ながらのほうが圧倒的に頭に入るからです。...",
+            "url": "https://zenn.dev/yuki7592/articles/cookie-tls-bearer",
+            "title": "Cookieは暗号化されてるの?盗まれないの? — Qiitaの本物のCookieを解剖して理解する | Zennの「Security」のフィード",
+            "summary": "はじめにWebの認証まわりを学んでいると、こんな疑問を持ったことはないでしょうか。「ログイン状態を保っているCookieって、暗号化されてるの?盗まれたらどうなるの?」そしてその前提として、こんな疑問もあるはずです。「そもそもTLSで暗号化接続できるのはなぜ?そんな暗号鍵、作った覚えがないのに」この記事では、この素朴な疑問を出発点に、TLSの仕組み、Cookieの中身、そして「盗まれたらどうなるか",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--AyUPqHyh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cookie%25E3%2581%25AF%25E6%259A%2597%25E5%258F%25B7%25E5%258C%2596%25E3%2581%2595%25E3%2582%258C%25E3%2581%25A6%25E3%2582%258B%25E3%2581%25AE%253F%25E7%259B%2597%25E3%2581%25BE%25E3%2582%258C%25E3%2581%25AA%25E3%2581%2584%25E3%2581%25AE%253F%2520%25E2%2580%2594%2520Qiita%25E3%2581%25AE%25E6%259C%25AC%25E7%2589%25A9%25E3%2581%25AECookie%25E3%2582%2592%25E8%25A7%25A3%25E5%2589%2596%25E3%2581%2597%25E3%2581%25A6%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsveS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-02T19:10:51.000Z",
+            "date_published": "2026-10-02T19:10:51.000Z",
+            "author": {
+                "name": "yuki"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Cookieは暗号化されてるの?盗まれないの? — Qiitaの本物のCookieを解剖して理解する",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/vs/articles/3bcf58c621f2ac",
+            "content_html": "はじめに前回の記事では、MicrosoftがなぜNTLMへの依存を減らそうとしているのかを見てきました。NTLMには、NTLM RelayPass-the-HashServer Identityとの弱いBindingなど、現在の脅威モデルでは問題になりやすい性質があります。一方、KerberosではKDCが発行するService Ticketによって、ユーザーだけでなく接続対象となるService Identityも認証モデルに組み込まれます。それなら、なぜWindowsはもっと早くNTLMを廃止し、Kerberosだけにしなかったのでしょうか。理由は単純...",
+            "url": "https://zenn.dev/vs/articles/3bcf58c621f2ac",
+            "title": "Kerberosの方が安全なのに、なぜNTLMをなくせなかったのか | Zennの「Security」のフィード",
+            "summary": "はじめに前回の記事では、MicrosoftがなぜNTLMへの依存を減らそうとしているのかを見てきました。NTLMには、NTLM RelayPass-the-HashServer Identityとの弱いBindingなど、現在の脅威モデルでは問題になりやすい性質があります。一方、KerberosではKDCが発行するService Ticketによって、ユーザーだけでなく接続対象となるService",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--74tlu0iU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kerberos%25E3%2581%25AE%25E6%2596%25B9%25E3%2581%258C%25E5%25AE%2589%25E5%2585%25A8%25E3%2581%25AA%25E3%2581%25AE%25E3%2581%25AB%25E3%2580%2581%25E3%2581%25AA%25E3%2581%259CNTLM%25E3%2582%2592%25E3%2581%25AA%25E3%2581%258F%25E3%2581%259B%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25AE%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Visuality%2520Systems%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTFIwamxCQklkc0IwWGNUZWxZUmZZUUJJcDcwS01oMVlIY0VZNGw4bUE0bEVwaUp3PXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-02T13:44:48.000Z",
+            "date_published": "2026-10-02T13:44:48.000Z",
+            "author": {
+                "name": "Visuality Systems"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Kerberosの方が安全なのに、なぜNTLMをなくせなかったのか",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/kondonator/articles/8a753c4f442fb8",
+            "content_html": "はじめに生成AIを使うことが、特別なことではなくなってきました。ChatGPTやClaudeのような対話型AIだけでなく、コードを書き、ファイルを操作し、コマンドを実行し、Webを検索し、外部サービスと連携するAIも身近になっています。AIは、単に「質問に答えるもの」から、「人間から仕事を受け取り、その仕事を実行するもの」へと変わりつつあります。そうなると、AIについて考えるべき問題も変わってきます。「AIは間違えることがある」ということ自体は、すでによく知られています。では、間違える可能性のあるAIに、私たちはどこまで仕事を任せてよいのでしょうか？そして、...",
+            "url": "https://zenn.dev/kondonator/articles/8a753c4f442fb8",
+            "title": "AI Security Labを始める ― AIに、どこまで仕事を任せられるのか | Zennの「Security」のフィード",
+            "summary": "はじめに生成AIを使うことが、特別なことではなくなってきました。ChatGPTやClaudeのような対話型AIだけでなく、コードを書き、ファイルを操作し、コマンドを実行し、Webを検索し、外部サービスと連携するAIも身近になっています。AIは、単に「質問に答えるもの」から、「人間から仕事を受け取り、その仕事を実行するもの」へと変わりつつあります。そうなると、AIについて考えるべき問題も変わってきま",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--c7LPzzjk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%2520Security%2520Lab%25E3%2582%2592%25E5%25A7%258B%25E3%2582%2581%25E3%2582%258B%2520%25E2%2580%2595%2520AI%25E3%2581%25AB%25E3%2580%2581%25E3%2581%25A9%25E3%2581%2593%25E3%2581%25BE%25E3%2581%25A7%25E4%25BB%2595%25E4%25BA%258B%25E3%2582%2592%25E4%25BB%25BB%25E3%2581%259B%25E3%2582%2589%25E3%2582%258C%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kondonator%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlRma3pLRF94cGdiclpkd19nWGJ1eE1zMW1mTGROa2JZMV9qbHBwV3gtTXBPS0xkZks9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-02T12:03:05.000Z",
+            "date_published": "2026-10-02T12:03:05.000Z",
+            "author": {
+                "name": "kondonator"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AI Security Labを始める ― AIに、どこまで仕事を任せられるのか",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/fukubaka0825/articles/421cf455029bdc",
+            "content_html": "!この記事は「@fukubaka0825っぽい記事をAIに書かせる」実験で、AIに出力させたものです。今回は、FAR.AI が 2026年2月に arXiv へ公開した論文「Exposing the Systematic Vulnerability of Open-Weight Models to Prefill Attacks」を紹介します。オープンウェイトの LLM に対する Prefill 攻撃を、23種類の戦略と50のモデルで評価した研究です。https://arxiv.org/abs/2602.14689なお、この記事は論文内容の紹介であり、手元での実験再現は行ってい...",
+            "url": "https://zenn.dev/fukubaka0825/articles/421cf455029bdc",
+            "title": "オープンウェイトLLMはPrefill攻撃にどこまで弱いのか: FAR.AIの大規模評価を読む | Zennの「Security」のフィード",
+            "summary": "!この記事は「@fukubaka0825っぽい記事をAIに書かせる」実験で、AIに出力させたものです。今回は、FAR.AI が 2026年2月に arXiv へ公開した論文「Exposing the Systematic Vulnerability of Open-Weight Models to Prefill Attacks」を紹介します。オープンウェイトの LLM に対する Prefill ",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--3lyzPE3Q--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AA%25E3%2583%25BC%25E3%2583%2597%25E3%2583%25B3%25E3%2582%25A6%25E3%2582%25A7%25E3%2582%25A4%25E3%2583%2588LLM%25E3%2581%25AFPrefill%25E6%2594%25BB%25E6%2592%2583%25E3%2581%25AB%25E3%2581%25A9%25E3%2581%2593%25E3%2581%25BE%25E3%2581%25A7%25E5%25BC%25B1%25E3%2581%2584%25E3%2581%25AE%25E3%2581%258B%253A%2520FAR.AI%25E3%2581%25AE%25E5%25A4%25A7%25E8%25A6%258F%25E6%25A8%25A1%25E8%25A9%2595%25E4%25BE%25A1%25E3%2582%2592%25E8%25AA%25AD%25E3%2582%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takashi%2520Narikawa%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNmMThjMTgyYjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-02T06:41:14.000Z",
+            "date_published": "2026-10-02T06:41:14.000Z",
+            "author": {
+                "name": "Takashi Narikawa"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "オープンウェイトLLMはPrefill攻撃にどこまで弱いのか: FAR.AIの大規模評価を読む",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/microsoft/articles/azure-waf-sentinel-solution",
+            "content_html": "はじめにMicrosoft Sentinel コンテンツパック整理シリーズ。前回は、Azure Storage のデータプレーン操作ログを収集するコンテンツパックを扱いました。https://zenn.dev/naonao71/articles/azure-storage-sentinel-solution今回は Azure Web Application Firewall (WAF) コンテンツパックを扱います。このパックには分析ルール 10 本、Workbook 4 本、データコネクタ 1 本が入っています。SQL インジェクション、クロスサイトスクリプティング、コードイ...",
+            "url": "https://zenn.dev/microsoft/articles/azure-waf-sentinel-solution",
+            "title": "分析ルールとWorkbookが別テーブルを見る Microsoft Sentinel「Azure WAF」を整理してみた | Zennの「Security」のフィード",
+            "summary": "はじめにMicrosoft Sentinel コンテンツパック整理シリーズ。前回は、Azure Storage のデータプレーン操作ログを収集するコンテンツパックを扱いました。https://zenn.dev/naonao71/articles/azure-storage-sentinel-solution今回は Azure Web Application Firewall (WAF) コンテンツ",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--jaaxqIPX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%2588%2586%25E6%259E%2590%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%25A8Workbook%25E3%2581%258C%25E5%2588%25A5%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2596%25E3%2583%25AB%25E3%2582%2592%25E8%25A6%258B%25E3%2582%258B%2520Microsoft%2520Sentinel%25E3%2580%258CAzure%2520WAF%25E3%2580%258D%25E3%2582%2592%25E6%2595%25B4%25E7%2590%2586%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Naoki%2520Abe%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzA3Y2VkYjUwYzAuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-10-02T05:25:50.000Z",
+            "date_published": "2026-10-02T05:25:50.000Z",
+            "author": {
+                "name": "Naoki Abe"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "分析ルールとWorkbookが別テーブルを見る Microsoft Sentinel「Azure WAF」を整理してみた",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        }
+    ]
+}

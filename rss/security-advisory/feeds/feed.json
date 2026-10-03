@@ -1,0 +1,371 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "GitHub Security Advisory｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/feed.json",
+    "description": "GitHub Security Advisoryセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://github.com/advisories/GHSA-gjj5-9665-rwrc",
+            "content_html": "Overviewprobe-image-size scans the SVG header with a searching regular expression, /&lt;[-_.:a-zA-Z0-9][^&gt;]*&gt;/. On input that contains many &lt; characters but no &gt;, the engine restarts the [^&gt;]* scan at every &lt; position and runs to end of input each time, giving quadratic time complexity.Both the synchronous and the streaming parser are affected.ImpactEvery entry point that reaches the SVG parser is affected: probe.sync(), probe(stream) and probe(url). The URL form is the most exposed one — the input",
+            "url": "https://github.com/advisories/GHSA-gjj5-9665-rwrc",
+            "title": "[probe-image-size] probe-image-size: Quadratic-time Denial of Service in the SVG Parser | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Overviewprobe-image-size scans the SVG header with a searching regular expression, /<[-_.:a-zA-Z0-9][^>]*>/. On input that contains many < characters but no >, the engine restarts the [^>]* scan at ev",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T23:18:02.000Z",
+            "date_published": "2026-10-02T23:18:02.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[probe-image-size] probe-image-size: Quadratic-time Denial of Service in the SVG Parser",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-x8mw-p69m-v3mx",
+            "content_html": "ImpactVersions of @fastify/busboy from 1.0.0 and prior to 3.2.1 are vulnerable to a Denial of Service. The multipart header parser stores part-header names on a plain JavaScript object, so a part header named __proto__ or constructor resolves to an inherited value that is not an array, and the parser throws TypeError: this.header[h].push is not a function. Through the documented req.pipe(busboy) integration this surfaces as an error event, while direct write()/end() usage throws synchronously an",
+            "url": "https://github.com/advisories/GHSA-x8mw-p69m-v3mx",
+            "title": "[@fastify/busboy] @fastify/busboy vulnerable to Denial of Service via prototype-named multipart part header | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactVersions of @fastify/busboy from 1.0.0 and prior to 3.2.1 are vulnerable to a Denial of Service. The multipart header parser stores part-header names on a plain JavaScript object, so a part head",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T23:16:36.000Z",
+            "date_published": "2026-10-02T23:16:36.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@fastify/busboy] @fastify/busboy vulnerable to Denial of Service via prototype-named multipart part header",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xjh9-v7x6-24jw",
+            "content_html": "ImpactVersions of @fastify/busboy from 3.1.0 and prior to 3.2.1 are vulnerable to a Denial of Service. The vendored streaming multipart search stores its default skip distance in a Uint8Array(256). A multipart boundary of exactly 252 bytes makes the search needle 256 bytes, and the table entry wraps to zero, so a crafted request keeps the search in a CPU-bound loop and stalls the Node.js event loop. An unauthenticated client can trigger this with a single small request. Applications that use @fa",
+            "url": "https://github.com/advisories/GHSA-xjh9-v7x6-24jw",
+            "title": "[@fastify/busboy] @fastify/busboy vulnerable to Denial of Service via oversized multipart boundary | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactVersions of @fastify/busboy from 3.1.0 and prior to 3.2.1 are vulnerable to a Denial of Service. The vendored streaming multipart search stores its default skip distance in a Uint8Array(256). A ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T23:16:17.000Z",
+            "date_published": "2026-10-02T23:16:17.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@fastify/busboy] @fastify/busboy vulnerable to Denial of Service via oversized multipart boundary",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-h46j-26q3-rggf",
+            "content_html": "SummaryThe Headroom WebSocket server does not validate the Origin header of incoming client WebSocket requests before forwarding the request to the upstream server, allowing malicious WebSocket clients to perform arbitrary LLM requests without authentication. This can be exploited by a malicious WebSocket client executed in a traditional or headless browser such as lightpanda, if the browser has access to the Headroom proxy and the OpenAI API key is stored in the OPENAI_API_KEY environment varia",
+            "url": "https://github.com/advisories/GHSA-h46j-26q3-rggf",
+            "title": "[headroom-ai] Headroom vulnerable to Cross-Site WebSocket Hijacking (CSWSH) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe Headroom WebSocket server does not validate the Origin header of incoming client WebSocket requests before forwarding the request to the upstream server, allowing malicious WebSocket client",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T23:09:15.000Z",
+            "date_published": "2026-10-02T23:09:15.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[headroom-ai] Headroom vulnerable to Cross-Site WebSocket Hijacking (CSWSH)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-72qq-p3r5-f7wq",
+            "content_html": "SummaryThe openUrl function in @a2ui/web_core passes an agent-controlled URL directly to window.open() without validating the URI scheme. A malicious agent can supply a javascript: URI as the url argument of a Button component's functionCall action. When the user clicks the rendered button, arbitrary JavaScript executes in the victim application's browser origin, constituting a stored/reflected XSS. No non-default configuration is required; the Basic Catalog is enabled by default.DetailsThe vuln",
+            "url": "https://github.com/advisories/GHSA-72qq-p3r5-f7wq",
+            "title": "[@a2ui/web_core] @a2ui/web_core: `openUrl` permits `javascript:` URI execution via agent-supplied button actions | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe openUrl function in @a2ui/web_core passes an agent-controlled URL directly to window.open() without validating the URI scheme. A malicious agent can supply a javascript: URI as the url argu",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:55:49.000Z",
+            "date_published": "2026-10-02T22:55:49.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@a2ui/web_core] @a2ui/web_core: `openUrl` permits `javascript:` URI execution via agent-supplied button actions",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-fj2x-mqqp-3v2w",
+            "content_html": "Affected version: trigger.dev 4.5.3 (4.5.6 was advertised by the CLI but was not tested).A staging dry-run executed with trigger.dev deploy --env staging --dry-run --log-level debug. The debug output logged the complete build-worker options object. Its envVars property contained unredacted values for every resolved staging variable, including database connection strings and service credentials. The non-debug environment listing correctly hides values, so users can reasonably expect deployment lo",
+            "url": "https://github.com/advisories/GHSA-fj2x-mqqp-3v2w",
+            "title": "[trigger.dev] Trigger.dev: Trigger CLI debug deployment logs expose resolved environment secret values | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Affected version: trigger.dev 4.5.3 (4.5.6 was advertised by the CLI but was not tested).A staging dry-run executed with trigger.dev deploy --env staging --dry-run --log-level debug. The debug output ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:45:12.000Z",
+            "date_published": "2026-10-02T22:45:12.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[trigger.dev] Trigger.dev: Trigger CLI debug deployment logs expose resolved environment secret values",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-v2f8-6655-7grj",
+            "content_html": "Summary:5 findings — unauthenticated full-API exposure (F1, lead Critical), read-side authorization gap that persists even with API_AUTH_KEY set (F2), unauthenticated file write of .py/.sh/.yaml to a server-returned path (F3), default-permissive CORS that combines with a loopback-only check to grant any browser page on whitelisted localhost ports credentialed cross-origin access (F-A4), and partial API-key disclosure via _mask_secret() (F-A5).Shared baseline (applies to all 5 findings)The shippe",
+            "url": "https://github.com/advisories/GHSA-v2f8-6655-7grj",
+            "title": "[vibe-trading-ai] Vibe-Trading FastAPI endpoints permit unauthenticated access, file upload, and an RCE chain | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Summary:5 findings — unauthenticated full-API exposure (F1, lead Critical), read-side authorization gap that persists even with API_AUTH_KEY set (F2), unauthenticated file write of .py/.sh/.yaml to a ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:44:26.000Z",
+            "date_published": "2026-10-02T22:44:26.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[vibe-trading-ai] Vibe-Trading FastAPI endpoints permit unauthenticated access, file upload, and an RCE chain",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5rmq-chc7-m22f",
+            "content_html": "Summary:2 findings — safe_user_path() accepts any path under Path.home() or Path.cwd(), which inside the shipped root container resolves to /root and /app (so all of root's home, including /root/.ssh/id_rsa, /root/.aws/credentials, /root/.kube/config, and /app/agent/.env, passes the check) (F9). read_document() has no sandbox call at all and returns the full content of any path the FastAPI process can read, including /etc/shadow, /etc/passwd, /proc/self/environ, and any secret file mounted into ",
+            "url": "https://github.com/advisories/GHSA-5rmq-chc7-m22f",
+            "title": "[vibe-trading-ai] Vibe-Trading file-read tools expose arbitrary server-readable files | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Summary:2 findings — safe_user_path() accepts any path under Path.home() or Path.cwd(), which inside the shipped root container resolves to /root and /app (so all of root's home, including /root/.ssh/",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:44:12.000Z",
+            "date_published": "2026-10-02T22:44:12.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[vibe-trading-ai] Vibe-Trading file-read tools expose arbitrary server-readable files",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jqmf-mx4f-hfr6",
+            "content_html": "Summary:5 findings — BashTool shell-injection sink (F6, the canonical RCE primitive), BackgroundRunTool async shell-injection sink (F7), backtest exec_module() runs top-level statements before the SignalEngine class check (F8 — independent RCE path that does not match BashTool signatures), read_url outbound HTTP forwarding without schema/host validation (F-B4 SSRF), and Jinja2 codegen with autoescape disabled for .py.j2 templates (F-B5, defense-in-depth code-injection sink).Shared baseline (appl",
+            "url": "https://github.com/advisories/GHSA-jqmf-mx4f-hfr6",
+            "title": "[vibe-trading-ai] Vibe-Trading LLM-callable tools permit command execution, code injection, and SSRF | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Summary:5 findings — BashTool shell-injection sink (F6, the canonical RCE primitive), BackgroundRunTool async shell-injection sink (F7), backtest exec_module() runs top-level statements before the Sig",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:44:03.000Z",
+            "date_published": "2026-10-02T22:44:03.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[vibe-trading-ai] Vibe-Trading LLM-callable tools permit command execution, code injection, and SSRF",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4672-hwv6-gq62",
+            "content_html": "SummaryTrigger.dev isolates each project into multiple environments (dev, staging, prod, and per-PR preview branches), each with its own secret API key — the environment is a trust boundary (a dev/preview/CI key is lower-trust than a prod key). Most API routes enforce this by scoping resource lookups to the authenticated key's environment (where: { friendlyId, runtimeEnvironmentId: auth.environment.id }).The deployment cancel path does not. DeploymentService.getDeployment() scopes the lookup by ",
+            "url": "https://github.com/advisories/GHSA-4672-hwv6-gq62",
+            "title": "[trigger.dev] Trigger.dev: Cross-environment deployment cancel | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryTrigger.dev isolates each project into multiple environments (dev, staging, prod, and per-PR preview branches), each with its own secret API key — the environment is a trust boundary (a dev/pre",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:42:40.000Z",
+            "date_published": "2026-10-02T22:42:40.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[trigger.dev] Trigger.dev: Cross-environment deployment cancel",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-9q4r-4842-93vw",
+            "content_html": "SummaryA cross-tenant SQL injection in the TSQL query compiler lets any authenticated trigger.dev customer read every other tenant's analytics data. The customer-facing query endpoint POST /api/v1/query accepts a TSQL/TRQL query that is compiled to ClickHouse SQL by internal-packages/tsql. The compiler parameterizes or escapes all user input and injects a per-tenant WHERE guard — except the window-function name, which is concatenated into the SQL string with no allowlist and no escaping. By smug",
+            "url": "https://github.com/advisories/GHSA-9q4r-4842-93vw",
+            "title": "[trigger.dev] Trigger.dev: Cross-tenant SQL injection in the TSQL query compiler (POST /api/v1/query) via unsanitized window-function name | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryA cross-tenant SQL injection in the TSQL query compiler lets any authenticated trigger.dev customer read every other tenant's analytics data. The customer-facing query endpoint POST /api/v1/que",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:42:20.000Z",
+            "date_published": "2026-10-02T22:42:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[trigger.dev] Trigger.dev: Cross-tenant SQL injection in the TSQL query compiler (POST /api/v1/query) via unsanitized window-function name",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-59h8-w5q6-mfmp",
+            "content_html": "SummaryThe POST handler for /realtime/v1/streams/:runId/:streamId has no authentication. Any entity that knows or guesses a run friendlyId can inject arbitrary data into its realtime stream.Vulnerability DetailsFile: apps/webapp/app/routes/realtime.v1.streams.$runId.$streamId.tsThe action handler (line 17) has no auth wrapper. The code comment says: \"Plain action for backwards compatibility with older clients that don't send auth headers.\"The run lookup at line 29 uses where: { friendlyId: runId",
+            "url": "https://github.com/advisories/GHSA-59h8-w5q6-mfmp",
+            "title": "[trigger.dev] Trigger.dev: Unauthenticated Realtime Stream Data Injection via Run FriendlyId | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe POST handler for /realtime/v1/streams/:runId/:streamId has no authentication. Any entity that knows or guesses a run friendlyId can inject arbitrary data into its realtime stream.Vulnerabil",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:39:57.000Z",
+            "date_published": "2026-10-02T22:39:57.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[trigger.dev] Trigger.dev: Unauthenticated Realtime Stream Data Injection via Run FriendlyId",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-pqxw-g93w-hj9x",
+            "content_html": "SummarySelf-hosted trigger.dev v4 instances deployed using the provided Docker Compose configuration with default secrets from hosting/docker/.env.example are vulnerable to a multi-stage unauthenticated attack chain leading to complete infrastructure compromise.Vulnerability DetailsThe hosting/docker/.env.example file contains hardcoded cryptographic secrets:SESSION_SECRET=2818143646516f6fffd707b36f334bbbMAGIC_LINK_SECRET=44da78b7bbb0dfe709cf38931d25dcddENCRYPTION_KEY=f686147ab967943ebbe9ed3b496",
+            "url": "https://github.com/advisories/GHSA-pqxw-g93w-hj9x",
+            "title": "[trigger.dev] Trigger.dev Self-Hosted Deployment: Default Secrets allow Unauthenticated Infrastructure Compromise | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummarySelf-hosted trigger.dev v4 instances deployed using the provided Docker Compose configuration with default secrets from hosting/docker/.env.example are vulnerable to a multi-stage unauthenticat",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:39:48.000Z",
+            "date_published": "2026-10-02T22:39:48.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[trigger.dev] Trigger.dev Self-Hosted Deployment: Default Secrets allow Unauthenticated Infrastructure Compromise",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-62ch-8vmq-8xm7",
+            "content_html": "ImpactA denial-of-service (infinite loop) can occur in text() / textSync() whenboth:whitespaceBreak: true is set, andwidth is set smaller than the rendered width of a single FIGlet character.Under these conditions breakWord() could never find a valid break point, so theword-wrapping loop in generateFigTextLines() never terminated. This pins a CPUcore and grows memory without bound, blocking the Node.js event loop.SeverityLow or Medium. Triggering requires a non-default configuration (whitespaceB",
+            "url": "https://github.com/advisories/GHSA-62ch-8vmq-8xm7",
+            "title": "[figlet] figlet is vulnerable to denial of service via unbounded loop when whitespaceBreak is used with a small width | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactA denial-of-service (infinite loop) can occur in text() / textSync() whenboth:whitespaceBreak: true is set, andwidth is set smaller than the rendered width of a single FIGlet character.Under the",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:39:16.000Z",
+            "date_published": "2026-10-02T22:39:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[figlet] figlet is vulnerable to denial of service via unbounded loop when whitespaceBreak is used with a small width",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-gg6r-gp4c-89hp",
+            "content_html": "TL;DRThe /coordinator Socket.IO namespace mounts on every webapp boot and authenticates with a default secret (\"coordinator-secret\") baked into source. The override variable isn't documented in the self-host docs, .env.example, or helm values, so any operator who didn't read source ships with the default. Once connected, READY_FOR_EXECUTION returns the run's decrypted env vars. Anyone who can reach a default-config self-hosted webapp can pull production secrets out of any run whose internal id t",
+            "url": "https://github.com/advisories/GHSA-gg6r-gp4c-89hp",
+            "title": "[trigger.dev] Trigger.dev: V1 coordinator default-secret unauth Socket.IO | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "TL;DRThe /coordinator Socket.IO namespace mounts on every webapp boot and authenticates with a default secret (\"coordinator-secret\") baked into source. The override variable isn't documented in the se",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:39:00.000Z",
+            "date_published": "2026-10-02T22:39:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[trigger.dev] Trigger.dev: V1 coordinator default-secret unauth Socket.IO",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-q567-cr4x-96w4",
+            "content_html": "SummaryA WEBHOOK alert channel stores a user-supplied url. When an alert fires (deployment/run failure, error groups), the webapp server (alertsWorker -&gt; DeliverAlertService) POSTs the HMAC-signed alert payload to that URL via fetch(webhook.url, ...). The URL is never validated against a host allowlist or private-IP/metadata blocklist (a repo-wide search for 169.254, isPrivate, isLoopback, net.isIP, ssrf returns ZERO hits), and the API route's URL field is just z.string().optional() (no syntax c",
+            "url": "https://github.com/advisories/GHSA-q567-cr4x-96w4",
+            "title": "[trigger.dev] Trigger.dev: Blind SSRF via alert-channel webhook | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryA WEBHOOK alert channel stores a user-supplied url. When an alert fires (deployment/run failure, error groups), the webapp server (alertsWorker -> DeliverAlertService) POSTs the HMAC-signed ale",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:35:31.000Z",
+            "date_published": "2026-10-02T22:35:31.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[trigger.dev] Trigger.dev: Blind SSRF via alert-channel webhook",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-pp95-gc86-jq6q",
+            "content_html": "SummaryThe run replay action function at apps/webapp/app/routes/resources.taskruns.$runParam.replay.ts has no authentication or authorization check. While the loader (GET) in the same file properly calls requireUser(request) and scopes queries to the user's organizations, the action (POST) at line 166 does neither — allowing any authenticated user to replay task runs from any organization by knowing the run's friendlyId.DetailsVulnerable file: apps/webapp/app/routes/resources.taskruns.$runParam.",
+            "url": "https://github.com/advisories/GHSA-pp95-gc86-jq6q",
+            "title": "[trigger.dev] Trigger.dev: Missing Authentication in Run Replay Action Allows Cross-Organization Task Execution (IDOR) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe run replay action function at apps/webapp/app/routes/resources.taskruns.$runParam.replay.ts has no authentication or authorization check. While the loader (GET) in the same file properly ca",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T22:35:24.000Z",
+            "date_published": "2026-10-02T22:35:24.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[trigger.dev] Trigger.dev: Missing Authentication in Run Replay Action Allows Cross-Organization Task Execution (IDOR)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xxv7-2vv3-h682",
+            "content_html": "SummaryA project member can create a webhook alert channel whose delivery URL points at an internal address, and trigger.dev's control plane will send the alert there with no SSRF protection. The webhook URL is stored as an unvalidated string and is fetched directly from the webapp server, so a low-privilege authenticated user can make the server issue POST requests to internal-only services and cloud metadata endpoints (for example http://169.254.169.254/). No private-IP, scheme, or redirect fi",
+            "url": "https://github.com/advisories/GHSA-xxv7-2vv3-h682",
+            "title": "[trigger.dev] Trigger.dev: Server-side request forgery via unvalidated webhook alert-channel URL | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryA project member can create a webhook alert channel whose delivery URL points at an internal address, and trigger.dev's control plane will send the alert there with no SSRF protection. The webh",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T19:31:33.000Z",
+            "date_published": "2026-10-02T19:31:33.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[trigger.dev] Trigger.dev: Server-side request forgery via unvalidated webhook alert-channel URL",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qxpp-qjg8-x4jv",
+            "content_html": "SummaryThe dashboard replay action authorizes the source run (it must belong to the caller's org), but the target environment for the replayed run is taken verbatim from the request body and is never checked for org or project membership. The environment lookup used by the replay path filters by id only. As a result, an authenticated user can replay one of their own runs into another organization's or project's environment, creating a task run there that consumes the victim tenant's queue and co",
+            "url": "https://github.com/advisories/GHSA-qxpp-qjg8-x4jv",
+            "title": "[trigger.dev] Trigger.dev: Run replay injects a task run into an attacker-chosen environment (cross-tenant write) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe dashboard replay action authorizes the source run (it must belong to the caller's org), but the target environment for the replayed run is taken verbatim from the request body and is never ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-02T19:31:17.000Z",
+            "date_published": "2026-10-02T19:31:17.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[trigger.dev] Trigger.dev: Run replay injects a task run into an attacker-chosen environment (cross-tenant write)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        }
+    ]
+}

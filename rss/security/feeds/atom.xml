@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security/</id>
+    <title>セキュリティ｜企業テックブログRSS</title>
+    <updated>2026-10-03T20:45:34.552Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security/feeds/atom.xml"/>
+    <subtitle>セキュリティセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[GitLab warns of critical RCE vulnerability in AI Gateway service | AI Security Daily Digest]]></title>
+        <id>https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/</id>
+        <link href="https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/"/>
+        <link rel="enclosure" href="https://www.bleepstatic.com/content/hl-images/2026/09/14/GitLab.jpg" type="image/jpg"/>
+        <updated>2026-10-02T16:20:05.000Z</updated>
+        <summary type="html"><![CDATA[GitLabは、AIゲートウェイサービスにおける重大なリモートコード実行（RCE）脆弱性を発見し、ユーザーに即時パッチ適用を警告した。攻撃者がこの脆弱性を悪用すると、脆弱なインスタンス上で任意のコマンドを実行できる可能性がある。AIインフラを直接標的とした重大な脆弱性として注目される。Source: Bleeping Computervulnerability incident]]></summary>
+        <content type="html"><![CDATA[GitLabは、AIゲートウェイサービスにおける重大なリモートコード実行（RCE）脆弱性を発見し、ユーザーに即時パッチ適用を警告した。攻撃者がこの脆弱性を悪用すると、脆弱なインスタンス上で任意のコマンドを実行できる可能性がある。AIインフラを直接標的とした重大な脆弱性として注目される。Source: Bleeping Computervulnerability incident]]></content>
+        <published>2026-10-02T16:20:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WordPress Coreの脆弱性CVE-2026-87902についてまとめてみた | piyolog]]></title>
+        <id>https://piyolog.hatenadiary.jp/entry/2026/10/03/001121</id>
+        <link href="https://piyolog.hatenadiary.jp/entry/2026/10/03/001121"/>
+        <link rel="enclosure" href="https://ogimage.blog.st-hatena.com/10257846132616586766/14945776032085145021/1790953881" type="image//10257846132616586766/14945776032085145021/1790953881"/>
+        <updated>2026-10-02T15:11:21.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月22日、WordPressは、WordPress Coreに深刻な脆弱性が確認されたとして、修正版を公開、さらに4.7系までの古い系列にも同様に修正を提供しました。ここでは関連する情報をまとめます。どんな脆弱性が確認されたの?WordPress Coreのページテンプレートの解決(get_page_template())で、認証不要の攻撃者が、一定の条件下で、有効なテーマのディレクト]]></summary>
+        <content type="html"><![CDATA[2026年9月22日、WordPressは、WordPress Coreに深刻な脆弱性が確認されたとして、修正版を公開、さらに4.7系までの古い系列にも同様に修正を提供しました。ここでは関連する情報をまとめます。どんな脆弱性が確認されたの?WordPress Coreのページテンプレートの解決(get_page_template())で、認証不要の攻撃者が、一定の条件下で、有効なテーマのディレクトリ外にある読み取り可能なローカルPHPファイルをインクルードさせられる。サーバー環境と有効なテーマの双方の前提条件を満たす場合は、リモートコード実行(RCE)に至りうる*1。(出典: 1, 3, 4)WordPressは、7.1.2のリリースで「クリティカルな深刻度」の脆弱性としている。変更されたファイルは/wp-includes/template.phpの1件。(出典: 1, 2)修正公開と同日に発見者がPoCを公開し、CISAは9月25日にKEVカタログへ追加した。(出典: 5, 9)脆弱性概要CVE CVE-2026-87902(GHSA-7hp8-65ch-5whp) CVSS 9.2]]></content>
+        <category label="脆弱性"/>
+        <category label="KEV"/>
+        <published>2026-10-02T15:11:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[本人確認書類の画像流出、対象アカウントは約160万件 - タイムズカー | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190989</id>
+        <link href="https://www.security-next.com/190989"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-02T14:22:15.000Z</updated>
+        <summary type="html"><![CDATA[パーク24グループのタイムズモビリティが運営するカーシェアリングサービス「タイムズカー」が外部から侵害され、会員の個人情報が流出した問題で、本人確認書類の流出状況を明らかにした。]]></summary>
+        <content type="html"><![CDATA[パーク24グループのタイムズモビリティが運営するカーシェアリングサービス「タイムズカー」が外部から侵害され、会員の個人情報が流出した問題で、本人確認書類の流出状況を明らかにした。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="ウイルス・不正アクセス"/>
+        <category label="ニュース"/>
+        <category label="個人情報漏洩事件・事故"/>
+        <published>2026-10-02T14:22:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[荷物問合サービスが侵害、個人情報流出の可能性 - 佐川急便 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190952</id>
+        <link href="https://www.security-next.com/190952"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-02T13:46:44.000Z</updated>
+        <summary type="html"><![CDATA[佐川急便は、荷物問い合わせサービスがサイバー攻撃を受け、顧客の個人情報が流出した可能性があることを明らかにした。ウェブサービスの一部を停止している。]]></summary>
+        <content type="html"><![CDATA[佐川急便は、荷物問い合わせサービスがサイバー攻撃を受け、顧客の個人情報が流出した可能性があることを明らかにした。ウェブサービスの一部を停止している。]]></content>
+        <author>
+            <name>shayashi</name>
+        </author>
+        <category label="ウイルス・不正アクセス"/>
+        <category label="ニュース"/>
+        <category label="不正アクセス事件"/>
+        <category label="個人情報漏洩事件・事故"/>
+        <published>2026-10-02T13:46:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenAI Parts Ways With Three Safety Researchers Over Sensitive Information Mishandling | AI Security Daily Digest]]></title>
+        <id>https://thehackernews.com/2026/10/openai-parts-ways-with-three-safety.html</id>
+        <link href="https://thehackernews.com/2026/10/openai-parts-ways-with-three-safety.html"/>
+        <link rel="enclosure" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvjuuIAEhjBjrbXQna97zki-AKSZ9hVcu2CHSFRronvsVxEcHsfg66bldy7UzBETlNj1wTjKhkE11aFSmOxTjmR-XVp7qwzM2rBM745vy0Jy2n_CDoWQowbrzcQ7pVMubxWXNxVhOptHQiV5nMSGf24ZpI2wdpr40A0ez16cO3IH6peI6A2L07_UuOHbaJ/s1700-nu-rw-lo-l85-e365/openai-servers.jpg" type="image/jpg"/>
+        <updated>2026-10-02T12:23:15.000Z</updated>
+        <summary type="html"><![CDATA[OpenAIは、機密情報の取り扱いに関する社内ポリシーに違反したとして、安全チームの3名のメンバーを解雇したと発表した。Wall Street Journalの報道によれば、対象者らは非公開情報を外部に漏洩させたとされる。AI安全性の研究・ガバナンス体制における内部管理の問題として業界から注目を集めている。Source: The Hacker Newsmodel-safety governance]]></summary>
+        <content type="html"><![CDATA[OpenAIは、機密情報の取り扱いに関する社内ポリシーに違反したとして、安全チームの3名のメンバーを解雇したと発表した。Wall Street Journalの報道によれば、対象者らは非公開情報を外部に漏洩させたとされる。AI安全性の研究・ガバナンス体制における内部管理の問題として業界から注目を集めている。Source: The Hacker Newsmodel-safety governance incident]]></content>
+        <published>2026-10-02T12:23:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日本エネルギー経済研究所、不正アクセスの続報　パスポート情報13件の漏えい確認 | ITmedia NEWS セキュリティ 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/news/article/2610/02/2000001976/</id>
+        <link href="https://www.itmedia.co.jp/news/article/2610/02/2000001976/"/>
+        <link rel="enclosure" href="https://www.itmedia.co.jp/news/article/ogp/2610/02/2000001976/10008300/2048" type="image//news/article/ogp/2610/02/2000001976/10008300/2048"/>
+        <updated>2026-10-02T08:51:33.000Z</updated>
+        <summary type="html"><![CDATA[日本エネルギー経済研究所は10月2日、9月に公表した不正アクセス被害について、詳細調査の結果を発表した。パスポート情報13件の漏えいを確認したほか、口座情報を含むメールアドレスも流出した可能性がある。]]></summary>
+        <content type="html"><![CDATA[日本エネルギー経済研究所は10月2日、9月に公表した不正アクセス被害について、詳細調査の結果を発表した。パスポート情報13件の漏えいを確認したほか、口座情報を含むメールアドレスも流出した可能性がある。]]></content>
+        <published>2026-10-02T08:51:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ApplyNowの採用管理プラットフォームへの不正アクセスについてまとめてみた | piyolog]]></title>
+        <id>https://piyolog.hatenadiary.jp/entry/2026/10/02/174228</id>
+        <link href="https://piyolog.hatenadiary.jp/entry/2026/10/02/174228"/>
+        <link rel="enclosure" href="https://ogimage.blog.st-hatena.com/10257846132616586766/14945776032084821429/1790930548" type="image//10257846132616586766/14945776032084821429/1790930548"/>
+        <updated>2026-10-02T08:42:28.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月9日、ApplyNowは、同社が提供する採用管理プラットフォームで、利用しているデータ分析ツールの脆弱性を突いた第三者による不正アクセスが発生し、個人データが外部へ漏えいした可能性があると公表しました。その後、複数の自治体や企業が、自組織の応募者や受験者の情報が対象に含まれると公表しています。ここでは関連する情報をまとめます。データ分析ツールの脆弱性を突いた不正アクセスApplyNo]]></summary>
+        <content type="html"><![CDATA[2026年9月9日、ApplyNowは、同社が提供する採用管理プラットフォームで、利用しているデータ分析ツールの脆弱性を突いた第三者による不正アクセスが発生し、個人データが外部へ漏えいした可能性があると公表しました。その後、複数の自治体や企業が、自組織の応募者や受験者の情報が対象に含まれると公表しています。ここでは関連する情報をまとめます。データ分析ツールの脆弱性を突いた不正アクセスApplyNowは2026年9月9日、コーポレートサイトで「当社サービスをご利用いただいているお客様への重要なお知らせとお詫び」を公表した。面接シェアリングサービス「Interview Cloud」、録画面接「ApplyNow」、電子雇用契約「ApplyNow Sign」の3サービスで、同社が利用しているデータ分析ツールの脆弱性を突いた第三者による不正アクセスが発生し、顧客と応募者の個人データが外部へ漏えいした可能性を検知した。不正アクセスが確認された期間は8月9日から9月7日。対象データ件数は「現在調査中」としているが、画像やPDF等のファイル実体と面接動画データは別の保管領域にあり、不正アクセスの対象外]]></content>
+        <category label="不正アクセス"/>
+        <category label="サプライチェーン"/>
+        <published>2026-10-02T08:42:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[研究用原子炉利用者の身分証明書などが外部流出 - 原子力機構 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190957</id>
+        <link href="https://www.security-next.com/190957"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-02T08:18:00.000Z</updated>
+        <summary type="html"><![CDATA[日本原子力研究開発機構は、研究支援サイトがサイバー攻撃を受けたことを明らかにした。研究用原子炉の利用者に関する身分証明書や特殊健康診断の結果なども外部に流出したという。]]></summary>
+        <content type="html"><![CDATA[日本原子力研究開発機構は、研究支援サイトがサイバー攻撃を受けたことを明らかにした。研究用原子炉の利用者に関する身分証明書や特殊健康診断の結果なども外部に流出したという。]]></content>
+        <author>
+            <name>shayashi</name>
+        </author>
+        <category label="ウイルス・不正アクセス"/>
+        <category label="ニュース"/>
+        <category label="個人情報漏洩事件・事故"/>
+        <published>2026-10-02T08:18:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[国内の「NetScaler」狙う攻撃も - 最新IoCで侵害確認を | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190973</id>
+        <link href="https://www.security-next.com/190973"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-02T07:49:46.000Z</updated>
+        <summary type="html"><![CDATA[「NetScaler ADC（旧Citrix ADC）」「NetScaler Gateway（旧Citrix Gateway）」の深刻な脆弱性に対する攻撃が発生している問題で、日本国内を標的とした攻撃試行が観測されている。最新の「IoC」情報をもとに侵害を受けていないか確認するよう呼びかけている。]]></summary>
+        <content type="html"><![CDATA[「NetScaler ADC（旧Citrix ADC）」「NetScaler Gateway（旧Citrix Gateway）」の深刻な脆弱性に対する攻撃が発生している問題で、日本国内を標的とした攻撃試行が観測されている。最新の「IoC」情報をもとに侵害を受けていないか確認するよう呼びかけている。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-10-02T07:49:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第一生命に不正アクセス　従業員情報12万人分漏えいか　退職者も対象 | ITmedia NEWS セキュリティ 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/news/article/2610/02/2000001971/</id>
+        <link href="https://www.itmedia.co.jp/news/article/2610/02/2000001971/"/>
+        <link rel="enclosure" href="https://www.itmedia.co.jp/news/article/ogp/2610/02/2000001971/10008289/2048" type="image//news/article/ogp/2610/02/2000001971/10008289/2048"/>
+        <updated>2026-10-02T07:49:41.000Z</updated>
+        <summary type="html"><![CDATA[第一ライフグループと第一生命保険が、2社の使う人事システムが不正アクセスを受け、従業員情報約12万人分が漏えいした可能性があると発表した。うち7万人分は退職者の情報という。]]></summary>
+        <content type="html"><![CDATA[第一ライフグループと第一生命保険が、2社の使う人事システムが不正アクセスを受け、従業員情報約12万人分が漏えいした可能性があると発表した。うち7万人分は退職者の情報という。]]></content>
+        <published>2026-10-02T07:49:41.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Apache HTTPD」に複数脆弱性 - 「クリティカル」との評価も | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190967</id>
+        <link href="https://www.security-next.com/190967"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-02T07:08:00.000Z</updated>
+        <summary type="html"><![CDATA[「Apache HTTP Server」の開発チームは、現地時間2026年10月1日に最新版となる「同2.4.69」をリリースした。開発チームでは比較的影響を小さいと評価しているが、CVSSベーススコアが「9.8」とされる脆弱性も複数含まれる。]]></summary>
+        <content type="html"><![CDATA[「Apache HTTP Server」の開発チームは、現地時間2026年10月1日に最新版となる「同2.4.69」をリリースした。開発チームでは比較的影響を小さいと評価しているが、CVSSベーススコアが「9.8」とされる脆弱性も複数含まれる。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="TOP記事"/>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-10-02T07:08:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Safety in Self-Evolving Agents: A Survey | AI Security Daily Digest]]></title>
+        <id>https://arxiv.org/abs/2610.00093</id>
+        <link href="https://arxiv.org/abs/2610.00093"/>
+        <link rel="enclosure" href="https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png" type="image/png"/>
+        <updated>2026-10-02T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[LLMベースの自己進化型エージェントにおける安全性の問題を体系的に調査したサーベイ論文。モデルパラメータ、メモリ、ツール定義などを継続的に更新するエージェントは、従来の固定パラメータモデルとは異なる新たな安全性リスクをもたらすことを論じている。エージェントの自律的な学習と安全性の両立に向けた課題を整理している。Source: arXiv cs.CR (Cryptography and Securi]]></summary>
+        <content type="html"><![CDATA[LLMベースの自己進化型エージェントにおける安全性の問題を体系的に調査したサーベイ論文。モデルパラメータ、メモリ、ツール定義などを継続的に更新するエージェントは、従来の固定パラメータモデルとは異なる新たな安全性リスクをもたらすことを論じている。エージェントの自律的な学習と安全性の両立に向けた課題を整理している。Source: arXiv cs.CR (Cryptography and Security)research agent-security model-safety]]></content>
+        <published>2026-10-02T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A Comprehensive Review of One-Pixel Attack: Research Status, Taxonomy, Applications, Regulation Policy and Future Directions | AI Security Daily Digest]]></title>
+        <id>https://arxiv.org/abs/2610.00125</id>
+        <link href="https://arxiv.org/abs/2610.00125"/>
+        <link rel="enclosure" href="https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png" type="image/png"/>
+        <updated>2026-10-02T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ディープラーニングモデルに対する「ワンピクセル攻撃（OPA）」を包括的にレビューした論文で、医療診断・自動運転・生体認証などの領域における脆弱性を分析している。単一ピクセルの変更だけで高確率の誤分類を引き起こせるという敵対的攻撃の極端な例として、規制政策や将来の研究方向についても考察している。Source: arXiv cs.CR (Cryptography and Security)resear]]></summary>
+        <content type="html"><![CDATA[ディープラーニングモデルに対する「ワンピクセル攻撃（OPA）」を包括的にレビューした論文で、医療診断・自動運転・生体認証などの領域における脆弱性を分析している。単一ピクセルの変更だけで高確率の誤分類を引き起こせるという敵対的攻撃の極端な例として、規制政策や将来の研究方向についても考察している。Source: arXiv cs.CR (Cryptography and Security)research adversarial evaluation]]></content>
+        <published>2026-10-02T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Cognitive Continuity Test: Verifying Governed State Transitions in Persistent AI Agents | AI Security Daily Digest]]></title>
+        <id>https://arxiv.org/abs/2610.00132</id>
+        <link href="https://arxiv.org/abs/2610.00132"/>
+        <link rel="enclosure" href="https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png" type="image/png"/>
+        <updated>2026-10-02T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[永続的なAIエージェントが信念の更新・メモリの統合・実行基盤の置き換えを行う際の状態遷移を検証するフレームワーク「Cognitive Continuity Test（CCT）」を提案した論文。スコープ付き権限・出所管理・意味論的述語などを用いて、正当に認可された状態遷移かどうかを保証するポリシー準拠の契約モデルを導入している。Source: arXiv cs.CR (Cryptography an]]></summary>
+        <content type="html"><![CDATA[永続的なAIエージェントが信念の更新・メモリの統合・実行基盤の置き換えを行う際の状態遷移を検証するフレームワーク「Cognitive Continuity Test（CCT）」を提案した論文。スコープ付き権限・出所管理・意味論的述語などを用いて、正当に認可された状態遷移かどうかを保証するポリシー準拠の契約モデルを導入している。Source: arXiv cs.CR (Cryptography and Security)research agent-security governance]]></content>
+        <published>2026-10-02T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WatchGuardの「Fireware OS」に15件の脆弱性 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190949</id>
+        <link href="https://www.security-next.com/190949"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-02T03:16:35.000Z</updated>
+        <summary type="html"><![CDATA[WatchGuard TechnologiesのUTMに搭載されている「Fireware OS」に複数の脆弱性が明らかとなった。]]></summary>
+        <content type="html"><![CDATA[WatchGuard TechnologiesのUTMに搭載されている「Fireware OS」に複数の脆弱性が明らかとなった。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-10-02T03:16:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ベネフィット・ワン、1万3460人の個人情報漏えい　把握済みの不具合解消に不備 | サイバーセキュリティ・情報漏洩ニュース – サイバーセキュリティ.com]]></title>
+        <id>https://cybersecurity-jp.com/?p=116906</id>
+        <link href="https://cybersecurity-jp.com/news/116906"/>
+        <link rel="enclosure" href="https://cybersecurity-jp.com/wp-content/uploads/2026/10/img_116906.png" type="image/png"/>
+        <updated>2026-10-02T02:51:48.000Z</updated>
+        <summary type="html"><![CDATA[画像：株式会社ベネフィット・ワンより引用 株式会社ベネフィット・ワンは2026年9月30日、福利厚生サービスの担当者向けシステム「ベネワン・プラットフォーム」で、2,322企業・団体の1万3,460人分の個人情報が漏えい […]]]></summary>
+        <content type="html"><![CDATA[画像：株式会社ベネフィット・ワンより引用 株式会社ベネフィット・ワンは2026年9月30日、福利厚生サービスの担当者向けシステム「ベネワン・プラットフォーム」で、2,322企業・団体の1万3,460人分の個人情報が漏えい […]]]></content>
+        <author>
+            <name>サイバーセキュリティ.com 事務局編集部</name>
+        </author>
+        <category label="サイバーセキュリティ・情報漏洩ニュース"/>
+        <published>2026-10-02T02:51:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[らしんばんに不正アクセス、顧客情報が漏えいした可能性 | サイバーセキュリティ・情報漏洩ニュース – サイバーセキュリティ.com]]></title>
+        <id>https://cybersecurity-jp.com/?p=116904</id>
+        <link href="https://cybersecurity-jp.com/news/116904"/>
+        <link rel="enclosure" href="https://cybersecurity-jp.com/wp-content/uploads/2026/10/img_116904.png" type="image/png"/>
+        <updated>2026-10-02T02:45:36.000Z</updated>
+        <summary type="html"><![CDATA[画像：株式会社らしんばんより引用 株式会社らしんばんは2026年10月1日、同社が運営するサービスへの第三者による不正アクセスにより、顧客情報の一部が外部に漏えいした可能性があると発表しました。 同社によると、不正アクセ […]]]></summary>
+        <content type="html"><![CDATA[画像：株式会社らしんばんより引用 株式会社らしんばんは2026年10月1日、同社が運営するサービスへの第三者による不正アクセスにより、顧客情報の一部が外部に漏えいした可能性があると発表しました。 同社によると、不正アクセ […]]]></content>
+        <author>
+            <name>サイバーセキュリティ.com 事務局編集部</name>
+        </author>
+        <category label="サイバーセキュリティ・情報漏洩ニュース"/>
+        <published>2026-10-02T02:45:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[メーリングリストで設定ミス、個人情報が公開状態 - 足立区 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190386</id>
+        <link href="https://www.security-next.com/190386"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-02T02:32:37.000Z</updated>
+        <summary type="html"><![CDATA[東京都足立区は、足立区都市農業公園の指定管理者が使用しているメーリングリストにおいて設定ミスがあり、個人情報を含むメールがインターネット上で閲覧可能になっていたことを明らかにした。]]></summary>
+        <content type="html"><![CDATA[東京都足立区は、足立区都市農業公園の指定管理者が使用しているメーリングリストにおいて設定ミスがあり、個人情報を含むメールがインターネット上で閲覧可能になっていたことを明らかにした。]]></content>
+        <author>
+            <name>shayashi</name>
+        </author>
+        <category label="ニュース"/>
+        <category label="個人情報漏洩事件・事故"/>
+        <category label="操作・設定ミス"/>
+        <published>2026-10-02T02:32:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HPE製アクセスポイント「Instant On」に脆弱性 - 「クリティカル」5件など | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190931</id>
+        <link href="https://www.security-next.com/190931"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-02T00:16:10.000Z</updated>
+        <summary type="html"><![CDATA[Hewlett Packard Enterprise（HPE）は、無線LANアクセスポイント製品「HPE Networking Instant On AP」に複数の脆弱性が明らかになったとしてアップデートをリリースした。]]></summary>
+        <content type="html"><![CDATA[Hewlett Packard Enterprise（HPE）は、無線LANアクセスポイント製品「HPE Networking Instant On AP」に複数の脆弱性が明らかになったとしてアップデートをリリースした。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-10-02T00:16:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「FortiMail」に深刻なゼロデイ脆弱性 - 悪用が報告、修正版は準備中 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190943</id>
+        <link href="https://www.security-next.com/190943"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-01T23:28:00.000Z</updated>
+        <summary type="html"><![CDATA[Fortinetが提供するメールセキュリティ製品「FortiMail」に深刻な脆弱性が明らかとなった。ゼロデイ攻撃に悪用されており、同社では修正版の準備を進めるとともに、回避策をアナウンスしている。]]></summary>
+        <content type="html"><![CDATA[Fortinetが提供するメールセキュリティ製品「FortiMail」に深刻な脆弱性が明らかとなった。ゼロデイ攻撃に悪用されており、同社では修正版の準備を進めるとともに、回避策をアナウンスしている。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="TOP記事"/>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-10-01T23:28:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日本トレクスの情報システムに不正アクセス、一部業務が停止 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56377.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56377.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/54961.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:05:23.000Z</updated>
+        <published>2026-10-01T23:05:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日本エネルギー経済研究所にフィッシング攻撃、所員6名のMicrosoft 365 アカウントに不正アクセス | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56376.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56376.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55073.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:05:21.000Z</updated>
+        <published>2026-10-01T23:05:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[当選を落選に書き換え ～ デジタル整理券システム「mogily」に不正アクセス | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56375.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56375.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/54995.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:05:18.000Z</updated>
+        <published>2026-10-01T23:05:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[メトロポイントクラブ会員向けサービスに不正アクセス、約59,000件のメールアドレスが漏えいした可能性 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56374.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56374.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55197.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:05:15.000Z</updated>
+        <published>2026-10-01T23:05:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「セイコーマートアプリ」に不正アクセス、約57万アカウントの会員情報が漏えいした可能性 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56373.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56373.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55200.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:05:13.000Z</updated>
+        <published>2026-10-01T23:05:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[払戻し申請を行った顧客1,463件の個人情報が漏えい ～ イープラスに不正アクセス | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56372.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56372.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55206.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:05:09.000Z</updated>
+        <published>2026-10-01T23:05:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「タイムズカー」への不正アクセス、約160万件の運転免許証画像等の本人確認書類が漏えい | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56371.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56371.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55213.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:05:06.000Z</updated>
+        <published>2026-10-01T23:05:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「郵便局アプリ」に不正アクセス、顧客情報を不正に取得 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56370.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56370.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55226.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:05:02.000Z</updated>
+        <published>2026-10-01T23:05:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日本標準時の供給サービスで異常、誤った時刻を配信 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56369.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56369.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55024.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:00:19.000Z</updated>
+        <published>2026-10-01T23:00:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GMOサイバーセキュリティ byイエラエ、台湾 TRAPA Security に出資 攻防演習プラットフォームの国内独占販売権を獲得 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56368.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56368.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-10-01T23:00:16.000Z</updated>
+        <published>2026-10-01T23:00:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PFU 製 Image Scanner Driver for Linux に複数の脆弱性 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56367.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56367.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-10-01T23:00:12.000Z</updated>
+        <published>2026-10-01T23:00:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[バッファロー製 Wi-Fi 製品に複数の脆弱性 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56366.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56366.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-10-01T23:00:09.000Z</updated>
+        <published>2026-10-01T23:00:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[本物の警察官と信じた理由は「自分の名や住所など個人情報を知っていた」54.1 ％ | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/02/56365.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/02/56365.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55070.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:00:04.000Z</updated>
+        <published>2026-10-01T23:00:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIが脆弱性を探す時代に何が変わる？　IPA白書2026が示す「防御」の転換点 | ＠IT Security&amp;Trustフォーラム 最新記事一覧]]></title>
+        <id>https://atmarkit.itmedia.co.jp/ait/articles/2610/02/news021.html</id>
+        <link href="https://atmarkit.itmedia.co.jp/ait/articles/2610/02/news021.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/ait/articles/2610/02/cover_news021.jpg" type="image/jpg"/>
+        <updated>2026-10-01T23:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AIが脆弱性を探し、攻撃にも防御にも使われる時代、企業が取るべき具体的な道筋は何か。IPAは「情報セキュリティ白書2026」を公開し、サイバーセキュリティの現状を整理した。本稿は全208ページの中から押さえておきたいポイントをまとめた。]]></summary>
+        <content type="html"><![CDATA[AIが脆弱性を探し、攻撃にも防御にも使われる時代、企業が取るべき具体的な道筋は何か。IPAは「情報セキュリティ白書2026」を公開し、サイバーセキュリティの現状を整理した。本稿は全208ページの中から押さえておきたいポイントをまとめた。]]></content>
+        <published>2026-10-01T23:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[なぜ気付けない？　侵入後にDLL偽装で正規ソフトに潜むマルウェアの手口と対策 | ITmedia エンタープライズ「セキュリティ」 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/enterprise/articles/2610/02/news013.html</id>
+        <link href="https://www.itmedia.co.jp/enterprise/articles/2610/02/news013.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/enterprise/articles/2610/02/cover_news013.jpg" type="image/jpg"/>
+        <updated>2026-10-01T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[攻撃者の侵入後に展開され、長期間潜伏するマルウェアをMicrosoftが解析した。このマルウェアは業務環境でよく使われる複数の正規ソフトウェアになりすまし、通常の通信に紛れて指令を受け取る。どう見抜き、どう備えればいいのか。]]></summary>
+        <content type="html"><![CDATA[攻撃者の侵入後に展開され、長期間潜伏するマルウェアをMicrosoftが解析した。このマルウェアは業務環境でよく使われる複数の正規ソフトウェアになりすまし、通常の通信に紛れて指令を受け取る。どう見抜き、どう備えればいいのか。]]></content>
+        <published>2026-10-01T22:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LINEヤフーはなぜ「社内の管理者」すら信用しないインフラを作ったのか | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2610/02/2000001938/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2610/02/2000001938/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2610/02/2000001938/10008185/2048" type="image//tt/article/ogp/2610/02/2000001938/10008185/2048"/>
+        <updated>2026-10-01T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[「LINE」でのAI機能の提供に際して、LINEヤフーはエンドユーザーのプライバシー保護のために高い安全性を確保する必要があった。そこで導入したのが、自社インフラの管理者さえ排除する高度な保護技術だ。]]></summary>
+        <content type="html"><![CDATA[「LINE」でのAI機能の提供に際して、LINEヤフーはエンドユーザーのプライバシー保護のために高い安全性を確保する必要があった。そこで導入したのが、自社インフラの管理者さえ排除する高度な保護技術だ。]]></content>
+        <published>2026-10-01T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新旧「Outlook」混在の恐怖を三星ダイヤモンド工業はどう乗り越えたか | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2610/02/2000001930/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2610/02/2000001930/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2610/02/2000001930/10008166/2048" type="image//tt/article/ogp/2610/02/2000001930/10008166/2048"/>
+        <updated>2026-10-01T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[「Microsoft Outlook」の刷新に伴い、三星ダイヤモンド工業は複数拠点におけるメール誤送信や現場の混乱を懸念していた。セキュリティ維持と作業負担の軽減を両立させ、どのようにしてツール移行を実現したのか。]]></summary>
+        <content type="html"><![CDATA[「Microsoft Outlook」の刷新に伴い、三星ダイヤモンド工業は複数拠点におけるメール誤送信や現場の混乱を懸念していた。セキュリティ維持と作業負担の軽減を両立させ、どのようにしてツール移行を実現したのか。]]></content>
+        <published>2026-10-01T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[事務用NASがランサム被害、通常業務は再開 - 佐賀大 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190842</id>
+        <link href="https://www.security-next.com/190842"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-01T13:50:23.000Z</updated>
+        <summary type="html"><![CDATA[佐賀大学は、事務に利用する一部情報システムで、ランサムウェアによる被害が発生したことを明らかにした。引き続き調査を進めているが、業務は再開しているという。]]></summary>
+        <content type="html"><![CDATA[佐賀大学は、事務に利用する一部情報システムで、ランサムウェアによる被害が発生したことを明らかにした。引き続き調査を進めているが、業務は再開しているという。]]></content>
+        <author>
+            <name>shayashi</name>
+        </author>
+        <category label="ニュース"/>
+        <category label="不正アクセス事件"/>
+        <published>2026-10-01T13:50:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「郵便局アプリ」で個人情報流出 - 緊急メンテを実施 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190903</id>
+        <link href="https://www.security-next.com/190903"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-01T07:59:48.000Z</updated>
+        <summary type="html"><![CDATA[日本郵政と日本郵便が提供するスマートフォン向けアプリが侵害され、個人情報が流出したことがわかった。]]></summary>
+        <content type="html"><![CDATA[日本郵政と日本郵便が提供するスマートフォン向けアプリが侵害され、個人情報が流出したことがわかった。]]></content>
+        <author>
+            <name>shayashi</name>
+        </author>
+        <category label="ウイルス・不正アクセス"/>
+        <category label="ニュース"/>
+        <category label="個人情報漏洩事件・事故"/>
+        <published>2026-10-01T07:59:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[グッズ作成サービス、クレカ情報含む個人情報流出の可能性 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190511</id>
+        <link href="https://www.security-next.com/190511"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-01T07:33:05.000Z</updated>
+        <summary type="html"><![CDATA[写真からオリジナルグッズを作成するサービス「PhotoGoods」が不正アクセスを受け、個人情報が流出した可能性があることがわかった。]]></summary>
+        <content type="html"><![CDATA[写真からオリジナルグッズを作成するサービス「PhotoGoods」が不正アクセスを受け、個人情報が流出した可能性があることがわかった。]]></content>
+        <author>
+            <name>shayashi</name>
+        </author>
+        <category label="ニュース"/>
+        <category label="不正アクセス事件"/>
+        <published>2026-10-01T07:33:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cisco、10月7日に複数製品のセキュリティアドバイザリを公開予定 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190900</id>
+        <link href="https://www.security-next.com/190900"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-01T07:23:05.000Z</updated>
+        <summary type="html"><![CDATA[Cisco Systemsは、複数製品を対象とするセキュリティアドバイザリを現地時間2026年10月7日に公開する予定であることを明らかにした。脆弱性情報とあわせて修正版を提供する見込み。]]></summary>
+        <content type="html"><![CDATA[Cisco Systemsは、複数製品を対象とするセキュリティアドバイザリを現地時間2026年10月7日に公開する予定であることを明らかにした。脆弱性情報とあわせて修正版を提供する見込み。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-10-01T07:23:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[佐川急便、不正アクセスで個人情報流出か　送り主・届け先の氏名や住所など、約100日分の荷物データ対象 | ITmedia NEWS セキュリティ 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/news/article/2610/01/2000001933/</id>
+        <link href="https://www.itmedia.co.jp/news/article/2610/01/2000001933/"/>
+        <link rel="enclosure" href="https://www.itmedia.co.jp/news/article/ogp/2610/01/2000001933/10008170/2048" type="image//news/article/ogp/2610/01/2000001933/10008170/2048"/>
+        <updated>2026-10-01T07:15:57.000Z</updated>
+        <summary type="html"><![CDATA[佐川急便は10月1日、荷物追跡サービスへの不正アクセスについて、顧客の個人情報が外部に流出した可能性があると発表した。荷物の送り主・届け先の氏名や住所などが対象で、同社はWebサービスの一部を停止している。]]></summary>
+        <content type="html"><![CDATA[佐川急便は10月1日、荷物追跡サービスへの不正アクセスについて、顧客の個人情報が外部に流出した可能性があると発表した。荷物の送り主・届け先の氏名や住所などが対象で、同社はWebサービスの一部を停止している。]]></content>
+        <published>2026-10-01T07:15:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[吉野家HD、バイト応募者の個人情報5366件漏えい　元委託先に不正アクセス　契約終了もデータ残存 | ITmedia NEWS セキュリティ 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/news/article/2610/01/2000001928/</id>
+        <link href="https://www.itmedia.co.jp/news/article/2610/01/2000001928/"/>
+        <link rel="enclosure" href="https://www.itmedia.co.jp/news/article/ogp/2610/01/2000001928/10008162/2048" type="image//news/article/ogp/2610/01/2000001928/10008162/2048"/>
+        <updated>2026-10-01T06:00:39.000Z</updated>
+        <summary type="html"><![CDATA[吉野家ホールディングスは9月30日、吉野家とはなまるが採用業務を委託していたApplyNow（東京都渋谷区）の採用管理プラットフォームが不正アクセスを受け、アルバイト応募者の個人情報5366件などが漏えいしたと発表した。]]></summary>
+        <content type="html"><![CDATA[吉野家ホールディングスは9月30日、吉野家とはなまるが採用業務を委託していたApplyNow（東京都渋谷区）の採用管理プラットフォームが不正アクセスを受け、アルバイト応募者の個人情報5366件などが漏えいしたと発表した。]]></content>
+        <published>2026-10-01T06:00:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「能動的サイバー防御」きょう開始　警察・自衛隊などが攻撃元サーバを無害化　高市首相も狙いを説明 | ITmedia NEWS セキュリティ 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/news/article/2610/01/2000001918/</id>
+        <link href="https://www.itmedia.co.jp/news/article/2610/01/2000001918/"/>
+        <link rel="enclosure" href="https://www.itmedia.co.jp/news/article/ogp/2610/01/2000001918/10008124/2048" type="image//news/article/ogp/2610/01/2000001918/10008124/2048"/>
+        <updated>2026-10-01T03:21:11.000Z</updated>
+        <summary type="html"><![CDATA[政府は10月1日、「サイバー対処能力強化法」と同整備法の一部施行に伴い、重大なサイバー攻撃を未然に防ぐ「能動的サイバー防御」の運用を始めた。攻撃元のサーバに警察や自衛隊がアクセスし、不正プログラムの消去などで無害化できるようになる。]]></summary>
+        <content type="html"><![CDATA[政府は10月1日、「サイバー対処能力強化法」と同整備法の一部施行に伴い、重大なサイバー攻撃を未然に防ぐ「能動的サイバー防御」の運用を始めた。攻撃元のサーバに警察や自衛隊がアクセスし、不正プログラムの消去などで無害化できるようになる。]]></content>
+        <published>2026-10-01T03:21:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NVIDIA製GPU関連ソフトに脆弱性 - 重要度「クリティカル」も | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190906</id>
+        <link href="https://www.security-next.com/190906"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-01T02:37:53.000Z</updated>
+        <summary type="html"><![CDATA[NVIDIAは、「NVIDIA GPU Display Driver」「NVIDIA vGPU Software」に複数の脆弱性が明らかになったとして、セキュリティアップデートをリリースした。「NVIDIA vGPU Software」に関しては、重要度「クリティカル（Critical）」とされる脆弱性も含まれる。]]></summary>
+        <content type="html"><![CDATA[NVIDIAは、「NVIDIA GPU Display Driver」「NVIDIA vGPU Software」に複数の脆弱性が明らかになったとして、セキュリティアップデートをリリースした。「NVIDIA vGPU Software」に関しては、重要度「クリティカル（Critical）」とされる脆弱性も含まれる。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-10-01T02:37:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VOISINGの利用するBIツールへの不正アクセスについてまとめてみた | piyolog]]></title>
+        <id>https://piyolog.hatenadiary.jp/entry/2026/10/01/112213</id>
+        <link href="https://piyolog.hatenadiary.jp/entry/2026/10/01/112213"/>
+        <link rel="enclosure" href="https://ogimage.blog.st-hatena.com/10257846132616586766/14945776032084570308/1790821333" type="image//10257846132616586766/14945776032084570308/1790821333"/>
+        <updated>2026-10-01T02:22:13.000Z</updated>
+        <summary type="html"><![CDATA[2026年8月18日、VOISINGは、同社が利用するBIツールへの不正アクセスにより顧客の個人情報が漏えいしたと公表しました。ここでは関連する情報をまとめます。修正プログラムの適用前に脆弱性悪用株式会社VOISINGは9月30日の第四報で、専門機関による最終調査と社内精査がすべて完了したとして、調査結果を公表。原因は、BIツールの脆弱性を悪用されたことで、「該当ツールの修正プログラムを適用する前]]></summary>
+        <content type="html"><![CDATA[2026年8月18日、VOISINGは、同社が利用するBIツールへの不正アクセスにより顧客の個人情報が漏えいしたと公表しました。ここでは関連する情報をまとめます。修正プログラムの適用前に脆弱性悪用株式会社VOISINGは9月30日の第四報で、専門機関による最終調査と社内精査がすべて完了したとして、調査結果を公表。原因は、BIツールの脆弱性を悪用されたことで、「該当ツールの修正プログラムを適用する前の段階で不正アクセスが行われ、当社システムへ侵入された結果、個人情報の漏洩へとつながる」としている(出典: 4)。今後の対策の項では、BIツールに存在した既知の脆弱性*1 に対する修正の適用が、脆弱性情報の公開から攻撃までの時間軸に間に合わなかったことを「直接の原因」としている(出典: 4)。同社は8月18日の第一報の時点で、原因とみられる脆弱性に対する修正プログラムの適用を完了したとしている(出典: 1)。不正アクセス被害の関連図 8月16日夜の約1時間半でデータ窃取VOISINGは、8月10日1時2分頃から、BIツールに対する外部からの不正アクセスが開始されたとしている。8月16日18時4]]></content>
+        <category label="不正アクセス"/>
+        <category label="脆弱性"/>
+        <published>2026-10-01T02:22:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Apache WSS4J」に認証回避など7件の脆弱性 - 修正版が公開 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190893</id>
+        <link href="https://www.security-next.com/190893"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-10-01T00:43:28.000Z</updated>
+        <summary type="html"><![CDATA[Java環境でSOAPメッセージに「WS-Security」を適用するためのライブラリ「Apache WSS4J」に複数の脆弱性が明らかとなった。脆弱性を修正したアップデートが提供されている。]]></summary>
+        <content type="html"><![CDATA[Java環境でSOAPメッセージに「WS-Security」を適用するためのライブラリ「Apache WSS4J」に複数の脆弱性が明らかとなった。脆弱性を修正したアップデートが提供されている。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="TOP記事"/>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-10-01T00:43:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[イープラスに不正アクセス、スマチケの払戻し情報1,463件が漏えい | サイバーセキュリティ・情報漏洩ニュース – サイバーセキュリティ.com]]></title>
+        <id>https://cybersecurity-jp.com/?p=116881</id>
+        <link href="https://cybersecurity-jp.com/news/116881"/>
+        <link rel="enclosure" href="https://cybersecurity-jp.com/wp-content/uploads/2026/09/img_116881.png" type="image/png"/>
+        <updated>2026-10-01T00:18:22.000Z</updated>
+        <summary type="html"><![CDATA[画像：株式会社イープラスより引用 株式会社イープラスは2026年9月29日、電子チケット「スマチケ」の払戻し情報を管理するシステムが不正アクセスを受け、個人情報1,463件が漏えいしたと発表しました。 同社によると、不正 […]]]></summary>
+        <content type="html"><![CDATA[画像：株式会社イープラスより引用 株式会社イープラスは2026年9月29日、電子チケット「スマチケ」の払戻し情報を管理するシステムが不正アクセスを受け、個人情報1,463件が漏えいしたと発表しました。 同社によると、不正 […]]]></content>
+        <author>
+            <name>サイバーセキュリティ.com 事務局編集部</name>
+        </author>
+        <category label="サイバーセキュリティ・情報漏洩ニュース"/>
+        <published>2026-10-01T00:18:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[サンポー食品のウェブサイトに不正アクセス、管理者権限の取得や改ざんを確認 | サイバーセキュリティ・情報漏洩ニュース – サイバーセキュリティ.com]]></title>
+        <id>https://cybersecurity-jp.com/?p=116879</id>
+        <link href="https://cybersecurity-jp.com/news/116879"/>
+        <link rel="enclosure" href="https://cybersecurity-jp.com/wp-content/uploads/2026/09/img_116879.png" type="image/png"/>
+        <updated>2026-10-01T00:16:36.000Z</updated>
+        <summary type="html"><![CDATA[画像：サンポー食品株式会社より引用 サンポー食品株式会社は2026年9月28日、同社ウェブサイトに対するサイバー攻撃を発表しました。 同社によると2026年8月25日、第三者による不正アクセスが確認されました。同社がサイ […]]]></summary>
+        <content type="html"><![CDATA[画像：サンポー食品株式会社より引用 サンポー食品株式会社は2026年9月28日、同社ウェブサイトに対するサイバー攻撃を発表しました。 同社によると2026年8月25日、第三者による不正アクセスが確認されました。同社がサイ […]]]></content>
+        <author>
+            <name>サイバーセキュリティ.com 事務局編集部</name>
+        </author>
+        <category label="サイバーセキュリティ・情報漏洩ニュース"/>
+        <published>2026-10-01T00:16:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Apple製品やCiscoのSD-WAN管理製品の脆弱性悪用に注意喚起 - 米当局 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190890</id>
+        <link href="https://www.security-next.com/190890"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-09-30T23:57:28.000Z</updated>
+        <summary type="html"><![CDATA[米当局は、AppleやCisco Systems製品に判明した脆弱性が悪用されているとして、注意喚起を行った。]]></summary>
+        <content type="html"><![CDATA[米当局は、AppleやCisco Systems製品に判明した脆弱性が悪用されているとして、注意喚起を行った。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-09-30T23:57:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Catalyst SD-WAN Manager」にゼロデイ脆弱性 - 更新や侵害調査を | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190883</id>
+        <link href="https://www.security-next.com/190883"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-09-30T23:37:52.000Z</updated>
+        <summary type="html"><![CDATA[Cisco Systemsは、「Cisco Catalyst SD-WAN Manager」に脆弱性が明らかになったとして、セキュリティアップデートをリリースした。すでに悪用も確認されている。]]></summary>
+        <content type="html"><![CDATA[Cisco Systemsは、「Cisco Catalyst SD-WAN Manager」に脆弱性が明らかになったとして、セキュリティアップデートをリリースした。すでに悪用も確認されている。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="TOP記事"/>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-09-30T23:37:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft Malware Protection Engine における任意の特権ファイルの書き込みが可能となるファイル操作での検証不備（Scan Tech Report） | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56364.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56364.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55199.jpg" type="image/jpg"/>
+        <updated>2026-09-30T23:20:02.000Z</updated>
+        <published>2026-09-30T23:20:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[人材不足に打ち勝つセキュリティ運用とは ～ DNP との対談で明かされる効果、テクマトリックスが Palo Alto Networks の Cortex XSIAM で提案する次世代 SOC | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56363.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56363.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55155.png" type="image/png"/>
+        <updated>2026-09-30T23:15:03.000Z</updated>
+        <published>2026-09-30T23:15:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS WAF の保守運用にお悩みの方向け ～ 継続的ルール調整・誤検知対応を実現するオンラインセミナーを GMOイエラエが 10 / 7 開催 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56362.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56362.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55135.jpg" type="image/jpg"/>
+        <updated>2026-09-30T23:10:03.000Z</updated>
+        <published>2026-09-30T23:10:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「クロネコ代金後払いサービス」に不正アクセス | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56361.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56361.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55204.jpg" type="image/jpg"/>
+        <updated>2026-09-30T23:05:22.000Z</updated>
+        <published>2026-09-30T23:05:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「タイムズカー」に不正アクセス、運転免許証画像含む会員情報が第三者に取得されたことを確認 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56360.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56360.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55177.jpg" type="image/jpg"/>
+        <updated>2026-09-30T23:05:19.000Z</updated>
+        <published>2026-09-30T23:05:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[スターツ出版「オズモール」に不正アクセス、会員のメールアドレス 最大447,610名分が漏えいした可能性 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56359.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56359.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55181.jpg" type="image/jpg"/>
+        <updated>2026-09-30T23:05:14.000Z</updated>
+        <published>2026-09-30T23:05:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「ニッポンレンタカーアプリ」への不正アクセス、運転免許証情報が閲覧されたおそれも | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56358.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56358.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55211.jpg" type="image/jpg"/>
+        <updated>2026-09-30T23:05:12.000Z</updated>
+        <published>2026-09-30T23:05:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CMSプラグインの脆弱性公表を受け更新作業中に不正アクセスを発見 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56357.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56357.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/54999.jpg" type="image/jpg"/>
+        <updated>2026-09-30T23:05:09.000Z</updated>
+        <published>2026-09-30T23:05:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[当選が落選に「ULTRA MART」チケット抽選システムに不正アクセス | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56356.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56356.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/54991.jpg" type="image/jpg"/>
+        <updated>2026-09-30T23:05:06.000Z</updated>
+        <published>2026-09-30T23:05:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「RESPECTion!シンポジウム」参加申込フォームに設定不備、他の申込者の回答内容が閲覧可能に | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56355.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56355.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55027.jpg" type="image/jpg"/>
+        <updated>2026-09-30T23:05:02.000Z</updated>
+        <published>2026-09-30T23:05:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NetScaler ADC および NetScaler Gateway に脆弱性、世界中で脅威アクターが積極的に悪用との情報 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56354.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56354.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-09-30T23:00:22.000Z</updated>
+        <published>2026-09-30T23:00:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Apache Tomcat に複数の脆弱性 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56353.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56353.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-09-30T23:00:18.000Z</updated>
+        <published>2026-09-30T23:00:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[IPA、情報セキュリティ早期警戒パートナーシップガイドライン改訂案を公開 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56352.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56352.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-09-30T23:00:15.000Z</updated>
+        <published>2026-09-30T23:00:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C&amp;Cサーバ検知共有スキームを実践フェーズへ、通信事業者らによる注意喚起・フィルタリング試行 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56351.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56351.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-09-30T23:00:12.000Z</updated>
+        <published>2026-09-30T23:00:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GMOサイバーセキュリティ byイエラエ、国際宇宙会議（IAC 2026）で衛星セキュリティ研究やデモを出展 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56350.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56350.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-09-30T23:00:07.000Z</updated>
+        <published>2026-09-30T23:00:07.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HENNGE がラグビーチーム「リコーブラックラムズ東京」とのオフィシャルパートナー契約を締結、公式戦ウェア背面にロゴ掲出 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/10/01/56349.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/10/01/56349.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55109.png" type="image/png"/>
+        <updated>2026-09-30T23:00:03.000Z</updated>
+        <published>2026-09-30T23:00:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Azureとオンプレをつなぐ「管理ツール」が侵入口に？　ハイブリッド構成の盲点 | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2610/01/2000001903/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2610/01/2000001903/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2610/01/2000001903/10008045/2048" type="image//tt/article/ogp/2610/01/2000001903/10008045/2048"/>
+        <updated>2026-09-30T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Microsoftのハイブリッド管理ツールに複数の脆弱性が発覚した。これらを連鎖させることで、ローカルデバイスからクラウド全体に被害が拡大する恐れがある。企業はどう立ち向かうべきか。]]></summary>
+        <content type="html"><![CDATA[Microsoftのハイブリッド管理ツールに複数の脆弱性が発覚した。これらを連鎖させることで、ローカルデバイスからクラウド全体に被害が拡大する恐れがある。企業はどう立ち向かうべきか。]]></content>
+        <published>2026-09-30T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIがサイバー攻撃調査を拒否？　セキュリティ企業が単一モデル依存から脱却する理由 | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2610/01/2000001889/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2610/01/2000001889/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2610/01/2000001889/10008008/2048" type="image//tt/article/ogp/2610/01/2000001889/10008008/2048"/>
+        <updated>2026-09-30T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[商用AIの安全機能が正規の攻撃解析を「悪意ある行為」と誤認して拒絶する問題が深刻化している。調査停止の危機に直面したセキュリティ各社が打ち出す、単一モデル依存から脱却するための現実解とは。]]></summary>
+        <content type="html"><![CDATA[商用AIの安全機能が正規の攻撃解析を「悪意ある行為」と誤認して拒絶する問題が深刻化している。調査停止の危機に直面したセキュリティ各社が打ち出す、単一モデル依存から脱却するための現実解とは。]]></content>
+        <published>2026-09-30T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[認証強化が招く「利便性低下」のわな　光世証券に学ぶパスキー導入の判断基準 | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2610/01/2000001883/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2610/01/2000001883/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2610/01/2000001883/10007986/2048" type="image//tt/article/ogp/2610/01/2000001883/10007986/2048"/>
+        <updated>2026-09-30T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[巧妙化するサイバー攻撃への対策として多要素認証の導入が推奨される中、過度なセキュリティ強化は利用者の利便性を損なうリスクをはらむ。安全性と使いやすさをどう両立すべきか。光世証券の事例から探る。]]></summary>
+        <content type="html"><![CDATA[巧妙化するサイバー攻撃への対策として多要素認証の導入が推奨される中、過度なセキュリティ強化は利用者の利便性を損なうリスクをはらむ。安全性と使いやすさをどう両立すべきか。光世証券の事例から探る。]]></content>
+        <published>2026-09-30T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[チケット販売「イープラス」、払戻し申請した顧客顧客の個人情報が流出 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190837</id>
+        <link href="https://www.security-next.com/190837"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-09-30T11:24:52.000Z</updated>
+        <summary type="html"><![CDATA[チケット販売プラットフォーム「イープラス」が不正アクセスを受け、顧客の個人情報が流出したことがわかった。]]></summary>
+        <content type="html"><![CDATA[チケット販売プラットフォーム「イープラス」が不正アクセスを受け、顧客の個人情報が流出したことがわかった。]]></content>
+        <author>
+            <name>shayashi</name>
+        </author>
+        <category label="ウイルス・不正アクセス"/>
+        <category label="ニュース"/>
+        <category label="個人情報漏洩事件・事故"/>
+        <published>2026-09-30T11:24:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[トークン消費85％減　Googleが脆弱性を自動修正するオープンソースハーネス「Mantis」公開 | ＠IT Security&amp;Trustフォーラム 最新記事一覧]]></title>
+        <id>https://atmarkit.itmedia.co.jp/ait/articles/2609/30/news056.html</id>
+        <link href="https://atmarkit.itmedia.co.jp/ait/articles/2609/30/news056.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/ait/articles/2609/30/cover_news056.jpg" type="image/jpg"/>
+        <updated>2026-09-30T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Googleは、ソフトウェアの脆弱性の発見から修正までを自動化するオープンソースのハーネス「Mantis」を公開した。]]></summary>
+        <content type="html"><![CDATA[Googleは、ソフトウェアの脆弱性の発見から修正までを自動化するオープンソースのハーネス「Mantis」を公開した。]]></content>
+        <published>2026-09-30T06:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[アイデンティティ管理製品「SailPoint IdentityIQ」に深刻な脆弱性 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190833</id>
+        <link href="https://www.security-next.com/190833"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-09-30T02:30:35.000Z</updated>
+        <summary type="html"><![CDATA[SailPointのアイデンティティ管理製品「SailPoint IdentityIQ」に深刻な脆弱性が明らかとなった。修正プログラムを提供している。]]></summary>
+        <content type="html"><![CDATA[SailPointのアイデンティティ管理製品「SailPoint IdentityIQ」に深刻な脆弱性が明らかとなった。修正プログラムを提供している。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-09-30T02:30:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「AWSのセキュリティサービスで“アラートの山”」――ほぼ日はどう解消？ | ＠IT Security&amp;Trustフォーラム 最新記事一覧]]></title>
+        <id>https://atmarkit.itmedia.co.jp/ait/articles/2609/30/news045.html</id>
+        <link href="https://atmarkit.itmedia.co.jp/ait/articles/2609/30/news045.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/ait/articles/2609/30/cover_news045.jpg" type="image/jpg"/>
+        <updated>2026-09-30T02:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ほぼ日は、自社サービスを支えるシステムのセキュリティ対策の強化を進めたものの、システムごとに必要な対策の見極めや、積み上がるアラートへの対処が課題になっていた。この状況をどう見直したのか。]]></summary>
+        <content type="html"><![CDATA[ほぼ日は、自社サービスを支えるシステムのセキュリティ対策の強化を進めたものの、システムごとに必要な対策の見極めや、積み上がるアラートへの対処が課題になっていた。この状況をどう見直したのか。]]></content>
+        <published>2026-09-30T02:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[タイムズカー、不正アクセスで約660万アカウントの個人情報漏えい　免許証画像なども対象 | サイバーセキュリティ・情報漏洩ニュース – サイバーセキュリティ.com]]></title>
+        <id>https://cybersecurity-jp.com/?p=116861</id>
+        <link href="https://cybersecurity-jp.com/news/116861"/>
+        <link rel="enclosure" href="https://cybersecurity-jp.com/wp-content/uploads/2026/09/img_116861.png" type="image/png"/>
+        <updated>2026-09-30T00:00:54.000Z</updated>
+        <summary type="html"><![CDATA[画像：タイムズカーより引用 カーシェアリングサービス「タイムズカー」は2026年9月28日までに、Webサイトへの不正アクセスに関する調査結果を公表し、約660万件のアカウントに関する個人情報が漏えいしたことを明らかにし […]]]></summary>
+        <content type="html"><![CDATA[画像：タイムズカーより引用 カーシェアリングサービス「タイムズカー」は2026年9月28日までに、Webサイトへの不正アクセスに関する調査結果を公表し、約660万件のアカウントに関する個人情報が漏えいしたことを明らかにし […]]]></content>
+        <author>
+            <name>サイバーセキュリティ.com 事務局編集部</name>
+        </author>
+        <category label="サイバーセキュリティ・情報漏洩ニュース"/>
+        <published>2026-09-30T00:00:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ファインズ、予約システムへの不正アクセスを公表　予約者情報約154万件が対象 | サイバーセキュリティ・情報漏洩ニュース – サイバーセキュリティ.com]]></title>
+        <id>https://cybersecurity-jp.com/?p=116863</id>
+        <link href="https://cybersecurity-jp.com/news/116863"/>
+        <link rel="enclosure" href="https://cybersecurity-jp.com/wp-content/uploads/2026/09/img_116863.png" type="image/png"/>
+        <updated>2026-09-30T00:00:21.000Z</updated>
+        <summary type="html"><![CDATA[画像：株式会社ファインズより引用 株式会社ファインズは2026年9月25日、同社が提供する予約システムで第三者による不正アクセスが発生したと公表しました。 説明によると同社は2026年9月22日、システムの異常を検知し、 […]]]></summary>
+        <content type="html"><![CDATA[画像：株式会社ファインズより引用 株式会社ファインズは2026年9月25日、同社が提供する予約システムで第三者による不正アクセスが発生したと公表しました。 説明によると同社は2026年9月22日、システムの異常を検知し、 […]]]></content>
+        <author>
+            <name>サイバーセキュリティ.com 事務局編集部</name>
+        </author>
+        <category label="サイバーセキュリティ・情報漏洩ニュース"/>
+        <published>2026-09-30T00:00:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ブラウザ「Chrome」にセキュリティ更新 - 脆弱性32件を修正 | Security NEXT]]></title>
+        <id>https://www.security-next.com/?p=190829</id>
+        <link href="https://www.security-next.com/190829"/>
+        <link rel="enclosure" href="https://b.st-hatena.com/images/entry-button/button-only.gif" type="image/gif"/>
+        <updated>2026-09-29T23:16:46.000Z</updated>
+        <summary type="html"><![CDATA[Googleは、ウェブブラウザ「Chrome」のセキュリティアップデートをリリースした。複数の脆弱性へ対応しており、「クリティカル（Critical）」とされる脆弱性にも対応している。]]></summary>
+        <content type="html"><![CDATA[Googleは、ウェブブラウザ「Chrome」のセキュリティアップデートをリリースした。複数の脆弱性へ対応しており、「クリティカル（Critical）」とされる脆弱性にも対応している。]]></content>
+        <author>
+            <name>snadmin</name>
+        </author>
+        <category label="TOP記事"/>
+        <category label="ニュース"/>
+        <category label="脆弱性"/>
+        <published>2026-09-29T23:16:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[恐喝集団 ShinyHunters かく語りき「我々の収益は合法的な企業をも大きく上回る」 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56348.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56348.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55196.jpg" type="image/jpg"/>
+        <updated>2026-09-29T23:15:03.000Z</updated>
+        <published>2026-09-29T23:15:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI コーディングやローコード開発の落とし穴を解説 ～ GMOイエラエ、10 / 6 に Web アプリ脆弱性診断のオンラインセミナー開催 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56347.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56347.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55136.jpg" type="image/jpg"/>
+        <updated>2026-09-29T23:10:02.000Z</updated>
+        <published>2026-09-29T23:10:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[佐賀大学のNASにランサムウェア攻撃、ファイルが暗号化される被害 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56346.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56346.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55185.jpg" type="image/jpg"/>
+        <updated>2026-09-29T23:05:14.000Z</updated>
+        <published>2026-09-29T23:05:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[京王電鉄にランサムウェア攻撃 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56345.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56345.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55191.jpg" type="image/jpg"/>
+        <updated>2026-09-29T23:05:12.000Z</updated>
+        <published>2026-09-29T23:05:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日本郵便 調査請求 Web受付サービスに不正アクセス、一時的に受付を停止 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56344.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56344.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55194.jpg" type="image/jpg"/>
+        <updated>2026-09-29T23:05:10.000Z</updated>
+        <published>2026-09-29T23:05:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ID・パスワードが窃取が原因 ～「HALMEK up」に不正アクセス | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56343.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56343.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55022.jpg" type="image/jpg"/>
+        <updated>2026-09-29T23:05:07.000Z</updated>
+        <published>2026-09-29T23:05:07.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[長野県大町市デジタルアーカイブサイトに不正アクセス、オンラインカジノサイト誘導ページに改ざん | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56342.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56342.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/54928.jpg" type="image/jpg"/>
+        <updated>2026-09-29T23:05:05.000Z</updated>
+        <published>2026-09-29T23:05:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[保育上の不適切な対応も確認 ～ 鎌倉市児童発達支援センターあおぞら園で個人情報を誤送付 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56341.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56341.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55004.jpg" type="image/jpg"/>
+        <updated>2026-09-29T23:05:03.000Z</updated>
+        <published>2026-09-29T23:05:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NetScaler ADC/Gatewayの脆弱性CVE-2026-88771、CVE-2026-88772の悪用についてまとめてみた | piyolog]]></title>
+        <id>https://piyolog.hatenadiary.jp/entry/2026/09/30/080115</id>
+        <link href="https://piyolog.hatenadiary.jp/entry/2026/09/30/080115"/>
+        <link rel="enclosure" href="https://ogimage.blog.st-hatena.com/10257846132616586766/14945776032084154275/1790722875" type="image//10257846132616586766/14945776032084154275/1790722875"/>
+        <updated>2026-09-29T23:01:15.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月27日、NetScaler ADCとNetScaler Gatewayを開発するCloud Software Groupは、両製品に複数の脆弱性が確認されたとしてセキュリティ情報を公開し、うち2件については未対策の環境での悪用を観測したとして、修正版への更新を案内しました。ここでは関連する情報をまとめます。観測された悪用事例は?Cloud Software Groupは、CVE-20]]></summary>
+        <content type="html"><![CDATA[2026年9月27日、NetScaler ADCとNetScaler Gatewayを開発するCloud Software Groupは、両製品に複数の脆弱性が確認されたとしてセキュリティ情報を公開し、うち2件については未対策の環境での悪用を観測したとして、修正版への更新を案内しました。ここでは関連する情報をまとめます。観測された悪用事例は?Cloud Software Groupは、CVE-2026-88771とCVE-2026-88772の悪用を観測したと公表している*1。(出典: 1, 2)CISAは、この2件をそれぞれ単独でリモートコード実行を可能にいたるクリティカルなゼロデイ脆弱性としている。(出典: 4)CISAは、報告およびパートナーからの脅威情報により、脅威アクターがこの2件を世界的に悪用していることを確認したとして、2026年9月27日にKEVカタログへ追加した。(出典: 3, 4)カナダのサイバーセキュリティセンター(CCCS)は、世界の複数のCitrix顧客環境で悪用が観測されたとの報告があるとする一方、活動の全容は現時点で不明としている*2。(出典: 5)Gre]]></content>
+        <category label="脆弱性"/>
+        <category label="KEV"/>
+        <published>2026-09-29T23:01:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[山口東京理科大チームが優勝 ～ 県警ら主催「サイバー攻撃共同対処訓練」で約 90 名が Micro Hardening 演習 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56340.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56340.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-09-29T23:00:14.000Z</updated>
+        <published>2026-09-29T23:00:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ランサムウェア被害件数が過去最多の123件に、警察庁が対策情報を紹介 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56339.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56339.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-09-29T23:00:11.000Z</updated>
+        <published>2026-09-29T23:00:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[11 / 2 までエントリー受付「セキュリティ・キャンプ2026オンライン」初級・中級コースをオンライン開催 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56338.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56338.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-09-29T23:00:08.000Z</updated>
+        <published>2026-09-29T23:00:08.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HENNGE One、コンテンツプラットフォーム「riclink」と SSO 連携 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56337.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56337.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55132.png" type="image/png"/>
+        <updated>2026-09-29T23:00:06.000Z</updated>
+        <published>2026-09-29T23:00:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GMOイエラエ、AI 活用で最短 3 営業日納品の「クイック診断」など Webアプリ脆弱性診断 3 プランを提供開始 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/30/56336.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/30/56336.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/base/images/img_ogp.png" type="image/png"/>
+        <updated>2026-09-29T23:00:03.000Z</updated>
+        <published>2026-09-29T23:00:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[タイムズカーで不正アクセス　「退会済み」含む約660万件の情報が流出 | ＠IT Security&amp;Trustフォーラム 最新記事一覧]]></title>
+        <id>https://atmarkit.itmedia.co.jp/ait/articles/2609/30/news038.html</id>
+        <link href="https://atmarkit.itmedia.co.jp/ait/articles/2609/30/news038.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/ait/articles/2609/30/cover_news038.jpg" type="image/jpg"/>
+        <updated>2026-09-29T23:00:00.000Z</updated>
+        <summary type="html"><![CDATA[タイムズカーは、Webシステムへの不正アクセスについての調査結果を発表した。退会者を含む約660万件のアカウント情報が第三者に取得され、運転免許証画像などが流出したという。漏えい情報を悪用した二次被害についても注意が必要だ。]]></summary>
+        <content type="html"><![CDATA[タイムズカーは、Webシステムへの不正アクセスについての調査結果を発表した。退会者を含む約660万件のアカウント情報が第三者に取得され、運転免許証画像などが流出したという。漏えい情報を悪用した二次被害についても注意が必要だ。]]></content>
+        <published>2026-09-29T23:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[シャドーAIへの機密流出をブロック　Microsoftがセキュリティ製品群をアップデート | ITmedia エンタープライズ「セキュリティ」 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/enterprise/articles/2609/29/news035.html</id>
+        <link href="https://www.itmedia.co.jp/enterprise/articles/2609/29/news035.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/enterprise/articles/2609/29/cover_news035.jpg" type="image/jpg"/>
+        <updated>2026-09-29T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Microsoftがセキュリティ製品群のアップデートを発表した。PurviewとEntraの連携で、利用者の代理で動くAIエージェントの通信も含め、未承認のAIツールへの機密データ流出をネットワーク層で止める機能を一般提供した。]]></summary>
+        <content type="html"><![CDATA[Microsoftがセキュリティ製品群のアップデートを発表した。PurviewとEntraの連携で、利用者の代理で動くAIエージェントの通信も含め、未承認のAIツールへの機密データ流出をネットワーク層で止める機能を一般提供した。]]></content>
+        <published>2026-09-29T22:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIエージェント暴走をミリ秒で隔離　NVIDIAがハードで挑む暴走抑止 | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2609/30/2000001848/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2609/30/2000001848/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2609/30/2000001848/10007874/2048" type="image//tt/article/ogp/2609/30/2000001848/10007874/2048"/>
+        <updated>2026-09-29T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[主要ベンダーのAIエージェントが制御を突破する事件が頻発。NVIDIAはインフラ層で暴走を隔離する新基盤を投じたが、専門家は「正当な権限で行う誤判断」のリスクを警告する。情シスが備えるべき防壁とは。]]></summary>
+        <content type="html"><![CDATA[主要ベンダーのAIエージェントが制御を突破する事件が頻発。NVIDIAはインフラ層で暴走を隔離する新基盤を投じたが、専門家は「正当な権限で行う誤判断」のリスクを警告する。情シスが備えるべき防壁とは。]]></content>
+        <published>2026-09-29T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[バイブコーディング製アプリが拡大　使用前に情シスが確認したい5つのポイント | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2609/30/2000001844/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2609/30/2000001844/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2609/30/2000001844/991575/2048" type="image//tt/article/ogp/2609/30/2000001844/991575/2048"/>
+        <updated>2026-09-29T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AIを使えば、専門的なプログラミング知識がなくてもアプリを作れるようになった。一方、AI生成コードには認証やアクセス制御などの不備が残る可能性がある。情シスは社内利用を許可する前に何を確認すべきか。]]></summary>
+        <content type="html"><![CDATA[AIを使えば、専門的なプログラミング知識がなくてもアプリを作れるようになった。一方、AI生成コードには認証やアクセス制御などの不備が残る可能性がある。情シスは社内利用を許可する前に何を確認すべきか。]]></content>
+        <published>2026-09-29T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「サイバー犯罪株式会社」に潜入　現地調査で判明した“犯罪者求人”の実態 | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2609/30/2000001857/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2609/30/2000001857/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2609/30/2000001857/10007896/2048" type="image//tt/article/ogp/2609/30/2000001857/10007896/2048"/>
+        <updated>2026-09-29T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[英紙記者の現地取材で、東南アジアを拠点とする犯罪組織の企業化が判明した。豪華な施設と劣悪な寮が同居する現地拠点を取材し、浮き彫りになった国家機能まで巻き込む犯罪構造とは。]]></summary>
+        <content type="html"><![CDATA[英紙記者の現地取材で、東南アジアを拠点とする犯罪組織の企業化が判明した。豪華な施設と劣悪な寮が同居する現地拠点を取材し、浮き彫りになった国家機能まで巻き込む犯罪構造とは。]]></content>
+        <published>2026-09-29T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ランサムウェア攻撃による京王電鉄グループのシステム障害についてまとめてみた | piyolog]]></title>
+        <id>https://piyolog.hatenadiary.jp/entry/2026/09/30/021814</id>
+        <link href="https://piyolog.hatenadiary.jp/entry/2026/09/30/021814"/>
+        <link rel="enclosure" href="https://ogimage.blog.st-hatena.com/10257846132616586766/14945776032084089084/1790702294" type="image//10257846132616586766/14945776032084089084/1790702294"/>
+        <updated>2026-09-29T17:18:14.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月26日、京王電鉄は同社グループのサーバーがランサムウェアによる攻撃を受け、一部グループ会社の営業システムに支障が生じていると公表しました。同日以降、ホテルや流通、旅行などのグループ各社がシステム障害を告知しています。ここでは関連する情報をまとめます。9月26日未明にグループサーバーへの攻撃を確認京王電鉄は2026年9月26日未明、同社グループのサーバーへのランサムウェアによる攻撃を確]]></summary>
+        <content type="html"><![CDATA[2026年9月26日、京王電鉄は同社グループのサーバーがランサムウェアによる攻撃を受け、一部グループ会社の営業システムに支障が生じていると公表しました。同日以降、ホテルや流通、旅行などのグループ各社がシステム障害を告知しています。ここでは関連する情報をまとめます。9月26日未明にグループサーバーへの攻撃を確認京王電鉄は2026年9月26日未明、同社グループのサーバーへのランサムウェアによる攻撃を確認した。ただちにネットワーク遮断措置等を講じ、警察への通報等を行ったうえで、外部専門家の協力を得て攻撃の経路や被害の調査を進めている(出典: 1)。攻撃の確認は26日午前5時台から6時台という(出典: 13)。同社は一部グループ会社の営業システムに支障が生じているとし、現時点で鉄道の運行に支障はないとしている(出典: 1)。鉄道運行システムのサーバーは別系統という(出典: 14)。情報漏洩の事実は現時点で確認できておらず、事業に関する機密事項や顧客に関する情報などの流出を含めた影響範囲を調査中とした(出典: 1)。身代金の要求の有無などについて、京王電鉄は「詳細は控える」としている(出典: 1]]></content>
+        <category label="Ransomware"/>
+        <category label="不正アクセス"/>
+        <published>2026-09-29T17:18:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[手間いらずの「TEMAIRAZU」シリーズへの不正アクセスについてまとめてみた | piyolog]]></title>
+        <id>https://piyolog.hatenadiary.jp/entry/2026/09/30/013735</id>
+        <link href="https://piyolog.hatenadiary.jp/entry/2026/09/30/013735"/>
+        <link rel="enclosure" href="https://ogimage.blog.st-hatena.com/10257846132616586766/14945776032084083867/1790829469" type="image//10257846132616586766/14945776032084083867/1790829469"/>
+        <updated>2026-09-29T16:37:35.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月28日、手間いらずは同社のサイトコントローラー「TEMAIRAZU」シリーズを利用する宿泊施設に予約した人へ予約に関する不審なメッセージが届いており、調査より同社システムへの不正アクセスを確認したことを公表しました。ここでは関連する情報をまとめます。予約情報を把握したかのような不審なメッセージ手間いらずは、2026年9月21日深夜頃より、複数の宿泊施設から、予約者にWhatsApp等]]></summary>
+        <content type="html"><![CDATA[2026年9月28日、手間いらずは同社のサイトコントローラー「TEMAIRAZU」シリーズを利用する宿泊施設に予約した人へ予約に関する不審なメッセージが届いており、調査より同社システムへの不正アクセスを確認したことを公表しました。ここでは関連する情報をまとめます。予約情報を把握したかのような不審なメッセージ手間いらずは、2026年9月21日深夜頃より、複数の宿泊施設から、予約者にWhatsApp等のメッセージアプリ、電子メール、SMS等で不審なメッセージが届いているとの連絡を受け始めた(出典: 1)。メッセージには宿泊予約に関する情報を把握しているとみられる内容が含まれ、予約の確認や確定、クレジットカード情報の再入力、緊急の支払い等を求めて不審なウェブサイトへ誘導するものがあるとしている(出典: 1)。スーパーホテルは、海外の送信元番号(+351など)からWhatsApp等で届く不審なメッセージに、名前や宿泊日などの予約情報が記載されている場合があると告知(出典: 17)。9月29日には、不審なメッセージの一部に「予約がキャンセルされた」という内容のものが確認されたと追記し、メッセージ]]></content>
+        <category label="クラウド"/>
+        <category label="不正アクセス"/>
+        <published>2026-09-29T16:37:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[チケット販売サイト「イープラス」に不正アクセス、個人情報1463件漏えい　口座情報や住所なども一部流出 | ITmedia NEWS セキュリティ 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/news/article/2609/29/2000001861/</id>
+        <link href="https://www.itmedia.co.jp/news/article/2609/29/2000001861/"/>
+        <link rel="enclosure" href="https://www.itmedia.co.jp/news/article/ogp/2609/29/2000001861/10007912/2048" type="image//news/article/ogp/2609/29/2000001861/10007912/2048"/>
+        <updated>2026-09-29T10:44:24.000Z</updated>
+        <summary type="html"><![CDATA[イープラス社は9月29日、電子チケット「スマチケ」の払い戻し情報を管理するシステムに不正アクセスがあり、利用者の個人情報1463件が漏えいしたと発表した。うち751件は、振込先の口座番号なども含む。]]></summary>
+        <content type="html"><![CDATA[イープラス社は9月29日、電子チケット「スマチケ」の払い戻し情報を管理するシステムに不正アクセスがあり、利用者の個人情報1463件が漏えいしたと発表した。うち751件は、振込先の口座番号なども含む。]]></content>
+        <published>2026-09-29T10:44:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【デジタル庁漏えい事件】残念過ぎるポイント3つを解説 | ＠IT Security&amp;Trustフォーラム 最新記事一覧]]></title>
+        <id>https://atmarkit.itmedia.co.jp/ait/articles/2609/29/news052.html</id>
+        <link href="https://atmarkit.itmedia.co.jp/ait/articles/2609/29/news052.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/ait/articles/2609/29/cover_news052.jpg" type="image/jpg"/>
+        <updated>2026-09-29T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月に発生したデジタル庁の不正アクセス被害。最大24.6万件の情報漏えいはなぜ発生してしまったのか。デジタル庁からの報告や有識者の知見を基に、今回の対応で“残念過ぎた3つのポイント”を解説する。]]></summary>
+        <content type="html"><![CDATA[2026年9月に発生したデジタル庁の不正アクセス被害。最大24.6万件の情報漏えいはなぜ発生してしまったのか。デジタル庁からの報告や有識者の知見を基に、今回の対応で“残念過ぎた3つのポイント”を解説する。]]></content>
+        <published>2026-09-29T06:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日本郵便に不正アクセスか　国際郵便の「調査請求Web受付」を停止、原因は調査中 | ITmedia NEWS セキュリティ 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/news/article/2609/29/2000001841/</id>
+        <link href="https://www.itmedia.co.jp/news/article/2609/29/2000001841/"/>
+        <link rel="enclosure" href="https://www.itmedia.co.jp/news/article/ogp/2609/29/2000001841/10007855/2048" type="image//news/article/ogp/2609/29/2000001841/10007855/2048"/>
+        <updated>2026-09-29T04:40:17.000Z</updated>
+        <summary type="html"><![CDATA[日本郵便は9月25日、国際郵便物の調査請求Web受付サービスのサーバに外部から不正アクセスを受けた可能性があると発表した。原因と影響範囲は調査中で、サービス再開の時期は決まっていない。]]></summary>
+        <content type="html"><![CDATA[日本郵便は9月25日、国際郵便物の調査請求Web受付サービスのサーバに外部から不正アクセスを受けた可能性があると発表した。原因と影響範囲は調査中で、サービス再開の時期は決まっていない。]]></content>
+        <published>2026-09-29T04:40:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[“期限切れクレカ”を蘇らせ、不正にタッチ決済する「ゾンビカード攻撃」　米研究チームが検証 | ITmedia NEWS セキュリティ 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/news/article/2609/29/2000001783/</id>
+        <link href="https://www.itmedia.co.jp/news/article/2609/29/2000001783/"/>
+        <link rel="enclosure" href="https://www.itmedia.co.jp/news/article/ogp/2609/29/2000001783/10007638/2048" type="image//news/article/ogp/2609/29/2000001783/10007638/2048"/>
+        <updated>2026-09-29T03:00:00.000Z</updated>
+        <summary type="html"><![CDATA[米マサチューセッツ大学アマースト校に所属する研究者らがセキュリティ分野の国際会議「USENIX Security Symposium 2026」で発表した論文「Zombie Cards Back Online: Reviving Expired Credit Cards for Contactless Payments」は、期限切れのクレジットカードが非接触決済（タッチ決済）で不正利用できてしまう]]></summary>
+        <content type="html"><![CDATA[米マサチューセッツ大学アマースト校に所属する研究者らがセキュリティ分野の国際会議「USENIX Security Symposium 2026」で発表した論文「Zombie Cards Back Online: Reviving Expired Credit Cards for Contactless Payments」は、期限切れのクレジットカードが非接触決済（タッチ決済）で不正利用できてしまうシステムの脆弱性を明らかにした研究報告だ。]]></content>
+        <published>2026-09-29T03:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「パッチを当てても安心できない」　Citrix NetScalerゼロデイ、CISAが異例の対応を要求 | ＠IT Security&amp;Trustフォーラム 最新記事一覧]]></title>
+        <id>https://atmarkit.itmedia.co.jp/ait/articles/2609/29/news050.html</id>
+        <link href="https://atmarkit.itmedia.co.jp/ait/articles/2609/29/news050.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/ait/articles/2609/29/cover_news050.jpg" type="image/jpg"/>
+        <updated>2026-09-29T02:00:00.000Z</updated>
+        <summary type="html"><![CDATA[CitrixのNetScaler ADC／Gatewayで8件の脆弱性が公開された。そのうち2件は「緊急」（Critical）のゼロデイで、既に世界規模で悪用されているという。CISAが要求した異例の対応とは。]]></summary>
+        <content type="html"><![CDATA[CitrixのNetScaler ADC／Gatewayで8件の脆弱性が公開された。そのうち2件は「緊急」（Critical）のゼロデイで、既に世界規模で悪用されているという。CISAが要求した異例の対応とは。]]></content>
+        <published>2026-09-29T02:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[東京メトロに不正アクセス、メトポ会員のメールアドレス約5万9,000件が流出した可能性 | サイバーセキュリティ・情報漏洩ニュース – サイバーセキュリティ.com]]></title>
+        <id>https://cybersecurity-jp.com/?p=116838</id>
+        <link href="https://cybersecurity-jp.com/news/116838"/>
+        <link rel="enclosure" href="https://cybersecurity-jp.com/wp-content/uploads/2026/09/img_116838.png" type="image/png"/>
+        <updated>2026-09-29T00:17:21.000Z</updated>
+        <summary type="html"><![CDATA[画像：東京地下鉄株式会社より引用 東京地下鉄株式会社（東京メトロ）は2026年9月27日、メトポ会員向けサービスで第三者による不正アクセスがあり、約5万9,000件のメールアドレスが閲覧または取得された可能性があると発表 […]]]></summary>
+        <content type="html"><![CDATA[画像：東京地下鉄株式会社より引用 東京地下鉄株式会社（東京メトロ）は2026年9月27日、メトポ会員向けサービスで第三者による不正アクセスがあり、約5万9,000件のメールアドレスが閲覧または取得された可能性があると発表 […]]]></content>
+        <author>
+            <name>サイバーセキュリティ.com 事務局編集部</name>
+        </author>
+        <category label="サイバーセキュリティ・情報漏洩ニュース"/>
+        <published>2026-09-29T00:17:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[京王プラザホテルにランサムウェア攻撃、一部システムに障害 | サイバーセキュリティ・情報漏洩ニュース – サイバーセキュリティ.com]]></title>
+        <id>https://cybersecurity-jp.com/?p=116836</id>
+        <link href="https://cybersecurity-jp.com/news/116836"/>
+        <link rel="enclosure" href="https://cybersecurity-jp.com/wp-content/uploads/2026/09/img_116836.png" type="image/png"/>
+        <updated>2026-09-29T00:12:36.000Z</updated>
+        <summary type="html"><![CDATA[画像：株式会社京王プラザホテルより引用 株式会社京王プラザホテルは2026年9月26日、ランサムウェア攻撃によるシステム障害が発生したと発表しました。 京王プラザホテルによると、同日未明にサーバーへの攻撃が確認されました […]]]></summary>
+        <content type="html"><![CDATA[画像：株式会社京王プラザホテルより引用 株式会社京王プラザホテルは2026年9月26日、ランサムウェア攻撃によるシステム障害が発生したと発表しました。 京王プラザホテルによると、同日未明にサーバーへの攻撃が確認されました […]]]></content>
+        <author>
+            <name>サイバーセキュリティ.com 事務局編集部</name>
+        </author>
+        <category label="サイバーセキュリティ・情報漏洩ニュース"/>
+        <published>2026-09-29T00:12:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSIRT支援室 第39回 魚の骨が、抜けた日。DEF CON CTF世界一までの20年 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/29/56335.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/29/56335.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55089.jpg" type="image/jpg"/>
+        <updated>2026-09-28T23:15:02.000Z</updated>
+        <published>2026-09-28T23:15:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[負担を抑えた ISMS 運用と脆弱性診断とは？ エーアイセキュリティラボと SecureNavi が 9 / 30 セミナー開催 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/29/56334.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/29/56334.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55040.png" type="image/png"/>
+        <updated>2026-09-28T23:10:03.000Z</updated>
+        <published>2026-09-28T23:10:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[不正プログラム設置 ～ 東京大学大学院医学系研究科公共健康医学専攻ウェブサイトに不正アクセス | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/29/56333.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/29/56333.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55127.jpg" type="image/jpg"/>
+        <updated>2026-09-28T23:05:19.000Z</updated>
+        <published>2026-09-28T23:05:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[モンベル・グローバルサイトに不正アクセス、最大15名分の個人情報が第三者に不正に取得された可能性 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/29/56332.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/29/56332.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55156.jpg" type="image/jpg"/>
+        <updated>2026-09-28T23:05:15.000Z</updated>
+        <published>2026-09-28T23:05:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「スマレジEC・リピート」「スマレジEC・B2B」に不正アクセス、一部の個人データが閲覧・取得された可能性 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/29/56331.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/29/56331.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/55167.jpg" type="image/jpg"/>
+        <updated>2026-09-28T23:05:14.000Z</updated>
+        <published>2026-09-28T23:05:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[問題発生後の報告体制に改善すべき点 ～ 選挙ドットコム運営のイチニで「個別お打合せのご提案」と題するメールを誤送信 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/29/56330.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/29/56330.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/54968.jpg" type="image/jpg"/>
+        <updated>2026-09-28T23:05:12.000Z</updated>
+        <published>2026-09-28T23:05:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[扶桑電通が社外関係者と利用していた共有フォルダに不正アクセス、26,489件の個人情報が漏えいした可能性 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/29/56329.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/29/56329.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/54963.jpg" type="image/jpg"/>
+        <updated>2026-09-28T23:05:10.000Z</updated>
+        <published>2026-09-28T23:05:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[商船三井クルーズで営業情報を保存した外部記憶媒体を紛失、就航準備中のクルーズ船「MITSUI OCEAN SAKURA」の船内で保管 | ScanNetSecurity]]></title>
+        <id>https://scan.netsecurity.ne.jp/article/2026/09/29/56328.html</id>
+        <link href="https://scan.netsecurity.ne.jp/article/2026/09/29/56328.html"/>
+        <link rel="enclosure" href="https://scan.netsecurity.ne.jp/imgs/ogp_f/54931.jpg" type="image/jpg"/>
+        <updated>2026-09-28T23:05:08.000Z</updated>
+        <published>2026-09-28T23:05:08.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ネットワークも認証サーバも要らない「多要素認証」、Windows端末でどう実現？ | ＠IT Security&amp;Trustフォーラム 最新記事一覧]]></title>
+        <id>https://atmarkit.itmedia.co.jp/ait/articles/2609/29/news030.html</id>
+        <link href="https://atmarkit.itmedia.co.jp/ait/articles/2609/29/news030.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/ait/articles/2609/29/cover_news030.jpg" type="image/jpg"/>
+        <updated>2026-09-28T23:00:00.000Z</updated>
+        <summary type="html"><![CDATA[不正アクセスや認証情報の窃取による被害を防ぐために、IDとパスワードだけに頼らない対策の一つになるのが「多要素認証」（MFA）だ。ネットワークに接続しない環境でも利用できる多要素認証の仕組みをソフト技研が発表した。]]></summary>
+        <content type="html"><![CDATA[不正アクセスや認証情報の窃取による被害を防ぐために、IDとパスワードだけに頼らない対策の一つになるのが「多要素認証」（MFA）だ。ネットワークに接続しない環境でも利用できる多要素認証の仕組みをソフト技研が発表した。]]></content>
+        <published>2026-09-28T23:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[★取得はゴールではなく入口　IPAお助け隊“新類型”で自社の穴を先に見つけよう | ITmedia エンタープライズ「セキュリティ」 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/enterprise/articles/2609/29/news020.html</id>
+        <link href="https://www.itmedia.co.jp/enterprise/articles/2609/29/news020.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/enterprise/articles/2609/29/cover_news020.jpg" type="image/jpg"/>
+        <updated>2026-09-28T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[SCS評価制度の★3を取ろうとしても、要求事項の理解や自社の状況把握からつまずく中小企業は多いはずです。IPAが2026年10月から実証を始める「サイバーセキュリティお助け隊サービス（新類型）」は、その壁をどこまで下げてくれるのでしょうか。]]></summary>
+        <content type="html"><![CDATA[SCS評価制度の★3を取ろうとしても、要求事項の理解や自社の状況把握からつまずく中小企業は多いはずです。IPAが2026年10月から実証を始める「サイバーセキュリティお助け隊サービス（新類型）」は、その壁をどこまで下げてくれるのでしょうか。]]></content>
+        <published>2026-09-28T22:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft 365 E5で使える「ISOC」　SIEMとXDRを1つにする新基盤の狙い | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2609/29/2000001800/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2609/29/2000001800/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2609/29/2000001800/1024183/2048" type="image//tt/article/ogp/2609/29/2000001800/1024183/2048"/>
+        <updated>2026-09-28T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Microsoftは、SIEMやXDR、脅威インテリジェンス、AIなどを統合する「ISOC」を発表した。企業のセキュリティ運用にどのような変化をもたらすのか。]]></summary>
+        <content type="html"><![CDATA[Microsoftは、SIEMやXDR、脅威インテリジェンス、AIなどを統合する「ISOC」を発表した。企業のセキュリティ運用にどのような変化をもたらすのか。]]></content>
+        <published>2026-09-28T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[データ侵害コストが過去最高に　AI防御は“悪用の脅威”を超えられるか？ | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2609/29/2000001806/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2609/29/2000001806/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2609/29/2000001806/10007713/2048" type="image//tt/article/ogp/2609/29/2000001806/10007713/2048"/>
+        <updated>2026-09-28T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[IBMが発表した最新レポートで、データ侵害による世界平均の被害額が過去最高を更新したことが判明した。AI技術を悪用した攻撃がますます盛んになる中、組織はどのように対処すべきなのか。]]></summary>
+        <content type="html"><![CDATA[IBMが発表した最新レポートで、データ侵害による世界平均の被害額が過去最高を更新したことが判明した。AI技術を悪用した攻撃がますます盛んになる中、組織はどのように対処すべきなのか。]]></content>
+        <published>2026-09-28T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Azure」に潜む落とし穴　GPUサービスを脅かす“サプライチェーン汚染”とは | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2609/29/2000001819/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2609/29/2000001819/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2609/29/2000001819/10007760/2048" type="image//tt/article/ogp/2609/29/2000001819/10007760/2048"/>
+        <updated>2026-09-28T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI開発の活性化に伴い、クラウドサービスでのGPU利用が拡大しているが、その裏にはマルチテナント特有の深刻なリスクが潜む。Microsoftのサービスで発覚した危険な攻撃手法とは。]]></summary>
+        <content type="html"><![CDATA[AI開発の活性化に伴い、クラウドサービスでのGPU利用が拡大しているが、その裏にはマルチテナント特有の深刻なリスクが潜む。Microsoftのサービスで発覚した危険な攻撃手法とは。]]></content>
+        <published>2026-09-28T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[パッチなしで「今すぐサーバを落とせ」　Kiteworks異例警告の波紋 | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2609/29/2000001805/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2609/29/2000001805/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2609/29/2000001805/10007711/2048" type="image//tt/article/ogp/2609/29/2000001805/10007711/2048"/>
+        <updated>2026-09-28T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[週末までに本番サーバを落とせ――ファイル転送大手Kiteworksによる異例の警告が波紋を呼んでいる。パッチもない中、差し迫るゼロデイ攻撃から企業を守るために情シスが取るべき防衛策とは。]]></summary>
+        <content type="html"><![CDATA[週末までに本番サーバを落とせ――ファイル転送大手Kiteworksによる異例の警告が波紋を呼んでいる。パッチもない中、差し迫るゼロデイ攻撃から企業を守るために情シスが取るべき防衛策とは。]]></content>
+        <published>2026-09-28T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[タイムズカーWebサイトへの不正アクセスについてまとめてみた | piyolog]]></title>
+        <id>https://piyolog.hatenadiary.jp/entry/2026/09/28/214857</id>
+        <link href="https://piyolog.hatenadiary.jp/entry/2026/09/28/214857"/>
+        <link rel="enclosure" href="https://ogimage.blog.st-hatena.com/10257846132616586766/14945776032083575597/1790697478" type="image//10257846132616586766/14945776032083575597/1790697478"/>
+        <updated>2026-09-28T12:48:57.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月25日、タイムズモビリティとパーク24は、カーシェアリングサービス「タイムズカー」のWebサイトが不正アクセスを受け、会員の個人情報が外部に漏えいした可能性があると公表しました。その後の調査で、対象システムに保存されていた会員情報の一部が第三者に取得されたことが判明しています。ここでは関連する情報をまとめます。会員情報漏えいの可能性を公表タイムズカーは、パーク24グループのタイムズモ]]></summary>
+        <content type="html"><![CDATA[2026年9月25日、タイムズモビリティとパーク24は、カーシェアリングサービス「タイムズカー」のWebサイトが不正アクセスを受け、会員の個人情報が外部に漏えいした可能性があると公表しました。その後の調査で、対象システムに保存されていた会員情報の一部が第三者に取得されたことが判明しています。ここでは関連する情報をまとめます。会員情報漏えいの可能性を公表タイムズカーは、パーク24グループのタイムズモビリティが運営するカーシェアリングサービス。タイムズモビリティとパーク24は2026年9月25日9時07分、自社システムへの不正アクセスを検知して調査を開始し、第三者がシステムにアクセスした形跡を確認(出典: 1, 3)。同日、個人情報漏えいの可能性について第1報を公表した。対象はタイムズカー会員および退会済みの会員。公表時点では漏えいした可能性のある情報が不特定多数に公開された事実や不正利用された事実は確認されておらず、サービス提供への影響も確認されていないとしている(出典: 1, 3)。第1報の公表を受け、西日本旅客鉄道は同日、タイムズカーにWESTER IDを登録している顧客について、漏]]></content>
+        <category label="不正アクセス"/>
+        <category label="情報漏えい"/>
+        <published>2026-09-28T12:48:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第319回 止まない雨はないじゃない！明けない夜もないじゃない！スペシャル！ | セキュリティのアレ]]></title>
+        <id>https://www.tsujileaks.com/?p=2382</id>
+        <link href="https://www.tsujileaks.com/?p=2382"/>
+        <link rel="enclosure" href="https://www.tsujileaks.com/wp-content/uploads/giri.jpg" type="image/jpg"/>
+        <updated>2026-09-28T11:00:01.000Z</updated>
+        <summary type="html"><![CDATA[・モデルのミスアラインメント報告フレームワーク | OpenAI【更新】インターネット接続がご利用できない、またはご利用しづらい状況について（9月24日16時00分時点）| ニュースリリース | JCOM株式会社 | J:COMJCOMのインターネット接続サービス障害についてまとめてみた – piyologUsing Cyber Decoys to Strengthen Detection and]]></summary>
+        <content type="html"><![CDATA[・モデルのミスアラインメント報告フレームワーク | OpenAI【更新】インターネット接続がご利用できない、またはご利用しづらい状況について（9月24日16時00分時点）| ニュースリリース | JCOM株式会社 | J:COMJCOMのインターネット接続サービス障害についてまとめてみた – piyologUsing Cyber Decoys to Strengthen Detection and Response | CISA鬼武者 Way of the Sword | CAPCOM 辻伸弘メモ：シルバーウィークでした。中身が判明。おすすめDoS。ステッカー貼る派・貼らない派。半二重めっちゃあった。言うだけにならないように。大事なことの1つ「継続」。AIが意図しない動作をしたときの報告フレームワーク。見えない仕様変更みたいなのは怖い。思ってた以上に自由の枠が広い。軽く超えてくる。AIに関するインシデント事例集が始まった感。攻撃者増やしてどうすんねん状態。かなり長かったですね。こんなに長いDDoSはかなり稀。ということは。他への影響もあってこの時間なのでは。外部のDNSを使うことで解決]]></content>
+        <category label="podcast"/>
+        <published>2026-09-28T11:00:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ヘッドハンティングかと思ったら「わな」　求職中のエンジニアを狙う北朝鮮“偽企業”に注意 | ＠IT Security&amp;Trustフォーラム 最新記事一覧]]></title>
+        <id>https://atmarkit.itmedia.co.jp/ait/articles/2609/28/news033.html</id>
+        <link href="https://atmarkit.itmedia.co.jp/ait/articles/2609/28/news033.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/ait/articles/2609/28/cover_news033.jpg" type="image/jpg"/>
+        <updated>2026-09-28T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[高市早苗首相は2026年9月18日、「X」のポストで北朝鮮IT労働者によるサイバー攻撃被害について注意喚起を促した。IT企業やエンジニアを標的にするその攻撃手法と、企業や個人が取るべき対策をまとめた。]]></summary>
+        <content type="html"><![CDATA[高市早苗首相は2026年9月18日、「X」のポストで北朝鮮IT労働者によるサイバー攻撃被害について注意喚起を促した。IT企業やエンジニアを標的にするその攻撃手法と、企業や個人が取るべき対策をまとめた。]]></content>
+        <published>2026-09-28T04:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[国立大にまたサイバー攻撃　佐賀大でランサムウェア被害、NASのファイルが暗号化 | ITmedia NEWS セキュリティ 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/news/article/2609/28/2000001792/</id>
+        <link href="https://www.itmedia.co.jp/news/article/2609/28/2000001792/"/>
+        <link rel="enclosure" href="https://www.itmedia.co.jp/news/article/ogp/2609/28/2000001792/10007666/2048" type="image//news/article/ogp/2609/28/2000001792/10007666/2048"/>
+        <updated>2026-09-28T02:53:46.000Z</updated>
+        <summary type="html"><![CDATA[佐賀大学は9月25日、事務情報システムの一部でランサムウェアによる被害が発生したと発表した。事務用端末の利用を停止し、感染経路と被害範囲を調べている。]]></summary>
+        <content type="html"><![CDATA[佐賀大学は9月25日、事務情報システムの一部でランサムウェアによる被害が発生したと発表した。事務用端末の利用を停止し、感染経路と被害範囲を調べている。]]></content>
+        <published>2026-09-28T02:53:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[大阪市立美術館でメール誤送信、受講者30人の氏名とメールアドレスが漏えい | サイバーセキュリティ・情報漏洩ニュース – サイバーセキュリティ.com]]></title>
+        <id>https://cybersecurity-jp.com/?p=116813</id>
+        <link href="https://cybersecurity-jp.com/news/116813"/>
+        <link rel="enclosure" href="https://cybersecurity-jp.com/wp-content/uploads/2026/09/img_116813.png" type="image/png"/>
+        <updated>2026-09-28T00:18:55.000Z</updated>
+        <summary type="html"><![CDATA[画像：大阪市より引用 大阪市は2026年9月24日、大阪市立美術館でメールの誤送信が発生し、講座受講者30人分の氏名とメールアドレスが漏えいしたと発表しました。 大阪市によると2026年9月10日、同館職員が講座受講者1 […]]]></summary>
+        <content type="html"><![CDATA[画像：大阪市より引用 大阪市は2026年9月24日、大阪市立美術館でメールの誤送信が発生し、講座受講者30人分の氏名とメールアドレスが漏えいしたと発表しました。 大阪市によると2026年9月10日、同館職員が講座受講者1 […]]]></content>
+        <author>
+            <name>サイバーセキュリティ.com 事務局編集部</name>
+        </author>
+        <category label="サイバーセキュリティ・情報漏洩ニュース"/>
+        <published>2026-09-28T00:18:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[家計簿アプリ「くふう Zaim」に不正アクセス、14名の登録情報を書き換え | サイバーセキュリティ・情報漏洩ニュース – サイバーセキュリティ.com]]></title>
+        <id>https://cybersecurity-jp.com/?p=116811</id>
+        <link href="https://cybersecurity-jp.com/news/116811"/>
+        <link rel="enclosure" href="https://cybersecurity-jp.com/wp-content/uploads/2026/09/img_116811.png" type="image/png"/>
+        <updated>2026-09-28T00:16:17.000Z</updated>
+        <summary type="html"><![CDATA[画像：株式会社くふうカンパニーより引用 株式会社くふうカンパニーは2026年9月22日、同社が運営する家計簿アプリ「くふう Zaim」で、外部からの不正アクセスにより、一部ユーザーの登録情報が書き換えられたと発表しました […]]]></summary>
+        <content type="html"><![CDATA[画像：株式会社くふうカンパニーより引用 株式会社くふうカンパニーは2026年9月22日、同社が運営する家計簿アプリ「くふう Zaim」で、外部からの不正アクセスにより、一部ユーザーの登録情報が書き換えられたと発表しました […]]]></content>
+        <author>
+            <name>サイバーセキュリティ.com 事務局編集部</name>
+        </author>
+        <category label="サイバーセキュリティ・情報漏洩ニュース"/>
+        <published>2026-09-28T00:16:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIエージェントによる利用者画像の外部サイト投稿についてまとめてみた | piyolog]]></title>
+        <id>https://piyolog.hatenadiary.jp/entry/2026/09/28/082600</id>
+        <link href="https://piyolog.hatenadiary.jp/entry/2026/09/28/082600"/>
+        <link rel="enclosure" href="https://ogimage.blog.st-hatena.com/10257846132616586766/14945776032083290583/1790551560" type="image//10257846132616586766/14945776032083290583/1790551560"/>
+        <updated>2026-09-27T23:26:00.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月25日、OpenAIは研究環境で稼働するAIエージェントが本来送信すべきでないデータを第三者サービスへ送信していたことを公表し、その中で利用者がアップロードした画像が画像ホスティングサイトに投稿されていたことも明らかにしました。ここでは関連する情報をまとめます。利用者の画像を画像ホスティングサイトへ投稿OpenAIは9月25日、研究環境のAIエージェントが訓練や評価のデータを第三者サ]]></summary>
+        <content type="html"><![CDATA[2026年9月25日、OpenAIは研究環境で稼働するAIエージェントが本来送信すべきでないデータを第三者サービスへ送信していたことを公表し、その中で利用者がアップロードした画像が画像ホスティングサイトに投稿されていたことも明らかにしました。ここでは関連する情報をまとめます。利用者の画像を画像ホスティングサイトへ投稿OpenAIは9月25日、研究環境のAIエージェントが訓練や評価のデータを第三者サービスへ送信していた事例をXおよび公表ページで発表(出典: 1, 2)。第三者サービスへ送信されたデータの大半は利用者由来ではないとしつつ、ChatGPT利用者がアップロードした画像について、現時点で53件が一般には一覧表示されないリンクとして画像ホスティングサイトに投稿されていたことを確認した(出典: 1, 2, 3, 5)。この件は、7月に発覚した研究環境のエージェントによるHugging Face社への侵入事案を契機に、エージェント活動を遡って調査する過程で判明したもの(出典: 2, 5)。piyolog.hatenadiary.jp同社は投稿された画像は、モデル改善へのデータ利用を許可]]></content>
+        <category label="AI"/>
+        <category label="意図せぬ公開"/>
+        <published>2026-09-27T23:26:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[画像を処理するだけで侵入される？　OpenAIにも侵入できた攻撃手法を解説 | ＠IT Security&amp;Trustフォーラム 最新記事一覧]]></title>
+        <id>https://atmarkit.itmedia.co.jp/ait/articles/2609/28/news034.html</id>
+        <link href="https://atmarkit.itmedia.co.jp/ait/articles/2609/28/news034.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/ait/articles/2609/28/cover_news034.jpg" type="image/jpg"/>
+        <updated>2026-09-27T23:00:00.000Z</updated>
+        <summary type="html"><![CDATA[画像をアップロードするだけの機能が、攻撃者にとって格好の入り口になることがある。セキュリティ研究チームのHacktron AIは、HEIFなどの画像を処理する仕組みを足掛かりに、OpenAIのフォーラムからさらに先へ攻撃を進めた事例を公開した。なぜ「画像」がRCEにつながったのか。]]></summary>
+        <content type="html"><![CDATA[画像をアップロードするだけの機能が、攻撃者にとって格好の入り口になることがある。セキュリティ研究チームのHacktron AIは、HEIFなどの画像を処理する仕組みを足掛かりに、OpenAIのフォーラムからさらに先へ攻撃を進めた事例を公開した。なぜ「画像」がRCEにつながったのか。]]></content>
+        <published>2026-09-27T23:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPT Plusの支払い情報更新メール、偽物かも？　AIブランドを餌にした攻撃が拡大 | ITmedia エンタープライズ「セキュリティ」 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/enterprise/articles/2609/28/news035.html</id>
+        <link href="https://www.itmedia.co.jp/enterprise/articles/2609/28/news035.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/enterprise/articles/2609/28/cover_news035.jpg" type="image/jpg"/>
+        <updated>2026-09-27T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ChatGPTやClaude、DeepSeekなどAIの名前をかたる攻撃が広がっている。Microsoftによると、ChatGPTを装ったフィッシングでは1日最大10万通のメールが送られ、カード情報が盗まれた。]]></summary>
+        <content type="html"><![CDATA[ChatGPTやClaude、DeepSeekなどAIの名前をかたる攻撃が広がっている。Microsoftによると、ChatGPTを装ったフィッシングでは1日最大10万通のメールが送られ、カード情報が盗まれた。]]></content>
+        <published>2026-09-27T22:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Wi-Fi 7」経由でWindowsが乗っ取られる？　最高権限奪取の恐怖 | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2609/28/2000001766/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2609/28/2000001766/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2609/28/2000001766/10007547/2048" type="image//tt/article/ogp/2609/28/2000001766/10007547/2048"/>
+        <updated>2026-09-27T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[主要プロセッサのセキュリティ対策が進む一方、通信チップの脆弱性は見過ごされがちだ。大学の研究チームが発見した、「Wi-Fi 7」チップを起点に「Windows 11」の最高権限が奪われるリスクとは。]]></summary>
+        <content type="html"><![CDATA[主要プロセッサのセキュリティ対策が進む一方、通信チップの脆弱性は見過ごされがちだ。大学の研究チームが発見した、「Wi-Fi 7」チップを起点に「Windows 11」の最高権限が奪われるリスクとは。]]></content>
+        <published>2026-09-27T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VMware離れの決め手は“機能”以外だった　情シス109人が選んだ新基準と死角は | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2609/28/2000001767/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2609/28/2000001767/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2609/28/2000001767/981795/2048" type="image//tt/article/ogp/2609/28/2000001767/981795/2048"/>
+        <updated>2026-09-27T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[サイバートラストの調査によると、VMwareのユーザー企業で移行先選定の軸に変化が見られることが分かった。一方、放置されたVMにはセキュリティリスクがある。ITインフラセキュリティ監査の手法や鉄則を整理する。]]></summary>
+        <content type="html"><![CDATA[サイバートラストの調査によると、VMwareのユーザー企業で移行先選定の軸に変化が見られることが分かった。一方、放置されたVMにはセキュリティリスクがある。ITインフラセキュリティ監査の手法や鉄則を整理する。]]></content>
+        <published>2026-09-27T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub上のMCP設定、8件に1件でAPIキー露出　情シスが今すぐ点検すべき盲点 | セキュリティ － TechTargetジャパン 最新記事一覧]]></title>
+        <id>https://techtarget.itmedia.co.jp/tt/article/2609/28/2000001760/</id>
+        <link href="https://techtarget.itmedia.co.jp/tt/article/2609/28/2000001760/"/>
+        <link rel="enclosure" href="https://techtarget.itmedia.co.jp/tt/article/ogp/2609/28/2000001760/10007531/2048" type="image//tt/article/ogp/2609/28/2000001760/10007531/2048"/>
+        <updated>2026-09-27T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AI活用を進める情シスに盲点だ。GitHub上のMCP設定の12％に認証情報が放置され、社内侵入や巨額AI費用負担の標的になっている。専門家が点検を促す深刻な実態と、取るべき緊急防衛策を明かす。]]></summary>
+        <content type="html"><![CDATA[AI活用を進める情シスに盲点だ。GitHub上のMCP設定の12％に認証情報が放置され、社内侵入や巨額AI費用負担の標的になっている。専門家が点検を促す深刻な実態と、取るべき緊急防衛策を明かす。]]></content>
+        <published>2026-09-27T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[楽天証券のシステム不具合による意図しない資金移動についてまとめてみた | piyolog]]></title>
+        <id>https://piyolog.hatenadiary.jp/entry/2026/09/28/015556</id>
+        <link href="https://piyolog.hatenadiary.jp/entry/2026/09/28/015556"/>
+        <link rel="enclosure" href="https://ogimage.blog.st-hatena.com/10257846132616586766/14945776032083212025/1790528156" type="image//10257846132616586766/14945776032083212025/1790528156"/>
+        <updated>2026-09-27T16:55:56.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月25日、楽天証券は国内株式信用取引で「投資あんしんサービス」を利用する一部の顧客において、システム不具合により意図しない資金振替が発生していたと公表しました。ここでは関連する情報をまとめます。自動スイープの誤作動で資金移動楽天証券の「投資あんしんサービス」は、銀行口座と証券口座を連携する「マネーブリッジ」を利用し信用取引口座を持つ顧客向けの無料サービスで、あらかじめ設定した保証金率を]]></summary>
+        <content type="html"><![CDATA[2026年9月25日、楽天証券は国内株式信用取引で「投資あんしんサービス」を利用する一部の顧客において、システム不具合により意図しない資金振替が発生していたと公表しました。ここでは関連する情報をまとめます。自動スイープの誤作動で資金移動楽天証券の「投資あんしんサービス」は、銀行口座と証券口座を連携する「マネーブリッジ」を利用し信用取引口座を持つ顧客向けの無料サービスで、あらかじめ設定した保証金率を下回った場合や預り金に不足が生じた場合に、楽天銀行口座から楽天証券口座へ資金を自動で振り替える仕組み(出典: 2)。楽天証券は今回発生した事象について「自動スイープ(楽天銀行から楽天証券への自動入金)」が本来行われるべきでないのに実行されたと説明している(出典: 1)。9月22日、投資あんしんサービスを利用する一部の顧客において、設定した条件に該当していないにもかかわらずこの自動スイープが実行され、楽天銀行口座から楽天証券口座へ意図しない資金振替が発生した(出典: 1, 3, 4)。証券口座の残高は不足していなかった(出典: 4)。楽天証券は、第三者による不正アクセスやサイバー攻撃など外部から]]></content>
+        <category label="重要インフラ"/>
+        <category label="システム障害"/>
+        <published>2026-09-27T16:55:56.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NetScaler ADCおよびNetScaler Gatewayの脆弱性について(CVE-2026-88771、CVE-2026-88772等) | IPAセキュリティセンター:重要なセキュリティ情報]]></title>
+        <id>https://www.ipa.go.jp/security/security-alert/2026/alert20260928.html</id>
+        <link href="https://www.ipa.go.jp/security/security-alert/2026/alert20260928.html"/>
+        <link rel="enclosure" href="https://www.ipa.go.jp/k3q2q400000050d7-img/k3q2q400000050dg.jpg" type="image/jpg"/>
+        <updated>2026-09-27T15:00:00.000Z</updated>
+        <author>
+            <name>情報処理推進機構（IPA）</name>
+        </author>
+        <published>2026-09-27T15:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIの「見つけた」をうのみにしない　Google、誤検知“ほぼゼロ”で脆弱性500件超を発見した検証の仕組み | ITmedia エンタープライズ「セキュリティ」 最新記事一覧]]></title>
+        <id>https://www.itmedia.co.jp/enterprise/articles/2609/27/news006.html</id>
+        <link href="https://www.itmedia.co.jp/enterprise/articles/2609/27/news006.html"/>
+        <link rel="enclosure" href="https://image.itmedia.co.jp/enterprise/articles/2609/27/cover_news006.jpg" type="image/jpg"/>
+        <updated>2026-09-26T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AIに脆弱性を探させると、未検証の仮説や誤検知が大量に届く。Googleは社内のAIエージェントで自社Webアプリからクロスサイトスクリプティングの脆弱性を500件超発見しながら、誤検知をほぼゼロに抑えたという。決め手は、AIに判定を任せない検証の仕組みだった。]]></summary>
+        <content type="html"><![CDATA[AIに脆弱性を探させると、未検証の仮説や誤検知が大量に届く。Googleは社内のAIエージェントで自社Webアプリからクロスサイトスクリプティングの脆弱性を500件超発見しながら、誤検知をほぼゼロに抑えたという。決め手は、AIに判定を任せない検証の仕組みだった。]]></content>
+        <published>2026-09-26T22:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenAIのAIエージェントによる豪州政府Medicare統計ポータルへの不正アクセスについてまとめてみた | piyolog]]></title>
+        <id>https://piyolog.hatenadiary.jp/entry/2026/09/26/070036</id>
+        <link href="https://piyolog.hatenadiary.jp/entry/2026/09/26/070036"/>
+        <link rel="enclosure" href="https://ogimage.blog.st-hatena.com/10257846132616586766/14945776032082426835/1790727425" type="image//10257846132616586766/14945776032082426835/1790727425"/>
+        <updated>2026-09-25T22:00:36.000Z</updated>
+        <summary type="html"><![CDATA[2026年9月24日、オーストラリアのアンソニー・アルバニージー首相は、OpenAIのAIエージェントが同国のMedicare統計報告サービスポータルに不正アクセスしていたことを公表しました。ここでは関連する情報をまとめます。医薬品支出の調査中にポータルへ侵入2026年6月18日、OpenAIの研究チームは内部モデルを使い、公的な医薬品支出に関するインターネット調査タスクを実施していた(出典: 1]]></summary>
+        <content type="html"><![CDATA[2026年9月24日、オーストラリアのアンソニー・アルバニージー首相は、OpenAIのAIエージェントが同国のMedicare統計報告サービスポータルに不正アクセスしていたことを公表しました。ここでは関連する情報をまとめます。医薬品支出の調査中にポータルへ侵入2026年6月18日、OpenAIの研究チームは内部モデルを使い、公的な医薬品支出に関するインターネット調査タスクを実施していた(出典: 1, 2)。OpenAIによれば、動かしていたのは公開製品の安全策一式を備えない社内専用の実験的モデルで、課題はビクトリア州の地域別の皮膚疾患薬の1人あたり政府支出の調査だった(出典: 14)。Marles副首相兼国防相(首相代行)は本件を「訓練中のモデル」、Gallagher財務相兼政府サービス相は「内部の能力評価の一環」として説明している(出典: 2)。このモデルは、Services Australiaが運営するMedicare統計報告サービスポータルへのアクセスを繰り返し拒否されたが、そのブロックを回避して不正アクセスし、公開ファイルと非公開ファイルの両方を取得した(出典: 1, 2)。O]]></content>
+        <category label="AI"/>
+        <category label="海外事例"/>
+        <published>2026-09-25T22:00:36.000Z</published>
+    </entry>
+</feed>

@@ -1,0 +1,2183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/</id>
+    <title>AWS - Translated Japanese｜企業テックブログRSS</title>
+    <updated>2026-10-03T20:45:52.458Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-jp/feeds/atom.xml"/>
+    <subtitle>AWS - Translated Japanese：enの記事を日本語に翻訳してまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[Oracleの展開 ONTAPのFSxとAmazon EVSのステップバイステップ | AWS Architecture Blog]]></title>
+        <id>https://aws.amazon.com/blogs/architecture/deploy-oracle-database-step-by-step-on-amazon-evs-with-fsx-for-ontap/</id>
+        <link href="https://aws.amazon.com/blogs/architecture/deploy-oracle-database-step-by-step-on-amazon-evs-with-fsx-for-ontap/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/09/17/ARCHBLOG-1654-featured-image.png" type="image/png"/>
+        <updated>2026-10-02T17:57:15.000Z</updated>
+        <summary type="html"><![CDATA[この投稿では、Amazon Elastic VMware Service (Amazon EVS) で Oracle Database を NFS データストア ストレージとして Amazon FSx でデプロイする手順について説明します。 ストレージのボリューム、NFS のデータストアをマウントし、Oracle をインストールし、SnapMirror のレプリケーションをクロスレギュレーション災]]></summary>
+        <content type="html"><![CDATA[この投稿では、Amazon Elastic VMware Service (Amazon EVS) で Oracle Database を NFS データストア ストレージとして Amazon FSx でデプロイする手順について説明します。 ストレージのボリューム、NFS のデータストアをマウントし、Oracle をインストールし、SnapMirror のレプリケーションをクロスレギュレーション災害復旧用に構成します。]]></content>
+        <author>
+            <name>Satish Bhoi</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Elastic VMware Service (Amazon EVS)"/>
+        <category label="Amazon FSx for NetApp ONTAP"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-02T17:57:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon EVS と ONTAP 用の FSx で Oracle データベースを高度に利用できるアーキテクト | AWS Architecture Blog]]></title>
+        <id>https://aws.amazon.com/blogs/architecture/architect-highly-available-oracle-database-on-amazon-evs-and-fsx-for-ontap/</id>
+        <link href="https://aws.amazon.com/blogs/architecture/architect-highly-available-oracle-database-on-amazon-evs-and-fsx-for-ontap/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/09/18/ARCHBLOG-1652-featured-image-1.png" type="image/png"/>
+        <updated>2026-10-02T17:57:01.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Elastic VMware Service (Amazon EVS) で、Amazon FSx for NetApp ONTAP で利用可能なOracle データベース環境を設計する方法を学びます。 この投稿は、EC2 ベアメタルインスタンスの選択、vSAN および FSx ストレージ ティアリング、NSX ネットワーキング、および VMware の運用ツールを使用する企業のための]]></summary>
+        <content type="html"><![CDATA[Amazon Elastic VMware Service (Amazon EVS) で、Amazon FSx for NetApp ONTAP で利用可能なOracle データベース環境を設計する方法を学びます。 この投稿は、EC2 ベアメタルインスタンスの選択、vSAN および FSx ストレージ ティアリング、NSX ネットワーキング、および VMware の運用ツールを使用する企業のための SnapMirror 横断災害復旧をカバーしています。]]></content>
+        <author>
+            <name>Satish Bhoi</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Elastic VMware Service (Amazon EVS)"/>
+        <category label="Best Practices"/>
+        <published>2026-10-02T17:57:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VPC でオープンソースのローカル可用性ツールを展開 | AWS Architecture Blog]]></title>
+        <id>https://aws.amazon.com/blogs/architecture/deploy-open-source-regional-availability-tools-in-your-vpc/</id>
+        <link href="https://aws.amazon.com/blogs/architecture/deploy-open-source-regional-availability-tools-in-your-vpc/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/09/30/ARCHBLOG-1522-featured-image.png" type="image/png"/>
+        <updated>2026-10-02T17:50:56.000Z</updated>
+        <summary type="html"><![CDATA[AWS導入 所有するインフラとして、地域の可用性データ。 AWS の機能的なインサイトは、VPC でセルフホストされたダッシュボードを実行し、毎日自動リフレッシュを行い、Workload Analysis は、実際に実行するサービスにカタログを絞り込みます。そのため、リージョンの拡張ギャップ分析は、デプロイされたものだけに焦点を当てます。]]></summary>
+        <content type="html"><![CDATA[AWS導入 所有するインフラとして、地域の可用性データ。 AWS の機能的なインサイトは、VPC でセルフホストされたダッシュボードを実行し、毎日自動リフレッシュを行い、Workload Analysis は、実際に実行するサービスにカタログを絞り込みます。そのため、リージョンの拡張ギャップ分析は、デプロイされたものだけに焦点を当てます。]]></content>
+        <author>
+            <name>Stefan Janjic</name>
+        </author>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="AWS CloudFormation"/>
+        <category label="Intermediate (200)"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-02T17:50:56.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon EventBridgeを使用してAWS DevOps Agentをサードパーティツールと統合 | AWS DevOps &amp; Developer Productivity Blog]]></title>
+        <id>https://aws.amazon.com/blogs/devops/integrate-aws-devops-agent-with-third-party-tools-using-amazon-eventbridge/</id>
+        <link href="https://aws.amazon.com/blogs/devops/integrate-aws-devops-agent-with-third-party-tools-using-amazon-eventbridge/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2026/09/30/DEVOPS-24819-featured-image.png" type="image/png"/>
+        <updated>2026-10-02T15:50:00.000Z</updated>
+        <summary type="html"><![CDATA[AWS DevOpsエージェントの調査イベントをAmazon EventBridge や AWS Lambda を使って、Jira などのサードパーティのツールに接続する方法を学びます。 この投稿は、Jira の問題を自動的に作成し、更新するデプロイ可能な AWS CDK ソリューションを調査の進捗状況として歩き、同じパターンを ServiceNow、PagerDuty、およびその他のツールに適応]]></summary>
+        <content type="html"><![CDATA[AWS DevOpsエージェントの調査イベントをAmazon EventBridge や AWS Lambda を使って、Jira などのサードパーティのツールに接続する方法を学びます。 この投稿は、Jira の問題を自動的に作成し、更新するデプロイ可能な AWS CDK ソリューションを調査の進捗状況として歩き、同じパターンを ServiceNow、PagerDuty、およびその他のツールに適応する方法を示します。]]></content>
+        <author>
+            <name>Toshihiro Furuno</name>
+        </author>
+        <category label="Amazon EventBridge"/>
+        <category label="Intermediate (200)"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-02T15:50:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Quick と Adjudicated Query パターンを使用して、何千ものリースを承諾 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/30/ML-21832-featured-image.png" type="image/png"/>
+        <updated>2026-10-02T15:48:26.000Z</updated>
+        <summary type="html"><![CDATA[Adjudicated Query パターンは、Amazon クイック チャット エージェントと、決定的なルール エンジン上に埋め込まれた MCP サーバーを組み合わせて、確実な完全で防御可能なコンプライアンス 回答を実現します。 この投稿では、リファレンスアーキテクチャとデプロイ可能なAWS CDKサンプルを、リースコンプライアンスを実行例として使用しています。]]></summary>
+        <content type="html"><![CDATA[Adjudicated Query パターンは、Amazon クイック チャット エージェントと、決定的なルール エンジン上に埋め込まれた MCP サーバーを組み合わせて、確実な完全で防御可能なコンプライアンス 回答を実現します。 この投稿では、リファレンスアーキテクチャとデプロイ可能なAWS CDKサンプルを、リースコンプライアンスを実行例として使用しています。]]></content>
+        <author>
+            <name>Anand Komandooru</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Quick Suite"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-02T15:48:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Add AmazonのBedrock AgentCoreでClaudeデスクトップに安全なWeb検索 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/30/ML-21694-featured-image.png" type="image/png"/>
+        <updated>2026-10-02T15:46:05.000Z</updated>
+        <summary type="html"><![CDATA[AmazonのBedrockのClaudeデスクトップは、Web検索なしでモデルの知識カットオフに限定されています。 この記事では、AWS IAM Identity Center と Amazon Cognito による JWT ベースのインバウンド認証で、Amazon Bedrock AgentCore Gateway を使用して、Claude Desktop を Web Search に接続し]]></summary>
+        <content type="html"><![CDATA[AmazonのBedrockのClaudeデスクトップは、Web検索なしでモデルの知識カットオフに限定されています。 この記事では、AWS IAM Identity Center と Amazon Cognito による JWT ベースのインバウンド認証で、Amazon Bedrock AgentCore Gateway を使用して、Claude Desktop を Web Search に接続します。]]></content>
+        <author>
+            <name>Jishnu Dasgupta</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-02T15:46:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon SageMaker AI でマルチターン RL で検索エージェントを微調整 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/10/01/ML-21889-featured-image.png" type="image/png"/>
+        <updated>2026-10-02T15:44:20.000Z</updated>
+        <summary type="html"><![CDATA[ファインチューニングは、ツールや環境の小さな検索エージェントを教え、レイテンシとコストの低いフロンティアモデルの信頼性を提供します。 この投稿では、Amazon SageMaker AI でマルチターン強化学習(MTRL)で LLM を搭載した検索エージェントを微調整し、検索品質と信頼性で測定した利益を共有します。]]></summary>
+        <content type="html"><![CDATA[ファインチューニングは、ツールや環境の小さな検索エージェントを教え、レイテンシとコストの低いフロンティアモデルの信頼性を提供します。 この投稿では、Amazon SageMaker AI でマルチターン強化学習(MTRL)で LLM を搭載した検索エージェントを微調整し、検索品質と信頼性で測定した利益を共有します。]]></content>
+        <author>
+            <name>Huibin Shen</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon SageMaker AI"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-02T15:44:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[クローズドループインシデント対応:AWS DevOps Agent を OpenSearch に接続 | AWS DevOps &amp; Developer Productivity Blog]]></title>
+        <id>https://aws.amazon.com/blogs/devops/closed-loop-incident-response-connect-aws-devops-agent-to-opensearch/</id>
+        <link href="https://aws.amazon.com/blogs/devops/closed-loop-incident-response-connect-aws-devops-agent-to-opensearch/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2026/10/01/DEVOPS-24818-featured-image.png" type="image/png"/>
+        <updated>2026-10-02T15:24:49.000Z</updated>
+        <summary type="html"><![CDATA[Amazon OpenSearchにAWS DevOps Agentを接続 モデルコンテキストプロトコル(MCP)を使用してサービスの保守性データなので、2 AMで火災するアラートは自動根本原因調査をトリガーします。 3つのMCPサーバーホスティングパス(Amazon ECS、Amazon Bedrock AgentCore、または組み込みOpenSearch 3.3 +)、アラートルーティングと]]></summary>
+        <content type="html"><![CDATA[Amazon OpenSearchにAWS DevOps Agentを接続 モデルコンテキストプロトコル(MCP)を使用してサービスの保守性データなので、2 AMで火災するアラートは自動根本原因調査をトリガーします。 3つのMCPサーバーホスティングパス(Amazon ECS、Amazon Bedrock AgentCore、または組み込みOpenSearch 3.3 +)、アラートルーティングとFGACロールマッピング。]]></content>
+        <author>
+            <name>Sitaraman Vijay Krishna</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon OpenSearch Service"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-02T15:24:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ゲートウェイを超えて:ベスト・バイヤーズ・クラウド・ワン・セグメント・マトリックスがネットワーク・ルーティングをセキュリティ・スーパーパワーに変える方法 | AWS for Industries]]></title>
+        <id>https://aws.amazon.com/blogs/industries/beyond-the-gateway-how-best-buys-cloud-wan-segment-matrix-turns-network-routing-into-a-security-superpower/</id>
+        <link href="https://aws.amazon.com/blogs/industries/beyond-the-gateway-how-best-buys-cloud-wan-segment-matrix-turns-network-routing-into-a-security-superpower/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/11/Beyond-the-Gateway-How-Best-Buys-Cloud-WAN-Segment-Matrix-Turns-Network-Routing-into-a-Security-Superpower-1.png" type="image/png"/>
+        <updated>2026-10-02T13:37:01.000Z</updated>
+        <summary type="html"><![CDATA[この投稿では、Best Buyが多くのフェーズと長年にわたってネットワークを変革し、最新の反復がクラウドWANの高度なルーティングポリシーで構築されたセグメントマトリックスを使用して、セキュリティ、柔軟性、およびコストを同時に改善する方法を学びます。]]></summary>
+        <content type="html"><![CDATA[この投稿では、Best Buyが多くのフェーズと長年にわたってネットワークを変革し、最新の反復がクラウドWANの高度なルーティングポリシーで構築されたセグメントマトリックスを使用して、セキュリティ、柔軟性、およびコストを同時に改善する方法を学びます。]]></content>
+        <author>
+            <name>Jason Schamp</name>
+        </author>
+        <category label="AWS Cloud WAN"/>
+        <category label="Industries"/>
+        <category label="Retail"/>
+        <published>2026-10-02T13:37:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AmazonのBedrock AgentCoreのエージェントAIによるクラウド移行 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/12/ML-20875-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T22:06:14.000Z</updated>
+        <summary type="html"><![CDATA[AWS Professional Services は、Amazon Bedrock AgentCore 上に構築されたマルチエージェントフレームワークを使用して、エンタープライズクラウド移行の終了を自動化する方法を学びます。 目的構築型AIエージェントは、コード生成、ポートフォリオ・ガバナンス、ポスト・マイグレーション・オペレーションとして、IaC開発時間を週から数分に短縮します。]]></summary>
+        <content type="html"><![CDATA[AWS Professional Services は、Amazon Bedrock AgentCore 上に構築されたマルチエージェントフレームワークを使用して、エンタープライズクラウド移行の終了を自動化する方法を学びます。 目的構築型AIエージェントは、コード生成、ポートフォリオ・ガバナンス、ポスト・マイグレーション・オペレーションとして、IaC開発時間を週から数分に短縮します。]]></content>
+        <author>
+            <name>Nikhil Jha</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-01T22:06:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[クラスタのオートスケールとカルペンターの側をROSAとHCPで動かします | IBM &amp; Red Hat on AWS]]></title>
+        <id>https://aws.amazon.com/blogs/ibm-redhat/running-cluster-autoscaler-and-karpenter-side-by-side-on-rosa-with-hcp/</id>
+        <link href="https://aws.amazon.com/blogs/ibm-redhat/running-cluster-autoscaler-and-karpenter-side-by-side-on-rosa-with-hcp/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c097638f92de80ba8d6c696b26e6e601a5f61eb7/2026/10/01/RunningClusterAutoScalerKarpenter-1120x630.png" type="image/png"/>
+        <updated>2026-10-01T20:05:09.000Z</updated>
+        <summary type="html"><![CDATA[AWS(ROSA)でRed Hat OpenShift Serviceを実行しているチームは、クラスタのAutoscalerとKarpenterのRed Hatビルドの間で選択する必要があるか、Podのスケーリングとスケーリングノード間のラインを強制することが多い。 ホストされた制御平面(HCP)を持つROSAは、スケールするいくつかの方法を提供し、チームはしばしばそれらを混同する。 この投稿はク]]></summary>
+        <content type="html"><![CDATA[AWS(ROSA)でRed Hat OpenShift Serviceを実行しているチームは、クラスタのAutoscalerとKarpenterのRed Hatビルドの間で選択する必要があるか、Podのスケーリングとスケーリングノード間のラインを強制することが多い。 ホストされた制御平面(HCP)を持つROSAは、スケールするいくつかの方法を提供し、チームはしばしばそれらを混同する。 この投稿はクリア [...]]]></content>
+        <author>
+            <name>Steve Mirman</name>
+        </author>
+        <category label="IBM &amp; Red Hat on AWS"/>
+        <published>2026-10-01T20:05:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS導入 クラウド環境を最適化するためのAI搭載インテリジェンスである Well-Architected Agent (プレビュー) | AWS News Blog]]></title>
+        <id>https://aws.amazon.com/blogs/aws/announcing-aws-well-architected-agent-an-ai-powered-intelligence-to-optimize-your-cloud-environment-preview/</id>
+        <link href="https://aws.amazon.com/blogs/aws/announcing-aws-well-architected-agent-an-ai-powered-intelligence-to-optimize-your-cloud-environment-preview/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/08/07/Image-2-2_1-no-footer-1260x630.png" type="image/png"/>
+        <updated>2026-10-01T20:04:04.000Z</updated>
+        <summary type="html"><![CDATA[AWS Well-Architected Agent の公開プレビュー、AWS 環境を分析するAI 搭載サービスで、アプリケーションのコスト、セキュリティ、パフォーマンス、およびレジリエンスを改善するための、ターゲット化されたコンテキスト推奨事項を、ビジネス目標に整列する準備が整いました。]]></summary>
+        <content type="html"><![CDATA[AWS Well-Architected Agent の公開プレビュー、AWS 環境を分析するAI 搭載サービスで、アプリケーションのコスト、セキュリティ、パフォーマンス、およびレジリエンスを改善するための、ターゲット化されたコンテキスト推奨事項を、ビジネス目標に整列する準備が整いました。]]></content>
+        <author>
+            <name>Channy Yun (윤석찬)</name>
+        </author>
+        <category label="Artificial Intelligence"/>
+        <category label="AWS Support"/>
+        <category label="AWS Well-Architected"/>
+        <category label="Customer Enablement"/>
+        <category label="Generative AI"/>
+        <category label="Launch"/>
+        <category label="News"/>
+        <published>2026-10-01T20:04:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon DynamoDB から Amazon S3 へのフィルタリングエクスポートを導入 | AWS Database Blog]]></title>
+        <id>https://aws.amazon.com/blogs/database/introducing-filtered-export-from-amazon-dynamodb-to-amazon-s3/</id>
+        <link href="https://aws.amazon.com/blogs/database/introducing-filtered-export-from-amazon-dynamodb-to-amazon-s3/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/09/30/DBBLOG-5983-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T20:01:13.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Dynamo のフィルターエクスポート DBは、テーブル容量を消費することなく、Amazon S3に必要なアイテムや属性だけをエクスポートするのに役立ちます。 この投稿では、単一のテナントのデータを復元する方法と、選択した属性を持つテナントの履歴を共有し、別の地域にテナントを移転する方法について説明します。]]></summary>
+        <content type="html"><![CDATA[Amazon Dynamo のフィルターエクスポート DBは、テーブル容量を消費することなく、Amazon S3に必要なアイテムや属性だけをエクスポートするのに役立ちます。 この投稿では、単一のテナントのデータを復元する方法と、選択した属性を持つテナントの履歴を共有し、別の地域にテナントを移転する方法について説明します。]]></content>
+        <author>
+            <name>Lee Hannigan</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon DynamoDB"/>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Announcements"/>
+        <published>2026-10-01T20:01:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon QuickでAI内蔵アプリでライブ、管理されたデータを管理 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/serve-live-governed-data-in-ai-built-apps-with-amazon-quick/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/serve-live-governed-data-in-ai-built-apps-with-amazon-quick/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/30/ML-22064-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T19:49:06.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Quick でアプリ内のライブデータを使って、AI 内蔵アプリは、静的、ビルドタイムスナップショットではなく、リアルタイムで管理された Quick Sight データセットをリアルタイムで問い合わせます。 各クエリは、アプリを表示している人として実行されます。そのため、行レベルと列レベルのセキュリティはリーダーごとに適用されます。 自然言語を使用してライブデータアプリをビルド、公開、]]></summary>
+        <content type="html"><![CDATA[Amazon Quick でアプリ内のライブデータを使って、AI 内蔵アプリは、静的、ビルドタイムスナップショットではなく、リアルタイムで管理された Quick Sight データセットをリアルタイムで問い合わせます。 各クエリは、アプリを表示している人として実行されます。そのため、行レベルと列レベルのセキュリティはリーダーごとに適用されます。 自然言語を使用してライブデータアプリをビルド、公開、共有する方法を学びます。]]></content>
+        <author>
+            <name>Wei Kuo</name>
+        </author>
+        <category label="Amazon Quick Sight"/>
+        <category label="Amazon Quick Suite"/>
+        <category label="Foundational (100)"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-01T19:49:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS 組織全体でシステムマネージャーの文書を AWS RAM で共有 | AWS Cloud Operations Blog]]></title>
+        <id>https://aws.amazon.com/blogs/mt/share-systems-manager-documents-across-your-aws-organization-with-aws-ram/</id>
+        <link href="https://aws.amazon.com/blogs/mt/share-systems-manager-documents-across-your-aws-organization-with-aws-ram/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/972a67c48192728a34979d9a35164c1295401b71/2026/10/01/ssm-blog-erik.png" type="image/png"/>
+        <updated>2026-10-01T19:37:35.000Z</updated>
+        <summary type="html"><![CDATA[導入事例 AWS システム マネージャー (SSM) のドキュメントを運用する場合、オートメーション ランブックやコマンド ドキュメントの実行など、AWS 組織全体で、どのアカウントが実行できるかを判断する必要があります。 これまでは、各ドキュメントを ModifyDocumentPermission API を通じて個々のアカウント ID の一覧で共有することを意味し、これにより、1 件あたり最]]></summary>
+        <content type="html"><![CDATA[導入事例 AWS システム マネージャー (SSM) のドキュメントを運用する場合、オートメーション ランブックやコマンド ドキュメントの実行など、AWS 組織全体で、どのアカウントが実行できるかを判断する必要があります。 これまでは、各ドキュメントを ModifyDocumentPermission API を通じて個々のアカウント ID の一覧で共有することを意味し、これにより、1 件あたり最大 1,000 個のアカウント ID が承認されます。]]></content>
+        <author>
+            <name>Erik Weber</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="AWS Systems Manager"/>
+        <category label="Best Practices"/>
+        <category label="Management Tools"/>
+        <category label="Resource Access Manager (RAM)"/>
+        <category label="Technical How-to"/>
+        <category label="Automation"/>
+        <category label="AWS CloudFormation"/>
+        <category label="AWS Organizations"/>
+        <category label="Cloud Operations"/>
+        <category label="How-to"/>
+        <category label="Systems Manager Automation"/>
+        <published>2026-10-01T19:37:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[F5 AI ガードレールと AWS ブロックによる継続的なAIセキュリティ | AWS Partner Network (APN) Blog]]></title>
+        <id>https://aws.amazon.com/blogs/apn/continuous-ai-security-with-f5-ai-guardrails-and-aws-bedrock/</id>
+        <link href="https://aws.amazon.com/blogs/apn/continuous-ai-security-with-f5-ai-guardrails-and-aws-bedrock/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/77de68daecd823babbb58edb1c8e14d7106e83bb/2026/09/22/F5-APN-Blog-2026-1260x630.png" type="image/png"/>
+        <updated>2026-10-01T17:50:24.000Z</updated>
+        <summary type="html"><![CDATA[F5 AI ガードレールと F5 AI レッド チームは、AWS ブロック上で AI アプリケーションに継続的な適応セキュリティを提供します。 この投稿では、エンタープライズAIセキュリティのための3つの機能を紹介します。事前採用モデルの評価、スケールでの試行、適応ランタイム保護。 脅威発見と防御展開のギャップを数週間から数分に圧縮する方法を学びます。]]></summary>
+        <content type="html"><![CDATA[F5 AI ガードレールと F5 AI レッド チームは、AWS ブロック上で AI アプリケーションに継続的な適応セキュリティを提供します。 この投稿では、エンタープライズAIセキュリティのための3つの機能を紹介します。事前採用モデルの評価、スケールでの試行、適応ランタイム保護。 脅威発見と防御展開のギャップを数週間から数分に圧縮する方法を学びます。]]></content>
+        <author>
+            <name>Vlad Tyshkov</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon Bedrock Guardrails"/>
+        <category label="AWS Partner Network"/>
+        <category label="Intermediate (200)"/>
+        <category label="Partner solutions"/>
+        <category label="Security"/>
+        <category label="Thought Leadership"/>
+        <category label="AWS Competency Partners"/>
+        <category label="AWS Marketplace"/>
+        <category label="AWS Partner Solution"/>
+        <category label="F5 Networks"/>
+        <published>2026-10-01T17:50:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NVIDIA NeMo エージェント ツールキットと Amazon S3 ベクトルでエージェント メモリを構築 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/build-agent-memory-with-nvidia-nemo-agent-toolkit-and-amazon-s3-vectors/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/build-agent-memory-with-nvidia-nemo-agent-toolkit-and-amazon-s3-vectors/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/28/ML-21981-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T17:34:56.000Z</updated>
+        <summary type="html"><![CDATA[NVIDIA NeMo Agent Toolkit (NAT) 内の永続的なメモリ層として Amazon S3 ベクトルを使用する方法を学び、Amazon Elastic Kubernetes Service (Amazon EKS) にデプロイしました。 この投稿では、NAT のメモリサブシステムがどのように動作するか、Amazon S3 ベクトルをカスタムメモリプロバイダとして実装する方法を解]]></summary>
+        <content type="html"><![CDATA[NVIDIA NeMo Agent Toolkit (NAT) 内の永続的なメモリ層として Amazon S3 ベクトルを使用する方法を学び、Amazon Elastic Kubernetes Service (Amazon EKS) にデプロイしました。 この投稿では、NAT のメモリサブシステムがどのように動作するか、Amazon S3 ベクトルをカスタムメモリプロバイダとして実装する方法を解説しています。マルチエージェントの投資用ユースケースを使っています。]]></content>
+        <author>
+            <name>Venkata Sistla</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-01T17:34:56.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[買収ファネル全体でのコンバージョンアップ、AWS上のコンテクストバンドを使用してパーソナライゼーション | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/uplifting-conversion-across-the-acquisition-funnel-with-personalization-using-contextual-bandits-on-aws/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/uplifting-conversion-across-the-acquisition-funnel-with-personalization-using-contextual-bandits-on-aws/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/29/ML-20979-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T16:51:04.000Z</updated>
+        <summary type="html"><![CDATA[ジェネレーションAIは、パーソナライズされたコンテンツをスケールで生成するのに安くなりますが、各顧客ごとに表示するバリエーションはありますか? Amazon Pays は、Amazon SageMaker AI で複数の視覚的コンテキスト・バンドイトを使用して、買収ファネルをパーソナライズし、1 人のオーディエンスに高単一デジタル変換リフトを実現し、モデルではなくコンテンツが制約された理由を学習し]]></summary>
+        <content type="html"><![CDATA[ジェネレーションAIは、パーソナライズされたコンテンツをスケールで生成するのに安くなりますが、各顧客ごとに表示するバリエーションはありますか? Amazon Pays は、Amazon SageMaker AI で複数の視覚的コンテキスト・バンドイトを使用して、買収ファネルをパーソナライズし、1 人のオーディエンスに高単一デジタル変換リフトを実現し、モデルではなくコンテンツが制約された理由を学習しました。]]></content>
+        <author>
+            <name>Chidi Prince John</name>
+        </author>
+        <category label="Amazon SageMaker AI"/>
+        <category label="Customer Solutions"/>
+        <published>2026-10-01T16:51:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[次世代プロトコルでAmazon MSKで消費者のリバランスを最適化 | AWS Big Data Blog]]></title>
+        <id>https://aws.amazon.com/blogs/big-data/optimize-consumer-rebalancing-on-amazon-msk-with-next-generation-protocol/</id>
+        <link href="https://aws.amazon.com/blogs/big-data/optimize-consumer-rebalancing-on-amazon-msk-with-next-generation-protocol/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/28/BDB-6038-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T16:43:54.000Z</updated>
+        <summary type="html"><![CDATA[Apache Kafka 4.0 の KIP-848 消費者プロトコルは、消費者グループを再設計し、ストップ・ザ・ワールドの停止を排除します。 この投稿では、消費者プロトコルがAmazon MSKでどのように機能するか、MSK標準およびエクスプレスブローカーで有効にする方法、および遅い再バランスの問題の診断および解決方法について説明します。]]></summary>
+        <content type="html"><![CDATA[Apache Kafka 4.0 の KIP-848 消費者プロトコルは、消費者グループを再設計し、ストップ・ザ・ワールドの停止を排除します。 この投稿では、消費者プロトコルがAmazon MSKでどのように機能するか、MSK標準およびエクスプレスブローカーで有効にする方法、および遅い再バランスの問題の診断および解決方法について説明します。]]></content>
+        <author>
+            <name>Yashika Jain</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Managed Streaming for Apache Kafka (Amazon MSK)"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-01T16:43:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS AppConfig でコンテナ環境における機能フラグの実装 | Containers]]></title>
+        <id>https://aws.amazon.com/blogs/containers/implementing-feature-flags-in-container-environments-with-aws-appconfig/</id>
+        <link href="https://aws.amazon.com/blogs/containers/implementing-feature-flags-in-container-environments-with-aws-appconfig/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2026/09/29/CONTAINERS-303-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T16:42:33.000Z</updated>
+        <summary type="html"><![CDATA[Amazon ECS と Amazon EKS の動的機能フラグを AWS AppConfig でサイドカーパターンで実装する方法を学びます。 AWS AppConfig 機能フラグを設定し、AWS AppConfig Agent をサイドカーコンテナとしてデプロイし、コンテナを再構築または再デプロイすることなく、実行時にアプリケーション動作をトグルします。]]></summary>
+        <content type="html"><![CDATA[Amazon ECS と Amazon EKS の動的機能フラグを AWS AppConfig でサイドカーパターンで実装する方法を学びます。 AWS AppConfig 機能フラグを設定し、AWS AppConfig Agent をサイドカーコンテナとしてデプロイし、コンテナを再構築または再デプロイすることなく、実行時にアプリケーション動作をトグルします。]]></content>
+        <author>
+            <name>Daniel Abib</name>
+        </author>
+        <category label="AWS Systems Manager"/>
+        <category label="Intermediate (200)"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-01T16:42:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[オーロラ DSQL の外部キー制約を扱う | AWS Database Blog]]></title>
+        <id>https://aws.amazon.com/blogs/database/working-with-foreign-key-constraints-in-aurora-dsql/</id>
+        <link href="https://aws.amazon.com/blogs/database/working-with-foreign-key-constraints-in-aurora-dsql/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/09/28/DBBLOG-5495-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T16:42:03.000Z</updated>
+        <summary type="html"><![CDATA[アマゾンオーロラ DSQLは、外部キー制約をサポートし、データベースに直接参照の整合性を強制します。 この投稿は、外部キーを定義するカバー, 即時対比の執行, 既存のテーブルに制約を追加, どのように楽観的な通貨制御は、分散ワークロードで競合を解決.]]></summary>
+        <content type="html"><![CDATA[アマゾンオーロラ DSQLは、外部キー制約をサポートし、データベースに直接参照の整合性を強制します。 この投稿は、外部キーを定義するカバー, 即時対比の執行, 既存のテーブルに制約を追加, どのように楽観的な通貨制御は、分散ワークロードで競合を解決.]]></content>
+        <author>
+            <name>Rekha Reddy Anupati</name>
+        </author>
+        <category label="Amazon Aurora"/>
+        <category label="DSQL"/>
+        <category label="Expert (400)"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-01T16:42:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Aurora PostgreSQL パフォーマンスチューニング用の Babelfish | AWS Database Blog]]></title>
+        <id>https://aws.amazon.com/blogs/database/babelfish-for-aurora-postgresql-performance-tuning/</id>
+        <link href="https://aws.amazon.com/blogs/database/babelfish-for-aurora-postgresql-performance-tuning/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/07/01/DB5282.png" type="image/png"/>
+        <updated>2026-10-01T16:40:53.000Z</updated>
+        <summary type="html"><![CDATA[この記事では、監視、クエリの最適化、パラメータ調整、継続的なメンテナンスを通じてBabelfishのパフォーマンスをチューニングする方法を紹介します。]]></summary>
+        <content type="html"><![CDATA[この記事では、監視、クエリの最適化、パラメータ調整、継続的なメンテナンスを通じてBabelfishのパフォーマンスをチューニングする方法を紹介します。]]></content>
+        <author>
+            <name>Amit Arora</name>
+        </author>
+        <category label="Babelfish for Aurora PostgreSQL"/>
+        <category label="Intermediate (200)"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-01T16:40:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AmazonのBedrock AgentCoreで包囲されたエージェントの構築:イベント主導のシグナルから人脈のワークフローまで | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/building-ambient-agents-with-amazon-bedrock-agentcore-from-event-driven-signals-to-human-in-the-loop-workflows/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/building-ambient-agents-with-amazon-bedrock-agentcore-from-event-driven-signals-to-human-in-the-loop-workflows/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/25/ML-19851-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T16:40:24.000Z</updated>
+        <summary type="html"><![CDATA[アンビエントエージェントは、チャットプロンプトを待つ代わりにAmazon S3アップロード、スケジュール、またはアラートなどのイベントに対応します。 この投稿は、Amazon SQS、AWS Lambda、Amazon DynamoDB を使用した Amazon Bedrock AgentCore のフレームワーク・アグノスティック・アンビエント・エージェントをビルドし、単一の Ask_human]]></summary>
+        <content type="html"><![CDATA[アンビエントエージェントは、チャットプロンプトを待つ代わりにAmazon S3アップロード、スケジュール、またはアラートなどのイベントに対応します。 この投稿は、Amazon SQS、AWS Lambda、Amazon DynamoDB を使用した Amazon Bedrock AgentCore のフレームワーク・アグノスティック・アンビエント・エージェントをビルドし、単一の Ask_human ツールと Jobs のページでヒューマン・イン・ザ・ループ・レビューを行います。]]></content>
+        <author>
+            <name>Juan Albarran</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Intermediate (200)"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-01T16:40:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS上でClaudeプラットフォーム用のマルチ環境アクセスを実施 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/implementing-multi-environment-access-for-claude-platform-on-aws/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/implementing-multi-environment-access-for-claude-platform-on-aws/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/21/ML-21203-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T16:32:23.000Z</updated>
+        <summary type="html"><![CDATA[AWS上のClaudeプラットフォームへのセキュアなマルチ環境アクセスを単一のサブスクリプションから構成する方法を学びます。AWSのワークロード、開発者のためのワークスペーススコープAPIキー、および外部環境のためのOIDCのフェデレーション、専用のAIサービスアカウントでワークスペースレベルの分離。]]></summary>
+        <content type="html"><![CDATA[AWS上のClaudeプラットフォームへのセキュアなマルチ環境アクセスを単一のサブスクリプションから構成する方法を学びます。AWSのワークロード、開発者のためのワークスペーススコープAPIキー、および外部環境のためのOIDCのフェデレーション、専用のAIサービスアカウントでワークスペースレベルの分離。]]></content>
+        <author>
+            <name>Andrea Gallo</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Technical How-to"/>
+        <published>2026-10-01T16:32:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[カスタマイズ . ATX CLIでコマンドラインからNETアプリケーション | .NET on AWS Blog]]></title>
+        <id>https://aws.amazon.com/blogs/dotnet/modernize-net-applications-from-the-command-line-with-atx-cli/</id>
+        <link href="https://aws.amazon.com/blogs/dotnet/modernize-net-applications-from-the-command-line-with-atx-cli/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b4c96d80854dd27e76d8cc9e21960eebda52e962/2026/10/01/modernize-dotnet-from-command-line-with-atx-cli-1260x630.png" type="image/png"/>
+        <updated>2026-10-01T16:32:05.000Z</updated>
+        <summary type="html"><![CDATA[AWS トランスフォーメーションでは、CLI ベースの . AWS管理の変革によるNETモダナイゼーション。これは制限範囲内で無料です。 この投稿では、近代化を通してあなたを歩きます。 ATX CLI を使用したコマンドラインからの NET ソリューション。 AWS Transform は、開発者やWeb コンソール用の Visual Studio IDE を含む複数の経験を既に提供しているため、]]></summary>
+        <content type="html"><![CDATA[AWS トランスフォーメーションでは、CLI ベースの . AWS管理の変革によるNETモダナイゼーション。これは制限範囲内で無料です。 この投稿では、近代化を通してあなたを歩きます。 ATX CLI を使用したコマンドラインからの NET ソリューション。 AWS Transform は、開発者やWeb コンソール用の Visual Studio IDE を含む複数の経験を既に提供しているため、IT のプロフェッショナル向けに提供しています。]]></content>
+        <author>
+            <name>David Pallmann</name>
+        </author>
+        <category label=".NET"/>
+        <category label="AWS Transform"/>
+        <category label="Uncategorized"/>
+        <published>2026-10-01T16:32:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazonのクイックサイト階層フィルタでダッシュボードのドリルダウンを簡素化 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/simplify-dashboard-drill-down-with-the-amazon-quick-sight-hierarchy-filter/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/simplify-dashboard-drill-down-with-the-amazon-quick-sight-hierarchy-filter/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/29/ML-21595-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T16:28:14.000Z</updated>
+        <summary type="html"><![CDATA[アマゾン クイック Sightは、インタラクティブなダッシュボードの構築と公開のための、完全に管理されたクラウドネイティブビジネスインテリジェンス(BI)機能です。 新しい階層フィルタは、ダッシュボードの作者を1つのコンパクトコントロールで豊富でマルチレベルフィルタリングし、数段のステップで必要なデータへのクラッタとガイドリーダーを削減します。]]></summary>
+        <content type="html"><![CDATA[アマゾン クイック Sightは、インタラクティブなダッシュボードの構築と公開のための、完全に管理されたクラウドネイティブビジネスインテリジェンス(BI)機能です。 新しい階層フィルタは、ダッシュボードの作者を1つのコンパクトコントロールで豊富でマルチレベルフィルタリングし、数段のステップで必要なデータへのクラッタとガイドリーダーを削減します。]]></content>
+        <author>
+            <name>Roy Yung</name>
+        </author>
+        <category label="Amazon Quick Sight"/>
+        <category label="Announcements"/>
+        <category label="Intermediate (200)"/>
+        <published>2026-10-01T16:28:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS パートナーのための新しい FDE の経路: 生産の代理店の AI 配達のための準備をして下さい | AWS Partner Network (APN) Blog]]></title>
+        <id>https://aws.amazon.com/blogs/apn/new-fde-pathways-for-aws-partners-get-ready-for-production-agentic-ai-delivery/</id>
+        <link href="https://aws.amazon.com/blogs/apn/new-fde-pathways-for-aws-partners-get-ready-for-production-agentic-ai-delivery/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/77de68daecd823babbb58edb1c8e14d7106e83bb/2026/09/30/FDE_Featured_Image-1260x630.png" type="image/png"/>
+        <updated>2026-10-01T15:45:37.000Z</updated>
+        <summary type="html"><![CDATA[ツイート パートナーは、AWS Skill Builder を通じて 3 つの新しい Forward deployed Engineering (FDE) の経路にアクセスし、認証情報を取得して、生産準備の整合性 AI 配信に必要な深さを構築し、検証することができます。]]></summary>
+        <content type="html"><![CDATA[ツイート パートナーは、AWS Skill Builder を通じて 3 つの新しい Forward deployed Engineering (FDE) の経路にアクセスし、認証情報を取得して、生産準備の整合性 AI 配信に必要な深さを構築し、検証することができます。]]></content>
+        <author>
+            <name>Karthik Sonti</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="APN Launches"/>
+        <category label="Artificial Intelligence"/>
+        <category label="AWS Partner Network"/>
+        <category label="Foundational (100)"/>
+        <category label="Generative AI"/>
+        <category label="Partner solutions"/>
+        <category label="AWS Partner"/>
+        <category label="Caylent"/>
+        <category label="Deloitte"/>
+        <published>2026-10-01T15:45:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[9月に追加された 156 新しい AWS のコンピテンシー、サービス デリバリー、および MSP パートナーにこんにちは言う | AWS Partner Network (APN) Blog]]></title>
+        <id>https://aws.amazon.com/blogs/apn/say-hello-to-156-new-aws-competency-service-delivery-and-msp-partners-added-in-september/</id>
+        <link href="https://aws.amazon.com/blogs/apn/say-hello-to-156-new-aws-competency-service-delivery-and-msp-partners-added-in-september/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/77de68daecd823babbb58edb1c8e14d7106e83bb/2024/11/19/Say-Hello.jpg" type="image/jpg"/>
+        <updated>2026-10-01T15:44:59.000Z</updated>
+        <summary type="html"><![CDATA[9月には、グローバルAWSコンピテンシー、AWSマネージドサービスプロバイダ(MSP)、AWSサービスデリバリープログラムの新規または更新された専門性を新たに受けた、156 AWSパートナーを強調することができました。 これらの設計は、作業負荷、ソリューション、および業界を網羅し、AWSの顧客は、中核ビジネスの目的に配信できるトップAWSパートナーを特定するのに役立ちます。 ツイート パートナーは]]></summary>
+        <content type="html"><![CDATA[9月には、グローバルAWSコンピテンシー、AWSマネージドサービスプロバイダ(MSP)、AWSサービスデリバリープログラムの新規または更新された専門性を新たに受けた、156 AWSパートナーを強調することができました。 これらの設計は、作業負荷、ソリューション、および業界を網羅し、AWSの顧客は、中核ビジネスの目的に配信できるトップAWSパートナーを特定するのに役立ちます。 ツイート パートナーは、お客様の成功に集中し、お客様がAWSが提供するビジネス上のメリットを最大限に活用できるようにします。]]></content>
+        <author>
+            <name>Nick Paris</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="APN Launches"/>
+        <category label="AWS Partner Network"/>
+        <category label="a Carbon60 Company"/>
+        <category label="A3Data"/>
+        <category label="ABRA CLOUD SOLUTIONS"/>
+        <category label="allOps Solutions"/>
+        <category label="AmaliTech Services"/>
+        <category label="Andersen"/>
+        <category label="Apex.IT"/>
+        <category label="Applying Consulting"/>
+        <category label="Atyos"/>
+        <category label="Automat-IT"/>
+        <category label="B8 ICT Solutions"/>
+        <category label="BeCloud"/>
+        <category label="Birlasoft (India)"/>
+        <category label="BRIGHT DIGITAL"/>
+        <category label="Business Compass"/>
+        <category label="Caleidos"/>
+        <category label="Cato Networks"/>
+        <category label="Caylent"/>
+        <category label="Changhong IT Information Products"/>
+        <category label="Cheppers"/>
+        <category label="Ci&amp;T Software"/>
+        <category label="CitiusTech"/>
+        <category label="Clerion"/>
+        <category label="Cloud Family AB"/>
+        <category label="Cloudcentrix Technologies"/>
+        <category label="Coforge"/>
+        <category label="Commencis"/>
+        <category label="Cygnet.One"/>
+        <category label="Darktrace"/>
+        <category label="DataEconomy"/>
+        <category label="DataSleek (Alanco Technologies)"/>
+        <category label="Denodo"/>
+        <category label="Descasio"/>
+        <category label="Devertix"/>
+        <category label="Devops TechLab"/>
+        <category label="DiUS"/>
+        <category label="EDT&amp;Partners"/>
+        <category label="EFFITECH SOLUTIONS"/>
+        <category label="Enreap"/>
+        <category label="Enreap Systems"/>
+        <category label="Entrephy"/>
+        <category label="Eon"/>
+        <category label="EPAM Systems"/>
+        <category label="Exabytes"/>
+        <category label="experienz"/>
+        <category label="Fairwinds Ops"/>
+        <category label="FluidCloud"/>
+        <category label="G-ABLE"/>
+        <category label="GENEXTECH SOLUTIONS"/>
+        <category label="Ghaim"/>
+        <category label="Graaho Technologies"/>
+        <category label="Grey Bracket Devops Automation"/>
+        <category label="Guance.com"/>
+        <category label="Gulf Kloud"/>
+        <category label="Habilelabs"/>
+        <category label="Hexadia"/>
+        <category label="Hostersi"/>
+        <category label="i2k2 Networks"/>
+        <category label="ILIOS DIGITAL"/>
+        <category label="In Motion"/>
+        <category label="Infynation"/>
+        <category label="Ingenious Tech World"/>
+        <category label="Innovation Cloud Services - ICS Compute"/>
+        <category label="IT Visionary"/>
+        <category label="Jefferson Frank"/>
+        <category label="Jellyfish"/>
+        <category label="Kaamel Technology"/>
+        <category label="Keyrus"/>
+        <category label="Kitsilano Technologies"/>
+        <category label="KnowBe4"/>
+        <category label="KPI Partners"/>
+        <category label="KTM ONE"/>
+        <category label="KXC"/>
+        <category label="Kyobo DTS (Digital Technology Service)"/>
+        <category label="Leapfrog Technology"/>
+        <category label="Loop8 - AI and Cloud Transformation Services"/>
+        <category label="Matellio"/>
+        <category label="Mayhive"/>
+        <category label="Meetsocial"/>
+        <category label="MHP"/>
+        <category label="Native"/>
+        <category label="NCLOUD THREE (MAURITIUS)"/>
+        <category label="Netrix Global"/>
+        <category label="Network Techlab India"/>
+        <category label="Nextgen Distribution"/>
+        <category label="NordHero"/>
+        <category label="Northbay Solutions"/>
+        <category label="Nuvme"/>
+        <category label="One Cloud Utopia"/>
+        <category label="Onepoint"/>
+        <category label="OpsGuru"/>
+        <category label="OpsTeam"/>
+        <category label="Pace Wisdom Solutions"/>
+        <category label="Pentagon System and Services"/>
+        <category label="PIYTECH SOLUTIONS"/>
+        <category label="Pokee AI"/>
+        <category label="PolarSeven"/>
+        <category label="Prana Tree"/>
+        <category label="Precisely"/>
+        <category label="Presidio Inc"/>
+        <category label="PROTOS Technologie"/>
+        <category label="PT Mastersystem Infotama Tbk"/>
+        <category label="Pump"/>
+        <category label="Qucoon"/>
+        <category label="Qumulo"/>
+        <category label="QyrosCloud"/>
+        <category label="RD Paytech"/>
+        <category label="Rebizo Cloud Tech"/>
+        <category label="Redington"/>
+        <category label="RevStar"/>
+        <category label="SaasNova"/>
+        <category label="Salesflo"/>
+        <category label="Sanrish Technologies"/>
+        <category label="Scale Factory"/>
+        <category label="ScaleCapacity"/>
+        <category label="SCSK Corporation"/>
+        <category label="SEC AND DEVOPS AI"/>
+        <category label="Sedmi Odjel"/>
+        <category label="Seesec Infotech"/>
+        <category label="Sentra"/>
+        <category label="Sigmoid"/>
+        <category label="Silicon Power Solutions"/>
+        <category label="Solvixe Technologies"/>
+        <category label="Sonata Software"/>
+        <category label="Spectro Cloud"/>
+        <category label="StableLogic"/>
+        <category label="StarOne IT Solutions"/>
+        <category label="Tech-5 UG"/>
+        <category label="Telefonica Cybersecurity and Cloud Tech"/>
+        <category label="Temporal Technologies"/>
+        <category label="Terasky"/>
+        <category label="Tiger Data"/>
+        <category label="TKTL INFORMATICA LTDA (Alest)."/>
+        <category label="TranSnet Cloud"/>
+        <category label="Tribe Networks"/>
+        <category label="UDS"/>
+        <category label="UHOMES"/>
+        <category label="upd8"/>
+        <category label="VArrow Technologies"/>
+        <category label="VeUP"/>
+        <category label="Wipro"/>
+        <category label="WPS金山办公"/>
+        <category label="XBOW | Autonomous Pentesting Platform"/>
+        <category label="Xebia"/>
+        <category label="Zensar Technologies"/>
+        <category label="深圳市帝盟网络科技有限公司"/>
+        <published>2026-10-01T15:44:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[航空会社の小売イノベーションの加速: AWS Experience-Based Acceleration および エージェント型 AI による Datalex の近代化 | AWS Architecture Blog]]></title>
+        <id>https://aws.amazon.com/blogs/architecture/accelerating-airline-retailing-innovation-how-datalex-modernized-with-aws-experience-based-acceleration-and-agentic-ai/</id>
+        <link href="https://aws.amazon.com/blogs/architecture/accelerating-airline-retailing-innovation-how-datalex-modernized-with-aws-experience-based-acceleration-and-agentic-ai/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/09/29/ARCHBLOG-1483-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T15:37:06.000Z</updated>
+        <summary type="html"><![CDATA[航空会社のeコマースのリーダーであるDatalexは、3日間のエクスペリエンスベースのアクセラレーション(EBA)ワークショップでAWSと提携し、近代化の実現可能性を証明しました。 EJB/Java 8 から Spring Boot/Java 21 までのコア予約コンポーネントを移行する方法を学び、安全な CI/CD パイプラインをビルドし、保守性を高め、エージェントの AI を統合しました。]]></summary>
+        <content type="html"><![CDATA[航空会社のeコマースのリーダーであるDatalexは、3日間のエクスペリエンスベースのアクセラレーション(EBA)ワークショップでAWSと提携し、近代化の実現可能性を証明しました。 EJB/Java 8 から Spring Boot/Java 21 までのコア予約コンポーネントを移行する方法を学び、安全な CI/CD パイプラインをビルドし、保守性を高め、エージェントの AI を統合しました。]]></content>
+        <author>
+            <name>Kanniah Vagathupatti Jaikumar</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon Elastic Container Service"/>
+        <category label="Customer Solutions"/>
+        <published>2026-10-01T15:37:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ユニオープンは、生産展開のための小売のモデレーションポリシーにAmazon Novaをカスタマイズする方法 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/how-uniopen-customized-amazon-nova-to-their-retail-moderation-policies-for-production-deployment/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/how-uniopen-customized-amazon-nova-to-their-retail-moderation-policies-for-production-deployment/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/14/ML-21411-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T15:33:01.000Z</updated>
+        <summary type="html"><![CDATA[台湾のUni-President Enterprises Groupの小売プラットフォームであるuniopenがAmazon Nova 2 LiteをAmazon SageMaker AIと迅速な最適化で監督された微調整を使用して、コンテンツ変更ポリシーに適応しました。 業務関連評価およびリリースゲートは、品質を保たれています。]]></summary>
+        <content type="html"><![CDATA[台湾のUni-President Enterprises Groupの小売プラットフォームであるuniopenがAmazon Nova 2 LiteをAmazon SageMaker AIと迅速な最適化で監督された微調整を使用して、コンテンツ変更ポリシーに適応しました。 業務関連評価およびリリースゲートは、品質を保たれています。]]></content>
+        <author>
+            <name>Felix Chin, Jia-You Lin</name>
+        </author>
+        <category label="Amazon Nova"/>
+        <category label="Customer Solutions"/>
+        <published>2026-10-01T15:33:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Connect カスタマーを使用して、クライアントごとに自分を形づける Agentic AI IVR を構築 | AWS Contact Center]]></title>
+        <id>https://aws.amazon.com/blogs/contact-center/build-an-agentic-ai-ivr-that-shapes-itself-per-client-using-amazon-connect/</id>
+        <link href="https://aws.amazon.com/blogs/contact-center/build-an-agentic-ai-ivr-that-shapes-itself-per-client-using-amazon-connect/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/af3e133428b9e25c55bc59fe534248e6a0c0f17b/2026/09/28/Connect_Blog_featured_image-2-1120x630.png" type="image/png"/>
+        <updated>2026-10-01T15:15:17.000Z</updated>
+        <summary type="html"><![CDATA[導入 金融サービス機関(FSI)は、小売銀行、クレジットカード、富裕層管理、保険請求など、多様なビジネスラインに対応するコンタクトセンターを運営しています。 各事業は、独自のワークフロー、コンプライアンス要件、用語集、およびエスカレーションパスを持っています。 今日、ほとんどの組織は、各クライアントやビジネスのために別のIVRフローを構築することにより、この複雑さに対処します[...]]]></summary>
+        <content type="html"><![CDATA[導入 金融サービス機関(FSI)は、小売銀行、クレジットカード、富裕層管理、保険請求など、多様なビジネスラインに対応するコンタクトセンターを運営しています。 各事業は、独自のワークフロー、コンプライアンス要件、用語集、およびエスカレーションパスを持っています。 今日、ほとんどの組織は、各クライアントやビジネスのために別のIVRフローを構築することにより、この複雑さに対処します[...]]]></content>
+        <author>
+            <name>Anand Mandilwar</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon Connect"/>
+        <category label="Amazon Machine Learning"/>
+        <category label="Artificial Intelligence"/>
+        <category label="Technical How-to"/>
+        <category label="#amazonconnect"/>
+        <published>2026-10-01T15:15:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ミラーロAIがMCPとキロパワーでIDEにサウンドデザインをもたらした方法 | AWS DevOps &amp; Developer Productivity Blog]]></title>
+        <id>https://aws.amazon.com/blogs/devops/how-mirelo-ai-brought-sound-design-to-the-ide-with-mcp-and-kiro-powers/</id>
+        <link href="https://aws.amazon.com/blogs/devops/how-mirelo-ai-brought-sound-design-to-the-ide-with-mcp-and-kiro-powers/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2026/09/28/DEVOPS-24804-featured-image.png" type="image/png"/>
+        <updated>2026-10-01T14:49:24.000Z</updated>
+        <summary type="html"><![CDATA[Mirelo AI は、ホストされているモデルコンテキストプロトコル (MCP) サーバを Kiro パワーに変えました。そのため、開発者は IDE を離れることなく、自然言語のプロンプトからプロダクション対応のサウンド効果を生成できます。 統合とAWS Enterprise Support がどのようにしてKiro のパワーマーケットプレースにもたらすのかを学びましょう。]]></summary>
+        <content type="html"><![CDATA[Mirelo AI は、ホストされているモデルコンテキストプロトコル (MCP) サーバを Kiro パワーに変えました。そのため、開発者は IDE を離れることなく、自然言語のプロンプトからプロダクション対応のサウンド効果を生成できます。 統合とAWS Enterprise Support がどのようにしてKiro のパワーマーケットプレースにもたらすのかを学びましょう。]]></content>
+        <author>
+            <name>Florian Breton</name>
+        </author>
+        <category label="Customer Solutions"/>
+        <category label="Intermediate (200)"/>
+        <category label="Kiro"/>
+        <published>2026-10-01T14:49:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[あなたの拡張 Kiro CLIを用いたエージェントAIを用いたWindows管理ツール | Microsoft Workloads on AWS]]></title>
+        <id>https://aws.amazon.com/blogs/modernizing-with-aws/augment-your-windows-management-tools-with-agentic-ai-using-kiro-cli/</id>
+        <link href="https://aws.amazon.com/blogs/modernizing-with-aws/augment-your-windows-management-tools-with-agentic-ai-using-kiro-cli/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/8effee409c625e1a2d8f5033631840e6ce1dcb64/2026/10/01/wincli-1215x630.png" type="image/png"/>
+        <updated>2026-10-01T10:55:44.000Z</updated>
+        <summary type="html"><![CDATA[このブログでは、Kiro CLIで既存のMicrosoftインフラ投資にインテリジェンスを追加する方法を紹介します。 結果は、Windowsインフラストラクチャの健康とセキュリティの姿勢を改善するためのAIを搭載したツールセットです。 導入 Windows ベースの環境の管理、監視、管理は面倒でエラーが発生します。 同時に、あなたはおそらく投資している[...]]]></summary>
+        <content type="html"><![CDATA[このブログでは、Kiro CLIで既存のMicrosoftインフラ投資にインテリジェンスを追加する方法を紹介します。 結果は、Windowsインフラストラクチャの健康とセキュリティの姿勢を改善するためのAIを搭載したツールセットです。 導入 Windows ベースの環境の管理、監視、管理は面倒でエラーが発生します。 同時に、あなたはおそらく投資している[...]]]></content>
+        <author>
+            <name>Sassan Hajrasooliha</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Architecture"/>
+        <category label="Artificial Intelligence"/>
+        <category label="Developer Tools"/>
+        <category label="Generative AI"/>
+        <category label="Hybrid Cloud Management"/>
+        <category label="Kiro"/>
+        <category label="Learning Levels"/>
+        <category label="Management &amp; Governance"/>
+        <category label="Management Tools"/>
+        <category label="PowerShell"/>
+        <category label="Programing Language"/>
+        <category label="Technical How-to"/>
+        <category label="Windows on AWS"/>
+        <category label="Active Directory"/>
+        <category label="automation"/>
+        <category label="Microsoft"/>
+        <category label="Observability"/>
+        <category label="Optimization"/>
+        <category label="Technical How-To"/>
+        <category label="Windows"/>
+        <category label="Windows On AWS"/>
+        <published>2026-10-01T10:55:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS DevOpsエージェントスキルを書くためのベストプラクティス | AWS Cloud Operations Blog]]></title>
+        <id>https://aws.amazon.com/blogs/mt/best-practices-for-writing-aws-devops-agent-skills/</id>
+        <link href="https://aws.amazon.com/blogs/mt/best-practices-for-writing-aws-devops-agent-skills/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/972a67c48192728a34979d9a35164c1295401b71/2026/10/01/dev-agent-blog.png" type="image/png"/>
+        <updated>2026-10-01T00:25:37.000Z</updated>
+        <summary type="html"><![CDATA[インシデントが午前2時に発生したとき、オンコールエンジニアの有効性は、最初にチェックするメトリック、このサービスで「通常」が見え、展開履歴を見つける方法によって異なります。 その知識は、多くの場合、ランブック、内部ウィキ、構築されたシニアエンジニアの頭に住んでいる [...]]]></summary>
+        <content type="html"><![CDATA[インシデントが午前2時に発生したとき、オンコールエンジニアの有効性は、最初にチェックするメトリック、このサービスで「通常」が見え、展開履歴を見つける方法によって異なります。 その知識は、多くの場合、ランブック、内部ウィキ、構築されたシニアエンジニアの頭に住んでいる [...]]]></content>
+        <author>
+            <name>Nisha Notani</name>
+        </author>
+        <category label="Best Practices"/>
+        <category label="DevOps"/>
+        <category label="Technical How-to"/>
+        <category label="Cloud Operations"/>
+        <published>2026-10-01T00:25:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon S3テーブルがApache Iceberg V3のデータタイプをすべてサポート | AWS News Blog]]></title>
+        <id>https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/</id>
+        <link href="https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/09/30/News-Blog-Featured-Images-15-2.png" type="image/png"/>
+        <updated>2026-09-30T22:10:00.000Z</updated>
+        <summary type="html"><![CDATA[Amazon S3 Tables では、Apache Iceberg V3 仕様のすべてのデータ型をサポートし、カラムのデフォルト値、削除ベクター、および行列の行列に対応しています。 既存のV2テーブルをアップグレードするか、内蔵のコンパクトさ、メンテナンス、エンジンの互換性を備えた新しいV3テーブルを作成します。]]></summary>
+        <content type="html"><![CDATA[Amazon S3 Tables では、Apache Iceberg V3 仕様のすべてのデータ型をサポートし、カラムのデフォルト値、削除ベクター、および行列の行列に対応しています。 既存のV2テーブルをアップグレードするか、内蔵のコンパクトさ、メンテナンス、エンジンの互換性を備えた新しいV3テーブルを作成します。]]></content>
+        <author>
+            <name>Daniel Abib</name>
+        </author>
+        <category label="Amazon S3 Tables"/>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Announcements"/>
+        <category label="Launch"/>
+        <category label="News"/>
+        <category label="Storage"/>
+        <published>2026-09-30T22:10:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS と AMD は、Amazon Aurora と Amazon RDS の 5 世代の AMD EPYC プロセッサーを Amazon Aurora に提供 | AWS Database Blog]]></title>
+        <id>https://aws.amazon.com/blogs/database/aws-and-amd-bring-5th-generation-amd-epyc-processors-to-amazon-aurora-and-amazon-rds/</id>
+        <link href="https://aws.amazon.com/blogs/database/aws-and-amd-bring-5th-generation-amd-epyc-processors-to-amazon-aurora-and-amazon-rds/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/09/30/DB5996.png" type="image/png"/>
+        <updated>2026-09-30T22:06:18.000Z</updated>
+        <summary type="html"><![CDATA[AWS は、Amazon Aurora および Amazon RDS の AMD ベースの R8a および M8a のデータベース・インスタンスの一般的な可用性について発表しました。 R8a は、Aurora と RDS の両方で利用可能なメモリ最適化されたインスタンスファミリーです。 M8aはRDSで利用可能な汎用インスタンスファミリーです。]]></summary>
+        <content type="html"><![CDATA[AWS は、Amazon Aurora および Amazon RDS の AMD ベースの R8a および M8a のデータベース・インスタンスの一般的な可用性について発表しました。 R8a は、Aurora と RDS の両方で利用可能なメモリ最適化されたインスタンスファミリーです。 M8aはRDSで利用可能な汎用インスタンスファミリーです。]]></content>
+        <author>
+            <name>Anum Jang Sher</name>
+        </author>
+        <category label="Amazon Aurora"/>
+        <category label="Amazon RDS"/>
+        <category label="Announcements"/>
+        <category label="Foundational (100)"/>
+        <category label="MySQL compatible"/>
+        <category label="PostgreSQL compatible"/>
+        <category label="RDS for MariaDB"/>
+        <category label="RDS for MySQL"/>
+        <category label="RDS for PostgreSQL"/>
+        <published>2026-09-30T22:06:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[クロスパーティションAWS GovCloud(US)アカウントのブートストラップを自動化 | AWS Public Sector Blog]]></title>
+        <id>https://aws.amazon.com/blogs/publicsector/automate-cross-partition-aws-govcloud-us-account-bootstrapping/</id>
+        <link href="https://aws.amazon.com/blogs/publicsector/automate-cross-partition-aws-govcloud-us-account-bootstrapping/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2026/09/26/Automate-cross-partition-AWS-GovCloud-US-account-bootstrapping.png" type="image/png"/>
+        <updated>2026-09-30T21:47:45.000Z</updated>
+        <summary type="html"><![CDATA[AWS Organizations APIを用いたAWS GovCloud(US)アカウント作成の自動化では、AWS Organizations APIを使用してGovCloud(US)アカウントをプログラム的に作成する方法を説明します。 これにより、アカウント作成が終了します。新しいアカウントは存在しますが、GovCloud(US)アカウントがスタンドアローンアカウントを維持しながら、標準アカウ]]></summary>
+        <content type="html"><![CDATA[AWS Organizations APIを用いたAWS GovCloud(US)アカウント作成の自動化では、AWS Organizations APIを使用してGovCloud(US)アカウントをプログラム的に作成する方法を説明します。 これにより、アカウント作成が終了します。新しいアカウントは存在しますが、GovCloud(US)アカウントがスタンドアローンアカウントを維持しながら、標準アカウントは組織のルートに残ります。 GovCloud(US)組織に参加し、アカウントを正しい組織単位(OU)に移動する手順を手動で完了しなければなりません。]]></content>
+        <author>
+            <name>Mitch Nolan</name>
+        </author>
+        <category label="Amazon CloudWatch"/>
+        <category label="AWS CloudFormation"/>
+        <category label="AWS GovCloud (US)"/>
+        <category label="AWS Lambda"/>
+        <category label="AWS Systems Manager"/>
+        <category label="Public Sector"/>
+        <published>2026-09-30T21:47:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[研究者がアマゾンの岩石を使用して数分で生物医学文献を分析する方法 | AWS for Industries]]></title>
+        <id>https://aws.amazon.com/blogs/industries/how-researchers-can-analyze-biomedical-literature-in-minutes-using-amazon-bedrock/</id>
+        <link href="https://aws.amazon.com/blogs/industries/how-researchers-can-analyze-biomedical-literature-in-minutes-using-amazon-bedrock/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/29/How-researchers-can-analyze-biomedical-literature-in-minutes-using-Amazon-Bedrock.png" type="image/png"/>
+        <updated>2026-09-30T21:46:46.000Z</updated>
+        <summary type="html"><![CDATA[生体医学研究論文の数は毎日公開され、単一の研究者は自動化された分析なしでペースを保つことができません。 ゲノムとバイオテクノロジーの研究者にとって、現在の意味は、数千の密なPDFを手動で読み、遺伝子の変動、バイオマーカー、および疾患に関する関連文献を一度に抽出することを意味します。 それは遅く、エラー傾向があり、最終的に研究者が実際に自分の作品に組み込むことができるどのくらいの文献を制限します。 ]]></summary>
+        <content type="html"><![CDATA[生体医学研究論文の数は毎日公開され、単一の研究者は自動化された分析なしでペースを保つことができません。 ゲノムとバイオテクノロジーの研究者にとって、現在の意味は、数千の密なPDFを手動で読み、遺伝子の変動、バイオマーカー、および疾患に関する関連文献を一度に抽出することを意味します。 それは遅く、エラー傾向があり、最終的に研究者が実際に自分の作品に組み込むことができるどのくらいの文献を制限します。 命を救う治療を発見するとき、そのボトルネックの問題。]]></content>
+        <author>
+            <name>Deepansha Tiwari</name>
+        </author>
+        <category label="Healthcare"/>
+        <category label="Industries"/>
+        <published>2026-09-30T21:46:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ドッグウッド・ローカル・エンジン:エージェント・アクションの一時的なガバナンス | AWS Open Source Blog]]></title>
+        <id>https://aws.amazon.com/blogs/opensource/introducing-the-dogwood-local-engine-temporal-governance-for-agent-actions/</id>
+        <link href="https://aws.amazon.com/blogs/opensource/introducing-the-dogwood-local-engine-temporal-governance-for-agent-actions/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/ca3512f4dfa95a03169c5a670a4c91a19b3077b4/2026/09/29/Screenshot-2026-09-29-at-1.23.31%E2%80%AFPM-1156x630.png" type="image/png"/>
+        <updated>2026-09-30T20:40:23.000Z</updated>
+        <summary type="html"><![CDATA[8月には、エージェントと行動のためのオープンソースのガバナンス言語である Dogwood をリリースしました。 ドッグウッドの方針は、エージェントがどのような条件下で取ることができるかを指定します。 言語の重要な特徴は、一時的な条件をサポートしており、ポリシーはエージェントの過去のアクションとその結果を参照することができます。 ドッグウッドポリシー [...]]]></summary>
+        <content type="html"><![CDATA[8月には、エージェントと行動のためのオープンソースのガバナンス言語である Dogwood をリリースしました。 ドッグウッドの方針は、エージェントがどのような条件下で取ることができるかを指定します。 言語の重要な特徴は、一時的な条件をサポートしており、ポリシーはエージェントの過去のアクションとその結果を参照することができます。 ドッグウッドポリシー [...]]]></content>
+        <author>
+            <name>Jatin Arora</name>
+        </author>
+        <category label="Open Source"/>
+        <published>2026-09-30T20:40:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[アマゾンS3 ベクトルは現在、フィルタリングされた検索でより高いリコールのためのメタデータ事前フィルタリングをサポート | AWS News Blog]]></title>
+        <id>https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/</id>
+        <link href="https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/09/30/News-Blog-Featured-Images-15-1-2.png" type="image/png"/>
+        <updated>2026-09-30T20:03:34.000Z</updated>
+        <summary type="html"><![CDATA[アマゾンS3 ベクトルはメタデータの事前フィルタリングをサポートし、フィルタリングされた検索で最大5倍の高リコールを提供します。 フィルタは、類似性検索の前に評価されるので、スコープ付きクエリは、より関連性の高い結果を返します。 RAG、エージェントアプリ、ドキュメント検索に最適です。]]></summary>
+        <content type="html"><![CDATA[アマゾンS3 ベクトルはメタデータの事前フィルタリングをサポートし、フィルタリングされた検索で最大5倍の高リコールを提供します。 フィルタは、類似性検索の前に評価されるので、スコープ付きクエリは、より関連性の高い結果を返します。 RAG、エージェントアプリ、ドキュメント検索に最適です。]]></content>
+        <author>
+            <name>Daniel Abib</name>
+        </author>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Announcements"/>
+        <category label="Launch"/>
+        <category label="News"/>
+        <category label="Storage"/>
+        <published>2026-09-30T20:03:34.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS AppConfig の実験による生産実験の実行 | AWS DevOps &amp; Developer Productivity Blog]]></title>
+        <id>https://aws.amazon.com/blogs/devops/running-production-experiments-with-aws-appconfig-experimentation/</id>
+        <link href="https://aws.amazon.com/blogs/devops/running-production-experiments-with-aws-appconfig-experimentation/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2026/09/30/Slide1-2.png" type="image/png"/>
+        <updated>2026-09-30T19:45:35.000Z</updated>
+        <summary type="html"><![CDATA[再設計されたチェックアウトボタンは、販売を持ち上げることを目的としています。 より長いキャッシュタイム(TTL)は、バックエンドのロードをカットすることを意味します。 しかし、実際の生産トラフィックに対する変化をテストするまで、決定は直感に降りかかり、証拠ではありません。 AWS AppConfig の実験では、A/B を使用して、代わりにデータ主導の呼び出しを行うことができます。]]></summary>
+        <content type="html"><![CDATA[再設計されたチェックアウトボタンは、販売を持ち上げることを目的としています。 より長いキャッシュタイム(TTL)は、バックエンドのロードをカットすることを意味します。 しかし、実際の生産トラフィックに対する変化をテストするまで、決定は直感に降りかかり、証拠ではありません。 AWS AppConfig の実験では、A/B を使用して、代わりにデータ主導の呼び出しを行うことができます。]]></content>
+        <author>
+            <name>Aparna Krishnamoorthy</name>
+        </author>
+        <category label="AWS Systems Manager"/>
+        <category label="DevOps"/>
+        <category label="Technical How-to"/>
+        <category label="Developer Tools"/>
+        <category label="Testing"/>
+        <published>2026-09-30T19:45:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ARC Zonal Shift を使用したマルチデイ AZ の避難訓練を実施 | AWS Architecture Blog]]></title>
+        <id>https://aws.amazon.com/blogs/architecture/running-multi-day-az-evacuation-drills-with-arc-zonal-shift/</id>
+        <link href="https://aws.amazon.com/blogs/architecture/running-multi-day-az-evacuation-drills-with-arc-zonal-shift/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/09/18/ARCHBLOG-1571-featured-image.png" type="image/png"/>
+        <updated>2026-09-30T19:01:57.000Z</updated>
+        <summary type="html"><![CDATA[複数のAZ アーキテクチャは、実際の損益を維持できます。 この投稿では、Amazon ECS、Amazon EKS、Amazon RDS for PostgreSQL、Amazon Aurora PostgreSQL 、ステップバイステップの CLI コマンド、前提条件、保守性メトリック、および手順の復元など、ARC Zonal Shift によるマルチデイ(48-72時間)の可用性ゾーンの避難訓]]></summary>
+        <content type="html"><![CDATA[複数のAZ アーキテクチャは、実際の損益を維持できます。 この投稿では、Amazon ECS、Amazon EKS、Amazon RDS for PostgreSQL、Amazon Aurora PostgreSQL 、ステップバイステップの CLI コマンド、前提条件、保守性メトリック、および手順の復元など、ARC Zonal Shift によるマルチデイ(48-72時間)の可用性ゾーンの避難訓練を実行する方法について説明します。]]></content>
+        <author>
+            <name>Antoine Boucherie</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Application Recovery Controller (ARC)"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-30T19:01:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MHKがAmazonのBetrockにHIPAA-eligible Agentic AIソリューションを構築する方法 | AWS Architecture Blog]]></title>
+        <id>https://aws.amazon.com/blogs/architecture/how-mhk-built-a-hipaa-eligible-agentic-ai-solution-on-amazon-bedrock/</id>
+        <link href="https://aws.amazon.com/blogs/architecture/how-mhk-built-a-hipaa-eligible-agentic-ai-solution-on-amazon-bedrock/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/09/29/ARCHBLOG-1486-featured-image-1.png" type="image/png"/>
+        <updated>2026-09-30T18:30:24.000Z</updated>
+        <summary type="html"><![CDATA[MHKは、AmazonのBetrock、Amazon ECS、イベント主導のパターンを使用してAWS上でHIPAA資格のあるエージェントワークフローフレームワークであるSmartProminence AI Orchestratorを設立しました。 90%の手動医療レビューの努力を削減し、数か月から数週間に新しいAI機能の展開をカットします。 MHKは、ヘルスケアAIの再利用可能なマルチテナントオー]]></summary>
+        <content type="html"><![CDATA[MHKは、AmazonのBetrock、Amazon ECS、イベント主導のパターンを使用してAWS上でHIPAA資格のあるエージェントワークフローフレームワークであるSmartProminence AI Orchestratorを設立しました。 90%の手動医療レビューの努力を削減し、数か月から数週間に新しいAI機能の展開をカットします。 MHKは、ヘルスケアAIの再利用可能なマルチテナントオーケストレーターを設計した方法を学びます。]]></content>
+        <author>
+            <name>Deepti Tirumala</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Customer Solutions"/>
+        <published>2026-09-30T18:30:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[キロクルーとインテリジェントネットワーク操作のための自己学習エージェントの構築 | AWS for Industries]]></title>
+        <id>https://aws.amazon.com/blogs/industries/building-self-learning-agents-for-intelligent-network-operations-with-kiro-crew/</id>
+        <link href="https://aws.amazon.com/blogs/industries/building-self-learning-agents-for-intelligent-network-operations-with-kiro-crew/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/29/Building-self-learning-agents-for-intelligent-Network-Operations-with-Kiro-Crew.png" type="image/png"/>
+        <updated>2026-09-30T18:22:19.000Z</updated>
+        <summary type="html"><![CDATA[このような自動ネットワーク操作のための自己進化型ループを構築するには、エージェントシステムがネットワークイベントに反応し、調査ループを駆動し、コンテキストを記憶し、オペレータがどのように機能するかを学び、ユニークなツールとワークフロー全体で調整するので、別のワークフローの代わりにシステムが進行して再起動します。 このブログでは、エージェントシステムの持続的かつ自己学習的な側面に焦点を当てます。]]></summary>
+        <content type="html"><![CDATA[このような自動ネットワーク操作のための自己進化型ループを構築するには、エージェントシステムがネットワークイベントに反応し、調査ループを駆動し、コンテキストを記憶し、オペレータがどのように機能するかを学び、ユニークなツールとワークフロー全体で調整するので、別のワークフローの代わりにシステムが進行して再起動します。 このブログでは、エージェントシステムの持続的かつ自己学習的な側面に焦点を当てます。]]></content>
+        <author>
+            <name>Nameet Dutia</name>
+        </author>
+        <category label="Artificial Intelligence"/>
+        <category label="Industries"/>
+        <category label="Kiro"/>
+        <category label="Telecommunications"/>
+        <published>2026-09-30T18:22:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VPCの簡素化 EC2リソースタグと次のホップメタデータでログをフロー | Networking &amp; Content Delivery]]></title>
+        <id>https://aws.amazon.com/blogs/networking-and-content-delivery/simplify-vpc-flow-logs-with-ec2-resource-tags-and-next-hop-metadata/</id>
+        <link href="https://aws.amazon.com/blogs/networking-and-content-delivery/simplify-vpc-flow-logs-with-ec2-resource-tags-and-next-hop-metadata/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2026/09/30/Simplify-VPC-Flow-Logs-with-EC2-resource-tags-and-next-hop-metadata.png" type="image/png"/>
+        <updated>2026-09-30T18:11:44.000Z</updated>
+        <summary type="html"><![CDATA[この投稿では、Amazon Virtual Private Cloud (Amazon VPC) Flow Logs のVer11 で、Amazon Elastic Compute Cloud (Amazon EC2) リソースタグと次のホップメタデータを使用する方法を紹介します。 これらのフィールドでは、ネットワークトラフィック分析を簡素化し、カスタムエンリッチメントパイプラインを構築できます。]]></summary>
+        <content type="html"><![CDATA[この投稿では、Amazon Virtual Private Cloud (Amazon VPC) Flow Logs のVer11 で、Amazon Elastic Compute Cloud (Amazon EC2) リソースタグと次のホップメタデータを使用する方法を紹介します。 これらのフィールドでは、ネットワークトラフィック分析を簡素化し、カスタムエンリッチメントパイプラインを構築できます。 VPCフローログの導入以来 [...]]]></content>
+        <author>
+            <name>Chaitanya Shah</name>
+        </author>
+        <category label="Amazon VPC"/>
+        <category label="Auto Scaling"/>
+        <category label="AWS Transit Gateway"/>
+        <category label="AWS Transit Gateway network manager"/>
+        <category label="Elastic Load Balancing"/>
+        <category label="Networking &amp; Content Delivery"/>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Uncategorized"/>
+        <published>2026-09-30T18:11:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Aurora PostgreSQL では、Apache Iceberg と Parquet のデータをデータ湖で直接クエリできるようになりました。 | AWS News Blog]]></title>
+        <id>https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/</id>
+        <link href="https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/09/30/Aurora_image_800x400.png" type="image/png"/>
+        <updated>2026-09-30T17:22:31.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Aurora PostgreSQL では、Apache Iceberg と Parquet のデータを直接、ライブ運用データと一緒に保存することができます。ETL パイプラインは必要ありません。 オーロラ内で埋め込まれたDuckDBを搭載したこの機能は、よくあるPostgreSQLの構文を使用してトランザクションと履歴データを結合する単一のクエリを可能にします。 AWS の接着剤のデ]]></summary>
+        <content type="html"><![CDATA[Amazon Aurora PostgreSQL では、Apache Iceberg と Parquet のデータを直接、ライブ運用データと一緒に保存することができます。ETL パイプラインは必要ありません。 オーロラ内で埋め込まれたDuckDBを搭載したこの機能は、よくあるPostgreSQLの構文を使用してトランザクションと履歴データを結合する単一のクエリを可能にします。 AWS の接着剤のデータカタログ、S3、S3 のテーブルを、精密な押し下げおよびキャッシングのような最適化と効率的なパフォーマンスをサポートします。]]></content>
+        <author>
+            <name>Esra Kayabali</name>
+        </author>
+        <category label="Amazon Aurora"/>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Announcements"/>
+        <category label="Database"/>
+        <category label="Launch"/>
+        <category label="News"/>
+        <published>2026-09-30T17:22:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI エージェントの構築、デプロイ、強化: 3つの新しいAWSジャム体験が利用可能になりました | AWS Training and Certification Blog]]></title>
+        <id>https://aws.amazon.com/blogs/training-and-certification/build-deploy-and-harden-ai-agents-three-new-aws-jam-experiences-now-available/</id>
+        <link href="https://aws.amazon.com/blogs/training-and-certification/build-deploy-and-harden-ai-agents-three-new-aws-jam-experiences-now-available/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/9109c85a45b703f87f1413a405549a2cea9ab556/2026/09/25/Build-deploy-and-harden-AI-agents-Three-new-AWS-Jam-experiences-now-available-.png" type="image/png"/>
+        <updated>2026-09-30T17:04:27.000Z</updated>
+        <summary type="html"><![CDATA[AI のコーディングエージェント、管理されたランタイムにエージェントをデプロイし、プロダクションワークロードを横断するマルチエージェントシステムをオーケストする仕様を記述します。 ライブAWS環境でこれらのスキルをビルドできるようになりました。 今日、私たちは、エージェントAI開発に焦点を当てた3つの新しいAWSジャムの経験を発売しています。 AWSジャム – AWS、KiroによるSpec Dr]]></summary>
+        <content type="html"><![CDATA[AI のコーディングエージェント、管理されたランタイムにエージェントをデプロイし、プロダクションワークロードを横断するマルチエージェントシステムをオーケストする仕様を記述します。 ライブAWS環境でこれらのスキルをビルドできるようになりました。 今日、私たちは、エージェントAI開発に焦点を当てた3つの新しいAWSジャムの経験を発売しています。 AWSジャム – AWS、KiroによるSpec Driven Development ジャム – [...]]]></content>
+        <author>
+            <name>Chester Manuel</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Announcements"/>
+        <category label="AWS Training and Certification"/>
+        <published>2026-09-30T17:04:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最新のAWSヒーローを祝う - 9月2026 | AWS News Blog]]></title>
+        <id>https://aws.amazon.com/blogs/aws/celebrating-our-newest-aws-heroes-september-2026/</id>
+        <link href="https://aws.amazon.com/blogs/aws/celebrating-our-newest-aws-heroes-september-2026/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2021/11/10/AWS-Heroes-program_RGB_Social-blog.png" type="image/png"/>
+        <updated>2026-09-30T17:04:05.000Z</updated>
+        <summary type="html"><![CDATA[本日はAWS Heroesプログラムの最新のメンバーをご紹介させていただきます。 ツイート ヒーローズは、知識やメンターなどを共有し、繁栄するコミュニティを構築するために、上記とを超えて行くAWSの専門家の活気に満ちた、世界的なグループです。 これら個人は、開発者や組織がAWSで成功するのを助けることに大きな違いをもたらします。 今月は、私たちを歓迎します [...]]]></summary>
+        <content type="html"><![CDATA[本日はAWS Heroesプログラムの最新のメンバーをご紹介させていただきます。 ツイート ヒーローズは、知識やメンターなどを共有し、繁栄するコミュニティを構築するために、上記とを超えて行くAWSの専門家の活気に満ちた、世界的なグループです。 これら個人は、開発者や組織がAWSで成功するのを助けることに大きな違いをもたらします。 今月は、私たちを歓迎します [...]]]></content>
+        <author>
+            <name>Taylor Jacobsen</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="AWS Heroes"/>
+        <category label="Launch"/>
+        <category label="News"/>
+        <published>2026-09-30T17:04:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PostgreSQL のレプリケーションのラグを、データキャプチャのシナリオを変更してハートビートテーブルで解決 | AWS Database Blog]]></title>
+        <id>https://aws.amazon.com/blogs/database/resolving-postgresql-replication-lag-with-heartbeat-tables-in-change-data-capture-scenarios/</id>
+        <link href="https://aws.amazon.com/blogs/database/resolving-postgresql-replication-lag-with-heartbeat-tables-in-change-data-capture-scenarios/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/09/29/DBBLOG-5412-featured-image.png" type="image/png"/>
+        <updated>2026-09-30T16:47:04.000Z</updated>
+        <summary type="html"><![CDATA[変更データキャプチャ(CDC)マイグレーション中にレプリケーションラグを偽りなくすることができます:ソースは忙しいですが、レプリケーションは後ろに落ち、WALパイルアップします。 この投稿では、AWS DMS または Debezium を使用して PostgreSQL のレプリケーション ラグを解決する方法と、Amazon CloudWatch と SQL 診断でレプリケーション スロット ヘルス]]></summary>
+        <content type="html"><![CDATA[変更データキャプチャ(CDC)マイグレーション中にレプリケーションラグを偽りなくすることができます:ソースは忙しいですが、レプリケーションは後ろに落ち、WALパイルアップします。 この投稿では、AWS DMS または Debezium を使用して PostgreSQL のレプリケーション ラグを解決する方法と、Amazon CloudWatch と SQL 診断でレプリケーション スロット ヘルスを監視する方法について説明します。]]></content>
+        <author>
+            <name>Donghua Luo</name>
+        </author>
+        <category label="Amazon Aurora"/>
+        <category label="Best Practices"/>
+        <category label="Intermediate (200)"/>
+        <category label="PostgreSQL compatible"/>
+        <category label="RDS for PostgreSQL"/>
+        <published>2026-09-30T16:47:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Db2 z/OS を Amazon Aurora PostgreSQL に AWS DMS およびゲートウェイ サーバーで移行 | AWS Database Blog]]></title>
+        <id>https://aws.amazon.com/blogs/database/migrate-db2-z-os-to-amazon-aurora-postgresql-using-aws-dms-and-gateway-server/</id>
+        <link href="https://aws.amazon.com/blogs/database/migrate-db2-z-os-to-amazon-aurora-postgresql-using-aws-dms-and-gateway-server/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/09/29/DBBLOG-4998-featured-image.png" type="image/png"/>
+        <updated>2026-09-30T16:45:26.000Z</updated>
+        <summary type="html"><![CDATA[AWS DMS および Amazon EC2 の Db2 ゲートウェイ サーバーを使用して、Amazon Aurora PostgreSQL への z/OS のオンプレミスの IBM Db2 データベースからデータを移行および複製する方法を学びます。 この投稿は、ゲートウェイの設定、DMS リソースの作成、定期的なフルロードリフレッシュでフルロードを実行し、移行の有効化をカバーします。]]></summary>
+        <content type="html"><![CDATA[AWS DMS および Amazon EC2 の Db2 ゲートウェイ サーバーを使用して、Amazon Aurora PostgreSQL への z/OS のオンプレミスの IBM Db2 データベースからデータを移行および複製する方法を学びます。 この投稿は、ゲートウェイの設定、DMS リソースの作成、定期的なフルロードリフレッシュでフルロードを実行し、移行の有効化をカバーします。]]></content>
+        <author>
+            <name>Pragnesh Patel</name>
+        </author>
+        <category label="Amazon Aurora"/>
+        <category label="AWS Database Migration Service"/>
+        <category label="Expert (400)"/>
+        <category label="PostgreSQL compatible"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-30T16:45:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[KiroによるAS/400ビジネスルール抽出の加速:ステップバイステップガイド | AWS DevOps &amp; Developer Productivity Blog]]></title>
+        <id>https://aws.amazon.com/blogs/devops/accelerating-as-400-business-rule-extraction-with-kiro-step-by-step-guide/</id>
+        <link href="https://aws.amazon.com/blogs/devops/accelerating-as-400-business-rule-extraction-with-kiro-step-by-step-guide/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2026/09/28/DEVOPS-24871-featured-image.png" type="image/png"/>
+        <updated>2026-09-30T15:43:51.000Z</updated>
+        <summary type="html"><![CDATA[AS/400 の規則の抽出はもはや手動努力の月を要求しません。 エージェント型のAIを活用した開発環境であるKiroを利用し、AS/400 RPGやCOBOLプログラムからビジネスルールを抽出し、技術仕様を生成し、数か月の代わりに近代化対応のドキュメントを生成する方法をご紹介します。]]></summary>
+        <content type="html"><![CDATA[AS/400 の規則の抽出はもはや手動努力の月を要求しません。 エージェント型のAIを活用した開発環境であるKiroを利用し、AS/400 RPGやCOBOLプログラムからビジネスルールを抽出し、技術仕様を生成し、数か月の代わりに近代化対応のドキュメントを生成する方法をご紹介します。]]></content>
+        <author>
+            <name>Daniel Gray</name>
+        </author>
+        <category label="Customer Solutions"/>
+        <category label="Kiro"/>
+        <published>2026-09-30T15:43:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AmazonのBedrockナレッジベースで自然言語でクレームを問い合わせる | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/query-claims-in-natural-language-with-amazon-bedrock-knowledge-bases/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/query-claims-in-natural-language-with-amazon-bedrock-knowledge-bases/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/28/ML-21629-featured-image.png" type="image/png"/>
+        <updated>2026-09-30T15:37:15.000Z</updated>
+        <summary type="html"><![CDATA[この技術は、アマゾンのBedrockナレッジベースで会話クレームアシスタントを構築し、引用で自然言語の質問に答えます。 Amazon S3のクレーム文書を摂取し、AgenticRetrieveStream API、マルチターンフォローアップ、メタデータフィルタ、およびコンテクストグラウンドガードレールに問い合わせます。]]></summary>
+        <content type="html"><![CDATA[この技術は、アマゾンのBedrockナレッジベースで会話クレームアシスタントを構築し、引用で自然言語の質問に答えます。 Amazon S3のクレーム文書を摂取し、AgenticRetrieveStream API、マルチターンフォローアップ、メタデータフィルタ、およびコンテクストグラウンドガードレールに問い合わせます。]]></content>
+        <author>
+            <name>Shreya Pawaskar</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon Bedrock Knowledge Bases"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-30T15:37:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AmazonのBedrock AgentCoreによるAI搭載EKSマイグレーション評価 | Containers]]></title>
+        <id>https://aws.amazon.com/blogs/containers/ai-powered-eks-migration-assessment-with-amazon-bedrock-agentcore/</id>
+        <link href="https://aws.amazon.com/blogs/containers/ai-powered-eks-migration-assessment-with-amazon-bedrock-agentcore/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2026/09/29/CONTAINERS-244-featured-image.png" type="image/png"/>
+        <updated>2026-09-30T15:34:19.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Bedrock AgentCore と Strands Agents SDK を使用して、AI 搭載マイグレーション評価エージェントを作成する方法を学びます。 エージェントは、アプリケーションソースコードとコンテナのアーティファクトを読み取り、Amazon EKS のマイグレーションの信頼性をスコアアップし、ブロックを識別し、ターゲットアーキテクチャの推奨事項で実用的なマイグレーショ]]></summary>
+        <content type="html"><![CDATA[Amazon Bedrock AgentCore と Strands Agents SDK を使用して、AI 搭載マイグレーション評価エージェントを作成する方法を学びます。 エージェントは、アプリケーションソースコードとコンテナのアーティファクトを読み取り、Amazon EKS のマイグレーションの信頼性をスコアアップし、ブロックを識別し、ターゲットアーキテクチャの推奨事項で実用的なマイグレーション計画を生成します。]]></content>
+        <author>
+            <name>Pradip Kumar Pandey</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Amazon Elastic Kubernetes Service"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-30T15:34:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AmazonのBedrock AgentCore Runtime Instancesでマルチエージェント音楽制作パイプラインを構築 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/build-a-multi-agent-music-production-pipeline-on-amazon-bedrock-agentcore-runtime-instances/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/build-a-multi-agent-music-production-pipeline-on-amazon-bedrock-agentcore-runtime-instances/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/28/ML-21762-featured-image.png" type="image/png"/>
+        <updated>2026-09-30T15:21:57.000Z</updated>
+        <summary type="html"><![CDATA[AmazonのBedrockの代理店 コアランタイム AWS は GPU、永続的なボリューム、マルチデイセッションで EC2 インフラストラクチャを管理しました。 この投稿では、エージェントが1つのGPUインスタンスに照らし、ファイルシステムを共有し、終了したトラックを生成するために互いに作業する3つのエージェントの音楽制作パイプラインを展開しています。]]></summary>
+        <content type="html"><![CDATA[AmazonのBedrockの代理店 コアランタイム AWS は GPU、永続的なボリューム、マルチデイセッションで EC2 インフラストラクチャを管理しました。 この投稿では、エージェントが1つのGPUインスタンスに照らし、ファイルシステムを共有し、終了したトラックを生成するために互いに作業する3つのエージェントの音楽制作パイプラインを展開しています。]]></content>
+        <author>
+            <name>Evandro Franco</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-30T15:21:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon EKS Hybrid Nodes を使用した、athenahealth の近代化医療の負荷方法 | Containers]]></title>
+        <id>https://aws.amazon.com/blogs/containers/how-athenahealth-modernized-healthcare-workloads-with-amazon-eks-hybrid-nodes/</id>
+        <link href="https://aws.amazon.com/blogs/containers/how-athenahealth-modernized-healthcare-workloads-with-amazon-eks-hybrid-nodes/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2026/09/25/CONTAINERS-206-featured-image.png" type="image/png"/>
+        <updated>2026-09-30T15:16:52.000Z</updated>
+        <summary type="html"><![CDATA[アテナヘルスがAmazon EKS Hybrid Nodesを使用して、施設のレイテンシビリティに敏感なヘルスケアワークロードを近代化し、応答時間を半分に切断し、ハードウェアと運用コストを50%削減し、データセンターとHITRUSTとデータ残留要件を満たしながら、単一のKubernetesオペレーティングシステムを維持する方法を学びます。]]></summary>
+        <content type="html"><![CDATA[アテナヘルスがAmazon EKS Hybrid Nodesを使用して、施設のレイテンシビリティに敏感なヘルスケアワークロードを近代化し、応答時間を半分に切断し、ハードウェアと運用コストを50%削減し、データセンターとHITRUSTとデータ残留要件を満たしながら、単一のKubernetesオペレーティングシステムを維持する方法を学びます。]]></content>
+        <author>
+            <name>Sai Charan Teja Gopaluni</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Elastic Kubernetes Service"/>
+        <category label="Customer Solutions"/>
+        <published>2026-09-30T15:16:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[意見:Amazonの低周波トランスクリプトパイプラインは、AmazonのRedshiftに顧客を接続します(パート2) | AWS Contact Center]]></title>
+        <id>https://aws.amazon.com/blogs/contact-center/voice-to-insight-low-latency-transcript-pipelines-from-amazon-connect-customer-to-amazon-redshift-part-2/</id>
+        <link href="https://aws.amazon.com/blogs/contact-center/voice-to-insight-low-latency-transcript-pipelines-from-amazon-connect-customer-to-amazon-redshift-part-2/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/af3e133428b9e25c55bc59fe534248e6a0c0f17b/2026/09/24/Part2_ScreenShot-975x630.png" type="image/png"/>
+        <updated>2026-09-30T15:11:00.000Z</updated>
+        <summary type="html"><![CDATA[導入 コンタクトセンター チームは、Amazon Connect の顧客を一貫してコアデータエンジニアリングの課題に直面しています。電話の完了からデータ倉庫内のトランスクリプトの可用性まで、エンドツーエンドのレイテンシーを削減します。 回答は単数ではありません。 パイプライン全体で14の異なるレイテンシ要因のインタープレイを理解することに依存します。 要因は、不可解な [...]]]></summary>
+        <content type="html"><![CDATA[導入 コンタクトセンター チームは、Amazon Connect の顧客を一貫してコアデータエンジニアリングの課題に直面しています。電話の完了からデータ倉庫内のトランスクリプトの可用性まで、エンドツーエンドのレイテンシーを削減します。 回答は単数ではありません。 パイプライン全体で14の異なるレイテンシ要因のインタープレイを理解することに依存します。 要因は、不可解な [...]]]></content>
+        <author>
+            <name>Jinesh Shah</name>
+        </author>
+        <category label="Amazon Connect"/>
+        <category label="Amazon Redshift"/>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Analytics"/>
+        <category label="Technical How-to"/>
+        <category label="ctr"/>
+        <published>2026-09-30T15:11:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[意見:Amazonの低周波トランスクリプトのパイプラインは、AmazonのRedshiftに顧客を接続します(パート1) | AWS Contact Center]]></title>
+        <id>https://aws.amazon.com/blogs/contact-center/voice-to-insight-low-latency-transcript-pipelines-from-amazon-connect-customer-to-amazon-redshift-part-1/</id>
+        <link href="https://aws.amazon.com/blogs/contact-center/voice-to-insight-low-latency-transcript-pipelines-from-amazon-connect-customer-to-amazon-redshift-part-1/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/af3e133428b9e25c55bc59fe534248e6a0c0f17b/2026/09/24/Part1_ScreenShot-975x630.png" type="image/png"/>
+        <updated>2026-09-30T15:09:54.000Z</updated>
+        <summary type="html"><![CDATA[導入 コンタクトセンター チームは、Amazon Connect の顧客を一貫してコアデータエンジニアリングの課題に直面しています。電話の完了からデータ倉庫内のトランスクリプトの可用性まで、エンドツーエンドのレイテンシーを削減します。 回答は単数ではありません。 パイプライン全体で14の異なるレイテンシ要因のインタープレイを理解することに依存します。 要因は、不可解な [...]]]></summary>
+        <content type="html"><![CDATA[導入 コンタクトセンター チームは、Amazon Connect の顧客を一貫してコアデータエンジニアリングの課題に直面しています。電話の完了からデータ倉庫内のトランスクリプトの可用性まで、エンドツーエンドのレイテンシーを削減します。 回答は単数ではありません。 パイプライン全体で14の異なるレイテンシ要因のインタープレイを理解することに依存します。 要因は、不可解な [...]]]></content>
+        <author>
+            <name>Jinesh Shah</name>
+        </author>
+        <category label="Amazon Connect"/>
+        <category label="Amazon Redshift"/>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Analytics"/>
+        <category label="Contact Center"/>
+        <category label="Technical How-to"/>
+        <category label="ctr"/>
+        <published>2026-09-30T15:09:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazonでメールサポートを自動化 顧客メールのAIエージェントを接続 | AWS Contact Center]]></title>
+        <id>https://aws.amazon.com/blogs/contact-center/automate-email-support-with-amazon-connect-customer-email-ai-agents/</id>
+        <link href="https://aws.amazon.com/blogs/contact-center/automate-email-support-with-amazon-connect-customer-email-ai-agents/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/af3e133428b9e25c55bc59fe534248e6a0c0f17b/2026/09/29/Screenshot-2026-09-29-at-19.22.09-1129x630.png" type="image/png"/>
+        <updated>2026-09-30T15:05:45.000Z</updated>
+        <summary type="html"><![CDATA[電子メールは、ほとんどのコンタクトセンターで最高のサポートチャネルの一つであり、最もマニュアルの1つです。 エージェントは、長いスレッドを読み込み、内部の知識を検索し、ゼロから返信をドラフトします。これにより、最初の応答と一貫性のないメッセージが遅くなります。 Amazon Connectの顧客は、メールチャネルのネイティブAI機能を提供します。 電子メールAIエージェントで、 [...]]]></summary>
+        <content type="html"><![CDATA[電子メールは、ほとんどのコンタクトセンターで最高のサポートチャネルの一つであり、最もマニュアルの1つです。 エージェントは、長いスレッドを読み込み、内部の知識を検索し、ゼロから返信をドラフトします。これにより、最初の応答と一貫性のないメッセージが遅くなります。 Amazon Connectの顧客は、メールチャネルのネイティブAI機能を提供します。 電子メールAIエージェントで、 [...]]]></content>
+        <author>
+            <name>Abilashkumar P C</name>
+        </author>
+        <category label="Amazon Connect"/>
+        <category label="Technical How-to"/>
+        <category label="#amazonconnect"/>
+        <category label="agent"/>
+        <category label="AI"/>
+        <category label="Customer Experience"/>
+        <published>2026-09-30T15:05:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazonで音声認証AIエージェントが顧客とAmazonのBedrockを接続 | AWS Contact Center]]></title>
+        <id>https://aws.amazon.com/blogs/contact-center/voice-activated-ai-agent-with-amazon-connect-customer-and-amazon-bedrock/</id>
+        <link href="https://aws.amazon.com/blogs/contact-center/voice-activated-ai-agent-with-amazon-connect-customer-and-amazon-bedrock/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/af3e133428b9e25c55bc59fe534248e6a0c0f17b/2026/09/17/image-44-1123x630.png" type="image/png"/>
+        <updated>2026-09-30T15:02:49.000Z</updated>
+        <summary type="html"><![CDATA[音声アクティブ化されたAIエージェントは、電話を扱うAIエージェントが緊急な変更を必要とするときに、コンタクトセンターの管理を著しく高速に行うことができます。 Amazon Connect でこれらのAIエージェントを実行しているスーパーバイザーは、永続的な運用課題に直面しています。 重要なシステムがダウンまたはAIエージェントの動作がすぐに調整する必要がある場合は、決定からアクションへのパスは複]]></summary>
+        <content type="html"><![CDATA[音声アクティブ化されたAIエージェントは、電話を扱うAIエージェントが緊急な変更を必要とするときに、コンタクトセンターの管理を著しく高速に行うことができます。 Amazon Connect でこれらのAIエージェントを実行しているスーパーバイザーは、永続的な運用課題に直面しています。 重要なシステムがダウンまたはAIエージェントの動作がすぐに調整する必要がある場合は、決定からアクションへのパスは複数の[...]を含みます]]></content>
+        <author>
+            <name>Joyson Neville Lewis</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon Connect"/>
+        <category label="Artificial Intelligence"/>
+        <category label="Customer Solutions"/>
+        <category label="Experience-Based Acceleration"/>
+        <category label="Generative AI"/>
+        <category label="Technical How-to"/>
+        <category label="#amazonconnect"/>
+        <category label="#contactcenter"/>
+        <category label="agents"/>
+        <category label="AI"/>
+        <category label="Contact Center"/>
+        <category label="Customer Experience"/>
+        <category label="Intelligent Contact Center"/>
+        <published>2026-09-30T15:02:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[有利な収益ダッシュボードで収益インサイトを解除 | AWS Partner Network (APN) Blog]]></title>
+        <id>https://aws.amazon.com/blogs/apn/unlock-revenue-insights-in-the-new-attributed-revenue-dashboard/</id>
+        <link href="https://aws.amazon.com/blogs/apn/unlock-revenue-insights-in-the-new-attributed-revenue-dashboard/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/77de68daecd823babbb58edb1c8e14d7106e83bb/2026/09/30/Attributed-Revenue-blog-title-slide-1260x630.jpg" type="image/jpg"/>
+        <updated>2026-09-30T10:25:34.000Z</updated>
+        <summary type="html"><![CDATA[AWSパートナー・セントラルの有利な収益ダッシュボードは、パートナー製品、AWSサービス、請求期間による自動収益データで、パートナー・収益測定のインサイトをライフに提供します。 パートナーは、これらのインサイトを使用して、インパクトを実証し、コセル戦略をシャープにし、より大きなAWS投資のロックを解除することができます。]]></summary>
+        <content type="html"><![CDATA[AWSパートナー・セントラルの有利な収益ダッシュボードは、パートナー製品、AWSサービス、請求期間による自動収益データで、パートナー・収益測定のインサイトをライフに提供します。 パートナーは、これらのインサイトを使用して、インパクトを実証し、コセル戦略をシャープにし、より大きなAWS投資のロックを解除することができます。]]></content>
+        <author>
+            <name>Jahnai Bilovsky</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="AWS Partner Network"/>
+        <category label="Foundational (100)"/>
+        <category label="Launch"/>
+        <category label="Amazon Machine Image"/>
+        <category label="Amazon SageMaker"/>
+        <category label="AWS Partner Central"/>
+        <category label="BASIS"/>
+        <category label="Global Partner Summit"/>
+        <category label="HCLTech"/>
+        <category label="Partner Revenue Measurement"/>
+        <published>2026-09-30T10:25:34.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kiro で SAP の近代化を加速 | AWS for SAP]]></title>
+        <id>https://aws.amazon.com/blogs/awsforsap/accelerate-your-sap-modernization-with-kiro/</id>
+        <link href="https://aws.amazon.com/blogs/awsforsap/accelerate-your-sap-modernization-with-kiro/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png" type="image/png"/>
+        <updated>2026-09-30T04:07:44.000Z</updated>
+        <summary type="html"><![CDATA[Kiro は AWS の AI 動力を与えられたエンジニアリング エージェントです。企業向けに設計されており、生産準備ソフトウェアを構築しています。 Kiro では、SAP のモダニゼーションのような複雑なリソース集中プロジェクトに理想的で、大規模なコードベースと並列エージェントを横断して構築することができます。 今日、私たちは、顧客とパートナーが近代化と展開を加速するために活用することができるキ]]></summary>
+        <content type="html"><![CDATA[Kiro は AWS の AI 動力を与えられたエンジニアリング エージェントです。企業向けに設計されており、生産準備ソフトウェアを構築しています。 Kiro では、SAP のモダニゼーションのような複雑なリソース集中プロジェクトに理想的で、大規模なコードベースと並列エージェントを横断して構築することができます。 今日、私たちは、顧客とパートナーが近代化と展開を加速するために活用することができるキロベースのサンプルエージェントを公開しています[...]]]></content>
+        <author>
+            <name>Erik Kamman</name>
+        </author>
+        <category label="Kiro"/>
+        <category label="SAP on AWS"/>
+        <category label="SAP"/>
+        <published>2026-09-30T04:07:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kiro - ベンチマークとユースケースでSAPの近代化を加速 | AWS for SAP]]></title>
+        <id>https://aws.amazon.com/blogs/awsforsap/accelerate-your-sap-modernization-with-kiro-benchmarks-and-use-cases/</id>
+        <link href="https://aws.amazon.com/blogs/awsforsap/accelerate-your-sap-modernization-with-kiro-benchmarks-and-use-cases/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png" type="image/png"/>
+        <updated>2026-09-30T04:05:26.000Z</updated>
+        <summary type="html"><![CDATA[このブログでは、ローンチブログで紹介した各ユースケースに潜入します。 SAPモダナイゼーションプロジェクトでは、Kiroベースのサンプルエージェントを使用して、結果パートナーや顧客の一部を共有します。 サンプルエージェントはこちらからダウンロードできます。 ここでは、カバーされている主な使用例の要約です [...]]]></summary>
+        <content type="html"><![CDATA[このブログでは、ローンチブログで紹介した各ユースケースに潜入します。 SAPモダナイゼーションプロジェクトでは、Kiroベースのサンプルエージェントを使用して、結果パートナーや顧客の一部を共有します。 サンプルエージェントはこちらからダウンロードできます。 ここでは、カバーされている主な使用例の要約です [...]]]></content>
+        <author>
+            <name>Erik Kamman</name>
+        </author>
+        <category label="Kiro"/>
+        <category label="SAP on AWS"/>
+        <category label="#saponaws"/>
+        <category label="SAP"/>
+        <published>2026-09-30T04:05:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AmazonのBedrockは拡大します インドの国外受容にClaudeモデルの可用性 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-expands-claude-model-availability-to-india-cross-region-inference/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-expands-claude-model-availability-to-india-cross-region-inference/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/29/ML-21953-featured-image-1.png" type="image/png"/>
+        <updated>2026-09-30T01:13:14.000Z</updated>
+        <summary type="html"><![CDATA[Anthropic's Claude Opus 5, クロード・ソンネット 5, そして、 クロード・ハイク 4.5 アマゾンのBedrock地理的交差Regionの推論を通じてインドで利用可能になりました. インド地域内のデータを処理しながら、これらのモデルにアクセスし、AmazonのBedrockコンソールまたはメッセージ、InvokeModel、Converse APIで起動できます。]]></summary>
+        <content type="html"><![CDATA[Anthropic's Claude Opus 5, クロード・ソンネット 5, そして、 クロード・ハイク 4.5 アマゾンのBedrock地理的交差Regionの推論を通じてインドで利用可能になりました. インド地域内のデータを処理しながら、これらのモデルにアクセスし、AmazonのBedrockコンソールまたはメッセージ、InvokeModel、Converse APIで起動できます。]]></content>
+        <author>
+            <name>Aamna Najmi</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Announcements"/>
+        <category label="Intermediate (200)"/>
+        <published>2026-09-30T01:13:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ソウルとシンガポールで展開するAmazon BedrockのAnthropicモデルをご紹介 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/29/ML-22088-featured-image.png" type="image/png"/>
+        <updated>2026-09-30T01:13:12.000Z</updated>
+        <summary type="html"><![CDATA[Amazon BedrockはAnthropic's Claude Opus 5とClaude Sonnet 5をサポートし、ソウル、シンガポールのClaude Sonnet 5をサポートしています。 韓国やシンガポールでローカルのデータ処理要件がある場合は、これらのアンソロピーモデルをスケールで使用できるようになりました。このアンソロピーモデルは、あなたが電話する領域内で完全に処理されます。]]></summary>
+        <content type="html"><![CDATA[Amazon BedrockはAnthropic's Claude Opus 5とClaude Sonnet 5をサポートし、ソウル、シンガポールのClaude Sonnet 5をサポートしています。 韓国やシンガポールでローカルのデータ処理要件がある場合は、これらのアンソロピーモデルをスケールで使用できるようになりました。このアンソロピーモデルは、あなたが電話する領域内で完全に処理されます。]]></content>
+        <author>
+            <name>Aamna Najmi</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Announcements"/>
+        <category label="Intermediate (200)"/>
+        <published>2026-09-30T01:13:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWSに関するリサーチ&amp;エンジニアリングスタジオの次のこと | AWS HPC Blog]]></title>
+        <id>https://aws.amazon.com/blogs/hpc/whats-next-for-research-and-engineering-studio-on-aws/</id>
+        <link href="https://aws.amazon.com/blogs/hpc/whats-next-for-research-and-engineering-studio-on-aws/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2026/09/29/HPCBlogThumnbails-1120x630.jpg" type="image/jpg"/>
+        <updated>2026-09-30T01:11:00.000Z</updated>
+        <summary type="html"><![CDATA[この投稿は、Charlie Chuang、Madhu Vellakal、Charunethran Panchalam Govindarajanによって貢献されました。 AWS(RES)で研究開発スタジオを立ち上げたため、AWSの研究、エンジニアリング、技術コンピューティングのセルフサービスポータルを立ち上げました。 このスペースが成熟したように、AWSパートナーと補完的なAWSサービスの強力なエコ]]></summary>
+        <content type="html"><![CDATA[この投稿は、Charlie Chuang、Madhu Vellakal、Charunethran Panchalam Govindarajanによって貢献されました。 AWS(RES)で研究開発スタジオを立ち上げたため、AWSの研究、エンジニアリング、技術コンピューティングのセルフサービスポータルを立ち上げました。 このスペースが成熟したように、AWSパートナーと補完的なAWSサービスの強力なエコシステムで、私たちは[...]]]></content>
+        <author>
+            <name>Charlie Chuang</name>
+        </author>
+        <category label="Amazon DCV"/>
+        <category label="Amazon WorkSpaces"/>
+        <category label="Announcements"/>
+        <category label="AWS Parallel Computing Service"/>
+        <category label="Best Practices"/>
+        <category label="Compute"/>
+        <category label="High Performance Computing"/>
+        <category label="Partner solutions"/>
+        <category label="Technical How-to"/>
+        <category label="AI"/>
+        <category label="DCV"/>
+        <category label="EC2"/>
+        <category label="HPC"/>
+        <category label="ML"/>
+        <category label="Research Computing"/>
+        <published>2026-09-30T01:11:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[執行役員のスポンサーシップがAWS変革の成功のトップドライバーである理由 | AWS Public Sector Blog]]></title>
+        <id>https://aws.amazon.com/blogs/publicsector/why-executive-sponsorship-is-a-top-driver-of-aws-transformation-success/</id>
+        <link href="https://aws.amazon.com/blogs/publicsector/why-executive-sponsorship-is-a-top-driver-of-aws-transformation-success/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2026/09/27/Why-executive-sponsorship-is-a-top-driver-of-AWS-transformation-success.png" type="image/png"/>
+        <updated>2026-09-29T22:48:28.000Z</updated>
+        <summary type="html"><![CDATA[この記事では、Amazon Web Services(AWS)で学んだことをクラウドの移行、コンタクトセンターのモダナイゼーション、AI導入の取り組みを通じて、パブリックセクターや高等教育機関と連携し、役員のスポンサーシップ権を得るのは、あなたの最初優先順位ではなく、共有しています。]]></summary>
+        <content type="html"><![CDATA[この記事では、Amazon Web Services(AWS)で学んだことをクラウドの移行、コンタクトセンターのモダナイゼーション、AI導入の取り組みを通じて、パブリックセクターや高等教育機関と連携し、役員のスポンサーシップ権を得るのは、あなたの最初優先順位ではなく、共有しています。]]></content>
+        <author>
+            <name>Iman Nur</name>
+        </author>
+        <category label="Public Sector"/>
+        <category label="Uncategorized"/>
+        <published>2026-09-29T22:48:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon CloudFrontキャッシュタグでストリーミングコンテンツを自動更新 | AWS for M&amp;E Blog]]></title>
+        <id>https://aws.amazon.com/blogs/media/automate-streaming-content-refresh-with-amazon-cloudfront-cache-tags/</id>
+        <link href="https://aws.amazon.com/blogs/media/automate-streaming-content-refresh-with-amazon-cloudfront-cache-tags/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fb644351560d8296fe6da332236b1f8d61b2828a/2026/09/28/Automate-streaming-content-refresh-with-Amazon-CloudFront-cache-tags.png" type="image/png"/>
+        <updated>2026-09-29T22:42:26.000Z</updated>
+        <summary type="html"><![CDATA[この記事では、イベント主導のコンテンツリフレッシュパイプラインのアーキテクチャと実装について説明します。]]></summary>
+        <content type="html"><![CDATA[この記事では、イベント主導のコンテンツリフレッシュパイプラインのアーキテクチャと実装について説明します。]]></content>
+        <author>
+            <name>Rizwan Khan</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon CloudFront"/>
+        <category label="Amazon EventBridge"/>
+        <category label="AWS Lambda"/>
+        <category label="Industries"/>
+        <category label="Learning Levels"/>
+        <category label="Media &amp; Entertainment"/>
+        <category label="Networking &amp; Content Delivery"/>
+        <published>2026-09-29T22:42:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TESSERAグローバル地球観測がAWSオープンデータで利用可能になりました | AWS Public Sector Blog]]></title>
+        <id>https://aws.amazon.com/blogs/publicsector/tessera-global-earth-observation-embeddings-now-available-on-aws-open-data/</id>
+        <link href="https://aws.amazon.com/blogs/publicsector/tessera-global-earth-observation-embeddings-now-available-on-aws-open-data/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2026/09/29/TESSERA-global-Earth-observation-embeddings-now-available-on-AWS-Open-Data.png" type="image/png"/>
+        <updated>2026-09-29T21:18:21.000Z</updated>
+        <summary type="html"><![CDATA[グローバルな地理空間AI基盤モデルであるTESSERAは、Amazonサステイナビリティデータイニシアチブ(ASDI)とAmazon Web Services(AWS)のオープンデータスポンサーシッププログラムを通じて、オープンでご利用いただけます。 AWS からのコンピュートとホスティングのサポートにより、dClimate は、TESSERA のグローバル 歴史上のカバレッジを補完し、Amazo]]></summary>
+        <content type="html"><![CDATA[グローバルな地理空間AI基盤モデルであるTESSERAは、Amazonサステイナビリティデータイニシアチブ(ASDI)とAmazon Web Services(AWS)のオープンデータスポンサーシッププログラムを通じて、オープンでご利用いただけます。 AWS からのコンピュートとホスティングのサポートにより、dClimate は、TESSERA のグローバル 歴史上のカバレッジを補完し、Amazon Simple Storage Service (Amazon S3) の分析読み取りデータを、追加費用なしで誰でも使用できます。 dClimateは、企業や政府がリスクを評価し、自然資本を監視し、自信をもって判断できる気候データソリューションを提供します。 この投稿では、TESSERAがどのような仕組みなのか、研究者、ビルダー、機関がそれをどのように活用できるかについて紹介しています。]]></content>
+        <author>
+            <name>Osho Jha</name>
+        </author>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Public Sector"/>
+        <category label="AWS Open Data Sponsorship Program"/>
+        <category label="climate"/>
+        <category label="datasets"/>
+        <category label="geospatial data"/>
+        <category label="Machine Learning"/>
+        <category label="open data"/>
+        <category label="Registry of Open Data on AWS"/>
+        <category label="research"/>
+        <category label="technical how-to"/>
+        <published>2026-09-29T21:18:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ServiceNow、Dynatrace、Slack を AWS DevOps エージェントで自動化 | AWS Cloud Operations Blog]]></title>
+        <id>https://aws.amazon.com/blogs/mt/automate-rca-across-servicenow-dynatrace-and-slack-with-aws-devops-agent/</id>
+        <link href="https://aws.amazon.com/blogs/mt/automate-rca-across-servicenow-dynatrace-and-slack-with-aws-devops-agent/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/972a67c48192728a34979d9a35164c1295401b71/2026/09/29/Automate-RCA-across-ServiceNow-Dynatrace-and-Slack-with-AWS-DevOps-Agent.jpg" type="image/jpg"/>
+        <updated>2026-09-29T19:37:15.000Z</updated>
+        <summary type="html"><![CDATA[生産のインシデントを管理する場合は、ドリルを知っています。 午前2時～午後2時(サービスなし) オンコールエンジニアは、Dynatrace にログインし、複数のダッシュボードでトレースやメトリクスをプルし、クロスリファレンスはレコードを変え、仮説を形成し、チケットを更新し、Slack に見つけた投稿を行います。 調査は1〜3時間かかります、そしてそれは[...]]]></summary>
+        <content type="html"><![CDATA[生産のインシデントを管理する場合は、ドリルを知っています。 午前2時～午後2時(サービスなし) オンコールエンジニアは、Dynatrace にログインし、複数のダッシュボードでトレースやメトリクスをプルし、クロスリファレンスはレコードを変え、仮説を形成し、チケットを更新し、Slack に見つけた投稿を行います。 調査は1〜3時間かかります、そしてそれは[...]]]></content>
+        <author>
+            <name>Yagya Vir Singh</name>
+        </author>
+        <category label="Architecture"/>
+        <category label="Artificial Intelligence"/>
+        <category label="AWS User Notifications"/>
+        <category label="Best Practices"/>
+        <category label="Centralized operations management"/>
+        <category label="Customer Solutions"/>
+        <category label="DevOps"/>
+        <category label="Expert (400)"/>
+        <category label="Generative AI"/>
+        <category label="How-To"/>
+        <category label="Management Tools"/>
+        <category label="Monitoring and observability"/>
+        <category label="solutions"/>
+        <category label="Technical How-to"/>
+        <category label="automated operations"/>
+        <category label="Cloud Operations"/>
+        <published>2026-09-29T19:37:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ほぼアストラの知能を、AmazonのBedrockでGPT-6.1 Solで日常業務に | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/bring-near-astra-intelligence-to-everyday-work-with-gpt-6-1-sol-on-amazon-bedrock/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/bring-near-astra-intelligence-to-everyday-work-with-gpt-6-1-sol-on-amazon-bedrock/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/29/ML-22090-featured-image.png" type="image/png"/>
+        <updated>2026-09-29T19:34:14.000Z</updated>
+        <summary type="html"><![CDATA[GPT-6.1の特長 ソルは、一般的にAmazonのBedrockで利用可能です, コーディングに強い推論をもたらす, コンピュータの使用, 頻繁に実行するプロのワークロード.]]></summary>
+        <content type="html"><![CDATA[GPT-6.1の特長 ソルは、一般的にAmazonのBedrockで利用可能です, コーディングに強い推論をもたらす, コンピュータの使用, 頻繁に実行するプロのワークロード.]]></content>
+        <author>
+            <name>Tanvi Girinath</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Announcements"/>
+        <category label="Intermediate (200)"/>
+        <published>2026-09-29T19:34:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[クラウドからクリニックまで: AWSがデジタル精神医学をスケールでパワーする方法 | AWS for Industries]]></title>
+        <id>https://aws.amazon.com/blogs/industries/from-cloud-to-clinic-how-aws-powers-digital-psychiatry-at-scale/</id>
+        <link href="https://aws.amazon.com/blogs/industries/from-cloud-to-clinic-how-aws-powers-digital-psychiatry-at-scale/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/27/From-cloud-to-clinic-How-AWS-powers-digital-psychiatry-at-scale-1.png" type="image/png"/>
+        <updated>2026-09-29T18:56:23.000Z</updated>
+        <summary type="html"><![CDATA[この記事では、Beth Israel Deaconess Medical Center(BIDMC)とHarvard Medical School(ハーバード・メディカル・スクール)のDigital Psychiatry(Digital Psychiatry)の部門が、Amazon Web Services(AWS)で稼働しているオープンソースのデジタル精神医学プラットフォームである mindLA]]></summary>
+        <content type="html"><![CDATA[この記事では、Beth Israel Deaconess Medical Center(BIDMC)とHarvard Medical School(ハーバード・メディカル・スクール)のDigital Psychiatry(Digital Psychiatry)の部門が、Amazon Web Services(AWS)で稼働しているオープンソースのデジタル精神医学プラットフォームである mindLAMP(マインドランプ)について説明しています。 現在、17ヵ国に65拠点を構え、マインドランプは、患者のモニタリング、デジタルフェノタイピング、AI対応の臨床ワークフローを継続的に実現し、サーバーレスのAWSインフラを採用し、小規模な学術グループが、専用のサイトの信頼性エンジニアリングチームなしで運用することができます。]]></content>
+        <author>
+            <name>Mark Kalinich, MD, PhD</name>
+        </author>
+        <category label="Amazon Elastic Container Service"/>
+        <category label="AWS Fargate"/>
+        <category label="Healthcare"/>
+        <category label="Industries"/>
+        <published>2026-09-29T18:56:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MIXIがAmazon S3 ベクトルで数億枚の写真を自然言語で検索する方法 | AWS Storage Blog]]></title>
+        <id>https://aws.amazon.com/blogs/storage/how-mixi-built-natural-language-search-over-billions-of-photos-with-amazon-s3-vectors/</id>
+        <link href="https://aws.amazon.com/blogs/storage/how-mixi-built-natural-language-search-over-billions-of-photos-with-amazon-s3-vectors/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/e1822db470e60d090affd0956d743cb0e7cdf113/2025/10/06/Amazon_S3_Vectors_Thumb01-1120x630.png" type="image/png"/>
+        <updated>2026-09-29T18:16:50.000Z</updated>
+        <summary type="html"><![CDATA[MIXI, Inc.(ミクシィ)は、登録ユーザーの約30万人が写真や動画をシェアするサービスです。 2026年1月現在、家族はサービスを通じて20億枚以上の写真や動画を共有しています。 彼らは特定の貴重な瞬間を再発見することができます - 赤ちゃんの最初の水泳、[...]]]></summary>
+        <content type="html"><![CDATA[MIXI, Inc.(ミクシィ)は、登録ユーザーの約30万人が写真や動画をシェアするサービスです。 2026年1月現在、家族はサービスを通じて20億枚以上の写真や動画を共有しています。 彼らは特定の貴重な瞬間を再発見することができます - 赤ちゃんの最初の水泳、[...]]]></content>
+        <author>
+            <name>Takahiro Kinouchi</name>
+        </author>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Customer Solutions"/>
+        <category label="Intermediate (200)"/>
+        <category label="Learning Levels"/>
+        <category label="Media &amp; Entertainment"/>
+        <category label="Amazon Simple Storage Service (Amazon S3)"/>
+        <category label="customer solution"/>
+        <category label="Media and entertainment"/>
+        <published>2026-09-29T18:16:50.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[あなたのエージェントを証明する AIスキル: 2つの新しいマイクロ資格が利用可能になりました | AWS Training and Certification Blog]]></title>
+        <id>https://aws.amazon.com/blogs/training-and-certification/prove-your-agentic-ai-skills-two-new-microcredentials-now-available/</id>
+        <link href="https://aws.amazon.com/blogs/training-and-certification/prove-your-agentic-ai-skills-two-new-microcredentials-now-available/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/9109c85a45b703f87f1413a405549a2cea9ab556/2026/09/29/Prove-your-agentic-AI-skills-Two-new-Microcredentials-now-available-1.png" type="image/png"/>
+        <updated>2026-09-29T17:37:57.000Z</updated>
+        <summary type="html"><![CDATA[AIエージェントは、その背後にあるID制御とデータレイヤーとしてのみ信頼できます。 建物の1つである場合、それは検証する時間です - そしてショーケース — あなたができることを正確に。 今日は、人工知能に重点を置いた2つの新しいマイクロクレンデンシャルが利用可能になりました。 AWS セキュアエージェント ID 実証済みおよび AWS データベースの [...]]]></summary>
+        <content type="html"><![CDATA[AIエージェントは、その背後にあるID制御とデータレイヤーとしてのみ信頼できます。 建物の1つである場合、それは検証する時間です - そしてショーケース — あなたができることを正確に。 今日は、人工知能に重点を置いた2つの新しいマイクロクレンデンシャルが利用可能になりました。 AWS セキュアエージェント ID 実証済みおよび AWS データベースの [...]]]></content>
+        <author>
+            <name>Tom Lawlor</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="AWS Training and Certification"/>
+        <published>2026-09-29T17:37:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Lambda 耐久性のある機能を Terraform で管理したキーを実装 | AWS Compute Blog]]></title>
+        <id>https://aws.amazon.com/blogs/compute/implementing-customer-managed-keys-for-aws-lambda-durable-functions-with-terraform/</id>
+        <link href="https://aws.amazon.com/blogs/compute/implementing-customer-managed-keys-for-aws-lambda-durable-functions-with-terraform/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/09/28/ComputeBlog-2578-featured-image.png" type="image/png"/>
+        <updated>2026-09-29T17:14:00.000Z</updated>
+        <summary type="html"><![CDATA[Lambdaの耐久性のある機能は、実行状態を耐久性のあるストレージにチェックポイントし、データが機密である規制された支払い作業負荷のためにチェックポイントします。 この投稿では、AWS KMS で管理されたキーを設定して、耐久性のある実行データを暗号化し、少なくとも優先するキーポリシーを定義し、AWS CloudTrail による暗号化を検証する方法を説明します。]]></summary>
+        <content type="html"><![CDATA[Lambdaの耐久性のある機能は、実行状態を耐久性のあるストレージにチェックポイントし、データが機密である規制された支払い作業負荷のためにチェックポイントします。 この投稿では、AWS KMS で管理されたキーを設定して、耐久性のある実行データを暗号化し、少なくとも優先するキーポリシーを定義し、AWS CloudTrail による暗号化を検証する方法を説明します。]]></content>
+        <author>
+            <name>Rajdeep Banerjee</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="AWS Key Management Service"/>
+        <category label="AWS Lambda"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-29T17:14:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazonのクイックのための迅速なエンジニアリングの基礎 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/prompt-engineering-fundamentals-for-amazon-quick/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/prompt-engineering-fundamentals-for-amazon-quick/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/24/ML-20527-part1-featured-image.png" type="image/png"/>
+        <updated>2026-09-29T16:27:57.000Z</updated>
+        <summary type="html"><![CDATA[Amazon の迅速なエンジニアリングにより、AI の機能が要求にどのように正確に対応するかがわかります。 2パートシリーズのパート1は、Amazon Quick全体で一貫した高品質の結果を得るために、基礎的原則と再使用可能なフレームワーク(特異性、コンテキスト設定、いくつかのショット例、CRISPEフレームワーク)をカバーしています。]]></summary>
+        <content type="html"><![CDATA[Amazon の迅速なエンジニアリングにより、AI の機能が要求にどのように正確に対応するかがわかります。 2パートシリーズのパート1は、Amazon Quick全体で一貫した高品質の結果を得るために、基礎的原則と再使用可能なフレームワーク(特異性、コンテキスト設定、いくつかのショット例、CRISPEフレームワーク)をカバーしています。]]></content>
+        <author>
+            <name>Daiquan Nkere</name>
+        </author>
+        <category label="Amazon Quick Suite"/>
+        <category label="Best Practices"/>
+        <category label="Intermediate (200)"/>
+        <published>2026-09-29T16:27:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[クイックコンポーネントによる迅速なエンジニアリング: パターンと落とし穴 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/prompt-engineering-by-quick-component-patterns-and-pitfalls/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/prompt-engineering-by-quick-component-patterns-and-pitfalls/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/24/ML-20527-part2-featured-image.png" type="image/png"/>
+        <updated>2026-09-29T16:27:33.000Z</updated>
+        <summary type="html"><![CDATA[Amazonクイックプロンプトエンジニアリングシリーズのパート2はコンポーネントによって構成されます。 Amazonクイックリサーチ、クイックフロー、クイックサイト、チャットエージェント、アクションインテグレーションから最高の結果を得るプロンプトパターンを学びます。]]></summary>
+        <content type="html"><![CDATA[Amazonクイックプロンプトエンジニアリングシリーズのパート2はコンポーネントによって構成されます。 Amazonクイックリサーチ、クイックフロー、クイックサイト、チャットエージェント、アクションインテグレーションから最高の結果を得るプロンプトパターンを学びます。]]></content>
+        <author>
+            <name>Daiquan Nkere</name>
+        </author>
+        <category label="Amazon Quick Suite"/>
+        <category label="Best Practices"/>
+        <category label="Intermediate (200)"/>
+        <published>2026-09-29T16:27:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon MWAA 用 LLM 搭載 DAG 故障解析プラグインの構築 | AWS Big Data Blog]]></title>
+        <id>https://aws.amazon.com/blogs/big-data/building-an-llm-powered-dag-failure-analysis-plugin-for-amazon-mwaa/</id>
+        <link href="https://aws.amazon.com/blogs/big-data/building-an-llm-powered-dag-failure-analysis-plugin-for-amazon-mwaa/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/22/BDB-5613-featured-image.png" type="image/png"/>
+        <updated>2026-09-29T16:17:09.000Z</updated>
+        <summary type="html"><![CDATA[AWS Glue、Amazon EMR、Amazon Athenaなどのサービス全体でApache Airflow DAGの不具合を解消し、手作業が遅くなります。 この記事では、Amazon Bedrockと統合するカスタムAirflowプラグインをビルドして、DAGタスクの失敗を自動的に分析し、Amazon MWAAのオンデマンドルート原因分析を配信する方法を紹介します。]]></summary>
+        <content type="html"><![CDATA[AWS Glue、Amazon EMR、Amazon Athenaなどのサービス全体でApache Airflow DAGの不具合を解消し、手作業が遅くなります。 この記事では、Amazon Bedrockと統合するカスタムAirflowプラグインをビルドして、DAGタスクの失敗を自動的に分析し、Amazon MWAAのオンデマンドルート原因分析を配信する方法を紹介します。]]></content>
+        <author>
+            <name>Sushant Samantaray</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Managed Workflows for Apache Airflow (Amazon MWAA)"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-29T16:17:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AmazonクイックとAmazonのBedrock AgentCoreでAI搭載契約インテリジェンスプラットフォームの構築 | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/building-an-ai-powered-contract-intelligence-platform-with-amazon-quick-and-amazon-bedrock-agentcore/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/building-an-ai-powered-contract-intelligence-platform-with-amazon-quick-and-amazon-bedrock-agentcore/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/23/ML-21546-featured-image.png" type="image/png"/>
+        <updated>2026-09-29T16:14:24.000Z</updated>
+        <summary type="html"><![CDATA[数百のベンダー契約からデータを手動で抽出することは、スケールではなく、RAGチャットツールはポートフォリオ全体の質問に不足しています。 この投稿は、AIエージェントが契約フィールドを抽出および検証するために、AWS上でコントラクトインテリジェンスプラットフォームを共有し、Amazon Quick Analyticsを通じて集計およびシングルコントラクトの質問に答えます。]]></summary>
+        <content type="html"><![CDATA[数百のベンダー契約からデータを手動で抽出することは、スケールではなく、RAGチャットツールはポートフォリオ全体の質問に不足しています。 この投稿は、AIエージェントが契約フィールドを抽出および検証するために、AWS上でコントラクトインテリジェンスプラットフォームを共有し、Amazon Quick Analyticsを通じて集計およびシングルコントラクトの質問に答えます。]]></content>
+        <author>
+            <name>Konala McGrath</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Amazon Quick Suite"/>
+        <category label="Best Practices"/>
+        <published>2026-09-29T16:14:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon EC2とSSMパラメータストアでAMI発見を簡素化 | AWS Compute Blog]]></title>
+        <id>https://aws.amazon.com/blogs/compute/simplify-ami-discovery-with-amazon-ec2-and-ssm-parameter-store/</id>
+        <link href="https://aws.amazon.com/blogs/compute/simplify-ami-discovery-with-amazon-ec2-and-ssm-parameter-store/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/09/29/ComputeBlog-2719-featured-image-1.png" type="image/png"/>
+        <updated>2026-09-29T16:14:17.000Z</updated>
+        <summary type="html"><![CDATA[Amazon EC2 AMI をスケールで管理することで、常に AMI ID を AWS Systems Manager パラメータパスにハンドでマッピングすることを意味します。 DescribeImages APIへの最近の強化は、関連するSSMパラメータを直接返します。 この投稿では、AWS CLI、AWS CloudFormation、Terraform、Auto Scaling Launc]]></summary>
+        <content type="html"><![CDATA[Amazon EC2 AMI をスケールで管理することで、常に AMI ID を AWS Systems Manager パラメータパスにハンドでマッピングすることを意味します。 DescribeImages APIへの最近の強化は、関連するSSMパラメータを直接返します。 この投稿では、AWS CLI、AWS CloudFormation、Terraform、Auto Scaling Launchテンプレートを横断して使う方法を説明します。]]></content>
+        <author>
+            <name>Ashwani Tyagi</name>
+        </author>
+        <category label="Amazon EC2"/>
+        <category label="Intermediate (200)"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-29T16:14:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[EKSのAmazon EMRでSpark Connectを発表:インタラクティブPySpark開発、どこでも | AWS Big Data Blog]]></title>
+        <id>https://aws.amazon.com/blogs/big-data/announcing-spark-connect-on-amazon-emr-on-eks/</id>
+        <link href="https://aws.amazon.com/blogs/big-data/announcing-spark-connect-on-amazon-emr-on-eks/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/25/6122.png" type="image/png"/>
+        <updated>2026-09-29T16:12:17.000Z</updated>
+        <summary type="html"><![CDATA[EKS で Amazon EMR 上で Spark Connect を発表: VS コード、PyCharm、Juppyter ノートブック、Amazon SageMaker Unified Studio 、または dbt のフルスケールの Spark 操作を実行している間、VS コード、PyCharm、Juppyter ノートブック、Amazon SageMaker Unified Studio、]]></summary>
+        <content type="html"><![CDATA[EKS で Amazon EMR 上で Spark Connect を発表: VS コード、PyCharm、Juppyter ノートブック、Amazon SageMaker Unified Studio 、または dbt のフルスケールの Spark 操作を実行している間、VS コード、PyCharm、Juppyter ノートブック、Amazon SageMaker Unified Studio、または dbt で、既存の Amazon EKS クラスターでフルスケールの Spark 操作を実行します。]]></content>
+        <author>
+            <name>Amit Maindola</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon EMR on EKS"/>
+        <category label="Announcements"/>
+        <published>2026-09-29T16:12:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2 AM アラームから回答まで: AWS DevOps エージェントによるセキュリティ トリアージ | AWS Cloud Operations Blog]]></title>
+        <id>https://aws.amazon.com/blogs/mt/from-2-am-alarm-to-answer-security-triage-with-aws-devops-agent/</id>
+        <link href="https://aws.amazon.com/blogs/mt/from-2-am-alarm-to-answer-security-triage-with-aws-devops-agent/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/972a67c48192728a34979d9a35164c1295401b71/2026/09/28/Screenshot-2026-09-28-at-13.54.37-1260x506.png" type="image/png"/>
+        <updated>2026-09-29T16:11:11.000Z</updated>
+        <summary type="html"><![CDATA[セキュリティインシデントのトリアージは通常、風邪を開始します。 Amazon CloudWatch は、AWS の ID と Access Management (IAM) アクセスキーが別のアクセスキーを作成するため、2 a.m でアラームを発火します。 回答者は、AWS CloudTrail、Amazon CloudWatch Logs、Amazon Virtual Private Cloud]]></summary>
+        <content type="html"><![CDATA[セキュリティインシデントのトリアージは通常、風邪を開始します。 Amazon CloudWatch は、AWS の ID と Access Management (IAM) アクセスキーが別のアクセスキーを作成するため、2 a.m でアラームを発火します。 回答者は、AWS CloudTrail、Amazon CloudWatch Logs、Amazon Virtual Private Cloud (Amazon VPC) Flow Logs の証拠を組み立てて最初の30分を費やしています。]]></content>
+        <author>
+            <name>Samir Behara</name>
+        </author>
+        <category label="Technical How-to"/>
+        <published>2026-09-29T16:11:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[オーロラ PostgreSQL Amazon SageMakerとのゼロETL統合 | AWS Big Data Blog]]></title>
+        <id>https://aws.amazon.com/blogs/big-data/aurora-postgresql-zero-etl-integration-with-amazon-sagemaker/</id>
+        <link href="https://aws.amazon.com/blogs/big-data/aurora-postgresql-zero-etl-integration-with-amazon-sagemaker/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/24/BDB-5743-featured-image.png" type="image/png"/>
+        <updated>2026-09-29T16:10:14.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Aurora PostgreSQL ゼロETL と Amazon SageMaker との統合により、運用データをほぼリアルタイムに湖ハウスに再現し、カスタム ETL パイプラインを構築することなく、運用データをリアルタイムで再現できます。 アーキテクチャを学び、データキャプチャのメカニカルを変更し、Amazon SageMakerの統合とクエリを設定します。]]></summary>
+        <content type="html"><![CDATA[Amazon Aurora PostgreSQL ゼロETL と Amazon SageMaker との統合により、運用データをほぼリアルタイムに湖ハウスに再現し、カスタム ETL パイプラインを構築することなく、運用データをリアルタイムで再現できます。 アーキテクチャを学び、データキャプチャのメカニカルを変更し、Amazon SageMakerの統合とクエリを設定します。]]></content>
+        <author>
+            <name>Apurwa Pawar</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Aurora"/>
+        <category label="Amazon SageMaker"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-29T16:10:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kiro CLI とヘッドレス認証で Slack 搭載の AI 開発エージェントの構築 | AWS DevOps &amp; Developer Productivity Blog]]></title>
+        <id>https://aws.amazon.com/blogs/devops/building-a-slack-powered-ai-development-agent-with-kiro-cli-and-headless-authentication/</id>
+        <link href="https://aws.amazon.com/blogs/devops/building-a-slack-powered-ai-development-agent-with-kiro-cli-and-headless-authentication/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2026/09/29/devops-23229.png" type="image/png"/>
+        <updated>2026-09-29T16:02:43.000Z</updated>
+        <summary type="html"><![CDATA[Slack では、コードレビューのディスカッション、インシデントレスポンススレッド、スタンドアップが行われます。 しかし、エンジニアがサービスを分析したり、失敗テストをデバッグする必要がある場合は、Slack を離れ、ターミナルを開き、リポジトリに移動し、コマンドを実行し、出力を貼り付けます。 その往復は、正確にどこに知っている人のために30秒かかります[...]]]></summary>
+        <content type="html"><![CDATA[Slack では、コードレビューのディスカッション、インシデントレスポンススレッド、スタンドアップが行われます。 しかし、エンジニアがサービスを分析したり、失敗テストをデバッグする必要がある場合は、Slack を離れ、ターミナルを開き、リポジトリに移動し、コマンドを実行し、出力を貼り付けます。 その往復は、正確にどこに知っている人のために30秒かかります[...]]]></content>
+        <author>
+            <name>Vishal Karlupia</name>
+        </author>
+        <category label="Artificial Intelligence"/>
+        <category label="Developer Tools"/>
+        <category label="DevOps"/>
+        <category label="Kiro"/>
+        <published>2026-09-29T16:02:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kiro CLIで開発ワークフローをプリコミットとGit Hook Agentとして加速 | AWS DevOps &amp; Developer Productivity Blog]]></title>
+        <id>https://aws.amazon.com/blogs/devops/accelerating-development-workflows-with-kiro-cli-as-a-pre-commit-and-git-hook-agent/</id>
+        <link href="https://aws.amazon.com/blogs/devops/accelerating-development-workflows-with-kiro-cli-as-a-pre-commit-and-git-hook-agent/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2026/09/11/kiro-git-hook-1120x630.png" type="image/png"/>
+        <updated>2026-09-29T15:59:26.000Z</updated>
+        <summary type="html"><![CDATA[コードレビューフィードバックは、早い段階で到着したときに最も価値があります。 プルリクエストに巻き込まれたセキュリティ脆弱性は時間を節約します。 生産コストの日数で捕捉された同じ脆弱性。 しかし、コードが開発者のマシンを離れる前にそれをキャッチできるのは、git commitの時に? Gitのホックは[...]で自動的に動く]]></summary>
+        <content type="html"><![CDATA[コードレビューフィードバックは、早い段階で到着したときに最も価値があります。 プルリクエストに巻き込まれたセキュリティ脆弱性は時間を節約します。 生産コストの日数で捕捉された同じ脆弱性。 しかし、コードが開発者のマシンを離れる前にそれをキャッチできるのは、git commitの時に? Gitのホックは[...]で自動的に動く]]></content>
+        <author>
+            <name>Vishal Karlupia</name>
+        </author>
+        <category label="Artificial Intelligence"/>
+        <category label="Developer Tools"/>
+        <category label="Kiro"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-29T15:59:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS IoTコアとAmazonロケーションサービスでリアルタイムでフリートを追跡 | The Internet of Things on AWS – Official Blog]]></title>
+        <id>https://aws.amazon.com/blogs/iot/tracking-fleets-in-real-time-with-aws-iot-core-and-amazon-location-service/</id>
+        <link href="https://aws.amazon.com/blogs/iot/tracking-fleets-in-real-time-with-aws-iot-core-and-amazon-location-service/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f6e1126cedebf23e1463aee73f9df08783640400/2026/09/24/IOTBLOG-17-featured-image.png" type="image/png"/>
+        <updated>2026-09-29T15:59:08.000Z</updated>
+        <summary type="html"><![CDATA[専用のGPSハードウェアをAWS IoTコアに接続し、Amazon Location Serviceで位置を視覚化することで、フリートオペレータはあらゆる車両のライブビューを提供します。 この投稿は、軽量でサーバーレスなアプローチの概念、アーキテクチャ、およびコストのトレードオフをカバーしています。GPS に焦点を絞ったフリートトラッキングにより、小型のフリートのトラッキングが可能になります。]]></summary>
+        <content type="html"><![CDATA[専用のGPSハードウェアをAWS IoTコアに接続し、Amazon Location Serviceで位置を視覚化することで、フリートオペレータはあらゆる車両のライブビューを提供します。 この投稿は、軽量でサーバーレスなアプローチの概念、アーキテクチャ、およびコストのトレードオフをカバーしています。GPS に焦点を絞ったフリートトラッキングにより、小型のフリートのトラッキングが可能になります。]]></content>
+        <author>
+            <name>Tim Sitze</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Location"/>
+        <category label="AWS IoT Core"/>
+        <category label="Best Practices"/>
+        <published>2026-09-29T15:59:08.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[コンデ ナスはアマゾンのBedrockとマルチモーダルビデオの発見を造りました | Artificial Intelligence]]></title>
+        <id>https://aws.amazon.com/blogs/machine-learning/how-conde-nast-built-multimodal-video-discovery-with-amazon-bedrock/</id>
+        <link href="https://aws.amazon.com/blogs/machine-learning/how-conde-nast-built-multimodal-video-discovery-with-amazon-bedrock/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/18/ML-21598-featured-image.png" type="image/png"/>
+        <updated>2026-09-29T15:55:17.000Z</updated>
+        <summary type="html"><![CDATA[Condé Nastの編集チームは、タイトルと説明のみを使用して、140,000以上のビデオのライブラリを検索するタスクあたり平均250分を費やしました。 AWS Generative AI Innovation Center と連携し、Amazon Bedrock と Amazon OpenSearch Service のマルチモーダルビデオディスカバリーソリューションを構築し、発見時間を2分以]]></summary>
+        <content type="html"><![CDATA[Condé Nastの編集チームは、タイトルと説明のみを使用して、140,000以上のビデオのライブラリを検索するタスクあたり平均250分を費やしました。 AWS Generative AI Innovation Center と連携し、Amazon Bedrock と Amazon OpenSearch Service のマルチモーダルビデオディスカバリーソリューションを構築し、発見時間を2分以内にカットしました。]]></content>
+        <author>
+            <name>Mariah Miller</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Bedrock"/>
+        <category label="Customer Solutions"/>
+        <published>2026-09-29T15:55:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[エア・ギャップの RHEL 家族 AMIs のための凍らせたパッケージ管理 | AWS Compute Blog]]></title>
+        <id>https://aws.amazon.com/blogs/compute/frozen-package-management-for-air-gapped-rhel-family-amis/</id>
+        <link href="https://aws.amazon.com/blogs/compute/frozen-package-management-for-air-gapped-rhel-family-amis/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/09/28/ComputeBlog-2688-featured-image-1.png" type="image/png"/>
+        <updated>2026-09-29T15:55:07.000Z</updated>
+        <summary type="html"><![CDATA[AWS上で、規制、エアギャップのRHELファミリーフリートを実行するための、サーバーレス、2アカウントパターンを学びます。 エアギャップのワークロードから接続されたパッケージの摂取量を分離し、パッケージの変更のための明示的な人間の承認を追加し、EC2 Image Builder AMIとパッチマネージャを1つの冷凍Amazon S3リポジトリスナップショットに保ちます。]]></summary>
+        <content type="html"><![CDATA[AWS上で、規制、エアギャップのRHELファミリーフリートを実行するための、サーバーレス、2アカウントパターンを学びます。 エアギャップのワークロードから接続されたパッケージの摂取量を分離し、パッケージの変更のための明示的な人間の承認を追加し、EC2 Image Builder AMIとパッチマネージャを1つの冷凍Amazon S3リポジトリスナップショットに保ちます。]]></content>
+        <author>
+            <name>Anand Krishna Varanasi</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon EC2"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-29T15:55:07.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS上のAG-UIプロトコル、エージェントスファーム、およびノーバ法による適応型AIインターフェイスの構築 | AWS Architecture Blog]]></title>
+        <id>https://aws.amazon.com/blogs/architecture/build-adaptive-ai-interfaces-with-the-ag-ui-protocol-agent-swarms-and-nova-act-on-aws/</id>
+        <link href="https://aws.amazon.com/blogs/architecture/build-adaptive-ai-interfaces-with-the-ag-ui-protocol-agent-swarms-and-nova-act-on-aws/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2026/09/28/ARCHBLOG-1366-featured-image.png" type="image/png"/>
+        <updated>2026-09-29T13:44:23.000Z</updated>
+        <summary type="html"><![CDATA[エージェントの変数出力に自動的に適応するAIインターフェイスを作成する方法を学びます, 動的UI生成のためのAG-UIプロトコルを使用して, Strands Agents SDKは、説明可能なマルチエージェントコラボレーションのためのパターンを分散します, そして、Amazon Nova Actは、APIがないレガシーシステムを統合します.]]></summary>
+        <content type="html"><![CDATA[エージェントの変数出力に自動的に適応するAIインターフェイスを作成する方法を学びます, 動的UI生成のためのAG-UIプロトコルを使用して, Strands Agents SDKは、説明可能なマルチエージェントコラボレーションのためのパターンを分散します, そして、Amazon Nova Actは、APIがないレガシーシステムを統合します.]]></content>
+        <author>
+            <name>Anand Bilgaiyan</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon Nova"/>
+        <category label="Expert (400)"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-29T13:44:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWSデータコンピテンシーパートナーの新しいカテゴリと利点 | AWS Partner Network (APN) Blog]]></title>
+        <id>https://aws.amazon.com/blogs/apn/new-categories-and-benefits-for-aws-data-competency-partners/</id>
+        <link href="https://aws.amazon.com/blogs/apn/new-categories-and-benefits-for-aws-data-competency-partners/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/77de68daecd823babbb58edb1c8e14d7106e83bb/2026/09/28/Data-Competency-title-slide-1260x627.png" type="image/png"/>
+        <updated>2026-09-29T10:36:52.000Z</updated>
+        <summary type="html"><![CDATA[AWSデータコンピテンシー(主にAWSデータと分析のコンピテンシー)は、データベースとリレーショナルデータベースの2つの新しいカテゴリを拡張し、パートナーがデータアーキテクチャをスケールで配信するための新しいパフォーマンスベースのシグネチャーメリットをもたらします。]]></summary>
+        <content type="html"><![CDATA[AWSデータコンピテンシー(主にAWSデータと分析のコンピテンシー)は、データベースとリレーショナルデータベースの2つの新しいカテゴリを拡張し、パートナーがデータアーキテクチャをスケールで配信するための新しいパフォーマンスベースのシグネチャーメリットをもたらします。]]></content>
+        <author>
+            <name>Chris Dally</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="AWS Partner Network"/>
+        <category label="Foundational (100)"/>
+        <category label="Launch"/>
+        <category label="Partner solutions"/>
+        <category label="APN Launches"/>
+        <category label="AWS Competency Partners"/>
+        <category label="AWS Marketplace"/>
+        <category label="AWS Partner Central"/>
+        <category label="Caylent"/>
+        <category label="Deloitte"/>
+        <category label="Toyota North America"/>
+        <published>2026-09-29T10:36:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[UMiamiとQuantiphiがAmazonのBedrockで最適化された放射線学のコーディング方法 | AWS Public Sector Blog]]></title>
+        <id>https://aws.amazon.com/blogs/publicsector/how-umiami-and-quantiphi-optimized-radiology-coding-with-amazon-bedrock/</id>
+        <link href="https://aws.amazon.com/blogs/publicsector/how-umiami-and-quantiphi-optimized-radiology-coding-with-amazon-bedrock/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2026/09/26/How-UMiami-and-Quantiphi-optimized-radiology-coding-with-Amazon-Bedrock.png" type="image/png"/>
+        <updated>2026-09-28T23:26:19.000Z</updated>
+        <summary type="html"><![CDATA[マイアミ保健システム大学(UHealth)は、下流方向と上流方向の両方のギャップを閉じるために設定しました。 Amazon Web Services (AWS) および AWS Partner Quantiphi と連携し、UHealth 部門の Radiology は、AI を半径検査ワークフローでペアリングし、エラーに似たマニュアルプロセスを交換しながら、臨床レベルの精度を実現します。]]></summary>
+        <content type="html"><![CDATA[マイアミ保健システム大学(UHealth)は、下流方向と上流方向の両方のギャップを閉じるために設定しました。 Amazon Web Services (AWS) および AWS Partner Quantiphi と連携し、UHealth 部門の Radiology は、AI を半径検査ワークフローでペアリングし、エラーに似たマニュアルプロセスを交換しながら、臨床レベルの精度を実現します。]]></content>
+        <author>
+            <name>Giorgia Rematska</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon CloudFront"/>
+        <category label="Amazon Cognito"/>
+        <category label="Amazon EC2"/>
+        <category label="Amazon RDS"/>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="AWS Lambda"/>
+        <category label="Public Sector"/>
+        <category label="Uncategorized"/>
+        <published>2026-09-28T23:26:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWSの支払い暗号化は暗号化セキュリティバーを上げます | AWS for Industries]]></title>
+        <id>https://aws.amazon.com/blogs/industries/how-aws-payment-cryptography-raises-the-cryptographic-security-bar/</id>
+        <link href="https://aws.amazon.com/blogs/industries/how-aws-payment-cryptography-raises-the-cryptographic-security-bar/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/23/How-AWS-Payment-Cryptography-Raises-the-Cryptographic-Security-Bar.png" type="image/png"/>
+        <updated>2026-09-28T23:24:25.000Z</updated>
+        <summary type="html"><![CDATA[このブログでは、顧客がPCI PINセキュリティ、PCI P2PE、PCI DSSの要件や、カートBancaires、フランスの国民カード決済ネットワーク、オーストラリア標準2805(AS2805)など、AWS支払い暗号化によって、オンプレミスHSMの交換方法を学びます。]]></summary>
+        <content type="html"><![CDATA[このブログでは、顧客がPCI PINセキュリティ、PCI P2PE、PCI DSSの要件や、カートBancaires、フランスの国民カード決済ネットワーク、オーストラリア標準2805(AS2805)など、AWS支払い暗号化によって、オンプレミスHSMの交換方法を学びます。]]></content>
+        <author>
+            <name>Amit Khanal</name>
+        </author>
+        <category label="Financial Services"/>
+        <category label="Industries"/>
+        <category label="CloudHSM"/>
+        <category label="payments"/>
+        <published>2026-09-28T23:24:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon EventBridgeでイベント駆動型アプリケーションの構築 | AWS Compute Blog]]></title>
+        <id>https://aws.amazon.com/blogs/compute/building-event-driven-applications-at-scale-with-amazon-eventbridge/</id>
+        <link href="https://aws.amazon.com/blogs/compute/building-event-driven-applications-at-scale-with-amazon-eventbridge/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/09/28/ComputeBlog-2709-featured-image.png" type="image/png"/>
+        <updated>2026-09-28T22:38:57.000Z</updated>
+        <summary type="html"><![CDATA[Amazon EventBridgeはカスタムイベントバスを再起動し、プラットフォームチームはアプリケーションチームが自分のアカウントから公開および購読しながら、組織全体で1つの管理されたバスを共有することができます。 保持方法、注文方法、オープンフォーマット、変換方法、および直接ターゲット配信方法を参照してください。]]></summary>
+        <content type="html"><![CDATA[Amazon EventBridgeはカスタムイベントバスを再起動し、プラットフォームチームはアプリケーションチームが自分のアカウントから公開および購読しながら、組織全体で1つの管理されたバスを共有することができます。 保持方法、注文方法、オープンフォーマット、変換方法、および直接ターゲット配信方法を参照してください。]]></content>
+        <author>
+            <name>Nahid Karimaghalou</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon EventBridge"/>
+        <category label="Announcements"/>
+        <published>2026-09-28T22:38:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[拡張可能なネットワーク帯域幅でランバダ機能のレイテンシを改善 | AWS Compute Blog]]></title>
+        <id>https://aws.amazon.com/blogs/compute/improving-lambda-function-latency-with-scalable-network-bandwidth/</id>
+        <link href="https://aws.amazon.com/blogs/compute/improving-lambda-function-latency-with-scalable-network-bandwidth/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2026/09/18/ComputeBlog-2609-featured-image.png" type="image/png"/>
+        <updated>2026-09-28T21:17:09.000Z</updated>
+        <summary type="html"><![CDATA[AWS Lambda は、VPC 以外のメモリの 2,048 MB 以上の機能に対してスケーラブルなネットワーク帯域幅をサポートしています。 625 Mbps から最大 3,000 Mbps までのスループットスケールを 10,240 MB で維持し、実行時間を削減し、レイテンシーに敏感なデータ処理のワークロードのための呼び出しあたりのコスト。]]></summary>
+        <content type="html"><![CDATA[AWS Lambda は、VPC 以外のメモリの 2,048 MB 以上の機能に対してスケーラブルなネットワーク帯域幅をサポートしています。 625 Mbps から最大 3,000 Mbps までのスループットスケールを 10,240 MB で維持し、実行時間を削減し、レイテンシーに敏感なデータ処理のワークロードのための呼び出しあたりのコスト。]]></content>
+        <author>
+            <name>Rahul Shandilya</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="AWS Lambda"/>
+        <category label="Intermediate (200)"/>
+        <published>2026-09-28T21:17:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SMTを削減して下さい 人工知能による欠陥:AWS上での極性検証の自動化 | AWS for Industries]]></title>
+        <id>https://aws.amazon.com/blogs/industries/reduce-smt-defects-with-agentic-ai-automating-polarity-validation-on-aws/</id>
+        <link href="https://aws.amazon.com/blogs/industries/reduce-smt-defects-with-agentic-ai-automating-polarity-validation-on-aws/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/28/Screenshot-2026-09-28-152714-1260x628.png" type="image/png"/>
+        <updated>2026-09-28T20:03:43.000Z</updated>
+        <summary type="html"><![CDATA[表面の台紙の技術(SMT)の極性プログラミングはテープ巻き枠か皿からのクリップおよび場所機械に、プリント基板アセンブリ(PCBA)の正しいオリエンテーションを維持するのを助けるように設計されている極性に敏感な部品供給する方法を定義します。 それを右手にし、ボードはきれいに動く。 180°、下流システム(Automated Optical Inspection(AOI)、X線、In-Circuit ]]></summary>
+        <content type="html"><![CDATA[表面の台紙の技術(SMT)の極性プログラミングはテープ巻き枠か皿からのクリップおよび場所機械に、プリント基板アセンブリ(PCBA)の正しいオリエンテーションを維持するのを助けるように設計されている極性に敏感な部品供給する方法を定義します。 それを右手にし、ボードはきれいに動く。 180°、下流システム(Automated Optical Inspection(AOI)、X線、In-Circuit [...]で誤った取得]]></content>
+        <author>
+            <name>Malini Sethi</name>
+        </author>
+        <category label="*Post Types"/>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Amazon Textract"/>
+        <category label="Best Practices"/>
+        <category label="Manufacturing"/>
+        <published>2026-09-28T20:03:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[伝統を超えて 市場価格 トラッキング:SAP 顧客向けの人工知能ソリューション | AWS for SAP]]></title>
+        <id>https://aws.amazon.com/blogs/awsforsap/beyond-traditional-market-price-tracking-a-generative-ai-solution-for-sap-customers/</id>
+        <link href="https://aws.amazon.com/blogs/awsforsap/beyond-traditional-market-price-tracking-a-generative-ai-solution-for-sap-customers/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png" type="image/png"/>
+        <updated>2026-09-28T20:03:36.000Z</updated>
+        <summary type="html"><![CDATA[小売企業は、今日のダイナミックマーケットプレイスで利益率を保護しながら、競争力のある価格を維持するために、完成品の表面実装圧力を管理する。 従来の価格監視アプローチは、ベンダーとデジタルプラットフォーム間で利用可能な価格データの階層のボリュームを渡る一貫した製品識別方法に対処するときに不足しています。 複数のチャネルのニーズを介して完成品を販売小売企業 [...]]]></summary>
+        <content type="html"><![CDATA[小売企業は、今日のダイナミックマーケットプレイスで利益率を保護しながら、競争力のある価格を維持するために、完成品の表面実装圧力を管理する。 従来の価格監視アプローチは、ベンダーとデジタルプラットフォーム間で利用可能な価格データの階層のボリュームを渡る一貫した製品識別方法に対処するときに不足しています。 複数のチャネルのニーズを介して完成品を販売小売企業 [...]]]></content>
+        <author>
+            <name>Shirli Cohen</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Amazon Bedrock Agents"/>
+        <category label="Amazon Machine Learning"/>
+        <category label="SAP on AWS"/>
+        <category label="Strands Agents"/>
+        <category label="Uncategorized"/>
+        <published>2026-09-28T20:03:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS DevOpsエージェントによるプロパティファインダー自動インシデント管理の手順 | AWS DevOps &amp; Developer Productivity Blog]]></title>
+        <id>https://aws.amazon.com/blogs/devops/how-property-finder-automated-incident-management-with-aws-devops-agent/</id>
+        <link href="https://aws.amazon.com/blogs/devops/how-property-finder-automated-incident-management-with-aws-devops-agent/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2026/09/21/DEVOPS-24969-featured-image.png" type="image/png"/>
+        <updated>2026-09-28T19:03:40.000Z</updated>
+        <summary type="html"><![CDATA[プロパティファインダーはAWS DevOps Agentでエンドツーエンドの自律インシデント管理を構築しました。 警報から根本原因分析、Jiraの切符、オンコールページ、自動回復プルリクエストまで、14分で完了し、検出だけで2〜3日間。]]></summary>
+        <content type="html"><![CDATA[プロパティファインダーはAWS DevOps Agentでエンドツーエンドの自律インシデント管理を構築しました。 警報から根本原因分析、Jiraの切符、オンコールページ、自動回復プルリクエストまで、14分で完了し、検出だけで2〜3日間。]]></content>
+        <author>
+            <name>Nada Tlohi</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Customer Solutions"/>
+        <category label="DevOps"/>
+        <published>2026-09-28T19:03:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MySQLエンジンのアップグレード後のクエリプランの回帰の解決 | AWS Database Blog]]></title>
+        <id>https://aws.amazon.com/blogs/database/resolving-query-plan-regressions-after-a-mysql-engine-upgrade/</id>
+        <link href="https://aws.amazon.com/blogs/database/resolving-query-plan-regressions-after-a-mysql-engine-upgrade/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2026/09/25/DBBLOG-5729-featured-image.png" type="image/png"/>
+        <updated>2026-09-28T17:22:48.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Aurora MySQL または Amazon RDS でメジャーバージョンまたはマイナーバージョンのアップグレード後、オプティマイザのコストモデル、デフォルト、および実行戦略が変更されるため、いくつかのクエリが再実行されます。 この投稿は、各回回帰を追跡し、その背後にある特定のバージョンの変更を追跡し、正しい修正を適用する診断ワークフローを歩きます。]]></summary>
+        <content type="html"><![CDATA[Amazon Aurora MySQL または Amazon RDS でメジャーバージョンまたはマイナーバージョンのアップグレード後、オプティマイザのコストモデル、デフォルト、および実行戦略が変更されるため、いくつかのクエリが再実行されます。 この投稿は、各回回帰を追跡し、その背後にある特定のバージョンの変更を追跡し、正しい修正を適用する診断ワークフローを歩きます。]]></content>
+        <author>
+            <name>CHANDANA DA</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Aurora"/>
+        <category label="Best Practices"/>
+        <category label="MySQL compatible"/>
+        <category label="RDS for MySQL"/>
+        <published>2026-09-28T17:22:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS のヨーロッパの Sovereign の雲: 独立した操作を実証して下さい | AWS Security Blog]]></title>
+        <id>https://aws.amazon.com/blogs/security/aws-european-sovereign-cloud-demonstrating-an-independent-operation/</id>
+        <link href="https://aws.amazon.com/blogs/security/aws-european-sovereign-cloud-demonstrating-an-independent-operation/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2026/09/25/EU-flag-1260x630.jpg" type="image/jpg"/>
+        <updated>2026-09-28T17:05:12.000Z</updated>
+        <summary type="html"><![CDATA[2026年10月24日(土)は、欧州連合(EU)の外部のインフラに依存することなく、AWS European Sovereign Cloudが動作できると実証する運動を行います。 AWS Europe Sovereign Cloud は、AWS Global Network のバックボーンに接続せずに稼働します。 バックボーンはプライベートネットワークです[...]]]></summary>
+        <content type="html"><![CDATA[2026年10月24日(土)は、欧州連合(EU)の外部のインフラに依存することなく、AWS European Sovereign Cloudが動作できると実証する運動を行います。 AWS Europe Sovereign Cloud は、AWS Global Network のバックボーンに接続せずに稼働します。 バックボーンはプライベートネットワークです[...]]]></content>
+        <author>
+            <name>Stéphane Israël</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="Europe"/>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Security Blog"/>
+        <published>2026-09-28T17:05:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWSと量子ノイズの結合:ワシントン・キャップストーン・プロジェクト大学 | AWS Quantum Technologies Blog]]></title>
+        <id>https://aws.amazon.com/blogs/quantum-computing/combating-quantum-noise-with-aws-university-of-washington-capstone-project/</id>
+        <link href="https://aws.amazon.com/blogs/quantum-computing/combating-quantum-noise-with-aws-university-of-washington-capstone-project/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/5a5b0f9b7d3f8fc84c3cef8fd8efaaa6c70d75ab/2026/09/17/QuantumBlogThumbnail-1120x630.jpg" type="image/jpg"/>
+        <updated>2026-09-28T16:30:53.000Z</updated>
+        <summary type="html"><![CDATA[Quantumコンピュータは、古典的なマシンの到達範囲を超えて問題を解決することを約束します, しかし、彼らは、頑固な議論を共有: ノイズ. 量子ビット(ビット)は環境に絶妙に敏感で、ゲートは不完全で、測定はバイアスを導入し、これらのエラーは回路が成長するにつれて蓄積します。 騒音を戦うための学習は、中央科学とエンジニアリングの課題の1つです[...]]]></summary>
+        <content type="html"><![CDATA[Quantumコンピュータは、古典的なマシンの到達範囲を超えて問題を解決することを約束します, しかし、彼らは、頑固な議論を共有: ノイズ. 量子ビット(ビット)は環境に絶妙に敏感で、ゲートは不完全で、測定はバイアスを導入し、これらのエラーは回路が成長するにつれて蓄積します。 騒音を戦うための学習は、中央科学とエンジニアリングの課題の1つです[...]]]></content>
+        <author>
+            <name>James Whitfield</name>
+        </author>
+        <category label="Amazon Braket"/>
+        <category label="Customer Solutions"/>
+        <category label="Partner solutions"/>
+        <category label="Quantum Technologies"/>
+        <category label="Technical How-to"/>
+        <category label="quantum computing"/>
+        <category label="research"/>
+        <published>2026-09-28T16:30:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Weekly Roundup: GPT-6 ソルとルナ、AmazonのBedrock、StandsハーネスのClaude Opus 5.5など(9月 28, 2026) | AWS News Blog]]></title>
+        <id>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-sol-and-luna-claude-opus-5-5-on-amazon-bedrock-strands-harness-and-more-september-28-2026/</id>
+        <link href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-sol-and-luna-claude-opus-5-5-on-amazon-bedrock-strands-harness-and-more-september-28-2026/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/09/28/2025-deepseek-r1-on-aws-1-andy-keynote.jpg" type="image/jpg"/>
+        <updated>2026-09-28T16:14:54.000Z</updated>
+        <summary type="html"><![CDATA[先週定義したテーマが1つある場合、それは選択です。 フロンティアモデルは到着し続け、興味深い質問はもはや「どのようにスマートなのか」ではなく、「このレイテンシーでこのステップにモデルが合っているのか」ではありません。 これは、過去数日間にアマゾンの岩盤に上陸したものです: GPT-6 SOL と GPT-6 [...]]]></summary>
+        <content type="html"><![CDATA[先週定義したテーマが1つある場合、それは選択です。 フロンティアモデルは到着し続け、興味深い質問はもはや「どのようにスマートなのか」ではなく、「このレイテンシーでこのステップにモデルが合っているのか」ではありません。 これは、過去数日間にアマゾンの岩盤に上陸したものです: GPT-6 SOL と GPT-6 [...]]]></content>
+        <author>
+            <name>Daniel Abib</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon CloudWatch"/>
+        <category label="Amazon EventBridge"/>
+        <category label="Amazon SageMaker AI"/>
+        <category label="Amazon Simple Email Service (SES)"/>
+        <category label="Announcements"/>
+        <category label="Artificial Intelligence"/>
+        <category label="AWS Lambda"/>
+        <category label="News"/>
+        <category label="Week in Review"/>
+        <published>2026-09-28T16:14:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[UDPをオンプレミスにルーティングする ネットワークロードバランサーターゲット | Networking &amp; Content Delivery]]></title>
+        <id>https://aws.amazon.com/blogs/networking-and-content-delivery/routing-udp-to-on-premises-network-load-balancer-targets/</id>
+        <link href="https://aws.amazon.com/blogs/networking-and-content-delivery/routing-udp-to-on-premises-network-load-balancer-targets/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2026/09/28/Routing-UDP-to-on-premises-Network-Load-Balancer-targets.png" type="image/png"/>
+        <updated>2026-09-28T16:14:43.000Z</updated>
+        <summary type="html"><![CDATA[AWSへの移行を1つの波ではほとんど完了しません。 依存関係と競合する優先順位は、仮想デスクトップゲートウェイ、IPsec VPN ヘッドエンド、アプリケーションが近代化を待っています。 これらのワークロードはAWSのグローバルネットワークを利用することができます。 ユーザーがインドにいると仮定し、その仮想デスクトップは北アメリカに住んでいる。 です。 [...]]]></summary>
+        <content type="html"><![CDATA[AWSへの移行を1つの波ではほとんど完了しません。 依存関係と競合する優先順位は、仮想デスクトップゲートウェイ、IPsec VPN ヘッドエンド、アプリケーションが近代化を待っています。 これらのワークロードはAWSのグローバルネットワークを利用することができます。 ユーザーがインドにいると仮定し、その仮想デスクトップは北アメリカに住んでいる。 です。 [...]]]></content>
+        <author>
+            <name>Tracy Honeycutt</name>
+        </author>
+        <category label="AWS Global Accelerator"/>
+        <category label="Elastic Load Balancing"/>
+        <category label="Networking &amp; Content Delivery"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-28T16:14:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS DevOpsエージェントによる自動エージェントの監査証 | AWS DevOps &amp; Developer Productivity Blog]]></title>
+        <id>https://aws.amazon.com/blogs/devops/audit-trails-for-autonomous-agents-with-aws-devops-agent/</id>
+        <link href="https://aws.amazon.com/blogs/devops/audit-trails-for-autonomous-agents-with-aws-devops-agent/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2026/09/24/DEVOPS-24429-featured-image.png" type="image/png"/>
+        <updated>2026-09-28T16:07:26.000Z</updated>
+        <summary type="html"><![CDATA[AWS DevOps Agent は、生産のインシデントを調査し、お客様の代理で修正を提案または適用します。すべての操作とセキュリティレビューのための 2 つの質問を上げます。エージェントが何をしたか、その影響をどのように理解しますか? エージェントジャーナル、Amazon EventBridge のライフサイクルイベント、AWS CloudTrail を使用して、耐久性、低メンテナンスの監査コー]]></summary>
+        <content type="html"><![CDATA[AWS DevOps Agent は、生産のインシデントを調査し、お客様の代理で修正を提案または適用します。すべての操作とセキュリティレビューのための 2 つの質問を上げます。エージェントが何をしたか、その影響をどのように理解しますか? エージェントジャーナル、Amazon EventBridge のライフサイクルイベント、AWS CloudTrail を使用して、耐久性、低メンテナンスの監査コースを作成する方法を学びます。]]></content>
+        <author>
+            <name>Ben Peterson</name>
+        </author>
+        <category label="Artificial Intelligence"/>
+        <category label="Configuration, compliance, and auditing"/>
+        <category label="Developer Tools"/>
+        <category label="DevOps"/>
+        <category label="Expert (400)"/>
+        <category label="Security &amp; Governance"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-28T16:07:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fix Podディストリビューションは、KubernetesデケジューラーでAmazon EKSで漂流 | Containers]]></title>
+        <id>https://aws.amazon.com/blogs/containers/fix-pod-distribution-drift-in-amazon-eks-with-the-kubernetes-descheduler/</id>
+        <link href="https://aws.amazon.com/blogs/containers/fix-pod-distribution-drift-in-amazon-eks-with-the-kubernetes-descheduler/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2026/09/22/CONTAINERS-238-featured-image.png" type="image/png"/>
+        <updated>2026-09-28T16:01:43.000Z</updated>
+        <summary type="html"><![CDATA[3つの空室ゾーンに広がるワークロードは、必ずしもスプレッドを維持しません。 この投稿では、ソフトトポロジーがノードアベイラビリティギャップの後にドリフトをスプレッドし、コストを対策し、KubernetesデケジューラがダウンタイムなしでAmazon EKSのポッドディストリビューションを復元し、ハード制約を強制することなく表示する方法について説明します。]]></summary>
+        <content type="html"><![CDATA[3つの空室ゾーンに広がるワークロードは、必ずしもスプレッドを維持しません。 この投稿では、ソフトトポロジーがノードアベイラビリティギャップの後にドリフトをスプレッドし、コストを対策し、KubernetesデケジューラがダウンタイムなしでAmazon EKSのポッドディストリビューションを復元し、ハード制約を強制することなく表示する方法について説明します。]]></content>
+        <author>
+            <name>Ramya D</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Elastic Kubernetes Service"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-28T16:01:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon SES Mail Manager の電子メールの評判をテナント管理で分離 | AWS Messaging Blog]]></title>
+        <id>https://aws.amazon.com/blogs/messaging-and-targeting/isolate-email-reputation-in-amazon-ses-mail-manager-with-tenant-management/</id>
+        <link href="https://aws.amazon.com/blogs/messaging-and-targeting/isolate-email-reputation-in-amazon-ses-mail-manager-with-tenant-management/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/632667547e7cd3e0466547863e1207a8c0c0c549/2026/09/22/MESSAGING-1422-featured-image-2.png" type="image/png"/>
+        <updated>2026-09-28T15:52:27.000Z</updated>
+        <summary type="html"><![CDATA[Amazon SESアカウント全体の評判を損なうミスコンファリング送信機は、バウンスをスパイクできます。 Amazon SESテナント管理とメールマネージャーでは、テナント当たりの評判を分離できます。 静的エンドポイントからAWS Lambda-driven のランタイム解像度まで、X-SES-TENANT ヘッダーを適用するための5つのアーキテクチャパターンを比較します。]]></summary>
+        <content type="html"><![CDATA[Amazon SESアカウント全体の評判を損なうミスコンファリング送信機は、バウンスをスパイクできます。 Amazon SESテナント管理とメールマネージャーでは、テナント当たりの評判を分離できます。 静的エンドポイントからAWS Lambda-driven のランタイム解像度まで、X-SES-TENANT ヘッダーを適用するための5つのアーキテクチャパターンを比較します。]]></content>
+        <author>
+            <name>Abilashkumar P C</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Simple Email Service (SES)"/>
+        <category label="Best Practices"/>
+        <published>2026-09-28T15:52:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon RedshiftでApache Icebergの書き込みサポートを開始 - Part 3 | AWS Big Data Blog]]></title>
+        <id>https://aws.amazon.com/blogs/big-data/getting-started-with-apache-iceberg-write-support-in-amazon-redshift-part-3/</id>
+        <link href="https://aws.amazon.com/blogs/big-data/getting-started-with-apache-iceberg-write-support-in-amazon-redshift-part-3/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/24/BDB-5994-featured-image.png" type="image/png"/>
+        <updated>2026-09-28T15:48:35.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Redshiftは、Apache IcebergテーブルのスキーマとパーティションのレイアウトをALTERステートメントで進化させ、データリライトやパイプラインリビルドなしでサポートします。 このシリーズの最終投稿では、名前を変更、追加、ドロップ、および広範囲の列、パーティションを進化させ、AWSレイクフォーメーションリソースリンクを作成して、Amazon S3テーブルへのクロスエン]]></summary>
+        <content type="html"><![CDATA[Amazon Redshiftは、Apache IcebergテーブルのスキーマとパーティションのレイアウトをALTERステートメントで進化させ、データリライトやパイプラインリビルドなしでサポートします。 このシリーズの最終投稿では、名前を変更、追加、ドロップ、および広範囲の列、パーティションを進化させ、AWSレイクフォーメーションリソースリンクを作成して、Amazon S3テーブルへのクロスエンジンアクセスを管理します。]]></content>
+        <author>
+            <name>Raghu Kuppala</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon Redshift"/>
+        <category label="Technical How-to"/>
+        <published>2026-09-28T15:48:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon SageMaker Unified Studio Tooling blueprint の IAM 許可境界を強化 | AWS Big Data Blog]]></title>
+        <id>https://aws.amazon.com/blogs/big-data/enforce-iam-permissions-boundaries-for-amazon-sagemaker-unified-studio-tooling-blueprints/</id>
+        <link href="https://aws.amazon.com/blogs/big-data/enforce-iam-permissions-boundaries-for-amazon-sagemaker-unified-studio-tooling-blueprints/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/08/25/BDB-6010-featured-image.png" type="image/png"/>
+        <updated>2026-09-28T15:45:42.000Z</updated>
+        <summary type="html"><![CDATA[Amazon SageMaker Unified Studio では、IAM の役割のカスタムパーミッションの境界線をサポートしました。 AIエージェントの能力を制限する権限境界を作成する方法を学び、AWS CLIでツールブループリントで設定し、すべての暫定されたロールが境界線を運ぶことを検証します。]]></summary>
+        <content type="html"><![CDATA[Amazon SageMaker Unified Studio では、IAM の役割のカスタムパーミッションの境界線をサポートしました。 AIエージェントの能力を制限する権限境界を作成する方法を学び、AWS CLIでツールブループリントで設定し、すべての暫定されたロールが境界線を運ぶことを検証します。]]></content>
+        <author>
+            <name>Sanjana Sekar</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Amazon SageMaker Unified Studio"/>
+        <category label="AWS Identity and Access Management (IAM)"/>
+        <published>2026-09-28T15:45:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[モーニングスターがAmazonのBedrock AgentCoreを搭載したファイナンシャルアドバイザーAIアシスタントを建設する方法 | AWS for Industries]]></title>
+        <id>https://aws.amazon.com/blogs/industries/how-morningstar-built-a-financial-advisor-ai-assistant-powered-by-amazon-bedrock-agentcore/</id>
+        <link href="https://aws.amazon.com/blogs/industries/how-morningstar-built-a-financial-advisor-ai-assistant-powered-by-amazon-bedrock-agentcore/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/12/How-Morningstar-built-a-financial-advisor-AI-assistant-powered-by-Amazon-Bedrock-AgentCore.png" type="image/png"/>
+        <updated>2026-09-28T13:33:51.000Z</updated>
+        <summary type="html"><![CDATA[このブログでは、モーニングスターがエージェントのオーケストレーション、強化されたガードレールを設計し、規制された環境のための包括的な監査証跡を有効にし、研究対行動ワークフローを自動化しながら、アドバイザーを制御に保つ生産システムを導入しました。]]></summary>
+        <content type="html"><![CDATA[このブログでは、モーニングスターがエージェントのオーケストレーション、強化されたガードレールを設計し、規制された環境のための包括的な監査証跡を有効にし、研究対行動ワークフローを自動化しながら、アドバイザーを制御に保つ生産システムを導入しました。]]></content>
+        <author>
+            <name>Kishore Nair</name>
+        </author>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Amazon Bedrock Guardrails"/>
+        <category label="Amazon Quick Sight"/>
+        <category label="Financial Services"/>
+        <category label="Industries"/>
+        <published>2026-09-28T13:33:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ガバナンスのAWSファウンデーションを日々立ち上がり、四半期ではなく、金融サービスのポスト・マーガ統合パターン | AWS for Industries]]></title>
+        <id>https://aws.amazon.com/blogs/industries/standing-up-a-governed-aws-foundation-in-days-not-quarters-a-post-merger-integration-pattern-for-financial-services/</id>
+        <link href="https://aws.amazon.com/blogs/industries/standing-up-a-governed-aws-foundation-in-days-not-quarters-a-post-merger-integration-pattern-for-financial-services/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/21/Standing-Up-a-Governed-AWS-Foundation-in-Days-Not-Quarters-A-Post-Merger-Integration-Pattern-for-Financial-Services.png" type="image/png"/>
+        <updated>2026-09-27T17:51:04.000Z</updated>
+        <summary type="html"><![CDATA[この記事では、作業負荷の土地の前にガバナンスが確立されるように、ポストマージクラウド基盤をシーケンスする方法を学びます。そして、設計をプレクローズする方法は、四半期から日付までの統合タイムラインを圧縮します。]]></summary>
+        <content type="html"><![CDATA[この記事では、作業負荷の土地の前にガバナンスが確立されるように、ポストマージクラウド基盤をシーケンスする方法を学びます。そして、設計をプレクローズする方法は、四半期から日付までの統合タイムラインを圧縮します。]]></content>
+        <author>
+            <name>Abiola Olanrewaju</name>
+        </author>
+        <category label="Amazon Detective"/>
+        <category label="Amazon GuardDuty"/>
+        <category label="Amazon Macie"/>
+        <category label="AWS CloudTrail"/>
+        <category label="AWS Security Hub"/>
+        <category label="Financial Services"/>
+        <category label="Industries"/>
+        <published>2026-09-27T17:51:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS上でAI-augmented B-pillar DFMEAの構築:マルチエージェントのオーケストレーションと実装 | AWS for Industries]]></title>
+        <id>https://aws.amazon.com/blogs/industries/building-ai-augmented-b-pillar-dfmea-on-aws-architecture-multi-agent-orchestration-and-implementation/</id>
+        <link href="https://aws.amazon.com/blogs/industries/building-ai-augmented-b-pillar-dfmea-on-aws-architecture-multi-agent-orchestration-and-implementation/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/15/Building-AI-augmented-B-pillar-DFMEA-on-AWS.png" type="image/png"/>
+        <updated>2026-09-27T17:47:05.000Z</updated>
+        <summary type="html"><![CDATA[この投稿では、実装ブループリントを配信します。 Amazon Web Services(AWS)で構築された完全なリファレンスアーキテクチャを歩き、レイヤーサービストポロジーを分解し、Amazon Bedrock AgentCoreとStands Agents SDKを使用してマルチエージェントのオーケストレーションパターンを詳細に説明します。]]></summary>
+        <content type="html"><![CDATA[この投稿では、実装ブループリントを配信します。 Amazon Web Services(AWS)で構築された完全なリファレンスアーキテクチャを歩き、レイヤーサービストポロジーを分解し、Amazon Bedrock AgentCoreとStands Agents SDKを使用してマルチエージェントのオーケストレーションパターンを詳細に説明します。]]></content>
+        <author>
+            <name>Malini Sethi</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Amazon Neptune"/>
+        <category label="Amazon SageMaker"/>
+        <category label="Amazon Simple Notification Service (SNS)"/>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Automotive"/>
+        <category label="AWS Identity and Access Management (IAM)"/>
+        <category label="AWS Lambda"/>
+        <category label="Industries"/>
+        <published>2026-09-27T17:47:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS上でのAgentic Shopping Assistantの7つの新機能をご紹介 | AWS for Industries]]></title>
+        <id>https://aws.amazon.com/blogs/industries/introducing-seven-new-features-of-the-agentic-shopping-assistant-on-aws/</id>
+        <link href="https://aws.amazon.com/blogs/industries/introducing-seven-new-features-of-the-agentic-shopping-assistant-on-aws/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2026/09/09/Introducing-seven-new-features-of-the-Agentic-Shopping-Assistant-on-AWS.png" type="image/png"/>
+        <updated>2026-09-26T22:35:43.000Z</updated>
+        <summary type="html"><![CDATA[今年は、小売店がオンライン買い物客に知識豊富な店内の仲間から得られる専門家の指導の種類を与えるのに役立つ、ジェネラルAIを搭載したソリューションであるAWSのAgentic Shopping Assistantを発表しました。 AWSのAgentic Shopping Assistantは、Amazonの成功したAlexa for Shopping AIアシスタントの背後にある専門知識とインサイト]]></summary>
+        <content type="html"><![CDATA[今年は、小売店がオンライン買い物客に知識豊富な店内の仲間から得られる専門家の指導の種類を与えるのに役立つ、ジェネラルAIを搭載したソリューションであるAWSのAgentic Shopping Assistantを発表しました。 AWSのAgentic Shopping Assistantは、Amazonの成功したAlexa for Shopping AIアシスタントの背後にある専門知識とインサイトを小売顧客に提供しています。]]></content>
+        <author>
+            <name>Vince Koh</name>
+        </author>
+        <category label="Amazon Bedrock AgentCore"/>
+        <category label="Industries"/>
+        <category label="Retail"/>
+        <published>2026-09-26T22:35:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[コンテンツのコンプライアンスの合理化: AWS Bedrockによるメディア分析の自動化 – パート2 | AWS for M&amp;E Blog]]></title>
+        <id>https://aws.amazon.com/blogs/media/streamlining-content-compliance-automating-media-analysis-with-aws-bedrock/</id>
+        <link href="https://aws.amazon.com/blogs/media/streamlining-content-compliance-automating-media-analysis-with-aws-bedrock/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fb644351560d8296fe6da332236b1f8d61b2828a/2026/09/15/Streamlining-content-compliance-Automating-media-analysis-with-AWS-Bedrock.png" type="image/png"/>
+        <updated>2026-09-26T21:22:16.000Z</updated>
+        <summary type="html"><![CDATA[この投稿では、GitHub で完全なリファレンス実装を提供し、デプロイメントの手順で、独自のコンテンツでソリューションを実行できるようにすることで、その基盤を拡張します。]]></summary>
+        <content type="html"><![CDATA[この投稿では、GitHub で完全なリファレンス実装を提供し、デプロイメントの手順で、独自のコンテンツでソリューションを実行できるようにすることで、その基盤を拡張します。]]></content>
+        <author>
+            <name>Alen Zograbyan</name>
+        </author>
+        <category label="Amazon Bedrock"/>
+        <category label="Amazon CloudFront"/>
+        <category label="Amazon Nova"/>
+        <category label="Amazon Simple Storage Service (S3)"/>
+        <category label="Amazon Transcribe"/>
+        <category label="AWS CloudTrail"/>
+        <category label="AWS Lambda"/>
+        <category label="AWS Marketplace"/>
+        <category label="Industries"/>
+        <category label="Media &amp; Entertainment"/>
+        <published>2026-09-26T21:22:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon WorkSpaceアプリケーション向けの自動STIGコンプライアンスとSCAPスキャンを実施 | AWS Public Sector Blog]]></title>
+        <id>https://aws.amazon.com/blogs/publicsector/implement-automated-stig-compliance-and-scap-scanning-for-amazon-workspaces-applications/</id>
+        <link href="https://aws.amazon.com/blogs/publicsector/implement-automated-stig-compliance-and-scap-scanning-for-amazon-workspaces-applications/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2026/09/24/Implement-automated-STIG-compliance-and-SCAP-scanning-for-Amazon-WorkSpaces-applications.png" type="image/png"/>
+        <updated>2026-09-26T21:13:42.000Z</updated>
+        <summary type="html"><![CDATA[この投稿では、Active Directory(AD) Group Policy を使用して、Windows 用の STIGs for WorkSpaces アプリケーションイメージを適用するプロセスを示します。 STIGsを適用した後、ポストは、セキュリティコンテンツオートメーションプロトコル(SCAP)コンプライアンスチェッカーを実行して、コンプライアンスの検証と文書の遵守方法を実証します。]]></summary>
+        <content type="html"><![CDATA[この投稿では、Active Directory(AD) Group Policy を使用して、Windows 用の STIGs for WorkSpaces アプリケーションイメージを適用するプロセスを示します。 STIGsを適用した後、ポストは、セキュリティコンテンツオートメーションプロトコル(SCAP)コンプライアンスチェッカーを実行して、コンプライアンスの検証と文書の遵守方法を実証します。]]></content>
+        <author>
+            <name>Angel Chaudhary</name>
+        </author>
+        <category label="Public Sector"/>
+        <published>2026-09-26T21:13:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWSは、2026 Gartner Magic Quadrant for Container Managementのリーダーに選ばれました。 | Containers]]></title>
+        <id>https://aws.amazon.com/blogs/containers/aws-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/</id>
+        <link href="https://aws.amazon.com/blogs/containers/aws-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2026/09/24/containers-348-featured-image.png" type="image/png"/>
+        <updated>2026-09-25T21:18:33.000Z</updated>
+        <summary type="html"><![CDATA[Gartner は、コンテナ管理部門の 2026 Gartner Magic Quadrant のリーダーとして AWS を 4 年連続で認定しました。 Amazon ECS と Amazon EKS で最新のコンテナのイノベーションが、AWS 上に構築・スケーリングすることを意味します。]]></summary>
+        <content type="html"><![CDATA[Gartner は、コンテナ管理部門の 2026 Gartner Magic Quadrant のリーダーとして AWS を 4 年連続で認定しました。 Amazon ECS と Amazon EKS で最新のコンテナのイノベーションが、AWS 上に構築・スケーリングすることを意味します。]]></content>
+        <author>
+            <name>Aarti Patil</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="Intermediate (200)"/>
+        <published>2026-09-25T21:18:33.000Z</published>
+    </entry>
+</feed>

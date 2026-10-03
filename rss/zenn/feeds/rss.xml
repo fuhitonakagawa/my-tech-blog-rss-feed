@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Zenn トレンド｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn/</link>
+        <description>初回掲載順の通知用RSS。元記事の公開日時は本文に記載します。</description>
+        <lastBuildDate>Sat, 03 Oct 2026 10:21:45 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>ja</language>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[UnityでなぜC# 10以降を使うライブラリが動くのか | Zennのトレンド]]></title>
+            <link>https://zenn.dev/s4k1/articles/ba87c0ff3c1d47</link>
+            <guid isPermaLink="false">https://zenn.dev/s4k1/articles/ba87c0ff3c1d47</guid>
+            <pubDate>Sat, 03 Oct 2026 10:21:45 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/3 15:05:15（日本時間）
+
+1. Unity対応ライブラリと「C# 9対応」の食い違いUnityでZLogger、R3、MemoryPackなどのライブラリを使っていると、Unity向けのパッケージと.NET向けの実装が同じリポジトリに並んでいるのを見かけます。そのコードには、C# 10以降で追加された機能も使われています。わかりやすい例がZLoggerです。ログを書き込む次のAPIは、C# 10のカスタム文字列補間ハンドラ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/3 15:05:15（日本時間）<br><br>1. Unity対応ライブラリと「C# 9対応」の食い違いUnityでZLogger、R3、MemoryPackなどのライブラリを使っていると、Unity向けのパッケージと.NET向けの実装が同じリポジトリに並んでいるのを見かけます。そのコードには、C# 10以降で追加された機能も使われています。わかりやすい例がZLoggerです。ログを書き込む次のAPIは、C# 10のカスタム文字列補間ハンドラ</p>]]></content:encoded>
+            <author>0y0</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--Gk1Kuanq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Unity%25E3%2581%25A7%25E3%2581%25AA%25E3%2581%259CC%2523%252010%25E4%25BB%25A5%25E9%2599%258D%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%258C%25E5%258B%2595%25E3%2581%258F%25E3%2581%25AE%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:0y0%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2ExMjc3ZjJkODUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Windowsで再生中の音声をWhisperで文字起こしする：Meetilyの仕組みを100行未満のRustで再現する | Zennのトレンド]]></title>
+            <link>https://zenn.dev/tmtk/articles/edc992e6a24b65</link>
+            <guid isPermaLink="false">https://zenn.dev/tmtk/articles/edc992e6a24b65</guid>
+            <pubDate>Sat, 03 Oct 2026 10:21:45 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/3 17:03:54（日本時間）
+
+はじめにMeetily（会議の録音、文字起こし、要約をすべてPCの中で行うオープンソースの会議アシスタント）のコードを読みました。Windows版のMeetilyは、会議アプリやブラウザが再生している音を「WASAPIのループバック」（PCが再生している音を、そのまま録音するWindowsの仕組み）で取り込み、Whisper（OpenAIが公開している音声認識モデル）などで文字にしています。ただ、]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/3 17:03:54（日本時間）<br><br>はじめにMeetily（会議の録音、文字起こし、要約をすべてPCの中で行うオープンソースの会議アシスタント）のコードを読みました。Windows版のMeetilyは、会議アプリやブラウザが再生している音を「WASAPIのループバック」（PCが再生している音を、そのまま録音するWindowsの仕組み）で取り込み、Whisper（OpenAIが公開している音声認識モデル）などで文字にしています。ただ、</p>]]></content:encoded>
+            <author>tmtk</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--gPrXleoS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%25E3%2581%25A7%25E5%2586%258D%25E7%2594%259F%25E4%25B8%25AD%25E3%2581%25AE%25E9%259F%25B3%25E5%25A3%25B0%25E3%2582%2592Whisper%25E3%2581%25A7%25E6%2596%2587%25E5%25AD%2597%25E8%25B5%25B7%25E3%2581%2593%25E3%2581%2597%25E3%2581%2599%25E3%2582%258B%25EF%25BC%259AMeetily%25E3%2581%25AE%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E3%2582%2592100%25E8%25A1%258C%25E6%259C%25AA%25E6%25BA%2580%25E3%2581%25AERust%25E3%2581%25A7%25E5%2586%258D%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tmtk%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSzVOUXpzaHFiY1h1OTJWT1NoZ2ZKNVc1Tnlsa0pjcEJYcUJXeVB5N3VuQTdzZG5nPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[実務において敵対的レビューはどの程度有効なのか | Zennのトレンド]]></title>
+            <link>https://zenn.dev/edash_tech_blog/articles/4577f7d4780bef</link>
+            <guid isPermaLink="false">https://zenn.dev/edash_tech_blog/articles/4577f7d4780bef</guid>
+            <pubDate>Sat, 03 Oct 2026 04:10:27 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/1 19:48:47（日本時間）
+
+目次背景やったこと検証結果考察付記：レビューと自動修正のループで指摘が収束しない問題感想 1. 背景AI エージェントにコードレビューをさせる手法のひとつとして、敵対的レビューが広まっています。差分を通常どおりレビューして問題を探すだけでなく、「この変更で誤った結果やエラーを起こす入力や状況は何か」を探す役割のエージェントを別に立て、両者の指摘を実コードで確かめてから確定させる方式です。筆者のチー]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/1 19:48:47（日本時間）<br><br>目次背景やったこと検証結果考察付記：レビューと自動修正のループで指摘が収束しない問題感想 1. 背景AI エージェントにコードレビューをさせる手法のひとつとして、敵対的レビューが広まっています。差分を通常どおりレビューして問題を探すだけでなく、「この変更で誤った結果やエラーを起こす入力や状況は何か」を探す役割のエージェントを別に立て、両者の指摘を実コードで確かめてから確定させる方式です。筆者のチー</p>]]></content:encoded>
+            <author>jellyfish1129</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--a5iWXFAC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25AE%259F%25E5%258B%2599%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2584%25E3%2581%25A6%25E6%2595%25B5%25E5%25AF%25BE%25E7%259A%2584%25E3%2583%25AC%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%25AE%25E7%25A8%258B%25E5%25BA%25A6%25E6%259C%2589%25E5%258A%25B9%25E3%2581%25AA%25E3%2581%25AE%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:jellyfish1129%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNkZWM5ZjExNTcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:e-dash%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzVkMTYyYTQ4OTguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[TiDBのIndex Advisorを始めるために知っておきたいこと | Zennのトレンド]]></title>
+            <link>https://zenn.dev/shigeyuki/articles/51b095f4831f00</link>
+            <guid isPermaLink="false">https://zenn.dev/shigeyuki/articles/51b095f4831f00</guid>
+            <pubDate>Sat, 03 Oct 2026 04:10:27 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/2 15:12:27（日本時間）
+
+この記事についてTiDB では v8.5.0 から Index Advisor という機能が利用できるようになりました。この機能を使うことで、対象クエリに対して適切なインデックスを見つけやすくなります。Index Advisor は特定クエリだけでなく、過去一定期間のクエリの実行状況から、実行頻度の高いクエリに対するインデックスを推薦することも可能であるため、日常的なクエリチューニングに利用するこ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/2 15:12:27（日本時間）<br><br>この記事についてTiDB では v8.5.0 から Index Advisor という機能が利用できるようになりました。この機能を使うことで、対象クエリに対して適切なインデックスを見つけやすくなります。Index Advisor は特定クエリだけでなく、過去一定期間のクエリの実行状況から、実行頻度の高いクエリに対するインデックスを推薦することも可能であるため、日常的なクエリチューニングに利用するこ</p>]]></content:encoded>
+            <author>Shigeyuki Fujishima</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--Y8Rzj4U5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:TiDB%25E3%2581%25AEIndex%2520Advisor%25E3%2582%2592%25E5%25A7%258B%25E3%2582%2581%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AB%25E7%259F%25A5%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%258A%25E3%2581%258D%25E3%2581%259F%25E3%2581%2584%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shigeyuki%2520Fujishima%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSk80VlQ1RVNBSGljVW0wN284c1hBVFhGamZFVUtQUURIRTk1S1JBOUplPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Strands Decider 2Bについて理解する | Zennのトレンド]]></title>
+            <link>https://zenn.dev/fusic/articles/db6e62832a4a1f</link>
+            <guid isPermaLink="false">https://zenn.dev/fusic/articles/db6e62832a4a1f</guid>
+            <pubDate>Sat, 03 Oct 2026 00:04:23 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/2 22:37:55（日本時間）
+
+はじめにFusicのレオナです。Strands Agentsは、AWSが開発し、オープンソースとして公開しているAIエージェント開発用SDKです。LLMに与える指示と利用可能なツールを定義することで、状況に応じてツールを選び、その実行結果を踏まえながら処理を進めるエージェントを構築できます。AWS専用のSDKではなく、Amazon Bedrock以外のモデルAPIやローカルモデルにも対応しています]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/2 22:37:55（日本時間）<br><br>はじめにFusicのレオナです。Strands Agentsは、AWSが開発し、オープンソースとして公開しているAIエージェント開発用SDKです。LLMに与える指示と利用可能なツールを定義することで、状況に応じてツールを選び、その実行結果を踏まえながら処理を進めるエージェントを構築できます。AWS専用のSDKではなく、Amazon Bedrock以外のモデルAPIやローカルモデルにも対応しています</p>]]></content:encoded>
+            <author>xthixsl_ml@レオナ</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--tGj_sker--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Strands%2520Decider%25202B%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:xthixsl_ml%2540%25E3%2583%25AC%25E3%2582%25AA%25E3%2583%258A%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNhNDgxMzQ3YjkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Fusic%2520%25E6%258A%2580%25E8%25A1%2593%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzIzOGE3MzVjMDIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[【Cursor pstack】AIエージェントに開発を任せる環境をつくる ―月2,500件のPRを支えた開発基盤とは？ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/sc30gsw/books/080faba713547b</link>
+            <guid isPermaLink="false">https://zenn.dev/sc30gsw/books/080faba713547b</guid>
+            <pubDate>Fri, 02 Oct 2026 16:04:19 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/2 22:19:46（日本時間）
+
+AIエージェントに開発を任せるための環境づくりを、Cursorのpstackから学ぶ実践ガイドです。月2,500件のPRを支えた考え方を手がかりに、成果物を検証する仕組みから、pstackに含まれるPlaybook・Principle・Skillといった全項目を解説。さらに、自分のアプリに検証スキルを作る方法から、調査・設計・計画をエージェントと進める方法まで、全39章で扱います。読み終えたとき、]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/2 22:19:46（日本時間）<br><br>AIエージェントに開発を任せるための環境づくりを、Cursorのpstackから学ぶ実践ガイドです。月2,500件のPRを支えた考え方を手がかりに、成果物を検証する仕組みから、pstackに含まれるPlaybook・Principle・Skillといった全項目を解説。さらに、自分のアプリに検証スキルを作る方法から、調査・設計・計画をエージェントと進める方法まで、全39章で扱います。読み終えたとき、</p>]]></content:encoded>
+            <author>kaito</author>
+            <enclosure length="0" type="image/jpg" url="https://res.cloudinary.com/zenn/image/upload/s--XurFM321--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci8yZTdiNGE2MTg1LmpwZWc=%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[glibc の strlen は文字列範囲外を読むことで高速に計算する | Zennのトレンド]]></title>
+            <link>https://zenn.dev/peloeil/articles/glibc-strlen-2023</link>
+            <guid isPermaLink="false">https://zenn.dev/peloeil/articles/glibc-strlen-2023</guid>
+            <pubDate>Fri, 02 Oct 2026 12:05:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/2 2:56:12（日本時間）
+
+はじめにstrlen は、文字列の先頭から終端文字 &#92;0 の直前までの byte 数を返す関数です。自分で実装するなら、1byte ずつ読んで &#92;0 が見つかるまで数えるのが自然だと思います。glibc では、この探索を高速化するために、複数 byte をまとめて読み、ビット演算を使って終端文字を探しています。その読み込みは、文字列の範囲内に収まるとは限りません。このように複数 byte をまとめ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/2 2:56:12（日本時間）<br><br>はじめにstrlen は、文字列の先頭から終端文字 &#92;0 の直前までの byte 数を返す関数です。自分で実装するなら、1byte ずつ読んで &#92;0 が見つかるまで数えるのが自然だと思います。glibc では、この探索を高速化するために、複数 byte をまとめて読み、ビット演算を使って終端文字を探しています。その読み込みは、文字列の範囲内に収まるとは限りません。このように複数 byte をまとめ</p>]]></content:encoded>
+            <author>ぷる</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--qE46h-Y7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:glibc%2520%25E3%2581%25AE%2520strlen%2520%25E3%2581%25AF%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E7%25AF%2584%25E5%259B%25B2%25E5%25A4%2596%25E3%2582%2592%25E8%25AA%25AD%25E3%2582%2580%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25A7%25E9%25AB%2598%25E9%2580%259F%25E3%2581%25AB%25E8%25A8%2588%25E7%25AE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B7%25E3%2582%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzEyZmIxM2NiZWYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[`use cache: private` のキャッシュはブラウザに残ることもある | Zennのトレンド]]></title>
+            <link>https://zenn.dev/chot/articles/362b7a2420ef1a</link>
+            <guid isPermaLink="false">https://zenn.dev/chot/articles/362b7a2420ef1a</guid>
+            <pubDate>Fri, 02 Oct 2026 12:05:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/2 13:07:01（日本時間）
+
+はじめにNext.js v16 には use cache: private というディレクティブがあり、cookies() などリクエスト固有の値を読んだ関数の結果をキャッシュできます。その結果がサーバーに残らないということはドキュメントに書かれています。In production, matching calls within one request can reuse the same resu]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/2 13:07:01（日本時間）<br><br>はじめにNext.js v16 には use cache: private というディレクティブがあり、cookies() などリクエスト固有の値を読んだ関数の結果をキャッシュできます。その結果がサーバーに残らないということはドキュメントに書かれています。In production, matching calls within one request can reuse the same resu</p>]]></content:encoded>
+            <author>k1350</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--ZtdJTz8M--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%2560use%2520cache%253A%2520private%2560%2520%25E3%2581%25AE%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E3%2581%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25A6%25E3%2582%25B6%25E3%2581%25AB%25E6%25AE%258B%25E3%2582%258B%25E3%2581%2593%25E3%2581%25A8%25E3%2582%2582%25E3%2581%2582%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:k1350%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzAzODVjOWFlYzkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:chot%2520Inc.%2520tech%2520blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2JmYWNlZTQzODQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[microCMS をやめて、Raspberry Pi で Payload CMS を動かす | Zennのトレンド]]></title>
+            <link>https://zenn.dev/85store/articles/574a1a07233283</link>
+            <guid isPermaLink="false">https://zenn.dev/85store/articles/574a1a07233283</guid>
+            <pubDate>Fri, 02 Oct 2026 12:05:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/1 22:59:52（日本時間）
+
+古着屋のサイト（Next.js 16 / Vercel）のブログとバナーを、microCMS から自宅の Raspberry Pi で動かす Payload CMS に移しました。結論から言うと、ポイントは「サイトは Pi を一切読まない」ことです。CMS は公開のたびに中身を JSON にして Cloudflare R2 に書き出し、サイトはその JSON だけを読みます。Pi が止まっても困る]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/1 22:59:52（日本時間）<br><br>古着屋のサイト（Next.js 16 / Vercel）のブログとバナーを、microCMS から自宅の Raspberry Pi で動かす Payload CMS に移しました。結論から言うと、ポイントは「サイトは Pi を一切読まない」ことです。CMS は公開のたびに中身を JSON にして Cloudflare R2 に書き出し、サイトはその JSON だけを読みます。Pi が止まっても困る</p>]]></content:encoded>
+            <author>85-Store Engineer</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--XYsVeRdn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:microCMS%2520%25E3%2582%2592%25E3%2582%2584%25E3%2582%2581%25E3%2581%25A6%25E3%2580%2581Raspberry%2520Pi%2520%25E3%2581%25A7%2520Payload%2520CMS%2520%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:85-Store%2520Engineer%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNmNzI1YjEzZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[学生が無料枠だけでRAGシステムを作った話 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/bigshine/articles/ai-librarian-free-tier</link>
+            <guid isPermaLink="false">https://zenn.dev/bigshine/articles/ai-librarian-free-tier</guid>
+            <pubDate>Thu, 01 Oct 2026 13:08:17 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 22:05:57（日本時間）
+
+概要Azure for Students・Supabase Free・GitHub Actions・Oracle Cloud Always Freeを組み合わせて、RAGシステムを無料で作成1ページのMarkdown化にかかるコストは約$0.006。応答用のモデル仕様を含めても年間$100のAzure for Studentsクレジットで十分運用可能 作ったもの今回作成するのは、RAGシステムと言]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 22:05:57（日本時間）<br><br>概要Azure for Students・Supabase Free・GitHub Actions・Oracle Cloud Always Freeを組み合わせて、RAGシステムを無料で作成1ページのMarkdown化にかかるコストは約$0.006。応答用のモデル仕様を含めても年間$100のAzure for Studentsクレジットで十分運用可能 作ったもの今回作成するのは、RAGシステムと言</p>]]></content:encoded>
+            <author>bigshine</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--MZJU05O7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25AD%25A6%25E7%2594%259F%25E3%2581%258C%25E7%2584%25A1%25E6%2596%2599%25E6%259E%25A0%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25A7RAG%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:bigshine%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSjdGS3JoQTVMUTFuc091c1ZHZUZhcDk5R1hNWXllRG0xM2lHbWZVYU9zYVZCb0FzT249czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[オブザーバビリティのAIエージェントをどう評価するか | Zennのトレンド]]></title>
+            <link>https://zenn.dev/ymotongpoo/articles/20261001-agent-eval-loop</link>
+            <guid isPermaLink="false">https://zenn.dev/ymotongpoo/articles/20261001-agent-eval-loop</guid>
+            <pubDate>Thu, 01 Oct 2026 11:04:34 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/1 9:00:00（日本時間）
+
+はじめにAIエージェントにオブザーバビリティの仕事をさせたとき、その最終応答の品質が上がったのか下がったのかを、どうやって知るのでしょうか。エージェントの最終応答を読んで判断する方法は、早い段階で行き詰まります。正しい応答と、正しく見えるだけの応答が同じ見た目をしているからです。しかも同じ質問に毎回同じ応答が返るわけでもなく、期待する文字列を固定したテストは書けません。この記事では、Grafana]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/1 9:00:00（日本時間）<br><br>はじめにAIエージェントにオブザーバビリティの仕事をさせたとき、その最終応答の品質が上がったのか下がったのかを、どうやって知るのでしょうか。エージェントの最終応答を読んで判断する方法は、早い段階で行き詰まります。正しい応答と、正しく見えるだけの応答が同じ見た目をしているからです。しかも同じ質問に毎回同じ応答が返るわけでもなく、期待する文字列を固定したテストは書けません。この記事では、Grafana</p>]]></content:encoded>
+            <author>Yoshi Yamaguchi</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--s2BPhy_r--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B6%25E3%2583%25BC%25E3%2583%2590%25E3%2583%2593%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E3%2581%25AEAI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E3%2581%25A9%25E3%2581%2586%25E8%25A9%2595%25E4%25BE%25A1%25E3%2581%2599%25E3%2582%258B%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yoshi%2520Yamaguchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dMOUN2MU9tRlBwUUcwY0pWOHZUeW1SZ3ViT3VaWnplQ01HUTJjMHRnPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Claude Code の使用量はどう数えられているのか ── Max 20x で実測した重みは API 料金表と違った | Zennのトレンド]]></title>
+            <link>https://zenn.dev/tksfjt1024/articles/25c0ab111c277c</link>
+            <guid isPermaLink="false">https://zenn.dev/tksfjt1024/articles/25c0ab111c277c</guid>
+            <pubDate>Thu, 01 Oct 2026 11:04:34 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/1 11:34:27（日本時間）
+
+Claude Code を Pro や Max のプランで使うと、使った分だけ「使用量制限」の枠を消費します。この制限には、5 時間ごとにリセットされる「5時間のセッション制限」と、週ごとにリセットされる「週間使用制限」の 2 つがあります[1]。この 5 時間枠と週間枠が何でどれだけ減るのかを、条件を揃えた実験で測り、使用量の計算式を求めました。主な結果は次のとおりです。cache read（キ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/1 11:34:27（日本時間）<br><br>Claude Code を Pro や Max のプランで使うと、使った分だけ「使用量制限」の枠を消費します。この制限には、5 時間ごとにリセットされる「5時間のセッション制限」と、週ごとにリセットされる「週間使用制限」の 2 つがあります[1]。この 5 時間枠と週間枠が何でどれだけ減るのかを、条件を揃えた実験で測り、使用量の計算式を求めました。主な結果は次のとおりです。cache read（キ</p>]]></content:encoded>
+            <author>tksfjt1024</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--LVMwA-dZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%2520Code%2520%25E3%2581%25AE%25E4%25BD%25BF%25E7%2594%25A8%25E9%2587%258F%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%2586%25E6%2595%25B0%25E3%2581%2588%25E3%2582%2589%25E3%2582%258C%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258B%2520%25E2%2594%2580%25E2%2594%2580%2520Max%252020x%2520%25E3%2581%25A7%25E5%25AE%259F%25E6%25B8%25AC%25E3%2581%2597%25E3%2581%259F%25E9%2587%258D%25E3%2581%25BF%25E3%2581%25AF%2520API%2520%25E6%2596%2599%25E9%2587%2591%25E8%25A1%25A8%25E3%2581%25A8%25E9%2581%2595%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tksfjt1024%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzc2YjlhZjVlZTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[HTML-in-Canvas で DOM を画像化し、動画にも書き出す | Zennのトレンド]]></title>
+            <link>https://zenn.dev/chot/articles/html-in-canvas-dom-to-video</link>
+            <guid isPermaLink="false">https://zenn.dev/chot/articles/html-in-canvas-dom-to-video</guid>
+            <pubDate>Thu, 01 Oct 2026 11:04:34 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 20:20:18（日本時間）
+
+はじめにここでは、提案中の API である HTML-in-Canvas で DOM を画像化する方法と、その応用として CSS アニメーションを動画としてエクスポートする方法を紹介します。https://github.com/WICG/html-in-canvas!HTML-in-Canvas は仕様策定中で、API の名前や引数が Chromium のバージョンごとに変わっています。この記事の]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 20:20:18（日本時間）<br><br>はじめにここでは、提案中の API である HTML-in-Canvas で DOM を画像化する方法と、その応用として CSS アニメーションを動画としてエクスポートする方法を紹介します。https://github.com/WICG/html-in-canvas!HTML-in-Canvas は仕様策定中で、API の名前や引数が Chromium のバージョンごとに変わっています。この記事の</p>]]></content:encoded>
+            <author>yu7400ki</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--0F4tOUZ6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:HTML-in-Canvas%2520%25E3%2581%25A7%2520DOM%2520%25E3%2582%2592%25E7%2594%25BB%25E5%2583%258F%25E5%258C%2596%25E3%2581%2597%25E3%2580%2581%25E5%258B%2595%25E7%2594%25BB%25E3%2581%25AB%25E3%2582%2582%25E6%259B%25B8%25E3%2581%258D%25E5%2587%25BA%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:yu7400ki%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzAzODVjOWFlYzkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:chot%2520Inc.%2520tech%2520blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2ZlNWQ5ZmRjNzkuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[AI-Slopな日本語を構造レベルで読みやすくするSkill『yomiyasu（よみやす）』を作りました | Zennのトレンド]]></title>
+            <link>https://zenn.dev/algoartis/articles/0b1c731881b25c</link>
+            <guid isPermaLink="false">https://zenn.dev/algoartis/articles/0b1c731881b25c</guid>
+            <pubDate>Thu, 01 Oct 2026 04:06:30 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/1 3:28:20（日本時間）
+
+TL;DR本日、AI生成された臭くて読みにくい日本語を、自然で読みやすい日本語へ書き直すスキル『yomiyasu（よみやす）』をリリースしました。従来のAI-Slop対策スキルで用いられてきた 「単語を禁止する」手法から改善し、統語構造（=誰が・何を・どうした）の復元と、比喩動詞の具体化に特化していることが特徴です。Claude Code, Codex, Cursorなどの主要なAI Agentで]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/1 3:28:20（日本時間）<br><br>TL;DR本日、AI生成された臭くて読みにくい日本語を、自然で読みやすい日本語へ書き直すスキル『yomiyasu（よみやす）』をリリースしました。従来のAI-Slop対策スキルで用いられてきた 「単語を禁止する」手法から改善し、統語構造（=誰が・何を・どうした）の復元と、比喩動詞の具体化に特化していることが特徴です。Claude Code, Codex, Cursorなどの主要なAI Agentで</p>]]></content:encoded>
+            <author>大賀愛一郎（oga_aiichiro）</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--fBqJdPTf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI-Slop%25E3%2581%25AA%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2582%2592%25E6%25A7%258B%25E9%2580%25A0%25E3%2583%25AC%25E3%2583%2599%25E3%2583%25AB%25E3%2581%25A7%25E8%25AA%25AD%25E3%2581%25BF%25E3%2582%2584%25E3%2581%2599%25E3%2581%258F%25E3%2581%2599%25E3%2582%258BSkill%25E3%2580%258Eyomiyasu%25EF%25BC%2588%25E3%2582%2588%25E3%2581%25BF%25E3%2582%2584%25E3%2581%2599%25EF%25BC%2589%25E3%2580%258F%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258A%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E5%25A4%25A7%25E8%25B3%2580%25E6%2584%259B%25E4%25B8%2580%25E9%2583%258E%25EF%25BC%2588oga_aiichiro%25EF%25BC%2589%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I1M2Y5MDFhMWYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:ALGO%2520ARTIS%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNhMDEwODY1NzkuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[キャラクターを画面内の指定領域に収めるカメラ位置の計算方法 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/reality_tech/articles/camera-auto-framing-algorithm</link>
+            <guid isPermaLink="false">https://zenn.dev/reality_tech/articles/camera-auto-framing-algorithm</guid>
+            <pubDate>Thu, 01 Oct 2026 04:06:30 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 18:00:07（日本時間）
+
+はじめに3Dキャラクターの写真や動画を撮影できるアプリやツールを開発・運用していると、画面内の指定領域に被写体を自動的に収めて撮影したいことがあります。さらに、指定領域内で被写体ができるだけ大きく映るようにしたい、キャラクターの体格・ポーズ・アニメーションなどの変化にフレーミングを追従させたい、という場合もあります。この記事では「被写体を画面内のフレーミング領域に収めるカメラ位置の求め方」について]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 18:00:07（日本時間）<br><br>はじめに3Dキャラクターの写真や動画を撮影できるアプリやツールを開発・運用していると、画面内の指定領域に被写体を自動的に収めて撮影したいことがあります。さらに、指定領域内で被写体ができるだけ大きく映るようにしたい、キャラクターの体格・ポーズ・アニメーションなどの変化にフレーミングを追従させたい、という場合もあります。この記事では「被写体を画面内のフレーミング領域に収めるカメラ位置の求め方」について</p>]]></content:encoded>
+            <author>Soichiro Sugimoto</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--cqixkfH2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%25A9%25E3%2582%25AF%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%2592%25E7%2594%25BB%25E9%259D%25A2%25E5%2586%2585%25E3%2581%25AE%25E6%258C%2587%25E5%25AE%259A%25E9%25A0%2598%25E5%259F%259F%25E3%2581%25AB%25E5%258F%258E%25E3%2582%2581%25E3%2582%258B%25E3%2582%25AB%25E3%2583%25A1%25E3%2583%25A9%25E4%25BD%258D%25E7%25BD%25AE%25E3%2581%25AE%25E8%25A8%2588%25E7%25AE%2597%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Soichiro%2520Sugimoto%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFjOWUxYjAxMmUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:REALITY%2520Tech%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJiOWFiZTJhYjEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[terraform applyしたら、1ヶ月半前のコードが本番に出ていた | Zennのトレンド]]></title>
+            <link>https://zenn.dev/gonta_ganbareyo/articles/6256bf2008b2ef</link>
+            <guid isPermaLink="false">https://zenn.dev/gonta_ganbareyo/articles/6256bf2008b2ef</guid>
+            <pubDate>Thu, 01 Oct 2026 04:06:30 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/1 8:45:42（日本時間）
+
+こんにちは。gontaです。GCP上でサービスを作っていて、インフラはTerraformで管理しています。先日、使わなくなった環境変数を削除してterraform applyしたところ、本番が落ちました。（まだリリースはしていない）調べてみたら、1ヶ月半前のコンテナイメージが本番で動いていました。原因はTerraformの使い方というか、コンテナをTerraformで扱うときの構造的な話のようです]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/1 8:45:42（日本時間）<br><br>こんにちは。gontaです。GCP上でサービスを作っていて、インフラはTerraformで管理しています。先日、使わなくなった環境変数を削除してterraform applyしたところ、本番が落ちました。（まだリリースはしていない）調べてみたら、1ヶ月半前のコンテナイメージが本番で動いていました。原因はTerraformの使い方というか、コンテナをTerraformで扱うときの構造的な話のようです</p>]]></content:encoded>
+            <author>gonta</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--R0-911cf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:terraform%2520apply%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589%25E3%2580%25811%25E3%2583%25B6%25E6%259C%2588%25E5%258D%258A%25E5%2589%258D%25E3%2581%25AE%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%258C%25E6%259C%25AC%25E7%2595%25AA%25E3%2581%25AB%25E5%2587%25BA%25E3%2581%25A6%25E3%2581%2584%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:gonta%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzE5NzFlNzc0NzAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[『構文解析のしくみ』が出版されました（出版にあたって宣伝と裏話） | Zennのトレンド]]></title>
+            <link>https://zenn.dev/kmizu/articles/2026-09-parser-book</link>
+            <guid isPermaLink="false">https://zenn.dev/kmizu/articles/2026-09-parser-book</guid>
+            <pubDate>Thu, 01 Oct 2026 04:06:30 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 21:12:41（日本時間）
+
+はじめにこんにちは！水島です。2026年9月28日に、ZEN大学出版会から『構文解析のしくみ 電卓から言語処理系まで自分で書く』という本を出しました。出版社のページ：https://zen.ac.jp/press/books/b_0019通販ページ：Amazon：https://amzn.asia/d/030QeHhu最短で10月7日配達（2026/09/30現在）楽天ブックス：https://b]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 21:12:41（日本時間）<br><br>はじめにこんにちは！水島です。2026年9月28日に、ZEN大学出版会から『構文解析のしくみ 電卓から言語処理系まで自分で書く』という本を出しました。出版社のページ：https://zen.ac.jp/press/books/b_0019通販ページ：Amazon：https://amzn.asia/d/030QeHhu最短で10月7日配達（2026/09/30現在）楽天ブックス：https://b</p>]]></content:encoded>
+            <author>kmizu</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--_LVZbfVi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258E%25E6%25A7%258B%25E6%2596%2587%25E8%25A7%25A3%25E6%259E%2590%25E3%2581%25AE%25E3%2581%2597%25E3%2581%258F%25E3%2581%25BF%25E3%2580%258F%25E3%2581%258C%25E5%2587%25BA%25E7%2589%2588%25E3%2581%2595%25E3%2582%258C%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%25EF%25BC%2588%25E5%2587%25BA%25E7%2589%2588%25E3%2581%25AB%25E3%2581%2582%25E3%2581%259F%25E3%2581%25A3%25E3%2581%25A6%25E5%25AE%25A3%25E4%25BC%259D%25E3%2581%25A8%25E8%25A3%258F%25E8%25A9%25B1%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kmizu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YlNka1h3ZXdRZENWdDRvbHk0OUkyNkgyNi1IS2k0R2phNGdJdno9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Kaggle Biohub Cell Trackingコンペ振り返り ー361st Place Solution | Zennのトレンド]]></title>
+            <link>https://zenn.dev/fusic/articles/d1ebeadcaeb2e2</link>
+            <guid isPermaLink="false">https://zenn.dev/fusic/articles/d1ebeadcaeb2e2</guid>
+            <pubDate>Thu, 01 Oct 2026 04:06:30 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 13:00:07（日本時間）
+
+はじめにFusicのレオナです。今回は、Kaggleの「Biohub - Cell Tracking During Development」[1]に参加しました。最終結果は4,017チーム中361位、スコア0.920で銅メダルでした。締切時点のPublic Leaderboard（以下、Public LB）は0.954で544位だったので、Private Leaderboard（以下、Privat]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 13:00:07（日本時間）<br><br>はじめにFusicのレオナです。今回は、Kaggleの「Biohub - Cell Tracking During Development」[1]に参加しました。最終結果は4,017チーム中361位、スコア0.920で銅メダルでした。締切時点のPublic Leaderboard（以下、Public LB）は0.954で544位だったので、Private Leaderboard（以下、Privat</p>]]></content:encoded>
+            <author>xthixsl_ml@レオナ</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--0KTc1rcP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kaggle%2520Biohub%2520Cell%2520Tracking%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%259A%25E6%258C%25AF%25E3%2582%258A%25E8%25BF%2594%25E3%2582%258A%2520%25E3%2583%25BC361st%2520Place%2520Solution%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:xthixsl_ml%2540%25E3%2583%25AC%25E3%2582%25AA%25E3%2583%258A%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNhNDgxMzQ3YjkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Fusic%2520%25E6%258A%2580%25E8%25A1%2593%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzIzOGE3MzVjMDIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[テスト要求仕様（TRS）を書いてみたら、テスト設計が楽になった話 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/edash_tech_blog/articles/0d49bd338b64f0</link>
+            <guid isPermaLink="false">https://zenn.dev/edash_tech_blog/articles/0d49bd338b64f0</guid>
+            <pubDate>Thu, 01 Oct 2026 00:05:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 11:40:05（日本時間）
+
+こんにちは。e-dashでQAエンジニアをしているuedaです。みなさんはテストをするにあたって、どんなドキュメントを用意していますか。e-dash の QA チームでは、テストケースの前に テスト設計書（Test Design） を用意します。直近では、そのさらに前に テスト要求仕様（Test Requirement Spec、以下 TRS） を挟んでいます。テスト対象がどう動くべきかを確定させ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 11:40:05（日本時間）<br><br>こんにちは。e-dashでQAエンジニアをしているuedaです。みなさんはテストをするにあたって、どんなドキュメントを用意していますか。e-dash の QA チームでは、テストケースの前に テスト設計書（Test Design） を用意します。直近では、そのさらに前に テスト要求仕様（Test Requirement Spec、以下 TRS） を挟んでいます。テスト対象がどう動くべきかを確定させ</p>]]></content:encoded>
+            <author>ueda</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--_K_Q-f0F--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E8%25A6%2581%25E6%25B1%2582%25E4%25BB%2595%25E6%25A7%2598%25EF%25BC%2588TRS%25EF%25BC%2589%25E3%2582%2592%25E6%259B%25B8%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2582%2589%25E3%2580%2581%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%258C%25E6%25A5%25BD%25E3%2581%25AB%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ueda%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNkZWM5ZjExNTcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:e-dash%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGticmJpbFlheGNFWUROZVJwNURYM05PcnBwcjRpekJHTzJVTWV1YjRTYTNwbS13PXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[ヘキサゴナルアーキテクチャを実装レベルで確かめてみた（その1）ポート・アダプター・アプリケーションはコードではどうなるのか | Zennのトレンド]]></title>
+            <link>https://zenn.dev/aws_japan/articles/hexagonal-architecture-lambda-1</link>
+            <guid isPermaLink="false">https://zenn.dev/aws_japan/articles/hexagonal-architecture-lambda-1</guid>
+            <pubDate>Thu, 01 Oct 2026 00:05:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 10:04:42（日本時間）
+
+ヘキサゴナルアーキテクチャ（Ports and Adapters）は、解説を読むと六角形の図と「アプリケーションを中心に置き、ポートとアダプターで外の世界とつなぐ」という説明で理解できた気になるのですが、いざ自分で書こうとすると、ポートは具体的にどんなクラスにすればよいのか、アダプターとの境目はどこか、そしてそこまでして何が楽になるのか、というところで手が止まる、ということがあるのではないでしょう]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 10:04:42（日本時間）<br><br>ヘキサゴナルアーキテクチャ（Ports and Adapters）は、解説を読むと六角形の図と「アプリケーションを中心に置き、ポートとアダプターで外の世界とつなぐ」という説明で理解できた気になるのですが、いざ自分で書こうとすると、ポートは具体的にどんなクラスにすればよいのか、アダプターとの境目はどこか、そしてそこまでして何が楽になるのか、というところで手が止まる、ということがあるのではないでしょう</p>]]></content:encoded>
+            <author>Yuta Okubo</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--UaddZP4k--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2598%25E3%2582%25AD%25E3%2582%25B5%25E3%2582%25B4%25E3%2583%258A%25E3%2583%25AB%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2581%25E3%2583%25A3%25E3%2582%2592%25E5%25AE%259F%25E8%25A3%2585%25E3%2583%25AC%25E3%2583%2599%25E3%2583%25AB%25E3%2581%25A7%25E7%25A2%25BA%25E3%2581%258B%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2588%25E3%2581%259D%25E3%2581%25AE1%25EF%25BC%2589%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%2580%25E3%2583%2597%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2581%25AF%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25A7%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%2586...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Yuta%2520Okubo%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZTY2NGI3N2IuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A2%25E3%2583%259E%25E3%2582%25BE%25E3%2583%25B3%2520%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2596%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%2520%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2591%25E3%2583%25B3%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E0ZDZmZmU0ZjcuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Web 標準動向 2026年9月版 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/cybozu_frontend/articles/web_standards_trends_202609</link>
+            <guid isPermaLink="false">https://zenn.dev/cybozu_frontend/articles/web_standards_trends_202609</guid>
+            <pubDate>Thu, 01 Oct 2026 00:05:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 18:00:08（日本時間）
+
+こんにちは！ サイボウズ株式会社 デザインテクノロジストの saku (@sakupi01) です。 はじめにサイボウズは 2025 年 4 月より、W3C のメンバーに加入しました。https://blog.cybozu.io/entry/joining-w3c標準化プロセスに関わることができるようになるための最初の一歩として、フロントエンドエンジニアの一部のメンバーは積極的に Web 標準のキ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 18:00:08（日本時間）<br><br>こんにちは！ サイボウズ株式会社 デザインテクノロジストの saku (@sakupi01) です。 はじめにサイボウズは 2025 年 4 月より、W3C のメンバーに加入しました。https://blog.cybozu.io/entry/joining-w3c標準化プロセスに関わることができるようになるための最初の一歩として、フロントエンドエンジニアの一部のメンバーは積極的に Web 標準のキ</p>]]></content:encoded>
+            <author>saku</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--Os2YydvZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Web%2520%25E6%25A8%2599%25E6%25BA%2596%25E5%258B%2595%25E5%2590%2591%25202026%25E5%25B9%25B49%25E6%259C%2588%25E7%2589%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:saku%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2VjOTA1OThlNjEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%259C%25E3%2582%25A6%25E3%2582%25BA%2520%25E3%2583%2595%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2588%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2o0S053NXVMek12cVJjdnlEU3JKQVBJUUNYQWNUTGJsR3pGWUc1cUE9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[AI×Blenderでゲーム用キャラ素体の作成に挑戦した記録 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/yy7613/articles/c150ef962ccc1f</link>
+            <guid isPermaLink="false">https://zenn.dev/yy7613/articles/c150ef962ccc1f</guid>
+            <pubDate>Wed, 30 Sep 2026 11:31:28 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 23:29:19（日本時間）
+
+はじめにこの記事では、ゲーム用のアニメ調キャラクターの素体(頭部とボディ)を、生成AIに指示を出しながらBlenderで作る手順を紹介します。Blender MCPとFable 5が出たころから試しはじめ、生成AIのモデルはFable 5・Fable 5.1・GPT-6 Astra・Claude Opus 5.5と乗り換えてきました。この記事の手順は、主にClaude Code(Claude Op]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 23:29:19（日本時間）<br><br>はじめにこの記事では、ゲーム用のアニメ調キャラクターの素体(頭部とボディ)を、生成AIに指示を出しながらBlenderで作る手順を紹介します。Blender MCPとFable 5が出たころから試しはじめ、生成AIのモデルはFable 5・Fable 5.1・GPT-6 Astra・Claude Opus 5.5と乗り換えてきました。この記事の手順は、主にClaude Code(Claude Op</p>]]></content:encoded>
+            <author>Yuuki.Y</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--gPfvHf5---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25C3%2597Blender%25E3%2581%25A7%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%25A0%25E7%2594%25A8%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%25A9%25E7%25B4%25A0%25E4%25BD%2593%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%25E3%2581%25AB%25E6%258C%2591%25E6%2588%25A6%25E3%2581%2597%25E3%2581%259F%25E8%25A8%2598%25E9%258C%25B2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yuuki.Y%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2IzOGYxZTI3OWYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[ゲーミングPC向けで LLMとデプロイ環境を最適化してみた話 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/knowledgework/articles/2691721311c2e4</link>
+            <guid isPermaLink="false">https://zenn.dev/knowledgework/articles/2691721311c2e4</guid>
+            <pubDate>Wed, 30 Sep 2026 11:31:28 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 9:45:00（日本時間）
+
+はじめに翻訳LLMを軽くしようとして、まず気づいたのは「モデルファイルを小さくしても、VRAMは思ったほど減らない」ということでした。この記事は、オンラインゲームのチャットを翻訳するために、翻訳特化LLMをゲーミングPC向けに最適化してデプロイした記録です。モデルファイル、プロセスのメモリ、そしてランタイムの3段階で削っていった結果、最終的には2〜3GBのVRAMで商用LLMに近いレベルの翻訳がで]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 9:45:00（日本時間）<br><br>はじめに翻訳LLMを軽くしようとして、まず気づいたのは「モデルファイルを小さくしても、VRAMは思ったほど減らない」ということでした。この記事は、オンラインゲームのチャットを翻訳するために、翻訳特化LLMをゲーミングPC向けに最適化してデプロイした記録です。モデルファイル、プロセスのメモリ、そしてランタイムの3段階で削っていった結果、最終的には2〜3GBのVRAMで商用LLMに近いレベルの翻訳がで</p>]]></content:encoded>
+            <author>Taein Kim</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--D1s8fh90--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0PC%25E5%2590%2591%25E3%2581%2591%25E3%2581%25A7%2520LLM%25E3%2581%25A8%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%259C%2580%25E9%2581%25A9%25E5%258C%2596%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Taein%2520Kim%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E4MWZhOWNhZmYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2583%258A%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25B8%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I3ZThiZjE2NjUuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[サイボウズのiOS実務型インターンに参加してきた！ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/rinngo0302/articles/intern-cybozu</link>
+            <guid isPermaLink="false">https://zenn.dev/rinngo0302/articles/intern-cybozu</guid>
+            <pubDate>Wed, 30 Sep 2026 11:31:28 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 22:29:44（日本時間）
+
+はじめにこんにちは、rinngoです！先日、サイボウズのiOS実務型インターンに参加させていただいたので、そのレポートをしようと思います！技術的なことや開発の進め方、AIの使い方などを中心にまとめようと思います！ インターン概要期間は 8/18(火)〜8/26(水) で、フルリモートでのインターンでした。インターン生は僕含め3人で、基本的にZoomで繋げての モブプログラミング を中心にしていまし]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 22:29:44（日本時間）<br><br>はじめにこんにちは、rinngoです！先日、サイボウズのiOS実務型インターンに参加させていただいたので、そのレポートをしようと思います！技術的なことや開発の進め方、AIの使い方などを中心にまとめようと思います！ インターン概要期間は 8/18(火)〜8/26(水) で、フルリモートでのインターンでした。インターン生は僕含め3人で、基本的にZoomで繋げての モブプログラミング を中心にしていまし</p>]]></content:encoded>
+            <author>rinngo</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--e4cGGlve--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%259C%25E3%2582%25A6%25E3%2582%25BA%25E3%2581%25AEiOS%25E5%25AE%259F%25E5%258B%2599%25E5%259E%258B%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%25E3%2581%25AB%25E5%258F%2582%25E5%258A%25A0%25E3%2581%2597%25E3%2581%25A6%25E3%2581%258D%25E3%2581%259F%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:rinngo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS0pqSlBaeExDcXN2MDIwVzFid2tzYWltNVhESUtnTEJPZjVhSkpxWWFVLUlBWUl3NTM9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[生命科学研究 × AI 活用ハンドブック | Zennのトレンド]]></title>
+            <link>https://zenn.dev/labcode/books/c4f81b6a2d9e37</link>
+            <guid isPermaLink="false">https://zenn.dev/labcode/books/c4f81b6a2d9e37</guid>
+            <pubDate>Wed, 30 Sep 2026 08:03:04 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 23:29:01（日本時間）
+
+📰 概要「AI で研究時間を取り戻す」ための、生命科学研究者向けの実践ハンドブックです。実験があり、解析があり、事務手続きがあり、そのうえで論文を書かなければならない。指導教員は忙しく、隣に詳しい人がいるとは限らない。そんな状況で研究を続ける研究者たちに取材し、実際にやっていることをそのまま書きました。理論書ではなく、明日から使える手順書です。🪜 最小限の学習コストで、できることを最大化するAI ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 23:29:01（日本時間）<br><br>📰 概要「AI で研究時間を取り戻す」ための、生命科学研究者向けの実践ハンドブックです。実験があり、解析があり、事務手続きがあり、そのうえで論文を書かなければならない。指導教員は忙しく、隣に詳しい人がいるとは限らない。そんな状況で研究を続ける研究者たちに取材し、実際にやっていることをそのまま書きました。理論書ではなく、明日から使える手順書です。🪜 最小限の学習コストで、できることを最大化するAI </p>]]></content:encoded>
+            <author>LabCode（ラボコード）</author>
+            <enclosure length="0" type="image/jpg" url="https://res.cloudinary.com/zenn/image/upload/s--87a4XG7y--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci9iYmJiYzI2MDNmLnBuZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[サイバーエージェントのバックエンドインターンUNIVERSEに参加し、優秀賞をいただきました | Zennのトレンド]]></title>
+            <link>https://zenn.dev/hayatosc/articles/ca-intern-universe</link>
+            <guid isPermaLink="false">https://zenn.dev/hayatosc/articles/ca-intern-universe</guid>
+            <pubDate>Wed, 30 Sep 2026 04:02:47 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 20:37:24（日本時間）
+
+参加したインターン『バックエンドエンジニア向けチーム開発インターンシップ UNIVERSE』に参加しました。https://www.cyberagent.co.jp/careers/students/event/detail/id=33044バックエンドエンジニア向け チーム開発インターンシップ（UNIVERSE）では、【メディア】【ゲーム】【広告】の3つの事業から提供されるお題のうち1テーマにつ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 20:37:24（日本時間）<br><br>参加したインターン『バックエンドエンジニア向けチーム開発インターンシップ UNIVERSE』に参加しました。https://www.cyberagent.co.jp/careers/students/event/detail/id=33044バックエンドエンジニア向け チーム開発インターンシップ（UNIVERSE）では、【メディア】【ゲーム】【広告】の3つの事業から提供されるお題のうち1テーマにつ</p>]]></content:encoded>
+            <author>hayatosc</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--ETAh4qV5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AE%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3UNIVERSE%25E3%2581%25AB%25E5%258F%2582%25E5%258A%25A0%25E3%2581%2597%25E3%2580%2581%25E5%2584%25AA%25E7%25A7%2580%25E8%25B3%259E%25E3%2582%2592%25E3%2581%2584%25E3%2581%259F%25E3%2581%25A0%25E3%2581%258D%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hayatosc%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2UzNGIyZDAzYTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[OpenAI DevDay 2026 発表まとめ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/schroneko/articles/openai-devday-2026</link>
+            <guid isPermaLink="false">https://zenn.dev/schroneko/articles/openai-devday-2026</guid>
+            <pubDate>Wed, 30 Sep 2026 04:02:47 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 2:20:46（日本時間）
+
+!加筆中です。追記していきます。 tl;drOpenAI DevDay 2026 がサンフランシスコで開催されたよサンフランシスコ現地から情報をお送りするよひと通りのリソースをまとめたけど、まずは Recap ページを見るといいよ24 時間常時稼働のエージェント dots が発表されたよGPT-6 Astra に近い性能を低コストで使える GPT-6.1 Sol が公開されたよ高速にトークンを生成]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 2:20:46（日本時間）<br><br>!加筆中です。追記していきます。 tl;drOpenAI DevDay 2026 がサンフランシスコで開催されたよサンフランシスコ現地から情報をお送りするよひと通りのリソースをまとめたけど、まずは Recap ページを見るといいよ24 時間常時稼働のエージェント dots が発表されたよGPT-6 Astra に近い性能を低コストで使える GPT-6.1 Sol が公開されたよ高速にトークンを生成</p>]]></content:encoded>
+            <author>ぬこぬこ</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--z_7FVyRV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%2520DevDay%25202026%2520%25E7%2599%25BA%25E8%25A1%25A8%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AC%25E3%2581%2593%25E3%2581%25AC%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzE4ZDE4NWExYTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[新規プロダクトのバックエンド自動テスト戦略 ─UT 中心から API テスト中心へ─ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/canary_techblog/articles/348d976da70857</link>
+            <guid isPermaLink="false">https://zenn.dev/canary_techblog/articles/348d976da70857</guid>
+            <pubDate>Wed, 30 Sep 2026 04:02:47 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 9:45:25（日本時間）
+
+こんにちは！株式会社カナリーで新規プロダクトを開発している tom-uchida です。新規プロダクトのバックエンドでは自動テストをユニットテスト（以下、UT）中心で整備してきたのですが、API 単位で仕様どおりに動作することを保証する仕組みがなかったため、runn による API テストを導入し、品質保証の主軸を UT から API テストへ切り替えました。本記事では、次の 3 点をご紹介できれ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 9:45:25（日本時間）<br><br>こんにちは！株式会社カナリーで新規プロダクトを開発している tom-uchida です。新規プロダクトのバックエンドでは自動テストをユニットテスト（以下、UT）中心で整備してきたのですが、API 単位で仕様どおりに動作することを保証する仕組みがなかったため、runn による API テストを導入し、品質保証の主軸を UT から API テストへ切り替えました。本記事では、次の 3 点をご紹介できれ</p>]]></content:encoded>
+            <author>tom-uchida</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--0BV5CxHT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2596%25B0%25E8%25A6%258F%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2580%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AE%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E8%2587%25AA%25E5%258B%2595%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E6%2588%25A6%25E7%2595%25A5%2520%25E2%2594%2580UT%2520%25E4%25B8%25AD%25E5%25BF%2583%25E3%2581%258B%25E3%2582%2589%2520API%2520%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E4%25B8%25AD%25E5%25BF%2583%25E3%2581%25B8%25E2%2594%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:tom-uchida%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U3NzUwZmNjMzUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Canary%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E4YzQwNWNkMGQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[タイムズカーの不正アクセスで免許証画像が流出した人へ：考えられる被害と今日からできる対策 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/gzer0/articles/timescar-leak-countermeasures</link>
+            <guid isPermaLink="false">https://zenn.dev/gzer0/articles/timescar-leak-countermeasures</guid>
+            <pubDate>Wed, 30 Sep 2026 04:02:47 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/30 1:50:08（日本時間）
+
+2026年9月25日、タイムズカーの Web システムが不正アクセスを受け、利用者の個人情報が流出したと発表されました。対象は約660万件で、そのうち約160万件では、運転免許証の画像など本人確認書類の画像も流出しました。この記事では、公式発表で分かっている範囲をもとに、流出した情報で起こりうる被害と、利用者が自分でできる対策をまとめます。!2026年9月30日時点の公式発表（9月29日の第3報ま]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/30 1:50:08（日本時間）<br><br>2026年9月25日、タイムズカーの Web システムが不正アクセスを受け、利用者の個人情報が流出したと発表されました。対象は約660万件で、そのうち約160万件では、運転免許証の画像など本人確認書類の画像も流出しました。この記事では、公式発表で分かっている範囲をもとに、流出した情報で起こりうる被害と、利用者が自分でできる対策をまとめます。!2026年9月30日時点の公式発表（9月29日の第3報ま</p>]]></content:encoded>
+            <author>gzer0</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--rjMTXk2g--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25A0%25E3%2582%25BA%25E3%2582%25AB%25E3%2583%25BC%25E3%2581%25AE%25E4%25B8%258D%25E6%25AD%25A3%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%25A7%25E5%2585%258D%25E8%25A8%25B1%25E8%25A8%25BC%25E7%2594%25BB%25E5%2583%258F%25E3%2581%258C%25E6%25B5%2581%25E5%2587%25BA%25E3%2581%2597%25E3%2581%259F%25E4%25BA%25BA%25E3%2581%25B8%25EF%25BC%259A%25E8%2580%2583%25E3%2581%2588%25E3%2582%2589%25E3%2582%258C%25E3%2582%258B%25E8%25A2%25AB%25E5%25AE%25B3%25E3%2581%25A8%25E4%25BB%258A%25E6%2597%25A5%25E3%2581%258B%25E3%2582%2589%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E5%25AF%25BE%25E7%25AD%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:gzer0%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzhmYjY3ZGI4ZGUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[録音音声を扱うプロダクトでAIとテストするために初手で行った工夫と改善点 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/knowledgework/articles/96d88ab25da83f</link>
+            <guid isPermaLink="false">https://zenn.dev/knowledgework/articles/96d88ab25da83f</guid>
+            <pubDate>Wed, 30 Sep 2026 00:03:10 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 11:00:05（日本時間）
+
+こんにちは。特撮に毎週元気をもらっているbunです。今年の8月（2026年）にナレッジワークにQAエンジニアとして入社しました。みなさん、AIとテストしてますか？私はAIがブラウザやモバイルアプリなどを容易に操作できるようになってから、機能テストを大きく以下のような3種類に分けて考えています。1: 手動テストいわゆる従来からテスト技術者やQAエンジニアがやってきているもの「ちゃんと動いているかな」]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 11:00:05（日本時間）<br><br>こんにちは。特撮に毎週元気をもらっているbunです。今年の8月（2026年）にナレッジワークにQAエンジニアとして入社しました。みなさん、AIとテストしてますか？私はAIがブラウザやモバイルアプリなどを容易に操作できるようになってから、機能テストを大きく以下のような3種類に分けて考えています。1: 手動テストいわゆる従来からテスト技術者やQAエンジニアがやってきているもの「ちゃんと動いているかな」</p>]]></content:encoded>
+            <author>bun913</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--tTnj-nwT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%258C%25B2%25E9%259F%25B3%25E9%259F%25B3%25E5%25A3%25B0%25E3%2582%2592%25E6%2589%25B1%25E3%2581%2586%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2580%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25A7AI%25E3%2581%25A8%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2581%2599%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AB%25E5%2588%259D%25E6%2589%258B%25E3%2581%25A7%25E8%25A1%258C%25E3%2581%25A3%25E3%2581%259F%25E5%25B7%25A5%25E5%25A4%25AB%25E3%2581%25A8%25E6%2594%25B9%25E5%2596%2584%25E7%2582%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:bun913%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E4MWZhOWNhZmYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2583%258A%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25B8%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzcxNGVhMDEyMDQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[目を醒ませ 僕らの信頼が生成AIに侵略されてるぞ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/spookies/articles/e70b80a510f5e2</link>
+            <guid isPermaLink="false">https://zenn.dev/spookies/articles/e70b80a510f5e2</guid>
+            <pubDate>Wed, 30 Sep 2026 00:03:10 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 10:00:08（日本時間）
+
+想定読者2025年度以降にIT業界に参入したエンジニアシステム開発プロジェクトで上流〜中流工程を任されている人自分の仕事がAIに奪われていると感じているエンジニア tl;drMeat Proxyで起きる破綻は、AIのせいではなく「己に対して当然求められている責任を己が放棄した結果」である。生成AIは責任を持てないので、原理的に副操縦士の域をでない。人間の介在価値は意思と責任を持つことにある。エンジ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 10:00:08（日本時間）<br><br>想定読者2025年度以降にIT業界に参入したエンジニアシステム開発プロジェクトで上流〜中流工程を任されている人自分の仕事がAIに奪われていると感じているエンジニア tl;drMeat Proxyで起きる破綻は、AIのせいではなく「己に対して当然求められている責任を己が放棄した結果」である。生成AIは責任を持てないので、原理的に副操縦士の域をでない。人間の介在価値は意思と責任を持つことにある。エンジ</p>]]></content:encoded>
+            <author>すずるん</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--7lfggBKQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%259B%25AE%25E3%2582%2592%25E9%2586%2592%25E3%2581%25BE%25E3%2581%259B%2520%25E5%2583%2595%25E3%2582%2589%25E3%2581%25AE%25E4%25BF%25A1%25E9%25A0%25BC%25E3%2581%258C%25E7%2594%259F%25E6%2588%2590AI%25E3%2581%25AB%25E4%25BE%25B5%25E7%2595%25A5%25E3%2581%2595%25E3%2582%258C%25E3%2581%25A6%25E3%2582%258B%25E3%2581%259E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%2599%25E3%2581%259A%25E3%2582%258B%25E3%2582%2593%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJlY2Y5YThhNjQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%25BC%25E3%2582%25BA%25E3%2581%25AE%25E3%2581%25A1%25E3%2582%2587%25E3%2581%25A3%25E3%2581%25A8Tech%25E3%2580%2582%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzBlNWU5OTc4ZWYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Rustで作った自作OS「octox」がサンフランシスコ大学の教材になっていました | Zennのトレンド]]></title>
+            <link>https://zenn.dev/o8vm/articles/3934806424cd85</link>
+            <guid isPermaLink="false">https://zenn.dev/o8vm/articles/3934806424cd85</guid>
+            <pubDate>Wed, 30 Sep 2026 00:03:10 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 18:00:05（日本時間）
+
+私が Rust で実装して公開している Unix-like OS「octox」が、サンフランシスコ大学（University of San Francisco）の授業で教材として使用されていることが分かりました。octox 専用のガイドが用意されているだけでなく、講義で実装が解説され、ユーザープログラムやカーネルを拡張する課題も公開されています。[1]もともとは自分が OS を理解するために始めた]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 18:00:05（日本時間）<br><br>私が Rust で実装して公開している Unix-like OS「octox」が、サンフランシスコ大学（University of San Francisco）の授業で教材として使用されていることが分かりました。octox 専用のガイドが用意されているだけでなく、講義で実装が解説され、ユーザープログラムやカーネルを拡張する課題も公開されています。[1]もともとは自分が OS を理解するために始めた</p>]]></content:encoded>
+            <author>o8vm</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--e0SPjRvZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Rust%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%25E8%2587%25AA%25E4%25BD%259COS%25E3%2580%258Coctox%25E3%2580%258D%25E3%2581%258C%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2595%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25B7%25E3%2582%25B9%25E3%2582%25B3%25E5%25A4%25A7%25E5%25AD%25A6%25E3%2581%25AE%25E6%2595%2599%25E6%259D%2590%25E3%2581%25AB%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:o8vm%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2NiZmU4Y2JiYzMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[AI 駆動開発で「設計」はどこに書くのか ― 振る舞いをテストで検証できる「仕様」にしてみる | Zennのトレンド]]></title>
+            <link>https://zenn.dev/softbank/articles/6f98cf7c4ebfd3</link>
+            <guid isPermaLink="false">https://zenn.dev/softbank/articles/6f98cf7c4ebfd3</guid>
+            <pubDate>Wed, 30 Sep 2026 00:03:10 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 16:02:41（日本時間）
+
+はじめに日々の開発において、AI にコードを書いてもらうことは日常になってきました。要件を伝えれば既存のコードベースを調査し、その作法に合わせて機能を足してくれます。生成されたコードがいつも正しいわけではありませんが、それでも「コードを書く」という作業そのものは、以前ほど開発のボトルネックではなくなりつつあると感じています。その一方で、AI と一緒に開発していると、「何を実装してもらうか」を決める]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 16:02:41（日本時間）<br><br>はじめに日々の開発において、AI にコードを書いてもらうことは日常になってきました。要件を伝えれば既存のコードベースを調査し、その作法に合わせて機能を足してくれます。生成されたコードがいつも正しいわけではありませんが、それでも「コードを書く」という作業そのものは、以前ほど開発のボトルネックではなくなりつつあると感じています。その一方で、AI と一緒に開発していると、「何を実装してもらうか」を決める</p>]]></content:encoded>
+            <author>田邉 優汰</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--06P2WhIO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%2520%25E9%25A7%2586%25E5%258B%2595%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25A7%25E3%2580%258C%25E8%25A8%25AD%25E8%25A8%2588%25E3%2580%258D%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%2593%25E3%2581%25AB%25E6%259B%25B8%25E3%2581%258F%25E3%2581%25AE%25E3%2581%258B%2520%25E2%2580%2595%2520%25E6%258C%25AF%25E3%2582%258B%25E8%2588%259E%25E3%2581%2584%25E3%2582%2592%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25A7%25E6%25A4%259C%25E8%25A8%25BC%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2580%258C%25E4%25BB%2595%25E6%25A7%2598%25E3%2580%258D%25E3%2581%25AB%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E7%2594%25B0%25E9%2582%2589%2520%25E5%2584%25AA%25E6%25B1%25B0%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg5M2YzODNlZDIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25BD%25E3%2583%2595%25E3%2583%2588%25E3%2583%2590%25E3%2583%25B3%25E3%2582%25AF%2520%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%25EF%25BC%2588%25E5%2585%25AC%25E5%25BC%258F%25EF%25BC%2589%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZlYTYxNTBmYTEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[高校生がマネーフォワードの2weeksインターンに参加してきたので振り返り | Zennのトレンド]]></title>
+            <link>https://zenn.dev/ngstk/articles/d69408a046d831</link>
+            <guid isPermaLink="false">https://zenn.dev/ngstk/articles/d69408a046d831</guid>
+            <pubDate>Wed, 30 Sep 2026 00:03:10 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 12:30:06（日本時間）
+
+!This article is not official information from Money Forward, Inc.These opinions and information are entirely my own.本記事の内容は、株式会社マネーフォワードの公式情報ではありません。全ての内容は、私個人による意見・情報です。 かいてあること参加の背景キャリア観なぜマネーフォワードか]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 12:30:06（日本時間）<br><br>!This article is not official information from Money Forward, Inc.These opinions and information are entirely my own.本記事の内容は、株式会社マネーフォワードの公式情報ではありません。全ての内容は、私個人による意見・情報です。 かいてあること参加の背景キャリア観なぜマネーフォワードか</p>]]></content:encoded>
+            <author>negishi_tako</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--Uf41cdjo--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%25AB%2598%25E6%25A0%25A1%25E7%2594%259F%25E3%2581%258C%25E3%2583%259E%25E3%2583%258D%25E3%2583%25BC%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25AE2weeks%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%25E3%2581%25AB%25E5%258F%2582%25E5%258A%25A0%25E3%2581%2597%25E3%2581%25A6%25E3%2581%258D%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E6%258C%25AF%25E3%2582%258A%25E8%25BF%2594%25E3%2582%258A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:negishi_tako%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSTMtVk0wSnRuZkN4aWlFQlZRam05ZVRjdGt1S0doODYtX0RxYkFwbGg2d0ozMG5NWTI9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Cloudflare の CLI を wrangler から cf に移行する | Zennのトレンド]]></title>
+            <link>https://zenn.dev/sora_kumo/articles/cloudflare-to-cf</link>
+            <guid isPermaLink="false">https://zenn.dev/sora_kumo/articles/cloudflare-to-cf</guid>
+            <pubDate>Wed, 30 Sep 2026 00:03:10 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 13:43:50（日本時間）
+
+はじめにCloudflare から次世代の統合 CLI ツール cf（現在 v1.0.0-beta）が登場しました。従来の wrangler（wrangler.json / wrangler.jsonc / wrangler.toml）から、TypeScript ベースの型安全な設定ファイル cloudflare.config.ts への移行が推奨されています。公式には cf migrate とい]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 13:43:50（日本時間）<br><br>はじめにCloudflare から次世代の統合 CLI ツール cf（現在 v1.0.0-beta）が登場しました。従来の wrangler（wrangler.json / wrangler.jsonc / wrangler.toml）から、TypeScript ベースの型安全な設定ファイル cloudflare.config.ts への移行が推奨されています。公式には cf migrate とい</p>]]></content:encoded>
+            <author>空雲</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--j6KZB7J---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloudflare%2520%25E3%2581%25AE%2520CLI%2520%25E3%2582%2592%2520wrangler%2520%25E3%2581%258B%25E3%2582%2589%2520cf%2520%25E3%2581%25AB%25E7%25A7%25BB%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25A9%25BA%25E9%259B%25B2%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2VlZTgzMDYyMDQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Claude Code / Codexで「私のlimit、減りすぎ…？」と思ったときに見る記事 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/tokium_dev/articles/ai-agent-usage-limit-long-sessions</link>
+            <guid isPermaLink="false">https://zenn.dev/tokium_dev/articles/ai-agent-usage-limit-long-sessions</guid>
+            <pubDate>Tue, 29 Sep 2026 12:12:05 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 12:00:09（日本時間）
+
+こんにちは、TOKIUMの花房です。Claude CodeやCodexをサブスクリプションで使っていて、以下のように感じることはないでしょうか。週の半ばで週間上限が尽きる。作業量は先週と変わらないはずなのにSlack botやcron/launchdからエージェントを動かしていて、体感よりもリミット消費が多いプロンプトキャッシュにヒットしているはずなのに、やはり減りが多い気がするCodexの週間上]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 12:00:09（日本時間）<br><br>こんにちは、TOKIUMの花房です。Claude CodeやCodexをサブスクリプションで使っていて、以下のように感じることはないでしょうか。週の半ばで週間上限が尽きる。作業量は先週と変わらないはずなのにSlack botやcron/launchdからエージェントを動かしていて、体感よりもリミット消費が多いプロンプトキャッシュにヒットしているはずなのに、やはり減りが多い気がするCodexの週間上</p>]]></content:encoded>
+            <author>hanafusay</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--Y3AQZej_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%2520Code%2520%252F%2520Codex%25E3%2581%25A7%25E3%2580%258C%25E7%25A7%2581%25E3%2581%25AElimit%25E3%2580%2581%25E6%25B8%259B%25E3%2582%258A%25E3%2581%2599%25E3%2581%258E%25E2%2580%25A6%25EF%25BC%259F%25E3%2580%258D%25E3%2581%25A8%25E6%2580%259D%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AB%25E8%25A6%258B%25E3%2582%258B%25E8%25A8%2598%25E4%25BA%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:hanafusay%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzViNTEwYjI5ZjEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:TOKIUM%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2580%25E3%2582%25AF%25E3%2583%2588%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%2520%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHVlNkF6SmtuTlMtdWV4dzN0Y0F4bFpmNTNzTTJLV3E3azQ3S1JLNF9TVXdTUFFkeHE9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[RX 5500 XTからV100S×4まで、4台の計算機でローカルLLMを測り比べた話 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/c4n4242/articles/75659aebdd62d4</link>
+            <guid isPermaLink="false">https://zenn.dev/c4n4242/articles/75659aebdd62d4</guid>
+            <pubDate>Tue, 29 Sep 2026 12:12:05 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/28 19:09:32（日本時間）
+
+みなさんこんにちは。カノンと申します。この記事では、とある事情で様々な計算機を使う機会があったので世代もメーカーもバラバラな4台の計算機にローカルLLMを載せて測り比べた結果を書き連ねていこうと思います。※ 数値はすべて2026年9月18〜19日の実測です。llama.cpp や ROCm は更新が速いので、今測ると違う値が出るかもしれません。 はじめに今回比較した対象の計算機は次の4台になりまし]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/28 19:09:32（日本時間）<br><br>みなさんこんにちは。カノンと申します。この記事では、とある事情で様々な計算機を使う機会があったので世代もメーカーもバラバラな4台の計算機にローカルLLMを載せて測り比べた結果を書き連ねていこうと思います。※ 数値はすべて2026年9月18〜19日の実測です。llama.cpp や ROCm は更新が速いので、今測ると違う値が出るかもしれません。 はじめに今回比較した対象の計算機は次の4台になりまし</p>]]></content:encoded>
+            <author>カノン@Zenn</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--NTsvD-ca--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:RX%25205500%2520XT%25E3%2581%258B%25E3%2582%2589V100S%25C3%25974%25E3%2581%25BE%25E3%2581%25A7%25E3%2580%25814%25E5%258F%25B0%25E3%2581%25AE%25E8%25A8%2588%25E7%25AE%2597%25E6%25A9%259F%25E3%2581%25A7%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25ABLLM%25E3%2582%2592%25E6%25B8%25AC%25E3%2582%258A%25E6%25AF%2594%25E3%2581%25B9%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25AB%25E3%2583%258E%25E3%2583%25B3%2540Zenn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzMyMTUxOTVhZWEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[３分で読めるトランザクション設計のコツ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/mconfjp/articles/transaction-action-order</link>
+            <guid isPermaLink="false">https://zenn.dev/mconfjp/articles/transaction-action-order</guid>
+            <pubDate>Tue, 29 Sep 2026 12:12:05 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 11:45:05（日本時間）
+
+これはなにこんにちは、もりたです。最近Software Designで連載をしています[1]。連載をしているとアホほど資料を読んでめちゃくちゃ学びがあるんですが原稿の進捗がやばすぎてZennに投稿できません[2]。この記事はせめてもの償いとして最近知った便利情報を簡単に皆さんにお伝えします。テーマは「トランザクションの中に処理を書く順番」です。これについて、簡単な指針があるという話をします。 課題]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 11:45:05（日本時間）<br><br>これはなにこんにちは、もりたです。最近Software Designで連載をしています[1]。連載をしているとアホほど資料を読んでめちゃくちゃ学びがあるんですが原稿の進捗がやばすぎてZennに投稿できません[2]。この記事はせめてもの償いとして最近知った便利情報を簡単に皆さんにお伝えします。テーマは「トランザクションの中に処理を書く順番」です。これについて、簡単な指針があるという話をします。 課題</p>]]></content:encoded>
+            <author>もりた</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--CTvabk1W--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%2593%25E5%2588%2586%25E3%2581%25A7%25E8%25AA%25AD%25E3%2582%2581%25E3%2582%258B%25E3%2583%2588%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25B6%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%25AE%25E3%2582%25B3%25E3%2583%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2582%25E3%2582%258A%25E3%2581%259F%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmduNmRjWi1heEt6c1JkLXQ4UmxGcmRJMi1VV0tnTUpiamZISmQ5T0hqdmI4PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Cloudflare Birthday Week 2026 Day1 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/remotive/articles/cloudflare-birthday-week-2026-day1</link>
+            <guid isPermaLink="false">https://zenn.dev/remotive/articles/cloudflare-birthday-week-2026-day1</guid>
+            <pubDate>Tue, 29 Sep 2026 12:12:05 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 10:15:45（日本時間）
+
+Cloudflare Birthday Week 2026 が始まりました！Cloudflare の16周年にあわせたさまざまな発表が行われる1週間です。この記事では Day1 の発表内容をまとめていきます！公式な情報が見たい方は以下で公式ブログを一覧できますhttps://www.cloudflare.com/birthday-week/また、前日には Founders&#39; Letter が今年も]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 10:15:45（日本時間）<br><br>Cloudflare Birthday Week 2026 が始まりました！Cloudflare の16周年にあわせたさまざまな発表が行われる1週間です。この記事では Day1 の発表内容をまとめていきます！公式な情報が見たい方は以下で公式ブログを一覧できますhttps://www.cloudflare.com/birthday-week/また、前日には Founders&#39; Letter が今年も</p>]]></content:encoded>
+            <author>NEKOYASAN</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--eTD8fLJG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:Cloudflare%2520Birthday%2520Week%25202026%2520Day1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:NEKOYASAN%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2NiZWU0MDM2NmQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:ReMotive%2520LLC.%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I2YTllZTA0ZWUuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[FastAPI はどこで待たされていたのか ― イベントループ・スレッド・プロセスで整理する | Zennのトレンド]]></title>
+            <link>https://zenn.dev/naokisuzuki27/articles/2026-asyncio-fastapi</link>
+            <guid isPermaLink="false">https://zenn.dev/naokisuzuki27/articles/2026-asyncio-fastapi</guid>
+            <pubDate>Tue, 29 Sep 2026 05:08:57 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/28 14:29:41（日本時間）
+
+きっかけSREとして参画していたプロジェクトで、FastAPI のレイテンシを改善したときの記録です。原因は「非同期処理の中で同期処理を呼ぶと遅くなる」という、よく聞く話でした。ただ、それがプロセス・スレッド・イベントループのどこで起きているのかを自分では説明できなかったので、負荷をかけて確かめたところまでを備忘録として書こうと思います。 結論：async def の中の同期 DB ドライバが、イ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/28 14:29:41（日本時間）<br><br>きっかけSREとして参画していたプロジェクトで、FastAPI のレイテンシを改善したときの記録です。原因は「非同期処理の中で同期処理を呼ぶと遅くなる」という、よく聞く話でした。ただ、それがプロセス・スレッド・イベントループのどこで起きているのかを自分では説明できなかったので、負荷をかけて確かめたところまでを備忘録として書こうと思います。 結論：async def の中の同期 DB ドライバが、イ</p>]]></content:encoded>
+            <author>naoki</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--rLVOQjlD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%2520%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%2593%25E3%2581%25A7%25E5%25BE%2585%25E3%2581%259F%25E3%2581%2595%25E3%2582%258C%25E3%2581%25A6%25E3%2581%2584%25E3%2581%259F%25E3%2581%25AE%25E3%2581%258B%2520%25E2%2580%2595%2520%25E3%2582%25A4%25E3%2583%2599%25E3%2583%25B3%25E3%2583%2588%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2583%25BB%25E3%2582%25B9%25E3%2583%25AC%25E3%2583%2583%25E3%2583%2589%25E3%2583%25BB%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%25A7%25E6%2595%25B4%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:naoki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzlkZDJkYWFmNWEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[別会社の開発チームに AWS 環境を共有するのって大変だ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/dress_code/articles/f89590d105ba5f</link>
+            <guid isPermaLink="false">https://zenn.dev/dress_code/articles/f89590d105ba5f</guid>
+            <pubDate>Tue, 29 Sep 2026 05:08:57 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/28 19:00:05（日本時間）
+
+別会社の開発チームに AWS を触ってもらいたいとき、どうしてますか？DRESS CODE（弊社のプロダクト）の開発にはパートナー企業のエンジニアにも参加してもらっているのですが、デプロイは GitHub Actions が全部やってくれるので、AWS の権限を渡さなくても開発は回ります。しかし、動作検証のフェーズにおいては「DB の中身を見たい」「バッチを流したい」「S3 に何が置かれたか確かめ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/28 19:00:05（日本時間）<br><br>別会社の開発チームに AWS を触ってもらいたいとき、どうしてますか？DRESS CODE（弊社のプロダクト）の開発にはパートナー企業のエンジニアにも参加してもらっているのですが、デプロイは GitHub Actions が全部やってくれるので、AWS の権限を渡さなくても開発は回ります。しかし、動作検証のフェーズにおいては「DB の中身を見たい」「バッチを流したい」「S3 に何が置かれたか確かめ</p>]]></content:encoded>
+            <author>shinoda</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--Qiq06Atj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%2588%25A5%25E4%25BC%259A%25E7%25A4%25BE%25E3%2581%25AE%25E9%2596%258B%25E7%2599%25BA%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%25E3%2581%25AB%2520AWS%2520%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E5%2585%25B1%25E6%259C%2589%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25A3%25E3%2581%25A6%25E5%25A4%25A7%25E5%25A4%2589%25E3%2581%25A0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:shinoda%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzRiOGMxZmU1MDUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:DRESS%2520CODE%2520TECH%2520BLOG%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzliYjdlODc0YzIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[大きなボトルネックをごろごろ見つける方法 - 優秀なエンジニアになる | Zennのトレンド]]></title>
+            <link>https://zenn.dev/339/articles/56ef43afde8bd2</link>
+            <guid isPermaLink="false">https://zenn.dev/339/articles/56ef43afde8bd2</guid>
+            <pubDate>Tue, 29 Sep 2026 05:08:57 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 8:46:04（日本時間）
+
+以下の記事を読んで、ボトルネックについての考えが私とだいぶ違うなあと思ったので、未来の大きなボトルネックを簡単にたくさん見つける方法について書きます。https://www.pospome.work/entry/2026/09/28/152221 ボトルネックは爆弾ではないそもそもですが、緊急性のない重要な課題やボトルネックの発現の仕方について、私は 爆弾ではない と思います。というのは、緊急性の]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 8:46:04（日本時間）<br><br>以下の記事を読んで、ボトルネックについての考えが私とだいぶ違うなあと思ったので、未来の大きなボトルネックを簡単にたくさん見つける方法について書きます。https://www.pospome.work/entry/2026/09/28/152221 ボトルネックは爆弾ではないそもそもですが、緊急性のない重要な課題やボトルネックの発現の仕方について、私は 爆弾ではない と思います。というのは、緊急性の</p>]]></content:encoded>
+            <author>さざんかぬふ</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--s5Tn6Det--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25A4%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2583%259C%25E3%2583%2588%25E3%2583%25AB%25E3%2583%258D%25E3%2583%2583%25E3%2582%25AF%25E3%2582%2592%25E3%2581%2594%25E3%2582%258D%25E3%2581%2594%25E3%2582%258D%25E8%25A6%258B%25E3%2581%25A4%25E3%2581%2591%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2520-%2520%25E5%2584%25AA%25E7%25A7%2580%25E3%2581%25AA%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2595%25E3%2581%2596%25E3%2582%2593%25E3%2581%258B%25E3%2581%25AC%25E3%2581%25B5%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzVkN2UyNjU4ZjcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[続・データサイエンティストのためのSkills:分析手法×診断可視化セット | Zennのトレンド]]></title>
+            <link>https://zenn.dev/green_tea/articles/55d2761106ee74</link>
+            <guid isPermaLink="false">https://zenn.dev/green_tea/articles/55d2761106ee74</guid>
+            <pubDate>Tue, 29 Sep 2026 05:08:57 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/28 11:50:05（日本時間）
+
+はじめに先日、データサイエンスを実務で扱う人向けの AGENTS.md と Skills の作り方の紹介と、実装例を公開しました。https://zenn.dev/green_tea/articles/d310e5cf809190https://github.com/atsushi-green/ds-ai-coding-skills想像以上に反響をいただき、とても嬉しく思っています。一方で、「まだ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/28 11:50:05（日本時間）<br><br>はじめに先日、データサイエンスを実務で扱う人向けの AGENTS.md と Skills の作り方の紹介と、実装例を公開しました。https://zenn.dev/green_tea/articles/d310e5cf809190https://github.com/atsushi-green/ds-ai-coding-skills想像以上に反響をいただき、とても嬉しく思っています。一方で、「まだ</p>]]></content:encoded>
+            <author>redtea</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--ZbJ34BId--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25B6%259A%25E3%2583%25BB%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%25B5%25E3%2582%25A4%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2586%25E3%2582%25A3%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AESkills%253A%25E5%2588%2586%25E6%259E%2590%25E6%2589%258B%25E6%25B3%2595%25C3%2597%25E8%25A8%25BA%25E6%2596%25AD%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:redtea%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzIzM2I4MmRkNzEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[「Jev、BERTでよくない？」と言われていたので、違いを調べてみた | Zennのトレンド]]></title>
+            <link>https://zenn.dev/blackleg/articles/4282a0f7e79737</link>
+            <guid isPermaLink="false">https://zenn.dev/blackleg/articles/4282a0f7e79737</guid>
+            <pubDate>Tue, 29 Sep 2026 05:08:57 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/27 14:12:05（日本時間）
+
+Xに関するJevをみてBERTの勉強もしてみようかなと思いました文章を分類して、各クラスの確率を返す。それなら以前からやっています。「生成しないAI」という紹介だけだと、どこに驚けばいいのか分からない。一方で、問い合わせを振り分けるだけなのに、LLMにJSONを書き終わるまで待たされるのは、たしかにもったいない気がします。欲しいのはbillingというラベルであって、その前後の説明文ではないので。]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/27 14:12:05（日本時間）<br><br>Xに関するJevをみてBERTの勉強もしてみようかなと思いました文章を分類して、各クラスの確率を返す。それなら以前からやっています。「生成しないAI」という紹介だけだと、どこに驚けばいいのか分からない。一方で、問い合わせを振り分けるだけなのに、LLMにJSONを書き終わるまで待たされるのは、たしかにもったいない気がします。欲しいのはbillingというラベルであって、その前後の説明文ではないので。</p>]]></content:encoded>
+            <author>blackleg</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--XoY7r6xT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258CJev%25E3%2580%2581BERT%25E3%2581%25A7%25E3%2582%2588%25E3%2581%258F%25E3%2581%25AA%25E3%2581%2584%25EF%25BC%259F%25E3%2580%258D%25E3%2581%25A8%25E8%25A8%2580%25E3%2582%258F%25E3%2582%258C%25E3%2581%25A6%25E3%2581%2584%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E3%2580%2581%25E9%2581%2595%25E3%2581%2584%25E3%2582%2592%25E8%25AA%25BF%25E3%2581%25B9%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:blackleg%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzM1ZWZiM2E4MzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[AI開発時代だからこそ、テストの役割を見つめ直す | Zennのトレンド]]></title>
+            <link>https://zenn.dev/ababup1192/articles/77b844dcfc1529</link>
+            <guid isPermaLink="false">https://zenn.dev/ababup1192/articles/77b844dcfc1529</guid>
+            <pubDate>Tue, 29 Sep 2026 05:08:57 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 10:00:44（日本時間）
+
+AI がコードを書くようになり、「これからは E2E テストが大事だ」「いや、ユニットテストを厚くすべきだ」という議論をよく見かけます。けれども、テストの種類ごとに検出できる不具合は違い、その役割は AI が来ても変わりません。大事なのは、それぞれの役割を意識して使い分けることです。この記事では、テストの役割の違いと、AI と一緒に開発する時にそれぞれの役割をどう活かすかを整理します。 役割は、検]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 10:00:44（日本時間）<br><br>AI がコードを書くようになり、「これからは E2E テストが大事だ」「いや、ユニットテストを厚くすべきだ」という議論をよく見かけます。けれども、テストの種類ごとに検出できる不具合は違い、その役割は AI が来ても変わりません。大事なのは、それぞれの役割を意識して使い分けることです。この記事では、テストの役割の違いと、AI と一緒に開発する時にそれぞれの役割をどう活かすかを整理します。 役割は、検</p>]]></content:encoded>
+            <author>ABAB↑↓BA</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--Xs1ErC0V--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E9%2596%258B%25E7%2599%25BA%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25A0%25E3%2581%258B%25E3%2582%2589%25E3%2581%2593%25E3%2581%259D%25E3%2580%2581%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25AE%25E5%25BD%25B9%25E5%2589%25B2%25E3%2582%2592%25E8%25A6%258B%25E3%2581%25A4%25E3%2582%2581%25E7%259B%25B4%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ABAB%25E2%2586%2591%25E2%2586%2593BA%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dqRm84X2NSbjU2WlRqUEpXQmNzQTVCMmZ0c1l6czFnUnAyRUZ5PXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Go 1.28でstring(int)周りの挙動が変わりそう | Zennのトレンド]]></title>
+            <link>https://zenn.dev/aqyuki/articles/go-proposal-3939</link>
+            <guid isPermaLink="false">https://zenn.dev/aqyuki/articles/go-proposal-3939</guid>
+            <pubDate>Tue, 29 Sep 2026 05:08:57 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/28 16:26:11（日本時間）
+
+はじめに2026年09月23日のProposal Review Meetingで珍しいProposalがProposal-Acceptedになったので今回はそのProposalについてまとめていこうと思います。 spec: remove string(int) #3939今回承認されたProposalはspec: remove string(int)#3939です。このProposalで提案されて]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/28 16:26:11（日本時間）<br><br>はじめに2026年09月23日のProposal Review Meetingで珍しいProposalがProposal-Acceptedになったので今回はそのProposalについてまとめていこうと思います。 spec: remove string(int) #3939今回承認されたProposalはspec: remove string(int)#3939です。このProposalで提案されて</p>]]></content:encoded>
+            <author>しろね</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--hxNmeXqI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Go%25201.28%25E3%2581%25A7string%2528int%2529%25E5%2591%25A8%25E3%2582%258A%25E3%2581%25AE%25E6%258C%2599%25E5%258B%2595%25E3%2581%258C%25E5%25A4%2589%25E3%2582%258F%25E3%2582%258A%25E3%2581%259D%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%258D%25E3%2581%25AD%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNlY2U3MDYwMjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[クロスプラットフォームアプリのためのiPhone Duoレビュー | Zennのトレンド]]></title>
+            <link>https://zenn.dev/rdlabo/articles/iphone-duo-cross-platform-introduction</link>
+            <guid isPermaLink="false">https://zenn.dev/rdlabo/articles/iphone-duo-cross-platform-introduction</guid>
+            <pubDate>Tue, 29 Sep 2026 05:08:57 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/28 19:47:31（日本時間）
+
+iPhone Duoへの対応を調べるために、SwiftUIで小さな検証アプリを作って、シミュレーターでひたすら操作していました。ボタンを置き換えたり、モーダルを開いたり、画面を遷移させたり。調査だけで数日溶けました 😂折り畳める端末なので、まず画面幅への対応が気になりますよね。けれど、実際に触ってみると、ツールバーやタブの配置、メニューの表示、背景のアニメーションまで、確認したいことが結構ありまし]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/28 19:47:31（日本時間）<br><br>iPhone Duoへの対応を調べるために、SwiftUIで小さな検証アプリを作って、シミュレーターでひたすら操作していました。ボタンを置き換えたり、モーダルを開いたり、画面を遷移させたり。調査だけで数日溶けました 😂折り畳める端末なので、まず画面幅への対応が気になりますよね。けれど、実際に触ってみると、ツールバーやタブの配置、メニューの表示、背景のアニメーションまで、確認したいことが結構ありまし</p>]]></content:encoded>
+            <author>榊原昌彦</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--xdsNzpxV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AF%25E3%2583%25AD%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25A9%25E3%2583%2583%25E3%2583%2588%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%25A0%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AEiPhone%2520Duo%25E3%2583%25AC%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25A6%258A%25E5%258E%259F%25E6%2598%258C%25E5%25BD%25A6%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hPaXJOMUlrUWZNc0J2Vlljc1NzOGRGYW9USjV1TnZNTHF5TUp4cWc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Jujutsu と出会い、15 年使った Git にもう戻れなくなった理由 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/oukayuka/articles/15years-git-then-jujutsu</link>
+            <guid isPermaLink="false">https://zenn.dev/oukayuka/articles/15years-git-then-jujutsu</guid>
+            <pubDate>Tue, 29 Sep 2026 05:08:57 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/29 8:30:05（日本時間）
+
+2026 年、初めて自分の意思で VCS を選択したふりかえると私にとって VCS（バージョン管理システム）は、会社に指定されたものを使ってきただけでした。それまでの会社では社内にサーバを立てて Subversion を使うことが多かった中、2011 年から働き出した会社では GitHub が導入されており、そのため個々のエンジニアは Git を使うことを求められました。Git / GitHub ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/29 8:30:05（日本時間）<br><br>2026 年、初めて自分の意思で VCS を選択したふりかえると私にとって VCS（バージョン管理システム）は、会社に指定されたものを使ってきただけでした。それまでの会社では社内にサーバを立てて Subversion を使うことが多かった中、2011 年から働き出した会社では GitHub が導入されており、そのため個々のエンジニアは Git を使うことを求められました。Git / GitHub </p>]]></content:encoded>
+            <author>oukayuka</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--LShNO1fJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Jujutsu%2520%25E3%2581%25A8%25E5%2587%25BA%25E4%25BC%259A%25E3%2581%2584%25E3%2580%258115%2520%25E5%25B9%25B4%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%2520Git%2520%25E3%2581%25AB%25E3%2582%2582%25E3%2581%2586%25E6%2588%25BB%25E3%2582%258C%25E3%2581%25AA%25E3%2581%258F%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%259F%25E7%2590%2586%25E7%2594%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:oukayuka%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E1MDUwMjcxNTAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Playwright Test Agents × GitHub Actions：E2E テスト生成・修復の自動化 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/sun_asterisk/articles/e9b50f09839def</link>
+            <guid isPermaLink="false">https://zenn.dev/sun_asterisk/articles/e9b50f09839def</guid>
+            <pubDate>Mon, 28 Sep 2026 03:02:56 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/28 12:02:56（日本時間）
+
+はじめにPlaywright 1.56 で追加された Playwright Test Agents は、E2E テストの計画・生成・修復を AI エージェントに任せる仕組みです。私たちは稼働中のプロジェクトで、このエージェントを GitHub Actions から無人で動かす仕組みを設計・実装し、検証しました。本記事では、その設計と、どのプロジェクトでも試せる最小構成のサンプルを紹介します。次の順]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/28 12:02:56（日本時間）<br><br>はじめにPlaywright 1.56 で追加された Playwright Test Agents は、E2E テストの計画・生成・修復を AI エージェントに任せる仕組みです。私たちは稼働中のプロジェクトで、このエージェントを GitHub Actions から無人で動かす仕組みを設計・実装し、検証しました。本記事では、その設計と、どのプロジェクトでも試せる最小構成のサンプルを紹介します。次の順</p>]]></content:encoded>
+            <author>Alam Shafiul / ｱﾙﾑ ｼｮﾌｨｳﾙ</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--NLx7cwnb--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Playwright%2520Test%2520Agents%2520%25C3%2597%2520GitHub%2520Actions%25EF%25BC%259AE2E%2520%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E7%2594%259F%25E6%2588%2590%25E3%2583%25BB%25E4%25BF%25AE%25E5%25BE%25A9%25E3%2581%25AE%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Alam%2520Shafiul%2520%252F%2520%25EF%25BD%25B1%25EF%25BE%2599%25EF%25BE%2591...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2M1YTU0ZjZiM2MuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Sun%252A%2520Developers%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSkZGZF9HeC1BMjVDSk5DNHVxNFFGdF9lcm1fSmttQWFzQnVsOW5seGV6S09CTG1sQT1zMjUwLWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[探索できる人は何をしているの？『Explore It!』を読んで | Zennのトレンド]]></title>
+            <link>https://zenn.dev/knowledgework/articles/6996274de49607</link>
+            <guid isPermaLink="false">https://zenn.dev/knowledgework/articles/6996274de49607</guid>
+            <pubDate>Mon, 28 Sep 2026 03:00:05 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/28 12:00:05（日本時間）
+
+ナレッジワークでQAエンジニアをしている かとあず です。探索的テストをすると、何かしらを見つけることが多くあります。細かい部分だったり、「そこを気にするんだ？」と言われそうなコーナーケースだったりします。しかし、「なぜそれに気づいたの？」と聞かれると、うまく説明できません。反対に、「探索的テストをしました。何も見つかりませんでした。」となると、「品質がよかった」とは思えません。「それって本当に探]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/28 12:00:05（日本時間）<br><br>ナレッジワークでQAエンジニアをしている かとあず です。探索的テストをすると、何かしらを見つけることが多くあります。細かい部分だったり、「そこを気にするんだ？」と言われそうなコーナーケースだったりします。しかし、「なぜそれに気づいたの？」と聞かれると、うまく説明できません。反対に、「探索的テストをしました。何も見つかりませんでした。」となると、「品質がよかった」とは思えません。「それって本当に探</p>]]></content:encoded>
+            <author>かとあず</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--C-lRVFs5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%258E%25A2%25E7%25B4%25A2%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E4%25BA%25BA%25E3%2581%25AF%25E4%25BD%2595%25E3%2582%2592%25E3%2581%2597%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2581%25AE%25EF%25BC%259F%25E3%2580%258EExplore%2520It%2521%25E3%2580%258F%25E3%2582%2592%25E8%25AA%25AD%25E3%2582%2593%25E3%2581%25A7%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%258B%25E3%2581%25A8%25E3%2581%2582%25E3%2581%259A%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E4MWZhOWNhZmYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2583%258A%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25B8%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGc5dl9BSW9sR29QQ1JQcUpOWTVGbW5ydW5vQTZJNHdwX09UTUdFa0RFZmp4aERQTT1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Kubernetes 1.37: SIG Appsの変更内容 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/musaprg/articles/kubernetes-changelog-1-37-sig-apps</link>
+            <guid isPermaLink="false">https://zenn.dev/musaprg/articles/kubernetes-changelog-1-37-sig-apps</guid>
+            <pubDate>Sun, 27 Sep 2026 17:25:56 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/28 2:25:56（日本時間）
+
+Kubernetes v1.37が2026/08/26にリリースされました🎉本記事では、特にSIG Appsに関係する変更点を、CHANGELOGからピックアップして紹介いたします。📝がついた文章は、CHANGELOGの公式内容ではなく筆者の補足です。また、内容に誤り等ございましたら、コメントまたはDM等でご連絡ください！直近の変更点は以下になります。Kubernetes 1.36: SIG Ap]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/28 2:25:56（日本時間）<br><br>Kubernetes v1.37が2026/08/26にリリースされました🎉本記事では、特にSIG Appsに関係する変更点を、CHANGELOGからピックアップして紹介いたします。📝がついた文章は、CHANGELOGの公式内容ではなく筆者の補足です。また、内容に誤り等ございましたら、コメントまたはDM等でご連絡ください！直近の変更点は以下になります。Kubernetes 1.36: SIG Ap</p>]]></content:encoded>
+            <author>musaprg</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--g-yV1fDQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kubernetes%25201.37%253A%2520SIG%2520Apps%25E3%2581%25AE%25E5%25A4%2589%25E6%259B%25B4%25E5%2586%2585%25E5%25AE%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:musaprg%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I4NDQ1MTJjMjguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[そもそもClaude Codeのエフォートってなに？ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/goat_eat_any/articles/claude-code-effort-explained</link>
+            <guid isPermaLink="false">https://zenn.dev/goat_eat_any/articles/claude-code-effort-explained</guid>
+            <pubDate>Sun, 27 Sep 2026 17:18:34 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/28 2:18:34（日本時間）
+
+はじめにClaude Codeのモデルは選んでいるのに、エフォートは既定のまま、あるいは雰囲気で上げ下げしていませんか？ちゃんと調整した方がいいんだろうなと思いつつ、自分も「とりあえず高（high）」くらいの感覚で使っていました。2026年9月25日に、Claude CodeチームのThariqさんが、エフォートの使い分けを解説する記事を公開しました。エフォートを「タスクにどれだけ計算量を使ってほ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/28 2:18:34（日本時間）<br><br>はじめにClaude Codeのモデルは選んでいるのに、エフォートは既定のまま、あるいは雰囲気で上げ下げしていませんか？ちゃんと調整した方がいいんだろうなと思いつつ、自分も「とりあえず高（high）」くらいの感覚で使っていました。2026年9月25日に、Claude CodeチームのThariqさんが、エフォートの使い分けを解説する記事を公開しました。エフォートを「タスクにどれだけ計算量を使ってほ</p>]]></content:encoded>
+            <author>たなちゅー</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--uzy_waES--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%259D%25E3%2582%2582%25E3%2581%259D%25E3%2582%2582Claude%2520Code%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%2588%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25AA%25E3%2581%25AB%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%25AA%25E3%2581%25A1%25E3%2582%2585%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2IzZjkyOTIzZDQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[SOLID 原則と型の持つ責務 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/sator_imaging/articles/834240491191ec</link>
+            <guid isPermaLink="false">https://zenn.dev/sator_imaging/articles/834240491191ec</guid>
+            <pubDate>Sun, 27 Sep 2026 11:55:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/27 20:55:18（日本時間）
+
+AI がどうにもまともなコードを生成しないので詰めていると、「SOLID 原則とか曖昧でちょっと・・・」と言われました。その辺り諸々あるんですが、ココではその前段として型システムと責務について纏めます。以下断定的に書いていますが、そうとは言い切れない例外や解釈を丸め過ぎている部分については本投稿では触れません。 C/C++C にはそもそもクラスの概念がない。構造体だけで継承できない。（ポインタを介]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/27 20:55:18（日本時間）<br><br>AI がどうにもまともなコードを生成しないので詰めていると、「SOLID 原則とか曖昧でちょっと・・・」と言われました。その辺り諸々あるんですが、ココではその前段として型システムと責務について纏めます。以下断定的に書いていますが、そうとは言い切れない例外や解釈を丸め過ぎている部分については本投稿では触れません。 C/C++C にはそもそもクラスの概念がない。構造体だけで継承できない。（ポインタを介</p>]]></content:encoded>
+            <author>サトー™ @sator_imaging</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--Q-KZwkPR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SOLID%2520%25E5%258E%259F%25E5%2589%2587%25E3%2581%25A8%25E5%259E%258B%25E3%2581%25AE%25E6%258C%2581%25E3%2581%25A4%25E8%25B2%25AC%25E5%258B%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25B5%25E3%2583%2588%25E3%2583%25BC%2520%2520%2540sator_imaging%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNlMDA1ZjdjMjQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[すこし踏み込む CancellationToken | Zennのトレンド]]></title>
+            <link>https://zenn.dev/poipoionigiri/articles/3826f7675d39fd</link>
+            <guid isPermaLink="false">https://zenn.dev/poipoionigiri/articles/3826f7675d39fd</guid>
+            <pubDate>Sun, 27 Sep 2026 11:00:05 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/27 20:00:05（日本時間）
+
+登壇してお話ししましたC# Kaigi 2026で「すこし踏み込む CancellationToken —— .NETの実装とか他言語比較とか」というタイトルでお話ししてきました．CancellationToken の内部実装とか，Python，Go，Rustとの比較とかを通して，C#/.NETの協調的キャンセルの仕組みを紹介しました．資料はこちら．https://speakerdeck.com/]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/27 20:00:05（日本時間）<br><br>登壇してお話ししましたC# Kaigi 2026で「すこし踏み込む CancellationToken —— .NETの実装とか他言語比較とか」というタイトルでお話ししてきました．CancellationToken の内部実装とか，Python，Go，Rustとの比較とかを通して，C#/.NETの協調的キャンセルの仕組みを紹介しました．資料はこちら．https://speakerdeck.com/</p>]]></content:encoded>
+            <author>tkym</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--NxbkFUdj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%2599%25E3%2581%2593%25E3%2581%2597%25E8%25B8%258F%25E3%2581%25BF%25E8%25BE%25BC%25E3%2582%2580%2520CancellationToken%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tkym%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzdhODkzYmY4MmIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[VS Code の Claude Code 拡張機能、なんか更新多い…？ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/headwaters/articles/15875671106c54</link>
+            <guid isPermaLink="false">https://zenn.dev/headwaters/articles/15875671106c54</guid>
+            <pubDate>Sun, 27 Sep 2026 04:48:33 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/27 13:48:33（日本時間）
+
+VS Code を開くと Claude Code の拡張機能が更新されている。翌朝に開くとまた更新されている。さすがに多くないかと思って、実際に数えた。 どれくらい出ているのか更新の回数は、Marketplace の API で正確に数えられる。拡張機能の全バージョンと、その公開時刻が返ってくる。curl -s -X POST &quot;https://marketplace.visualstudio.c]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/27 13:48:33（日本時間）<br><br>VS Code を開くと Claude Code の拡張機能が更新されている。翌朝に開くとまた更新されている。さすがに多くないかと思って、実際に数えた。 どれくらい出ているのか更新の回数は、Marketplace の API で正確に数えられる。拡張機能の全バージョンと、その公開時刻が返ってくる。curl -s -X POST &quot;https://marketplace.visualstudio.c</p>]]></content:encoded>
+            <author>noriyasu</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--nwAR71tX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:VS%2520Code%2520%25E3%2581%25AE%2520Claude%2520Code%2520%25E6%258B%25A1%25E5%25BC%25B5%25E6%25A9%259F%25E8%2583%25BD%25E3%2580%2581%25E3%2581%25AA%25E3%2582%2593%25E3%2581%258B%25E6%259B%25B4%25E6%2596%25B0%25E5%25A4%259A%25E3%2581%2584%25E2%2580%25A6%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:noriyasu%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvaC5wbmc=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Platform Engineering Kaigi 2026 登壇資料まとめ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/key60228/articles/d4f2591a42a876</link>
+            <guid isPermaLink="false">https://zenn.dev/key60228/articles/d4f2591a42a876</guid>
+            <pubDate>Sat, 26 Sep 2026 17:01:10 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/27 2:01:10（日本時間）
+
+こんにちは、@key60228 です。Platform Engineering Kaigi 2026 に参加してきました！https://www.cnia.io/pek2026/原理的な Platform Engineering の話から、AI 基盤としての Platform の話、組織論的な話、はたまた Kubernetes の Controller の話まで、幅広いテーマのセッションがあり、か]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/27 2:01:10（日本時間）<br><br>こんにちは、@key60228 です。Platform Engineering Kaigi 2026 に参加してきました！https://www.cnia.io/pek2026/原理的な Platform Engineering の話から、AI 基盤としての Platform の話、組織論的な話、はたまた Kubernetes の Controller の話まで、幅広いテーマのセッションがあり、か</p>]]></content:encoded>
+            <author>KEY60228</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--6parybzP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Platform%2520Engineering%2520Kaigi%25202026%2520%25E7%2599%25BB%25E5%25A3%2587%25E8%25B3%2587%25E6%2596%2599%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:KEY60228%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzYwNWRjYjM3YmIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Cloudflare 上で Jev で作るほぼ0円運用可能な高品質なページ内検索 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/mazrean/articles/bd9b563ace18db</link>
+            <guid isPermaLink="false">https://zenn.dev/mazrean/articles/bd9b563ace18db</guid>
+            <pubDate>Sat, 26 Sep 2026 11:26:39 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/26 20:26:39（日本時間）
+
+自分は Go Proposal Weekly Digest というサイトを個人で運用しています。https://go-proposal-weekly-digest.mazrean.comGo 言語の Proposal と呼ばれる言語機能追加の提案を毎週 Claude Code がまとめるサイトで、公開してからそろそろ 8か月程度が立つものになります。ありがたいことにユーザーが一定数付いて毎週 20]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/26 20:26:39（日本時間）<br><br>自分は Go Proposal Weekly Digest というサイトを個人で運用しています。https://go-proposal-weekly-digest.mazrean.comGo 言語の Proposal と呼ばれる言語機能追加の提案を毎週 Claude Code がまとめるサイトで、公開してからそろそろ 8か月程度が立つものになります。ありがたいことにユーザーが一定数付いて毎週 20</p>]]></content:encoded>
+            <author>mazrean</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--JBConU37--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloudflare%2520%25E4%25B8%258A%25E3%2581%25A7%2520Jev%2520%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258B%25E3%2581%25BB%25E3%2581%25BC0%25E5%2586%2586%25E9%2581%258B%25E7%2594%25A8%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E9%25AB%2598%25E5%2593%2581%25E8%25B3%25AA%25E3%2581%25AA%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8%25E5%2586%2585%25E6%25A4%259C%25E7%25B4%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mazrean%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2NlZTE5ZGIxNDkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[人工知能と小説新人賞審査 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/enjoetoh/articles/ai-as-literary-judge</link>
+            <guid isPermaLink="false">https://zenn.dev/enjoetoh/articles/ai-as-literary-judge</guid>
+            <pubDate>Sat, 26 Sep 2026 06:53:26 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/26 15:53:26（日本時間）
+
+「第9回ゲンロンSF新人賞」候補作短評余禄 ■ＡＩ……2026年現在において大きな話題として各分野におけるＡＩ利用がありますが、それは創作業界においても同じです。 自分としてはとりあえず、「ＡＩにも小説は書ける」という人は、「自分がどんな作品を小説と考えているのか、具体的なリストを挙げよ、話はそれからだ」という気持ちですが、それはそれとします。昨年末あたりから、新人賞への投稿作の倍増が話題になるよ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/26 15:53:26（日本時間）<br><br>「第9回ゲンロンSF新人賞」候補作短評余禄 ■ＡＩ……2026年現在において大きな話題として各分野におけるＡＩ利用がありますが、それは創作業界においても同じです。 自分としてはとりあえず、「ＡＩにも小説は書ける」という人は、「自分がどんな作品を小説と考えているのか、具体的なリストを挙げよ、話はそれからだ」という気持ちですが、それはそれとします。昨年末あたりから、新人賞への投稿作の倍増が話題になるよ</p>]]></content:encoded>
+            <author>enjoetoh</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--dKa4yPL_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BA%25BA%25E5%25B7%25A5%25E7%259F%25A5%25E8%2583%25BD%25E3%2581%25A8%25E5%25B0%258F%25E8%25AA%25AC%25E6%2596%25B0%25E4%25BA%25BA%25E8%25B3%259E%25E5%25AF%25A9%25E6%259F%25BB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:enjoetoh%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzUzMWU2OGQ3ZjguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[OpenTelemetryで作るセルフサービステレメトリー基盤 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/ymotongpoo/books/observability-platform-with-otel</link>
+            <guid isPermaLink="false">https://zenn.dev/ymotongpoo/books/observability-platform-with-otel</guid>
+            <pubDate>Fri, 25 Sep 2026 23:38:05 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/26 8:38:05（日本時間）
+
+Platform Engineering Kaigi 2026の登壇「セルフサービスのオブザーバビリティ基盤をOpenTelemetryで作る」の解説資料です。SDKディストリビューションと自動計装、OpenTelemetry Collector、セマンティック規約を使い、開発チームが自分たちのテレメトリーを整備できる基盤を設計します。AIワークロードの観測と、AIエージェントによる障害調査への拡]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/26 8:38:05（日本時間）<br><br>Platform Engineering Kaigi 2026の登壇「セルフサービスのオブザーバビリティ基盤をOpenTelemetryで作る」の解説資料です。SDKディストリビューションと自動計装、OpenTelemetry Collector、セマンティック規約を使い、開発チームが自分たちのテレメトリーを整備できる基盤を設計します。AIワークロードの観測と、AIエージェントによる障害調査への拡</p>]]></content:encoded>
+            <author>Yoshi Yamaguchi</author>
+            <enclosure length="0" type="image/jpg" url="https://res.cloudinary.com/zenn/image/upload/s--97nAT-3Z--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci8yNzY1NjRiOTRjLnBuZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Vercelの「インポートできます」メールは何を見て送られてくるのか 61リポジトリで確かめた | Zennのトレンド]]></title>
+            <link>https://zenn.dev/devuloper/articles/vercel_import_candidates_email</link>
+            <guid isPermaLink="false">https://zenn.dev/devuloper/articles/vercel_import_candidates_email</guid>
+            <pubDate>Fri, 25 Sep 2026 12:04:47 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/25 21:04:47（日本時間）
+
+きっかけGitHub にリポジトリを作って push すると、Vercel から「A new project in ○○ is available to import and deploy on Vercel.」というメールが届くことがあります。この記事は、このメールがどんな条件で送られてくるのかを、検証用の Organization に 61 個のリポジトリを作って調べた記録です。発端は sh1]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/25 21:04:47（日本時間）<br><br>きっかけGitHub にリポジトリを作って push すると、Vercel から「A new project in ○○ is available to import and deploy on Vercel.」というメールが届くことがあります。この記事は、このメールがどんな条件で送られてくるのかを、検証用の Organization に 61 個のリポジトリを作って調べた記録です。発端は sh1</p>]]></content:encoded>
+            <author>otoneko.</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--XwSS_5af--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Vercel%25E3%2581%25AE%25E3%2580%258C%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25BE%25E3%2581%2599%25E3%2580%258D%25E3%2583%25A1%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%25AF%25E4%25BD%2595%25E3%2582%2592%25E8%25A6%258B%25E3%2581%25A6%25E9%2580%2581%25E3%2582%2589%25E3%2582%258C%25E3%2581%25A6%25E3%2581%258F%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258B%252061%25E3%2583%25AA%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E3%2581%25A7%25E7%25A2%25BA%25E3%2581%258B%25E3%2582%2581%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:otoneko.%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSXlpSGhSQzk3cTgwdlNoc0JnSGFPZHk3RWJFNFdFeXJKdkZkRFZWTFo4d0tIT2l5OF89czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[AIに書かせても速くならないのは、AIを「手足」として使っているから。人が押さえるべき5つの判断ポイントと半自動ループの作り方 | Zennのトレンド]]></title>
+            <link>https://zenn.dev/dotdtech_blog/articles/65d51bc72d7ee9</link>
+            <guid isPermaLink="false">https://zenn.dev/dotdtech_blog/articles/65d51bc72d7ee9</guid>
+            <pubDate>Fri, 25 Sep 2026 09:35:29 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/25 18:35:29（日本時間）
+
+はじめにAI にコードを書かせているのに、開発が速くならない。この感覚を持っている人は多いと思います。書かせるのは一瞬なのに、確認と手戻りで1日が終わる。同じ時期に、「ループエンジニアリング」という言葉を見かけるようになりました。AI エージェントに計画 → 実装 → 検証 → 修正のループを繰り返させ、人はコードを書く側から、ループと判断点を設計する側に回る考え方です。うまく回れば、人が付きっき]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/25 18:35:29（日本時間）<br><br>はじめにAI にコードを書かせているのに、開発が速くならない。この感覚を持っている人は多いと思います。書かせるのは一瞬なのに、確認と手戻りで1日が終わる。同じ時期に、「ループエンジニアリング」という言葉を見かけるようになりました。AI エージェントに計画 → 実装 → 検証 → 修正のループを繰り返させ、人はコードを書く側から、ループと判断点を設計する側に回る考え方です。うまく回れば、人が付きっき</p>]]></content:encoded>
+            <author>koki yamamoto</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--trxdc6oY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2581%25AB%25E6%259B%25B8%25E3%2581%258B%25E3%2581%259B%25E3%2581%25A6%25E3%2582%2582%25E9%2580%259F%25E3%2581%258F%25E3%2581%25AA%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25E3%2581%25AE%25E3%2581%25AF%25E3%2580%2581AI%25E3%2582%2592%25E3%2580%258C%25E6%2589%258B%25E8%25B6%25B3%25E3%2580%258D%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2581%258B%25E3%2582%2589%25E3%2580%2582%25E4%25BA%25BA%25E3%2581%258C%25E6%258A%25BC%25E3%2581%2595%25E3%2581%2588%25E3%2582%258B%25E3%2581%25B9%25E3%2581%258D5%25E3%2581%25A4%25E3%2581%25AE%25E5%2588%25A4%25E6%2596%25AD%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25A8%25E5%258D%258A%25E8%2587%25AA%25E5%258B%2595%25E3%2583%25AB...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:koki%2520yamamoto%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzcxNTMxNmU4NDMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:dotD%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1ViMm1TV0pIcXBzZnNSUVNwb1Y1clVkVzhfTlFscGJTUU52NGF2NGEyLUs0T1VuYz1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Jevにゲームをやらせるな！LLMを蒸留してみよう！ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/nwn/articles/e49154653ecea9</link>
+            <guid isPermaLink="false">https://zenn.dev/nwn/articles/e49154653ecea9</guid>
+            <pubDate>Fri, 25 Sep 2026 07:27:13 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/25 16:27:13（日本時間）
+
+はじめにJevのデモとして公式ではDOOMをプレイさせるデモがありました。100ms前後のレイテンシでレスポンスを返せるため、リアルタイム制御に使えるという点が強調されています。https://x.com/CompleteSkeptic/status/2099925687465570372またXをみているとJevにゲームをプレイさせた投稿を多く見かけました。「BERTでよい」論などあると思いますが]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/25 16:27:13（日本時間）<br><br>はじめにJevのデモとして公式ではDOOMをプレイさせるデモがありました。100ms前後のレイテンシでレスポンスを返せるため、リアルタイム制御に使えるという点が強調されています。https://x.com/CompleteSkeptic/status/2099925687465570372またXをみているとJevにゲームをプレイさせた投稿を多く見かけました。「BERTでよい」論などあると思いますが</p>]]></content:encoded>
+            <author>ヨ</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--q_h2Loh0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Jev%25E3%2581%25AB%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%25A0%25E3%2582%2592%25E3%2582%2584%25E3%2582%2589%25E3%2581%259B%25E3%2582%258B%25E3%2581%25AA%25EF%25BC%2581LLM%25E3%2582%2592%25E8%2592%25B8%25E7%2595%2599%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%2588%25E3%2581%2586%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%25A8%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzllY2U3NmI3N2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[HTTP/3 を知ったので Docker で動かして仕組みを確かめた | Zennのトレンド]]></title>
+            <link>https://zenn.dev/sonicmoov/articles/http3-hands-on</link>
+            <guid isPermaLink="false">https://zenn.dev/sonicmoov/articles/http3-hands-on</guid>
+            <pubDate>Fri, 25 Sep 2026 04:23:57 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/25 13:23:57（日本時間）
+
+HTTP/3 というものがあるらしい恥ずかしながら、つい最近 HTTP/3 という存在を知りました。HTTP/2 までは何となく理解しているつもりでしたが、HTTP/3 は「速いらしい」以上のことを何も知らない状態でした。調べてみると、HTTP/3 は HTTP のバージョンアップというより、Web を30年以上支えてきた TCP を捨てて、QUIC という別のプロトコルに土台を載せ替えたものでし]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/25 13:23:57（日本時間）<br><br>HTTP/3 というものがあるらしい恥ずかしながら、つい最近 HTTP/3 という存在を知りました。HTTP/2 までは何となく理解しているつもりでしたが、HTTP/3 は「速いらしい」以上のことを何も知らない状態でした。調べてみると、HTTP/3 は HTTP のバージョンアップというより、Web を30年以上支えてきた TCP を捨てて、QUIC という別のプロトコルに土台を載せ替えたものでし</p>]]></content:encoded>
+            <author>03104</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--fdsNF0Vs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:HTTP%252F3%2520%25E3%2582%2592%25E7%259F%25A5%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%2520Docker%2520%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E3%2582%2592%25E7%25A2%25BA%25E3%2581%258B%25E3%2582%2581%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:03104%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzY0YjYwNGE3MzguanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2582%25BD%25E3%2583%258B%25E3%2583%2583%25E3%2582%25AF%25E3%2583%25A0%25E3%2583%25BC%25E3%2583%2596%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2p5cmY2YWxxSzRfVVVIVWNtVWl5STBJbXp0NjI1M3ZOQjE3UERHTWc9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[/claude-api prompt-audit で棚卸ししたら、Claude Opus 5.5 化で外れた設定がぞろぞろ出てきた | Zennのトレンド]]></title>
+            <link>https://zenn.dev/nanora/articles/20260925-claude-prompt-audit-opus55</link>
+            <guid isPermaLink="false">https://zenn.dev/nanora/articles/20260925-claude-prompt-audit-opus55</guid>
+            <pubDate>Fri, 25 Sep 2026 01:59:47 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/25 10:59:47（日本時間）
+
+TL;DRClaude Code 同梱の /claude-api prompt-audit で、CLAUDE.md やプロンプトの古い書き方を洗い出せる自前のエージェントに当てたら、言い回しより「書いてあることと実物のずれ」がぞろぞろ出たopus がいつの間にか Opus 5.5 になっていて、effort 設定も効かず重い xhigh のままだったeffort が効いているかは起動ログに出ない。]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/25 10:59:47（日本時間）<br><br>TL;DRClaude Code 同梱の /claude-api prompt-audit で、CLAUDE.md やプロンプトの古い書き方を洗い出せる自前のエージェントに当てたら、言い回しより「書いてあることと実物のずれ」がぞろぞろ出たopus がいつの間にか Opus 5.5 になっていて、effort 設定も効かず重い xhigh のままだったeffort が効いているかは起動ログに出ない。</p>]]></content:encoded>
+            <author>nanora</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s---94tvCSC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%252Fclaude-api%2520prompt-audit%2520%25E3%2581%25A7%25E6%25A3%259A%25E5%258D%25B8%25E3%2581%2597%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589%25E3%2580%2581Claude%2520Opus%25205.5%2520%25E5%258C%2596%25E3%2581%25A7%25E5%25A4%2596%25E3%2582%258C%25E3%2581%259F%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%258C...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nanora%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzk3YWY5ODNkOGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[11年生本番データ飛ばす | Zennのトレンド]]></title>
+            <link>https://zenn.dev/ficilcom/articles/prod_db_reset_incident</link>
+            <guid isPermaLink="false">https://zenn.dev/ficilcom/articles/prod_db_reset_incident</guid>
+            <pubDate>Fri, 25 Sep 2026 00:00:05 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/25 9:00:05（日本時間）
+
+はじめに早いもので、エンジニア歴 11 年目になりました。これまでの人生で、本番データを飛ばしたことは一度もありませんでした。それが、シルバーウィーク明けの初日に起きました。連休明けの記憶なんて当てにならないということです。連休前に何をして、どの URL を触っていたかなんて、正直ほぼ覚えていませんでした。失敗談と、これから入れる対策の備忘録です。使っているのはだいたいこれです。Turborepo]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/25 9:00:05（日本時間）<br><br>はじめに早いもので、エンジニア歴 11 年目になりました。これまでの人生で、本番データを飛ばしたことは一度もありませんでした。それが、シルバーウィーク明けの初日に起きました。連休明けの記憶なんて当てにならないということです。連休前に何をして、どの URL を触っていたかなんて、正直ほぼ覚えていませんでした。失敗談と、これから入れる対策の備忘録です。使っているのはだいたいこれです。Turborepo</p>]]></content:encoded>
+            <author>かげやま</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--lyaabPPy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:11%25E5%25B9%25B4%25E7%2594%259F%25E6%259C%25AC%25E7%2595%25AA%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E9%25A3%259B%25E3%2581%25B0%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%258B%25E3%2581%2592%25E3%2582%2584%25E3%2581%25BE%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzE3MmFmNGJkODAuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2595%25E3%2582%25A3%25E3%2582%25B7%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25A0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNjNmE4NDNiMzEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[age40 - 30代でやってよかったこと | Zennのトレンド]]></title>
+            <link>https://zenn.dev/dress_code/articles/2026-09-24_age-40</link>
+            <guid isPermaLink="false">https://zenn.dev/dress_code/articles/2026-09-24_age-40</guid>
+            <pubDate>Thu, 24 Sep 2026 07:58:17 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/24 16:58:17（日本時間）
+
+2026年9月24日、40歳になりました。昔バズった「35歳定年説」を聞きながら過ごした30代だった。最近また読み返した、そーだいさんの記事がきっかけで、僕も40歳の区切りでエンジニアとしての30代を振り返ることにした。!TL;DRコードを書かない時期も、「伝える」「つなぐ」を通じて技術への理解と視野は広がった技術の細部を忘れても、「前回との差分に気づく」ための経験は残るAIで作れる量が増えるほど]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/24 16:58:17（日本時間）<br><br>2026年9月24日、40歳になりました。昔バズった「35歳定年説」を聞きながら過ごした30代だった。最近また読み返した、そーだいさんの記事がきっかけで、僕も40歳の区切りでエンジニアとしての30代を振り返ることにした。!TL;DRコードを書かない時期も、「伝える」「つなぐ」を通じて技術への理解と視野は広がった技術の細部を忘れても、「前回との差分に気づく」ための経験は残るAIで作れる量が増えるほど</p>]]></content:encoded>
+            <author>sakutaro</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--rI4fY3ju--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:age40%2520-%252030%25E4%25BB%25A3%25E3%2581%25A7%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2582%2588%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:sakutaro%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzRiOGMxZmU1MDUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:DRESS%2520CODE%2520TECH%2520BLOG%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzA4NmIzNjU0NzQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Claude Code クラウドセッション、使ってみて！ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/goat_eat_any/articles/claude-code-cloud-sessions</link>
+            <guid isPermaLink="false">https://zenn.dev/goat_eat_any/articles/claude-code-cloud-sessions</guid>
+            <pubDate>Thu, 24 Sep 2026 07:27:32 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/24 16:27:32（日本時間）
+
+はじめにClaude Code クラウドセッション、使っていますか？実は、ふだんの対話のセッションもそのままクラウドで動かせます！クラウドセッションは、Claude CodeをAnthropicのクラウドで動かす機能です。PCやアプリ、ブラウザを閉じても処理が止まらず、Desktopアプリやブラウザ、スマホのどこからでも同じセッションの続きができます。以前は「Claude Code on the ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/24 16:27:32（日本時間）<br><br>はじめにClaude Code クラウドセッション、使っていますか？実は、ふだんの対話のセッションもそのままクラウドで動かせます！クラウドセッションは、Claude CodeをAnthropicのクラウドで動かす機能です。PCやアプリ、ブラウザを閉じても処理が止まらず、Desktopアプリやブラウザ、スマホのどこからでも同じセッションの続きができます。以前は「Claude Code on the </p>]]></content:encoded>
+            <author>たなちゅー</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--RB3ILX3M--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%2520Code%2520%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25A6%25E3%2583%2589%25E3%2582%25BB%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2580%2581%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%25A6%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%25AA%25E3%2581%25A1%25E3%2582%2585%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2IzZjkyOTIzZDQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[自宅サーバーのススメ | Zennのトレンド]]></title>
+            <link>https://zenn.dev/porters_tech/articles/b2282728b35397</link>
+            <guid isPermaLink="false">https://zenn.dev/porters_tech/articles/b2282728b35397</guid>
+            <pubDate>Thu, 24 Sep 2026 01:00:06 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/9/24 10:00:06（日本時間）
+
+はじめに昨年末、新しいパソコンを組むことにしました。欲しいパーツを選び、秋葉原のお店で見積もりを出してもらった直後に、RAM不足による価格高騰が発生しました。なんてタイミングが悪いんだと思いましたが、それはまた別の話です。新しいパソコンのセットアップが終わると、次に考えたのは、古いノートPC「ASUS ROG Strix GL703」をどうするかということでした。GL703は複数のストレージドライ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/9/24 10:00:06（日本時間）<br><br>はじめに昨年末、新しいパソコンを組むことにしました。欲しいパーツを選び、秋葉原のお店で見積もりを出してもらった直後に、RAM不足による価格高騰が発生しました。なんてタイミングが悪いんだと思いましたが、それはまた別の話です。新しいパソコンのセットアップが終わると、次に考えたのは、古いノートPC「ASUS ROG Strix GL703」をどうするかということでした。GL703は複数のストレージドライ</p>]]></content:encoded>
+            <author>Tucker</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--vPxl8RR---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2587%25AA%25E5%25AE%2585%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25AE%25E3%2582%25B9%25E3%2582%25B9%25E3%2583%25A1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Tucker%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzI5ZWYwZTM2YmUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%259D%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25BA%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvcC5wbmc=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+    </channel>
+</rss>

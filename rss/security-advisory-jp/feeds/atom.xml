@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/</id>
+    <title>GitHub Security Advisory - Translated Japanese｜企業テックブログRSS</title>
+    <updated>2026-10-03T20:45:52.578Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/atom.xml"/>
+    <subtitle>GitHub Security Advisory - Translated Japanese：enの記事を日本語に翻訳してまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[[probe-image-size] プローブ画像サイズ:SVGパーサーにおけるQuadratic-time Denial | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-gjj5-9665-rwrc</id>
+        <link href="https://github.com/advisories/GHSA-gjj5-9665-rwrc"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T23:18:02.000Z</updated>
+        <summary type="html"><![CDATA[概要probe-image-size は、SVG ヘッダを検索正規表現でスキャンします。 /&lt;[-_.:a-zA-Z0-9][^&gt;]*/。 多くの &lt; 文字を含んだ入力では、 &gt; がエンジンを再起動します。 [^&gt;]* 各 &lt; 位置でスキャンし、毎回入力の終了まで実行し、クワッドな時間複雑さを与えます。 同期とストリーミングパーサの両方が影響されます。 SVG パーサに達する ImpactEver]]></summary>
+        <content type="html"><![CDATA[概要probe-image-size は、SVG ヘッダを検索正規表現でスキャンします。 /&lt;[-_.:a-zA-Z0-9][^&gt;]*/。 多くの &lt; 文字を含んだ入力では、 &gt; がエンジンを再起動します。 [^&gt;]* 各 &lt; 位置でスキャンし、毎回入力の終了まで実行し、クワッドな時間複雑さを与えます。 同期とストリーミングパーサの両方が影響されます。 SVG パーサに達する ImpactEvery エントリーポイントは、プローブ(stream)、プローブ(url)の影響を受けます。 URL フォームは最も露出しているものの、入力はリモートホストから取得されるため、攻撃者はリンクのみを提供する必要があります。 クラフトしたバッファを処理すると、Node.js イベント ループを100% CPUで実行し、全期間にわたってブロックします。 アップロードバリデータ、画像プロキシ、またはリンクアンフルサービスなどの生産環境では、同時リクエスト数が少ないため、サービスを拒否することができます。 根本原因分析 2つの独立した問題。 同期パスの入力サイズのキャップの欠如。 lib/parse_syn]]></content>
+        <published>2026-10-02T23:18:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@fastify/busboy] @fastify/busboy は、プロトタイプの名前の複数の部分のヘッダーを介してサービス拒否に脆弱です | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-x8mw-p69m-v3mx</id>
+        <link href="https://github.com/advisories/GHSA-x8mw-p69m-v3mx"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T23:16:36.000Z</updated>
+        <summary type="html"><![CDATA[1.0.0 から @fastify/busboy の ImpactVersions と 3.2.1 以前はサービス拒否に脆弱です。 multipart ヘッダパーサは、プレーン JavaScript オブジェクトに部分ヘッダ名を保存します。そのため、_proto__ またはコンストラクタという部分のヘッダは配列ではなく継承された値に解決し、パーサは TypeError: this.header[h]]></summary>
+        <content type="html"><![CDATA[1.0.0 から @fastify/busboy の ImpactVersions と 3.2.1 以前はサービス拒否に脆弱です。 multipart ヘッダパーサは、プレーン JavaScript オブジェクトに部分ヘッダ名を保存します。そのため、_proto__ またはコンストラクタという部分のヘッダは配列ではなく継承された値に解決し、パーサは TypeError: this.header[h].push をスローします。 文書化された req.pipe(busboy) をエラーイベントとして統合することで、直接 write()/end() の使用法は同期的にスローし、uncaught なら Node.js プロセスを終了できます。 パーサはアプリケーションミドルウェアの前に実行されます。そのため、マルチパート/フォームデータを送信できる未処理のクライアントが影響されます。 バージョン 3.2.1 で PatchesFixed。 トレーニング エラーリスナーを Busboy ストリームに添付して、パーサーの失敗はプロセスをクラッシュするのではなく処理され、直接 write()/en]]></content>
+        <published>2026-10-02T23:16:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@fastify/busboy] @fastify/busboyは、特大のマルチパート境界を介してサービス拒否に脆弱 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-xjh9-v7x6-24jw</id>
+        <link href="https://github.com/advisories/GHSA-xjh9-v7x6-24jw"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T23:16:17.000Z</updated>
+        <summary type="html"><![CDATA[3.1.0 以降から @fastify/busboy の ImpactVersions は、サービス拒否に脆弱です。 ベンダーのストリーミングマルチパート検索では、デフォルトは Uint8Array(256) でスキップします。 正確に252バイトのマルチパート境界は、検索針256バイトになり、テーブルのエントリはゼロにラップします。そのため、細工されたリクエストはCPU-boundループで検索を]]></summary>
+        <content type="html"><![CDATA[3.1.0 以降から @fastify/busboy の ImpactVersions は、サービス拒否に脆弱です。 ベンダーのストリーミングマルチパート検索では、デフォルトは Uint8Array(256) でスキップします。 正確に252バイトのマルチパート境界は、検索針256バイトになり、テーブルのエントリはゼロにラップします。そのため、細工されたリクエストはCPU-boundループで検索を維持し、Node.jsイベントループを固定します。 未認証のクライアントは、単一の小さなリクエストでこれをトリガーできます。 @fastify/busboy を使用して、マルチパート/フォームデータを解析したり、@fastify/multipart を経由したりするアプリケーションが影響されます。 バージョン 3.2.1 で PatchesFixed。 トレーニング 70文字のRFC 2046制限よりも長い境界線を解析し、拒否する前に、複数部境界線を検証します(例えば逆プロキシやonRequestホック)。 3.2.1 にアップグレードすると、問題が削除されます。 参考:https://git]]></content>
+        <published>2026-10-02T23:16:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[headroom-ai] クロスサイトWebSocketハイジャック(CSWSH)に脆弱なヘッドルーム | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-h46j-26q3-rggf</id>
+        <link href="https://github.com/advisories/GHSA-h46j-26q3-rggf"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T23:09:15.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション ヘッドルーム WebSocket サーバは、クライアント WebSocket リクエストのオリジンヘッダを上流サーバーに転送し、悪意のある WebSocket クライアントが認証なしで任意の LLM リクエストを実行することを可能にします。 これは、ブラウザがヘッドルームプロキシにアクセスし、OpenAI APIキーがOpenAI_API_KEY環境変数に保存されている場合、l]]></summary>
+        <content type="html"><![CDATA[インフォメーション ヘッドルーム WebSocket サーバは、クライアント WebSocket リクエストのオリジンヘッダを上流サーバーに転送し、悪意のある WebSocket クライアントが認証なしで任意の LLM リクエストを実行することを可能にします。 これは、ブラウザがヘッドルームプロキシにアクセスし、OpenAI APIキーがOpenAI_API_KEY環境変数に保存されている場合、lightpandaなどの従来のまたはヘッドレスブラウザで実行された悪意のあるWebSocketクライアントによって悪用することができます。 DetailsThe Headroom サーバーは ws://&lt;headroom_host&gt;:8787/v1/responses で WebSocket ハンドラを定義します。: @app.websocket("/v1/responses") async def openai_responses_ws(websocket: WebSocket): await proxy.handle_openai_responses_ws(websocket): awai]]></content>
+        <published>2026-10-02T23:09:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@a2ui/web_core] @a2ui/web_core: `openUrl` は `javascript を許可します:` エージェントが指定したボタン操作による URI 実行 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-72qq-p3r5-f7wq</id>
+        <link href="https://github.com/advisories/GHSA-72qq-p3r5-f7wq"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:55:49.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション オープン @a2ui/web_core の Url 関数は、URI スキームを有効化せずに、エージェント制御 URL を window.open() に直接渡します。 悪意のあるエージェントは、ボタンコンポーネントの関数コールアクションの url 引数として javascript: URI を供給できます。 ユーザーがレンダーされたボタンをクリックすると、犠牲者のアプリケーショ]]></summary>
+        <content type="html"><![CDATA[インフォメーション オープン @a2ui/web_core の Url 関数は、URI スキームを有効化せずに、エージェント制御 URL を window.open() に直接渡します。 悪意のあるエージェントは、ボタンコンポーネントの関数コールアクションの url 引数として javascript: URI を供給できます。 ユーザーがレンダーされたボタンをクリックすると、犠牲者のアプリケーションのブラウザの起源で任意のJavaScriptが実行され、保存/反映されたXSSを構成する。 デフォルトでない設定は必要ありません。 デフォルトでは基本カタログが有効になっています。 詳細オープンに脆弱性が存在する @a2ui/web_core (commit 23a003248abbf59da6c376ea64ace91d82d209ff).Sink — レンダラー/web_core/src/v0_9/basic_catalog/functions/basic_functions.ts:428-430:export const OpenUrlImplementation = createFu]]></content>
+        <published>2026-10-02T22:55:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[trigger.dev] トリガ.dev: Trigger CLI デバッグデプロイメントログは、解決された環境の秘密値を公開します | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-fj2x-mqqp-3v2w</id>
+        <link href="https://github.com/advisories/GHSA-fj2x-mqqp-3v2w"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:45:12.000Z</updated>
+        <summary type="html"><![CDATA[影響を受けたバージョン: トリガー.dev 4.5.3 (4.5.6 は CLI によって宣伝されたがテストされていない)。 トリガーで実行されるドライランをステージングします。 dev は --env のステージング --dry-run --log-level デバッグをデプロイします。 デバッグ出力は、完全なビルドワーカーオプションオブジェクトを記録しました。 envVars プロパティには、]]></summary>
+        <content type="html"><![CDATA[影響を受けたバージョン: トリガー.dev 4.5.3 (4.5.6 は CLI によって宣伝されたがテストされていない)。 トリガーで実行されるドライランをステージングします。 dev は --env のステージング --dry-run --log-level デバッグをデプロイします。 デバッグ出力は、完全なビルドワーカーオプションオブジェクトを記録しました。 envVars プロパティには、データベース接続文字列やサービス資格情報を含む、すべての解決されたステージング変数に対する未処理の値が含まれています。 正しく値を隠す非デバッグ環境なので、ユーザはディストリビューションログをコピーしないと合理的に期待できます。 影響: 開発者ターミナル トランスクリプト、CI デバッグ ログ、キャプチャされたエージェント/ツールの出力、またはサポート バンドルはデプロイメントが起こらない場合でも、デプロイのシークレットを回復できます。 再生産: Trigger.dev プロジェクトをシークレット環境変数で構成します。 上記のコマンドを認証されたプロファイルで実行します。 開始ビルドのインスペ]]></content>
+        <published>2026-10-02T22:45:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[vibe-trading-ai] Vibe-Trading FastAPIエンドポイントは、不正なアクセス、ファイルアップロード、およびRCEチェーンを許可します | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-v2f8-6655-7grj</id>
+        <link href="https://github.com/advisories/GHSA-v2f8-6655-7grj"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:44:26.000Z</updated>
+        <summary type="html"><![CDATA[概要:5 発見 — 未認証のフル API 露出 (F1, リード クリティカル), API_AUTH_KEY セット (F2) と相殺する既定の認証ギャップ, .py/.sh/.yaml の未認証ファイル書き込みをサーバーに返されたパス (F3), デフォルトで実行された CORS と組み合わせて、ループバックのみのチェックを行い、ホワイトリストされたローカルホスト ポートのクレデンシャル アクセ]]></summary>
+        <content type="html"><![CDATA[概要:5 発見 — 未認証のフル API 露出 (F1, リード クリティカル), API_AUTH_KEY セット (F2) と相殺する既定の認証ギャップ, .py/.sh/.yaml の未認証ファイル書き込みをサーバーに返されたパス (F3), デフォルトで実行された CORS と組み合わせて、ループバックのみのチェックを行い、ホワイトリストされたローカルホスト ポートのクレデンシャル アクセス (F5) および (F4) を介して、 (F3) および (F3) 部分的な API を経由して) および (F4) または (F5) ) 共有ベースライン(5件の検索結果) 出荷されたagent/.env.example ライン 112 は # API_AUTH_KEY= はコメントアウトしました。 エージェント/api_server.py ライン 303 では、api_key: が返して、API_ の直後に None を返すと実行されます。 AUTH_KEY は未設定なので、依存関係=[Depends(require_auth)] で飾られたすべてのエンドポイントは未認証として動作しま]]></content>
+        <published>2026-10-02T22:44:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[vibe-trading-ai] Vibe-Tradingファイル読み込みツールは、任意のサーバー読み取りファイルを公開します | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-5rmq-chc7-m22f</id>
+        <link href="https://github.com/advisories/GHSA-5rmq-chc7-m22f"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:44:12.000Z</updated>
+        <summary type="html"><![CDATA[概要:2 発見 — Safe_user_path() は、path.home() または Path.cwd() の下の任意のパスを受け付けます。 出荷されたルートコンテナ内のパスは /root と /app に解決します。 (root/.ssh/id_rsa、 /root/.aws/credentials、 /root/.kube/config 、 /app/agent/.env に、チェックを渡]]></summary>
+        <content type="html"><![CDATA[概要:2 発見 — Safe_user_path() は、path.home() または Path.cwd() の下の任意のパスを受け付けます。 出荷されたルートコンテナ内のパスは /root と /app に解決します。 (root/.ssh/id_rsa、 /root/.aws/credentials、 /root/.kube/config 、 /app/agent/.env に、チェックを渡します) (F9)。 readdocu/id_rsa、 / は、 /root/.aws/credentials、 /root/.kube/config、および/config および /app/.env は、および /app/.env は、および /app/ は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、 は、すべての 全てを全てを全てを全てを全て、 と 全てを全て、 と に渡します。 F10 は F9 よりも厳密に広範ですが、異なる固定スコープ (F10 = 行方不明な Safe_path() は 1 つの関数で呼び出します。 F9 = path]]></content>
+        <published>2026-10-02T22:44:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[vibe-trading-ai] Vibe-Trading LLM-callable ツールは、コマンドの実行、コードの注入、および SSRF を許可します | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-jqmf-mx4f-hfr6</id>
+        <link href="https://github.com/advisories/GHSA-jqmf-mx4f-hfr6"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:44:03.000Z</updated>
+        <summary type="html"><![CDATA[概要:5件の検索 — BashTool シェルインジェクションシンク (F6、キャノン RCE プリミティブ)、背景RunTool async シェルインジェクションシンク (F7)、バックテスト exec_module() は、SignalEngine クラスチェック (F8 — BashTool 署名と一致しない独立した RCE パス) の前にトップレベルのステートメントを実行し、スキーマ/ホ]]></summary>
+        <content type="html"><![CDATA[概要:5件の検索 — BashTool シェルインジェクションシンク (F6、キャノン RCE プリミティブ)、背景RunTool async シェルインジェクションシンク (F7)、バックテスト exec_module() は、SignalEngine クラスチェック (F8 — BashTool 署名と一致しない独立した RCE パス) の前にトップレベルのステートメントを実行し、スキーマ/ホスト検証 (F-B4 SSRF) なしで HTTP を転送する read_url アウトバウンド (F-B4 SSRF)、およびJinja-F2 のコードを無効化します。 共有ベースライン(5件の検索結果) すべての5つのツールは、LMエージェントが起動時に取得する自動検出ツールレジストリのメンバーです。 LLMは、ユーザープロンプトに基づいて、それらのいずれかを呼び出すために自由です。 ツールの登録は、デフォルト設定で無条件です。 演算子のオプトインフラグは、それらをゲートします。 GHSA-1 / F1(未認証 POST /sessions/{id}/messages) と組み合わせ、この]]></content>
+        <published>2026-10-02T22:44:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[trigger.dev] トリガ.dev: クロス環境展開解除 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-4672-hwv6-gq62</id>
+        <link href="https://github.com/advisories/GHSA-4672-hwv6-gq62"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:42:40.000Z</updated>
+        <summary type="html"><![CDATA[それぞれのプロジェクトを複数の環境(dev、staging、prod、per-PR プレビューブランチ)に分離し、それぞれ独自のシークレット API キーで分離します。環境は信頼境界です(dev/preview/CI キーは、prod キーよりも低い信頼です)。 ほとんどの API ルートは、認証されたキーの環境({friendlyId, runtimeEnvironmentId: auth.en]]></summary>
+        <content type="html"><![CDATA[それぞれのプロジェクトを複数の環境(dev、staging、prod、per-PR プレビューブランチ)に分離し、それぞれ独自のシークレット API キーで分離します。環境は信頼境界です(dev/preview/CI キーは、prod キーよりも低い信頼です)。 ほとんどの API ルートは、認証されたキーの環境({friendlyId, runtimeEnvironmentId: auth.environment.id)にリソースの検索をスクーピングすることでこれを強制します。 展開キャンセルパスは行いません。 deploymentService.getDeployment() は、プロジェクトによるルックアップをスコープ 決して環境を使わない Id — プロジェクト内のあらゆる環境の秘密鍵は、同じプロジェクトの他の環境に属する展開をキャンセルできます。 デプロイメント GET ルートは、対照的に、env-scoped です。そのため、prod デプロイを読んでみると、404'd と同じキーは、それもキャンセルできません。 つまり、暗黙はバグです。 Affectedapps/weba]]></content>
+        <published>2026-10-02T22:42:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[trigger.dev] トリガ.dev: TSQLクエリコンパイラ(POST /api/v1/query)のクロステナントSQLインジェクション | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-9q4r-4842-93vw</id>
+        <link href="https://github.com/advisories/GHSA-9q4r-4842-93vw"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:42:20.000Z</updated>
+        <summary type="html"><![CDATA[TSQLクエリコンパイラ内のクロステナントSQLインジェクションにより、認証されたトリガーが使用できます。 開発者は、他のテナントの分析データをすべて読み込みます。 顧客向きのクエリエンドポイント POST /api/v1/query は、内部パッケージ/tsql で ClickHouse SQL にコンパイルされる TSQL/TRQL クエリを受け付けます。 コンパイラは、すべてのユーザの入力を]]></summary>
+        <content type="html"><![CDATA[TSQLクエリコンパイラ内のクロステナントSQLインジェクションにより、認証されたトリガーが使用できます。 開発者は、他のテナントの分析データをすべて読み込みます。 顧客向きのクエリエンドポイント POST /api/v1/query は、内部パッケージ/tsql で ClickHouse SQL にコンパイルされる TSQL/TRQL クエリを受け付けます。 コンパイラは、すべてのユーザの入力をパラメータ化またはエスケープし、パーテナントWHEREガードを注入します。ただし、ウィンドウ関数名を除き、許可リストなしでSQL文字列に連結され、エスケープしません。 バックティック・クォートされた識別子をその位置にスミュリングすることにより、攻撃者は、テナントガードの外に座っている(例:(SELECT ... From Task_runs_v2 WHERE Organization_id = 'org_VICTIM'))を、他の組織の行を拡張します。 実際のコンパイラとライブClickHouseに対する検証済みエンドツーエンド。 DetailsVulnerable シンク — 内部パッケージ]]></content>
+        <published>2026-10-02T22:42:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[trigger.dev] トリガ.dev: 友好的な操業によるUnauthenticatedの実時間ストリーム データ注入 ログイン | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-59h8-w5q6-mfmp</id>
+        <link href="https://github.com/advisories/GHSA-59h8-w5q6-mfmp"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:39:57.000Z</updated>
+        <summary type="html"><![CDATA[概要 /realtime/v1/streams/:runId/:stream 用の POST ハンドラ 認証がない 実行中のfriendlyIdを知っているか推測する任意のエンティティティティは、任意のデータをリアルタイムストリームに注入することができます。 脆弱性の詳細ファイル: app/webapp/app/routes/realtime.v1.streams.$runId.$streamId]]></summary>
+        <content type="html"><![CDATA[概要 /realtime/v1/streams/:runId/:stream 用の POST ハンドラ 認証がない 実行中のfriendlyIdを知っているか推測する任意のエンティティティティは、任意のデータをリアルタイムストリームに注入することができます。 脆弱性の詳細ファイル: app/webapp/app/routes/realtime.v1.streams.$runId.$streamId.ts アクションハンドラ(ライン17)は、オースラッパーはありません。 コードコメントは「バックワードの互換性のためのPlainアクションは、authヘッダを送信しない古いクライアントと互換性があります。 お問い合わせ 行29の実行ルックアップは、{friendlyId: run 環境のスキャッピング(runtimeEnvironmentId がチェックされていない)無しで Id } を、生産の操業はアクセス可能です。 友好的な操業 Idsは予測可能なパターン(例、 run_1234abcd)に従います。 Reproduce# へのステップ 認証不要curl -X POST "http://]]></content>
+        <published>2026-10-02T22:39:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[trigger.dev] トリガ.dev 自己主催の展開: デフォルトの秘密は、非認証インフラストラクチャの妥協を許します | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-pqxw-g93w-hj9x</id>
+        <link href="https://github.com/advisories/GHSA-pqxw-g93w-hj9x"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:39:48.000Z</updated>
+        <summary type="html"><![CDATA[サマリーSelf-hostedトリガー.dev v4 インスタンスは、提供されている Docker Compose 設定を使用してデプロイされ、ホスティング/docker/.env.example からのデフォルトシークレットは、マルチステージの未認証攻撃チェーンに脆弱で、インフラストラクチャの妥協を完了します。 脆弱性の詳細 ホスティング/ドッカー/.env.exampleファイルには、ハードコ]]></summary>
+        <content type="html"><![CDATA[サマリーSelf-hostedトリガー.dev v4 インスタンスは、提供されている Docker Compose 設定を使用してデプロイされ、ホスティング/docker/.env.example からのデフォルトシークレットは、マルチステージの未認証攻撃チェーンに脆弱で、インフラストラクチャの妥協を完了します。 脆弱性の詳細 ホスティング/ドッカー/.env.exampleファイルには、ハードコードされた暗号化の秘密が含まれている:SESSION_SECRET=2818143646516f6fffd707b36f334bbbMAGIC_LINK_SECRET=44da78b7bbb0dfe709cf38931d25dcddENCRYPTION_KEY=f686147ab967943ebbe9ed3b496eaMAN465D_WORKDRET_SECRET=44da78b7bbb0dfe709cf38931dfe709cf38931d25dcddENCRYPTION_KEY=f686147ab967943ebbe9ebbe9ebbe9ebbe9ebbe9ebbe9ed3b496e3b4]]></content>
+        <published>2026-10-02T22:39:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[figlet] フィグレットは、空白空間のときに、アンバウンドされていないループを介してサービスの拒否に脆弱です ブレイクは小さい幅と使用されます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-62ch-8vmq-8xm7</id>
+        <link href="https://github.com/advisories/GHSA-62ch-8vmq-8xm7"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:39:16.000Z</updated>
+        <summary type="html"><![CDATA[ImpactA の denial-of-service (infinite ループ) は text()/textSync() の ifboth:whitespace で発生できます Break: true はセットされ、単一の FIGlet 文字のレンダリングされた幅より幅は小さくなります。 これらの条件下では、breakWord() は有効なブレイクポイントが見つかりません。そのため、gener]]></summary>
+        <content type="html"><![CDATA[ImpactA の denial-of-service (infinite ループ) は text()/textSync() の ifboth:whitespace で発生できます Break: true はセットされ、単一の FIGlet 文字のレンダリングされた幅より幅は小さくなります。 これらの条件下では、breakWord() は有効なブレイクポイントが見つかりません。そのため、generateFigTextLines() の単語拍ループは終了しません。 これは、CPUcore をピン化し、 Node.js イベント ループをブロックせずにメモリを成長させます。 SeverityLow か媒体。 Triggering には、デフォルトでない設定 (whitespaceBreak: true) と、 攻撃者制御の幅の値が text()/textSync() に達する必要があります。 このライブラリは、通常、これは到達できない固定オプションで使用されます。 リクエストパスにwithwhitespaceBreak と一緒に不信な幅を渡るアプリケーションが影響されます。 Patches]]></content>
+        <published>2026-10-02T22:39:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[trigger.dev] Trigger.dev: V1コーディネーターのデフォルト秘密のソケット。 ログイン | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-gg6r-gp4c-89hp</id>
+        <link href="https://github.com/advisories/GHSA-gg6r-gp4c-89hp"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:39:00.000Z</updated>
+        <summary type="html"><![CDATA[TL;DRThe/coordinatorのソケット。 IO ネームスペースは、すべての webapp ブートにマウントし、ソースに焼き込まれたデフォルトシークレット(「コーディネーターシークレット」)で認証します。 オーバーライド変数は、セルフホストのドキュメント、.env.example、または Helm 値で文書化されていないため、デフォルトでソースの船を読んでいなかったオペレータはいません。]]></summary>
+        <content type="html"><![CDATA[TL;DRThe/coordinatorのソケット。 IO ネームスペースは、すべての webapp ブートにマウントし、ソースに焼き込まれたデフォルトシークレット(「コーディネーターシークレット」)で認証します。 オーバーライド変数は、セルフホストのドキュメント、.env.example、または Helm 値で文書化されていないため、デフォルトでソースの船を読んでいなかったオペレータはいません。 接続したら、READY_FOR_EXECUTION run の暗号化された env vars を返します。 デフォルト設定のセルフホスト型Webappにアクセスできる人は誰でも、内部IDを見つけることができる任意の実行からプロダクションシークレットを引き出すことができます。 脆弱性 この攻撃は、トリガーの3つの脆弱性によって可能になります。 開発1. デフォルト認証シークレット(CWE-798、クリティカル) PROVIDER_SECRET および COORDINATOR_SECRET app/webapp/env.server.ts:289-290 で .default("provider]]></content>
+        <published>2026-10-02T22:39:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[trigger.dev] トリガ.dev: 警報チャネルのwebhookによる盲目SSRF | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-q567-cr4x-96w4</id>
+        <link href="https://github.com/advisories/GHSA-q567-cr4x-96w4"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:35:31.000Z</updated>
+        <summary type="html"><![CDATA[概要WEBHOOKアラートチャネルは、ユーザが指定したURLを保存します。 アラート火災(deployment/run障害、エラーグループ)、Webappサーバー(alertsWorker -&gt; DeliverAlertService)が、フェッチ(webhook.url、...)を介してそのURLにHMAC署名されたアラートペイロードをPOSTします。 URL はホストの allowlist ま]]></summary>
+        <content type="html"><![CDATA[概要WEBHOOKアラートチャネルは、ユーザが指定したURLを保存します。 アラート火災(deployment/run障害、エラーグループ)、Webappサーバー(alertsWorker -&gt; DeliverAlertService)が、フェッチ(webhook.url、...)を介してそのURLにHMAC署名されたアラートペイロードをPOSTします。 URL はホストの allowlist または private-IP/metadata ブロックリスト (169.254 のリポジトリ全体検索、isPrivate、isLoopback、net.isIP、srf は ZERO のヒットを返します) に対して検証されず、API ルートの URL フィールドは z.string().Optional() だけです。 そのため、認証されたテナントは、内部インフラまたは169.254.169.254およびマルチテナントサーバーでWebhookをフェッチすることができます。 Affectedapps/webapp、頭部5d99457 (現在の本管)。 ルート原因情報源(APIルート):アプリ/プ]]></content>
+        <published>2026-10-02T22:35:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[trigger.dev] トリガ.dev: 実行再生アクションで認証を欠くと、クロス組織タスク実行(IDOR)が可能 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-pp95-gc86-jq6q</id>
+        <link href="https://github.com/advisories/GHSA-pp95-gc86-jq6q"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T22:35:24.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション app/webapp/app/routes/resources.taskruns.$runParam.replay.ts で実行するアクション関数は認証や認可チェックがありません。 同じファイルで loader (GET) は、requestUser(request) とスコープのクエリをユーザの組織に正しく呼び出しますが、 166 行の action(POST) はどちらも行]]></summary>
+        <content type="html"><![CDATA[インフォメーション app/webapp/app/routes/resources.taskruns.$runParam.replay.ts で実行するアクション関数は認証や認可チェックがありません。 同じファイルで loader (GET) は、requestUser(request) とスコープのクエリをユーザの組織に正しく呼び出しますが、 166 行の action(POST) はどちらも行いません。これにより、認証されたユーザは、実行のfriendlyId.DetailsVulnerable ファイルを知ることで、任意の組織からタスクを再生することができます。app/app/routes/resources.taskruns.$runParam.replay.ts loader (line 28-29) — 適切に認証された:export async 関数 loader({リクエスト、params }: LoaderFunctionArgs) { const user = await が要求されます ユーザー(リクエスト) // ✓ Auth チェック const userId]]></content>
+        <published>2026-10-02T22:35:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[trigger.dev] トリガ.dev: サーバー側のリクエストは無効な webhook アラートチャネル URL で強制的に | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-xxv7-2vv3-h682</id>
+        <link href="https://github.com/advisories/GHSA-xxv7-2vv3-h682"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T19:31:33.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション プロジェクトメンバーは、内部アドレスでURLポイントを配信し、トリガーするWebhookアラートチャンネルを作成できます。 dev の制御平面は SSRF の保護なしでそこに警報を送ります。 webhook URL は無効な文字列として保存され、Webapp サーバから直接取得されるため、低特権認証ユーザは、サーバーの問題 POST リクエストを内部のみサービスやクラウドメタデ]]></summary>
+        <content type="html"><![CDATA[インフォメーション プロジェクトメンバーは、内部アドレスでURLポイントを配信し、トリガーするWebhookアラートチャンネルを作成できます。 dev の制御平面は SSRF の保護なしでそこに警報を送ります。 webhook URL は無効な文字列として保存され、Webapp サーバから直接取得されるため、低特権認証ユーザは、サーバーの問題 POST リクエストを内部のみサービスやクラウドメタデータエンドポイント(例えば http://169.254.169.254/)にすることができます。 Webappのどこにいても、プライベートIP、スキーム、またはリダイレクトフィルタリングは存在しません。 詳細は、保存されたURL、apps/webapp/app/v3/services/alerts/deliverAlert.server.ts:949(#deliverWebhook):const response = await fetch(webhook.url、{メソッド: "POST"、ヘッダ: { "content-type": "application/json", "x-trig]]></content>
+        <published>2026-10-02T19:31:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[trigger.dev] トリガ.dev: 再プレイを実行すると、タスクが攻撃者-chosen 環境に実行されます(クロステナント書き込み) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-qxpp-qjg8-x4jv</id>
+        <link href="https://github.com/advisories/GHSA-qxpp-qjg8-x4jv"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-02T19:31:17.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション ダッシュボードの再生アクションは、ソースの実行を承認します(それは、発信者のorgに属している必要があります)が、再生された実行のためのターゲット環境は、体から動詞を取り、orgまたはプロジェクトメンバーシップのためにチェックされていません。 id のみで再生パスフィルタで使用される環境のルックアップ。 その結果、認証されたユーザーは、別の組織やプロジェクトの環境に自分の実行の]]></summary>
+        <content type="html"><![CDATA[インフォメーション ダッシュボードの再生アクションは、ソースの実行を承認します(それは、発信者のorgに属している必要があります)が、再生された実行のためのターゲット環境は、体から動詞を取り、orgまたはプロジェクトメンバーシップのためにチェックされていません。 id のみで再生パスフィルタで使用される環境のルックアップ。 その結果、認証されたユーザーは、別の組織やプロジェクトの環境に自分の実行の1つを再生し、犠牲者のテナントのキューを消費し、実行履歴を汚染するタスクを実行することができます。 インフォメーション replay アクション メンバーは、ソースが正しく実行される (apps/webapp/routes/resources.taskruns.$runParam.replay.ts, project.organization.members.some.userId がフィルタリングしたtaskrun のfindFirst を指しています。しかし、送信されたフォーム、resources.taskruns.replay.ts:344-346:const replayunservi]]></content>
+        <published>2026-10-02T19:31:17.000Z</published>
+    </entry>
+</feed>
