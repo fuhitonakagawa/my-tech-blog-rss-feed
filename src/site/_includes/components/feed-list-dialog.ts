@@ -166,7 +166,7 @@ const createCategory = (
   };
 };
 
-/** 左ナビと同じ順序で、カテゴリと取得元を一覧するモーダル。 */
+/** 配信元・テーマの表示順で、カテゴリと取得元を一覧するモーダル。 */
 export const renderFeedListDialog = (
   page: EleventyPage,
   generatedFeedStatuses: ReadonlyMap<string, GeneratedFeedDisplayStatus> = loadGeneratedFeedStatuses(),

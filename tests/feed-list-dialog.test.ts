@@ -58,7 +58,7 @@ describe('renderFeedListDialog', () => {
 });
 
 describe('登録フィード一覧のカテゴリ構造', () => {
-  it('全カテゴリをナビと同じ順序で表示し、現在のカテゴリだけ展開する', () => {
+  it('全カテゴリを定義の表示順で表示し、現在のカテゴリだけ展開する', () => {
     const $ = load(renderFeedListDialog({ url: '/rss/publickey/' }, new Map()));
     const ids = $('.ui-feed-list-dialog__section')
       .toArray()
@@ -86,7 +86,7 @@ describe('登録フィード一覧のカテゴリ構造', () => {
         .find('.ui-feed-list-dialog__sources a')
         .toArray()
         .map((node) => $(node).text()),
-    ).toEqual(['国内テックブログ', '企業テックブログ', 'karaageAI情報']);
+    ).toEqual(['国内テックブログ', 'yamadashy企業テックブログ', 'karaageAI情報']);
     const translated = $('#feed-list-section-my-tech-blog-robotics-zh-translated-jp');
     expect(translated.text()).toContain('中国語記事の翻訳元カテゴリ');
     expect(translated.find('.ui-feed-list-dialog__sources a').text()).toBe('Robotics（中国語）');
