@@ -19,21 +19,9 @@ export const renderNav = (page: EleventyPage): string => {
   const currentTitle =
     current?.title ??
     (page.url === '/' ? 'ALL' : page.url === `/${statisticsConfig.pagePath}` ? statisticsConfig.title : 'カテゴリ一覧');
-  const groups = [
-    { directory: 'deduplicated-feeds', title: '重複除外（dedup）' },
-    { directory: 'translated-feeds', title: '日本語翻訳' },
-    { directory: 'section-feeds', title: 'カテゴリ別' },
-  ];
-  const sections = groups
-    .map(
-      (group) => `<section class='ui-category-group' aria-labelledby='category-${group.directory}'>
-    <p class='ui-category-group__title' id='category-${group.directory}'>${group.title}</p>
-    <ul class='ui-category-links'>${DISPLAY_SECTION_LIST.filter((section) => section.feedDirectory === group.directory)
-      .map((section) => `<li>${link(section.title, `${constants.sectionRootPath}/${sectionPathId(section.id)}/`)}</li>`)
-      .join('')}</ul>
-  </section>`,
-    )
-    .join('');
+  const sections = DISPLAY_SECTION_LIST.map(
+    (section) => `<li>${link(section.title, `${constants.sectionRootPath}/${sectionPathId(section.id)}/`)}</li>`,
+  ).join('');
 
   return `<nav class='ui-nav' aria-label='カテゴリ'>
     <div class='ui-category-heading'>
@@ -42,7 +30,7 @@ export const renderNav = (page: EleventyPage): string => {
     </div>
     <div class='ui-category-scroll' tabindex='0' role='region' aria-label='カテゴリ一覧を縦スクロール'>
       <div class='ui-category-shortcuts'>${link('ALL', '')}${link(statisticsConfig.title, statisticsConfig.pagePath)}</div>
-      ${sections}
+      <ul class='ui-category-links'>${sections}</ul>
     </div>
 </nav>`;
 };

@@ -7,21 +7,16 @@ export interface DisplaySection extends Pick<FeedSection, 'id' | 'title'> {
   feedDirectory: 'section-feeds' | 'translated-feeds' | 'deduplicated-feeds';
 }
 
-/** 購読用の統合フィードを先頭に置き、関連するカテゴリを隣接させる。 */
+/** 配信元・テーマごとに、重複除外版と集約元のカテゴリを隣接させる。 */
 const SECTION_DISPLAY_ORDER = [
-  'my-tech-blog-jp-dedup',
-  'zenn-dedup',
-  'qiita-dedup',
-  'it-media-dedup',
-  'menthas-dedup',
-  'hatenab-dedup',
   // 企業・個人ブログ
+  'my-tech-blog-jp-dedup',
   'my-tech-blog-jp',
   'company-tech-blog',
+  'karaage-ai-news',
   'my-tech-blog-solo',
   // AI・開発
   'my-tech-blog-ai',
-  'karaage-ai-news',
   'my-tech-blog-engineering',
   'my-tech-blog-platform',
   'my-tech-blog-programming',
@@ -42,22 +37,29 @@ const SECTION_DISPLAY_ORDER = [
   'jvn',
   'jpcert',
   // 投稿サービス
+  'zenn-dedup',
   'zenn-trend',
   'zenn-ai',
+  'zenn-physical-ai',
   'zenn-cloud',
   'zenn-security',
+  'qiita-dedup',
   'qiita-trend',
   'qiita-ai',
+  'qiita-physical-ai',
   'qiita-cloud',
   'qiita-security',
   // ニュース・メディア
+  'hatenab-dedup',
   'hatenab',
+  'menthas-dedup',
   'menthas',
   'publickey',
   'infoq',
   'thinkit',
   'developersio',
   'gihyo',
+  'it-media-dedup',
   'it-media',
   'technoedge',
   'gigazine',

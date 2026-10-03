@@ -73,3 +73,32 @@ AI情報RSS：54件
 
 はてブ dedup：39件
 はてブ...
+
+
+
+----
+
+
+https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/tech-book/
+
+の左のカテゴリ一覧の並び順をアプデしたい。
+Zennとかqiitaはphysical aiが離れているが、まとめたい
+my-docs/CleanShot 2026-10-03 at 14.54.06@2x.png
+
+企業テックブログも、日本のものは
+dedup
+yamadashy
+karaage
+など、dedupの集約元になっているものは連番にしたいし、
+
+aws en
+aws en translated jp
+も並べたい
+
+いまはdedup、日本語訳、で離れてカテゴライズしているけど、
+それはいらないかな
+
+あと、
+右上のハンバーガーメニューを押すと一覧が出てくるけど、
+my-docs/CleanShot 2026-10-03 at 14.56.26@2x.png
+文字サイズが大きすぎたり、descありなしとか、どのカテゴリにどのurlがはいっているかとか、見にくいので、もうちょっと見やすくしたい。ハンバーガーアイコンであることも、一覧っぽくないアイコンなので、別のが良いかな。いい感じにパット見で一覧であることがわかるアイコンにしてほしい

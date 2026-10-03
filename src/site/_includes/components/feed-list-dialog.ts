@@ -62,104 +62,142 @@ const renderGeneratedFeedStatus = (
   return `<span class="ui-feed-list-dialog__feed-status" data-status="${status}">${label}</span>`;
 };
 
-/**
- * 登録フィード一覧を開くヘッダーボタン。
- */
+/** 登録フィード一覧を開くヘッダーボタン。 */
 export const renderFeedListButton = (): string => {
   return `<button type="button" class="ui-feed-list-button" aria-label="登録フィード一覧を開く" aria-haspopup="dialog" aria-expanded="false" aria-controls="feed-list-dialog">
-        <span class="ui-feed-list-button__icon" aria-hidden="true">☰</span>
+        <svg class="ui-feed-list-button__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M9 6h12M9 12h12M9 18h12"/><circle cx="3" cy="6" r="1"/><circle cx="3" cy="12" r="1"/><circle cx="3" cy="18" r="1"/>
+        </svg>
+        <span>フィード一覧</span>
     </button>`;
 };
 
-/**
- * セクションごとに登録フィードを一覧するモーダル。
- */
+/** 取得元の名前・RSS URL・生成状態を同じ行の中に表示する。 */
+const renderSourceFeed = (
+  feedInfo: FeedInfo,
+  statuses: ReadonlyMap<string, GeneratedFeedDisplayStatus>,
+): string => `<li class="ui-feed-list-dialog__feed">
+    <div class="ui-feed-list-dialog__feed-heading">
+        <a class="ui-feed-list-dialog__feed-label" href="${escapeHtml(feedInfo.pageUrl ?? feedInfo.url)}">${escapeHtml(feedInfo.label)}</a>
+        ${renderGeneratedFeedStatus(feedInfo, statuses)}
+    </div>
+    <a class="ui-feed-list-dialog__feed-url" href="${escapeHtml(feedInfo.url)}">${escapeHtml(feedInfo.url)}</a>
+</li>`;
+
+/** 派生フィードの集約元・翻訳元のカテゴリへ案内する。 */
+const renderSourceSections = (ids: string[], relativeUrl: string): string =>
+  `<ul class="ui-feed-list-dialog__sources">${ids
+    .map((id) => {
+      const title = FEED_SECTION_LIST.find((section) => section.id === id)?.title ?? id;
+      return `<li><a href="${relativeUrl}${constants.sectionRootPath}/${escapeHtml(sectionPathId(id))}/">${escapeHtml(title)}</a></li>`;
+    })
+    .join('')}</ul>`;
+
+interface FeedListCategory {
+  id: string;
+  title: string;
+  pagePath: string;
+  rssUrl: string;
+  meta: string;
+  sourceTitle: string;
+  sources: string;
+}
+
+/** カテゴリの購読先と取得元を分け、現在のカテゴリだけ初期表示で展開する。 */
+const renderCategory = (category: FeedListCategory, page: EleventyPage): string => {
+  const relativeUrl = escapeHtml(relativeUrlFilter(page.url));
+  const current = page.url === `/${category.pagePath}`;
+  return `<details class="ui-feed-list-dialog__section" id="feed-list-section-${escapeHtml(category.id)}"${current ? ' open' : ''}>
+    <summary class="ui-feed-list-dialog__summary">
+        <span class="ui-feed-list-dialog__section-title">${escapeHtml(category.title)}</span>
+        <span class="ui-feed-list-dialog__meta">${escapeHtml(category.meta)}</span>
+    </summary>
+    <div class="ui-feed-list-dialog__section-content">
+        <div class="ui-feed-list-dialog__subscription">
+            <a class="ui-feed-list-dialog__page-link" href="${relativeUrl}${escapeHtml(category.pagePath)}">カテゴリページ</a>
+            <span class="ui-feed-list-dialog__source-title">購読RSS</span>
+            <a class="ui-feed-list-dialog__feed-url" href="${escapeHtml(category.rssUrl)}">${escapeHtml(category.rssUrl)}</a>
+        </div>
+        <p class="ui-feed-list-dialog__source-title">${escapeHtml(category.sourceTitle)}</p>
+        ${category.sources}
+    </div>
+</details>`;
+};
+
+/** 種別に応じた取得元を、カテゴリ共通の表示形式で返す。 */
+const createCategory = (
+  section: (typeof DISPLAY_SECTION_LIST)[number],
+  relativeUrl: string,
+  statuses: ReadonlyMap<string, GeneratedFeedDisplayStatus>,
+): FeedListCategory => {
+  const base = {
+    id: section.id,
+    title: section.title,
+    pagePath: `${constants.sectionRootPath}/${sectionPathId(section.id)}/`,
+    rssUrl: sectionFeedUrls(section.id).rss,
+  };
+  const deduplicated = DEDUPLICATED_FEED_DEFINITION_LIST.find(({ id }) => id === section.id);
+  if (deduplicated) {
+    return {
+      ...base,
+      meta: `重複除外 · ${deduplicated.sourceSectionIds.length}カテゴリ`,
+      sourceTitle: '集約元カテゴリ',
+      sources: renderSourceSections(deduplicated.sourceSectionIds, relativeUrl),
+    };
+  }
+  const translated = TRANSLATED_FEED_DEFINITION_LIST.find(({ id }) => id === section.id);
+  if (translated) {
+    return {
+      ...base,
+      meta: '日本語訳',
+      sourceTitle: `${translated.sourceLanguage === 'zh' ? '中国語' : '英語'}記事の翻訳元カテゴリ`,
+      sources: renderSourceSections([translated.sourceSectionId], relativeUrl),
+    };
+  }
+  const feeds = FEED_SECTION_LIST.find(({ id }) => id === section.id)?.feedInfoList ?? [];
+  const available = feeds.filter((feed) => isAvailableFeed(feed, statuses));
+  return {
+    ...base,
+    meta: `取得元 ${available.length}件`,
+    sourceTitle: '取得元RSS',
+    sources: available.length
+      ? `<ul class="ui-feed-list-dialog__feeds">${available.map((feed) => renderSourceFeed(feed, statuses)).join('')}</ul>`
+      : '<p class="ui-feed-list-dialog__empty">公開可能な取得元RSSはありません。</p>',
+  };
+};
+
+/** 左ナビと同じ順序で、カテゴリと取得元を一覧するモーダル。 */
 export const renderFeedListDialog = (
   page: EleventyPage,
   generatedFeedStatuses: ReadonlyMap<string, GeneratedFeedDisplayStatus> = loadGeneratedFeedStatuses(),
 ): string => {
   const relativeUrl = escapeHtml(relativeUrlFilter(page.url));
-
-  const sectionGroups = new Map(
-    FEED_SECTION_LIST.map((section): [string, string] => {
-      const sectionPath = `${constants.sectionRootPath}/${sectionPathId(section.id)}/`;
-      const feedItems = section.feedInfoList
-        .filter((feedInfo) => isAvailableFeed(feedInfo, generatedFeedStatuses))
-        .map((feedInfo) => {
-          return `<li class="ui-feed-list-dialog__feed">
-                    <div class="ui-feed-list-dialog__feed-heading">
-                        <a class="ui-feed-list-dialog__feed-label" href="${escapeHtml(feedInfo.pageUrl ?? feedInfo.url)}">${escapeHtml(feedInfo.label)}</a>
-                        ${renderGeneratedFeedStatus(feedInfo, generatedFeedStatuses)}
-                    </div>
-                    <a class="ui-feed-list-dialog__feed-url" href="${escapeHtml(feedInfo.url)}">${escapeHtml(feedInfo.url)}</a>
-                </li>`;
-        })
-        .join('\n');
-
-      const translatedFeeds = TRANSLATED_FEED_DEFINITION_LIST.filter(
-        (definition) => definition.sourceSectionId === section.id,
-      )
-        .map((definition) => {
-          const feedUrl = escapeHtml(sectionFeedUrls(definition.id).rss);
-          return `<li class="ui-feed-list-dialog__feed">
-            <div class="ui-feed-list-dialog__feed-heading">
-                <a class="ui-feed-list-dialog__feed-label" href="${relativeUrl}${escapeHtml(constants.sectionRootPath)}/${escapeHtml(sectionPathId(definition.id))}/">${escapeHtml(definition.title)}</a>
-                <span>英語記事の日本語翻訳</span>
-            </div>
-            <a class="ui-feed-list-dialog__feed-url" href="${feedUrl}">${feedUrl}</a>
-        </li>`;
-        })
-        .join('\n');
-
-      return [
-        section.id,
-        `<section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-section-${escapeHtml(section.id)}">
-                <h3 id="feed-list-section-${escapeHtml(section.id)}" class="ui-feed-list-dialog__section-title">
-                    <a href="${relativeUrl}${escapeHtml(sectionPath)}">${escapeHtml(section.title)}</a>
-                </h3>
-                <ul class="ui-feed-list-dialog__feeds">
-                    ${feedItems}
-                    ${translatedFeeds}
-                </ul>
-            </section>`,
-      ];
-    }),
+  const categories = DISPLAY_SECTION_LIST.map((section) =>
+    renderCategory(createCategory(section, relativeUrl, generatedFeedStatuses), page),
+  ).join('');
+  const statistics = renderCategory(
+    {
+      id: 'statistics',
+      title: statisticsConfig.title,
+      pagePath: statisticsConfig.pagePath,
+      rssUrl: statisticsFeedUrls.rss,
+      meta: '日次集計',
+      sourceTitle: '集計対象',
+      sources: '<p class="ui-feed-list-dialog__empty">通常・日本語訳・重複除外カテゴリの記事数</p>',
+    },
+    page,
   );
 
-  const deduplicatedGroups = new Map(
-    DEDUPLICATED_FEED_DEFINITION_LIST.map((definition): [string, string] => {
-      const feedUrl = escapeHtml(sectionFeedUrls(definition.id).rss);
-      const inputs = definition.sourceSectionIds.map(
-        (id) => FEED_SECTION_LIST.find((section) => section.id === id)?.title ?? id,
-      );
-      return [
-        definition.id,
-        `<section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-section-${escapeHtml(definition.id)}">
-      <h3 id="feed-list-section-${escapeHtml(definition.id)}" class="ui-feed-list-dialog__section-title"><a href="${relativeUrl}${escapeHtml(constants.sectionRootPath)}/${escapeHtml(sectionPathId(definition.id))}/">${escapeHtml(definition.title)}</a></h3>
-      <p>${escapeHtml(inputs.join('・'))}を統合。${DEDUPLICATED_FEED_DEFINITION_LIST.length}本の重複除外RSSで記事の配信先を共有します。</p>
-      <ul class="ui-feed-list-dialog__feeds"><li class="ui-feed-list-dialog__feed"><a class="ui-feed-list-dialog__feed-url" href="${feedUrl}">${feedUrl}</a></li></ul>
-    </section>`,
-      ];
-    }),
-  );
-
-  const groups = new Map([...sectionGroups, ...deduplicatedGroups]);
-  const orderedGroups = DISPLAY_SECTION_LIST.map((section) => groups.get(section.id) ?? '').join('\n');
-
-  return `<div id="feed-list-dialog" class="ui-feed-list-dialog" role="dialog" aria-modal="true" aria-labelledby="feed-list-dialog-title" hidden>
-        <div class="ui-feed-list-dialog__backdrop" data-feed-list-dialog-close></div>
-        <div class="ui-feed-list-dialog__panel" tabindex="-1">
-            <div class="ui-feed-list-dialog__header">
+  return `<dialog id="feed-list-dialog" class="ui-feed-list-dialog" aria-labelledby="feed-list-dialog-title" aria-describedby="feed-list-dialog-description">
+    <div class="ui-feed-list-dialog__panel">
+        <div class="ui-feed-list-dialog__header">
+            <div>
                 <h2 id="feed-list-dialog-title" class="ui-feed-list-dialog__title">登録フィード一覧</h2>
-                <button type="button" class="ui-feed-list-dialog__close" aria-label="登録フィード一覧を閉じる" data-feed-list-dialog-close>×</button>
+                <p id="feed-list-dialog-description" class="ui-feed-list-dialog__description">カテゴリを開くと、購読RSSと取得元を確認できます。</p>
             </div>
-            <div class="ui-feed-list-dialog__body">
-                ${orderedGroups}
-                <section class="ui-feed-list-dialog__section" aria-labelledby="feed-list-statistics">
-                    <h3 id="feed-list-statistics" class="ui-feed-list-dialog__section-title"><a href="${relativeUrl}${statisticsConfig.pagePath}">${escapeHtml(statisticsConfig.title)}</a></h3>
-                    <ul class="ui-feed-list-dialog__feeds"><li class="ui-feed-list-dialog__feed"><a class="ui-feed-list-dialog__feed-url" href="${escapeHtml(statisticsFeedUrls.rss)}">${escapeHtml(statisticsFeedUrls.rss)}</a></li></ul>
-                </section>
-            </div>
+            <button type="button" class="ui-feed-list-dialog__close" aria-label="登録フィード一覧を閉じる" autofocus>×</button>
         </div>
-    </div>`;
+        <div class="ui-feed-list-dialog__body">${categories}${statistics}</div>
+    </div>
+</dialog>`;
 };
