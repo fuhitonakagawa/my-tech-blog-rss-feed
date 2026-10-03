@@ -250,7 +250,6 @@ img {
   border-bottom: 1px solid var(--border-color);
 }
 .ui-feed-list-dialog__summary {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -263,15 +262,19 @@ img {
 .ui-feed-list-dialog__summary::-webkit-details-marker {
   display: none;
 }
-.ui-feed-list-dialog__summary::before {
-  content: "›";
+.ui-feed-list-dialog__section-title::before {
+  content: "";
   position: absolute;
-  left: 0.35rem;
-  top: 0.55rem;
-  font-size: 1.125rem;
+  left: -1.15rem;
+  top: 50%;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-50%) rotate(-45deg);
 }
-.ui-feed-list-dialog__section[open] > summary::before {
-  transform: rotate(90deg);
+.ui-feed-list-dialog__section[open] > summary .ui-feed-list-dialog__section-title::before {
+  transform: translateY(-50%) rotate(45deg);
 }
 .ui-feed-list-dialog__summary:hover,
 .ui-feed-list-dialog__section[open] > summary,
@@ -279,6 +282,7 @@ img {
   background: var(--page-background);
 }
 .ui-feed-list-dialog__section-title {
+  position: relative;
   flex: 1 1 15rem;
   font-size: 0.875rem;
   font-weight: bold;
