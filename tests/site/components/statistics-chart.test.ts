@@ -44,7 +44,13 @@ describe('日付ごとの投稿数グラフ', () => {
     expect(heights[0]).toBeGreaterThan(0);
     expect(heights[0]).toBe(heights[1] * 2);
     expect(heights[2]).toBe(0);
-    expect(html('a[href="#2026-10-04"]').text()).toBe('2026-10-04（日）');
+    const sundayLink = html('a[href="#2026-10-04"]');
+    expect(sundayLink.text()).toBe('詳細へ ↓');
+    expect(sundayLink.attr('aria-label')).toBe('2026-10-04の詳細へ');
+    expect(sundayLink.siblings('.ui-statistics-sunday').text()).toBe('2026-10-04（日）');
+    expect(html('a[href="#2026-10-03"]').siblings('.ui-statistics-saturday').text()).toBe('2026-10-03（土）');
+    expect(html('a[href="#2026-10-05"]').siblings('span').text()).toBe('2026-10-05（月）');
+    expect(html('tbody a.ui-statistics-saturday, tbody a.ui-statistics-sunday')).toHaveLength(0);
     expect(html('svg').attr('aria-labelledby')).toBe('daily-chart-title daily-chart-description');
     expect(html('.ui-statistics-chart-scroll').attr('tabindex')).toBe('0');
     expect(reports).toEqual(saved);

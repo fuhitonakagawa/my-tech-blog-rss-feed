@@ -77,7 +77,7 @@ const renderTable = (days: readonly ChartDay[]): string =>
 <tbody>${days
     .map(({ date, report }) => {
       const label = `${escapeHtml(date)}（${WEEKDAYS[weekday(date)]}）`;
-      return `<tr><th scope="row">${report ? `<a class="${dateClass(date)}" href="#${escapeHtml(date)}">${label}</a>` : `<span class="${dateClass(date)}">${label}</span>`}</th><td>${report ? `${statisticsOriginalTotal(report.categories).toLocaleString('ja-JP')}件` : '—'}</td><td>${report ? coverageLabel(report) : '未集計'}</td></tr>`;
+      return `<tr><th scope="row"><span class="ui-statistics-date-cell"><span class="${dateClass(date)}">${label}</span>${report ? `<a class="ui-statistics-date-link" href="#${escapeHtml(date)}" aria-label="${escapeHtml(date)}の詳細へ">詳細へ<span aria-hidden="true"> ↓</span></a>` : ''}</span></th><td>${report ? `${statisticsOriginalTotal(report.categories).toLocaleString('ja-JP')}件` : '—'}</td><td>${report ? coverageLabel(report) : '未集計'}</td></tr>`;
     })
     .join('')}</tbody></table></details>`;
 
