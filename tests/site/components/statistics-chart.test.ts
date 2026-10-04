@@ -41,6 +41,7 @@ describe('日付ごとの投稿数グラフ', () => {
     const heights = html('rect')
       .map((_, element) => Number(html(element).attr('height')))
       .get();
+    expect(heights[0]).toBeGreaterThan(0);
     expect(heights[0]).toBe(heights[1] * 2);
     expect(heights[2]).toBe(0);
     expect(html('a[href="#2026-10-04"]').text()).toBe('2026-10-04（日）');
