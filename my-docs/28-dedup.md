@@ -307,3 +307,58 @@ my-docs/CleanShot 2026-10-03 at 20.09.31@2x.png
 ずれていました。矢印をタイトルの中央に揃え、開閉時やタイトルの折り返しにも追従するようにしました。
 
 [ローカルプレビュー](http://127.0.0.1:59362/rss/aws-jp/?v=chevron)を再読み込みし、「フィード一覧」で確認できます。
+
+
+
+
+
+----
+
+
+
+daily statsの投稿が以下になってますが、speakers deckが多すぎです。
+マージできるカテゴリはマージしたいです。
+また、
+
+元記事公開：2026/10/4 0:00:00（日本時間）
+
+2026年10月03日（日本時間）の新着記事をまとめました。
+の2行もいらないです。
+
+トップにはその日の合計投稿数も欲しいです。
+そして、件数の多い順ですよね？10/3はdesignが0件になってますが、これより上のカテゴリしか投稿がなかったということ？つまり、awsとか自動運転とかhackers newsとかit mediaとか、ニュース系の記事は投稿がなかったの？そんなことないよね？なんでこうなってるの？
+
+
+【日次統計】2026-10-03のカテゴリ別投稿数
+元記事公開：2026/10/4 0:00:00（日本時間）
+
+2026年10月03日（日本時間）の新着記事をまとめました。
+
+    カテゴリ別投稿数
+Qiita dedup：170件（AI 124件 / Cloud 33件 / Security 18件 / 人気記事 7件 / Physical AI 2件）
+Zenn dedup：111件（AI 89件 / Security 13件 / Cloud 10件 / トレンド 2件 / Physical AI 0件）
+Hacker News：37件（en 37件 / translated-jp 37件）
+Speaker Deck：28件
+Technology - Speaker Deck：13件
+Programming - Speaker Deck：8件
+Education - Speaker Deck：3件
+Business - Speaker Deck：2件
+Research - Speaker Deck：1件
+Storyboards - Speaker Deck：1件
+Design - Speaker Deck：0件...
+
+----
+
+
+カテゴリは件数順です。ただし、**Designの0件はSpeaker Deck内の取得元の内訳**で、その後にも他カテゴリが続いています。貼られた投稿は途中までの表示です。
+
+[10/3の公開集計](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/statistics/daily/#2026-10-03)には、AWS 8件、自動運転2件、ITmedia 17件、Hacker News 43件があります。遅延取得により投稿時から件数が増えています。
+
+手元の変更では、次の表示になります。
+
+- Speaker Deckなどはカテゴリ単位の1行。取得元の詳細はWebページへ
+- 指定の2行は非表示
+- 冒頭に合計投稿数。10/3は**667件**（原文カテゴリの延べ件数。翻訳・dedupは加算対象外）
+- 全カテゴリは件数順で保持し、冒頭に全文へのリンク
+
+内部テスト577件・lintは通過。依存監査には既存の`braces`のHigh脆弱性が残っています（修正版未提供）。公開反映はまだです。

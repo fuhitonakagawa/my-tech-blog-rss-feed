@@ -81,20 +81,18 @@ describe('Slack用の初回掲載日時', () => {
     expect(parsed.items[0].categories).toEqual(['API']);
   });
 
-  it.each([
-    'feeds/rss.xml',
-    'rss/ai/feeds/rss.xml',
-    'feeds/generated/anthropic-news/rss.xml',
-    'feeds/statistics/daily/rss.xml',
-  ])('翻訳以外の自家製RSSでも元記事日時と通知日時を分離する: %s', async (path) => {
-    const sourceUrl = `${constants.siteUrl}${path}`;
-    const input = { ...source([article('https://example.com/old', '2026-09-20T00:00:00.000Z')]), rssUrl: sourceUrl };
-    const history = updateSlackFeed(input, undefined, new Date('2026-09-29T07:00:00.000Z'));
-    const parsed = await new Parser().parseString(buildSlackRss(sourceUrl, history));
-    expect(parsed.items[0].isoDate).toBe('2026-09-29T07:00:00.000Z');
-    expect(parsed.items[0].contentSnippet).toContain('2026/9/20');
-    expect(parsed.items[0].link).toBe('https://example.com/old');
-  });
+  it.each(['feeds/rss.xml', 'rss/ai/feeds/rss.xml', 'feeds/generated/anthropic-news/rss.xml'])(
+    '翻訳以外の自家製RSSでも元記事日時と通知日時を分離する: %s',
+    async (path) => {
+      const sourceUrl = `${constants.siteUrl}${path}`;
+      const input = { ...source([article('https://example.com/old', '2026-09-20T00:00:00.000Z')]), rssUrl: sourceUrl };
+      const history = updateSlackFeed(input, undefined, new Date('2026-09-29T07:00:00.000Z'));
+      const parsed = await new Parser().parseString(buildSlackRss(sourceUrl, history));
+      expect(parsed.items[0].isoDate).toBe('2026-09-29T07:00:00.000Z');
+      expect(parsed.items[0].contentSnippet).toContain('2026/9/20');
+      expect(parsed.items[0].link).toBe('https://example.com/old');
+    },
+  );
 
   it('遅れて取得した過去記事も、前回の通知日時より後になる', async () => {
     const recent = article('https://example.com/recent');

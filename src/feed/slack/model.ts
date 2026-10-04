@@ -6,6 +6,7 @@ import { isPublishableHttpUrl, isValidImageDataUrl } from '../../common/url-guar
 import { escapeHtml } from '../../site/_includes/components/html-utils';
 import { normalizeArticleUrl, removeInvalidUnicode } from '../common-util';
 import { boundedFeedText, feedItemLimits, normalizeFeedItemTags } from '../feed-item-policy';
+import { statisticsFeedUrls } from '../statistics/config';
 import { slackFeedConfig, slackSourcePath } from './config';
 import type { SlackArticle, SlackFeedHistory, SlackSource } from './types';
 
@@ -106,7 +107,7 @@ const parseSource = (
       guid: item.id,
       url: item.url,
       title: boundedFeedText(item.title, 2000),
-      summary: summaryText(item, source.rssUrl.endsWith('/feeds/statistics/daily/rss.xml')),
+      summary: summaryText(item, source.rssUrl === statisticsFeedUrls.rss),
       image:
         typeof item.image === 'string' && (isPublishableHttpUrl(item.image) || isValidImageDataUrl(item.image))
           ? item.image
@@ -218,7 +219,7 @@ export const buildSlackRss = (sourceUrl: string, history: SlackFeedHistory): str
   const feed = new Feed({
     title: history.title,
     language: history.language,
-    description: '初回掲載順の通知用RSS。元記事の公開日時は本文に記載します。',
+    description: '初回掲載順の通知用RSS。日次統計以外は元記事の公開日時を本文に記載します。',
     id: url,
     link: history.link,
     copyright: constants.feedCopyright,
@@ -230,7 +231,10 @@ export const buildSlackRss = (sourceUrl: string, history: SlackFeedHistory): str
       timeZone: 'Asia/Tokyo',
       hour12: false,
     });
-    const text = `元記事公開：${originalDate}（日本時間）\n\n${item.summary}`;
+    const text =
+      sourceUrl === statisticsFeedUrls.rss
+        ? item.summary
+        : `元記事公開：${originalDate}（日本時間）\n\n${item.summary}`;
     feed.addItem({
       id: item.guid,
       guid: item.guid,

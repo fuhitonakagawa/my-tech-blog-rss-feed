@@ -1,9 +1,13 @@
 import { load } from 'cheerio';
+import Parser from 'rss-parser';
 import { expect, it } from 'vitest';
 import { sectionFeedUrls } from '../../../src/common/constants';
 import { deduplicatedStatisticsSections } from '../../../src/feed/deduplication/service';
+import { buildSlackRss, updateSlackFeed } from '../../../src/feed/slack/model';
 import { updateStatistics } from '../../../src/feed/statistics/aggregate';
+import { statisticsFeedUrls, statisticsPageUrl } from '../../../src/feed/statistics/config';
 import { statisticsDisplayRows } from '../../../src/feed/statistics/display-rows';
+import { buildStatisticsFeed } from '../../../src/feed/statistics/feed-builder';
 import type { StatisticsSection } from '../../../src/feed/statistics/observations';
 import { renderDailyReport } from '../../../src/feed/statistics/presentation';
 import { parseStatisticsState } from '../../../src/feed/statistics/state-store';
@@ -51,6 +55,82 @@ const reportState = (input = items) => {
   return updateStatistics(start, [], sections, new Date('2026-09-30T15:00:00.000Z'));
 };
 
+it('通知RSSは合計と全カテゴリを件数順で表示し、取得元の詳細をWebへまとめる', async () => {
+  const speakerFeeds = [
+    { url: 'https://speakerdeck.com/c/technology.atom', label: 'Technology - Speaker Deck' },
+    { url: 'https://speakerdeck.com/c/programming.atom', label: 'Programming - Speaker Deck' },
+    { url: 'https://speakerdeck.com/c/design.atom', label: 'Design - Speaker Deck' },
+  ] as const;
+  const sources: StatisticsSection[] = [
+    {
+      id: 'speakerdeck',
+      title: 'Speaker Deck',
+      feedInfoList: speakerFeeds,
+    },
+    { id: 'aws', title: 'AWS', feedInfoList: [{ url: 'https://example.com/aws/rss', language: 'en' }] },
+    { id: 'autonomous-driving', title: '自動運転' },
+    { id: 'empty', title: '0件カテゴリ' },
+  ];
+  const translations = [
+    {
+      id: 'aws-translated-jp',
+      title: 'AWS 翻訳',
+      sourceSectionId: 'aws',
+      sourceLanguage: 'en' as const,
+      targetLanguage: 'ja' as const,
+    },
+  ];
+  const input = [
+    ...speakerFeeds.slice(0, 2).map((feed) =>
+      makeSourceItem({
+        link: 'https://speakerdeck.com/example/shared',
+        sectionId: 'speakerdeck',
+        sourceFeedUrl: feed.url,
+        isoDate: '2026-09-30T00:00:00.000Z',
+      }),
+    ),
+    item('aws-one', 'aws'),
+    item('aws-two', 'aws'),
+    item('driving', 'autonomous-driving'),
+  ];
+  const initial = updateStatistics(null, input, sources, new Date('2026-09-30T12:00:00.000Z'), translations, [
+    input[2],
+  ]);
+  const state = updateStatistics(initial, [], sources, new Date('2026-09-30T15:00:00.000Z'), translations);
+  const report = state.reports[0];
+  const source = {
+    rssUrl: statisticsFeedUrls.rss,
+    rssPath: 'feeds/statistics/daily/rss.xml',
+    json: buildStatisticsFeed(state).json,
+  };
+  const first = updateSlackFeed(source, undefined, new Date('2026-09-30T16:00:00.000Z'));
+  const history = updateSlackFeed(source, first, new Date('2026-09-30T17:00:00.000Z'));
+  const rss = await new Parser().parseString(buildSlackRss(source.rssUrl, history));
+  const text = rss.items[0].contentSnippet ?? '';
+  expect(text).toMatch(/^合計投稿数：4件（原文カテゴリ合計・延べ）/);
+  expect(text).not.toContain('元記事公開：');
+  expect(text).not.toContain('新着記事をまとめました');
+  expect(text).not.toContain('Design - Speaker Deck');
+  expect(text).not.toContain('Technology - Speaker Deck');
+  expect(text).toContain('Speaker Deck：1件');
+  expect(text).toContain('自動運転：1件');
+  expect(text).toContain('0件カテゴリ：0件');
+  expect(text).toContain(`${statisticsPageUrl}#${report.date}`);
+  const body = load(renderDailyReport(report));
+  expect(
+    body('li')
+      .map((_, element) => body(element).text())
+      .get(),
+  ).toEqual(['AWS：2件（en 2件 / translated-jp 1件）', '自動運転：1件', 'Speaker Deck：1件', '0件カテゴリ：0件']);
+  const web = load(renderStatisticsReport(report));
+  expect(web('.ui-statistics-metrics dd').first().text()).toBe('4件');
+  expect(web('a[href="https://speakerdeck.com/c/design.atom"]').text()).toBe('Design - Speaker Deck');
+  expect(web('a[href="https://speakerdeck.com/c/design.atom"]').closest('li').text()).toContain('0件');
+  expect(history.items[0].guid).toBe(first.items[0].guid);
+  expect(rss.items[0].isoDate).toBe(first.items[0].firstSeenAt);
+  expect(history.items[0].originalPublishedAt).toBe(report.publishedAt);
+});
+
 it('dedup掲載記事だけの所属を数え、複数カテゴリ所属と0件を保持する', () => {
   const state = reportState();
   const report = state.reports[0];
@@ -66,6 +146,7 @@ it('dedup掲載記事だけの所属を数え、複数カテゴリ所属と0件�
   const rss = load(renderDailyReport(report));
   expect(rss.text()).toContain('Zenn dedup：2件（AI 2件 / Cloud 1件 / Security 0件）');
   expect(rss.text()).not.toContain('Zenn dedup（生成RSS）');
+  expect(rss('p').first().text()).toBe('合計投稿数：4件（原文カテゴリ合計・延べ）');
   expect(rss('ul > li')).toHaveLength(1);
   const web = load(renderStatisticsReport(report));
   expect(web('.ui-statistics-category')).toHaveLength(1);

@@ -7,6 +7,10 @@ export interface StatisticsDisplayRow {
   grouped: boolean;
 }
 
+/** 翻訳版・dedupを加算せず、原文カテゴリ間の重複を含む延べ件数を返す。 */
+export const statisticsOriginalTotal = (categories: readonly CategoryCount[]): number =>
+  categories.filter((category) => category.kind === 'source').reduce((sum, category) => sum + category.count, 0);
+
 /** 投稿サービス名とタグの説明を除いた、内訳用の短いカテゴリ名。 */
 const shortTitle = (title: string): string => title.replace(/^(?:Zenn|Qiita)\s+/, '').replace(/(?:関連)?タグ$/, '');
 

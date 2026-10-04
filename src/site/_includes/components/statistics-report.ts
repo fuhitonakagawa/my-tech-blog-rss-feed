@@ -3,6 +3,7 @@ import {
   type StatisticsDisplayRow,
   statisticsBreakdownText,
   statisticsDisplayRows,
+  statisticsOriginalTotal,
 } from '../../../feed/statistics/display-rows';
 import type { CategoryCount, DailyReport, SourceCount } from '../../../feed/statistics/types';
 import { escapeHtml } from './html-utils';
@@ -85,9 +86,7 @@ const renderCoverageNote = (report: DailyReport): string => {
 
 /** 日付・延べ件数・カテゴリ内訳をひとまとまりに表示する。 */
 export const renderStatisticsReport = (report: DailyReport): string => {
-  const total = report.categories
-    .filter((category) => category.kind === 'source')
-    .reduce((sum, category) => sum + category.count, 0);
+  const total = statisticsOriginalTotal(report.categories);
   const translated = report.categories
     .filter((category) => category.kind === 'translated')
     .reduce((sum, category) => sum + category.count, 0);
