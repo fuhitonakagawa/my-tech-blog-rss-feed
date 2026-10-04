@@ -668,6 +668,71 @@ img {
   background: var(--base-background);
   scroll-margin-top: 1rem;
 }
+.ui-statistics-chart {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: var(--base-background);
+}
+.ui-statistics-chart h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+}
+.ui-statistics-chart-scroll {
+  overflow-x: auto;
+  margin-block: 1.5rem 0.75rem;
+}
+.ui-statistics-chart-scroll:focus-visible,
+.ui-statistics-chart-table > summary:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+.ui-statistics-chart svg {
+  display: block;
+  min-width: 100%;
+  font-family: var(--base-font);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  fill: var(--base-color);
+}
+.ui-statistics-chart-grid {
+  stroke: var(--border-color);
+}
+.ui-statistics-chart-bar {
+  fill: var(--accent-color);
+}
+.ui-statistics-saturday {
+  color: var(--link-color);
+  fill: var(--link-color);
+}
+.ui-statistics-sunday {
+  color: #b42318;
+  fill: #b42318;
+}
+.ui-statistics-chart-table {
+  overflow-x: auto;
+}
+.ui-statistics-chart-table > summary {
+  cursor: pointer;
+  padding-block: 0.75rem;
+}
+.ui-statistics-chart-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+.ui-statistics-chart-table th,
+.ui-statistics-chart-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+  white-space: nowrap;
+}
+.ui-statistics-chart-table td:nth-child(2) {
+  text-align: right;
+}
 .ui-statistics-report__header {
   display: flex;
   flex-wrap: wrap;
