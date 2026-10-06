@@ -102,7 +102,6 @@ ${renderGrid(width, step)}
 ${days.map((day, index) => renderBar(day, index, slot, step * 4)).join('')}
 <text x="${PLOT_LEFT + (width - PLOT_LEFT) / 2}" y="330" text-anchor="middle">日付（日本時間）</text>
 </svg></div>
-<p class="ui-text-note">横にスクロールして各日を確認できます。<span class="ui-statistics-saturday">土曜日は青</span>、<span class="ui-statistics-sunday">日曜日は赤</span>。※は部分集計または巡回記録のない日です。未集計は保存履歴のない日で、0件とは異なります。</p>
 ${renderTable(days)}
 </section>`;
 };
