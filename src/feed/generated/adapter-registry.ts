@@ -1,4 +1,5 @@
 import { extractAnthropicNews } from './anthropic-news';
+import { extractClaudeArticles } from './claude-articles';
 import { extractCssGeneratedFeedItems } from './css-extractor';
 import { extractHuggingFaceCommits } from './huggingface-commits';
 import { extractLeaderobot } from './leaderobot';
@@ -39,6 +40,7 @@ const GENERATED_FEED_ADAPTERS: ReadonlyMap<string, GeneratedFeedExtractor> = new
   ['leaderobot-news', extractLeaderobot],
   ['mongodb-blog', extractMongoDbBlog],
   ['anthropic-news', extractAnthropicNews],
+  ['claude-articles', extractClaudeArticles],
   ['serverless-operations', extractServerlessOperations],
 ]);
 

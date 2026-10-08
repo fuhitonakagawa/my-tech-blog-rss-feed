@@ -51,6 +51,7 @@ export type CustomRssParserItem = RssParser.Item & {
   sourceLanguage: FeedLanguage;
   sourceFeedUrl?: string;
   originalTitle?: string;
+  recoveredUnpublished?: boolean;
 };
 export type CustomRssParserFeed = RssParser.Output<CustomRssParserItem> & {
   link: string;
@@ -155,13 +156,17 @@ export class FeedCrawler {
   private readonly sourceObservations = new Map<string, SourceFetchObservation>();
   private readonly sourceRequests = new SourceRequestQueue();
   private readonly qiitaSupplement = new QiitaSupplement();
-  private readonly acquisitionHistory = new AcquisitionHistory();
+  private readonly acquisitionHistory: AcquisitionHistory;
   private readonly qiitaOrganization = new QiitaOrganizationSupplement(this.sourceRequests);
   private rssParser: RssParser<CustomRssParserFeed, CustomRssParserItem>;
   private feedValidator: FeedValidator;
   private generatedFeedRegistry: GeneratedFeedRegistry;
 
-  constructor(generatedFeedRegistry: GeneratedFeedRegistry = new Map()) {
+  constructor(
+    generatedFeedRegistry: GeneratedFeedRegistry = new Map(),
+    publishedKeys: ReadonlySet<string> = new Set(),
+  ) {
+    this.acquisitionHistory = new AcquisitionHistory(undefined, publishedKeys);
     this.rssParser = new RssParser<CustomRssParserFeed, CustomRssParserItem>({
       maxRedirects: 5,
       timeout: 1000 * 10,
@@ -236,7 +241,7 @@ export class FeedCrawler {
             },
             1000,
             constants.feedFetchRetryCount,
-            (error) => !(error instanceof FeedHttpError) || error.retryable,
+            (error) => feedInfo.input.kind !== 'generated' && (!(error instanceof FeedHttpError) || error.retryable),
           ),
         );
         let feed = sourceFeed;
@@ -263,6 +268,14 @@ export class FeedCrawler {
           }
         }
 
+        // 補完取得・メタデータ確認の前に、取得した先頭ページを正規化して保存する。
+        if (feed)
+          this.acquisitionHistory.enrich(
+            FeedCrawler.postProcessFeed(feedInfo, objectDeepCopy(feed), sourceKind),
+            feedInfo.url,
+            [],
+            feedInfo.language,
+          );
         const organizationComplete = feed ? await this.qiitaOrganization.enrich(feed, feedInfo.url) : true;
         const postProcessedFeed = FeedCrawler.postProcessFeed(
           feedInfo,
@@ -307,6 +320,8 @@ export class FeedCrawler {
       );
       logger.trace(error.raw);
     }
+
+    if (errors.length) throw new Error('取得記録の保存または取得後処理に失敗しました');
 
     logger.info('[fetch-feed] finished');
 
@@ -509,7 +524,7 @@ export class FeedCrawler {
           return false;
         }
 
-        return feedItem.isoDate >= aggregateFeedStartAtIsoDate;
+        return feedItem.recoveredUnpublished || feedItem.isoDate >= aggregateFeedStartAtIsoDate;
       });
 
       // 現在時刻より未来のものはフィルタ。UTC表記で日本時間設定しているブログがあるので。

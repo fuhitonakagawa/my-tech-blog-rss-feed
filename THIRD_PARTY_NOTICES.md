@@ -60,3 +60,12 @@
 ## 中国語から英語へのモデル
 
 中英モデルの固定情報は[scripts/translation/models/zh-en.json](scripts/translation/models/zh-en.json)にあります。配布元アーカイブのREADMEでは、派生元のOPUSモデルのライセンスをCC-BY 4.0としています。原文の著者・出典表示は[Argos-zh-en-MODEL-NOTICES.md](LICENSES/Argos-zh-en-MODEL-NOTICES.md)に保持します。モデル重みをリポジトリへ同梱せず、利用環境で検証して取得します。
+
+## 同梱するnpmセキュリティパッチ
+
+| 同梱ソース | 由来 | ライセンス | 変更 |
+| --- | --- | --- | --- |
+| [vendor/braces](vendor/braces) | braces 3.0.3 | [MIT](vendor/braces/LICENSE) | GHSA-vfj7-8cjw-p6xmへの対策として構文木の深さ・ノード数・循環を制限 |
+| [vendor/sprintf-js](vendor/sprintf-js) | sprintf-js 1.0.3 | [BSD-3-Clause](vendor/sprintf-js/LICENSE) | GHSA-hp3w-g68c-fv3cへの対策として数値精度とパディング幅を制限 |
+
+上流の著作権・ライセンス本文を同梱しています。これらは公式の修正版としてバージョン番号を上げたものではなく、本リポジトリのローカルパッチです。npm overridesで間接依存にも適用し、由来と対象指摘は各`SECURITY-PATCH.md`に記載します。

@@ -4,8 +4,10 @@ import * as path from 'node:path';
 import { afterAll, describe, expect, it } from 'vitest';
 import { FeedCrawler } from '../../src/feed/feed-crawler';
 import { GeneratedFeedService } from '../../src/feed/generated/generated-feed-service';
+import { fetchGeneratedFeedPage } from '../../src/feed/generated/page-fetcher';
 import { FEED_INFO_LIST } from '../../src/resources/feed-info-list';
 import { GENERATED_FEED_DEFINITION_MAP } from '../../src/resources/generated-feed-list';
+import { providerCheck } from './provider-check';
 
 const temporaryDirectory = await fs.mkdtemp(path.join(os.tmpdir(), 'generated-feed-'));
 
@@ -24,10 +26,18 @@ describe.each([
   { id: 'mongodb-blog', sectionId: 'my-tech-blog-db', articlePrefix: 'https://www.mongodb.com/company/blog/' },
   { id: 'serverless-operations', sectionId: 'my-tech-blog-jp', articlePrefix: 'https://serverless.co.jp/blog/' },
   { id: 'anthropic-news', sectionId: 'my-tech-blog-ai', articlePrefix: 'https://www.anthropic.com/' },
-  { id: 'claude-announcements', sectionId: 'my-tech-blog-ai', articlePrefix: 'https://claude.com/blog/' },
-  { id: 'claude-code-blog', sectionId: 'my-tech-blog-ai', articlePrefix: 'https://claude.com/blog/' },
+  {
+    id: 'claude-announcements',
+    sectionId: 'my-tech-blog-ai',
+    articlePrefix: ['https://claude.com/resources/articles/', 'https://claude.dev/blog/', 'https://www.anthropic.com/'],
+  },
+  {
+    id: 'claude-code-blog',
+    sectionId: 'my-tech-blog-ai',
+    articlePrefix: ['https://claude.com/resources/articles/', 'https://claude.dev/blog/', 'https://www.anthropic.com/'],
+  },
 ])('$idの生成フィード', ({ id, sectionId, articlePrefix }) => {
-  it('単独RSSと所属セクションの記事を同じXMLから生成する', async () => {
+  it('単独RSSと所属セクションの記事を同じXMLから生成する', async (context) => {
     const definition = GENERATED_FEED_DEFINITION_MAP.get(id);
     const feedInfo = FEED_INFO_LIST.find((feed) => feed.input.kind === 'generated' && feed.input.id === definition?.id);
     if (!definition || !feedInfo) {
@@ -35,7 +45,8 @@ describe.each([
     }
 
     const outputDirectory = path.join(temporaryDirectory, id, 'output');
-    const registry = await new GeneratedFeedService().generate(
+    const html = await providerCheck(definition.pageUrl, context, () => fetchGeneratedFeedPage(definition));
+    const registry = await new GeneratedFeedService(async () => html).generate(
       [definition],
       path.join(temporaryDirectory, 'previous'),
       outputDirectory,
@@ -50,7 +61,8 @@ describe.each([
     expect(await fs.readFile(path.join(outputDirectory, definition.id, 'rss.xml'), 'utf-8')).toBe(rss);
     expect(crawlResult.feedItems.length).toBeGreaterThan(0);
     expect(crawlResult.feedItems.every((item) => item.sectionId === sectionId)).toBe(true);
-    expect(crawlResult.feedItems.every((item) => item.link.startsWith(articlePrefix))).toBe(true);
+    const prefixes = Array.isArray(articlePrefix) ? articlePrefix : [articlePrefix];
+    expect(crawlResult.feedItems.every((item) => prefixes.some((prefix) => item.link.startsWith(prefix)))).toBe(true);
     expect(crawlResult.feedItems.every((item) => !item.link.includes('/blog/tag/'))).toBe(true);
     const status = JSON.parse(await fs.readFile(path.join(outputDirectory, id, 'status.json'), 'utf-8'));
     expect(status.state).toBe('ok');

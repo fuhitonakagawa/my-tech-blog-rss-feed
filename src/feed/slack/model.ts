@@ -13,10 +13,18 @@ import type { SlackArticle, SlackFeedHistory, SlackSource } from './types';
 const DAY_MS = 86_400_000;
 
 /** 配信元がGUIDを再利用しても別記事を混同しないよう、公開日とサイトも照合する。 */
-const guidIdentity = (item: Pick<SlackArticle, 'url' | 'guid' | 'originalPublishedAt'>): string =>
-  createHash('sha256')
-    .update(JSON.stringify([new URL(item.url).origin, item.guid, item.originalPublishedAt]))
+const guidIdentity = (item: Pick<SlackArticle, 'url' | 'guid' | 'originalPublishedAt'>): string => {
+  let origin = new URL(item.url).origin;
+  // Claudeの公式移転だけは旧GUIDと公開日を照合して、別ドメインへの移転でも再通知を防ぐ。
+  if (
+    ['https://claude.com', 'https://claude.dev'].includes(origin) &&
+    /^https:\/\/claude\.com\/blog\/[^/?#]+$/.test(item.guid)
+  )
+    origin = 'https://claude.com';
+  return createHash('sha256')
+    .update(JSON.stringify([origin, item.guid, item.originalPublishedAt]))
     .digest('hex');
+};
 
 /** 現在の入力が1つのURLを指すときだけ、同一記事の旧URL履歴を返す。 */
 const urlAliases = (

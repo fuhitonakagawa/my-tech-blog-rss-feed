@@ -17,6 +17,36 @@ afterEach(async () => {
 });
 
 describe('GeneratedFeedStateStore', () => {
+  it('Claudeの公式移転で旧GUIDを再読込でき、不一致のGUIDは拒否する', async () => {
+    const root = await createDirectory();
+    const directory = path.join(root, 'claude-code-blog');
+    await fs.mkdir(directory);
+    const item = {
+      id: 'https://claude.com/blog/article',
+      url: 'https://claude.dev/blog/article/',
+      title: '記事',
+      publishedAt: '2026-10-07T00:00:00.000Z',
+      summary: '',
+      creator: '',
+      categories: [],
+    };
+    const snapshot = {
+      schemaVersion: 1,
+      id: 'claude-code-blog',
+      definitionHash: 'hash',
+      label: 'Claude',
+      pageUrl: 'https://claude.com/blog-category/claude-code',
+      language: 'en',
+      contentUpdatedAt: '2026-10-08T00:00:00.000Z',
+      items: [item],
+    };
+    const file = path.join(directory, 'snapshot.json');
+    await fs.writeFile(file, JSON.stringify(snapshot));
+    expect((await new GeneratedFeedStateStore().read(root, 'claude-code-blog'))?.snapshot.items).toEqual([item]);
+    item.id = 'https://claude.com/blog/different';
+    await fs.writeFile(file, JSON.stringify(snapshot));
+    await expect(new GeneratedFeedStateStore().read(root, 'claude-code-blog')).rejects.toThrow('スナップショット');
+  });
   it('パスに使用できない生成フィードIDを拒否する', async () => {
     const rootDirectory = await createDirectory();
 

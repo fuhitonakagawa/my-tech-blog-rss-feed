@@ -1,9 +1,11 @@
 import { createHash } from 'node:crypto';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 import { create as createCache } from 'flat-cache';
 import constants from '../common/constants';
 import { isPublishableHttpUrl } from '../common/url-guard';
 import type { FeedLanguage } from '../resources/feed-language';
-import { normalizeArticleUrl, removeInvalidUnicode } from './common-util';
+import { removeInvalidUnicode } from './common-util';
 import type { CustomRssParserFeed, CustomRssParserItem } from './feed-crawler';
 import {
   boundedFeedText,
@@ -13,6 +15,7 @@ import {
 } from './feed-item-policy';
 import { logger } from './logger';
 import { parsePublicationDate } from './publication-metadata';
+import { slackArticleKey } from './slack/model';
 
 export interface AcquiredArticle {
   link: string;
@@ -55,11 +58,7 @@ export const isAcquiredArticle = (value: unknown): value is AcquiredArticle => {
 };
 
 /** URLの追跡情報を除き、記事を区別するフラグメントは保持する。 */
-const articleKey = (link: string): string => {
-  const url = new URL(normalizeArticleUrl(link));
-  url.hash = new URL(link).hash;
-  return url.href;
-};
+const articleKey = slackArticleKey;
 
 const snapshotArticle = (item: CustomRssParserItem): AcquiredArticle => ({
   link: item.link,
@@ -73,6 +72,48 @@ const snapshotArticle = (item: CustomRssParserItem): AcquiredArticle => ({
 
 /** 公開成功とは独立して取得済み記事を保持し、元RSSから消えた期間内記事を補う。 */
 export class AcquisitionHistory {
+  constructor(
+    private readonly directory = process.env.FEED_ACQUISITION_DIR ?? '.feed-acquisition',
+    private readonly publishedKeys: ReadonlySet<string> = new Set(),
+  ) {}
+
+  /** 専用記録を優先し、移行時だけ旧キャッシュを読み込む。破損を初期化で隠さない。 */
+  private read(sourceUrl: string, id: string): AcquisitionSnapshot | undefined {
+    const file = path.join(this.directory, `${id}.json`);
+    let value: unknown;
+    try {
+      const stat = fs.lstatSync(file);
+      if (!stat.isFile() || stat.size > 32 * 1024 * 1024) throw new Error('取得記録のファイルが不正です');
+      value = JSON.parse(fs.readFileSync(file, 'utf8'));
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+      if (fs.existsSync(path.join(this.directory, 'index.json'))) return undefined;
+      value = createCache({ cacheId: id }).get('snapshot');
+    }
+    if (value === undefined) return undefined;
+    const snapshot = value as AcquisitionSnapshot;
+    if (snapshot.sourceUrl !== sourceUrl || !Array.isArray(snapshot.items) || !snapshot.items.every(isAcquiredArticle))
+      throw new Error('取得記録の内容が不正です');
+    return snapshot;
+  }
+
+  /** 保存失敗を伝播し、未保存の取得を成功として扱わない。 */
+  private save(id: string, snapshot: AcquisitionSnapshot): void {
+    fs.mkdirSync(this.directory, { recursive: true });
+    const file = path.join(this.directory, `${id}.json`);
+    if (!snapshot.items.length) {
+      fs.rmSync(file, { force: true });
+      return;
+    }
+    const temporary = `${file}.${process.pid}.tmp`;
+    try {
+      fs.writeFileSync(temporary, `${JSON.stringify(snapshot)}\n`);
+      fs.renameSync(temporary, file);
+    } finally {
+      fs.rmSync(temporary, { force: true });
+    }
+  }
+
   public enrich(
     feed: CustomRssParserFeed,
     sourceUrl: string,
@@ -80,28 +121,28 @@ export class AcquisitionHistory {
     language: FeedLanguage = feed.items[0]?.sourceLanguage ?? 'unknown',
   ): number {
     const key = createHash('sha256').update(sourceUrl).digest('hex');
-    const cache = createCache({ cacheId: `feed-acquisition-v1-${key}`, ttl: 14 * 86400_000 });
-    const saved: unknown = cache.get('snapshot');
-    const previous = saved as AcquisitionSnapshot | undefined;
-    const valid =
-      previous &&
-      previous.sourceUrl === sourceUrl &&
-      Array.isArray(previous.items) &&
-      previous.items.every(isAcquiredArticle);
-    if (saved !== undefined && !valid) logger.warn('[feed-acquisition] invalid-cache', { sourceUrl });
+    const id = `feed-acquisition-v1-${key}`;
+    const previous = this.read(sourceUrl, id);
     const now = new Date().toISOString();
     const cutoff = new Date(Date.now() - constants.aggregateFeedDurationInHours * 3600_000).toISOString();
     const articles = new Map<string, AcquiredArticle>();
-    for (const item of [...(valid ? previous.items : []), ...seeds, ...feed.items.map(snapshotArticle)]) {
-      if (isAcquiredArticle(item) && item.isoDate >= cutoff && item.isoDate <= now)
+    for (const item of previous?.items ?? []) {
+      if (item.isoDate <= now && !this.publishedKeys.has(articleKey(item.link)))
         articles.set(articleKey(item.link), item);
     }
-    cache.set('snapshot', { sourceUrl, items: [...articles.values()] } satisfies AcquisitionSnapshot);
-    // 取得直後に保存し、後続の翻訳・通知履歴保存・公開失敗でも取得記録を残す。
-    try {
-      cache.save();
-    } catch {
-      logger.warn('[feed-acquisition] cache-save-failed', { sourceUrl });
+    for (const item of [...seeds, ...feed.items.map(snapshotArticle)]) {
+      if (
+        isAcquiredArticle(item) &&
+        item.isoDate >= cutoff &&
+        item.isoDate <= now &&
+        !this.publishedKeys.has(articleKey(item.link))
+      )
+        articles.set(articleKey(item.link), item);
+    }
+    this.save(id, { sourceUrl, items: [...articles.values()] });
+    // 未公開の取得記録は期間を過ぎても残し、元記事日時のまま通知候補へ戻す。
+    for (const item of feed.items) {
+      if (articles.has(articleKey(item.link))) item.recoveredUnpublished = true;
     }
     const current = new Set(feed.items.map((item) => articleKey(item.link)));
     let added = 0;
@@ -116,6 +157,7 @@ export class AcquisitionHistory {
         sectionId: feed.sectionId,
         sourceLanguage: language,
         sourceFeedUrl: sourceUrl,
+        recoveredUnpublished: true,
       });
       added++;
     }

@@ -36,7 +36,6 @@ jobs:
 
       - name: Run external tests
         id: external-test
-        continue-on-error: true
         run: npm run test-external -- --reporter=verbose --reporter=json --outputFile=test-results.json
 
       - name: Comment test results on PR
@@ -56,14 +55,16 @@ jobs:
 
             const passed = results.numPassedTests || 0;
             const failed = results.numFailedTests || 0;
+            const skipped = results.numPendingTests || 0;
             const total = results.numTotalTests || 0;
-            const icon = failed === 0 ? '✅' : '⚠️';
+            const icon = failed === 0 && skipped === 0 ? '✅' : '⚠️';
 
             let body = `## ${icon} 外部テスト結果\n\n`;
             body += `| ステータス | 件数 |\n`;
             body += `|-----------|------|\n`;
             body += `| ✅ 成功 | ${passed} |\n`;
             body += `| ❌ 失敗 | ${failed} |\n`;
+            body += `| ⏭️ 未検証（提供元403など） | ${skipped} |\n`;
             body += `| 📊 合計 | ${total} |\n\n`;
 
             if (failed > 0 && results.testResults) {
@@ -82,7 +83,17 @@ jobs:
               body += `\n</details>\n\n`;
             }
 
-            body += `> ℹ️ 外部テストには配信元への通信、フィード生成処理、翻訳モデルの検証が含まれます。失敗したテストとログから原因を確認してください。\n`;
+            if (skipped > 0) {
+              body += `<details>\n<summary>未検証の取得元 (${skipped}件)</summary>\n\n`;
+              for (const suite of results.testResults || []) {
+                for (const test of suite.assertionResults || []) {
+                  if (['pending', 'skipped'].includes(test.status)) body += `- ${test.fullName || test.title}\n`;
+                }
+              }
+              body += `\n</details>\n\n`;
+            }
+
+            body += `> ℹ️ 失敗はワークフローを失敗にします。提供元が403で拒否した対象は未検証として表示し、取得成功には数えません。\n`;
 
             // 既存のコメントを探して更新、なければ新規作成
             const comments = await github.paginate(github.rest.issues.listComments, {

@@ -122,11 +122,12 @@ it('公開済み履歴を復元し、未公開の出力履歴で初回掲載日�
   expect(await readSlackState(path.join(output, 'feeds/delivery'))).toEqual(next);
 });
 
-it('旧JSON履歴から圧縮保存へ移行しても通知日時・GUID・既知記事を保持する', async () => {
+it('旧JSON履歴から分割保存へ移行しても通知日時・GUID・既知記事を保持する', async () => {
   const first = await generateSlackFeeds([source(['https://example.com/first'])], published, output, now);
   const stateDirectory = path.join(output, 'feeds/delivery');
+  await fs.rm(stateDirectory, { recursive: true });
+  await fs.mkdir(stateDirectory);
   await fs.writeFile(path.join(stateDirectory, 'state.json'), JSON.stringify(first));
-  await fs.rm(path.join(stateDirectory, 'state.json.gz'));
   await fs.cp(output, published, { recursive: true });
   const next = await generateSlackFeeds(
     [source(['https://example.com/late'])],
@@ -139,7 +140,10 @@ it('旧JSON履歴から圧縮保存へ移行しても通知日時・GUID・既�
   expect(next.feeds[key].seen).toMatchObject(first.feeds[key].seen);
   expect(next.feeds[key].items.find((item) => item.url.endsWith('/late'))?.firstSeenAt).toBe(next.updatedAt);
   expect(await readSlackState(stateDirectory)).toEqual(next);
-  expect(await fs.readdir(stateDirectory)).toEqual(['state.json.gz']);
+  expect(await fs.readdir(stateDirectory)).toEqual([
+    'index.json',
+    expect.stringMatching(/^state-[a-f0-9]{64}\.json\.gz$/),
+  ]);
   const rss = await new Parser().parseString(await fs.readFile(path.join(output, source([]).rssPath), 'utf8'));
   expect(rss.items.find((item) => item.link?.endsWith('/first'))).toMatchObject({
     guid: first.feeds[key].items[0].guid,
@@ -196,7 +200,7 @@ it('公開履歴のパス・記事URL・日時の不整合を拒否し、未知�
 it('後続フィードが不正なら先行RSSも配信履歴も書き換えない', async () => {
   const original = source(['https://example.com/a']);
   await generateSlackFeeds([original], published, output, now);
-  const files = [original.rssPath, 'feeds/delivery/state.json.gz'];
+  const files = [original.rssPath, 'feeds/delivery/index.json'];
   const before = await Promise.all(files.map((file) => fs.readFile(path.join(output, file))));
   const invalid = {
     ...source(['https://example.com/b?access_token=secret']),
@@ -226,12 +230,12 @@ it('公開済みRSSだけが残りJSONと履歴がない状態を初回扱いに
 it('RSSのファイル置換が失敗しても既存履歴を保持し、一時ファイルを残さない', async () => {
   const input = source(['https://example.com/a']);
   await generateSlackFeeds([input], published, output, now);
-  const history = await fs.readFile(path.join(output, 'feeds/delivery/state.json.gz'));
+  const history = await fs.readFile(path.join(output, 'feeds/delivery/index.json'));
   const file = path.join(output, input.rssPath);
   await fs.unlink(file);
   await fs.mkdir(file);
   await expect(generateSlackFeeds([source(['https://example.com/b'])], published, output, now)).rejects.toThrow();
-  expect(await fs.readFile(path.join(output, 'feeds/delivery/state.json.gz'))).toEqual(history);
+  expect(await fs.readFile(path.join(output, 'feeds/delivery/index.json'))).toEqual(history);
   expect(await fs.readdir(path.dirname(file))).toEqual(['rss.xml']);
 });
 

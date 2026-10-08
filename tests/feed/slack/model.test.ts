@@ -21,6 +21,20 @@ const source = (items: ReturnType<typeof article>[]): SlackSource => ({
 });
 
 describe('Slack用の初回掲載日時', () => {
+  it('Claudeの公式ドメイン移転でGUID・初回掲載日時を保持し、無関係なドメインには適用しない', () => {
+    const old = article('https://claude.com/blog/test');
+    const first = updateSlackFeed(source([old]), undefined, new Date('2026-09-29T07:00:00Z'));
+    const moved = { ...old, url: 'https://claude.dev/blog/test/' };
+    const next = updateSlackFeed(source([moved]), first, new Date('2026-09-29T08:00:00Z'));
+    expect(next.items).toHaveLength(1);
+    expect(next.items[0]).toMatchObject({ guid: old.id, url: moved.url, firstSeenAt: first.items[0].firstSeenAt });
+    const other = updateSlackFeed(
+      source([{ ...moved, url: 'https://example.com/test' }]),
+      first,
+      new Date('2026-09-29T08:00:00Z'),
+    );
+    expect(other.items).toHaveLength(2);
+  });
   it('同時掲載されたGUID競合の記事は、片方が消えて再登場しても別記事のまま保持する', () => {
     const one = { ...article('https://example.com/one'), id: 'reused-guid' };
     const two = { ...article('https://example.com/two'), id: 'reused-guid' };
