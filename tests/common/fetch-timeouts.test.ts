@@ -43,11 +43,15 @@ afterEach(async () => {
 it('OGPの本文停止を期限で中断し、後続取得と同じURLの再試行が成功する', async () => {
   let requests = 0;
   let bodyStarted = false;
+  const bodyTimeout = new AbortController();
+  let bodyTimer: NodeJS.Timeout | undefined;
   const server = createServer((_request, response) => {
     response.setHeader('content-type', 'text/html');
     if (++requests === 1) {
       response.write('<html><head>');
       bodyStarted = true;
+      // 接続初期化の遅延と分け、本文開始後の停止を確実に検証する。
+      bodyTimer = setTimeout(() => bodyTimeout.abort(new DOMException('本文の取得期限', 'TimeoutError')), 500);
     } else {
       response.end('<html><head><meta property="og:title" content="Healthy"></head><body>ok</body></html>');
     }
@@ -63,7 +67,10 @@ it('OGPの本文停止を期限で中断し、後続取得と同じURLの再試�
       agent.dispatch({ ...options, origin: `http://127.0.0.1:${address.port}` }, handler),
     );
   const originalTimeout = AbortSignal.timeout.bind(AbortSignal);
-  const timeout = vi.spyOn(AbortSignal, 'timeout').mockImplementation(() => originalTimeout(500));
+  const timeout = vi
+    .spyOn(AbortSignal, 'timeout')
+    .mockImplementation(() => originalTimeout(500))
+    .mockImplementationOnce(() => bodyTimeout.signal);
   const crawler = FeedCrawler as unknown as { fetchOgObject(url: string): Promise<CustomOgObject> };
   try {
     await expect(crawler.fetchOgObject('https://example.com/slow')).rejects.toThrow('OGの取得に失敗');
@@ -73,6 +80,7 @@ it('OGPの本文停止を期限で中断し、後続取得と同じURLの再試�
     expect((await crawler.fetchOgObject('https://example.com/slow')).ogTitle).toBe('Healthy');
     expect(requests).toBe(3);
   } finally {
+    clearTimeout(bodyTimer);
     dispatch.mockRestore();
     server.closeAllConnections();
     await agent.destroy();
