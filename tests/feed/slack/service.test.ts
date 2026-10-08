@@ -7,7 +7,7 @@ import constants from '../../../src/common/constants';
 import { logger } from '../../../src/feed/logger';
 import { loadDeliveryHistory } from '../../../src/feed/slack/history';
 import { generateSlackFeeds } from '../../../src/feed/slack/service';
-import { parseSlackState, readSlackState } from '../../../src/feed/slack/state-store';
+import { parseSlackState, readSlackState, serializeSlackState } from '../../../src/feed/slack/state-store';
 import type { SlackSource } from '../../../src/feed/slack/types';
 
 let directory: string;
@@ -122,6 +122,32 @@ it('公開済み履歴を復元し、未公開の出力履歴で初回掲載日�
   expect(await readSlackState(path.join(output, 'feeds/delivery'))).toEqual(next);
 });
 
+it('旧JSON履歴から圧縮保存へ移行しても通知日時・GUID・既知記事を保持する', async () => {
+  const first = await generateSlackFeeds([source(['https://example.com/first'])], published, output, now);
+  const stateDirectory = path.join(output, 'feeds/delivery');
+  await fs.writeFile(path.join(stateDirectory, 'state.json'), JSON.stringify(first));
+  await fs.rm(path.join(stateDirectory, 'state.json.gz'));
+  await fs.cp(output, published, { recursive: true });
+  const next = await generateSlackFeeds(
+    [source(['https://example.com/late'])],
+    published,
+    output,
+    new Date('2026-09-29T08:00:00.000Z'),
+  );
+  const key = 'rss/ai-jp/feeds/rss.xml';
+  expect(next.feeds[key].items.find((item) => item.url.endsWith('/first'))).toEqual(first.feeds[key].items[0]);
+  expect(next.feeds[key].seen).toMatchObject(first.feeds[key].seen);
+  expect(next.feeds[key].items.find((item) => item.url.endsWith('/late'))?.firstSeenAt).toBe(next.updatedAt);
+  expect(await readSlackState(stateDirectory)).toEqual(next);
+  expect(await fs.readdir(stateDirectory)).toEqual(['state.json.gz']);
+  const rss = await new Parser().parseString(await fs.readFile(path.join(output, source([]).rssPath), 'utf8'));
+  expect(rss.items.find((item) => item.link?.endsWith('/first'))).toMatchObject({
+    guid: first.feeds[key].items[0].guid,
+    isoDate: first.feeds[key].items[0].firstSeenAt,
+  });
+  expect(await readSlackState(path.join(published, 'feeds/delivery'))).toEqual(first);
+});
+
 it('公開履歴が壊れている場合に正常なローカル履歴へ黙って切り替えない', async () => {
   await generateSlackFeeds([source(['https://example.com/a'])], published, output, now);
   await fs.mkdir(path.join(published, 'feeds/delivery'), { recursive: true });
@@ -170,8 +196,8 @@ it('公開履歴のパス・記事URL・日時の不整合を拒否し、未知�
 it('後続フィードが不正なら先行RSSも配信履歴も書き換えない', async () => {
   const original = source(['https://example.com/a']);
   await generateSlackFeeds([original], published, output, now);
-  const files = [original.rssPath, 'feeds/delivery/state.json'];
-  const before = await Promise.all(files.map((file) => fs.readFile(path.join(output, file), 'utf8')));
+  const files = [original.rssPath, 'feeds/delivery/state.json.gz'];
+  const before = await Promise.all(files.map((file) => fs.readFile(path.join(output, file))));
   const invalid = {
     ...source(['https://example.com/b?access_token=secret']),
     rssUrl: `${constants.siteUrl}rss/aws-jp/feeds/rss.xml`,
@@ -180,7 +206,7 @@ it('後続フィードが不正なら先行RSSも配信履歴も書き換えな�
   await expect(
     generateSlackFeeds([source(['https://example.com/new']), invalid], published, output, now),
   ).rejects.toThrow();
-  expect(await Promise.all(files.map((file) => fs.readFile(path.join(output, file), 'utf8')))).toEqual(before);
+  expect(await Promise.all(files.map((file) => fs.readFile(path.join(output, file))))).toEqual(before);
   await expect(fs.access(path.join(output, invalid.rssPath))).rejects.toMatchObject({ code: 'ENOENT' });
 });
 
@@ -200,12 +226,12 @@ it('公開済みRSSだけが残りJSONと履歴がない状態を初回扱いに
 it('RSSのファイル置換が失敗しても既存履歴を保持し、一時ファイルを残さない', async () => {
   const input = source(['https://example.com/a']);
   await generateSlackFeeds([input], published, output, now);
-  const history = await fs.readFile(path.join(output, 'feeds/delivery/state.json'), 'utf8');
+  const history = await fs.readFile(path.join(output, 'feeds/delivery/state.json.gz'));
   const file = path.join(output, input.rssPath);
   await fs.unlink(file);
   await fs.mkdir(file);
   await expect(generateSlackFeeds([source(['https://example.com/b'])], published, output, now)).rejects.toThrow();
-  expect(await fs.readFile(path.join(output, 'feeds/delivery/state.json'), 'utf8')).toBe(history);
+  expect(await fs.readFile(path.join(output, 'feeds/delivery/state.json.gz'))).toEqual(history);
   expect(await fs.readdir(path.dirname(file))).toEqual(['rss.xml']);
 });
 
@@ -226,27 +252,29 @@ it.each(['file', 'symlink'])('公開履歴ルートがディレクトリでな�
   await expect(loadDeliveryHistory(published, output, now)).rejects.toThrow('ディレクトリが不正');
 });
 
-it.each(['missing', 'directory', 'symlink', 'oversized'])(
-  '履歴ファイルの欠落・不正を初期化で隠さない: %s',
-  async (kind) => {
+it.each(['state.json', 'state.json.gz'])('履歴ファイルの欠落・不正を初期化で隠さない: %s', async (name) => {
+  for (const kind of ['missing', 'directory', 'symlink', 'oversized']) {
     const validState = await generateSlackFeeds(
       [source([])],
       path.join(directory, 'absent'),
       path.join(directory, 'baseline'),
       now,
     );
-    const validJson = JSON.stringify(validState);
+    const content = name.endsWith('.gz')
+      ? await serializeSlackState(validState)
+      : Buffer.from(JSON.stringify(validState));
     const stateDirectory = path.join(published, 'feeds/delivery');
     await fs.mkdir(stateDirectory, { recursive: true });
-    const file = path.join(stateDirectory, 'state.json');
+    const file = path.join(stateDirectory, name);
     if (kind === 'directory') await fs.mkdir(file);
     if (kind === 'symlink') {
       const target = path.join(directory, 'other.json');
-      await fs.writeFile(target, validJson);
+      await fs.writeFile(target, content);
       await fs.symlink(target, file);
     }
     if (kind === 'oversized') {
-      await fs.writeFile(file, validJson + ' '.repeat(64 * 1024 * 1024 + 1 - Buffer.byteLength(validJson)));
+      await fs.writeFile(file, content);
+      await fs.truncate(file, 64 * 1024 * 1024 + 1);
     }
     if (kind === 'missing') {
       await expect(generateSlackFeeds([source([])], published, output, now)).rejects.toMatchObject({ code: 'ENOENT' });
@@ -254,5 +282,6 @@ it.each(['missing', 'directory', 'symlink', 'oversized'])(
       await expect(generateSlackFeeds([source([])], published, output, now)).rejects.toThrow('履歴のファイルが不正');
     }
     await expect(fs.access(output)).rejects.toMatchObject({ code: 'ENOENT' });
-  },
-);
+    await fs.rm(published, { recursive: true });
+  }
+});

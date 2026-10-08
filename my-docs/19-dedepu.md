@@ -551,7 +551,7 @@ dedupの履歴は何日前まで見てくれるの？
 
 
 
-公開サイトの **[`feeds/delivery/state.json`](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/delivery/state.json)** に保存しています。GitHubの`gh-pages`ブランチで保持されます。
+公開サイトの **[`feeds/delivery/state.json.gz`](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/delivery/state.json.gz)** に保存しています。GitHubの`gh-pages`ブランチで保持されます。
 
 保存するのは、記事URLの識別キー、配信先RSS、初回掲載日時、最終取得日時、GUIDなどです。
 
