@@ -71,3 +71,16 @@ it('一時的な通信・HTTP失敗だけ再試行し、取得拒否とXML不正
   ])
     expect(isRetryableSourceError(error)).toBe(false);
 });
+
+it.each([
+  { url: 'https://jvndb.jvn.jp/ja/rss/jvndb_new.rdf', deadline: undefined, expected: 45_000 },
+  { url: 'https://example.com/rss', deadline: undefined, expected: 10_000 },
+  { url: 'https://jvndb.jvn.jp/ja/rss/jvndb_new.rdf', deadline: 2000, expected: 2000 },
+])('JVNDBの取得上限を延長しても通常上限・全体予算を守る: $expected', async ({ url, deadline, expected }) => {
+  vi.useFakeTimers({ toFake: ['Date'] });
+  vi.setSystemTime(0);
+  vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response('RSS'));
+  const timeout = vi.spyOn(AbortSignal, 'timeout');
+  expect(await new SourceRequestQueue().fetchText(url, { deadline })).toBe('RSS');
+  expect(timeout).toHaveBeenCalledWith(expected);
+});

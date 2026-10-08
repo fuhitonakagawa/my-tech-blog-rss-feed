@@ -48,6 +48,9 @@ export class SourceRequestQueue {
 
   public async fetchText(url: string, options: { accept?: string; deadline?: number } = {}): Promise<string> {
     const origin = new URL(url).origin;
+    // JVNDB新着RDFは大きく応答も遅いため、この公開フィードだけ本文取得の予算を延長する。
+    const requestTimeoutMs =
+      url === 'https://jvndb.jvn.jp/ja/rss/jvndb_new.rdf' ? 45_000 : constants.externalFetchTimeoutMs;
     const prior = this.queues.get(origin) ?? Promise.resolve();
     const { promise: gate, resolve: release } = Promise.withResolvers<void>();
     this.queues.set(origin, gate);
@@ -66,10 +69,7 @@ export class SourceRequestQueue {
             options.accept ?? 'application/atom+xml, application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.5',
         },
         signal: AbortSignal.timeout(
-          Math.min(
-            constants.externalFetchTimeoutMs,
-            Math.max(1, (options.deadline ?? Number.POSITIVE_INFINITY) - Date.now()),
-          ),
+          Math.min(requestTimeoutMs, Math.max(1, (options.deadline ?? Number.POSITIVE_INFINITY) - Date.now())),
         ),
         dispatcher: publicNetworkDispatcher,
       });
