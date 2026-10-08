@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: generate-feed
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   # ビルドにはソース参照と翻訳用OIDC、デプロイには公開先への書き込みを許可する
@@ -40,11 +40,15 @@ jobs:
         with:
           allow-aws: 'true'
       - uses: ./.github/actions/restore-feed-cache
+        id: restore_feed_cache
       - run: npm run cache-prune
       - run: npm run feed-generate
+        id: generate_feeds
       - run: npm run site-prepare
       - run: npm run site-build
       - uses: ./.github/actions/save-feed-cache
+        # 取得済み記事を生成失敗後も保存する。復元・生成開始前の失敗では保存しない。
+        if: ${{ always() && steps.restore_feed_cache.outcome == 'success' && steps.generate_feeds.outcome != 'skipped' }}
       - name: Upload site
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:

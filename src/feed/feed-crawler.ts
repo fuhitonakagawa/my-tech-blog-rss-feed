@@ -15,6 +15,7 @@ import {
 } from '../common/url-guard';
 import type { FeedInfo } from '../resources/feed-info-list';
 import type { FeedLanguage } from '../resources/feed-language';
+import { AcquisitionHistory } from './acquisition-history';
 import {
   exponentialBackoff,
   fetchHatenaCountMap,
@@ -30,7 +31,8 @@ import { logger } from './logger';
 import { fetchMercariFallback, mercariFeedUrl } from './mercari-fallback';
 import { fillPublicationDates } from './publication-metadata';
 import { QiitaOrganizationSupplement } from './qiita-organization';
-import { QiitaSupplement, qiitaTag } from './qiita-supplement';
+import { QiitaSupplement } from './qiita-supplement';
+import { recoveryArticles } from './recovery-articles';
 import { parseRemoteFeed } from './remote-feed-input';
 import { FeedHttpError, SourceRequestQueue } from './source-request';
 
@@ -153,6 +155,7 @@ export class FeedCrawler {
   private readonly sourceObservations = new Map<string, SourceFetchObservation>();
   private readonly sourceRequests = new SourceRequestQueue();
   private readonly qiitaSupplement = new QiitaSupplement();
+  private readonly acquisitionHistory = new AcquisitionHistory();
   private readonly qiitaOrganization = new QiitaOrganizationSupplement(this.sourceRequests);
   private rssParser: RssParser<CustomRssParserFeed, CustomRssParserItem>;
   private feedValidator: FeedValidator;
@@ -258,10 +261,6 @@ export class FeedCrawler {
               sourceKind = 'html';
             } else logger.warn('[fetch-feed] html-fallback-failed', { label: feedInfo.label });
           }
-          if (!feed && !qiitaTag(feedInfo.url)) {
-            fetchProcessCounter++;
-            return;
-          }
         }
 
         const organizationComplete = feed ? await this.qiitaOrganization.enrich(feed, feedInfo.url) : true;
@@ -276,12 +275,19 @@ export class FeedCrawler {
           sourceKind,
         );
         const tagComplete = await this.qiitaSupplement.enrich(postProcessedFeed, feedInfo.url);
+        if (feedInfo.publicationDateSource === 'article-metadata')
+          await fillPublicationDates(postProcessedFeed, feedInfo.url);
+
+        this.acquisitionHistory.enrich(
+          postProcessedFeed,
+          feedInfo.url,
+          recoveryArticles(feedInfo.url),
+          feedInfo.language,
+        );
         if (error && postProcessedFeed.items.length === 0) {
           fetchProcessCounter++;
           return;
         }
-        if (feedInfo.publicationDateSource === 'article-metadata')
-          await fillPublicationDates(postProcessedFeed, feedInfo.url);
 
         feeds.set(feedInfo.url, postProcessedFeed);
         this.sourceObservations.set(feedInfo.url, {
