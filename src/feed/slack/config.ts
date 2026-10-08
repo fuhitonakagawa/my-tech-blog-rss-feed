@@ -4,6 +4,7 @@ export const slackFeedConfig = {
   itemRetentionDays: 14,
   seenRetentionDays: 90,
   maxStateBytes: 64 * 1024 * 1024,
+  maxDecodedStateBytes: 256 * 1024 * 1024,
 };
 
 /** 自サイトが生成するRSSだけを通知用フィードへ対応付ける。 */

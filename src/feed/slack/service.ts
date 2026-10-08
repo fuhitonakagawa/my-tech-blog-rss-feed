@@ -4,10 +4,10 @@ import * as path from 'node:path';
 import { generatedFeedUrls } from '../../common/constants';
 import { FeedValidator } from '../feed-validator';
 import { logger } from '../logger';
-import { slackFeedConfig, slackSourcePath, validateRssOutputPath } from './config';
+import { slackSourcePath, validateRssOutputPath } from './config';
 import { loadDeliveryHistory } from './history';
 import { bootstrapSlackFeed, buildSlackRss, updateSlackFeed } from './model';
-import { parseSlackState } from './state-store';
+import { serializeSlackState } from './state-store';
 import type { SlackFeedState, SlackSource } from './types';
 
 /** 定義が残る一時的な生成不能フィードの正常履歴を、保持期限内で引き継ぐ。 */
@@ -37,7 +37,7 @@ const retainUnavailableHistories = (
 };
 
 /** RSSと履歴を、ファイルごとに完全な内容へ置き換える。 */
-const writeOutput = async (file: string, content: string): Promise<void> => {
+const writeOutput = async (file: string, content: string | Buffer): Promise<void> => {
   await fs.mkdir(path.dirname(file), { recursive: true });
   const temporary = `${file}.${randomUUID()}.tmp`;
   try {
@@ -99,14 +99,13 @@ export const generateSlackFeeds = async (
     outputs.set(source.rssPath, xml);
   }
   retainUnavailableHistories(state, previous, unavailableGeneratedIds, now);
-  const json = `${JSON.stringify(state)}\n`;
-  if (Buffer.byteLength(json) > slackFeedConfig.maxStateBytes) throw new Error('Slack配信履歴の保存上限を超えています');
-  parseSlackState(json);
+  const content = await serializeSlackState(state);
   for (const [key, xml] of outputs) {
     const file = path.join(outputDirectory, key);
     await writeOutput(file, xml);
   }
-  await writeOutput(path.join(historyPath, 'state.json'), json);
-  logger.info('[slack-feeds] generated', { feeds: sources.length });
+  await writeOutput(path.join(historyPath, 'state.json.gz'), content);
+  await fs.rm(path.join(historyPath, 'state.json'), { force: true });
+  logger.info('[slack-feeds] generated', { feeds: sources.length, historyBytes: content.byteLength });
   return state;
 };

@@ -1,5 +1,7 @@
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
+import { promisify } from 'node:util';
+import { gunzip, gzip } from 'node:zlib';
 import constants from '../../common/constants';
 import { isPublishableHttpUrl, isValidImageDataUrl } from '../../common/url-guard';
 import { removeInvalidUnicode } from '../common-util';
@@ -7,6 +9,9 @@ import { feedItemLimits } from '../feed-item-policy';
 import { slackFeedConfig, slackSourcePath } from './config';
 import { isSlackDate, slackArticleKey } from './model';
 import type { SeenArticle, SlackArticle, SlackFeedHistory, SlackFeedState } from './types';
+
+const compress = promisify(gzip);
+const decompress = promisify(gunzip);
 
 const record = (value: unknown): Record<string, unknown> => {
   if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Slack配信履歴の形式が不正です');
@@ -133,6 +138,17 @@ export const parseSlackState = (json: string): SlackFeedState => {
   return { schemaVersion: 1, updatedAt, feeds };
 };
 
+/** 記事履歴を削らずに圧縮し、展開後と保存時の両方のサイズ上限を守る。 */
+export const serializeSlackState = async (state: SlackFeedState): Promise<Buffer> => {
+  const json = `${JSON.stringify(state)}\n`;
+  if (Buffer.byteLength(json) > slackFeedConfig.maxDecodedStateBytes)
+    throw new Error('Slack配信履歴の展開上限を超えています');
+  parseSlackState(json);
+  const content = await compress(json);
+  if (content.byteLength > slackFeedConfig.maxStateBytes) throw new Error('Slack配信履歴の保存上限を超えています');
+  return content;
+};
+
 /** ディレクトリ未作成だけを初回扱いとし、履歴欠落を初期化で隠さない。 */
 export const readSlackState = async (directory: string): Promise<SlackFeedState | null> => {
   try {
@@ -142,10 +158,20 @@ export const readSlackState = async (directory: string): Promise<SlackFeedState 
     if ((error as NodeJS.ErrnoException).code === 'ENOENT') return null;
     throw error;
   }
-  const file = path.join(directory, 'state.json');
-  const info = await fs.lstat(file);
+  const compressedFile = path.join(directory, 'state.json.gz');
+  const compressedInfo = await fs.lstat(compressedFile).catch((error: NodeJS.ErrnoException) => {
+    if (error.code !== 'ENOENT') throw error;
+    return null;
+  });
+  const compressed = compressedInfo !== null;
+  const file = compressed ? compressedFile : path.join(directory, 'state.json');
+  const info = compressedInfo ?? (await fs.lstat(file));
   if (!info.isFile() || info.size > slackFeedConfig.maxStateBytes) throw new Error('Slack配信履歴のファイルが不正です');
-  const json = await fs.readFile(file, 'utf-8');
-  if (Buffer.byteLength(json) > slackFeedConfig.maxStateBytes) throw new Error('Slack配信履歴の保存上限を超えています');
+  const content = await fs.readFile(file);
+  if (content.byteLength > slackFeedConfig.maxStateBytes) throw new Error('Slack配信履歴の保存上限を超えています');
+  const decoded = compressed
+    ? await decompress(content, { maxOutputLength: slackFeedConfig.maxDecodedStateBytes })
+    : content;
+  const json = decoded.toString('utf-8');
   return parseSlackState(json);
 };
