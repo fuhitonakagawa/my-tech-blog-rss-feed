@@ -24,7 +24,7 @@ const validText = (value: unknown, limit: number, multiline = false): value is s
   (multiline ? value.split('\n').map(removeInvalidUnicode).join('\n') : removeInvalidUnicode(value)) === value;
 
 /** 保存した記事の公開情報と初回掲載日時を検証する。 */
-const parseArticle = (value: unknown): SlackArticle => {
+export const parseSlackArticle = (value: unknown): SlackArticle => {
   const item = record(value);
   if (
     typeof item.key !== 'string' ||
@@ -96,7 +96,7 @@ const parseHistory = (value: unknown, updatedAt: string): SlackFeedHistory => {
     !Array.isArray(feed.items)
   )
     throw new Error('Slack配信履歴のフィードが不正です');
-  const items = feed.items.map(parseArticle);
+  const items = feed.items.map(parseSlackArticle);
   const seen = parseSeen(feed.seen, updatedAt);
   const ambiguousGuids = feed.ambiguousGuids === undefined ? {} : record(feed.ambiguousGuids);
   const ambiguous: Record<string, string> = {};
@@ -158,6 +158,11 @@ export const readSlackState = async (directory: string): Promise<SlackFeedState 
     if ((error as NodeJS.ErrnoException).code === 'ENOENT') return null;
     throw error;
   }
+  const manifestInfo = await fs.lstat(path.join(directory, 'index.json')).catch((error: NodeJS.ErrnoException) => {
+    if (error.code !== 'ENOENT') throw error;
+    return null;
+  });
+  if (manifestInfo !== null) return (await import('./state-shards')).readSlackShards(directory);
   const compressedFile = path.join(directory, 'state.json.gz');
   const compressedInfo = await fs.lstat(compressedFile).catch((error: NodeJS.ErrnoException) => {
     if (error.code !== 'ENOENT') throw error;

@@ -1,5 +1,6 @@
 import constants from '../../common/constants';
 import { createPublicNetworkDispatcher } from '../../common/url-guard';
+import { FeedHttpError } from '../source-request';
 import type { GeneratedFeedDefinition } from './types';
 
 const pageDispatcher = createPublicNetworkDispatcher(constants.generatedFeedMaxResponseBytes);
@@ -19,7 +20,8 @@ export const fetchGeneratedFeedPage: GeneratedFeedPageFetcher = async (
     dispatcher: pageDispatcher,
   });
   if (!response.ok) {
-    throw new Error(`HTTP Error: ${response.status}`);
+    await response.body?.cancel();
+    throw new FeedHttpError(response.status);
   }
   if (!response.headers.get('content-type')?.toLowerCase().includes('text/html')) {
     throw new Error(`HTMLではないレスポンスです: ${response.headers.get('content-type') ?? 'unknown'}`);

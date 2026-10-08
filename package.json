@@ -19,7 +19,8 @@
     "test-coverage": "vitest run --coverage --exclude 'tests/external/**/*'",
     "test-external": "vitest run -c ./vitest.external.config.ts",
     "test-internal": "vitest run --exclude 'tests/external/**/*'",
-    "renovate-validate": "renovate-config-validator"
+    "renovate-validate": "renovate-config-validator",
+    "slack-monitor": "tsx src/cli/monitor-slack-command.ts"
   },
   "repository": {
     "type": "git",
@@ -73,7 +74,9 @@
     "tsx": "4.23.13",
     "typescript": "7.0.2",
     "undici": "7.29.1",
-    "vitest": "4.1.11"
+    "vitest": "4.1.11",
+    "braces": "file:vendor/braces",
+    "sprintf-js": "file:vendor/sprintf-js"
   },
   "engines": {
     "node": ">=24",
@@ -86,5 +89,11 @@
     "@biomejs/biome@1.9.4": true,
     "esbuild@0.28.1": true,
     "fsevents@2.3.3": true
+  },
+  "overrides": {
+    "braces": "$braces",
+    "sprintf-js": "$sprintf-js",
+    "sharp": "0.35.5",
+    "source-map-js": "1.2.2"
   }
 }

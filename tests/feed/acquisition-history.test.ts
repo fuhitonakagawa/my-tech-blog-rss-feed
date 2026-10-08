@@ -8,6 +8,7 @@ import { AcquisitionHistory } from '../../src/feed/acquisition-history';
 import { type CustomRssParserFeed, type CustomRssParserItem, FeedCrawler } from '../../src/feed/feed-crawler';
 import { logger } from '../../src/feed/logger';
 import { RECOVERY_ARTICLES, recoveryArticles } from '../../src/feed/recovery-articles';
+import { slackArticleKey } from '../../src/feed/slack/model';
 import { generateSlackFeeds } from '../../src/feed/slack/service';
 import { FeedHttpError } from '../../src/feed/source-request';
 import { FEED_INFO_LIST, type FeedInfo } from '../../src/resources/feed-info-list';
@@ -47,6 +48,7 @@ const feed = (items: CustomRssParserItem[] = []): CustomRssParserFeed => ({
 
 beforeEach(async () => {
   location.directory = await fs.mkdtemp(path.join(os.tmpdir(), 'feed-acquisition-'));
+  vi.stubEnv('FEED_ACQUISITION_DIR', path.join(location.directory, 'journal'));
   vi.useFakeTimers({ toFake: ['Date'] });
   vi.setSystemTime(now);
   vi.spyOn(logger, 'warn').mockImplementation(() => undefined);
@@ -55,6 +57,7 @@ beforeEach(async () => {
 afterEach(async () => {
   vi.restoreAllMocks();
   vi.useRealTimers();
+  vi.unstubAllEnvs();
   await fs.rm(location.directory, { recursive: true, force: true });
 });
 
@@ -71,6 +74,22 @@ it('元RSSから消えた取得済み記事を次のプロセスへ引き継ぎ�
   expect(restored.items.find((x) => x.link === updated.link)?.title).toBe(updated.title);
 });
 
+it('専用保存先への更新に失敗した実行のバックアップから未公開記事を回収する', async () => {
+  const backup = path.join(location.directory, 'backup');
+  new AcquisitionHistory(backup).enrich(feed([article()]), sourceUrl);
+  vi.stubEnv('FEED_ACQUISITION_RECOVERY_DIR', backup);
+  const restored = feed();
+  expect(new AcquisitionHistory().enrich(restored, sourceUrl)).toBe(1);
+  expect(restored.items[0]).toMatchObject({
+    guid: article().guid,
+    isoDate: article().isoDate,
+    recoveredUnpublished: true,
+  });
+  expect(new AcquisitionHistory(undefined, new Set([slackArticleKey(article().link)])).enrich(feed(), sourceUrl)).toBe(
+    0,
+  );
+});
+
 it('取得元を分離し、復元時のカテゴリ・言語は現在の登録情報を使う', () => {
   new AcquisitionHistory().enrich(feed([article()]), sourceUrl);
   const another = feed();
@@ -84,7 +103,61 @@ it('取得元を分離し、復元時のカテゴリ・言語は現在の登録�
   });
 });
 
-it('日付なし・未来・期間外・不正識別子を保存せず、期限を過ぎた記事は補完しない', () => {
+it('古い共有キャッシュの復元で専用記録を巻き戻さず、移行後はキャッシュから復活させない', async () => {
+  new AcquisitionHistory().enrich(feed([article()]), sourceUrl);
+  const files = await fs.readdir(path.join(location.directory, 'journal'));
+  const id = files[0].replace(/\.json$/, '');
+  const stale = createCache({ cacheId: id });
+  stale.set('snapshot', { sourceUrl, items: [] });
+  stale.save();
+  expect(new AcquisitionHistory().enrich(feed(), sourceUrl)).toBe(1);
+  await fs.writeFile(path.join(location.directory, 'journal/index.json'), '{}');
+  new AcquisitionHistory(undefined, new Set([slackArticleKey(article().link)])).enrich(feed(), sourceUrl);
+  stale.set('snapshot', { sourceUrl, items: [article()] });
+  stale.save();
+  expect(new AcquisitionHistory().enrich(feed(), sourceUrl)).toBe(0);
+});
+
+it('取得記録の保存失敗をフィード取得成功として握りつぶさない', async () => {
+  const journal = path.join(location.directory, 'journal');
+  await fs.writeFile(journal, 'directory is unavailable');
+  const info: FeedInfo = {
+    label: 'Source',
+    url: sourceUrl,
+    language: 'en',
+    sectionId: 'hacker-news',
+    input: { kind: 'remote', url: sourceUrl },
+  };
+  const crawler = new FeedCrawler() as unknown as {
+    fetchSourceFeed(info: FeedInfo): Promise<CustomRssParserFeed>;
+    fetchFeedsAsync(info: FeedInfo[], concurrency: number): Promise<CustomRssParserFeed[]>;
+  };
+  vi.spyOn(crawler, 'fetchSourceFeed').mockResolvedValue(feed([article()]));
+  await expect(crawler.fetchFeedsAsync([info], 1)).rejects.toThrow('取得記録の保存');
+});
+
+it('補完処理が失敗しても先頭ページの取得記録を残し、生成フィードが利用不能でも回収する', async () => {
+  const info: FeedInfo = {
+    label: 'Source',
+    url: sourceUrl,
+    language: 'en',
+    sectionId: 'hacker-news',
+    input: { kind: 'remote', url: sourceUrl },
+  };
+  const crawler = new FeedCrawler() as unknown as {
+    fetchSourceFeed(info: FeedInfo): Promise<CustomRssParserFeed>;
+    fetchFeedsAsync(info: FeedInfo[], concurrency: number): Promise<CustomRssParserFeed[]>;
+    qiitaOrganization: { enrich(feed: CustomRssParserFeed, url: string): Promise<boolean> };
+  };
+  vi.spyOn(crawler, 'fetchSourceFeed').mockResolvedValue(feed([article()]));
+  vi.spyOn(crawler.qiitaOrganization, 'enrich').mockRejectedValue(new Error('supplement failed'));
+  await expect(crawler.fetchFeedsAsync([info], 1)).rejects.toThrow('取得後処理');
+  const retry = new FeedCrawler() as unknown as typeof crawler;
+  const result = await retry.fetchFeedsAsync([{ ...info, input: { kind: 'generated', id: 'unavailable' } }], 1);
+  expect(result[0].items[0]).toMatchObject({ link: article().link, guid: article().guid, isoDate: article().isoDate });
+});
+
+it('日付なし・未来・期間外・不正識別子を新規保存せず、未公開記事は期間を過ぎても補完する', () => {
   new AcquisitionHistory().enrich(
     feed([
       article(),
@@ -99,7 +172,10 @@ it('日付なし・未来・期間外・不正識別子を保存せず、期限�
   expect(new AcquisitionHistory().enrich(next, sourceUrl)).toBe(1);
   expect(next.items.map((x) => x.link)).toEqual([article().link]);
   vi.setSystemTime(new Date(now.getTime() + 9 * 86400_000));
-  expect(new AcquisitionHistory().enrich(feed(), sourceUrl)).toBe(0);
+  expect(new AcquisitionHistory().enrich(feed(), sourceUrl)).toBe(1);
+  expect(new AcquisitionHistory(undefined, new Set([slackArticleKey(article().link)])).enrich(feed(), sourceUrl)).toBe(
+    0,
+  );
 });
 
 it('日別アンカーを区別し、追跡パラメーターだけの違いでは重複させない', () => {
@@ -117,16 +193,17 @@ it('日別アンカーを区別し、追跡パラメーターだけの違いで�
   expect(next.items).toHaveLength(3);
 });
 
-it('破損した取得履歴を配信に混ぜず、現在取得した記事で復旧する', () => {
+it('破損した永続記録を初期化で消さずに失敗させる', () => {
   new AcquisitionHistory().enrich(feed([article()]), sourceUrl);
-  const files = fs.readdir(location.directory);
+  const directory = path.join(location.directory, 'journal');
+  const files = fs.readdir(directory);
   return files.then(async ([id]) => {
-    const cache = createCache({ cacheId: id });
-    cache.set('snapshot', { sourceUrl, items: [{ ...article(), isoDate: 'not-a-date' }] });
-    cache.save();
+    await fs.writeFile(
+      path.join(directory, id),
+      JSON.stringify({ sourceUrl, items: [{ ...article(), isoDate: 'not-a-date' }] }),
+    );
     const current = feed([article('https://example.com/current')]);
-    expect(new AcquisitionHistory().enrich(current, sourceUrl)).toBe(0);
-    expect(logger.warn).toHaveBeenCalledWith('[feed-acquisition] invalid-cache', { sourceUrl });
+    expect(() => new AcquisitionHistory().enrich(current, sourceUrl)).toThrow('取得記録の内容');
   });
 });
 

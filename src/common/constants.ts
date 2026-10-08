@@ -37,7 +37,7 @@ export default {
   globalSiteTagKey: '',
 
   // フィードの取得などに使う UserAgent
-  requestUserAgent: 'facebookexternalhit/1.1; fuhitonakagawa/my-tech-blog-rss-feed',
+  requestUserAgent: 'my-tech-blog-rss-feed/1.0 (+https://github.com/fuhitonakagawa/my-tech-blog-rss-feed)',
   externalFetchTimeoutMs: 10_000,
   externalFetchMaxResponseBytes: 10 * 1024 * 1024,
 

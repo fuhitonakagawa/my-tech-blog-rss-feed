@@ -10,6 +10,7 @@ import { GeneratedFeedService } from '../feed/generated/generated-feed-service';
 import { checkFeedCoverage } from '../feed/health/coverage';
 import { buildHealthReport, writeFeedHealth } from '../feed/health/service';
 import { logger } from '../feed/logger';
+import { loadDeliveryHistory } from '../feed/slack/history';
 import { generateSlackFeeds } from '../feed/slack/service';
 import { loadSlackSources } from '../feed/slack/sources';
 import { statisticsConfig } from '../feed/statistics/config';
@@ -59,6 +60,14 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
 });
 
 (async () => {
+  const { previous: publishedDelivery } = await loadDeliveryHistory(
+    path.join(dirName, '../../.previous-site'),
+    path.join(dirName, '../site'),
+    new Date(),
+  );
+  const publishedKeys = new Set(
+    Object.values(publishedDelivery?.feeds ?? {}).flatMap((feed) => Object.keys(feed.seen)),
+  );
   const generatedFeedRegistry = await generatedFeedService.generate(
     GENERATED_FEED_DEFINITION_LIST,
     PREVIOUS_GENERATED_FEEDS_DIR_PATH,
@@ -66,13 +75,10 @@ const createSectionFeedMeta = (section: FeedSection): AggregatedFeedMeta => ({
   );
 
   // フィード取得
-  const feedCrawler = new FeedCrawler(generatedFeedRegistry);
-  const availableFeedInfoList = FEED_INFO_LIST.filter((feedInfo) => {
-    return feedInfo.input.kind === 'remote' || generatedFeedRegistry.has(feedInfo.input.id);
-  });
+  const feedCrawler = new FeedCrawler(generatedFeedRegistry, publishedKeys);
   const aggregateFeedStartAt = new Date(Date.now() - constants.aggregateFeedDurationInHours * 60 * 60 * 1000);
   const crawlFeedsResult = await feedCrawler.crawlFeeds(
-    availableFeedInfoList,
+    FEED_INFO_LIST,
     constants.feedFetchConcurrency,
     constants.feedOgFetchConcurrency,
     aggregateFeedStartAt,

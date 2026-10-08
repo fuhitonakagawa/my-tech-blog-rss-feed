@@ -13,15 +13,10 @@ const extract = (html: string): GeneratedFeedItem[] => extractGeneratedFeedItems
 
 /** カード内の表示用リンク・記事情報・カテゴリを含むHTMLを返す */
 const article = (date: string, href = '/blog/article?id=1&utm_source=news', title = ' 記事\nタイトル '): string => `
-  <div class="blog_cms_item w-dyn-item">
-    <div class="card_blog_wrap">
-      <a href="#">表示用リンク</a>
-      <div fs-list-field="heading">${title}</div>
-      <div fs-list-field="date">${date}</div>
-      <div class="w-dyn-item"><div fs-list-field="category">Product announcements</div></div>
-      <a fs-list-element="item-link" href="${href}"></a>
-    </div>
-  </div>
+  <a data-cta-position="resourcesTypeIndex" href="${href}">
+    <div><span>Article</span><span>${date}</span></div>
+    <h3>${title}</h3>
+  </a>
 `;
 
 afterEach(() => {
@@ -32,9 +27,9 @@ describe('Claude Product announcementsの生成フィード', () => {
   it('グリッドの記事だけを抽出しリスト表示やナビゲーションの重複を含めない', () => {
     const card = article('September 25, 2026');
     const items = extract(`
-      <nav><div class="blog_cms_grid">${card}</div></nav>
+      <nav><div data-card-group="true">${card}</div></nav>
       <main>
-        <div class="blog_cms_grid">${card}</div>
+        <div data-card-group="true">${card}</div>
         <div class="blog_cms_list">${card}</div>
       </main>
     `);
@@ -64,7 +59,7 @@ describe('Claude Product announcementsの生成フィード', () => {
   ])('不正な記事を除外する: %s %s %s', (date, href, title) => {
     vi.spyOn(logger, 'warn').mockImplementation(() => undefined);
     vi.spyOn(logger, 'trace').mockImplementation(() => undefined);
-    const items = extract(`<main><div class="blog_cms_grid">
+    const items = extract(`<main><div data-card-group="true">
       ${article(date, href, title)}
       ${article('February 29, 2024', '/blog/valid')}
     </div></main>`);
@@ -73,6 +68,29 @@ describe('Claude Product announcementsの生成フィード', () => {
 
   it('記事一覧が存在しない場合は生成元を異常として扱う', () => {
     expect(() => extract('<main></main>')).toThrow('記事を取得できません');
+  });
+
+  it('サイト移行後も既存GUIDを維持し、現在の記事URLへリンクする', () => {
+    const items = extract(`<main><div data-card-group="true">
+      ${article('Oct 1, 2026', '/resources/articles/claude-code-mods', 'Customize Claude Code')}
+    </div></main>`);
+    expect(items[0]).toMatchObject({
+      id: 'https://claude.com/blog/claude-code-mods',
+      url: 'https://claude.com/resources/articles/claude-code-mods',
+      publishedAt: '2026-10-01T00:00:00.000Z',
+    });
+  });
+
+  it('一覧に掲載された外部記事を含み、特集カルーセルは除外する', () => {
+    const items =
+      extract(`<main><div class="featured">${article('Oct 7, 2026', 'https://claude.dev/blog/featured/')}</div>
+      <div data-card-group="true">${article('Oct 7, 2026', 'https://www.anthropic.com/claude-haiku-5-5')}
+      ${article('Oct 6, 2026', 'https://claude.dev/blog/claude-code-in-the-cloud/')}</div></main>`);
+    expect(items.map((item) => item.url)).toEqual([
+      'https://www.anthropic.com/claude-haiku-5-5',
+      'https://claude.dev/blog/claude-code-in-the-cloud/',
+    ]);
+    expect(items[1].id).toBe('https://claude.com/blog/claude-code-in-the-cloud');
   });
 
   it('AIセクションだけに所属する', () => {

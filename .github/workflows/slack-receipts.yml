@@ -1,0 +1,109 @@
+name: Verify Slack receipts
+
+on:
+  workflow_run:
+    workflows: [Generate feeds and site]
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: slack-receipts
+  cancel-in-progress: false
+
+jobs:
+  configured:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    outputs:
+      available: ${{ steps.token.outputs.available }}
+    steps:
+      - name: Check monitoring configuration
+        id: token
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        run: |
+          if [[ -n "$SLACK_BOT_TOKEN" ]]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::SLACK_BOT_TOKEN未設定。Slack実投稿は未検証です。"
+            echo "Slack実投稿の確認・再送は未検証です。Secret SLACK_BOT_TOKENを設定してください。" >> "$GITHUB_STEP_SUMMARY"
+          fi
+  verify:
+    needs: configured
+    if: needs.configured.outputs.available == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/restore-published-feeds
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: .tool-versions
+          cache: npm
+      - run: npm install --global npm@11.19.1
+      - run: npm ci
+      - name: Restore Slack receipt history
+        id: restore
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          retries: 3
+          script: |
+            const store = require('./.github/scripts/acquisition-history.cjs').createStore({
+              branch: 'slack-receipt-history', allowed: /^monitor\.json$/, marker: 'monitor.json'
+            });
+            const sha = await store.restore({github, context, core}, '.slack-receipts');
+            core.setOutput('sha', sha || '');
+      - name: Find receipt backup from failed production runs
+        id: receipt_backup
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          retries: 3
+          script: |
+            const runId = await require('./.github/scripts/acquisition-history.cjs').findFailedBackup(
+              {github, context, core}, 'slack-receipts.yml', 'slack-receipts'
+            );
+            core.setOutput('run_id', runId);
+      - name: Restore receipt backup
+        if: steps.receipt_backup.outputs.run_id != ''
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: slack-receipts
+          run-id: ${{ steps.receipt_backup.outputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: .slack-receipt-recovery
+      - name: Check actual Slack posts and resend missing articles
+        id: check
+        run: npm run slack-monitor
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_RECEIPTS_BASE_COMMIT: ${{ steps.restore.outputs.sha }}
+      - name: Back up receipt history
+        if: always() && steps.restore.outcome == 'success' && steps.check.outcome != 'skipped'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: slack-receipts
+          path: .slack-receipts/monitor.json
+          retention-days: 30
+          include-hidden-files: true
+          if-no-files-found: error
+      - name: Persist Slack receipt history
+        if: always() && steps.restore.outcome == 'success' && steps.check.outcome != 'skipped'
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          retries: 3
+          script: |
+            const store = require('./.github/scripts/acquisition-history.cjs').createStore({
+              branch: 'slack-receipt-history', allowed: /^monitor\.json$/, marker: 'monitor.json'
+            });
+            await store.save({github, context, core}, '.slack-receipts');

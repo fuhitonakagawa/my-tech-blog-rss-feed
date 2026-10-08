@@ -2,6 +2,7 @@ import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import { isPublishableHttpUrl } from '../../common/url-guard';
 import type { FeedDistributionSet } from '../feed-generator';
+import { claudeArticleId } from './claude-articles';
 import type { GeneratedFeedItem, GeneratedFeedSnapshot, GeneratedFeedStatus, StoredGeneratedFeedState } from './types';
 
 const GENERATED_FEED_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
@@ -40,7 +41,11 @@ const isGeneratedFeedItem = (value: unknown): value is GeneratedFeedItem => {
   return (
     typeof item.id === 'string' &&
     typeof item.url === 'string' &&
-    item.id === item.url &&
+    (item.id === item.url ||
+      (typeof item.url === 'string' &&
+        isPublishableHttpUrl(item.url) &&
+        ['https://claude.com', 'https://claude.dev'].includes(new URL(item.url).origin) &&
+        item.id === claudeArticleId(item.url))) &&
     isPublishableHttpUrl(item.url) &&
     typeof item.title === 'string' &&
     item.title !== '' &&
