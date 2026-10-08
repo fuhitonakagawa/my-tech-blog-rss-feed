@@ -4,6 +4,7 @@ import { updateSlackFeed } from '../../../src/feed/slack/model';
 import {
   type ReceiptState,
   SlackReceiptClient,
+  mergeReceiptStates,
   monitorSlackReceipts,
   parseReceiptState,
   receiptTargets,
@@ -82,6 +83,19 @@ it('90分のRSS巡回猶予中は再送せず、RSSから消えた未着も次�
   await monitorSlackReceipts(state, input, client, new Date('2026-10-30T12:00:00.000Z'));
   expect(client.post).toHaveBeenCalledTimes(6);
   expect(Object.keys(state.pending)).toHaveLength(0);
+});
+
+it('保存失敗した未着候補をバックアップから復元し、確認済みの記事は戻さない', async () => {
+  const backup = initial();
+  const client = { history: vi.fn().mockResolvedValue([]), post: vi.fn() };
+  await monitorSlackReceipts(backup, published('2026-10-08T11:00:00.000Z'), client, now);
+  const current = { ...initial(), updatedAt: now.toISOString() };
+  const key = Object.keys(backup.pending)[0];
+  current.confirmed[key] = now.toISOString();
+  const merged = mergeReceiptStates(current, backup);
+  expect(Object.keys(merged.pending)).toHaveLength(5);
+  expect(merged.pending[key]).toBeUndefined();
+  expect(parseReceiptState(JSON.stringify(merged))).toEqual(merged);
 });
 
 it('曖昧な投稿失敗を直ちに再送せず、次回の履歴確認で受信済みと判断する', async () => {

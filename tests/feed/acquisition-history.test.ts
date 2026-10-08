@@ -74,6 +74,22 @@ it('元RSSから消えた取得済み記事を次のプロセスへ引き継ぎ�
   expect(restored.items.find((x) => x.link === updated.link)?.title).toBe(updated.title);
 });
 
+it('専用保存先への更新に失敗した実行のバックアップから未公開記事を回収する', async () => {
+  const backup = path.join(location.directory, 'backup');
+  new AcquisitionHistory(backup).enrich(feed([article()]), sourceUrl);
+  vi.stubEnv('FEED_ACQUISITION_RECOVERY_DIR', backup);
+  const restored = feed();
+  expect(new AcquisitionHistory().enrich(restored, sourceUrl)).toBe(1);
+  expect(restored.items[0]).toMatchObject({
+    guid: article().guid,
+    isoDate: article().isoDate,
+    recoveredUnpublished: true,
+  });
+  expect(new AcquisitionHistory(undefined, new Set([slackArticleKey(article().link)])).enrich(feed(), sourceUrl)).toBe(
+    0,
+  );
+});
+
 it('取得元を分離し、復元時のカテゴリ・言語は現在の登録情報を使う', () => {
   new AcquisitionHistory().enrich(feed([article()]), sourceUrl);
   const another = feed();

@@ -10,6 +10,36 @@ export class FeedHttpError extends Error {
   }
 }
 
+/** 通信の一時失敗だけ再試行し、入力・XML検証の不正や取得拒否は繰り返さない。 */
+export const isRetryableSourceError = (error: unknown): boolean => {
+  if (error instanceof FeedHttpError) return error.retryable;
+  const pending: unknown[] = [error];
+  for (let index = 0; index < pending.length && index < 32; index++) {
+    const value = pending[index] as { name?: string; code?: string; cause?: unknown; errors?: unknown[] } | null;
+    if (!value || typeof value !== 'object') continue;
+    if (
+      value.name === 'TimeoutError' ||
+      value.name === 'AbortError' ||
+      [
+        'ETIMEDOUT',
+        'ECONNRESET',
+        'ECONNREFUSED',
+        'ENETUNREACH',
+        'EAI_AGAIN',
+        'ENOTFOUND',
+        'UND_ERR_CONNECT_TIMEOUT',
+        'UND_ERR_HEADERS_TIMEOUT',
+        'UND_ERR_BODY_TIMEOUT',
+        'UND_ERR_SOCKET',
+      ].includes(value.code ?? '')
+    )
+      return true;
+    if (value.cause) pending.push(value.cause);
+    if (Array.isArray(value.errors)) pending.push(...value.errors.slice(0, 32));
+  }
+  return false;
+};
+
 /** 同じ配信元への開始間隔とRetry-Afterを守り、長い待機を後続巡回へ委ねる。 */
 export class SourceRequestQueue {
   private readonly queues = new Map<string, Promise<void>>();

@@ -3,7 +3,7 @@ import RssParser from 'rss-parser';
 import { describe, expect, it } from 'vitest';
 import { exponentialBackoff } from '../../src/feed/common-util';
 import { parseRemoteFeed } from '../../src/feed/remote-feed-input';
-import { FeedHttpError, SourceRequestQueue } from '../../src/feed/source-request';
+import { SourceRequestQueue, isRetryableSourceError } from '../../src/feed/source-request';
 import { FEED_INFO_LIST, type FeedInfo } from '../../src/resources/feed-info-list';
 import { providerCheck } from './provider-check';
 
@@ -27,7 +27,7 @@ describe('フィードが取得可能', () => {
             },
             500,
             2,
-            (error) => error instanceof FeedHttpError && error.retryable,
+            isRetryableSourceError,
           ),
         );
         const { feed } = await parseRemoteFeed(xml, rssParser, feedInfo.label);

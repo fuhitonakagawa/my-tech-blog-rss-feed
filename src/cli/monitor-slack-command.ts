@@ -3,6 +3,7 @@ import * as path from 'node:path';
 import {
   type ReceiptState,
   SlackReceiptClient,
+  mergeReceiptStates,
   monitorSlackReceipts,
   parseReceiptState,
 } from '../feed/slack/receipt-monitor';
@@ -20,6 +21,14 @@ try {
   state = { schemaVersion: 1, updatedAt: new Date().toISOString(), pending: {}, confirmed: {} };
 }
 const published = await readSlackState('.previous-site/feeds/delivery');
+try {
+  state = mergeReceiptStates(
+    state,
+    parseReceiptState(await fs.readFile('.slack-receipt-recovery/monitor.json', 'utf8')),
+  );
+} catch (error) {
+  if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+}
 if (!published) throw new Error('公開済み通知履歴がありません');
 try {
   const result = await monitorSlackReceipts(state, published, new SlackReceiptClient(token));

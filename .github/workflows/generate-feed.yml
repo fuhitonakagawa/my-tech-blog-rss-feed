@@ -26,6 +26,9 @@ jobs:
     permissions:
       contents: read
       id-token: write
+      actions: read
+    env:
+      FEED_ACQUISITION_RECOVERY_DIR: .acquisition-recovery
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -47,9 +50,28 @@ jobs:
         id: restore_acquisition
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
+          retries: 3
           script: |
             const sha = await require('./.github/scripts/acquisition-history.cjs').restore({ github, context, core });
             core.setOutput('sha', sha || '');
+      - name: Find acquired articles from failed production runs
+        id: recovery_artifact
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          retries: 3
+          script: |
+            const runId = await require('./.github/scripts/acquisition-history.cjs').findFailedBackup(
+              {github, context, core}, 'generate-feed.yml', 'acquired-articles'
+            );
+            core.setOutput('run_id', runId);
+      - name: Restore acquired article backup
+        if: steps.recovery_artifact.outputs.run_id != ''
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: acquired-articles
+          run-id: ${{ steps.recovery_artifact.outputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: .acquisition-recovery
       - run: npm run cache-prune
       - run: npm run feed-generate
         id: generate_feeds
@@ -69,7 +91,7 @@ jobs:
         with:
           name: acquired-articles
           path: .feed-acquisition/*.json
-          retention-days: 1
+          retention-days: 30
           include-hidden-files: true
           if-no-files-found: error
       - uses: ./.github/actions/save-feed-cache
@@ -102,6 +124,7 @@ jobs:
       - name: Persist acquired articles
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
+          retries: 3
           script: await require('./.github/scripts/acquisition-history.cjs').save({ github, context, core });
 
   deploy:

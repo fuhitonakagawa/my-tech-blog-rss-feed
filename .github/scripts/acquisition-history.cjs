@@ -68,3 +68,22 @@ return {restore, save};
 };
 Object.assign(exports, exports.createStore({branch: 'feed-acquisition-history',
   allowed: /^(?:index|feed-acquisition-v1-[a-f0-9]{64})\.json$/}));
+
+// 専用保存が失敗した本番実行のバックアップだけを選び、PRやCIの記録を採用しない。
+exports.findFailedBackup = async ({github, context, core}, workflow, artifactName) => {
+  const runs = await github.paginate(github.rest.actions.listWorkflowRuns, {
+    ...context.repo, workflow_id: workflow, branch: 'main', status: 'failure', per_page: 100,
+    created: `>=${new Date(Date.now() - 30 * 86400000).toISOString()}`
+  });
+  for (const run of runs) {
+    if (!['push', 'schedule', 'workflow_dispatch', 'workflow_run'].includes(run.event)) continue;
+    const artifacts = (await github.rest.actions.listWorkflowRunArtifacts({
+      ...context.repo, run_id: run.id, per_page: 100
+    })).data.artifacts;
+    if (artifacts.some(artifact => artifact.name === artifactName && !artifact.expired)) {
+      core.info(`失敗した本番実行のバックアップを復元します: ${run.html_url}`);
+      return String(run.id);
+    }
+  }
+  return '';
+};

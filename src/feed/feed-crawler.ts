@@ -34,7 +34,7 @@ import { QiitaOrganizationSupplement } from './qiita-organization';
 import { QiitaSupplement } from './qiita-supplement';
 import { recoveryArticles } from './recovery-articles';
 import { parseRemoteFeed } from './remote-feed-input';
-import { FeedHttpError, SourceRequestQueue } from './source-request';
+import { FeedHttpError, SourceRequestQueue, isRetryableSourceError } from './source-request';
 
 export type CustomOgObject = OgObject & {
   // 画像は一つだけとする
@@ -241,7 +241,7 @@ export class FeedCrawler {
             },
             1000,
             constants.feedFetchRetryCount,
-            (error) => feedInfo.input.kind !== 'generated' && (!(error instanceof FeedHttpError) || error.retryable),
+            (error) => feedInfo.input.kind !== 'generated' && isRetryableSourceError(error),
           ),
         );
         let feed = sourceFeed;

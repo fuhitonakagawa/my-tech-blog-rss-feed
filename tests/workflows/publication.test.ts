@@ -155,3 +155,24 @@ it('取得記録を専用ブランチから復元し、復元後に更新され�
   await expect(acquisition.save({ github, context, core }, directory)).rejects.toThrow('復元後に更新');
   expect(head).toBe(saved);
 });
+
+it('失敗バックアップは本番だけを選び、PR実行と期限切れを採用しない', async () => {
+  const list = vi.fn();
+  const artifacts = vi
+    .fn()
+    .mockResolvedValueOnce({ data: { artifacts: [{ name: 'acquired-articles', expired: true }] } })
+    .mockResolvedValueOnce({ data: { artifacts: [{ name: 'acquired-articles', expired: false }] } });
+  const github = {
+    rest: { actions: { listWorkflowRuns: list, listWorkflowRunArtifacts: artifacts } },
+    paginate: vi.fn().mockResolvedValue([
+      { id: 1, event: 'pull_request' },
+      { id: 2, event: 'push' },
+      { id: 3, event: 'schedule' },
+    ]),
+  };
+  expect(await acquisition.findFailedBackup({ github, context, core }, 'generate-feed.yml', 'acquired-articles')).toBe(
+    '3',
+  );
+  expect(artifacts).toHaveBeenCalledTimes(2);
+  expect(github.paginate).toHaveBeenCalledWith(list, expect.objectContaining({ branch: 'main', status: 'failure' }));
+});

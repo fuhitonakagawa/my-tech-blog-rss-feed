@@ -67,6 +67,22 @@ export const parseReceiptState = (json: string): ReceiptState => {
   return { schemaVersion: 1, updatedAt: value.updatedAt, pending, confirmed };
 };
 
+/** 保存失敗した実行の候補も統合し、確認済みの記事を未着へ戻さない。 */
+export const mergeReceiptStates = (primary: ReceiptState, backup: ReceiptState): ReceiptState => {
+  const confirmed = { ...backup.confirmed, ...primary.confirmed };
+  for (const [key, date] of Object.entries(backup.confirmed)) {
+    if (!confirmed[key] || confirmed[key] < date) confirmed[key] = date;
+  }
+  const pending = { ...backup.pending, ...primary.pending };
+  for (const key of Object.keys(confirmed)) delete pending[key];
+  return {
+    schemaVersion: 1,
+    updatedAt: primary.updatedAt > backup.updatedAt ? primary.updatedAt : backup.updatedAt,
+    pending,
+    confirmed,
+  };
+};
+
 /** 投稿本文・unfurl・block内のURLを照合し、タイトル一致だけで着信済みにしない。 */
 const postedKeys = (messages: unknown[]): Set<string> => {
   const text = JSON.stringify(messages).replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');

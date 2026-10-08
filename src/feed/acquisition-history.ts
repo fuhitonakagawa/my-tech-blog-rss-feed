@@ -78,8 +78,13 @@ export class AcquisitionHistory {
   ) {}
 
   /** 専用記録を優先し、移行時だけ旧キャッシュを読み込む。破損を初期化で隠さない。 */
-  private read(sourceUrl: string, id: string): AcquisitionSnapshot | undefined {
-    const file = path.join(this.directory, `${id}.json`);
+  private read(
+    sourceUrl: string,
+    id: string,
+    directory = this.directory,
+    allowLegacy = true,
+  ): AcquisitionSnapshot | undefined {
+    const file = path.join(directory, `${id}.json`);
     let value: unknown;
     try {
       const stat = fs.lstatSync(file);
@@ -87,7 +92,7 @@ export class AcquisitionHistory {
       value = JSON.parse(fs.readFileSync(file, 'utf8'));
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-      if (fs.existsSync(path.join(this.directory, 'index.json'))) return undefined;
+      if (!allowLegacy || fs.existsSync(path.join(directory, 'index.json'))) return undefined;
       value = createCache({ cacheId: id }).get('snapshot');
     }
     if (value === undefined) return undefined;
@@ -123,10 +128,12 @@ export class AcquisitionHistory {
     const key = createHash('sha256').update(sourceUrl).digest('hex');
     const id = `feed-acquisition-v1-${key}`;
     const previous = this.read(sourceUrl, id);
+    const recoveryDirectory = process.env.FEED_ACQUISITION_RECOVERY_DIR;
+    const recovery = recoveryDirectory ? this.read(sourceUrl, id, recoveryDirectory, false) : undefined;
     const now = new Date().toISOString();
     const cutoff = new Date(Date.now() - constants.aggregateFeedDurationInHours * 3600_000).toISOString();
     const articles = new Map<string, AcquiredArticle>();
-    for (const item of previous?.items ?? []) {
+    for (const item of [...(recovery?.items ?? []), ...(previous?.items ?? [])]) {
       if (item.isoDate <= now && !this.publishedKeys.has(articleKey(item.link)))
         articles.set(articleKey(item.link), item);
     }

@@ -29,12 +29,22 @@ describe.each([
   {
     id: 'claude-announcements',
     sectionId: 'my-tech-blog-ai',
-    articlePrefix: ['https://claude.com/resources/articles/', 'https://claude.dev/blog/', 'https://www.anthropic.com/'],
+    articlePrefix: [
+      'https://claude.com/blog/',
+      'https://claude.com/resources/articles/',
+      'https://claude.dev/blog/',
+      'https://www.anthropic.com/',
+    ],
   },
   {
     id: 'claude-code-blog',
     sectionId: 'my-tech-blog-ai',
-    articlePrefix: ['https://claude.com/resources/articles/', 'https://claude.dev/blog/', 'https://www.anthropic.com/'],
+    articlePrefix: [
+      'https://claude.com/blog/',
+      'https://claude.com/resources/articles/',
+      'https://claude.dev/blog/',
+      'https://www.anthropic.com/',
+    ],
   },
 ])('$idの生成フィード', ({ id, sectionId, articlePrefix }) => {
   it('単独RSSと所属セクションの記事を同じXMLから生成する', async (context) => {

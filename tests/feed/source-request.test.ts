@@ -1,5 +1,5 @@
 import { afterEach, expect, it, vi } from 'vitest';
-import { FeedHttpError, SourceRequestQueue } from '../../src/feed/source-request';
+import { FeedHttpError, SourceRequestQueue, isRetryableSourceError } from '../../src/feed/source-request';
 
 afterEach(() => {
   vi.restoreAllMocks();
@@ -57,4 +57,17 @@ it('恒久的なHTTP失敗を再試行せず、一時的なサーバー失敗は
   expect(new FeedHttpError(404).retryable).toBe(false);
   expect(new FeedHttpError(403).retryable).toBe(false);
   expect(new FeedHttpError(503).retryable).toBe(true);
+});
+
+it('一時的な通信・HTTP失敗だけ再試行し、取得拒否とXML不正は繰り返さない', () => {
+  expect(isRetryableSourceError(new TypeError('fetch failed', { cause: { code: 'ETIMEDOUT' } }))).toBe(true);
+  expect(isRetryableSourceError(new DOMException('timeout', 'TimeoutError'))).toBe(true);
+  expect(isRetryableSourceError(new FeedHttpError(503))).toBe(true);
+  for (const error of [
+    new FeedHttpError(403),
+    new FeedHttpError(429),
+    new Error('XML invalid'),
+    new TypeError('invalid input'),
+  ])
+    expect(isRetryableSourceError(error)).toBe(false);
 });
