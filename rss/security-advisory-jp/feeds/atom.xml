@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/</id>
+    <title>GitHub Security Advisory - Translated Japanese｜企業テックブログRSS</title>
+    <updated>2026-10-11T05:04:23.233Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/atom.xml"/>
+    <subtitle>GitHub Security Advisory - Translated Japanese：enの記事を日本語に翻訳してまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[[@tinacms/cli] は、 ティナ: 生成されたクライアントソースの unescaped Git ブランチ名によるコードインジェクション | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-pwhx-cvv3-qj5c</id>
+        <link href="https://github.com/advisories/GHSA-pwhx-cvv3-qj5c"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T20:56:52.000Z</updated>
+        <summary type="html"><![CDATA[サマリー@tinacms/cli は、生成された client.ts ソースに、エスケープやエンコーディングなしで、生の Git ブランチ値を差し込みます。 Git-valid ブランチ名は、生成されたクライアントモジュールをインポートしたときに実行される文字列のリテラルを閉じ、任意の JavaScript 式を注入できます。 Affected componentSource (branch re]]></summary>
+        <content type="html"><![CDATA[サマリー@tinacms/cli は、生成された client.ts ソースに、エスケープやエンコーディングなしで、生の Git ブランチ値を差し込みます。 Git-valid ブランチ名は、生成されたクライアントモジュールをインポートしたときに実行される文字列のリテラルを閉じ、任意の JavaScript 式を注入できます。 Affected componentSource (branch read): パッケージ/@tinacms/cli/src/cmds/init/templates/config.ts 行 155–172 — VERCEL_GIT_COMMIT_REF、GITHUB_BRANCH、または HEAD を config.branchTransform (URL ビルド): パッケージ/@tinacms/cli/src/codegen/index.ts 行 219– 行 Laravel{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{]]></content>
+        <published>2026-10-09T20:56:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@tinacms/app] TinaCMS管理プレビューiframeは、URLフラグメントから攻撃者制御の起源をロードします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-x34j-47hf-4xg7</id>
+        <link href="https://github.com/advisories/GHSA-x34j-47hf-4xg7"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T20:56:48.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション TinaCMS 管理者は、値が同じorigin にとどまらず、 /~/* hash-router splat からプレビュー &lt;iframe src&gt; をビルドします。 二重スラッシュ(#/~//attacker.example/p)のフラグメントは、プロトコルに依存するURL //attacker.example/pになりますので、管理者は外部サイトをフレーム化します。 同じ]]></summary>
+        <content type="html"><![CDATA[インフォメーション TinaCMS 管理者は、値が同じorigin にとどまらず、 /~/* hash-router splat からプレビュー &lt;iframe src&gt; をビルドします。 二重スラッシュ(#/~//attacker.example/p)のフラグメントは、プロトコルに依存するURL //attacker.example/pになりますので、管理者は外部サイトをフレーム化します。 同じ無効な文字列が期待されているOrigin、admin↔preview postMessageチャンネルの唯一の信頼アンカーであるので、攻撃者のフレームは信頼通り扱われます:管理者が署名されたエディタのトークンで実行し、攻撃者の起源に戻すGraphQL操作を提出することができます。 1つのリンクは、ログインしたエディタで開き、非認証のリモート攻撃者の任意の読み取りと、そのエディタとしてサイトのコンテンツAPIへのアクセスを書き込みます。 DetailsRoot 原因 — ルータ splat は、同じorigin のないフレーム ソースになります チェック:packages/tinacms/src]]></content>
+        <published>2026-10-09T20:56:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ティーナ cms] TinaCMS管理プレビューiframeは、URLフラグメントから攻撃者制御の起源をロードします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-x34j-47hf-4xg7</id>
+        <link href="https://github.com/advisories/GHSA-x34j-47hf-4xg7"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T20:56:48.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション TinaCMS 管理者は、値が同じorigin にとどまらず、 /~/* hash-router splat からプレビュー &lt;iframe src&gt; をビルドします。 二重スラッシュ(#/~//attacker.example/p)のフラグメントは、プロトコルに依存するURL //attacker.example/pになりますので、管理者は外部サイトをフレーム化します。 同じ]]></summary>
+        <content type="html"><![CDATA[インフォメーション TinaCMS 管理者は、値が同じorigin にとどまらず、 /~/* hash-router splat からプレビュー &lt;iframe src&gt; をビルドします。 二重スラッシュ(#/~//attacker.example/p)のフラグメントは、プロトコルに依存するURL //attacker.example/pになりますので、管理者は外部サイトをフレーム化します。 同じ無効な文字列が期待されているOrigin、admin↔preview postMessageチャンネルの唯一の信頼アンカーであるので、攻撃者のフレームは信頼通り扱われます:管理者が署名されたエディタのトークンで実行し、攻撃者の起源に戻すGraphQL操作を提出することができます。 1つのリンクは、ログインしたエディタで開き、非認証のリモート攻撃者の任意の読み取りと、そのエディタとしてサイトのコンテンツAPIへのアクセスを書き込みます。 DetailsRoot 原因 — ルータ splat は、同じorigin のないフレーム ソースになります チェック:packages/tinacms/src]]></content>
+        <published>2026-10-09T20:56:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@tinacms/web-components] @tinacms/web-components: `tina-markdown` は、スキーム検証なしで `href` にリッチテキストリンク URL を書き込み、XSS を保存できるようにします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-c42q-qvc3-j6vg</id>
+        <link href="https://github.com/advisories/GHSA-c42q-qvc3-j6vg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T20:56:45.000Z</updated>
+        <summary type="html"><![CDATA[概要&lt;tina-markdown&gt; は、DOM にリッチテキスト AST をレンダリングし、ノードに対して、ノードの URL をアンカーの href に、スキームチェックなしで割り当てます。 CMS を javascript として作成するリンク:... ライブ javascript としてレンダーします: アンカー, 従って、クリックする訪問者は、サイトの原点で攻撃者対応スクリプトを実行します.]]></summary>
+        <content type="html"><![CDATA[概要&lt;tina-markdown&gt; は、DOM にリッチテキスト AST をレンダリングし、ノードに対して、ノードの URL をアンカーの href に、スキームチェックなしで割り当てます。 CMS を javascript として作成するリンク:... ライブ javascript としてレンダーします: アンカー, 従って、クリックする訪問者は、サイトの原点で攻撃者対応スクリプトを実行します. リポジトリ内のすべての兄弟のレンダラーは、すでにこれらのURLをサンライズしています。これはそうではありません。 詳細未検証 例:node.type == 'html' _ Node.type === 'html_inline' の場合には、{ DOMPurify.sanitize(node.value, { RETURN_DOM_FRAGMENT: true); // Node.type ======================================================================================================]]></content>
+        <published>2026-10-09T20:56:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[shiny] Python用のShinyは、ブックマークの復元でパストラバース | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-47c3-hpmg-7j6p</id>
+        <link href="https://github.com/advisories/GHSA-47c3-hpmg-7j6p"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T20:56:37.000Z</updated>
+        <summary type="html"><![CDATA[Python のブックマーク・ストア・パスの ImpactShiny は、クライアントが指定した _state_id_query-string をリクエストし、サーバー・サイド・ブックマーク・ディレクトリ(&lt;cwd&gt;/shiny_bookmarks/&lt;id&gt;) に、バリデーションせずにアクセスしました。 ..path セグメントを含む値、または絶対パスは、サーバが入出力し、input.json と]]></summary>
+        <content type="html"><![CDATA[Python のブックマーク・ストア・パスの ImpactShiny は、クライアントが指定した _state_id_query-string をリクエストし、サーバー・サイド・ブックマーク・ディレクトリ(&lt;cwd&gt;/shiny_bookmarks/&lt;id&gt;) に、バリデーションせずにアクセスしました。 ..path セグメントを含む値、または絶対パスは、サーバが入出力し、input.json と値を定義する可能性があります。 ブックマークストアの外にあるディレクトリからjson。 既定のアプリケーションでは、クライアントが aURL クエリ文字列を受け取ったときに、ブックマークが無効(bookmark_store="disable") されたときに、Recover が試みられました。そのため、オプトインの設定は必要ありません。 そのようなアプリケーションでは、影響は、攻撃者のコードセンパスの本質とJSON-validityのサーバサイドプローブで、それらの2つのファイル名に制約されます。 bookmark_store="server" と useui.input_file() で設定]]></content>
+        <published>2026-10-09T20:56:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pacioli-guard] パシオリ: 提出された同意マーカーは、発信者の名前付き文書のキャンセルを認可しました | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-3hj7-6vmj-h8v4</id>
+        <link href="https://github.com/advisories/GHSA-3hj7-6vmj-h8v4"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T20:42:51.000Z</updated>
+        <summary type="html"><![CDATA[Impactpacioli-guardの文書層の同意ゲートは、クレデンシャルキャリングAPIの前に、人件費、単一使用、文書上りおよび行動上りマーカーを要求します Key Scope.require_consent は、文書を提出またはキャンセルすることができます。 ERPNext は、準拠法の妥当性としてさらなる文書を記述するので、ネストされた行為は、自分自身のマーカーを必要とする代わりに、エンク]]></summary>
+        <content type="html"><![CDATA[Impactpacioli-guardの文書層の同意ゲートは、クレデンシャルキャリングAPIの前に、人件費、単一使用、文書上りおよび行動上りマーカーを要求します Key Scope.require_consent は、文書を提出またはキャンセルすることができます。 ERPNext は、準拠法の妥当性としてさらなる文書を記述するので、ネストされた行為は、自分自身のマーカーを必要とする代わりに、エンクロージャ法によって確立された同意を「ride」することができます。 乗務員は、承認された封印マーカーを演じているにもかかわらず、すべてのキャンセルのためにtrueを返す。 乗っては、マーカーと対作用の結合が強制される場所である、同意_verdictに達しません。 その結果: どの Document.cancel() は、同意が docstatus = 2 に達した行動の中で実行され、マーカーなし、行動結合チェックなし、単価なし、および拒否監査行なし。 これは、オペレータがブローカーを与えるために文書化され、キャンセルされた文書のアイデンティティは、呼び出し主制御:販売Invoice.on_su]]></content>
+        <published>2026-10-09T20:42:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyload-ng] pyload-ng: Perms で公開された getUserData/get_userdata です。 ANY は、認証されたアカウントが管理者パスワードの書き込みを強制することを可能にします。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-68w4-83fh-f2w8</id>
+        <link href="https://github.com/advisories/GHSA-68w4-83fh-f2w8"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T17:09:15.000Z</updated>
+        <summary type="html"><![CDATA[サマリーApi.getUserData(legacy)とApi.get_userdataは@permission(Perms.ANY)で宣言され、/api/getUserDataと/api/get_userdataでリーチできます。 なぜなら、Perms.ANY === 0 と pyLoad のパーミッションチェックはビットマスクであり、そのゲートは no-op です。すべての認証されたアカウント]]></summary>
+        <content type="html"><![CDATA[サマリーApi.getUserData(legacy)とApi.get_userdataは@permission(Perms.ANY)で宣言され、/api/getUserDataと/api/get_userdataでリーチできます。 なぜなら、Perms.ANY === 0 と pyLoad のパーミッションチェックはビットマスクであり、そのゲートは no-op です。すべての認証されたアカウントパスは、ゼロパーミッションビットを保持します。 両方のメソッドは check_auth() の周りの細いラッパーで、メンテナーは @permission (perm_map のエントリがないので、is_authorized() は非管理者の偽値を返します。 保護するラッパーは禁止します。 したがって、システム内で最も低い特権アカウントを保持する攻撃者は、管理者パスワードのクリーンなバイナリ・オラクルを持っています。コードベースでどこにもアカウントロックアウトせず、100 req/min レート・リミッターで、X-Forwarded-For.Affected coderc/pyload/core]]></content>
+        <published>2026-10-09T17:09:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyload-ng] pyLoad: Trusted Client-Controlled による率制限バイパスと監査ログのスプーフィング `X-Forwarded-For` ヘッダー | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-9q47-3cm2-2rp8</id>
+        <link href="https://github.com/advisories/GHSA-9q47-3cm2-2rp8"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T17:09:12.000Z</updated>
+        <summary type="html"><![CDATA[SummarypyLoad は、速度制限のデコレータと、クライアントが指定した X-Forwarded-For (XFF) HTTP ヘッダを読み込み、一番左の値を処理します。 信頼されるプロキシ構成が存在しません(Cheroot WSGIサーバは直接、ProxyFixミドルウェアはありません)。 クライアントは、このヘッダーを自由に設定できるため、攻撃者は、各リクエストのヘッダーを回転させること]]></summary>
+        <content type="html"><![CDATA[SummarypyLoad は、速度制限のデコレータと、クライアントが指定した X-Forwarded-For (XFF) HTTP ヘッダを読み込み、一番左の値を処理します。 信頼されるプロキシ構成が存在しません(Cheroot WSGIサーバは直接、ProxyFixミドルウェアはありません)。 クライアントは、このヘッダーを自由に設定できるため、攻撃者は、各リクエストのヘッダーを回転させることで、(1)完全にバイパスレート制限を行なうことができ、(2)ログインとAPIキー認証のセキュリティログに記録されたソースIPを強制し、IPベースのブロック(例えば、fail2ban)を破り、アトリビューションを毒することができます。 SeverityMedium — CVSS 3.1: AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L (~5.3)CWE-807:セキュリティ上の決定書の信頼できない入力の信頼性CWE-290:SpoofingCWE-348による認証バイパス:より少ない信頼できる SourceAffected VersionpyLoad 0.5.0b3の使]]></content>
+        <published>2026-10-09T17:09:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyload-ng] pyLoad: REST API による Privilege の呼び出しとパスワードの変更は、ユーザーのセッションを無効化しません。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-jq7h-wrvp-3rgx</id>
+        <link href="https://github.com/advisories/GHSA-jq7h-wrvp-3rgx"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T17:09:09.000Z</updated>
+        <summary type="html"><![CDATA[REST API を介してユーザーの特権を呼び出す管理者は、これらの特権を運ぶセッションが無効化されていないため、実際にそれらを取り消ししません。 pyLoad は、ログイン時にフラスコセッションにコピーした値からそれぞれリクエストを承認します。 webui/app/helpers の set_session ディレクティブ py はロールとパーマを一度書いて、両方 login_required ]]></summary>
+        <content type="html"><![CDATA[REST API を介してユーザーの特権を呼び出す管理者は、これらの特権を運ぶセッションが無効化されていないため、実際にそれらを取り消ししません。 pyLoad は、ログイン時にフラスコセッションにコピーした値からそれぞれリクエストを承認します。 webui/app/helpers の set_session ディレクティブ py はロールとパーマを一度書いて、両方 login_required と apikey_auth のセッションブランチは、データベースではなくセッションから読み返します。 GHSA-66hx-chf7-3332 の修正は、ユーザのセッションファイルを削除することで処理しましたが、この呼び出しは webui/app/blueprints/json_blueprint.py に 3 つの WebUI フォーム ハンドラでのみ追加されました。 Api.set_user_permission と Api.change_password を core/api/init.py に書き、データベースに返します。 両方とも /api/ にエクスポートされ、OpenAPI の s]]></content>
+        <published>2026-10-09T17:09:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyload-ng] pyLoad: Api.set_user_permission は、ターゲットのセッションを無効化しません。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-889w-m37p-88m5</id>
+        <link href="https://github.com/advisories/GHSA-889w-m37p-88m5"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T17:09:07.000Z</updated>
+        <summary type="html"><![CDATA[概要pyLoad のドキュメント/api/&lt;func&gt; を通じて、管理者以外のユーザの許可を呼び返したり下げたりする管理者 RPC表面 — 例 POST /api/set_user_permission(またはそのレガシーエイリアス/api/setUserPermission) — ターゲットのデータベース行を更新するが、ユーザのFlamesisting Flask Cookieセッションを無効化]]></summary>
+        <content type="html"><![CDATA[概要pyLoad のドキュメント/api/&lt;func&gt; を通じて、管理者以外のユーザの許可を呼び返したり下げたりする管理者 RPC表面 — 例 POST /api/set_user_permission(またはそのレガシーエイリアス/api/setUserPermission) — ターゲットのデータベース行を更新するが、ユーザのFlamesisting Flask Cookieセッションを無効化しない。 デモされたユーザーは、そのWebUIページの読み込みと、そのクッキーで作られたすべての/api/&lt;func&gt;コールごとに、~31日のデフォルトのsession_lifetimeまで、または自発的にログアウトするまで、そのクッキーで処理されたユーザーを呼び出します。 取り消し時に既にログインされていること以外では、アクションによるユーザは必要ありません。 インフォメーション vulnerableメソッド、動詞、src/pyload/core/api/_init__.py:1652-1656: @legacy("setUserPermission") @post def set_user]]></content>
+        <published>2026-10-09T17:09:07.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyload-ng] pyLoad ウィンドウズ PhoneNotify addon: 管理者以外の SETTINGS は、保護されていない http で SSRF をトリガーします。 クライアント通知ホスト | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-p3pr-8f3m-4qp8</id>
+        <link href="https://github.com/advisories/GHSA-p3pr-8f3m-4qp8"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T17:09:03.000Z</updated>
+        <summary type="html"><![CDATA[概要pyLoad は、プラグインの pushurl 設定値から直接受け取るホストに HTTP 接続を開く WindowsPhoneNotify addon を出荷します。 標準の非admin SETTINGS パーミッションを保持しているユーザーは、管理者専用のオプションが設定されていないため、Web API を介して addon を設定し、有効にすることができます。 有効にすると、 addon ]]></summary>
+        <content type="html"><![CDATA[概要pyLoad は、プラグインの pushurl 設定値から直接受け取るホストに HTTP 接続を開く WindowsPhoneNotify addon を出荷します。 標準の非admin SETTINGS パーミッションを保持しているユーザーは、管理者専用のオプションが設定されていないため、Web API を介して addon を設定し、有効にすることができます。 有効にすると、 addon は再起動せずに動的にアクティブにし、完了したダウンロード(ユーザーがいないイベントをグローバルにダウンロード)すると、設定されたホストとパスに HTTP POST を送信します。 Python の http.client でリクエストします。 HTTPConnection では、pyLoad の pycurl ベースの アウトバウンド 接続ガード を通過しません。 したがって、攻撃者は、ループバックサービス、RFC 1918アドレス、またはクラウドメタデータエンドポイント169.254.169.254などの内部ホストでブラインドPOSTリクエストを指示することができます。 根本原因 Load ]]></content>
+        <published>2026-10-09T17:09:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyload-ng] pyLoad: Tar 抽出物は、デバイスノードと FIFO を作成します (フィルタリングされていないタイプ、tarfile 抽出物は filter= なし) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-fr26-jjhm-638c</id>
+        <link href="https://github.com/advisories/GHSA-fr26-jjhm-638c"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T17:08:58.000Z</updated>
+        <summary type="html"><![CDATA[概要UnTar._safe_extractall — GHSA-mvwx-582f-56r7 に追加された硬化は、メンバ名とsymlink/hardlink のターゲットを検証しますが、メンバタイプと callstarfile はチェックしません。 filter= なしの Extractall。 Python &lt; 3.14 ではデフォルトの抽出フィルタは isfully_trusted なので、デ]]></summary>
+        <content type="html"><![CDATA[概要UnTar._safe_extractall — GHSA-mvwx-582f-56r7 に追加された硬化は、メンバ名とsymlink/hardlink のターゲットを検証しますが、メンバタイプと callstarfile はチェックしません。 filter= なしの Extractall。 Python &lt; 3.14 ではデフォルトの抽出フィルタは isfully_trusted なので、デバイスや FIFO エントリを含む作成された tar は pyLoad createthem をディスク上に作成します。 pyLoad が root (公式 Docker デプロイメント) として実行されると、ブロック・デバイス・メンバーは、生ディスク・アクセスを付与します。フル・ホスト・コンプロミスは、低優先の userwho がアーカイブ抽出 (ADD) をトリガーできるため、STATUS から invokeExtractArchive.extract_package)。 Details# プラグイン/エクストラクター/UnTar.py:69-79 tar.getmembers(): is]]></content>
+        <published>2026-10-09T17:08:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyload-ng] pyLoad は API のキー検証 (check_apikey キャッシュ) で認証バイパスを持っています。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-r44w-v6gf-x3p6</id>
+        <link href="https://github.com/advisories/GHSA-r44w-v6gf-x3p6"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T16:43:55.000Z</updated>
+        <summary type="html"><![CDATA[check_apikey() の API-key キャッシュは、同じ key_id の正当なキーが最近使用されている限り、攻撃者が偽造された API キーで認証することができます。 キャッシュヒット時に、APIキーシークレットは検証されず、キャッシュライフタイム中に完全な認証バイパスが行われます。 コンポーネント rc/pyload/core/api/init.pyApi.check_apikey]]></summary>
+        <content type="html"><![CDATA[check_apikey() の API-key キャッシュは、同じ key_id の正当なキーが最近使用されている限り、攻撃者が偽造された API キーで認証することができます。 キャッシュヒット時に、APIキーシークレットは検証されず、キャッシュライフタイム中に完全な認証バイパスが行われます。 コンポーネント rc/pyload/core/api/init.pyApi.check_apikey()src/pyload/core/database/apikey_database.pycheck_apikey()_check_key() キャッシュは、ttl を使わずに、:src/pyload/webui/app/helpers.pywhich 呼び出し:api.check_apikey(api_key) で通常の API リクエストによって使用されます。つまり、デフォルトの 300-second キャッシュは常に有効になっています。 根本原因成功 API のキーバリデーションは、次の構造:{ key_id: (timestamp, cached_data)} でキャッシュされます。 ]]></content>
+        <published>2026-10-09T16:43:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyload-ng] pyLoad: /web/&lt;path:filename&gt; への不正なアクセスは、機密テンプレートの認証を迂回し、例外属性による内部エラーの詳細を漏れます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-j92p-c242-7hfx</id>
+        <link href="https://github.com/advisories/GHSA-j92p-c242-7hfx"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T16:40:30.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション /web/&lt;path:filename&gt; src/pyload/webui/app/blueprints/app_blueprint.py の /web/&lt;path:filename&gt; ルートは認証要件なしで Jinja2 テンプレートをレンダリングします。 @login_required で同一の直接ルート(/logs, /settings, /queue, /dashboa]]></summary>
+        <content type="html"><![CDATA[インフォメーション /web/&lt;path:filename&gt; src/pyload/webui/app/blueprints/app_blueprint.py の /web/&lt;path:filename&gt; ルートは認証要件なしで Jinja2 テンプレートをレンダリングします。 @login_required で同一の直接ルート(/logs, /settings, /queue, /dashboard など)は保護されていますが、これらのすべてのページの下にあるテンプレートは、このエンドポイントを介してアクセスできないものです。 src/pyload/webui/app/handlers.py (exc.description の代わりに ex.desc) の例外属性 typo と組み合わせることで、内部の Jinja2 変数名は HTTP 500 応答体内で未認証の発信者に漏れます。 攻撃者は、200対500応答の差分を観察することにより、すべての有効なテンプレート名を列挙することもできます。 DetailsBug 1 — /web/&lt;path:filename&gt;File: src/]]></content>
+        <published>2026-10-09T16:40:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyload-ng] pyLoad: 入力サイズの検証の欠如は、サービス(DoS)とプロセス終了の拒否につながる | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-vq8p-m3wm-gv5f</id>
+        <link href="https://github.com/advisories/GHSA-vq8p-m3wm-gv5f"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T16:26:53.000Z</updated>
+        <summary type="html"><![CDATA[説明: api_blueprint.py の API rpc 関数は、アップロードされたファイルの内容を file.read() でメモリ全体に読み込むことで、multipart/form-data のアップロードを処理します。 これにより、データがアンダーリング機能に送信される前に発生します。 この時点ではサイズ制限はありませんので、大量のファイルアップロードは、プロセス終了につながるサーバーの]]></summary>
+        <content type="html"><![CDATA[説明: api_blueprint.py の API rpc 関数は、アップロードされたファイルの内容を file.read() でメモリ全体に読み込むことで、multipart/form-data のアップロードを処理します。 これにより、データがアンダーリング機能に送信される前に発生します。 この時点ではサイズ制限はありませんので、大量のファイルアップロードは、プロセス終了につながるサーバーの利用可能なメモリを排出することができます。 脆弱性コードとパス:https://github.com/pyload/pyload/blob/8e447958b8a66c5899775e725a8b90bce6643004/src/pyload/webui/app/blueprint/api_blueprint.py#L73 Reproduce:Log in to pyLoad (またはAPIキーを使用する手順で、apiを使用して通信します)。 大きいファイル (例えば、10GB) .truncate -s 10G big_file.bin check_online_status_contain]]></content>
+        <published>2026-10-09T16:26:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[strawberry-graphql] _ ビール天国 いちごレガシーの graphql-ws は自然に完了したサブスクリプションスロットを保持します | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-m952-2w3f-6r8h</id>
+        <link href="https://github.com/advisories/GHSA-m952-2w3f-6r8h"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T14:07:20.000Z</updated>
+        <summary type="html"><![CDATA[概要 ストロベリーのレガシーの graphql-ws サブスクリプションハンドラは、ワンショットサブスクリプションが自然に完全なメッセージを送信した後、タスクとサブスクリプションの簿記を保持することができます。 アプリケーションが max_subscriptions_per_connection を設定すると、ハンドラは len(self.tasks) で完了した操作をカウントします。 異なる操作]]></summary>
+        <content type="html"><![CDATA[概要 ストロベリーのレガシーの graphql-ws サブスクリプションハンドラは、ワンショットサブスクリプションが自然に完全なメッセージを送信した後、タスクとサブスクリプションの簿記を保持することができます。 アプリケーションが max_subscriptions_per_connection を設定すると、ハンドラは len(self.tasks) で完了した操作をカウントします。 異なる操作 ID を使用するクライアントは、以前のサブスクリプションが既に完了しているにもかかわらず、設定されたサブスクリプションの制限に達することができます。これにより、サブスクリプションの制限を受け取るために、同じ永続的な WebSocket 接続で、その後の正当なサブスクリプションが発生します。 これは、条件付き接続レベルの可用性とリソースアカウントの問題です。 従来の graphql-wsプロトコル、永続的なWebSocket接続、自然に完了するワンショットサブスクリプション、および構成されたmax_subscriptions_per_connection制限の明示的な使用が必要です。 デフォル]]></content>
+        <published>2026-10-09T14:07:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[strawberry-graphql] _ ビール天国 Strawberry GraphQL: 同期許可チェックは、待望の認可結果を真理として扱うことができます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-pfvf-fwfp-25mp</id>
+        <link href="https://github.com/advisories/GHSA-pfvf-fwfp-25mp"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-09T14:07:16.000Z</updated>
+        <summary type="html"><![CDATA[概要PermissionExtension.resolve() は、同期パスの真理性のために has_permission() の戻り値を評価します。 support_sync は has_permission が async def (via check.iscoroutinefunction) で宣言されたとき、非同期のパーミッションとしてのみ許可を分類します。そのため、待ち受ける def は]]></summary>
+        <content type="html"><![CDATA[概要PermissionExtension.resolve() は、同期パスの真理性のために has_permission() の戻り値を評価します。 support_sync は has_permission が async def (via check.iscoroutinefunction) で宣言されたとき、非同期のパーミッションとしてのみ許可を分類します。そのため、待ち受ける def は同期として扱われます。 待望のことは常に真面目なので、チェックは偽物や保護された解決者に解決しても通過します。 解決パスは、実行方法ではなく、フィールドリゾルバーによって選択されます。そのため、同期リゾルバーを持つフィールドは、run_sync() と execute() の両方で影響されます。 async def has_permission() で宣言されたパーミッション、または boolean を返すプレーン def は影響しません。 詳細影響を受けたコードは、イチゴ/permission.py の PermissionExtension.resolve() です。 has_permis]]></content>
+        <published>2026-10-09T14:07:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[fast-jwt] fast-jwt: 検証キャッシュは、iatなしで期限切れのJWTsを受け入れます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-x937-hj6v-793p</id>
+        <link href="https://github.com/advisories/GHSA-x937-hj6v-793p"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:10:35.000Z</updated>
+        <summary type="html"><![CDATA[サマリーキャッシュ hasIat (src/verifier.js:127-140) 内の exp キャッシュの期限だけを指定する。 JWT iatはオプションです。 有効なトークンを exp ではなく iat なし、 キャッシュ ClockTimestamp + ClockTolerance + cacheTTL (src/verifier.js:142-146) を置換します。 その後、キャッ]]></summary>
+        <content type="html"><![CDATA[サマリーキャッシュ hasIat (src/verifier.js:127-140) 内の exp キャッシュの期限だけを指定する。 JWT iatはオプションです。 有効なトークンを exp ではなく iat なし、 キャッシュ ClockTimestamp + ClockTolerance + cacheTTL (src/verifier.js:142-146) を置換します。 その後、キャッシュパスは保存したペイロードをデコードするか、検証トークン(src/verifier.js:372-388)を呼び出します。 有効期限のバリデーションは、checkToken にあるため、期限切れのトークンはキャッシュ期限まで受け付けられます。 DetailsThe のバグは、キャッシュによって引き起こされた expiration-check バイパスです。 通常、検証はこのように動作します:署名を検証します。 現行時刻に追随する JWT クレームを返します。 キャッシュを有効にすると、fast-jwt は成功した検証結果を保存しますので、同じトークンの暗号化作業を繰り返すことはできません。 ]]></content>
+        <published>2026-10-08T22:10:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[銀行] 銀行: Symlink traversal と arbitrary ファイル開示/overwrite で DirectoryPromptRegistry | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-556j-vv39-8rqv</id>
+        <link href="https://github.com/advisories/GHSA-556j-vv39-8rqv"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:10:07.000Z</updated>
+        <summary type="html"><![CDATA[サマリーIn banks.registries.DirectoryPromptRegistry、プロンプトファイルパス、インデックスファイル(index.json)は、シンボリックリンクを拒否しません。 プロンプトディレクトリに不信なファイル(例えば、解凍されたアーカイブ、共有リポジトリ、またはマルチテナントフォルダ)が含まれている場合、レジストリのルートの外部のシンボリックリンクを使用して、_s]]></summary>
+        <content type="html"><![CDATA[サマリーIn banks.registries.DirectoryPromptRegistry、プロンプトファイルパス、インデックスファイル(index.json)は、シンボリックリンクを拒否しません。 プロンプトディレクトリに不信なファイル(例えば、解凍されたアーカイブ、共有リポジトリ、またはマルチテナントフォルダ)が含まれている場合、レジストリのルートの外部のシンボリックリンクを使用して、_scan() / get() または set() / _save() 経由で任意のファイルを開示することができます。 DetailsFollowing PR #77, DirectoryPromptRegistry は、プロンプト名のパスの解像度を検証します。 しかし、:self._index_path (index.json) はシンボリックリンクではチェックされません。 外部ターゲット(例えばコンフィギュレーションファイル)を指すリンクは、reg.set() で _save() で上書きするか、 _load() で読みます。 _scan() では、.jinja ファイルが開いて、path.i]]></content>
+        <published>2026-10-08T22:10:07.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[銀行] 銀行: ユーザー制御のプロンプト入力は、特権チャットメッセージとして解析できます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-hmq2-7hp6-7crh</id>
+        <link href="https://github.com/advisories/GHSA-hmq2-7hp6-7crh"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:10:01.000Z</updated>
+        <summary type="html"><![CDATA[概要 Banks の Prompt.chat_messages() メソッドは、すべてのレンダリングされた出力行を潜在的な ChatMessage JSON オブジェクトとしてパースします。 攻撃者制御のテンプレートデータが {"role":"system","content":"","} などの JSON にレンダリングされると、 銀行は、ユーザー制御のテキストとしてそれを処理する代わりに、特権]]></summary>
+        <content type="html"><![CDATA[概要 Banks の Prompt.chat_messages() メソッドは、すべてのレンダリングされた出力行を潜在的な ChatMessage JSON オブジェクトとしてパースします。 攻撃者制御のテンプレートデータが {"role":"system","content":"","} などの JSON にレンダリングされると、 銀行は、ユーザー制御のテキストとしてそれを処理する代わりに、特権システムメッセージとして返します。 Prompt.chat_messages() で不信なユーザ入力をレンダリングし、返されたメッセージを直接 LLM プロバイダーに渡すアプリケーションは、ロールインジェクションとプロンプト境界バイパスをチャットするのに脆弱な場合があります。 ニュース 問題は src/banks/prompt.py:messages: list[ChatMessage] = [] 行の rendered.strip().split("\n") にあります。: 試してみる: message.append(ChatMessage.model_validate_json(line)]]></content>
+        <published>2026-10-08T22:10:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[indico] Indico: Incomplete Server-Side Request Forgery (SSRF) チェック | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-2v95-h47v-g4x9</id>
+        <link href="https://github.com/advisories/GHSA-2v95-h47v-g4x9"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:09:55.000Z</updated>
+        <summary type="html"><![CDATA[ImpactIndico は、さまざまな場所でユーザが URL を認証するリクエストを発信します。 これは主に意図的であり、Indicoの機能の一部であるが、もちろん、ローカルホストやクラウドメタデータエンドポイントなどの「特別な」ターゲットにアクセスできるように意図されていません。 前の修正(CVE-2026-25738)はエッジケースを覆いませんでしたので、ローカルターゲットを指したURLを作]]></summary>
+        <content type="html"><![CDATA[ImpactIndico は、さまざまな場所でユーザが URL を認証するリクエストを発信します。 これは主に意図的であり、Indicoの機能の一部であるが、もちろん、ローカルホストやクラウドメタデータエンドポイントなどの「特別な」ターゲットにアクセスできるように意図されていません。 前の修正(CVE-2026-25738)はエッジケースを覆いませんでしたので、ローカルターゲットを指したURLを作製することができましたが、Indicoで有効として受け入れられました。 PatchesIndico 3.3.13にできるだけ早く更新する必要があります。 更新方法の指示については、ドキュメントを参照してください。 ワークアラウンド 認証なしで機密データを公開するIPがない場合(特にAWS上でIndicoをホストしないため)、この脆弱性は影響しませんし、無視できます(ただし、とにかくアップグレードしてください)。 また、SSRFが実際にこのようなリクエストで返されたデータを見るために使用できるエンドポイントにアクセスできるイベント主催者のみです。 そのため、イベント主催者を信頼する場合、リスクも]]></content>
+        <published>2026-10-08T22:09:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[indico] Indico:レガシーセッションエクスポートAPIでアクセスチェックを欠く | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-6p4f-j8j6-463q</id>
+        <link href="https://github.com/advisories/GHSA-6p4f-j8j6-463q"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:09:49.000Z</updated>
+        <summary type="html"><![CDATA[ソリューション セッションの詳細を取得するためのレガシー API は、イベント自体がアクセスできる限り、そのセッションにアクセスすることなく、制限されたセッションのメタデータ(タイトル、説明、コンベナースなど)を取得するために誤用される可能性があります。 PatchesIndico 3.3.13にできるだけ早く更新する必要があります。 更新方法の指示については、ドキュメントを参照してください。 ワ]]></summary>
+        <content type="html"><![CDATA[ソリューション セッションの詳細を取得するためのレガシー API は、イベント自体がアクセスできる限り、そのセッションにアクセスすることなく、制限されたセッションのメタデータ(タイトル、説明、コンベナースなど)を取得するために誤用される可能性があります。 PatchesIndico 3.3.13にできるだけ早く更新する必要があります。 更新方法の指示については、ドキュメントを参照してください。 ワークアラウンド イベント自体へのアクセスを制限する 詳細情報 このアドバイザリーに関する質問やコメントがある場合: フォーラムでスレッドを開く お問い合わせは、indico-team@cern.chReferenceshttps://github.com/indico/advisories/GHSA-6p4f-j8j6-463qhttps://nvd.nist.gov/vuln/detail/CVE-2026-107395https://github.com/indico/indico/commit/524e8e93e93ecd8484905https://jpnvd.nist.gov/vul]]></content>
+        <published>2026-10-08T22:09:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[indico] Indico:分エディタでクロスサイトスクリプト | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-cw24-x4mj-fw3q</id>
+        <link href="https://github.com/advisories/GHSA-cw24-x4mj-fw3q"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:09:45.000Z</updated>
+        <summary type="html"><![CDATA[ImpactConcurrent editsがイベントで同じ分に作成されると、分エディタでクロスサイトスクリプトの脆弱性があります。 PatchesIndico 3.3.13にできるだけ早く更新する必要があります。 更新方法の指示については、ドキュメントを参照してください。 ワークアラウンド CSP_ENABLED = indico.conf で真に - 更新に関係なくこれは推奨されます。 Ind]]></summary>
+        <content type="html"><![CDATA[ImpactConcurrent editsがイベントで同じ分に作成されると、分エディタでクロスサイトスクリプトの脆弱性があります。 PatchesIndico 3.3.13にできるだけ早く更新する必要があります。 更新方法の指示については、ドキュメントを参照してください。 ワークアラウンド CSP_ENABLED = indico.conf で真に - 更新に関係なくこれは推奨されます。 Indico上で信頼できるユーザーはコンテンツ(スピーカーが通常できる分を含む)を作成できるようにします。 詳細情報 このアドバイザリーに関する質問やコメントがある場合: フォーラムでスレッドを開く Eメール:indico-team@cern.chReferenceshttps://github.com/indico/advisories/GHSA-cw24-x4mj-fw3qhttps://nvd.nist.gov/vuln/detail/CVE-2026-107397https://github.com/indico/indico/pull/7619https://github.com/ja/j]]></content>
+        <published>2026-10-08T22:09:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[indico] Indico:リンクフィールドのクロスサイトスクリプト | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-c4wc-ggrj-jg9v</id>
+        <link href="https://github.com/advisories/GHSA-c4wc-ggrj-jg9v"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:09:41.000Z</updated>
+        <summary type="html"><![CDATA[ImpactカスタムURLを入力するフィールドにクロスサイトスクリプトの脆弱性があります。 PatchesIndico 3.3.13にできるだけ早く更新する必要があります。 更新方法の指示については、ドキュメントを参照してください。 ワークアラウンド CSP_ENABLED = indico.conf で真に - 更新に関係なくこれは推奨されます。 信頼できるユーザーはイベントを管理したり、Ind]]></summary>
+        <content type="html"><![CDATA[ImpactカスタムURLを入力するフィールドにクロスサイトスクリプトの脆弱性があります。 PatchesIndico 3.3.13にできるだけ早く更新する必要があります。 更新方法の指示については、ドキュメントを参照してください。 ワークアラウンド CSP_ENABLED = indico.conf で真に - 更新に関係なくこれは推奨されます。 信頼できるユーザーはイベントを管理したり、Indicoでコンテンツ(スピーカーが通常できる素材のアップロードを含む)を作成したりすることができます。 詳細情報 このアドバイザリーに関する質問やコメントがある場合: フォーラムでスレッドを開く お問い合わせは、indico-team@cern.chReferenceshttps://github.com/indico/advisories/GHSA-c4wc-ggrj-jg9vhttps://nvd.nist.gov/vuln/detail/CVE-2026-107396https://github.com/indico/indico/pull/7619https://github.com/j]]></content>
+        <published>2026-10-08T22:09:41.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@adonisjs/http サーバ] アドニス JS: 符号化されていないルートパラメータは、オープンリダイレクトを生成することができます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-2m6q-8v3h-jqww</id>
+        <link href="https://github.com/advisories/GHSA-2m6q-8v3h-jqww"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:09:06.000Z</updated>
+        <summary type="html"><![CDATA[ルートパラメータは、URIエンコーディングなしで生成されたURLに差し込みます。 アプリケーションが最初のパスセグメントが動的であるルートに不信な入力を渡すと、/ で始まる値がスキームに依存する URL を生成することができます。 例:router.get('/:page', ハンドラ).as('pages.show')response.redirect().toRoute('pages.show]]></summary>
+        <content type="html"><![CDATA[ルートパラメータは、URIエンコーディングなしで生成されたURLに差し込みます。 アプリケーションが最初のパスセグメントが動的であるルートに不信な入力を渡すと、/ で始まる値がスキームに依存する URL を生成することができます。 例:router.get('/:page', ハンドラ).as('pages.show')response.redirect().toRoute('pages.show', { page: '/evil.example.com',}) これは、次のリダイレクトを生成します:Location: //evil.example.comBrowsers は、この値を外部 URL として解釈し、ユーザを https://evil.example.com.Details共有 createURL() ヘルパーは、router.makeUrl() や response.redirect().toRoute() を含むURLビルダーによって使用されます。 ルートパラメータの値がエンコーディングなしで追加されました:if (isDefined) { uriSegments.pu]]></content>
+        <published>2026-10-08T22:09:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@adonisjs/http サーバ] アドニス JS: 符号化されていないルートパラメータは、オープンリダイレクトを生成することができます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-2m6q-8v3h-jqww</id>
+        <link href="https://github.com/advisories/GHSA-2m6q-8v3h-jqww"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:09:06.000Z</updated>
+        <summary type="html"><![CDATA[ルートパラメータは、URIエンコーディングなしで生成されたURLに差し込みます。 アプリケーションが最初のパスセグメントが動的であるルートに不信な入力を渡すと、/ で始まる値がスキームに依存する URL を生成することができます。 例:router.get('/:page', ハンドラ).as('pages.show')response.redirect().toRoute('pages.show]]></summary>
+        <content type="html"><![CDATA[ルートパラメータは、URIエンコーディングなしで生成されたURLに差し込みます。 アプリケーションが最初のパスセグメントが動的であるルートに不信な入力を渡すと、/ で始まる値がスキームに依存する URL を生成することができます。 例:router.get('/:page', ハンドラ).as('pages.show')response.redirect().toRoute('pages.show', { page: '/evil.example.com',}) これは、次のリダイレクトを生成します:Location: //evil.example.comBrowsers は、この値を外部 URL として解釈し、ユーザを https://evil.example.com.Details共有 createURL() ヘルパーは、router.makeUrl() や response.redirect().toRoute() を含むURLビルダーによって使用されます。 ルートパラメータの値がエンコーディングなしで追加されました:if (isDefined) { uriSegments.pu]]></content>
+        <published>2026-10-08T22:09:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[fast-jwt] fast-jwt: createVerifier は、キーが '' または null の場合、署名されていない JWT を受け入れ、アルゴリズムは明示的に設定されます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-8wpc-h4q6-8fxv</id>
+        <link href="https://github.com/advisories/GHSA-8wpc-h4q6-8fxv"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:02:12.000Z</updated>
+        <summary type="html"><![CDATA[速いjwt のサマリーcreateVerifier ≤ 6.3.0 は、キーオプションが falsy の同期値 ('' または null) で、アルゴリズムのオプションが非空の allowlist に設定されると、シグネチャ検証を完全にスキップします。 アルゴリズムに関係なく、JWTをアプリケーションに提示できる攻撃者は、任意の署名キーを持たない任意のクレームを強制することができます。 Detai]]></summary>
+        <content type="html"><![CDATA[速いjwt のサマリーcreateVerifier ≤ 6.3.0 は、キーオプションが falsy の同期値 ('' または null) で、アルゴリズムのオプションが非空の allowlist に設定されると、シグネチャ検証を完全にスキップします。 アルゴリズムに関係なく、JWTをアプリケーションに提示できる攻撃者は、任意の署名キーを持たない任意のクレームを強制することができます。 DetailsRoot 原因 — 4 つの連携コードパス: A. 偽りなくキーのバイパスの prepareKeyOrSecretcreateVerifier ブランチの型鍵:const キー Type = typeof キーフ (keyType !== 'string' &amp;&amp;keyType !== 'object' &amp;&amp;keyType !== 'function') {新しい TokenError(/* ... */)}if (key &amp;&amp;keyType !=== 'function') { キー = prepareKeyOrSecret(key, hsAlgorithms.include(利用可能なA]]></content>
+        <published>2026-10-08T22:02:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[fast-jwt] 速いjwt: CVE-2026-34950 の不完全なパッチ: 非空白のキープレフィックスは RSA→HS256 のアルゴリズムの混乱を再使用可能にします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-ww5h-9m49-7xx4</id>
+        <link href="https://github.com/advisories/GHSA-ww5h-9m49-7xx4"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:02:07.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション CVE-2026-34950(CVSS 9.1、v6.2.0)の修正は不完全です。 これは、src/crypto.js の PEM 検出パスに key.trim() を付加しますが、 String.prototype.trim() は、ECMAScript 仕様の空白として分類される文字列のみです。 その後の^-anchored regex(/^-----BEGIN(?:RSA]]></summary>
+        <content type="html"><![CDATA[インフォメーション CVE-2026-34950(CVSS 9.1、v6.2.0)の修正は不完全です。 これは、src/crypto.js の PEM 検出パスに key.trim() を付加しますが、 String.prototype.trim() は、ECMAScript 仕様の空白として分類される文字列のみです。 その後の^-anchored regex(/^-----BEGIN(?:RSA)? PUBLIC KEY-----/) は、PEM ヘッダーを 0 位置で要求します。そのため、非空白のリーディングバイトバイト (制御文字、ゼロ幅のユニコード、#コメント、HTTP スタイルのヘッダー、PGP のラッパー) は、HMAC 共有シークレットとして RSA パブリックキーを使用して、検出と HMAC 検証パスを迂回します。 純結果: まったく同じ RSA→HS256 アルゴリズム融合攻撃元の CVE は、わずかに異なる主要なバイトで完全に再使用可能です。 攻撃前提条件は、CVE-2026-34950 と同一です。攻撃者は、ターゲットのパブリック RSA キー(定義によって公開さ]]></content>
+        <published>2026-10-08T22:02:07.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[fast-jwt]高速jwtクロック 寛容: Infinity は、exp と nbf の検証の両方をサイレントにバイパスします(そして、バディファイアキャッシュで主張します) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-687g-22h4-j4w4</id>
+        <link href="https://github.com/advisories/GHSA-687g-22h4-j4w4"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:02:02.000Z</updated>
+        <summary type="html"><![CDATA[サマリーcreateVerifier({ ClockTolerance:Infinity })は、exp(expiry)とnbf(not-before)の両方の検証をサイレントにバイパスします。 有効期限が切れる、または非アクティブトークンは有効として受け入れられます。 同じプリミティブは、検証者の内部キャッシュを破損しているため、キャッシュされたエントリは無限の妥当性を継承します。LRU の e]]></summary>
+        <content type="html"><![CDATA[サマリーcreateVerifier({ ClockTolerance:Infinity })は、exp(expiry)とnbf(not-before)の両方の検証をサイレントにバイパスします。 有効期限が切れる、または非アクティブトークンは有効として受け入れられます。 同じプリミティブは、検証者の内部キャッシュを破損しているため、キャッシュされたエントリは無限の妥当性を継承します。LRU の eviction まで、後続の開発者によって削除された Infinity config を過ぎても有効です。 Vulnerable coderc/verifier.js:531-533 — オプションのバリデーションは、インフィニティ:if (clockTolerance &amp;&amp; (typeof ClockTolerance !== 'number' || ClockTolerance &lt; 0) {新しいTokenError(TokenError.codes.invalidOption, 'The ClockToleranceオプションはプラス番号でなければなりません。')} インフィニティパス(]]></content>
+        <published>2026-10-08T22:02:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[fast-jwt] 高速jwt : JWT のペイロードが JSON 配列であるとき無声要求validator バイパス | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-5hjw-83fp-phq9</id>
+        <link href="https://github.com/advisories/GHSA-5hjw-83fp-phq9"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:01:58.000Z</updated>
+        <summary type="html"><![CDATA[概要のfast-jwt の createVerifier は、有効な署名された JWT がオブジェクトの代わりに JSON 配列をペイロードとして運ぶとき、すべての構成されたクレームバリデータ (exp, nbf, iss, aud, sub, jti, nonce) を静かにスキップします。 署名のみを強制しながら、検証レポートの成功。 これにより、ライブラリの文書化が許可される Iss / a]]></summary>
+        <content type="html"><![CDATA[概要のfast-jwt の createVerifier は、有効な署名された JWT がオブジェクトの代わりに JSON 配列をペイロードとして運ぶとき、すべての構成されたクレームバリデータ (exp, nbf, iss, aud, sub, jti, nonce) を静かにスキップします。 署名のみを強制しながら、検証レポートの成功。 これにより、ライブラリの文書化が許可される Iss / allowAud / allowSub / expiry / replay-protection は、JSON オブジェクトに設定する JWT クレームを要求する RFC 7519 §7.2 ステップ 10 に違反します。 DetailsThe デコダーはヘッダーが非配列オブジェクトであるが、ペイロードチェックがArrayを欠落していることを確認します。 isArray Guard:// src/decoder.js:49 — ヘッダチェック (間違い)if (!header || typeof ヘッダ !== 'object' || Array.isArray(ヘッダ) { 新規 TokenE]]></content>
+        <published>2026-10-08T22:01:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[fast-jwt] fast-jwt は、HMAC の秘密として生の公開 JWK JSON を扱い、HS256 トークンの偽造を有効にします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-g3jj-5cmm-3hxx</id>
+        <link href="https://github.com/advisories/GHSA-g3jj-5cmm-3hxx"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:01:53.000Z</updated>
+        <summary type="html"><![CDATA[サマリーファスト-jwt 6.2.4 サイレントは、HMAC の秘密に、生シリアル化されたパブリック JWK JSONas を分類します。 アプリケーションが公開された JWK JSON テキストを検証キーとして供給し、HS256 が明示的に許可または自動的に推論されている場合は、同じ公開 JSON テキストを HMAC キーとして使用し、有効なように承認する任意の HS256 トークンを作成しま]]></summary>
+        <content type="html"><![CDATA[サマリーファスト-jwt 6.2.4 サイレントは、HMAC の秘密に、生シリアル化されたパブリック JWK JSONas を分類します。 アプリケーションが公開された JWK JSON テキストを検証キーとして供給し、HS256 が明示的に許可または自動的に推論されている場合は、同じ公開 JSON テキストを HMAC キーとして使用し、有効なように承認する任意の HS256 トークンを作成します。 これにより、認証または認可は、forgedJWT クレームを介してバイパスできます。 PoCは、シリアル化されたRSAパブリックJWKでの問題を示しています。 同等なPEM分類は、JWKS JSONテキストにも適用されますが、添付されたスタンドアロンPoCは最小のJWKケースに焦点を当てています。 DetailsVerifier は、文字列やバッファをキー素材として受け入れます。 Insrc/crypto.js は、提供された文字列から許可されたアルゴリズムファミリーを継承しようとする、DetectPublicKeyAlgorithms() を実行します。 サポートされているPEMパブリ]]></content>
+        <published>2026-10-08T22:01:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[プラソサイ] プラソ AI:AgentOS はネットワーク エクスポーションなしモードにデフォルトで、未認証のエージェントの呼び出しと指示の開示を可能にしました | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-6wjp-v33h-5cvq</id>
+        <link href="https://github.com/advisories/GHSA-6wjp-v33h-5cvq"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:01:29.000Z</updated>
+        <summary type="html"><![CDATA[概要エージェント praisonai TypeScript/npm パッケージのOSサーバーは、安全でないデフォルトを出荷します: 0.0.0.0 をバインドし、API キーをセットし、 CORS * を認証で使用します。 API キーのミドルウェアは、API キーが設定されている場合にのみ登録されますので、文書化されたクイックスタート(新しいAgentOS({agents:[...]).serv]]></summary>
+        <content type="html"><![CDATA[概要エージェント praisonai TypeScript/npm パッケージのOSサーバーは、安全でないデフォルトを出荷します: 0.0.0.0 をバインドし、API キーをセットし、 CORS * を認証で使用します。 API キーのミドルウェアは、API キーが設定されている場合にのみ登録されますので、文書化されたクイックスタート(新しいAgentOS({agents:[...]).serve({port})))は、未認証、GET /api/agents(エージェント名/roles/instructions、すなわちシステムプロンプト)とPOST /api/chat(インボイスエージェント)を漏れます。 任意のネットワークピアは、エージェントシステムプロンプトを読み、エージェントを駆動することができます。 Runtime-confirmed; severity High.DetailsAffected componentPackage: praisonai (npm/TypeScript). ファイルsrc/praisonai-ts/src/os/config.tsおよびsrc/]]></content>
+        <published>2026-10-08T22:01:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[プラソサイプラットフォーム] プライソン AI: プラットフォームメンバー PATCH ルートでは、オーナーリソースのリライトとプロジェクトのリード再割り当てがバイパスを削除できます。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-c78w-2q4r-68r7</id>
+        <link href="https://github.com/advisories/GHSA-c78w-2q4r-68r7"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T22:01:11.000Z</updated>
+        <summary type="html"><![CDATA[プラットフォームメンバー PATCH ルートでは、オーナーリソースのリライトとプロジェクトのリード再割り当てがバイパスされます。Summarypraisonai-platform は、ペアリングされた削除ルートが所有者/管理者権限を執行しているにもかかわらず、通常のワークスペース メンバーのパッチの所有者作成プロジェクト、問題、およびエージェントレコードを可能にします。 プロジェクトの場合、メンバ]]></summary>
+        <content type="html"><![CDATA[プラットフォームメンバー PATCH ルートでは、オーナーリソースのリライトとプロジェクトのリード再割り当てがバイパスされます。Summarypraisonai-platform は、ペアリングされた削除ルートが所有者/管理者権限を執行しているにもかかわらず、通常のワークスペース メンバーのパッチの所有者作成プロジェクト、問題、およびエージェントレコードを可能にします。 プロジェクトの場合、メンバーはまず自分のユーザ ID に get_id をパッチし、所有者が作成したプロジェクトを削除し、再割り当ての前に 403 を正しく返した削除ガードを渡すことができます。 技術情報 影響を受ける境界は、「ワークスペースメンバー」と「このリソースの所有者または管理」の違いです。 src/praisonai-platform/praisonai_platform/api/deps.py は、require_workspace_member、require_workspace_admin、require_workspace_owner、require_delete_permission を定義します。]]></content>
+        <published>2026-10-08T22:01:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[music-metadata] 音楽メタデータ: MP4 stsd サンプルエントリー size==0 は、同期無限ループ (DoS) — マスターにリリースされていない回帰を引き起こします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-f94x-6692-553q</id>
+        <link href="https://github.com/advisories/GHSA-f94x-6692-553q"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T19:43:25.000Z</updated>
+        <summary type="html"><![CDATA[lib/mp4/AtomToken.ts のサマリーStsdAtom.get() は、MP4 stsd (sample description) のボックスのエントリーテーブルをパースし、+= サイズのカーソルをオフにし、サイズは 32 ビットで、攻撃者制御のパーエントリーの長さはファイルから直接読み込まれます。 size == 0 の場合、その先は 0 なので、巨大な entry_count を]]></summary>
+        <content type="html"><![CDATA[lib/mp4/AtomToken.ts のサマリーStsdAtom.get() は、MP4 stsd (sample description) のボックスのエントリーテーブルをパースし、+= サイズのカーソルをオフにし、サイズは 32 ビットで、攻撃者制御のパーエントリーの長さはファイルから直接読み込まれます。 size == 0 の場合、その先は 0 なので、巨大な entry_count を宣言し、 0 のスピンを繰り返します。同じバイトは、すべての反復を読み込み、進行しません。 StsdAtom.get は strtok3 のトークナイザーの内部で同期的に実行されるため、これはただゆっくりと失敗しません。それは Node.js イベント ループを全工程でブロックします。 48 バイトのファイルは、parseBuffer、parseFile、parseStream、parseBlob、または parseWebStream を介してユーザー アップロードされたオーディオ/ビデオのメタデータを解析する任意のサービスを掛けるのに十分です。 これは、現在未発表です。最新のnpmリリース(]]></content>
+        <published>2026-10-08T19:43:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[music-metadata] 音楽メタデータ: APEv2パーサで制御されていないメモリ割り当て | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-53v6-4h7p-p4gj</id>
+        <link href="https://github.com/advisories/GHSA-53v6-4h7p-p4gj"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T19:43:22.000Z</updated>
+        <summary type="html"><![CDATA[概要music-metadata 11.15.0 は、APEv2 パーサでメモリ割り当てを制御できない脆弱性です。 パーサは、入力ファイルからAPEv2タグ項目のサイズを読み、その値がメモリを割り当てるのに、実際にそのファイルが多くのバイトを含んでいるかどうかをチェックする前に使用します。 小さな .ape ファイルが、カバーアートなどの非常に大きなバイナリタグ項目を宣言し、パーサーを強制して大き]]></summary>
+        <content type="html"><![CDATA[概要music-metadata 11.15.0 は、APEv2 パーサでメモリ割り当てを制御できない脆弱性です。 パーサは、入力ファイルからAPEv2タグ項目のサイズを読み、その値がメモリを割り当てるのに、実際にそのファイルが多くのバイトを含んでいるかどうかをチェックする前に使用します。 小さな .ape ファイルが、カバーアートなどの非常に大きなバイナリタグ項目を宣言し、パーサーを強制して大きなバッファを割り当てることができます。 本問題は、ID3v2、MP4、EBMLアドバイザリーとは別にAPEv2の解析に特異的です。 コンポーネントlib/apev2/APEv2Token.tslib/apev2/APEv2Parser.ts 信頼できないサイズは、ここに読み込まれます:size: Token.UINT32_LE.get(buf, off)バイナリタグ項目を解析する際には、後に割り当てに使用されます。:const picData = new Uint8Array(tagItemHeader.size));これを待ってください。tokenizer.readBuffer(picDat]]></content>
+        <published>2026-10-08T19:43:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[music-metadata] Music-metadata:割り当ての前に検証されていないID3v2タグサイズ、メモリの排気DESを引き起こします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-jjpr-9cvf-cq55</id>
+        <link href="https://github.com/advisories/GHSA-jjpr-9cvf-cq55"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T19:43:17.000Z</updated>
+        <summary type="html"><![CDATA[概要音楽メタデータのID3v2パーサは、検証なしでタグサイズフィールドを信頼し、読み込む前にリクエストされたフルバッファを割り当てます。 truncated ID3v2タグ付きMP3ファイルは、10バイトのファイルから最大268 MBの割り当てを強制的にし、サーバーメモリの排気を引き起こします。 この脆弱性は、ID3v2タグ(MP3、FLAC、DSF、Musepack)をサポートし、サイレントに成]]></summary>
+        <content type="html"><![CDATA[概要音楽メタデータのID3v2パーサは、検証なしでタグサイズフィールドを信頼し、読み込む前にリクエストされたフルバッファを割り当てます。 truncated ID3v2タグ付きMP3ファイルは、10バイトのファイルから最大268 MBの割り当てを強制的にし、サーバーメモリの排気を引き起こします。 この脆弱性は、ID3v2タグ(MP3、FLAC、DSF、Musepack)をサポートし、サイレントに成功するすべてのパーサに影響します。 詳細情報 コードパス:lib/id3v2/ID3v2Token.ts:108 - Syncsafe サイズは、validlib/id3v2/ID3v2Parser.ts:122 - フルタグのボディが読み込まれる前に、previewlib/id3v2/AbstractID3Parser.ts:22 - ストリームのvalidRoot 原因:ID3v2パーサーは、タグサイズ(maximum 268,435,455バイトまたは0x0FFFFFFF)を表すsyncsafe整数を読み、すぐにバッファサイズをチェックします。 タグのサイズが残りのファイルサイズを超えた]]></content>
+        <published>2026-10-08T19:43:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[music-metadata] 音楽メタデータ: EBMLパーサーは要素の長さを信頼し、記憶疲労かプロセスのabortを可能にします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-5gfj-9q3v-qfp3</id>
+        <link href="https://github.com/advisories/GHSA-5gfj-9q3v-qfp3"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T19:43:09.000Z</updated>
+        <summary type="html"><![CDATA[概要Matroska/WebM EBMLパーサーは、宣言された要素が、コンテナまたは利用可能な入力の内側に収まることを最初に検証することなく、攻撃制御変数長整数 (VINT) 要素長をデコードします。 リーフの長さは、文字列トークンとUint8Arrayの割り当てに直接使用されます。 非常に小規模な .webm, .mkv, または .mka ファイルが、したがって、大規模な割り当て、サービスの非]]></summary>
+        <content type="html"><![CDATA[概要Matroska/WebM EBMLパーサーは、宣言された要素が、コンテナまたは利用可能な入力の内側に収まることを最初に検証することなく、攻撃制御変数長整数 (VINT) 要素長をデコードします。 リーフの長さは、文字列トークンとUint8Arrayの割り当てに直接使用されます。 非常に小規模な .webm, .mkv, または .mka ファイルが、したがって、大規模な割り当て、サービスの非記憶拒否、または 1 つの実証済みの解析を引き起こす可能性があります ファイルケース - 見られない V8 致命的な中絶。 信頼できないMatroska/WebMメディアを解析するインパクトアプリケーションは、サービスを拒否することができます。 入力、パーサーAPI、およびNode.js/V8バージョンに応じて、実証済みの結果には、:a34バイトの入力が含まれ、終点前の約128 MiBの割り当てを引き起こします。 70バイトの入力により、バイナリEBMLリーフを介して500 MiBの割り当てを引き起こし、同時並列で複数のメモリ消費を解析します。 48バイトのファイルでは、不安定なV8の脂肪がパ]]></content>
+        <published>2026-10-08T19:43:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[マリアドブ] MariaDB コネクタ/Node.js: セッションが NO_BACKSLASH_ESCAPES を使用するときにテキストプロトコルの SQL 注射 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-r3rv-jm3r-62q2</id>
+        <link href="https://github.com/advisories/GHSA-r3rv-jm3r-62q2"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T19:42:28.000Z</updated>
+        <summary type="html"><![CDATA[コンテンツ テキストプロトコルの文字列とバイナリパラメータをエスケープするとき、 コネクタは、セッションのNO_をコンサルティングすることなく、常にバックスラッシュで引用文字をエスケープしました。 バックラッシュ_ ESCAPES SQL モード。 サーバのステータスフラグが宣言されました (STATUS_NO_BACKSLASH_ESCAPES) しかし、読みません。 NO_BACKSLASH_]]></summary>
+        <content type="html"><![CDATA[コンテンツ テキストプロトコルの文字列とバイナリパラメータをエスケープするとき、 コネクタは、セッションのNO_をコンサルティングすることなく、常にバックスラッシュで引用文字をエスケープしました。 バックラッシュ_ ESCAPES SQL モード。 サーバのステータスフラグが宣言されました (STATUS_NO_BACKSLASH_ESCAPES) しかし、読みません。 NO_BACKSLASH_ESCAPES で実行されているサーバーやセッションでは、バックスラッシュは普通のキャラクターであり、クォートはそれを倍増してエスケープする必要があります。 コネクターによって生成されたエスケープされた値は、文字列リテラルを閉じ、プレースホルダを通過した値はSQLとして解釈されました。 テキストプロトコルのエスケープエントリ ポイントは、Connection.escape() を含む影響を受けました。 クエリパラメータとして、アプリケーションパスが任意の値に影響を与えることができる ImpactAn 攻撃者は、アプリケーションのデータベースユーザーの特権で任意の SQL を実行できます。その接]]></content>
+        <published>2026-10-08T19:42:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[マリアドブ] MariaDB コネクタ/Node.js: セッションが NO_BACKSLASH_ESCAPES を使用するときにテキストプロトコルの SQL 注射 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-r3rv-jm3r-62q2</id>
+        <link href="https://github.com/advisories/GHSA-r3rv-jm3r-62q2"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-08T19:42:28.000Z</updated>
+        <summary type="html"><![CDATA[コンテンツ テキストプロトコルの文字列とバイナリパラメータをエスケープするとき、 コネクタは、セッションのNO_をコンサルティングすることなく、常にバックスラッシュで引用文字をエスケープしました。 バックラッシュ_ ESCAPES SQL モード。 サーバのステータスフラグが宣言されました (STATUS_NO_BACKSLASH_ESCAPES) しかし、読みません。 NO_BACKSLASH_]]></summary>
+        <content type="html"><![CDATA[コンテンツ テキストプロトコルの文字列とバイナリパラメータをエスケープするとき、 コネクタは、セッションのNO_をコンサルティングすることなく、常にバックスラッシュで引用文字をエスケープしました。 バックラッシュ_ ESCAPES SQL モード。 サーバのステータスフラグが宣言されました (STATUS_NO_BACKSLASH_ESCAPES) しかし、読みません。 NO_BACKSLASH_ESCAPES で実行されているサーバーやセッションでは、バックスラッシュは普通のキャラクターであり、クォートはそれを倍増してエスケープする必要があります。 コネクターによって生成されたエスケープされた値は、文字列リテラルを閉じ、プレースホルダを通過した値はSQLとして解釈されました。 テキストプロトコルのエスケープエントリ ポイントは、Connection.escape() を含む影響を受けました。 クエリパラメータとして、アプリケーションパスが任意の値に影響を与えることができる ImpactAn 攻撃者は、アプリケーションのデータベースユーザーの特権で任意の SQL を実行できます。その接]]></content>
+        <published>2026-10-08T19:42:28.000Z</published>
+    </entry>
+</feed>

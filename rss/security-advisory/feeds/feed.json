@@ -1,0 +1,751 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "GitHub Security Advisory｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/feed.json",
+    "description": "GitHub Security Advisoryセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://github.com/advisories/GHSA-pwhx-cvv3-qj5c",
+            "content_html": "Summary@tinacms/cli inserts the raw Git branch value into the generated client.ts source without escaping or encoding. A Git-valid branch name can close the string literal and inject an arbitrary JavaScript expression that executes when the consumer build imports the generated client module.Affected componentSource (branch read): packages/@tinacms/cli/src/cmds/init/templates/config.ts lines 155–172 — reads VERCEL_GIT_COMMIT_REF, GITHUB_BRANCH, or HEAD into config.branchTransform (URL build): pac",
+            "url": "https://github.com/advisories/GHSA-pwhx-cvv3-qj5c",
+            "title": "[@tinacms/cli] Tina: Code injection via unescaped Git branch name in generated client source | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summary@tinacms/cli inserts the raw Git branch value into the generated client.ts source without escaping or encoding. A Git-valid branch name can close the string literal and inject an arbitrary Java",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T20:56:52.000Z",
+            "date_published": "2026-10-09T20:56:52.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tinacms/cli] Tina: Code injection via unescaped Git branch name in generated client source",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-x34j-47hf-4xg7",
+            "content_html": "SummaryThe TinaCMS admin builds its preview &lt;iframe src&gt; from the /~/* hash-router splat without checking that the value stays same-origin. A fragment with a doubled slash (#/~//attacker.example/p) becomes the protocol-relative URL //attacker.example/p, so the admin frames an external site. That same unvalidated string derives expectedOrigin, the only trust anchor for the admin↔preview postMessage channel, so the attacker's frame is treated as trusted: it can submit any GraphQL operation, which ",
+            "url": "https://github.com/advisories/GHSA-x34j-47hf-4xg7",
+            "title": "[@tinacms/app] TinaCMS admin preview iframe loads an attacker-controlled origin from the URL fragment | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe TinaCMS admin builds its preview <iframe src> from the /~/* hash-router splat without checking that the value stays same-origin. A fragment with a doubled slash (#/~//attacker.example/p) be",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T20:56:48.000Z",
+            "date_published": "2026-10-09T20:56:48.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tinacms/app] TinaCMS admin preview iframe loads an attacker-controlled origin from the URL fragment",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-x34j-47hf-4xg7",
+            "content_html": "SummaryThe TinaCMS admin builds its preview &lt;iframe src&gt; from the /~/* hash-router splat without checking that the value stays same-origin. A fragment with a doubled slash (#/~//attacker.example/p) becomes the protocol-relative URL //attacker.example/p, so the admin frames an external site. That same unvalidated string derives expectedOrigin, the only trust anchor for the admin↔preview postMessage channel, so the attacker's frame is treated as trusted: it can submit any GraphQL operation, which ",
+            "url": "https://github.com/advisories/GHSA-x34j-47hf-4xg7",
+            "title": "[tinacms] TinaCMS admin preview iframe loads an attacker-controlled origin from the URL fragment | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe TinaCMS admin builds its preview <iframe src> from the /~/* hash-router splat without checking that the value stays same-origin. A fragment with a doubled slash (#/~//attacker.example/p) be",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T20:56:48.000Z",
+            "date_published": "2026-10-09T20:56:48.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tinacms] TinaCMS admin preview iframe loads an attacker-controlled origin from the URL fragment",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-c42q-qvc3-j6vg",
+            "content_html": "Summary&lt;tina-markdown&gt; renders a rich-text AST into the DOM and, for a nodes, assigns the node's URL straight to the anchor's href with no scheme check. A link authored in the CMS as javascript:… renders as a live javascript: anchor, so a visitor who clicks it executes attacker-supplied script in the site's origin. Every sibling renderer in the repository already sanitizes these URLs; this one does not.DetailsThe unvalidated sink:packages/@tinacms/web-components/src/tina-markdown.js:67-69 if (no",
+            "url": "https://github.com/advisories/GHSA-c42q-qvc3-j6vg",
+            "title": "[@tinacms/web-components] @tinacms/web-components: `tina-markdown` writes rich-text link URLs into `href` without scheme validation, allowing stored XSS | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summary<tina-markdown> renders a rich-text AST into the DOM and, for a nodes, assigns the node's URL straight to the anchor's href with no scheme check. A link authored in the CMS as javascript:… rend",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T20:56:45.000Z",
+            "date_published": "2026-10-09T20:56:45.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tinacms/web-components] @tinacms/web-components: `tina-markdown` writes rich-text link URLs into `href` without scheme validation, allowing stored XSS",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-47c3-hpmg-7j6p",
+            "content_html": "ImpactShiny for Python's bookmark-restore path accepted a client-supplied _state_id_query-string value and joined it into the server-side bookmark directory(&lt;cwd&gt;/shiny_bookmarks/&lt;id&gt;) without validating it. A value containing ..path segments, or an absolute path, could therefore cause the server to open andparse input.json and values.json from a directory outside the bookmark store.On a default application the restore was attempted whenever the client supplied aURL query string — including when",
+            "url": "https://github.com/advisories/GHSA-47c3-hpmg-7j6p",
+            "title": "[shiny] Shiny for Python has path traversal in bookmark restore | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactShiny for Python's bookmark-restore path accepted a client-supplied _state_id_query-string value and joined it into the server-side bookmark directory(<cwd>/shiny_bookmarks/<id>) without validat",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T20:56:37.000Z",
+            "date_published": "2026-10-09T20:56:37.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[shiny] Shiny for Python has path traversal in bookmark restore",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3hj7-6vmj-h8v4",
+            "content_html": "Impactpacioli-guard's document-layer consent gate requires a human-minted, single-use, document-bound and act-bound marker before a credential carrying API Key Scope.require_consent may submit or cancel a document. Because ERPNext performs further document writes as a consequence of a governed act, nested acts are allowed to \"ride\" the consent established by the enclosing act instead of needing a marker of their own.The ride predicate returned true for every cancel, regardless of which act the e",
+            "url": "https://github.com/advisories/GHSA-3hj7-6vmj-h8v4",
+            "title": "[pacioli-guard] pacioli: A submit consent marker licensed cancellation of caller-named pre-existing documents | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Impactpacioli-guard's document-layer consent gate requires a human-minted, single-use, document-bound and act-bound marker before a credential carrying API Key Scope.require_consent may submit or canc",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T20:42:51.000Z",
+            "date_published": "2026-10-09T20:42:51.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pacioli-guard] pacioli: A submit consent marker licensed cancellation of caller-named pre-existing documents",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-68w4-83fh-f2w8",
+            "content_html": "SummaryApi.getUserData (legacy) and Api.get_userdata are declared with @permission(Perms.ANY) and are reachable at /api/getUserData and /api/get_userdata. Because Perms.ANY == 0 and pyLoad's permission check is a bitmask AND, that gate is a no-op: every authenticated account passes, including one holding zero permission bits.Both methods are thin wrappers around check_auth(), which the maintainers deliberately restricted to administrators by omitting @permission (no entry in perm_map, so is_auth",
+            "url": "https://github.com/advisories/GHSA-68w4-83fh-f2w8",
+            "title": "[pyload-ng] pyload-ng: getUserData/get_userdata exposed at Perms.ANY allow any authenticated account to brute-force the administrator password | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryApi.getUserData (legacy) and Api.get_userdata are declared with @permission(Perms.ANY) and are reachable at /api/getUserData and /api/get_userdata. Because Perms.ANY == 0 and pyLoad's permissio",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T17:09:15.000Z",
+            "date_published": "2026-10-09T17:09:15.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyload-ng] pyload-ng: getUserData/get_userdata exposed at Perms.ANY allow any authenticated account to brute-force the administrator password",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-9q47-3cm2-2rp8",
+            "content_html": "SummarypyLoad determines the \"client IP\" used for its rate-limiting decorator and for itssecurity/audit logging by reading the client-supplied X-Forwarded-For (XFF) HTTP header andtaking the leftmost value. No trusted-proxy configuration exists (the Cheroot WSGI server facesclients directly, and there is no ProxyFix middleware). Because any client can freely set thisheader, an attacker can (1) completely bypass rate limiting by rotating the header on each request,and (2) forge the source IP reco",
+            "url": "https://github.com/advisories/GHSA-9q47-3cm2-2rp8",
+            "title": "[pyload-ng] pyLoad: Rate-Limit Bypass and Audit-Log Spoofing via Trusted Client-Controlled `X-Forwarded-For` Header | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummarypyLoad determines the \"client IP\" used for its rate-limiting decorator and for itssecurity/audit logging by reading the client-supplied X-Forwarded-For (XFF) HTTP header andtaking the leftmost ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T17:09:12.000Z",
+            "date_published": "2026-10-09T17:09:12.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyload-ng] pyLoad: Rate-Limit Bypass and Audit-Log Spoofing via Trusted Client-Controlled `X-Forwarded-For` Header",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jq7h-wrvp-3rgx",
+            "content_html": "An admin who revokes a user's privileges through the REST API does not actually revoke them, because the session carrying those privileges is never invalidated.pyLoad authorizes each request from values copied into the Flask session at login. set_session in webui/app/helpers.py writes role and perms once, and both login_required and the session branch of apikey_auth read them back from the session rather than from the database. The fix for GHSA-66hx-chf7-3332 handled this by deleting the user's ",
+            "url": "https://github.com/advisories/GHSA-jq7h-wrvp-3rgx",
+            "title": "[pyload-ng] pyLoad: Privilege revocation and password change through the REST API do not invalidate the user's session | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "An admin who revokes a user's privileges through the REST API does not actually revoke them, because the session carrying those privileges is never invalidated.pyLoad authorizes each request from valu",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T17:09:09.000Z",
+            "date_published": "2026-10-09T17:09:09.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyload-ng] pyLoad: Privilege revocation and password change through the REST API do not invalidate the user's session",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-889w-m37p-88m5",
+            "content_html": "SummaryAn admin who revokes or downgrades a non-admin user's permissions through pyLoad's own documented/api/&lt;func&gt; RPC surface — e.g. POST /api/set_user_permission (or its legacy alias/api/setUserPermission) — updates the target's database row but never invalidates that user'sexisting Flask cookie session. The demoted user keeps their pre-revocation role/permission bitson every subsequent WebUI page load and every subsequent /api/&lt;func&gt; call made with that cookie,for up to the default session_l",
+            "url": "https://github.com/advisories/GHSA-889w-m37p-88m5",
+            "title": "[pyload-ng] pyLoad: Api.set_user_permission never invalidates the target's session | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryAn admin who revokes or downgrades a non-admin user's permissions through pyLoad's own documented/api/<func> RPC surface — e.g. POST /api/set_user_permission (or its legacy alias/api/setUserPer",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T17:09:07.000Z",
+            "date_published": "2026-10-09T17:09:07.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyload-ng] pyLoad: Api.set_user_permission never invalidates the target's session",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-p3pr-8f3m-4qp8",
+            "content_html": "SummarypyLoad ships the WindowsPhoneNotify addon, whose send() method opens an HTTP connection to a host taken directly from the plugin's pushurl configuration value. A user holding the standard non-admin SETTINGS permission can set pushurl and pushid and enable the addon through the web API, since these plugin options are not in the admin-only option set. Once enabled, the addon activates dynamically without a restart, and any completed download (download events fire globally, not per user) cau",
+            "url": "https://github.com/advisories/GHSA-p3pr-8f3m-4qp8",
+            "title": "[pyload-ng] pyLoad WindowsPhoneNotify addon: non-admin SETTINGS user triggers SSRF via unguarded http.client notification host | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummarypyLoad ships the WindowsPhoneNotify addon, whose send() method opens an HTTP connection to a host taken directly from the plugin's pushurl configuration value. A user holding the standard non-a",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T17:09:03.000Z",
+            "date_published": "2026-10-09T17:09:03.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyload-ng] pyLoad WindowsPhoneNotify addon: non-admin SETTINGS user triggers SSRF via unguarded http.client notification host",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-fr26-jjhm-638c",
+            "content_html": "SummaryUnTar._safe_extractall — the hardening added for GHSA-mvwx-582f-56r7 — validates membernames and symlink/hardlink targets, but never checks member types, and callstarfile.extractall without a filter=. On Python &lt; 3.14 the default extraction filter isfully_trusted, so a crafted tar containing device or FIFO entries makes pyLoad createthem on disk. When pyLoad runs as root (the official Docker deployment), a block-devicemember grants raw disk access — full host compromise — reachable by any",
+            "url": "https://github.com/advisories/GHSA-fr26-jjhm-638c",
+            "title": "[pyload-ng] pyLoad: Tar extraction creates device nodes and FIFOs (member types not filtered; tarfile extractall without filter=) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryUnTar._safe_extractall — the hardening added for GHSA-mvwx-582f-56r7 — validates membernames and symlink/hardlink targets, but never checks member types, and callstarfile.extractall without a f",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T17:08:58.000Z",
+            "date_published": "2026-10-09T17:08:58.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyload-ng] pyLoad: Tar extraction creates device nodes and FIFOs (member types not filtered; tarfile extractall without filter=)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-r44w-v6gf-x3p6",
+            "content_html": "SummaryThe API-key cache in check_apikey() allows an attacker to authenticate with a forged API key as long as the legitimate key for the same key_id has been used recently.On a cache hit, the API key secret is never verified, resulting in a complete authentication bypass during the cache lifetime.Affected Componentssrc/pyload/core/api/init.pyApi.check_apikey()src/pyload/core/database/apikey_database.pycheck_apikey()_check_key()The cache is used by normal API requests through:src/pyload/webui/ap",
+            "url": "https://github.com/advisories/GHSA-r44w-v6gf-x3p6",
+            "title": "[pyload-ng] pyLoad has an authentication bypass in API key validation (check_apikey cache) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe API-key cache in check_apikey() allows an attacker to authenticate with a forged API key as long as the legitimate key for the same key_id has been used recently.On a cache hit, the API key",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T16:43:55.000Z",
+            "date_published": "2026-10-09T16:43:55.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyload-ng] pyLoad has an authentication bypass in API key validation (check_apikey cache)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-j92p-c242-7hfx",
+            "content_html": "SummaryThe /web/&lt;path:filename&gt; route in src/pyload/webui/app/blueprints/app_blueprint.py renders Jinja2 templates without any authentication requirement. Every equivalent direct route (/logs, /settings, /queue, /dashboard, etc.) is protected by @login_required, but the underlying templates for all of these pages are accessible unauthenticated via this endpoint. Combined with an exception attribute typo in src/pyload/webui/app/handlers.py (exc.desc instead of exc.description), internal Jinja2 va",
+            "url": "https://github.com/advisories/GHSA-j92p-c242-7hfx",
+            "title": "[pyload-ng] pyLoad: Unauthenticated access to /web/<path:filename> bypasses authentication on sensitive templates and leaks internal error details via exception attribute typo | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe /web/<path:filename> route in src/pyload/webui/app/blueprints/app_blueprint.py renders Jinja2 templates without any authentication requirement. Every equivalent direct route (/logs, /settin",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T16:40:30.000Z",
+            "date_published": "2026-10-09T16:40:30.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyload-ng] pyLoad: Unauthenticated access to /web/<path:filename> bypasses authentication on sensitive templates and leaks internal error details via exception attribute typo",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vq8p-m3wm-gv5f",
+            "content_html": "Description:The API rpc function in api_blueprint.py handles multipart/form-data uploads by reading the whole content of the uploaded file into memory with file.read(). This occurs before the data is sent to the underlying function. Since there is no size limit set at this point, a large file upload can exhaust the server's available memory which led to process termination.VulnerableCode &amp; Path:https://github.com/pyload/pyload/blob/8e447958b8a66c5899775e725a8b90bce6643004/src/pyload/webui/app/bl",
+            "url": "https://github.com/advisories/GHSA-vq8p-m3wm-gv5f",
+            "title": "[pyload-ng] pyLoad: Lack of Input Size Validation Leads to Denial of Service (DoS) and Process Termination | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Description:The API rpc function in api_blueprint.py handles multipart/form-data uploads by reading the whole content of the uploaded file into memory with file.read(). This occurs before the data is ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T16:26:53.000Z",
+            "date_published": "2026-10-09T16:26:53.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyload-ng] pyLoad: Lack of Input Size Validation Leads to Denial of Service (DoS) and Process Termination",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-m952-2w3f-6r8h",
+            "content_html": "SummaryStrawberry's legacy graphql-ws subscription handler can retain task and subscription bookkeeping after a one-shot subscription has naturally sent its complete message. When the application configures max_subscriptions_per_connection, the handler counts those completed operations in len(self.tasks). A client that uses distinct operation IDs can therefore reach the configured subscription limit even though the earlier subscriptions have already completed, causing subsequent legitimate subsc",
+            "url": "https://github.com/advisories/GHSA-m952-2w3f-6r8h",
+            "title": "[strawberry-graphql] Strawberry legacy graphql-ws retains naturally completed subscription slots | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryStrawberry's legacy graphql-ws subscription handler can retain task and subscription bookkeeping after a one-shot subscription has naturally sent its complete message. When the application conf",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T14:07:20.000Z",
+            "date_published": "2026-10-09T14:07:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[strawberry-graphql] Strawberry legacy graphql-ws retains naturally completed subscription slots",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-pfvf-fwfp-25mp",
+            "content_html": "SummaryPermissionExtension.resolve() evaluates the return value of has_permission() for truthiness on the synchronous path. supports_sync only classifies a permission as asynchronous when has_permission is declared with async def (via inspect.iscoroutinefunction), so a plain def that returns an awaitable is treated as synchronous. An awaitable is always truthy, so the check passes even when it resolves to False and the protected resolver runs.The resolve path is chosen by the field resolver, not",
+            "url": "https://github.com/advisories/GHSA-pfvf-fwfp-25mp",
+            "title": "[strawberry-graphql] Strawberry GraphQL: Synchronous permission checks can treat an awaitable authorization result as truthy | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryPermissionExtension.resolve() evaluates the return value of has_permission() for truthiness on the synchronous path. supports_sync only classifies a permission as asynchronous when has_permissi",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-09T14:07:16.000Z",
+            "date_published": "2026-10-09T14:07:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[strawberry-graphql] Strawberry GraphQL: Synchronous permission checks can treat an awaitable authorization result as truthy",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-x937-hj6v-793p",
+            "content_html": "SummarycacheSet only derives its exp cache deadline inside hasIat (src/verifier.js:127-140). JWT iat is optional. For a valid token with exp but no iat, cacheSet substitutes clockTimestamp + clockTolerance + cacheTTL (src/verifier.js:142-146). Later, the cache path returns the saved payload before decoding or invoking verifyToken (src/verifier.js:372-388). Since expiration validation is in verifyToken, the expired token remains accepted until the cache deadline.DetailsThe bug is an expiration-ch",
+            "url": "https://github.com/advisories/GHSA-x937-hj6v-793p",
+            "title": "[fast-jwt] fast-jwt: Verifier cache accepts expired JWTs without iat. | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummarycacheSet only derives its exp cache deadline inside hasIat (src/verifier.js:127-140). JWT iat is optional. For a valid token with exp but no iat, cacheSet substitutes clockTimestamp + clockTole",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:10:35.000Z",
+            "date_published": "2026-10-08T22:10:35.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[fast-jwt] fast-jwt: Verifier cache accepts expired JWTs without iat.",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-556j-vv39-8rqv",
+            "content_html": "SummaryIn banks.registries.DirectoryPromptRegistry, prompt file paths and the index file (index.json) do not refuse symbolic links. When a prompt directory contains or accepts untrusted files (e.g. unpacked archives, shared repositories, or multi-tenant folders), symbolic links pointing outside the registry root can be used to disclose arbitrary files via _scan() / get() or overwrite arbitrary files via set() / _save().DetailsFollowing PR #77, DirectoryPromptRegistry validates path resolution fo",
+            "url": "https://github.com/advisories/GHSA-556j-vv39-8rqv",
+            "title": "[banks] Banks: Symlink traversal and arbitrary file disclosure/overwrite in DirectoryPromptRegistry | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryIn banks.registries.DirectoryPromptRegistry, prompt file paths and the index file (index.json) do not refuse symbolic links. When a prompt directory contains or accepts untrusted files (e.g. un",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:10:07.000Z",
+            "date_published": "2026-10-08T22:10:07.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[banks] Banks: Symlink traversal and arbitrary file disclosure/overwrite in DirectoryPromptRegistry",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-hmq2-7hp6-7crh",
+            "content_html": "Summary Banks' Prompt.chat_messages() method parses every rendered output line as a potential ChatMessage JSON object. If attacker-controlled template data renders to JSON such as {\"role\":\"system\",\"content\":\"...\"}, Banks returns it as a privileged system message instead of treating it as plain user-controlled text. Applications that render untrusted user input with Prompt.chat_messages() and pass the returned messages directly to an LLM provider may be vulnerable to chat role injection and promp",
+            "url": "https://github.com/advisories/GHSA-hmq2-7hp6-7crh",
+            "title": "[banks] Banks: User-controlled prompt input can be parsed as privileged chat messages | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Summary Banks' Prompt.chat_messages() method parses every rendered output line as a potential ChatMessage JSON object. If attacker-controlled template data renders to JSON such as {\"role\":\"system\",\"co",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:10:01.000Z",
+            "date_published": "2026-10-08T22:10:01.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[banks] Banks: User-controlled prompt input can be parsed as privileged chat messages",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2v95-h47v-g4x9",
+            "content_html": "ImpactIndico makes outgoing requests to user-provides URLs in various places. This is mostly intentional and part of Indico's functionality, but of course it is never intended to let you access \"special\" targets such as localhost or cloud metadata endpoints. The previous fix (CVE-2026-25738) did not cover an edge case so it was still possible to craft a URL that pointed to a local target but was accepted as valid by Indico.PatchesYou should to update to Indico 3.3.13 as soon as possible.See the ",
+            "url": "https://github.com/advisories/GHSA-2v95-h47v-g4x9",
+            "title": "[indico] Indico: Incomplete Server-Side Request Forgery (SSRF) check | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactIndico makes outgoing requests to user-provides URLs in various places. This is mostly intentional and part of Indico's functionality, but of course it is never intended to let you access \"speci",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:09:55.000Z",
+            "date_published": "2026-10-08T22:09:55.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[indico] Indico: Incomplete Server-Side Request Forgery (SSRF) check",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-6p4f-j8j6-463q",
+            "content_html": "ImpactA legacy API to retrieve session details could be misused to retrieve metadata (such as title, description and conveners) of a restricted session within without having access to that session, as long as the event itself was accessible.PatchesYou should to update to Indico 3.3.13 as soon as possible.See the docs for instructions on how to update.WorkaroundsRestrict access to the event itselfFor more informationIf you have any questions or comments about this advisory:Open a thread in our fo",
+            "url": "https://github.com/advisories/GHSA-6p4f-j8j6-463q",
+            "title": "[indico] Indico: Missing access check in legacy session export API | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactA legacy API to retrieve session details could be misused to retrieve metadata (such as title, description and conveners) of a restricted session within without having access to that session, as",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:09:49.000Z",
+            "date_published": "2026-10-08T22:09:49.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[indico] Indico: Missing access check in legacy session export API",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-cw24-x4mj-fw3q",
+            "content_html": "ImpactThere is a Cross-Site-Scripting vulnerability in the minute editor conflict UI tha's shown when concurrent edits are made to the same minutes in an event.PatchesYou should to update to Indico 3.3.13 as soon as possible.See the docs for instructions on how to update.WorkaroundsSet CSP_ENABLED = True in indico.conf - this is recommended regardless of updating.Only let trustworthy users create content (including minutes which speakers can typically do as well) on Indico.For more informationIf",
+            "url": "https://github.com/advisories/GHSA-cw24-x4mj-fw3q",
+            "title": "[indico] Indico: Cross-Site-Scripting in minutes editor | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactThere is a Cross-Site-Scripting vulnerability in the minute editor conflict UI tha's shown when concurrent edits are made to the same minutes in an event.PatchesYou should to update to Indico 3.",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:09:45.000Z",
+            "date_published": "2026-10-08T22:09:45.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[indico] Indico: Cross-Site-Scripting in minutes editor",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-c4wc-ggrj-jg9v",
+            "content_html": "ImpactThere is a Cross-Site-Scripting vulnerability in fields that allow entering custom URLs.PatchesYou should to update to Indico 3.3.13 as soon as possible.See the docs for instructions on how to update.WorkaroundsSet CSP_ENABLED = True in indico.conf - this is recommended regardless of updating.Only let trustworthy users manage events or create content (including material uploads which speakers can typically do as well) on Indico.For more informationIf you have any questions or comments abou",
+            "url": "https://github.com/advisories/GHSA-c4wc-ggrj-jg9v",
+            "title": "[indico] Indico: Cross-Site-Scripting in link fields | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactThere is a Cross-Site-Scripting vulnerability in fields that allow entering custom URLs.PatchesYou should to update to Indico 3.3.13 as soon as possible.See the docs for instructions on how to u",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:09:41.000Z",
+            "date_published": "2026-10-08T22:09:41.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[indico] Indico: Cross-Site-Scripting in link fields",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2m6q-8v3h-jqww",
+            "content_html": "Route parameters are inserted into generated URLs without URI encoding.When an application passes untrusted input to a route whose first path segment is dynamic, a value beginning with / can produce a scheme-relative URL. For example:router.get('/:page', handler).as('pages.show')response.redirect().toRoute('pages.show', { page: '/evil.example.com',})This generates the following redirect:Location: //evil.example.comBrowsers interpret this value as an external URL and redirect the user to https://",
+            "url": "https://github.com/advisories/GHSA-2m6q-8v3h-jqww",
+            "title": "[@adonisjs/http-server] AdonisJS: Unencoded route parameters can produce open redirects | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Route parameters are inserted into generated URLs without URI encoding.When an application passes untrusted input to a route whose first path segment is dynamic, a value beginning with / can produce a",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:09:06.000Z",
+            "date_published": "2026-10-08T22:09:06.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@adonisjs/http-server] AdonisJS: Unencoded route parameters can produce open redirects",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2m6q-8v3h-jqww",
+            "content_html": "Route parameters are inserted into generated URLs without URI encoding.When an application passes untrusted input to a route whose first path segment is dynamic, a value beginning with / can produce a scheme-relative URL. For example:router.get('/:page', handler).as('pages.show')response.redirect().toRoute('pages.show', { page: '/evil.example.com',})This generates the following redirect:Location: //evil.example.comBrowsers interpret this value as an external URL and redirect the user to https://",
+            "url": "https://github.com/advisories/GHSA-2m6q-8v3h-jqww",
+            "title": "[@adonisjs/http-server] AdonisJS: Unencoded route parameters can produce open redirects | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Route parameters are inserted into generated URLs without URI encoding.When an application passes untrusted input to a route whose first path segment is dynamic, a value beginning with / can produce a",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:09:06.000Z",
+            "date_published": "2026-10-08T22:09:06.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@adonisjs/http-server] AdonisJS: Unencoded route parameters can produce open redirects",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8wpc-h4q6-8fxv",
+            "content_html": "SummarycreateVerifier in fast-jwt ≤ 6.3.0 skips signature verification entirely when the key option is a falsy synchronous value ('' or null) and the algorithms option is set to a non-empty allowlist. An attacker who can present a JWT to the application — regardless of algorithm — can forge arbitrary claims without possessing any signing key.DetailsRoot cause — four cooperating code paths:A. Falsy sync keys bypass prepareKeyOrSecretcreateVerifier branches on typeof key:const keyType = typeof key",
+            "url": "https://github.com/advisories/GHSA-8wpc-h4q6-8fxv",
+            "title": "[fast-jwt] fast-jwt: createVerifier accepts unsigned JWTs when key is '' or null and algorithms is explicitly set | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummarycreateVerifier in fast-jwt ≤ 6.3.0 skips signature verification entirely when the key option is a falsy synchronous value ('' or null) and the algorithms option is set to a non-empty allowlist.",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:02:12.000Z",
+            "date_published": "2026-10-08T22:02:12.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[fast-jwt] fast-jwt: createVerifier accepts unsigned JWTs when key is '' or null and algorithms is explicitly set",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-ww5h-9m49-7xx4",
+            "content_html": "SummaryThe fix for CVE-2026-34950 (CVSS 9.1, released in v6.2.0) is incomplete. It adds key.trim() to the PEM-detection path in src/crypto.js, but String.prototype.trim() only strips characters classified as whitespace by the ECMAScript specification. The subsequent ^-anchored regex (/^-----BEGIN(?: (RSA))? PUBLIC KEY-----/) still requires the PEM header at position 0 — so any non-whitespace leading byte (control chars, zero-width unicode, # comments, HTTP-style headers, PGP wrappers) bypasses d",
+            "url": "https://github.com/advisories/GHSA-ww5h-9m49-7xx4",
+            "title": "[fast-jwt] fast-jwt: Incomplete patch of CVE-2026-34950: Non-whitespace key-prefix re-enables RSA→HS256 algorithm confusion | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe fix for CVE-2026-34950 (CVSS 9.1, released in v6.2.0) is incomplete. It adds key.trim() to the PEM-detection path in src/crypto.js, but String.prototype.trim() only strips characters classi",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:02:07.000Z",
+            "date_published": "2026-10-08T22:02:07.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[fast-jwt] fast-jwt: Incomplete patch of CVE-2026-34950: Non-whitespace key-prefix re-enables RSA→HS256 algorithm confusion",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-687g-22h4-j4w4",
+            "content_html": "SummarycreateVerifier({ clockTolerance: Infinity }) silently bypasses both exp (expiry) AND nbf (not-before) validation. Any expired or not-yet-active token is accepted as valid. The same primitive also corrupts the verifier's internal cache so cached entries inherit infinite validity — they remain valid past a later developer-removed Infinity config until LRU eviction.Vulnerable codesrc/verifier.js:531-533 — option validation only rejects negative values, not Infinity:if (clockTolerance &amp;&amp; (typ",
+            "url": "https://github.com/advisories/GHSA-687g-22h4-j4w4",
+            "title": "[fast-jwt] fast-jwt clockTolerance: Infinity silently bypasses both exp and nbf validation (and persists in the verifier cache) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummarycreateVerifier({ clockTolerance: Infinity }) silently bypasses both exp (expiry) AND nbf (not-before) validation. Any expired or not-yet-active token is accepted as valid. The same primitive al",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:02:02.000Z",
+            "date_published": "2026-10-08T22:02:02.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[fast-jwt] fast-jwt clockTolerance: Infinity silently bypasses both exp and nbf validation (and persists in the verifier cache)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5hjw-83fp-phq9",
+            "content_html": "Summary fast-jwt's createVerifier silently skips all configured claim validators (exp, nbf, iss, aud, sub, jti, nonce) when a validly-signed JWT carries a JSON array as its payload instead of an object. The verifier reports success while having enforced only the signature. This breaks the library's documented allowedIss / allowedAud / allowedSub / expiry / replay-protection guarantees and violates RFC 7519 §7.2 step 10, which requires the JWT Claims Set to be a JSON object.DetailsThe decoder val",
+            "url": "https://github.com/advisories/GHSA-5hjw-83fp-phq9",
+            "title": "[fast-jwt] fast-jwt : Silent claim-validator bypass when JWT payload is a JSON array | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summary fast-jwt's createVerifier silently skips all configured claim validators (exp, nbf, iss, aud, sub, jti, nonce) when a validly-signed JWT carries a JSON array as its payload instead of an objec",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:01:58.000Z",
+            "date_published": "2026-10-08T22:01:58.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[fast-jwt] fast-jwt : Silent claim-validator bypass when JWT payload is a JSON array",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-g3jj-5cmm-3hxx",
+            "content_html": "Summaryfast-jwt 6.2.4 silently classifies raw serialized public JWK JSONas an HMAC secret.If an application supplies public JWK JSON text as the verifier key andHS256 is explicitly allowed or automatically inferred, an attacker whoknows the same public JSON text can use it as an HMAC key and create anarbitrary HS256 token that fast-jwt accepts as valid.This can result in authentication or authorization bypass through forgedJWT claims.The PoC demonstrates the issue with a serialized RSA public JW",
+            "url": "https://github.com/advisories/GHSA-g3jj-5cmm-3hxx",
+            "title": "[fast-jwt] fast-jwt treats raw public JWK JSON as an HMAC secret, enabling HS256 token forgery | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summaryfast-jwt 6.2.4 silently classifies raw serialized public JWK JSONas an HMAC secret.If an application supplies public JWK JSON text as the verifier key andHS256 is explicitly allowed or automati",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:01:53.000Z",
+            "date_published": "2026-10-08T22:01:53.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[fast-jwt] fast-jwt treats raw public JWK JSON as an HMAC secret, enabling HS256 token forgery",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-6wjp-v33h-5cvq",
+            "content_html": "SummaryThe AgentOS server in the praisonai TypeScript/npm package ships an insecure default: it binds 0.0.0.0, sets no API key, and uses CORS * with credentials. The API-key middleware is only registered when an API key is configured, so the documented quickstart (new AgentOS({agents:[...]}).serve({port})) exposes, unauthenticated, GET /api/agents (which leaks agent names/roles/instructions, i.e. system prompts) and POST /api/chat (which invokes agents). Any network peer can read agent system pr",
+            "url": "https://github.com/advisories/GHSA-6wjp-v33h-5cvq",
+            "title": "[praisonai] PraisonAI: AgentOS defaults to network-exposed no-auth mode, allowing unauthenticated agent invocation and instruction disclosure | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe AgentOS server in the praisonai TypeScript/npm package ships an insecure default: it binds 0.0.0.0, sets no API key, and uses CORS * with credentials. The API-key middleware is only registe",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:01:29.000Z",
+            "date_published": "2026-10-08T22:01:29.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[praisonai] PraisonAI: AgentOS defaults to network-exposed no-auth mode, allowing unauthenticated agent invocation and instruction disclosure",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-c78w-2q4r-68r7",
+            "content_html": "Platform member PATCH routes allow owner resource rewrites and project lead reassignment delete bypassSummarypraisonai-platform lets an ordinary workspace member patch owner-created project, issue, and agent records even though the paired delete routes enforce owner/admin authorization. For projects, the member can first patch lead_id to their own user id and then delete the owner-created project, bypassing a delete guard that correctly returned 403 before the reassignment.Technical DetailsThe a",
+            "url": "https://github.com/advisories/GHSA-c78w-2q4r-68r7",
+            "title": "[praisonai-platform] PraisonAI: Platform member PATCH routes allow owner resource rewrites and project lead reassignment delete bypass | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Platform member PATCH routes allow owner resource rewrites and project lead reassignment delete bypassSummarypraisonai-platform lets an ordinary workspace member patch owner-created project, issue, an",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T22:01:11.000Z",
+            "date_published": "2026-10-08T22:01:11.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[praisonai-platform] PraisonAI: Platform member PATCH routes allow owner resource rewrites and project lead reassignment delete bypass",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-f94x-6692-553q",
+            "content_html": "SummaryStsdAtom.get() in lib/mp4/AtomToken.ts parses an MP4 stsd (sample description) box's entry table by advancing a cursor with off += size - 4, where size is a 32-bit, attacker-controlled per-entry length read straight from the file. When size == 0, that advance is 0, so a file declaring a huge entry_count and a first entry size of 0 spins forever: same bytes read every iteration, no progress, no exit. Because StsdAtom.get runs synchronously inside strtok3's tokenizer, this doesn't just fail",
+            "url": "https://github.com/advisories/GHSA-f94x-6692-553q",
+            "title": "[music-metadata] music-metadata: MP4 stsd sample-entry size==0 causes a synchronous infinite loop (DoS) — unreleased regression on master | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryStsdAtom.get() in lib/mp4/AtomToken.ts parses an MP4 stsd (sample description) box's entry table by advancing a cursor with off += size - 4, where size is a 32-bit, attacker-controlled per-entr",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T19:43:25.000Z",
+            "date_published": "2026-10-08T19:43:25.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[music-metadata] music-metadata: MP4 stsd sample-entry size==0 causes a synchronous infinite loop (DoS) — unreleased regression on master",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-53v6-4h7p-p4gj",
+            "content_html": "Summarymusic-metadata 11.15.0 is vulnerable to uncontrolled memory allocation in the APEv2 parser.The parser reads the size of an APEv2 tag item from the input file and uses that value to allocate memory before checking whether the file actually contains that many bytes. A small crafted .ape file can declare a very large binary tag item, such as cover art, and force the parser to allocate a large buffer.This issue is specific to APEv2 parsing and is separate from the ID3v2, MP4, and EBML advisor",
+            "url": "https://github.com/advisories/GHSA-53v6-4h7p-p4gj",
+            "title": "[music-metadata] music-metadata: Uncontrolled memory allocation in APEv2 parser | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summarymusic-metadata 11.15.0 is vulnerable to uncontrolled memory allocation in the APEv2 parser.The parser reads the size of an APEv2 tag item from the input file and uses that value to allocate mem",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T19:43:22.000Z",
+            "date_published": "2026-10-08T19:43:22.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[music-metadata] music-metadata: Uncontrolled memory allocation in APEv2 parser",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jjpr-9cvf-cq55",
+            "content_html": "SummaryThe ID3v2 parser in music-metadata trusts the tag size field without validation and allocates the full requested buffer before reading. A specially crafted MP3 file with a truncated ID3v2 tag can force allocation of up to 268 MB from a 10-byte file, causing server memory exhaustion. This vulnerability affects all parsers that support ID3v2 tags (MP3, FLAC, DSF, Musepack) and succeeds silently—callers don't see an error.DetailsVulnerable Code Path:lib/id3v2/ID3v2Token.ts:108 - Syncsafe siz",
+            "url": "https://github.com/advisories/GHSA-jjpr-9cvf-cq55",
+            "title": "[music-metadata] music-metadata: ID3v2 tag size not validated before allocation, causing memory exhaustion DoS | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe ID3v2 parser in music-metadata trusts the tag size field without validation and allocates the full requested buffer before reading. A specially crafted MP3 file with a truncated ID3v2 tag c",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T19:43:17.000Z",
+            "date_published": "2026-10-08T19:43:17.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[music-metadata] music-metadata: ID3v2 tag size not validated before allocation, causing memory exhaustion DoS",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5gfj-9q3v-qfp3",
+            "content_html": "SummaryThe Matroska/WebM EBML parser decodes attacker-controlled variable-length integer (VINT) element lengths without first validating that the declared element fits within its enclosing container or the available input. Leaf lengths are then used directly for string-token and Uint8Array allocations.A very small crafted .webm, .mkv, or .mka file can therefore cause a disproportionately large allocation, an out-of-memory denial of service, or—in one demonstrated parseFile case—an uncatchable V8",
+            "url": "https://github.com/advisories/GHSA-5gfj-9q3v-qfp3",
+            "title": "[music-metadata] music-metadata: EBML parser trusts element lengths, allowing memory exhaustion or process abort | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe Matroska/WebM EBML parser decodes attacker-controlled variable-length integer (VINT) element lengths without first validating that the declared element fits within its enclosing container o",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T19:43:09.000Z",
+            "date_published": "2026-10-08T19:43:09.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[music-metadata] music-metadata: EBML parser trusts element lengths, allowing memory exhaustion or process abort",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-r3rv-jm3r-62q2",
+            "content_html": "DescriptionWhen escaping string and binary parameters for the text protocol, the connector always escaped the quote character with a backslash, without ever consulting the session's NO_BACKSLASH_ESCAPES SQL mode. The server status flag was declared (STATUS_NO_BACKSLASH_ESCAPES) but never read.Under a server or session running with NO_BACKSLASH_ESCAPES, the backslash is an ordinary character and the quote must be escaped by doubling it. The escaped value produced by the connector therefore closed",
+            "url": "https://github.com/advisories/GHSA-r3rv-jm3r-62q2",
+            "title": "[mariadb] MariaDB Connector/Node.js: SQL injection in the text protocol when the session uses NO_BACKSLASH_ESCAPES | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "DescriptionWhen escaping string and binary parameters for the text protocol, the connector always escaped the quote character with a backslash, without ever consulting the session's NO_BACKSLASH_ESCAP",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T19:42:28.000Z",
+            "date_published": "2026-10-08T19:42:28.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[mariadb] MariaDB Connector/Node.js: SQL injection in the text protocol when the session uses NO_BACKSLASH_ESCAPES",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-r3rv-jm3r-62q2",
+            "content_html": "DescriptionWhen escaping string and binary parameters for the text protocol, the connector always escaped the quote character with a backslash, without ever consulting the session's NO_BACKSLASH_ESCAPES SQL mode. The server status flag was declared (STATUS_NO_BACKSLASH_ESCAPES) but never read.Under a server or session running with NO_BACKSLASH_ESCAPES, the backslash is an ordinary character and the quote must be escaped by doubling it. The escaped value produced by the connector therefore closed",
+            "url": "https://github.com/advisories/GHSA-r3rv-jm3r-62q2",
+            "title": "[mariadb] MariaDB Connector/Node.js: SQL injection in the text protocol when the session uses NO_BACKSLASH_ESCAPES | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "DescriptionWhen escaping string and binary parameters for the text protocol, the connector always escaped the quote character with a backslash, without ever consulting the session's NO_BACKSLASH_ESCAP",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-08T19:42:28.000Z",
+            "date_published": "2026-10-08T19:42:28.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[mariadb] MariaDB Connector/Node.js: SQL injection in the text protocol when the session uses NO_BACKSLASH_ESCAPES",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        }
+    ]
+}

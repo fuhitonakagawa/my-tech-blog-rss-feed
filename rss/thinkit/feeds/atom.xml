@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/</id>
+    <title>Think IT｜企業テックブログRSS</title>
+    <updated>2026-10-11T05:04:06.932Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/feeds/atom.xml"/>
+    <subtitle>Think ITセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[「Python 3.15.0」リリース ─ 遅延インポートやfrozendictを導入 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39618</id>
+        <link href="https://thinkit.co.jp/news/39618"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39618.png?itok=Z0_IENSs" type="image/png"/>
+        <updated>2026-10-10T01:45:29.000Z</updated>
+        <summary type="html"><![CDATA[「Python 3.15.0」リリース ─ 遅延インポートやfrozendictを導入 UTF-8を標準エンコーディング化、実験的JITとフリースレッド対応も強化kawahara2026年10月10日シェア ポスト はてブ 優先するニュース提供元に追加 Python Software Foundationは10月9日(現地時間)、プログラミング言語Pythonの最新版「Python 3.15.0」]]></summary>
+        <content type="html"><![CDATA[「Python 3.15.0」リリース ─ 遅延インポートやfrozendictを導入 UTF-8を標準エンコーディング化、実験的JITとフリースレッド対応も強化kawahara2026年10月10日シェア ポスト はてブ 優先するニュース提供元に追加 Python Software Foundationは10月9日(現地時間)、プログラミング言語Pythonの最新版「Python 3.15.0」をリリースした。なお、10月1日にはPython 3.10.22、3.11.17、3.12.15、3.13.16、3.14.8もセキュリティ修正を含む更新版として公開されている。 「Python 3.15.0」はメジャーアップデートリリースに当たり、必要になるまでモジュールの読み込みを遅らせる遅延インポート、変更不能な辞書型「frozendict」、固有の番兵値を作成する「sentinel」などが導入された。また、標準エンコーディングがシステム環境にかかわらずUTF-8となった。 「Python 3.15.0」のハイライトは次の通り。 新しい「frozendict」は作成後に内容を変更できない]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-10T01:45:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「マイナス10個あげます」でアイテムが増えるゲーム ― 数値バリデーションの落とし穴2選 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39587</id>
+        <link href="https://thinkit.co.jp/article/39587"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/95/39587/ren_sec_vulnerability_main_2_0.png?itok=QsVVSiso" type="image/png"/>
+        <updated>2026-10-08T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[株式会社ステラセキュリティ代表の小竹(@tkmru)です。本記事は、先日公開した 「1日1回限定のガチャ」を20連できてしまう ― ゲームAPIで頻出するTOCTOU脆弱性と対策」に続く、ゲームAPIの脆弱性シリーズの第2弾です。元ネタは、2026年3月19日に開催された勉強会「TECH BATON in 東京 〜ゲームアンチチートに学ぶ セキュリティ設計と攻防の舞台裏〜」での登壇「10分で知る ]]></summary>
+        <content type="html"><![CDATA[株式会社ステラセキュリティ代表の小竹(@tkmru)です。本記事は、先日公開した 「1日1回限定のガチャ」を20連できてしまう ― ゲームAPIで頻出するTOCTOU脆弱性と対策」に続く、ゲームAPIの脆弱性シリーズの第2弾です。元ネタは、2026年3月19日に開催された勉強会「TECH BATON in 東京 〜ゲームアンチチートに学ぶ セキュリティ設計と攻防の舞台裏〜」での登壇「10分で知る ゲームが『チートされる』仕組み 〜通信・API・メモリから見る攻撃と防御〜」です(スライドは Speaker Deck で公開しています)。前回は「同時並列リクエストで回数制限をすり抜ける」というレースコンディションの話でしたが、今回は入力値のバリデーションの話です。取り上げるのは次の2つです。マイナス値を受け付けてしまい、減らすはずのアイテムが増えてしまう巨大な値を受け付けてしまい、整数オーバーフローで所持数が壊れるいずれもゲーム固有の問題ではなく、決済・ポイント・在庫管理など数量を扱う Web アプリケーション全般で起こりうる典型的なバグです。「型は検証しているから大丈夫」「エスケープして]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-10-08T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【OSS Summit North America 2026】Netflixのエンジニアが開発したコンテキストを圧縮するオープンソース、Headroomを紹介 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39595</id>
+        <link href="https://thinkit.co.jp/article/39595"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/95/39595/39595_main.jpg?itok=_Qj8YCtj" type="image/jpg"/>
+        <updated>2026-10-08T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026年5月18日から20日の3日間、ミネソタのミネアポリスで開催されたOpen Source Summit North America 2026から、Netflixのエンジニアが解説するHeadroomというオープンソースソフトウェアを紹介する。セッションのタイトルは「Headroom: A Context Optimization Layer for LLM Applications」プレゼ]]></summary>
+        <content type="html"><![CDATA[2026年5月18日から20日の3日間、ミネソタのミネアポリスで開催されたOpen Source Summit North America 2026から、Netflixのエンジニアが解説するHeadroomというオープンソースソフトウェアを紹介する。セッションのタイトルは「Headroom: A Context Optimization Layer for LLM Applications」プレゼンテーションを行ったのはNetflixのTejas Chopra氏だ。動画は以下から視聴できる。●動画：Headroom: A Context Optimization Layer for LLM ApplicationsChopra氏のLinkedInによると2026年6月でNetflixを離れたことになっているが、このカンファレンスが行われた5月の段階ではNetflixの一員であったということだろう。所属はMachine Learning Platform Groupということから、Netflixにおける機械学習や大規模言語モデルの中核にいた人材であることがわかる。個人のデベロッパーとして]]></content>
+        <author>
+            <name>iioka</name>
+        </author>
+        <published>2026-10-08T21:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「NVIDIA 615.78.08」リリース ─ vkd3d-protonの遅延やカクつきを改善 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39617</id>
+        <link href="https://thinkit.co.jp/news/39617"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39617.png?itok=yHK3vMs-" type="image/png"/>
+        <updated>2026-10-08T15:53:47.000Z</updated>
+        <summary type="html"><![CDATA[「NVIDIA 615.78.08」リリース ─ vkd3d-protonの遅延やカクつきを改善 systemdによるサスペンドやWaylandのカラーマネジメントに関する問題も修正kawahara2026年10月9日シェア ポスト はてブ 優先するニュース提供元に追加 NVIDIAは10月7日(現地時間)、Linux向けGPUドライバ「NVIDIA 615.78.08」をリリースした。 「NVI]]></summary>
+        <content type="html"><![CDATA[「NVIDIA 615.78.08」リリース ─ vkd3d-protonの遅延やカクつきを改善 systemdによるサスペンドやWaylandのカラーマネジメントに関する問題も修正kawahara2026年10月9日シェア ポスト はてブ 優先するニュース提供元に追加 NVIDIAは10月7日(現地時間)、Linux向けGPUドライバ「NVIDIA 615.78.08」をリリースした。 「NVIDIA Linux Display Driver」は、NVIDIA製GPUでOpenGL、Vulkan、CUDA、映像処理などのハードウェア機能を利用するためのドライバ。GeForce、NVIDIA RTX、データセンター向けGPUなどに対応する。 「NVIDIA 615.78.08」は、新しい機能やOS対応をProduction Branchに先行して提供するNew Feature Branch(NFB)の正式リリース。Vulkan拡張「VK_NV_low_latency2」のrevision 3に対応し、Direct3D 12をVulkanへ変換するvkd3d-protonで、特にフレーム]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-08T15:53:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「OpenVPN 2.7.8」リリース ─ 認証回避や情報漏えいにつながる脆弱性を修正 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39616</id>
+        <link href="https://thinkit.co.jp/news/39616"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39616.png?itok=zo_gWmY-" type="image/png"/>
+        <updated>2026-10-08T15:35:24.000Z</updated>
+        <summary type="html"><![CDATA[「OpenVPN 2.7.8」リリース ─ 認証回避や情報漏えいにつながる脆弱性を修正 Windows版ではDCOドライバーのローカルDoSにも対応kawahara2026年10月9日シェア ポスト はてブ 優先するニュース提供元に追加 OpenVPN Communityは10月7日(現地時間)、オープンソースのVPNソフトウェア「OpenVPN 2.7.8」をリリースした。 「OpenVPN」は]]></summary>
+        <content type="html"><![CDATA[「OpenVPN 2.7.8」リリース ─ 認証回避や情報漏えいにつながる脆弱性を修正 Windows版ではDCOドライバーのローカルDoSにも対応kawahara2026年10月9日シェア ポスト はてブ 優先するニュース提供元に追加 OpenVPN Communityは10月7日(現地時間)、オープンソースのVPNソフトウェア「OpenVPN 2.7.8」をリリースした。 「OpenVPN」は、SSL/TLSを利用して安全な通信経路を構築するVPNソフトウェア。クライアント／サーバ型のVPNや拠点間接続などに利用でき、Windows、Linux、BSD、macOSなどのプラットフォームに対応する。 「OpenVPN 2.7.8」は、複数のセキュリティ問題を修正した正式リリース。細工した証明書による利用者のなりすましや、悪意のあるVPNサーバーから送信されたDNS検索ドメイン設定によるメモリー情報の漏えい、サービス拒否などの問題が修正されている。 「OpenVPN 2.7.8」のハイライトは次の通り。 「OpenVPN 2.7.8」のCommunity Editionは、Webサイト]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-08T15:35:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Linuxネットワーク標準教科書」について | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39585</id>
+        <link href="https://thinkit.co.jp/article/39585"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/95/39585/ren_linux-nw-kiso_main.png?itok=lDovql7H" type="image/png"/>
+        <updated>2026-10-07T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに「Linuxネットワーク標準教科書」は、特定非営利活動法人エルピーアイジャパンが提供している「標準教科書シリーズ」のうち、ネットワークの学習に利用していただくことを目的として開発、公開している教科書です。「Linux標準教科書シリーズ」は、様々な種類の教科書を提供していますが、特にLinuxの基礎を学習するために以下の3冊が提供されています。・「Linux標準教科書」主にLinuxのコマン]]></summary>
+        <content type="html"><![CDATA[はじめに「Linuxネットワーク標準教科書」は、特定非営利活動法人エルピーアイジャパンが提供している「標準教科書シリーズ」のうち、ネットワークの学習に利用していただくことを目的として開発、公開している教科書です。「Linux標準教科書シリーズ」は、様々な種類の教科書を提供していますが、特にLinuxの基礎を学習するために以下の3冊が提供されています。・「Linux標準教科書」主にLinuxのコマンド操作を学習するための教科書です。・「Linuxサーバー構築標準教科書」主にLinuxを使ってWebサーバー、DNSサーバー、メールサーバーの構築を学習するための教科書です。・「Linuxシステム管理標準教科書」主にLinuxのシステム管理を学習するための教科書です。そして4冊目となる「Linuxネットワーク標準教科書」は、上記3冊で詳細に解説できなかったLinuxネットワークについて補完するために企画、執筆されました。また、従来はPDF版やEPUB版、Kindle版で提供されていましたが、Think ITで連載形式で読むことができるようになりました。もちろん、1冊にまとめられた電子版も入手で]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-10-07T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1日3.6億件の計算を、空冷のまま回せるか――みずほ証券がHPE Cray XD2000で液冷データセンターを新設 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39609</id>
+        <link href="https://thinkit.co.jp/article/39609"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39609/ren_3-list-tech-news_cover.png?itok=9jmW0z7g" type="image/png"/>
+        <updated>2026-10-07T21:25:00.000Z</updated>
+        <summary type="html"><![CDATA[📌 このニュース、3行で押さえるなら 📌みずほ証券と日本ヒューレット・パッカードが、液冷データセンターを新たに構築し、国内の金融業界で初となる直接液冷(DLC)方式を採用した「HPE Cray XD2000」を導入すると発表。今秋から液冷設備やシステム構築、稼働評価等を実施し、2027年4月以降に本番稼働する予定背景にあるのはグローバルマーケッツ部門の計算需要で、デリバティブ評価や市場リスク・信用]]></summary>
+        <content type="html"><![CDATA[📌 このニュース、3行で押さえるなら 📌みずほ証券と日本ヒューレット・パッカードが、液冷データセンターを新たに構築し、国内の金融業界で初となる直接液冷(DLC)方式を採用した「HPE Cray XD2000」を導入すると発表。今秋から液冷設備やシステム構築、稼働評価等を実施し、2027年4月以降に本番稼働する予定背景にあるのはグローバルマーケッツ部門の計算需要で、デリバティブ評価や市場リスク・信用リスクの計量に向けたシミュレーションは1日あたりの計算件数が3.6億件超と年々増加しているDLC方式は空冷方式と比較してキロワットあたり最大20%の性能向上と15%の消費電力削減を実現する。新システムではサーバーノードあたり現行の1.6倍の性能を見込む。第1期として8サーバーノードを導入し、将来のプライベートAI基盤向けGPUサーバーへの展開も検討する📝 Think IT編集部の見解 📝液冷の採用判断は、これまで研究機関やHPC領域の話として語られることが多かった。それが金融機関の業務システムで、しかもデータセンターごと新設する形で出てきたことに、この発表の意味がある。きっかけは明快だ。1日3]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-10-07T21:25:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「OpenSSH 10.6/10.6p1」リリース ─ SSH圧縮を悪用する情報漏えい攻撃に対策 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39615</id>
+        <link href="https://thinkit.co.jp/news/39615"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39615.png?itok=W2G26Bu7" type="image/png"/>
+        <updated>2026-10-07T17:17:43.000Z</updated>
+        <summary type="html"><![CDATA[「OpenSSH 10.6/10.6p1」リリース ─ SSH圧縮を悪用する情報漏えい攻撃に対策 SFTPやGSSAPI認証を強化、ハイブリッド耐量子署名にも対応kawahara2026年10月8日シェア ポスト はてブ 優先するニュース提供元に追加 OpenBSD Projectは10月6日(現地時間)、SSHソフトウェアの最新版「OpenSSH 10.6/10.6p1」をリリースした。 「Op]]></summary>
+        <content type="html"><![CDATA[「OpenSSH 10.6/10.6p1」リリース ─ SSH圧縮を悪用する情報漏えい攻撃に対策 SFTPやGSSAPI認証を強化、ハイブリッド耐量子署名にも対応kawahara2026年10月8日シェア ポスト はてブ 優先するニュース提供元に追加 OpenBSD Projectは10月6日(現地時間)、SSHソフトウェアの最新版「OpenSSH 10.6/10.6p1」をリリースした。 「OpenSSH」は、遠隔システムへのログインやコマンド実行、ファイル転送、ポート転送などを暗号化するSSHプロトコルのオープンソース実装。SSHクライアントとサーバーに加え、scpやsftp、ssh-agentなどの関連ツールを提供する。 「OpenSSH 10.6」は、複数のセキュリティ問題を修正したリリース。SSH接続内の複数チャネルで圧縮辞書を共有することによって暗号文の長さから秘密情報を推測できるサイドチャネル攻撃への対策として、LZ77辞書圧縮が無効化された。また、SFTPの再帰コピーやGSSAPI認証、トンネル転送などの処理も強化されている。 ハイライトは次の通り。 なお、scpの「-]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-07T17:17:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Raspberry Pi OS」2026年10月6日版リリース ─ デスクトップ環境を改善 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39614</id>
+        <link href="https://thinkit.co.jp/news/39614"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39614.png?itok=qpXUGtZU" type="image/png"/>
+        <updated>2026-10-07T16:51:29.000Z</updated>
+        <summary type="html"><![CDATA[「Raspberry Pi OS」2026年10月6日版リリース ─ デスクトップ環境を改善 PC／Mac向け「Raspberry Pi Desktop」もDebian 13ベースの64bit版として公開kawahara2026年10月8日シェア ポスト はてブ Raspberry Piは10月6日(現地時間)、公式OS「Raspberry Pi OS」の最新インストールイメージを公開した。 「R]]></summary>
+        <content type="html"><![CDATA[「Raspberry Pi OS」2026年10月6日版リリース ─ デスクトップ環境を改善 PC／Mac向け「Raspberry Pi Desktop」もDebian 13ベースの64bit版として公開kawahara2026年10月8日シェア ポスト はてブ Raspberry Piは10月6日(現地時間)、公式OS「Raspberry Pi OS」の最新インストールイメージを公開した。 「Raspberry Pi OS」は、DebianをベースにRaspberry Piシリーズ向けのデスクトップ環境や設定ツール、ハードウェア対応機能などを組み込んだLinuxディストリビューション。デスクトップ版、推奨アプリケーションを追加したFull版、デスクトップ環境を含まないLite版が用意されている。 「Raspberry Pi OS」の2026年10月6日版は、Debian 13「Trixie」をベースとし、64bit版および32bit版にLinux 6.18.50と最新のRaspberry Piファームウェアを収録したもの。ハイライトは次の通り。 同時に、一般的なPCとMac向けの「R]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-07T16:51:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「mold 3.0.0」リリース ─ 実装をC++からRustへ全面移行 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39613</id>
+        <link href="https://thinkit.co.jp/news/39613"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39613.png?itok=_ZP8Rw28" type="image/png"/>
+        <updated>2026-10-07T16:05:23.000Z</updated>
+        <summary type="html"><![CDATA[「mold 3.0.0」リリース ─ 実装をC++からRustへ全面移行 前バージョンmold 2.42.1との互換性を維持kawahara2026年10月8日シェア ポスト はてブ mold teamは10月5日(現地時間)、高速リンカー「mold 3.0.0」をリリースした。 「mold」は、コンパイラが生成したオブジェクトファイルを実行ファイルや共有ライブラリへリンクするオープンソースのリン]]></summary>
+        <content type="html"><![CDATA[「mold 3.0.0」リリース ─ 実装をC++からRustへ全面移行 前バージョンmold 2.42.1との互換性を維持kawahara2026年10月8日シェア ポスト はてブ mold teamは10月5日(現地時間)、高速リンカー「mold 3.0.0」をリリースした。 「mold」は、コンパイラが生成したオブジェクトファイルを実行ファイルや共有ライブラリへリンクするオープンソースのリンカー。並列処理と効率的なデータ構造による高速なリンク処理を特徴とし、GNU ldやLLVM lldなどの代替として利用できる。 「mold 3.0.0」は、実装をC++からRustへ全面的に書き直した初の正式版。従来のC++版は2.42.1が最終版となり、今後の3.x系列ではGNU ldとの互換性、特にリンカースクリプトへの対応を強化し、Linuxディストリビューションの既定リンカーとして採用可能な水準を目指す。 「mold 3.0.0」のハイライトは次の通り。 Rustへの移行後も、リンク性能はmold 2.42.1と同等とされている。開発チームはすべての対応アーキテクチャーでテストを実行し]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-07T16:05:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「C#」の「WinUI」でデスクトップゲーム「Color」を開発してみよう | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39579</id>
+        <link href="https://thinkit.co.jp/article/39579"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/95/39579/ren_game-prog_etc_cover.png?itok=8L5HWrg0" type="image/png"/>
+        <updated>2026-10-06T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこの連載では、さまざまなプログラミング言語やライブラリで同じゲームを開発することで、容易にそのプログラミング言語に入門します。第12回の今回はプログラミング言語「C#」を使って、次のURLのようなColorゲームを作ります。こちらからアセットをダウンロードしておいてください。ColorゲームについてColorゲームの内容は第1回でも解説した通り、ゲームを開始したら、赤緑青の色ブロックをクリ]]></summary>
+        <content type="html"><![CDATA[はじめにこの連載では、さまざまなプログラミング言語やライブラリで同じゲームを開発することで、容易にそのプログラミング言語に入門します。第12回の今回はプログラミング言語「C#」を使って、次のURLのようなColorゲームを作ります。こちらからアセットをダウンロードしておいてください。ColorゲームについてColorゲームの内容は第1回でも解説した通り、ゲームを開始したら、赤緑青の色ブロックをクリックします。すると背景色にその色が混ぜられるので、どんどんクリックして真っ白な背景にしていこうというゲームです。プログラミング言語についてC#はMicrosoftが開発した言語で、デスクトップアプリ(Windows)、Webアプリ(ASP.NET)、ゲーム開発(特にUnity)などに使われています。一度「中間言語(IL)」にコンパイルし、実行時にJITコンパイルするハイブリッド型のコンパイラ言語で、オブジェクト指向でデータ型が厳密に管理されるためバグが起きにくく、「.NET」という仕組みで多くのライブラリの機能がすぐに使えます。WinUIについて「WinUI」は「Windows UI Libr]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-10-06T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【KubeCon Japan】CNCFのリサーチ「クラウドネイティブ開発の現状」から見える日本のITが抱える問題点を考察する | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39594</id>
+        <link href="https://thinkit.co.jp/article/39594"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/95/39594/39594_main.jpg?itok=suk5PK7U" type="image/jpg"/>
+        <updated>2026-10-06T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Cloud Native Computing Foundation（CNCF）がKubeCon＋CloudNativeCon Japan 2026に合わせて公開した、日本におけるクラウドネイティブなシステム開発および運用に関する調査を紹介し、同時に日本が抱える問題点に関する考察をお届けする。リサーチはCNCFとSlashDataの共同で行われ、リサーチの部分は主にSlashDataが担当、2025]]></summary>
+        <content type="html"><![CDATA[Cloud Native Computing Foundation（CNCF）がKubeCon＋CloudNativeCon Japan 2026に合わせて公開した、日本におけるクラウドネイティブなシステム開発および運用に関する調査を紹介し、同時に日本が抱える問題点に関する考察をお届けする。リサーチはCNCFとSlashDataの共同で行われ、リサーチの部分は主にSlashDataが担当、2025年12月から2026年1月にかけて世界規模で実施され、95ヶ国から12500人が参加した。アジアからの回答者は全体の9％に相当するという。リサーチの要約については以下のページから参照可能だ。●リサーチのページ：日本におけるクラウドネイティブ開発の現状 2026このレポートのタイトルは「日本におけるクラウドネイティブ開発の現状2026」、クラウドネイティブなシステムの開発と運用の現状を世界のデータと比較して考察するという内容だ。このレポートの冒頭で日本のクラウドネイティブな開発者の数が95万人になったことを紹介。しかしながら2025年のQ3の数からは減少している。この95万人はThe Linux]]></content>
+        <author>
+            <name>iioka</name>
+        </author>
+        <published>2026-10-06T21:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIを使いたいのに、コードを外に出せない――AIコーディング支援「IBM Bob」がオンプレミスとソブリンクラウドに対応 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39601</id>
+        <link href="https://thinkit.co.jp/article/39601"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39601/ren_3-list-tech-news_cover.png?itok=ZiTtya4J" type="image/png"/>
+        <updated>2026-10-05T21:25:00.000Z</updated>
+        <summary type="html"><![CDATA[📌 このニュース、3行で押さえるなら 📌IBMが、AIエージェント駆動の開発支援ツール「IBM Bob」のセルフホステッド型を発表。オンプレミス、プライベートクラウド、ソブリンクラウド、エアギャップなど自社で管理できる環境でAIを活用したソフトウェア開発を行えるようになる多くのAIコーディングツールがデータを外部サービスへ移す必要があるのに対し、セルフホステッド型では顧客のコード、アプリケーション]]></summary>
+        <content type="html"><![CDATA[📌 このニュース、3行で押さえるなら 📌IBMが、AIエージェント駆動の開発支援ツール「IBM Bob」のセルフホステッド型を発表。オンプレミス、プライベートクラウド、ソブリンクラウド、エアギャップなど自社で管理できる環境でAIを活用したソフトウェア開発を行えるようになる多くのAIコーディングツールがデータを外部サービスへ移す必要があるのに対し、セルフホステッド型では顧客のコード、アプリケーションコンテキスト、データが既に存在している環境内で、AI活用の開発およびモダナイゼーション機能をデプロイできるライセンス契約済みの対応モデルをオンプレミス環境で利用しインターネットから隔離されたエアギャップ環境で動かせるほか、ハイブリッド構成により対応する外部モデルサービスと連携させることも可能📝 Think IT編集部の見解 📝この発表が応えているのは、AIコーディング支援をめぐって多くの現場で起きている膠着状態だ。生産性向上の効果は認識されている。しかしソースコードは知的財産であり、扱うデータには規制がかかる。外部サービスへコードを送信する構成が社内規定で通らず、検討段階で止まっているケースは]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-10-05T21:25:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LF Energyがミートアップを実施。ヨーロッパとの違いが際立ったプレゼンテーションを紹介 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39593</id>
+        <link href="https://thinkit.co.jp/article/39593"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/95/39593/39593_main.jpg?itok=7es8HrG9" type="image/jpg"/>
+        <updated>2026-10-05T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Linux Foundation（LF）配下のLF Energyがミートアップを都内で開催した。ミートアップではLF EnergyのエグゼクティブディレクターのAlex Thornton氏が来日し、プレゼンテーションを行った。LF Energyは2018年に設立されたLFの下部組織で、主にヨーロッパの電力、エネルギー業界のベンダーが参加するコミュニティであり、日本からは日立製作所がメンバー]]></summary>
+        <content type="html"><![CDATA[The Linux Foundation（LF）配下のLF Energyがミートアップを都内で開催した。ミートアップではLF EnergyのエグゼクティブディレクターのAlex Thornton氏が来日し、プレゼンテーションを行った。LF Energyは2018年に設立されたLFの下部組織で、主にヨーロッパの電力、エネルギー業界のベンダーが参加するコミュニティであり、日本からは日立製作所がメンバーとして加入している。2026年7月21日に都内で開催されたミートアップであったが、参加者は約10名、時間も15時から17時の2時間と短く、エグゼクティブディレクターのプレゼンテーションと日立の研究所所属のエンジニアがLF Energyのプロジェクトをデモを通して簡単に紹介するという内容となった。この稿ではAlex Thornton氏のプレゼンテーションを紹介する。 プレゼンテーションのタイトルは「Intro LF Energy: Past, Present and Future」というもので、LF Energyを知らない人向けの内容となっている。しかしながら数少ない参加者はすでにLF Ener]]></content>
+        <author>
+            <name>iioka</name>
+        </author>
+        <published>2026-10-05T21:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「OpenMandriva ROME 26.09」リリース ─ Linux 7.2.7とPlasma 6.7.5を収録 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39598</id>
+        <link href="https://thinkit.co.jp/news/39598"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39598.png?itok=1KYUlivE" type="image/png"/>
+        <updated>2026-10-05T05:21:52.000Z</updated>
+        <summary type="html"><![CDATA[「OpenMandriva ROME 26.09」リリース ─ Linux 7.2.7とPlasma 6.7.5を収録 LLVM/Clang 23とRPM 6.1.0へ更新、AI／GPU環境やSnap対応も強化kawahara2026年10月5日シェア ポスト はてブ 優先するニュース提供元に追加 OpenMandriva Projectは10月1日(現地時間)、Linuxディストリビューション「]]></summary>
+        <content type="html"><![CDATA[「OpenMandriva ROME 26.09」リリース ─ Linux 7.2.7とPlasma 6.7.5を収録 LLVM/Clang 23とRPM 6.1.0へ更新、AI／GPU環境やSnap対応も強化kawahara2026年10月5日シェア ポスト はてブ 優先するニュース提供元に追加 OpenMandriva Projectは10月1日(現地時間)、Linuxディストリビューション「OpenMandriva ROME 26.09」をリリースした。 「OpenMandriva」は、RPMパッケージを採用する独立系のLinuxディストリビューション。ROMEは継続的に新しいソフトウェアを提供するローリングリリース版で、今回の26.09は既存利用者へ先行して提供されていた更新を反映した新しいインストールイメージとなっている。 「OpenMandriva ROME 26.09」ではカーネルとしてLinux 7.2.7が採用され、既定のコンパイラがLLVM/Clang 23に更新された。RPM 6.1.0やGCC 16.2.0、glibc 2.44など開発・実行基盤も更新され、デス]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-05T05:21:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Parrot OS 7.4」リリース ─ AnonSurf 6.0を刷新、最適化ISOを正式提供 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39597</id>
+        <link href="https://thinkit.co.jp/news/39597"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39597.png?itok=wt8i7DYe" type="image/png"/>
+        <updated>2026-10-05T04:31:59.000Z</updated>
+        <summary type="html"><![CDATA[「Parrot OS 7.4」リリース ─ AnonSurf 6.0を刷新、最適化ISOを正式提供 Linux 7.1.13を収録、Rocket 2.0やARMイメージ、初期設定ツールも強化kawahara2026年10月5日シェア ポスト はてブ 優先するニュース提供元に追加 Parrot Securityは10月3日(現地時間)、セキュリティを重視したLinuxディストリビューション「Parr]]></summary>
+        <content type="html"><![CDATA[「Parrot OS 7.4」リリース ─ AnonSurf 6.0を刷新、最適化ISOを正式提供 Linux 7.1.13を収録、Rocket 2.0やARMイメージ、初期設定ツールも強化kawahara2026年10月5日シェア ポスト はてブ 優先するニュース提供元に追加 Parrot Securityは10月3日(現地時間)、セキュリティを重視したLinuxディストリビューション「Parrot OS 7.4」をリリースした。 「Parrot OS」はDebian 13をベースとし、ペネトレーションテスト、デジタルフォレンジック、リバースエンジニアリング、プライバシー保護などの用途を想定したLinuxディストリビューション。多数のセキュリティツールを収録するSecurity Editionのほか、日常利用や開発向けのHome Editionなどを提供している。 「Parrot OS 7.4」では、通信をTor経由に切り替える「AnonSurf」が全面的に書き直された。初期設定ツール「Discovery」やコンテナ化されたセキュリティツールを管理する「Rocket」も強化され、対応]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-05T04:31:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【クラウドネイティブ会議】コンテナイメージの脆弱性をどう減らすか ―― 依存関係を最小化する新たな安全設計 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39592</id>
+        <link href="https://thinkit.co.jp/article/39592"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/95/39592/39592_main.jpg?itok=tbUzLjhA" type="image/jpg"/>
+        <updated>2026-10-04T21:01:00.000Z</updated>
+        <summary type="html"><![CDATA[クラウドネイティブ会議のセッション「脆弱性を削減し、安全なコンテナイメージを作るための新しいアプローチ：Hardened Container」では、Docker, Inc.のStrategic Solutions Engineerである根本征氏が、コンテナイメージに潜む依存関係と脆弱性の問題を解説した。OSや言語ランタイム、各種ライブラリなど多数のOSSを含むコンテナイメージは、ソフトウェアサプラ]]></summary>
+        <content type="html"><![CDATA[クラウドネイティブ会議のセッション「脆弱性を削減し、安全なコンテナイメージを作るための新しいアプローチ：Hardened Container」では、Docker, Inc.のStrategic Solutions Engineerである根本征氏が、コンテナイメージに潜む依存関係と脆弱性の問題を解説した。OSや言語ランタイム、各種ライブラリなど多数のOSSを含むコンテナイメージは、ソフトウェアサプライチェーン攻撃の標的になりやすい。本セッションでは、安全なイメージを選ぶ基準に加え、依存関係や攻撃対象領域を最小化する「Hardened Container Images」を紹介。Docker Hardened Imagesへの移行デモを交えながら、脆弱性を後から追いかけるのではなく、初めから安全性を高めるアプローチを示した。多数の依存関係が広げるコンテナの攻撃対象領域コンテナイメージは、開発者が作成したアプリケーションコードだけで構成されているわけではない。ベースイメージに含まれるOSや言語ランタイム、OSパッケージ、npmやpipなどで導入するアプリケーションの依存パッケージを含め、多数の]]></content>
+        <author>
+            <name>iioka</name>
+        </author>
+        <published>2026-10-04T21:01:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Meta、新型VRデバイスや新型AIグラスを多数発表 ほか | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39591</id>
+        <link href="https://thinkit.co.jp/article/39591"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/95/39591/39591_main.jpg?itok=TYPPzSbz" type="image/jpg"/>
+        <updated>2026-10-04T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[今週も、バーチャル領域の最新動向をお届けします。Metaからは、重さ約100グラムの新型メガネ型VRデバイス「Meta VR Glasses」向けの開発環境であるv207 SDKの公開や、AIグラス向け開発環境の拡充、さらに文章入力で2D・3Dゲームを制作できる「Horizon Create」と「Horizon Studio」の発表など、開発支援に関する注目のアップデートが相次いで発表されました。]]></summary>
+        <content type="html"><![CDATA[今週も、バーチャル領域の最新動向をお届けします。Metaからは、重さ約100グラムの新型メガネ型VRデバイス「Meta VR Glasses」向けの開発環境であるv207 SDKの公開や、AIグラス向け開発環境の拡充、さらに文章入力で2D・3Dゲームを制作できる「Horizon Create」と「Horizon Studio」の発表など、開発支援に関する注目のアップデートが相次いで発表されました。また国内の社会実装事例として、株式会社G1 companyがのぞくだけで360度映像を楽しめる「VR双眼鏡」の法人・自治体向け販売およびレンタルを開始したニュースをお伝えします。Meta、新型デバイス「Meta VR Glasses」の開発環境を公開Metaは2027年春に発売を予定している、重さ約100グラムのメガネ型VRデバイス「Meta VR Glasses」に向け、アプリ開発ツール群「v207 SDK」を公開しました。本機はOSやストアがMeta Questと共通で、操作は視線と手が中心となります。視野角は約70×66度と狭いものの、高解像度で文字を読みやすく、重要なUI要素を中央に配]]></content>
+        <author>
+            <name>iioka</name>
+        </author>
+        <published>2026-10-04T21:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Samba 4.23.13」リリース ─ KDC暗号化設定の解析に対応 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39596</id>
+        <link href="https://thinkit.co.jp/news/39596"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39596.png?itok=KPDlJIqM" type="image/png"/>
+        <updated>2026-10-04T13:46:48.000Z</updated>
+        <summary type="html"><![CDATA[「Samba 4.23.13」リリース ─ KDC暗号化設定の解析に対応 SMB3署名やCTDBなど7件の不具合を修正、winbindのクラッシュやPOSIX ACLなどkawahara2026年10月4日シェア ポスト はてブ 優先するニュース提供元に追加 Samba Teamは10月1日(現地時間)、オープンソースのファイル／プリンター共有ソフトウェア「Samba 4.23.13」をリリースし]]></summary>
+        <content type="html"><![CDATA[「Samba 4.23.13」リリース ─ KDC暗号化設定の解析に対応 SMB3署名やCTDBなど7件の不具合を修正、winbindのクラッシュやPOSIX ACLなどkawahara2026年10月4日シェア ポスト はてブ 優先するニュース提供元に追加 Samba Teamは10月1日(現地時間)、オープンソースのファイル／プリンター共有ソフトウェア「Samba 4.23.13」をリリースした。 「Samba」は、Windowsで利用されるSMBプロトコルをオープンソースで実装したソフトウェア。LinuxやBSDなどのUnix系OSとWindowsとのファイル／プリンター共有に利用できるほか、Active Directory互換のドメインコントローラとしても動作する。 「Samba 4.23.13」は、Samba 4.23系列の最新安定版となるアップデートリリース。KDC暗号化設定の解析対応や、SMB3のセッション確立時における署名処理、クラスター構成で利用されるCTDB、winbind、POSIX ACLなどに関する7件の不具合が修正された。 「Samba 4.23.13」のハ]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-04T13:46:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Apache HTTP Server 2.4.69」リリース ─ 20件の脆弱性を修正 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39590</id>
+        <link href="https://thinkit.co.jp/news/39590"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39590.png?itok=nkS5FCtx" type="image/png"/>
+        <updated>2026-10-03T14:23:14.000Z</updated>
+        <summary type="html"><![CDATA[「Apache HTTP Server 2.4.69」リリース ─ 20件の脆弱性を修正 mod_vhost_aliasのバッファーオーバーフローやmod_http2のuse-after-freeなどに対応kawahara2026年10月3日シェア ポスト はてブ 優先するニュース提供元に追加 Apache Software Foundationは10月1日(現地時間)、オープンソースのWebサー]]></summary>
+        <content type="html"><![CDATA[「Apache HTTP Server 2.4.69」リリース ─ 20件の脆弱性を修正 mod_vhost_aliasのバッファーオーバーフローやmod_http2のuse-after-freeなどに対応kawahara2026年10月3日シェア ポスト はてブ 優先するニュース提供元に追加 Apache Software Foundationは10月1日(現地時間)、オープンソースのWebサーバー「Apache HTTP Server 2.4.69」をリリースした。 「Apache HTTP Server 2.4.69」は、2.4系列の最新GA版となるアップデートリリース。20件の脆弱性が修正されており、Apacheの深刻度評価では5件が「moderate」、15件が「low」となっている。Apache HTTP Server Projectは、従来のすべてのバージョンからのアップデート適用を推奨している。 「Apache HTTP Server 2.4.69」のハイライトは次の通り。 修正された脆弱性の重大性は、5件が「moderate」、15件が「low」となっているものの、バ]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-03T14:23:14.000Z</published>
+    </entry>
+</feed>
