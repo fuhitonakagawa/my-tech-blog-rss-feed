@@ -1,0 +1,812 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "AWS 日本語｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-ja/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-ja/feeds/feed.json",
+    "description": "AWS 日本語セクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "5e4e050a31df15f72df597c7f3e43a9146ada015",
+            "content_html": "単一のアラートだけでは、多段階攻撃の全体像は見えません。この記事では、Amazon GuardDuty 拡張脅威検出に、データ分類、通常のアクセスパターン、リソースの所有関係、変更ウィンドウといったお客様のビジネスコンテキストを重ね合わせる方法を説明します。CloudTrail、VPC フローログ、Route 53 Resolver クエリログを CloudWatch Logs Insights で相関付ける 4 つのパターンを紹介し、Lambda、Amazon SNS、EventBridge Scheduler を使った相関ルールの自動化手順も解説します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/detecting-multi-stage-attacks-on-aws-a-guide-to-cross-service-signal-correlation/",
+            "title": "AWS での多段階攻撃の検出: サービス横断のシグナル相関分析ガイド | Amazon Web Services ブログ",
+            "summary": "単一のアラートだけでは、多段階攻撃の全体像は見えません。この記事では、Amazon GuardDuty 拡張脅威検出に、データ分類、通常のアクセスパターン、リソースの所有関係、変更ウィンドウといったお客様のビジネスコンテキストを重ね合わせる方法を説明します。CloudTrail、VPC フローログ、Route 53 Resolver クエリログを CloudWatch Logs Insights ",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/15/main-image-multi-stage-attack.jpg",
+            "date_modified": "2026-10-16T08:09:37.000Z",
+            "date_published": "2026-10-16T08:09:37.000Z",
+            "author": {
+                "name": "中島 章博"
+            },
+            "tags": [
+                "Advanced (300)",
+                "Amazon CloudWatch",
+                "Amazon GuardDuty",
+                "Amazon Route 53",
+                "AWS CloudTrail",
+                "Best Practices",
+                "Security, Identity, & Compliance",
+                "Technical How-to",
+                "AWS Cloudtrail",
+                "AWS Security Hub",
+                "Incident response",
+                "Security Blog",
+                "Shared Responsibility Model",
+                "threat detection"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS での多段階攻撃の検出: サービス横断のシグナル相関分析ガイド",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "b71c05e2c4c26a459525b05722b44d6e1ab4d4f2",
+            "content_html": "自律型ペネトレーションテストエージェントである AWS Security Agent (now part of AWS Continuum) を、最近公開された実在の CVE 37 件で評価しました。その結果、37 件中 33 件 (89.2%) で、意図された脆弱性をエンドツーエンドでエクスプロイトしました。本記事では、コンタミネーションを低減した CTF 形式のベンチマークの設計と整合性監査の仕組みを紹介します。あわせて、代表的な攻撃チェーン、誤検知のフィルタリング、ターゲットをダウンさせた失敗事例から得たガードレールの重要性についても説明します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/aws-security-agent-now-part-of-aws-continuum-exploited-33-of-37-new-real-world-cves/",
+            "title": "AWS Security Agent (now part of AWS Continuum) が新たに公開された実在の CVE 37 件中 33 件のエクスプロイトに成功 | Amazon Web Services ブログ",
+            "summary": "自律型ペネトレーションテストエージェントである AWS Security Agent (now part of AWS Continuum) を、最近公開された実在の CVE 37 件で評価しました。その結果、37 件中 33 件 (89.2%) で、意図された脆弱性をエンドツーエンドでエクスプロイトしました。本記事では、コンタミネーションを低減した CTF 形式のベンチマークの設計と整合性監査の",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/15/hero-cve-continuum-1.jpg",
+            "date_modified": "2026-10-16T08:09:03.000Z",
+            "date_published": "2026-10-16T08:09:03.000Z",
+            "author": {
+                "name": "中島 章博"
+            },
+            "tags": [
+                "Artificial Intelligence",
+                "Generative AI",
+                "Security, Identity, & Compliance",
+                "Security Blog"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS Security Agent (now part of AWS Continuum) が新たに公開された実在の CVE 37 件中 33 件のエクスプロイトに成功",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "9cdd7946bc4304d0d661a79310c65b6060504ed4",
+            "content_html": "物流業界では、EC 市場の急拡大、販売チャネルの多様化、商品ライフサイクルの短期化が同時に進み、サプライチェー […]",
+            "url": "https://aws.amazon.com/jp/blogs/news/nx-dcx/",
+            "title": "日本通運の AI 搭載型物流 Web アプリ「DCX」— AWS で実現する次世代サプライチェーンの可視化と予測 | Amazon Web Services ブログ",
+            "summary": "物流業界では、EC 市場の急拡大、販売チャネルの多様化、商品ライフサイクルの短期化が同時に進み、サプライチェー […]",
+            "image": "https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png",
+            "date_modified": "2026-10-16T07:54:07.000Z",
+            "date_published": "2026-10-16T07:54:07.000Z",
+            "author": {
+                "name": "Makoto Yokoyama"
+            },
+            "tags": [
+                "Amazon Bedrock AgentCore",
+                "Amazon Elastic Container Service",
+                "Amazon Redshift",
+                "AWS Fargate"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "日本通運の AI 搭載型物流 Web アプリ「DCX」— AWS で実現する次世代サプライチェーンの可視化と予測",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "8f180bd7c3ff9931bd2a772c563826d33f47b777",
+            "content_html": "Vercel でウェブおよび AI アプリケーションを構築している開発者は、Vercel Marketplac […]",
+            "url": "https://aws.amazon.com/jp/blogs/news/amazon-s3-vercel-marketplace-v0/",
+            "title": "Amazon S3 が Vercel Marketplace と v0 by Vercel で入手可能になりました | Amazon Web Services ブログ",
+            "summary": "Vercel でウェブおよび AI アプリケーションを構築している開発者は、Vercel Marketplac […]",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/16/2026-s3-vercel-thum-1.jpg",
+            "date_modified": "2026-10-16T04:32:19.000Z",
+            "date_published": "2026-10-16T04:32:19.000Z",
+            "author": {
+                "name": "Daniel Abib"
+            },
+            "tags": [
+                "Amazon S3 Tables",
+                "Amazon Simple Storage Service (S3)"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon S3 が Vercel Marketplace と v0 by Vercel で入手可能になりました",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "5c3dbee4b1655d237db5ba58371f06d144703470",
+            "content_html": "Kiro-CLI と AWS MCP Servers を組み合わせ、複雑な SAP ランドスケープのネットワークトラブルシューティングを数時間から数分へ短縮するエージェント型 AI アプローチを解説します。VPC Flow Logs、セキュリティグループ、Transit Gateway などを自然言語のプロンプトで診断し、AWS CloudTrail による原因特定や CloudWatch を用いたキャパシティ予測を実現します。ネットワークヘルスチェック、504 エラーの根本原因分析、クロス AZ レイテンシー、セキュリティグループのドリフト検出、キャパシティ予測という5つの実例を通じて、運用の効率化を紹介します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/accelerate-sap-network-troubleshooting-from-hours-to-minutes-agentic-ai-approach/",
+            "title": "SAP ネットワークのトラブルシューティングを数時間から数分へ加速する：エージェント型 AI アプローチ | Amazon Web Services ブログ",
+            "summary": "Kiro-CLI と AWS MCP Servers を組み合わせ、複雑な SAP ランドスケープのネットワークトラブルシューティングを数時間から数分へ短縮するエージェント型 AI アプローチを解説します。VPC Flow Logs、セキュリティグループ、Transit Gateway などを自然言語のプロンプトで診断し、AWS CloudTrail による原因特定や CloudWatch を用い",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/09/25/network_featured_kironetwork_figure1-1260x388.png",
+            "date_modified": "2026-10-16T03:26:37.000Z",
+            "date_published": "2026-10-16T03:26:37.000Z",
+            "author": {
+                "name": "Koshi Matsumoto"
+            },
+            "tags": [
+                "Artificial Intelligence",
+                "Best Practices",
+                "Kiro",
+                "SAP on AWS",
+                "#saponaws",
+                "SAP"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "SAP ネットワークのトラブルシューティングを数時間から数分へ加速する：エージェント型 AI アプローチ",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "160e1c46388a23bc661c886159b2b6475f79bd84",
+            "content_html": "本日、Moonshot AI の Kimi K3 モデルが Kiro で利用可能になったことをお知らせします。Kimi K3 は、Moonshot AI によると世界初の 2.8T パラメーターのオープンウェイトモデルで、これをエージェンティックな開発ワークフローの中で直接使えるようになります。100 万トークンのコンテキストウィンドウ、2.8 兆のパラメーター、トークン効率の高い Mixture-of-Experts アーキテクチャを備えた Kimi K3 は、複雑なソフトウェア開発において性能と効率を両立させます。また、Kiro の特徴である仕様駆動で正しさを最優先するアプローチとも相性の良いモデルです。",
+            "url": "https://aws.amazon.com/jp/blogs/news/kimi-k3/",
+            "title": "Kimi K3 が Kiro で利用可能になりました | Amazon Web Services ブログ",
+            "summary": "本日、Moonshot AI の Kimi K3 モデルが Kiro で利用可能になったことをお知らせします。Kimi K3 は、Moonshot AI によると世界初の 2.8T パラメーターのオープンウェイトモデルで、これをエージェンティックな開発ワークフローの中で直接使えるようになります。100 万トークンのコンテキストウィンドウ、2.8 兆のパラメーター、トークン効率の高い Mixture",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/16/kiro-kimi-k3.jpg",
+            "date_modified": "2026-10-16T01:31:37.000Z",
+            "date_published": "2026-10-16T01:31:37.000Z",
+            "author": {
+                "name": "稲田大陸"
+            },
+            "tags": [
+                "Amazon Q Developer",
+                "Developer Tools",
+                "Kiro"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Kimi K3 が Kiro で利用可能になりました",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "4b26dba5c60e47346742fcafaf10886883834cda",
+            "content_html": "2026年9月9日、経済産業省と国立研究開発法人新エネルギー・産業技術総合開発機構 (NEDO) が実施する […]",
+            "url": "https://aws.amazon.com/jp/blogs/news/geniac-cycle4-robotics-kick-off/",
+            "title": "経済産業省 GENIAC ロボット基盤モデルの研究開発における採択事業者への支援を開始 | Amazon Web Services ブログ",
+            "summary": "2026年9月9日、経済産業省と国立研究開発法人新エネルギー・産業技術総合開発機構 (NEDO) が実施する […]",
+            "image": "https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2020/06/03/Blog-Post_thumbnail.png",
+            "date_modified": "2026-10-16T01:18:56.000Z",
+            "date_published": "2026-10-16T01:18:56.000Z",
+            "author": {
+                "name": "Yoko Tsukamoto"
+            },
+            "tags": [
+                "General"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "経済産業省 GENIAC ロボット基盤モデルの研究開発における採択事業者への支援を開始",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "db45b1ace9be0e858cc7fd27e0b2d3f20a0330e1",
+            "content_html": "半導体の検証チームが毎晩生成する大量の EDA ログを、データを移動せずに AI で分析するアーキテクチャを紹介します。Amazon S3 Access Points を使って Amazon FSx for NetApp ONTAP 上のログに S3 API でアクセスし、Amazon Bedrock AgentCore と Amazon Quick により、リグレッションテストで失敗した原因の切り分けを自然言語の質問で行います。",
+            "url": "https://aws.amazon.com/jp/blogs/news/enable-zero-copy-access-to-aws-services-on-amazon-fsx-for-netapp-ontap-with-amazon-s3-access-points/",
+            "title": "Amazon S3 Access Points で Amazon FSx for NetApp ONTAP 上のデータに AWS サービスからゼロコピーでアクセスする | Amazon Web Services ブログ",
+            "summary": "半導体の検証チームが毎晩生成する大量の EDA ログを、データを移動せずに AI で分析するアーキテクチャを紹介します。Amazon S3 Access Points を使って Amazon FSx for NetApp ONTAP 上のログに S3 API でアクセスし、Amazon Bedrock AgentCore と Amazon Quick により、リグレッションテストで失敗した原因の切",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/16/fsxn-s3ap-featured-fig01-918x459-1.png",
+            "date_modified": "2026-10-16T00:56:58.000Z",
+            "date_published": "2026-10-16T00:56:58.000Z",
+            "author": {
+                "name": "Ken Sakai"
+            },
+            "tags": [
+                "Amazon Bedrock AgentCore",
+                "Amazon FSx for NetApp ONTAP",
+                "Amazon Quick Suite",
+                "Amazon Simple Storage Service (S3)",
+                "Industries",
+                "Intermediate (200)",
+                "Semiconductor",
+                "Technical How-to",
+                "AWS for Industrial",
+                "AWS Semiconductor"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon S3 Access Points で Amazon FSx for NetApp ONTAP 上のデータに AWS サービスからゼロコピーでアクセスする",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "659a740459fb82092e5dbf179ab4fd4f8396a270",
+            "content_html": "金融サービスでエージェンティック AI をデプロイするには、AI 固有のリスクに対処する追加のセキュリティ統制が必要です。この記事では、説明可能性と説明責任を支える包括的なオブザーバビリティときめ細かなアクセス制御に焦点を当て、7 つの中核的な設計原則を説明します。さらに、Amazon Bedrock AgentCore や Amazon CloudWatch を活用した監視、最小権限、ガードレール、マルチエージェントワークフローの管理など、規制要件を満たしながら安全に導入するための実装ガイダンスを紹介します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/preparing-for-agentic-ai-a-financial-services-approach/",
+            "title": "エージェンティック AI への備え: 金融サービスにおけるセキュリティアプローチ | Amazon Web Services ブログ",
+            "summary": "金融サービスでエージェンティック AI をデプロイするには、AI 固有のリスクに対処する追加のセキュリティ統制が必要です。この記事では、説明可能性と説明責任を支える包括的なオブザーバビリティときめ細かなアクセス制御に焦点を当て、7 つの中核的な設計原則を説明します。さらに、Amazon Bedrock AgentCore や Amazon CloudWatch を活用した監視、最小権限、ガードレー",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/09/06/Blog-Post_thumbnail.png",
+            "date_modified": "2026-10-16T00:07:00.000Z",
+            "date_published": "2026-10-16T00:07:00.000Z",
+            "author": {
+                "name": "中島 章博"
+            },
+            "tags": [
+                "Security, Identity, & Compliance",
+                "Security Blog"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "エージェンティック AI への備え: 金融サービスにおけるセキュリティアプローチ",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "f7d3ef1ae625c4eeff968a7f64dbd9245f05964f",
+            "content_html": "AWS が NIST CAISI の情報提供依頼 (RFI) に提出した回答を基に、エージェンティック AI の 4 つのセキュリティ原則を紹介します。4 つの原則は、セキュアな開発ライフサイクル、従来のセキュリティ制御の継続適用、エージェントの外部に置く決定論的な制御 (セキュリティボックス)、評価に基づく段階的な自律性の拡大です。さらに、Amazon Bedrock AgentCore によるコンピューティングの分離、アイデンティティとアクセス管理、ポリシーの適用、オブザーバビリティといったアーキテクチャの構成要素も説明します。",
+            "url": "https://aws.amazon.com/jp/blogs/news/four-security-principles-for-agentic-ai-systems/",
+            "title": "エージェンティック AI システムのための 4 つのセキュリティ原則 | Amazon Web Services ブログ",
+            "summary": "AWS が NIST CAISI の情報提供依頼 (RFI) に提出した回答を基に、エージェンティック AI の 4 つのセキュリティ原則を紹介します。4 つの原則は、セキュアな開発ライフサイクル、従来のセキュリティ制御の継続適用、エージェントの外部に置く決定論的な制御 (セキュリティボックス)、評価に基づく段階的な自律性の拡大です。さらに、Amazon Bedrock AgentCore による",
+            "image": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/10/09/Four-security-principles-for-agentic-AI-systems-1208x630-1.png",
+            "date_modified": "2026-10-16T00:02:22.000Z",
+            "date_published": "2026-10-16T00:02:22.000Z",
+            "author": {
+                "name": "中島 章博"
+            },
+            "tags": [
+                "Amazon Bedrock",
+                "Amazon Bedrock AgentCore",
+                "Amazon Bedrock Guardrails",
+                "Security, Identity, & Compliance",
+                "Thought Leadership",
+                "Security Blog"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "エージェンティック AI システムのための 4 つのセキュリティ原則",
+                "blogTitle": "Amazon Web Services ブログ",
+                "blogLink": "https://aws.amazon.com/jp/blogs/news/",
+                "blogLinkMd5Hash": "e89604d2ec0c7b57b9266aabc8e6a2bb",
+                "favicon": "https://a0.awsstatic.com/main/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "8e8ff8a69e4f499ea17f49473da578d3bbc7db7b",
+            "content_html": "本日、Amazon Elastic Container Service (Amazon ECS) では、新しい ECS サービスメトリクスである LiveTaskCount が発表されました。このメトリクスは、サービス内でアクティブに実行されているタスクの数をレポートするもので、すべてのお客様が追加料金なしで利用できます。また、Amazon CloudWatch Container Insights の既存メトリクスである RunningTaskCount を、無料で利用できるようになりました。LiveTaskCount は、すべての目的のステータス (ACTIVATING、RUNNING、DEACTIVATING) にわたって、アクティブに実行されている ECS タスクの数をレポートします。これには、スケールインイベント中に Connection Draining が行われているタスクのように、停止状態への移行中でまだ実行中のタスクも含まれます。LiveTaskCount はこのようにすべての状態を網羅しているため、自動スケーリングポリシーやキャパシティプランニングに適しています。こ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/ecs-service-metrics/",
+            "title": "Amazon ECS が LiveTaskCount を追加し、RunningTaskCount メトリクスを無料化 | 最近の発表",
+            "summary": "本日、Amazon Elastic Container Service (Amazon ECS) では、新しい ECS サービスメトリクスである LiveTaskCount が発表されました。このメトリクスは、サービス内でアクティブに実行されているタスクの数をレポートするもので、すべてのお客様が追加料金なしで利用できます。また、Amazon CloudWatch Container Insight",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-13T22:00:00.000Z",
+            "date_published": "2026-10-13T22:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-ecs,marketing:marchitecture/containers,general:products/amazon-cloudwatch"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon ECS が LiveTaskCount を追加し、RunningTaskCount メトリクスを無料化",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "1ffd3e89c1d92ff0adaa68420106cb5ee6c63da8",
+            "content_html": "AWS Agent Registry は、組織内のエージェント、MCP サーバー、エージェントスキル、ゲートウェイ、カスタムリソースを対象とした、ガバナンスが適用された一元的なカタログです。組織内でこうしたリソースが数百規模に増えると、名前と説明だけでは、ガバナンスを効果的に適用したり、リソースを見つけたりすることが難しくなります。カスタムメタデータを使用すると、組織独自の構造化フィールドですべてのレジストリレコードを拡張できます。これにより、ユーザーと自動化されたシステムの両方が、一貫した方法でリソースを見つけ、ガバナンスを適用できます。 AWS Agent Registry のドキュメントを参照してください。詳細なセットアップのガイダンスについては、「Define a custom metadata schema」および「Set custom metadata values on a record」を参照してください。",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/aws-agent-registry-custom-metadata-registry-records",
+            "title": "AWS Agent Registry がレジストリレコードのカスタムメタデータをサポート | 最近の発表",
+            "summary": "AWS Agent Registry は、組織内のエージェント、MCP サーバー、エージェントスキル、ゲートウェイ、カスタムリソースを対象とした、ガバナンスが適用された一元的なカタログです。組織内でこうしたリソースが数百規模に増えると、名前と説明だけでは、ガバナンスを効果的に適用したり、リソースを見つけたりすることが難しくなります。カスタムメタデータを使用すると、組織独自の構造化フィールドですべて",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-13T21:00:00.000Z",
+            "date_published": "2026-10-13T21:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS Agent Registry がレジストリレコードのカスタムメタデータをサポート",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "062f10a3df4575a8a21a9036dac88aa9fea5a201",
+            "content_html": "Amazon DCV 2026.0 の提供が開始されました。RHEL 10、Rocky Linux 10、CentOS 10、Ubuntu 26.04 がサポートされたほか、新しい macOS クライアントが追加され、Windows クライアントと Linux クライアントが更新されました。Amazon DCV は、Windows、Linux、macOS 上のリモートデスクトップやアプリケーションセッションに安全にアクセスできるようにする高性能なリモートディスプレイプロトコルです。Amazon DCV 2026.0 の主な機能と改善点は以下のとおりです。RHEL 10、Rocky Linux 10、CentOS 10、Ubuntu 26.04 のサポート (Linux のホストとセッションは最新の Wayland ディスプレイサーバーで実行)ゲームパッドをサポートする新しい macOS クライアント、および更新された Windows クライアントと Linux クライアントWindows ホストでの URL リダイレクト (リモートセッションで開いた設定済みのリンクが、クライアントデバ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/amazon-dcv-2026-0/",
+            "title": "Amazon DCV がバージョン 2026.0 をリリースし、RHEL 10 のサポートと新しいクライアントを追加 | 最近の発表",
+            "summary": "Amazon DCV 2026.0 の提供が開始されました。RHEL 10、Rocky Linux 10、CentOS 10、Ubuntu 26.04 がサポートされたほか、新しい macOS クライアントが追加され、Windows クライアントと Linux クライアントが更新されました。Amazon DCV は、Windows、Linux、macOS 上のリモートデスクトップやアプリケーション",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-13T19:35:00.000Z",
+            "date_published": "2026-10-13T19:35:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon DCV がバージョン 2026.0 をリリースし、RHEL 10 のサポートと新しいクライアントを追加",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "99c76ecb71616ad7bc20f043c1a0a45364fc549a",
+            "content_html": "AWS Deadline Cloud では、ファーム全体ではなく特定のキュー、フリート、またはジョブへのアクセス権を持つユーザーが、アクセスできるリソースを Deadline Cloud モニターから直接見つけられるようになりました。Deadline Cloud は、視覚効果、アニメーション、プロダクトデザイン、シミュレーション、およびゲーム開発向けに、計算量が膨大なワークロードを実行できるようチームを支援するフルマネージド型のサービスです。これまでは、1 つのキューにのみアクセス権を持つユーザーは、作業に取りかかる前に、管理者からファーム ID を入手する必要がありました。今回のリリースにより、Deadline Cloud モニターには、ユーザーがアクセスできるキュー、そのキューにアクセスするために必要な親 ID、およびユーザーのアクセスレベルが表示されます。直接付与されたアクセス許可と、グループから継承されたアクセス許可の両方が対象です。 今回のリリースにより、モニターには、これらのユーザーがアクセスできるリソース、そのリソースにアクセスするために必要な親 ID、およびユーザーのア",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/deadline-cloud/resources",
+            "title": "AWS Deadline Cloud の Deadline Cloud モニターで、ユーザーがアクセス可能なリソースを確認可能に | 最近の発表",
+            "summary": "AWS Deadline Cloud では、ファーム全体ではなく特定のキュー、フリート、またはジョブへのアクセス権を持つユーザーが、アクセスできるリソースを Deadline Cloud モニターから直接見つけられるようになりました。Deadline Cloud は、視覚効果、アニメーション、プロダクトデザイン、シミュレーション、およびゲーム開発向けに、計算量が膨大なワークロードを実行できるようチ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-13T18:54:00.000Z",
+            "date_published": "2026-10-13T18:54:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/aws-deadline-cloud,marketing:marchitecture/media-services"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS Deadline Cloud の Deadline Cloud モニターで、ユーザーがアクセス可能なリソースを確認可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "9cc26596fedcae2b35c4c55da077ef08674f0015",
+            "content_html": "Amazon Location Service では、包括的なインタラクティブ API Playground の提供を開始しました。これにより、デベロッパーは、コードを記述することなく、Places、Routes、Maps のすべての API を視覚的に確認しながら、テストできます。今回のリリースにより、Amazon Location Service の Places、Maps、Routes に含まれる 14 の API すべてを、インタラクティブな API Playground で利用できるようになりました。デベロッパーは、実際に API コールを実行し、その結果をインタラクティブマップで確認しながらパラメータを調整し、すぐに使用できるリクエストのスニペットをコピーしてアプリケーションに直接組み込むことができます。API Playground は、Amazon Location Service の Places、Routes、Maps の各 API を対象としています。具体的には、検索とジオコーディング (Geocode、ReverseGeocode、Autocomplete、Sug",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/amazon-location-service-api-playground",
+            "title": "Amazon Location Service が Places、Routes、Maps の各 API を備えたインタラクティブな API Playground の提供を開始 | 最近の発表",
+            "summary": "Amazon Location Service では、包括的なインタラクティブ API Playground の提供を開始しました。これにより、デベロッパーは、コードを記述することなく、Places、Routes、Maps のすべての API を視覚的に確認しながら、テストできます。今回のリリースにより、Amazon Location Service の Places、Maps、Routes に含",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-13T18:46:00.000Z",
+            "date_published": "2026-10-13T18:46:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Location Service が Places、Routes、Maps の各 API を備えたインタラクティブな API Playground の提供を開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "13c52955011591083a9f5adcfcdb9ba268f5665d",
+            "content_html": "Amazon SageMaker Studio では、新規のお客様が Google、GitHub、または Apple の認証情報を使用してサインアップし、すべての設定が完了した Studio 環境にそのまま移動できるようになりました。AWS アカウントの従来のセットアップ、クレジットカード、コンソール操作は必要ありません。これまで、Hugging Face や AWS の製品ページでモデルを見つけた新規のお客様は、作業を開始する前に、複数のステップからなる AWS アカウントの作成プロセスを完了し、クレジットカードを登録し、AWS コンソールで SageMaker AI を探して環境を設定し、IAM アクセス許可をセットアップする必要がありました。以前のリリースでは、環境のセットアップ時間を 20 秒に短縮し、モデルのカスタマイズに必要なアクセス許可を事前に設定しました。また、Hugging Face や AWS の製品ページからのディープリンクを導入し、モデルが事前にロードされた Studio にお客様が直接移動できるようにしました。今回のソーシャルサインインにより、新規のお客様は既",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/01/sagemaker-studio-social-sign-in/",
+            "title": "Amazon SageMaker Studio がソーシャルサインインで、AI/機械学習の新規ビルダーの使用開始を簡素化 | 最近の発表",
+            "summary": "Amazon SageMaker Studio では、新規のお客様が Google、GitHub、または Apple の認証情報を使用してサインアップし、すべての設定が完了した Studio 環境にそのまま移動できるようになりました。AWS アカウントの従来のセットアップ、クレジットカード、コンソール操作は必要ありません。これまで、Hugging Face や AWS の製品ページでモデルを見つけ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-13T17:24:00.000Z",
+            "date_published": "2026-10-13T17:24:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/aiml,general:products/amazon-sagemaker,general:products/amazon-sagemaker-jumpstart,marketing:marchitecture/artificial-intelligence,general:products/amazon-sagemaker-studio"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon SageMaker Studio がソーシャルサインインで、AI/機械学習の新規ビルダーの使用開始を簡素化",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "6e3e52bdf29c45b355c9969402a561dd38eb99fa",
+            "content_html": "コーディングエージェントは、単一の自然言語ワークフローで AWS 環境内の他のサービスにまたがる作業を進めながら、Amazon SageMaker AI でモデルの選択、トレーニング、最適化、デプロイを実行できます。AWS AI/ML スキルが Agent Toolkit for AWS の主要なスキルの 1 つになりました。これにより、EC2 や Bedrock など、ツールキットに含まれる他の AWS スキルと組み合わせて使用できます。Agent Toolkit for AWS で新しい AWS AI/ML スキルをリリースしました。このツールキットは、従来の AWS ラボのスキルおよびプラグインに代わり、唯一のサポートされた統合ポイントになりました。インストールと更新の方法も統一され、簡単に行えます。このスキルは SageMaker Studio JupyterLab にもプリインストールされており、Kiro や任意のコーディングエージェントで使用できます。さらに、スキルがサポートする SageMaker AI の機能領域を拡大しました。推論の最適化: デプロイ済みモデルのレイテ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/bring-sagemaker-ai-expertise-to-your-coding-agent/",
+            "title": "Agent Toolkit for AWS の AWS AI/ML スキルにより、コーディングエージェントが SageMaker AI の高度な専門知識を活用可能に | 最近の発表",
+            "summary": "コーディングエージェントは、単一の自然言語ワークフローで AWS 環境内の他のサービスにまたがる作業を進めながら、Amazon SageMaker AI でモデルの選択、トレーニング、最適化、デプロイを実行できます。AWS AI/ML スキルが Agent Toolkit for AWS の主要なスキルの 1 つになりました。これにより、EC2 や Bedrock など、ツールキットに含まれる他の",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-13T14:00:00.000Z",
+            "date_published": "2026-10-13T14:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Agent Toolkit for AWS の AWS AI/ML スキルにより、コーディングエージェントが SageMaker AI の高度な専門知識を活用可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "8b98b64596ba654f62aba1f1dcc665bae9650d99",
+            "content_html": "AWS DataSync の拡張モードでは、Amazon FSx for OpenZFS を転送元または転送先のロケーションとして使用できるようになりました。また、オンプレミスの NFS サーバーと FSx for OpenZFS ファイルシステムで NFS バージョン 4.2 がサポートされ、オブジェクトストレージの転送向けに新しい ObjectMetadata オプションが追加されました。これまで、FSx for OpenZFS との間でデータを転送するお客様は、基本モードしか使用できませんでした。NFS 4.2 のサポートにより、最新バージョンで稼働している NFS サーバーを古いプロトコルバージョンに設定し直さなくても、そのままデータを転送できます。ObjectMetadata オプションを使用すると、オブジェクトのユーザーメタデータを転送先にコピーするかどうかを制御できます。これは、AWS Storage Gateway が提供するバケットのように転送先のメタデータをそのまま維持する必要がある場合や、転送先が Azure Blob Storage の場合のように転送元のメタデ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/datasync-enhanced-openzfs-nfs42-metadata/",
+            "title": "AWS DataSync の拡張モードが FSx for OpenZFS、NFS 4.2、オブジェクトメタデータの制御をサポート | 最近の発表",
+            "summary": "AWS DataSync の拡張モードでは、Amazon FSx for OpenZFS を転送元または転送先のロケーションとして使用できるようになりました。また、オンプレミスの NFS サーバーと FSx for OpenZFS ファイルシステムで NFS バージョン 4.2 がサポートされ、オブジェクトストレージの転送向けに新しい ObjectMetadata オプションが追加されました。これ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-13T08:00:00.000Z",
+            "date_published": "2026-10-13T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/migration,general:products/amazon-fsx-for-openzfs,marketing:marchitecture/storage,general:products/aws-datasync"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS DataSync の拡張モードが FSx for OpenZFS、NFS 4.2、オブジェクトメタデータの制御をサポート",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "daf525b0ece718d92f702dcc2844683f44539a9e",
+            "content_html": "Amazon Route 53 ドメインではプレミアムドメイン名がサポートされるようになりました。お客様は、レジストリのプレミアムドメイン名を Route 53 で直接、検索、登録、移管、更新、復元できるようになりました。ほとんどのドメインレジストリは、短い名前、覚えやすい名前、需要の高い名前などの一部を「プレミアム」ドメインとして指定しています。これまで Route 53 ドメインではこうしたプレミアムドメイン名をサポートしていなかったため、これらのドメインを使用したいお客様は、他の登録事業者を通じて登録および管理する必要がありました。その結果、保有するドメインの管理先が複数のプロバイダーに分かれていました。今回のリリースにより、お客様は Route 53 ドメインでプレミアムドメインを直接見つけて取得できるようになりました。また、他の登録事業者で管理している既存のプレミアムドメインを集約し、プレミアムドメインと標準ドメインを単一の統合されたエクスペリエンスでまとめて管理できます。プレミアムドメインの検索と登録は、標準ドメインと同じ方法で行えます。ドメインを検索したり空き状況を確認し",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/route-53-premium-domains/",
+            "title": "Amazon Route 53 がプレミアムドメインの登録、移管、更新をサポート | 最近の発表",
+            "summary": "Amazon Route 53 ドメインではプレミアムドメイン名がサポートされるようになりました。お客様は、レジストリのプレミアムドメイン名を Route 53 で直接、検索、登録、移管、更新、復元できるようになりました。ほとんどのドメインレジストリは、短い名前、覚えやすい名前、需要の高い名前などの一部を「プレミアム」ドメインとして指定しています。これまで Route 53 ドメインではこうしたプ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-13T08:00:00.000Z",
+            "date_published": "2026-10-13T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:producer/partner,general:products/amazon-route-53,general:products,marketing:marchitecture/networking-and-content-delivery"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Route 53 がプレミアムドメインの登録、移管、更新をサポート",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "a3f96c58bcc197f06eff18d572c4b2688f64ff1f",
+            "content_html": "Amazon Relational Database Service (Amazon RDS) for SQL Server が、Microsoft SQL Server の最新の累積更新 (CU) に対応しました。このリリースには、Microsoft SQL Server 2025 CU8 の KB5104822 (RDS バージョン 17.00.4075.5.v1) のサポートが含まれています。 RDS Microsoft SQL Server DB エンジンのアップグレードに関する Amazon RDS SQL Server ユーザーガイドを参照してください。",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/09/amazon-rds-supports-latest-cu-microsoft-sql-server/",
+            "title": "Amazon RDS が Microsoft SQL Server の最新の CU に対応 | 最近の発表",
+            "summary": "Amazon Relational Database Service (Amazon RDS) for SQL Server が、Microsoft SQL Server の最新の累積更新 (CU) に対応しました。このリリースには、Microsoft SQL Server 2025 CU8 の KB5104822 (RDS バージョン 17.00.4075.5.v1) のサポートが含まれています",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-13T07:30:00.000Z",
+            "date_published": "2026-10-13T07:30:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/aws-govcloud-us,marketing:marchitecture/databases,general:products/amazon-rds-for-sql-server"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon RDS が Microsoft SQL Server の最新の CU に対応",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "348fd8b9782731379b9e3817851173ce89d058c8",
+            "content_html": "本日より、AWS Lambda Web Function 上で構築されたウェブアプリケーションを CloudFront のグローバルエッジネットワークを通じて配信できるようになりました。 CloudFront を Lambda Web Function の前に配置することで、レイテンシーの短縮と接続の高速化を実現するエッジでの TLS ターミネーション、パフォーマンスを向上させるキャッシュ機能、マネージド TLS 証明書を使用したカスタムドメインを利用できます。アプリケーションコードを変更する必要はありません。CloudFront オリジンアクセスコントロール (OAC) は Lambda Web Function を制限して CloudFront からのみアクセスできるようにします。そのため、セキュリティ保護をバイパスする意図しないリクエストはオリジンに届きません。OAC を導入すると、CloudFront のエッジネットワークが Lambda Web Function をネットワークレイヤーの DDoS 攻撃から保護し、AWS WAF をアタッチしてアプリケーションレイヤーのセキュ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/cloudfront-lambda-web-functions-origin/",
+            "title": "Amazon CloudFront がオリジンとしての AWS Lambda Web Function のサポートを開始 | 最近の発表",
+            "summary": "本日より、AWS Lambda Web Function 上で構築されたウェブアプリケーションを CloudFront のグローバルエッジネットワークを通じて配信できるようになりました。 CloudFront を Lambda Web Function の前に配置することで、レイテンシーの短縮と接続の高速化を実現するエッジでの TLS ターミネーション、パフォーマンスを向上させるキャッシュ機能、マ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T23:10:00.000Z",
+            "date_published": "2026-10-12T23:10:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-cloudfront,marketing:marchitecture/networking-and-content-delivery"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon CloudFront がオリジンとしての AWS Lambda Web Function のサポートを開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "681fbadb036e1a75613347acab6b248c8aff090d",
+            "content_html": "NVIDIA RTX PRO 4500 Blackwell Server Edition GPU を搭載した Amazon Elastic Compute Cloud (Amazon EC2) G7 インスタンスが、欧州 (フランクフルト) および欧州 (ストックホルム) リージョンで利用できるようになりました。G7 インスタンスは、G6 インスタンスと比較して AI 推論性能が最大 4.6 倍、グラフィックス性能が最大 2.1 倍向上しています。また、G7 インスタンスは、GPU で高速化されたデータ分析ワークロードにおいても、高いパフォーマンスを発揮します。言語翻訳、動画および画像解析、音声認識、リコメンダーシステム向けの AI モデルのデプロイに G7 インスタンスを使用できます。また、リアルタイムでのシネマティック品質のグラフィックス作成およびレンダリングやゲームストリーミングなど、グラフィックスワークロードの高速化にも利用できます。さらに、G7 インスタンスは動画トランスコーディング、空間コンピューティング、データ分析ワークロードをサポートします。G7 インスタンスは、最大 ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/amazon-g7-european-regions/",
+            "title": "Amazon EC2 G7 インスタンスが欧州 (フランクフルト) および欧州 (ストックホルム) リージョンで利用可能に | 最近の発表",
+            "summary": "NVIDIA RTX PRO 4500 Blackwell Server Edition GPU を搭載した Amazon Elastic Compute Cloud (Amazon EC2) G7 インスタンスが、欧州 (フランクフルト) および欧州 (ストックホルム) リージョンで利用できるようになりました。G7 インスタンスは、G6 インスタンスと比較して AI 推論性能が最大 4.6 倍、",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T22:30:00.000Z",
+            "date_published": "2026-10-12T22:30:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/compute,general:products/amazon-ec2"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon EC2 G7 インスタンスが欧州 (フランクフルト) および欧州 (ストックホルム) リージョンで利用可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "155f65b7c714ef5fbcdae9c91de8ad4080606a36",
+            "content_html": "Amazon Connect Customer では、予約 ID、請求番号、会話の概要など、顧客との会話から抽出された情報を使用して、コンタクト後にエージェントが記入するステップバイステップガイドに記入できるようになりました。マネージャーは、各フォームフィールドに入力する情報を設定できます。エージェントは、各フィールドに手動で入力するのではなく、内容を確認して送信できるため、コンタクト後の作業にかかる時間を節約し、データの正確性を向上させることができます。コンタクトセンターのエージェントは、各コンタクトの後に、頻繁に使用される情報をステップバイステップガイドに入力することに時間を費やしています。例えば、保険金の請求に関する通話を終えた保険エージェントは、顧客の保険証券番号、通話の要約、処理コードを記録することがあります。今後、マネージャーは会話からどの情報を抽出するか、ガイドでどのフィールドを自動的に入力するかについてのルールを定義できます。これにより、エージェントは情報を確認し、必要な修正を行ってガイドを送信できるため、コンタクト後の作業が短縮され、データ入力エラーが減少します。情報",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/connect-customer-prefills-guides-acw",
+            "title": "Amazon Connect Customer でアフターコンタクトワークのステップバイステップガイドの事前入力が可能に | 最近の発表",
+            "summary": "Amazon Connect Customer では、予約 ID、請求番号、会話の概要など、顧客との会話から抽出された情報を使用して、コンタクト後にエージェントが記入するステップバイステップガイドに記入できるようになりました。マネージャーは、各フォームフィールドに入力する情報を設定できます。エージェントは、各フィールドに手動で入力するのではなく、内容を確認して送信できるため、コンタクト後の作業にか",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T22:28:00.000Z",
+            "date_published": "2026-10-12T22:28:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/contact-center,marketing:marchitecture/applications"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Connect Customer でアフターコンタクトワークのステップバイステップガイドの事前入力が可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "3b959706380b601263454cc7287074d62883c679",
+            "content_html": "AWS Lambda は、コードが HTTP リクエストを直接処理する新しいサーバーレスコンピューティングプリミティブである Lambda Web Function を発表しました。コードはポートでリッスンし、あらゆる HTTP サーバーと同じようにリクエストを処理します。Express や Hono などの使い慣れたフレームワークを、アダプターやカスタム設定なしで使用できます。これにより、AI 推論エンドポイント、サーバー側でレンダリング (SSR) されたウェブアプリケーション、ストリーミング API エンドポイント、マイクロサービス、Webhook などのワークロードに対応できます。コードがデータベースやダウンストリームサービスを待機するために費やすアイドル状態の CPU 時間ではなく、アクティブな CPU 時間と環境が確保しているメモリ量に対して料金が発生します。今回のリリースでは、既存の Lambda 関数の名前を Lambda Event Function に変更します。名前のみの変更であり、既存の関数のコード変更や再デプロイは不要です。ビルダーは Lambda を使用する",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/aws-lambda-web-functions/",
+            "title": "AWS Lambda が Lambda Web Function を発表 | 最近の発表",
+            "summary": "AWS Lambda は、コードが HTTP リクエストを直接処理する新しいサーバーレスコンピューティングプリミティブである Lambda Web Function を発表しました。コードはポートでリッスンし、あらゆる HTTP サーバーと同じようにリクエストを処理します。Express や Hono などの使い慣れたフレームワークを、アダプターやカスタム設定なしで使用できます。これにより、AI ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T19:30:00.000Z",
+            "date_published": "2026-10-12T19:30:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 4,
+                "originalTitle": "AWS Lambda が Lambda Web Function を発表",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "d58c16b5de36d581b07abf392f79b62944b62f17",
+            "content_html": "Amazon Bedrock AgentCore の短期メモリで従量制の価格設定を発表Amazon Bedrock AgentCore メモリは、従来のイベントごとの定額料金に代わり、エージェントが取り込み、取得、保存するデータに基づいて短期メモリ (STM) の料金が設定されるようになりました。AgentCore メモリは、短期メモリを通じてエージェントにセッション内のコンテキストを提供し、長期メモリを通じてセッション間で永続的な知識を提供します。従量制の価格設定により、頻繁に小さなイベントを書き込むエージェントを構築するデベロッパーは、使用量に応じた料金を支払うことになります。STM の料金は、取り込みが 1 GB あたり 1.00 USD、取得が 1 GB あたり 0.20 USD、ストレージが 1 GB か月あたり 0.10 USD の 3 つの次元で設定されます。取り込みと取得は、課金対象となるサイズが最小 12 KB、最大 64 KB でイベントごとに課金され、ストレージは各イベントの実際のサイズに基づいて課金されます。ほとんどのワークロードでコストが削減され、ペイロードが",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/agentcore-memory-consumption-based-pricing",
+            "title": "Amazon Bedrock AgentCore の短期メモリで従量制の価格設定を発表 | 最近の発表",
+            "summary": "Amazon Bedrock AgentCore の短期メモリで従量制の価格設定を発表Amazon Bedrock AgentCore メモリは、従来のイベントごとの定額料金に代わり、エージェントが取り込み、取得、保存するデータに基づいて短期メモリ (STM) の料金が設定されるようになりました。AgentCore メモリは、短期メモリを通じてエージェントにセッション内のコンテキストを提供し、長期",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T16:00:00.000Z",
+            "date_published": "2026-10-12T16:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/artificial-intelligence"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon Bedrock AgentCore の短期メモリで従量制の価格設定を発表",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "5ff92a0f293eff5c329c6e9a4fb5e6a85e55dd67",
+            "content_html": "AWS Transfer Family では、パブリック SFTP サーバーでカスタムポートを設定し、ポートごとに通信モードを選択できるようになりました。1 つのサーバーで、異なるポートを必要とするクライアントや、SFTP 接続を異なる方法で開始するクライアントをサポートできます。これまで、パブリック SFTP サーバーはポート 22 でのみ接続を受け付け、サーバーファーストの通信を使用していました。今回のリリースにより、最大 3 つのポート (22、または 2000～65535 の任意のポート) を設定できるため、ビジネスやネットワークに必要なポート番号の使用や、1 つのサーバーでの複数ポートの提供が可能になります。一部の SFTP クライアントは自ら通信を開始するため、サーバーファーストポートでの接続が一時的に停止することがあります。ポートごとにクライアントファーストまたはサーバーファーストの通信を選択し、接続動作に合ったポートにクライアントを誘導できるようになりました。22 以外のポートを使用すると、ポート 22 をターゲットとする自動スキャナーによる不要な接続試行を減らすことも",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/transfer-family-custom-ports-sftp/",
+            "title": "AWS Transfer Family でパブリック SFTP サーバーのカスタムポートのサポートを開始 | 最近の発表",
+            "summary": "AWS Transfer Family では、パブリック SFTP サーバーでカスタムポートを設定し、ポートごとに通信モードを選択できるようになりました。1 つのサーバーで、異なるポートを必要とするクライアントや、SFTP 接続を異なる方法で開始するクライアントをサポートできます。これまで、パブリック SFTP サーバーはポート 22 でのみ接続を受け付け、サーバーファーストの通信を使用していまし",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T08:00:00.000Z",
+            "date_published": "2026-10-12T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/aws-transfer-family,marketing:marchitecture/migration,marketing:marchitecture/storage"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS Transfer Family でパブリック SFTP サーバーのカスタムポートのサポートを開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "ca4ac3455a6f690697289982495396d32f355ccc",
+            "content_html": "Amazon S3 Express One Zone ストレージクラスが、欧州 (ロンドン)、アジアパシフィック (ジャカルタ)、アジアパシフィック (香港)、アフリカ (ケープタウン) の 4 つの AWS リージョンで新たに利用可能になりました。Amazon S3 Express One Zone は単一アベイラビリティーゾーンの高性能ストレージクラスです。1 桁ミリ秒の一貫したデータアクセスを実現することで、アクセス頻度が最も高いデータや低レイテンシーを必要とするアプリケーションに対応できるよう専用に構築されました。S3 Express One Zone では、S3 Standard に比べてデータアクセス速度が最大 10 倍速く、リクエストのコストを最大 80% 低く抑えることができます。そのため、機械学習トレーニング、インタラクティブ分析、AI 検索エンジンで使用する key-value キャッシュなどのワークロードでも、高い耐久性と可用性を維持しながら高速なデータアクセスを実現できます。今回の拡張により、S3 Express One Zone は 19 の AWS リージョ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/s3-express-one-zone-4-additional-regions/",
+            "title": "Amazon S3 Express One Zone が 4 つの AWS リージョンで新たに利用可能に | 最近の発表",
+            "summary": "Amazon S3 Express One Zone ストレージクラスが、欧州 (ロンドン)、アジアパシフィック (ジャカルタ)、アジアパシフィック (香港)、アフリカ (ケープタウン) の 4 つの AWS リージョンで新たに利用可能になりました。Amazon S3 Express One Zone は単一アベイラビリティーゾーンの高性能ストレージクラスです。1 桁ミリ秒の一貫したデータアクセス",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T08:00:00.000Z",
+            "date_published": "2026-10-12T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/storage,general:products/amazon-simple-storage-service"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon S3 Express One Zone が 4 つの AWS リージョンで新たに利用可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "11c6c3f07cca4caca2efbfbfe967fe2bbdcac5b9",
+            "content_html": "AWS Secrets Manager のマネージド外部シークレット機能が拡張され、Databricks と Twilio がサポート対象に加わりました。これにより、データパイプラインやメッセージングアプリケーションがこれらのサービスを呼び出すために使用する認証情報を自動的にローテーションできるようになります。ローテーションは AWS マネジメントコンソールまたは API から直接設定でき、カスタムのローテーション Lambda 関数を作成したり維持したりする必要はありません。長期間有効な認証情報は、設定が難しく、更新された認証情報を使用するアプリケーションに安全に配布するのが難しいため、ローテーションされないままになることがよくあります。マネージド外部シークレットを使用すると、Secrets Manager を使用して、ジョブや継続的インテグレーションと継続的デリバリー (CI/CD) のパイプラインで使用される Databricks 個人アクセストークンをローテーションできます。自動化ワークフローで使用されるサービスプリンシパルの OAuth クライアントシークレットをローテーショ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/secrets-manager-managed-external-secrets-databricks-twilio/",
+            "title": "AWS Secrets Manager が Databricks と Twilio のマネージド外部シークレットのサポートを追加 | 最近の発表",
+            "summary": "AWS Secrets Manager のマネージド外部シークレット機能が拡張され、Databricks と Twilio がサポート対象に加わりました。これにより、データパイプラインやメッセージングアプリケーションがこれらのサービスを呼び出すために使用する認証情報を自動的にローテーションできるようになります。ローテーションは AWS マネジメントコンソールまたは API から直接設定でき、カスタ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T07:00:00.000Z",
+            "date_published": "2026-10-12T07:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/aws-secrets-manager"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS Secrets Manager が Databricks と Twilio のマネージド外部シークレットのサポートを追加",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "14c31313c1ec26f748c477d52389bdc7b6da6607",
+            "content_html": "Amazon EMR が Apache Spark ジョブ内でネイティブにデータ品質を検証するようになりました。データエンジニアリングチームは、個別の検証インフラストラクチャを構築または維持しなくても、不良データがダウンストリームシステムに到達する前にインラインで品質上の問題を検出できます。AWS Glue を搭載した Amazon EMR Data Quality は追加料金なしで利用でき、AWS Glue と同じ宣言型ルール言語 (データ品質定義言語 (DQDL)) と API を使用して両方のエンジンで一貫したエクスペリエンスを実現しています。また、EC2、EKS、サーバーレスのデプロイモードで Apache Iceberg、Apache Hudi、Delta Lake と連携します。この機能を使用すると、Spark スクリプトで検証ルールを作成したり、AWS Glue データカタログに保存されている参照ルールを作成したりして、パイプラインの任意の段階 (データの読み取り後、変換中、処理後など) に適用できます。Amazon EMR Data Quality では、実行履歴と比較",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/amazon-emr-data-quality-spark/",
+            "title": "Amazon EMR が Apache Spark ジョブのネイティブデータ品質チェックのサポートを開始 | 最近の発表",
+            "summary": "Amazon EMR が Apache Spark ジョブ内でネイティブにデータ品質を検証するようになりました。データエンジニアリングチームは、個別の検証インフラストラクチャを構築または維持しなくても、不良データがダウンストリームシステムに到達する前にインラインで品質上の問題を検出できます。AWS Glue を搭載した Amazon EMR Data Quality は追加料金なしで利用でき、AW",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T07:00:00.000Z",
+            "date_published": "2026-10-12T07:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-emr,marketing:marchitecture/databases,general:products/aws-glue,marketing:marchitecture/analytics"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon EMR が Apache Spark ジョブのネイティブデータ品質チェックのサポートを開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "938753a704dab619965b254a96ce493686a7b895",
+            "content_html": "Amazon ElastiCache for Valkey には、ノードベースのクラスター用の Amazon CloudWatch にあらかじめ組み込まれているダッシュボード、ElastiCache Insights が搭載されるようになりました。ElastiCache Insights は、ElastiCache が自動的に公開する OpenTelemetry メトリクスのセットをソースとするクラスターの健全性、メモリ、コンピューティング、ネットワーク、コマンドスループット、レイテンシー、キースペース、エラーを 1 つのビューにまとめます。ElastiCache Insights を使用すると、リージョン内のキャッシュワークロードの健全性をひとめで確認したり、ノードがメモリ、ネットワーク、接続の制限に近づいたことを検出したり、ビューをクラスター、シャード、ノード、アベイラビリティーゾーンでフィルタリングしたりできます。また、コピーを保存して、ワークロードに合わせたカスタムダッシュボードの開始点として利用することもできます。詳細モニタリングでは、15 秒ごとに発行するメトリクスを選択し",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/amazon-elasticache-valkey-elasticache-insights/",
+            "title": "Amazon ElastiCache for Valkey が ElastiCache Insights を発表 | 最近の発表",
+            "summary": "Amazon ElastiCache for Valkey には、ノードベースのクラスター用の Amazon CloudWatch にあらかじめ組み込まれているダッシュボード、ElastiCache Insights が搭載されるようになりました。ElastiCache Insights は、ElastiCache が自動的に公開する OpenTelemetry メトリクスのセットをソースとするク",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T07:00:00.000Z",
+            "date_published": "2026-10-12T07:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "marketing:marchitecture/databases,general:products/amazon-elasticache"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Amazon ElastiCache for Valkey が ElastiCache Insights を発表",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "0aa2e9269961b9a404b150ebab4a68d98cab8853",
+            "content_html": "Amazon OpenSearch Service がインデックスレベルの暗号化をサポートするようになり、保管中の各インデックスを独自の AWS Key Management Service (AWS KMS) のカスタマーマネージドキーで暗号化できるようになりました。 これにより、所有権や機密性が異なるデータを、同じドメインの別々のキーで保護できます。例えば、マルチテナントアプリケーションでは、各テナントのデータを独自のキーで暗号化できます。インデックスレベルの暗号化は、Amazon OpenSearch Service の既存の保管時の暗号化機能を基盤としています。有効にするには、AWS マネジメントコンソールまたは AWS CLI を使用して新しいドメインを作成する際に、暗号化モードをネイティブに設定し、カスタマーマネージド AWS KMS キーを指定します。その後、ドメインに追加のキーを登録し、そのキーを使用して個々のインデックスを暗号化できます。インデックスレベルの暗号化は、米国東部 (バージニア北部、オハイオ)、米国西部 (オレゴン)、カナダ (中部)、アジアパシフィック ",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/opensearch-index-level-encryption",
+            "title": "Amazon OpenSearch Service がインデックスレベルの暗号化のサポートを開始 | 最近の発表",
+            "summary": "Amazon OpenSearch Service がインデックスレベルの暗号化をサポートするようになり、保管中の各インデックスを独自の AWS Key Management Service (AWS KMS) のカスタマーマネージドキーで暗号化できるようになりました。 これにより、所有権や機密性が異なるデータを、同じドメインの別々のキーで保護できます。例えば、マルチテナントアプリケーションでは、",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-12T02:30:00.000Z",
+            "date_published": "2026-10-12T02:30:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/amazon-opensearch-service,marketing:marchitecture/analytics"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Amazon OpenSearch Service がインデックスレベルの暗号化のサポートを開始",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        },
+        {
+            "id": "7b19b062aa64007488c8f2bf9d9e87e541f8505b",
+            "content_html": "本日より、米国の AWS のお客様は、米国の銀行口座を使用して AWS にサインアップし、ACH ダイレクトデビットで AWS サービスの料金を支払うことができます。この機能により、USD の銀行口座から AWS の支払いを直接管理する便利で安全な方法が提供されます。お客様は個人または法人の米国銀行口座を安全に接続し、AWS 請求書の支払いに使用できます。これまで、AWS の新規のお客様は、アカウントへのサインアップを完了するためにクレジットカードまたはデビットカードが必要でした。お客様はサインアップ時に、AWS サインアップページで [Bank Account] を選択し、銀行を選択して、銀行のモバイルアプリまたはオンラインバンキングの認証情報を使用して認証できます。これにより、所有権が安全に検証され、銀行口座が AWS アカウントにリンクされます。デフォルトでは、この口座が今後の AWS 請求書の支払いに使用されます。既存のお客様は、AWS Billing and Cost Management コンソールの支払い設定ページから銀行口座を追加できます。[支払い方法を追加]、[銀行口",
+            "url": "https://aws.amazon.com/jp/about-aws/whats-new/2026/10/aws-sign-up-invoices-ach-direct-debit/",
+            "title": "AWS で ACH ダイレクトデビットを使用した AWS へのサインアップおよび請求書の支払いが可能に | 最近の発表",
+            "summary": "本日より、米国の AWS のお客様は、米国の銀行口座を使用して AWS にサインアップし、ACH ダイレクトデビットで AWS サービスの料金を支払うことができます。この機能により、USD の銀行口座から AWS の支払いを直接管理する便利で安全な方法が提供されます。お客様は個人または法人の米国銀行口座を安全に接続し、AWS 請求書の支払いに使用できます。これまで、AWS の新規のお客様は、アカウ",
+            "image": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/homepage/global-nav/reinvent-register-2026.73ee1c918de65784347ba0cd636b27da8086c66e.png",
+            "date_modified": "2026-10-11T08:00:00.000Z",
+            "date_published": "2026-10-11T08:00:00.000Z",
+            "author": {
+                "name": "aws@amazon.com"
+            },
+            "tags": [
+                "general:products/aws-account-billing,marketing:marchitecture/cost-management"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS で ACH ダイレクトデビットを使用した AWS へのサインアップおよび請求書の支払いが可能に",
+                "blogTitle": "最近の発表",
+                "blogLink": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+                "blogLinkMd5Hash": "ab6a8a4cc560eea40b904c277e5049c1",
+                "favicon": "https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico"
+            }
+        }
+    ]
+}

@@ -1,0 +1,650 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "GitHub Security Advisory - Translated Japanese｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/feed.json",
+    "description": "GitHub Security Advisory - Translated Japanese：enの記事を日本語に翻訳してまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://github.com/advisories/GHSA-w5f2-9q9c-ff4h",
+            "content_html": "概要LMCache は、複数のプロセス ZMQ トランスポートのピックルのデシリアライゼーションによる非認証リモートコードの実行に脆弱です。 分散モードとも呼ばれるLMCacheマルチプロセスモードは、未認証のZeroMQ ROUTERを開くため、作業者のプロセスはKVキャッシュブロックを登録して共有できます。 意図したクライアントは、LMCache プロセスをシブルしています。 そのソケットにCURVE、ZAP、パスワード、メッセージ認証はありません。 vLLM プロセス内でのみ使用される LMCache は、このポートを開くことができません。 演算子が --host で routable アドレスを設定しない限り、トランスポートは localhost にバインドします。これは、マルチノードのデプロイメントがピアが接続できるようにする方法です。 9.8 スコアは、そのルータ設定です。 デフォルトバインドを残すストックシングルホストインストールは、他のマシンから到達できません。 ソケットのメッセージはmsgpackです。 エクステンションコード1は、DeviceIPCWrapperに登",
+            "url": "https://github.com/advisories/GHSA-w5f2-9q9c-ff4h",
+            "title": "[lmcache] LMCache:マルチプロセスモードでの輸送で安全でないdeserializationによるリモートコードの実行 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "概要LMCache は、複数のプロセス ZMQ トランスポートのピックルのデシリアライゼーションによる非認証リモートコードの実行に脆弱です。 分散モードとも呼ばれるLMCacheマルチプロセスモードは、未認証のZeroMQ ROUTERを開くため、作業者のプロセスはKVキャッシュブロックを登録して共有できます。 意図したクライアントは、LMCache プロセスをシブルしています。 そのソケットにC",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-16T20:08:44.000Z",
+            "date_published": "2026-10-16T20:08:44.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[lmcache] LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
+                "translatedTitle": "[lmcache] LMCache:マルチプロセスモードでの輸送で安全でないdeserializationによるリモートコードの実行",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-h4mw-j7qp-8mwm",
+            "content_html": "Python 用の Claude Agent SDK は、Claude CLI に、バリデーションなしで再開オプションを渡しました。これにより、- で始まる値を別の CLI フラグとして解釈できます。 履歴書の値を制御した攻撃者は、stdio MCP サーバーを定義する --mcp-config フラグを注入し、SDK のパーミッション・コントロールを迂回した CLI 起動時に任意のコマンド実行を実行できます。 セッション ID として信頼できない入力を再開させるためのアプリケーションが必要です。 ユーザーは、claude-agent-sdkパッケージの最新バージョンに更新することをお勧めします。 この問題を報告するためにハッカーロン.com/moamenmahmoodをありがとう. 参考:https://github.com/anthropics/claude-agent-sdk-python/security/advisories/GHSA-h4mw-j7qp-8mwmhttps://github.com/anthropics/claude-agent-sdk-python/pul",
+            "url": "https://github.com/advisories/GHSA-h4mw-j7qp-8mwm",
+            "title": "[claude-agent-sdk] は、 Claude Agent SDK: 履歴書オプションによる引数インジェクションにより、任意のコマンド実行が可能 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Python 用の Claude Agent SDK は、Claude CLI に、バリデーションなしで再開オプションを渡しました。これにより、- で始まる値を別の CLI フラグとして解釈できます。 履歴書の値を制御した攻撃者は、stdio MCP サーバーを定義する --mcp-config フラグを注入し、SDK のパーミッション・コントロールを迂回した CLI 起動時に任意のコマンド実行を",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-16T19:44:37.000Z",
+            "date_published": "2026-10-16T19:44:37.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[claude-agent-sdk] Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
+                "translatedTitle": "[claude-agent-sdk] は、 Claude Agent SDK: 履歴書オプションによる引数インジェクションにより、任意のコマンド実行が可能",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vqff-r82h-9crc",
+            "content_html": "MCPの概要 Apps UI リソース (ホストの webview/iframe でレンダリングされたインタラクティブな DataStore テーブル) は、postMessage で親と通信します。 そのインバウンドメッセージリスナーは event.origin バリデーションを実行せず、そのアウトバウンドメッセージは対象の '*' で送信されます。 ドキュメントに到達できる任意のウィンドウ/フレームは、データをテーブルに注入し、MCP UI ハンドシェイクと干渉し、元の制限なしに、UI 独自の JSON-RPC メッセージが放送されます。 例:info@gmail.com インパクトコンテンツのスプーフィング。 UI に postMessage を投稿できるフレームは、queriedportal から来るように見える (例えば、phishing __link_url) をレンダリングするテーブルを引き起こし、任意のフィールド/レコードを供給することができます。 (Value は HTML-escaped なので、スクリプトインジェクションではなく、XSS は表示されません。)Han",
+            "url": "https://github.com/advisories/GHSA-vqff-r82h-9crc",
+            "title": "[@aborruso/ckan-mcp-server] は、 ckan-mcp-server: データストア 表 UI リソースは、postMessage のオリジン (in) および targetOrigin の投稿を検証しません。(out) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "MCPの概要 Apps UI リソース (ホストの webview/iframe でレンダリングされたインタラクティブな DataStore テーブル) は、postMessage で親と通信します。 そのインバウンドメッセージリスナーは event.origin バリデーションを実行せず、そのアウトバウンドメッセージは対象の '*' で送信されます。 ドキュメントに到達できる任意のウィンドウ/フ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-16T19:23:48.000Z",
+            "date_published": "2026-10-16T19:23:48.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@aborruso/ckan-mcp-server] ckan-mcp-server: DataStore Table UI resource does not validate postMessage origin (in) and posts to targetOrigin \"*\" (out)",
+                "translatedTitle": "[@aborruso/ckan-mcp-server] は、 ckan-mcp-server: データストア 表 UI リソースは、postMessage のオリジン (in) および targetOrigin の投稿を検証しません。(out)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vgf9-9mxx-hq54",
+            "content_html": "ソリューション リビジョン コマンドのパス traversal vulnerability は、意図したマイグレーション ディレクトリをエスケープするために -m 引数を介して供給された、生成されたマイグレーション名を許可しました。 特定の条件下では、攻撃者は、コマンドを実行してユーザが書き込み可能な任意の場所にある.sqlファイルを作成するためにツールを引き起こす可能性があります。 この問題は、攻撃者が無担保な自動化や、信頼できない入力を転送するCI/CDパイプラインなど、リビジョンコマンドに渡されたマイグレーション名に影響を与えることができる場合にのみ有効です。 PatchesVulnerability はバージョン 1.0.3 で固定されています。マイグレーション名を有効化し、ディレクトリのトラバースを防ぐことができます。 ユーザーはバージョン1.0.3以降にアップグレードする必要があります。 ワークアラウンド リビジョン -m 引数に不信な入力を渡さないでください。 アップグレードがすぐに不可能な場合は、信頼できるユーザーやオートメーションだけがリビジョンコマンドを呼び出すこと",
+            "url": "https://github.com/advisories/GHSA-vgf9-9mxx-hq54",
+            "title": "[ClickMigrate] ClickMigrate は \"revision -m\" 引数でパストラバーサルを持っています | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ソリューション リビジョン コマンドのパス traversal vulnerability は、意図したマイグレーション ディレクトリをエスケープするために -m 引数を介して供給された、生成されたマイグレーション名を許可しました。 特定の条件下では、攻撃者は、コマンドを実行してユーザが書き込み可能な任意の場所にある.sqlファイルを作成するためにツールを引き起こす可能性があります。 この問題は、",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-16T19:17:28.000Z",
+            "date_published": "2026-10-16T19:17:28.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[ClickMigrate] ClickMigrate has Path Traversal in \"revision -m\" argument",
+                "translatedTitle": "[ClickMigrate] ClickMigrate は \"revision -m\" 引数でパストラバーサルを持っています",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "content_html": "ImpactAnは、影響を受けたTansStack Startアプリでサーバー機能にURLを作成することができます。 誰かがリンクを開くと、アプリは攻撃者制御のHTMLを独自の起源から返し、そこに攻撃者のJavaScriptを実行することができます。 スクリプトは、訪問者に利用可能な同じオリジンデータにアクセスし、その権限でリクエストをすることができます。 原因サーバー機能の輸送は、パブリック入力フィールドに制限するのではなく、内部ミドルウェア状態にペイロードフィールドを渡すことができます。 誤ったペイロードは、エラーパスの攻撃者制御の結果を残すことができます。 応答処理は、レスポンス型のオブジェクトをHTTPレスポンスとして扱うことができます。 欠陥のあるバージョン @tanstack/start-server-core、@tanstack/react-start、@tanstack/solid-start、および1.143.12から@tanstack/vue-startの公開バージョンは、それぞれパッチバージョンの影響を受けません。 パッチ化されたバージョンは、@tanstack/",
+            "url": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "title": "[@tanstack/vue-start] は、 TanStackのルーター:TanStackのサーバー機能応答のUnauthenticated反映されたXSS | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAnは、影響を受けたTansStack Startアプリでサーバー機能にURLを作成することができます。 誰かがリンクを開くと、アプリは攻撃者制御のHTMLを独自の起源から返し、そこに攻撃者のJavaScriptを実行することができます。 スクリプトは、訪問者に利用可能な同じオリジンデータにアクセスし、その権限でリクエストをすることができます。 原因サーバー機能の輸送は、パブリック入力",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:20.000Z",
+            "date_published": "2026-10-15T20:22:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tanstack/vue-start] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses",
+                "translatedTitle": "[@tanstack/vue-start] は、 TanStackのルーター:TanStackのサーバー機能応答のUnauthenticated反映されたXSS",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "content_html": "ImpactAnは、影響を受けたTansStack Startアプリでサーバー機能にURLを作成することができます。 誰かがリンクを開くと、アプリは攻撃者制御のHTMLを独自の起源から返し、そこに攻撃者のJavaScriptを実行することができます。 スクリプトは、訪問者に利用可能な同じオリジンデータにアクセスし、その権限でリクエストをすることができます。 原因サーバー機能の輸送は、パブリック入力フィールドに制限するのではなく、内部ミドルウェア状態にペイロードフィールドを渡すことができます。 誤ったペイロードは、エラーパスの攻撃者制御の結果を残すことができます。 応答処理は、レスポンス型のオブジェクトをHTTPレスポンスとして扱うことができます。 欠陥のあるバージョン @tanstack/start-server-core、@tanstack/react-start、@tanstack/solid-start、および1.143.12から@tanstack/vue-startの公開バージョンは、それぞれパッチバージョンの影響を受けません。 パッチ化されたバージョンは、@tanstack/",
+            "url": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "title": "[@tanstack/ソリッドスタート] TanStackのルーター:TanStackのサーバー機能応答のUnauthenticated反映されたXSS | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAnは、影響を受けたTansStack Startアプリでサーバー機能にURLを作成することができます。 誰かがリンクを開くと、アプリは攻撃者制御のHTMLを独自の起源から返し、そこに攻撃者のJavaScriptを実行することができます。 スクリプトは、訪問者に利用可能な同じオリジンデータにアクセスし、その権限でリクエストをすることができます。 原因サーバー機能の輸送は、パブリック入力",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:20.000Z",
+            "date_published": "2026-10-15T20:22:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tanstack/solid-start] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses",
+                "translatedTitle": "[@tanstack/ソリッドスタート] TanStackのルーター:TanStackのサーバー機能応答のUnauthenticated反映されたXSS",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "content_html": "ImpactAnは、影響を受けたTansStack Startアプリでサーバー機能にURLを作成することができます。 誰かがリンクを開くと、アプリは攻撃者制御のHTMLを独自の起源から返し、そこに攻撃者のJavaScriptを実行することができます。 スクリプトは、訪問者に利用可能な同じオリジンデータにアクセスし、その権限でリクエストをすることができます。 原因サーバー機能の輸送は、パブリック入力フィールドに制限するのではなく、内部ミドルウェア状態にペイロードフィールドを渡すことができます。 誤ったペイロードは、エラーパスの攻撃者制御の結果を残すことができます。 応答処理は、レスポンス型のオブジェクトをHTTPレスポンスとして扱うことができます。 欠陥のあるバージョン @tanstack/start-server-core、@tanstack/react-start、@tanstack/solid-start、および1.143.12から@tanstack/vue-startの公開バージョンは、それぞれパッチバージョンの影響を受けません。 パッチ化されたバージョンは、@tanstack/",
+            "url": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "title": "[@tanstack/react-start] の検索結果 TanStackのルーター:TanStackのサーバー機能応答のUnauthenticated反映されたXSS | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAnは、影響を受けたTansStack Startアプリでサーバー機能にURLを作成することができます。 誰かがリンクを開くと、アプリは攻撃者制御のHTMLを独自の起源から返し、そこに攻撃者のJavaScriptを実行することができます。 スクリプトは、訪問者に利用可能な同じオリジンデータにアクセスし、その権限でリクエストをすることができます。 原因サーバー機能の輸送は、パブリック入力",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:20.000Z",
+            "date_published": "2026-10-15T20:22:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tanstack/react-start] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses",
+                "translatedTitle": "[@tanstack/react-start] の検索結果 TanStackのルーター:TanStackのサーバー機能応答のUnauthenticated反映されたXSS",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "content_html": "ImpactAnは、影響を受けたTansStack Startアプリでサーバー機能にURLを作成することができます。 誰かがリンクを開くと、アプリは攻撃者制御のHTMLを独自の起源から返し、そこに攻撃者のJavaScriptを実行することができます。 スクリプトは、訪問者に利用可能な同じオリジンデータにアクセスし、その権限でリクエストをすることができます。 原因サーバー機能の輸送は、パブリック入力フィールドに制限するのではなく、内部ミドルウェア状態にペイロードフィールドを渡すことができます。 誤ったペイロードは、エラーパスの攻撃者制御の結果を残すことができます。 応答処理は、レスポンス型のオブジェクトをHTTPレスポンスとして扱うことができます。 欠陥のあるバージョン @tanstack/start-server-core、@tanstack/react-start、@tanstack/solid-start、および1.143.12から@tanstack/vue-startの公開バージョンは、それぞれパッチバージョンの影響を受けません。 パッチ化されたバージョンは、@tanstack/",
+            "url": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "title": "[@tanstack/スタートサーバコア] TanStackのルーター:TanStackのサーバー機能応答のUnauthenticated反映されたXSS | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAnは、影響を受けたTansStack Startアプリでサーバー機能にURLを作成することができます。 誰かがリンクを開くと、アプリは攻撃者制御のHTMLを独自の起源から返し、そこに攻撃者のJavaScriptを実行することができます。 スクリプトは、訪問者に利用可能な同じオリジンデータにアクセスし、その権限でリクエストをすることができます。 原因サーバー機能の輸送は、パブリック入力",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:20.000Z",
+            "date_published": "2026-10-15T20:22:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tanstack/start-server-core] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses",
+                "translatedTitle": "[@tanstack/スタートサーバコア] TanStackのルーター:TanStackのサーバー機能応答のUnauthenticated反映されたXSS",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-hqm2-cfx2-2vgh",
+            "content_html": "Pipecatのビルトイン開発ランナーは、ボットセッションを作成し、毎日の輸送のために、毎日の部屋を支払ったエンドポイントを公開しています。 これらの開発は意図的に発信者を認証しません。 ランナーはデフォルトで localhost にバインドし、ローカル開発のために特別に設計されています。 生産サーバーとして構築・サポートされていません。 したがって、オペレータは、--host 0.0.0.0の設定、ポートの公開、またはアクセス制御なしでパブリックトンネルを使用して、そのような、信頼できるネットワークから到達可能な開発ランナーを意図的に決定する必要があります。 このように露出すると、未認証の発信者は/start、/daily、/daily-dialin-webhookなどのエンドポイントを呼び出します。 エンドポイントと設定に応じて、ボットセッションまたはデイリールームを作成でき、ルームURLと参加トークンを返すことができます。 繰り返しリクエストは、ローカルリソースとサードパーティサービスクォータを消費することもできます。 起動したボットと相互作用する結果は、そのボットの構成と接続さ",
+            "url": "https://github.com/advisories/GHSA-hqm2-cfx2-2vgh",
+            "title": "[ピペカタイ] Pipecat: Pipecat の開発ランナーの公開露出では、未使用のボットセッション作成が可能 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Pipecatのビルトイン開発ランナーは、ボットセッションを作成し、毎日の輸送のために、毎日の部屋を支払ったエンドポイントを公開しています。 これらの開発は意図的に発信者を認証しません。 ランナーはデフォルトで localhost にバインドし、ローカル開発のために特別に設計されています。 生産サーバーとして構築・サポートされていません。 したがって、オペレータは、--host 0.0.0.0の設",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:18.000Z",
+            "date_published": "2026-10-15T20:22:18.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pipecat-ai] Pipecat: Public exposure of Pipecat’s development runner can allow unauthenticated bot session creation",
+                "translatedTitle": "[ピペカタイ] Pipecat: Pipecat の開発ランナーの公開露出では、未使用のボットセッション作成が可能",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "content_html": "説明Markdownファイルまたはノートブック出力は、JuppyterLabコマンドを実行するボタンを運ぶことができます。 4.5.7 以降、そのようなボタンを最初にクリックすると、コマンドのプロンプトを命名し、キャンセル、一度実行し、Trust を実行します。 Trust を選択すると、コマンドを実行し、信頼できるドキュメントをマークします。そのため、後続のボタンはプロンプトなしで実行されます。 ユーザーがクリックしたときに、ユーザーが回答したときにマークされる文書が決定されます。 どちらの信頼コマンドでも、どの文書が現在のところにあるかを読んでいます。Markdownviewer:trust は tracker.currentWidget を使用し、ノートブック:trust は同等のルックアップを使用します。 プロンプトが開いている間に別の文書が現在の場合、その文書は信頼されるものであり、ユーザーが信頼できないまま見ていました。 ユーザーは、次のすべてが真の場合に影響されます。:JupyterLab 4.5.7 から 4.6.3 を実行します。または、Notebook 7.5 + ",
+            "url": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "title": "[ジュピテルライトコア] JupyterLab: JupyterLabのコマンド・リンク・トラスト・プロンプトは、クリックされたもの以外のドキュメントを信頼できます。 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "説明Markdownファイルまたはノートブック出力は、JuppyterLabコマンドを実行するボタンを運ぶことができます。 4.5.7 以降、そのようなボタンを最初にクリックすると、コマンドのプロンプトを命名し、キャンセル、一度実行し、Trust を実行します。 Trust を選択すると、コマンドを実行し、信頼できるドキュメントをマークします。そのため、後続のボタンはプロンプトなしで実行されます。",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:13.000Z",
+            "date_published": "2026-10-15T20:22:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[jupyterlite-core] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked",
+                "translatedTitle": "[ジュピテルライトコア] JupyterLab: JupyterLabのコマンド・リンク・トラスト・プロンプトは、クリックされたもの以外のドキュメントを信頼できます。",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "content_html": "説明Markdownファイルまたはノートブック出力は、JuppyterLabコマンドを実行するボタンを運ぶことができます。 4.5.7 以降、そのようなボタンを最初にクリックすると、コマンドのプロンプトを命名し、キャンセル、一度実行し、Trust を実行します。 Trust を選択すると、コマンドを実行し、信頼できるドキュメントをマークします。そのため、後続のボタンはプロンプトなしで実行されます。 ユーザーがクリックしたときに、ユーザーが回答したときにマークされる文書が決定されます。 どちらの信頼コマンドでも、どの文書が現在のところにあるかを読んでいます。Markdownviewer:trust は tracker.currentWidget を使用し、ノートブック:trust は同等のルックアップを使用します。 プロンプトが開いている間に別の文書が現在の場合、その文書は信頼されるものであり、ユーザーが信頼できないまま見ていました。 ユーザーは、次のすべてが真の場合に影響されます。:JupyterLab 4.5.7 から 4.6.3 を実行します。または、Notebook 7.5 + ",
+            "url": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "title": "[ノートブック] JupyterLab: JupyterLabのコマンド・リンク・トラスト・プロンプトは、クリックされたもの以外のドキュメントを信頼できます。 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "説明Markdownファイルまたはノートブック出力は、JuppyterLabコマンドを実行するボタンを運ぶことができます。 4.5.7 以降、そのようなボタンを最初にクリックすると、コマンドのプロンプトを命名し、キャンセル、一度実行し、Trust を実行します。 Trust を選択すると、コマンドを実行し、信頼できるドキュメントをマークします。そのため、後続のボタンはプロンプトなしで実行されます。",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:13.000Z",
+            "date_published": "2026-10-15T20:22:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[notebook] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked",
+                "translatedTitle": "[ノートブック] JupyterLab: JupyterLabのコマンド・リンク・トラスト・プロンプトは、クリックされたもの以外のドキュメントを信頼できます。",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "content_html": "説明Markdownファイルまたはノートブック出力は、JuppyterLabコマンドを実行するボタンを運ぶことができます。 4.5.7 以降、そのようなボタンを最初にクリックすると、コマンドのプロンプトを命名し、キャンセル、一度実行し、Trust を実行します。 Trust を選択すると、コマンドを実行し、信頼できるドキュメントをマークします。そのため、後続のボタンはプロンプトなしで実行されます。 ユーザーがクリックしたときに、ユーザーが回答したときにマークされる文書が決定されます。 どちらの信頼コマンドでも、どの文書が現在のところにあるかを読んでいます。Markdownviewer:trust は tracker.currentWidget を使用し、ノートブック:trust は同等のルックアップを使用します。 プロンプトが開いている間に別の文書が現在の場合、その文書は信頼されるものであり、ユーザーが信頼できないまま見ていました。 ユーザーは、次のすべてが真の場合に影響されます。:JupyterLab 4.5.7 から 4.6.3 を実行します。または、Notebook 7.5 + ",
+            "url": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "title": "[ジュピターラボ] JupyterLab: JupyterLabのコマンド・リンク・トラスト・プロンプトは、クリックされたもの以外のドキュメントを信頼できます。 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "説明Markdownファイルまたはノートブック出力は、JuppyterLabコマンドを実行するボタンを運ぶことができます。 4.5.7 以降、そのようなボタンを最初にクリックすると、コマンドのプロンプトを命名し、キャンセル、一度実行し、Trust を実行します。 Trust を選択すると、コマンドを実行し、信頼できるドキュメントをマークします。そのため、後続のボタンはプロンプトなしで実行されます。",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:13.000Z",
+            "date_published": "2026-10-15T20:22:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[jupyterlab] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked",
+                "translatedTitle": "[ジュピターラボ] JupyterLab: JupyterLabのコマンド・リンク・トラスト・プロンプトは、クリックされたもの以外のドキュメントを信頼できます。",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "content_html": "説明Markdownファイルまたはノートブック出力は、JuppyterLabコマンドを実行するボタンを運ぶことができます。 4.5.7 以降、そのようなボタンを最初にクリックすると、コマンドのプロンプトを命名し、キャンセル、一度実行し、Trust を実行します。 Trust を選択すると、コマンドを実行し、信頼できるドキュメントをマークします。そのため、後続のボタンはプロンプトなしで実行されます。 ユーザーがクリックしたときに、ユーザーが回答したときにマークされる文書が決定されます。 どちらの信頼コマンドでも、どの文書が現在のところにあるかを読んでいます。Markdownviewer:trust は tracker.currentWidget を使用し、ノートブック:trust は同等のルックアップを使用します。 プロンプトが開いている間に別の文書が現在の場合、その文書は信頼されるものであり、ユーザーが信頼できないまま見ていました。 ユーザーは、次のすべてが真の場合に影響されます。:JupyterLab 4.5.7 から 4.6.3 を実行します。または、Notebook 7.5 + ",
+            "url": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "title": "[ジュピターラボ] JupyterLab: JupyterLabのコマンド・リンク・トラスト・プロンプトは、クリックされたもの以外のドキュメントを信頼できます。 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "説明Markdownファイルまたはノートブック出力は、JuppyterLabコマンドを実行するボタンを運ぶことができます。 4.5.7 以降、そのようなボタンを最初にクリックすると、コマンドのプロンプトを命名し、キャンセル、一度実行し、Trust を実行します。 Trust を選択すると、コマンドを実行し、信頼できるドキュメントをマークします。そのため、後続のボタンはプロンプトなしで実行されます。",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:13.000Z",
+            "date_published": "2026-10-15T20:22:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[jupyterlab] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked",
+                "translatedTitle": "[ジュピターラボ] JupyterLab: JupyterLabのコマンド・リンク・トラスト・プロンプトは、クリックされたもの以外のドキュメントを信頼できます。",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-pq7j-f95f-qfcv",
+            "content_html": "プラグインは、Claude Code と Claude Desktop にインストールされたフローで、その結果の HEAD がピントされた SHA に一致することを検証することなく、git チェックアウトを使用して、マーケットプレースのピン留めコミット SHA をチェックしました。 プラグインの上流リポジトリを制御する攻撃者は、同じ名前のブランチを作成することができます ピン留めされた40文字の SHA, チェックアウトは、レビューされたコミットの代わりに、攻撃者のブランチチップにサイレントに解決する, ピン留めされたハッシュを迂回してインストールされている攻撃者の制御コード. Exploitation では、悪意のあるプラグイン、安全なハッシュへのピン、および SHA 字型のブランチ名を許す git ホストでホストされるプラグインのソースをインストールするユーザーが必要です。 標準的なClaudeコード自動更新のユーザーは既にこの修正を受け取りました。 マニュアルの更新を実行するユーザーは、最新バージョンに更新することをお勧めします。 この問題を報告するために、またはNevo Mic",
+            "url": "https://github.com/advisories/GHSA-pq7j-f95f-qfcv",
+            "title": "[@anthropic-ai/claude-code] は、 Claudeコード:プラグインハッシュピンバイパスはハッシュピニングのバイパスを許可します | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "プラグインは、Claude Code と Claude Desktop にインストールされたフローで、その結果の HEAD がピントされた SHA に一致することを検証することなく、git チェックアウトを使用して、マーケットプレースのピン留めコミット SHA をチェックしました。 プラグインの上流リポジトリを制御する攻撃者は、同じ名前のブランチを作成することができます ピン留めされた40文字の ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:07.000Z",
+            "date_published": "2026-10-15T20:22:07.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@anthropic-ai/claude-code] Claude Code: Plugin Hash Pin Bypass Allows Bypass of Hash Pinning",
+                "translatedTitle": "[@anthropic-ai/claude-code] は、 Claudeコード:プラグインハッシュピンバイパスはハッシュピニングのバイパスを許可します",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-x586-xvc8-g7q6",
+            "content_html": "サマリーA デフォルト設定のQwikサーバーは、未認証のHTTPリクエストでクラッシュできます。 qwik-json ボディ解析中に、resourceSerializer.$fill$ は Promise.resolve(resource._resolved) を実行します。 _resolved が .then が未登録のシンボルの QRL であるプレーン オブジェクトの場合、非同期 QRL が拒否され、拒絶が孤立し、Node はデフォルトの未処理ポリシーによりプロセスを終了します。 ImpactOne unauthentic リクエストはサーバーをクラッシュさせます。 ループは、攻撃者が要求を送信する限り、すべてのレプリカが死んだままです。 参考:https://github.com/QwikDev/qwik/security/advisories/GHSA-x5ad-xvc8-g7q6https://nvd.nist.gov/vuln/detail/CVE-2026-84994https://github.com/QwikDev/qwik/pull/8655https://gith",
+            "url": "https://github.com/advisories/GHSA-x586-xvc8-g7q6",
+            "title": "[@qwik.dev/core] は、 Qwik:Qwikサーバーをリソースで確実にクラッシュする | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "サマリーA デフォルト設定のQwikサーバーは、未認証のHTTPリクエストでクラッシュできます。 qwik-json ボディ解析中に、resourceSerializer.$fill$ は Promise.resolve(resource._resolved) を実行します。 _resolved が .then が未登録のシンボルの QRL であるプレーン オブジェクトの場合、非同期 QRL が拒",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:00.000Z",
+            "date_published": "2026-10-15T20:22:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@qwik.dev/core] Qwik: Crashing any Qwik Server via Resource thenable",
+                "translatedTitle": "[@qwik.dev/core] は、 Qwik:Qwikサーバーをリソースで確実にクラッシュする",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-x586-xvc8-g7q6",
+            "content_html": "サマリーA デフォルト設定のQwikサーバーは、未認証のHTTPリクエストでクラッシュできます。 qwik-json ボディ解析中に、resourceSerializer.$fill$ は Promise.resolve(resource._resolved) を実行します。 _resolved が .then が未登録のシンボルの QRL であるプレーン オブジェクトの場合、非同期 QRL が拒否され、拒絶が孤立し、Node はデフォルトの未処理ポリシーによりプロセスを終了します。 ImpactOne unauthentic リクエストはサーバーをクラッシュさせます。 ループは、攻撃者が要求を送信する限り、すべてのレプリカが死んだままです。 参考:https://github.com/QwikDev/qwik/security/advisories/GHSA-x5ad-xvc8-g7q6https://nvd.nist.gov/vuln/detail/CVE-2026-84994https://github.com/QwikDev/qwik/pull/8655https://gith",
+            "url": "https://github.com/advisories/GHSA-x586-xvc8-g7q6",
+            "title": "[@builder.io/qwik] は、 Qwik:Qwikサーバーをリソースで確実にクラッシュする | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "サマリーA デフォルト設定のQwikサーバーは、未認証のHTTPリクエストでクラッシュできます。 qwik-json ボディ解析中に、resourceSerializer.$fill$ は Promise.resolve(resource._resolved) を実行します。 _resolved が .then が未登録のシンボルの QRL であるプレーン オブジェクトの場合、非同期 QRL が拒",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:00.000Z",
+            "date_published": "2026-10-15T20:22:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@builder.io/qwik] Qwik: Crashing any Qwik Server via Resource thenable",
+                "translatedTitle": "[@builder.io/qwik] は、 Qwik:Qwikサーバーをリソースで確実にクラッシュする",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3xr5-8w6c-p5gw",
+            "content_html": "ImpactAn 認証されたユーザーは、操作者がアクション設定で排除したアクションを呼び起こすことができます。 アクションの権限と下流の許可を主張することは、強制的に残っています。 PatchesPatched in @backstage/backend-defaults バージョン 0.17.8Workarounds アクションの呼び出しエンドポイントへのアクセスを制限し、アップグレードまで信頼できるサービス呼び出し者にエンドポイントを提供します。 参考:https://github.com/backstage/backstage/security/advisories/GHSA-3xr5-8w6c-p5gwhttps://nvd.nist.gov/vuln/detail/CVE-2026-106495https://github.com/backstage/commit/a8fb34a990a69bcb745e85a3213cf9e5ba2d31a3https://github.com/backstage/backstage/com/a8fb34a990a69bcb745e85a3",
+            "url": "https://github.com/advisories/GHSA-3xr5-8w6c-p5gw",
+            "title": "[@backstage/backend-defaults] は、 バックステージ:バックエンドアクションの呼び出しにおける不正なアクセス制御 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAn 認証されたユーザーは、操作者がアクション設定で排除したアクションを呼び起こすことができます。 アクションの権限と下流の許可を主張することは、強制的に残っています。 PatchesPatched in @backstage/backend-defaults バージョン 0.17.8Workarounds アクションの呼び出しエンドポイントへのアクセスを制限し、アップグレードまで信頼",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:21:54.000Z",
+            "date_published": "2026-10-15T20:21:54.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@backstage/backend-defaults] Backstage: Improper access control in backend action invocation",
+                "translatedTitle": "[@backstage/backend-defaults] は、 バックステージ:バックエンドアクションの呼び出しにおける不正なアクセス制御",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qfxx-c367-67f8",
+            "content_html": "概要CVE-2026-30973 (GHSA-rfx7-4xw3-gh4m) は、エントリー名にパストラバーサルをした。 封入チェックは、それを投げずにエラーオブジェクトをビルドしたので、エントリは文字通り../evil.txt のようなものの名前が宛先外に書かれていました。 その問題は、@appium/support 7.0.6 で固定され、実際にバインドされたエントリ名から除外されます。 この結果は、7.0.6修正がカバーされていない異なるベクトルです。 ここでのアーカイブエントリ名は、完全に正式です (例えば、pwn と pwn/owned.txt, no .. どこでも)、ので、すべての名前ベースの防衛はそれらを受け入れます。 エスケープは、象徴的なリンクによって起こります。 1つのエントリは、抽出ディレクトリの外にターゲットポイントを指すシンリンクであり、後にエントリは、そのシンリンクを通して名前が解決する通常のファイルです。 名前ベースの封入チェックは、symlinkターゲットを検査しず、抽出器はsymlinkターゲットの動詞を書きます。そのため、抽出ルートの外側にファイル",
+            "url": "https://github.com/advisories/GHSA-qfxx-c367-67f8",
+            "title": "[@appium/サポート] Appium:Symlinkは@appium/サポートZIPの抽出のZipのスリップを基づかせていました | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "概要CVE-2026-30973 (GHSA-rfx7-4xw3-gh4m) は、エントリー名にパストラバーサルをした。 封入チェックは、それを投げずにエラーオブジェクトをビルドしたので、エントリは文字通り../evil.txt のようなものの名前が宛先外に書かれていました。 その問題は、@appium/support 7.0.6 で固定され、実際にバインドされたエントリ名から除外されます。 この",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:18:56.000Z",
+            "date_published": "2026-10-15T20:18:56.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@appium/support] Appium: Symlink based Zip Slip in @appium/support ZIP extraction",
+                "translatedTitle": "[@appium/サポート] Appium:Symlinkは@appium/サポートZIPの抽出のZipのスリップを基づかせていました",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-24cc-9352-h2pg",
+            "content_html": "ImpactAn M4Aファイルには、ゼロのサイズのサブアトムが含まれています ---- 原子は、パーサが無限ループに入り、小さなタグでそのようなファイルを読み込むプログラムのためのサービス拒否になります。 PatchesThe の問題は、適切なサイズのチェックを含む主要な原子解析コードパスを再利用することにより、小さなタグ 2.3.0 で固定されています。 トレーニング 回避策はありません。 ユーザーは、小さなタグ2.3.0にアップグレードする必要があります。 参考文献https://github.com/tinytag/tinytag/security/advisories/GHSA-24cc-9352-h2pghttps://nvd.nist.gov/vuln/detail/CVE-2026-104266https://github.com/tinytag/tinytag/pull/326https://github.com/tinytag/tinytag/tinytag/tinytag/tinytag/commit/9ada02990bab990cbcd02990https:/",
+            "url": "https://github.com/advisories/GHSA-24cc-9352-h2pg",
+            "title": "[tinytag] 小さなタグ: 無効な原子を含む特定のM4Aファイルを解析するときに無限ループ | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactAn M4Aファイルには、ゼロのサイズのサブアトムが含まれています ---- 原子は、パーサが無限ループに入り、小さなタグでそのようなファイルを読み込むプログラムのためのサービス拒否になります。 PatchesThe の問題は、適切なサイズのチェックを含む主要な原子解析コードパスを再利用することにより、小さなタグ 2.3.0 で固定されています。 トレーニング 回避策はありません。 ユ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:16:47.000Z",
+            "date_published": "2026-10-15T20:16:47.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tinytag] tinytag: Infinite loop when parsing certain M4A files containing invalid atoms",
+                "translatedTitle": "[tinytag] 小さなタグ: 無効な原子を含む特定のM4Aファイルを解析するときに無限ループ",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-phv8-wgjp-g4p9",
+            "content_html": "FTP と FTPS サーバ -- 有効な場合 -- コピーパーティ プロセスが書き込み権限を持つフォルダーにアップロードを許可します。 FTP-server はデフォルトで無効化され、グローバル・オプションの ftp または ftps で config で明示的に有効化する必要があります。 さらに、SFTPは全く影響を受けませんでした。FTPとFTPSのみです。 これは、完全な読み取り/書き込みのパス・トラバースではなく、次の制限がありました。 アップロードにのみ適用され、この方法で既存のファイルを読み込み/ダウンロードすることはできません。 出力ファイル名は完全に制御できませんでした。ランダム化されたサフィックスはファイル名に常に追加されます。 既存のファイルは上書きや追加できませんでした。新しいファイルだけが作成できます。 Filesystem-permissions は、ほとんどのデプロイメントで root として実行されていないコピーパーティとして、システムフォルダーへの書き込みを防止します。 Copyparty自体はデフォルトでは任意のファイルをコードとして実行しません。そ",
+            "url": "https://github.com/advisories/GHSA-phv8-wgjp-g4p9",
+            "title": "[copyparty] コピーパーティ FTP: 定義されたボリュームを外にアップロードする(制限されたパストラバース) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "FTP と FTPS サーバ -- 有効な場合 -- コピーパーティ プロセスが書き込み権限を持つフォルダーにアップロードを許可します。 FTP-server はデフォルトで無効化され、グローバル・オプションの ftp または ftps で config で明示的に有効化する必要があります。 さらに、SFTPは全く影響を受けませんでした。FTPとFTPSのみです。 これは、完全な読み取り/書き込み",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:16:38.000Z",
+            "date_published": "2026-10-15T20:16:38.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[copyparty] copyparty FTP: upload outside defined volumes (limited path traversal)",
+                "translatedTitle": "[copyparty] コピーパーティ FTP: 定義されたボリュームを外にアップロードする(制限されたパストラバース)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-v5mq-3xhg-98m9",
+            "content_html": "未構造化の解析が不信な文書を解析し、その結果を HTML として出力すると、ドキュメントに含まれる悪意のあるマークアップ(例えば、&lt;img src=x onerror=...&gt;)がエスケープなしで出力 HTML に残されます。 ブラウザで出力されると、ドキュメントに埋め込まれたスクリプトがビューアのブラウザで実行されます。 Detailspartition_html(html_parser_version=\"v2\")(およびVLMのパースペクタ)は、入力文書の要素タグ、属性、およびテキストをメタデータに保持します。text_as_html、および要素_to_html()は、HTML文書として出力します。 このパスで HTML をビルドする関数、unstructd/documents/ontology.py で to_html() は、エスケープを一切行わない。 その結果、入力文書から発信するonerror/onmouseover/onloadなどのイベントハンドラは、出力されたHTMLのas-is(文字&lt;script&gt;タグはパーサでストライプされますが、属性ベースのベクトルとjavas",
+            "url": "https://github.com/advisories/GHSA-v5mq-3xhg-98m9",
+            "title": "[非構造化] 未構造化: エスケープされたHTML生成によるXSS保存 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "未構造化の解析が不信な文書を解析し、その結果を HTML として出力すると、ドキュメントに含まれる悪意のあるマークアップ(例えば、<img src=x onerror=...>)がエスケープなしで出力 HTML に残されます。 ブラウザで出力されると、ドキュメントに埋め込まれたスクリプトがビューアのブラウザで実行されます。 Detailspartition_html(html_parser_ver",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:16:18.000Z",
+            "date_published": "2026-10-15T20:16:18.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[unstructured] unstructured: Stored XSS via unescaped HTML generation",
+                "translatedTitle": "[非構造化] 未構造化: エスケープされたHTML生成によるXSS保存",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2x6f-rp82-ppmj",
+            "content_html": "ベンダー:NuxtProduct:Nuxt OG ImageVersion: 6.2.5Description: モジュールによって作成されたOpen Graphイメージキャッシュとキー生成の特定により、未認証の攻撃者は、ユーザーに配信される画像(例えば、タイトルパラメータ)の内容を変更できます。 影響: コンテンツのスプーフィング脆弱なコンポーネント: ルート /_og/d/*.pngExploitation 条件: applicationMitigation へのアクセス: 6.7.2 にアップグレードし、 config ogImageResearcher: Dmitry Vanin (Positive Technologies)ResearchDuring で十分なセキュアなシークレットを設定しました。以前の脆弱性調査では、バージョン 6.2.5 がキャッシュインデックスを生成するためのメカニズムを変更したことが判明しました。画像生成中に渡されたパラメータを考慮に入れます。 ただし、送信したデータから攻撃者に画像が生成されます。 リスト 1. キャッシュエクスポート機能でインデッ",
+            "url": "https://github.com/advisories/GHSA-2x6f-rp82-ppmj",
+            "title": "[nuxt-og-image] Nuxt OG (Nuxt-og-image) [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-OG] [nuxt-OG] [nuxt-OG] [nuxt-OG] [nuxt-OG-OG] [nuxt-OG-OG-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G- 署名されていない動的イメージ ルートの派手なキャッシュ キーによるイメージ キャッシュの中毒 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ベンダー:NuxtProduct:Nuxt OG ImageVersion: 6.2.5Description: モジュールによって作成されたOpen Graphイメージキャッシュとキー生成の特定により、未認証の攻撃者は、ユーザーに配信される画像(例えば、タイトルパラメータ)の内容を変更できます。 影響: コンテンツのスプーフィング脆弱なコンポーネント: ルート /_og/d/*.pngExplo",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:15:27.000Z",
+            "date_published": "2026-10-15T20:15:27.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nuxt-og-image] Nuxt OG Image cache poisoning through derivable cache keys on unsigned dynamic image routes",
+                "translatedTitle": "[nuxt-og-image] Nuxt OG (Nuxt-og-image) [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-og-image] [nuxt-OG] [nuxt-OG] [nuxt-OG] [nuxt-OG] [nuxt-OG-OG] [nuxt-OG-OG-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G-G- 署名されていない動的イメージ ルートの派手なキャッシュ キーによるイメージ キャッシュの中毒",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2vc4-c4r6-p6v6",
+            "content_html": "キャッシュのインターセプションが有効になっている場合、@opennextjs/cloudflareは、ミドルウェアマッチングとキャッシュルックアップ中にパーセントエンコードされたパスを異なる方法で解釈できます。 符号化されたリクエストは、認証ミドルウェアにマッチしないため、保護されたルートのキャッシュキーにデコードされます。 キャッシュされたレスポンスは、デフォルトではミドルウェアを呼び出しずに返されることがあります。enableCacheInterceptionは無効になっています。 ImpactA リモート unauthenticated 攻撃は、ミドルウェアによって保護されるように意図したルートからキャッシュされたコンテンツを取得できます。 アプリケーションは、:explicitly が enableCacheInterception を有効にしたときに影響を受けます。アクセス制御のミドルウェアに依存します。マッチングされたキャッシュされたルートが使用されます。 DetailsMiddleware マッチングは、以前にエンコードされたリクエストパス名を使用していましたが、キャッシ",
+            "url": "https://github.com/advisories/GHSA-2vc4-c4r6-p6v6",
+            "title": "[@opennextjs/cloudflare] は、 OpenNext Cloudflare(クラウドフレア) キャッシュのインターセプションは符号化されたパスのためのミドルウェアの保護をバイパスできます | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "キャッシュのインターセプションが有効になっている場合、@opennextjs/cloudflareは、ミドルウェアマッチングとキャッシュルックアップ中にパーセントエンコードされたパスを異なる方法で解釈できます。 符号化されたリクエストは、認証ミドルウェアにマッチしないため、保護されたルートのキャッシュキーにデコードされます。 キャッシュされたレスポンスは、デフォルトではミドルウェアを呼び出しずに返",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:15:17.000Z",
+            "date_published": "2026-10-15T20:15:17.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@opennextjs/cloudflare] OpenNext Cloudflare: Cache interception can bypass middleware protection for encoded paths",
+                "translatedTitle": "[@opennextjs/cloudflare] は、 OpenNext Cloudflare(クラウドフレア) キャッシュのインターセプションは符号化されたパスのためのミドルウェアの保護をバイパスできます",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-84m7-p3x7-pcfv",
+            "content_html": "インフォメーション 影響を受けたバージョンでは、ステートフルモード(デフォルト)の Streamable HTTP サーバは、セッションの状態を返さなかったり、セッションが終了してしまったり、クライアント DELETE はセッションを終了したが、エントリが登録されたままになったり、最初のリクエストが実行中のタスクに登録されたまま拒否されたセッション。 各セッションでは、パラメータを初期化し、セッション数を無制限に保持しました。 エンドポイントに到達できるクライアントは、通常の短いリクエストを使用して境界線なしでサーバーのメモリを成長させることができます。 再起動のみが再要求されます。 影響を受けますか? はい、ステートフルなモードでストリーミング可能な HTTP 経由で MCP サービスを提供している場合は、完全に信頼しない場合はエンドポイントに到達できます。 Stateful モードは、:FastMCP (1.x)MCPServer と Server.streamable_http_app() (2.x)StreamableHTTPSessionManagerAffected バージ",
+            "url": "https://github.com/advisories/GHSA-84m7-p3x7-pcfv",
+            "title": "[mcp] MCP Python SDK: StreamableHTTP で展開されていないセッションの蓄積 輸送は資源の排出を可能にします | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "インフォメーション 影響を受けたバージョンでは、ステートフルモード(デフォルト)の Streamable HTTP サーバは、セッションの状態を返さなかったり、セッションが終了してしまったり、クライアント DELETE はセッションを終了したが、エントリが登録されたままになったり、最初のリクエストが実行中のタスクに登録されたまま拒否されたセッション。 各セッションでは、パラメータを初期化し、セッシ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:13:13.000Z",
+            "date_published": "2026-10-15T20:13:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[mcp] MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion",
+                "translatedTitle": "[mcp] MCP Python SDK: StreamableHTTP で展開されていないセッションの蓄積 輸送は資源の排出を可能にします",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-84m7-p3x7-pcfv",
+            "content_html": "インフォメーション 影響を受けたバージョンでは、ステートフルモード(デフォルト)の Streamable HTTP サーバは、セッションの状態を返さなかったり、セッションが終了してしまったり、クライアント DELETE はセッションを終了したが、エントリが登録されたままになったり、最初のリクエストが実行中のタスクに登録されたまま拒否されたセッション。 各セッションでは、パラメータを初期化し、セッション数を無制限に保持しました。 エンドポイントに到達できるクライアントは、通常の短いリクエストを使用して境界線なしでサーバーのメモリを成長させることができます。 再起動のみが再要求されます。 影響を受けますか? はい、ステートフルなモードでストリーミング可能な HTTP 経由で MCP サービスを提供している場合は、完全に信頼しない場合はエンドポイントに到達できます。 Stateful モードは、:FastMCP (1.x)MCPServer と Server.streamable_http_app() (2.x)StreamableHTTPSessionManagerAffected バージ",
+            "url": "https://github.com/advisories/GHSA-84m7-p3x7-pcfv",
+            "title": "[mcp] MCP Python SDK: StreamableHTTP で展開されていないセッションの蓄積 輸送は資源の排出を可能にします | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "インフォメーション 影響を受けたバージョンでは、ステートフルモード(デフォルト)の Streamable HTTP サーバは、セッションの状態を返さなかったり、セッションが終了してしまったり、クライアント DELETE はセッションを終了したが、エントリが登録されたままになったり、最初のリクエストが実行中のタスクに登録されたまま拒否されたセッション。 各セッションでは、パラメータを初期化し、セッシ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:13:13.000Z",
+            "date_published": "2026-10-15T20:13:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[mcp] MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion",
+                "translatedTitle": "[mcp] MCP Python SDK: StreamableHTTP で展開されていないセッションの蓄積 輸送は資源の排出を可能にします",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-524c-h47v-m3h8",
+            "content_html": "説明アドーニスJS のスラグ ルー ルー ルーティング マッチング でサービス 脆弱性の正規表現拒否は、特別に作られた URL を使用して Node.js イベント ループをブロックするリモート 攻撃を許可できます。 これは、攻撃者によって到達可能なルートパラメータでrouter.matchers.slug()を使用してアプリケーションに影響を与えます。 詳細は、router.matchers.slug() で使われる正規表現には、重複した文字クラスを持つ隣接する greedy 修飾語が含まれている:/^[^\\s-_](?[-_]{2,})([a-z0-9-\\\\]{1,})[^\\s]*[^-_\\s]$/マッチした文字が最後のアサーションで拒否された長い文字列を受け取ったとき、 修飾されたエンジンは、 修飾語を上回ることができないと判断します。 この結果は、定形実行時間です。 O(n^1.98)の近接的な複雑さを測定したテスト。 ルーティング中の攻撃者制御のURLセグメントに対して、ルートのマッチングが評価されます。 したがって、未認証の攻撃者は、次のようになります:router .ge",
+            "url": "https://github.com/advisories/GHSA-524c-h47v-m3h8",
+            "title": "[@adonisjs/http サーバ] AdonisJS HTTP サーバー: 管理されていないリソース消費と非効率的な正規表現の複雑さ | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "説明アドーニスJS のスラグ ルー ルー ルーティング マッチング でサービス 脆弱性の正規表現拒否は、特別に作られた URL を使用して Node.js イベント ループをブロックするリモート 攻撃を許可できます。 これは、攻撃者によって到達可能なルートパラメータでrouter.matchers.slug()を使用してアプリケーションに影響を与えます。 詳細は、router.matchers.s",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:09:52.000Z",
+            "date_published": "2026-10-15T20:09:52.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@adonisjs/http-server] AdonisJS HTTP Server: Uncontrolled Resource Consumption and Inefficient Regular Expression Complexity",
+                "translatedTitle": "[@adonisjs/http サーバ] AdonisJS HTTP サーバー: 管理されていないリソース消費と非効率的な正規表現の複雑さ",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-524c-h47v-m3h8",
+            "content_html": "説明アドーニスJS のスラグ ルー ルー ルーティング マッチング でサービス 脆弱性の正規表現拒否は、特別に作られた URL を使用して Node.js イベント ループをブロックするリモート 攻撃を許可できます。 これは、攻撃者によって到達可能なルートパラメータでrouter.matchers.slug()を使用してアプリケーションに影響を与えます。 詳細は、router.matchers.slug() で使われる正規表現には、重複した文字クラスを持つ隣接する greedy 修飾語が含まれている:/^[^\\s-_](?[-_]{2,})([a-z0-9-\\\\]{1,})[^\\s]*[^-_\\s]$/マッチした文字が最後のアサーションで拒否された長い文字列を受け取ったとき、 修飾されたエンジンは、 修飾語を上回ることができないと判断します。 この結果は、定形実行時間です。 O(n^1.98)の近接的な複雑さを測定したテスト。 ルーティング中の攻撃者制御のURLセグメントに対して、ルートのマッチングが評価されます。 したがって、未認証の攻撃者は、次のようになります:router .ge",
+            "url": "https://github.com/advisories/GHSA-524c-h47v-m3h8",
+            "title": "[@adonisjs/http サーバ] AdonisJS HTTP サーバー: 管理されていないリソース消費と非効率的な正規表現の複雑さ | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "説明アドーニスJS のスラグ ルー ルー ルーティング マッチング でサービス 脆弱性の正規表現拒否は、特別に作られた URL を使用して Node.js イベント ループをブロックするリモート 攻撃を許可できます。 これは、攻撃者によって到達可能なルートパラメータでrouter.matchers.slug()を使用してアプリケーションに影響を与えます。 詳細は、router.matchers.s",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:09:52.000Z",
+            "date_published": "2026-10-15T20:09:52.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@adonisjs/http-server] AdonisJS HTTP Server: Uncontrolled Resource Consumption and Inefficient Regular Expression Complexity",
+                "translatedTitle": "[@adonisjs/http サーバ] AdonisJS HTTP サーバー: 管理されていないリソース消費と非効率的な正規表現の複雑さ",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-gfp8-w835-v44j",
+            "content_html": "ソリューション 悪意のある作成されたアーカイブには、以下の項目(「evil/passwd」)、または「.」を埋め込むパスを含む項目(例:「a/.././etc/passwd」)が含まれる場合があります。 そのような項目を抽出するとき、borg は、symlink / が \"...\" を解決したので、抽出ディレクトリの外にファイルを削除または上書きできます。 非常に同様のシナリオでは、細工されたアーカイブは、抽出ディレクトリの外側を指すハードリンクソースでスレーブハードリンク項目を含むことができます。 そのような項目を抽出するとき、ボーグは外側と内側の項目をハードリンクします。 Note: 悪く聞こえますが、実際には大きな問題はありません。そのような悪意のあるアーカイブを作成するには、攻撃者はリポジトリアクセスを必要とし、(暗号化または認証されたリポジトリのために)ボーグキーとパスフレーズも必要です。 影響を受ける: おそらく、すべてのバグのリリースが1.4.5以前(およびb22以前のすべてのバグ2.0.0ベータ)。 パッチ1.4.x 解放シリーズ: 1.4.5 と解放される固定。 コミ",
+            "url": "https://github.com/advisories/GHSA-gfp8-w835-v44j",
+            "title": "[borgbackup] borg 抽出物は、悪意のあるビルドされたアーカイブを抽出するときにツリー外ファイルを変更することがあります | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ソリューション 悪意のある作成されたアーカイブには、以下の項目(「evil/passwd」)、または「.」を埋め込むパスを含む項目(例:「a/.././etc/passwd」)が含まれる場合があります。 そのような項目を抽出するとき、borg は、symlink / が \"...\" を解決したので、抽出ディレクトリの外にファイルを削除または上書きできます。 非常に同様のシナリオでは、細工されたアー",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:09:23.000Z",
+            "date_published": "2026-10-15T20:09:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[borgbackup] borg extract might modify out-of-tree files when extracting maliciously crafted archives",
+                "translatedTitle": "[borgbackup] borg 抽出物は、悪意のあるビルドされたアーカイブを抽出するときにツリー外ファイルを変更することがあります",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-gfp8-w835-v44j",
+            "content_html": "ソリューション 悪意のある作成されたアーカイブには、以下の項目(「evil/passwd」)、または「.」を埋め込むパスを含む項目(例:「a/.././etc/passwd」)が含まれる場合があります。 そのような項目を抽出するとき、borg は、symlink / が \"...\" を解決したので、抽出ディレクトリの外にファイルを削除または上書きできます。 非常に同様のシナリオでは、細工されたアーカイブは、抽出ディレクトリの外側を指すハードリンクソースでスレーブハードリンク項目を含むことができます。 そのような項目を抽出するとき、ボーグは外側と内側の項目をハードリンクします。 Note: 悪く聞こえますが、実際には大きな問題はありません。そのような悪意のあるアーカイブを作成するには、攻撃者はリポジトリアクセスを必要とし、(暗号化または認証されたリポジトリのために)ボーグキーとパスフレーズも必要です。 影響を受ける: おそらく、すべてのバグのリリースが1.4.5以前(およびb22以前のすべてのバグ2.0.0ベータ)。 パッチ1.4.x 解放シリーズ: 1.4.5 と解放される固定。 コミ",
+            "url": "https://github.com/advisories/GHSA-gfp8-w835-v44j",
+            "title": "[borgbackup] borg 抽出物は、悪意のあるビルドされたアーカイブを抽出するときにツリー外ファイルを変更することがあります | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ソリューション 悪意のある作成されたアーカイブには、以下の項目(「evil/passwd」)、または「.」を埋め込むパスを含む項目(例:「a/.././etc/passwd」)が含まれる場合があります。 そのような項目を抽出するとき、borg は、symlink / が \"...\" を解決したので、抽出ディレクトリの外にファイルを削除または上書きできます。 非常に同様のシナリオでは、細工されたアー",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:09:23.000Z",
+            "date_published": "2026-10-15T20:09:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[borgbackup] borg extract might modify out-of-tree files when extracting maliciously crafted archives",
+                "translatedTitle": "[borgbackup] borg 抽出物は、悪意のあるビルドされたアーカイブを抽出するときにツリー外ファイルを変更することがあります",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-526j-582w-7fm9",
+            "content_html": "LINEログインバックエンドを使用したインパクトアプリケーションは、CSRF/強制認証のログインに脆弱です。 攻撃者は、攻撃者の承認コードでコールバックURLにアクセスするために、犠牲者を制御するアカウントでLINE認証フローを開始することができます。 LINE バックエンドは、返された OAuth 状態を検証しなかったため、アプリケーションは偽造されたコールバックを受け入れ、攻撃者制御の LINE アカウントとして犠牲者をログアウトすることができます。 アカウントのリンクが有効になっている場合、同じ欠陥は、攻撃者がLINE IDを犠牲者の既存の認証アカウントにリンクし、永続的な不正なログインパスを作成できるようにすることができます。 パッチhttps://github.com/python-social-auth/social-core/pull/1829Workarounds LINEバックエンドを有効にするアプリケーションのみの影響を受けます。 クレジット Ta Duc Thien と Duc Anh Nguyen が GitHub.Referenceshttps://githu",
+            "url": "https://github.com/advisories/GHSA-526j-582w-7fm9",
+            "title": "[ソーシャル・ユース・コア] Pythonソーシャル Auth: LINE バックエンド (LineOAuth2) で CSRF にログイン — OAuth 状態の検証が欠如 ( 5.0.0 キャンペーンの完全修正) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "LINEログインバックエンドを使用したインパクトアプリケーションは、CSRF/強制認証のログインに脆弱です。 攻撃者は、攻撃者の承認コードでコールバックURLにアクセスするために、犠牲者を制御するアカウントでLINE認証フローを開始することができます。 LINE バックエンドは、返された OAuth 状態を検証しなかったため、アプリケーションは偽造されたコールバックを受け入れ、攻撃者制御の LIN",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:09:11.000Z",
+            "date_published": "2026-10-15T20:09:11.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[social-auth-core] Python Social Auth: Login CSRF in LINE backend (LineOAuth2) — missing OAuth state validation (incomplete fix of 5.0.0 campaign)",
+                "translatedTitle": "[ソーシャル・ユース・コア] Pythonソーシャル Auth: LINE バックエンド (LineOAuth2) で CSRF にログイン — OAuth 状態の検証が欠如 ( 5.0.0 キャンペーンの完全修正)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xpf3-p7gm-7756",
+            "content_html": "BBOTの非アーカイブモジュールは、抽出前のシンリンクエントリを含むアーカイブを拒否しますが、zip と 7z アーカイブでは、p7zip のレガシーバージョンによって生成された unix モードの前に DOS-attribute 接頭辞をリストしているシンリンクを検出できませんでした。 このようなアーカイブ, スキャン中にダウンロードし、抽出 (例えば、ファイルダウンロードを介して), ガードをバイパスし、抽出ディレクトリに書かれている攻撃者制御のシンリンクを引き起こしました. 効果は、symplink(ターゲットは通じていません)を植えることに限定され、そのようなレガシーp7zipビルドを使用するホストのみが影響されます。 現在のメインライン7-Zipは影響しません。 参考:https://github.com/blacklanternsecurity/bbot/security/advisories/GHSA-xpf3ad-p7gm-7756https://nvd.nist.gov/vuln/detail/CVE-2026-14966https://github.com/blac",
+            "url": "https://github.com/advisories/GHSA-xpf3-p7gm-7756",
+            "title": "[bbot] BBOTのSymlinkガードは、非archiveモジュールのバイパスで、抽出中にシンリンクを植えることができます | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "BBOTの非アーカイブモジュールは、抽出前のシンリンクエントリを含むアーカイブを拒否しますが、zip と 7z アーカイブでは、p7zip のレガシーバージョンによって生成された unix モードの前に DOS-attribute 接頭辞をリストしているシンリンクを検出できませんでした。 このようなアーカイブ, スキャン中にダウンロードし、抽出 (例えば、ファイルダウンロードを介して), ガードを",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-14T19:34:31.000Z",
+            "date_published": "2026-10-14T19:34:31.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[bbot] BBOT's Symlink guard bypass in unarchive module allows planting symlinks during extraction",
+                "translatedTitle": "[bbot] BBOTのSymlinkガードは、非archiveモジュールのバイパスで、抽出中にシンリンクを植えることができます",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-856c-92hv-3vxx",
+            "content_html": "概要Apprise の HTTP ベースの通知プラグインと HTTP 添付ファイル / config ローダー (apprise/attachment/http.py, apprise/config/http.py) は、デフォルトで HTTP 3xx リダイレクトを実行し、リダイレクトされたリクエストのユーザ構成の auth ヘッダとクエリパラメーターを再送信します。 オペレータによって構成される宛先が後で妥協される(サービス買収、悪意のある更新)、または攻撃者は保護されていないネットワークパスでMITMの位置を保持している場合、その宛先は302ロケーションを返すことができます。任意のホストとAppriseは、そのクロスオリジンホストに、ユーザーの秘密(X-Gotify-Key、Authorization、ベアアトークン)を転送します。 攻撃者は、元のApprise URLを制御する必要はありません。オペレータが既に信頼している目的地からの応答のみ。 urllib3のアプリケーションレイヤーアナログです。 GHSA-34jh-p97f-mpxf / CVE-2026-44431(クロ",
+            "url": "https://github.com/advisories/GHSA-856c-92hv-3vxx",
+            "title": "[apprise] 設定された auth ヘッダをクロスオリジン HTTP リダイレクトに転送します。 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "概要Apprise の HTTP ベースの通知プラグインと HTTP 添付ファイル / config ローダー (apprise/attachment/http.py, apprise/config/http.py) は、デフォルトで HTTP 3xx リダイレクトを実行し、リダイレクトされたリクエストのユーザ構成の auth ヘッダとクエリパラメーターを再送信します。 オペレータによって構成され",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-14T18:38:05.000Z",
+            "date_published": "2026-10-14T18:38:05.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[apprise] Apprise forwards configured auth headers across cross-origin HTTP redirects",
+                "translatedTitle": "[apprise] 設定された auth ヘッダをクロスオリジン HTTP リダイレクトに転送します。",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        }
+    ]
+}

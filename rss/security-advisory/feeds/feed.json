@@ -1,0 +1,618 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "GitHub Security Advisory｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/feed.json",
+    "description": "GitHub Security Advisoryセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://github.com/advisories/GHSA-w5f2-9q9c-ff4h",
+            "content_html": "SummaryLMCache is vulnerable to Unauthenticated Remote Code Execution via Pickle Deserialization on the Multiprocess ZMQ TransportDetailsLMCache multiprocess mode, also called distributed mode, opens an unauthenticated ZeroMQ ROUTER so worker processes can register and share KV cache blocks. The intended clients are sibling LMCache processes. There is no CURVE, ZAP, password, or message authentication on that socket. LMCache used only inside a vLLM process does not open this port. The transport ",
+            "url": "https://github.com/advisories/GHSA-w5f2-9q9c-ff4h",
+            "title": "[lmcache] LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryLMCache is vulnerable to Unauthenticated Remote Code Execution via Pickle Deserialization on the Multiprocess ZMQ TransportDetailsLMCache multiprocess mode, also called distributed mode, opens ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-16T20:08:44.000Z",
+            "date_published": "2026-10-16T20:08:44.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[lmcache] LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-h4mw-j7qp-8mwm",
+            "content_html": "The Claude Agent SDK for Python passed the resume option to the Claude CLI without validation, allowing a value beginning with - to be interpreted as a separate CLI flag. An attacker who controlled the resume value could inject an --mcp-config flag defining a stdio MCP server, resulting in arbitrary command execution at CLI startup that bypassed the SDK's permission controls. Exploitation required an application to pass untrusted input as the session ID to resume.Users are advised to update to t",
+            "url": "https://github.com/advisories/GHSA-h4mw-j7qp-8mwm",
+            "title": "[claude-agent-sdk] Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "The Claude Agent SDK for Python passed the resume option to the Claude CLI without validation, allowing a value beginning with - to be interpreted as a separate CLI flag. An attacker who controlled th",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-16T19:44:37.000Z",
+            "date_published": "2026-10-16T19:44:37.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[claude-agent-sdk] Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vqff-r82h-9crc",
+            "content_html": "SummaryThe MCP Apps UI resource (an interactive DataStore table rendered in the host's webview/iframe) communicates with its parent via postMessage. Its inbound message listener performs no event.origin validation, and its outbound messages are sent with target origin '*'. Any window/frame able to reach the document can inject data into the table and interfere with the MCP UI handshake, and the UI's own JSON-RPC messages are broadcast without an origin restriction.Affected codesrc/resources/data",
+            "url": "https://github.com/advisories/GHSA-vqff-r82h-9crc",
+            "title": "[@aborruso/ckan-mcp-server] ckan-mcp-server: DataStore Table UI resource does not validate postMessage origin (in) and posts to targetOrigin \"*\" (out) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe MCP Apps UI resource (an interactive DataStore table rendered in the host's webview/iframe) communicates with its parent via postMessage. Its inbound message listener performs no event.orig",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-16T19:23:48.000Z",
+            "date_published": "2026-10-16T19:23:48.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@aborruso/ckan-mcp-server] ckan-mcp-server: DataStore Table UI resource does not validate postMessage origin (in) and posts to targetOrigin \"*\" (out)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vgf9-9mxx-hq54",
+            "content_html": "ImpactA path traversal vulnerability in the revision command allowed a crafted migration name supplied via the -m argument to escape the intended migrations directory.Under specific conditions, an attacker could cause the tool to create a .sql file in an arbitrary location writable by the user executing the command.This issue is only exploitable if an attacker can influence the migration name passed to the revision command, such as through an insecure automation or CI/CD pipeline that forwards u",
+            "url": "https://github.com/advisories/GHSA-vgf9-9mxx-hq54",
+            "title": "[ClickMigrate] ClickMigrate has Path Traversal in \"revision -m\" argument | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactA path traversal vulnerability in the revision command allowed a crafted migration name supplied via the -m argument to escape the intended migrations directory.Under specific conditions, an att",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-16T19:17:28.000Z",
+            "date_published": "2026-10-16T19:17:28.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[ClickMigrate] ClickMigrate has Path Traversal in \"revision -m\" argument",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "content_html": "ImpactAn unauthenticated attacker can craft a URL to a server function in an affected TanStack Start app. If someone opens the link, the app can return attacker-controlled HTML from its own origin and run the attacker's JavaScript there. The script can access same-origin data available to that visitor and make requests with their authority.CauseThe server-function transport can pass request payload fields into internal middleware state instead of limiting them to public input fields. A malformed",
+            "url": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "title": "[@tanstack/vue-start] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAn unauthenticated attacker can craft a URL to a server function in an affected TanStack Start app. If someone opens the link, the app can return attacker-controlled HTML from its own origin and",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:20.000Z",
+            "date_published": "2026-10-15T20:22:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tanstack/vue-start] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "content_html": "ImpactAn unauthenticated attacker can craft a URL to a server function in an affected TanStack Start app. If someone opens the link, the app can return attacker-controlled HTML from its own origin and run the attacker's JavaScript there. The script can access same-origin data available to that visitor and make requests with their authority.CauseThe server-function transport can pass request payload fields into internal middleware state instead of limiting them to public input fields. A malformed",
+            "url": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "title": "[@tanstack/solid-start] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAn unauthenticated attacker can craft a URL to a server function in an affected TanStack Start app. If someone opens the link, the app can return attacker-controlled HTML from its own origin and",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:20.000Z",
+            "date_published": "2026-10-15T20:22:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tanstack/solid-start] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "content_html": "ImpactAn unauthenticated attacker can craft a URL to a server function in an affected TanStack Start app. If someone opens the link, the app can return attacker-controlled HTML from its own origin and run the attacker's JavaScript there. The script can access same-origin data available to that visitor and make requests with their authority.CauseThe server-function transport can pass request payload fields into internal middleware state instead of limiting them to public input fields. A malformed",
+            "url": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "title": "[@tanstack/react-start] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAn unauthenticated attacker can craft a URL to a server function in an affected TanStack Start app. If someone opens the link, the app can return attacker-controlled HTML from its own origin and",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:20.000Z",
+            "date_published": "2026-10-15T20:22:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tanstack/react-start] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "content_html": "ImpactAn unauthenticated attacker can craft a URL to a server function in an affected TanStack Start app. If someone opens the link, the app can return attacker-controlled HTML from its own origin and run the attacker's JavaScript there. The script can access same-origin data available to that visitor and make requests with their authority.CauseThe server-function transport can pass request payload fields into internal middleware state instead of limiting them to public input fields. A malformed",
+            "url": "https://github.com/advisories/GHSA-qx66-fv34-fjm8",
+            "title": "[@tanstack/start-server-core] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAn unauthenticated attacker can craft a URL to a server function in an affected TanStack Start app. If someone opens the link, the app can return attacker-controlled HTML from its own origin and",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:20.000Z",
+            "date_published": "2026-10-15T20:22:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@tanstack/start-server-core] TanStack Router: Unauthenticated reflected XSS in TanStack Start server-function responses",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-hqm2-cfx2-2vgh",
+            "content_html": "Pipecat’s built-in development runner exposes endpoints that create bot sessions and, for the Daily transport, paid Daily rooms. These development endpoints intentionally do not authenticate callers.The runner binds to localhost by default and is designed exclusively for local development. It is not built or supported as a production server. Exploitation therefore requires an operator to deliberately make the development runner reachable from an untrusted network, such as by setting --host 0.0.0",
+            "url": "https://github.com/advisories/GHSA-hqm2-cfx2-2vgh",
+            "title": "[pipecat-ai] Pipecat: Public exposure of Pipecat’s development runner can allow unauthenticated bot session creation | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Pipecat’s built-in development runner exposes endpoints that create bot sessions and, for the Daily transport, paid Daily rooms. These development endpoints intentionally do not authenticate callers.T",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:18.000Z",
+            "date_published": "2026-10-15T20:22:18.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pipecat-ai] Pipecat: Public exposure of Pipecat’s development runner can allow unauthenticated bot session creation",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "content_html": "DescriptionA Markdown file or a notebook output can carry a button that runs a JupyterLab command. Since 4.5.7 the first click on such a button opens a prompt naming the command, with Cancel, Run Once and Trust. Choosing Trust runs the command and marks the document trusted, so its later buttons run without a prompt.Which document gets marked is decided when the user answers, not when they click. Both trust commands read whichever document is current at that moment: markdownviewer:trust uses tra",
+            "url": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "title": "[jupyterlite-core] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "DescriptionA Markdown file or a notebook output can carry a button that runs a JupyterLab command. Since 4.5.7 the first click on such a button opens a prompt naming the command, with Cancel, Run Once",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:13.000Z",
+            "date_published": "2026-10-15T20:22:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[jupyterlite-core] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "content_html": "DescriptionA Markdown file or a notebook output can carry a button that runs a JupyterLab command. Since 4.5.7 the first click on such a button opens a prompt naming the command, with Cancel, Run Once and Trust. Choosing Trust runs the command and marks the document trusted, so its later buttons run without a prompt.Which document gets marked is decided when the user answers, not when they click. Both trust commands read whichever document is current at that moment: markdownviewer:trust uses tra",
+            "url": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "title": "[notebook] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "DescriptionA Markdown file or a notebook output can carry a button that runs a JupyterLab command. Since 4.5.7 the first click on such a button opens a prompt naming the command, with Cancel, Run Once",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:13.000Z",
+            "date_published": "2026-10-15T20:22:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[notebook] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "content_html": "DescriptionA Markdown file or a notebook output can carry a button that runs a JupyterLab command. Since 4.5.7 the first click on such a button opens a prompt naming the command, with Cancel, Run Once and Trust. Choosing Trust runs the command and marks the document trusted, so its later buttons run without a prompt.Which document gets marked is decided when the user answers, not when they click. Both trust commands read whichever document is current at that moment: markdownviewer:trust uses tra",
+            "url": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "title": "[jupyterlab] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "DescriptionA Markdown file or a notebook output can carry a button that runs a JupyterLab command. Since 4.5.7 the first click on such a button opens a prompt naming the command, with Cancel, Run Once",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:13.000Z",
+            "date_published": "2026-10-15T20:22:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[jupyterlab] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "content_html": "DescriptionA Markdown file or a notebook output can carry a button that runs a JupyterLab command. Since 4.5.7 the first click on such a button opens a prompt naming the command, with Cancel, Run Once and Trust. Choosing Trust runs the command and marks the document trusted, so its later buttons run without a prompt.Which document gets marked is decided when the user answers, not when they click. Both trust commands read whichever document is current at that moment: markdownviewer:trust uses tra",
+            "url": "https://github.com/advisories/GHSA-jwrc-gm9j-263p",
+            "title": "[jupyterlab] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "DescriptionA Markdown file or a notebook output can carry a button that runs a JupyterLab command. Since 4.5.7 the first click on such a button opens a prompt naming the command, with Cancel, Run Once",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:13.000Z",
+            "date_published": "2026-10-15T20:22:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[jupyterlab] JupyterLab: Command link trust prompt in JupyterLab can trust a document other than the one clicked",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-pq7j-f95f-qfcv",
+            "content_html": "The plugin install flow in Claude Code and Claude Desktop checked out a marketplace's pinned commit SHA using git checkout without verifying that the resulting HEAD matched the pinned SHA. An attacker controlling a plugin's upstream repository could create a branch named identically to the pinned 40-character SHA, causing the checkout to silently resolve to the attacker's branch tip instead of the reviewed commit, resulting in attacker-controlled code being installed bypassing the pinned hash. E",
+            "url": "https://github.com/advisories/GHSA-pq7j-f95f-qfcv",
+            "title": "[@anthropic-ai/claude-code] Claude Code: Plugin Hash Pin Bypass Allows Bypass of Hash Pinning | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "The plugin install flow in Claude Code and Claude Desktop checked out a marketplace's pinned commit SHA using git checkout without verifying that the resulting HEAD matched the pinned SHA. An attacker",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:07.000Z",
+            "date_published": "2026-10-15T20:22:07.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@anthropic-ai/claude-code] Claude Code: Plugin Hash Pin Bypass Allows Bypass of Hash Pinning",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-x586-xvc8-g7q6",
+            "content_html": "SummaryA Qwik server in the default configuration can be crashed with one unauthenticated HTTP request. During qwik-json body parsing, ResourceSerializer.$fill$ does Promise.resolve(resource._resolved). If _resolved is a plain object whose .then is a QRL for an unregistered symbol, the async QRL rejects, the rejection is orphaned, and Node terminates the process via its default unhandled-rejection policy.ImpactOne unauthenticated request crashes the server. Looping keeps every replica dead as lo",
+            "url": "https://github.com/advisories/GHSA-x586-xvc8-g7q6",
+            "title": "[@qwik.dev/core] Qwik: Crashing any Qwik Server via Resource thenable | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryA Qwik server in the default configuration can be crashed with one unauthenticated HTTP request. During qwik-json body parsing, ResourceSerializer.$fill$ does Promise.resolve(resource._resolved",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:00.000Z",
+            "date_published": "2026-10-15T20:22:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@qwik.dev/core] Qwik: Crashing any Qwik Server via Resource thenable",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-x586-xvc8-g7q6",
+            "content_html": "SummaryA Qwik server in the default configuration can be crashed with one unauthenticated HTTP request. During qwik-json body parsing, ResourceSerializer.$fill$ does Promise.resolve(resource._resolved). If _resolved is a plain object whose .then is a QRL for an unregistered symbol, the async QRL rejects, the rejection is orphaned, and Node terminates the process via its default unhandled-rejection policy.ImpactOne unauthenticated request crashes the server. Looping keeps every replica dead as lo",
+            "url": "https://github.com/advisories/GHSA-x586-xvc8-g7q6",
+            "title": "[@builder.io/qwik] Qwik: Crashing any Qwik Server via Resource thenable | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryA Qwik server in the default configuration can be crashed with one unauthenticated HTTP request. During qwik-json body parsing, ResourceSerializer.$fill$ does Promise.resolve(resource._resolved",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:22:00.000Z",
+            "date_published": "2026-10-15T20:22:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@builder.io/qwik] Qwik: Crashing any Qwik Server via Resource thenable",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3xr5-8w6c-p5gw",
+            "content_html": "ImpactAn authenticated user could invoke actions that an operator had excluded through action configuration. Existing action permissions and downstream authorization remain enforced.PatchesPatched in @backstage/backend-defaults version 0.17.8WorkaroundsLimit access to action invocation endpoints to trusted service callers until upgrading.Referenceshttps://github.com/backstage/backstage/security/advisories/GHSA-3xr5-8w6c-p5gwhttps://nvd.nist.gov/vuln/detail/CVE-2026-106495https://github.com/backs",
+            "url": "https://github.com/advisories/GHSA-3xr5-8w6c-p5gw",
+            "title": "[@backstage/backend-defaults] Backstage: Improper access control in backend action invocation | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactAn authenticated user could invoke actions that an operator had excluded through action configuration. Existing action permissions and downstream authorization remain enforced.PatchesPatched in ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:21:54.000Z",
+            "date_published": "2026-10-15T20:21:54.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@backstage/backend-defaults] Backstage: Improper access control in backend action invocation",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qfxx-c367-67f8",
+            "content_html": "SummaryCVE-2026-30973 (GHSA-rfx7-4xw3-gh4m) was a plain path traversal in the entry name. The containment check built an Error object without throwing it, so an entry literally named something like ../evil.txt was written outside the destination. That issue was fixed in @appium/support 7.0.6 by actually rejecting out of bound entry names.This finding is a different vector that the 7.0.6 fix does not cover. The archive entry names here are completely legitimate (for example pwn and pwn/owned.txt,",
+            "url": "https://github.com/advisories/GHSA-qfxx-c367-67f8",
+            "title": "[@appium/support] Appium: Symlink based Zip Slip in @appium/support ZIP extraction | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryCVE-2026-30973 (GHSA-rfx7-4xw3-gh4m) was a plain path traversal in the entry name. The containment check built an Error object without throwing it, so an entry literally named something like ..",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:18:56.000Z",
+            "date_published": "2026-10-15T20:18:56.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@appium/support] Appium: Symlink based Zip Slip in @appium/support ZIP extraction",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-24cc-9352-h2pg",
+            "content_html": "ImpactAn M4A file containing a sub-atom with a size of zero in the ---- atom makes the parser enter an infinite loop, resulting in a denial-of-service for programs reading such files with tinytag.PatchesThe issue has been fixed in tinytag 2.3.0, by reusing the primary atom parsing code path that contains appropriate size checks.WorkaroundsNo workarounds exist. Users must upgrade to tinytag 2.3.0.Referenceshttps://github.com/tinytag/tinytag/security/advisories/GHSA-24cc-9352-h2pghttps://nvd.nist.",
+            "url": "https://github.com/advisories/GHSA-24cc-9352-h2pg",
+            "title": "[tinytag] tinytag: Infinite loop when parsing certain M4A files containing invalid atoms | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactAn M4A file containing a sub-atom with a size of zero in the ---- atom makes the parser enter an infinite loop, resulting in a denial-of-service for programs reading such files with tinytag.Patc",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:16:47.000Z",
+            "date_published": "2026-10-15T20:16:47.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tinytag] tinytag: Infinite loop when parsing certain M4A files containing invalid atoms",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-phv8-wgjp-g4p9",
+            "content_html": "The FTP and FTPS server -- if enabled -- would allow uploading to any folder that the copyparty process had permission to write to.The FTP-server is default-disabled, and must be explicitly enabled in the config with global-option ftp or ftps to be affected. Additionally, SFTP was not affected at all; only FTP and FTPS.This was not a full read/write path-traversal; it had the following limitations:Only applied to uploads; it was not possible to read/download existing files in this manner.The out",
+            "url": "https://github.com/advisories/GHSA-phv8-wgjp-g4p9",
+            "title": "[copyparty] copyparty FTP: upload outside defined volumes (limited path traversal) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "The FTP and FTPS server -- if enabled -- would allow uploading to any folder that the copyparty process had permission to write to.The FTP-server is default-disabled, and must be explicitly enabled in",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:16:38.000Z",
+            "date_published": "2026-10-15T20:16:38.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[copyparty] copyparty FTP: upload outside defined volumes (limited path traversal)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-v5mq-3xhg-98m9",
+            "content_html": "SummaryWhen unstructured parses an untrusted document and outputs the result as HTML, malicious markup contained in the document (e.g. &lt;img src=x onerror=...&gt;) is left in the output HTML without escaping. When that output is displayed in a browser, the script embedded in the document executes in the viewer's browser.Detailspartition_html(html_parser_version=\"v2\") (and the VLM partitioner) preserve the input document's element tags, attributes, and text into metadata.text_as_html, and elements_to",
+            "url": "https://github.com/advisories/GHSA-v5mq-3xhg-98m9",
+            "title": "[unstructured] unstructured: Stored XSS via unescaped HTML generation | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryWhen unstructured parses an untrusted document and outputs the result as HTML, malicious markup contained in the document (e.g. <img src=x onerror=...>) is left in the output HTML without escap",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:16:18.000Z",
+            "date_published": "2026-10-15T20:16:18.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[unstructured] unstructured: Stored XSS via unescaped HTML generation",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2x6f-rp82-ppmj",
+            "content_html": "Vendor: NuxtProduct: Nuxt OG ImageVersion: 6.2.5Description: Due to the specifics of caching and key generation in the Open Graph image cache created by the module, an unauthenticated attacker can modify the content of the image (for example, the title parameter) that is delivered to the user. Impact: Content SpoofingVulnerable component: route /_og/d/*.pngExploitation conditions: Access to the applicationMitigation: Upgrade to 6.7.2 and set a sufficiently secure secret in config ogImageResearch",
+            "url": "https://github.com/advisories/GHSA-2x6f-rp82-ppmj",
+            "title": "[nuxt-og-image] Nuxt OG Image cache poisoning through derivable cache keys on unsigned dynamic image routes | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Vendor: NuxtProduct: Nuxt OG ImageVersion: 6.2.5Description: Due to the specifics of caching and key generation in the Open Graph image cache created by the module, an unauthenticated attacker can mod",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:15:27.000Z",
+            "date_published": "2026-10-15T20:15:27.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nuxt-og-image] Nuxt OG Image cache poisoning through derivable cache keys on unsigned dynamic image routes",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2vc4-c4r6-p6v6",
+            "content_html": "SummaryWhen cache interception is enabled, @opennextjs/cloudflare can interpret percent-encoded paths differently during middleware matching and cache lookup.An encoded request may fail to match authorization middleware, then be decoded into the cache key of a protected route. The cached response may consequently be returned without invoking the middleware.enableCacheInterception is disabled by default.ImpactA remote unauthenticated attacker may retrieve cached content from routes intended to be",
+            "url": "https://github.com/advisories/GHSA-2vc4-c4r6-p6v6",
+            "title": "[@opennextjs/cloudflare] OpenNext Cloudflare: Cache interception can bypass middleware protection for encoded paths | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryWhen cache interception is enabled, @opennextjs/cloudflare can interpret percent-encoded paths differently during middleware matching and cache lookup.An encoded request may fail to match autho",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:15:17.000Z",
+            "date_published": "2026-10-15T20:15:17.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@opennextjs/cloudflare] OpenNext Cloudflare: Cache interception can bypass middleware protection for encoded paths",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-84m7-p3x7-pcfv",
+            "content_html": "SummaryIn affected versions, a Streamable HTTP server in stateful mode (the default) never reclaimed session state:sessions did not expire;a client DELETE ended the session but left its entry registered;a session whose first request was refused stayed registered with a running task.Each session also kept its parsed initialize parameters, and the number of sessions was unlimited. A client that could reach the endpoint could grow server memory without bound using ordinary short requests; only a re",
+            "url": "https://github.com/advisories/GHSA-84m7-p3x7-pcfv",
+            "title": "[mcp] MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryIn affected versions, a Streamable HTTP server in stateful mode (the default) never reclaimed session state:sessions did not expire;a client DELETE ended the session but left its entry register",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:13:13.000Z",
+            "date_published": "2026-10-15T20:13:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[mcp] MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-84m7-p3x7-pcfv",
+            "content_html": "SummaryIn affected versions, a Streamable HTTP server in stateful mode (the default) never reclaimed session state:sessions did not expire;a client DELETE ended the session but left its entry registered;a session whose first request was refused stayed registered with a running task.Each session also kept its parsed initialize parameters, and the number of sessions was unlimited. A client that could reach the endpoint could grow server memory without bound using ordinary short requests; only a re",
+            "url": "https://github.com/advisories/GHSA-84m7-p3x7-pcfv",
+            "title": "[mcp] MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryIn affected versions, a Streamable HTTP server in stateful mode (the default) never reclaimed session state:sessions did not expire;a client DELETE ended the session but left its entry register",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:13:13.000Z",
+            "date_published": "2026-10-15T20:13:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[mcp] MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-524c-h47v-m3h8",
+            "content_html": "DescriptionA Regular Expression Denial of Service vulnerability in the built-in AdonisJS slug route matcher may allow a remote attacker to block the Node.js event loop using a specially crafted URL.This affects applications using router.matchers.slug() on a route parameter reachable by an attacker.DetailsThe regular expression used by router.matchers.slug() contains adjacent greedy quantifiers with overlapping character classes:/^[^\\s-_](?!.*?[-_]{2,})([a-z0-9-\\\\]{1,})[^\\s]*[^-_\\s]$/When the mat",
+            "url": "https://github.com/advisories/GHSA-524c-h47v-m3h8",
+            "title": "[@adonisjs/http-server] AdonisJS HTTP Server: Uncontrolled Resource Consumption and Inefficient Regular Expression Complexity | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "DescriptionA Regular Expression Denial of Service vulnerability in the built-in AdonisJS slug route matcher may allow a remote attacker to block the Node.js event loop using a specially crafted URL.Th",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:09:52.000Z",
+            "date_published": "2026-10-15T20:09:52.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@adonisjs/http-server] AdonisJS HTTP Server: Uncontrolled Resource Consumption and Inefficient Regular Expression Complexity",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-524c-h47v-m3h8",
+            "content_html": "DescriptionA Regular Expression Denial of Service vulnerability in the built-in AdonisJS slug route matcher may allow a remote attacker to block the Node.js event loop using a specially crafted URL.This affects applications using router.matchers.slug() on a route parameter reachable by an attacker.DetailsThe regular expression used by router.matchers.slug() contains adjacent greedy quantifiers with overlapping character classes:/^[^\\s-_](?!.*?[-_]{2,})([a-z0-9-\\\\]{1,})[^\\s]*[^-_\\s]$/When the mat",
+            "url": "https://github.com/advisories/GHSA-524c-h47v-m3h8",
+            "title": "[@adonisjs/http-server] AdonisJS HTTP Server: Uncontrolled Resource Consumption and Inefficient Regular Expression Complexity | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "DescriptionA Regular Expression Denial of Service vulnerability in the built-in AdonisJS slug route matcher may allow a remote attacker to block the Node.js event loop using a specially crafted URL.Th",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:09:52.000Z",
+            "date_published": "2026-10-15T20:09:52.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@adonisjs/http-server] AdonisJS HTTP Server: Uncontrolled Resource Consumption and Inefficient Regular Expression Complexity",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-gfp8-w835-v44j",
+            "content_html": "ImpactA maliciously crafted archive could contain a symlink (e.g. \"evil\" -&gt; \"/etc\") followed by an item below it (\"evil/passwd\"), or an item whose path embeds \"..\" (e.g. \"a/../../etc/passwd\").When extracting such items, borg followed the symlink / resolved the \"..\", so it could delete or overwrite files outside the extraction directory.In a quite similar scenario, a crafted archive could contain a slave hardlink item with the hardlink source pointing outside the extraction directory.When extract",
+            "url": "https://github.com/advisories/GHSA-gfp8-w835-v44j",
+            "title": "[borgbackup] borg extract might modify out-of-tree files when extracting maliciously crafted archives | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactA maliciously crafted archive could contain a symlink (e.g. \"evil\" -> \"/etc\") followed by an item below it (\"evil/passwd\"), or an item whose path embeds \"..\" (e.g. \"a/../../etc/passwd\").When ext",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:09:23.000Z",
+            "date_published": "2026-10-15T20:09:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[borgbackup] borg extract might modify out-of-tree files when extracting maliciously crafted archives",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-gfp8-w835-v44j",
+            "content_html": "ImpactA maliciously crafted archive could contain a symlink (e.g. \"evil\" -&gt; \"/etc\") followed by an item below it (\"evil/passwd\"), or an item whose path embeds \"..\" (e.g. \"a/../../etc/passwd\").When extracting such items, borg followed the symlink / resolved the \"..\", so it could delete or overwrite files outside the extraction directory.In a quite similar scenario, a crafted archive could contain a slave hardlink item with the hardlink source pointing outside the extraction directory.When extract",
+            "url": "https://github.com/advisories/GHSA-gfp8-w835-v44j",
+            "title": "[borgbackup] borg extract might modify out-of-tree files when extracting maliciously crafted archives | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactA maliciously crafted archive could contain a symlink (e.g. \"evil\" -> \"/etc\") followed by an item below it (\"evil/passwd\"), or an item whose path embeds \"..\" (e.g. \"a/../../etc/passwd\").When ext",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:09:23.000Z",
+            "date_published": "2026-10-15T20:09:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[borgbackup] borg extract might modify out-of-tree files when extracting maliciously crafted archives",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-526j-582w-7fm9",
+            "content_html": "ImpactApplications using the LINE Login backend are vulnerable to login CSRF / forced authentication. An attacker can start a LINE authorization flow for an account they control and trick a victim into visiting the callback URL with the attacker’s authorization code. Because the LINE backend did not validate the returned OAuth state, the application could accept the forged callback and log the victim in as the attacker-controlled LINE account.If account linking is enabled, the same flaw can allo",
+            "url": "https://github.com/advisories/GHSA-526j-582w-7fm9",
+            "title": "[social-auth-core] Python Social Auth: Login CSRF in LINE backend (LineOAuth2) — missing OAuth state validation (incomplete fix of 5.0.0 campaign) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ImpactApplications using the LINE Login backend are vulnerable to login CSRF / forced authentication. An attacker can start a LINE authorization flow for an account they control and trick a victim int",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-15T20:09:11.000Z",
+            "date_published": "2026-10-15T20:09:11.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[social-auth-core] Python Social Auth: Login CSRF in LINE backend (LineOAuth2) — missing OAuth state validation (incomplete fix of 5.0.0 campaign)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xpf3-p7gm-7756",
+            "content_html": "BBOT's unarchive module rejects archives containing symlink entries before extraction, but for zip and 7z archives it failed to detect symlinks whose listing carries a DOS-attribute prefix before the unix mode, as produced by legacy versions of p7zip. Such an archive, downloaded and extracted during a scan (for example via filedownload), bypassed the guard and caused an attacker-controlled symlink to be written into the extraction directory. The effect is limited to planting the symlink (its tar",
+            "url": "https://github.com/advisories/GHSA-xpf3-p7gm-7756",
+            "title": "[bbot] BBOT's Symlink guard bypass in unarchive module allows planting symlinks during extraction | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "BBOT's unarchive module rejects archives containing symlink entries before extraction, but for zip and 7z archives it failed to detect symlinks whose listing carries a DOS-attribute prefix before the ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-14T19:34:31.000Z",
+            "date_published": "2026-10-14T19:34:31.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[bbot] BBOT's Symlink guard bypass in unarchive module allows planting symlinks during extraction",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-856c-92hv-3vxx",
+            "content_html": "SummaryApprise's HTTP-based notification plugins and its HTTP attachment / config loaders (apprise/attachment/http.py, apprise/config/http.py) follow HTTP 3xx redirects by default and re-send the user-configured auth headers and query parameters on the redirected request. If an operator-configured destination is later compromised (service takeover, malicious update), or an attacker holds a MITM position on an unprotected network path, that destination can return a 302 Location: to an arbitrary h",
+            "url": "https://github.com/advisories/GHSA-856c-92hv-3vxx",
+            "title": "[apprise] Apprise forwards configured auth headers across cross-origin HTTP redirects | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryApprise's HTTP-based notification plugins and its HTTP attachment / config loaders (apprise/attachment/http.py, apprise/config/http.py) follow HTTP 3xx redirects by default and re-send the user",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-14T18:38:05.000Z",
+            "date_published": "2026-10-14T18:38:05.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[apprise] Apprise forwards configured auth headers across cross-origin HTTP redirects",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        }
+    ]
+}
