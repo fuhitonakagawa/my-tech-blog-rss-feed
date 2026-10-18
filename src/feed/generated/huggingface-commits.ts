@@ -46,15 +46,18 @@ export const extractHuggingFaceCommits = (definition: GeneratedFeedDefinition, h
   if (page.origin !== 'https://huggingface.co' || !repository) throw new Error('Hugging Face Spaceの履歴URLが不正です');
   const $ = load(html);
   const items = new Map<string, GeneratedFeedItem>();
-  $('[data-target="Commit"][data-props]').each((_, element) => {
+  $('[data-target="CommitHistoryList"][data-props]').each((_, element) => {
     let data: unknown;
     try {
       data = JSON.parse($(element).attr('data-props') ?? '');
     } catch {
       return;
     }
-    const item = commitItem(data, repository, page.origin);
-    if (item) items.set(item.id, item);
+    if (!record(data) || !Array.isArray(data.commits)) return;
+    for (const commit of data.commits) {
+      const item = commitItem({ repo: data.repo, commit }, repository, page.origin);
+      if (item) items.set(item.id, item);
+    }
   });
   if (!items.size) throw new Error('教材の変更履歴を取得できません');
   return [...items.values()];

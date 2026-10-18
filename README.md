@@ -322,6 +322,8 @@ CSS方式では`itemSelector`、`titleSelector`、`linkSelector`、`dateSelector
 
 Roboticsの教材更新は、ETH講義の[公式教材リポジトリのAtom](https://github.com/mees-robot-learning-course/ethz-course-2026/commits/main.atom)と、Hugging Faceの[教材変更履歴](https://huggingface.co/spaces/lerobot/robot-learning-tutorial/commits/main)を対象とします。記事はコミットのタイトル・URL・日時で識別します。講義の開催日や動画公開日は別のイベントです。教材自体の入口は[ETH講義ページ](https://cvg.ethz.ch/lectures/Robot-Learning/)と[Robot Learning: A Tutorial](https://huggingface.co/spaces/lerobot/robot-learning-tutorial)です。IEEE Video Fridayは既存のIEEE Spectrum Robotics RSSに含まれます。
 
+Hugging Faceは履歴ページに埋め込まれたコミット一覧を読み取り、対象Spaceのリポジトリ名・コミットID・日時を検証します。有効なコミットを抽出できない場合は取得失敗とし、空のRSSを正常として公開しません。
+
 机器人大讲堂は「Robotics（中国語）」に分類し、公式記事一覧の公開済みデータからタイトル・URL・概要を生成します。公開日は`publishTime`の日付を中国標準時（UTC+08:00）の午前0時として扱い、作成日時・更新日時を代用しません。一覧1ページの取得分と保存済み記事を統合します。
 
 | 購読先 | 公開時のRSS URL |
