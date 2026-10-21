@@ -59,6 +59,7 @@ const SECTION_DISPLAY_ORDER = [
   'thinkit',
   'developersio',
   'gihyo',
+  'codezine',
   'it-media-dedup',
   'it-media',
   'technoedge',
