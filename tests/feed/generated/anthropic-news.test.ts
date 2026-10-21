@@ -60,6 +60,37 @@ describe('Anthropic Newsroomの抽出', () => {
     });
   });
 
+  it('カード・テーブル行の外部メタデータを参照し、カテゴリリンクと重複記事を除外する', () => {
+    const items = extract(`<main>
+      <article class="FeaturedGrid-module__hash__featured">
+        <header><a class="TopicLink-module__hash__link" href="/news/announcements">Announcements</a><time>Oct 18, 2026</time></header>
+        <a class="FeaturedGrid-module__hash__tileLink" href="/news/featured"><h2>注目記事</h2><p>注目概要</p></a>
+      </article>
+      <ul>
+        <li><a class="TableView-module__hash__title-link" href="/news/featured"><h3>重複記事</h3></a><time>Oct 18, 2026</time></li>
+        <li>
+          <a class="TableView-module__hash__title-link" href="/news/list"><h3>一覧記事</h3></a>
+          <a class="TableView-module__hash__above-link" href="/news/list"><p>一覧概要</p></a>
+          <a class="TableView-module__hash__category-link" href="/news/research">Research</a><time>Oct 17, 2026</time>
+        </li>
+        <li><a class="TableView-module__hash__title-link" href="/news/missing"><h3>日付なし</h3></a></li>
+      </ul>
+    </main>`);
+    expect(items).toHaveLength(2);
+    expect(items[0]).toMatchObject({
+      title: '注目記事',
+      summary: '注目概要',
+      categories: ['Announcements'],
+      publishedAt: '2026-10-18T00:00:00.000Z',
+    });
+    expect(items[1]).toMatchObject({
+      url: 'https://www.anthropic.com/news/list',
+      summary: '一覧概要',
+      categories: ['Research'],
+      publishedAt: '2026-10-17T00:00:00.000Z',
+    });
+  });
+
   it.each([
     ['/news/invalid', 'Feb 29, 2025', '記事'],
     ['/news/invalid', 'Apr 31, 2026', '記事'],

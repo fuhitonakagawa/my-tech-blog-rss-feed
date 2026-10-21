@@ -11,6 +11,8 @@ const ARTICLE_SELECTOR = [
   'main a[class*="PublicationList"][class*="__listItem"]',
   'main a[class*="FeaturedGrid"][class*="__content"]',
   'main a[class*="FeaturedGrid"][class*="__sideLink"]',
+  'main a[class*="FeaturedGrid"][class*="__tileLink"]',
+  'main a[class*="TableView"][class*="__title-link"]',
 ].join(', ');
 const TITLE_SELECTOR = 'h2, h3, h4, [class*="PublicationList"][class*="__title"]';
 const CATEGORY_SELECTOR =
@@ -33,13 +35,22 @@ const extractArticle = (definition: GeneratedFeedDefinition, article: HtmlSelect
   if (!isPublishableHttpUrl(url) || new URL(url).origin !== new URL(definition.pageUrl).origin) {
     throw new Error('公開できない記事URLです');
   }
-  const category = extractText(article, CATEGORY_SELECTOR);
+  // 日付・カテゴリがリンクの外にあるレイアウトでは、同じカード・行だけを参照する。
+  const container = article.is('[class*="__tileLink"]')
+    ? article.closest('article')
+    : article.is('[class*="TableView"][class*="__title-link"]')
+      ? article.closest('li')
+      : article;
+  const category = extractText(
+    container,
+    `${CATEGORY_SELECTOR}, header [class*="TopicLink"], [class*="TableView"][class*="__category-link"]`,
+  );
   return {
     id: url,
     title,
     url,
-    publishedAt: parseEnglishPublicationDate(extractText(article, 'time')),
-    summary: extractText(article, 'p'),
+    publishedAt: parseEnglishPublicationDate(extractText(container, 'time')),
+    summary: extractText(article, 'p') || extractText(container, 'a[class*="__above-link"] p'),
     creator: '',
     categories: category ? [category] : [],
   };
