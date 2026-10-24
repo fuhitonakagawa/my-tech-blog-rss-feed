@@ -1,0 +1,751 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "GitHub Security Advisory｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/feed.json",
+    "description": "GitHub Security Advisoryセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://github.com/advisories/GHSA-jqc4-5cvw-7w85",
+            "content_html": "ReadWriteLock and AsyncReadWriteLock (the SQLite-backed reader/writer lock) remove their private .filelock-* link directories with shutil.rmtree (a recursive delete) on a remembered path. They do not check that the path still names the directory they created. This happens on the hard-link route (a hard link is a second name for the same file). That route is every connection on macOS since 4.1.1 and any POSIX process without a usable /proc/self/fd (a Linux path that names the process's own open f",
+            "url": "https://github.com/advisories/GHSA-jqc4-5cvw-7w85",
+            "title": "[filelock] filelock: ReadWriteLock on the hard-link route deletes any directory another user renames onto its .filelock-* link directory name | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ReadWriteLock and AsyncReadWriteLock (the SQLite-backed reader/writer lock) remove their private .filelock-* link directories with shutil.rmtree (a recursive delete) on a remembered path. They do not ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:28:41.000Z",
+            "date_published": "2026-10-23T22:28:41.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[filelock] filelock: ReadWriteLock on the hard-link route deletes any directory another user renames onto its .filelock-* link directory name",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-9vhv-jxww-xfm5",
+            "content_html": "On Windows, ReadWriteLock and AsyncReadWriteLock (the SQLite-backed reader/writer lock) connect SQLite to the lock database by its path, in every directory. SQLite derives three side files from that path: &lt;database&gt;-journal, the rollback journal (pages saved to undo an interrupted write); &lt;database&gt;-wal, the write-ahead log (changes kept outside the main file); and &lt;database&gt;-shm, the shared-memory index of the WAL. SQLite acts on whichever of these it finds beside the database before the lock r",
+            "url": "https://github.com/advisories/GHSA-9vhv-jxww-xfm5",
+            "title": "[filelock] filelock: ReadWriteLock on Windows acts on SQLite side files another local user places beside its database | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "On Windows, ReadWriteLock and AsyncReadWriteLock (the SQLite-backed reader/writer lock) connect SQLite to the lock database by its path, in every directory. SQLite derives three side files from that p",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:28:19.000Z",
+            "date_published": "2026-10-23T22:28:19.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[filelock] filelock: ReadWriteLock on Windows acts on SQLite side files another local user places beside its database",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-567q-5qvw-pf92",
+            "content_html": "On Windows the soft locks (SoftFileLock, MarkerSoftFileLock, SoftFileLease, their async forms, and a FileLock that fell back to a soft lock) read their marker by path. The marker is the lock file whose presence says a process holds the lock. Each acquire() attempt that finds a marker opens it with os.open to read the holder's process id, and the lock renames and deletes a marker it judges stale, by path. On Windows each of these calls waits for an oplock. An oplock (opportunistic lock) is a requ",
+            "url": "https://github.com/advisories/GHSA-567q-5qvw-pf92",
+            "title": "[filelock] filelock: On Windows an oplock on a soft lock's marker holds SoftFileLock.acquire() past its timeout and blocks the stale break | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "On Windows the soft locks (SoftFileLock, MarkerSoftFileLock, SoftFileLease, their async forms, and a FileLock that fell back to a soft lock) read their marker by path. The marker is the lock file whos",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:27:32.000Z",
+            "date_published": "2026-10-23T22:27:32.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[filelock] filelock: On Windows an oplock on a soft lock's marker holds SoftFileLock.acquire() past its timeout and blocks the stale break",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4f8h-vr72-p32c",
+            "content_html": "SummaryThe app-data seeder can leave an environment linked to temporary package files that virtualenv deletes when creationfinishes. The environment-variable and configuration-file forms of symlink_app_data can enable this state even thoughthe command-line flag is disabled for temporary app-data. The resulting environment depends on a cache pathname that itsowner no longer controls.Anthropic's OSS Scanner reported this as ANT-2026-ZOE2GEPC in virtualenv-20261015-005, received on 15 October 2026.",
+            "url": "https://github.com/advisories/GHSA-4f8h-vr72-p32c",
+            "title": "[virtualenv] virtualenv: Temporary app-data can leave dangling seed package links | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe app-data seeder can leave an environment linked to temporary package files that virtualenv deletes when creationfinishes. The environment-variable and configuration-file forms of symlink_ap",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:26:57.000Z",
+            "date_published": "2026-10-23T22:26:57.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[virtualenv] virtualenv: Temporary app-data can leave dangling seed package links",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-cx28-75q4-x26q",
+            "content_html": "SummaryThe pip seeder acquires bundled wheels with download=False and lets pip access the index when --download is selected.Index candidates on that path do not pass through virtualenv's wheel digest verification.Anthropic's OSS Scanner reported this as ANT-2026-74ALJBUF in virtualenv-20261015-005, received on 15 October 2026.Affected areaWheel selection by the pip seeder when downloads are enabled.Attacker-controlled inputThe pip seeder and download option must be selected. The finding concerns",
+            "url": "https://github.com/advisories/GHSA-cx28-75q4-x26q",
+            "title": "[virtualenv] virtualenv: Pip seeding with download omits wheel digest verification | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe pip seeder acquires bundled wheels with download=False and lets pip access the index when --download is selected.Index candidates on that path do not pass through virtualenv's wheel digest ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:26:04.000Z",
+            "date_published": "2026-10-23T22:26:04.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[virtualenv] virtualenv: Pip seeding with download omits wheel digest verification",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-494p-63j8-28p3",
+            "content_html": "SummaryWheel downloads go directly into the reusable wheelhouse, while the verification target is selected from pip's textualoutput. A verification failure does not remove the downloaded file from that cache.Anthropic's OSS Scanner reported this as ANT-2026-ST00DRO3 in virtualenv-20261015-005, received on 15 October 2026.Affected areaDownload selection and promotion into the reusable wheel cache.Attacker-controlled inputA download must fail verification, or the archive selected from pip output m",
+            "url": "https://github.com/advisories/GHSA-494p-63j8-28p3",
+            "title": "[virtualenv] virtualenv: Downloaded wheel selection and caching precede verification | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryWheel downloads go directly into the reusable wheelhouse, while the verification target is selected from pip's textualoutput. A verification failure does not remove the downloaded file from tha",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:25:22.000Z",
+            "date_published": "2026-10-23T22:25:22.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[virtualenv] virtualenv: Downloaded wheel selection and caching precede verification",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-394h-qwmc-48pf",
+            "content_html": "SummaryCaller-supplied prompt text can become executable syntax in the xonsh activation script. An attacker must influence thevalue passed to virtualenv, and a user must subsequently activate the environment.Affected areaXonsh reads a UTF-8 activation script using a legacy multibyte encoding such as GBK. Printable non-ASCII bytes canchange how the reader recognizes an adjacent quote. The report concerns POSIX activation. It does not establish exposurethrough unrelated activators.Attacker-control",
+            "url": "https://github.com/advisories/GHSA-394h-qwmc-48pf",
+            "title": "[virtualenv] virtualenv: Xonsh activation literals depend on the script decoding codec | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryCaller-supplied prompt text can become executable syntax in the xonsh activation script. An attacker must influence thevalue passed to virtualenv, and a user must subsequently activate the envi",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:24:43.000Z",
+            "date_published": "2026-10-23T22:24:43.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[virtualenv] virtualenv: Xonsh activation literals depend on the script decoding codec",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-fc2g-4w5p-6whm",
+            "content_html": "SummaryThe app-data copy seeder uses shutil.copy, which preserves cached file modes independently of the current umask. A cachepopulated under permissive permissions can therefore produce files with wider access in later environments.Anthropic's OSS Scanner reported this as ANT-2026-487MH6OW in virtualenv-20261015-005, received on 15 October 2026.Affected areaPermissions of files copied from app-data into a new environment.Attacker-controlled inputThe cache must contain files created with broade",
+            "url": "https://github.com/advisories/GHSA-fc2g-4w5p-6whm",
+            "title": "[virtualenv] virtualenv: Seeded files retain permissions from an older cache | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe app-data copy seeder uses shutil.copy, which preserves cached file modes independently of the current umask. A cachepopulated under permissive permissions can therefore produce files with w",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:23:11.000Z",
+            "date_published": "2026-10-23T22:23:11.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[virtualenv] virtualenv: Seeded files retain permissions from an older cache",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-6w3r-xr62-4xcp",
+            "content_html": "SummaryCaller-supplied prompt text can become executable syntax in the bash activation prompt. An attacker must influence thevalue passed to virtualenv, and a user must subsequently activate the environment and draw the prompt.Affected areaBash runs with compatibility level 4.2 and draws the environment prompt. Its replacement-string behavior differs fromnewer compatibility modes, leaving prompt text subject to a second interpretation. The report concerns POSIX activation.It does not establish e",
+            "url": "https://github.com/advisories/GHSA-6w3r-xr62-4xcp",
+            "title": "[virtualenv] virtualenv: Bash prompt values can change meaning under older compatibility modes | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryCaller-supplied prompt text can become executable syntax in the bash activation prompt. An attacker must influence thevalue passed to virtualenv, and a user must subsequently activate the envir",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:21:57.000Z",
+            "date_published": "2026-10-23T22:21:57.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[virtualenv] virtualenv: Bash prompt values can change meaning under older compatibility modes",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qmx5-4p3x-wvqf",
+            "content_html": "SummaryThe venv creator reads the standard library's generated pyvenv.cfg with splitlines() and merges all resulting keys overvirtualenv's configuration. Line-boundary characters from destination data can therefore become configuration structurebefore output sanitization.Anthropic's OSS Scanner reported this as ANT-2026-6ZQHJ6VI in virtualenv-20261015-005, received on 15 October 2026.Affected areaConfiguration readback by the stdlib venv creator.Attacker-controlled inputAn untrusted caller must ",
+            "url": "https://github.com/advisories/GHSA-qmx5-4p3x-wvqf",
+            "title": "[virtualenv] virtualenv: Venv configuration readback can reinterpret path boundaries | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe venv creator reads the standard library's generated pyvenv.cfg with splitlines() and merges all resulting keys overvirtualenv's configuration. Line-boundary characters from destination data",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:20:43.000Z",
+            "date_published": "2026-10-23T22:20:43.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[virtualenv] virtualenv: Venv configuration readback can reinterpret path boundaries",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-hhxq-47xx-j5xx",
+            "content_html": "SummaryThe app-data seeder joins paths from existing distribution metadata to site-packages and deletes the resulting pathswithout checking containment within the environment.Anthropic's OSS Scanner reported this as ANT-2026-SXOEHWP7 in virtualenv-20261015-005, received on 15 October 2026.Affected areaRemoval of a previously installed seed package.Attacker-controlled inputAn environment being reused must contain distribution metadata influenced by another account. The invoking user musthave dele",
+            "url": "https://github.com/advisories/GHSA-hhxq-47xx-j5xx",
+            "title": "[virtualenv] virtualenv: Seed replacement does not contain metadata deletion paths | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe app-data seeder joins paths from existing distribution metadata to site-packages and deletes the resulting pathswithout checking containment within the environment.Anthropic's OSS Scanner r",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:19:15.000Z",
+            "date_published": "2026-10-23T22:19:15.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[virtualenv] virtualenv: Seed replacement does not contain metadata deletion paths",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xcx6-jx8p-x3h5",
+            "content_html": "ImpactOrigin validation error in Microsoft Authentication Library (MSAL) for Node.js allows an unauthorized attacker to disclose information over a network. This affects the auth_code flow.PatchesVersion 7.1.0 and higher are patched.WorkaroundsEnsure you pass in only the auth_code to to acquireTokenByCodeReferenceshttps://github.com/AzureAD/microsoft-authentication-library-for-js/security/advisories/GHSA-xcx6-jx8p-x3h5https://nvd.nist.gov/vuln/detail/CVE-2026-109461https://github.com/AzureAD/mic",
+            "url": "https://github.com/advisories/GHSA-xcx6-jx8p-x3h5",
+            "title": "[@azure/msal-node] MSAL Node authorization code flow may disclose parameters to an attacker-controlled endpoint | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactOrigin validation error in Microsoft Authentication Library (MSAL) for Node.js allows an unauthorized attacker to disclose information over a network. This affects the auth_code flow.PatchesVers",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:16:44.000Z",
+            "date_published": "2026-10-23T22:16:44.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@azure/msal-node] MSAL Node authorization code flow may disclose parameters to an attacker-controlled endpoint",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+            "content_html": "Impactundici's fetch() crashes the Node.js process when a malicious server returns a response with more than five content codings and closes the connection before sending the body. undici rejects such responses (a content-encoding limit), but it created the internal response stream before that check and returned without attaching an error listener or aborting the request. The early close then surfaces a content-length mismatch on that orphaned internal stream, which Node.js treats as an unhandle",
+            "url": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+            "title": "[undici] undici vulnerable to Denial of Service via unhandled error on excessive content-encodings | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Impactundici's fetch() crashes the Node.js process when a malicious server returns a response with more than five content codings and closes the connection before sending the body. undici rejects such",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:14:31.000Z",
+            "date_published": "2026-10-23T22:14:31.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[undici] undici vulnerable to Denial of Service via unhandled error on excessive content-encodings",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+            "content_html": "Impactundici's fetch() crashes the Node.js process when a malicious server returns a response with more than five content codings and closes the connection before sending the body. undici rejects such responses (a content-encoding limit), but it created the internal response stream before that check and returned without attaching an error listener or aborting the request. The early close then surfaces a content-length mismatch on that orphaned internal stream, which Node.js treats as an unhandle",
+            "url": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+            "title": "[undici] undici vulnerable to Denial of Service via unhandled error on excessive content-encodings | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Impactundici's fetch() crashes the Node.js process when a malicious server returns a response with more than five content codings and closes the connection before sending the body. undici rejects such",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:14:31.000Z",
+            "date_published": "2026-10-23T22:14:31.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[undici] undici vulnerable to Denial of Service via unhandled error on excessive content-encodings",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+            "content_html": "Impactundici's fetch() crashes the Node.js process when a malicious server returns a response with more than five content codings and closes the connection before sending the body. undici rejects such responses (a content-encoding limit), but it created the internal response stream before that check and returned without attaching an error listener or aborting the request. The early close then surfaces a content-length mismatch on that orphaned internal stream, which Node.js treats as an unhandle",
+            "url": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+            "title": "[undici] undici vulnerable to Denial of Service via unhandled error on excessive content-encodings | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Impactundici's fetch() crashes the Node.js process when a malicious server returns a response with more than five content codings and closes the connection before sending the body. undici rejects such",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:14:31.000Z",
+            "date_published": "2026-10-23T22:14:31.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[undici] undici vulnerable to Denial of Service via unhandled error on excessive content-encodings",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4qv8-2p9j-2685",
+            "content_html": "Impactundici's EventSource client can be driven to exhaust process memory by a malicious or compromised Server-Sent Events peer. By sending millions of tiny completed data: fields with no blank event separator, or a single unfinished line split across many chunks, the parser retains a growing amount of per-field and per-chunk state. The byte-based maxEventSize and maxResponseSize limits do not bound that retained state, and maxResponseSize is enforced on the compressed body before decompression,",
+            "url": "https://github.com/advisories/GHSA-4qv8-2p9j-2685",
+            "title": "[undici] undici vulnerable to Denial of Service via unbounded memory in the EventSource parser | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Impactundici's EventSource client can be driven to exhaust process memory by a malicious or compromised Server-Sent Events peer. By sending millions of tiny completed data: fields with no blank event ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:13:29.000Z",
+            "date_published": "2026-10-23T22:13:29.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[undici] undici vulnerable to Denial of Service via unbounded memory in the EventSource parser",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4qv8-2p9j-2685",
+            "content_html": "Impactundici's EventSource client can be driven to exhaust process memory by a malicious or compromised Server-Sent Events peer. By sending millions of tiny completed data: fields with no blank event separator, or a single unfinished line split across many chunks, the parser retains a growing amount of per-field and per-chunk state. The byte-based maxEventSize and maxResponseSize limits do not bound that retained state, and maxResponseSize is enforced on the compressed body before decompression,",
+            "url": "https://github.com/advisories/GHSA-4qv8-2p9j-2685",
+            "title": "[undici] undici vulnerable to Denial of Service via unbounded memory in the EventSource parser | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Impactundici's EventSource client can be driven to exhaust process memory by a malicious or compromised Server-Sent Events peer. By sending millions of tiny completed data: fields with no blank event ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:13:29.000Z",
+            "date_published": "2026-10-23T22:13:29.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[undici] undici vulnerable to Denial of Service via unbounded memory in the EventSource parser",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4qv8-2p9j-2685",
+            "content_html": "Impactundici's EventSource client can be driven to exhaust process memory by a malicious or compromised Server-Sent Events peer. By sending millions of tiny completed data: fields with no blank event separator, or a single unfinished line split across many chunks, the parser retains a growing amount of per-field and per-chunk state. The byte-based maxEventSize and maxResponseSize limits do not bound that retained state, and maxResponseSize is enforced on the compressed body before decompression,",
+            "url": "https://github.com/advisories/GHSA-4qv8-2p9j-2685",
+            "title": "[undici] undici vulnerable to Denial of Service via unbounded memory in the EventSource parser | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Impactundici's EventSource client can be driven to exhaust process memory by a malicious or compromised Server-Sent Events peer. By sending millions of tiny completed data: fields with no blank event ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:13:29.000Z",
+            "date_published": "2026-10-23T22:13:29.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[undici] undici vulnerable to Denial of Service via unbounded memory in the EventSource parser",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-f72v-6w45-q472",
+            "content_html": "Impactundici's fetch() verifies Subresource Integrity (SRI) metadata by looking up the algorithm token in a lowercase-only set, but the SRI specification defines a valid token by its ASCII-lowercase form. A correct but non-lowercase token such as SHA256-... or Sha256-... is therefore treated as unknown and skipped. When no recognized algorithm remains, undici treats the integrity list as empty and accepts the response, so a server that returns a body different from the pinned digest passes the c",
+            "url": "https://github.com/advisories/GHSA-f72v-6w45-q472",
+            "title": "[undici] undici vulnerable to Subresource Integrity bypass via non-lowercase algorithm tokens | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Impactundici's fetch() verifies Subresource Integrity (SRI) metadata by looking up the algorithm token in a lowercase-only set, but the SRI specification defines a valid token by its ASCII-lowercase f",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:12:57.000Z",
+            "date_published": "2026-10-23T22:12:57.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[undici] undici vulnerable to Subresource Integrity bypass via non-lowercase algorithm tokens",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-f72v-6w45-q472",
+            "content_html": "Impactundici's fetch() verifies Subresource Integrity (SRI) metadata by looking up the algorithm token in a lowercase-only set, but the SRI specification defines a valid token by its ASCII-lowercase form. A correct but non-lowercase token such as SHA256-... or Sha256-... is therefore treated as unknown and skipped. When no recognized algorithm remains, undici treats the integrity list as empty and accepts the response, so a server that returns a body different from the pinned digest passes the c",
+            "url": "https://github.com/advisories/GHSA-f72v-6w45-q472",
+            "title": "[undici] undici vulnerable to Subresource Integrity bypass via non-lowercase algorithm tokens | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Impactundici's fetch() verifies Subresource Integrity (SRI) metadata by looking up the algorithm token in a lowercase-only set, but the SRI specification defines a valid token by its ASCII-lowercase f",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:12:57.000Z",
+            "date_published": "2026-10-23T22:12:57.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[undici] undici vulnerable to Subresource Integrity bypass via non-lowercase algorithm tokens",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-m5mm-p8h7-m29v",
+            "content_html": "Impactserialize-javascript escapes its output so it is safe to embed inside a&lt;script&gt; element. Before 7.1.3 that guarantee did not hold for a functionvalue whose source ends in a bare &lt;/script.Each function body is escaped on its own, and a bare &lt;/script was onlyneutralized when followed — within the same body — by a character the HTMLtokenizer treats as ending the tag name (TAB, LF, FF, CR, SPACE, / or &gt;).A body ending exactly at &lt;/script has no following character, so it wasemitted unescaped. ",
+            "url": "https://github.com/advisories/GHSA-m5mm-p8h7-m29v",
+            "title": "[serialize-javascript] Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Impactserialize-javascript escapes its output so it is safe to embed inside a<script> element. Before 7.1.3 that guarantee did not hold for a functionvalue whose source ends in a bare </script.Each fu",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:09:52.000Z",
+            "date_published": "2026-10-23T22:09:52.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[serialize-javascript] Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-q7qp-rjg7-q26m",
+            "content_html": "ImpactWhen multer is configured with an asynchronous fileFilter, a single request can crash the Node.js process. If a request is aborted (for example when one file is rejected) while another file's async fileFilter is still pending, the pending callback later resumes a parsing stream that multer has already torn down. busboy then emits an error on a stream that no longer has an error listener, which Node raises as an unhandled 'error' event, and the process exits. A single unauthenticated reques",
+            "url": "https://github.com/advisories/GHSA-q7qp-rjg7-q26m",
+            "title": "[multer] multer vulnerable to Denial of Service via a pending asynchronous fileFilter after request teardown | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactWhen multer is configured with an asynchronous fileFilter, a single request can crash the Node.js process. If a request is aborted (for example when one file is rejected) while another file's as",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:08:22.000Z",
+            "date_published": "2026-10-23T22:08:22.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[multer] multer vulnerable to Denial of Service via a pending asynchronous fileFilter after request teardown",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2wqp-q3c6-ccj5",
+            "content_html": "SummaryMLflow's tracking server exposes POST /ajax-api/3.0/mlflow/scorer/invoke with no authentication, and the handler reflectively instantiates an attacker-named class from attacker-supplied JSON with unconstrained constructor kwargs. With the optional trulens + trulens-providers-litellm packages installed, an unauthenticated attacker can force the server to make an outbound HTTP request to an arbitrary host of their choosing, carrying attacker-controlled headers (SSRF).DetailsScorer.model_val",
+            "url": "https://github.com/advisories/GHSA-2wqp-q3c6-ccj5",
+            "title": "[mlflow] MLflow: SSRF on unauthenticated MLflow servers via third-party scorer kwargs in the scorer invoke, register, and GenAI evaluate endpoints | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryMLflow's tracking server exposes POST /ajax-api/3.0/mlflow/scorer/invoke with no authentication, and the handler reflectively instantiates an attacker-named class from attacker-supplied JSON wi",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:07:26.000Z",
+            "date_published": "2026-10-23T22:07:26.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[mlflow] MLflow: SSRF on unauthenticated MLflow servers via third-party scorer kwargs in the scorer invoke, register, and GenAI evaluate endpoints",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-6hmw-9432-67qq",
+            "content_html": "SummaryThe Postgres and SQLite stores save a namespace as its labels joined with ., so (\"tenant\", \"bob\") and (\"tenant.bob\",) map to the same stored namespace. put rejected labels containing ., but get, search, delete, list_namespaces, their async versions, and ops passed directly to batch/abatch did not. A caller that could pass such a label could read, overwrite or delete items in another namespace.DetailsBaseStore checked namespace labels only in put/aput. The other methods passed the namespac",
+            "url": "https://github.com/advisories/GHSA-6hmw-9432-67qq",
+            "title": "[langgraph-checkpoint-sqlite] LangGraph: Namespace labels containing `.` reach other namespaces in Postgres and SQLite stores | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe Postgres and SQLite stores save a namespace as its labels joined with ., so (\"tenant\", \"bob\") and (\"tenant.bob\",) map to the same stored namespace. put rejected labels containing ., but get",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:06:44.000Z",
+            "date_published": "2026-10-23T22:06:44.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[langgraph-checkpoint-sqlite] LangGraph: Namespace labels containing `.` reach other namespaces in Postgres and SQLite stores",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-6hmw-9432-67qq",
+            "content_html": "SummaryThe Postgres and SQLite stores save a namespace as its labels joined with ., so (\"tenant\", \"bob\") and (\"tenant.bob\",) map to the same stored namespace. put rejected labels containing ., but get, search, delete, list_namespaces, their async versions, and ops passed directly to batch/abatch did not. A caller that could pass such a label could read, overwrite or delete items in another namespace.DetailsBaseStore checked namespace labels only in put/aput. The other methods passed the namespac",
+            "url": "https://github.com/advisories/GHSA-6hmw-9432-67qq",
+            "title": "[langgraph-checkpoint-postgres] LangGraph: Namespace labels containing `.` reach other namespaces in Postgres and SQLite stores | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe Postgres and SQLite stores save a namespace as its labels joined with ., so (\"tenant\", \"bob\") and (\"tenant.bob\",) map to the same stored namespace. put rejected labels containing ., but get",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:06:44.000Z",
+            "date_published": "2026-10-23T22:06:44.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[langgraph-checkpoint-postgres] LangGraph: Namespace labels containing `.` reach other namespaces in Postgres and SQLite stores",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-834v-8h66-3h79",
+            "content_html": "SummaryThe ESM compiler in happy-dom@20.14.5 does not validate imported local binding aliases before interpolating them into generated JavaScript.As a result, an invalid ESM import alias can be transformed into a valid JavaScript destructuring default initializer and executed.This appears to be an alternate injection path and incomplete remediation of GHSA-6q6h-j7hj-3r64 / CVE-2026-33943. The previous fix validates importName in the local export { ... } handler, but the named import handler stil",
+            "url": "https://github.com/advisories/GHSA-834v-8h66-3h79",
+            "title": "[happy-dom] Happy DOM: Incomplete fix for CVE-2026-33943: unsanitized import alias leads to host code execution | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe ESM compiler in happy-dom@20.14.5 does not validate imported local binding aliases before interpolating them into generated JavaScript.As a result, an invalid ESM import alias can be transf",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:06:13.000Z",
+            "date_published": "2026-10-23T22:06:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[happy-dom] Happy DOM: Incomplete fix for CVE-2026-33943: unsanitized import alias leads to host code execution",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2g95-wg33-c5x2",
+            "content_html": "SoftFileLock and MarkerSoftFileLock evict an unparsable marker (the lock file at &lt;path&gt;, whose presence says a process holds the lock) once a waiting contender has watched it unchanged for two seconds. SoftFileLease expires a lease the same way. The watch tells two looks apart by the marker's modification time (mtime) and inode number (the kernel's identity for a file, independent of its name) alone.Another local user (the other user below) who can create files in the lock's directory, a sticky ",
+            "url": "https://github.com/advisories/GHSA-2g95-wg33-c5x2",
+            "title": "[filelock] filelock: SoftFileLock evicts a fresh lock file whose watched age another local user's pre-dated file passed on through inode reuse | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SoftFileLock and MarkerSoftFileLock evict an unparsable marker (the lock file at <path>, whose presence says a process holds the lock) once a waiting contender has watched it unchanged for two seconds",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:00:33.000Z",
+            "date_published": "2026-10-23T22:00:33.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[filelock] filelock: SoftFileLock evicts a fresh lock file whose watched age another local user's pre-dated file passed on through inode reuse",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-crv4-6mhj-j5jh",
+            "content_html": "When a soft-lock stale break finds that the marker (the lock file at &lt;path&gt;) it renamed aside was a live one recreated by a successor, the restore branch of break_lock_file() checks the break name with lstat (a check that reads a name without following a symbolic link) and then calls os.link(break_path, lock_file) by name. On CPython 3.12 and later on Linux (and on macOS) that call follows a symbolic link (a file that redirects to another path). A local user (the other user below) who can write ",
+            "url": "https://github.com/advisories/GHSA-crv4-6mhj-j5jh",
+            "title": "[filelock] filelock: SoftFileLock stale-break restore follows a swapped-in symbolic link and hard-links a file of the user running the lock into the lock directory | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "When a soft-lock stale break finds that the marker (the lock file at <path>) it renamed aside was a live one recreated by a successor, the restore branch of break_lock_file() checks the break name wit",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T22:00:11.000Z",
+            "date_published": "2026-10-23T22:00:11.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[filelock] filelock: SoftFileLock stale-break restore follows a swapped-in symbolic link and hard-links a file of the user running the lock into the lock directory",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-v4x8-3wr5-3wq8",
+            "content_html": "ReadWriteLock and AsyncReadWriteLock (the SQLite-backed reader/writer lock) hand SQLite a name they do not control. On Linux the lock validates its database through a descriptor (the number the kernel gives a process for an open file). It then connects SQLite to /proc/self/fd/&lt;n&gt;, a Linux path that names the process's own open file n. SQLite turns that path back into a plain path and reopens it by name, following symlinks (a symlink is a file that points at another path). On every POSIX route SQ",
+            "url": "https://github.com/advisories/GHSA-v4x8-3wr5-3wq8",
+            "title": "[filelock] filelock ReadWriteLock: SQLite reopens the lock database by name, so a planted symlink or journal file makes the lock user's process overwrite or unlink its own files | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ReadWriteLock and AsyncReadWriteLock (the SQLite-backed reader/writer lock) hand SQLite a name they do not control. On Linux the lock validates its database through a descriptor (the number the kernel",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:59:08.000Z",
+            "date_published": "2026-10-23T21:59:08.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[filelock] filelock ReadWriteLock: SQLite reopens the lock database by name, so a planted symlink or journal file makes the lock user's process overwrite or unlink its own files",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-h4fr-cmh5-qr62",
+            "content_html": "ImpactFallow expands some globs from the analyzed repository on disk. Before 3.34.0, a segment such as .*, .? or ..* in such a glob also matched the special .. entry. The glob crate tests .. against a segment that starts with a literal .. Fallow validates plugin glob patterns and refuses absolute paths and .. segments, but these segments passed that validation.The attacker controls the repository content. The attacker must also be able to read the Fallow output, for example a CI log or a pull re",
+            "url": "https://github.com/advisories/GHSA-h4fr-cmh5-qr62",
+            "title": "[@fallow-cli/fallow-node] Fallow: A `.*` glob segment let an analyzed repository make Fallow test paths in the parent of the project root | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactFallow expands some globs from the analyzed repository on disk. Before 3.34.0, a segment such as .*, .? or ..* in such a glob also matched the special .. entry. The glob crate tests .. against a",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:58:16.000Z",
+            "date_published": "2026-10-23T21:58:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@fallow-cli/fallow-node] Fallow: A `.*` glob segment let an analyzed repository make Fallow test paths in the parent of the project root",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-h4fr-cmh5-qr62",
+            "content_html": "ImpactFallow expands some globs from the analyzed repository on disk. Before 3.34.0, a segment such as .*, .? or ..* in such a glob also matched the special .. entry. The glob crate tests .. against a segment that starts with a literal .. Fallow validates plugin glob patterns and refuses absolute paths and .. segments, but these segments passed that validation.The attacker controls the repository content. The attacker must also be able to read the Fallow output, for example a CI log or a pull re",
+            "url": "https://github.com/advisories/GHSA-h4fr-cmh5-qr62",
+            "title": "[fallow] Fallow: A `.*` glob segment let an analyzed repository make Fallow test paths in the parent of the project root | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactFallow expands some globs from the analyzed repository on disk. Before 3.34.0, a segment such as .*, .? or ..* in such a glob also matched the special .. entry. The glob crate tests .. against a",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:58:16.000Z",
+            "date_published": "2026-10-23T21:58:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[fallow] Fallow: A `.*` glob segment let an analyzed repository make Fallow test paths in the parent of the project root",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jfwm-3p3c-6hx5",
+            "content_html": "ImpactFallow reads the Jest and Vitest configs of the repository that it analyzes. A Jest projects entry or a Vitest test.projects entry can name a path. Fallow followed such an entry to a config file and read that file, also when the file was outside the project root. These forms reached outside the root:an absolute path or glob, for example /etc/*;a path with .. segments, for example ../*;a glob with a .* segment, because the glob crate also tests .. against a segment that starts with a litera",
+            "url": "https://github.com/advisories/GHSA-jfwm-3p3c-6hx5",
+            "title": "[@fallow-cli/fallow-node] Fallow: Jest and Vitest `projects` entries let an analyzed repository make Fallow read files outside the project root | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactFallow reads the Jest and Vitest configs of the repository that it analyzes. A Jest projects entry or a Vitest test.projects entry can name a path. Fallow followed such an entry to a config file",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:57:37.000Z",
+            "date_published": "2026-10-23T21:57:37.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@fallow-cli/fallow-node] Fallow: Jest and Vitest `projects` entries let an analyzed repository make Fallow read files outside the project root",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jfwm-3p3c-6hx5",
+            "content_html": "ImpactFallow reads the Jest and Vitest configs of the repository that it analyzes. A Jest projects entry or a Vitest test.projects entry can name a path. Fallow followed such an entry to a config file and read that file, also when the file was outside the project root. These forms reached outside the root:an absolute path or glob, for example /etc/*;a path with .. segments, for example ../*;a glob with a .* segment, because the glob crate also tests .. against a segment that starts with a litera",
+            "url": "https://github.com/advisories/GHSA-jfwm-3p3c-6hx5",
+            "title": "[fallow] Fallow: Jest and Vitest `projects` entries let an analyzed repository make Fallow read files outside the project root | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactFallow reads the Jest and Vitest configs of the repository that it analyzes. A Jest projects entry or a Vitest test.projects entry can name a path. Fallow followed such an entry to a config file",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:57:37.000Z",
+            "date_published": "2026-10-23T21:57:37.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[fallow] Fallow: Jest and Vitest `projects` entries let an analyzed repository make Fallow read files outside the project root",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5x8w-8jj5-q52h",
+            "content_html": "CreditsResearcher: Alex Bouffard (mixbo@pebwalker.com)SummaryA heap buffer overflow in Pillow's FlashPix (FPX) JPEG-tile decoder lets an attacker achieve arbitrary code execution by getting an application to open a single crafted file with Image.open(). The file is recognized by content (the OLE2 magic), not by extension, so any service that opens or thumbnails untrusted uploads with the optional olefile dependency installed is reachable with no user interaction. In the PoC below, opening one cr",
+            "url": "https://github.com/advisories/GHSA-5x8w-8jj5-q52h",
+            "title": "[pillow] Pillow: Heap buffer overflow in FlashPix (FPX) JPEG decoding leads to code execution | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "CreditsResearcher: Alex Bouffard (mixbo@pebwalker.com)SummaryA heap buffer overflow in Pillow's FlashPix (FPX) JPEG-tile decoder lets an attacker achieve arbitrary code execution by getting an applica",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:55:21.000Z",
+            "date_published": "2026-10-23T21:55:21.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pillow] Pillow: Heap buffer overflow in FlashPix (FPX) JPEG decoding leads to code execution",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-f2hq-32vh-53cc",
+            "content_html": "ImpactDecoding a header that holds a long run of joinable RFC 2047 base64 encoded words, such as =?utf-8?B?QUJD?= repeated tens of thousands of times in a Subject, From, To, a filename or a description, took time quadratic in the number of words. The join check ran a regex over the text joined so far for every word, which flattens the accumulated string each time. A single well formed message of about 1.6 MB blocked the event loop for one to twenty seconds depending on the host, and inline messa",
+            "url": "https://github.com/advisories/GHSA-f2hq-32vh-53cc",
+            "title": "[postal-mime] postal-mime: Quadratic CPU consumption when decoding a header of many joinable RFC 2047 base64 encoded words | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactDecoding a header that holds a long run of joinable RFC 2047 base64 encoded words, such as =?utf-8?B?QUJD?= repeated tens of thousands of times in a Subject, From, To, a filename or a descriptio",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:54:36.000Z",
+            "date_published": "2026-10-23T21:54:36.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[postal-mime] postal-mime: Quadratic CPU consumption when decoding a header of many joinable RFC 2047 base64 encoded words",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-654x-cwwv-5j9c",
+            "content_html": "SummaryWhen PILLOW_ALIGNMENT is set above 1, exporting an image to Arrow returns uninitialized heap memory mixed in with the pixel data. That memory can include pixels from images the process freed earlier. DetailsWith an alignment above 1, the default allocator pads each row up to aligned_linesize and starts the first row at an aligned offset into the block. It then exports im-&gt;blocks[0].ptr as xsize * ysize tightly packed pixels, so exported data includes the padding bytes, and can include a f",
+            "url": "https://github.com/advisories/GHSA-654x-cwwv-5j9c",
+            "title": "[Pillow] Pillow: Arrow export leaks stale heap memory when PILLOW_ALIGNMENT > 1 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryWhen PILLOW_ALIGNMENT is set above 1, exporting an image to Arrow returns uninitialized heap memory mixed in with the pixel data. That memory can include pixels from images the process freed ea",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:53:21.000Z",
+            "date_published": "2026-10-23T21:53:21.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[Pillow] Pillow: Arrow export leaks stale heap memory when PILLOW_ALIGNMENT > 1",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8c8m-p3m8-cjg8",
+            "content_html": "Vulnerability summaryRFC 5322 comments nest. addressparser ended a comment at the first ), including the one that closes a nested comment, and parsed the rest of the outer comment as header text. Victim (x(y) &lt;evil@evil.com&gt;) &lt;v@victim.com&gt; names v@victim.com with x(y) &lt;evil@evil.com&gt; as a comment, and Nodemailer read it as the address evil@evil.com. This is the same shape as the escaped parenthesis fixed in 10.1.2, reached through nesting instead of a quoted-pair. Affected: 3.0.0 through 10.1.3",
+            "url": "https://github.com/advisories/GHSA-8c8m-p3m8-cjg8",
+            "title": "[nodemailer] Nodemailer: A nested comment ends early in addressparser, releasing the rest of the comment as a recipient | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Vulnerability summaryRFC 5322 comments nest. addressparser ended a comment at the first ), including the one that closes a nested comment, and parsed the rest of the outer comment as header text. Vict",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:53:04.000Z",
+            "date_published": "2026-10-23T21:53:04.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nodemailer] Nodemailer: A nested comment ends early in addressparser, releasing the rest of the comment as a recipient",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-m943-m63m-w62w",
+            "content_html": "Vulnerability summaryaddressparser ends an RFC 5322 group at the first ;, including one inside a quoted display name or a comment. The text after it is parsed again as top level recipients with the quoting flipped, so text that every conformant parser reads as a display name or comment becomes a live address. G: (a; &lt;evil@evil.com&gt;) &lt;v@victim.com&gt;; names only v@victim.com, and Nodemailer read it as the single recipient evil@evil.com. Affected: 3.0.0 through 10.1.3.Attacker capabilitiesThe attack",
+            "url": "https://github.com/advisories/GHSA-m943-m63m-w62w",
+            "title": "[nodemailer] Nodemailer: A \";\" inside a quoted string or comment ends an address group early in addressparser, turning display text into a recipient | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Vulnerability summaryaddressparser ends an RFC 5322 group at the first ;, including one inside a quoted display name or a comment. The text after it is parsed again as top level recipients with the qu",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:51:52.000Z",
+            "date_published": "2026-10-23T21:51:52.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nodemailer] Nodemailer: A \";\" inside a quoted string or comment ends an address group early in addressparser, turning display text into a recipient",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-85x2-q946-cp5h",
+            "content_html": "Vulnerability summaryaddressparser ends an angle-addr at the first &gt; it sees, including one inside a quoted local part, a comment or a domain literal. The domain is then read off the text in front of that &gt;. &lt;\"a@evil.com&gt;\"@good.com&gt; is the mailbox \"a@evil.com&gt;\"@good.com under RFC 5322, and Nodemailer read it as an address at evil.com. The unbracketed spelling of the same value was already read correctly. Affected: 3.0.0 through 10.1.3.Attacker capabilitiesThe attacker controls the text of a reci",
+            "url": "https://github.com/advisories/GHSA-85x2-q946-cp5h",
+            "title": "[nodemailer] Nodemailer: A \">\" inside a quoted local part ends an angle-addr early in addressparser, delivering to a domain the header does not name | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Vulnerability summaryaddressparser ends an angle-addr at the first > it sees, including one inside a quoted local part, a comment or a domain literal. The domain is then read off the text in front of ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-23T21:51:18.000Z",
+            "date_published": "2026-10-23T21:51:18.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nodemailer] Nodemailer: A \">\" inside a quoted local part ends an angle-addr early in addressparser, delivering to a domain the header does not name",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        }
+    ]
+}

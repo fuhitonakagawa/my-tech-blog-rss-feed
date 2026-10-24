@@ -1,0 +1,1121 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Platform｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/platform/feeds/feed.json",
+    "description": "Platformセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://vercel.com/changelog/vercel-cli-adds-spend-management",
+            "content_html": "You can now view and manage your team's budget from the Vercel CLI. Run and you, or the scripts and agents you run, get back your current spend and the active budget.Spend Managementvercel budgetsThis is the same On-Demand Budget shown in your team's billing settings. Setting a budget does not stop usage on its own. The flag pauses production deployments of all projects when spend reaches 100%.--pauseYou can now see your budget alert history. Run for the full log, filtered with , , , and . A bar",
+            "url": "https://vercel.com/changelog/vercel-cli-adds-spend-management",
+            "title": "Vercel CLI adds Spend Management | Vercel News",
+            "summary": "You can now view and manage your team's budget from the Vercel CLI. Run and you, or the scripts and agents you run, get back your current spend and the active budget.Spend Managementvercel budgetsThis",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/48w79bmU1b46BZolJx9kRu/dcbb67baf09aa4d2e8dad2f9c3c04431/image__53_.png",
+            "date_modified": "2026-10-23T21:44:00.000Z",
+            "date_published": "2026-10-23T21:44:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Vercel CLI adds Spend Management",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/send-feedback-from-vercel-mcp",
+            "content_html": "now includes , a tool for sending bug reports, friction reports, and feature requests directly to the Vercel team from your agent or harness.Vercel MCPsubmit_feedbackAsk your agent to give feedback in plain language: Your assistant can attach structured context that describes the task, the expected behavior, and what went wrong:The tool requires sign-in, and it sends feedback only when you ask your agent to share it.Connect your agent to Vercel MCP and read the to get started.submit_feedback doc",
+            "url": "https://vercel.com/changelog/send-feedback-from-vercel-mcp",
+            "title": "Send feedback from the Vercel MCP | Vercel News",
+            "summary": "now includes , a tool for sending bug reports, friction reports, and feature requests directly to the Vercel team from your agent or harness.Vercel MCPsubmit_feedbackAsk your agent to give feedback in",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5zUPDbfsi6JNUM6IRgNFRQ/d3a2f741d6d947709a347712fc2ce8ee/vercel-mcp-feedback-og.png",
+            "date_modified": "2026-10-23T20:53:00.000Z",
+            "date_published": "2026-10-23T20:53:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Send feedback from the Vercel MCP",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/blog/how-vercel-agent-accesses-production-safely",
+            "content_html": "An agent working on production systems needs permission to act. A request like “fix this deployment” doesn’t tell you upfront which actions it will take or what access it will need. Grant agents broad access and a mistake can affect unrelated resources. Ask for approval at every step and the user has to approve individual actions before they know how the agent intends to solve the problem. Repeated prompts can turn that review into a habit of clicking approve. starts by investigating the problem",
+            "url": "https://vercel.com/blog/how-vercel-agent-accesses-production-safely",
+            "title": "How Vercel Agent accesses production safely | Vercel News",
+            "summary": "An agent working on production systems needs permission to act. A request like “fix this deployment” doesn’t tell you upfront which actions it will take or what access it will need. Grant agents broad",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/cafef5b99ad121eaf5b0cc65/542ff0db971f92dcc52edc05eba0320a/how_vercel_agent_ensures_safe_access_to_production_og_card.jpg",
+            "date_modified": "2026-10-23T20:29:00.000Z",
+            "date_published": "2026-10-23T20:29:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How Vercel Agent accesses production safely",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/deployments-now-show-build-cache-size",
+            "content_html": "Deployment summaries now show the size of the build cache each deployment saved and how close it is to the limit for its . The same information is in the CLI with on version 65.1.0 or newer, and in the .build machineget-deployment REST API endpointvercel inspectUploading the build cache is billable build time, and a cache that goes over the limit is discarded, so the next build starts without one. This is on by default on all plans for deployments built on or after October 21. See the in the doc",
+            "url": "https://vercel.com/changelog/deployments-now-show-build-cache-size",
+            "title": "Deployments now show build cache size | Vercel News",
+            "summary": "Deployment summaries now show the size of the build cache each deployment saved and how close it is to the limit for its . The same information is in the CLI with on version 65.1.0 or newer, and in th",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6mXxqs5DZnil5hHVwF2uJ4/c086032d748cc671342877c6f5cadb3c/image__54_.png",
+            "date_modified": "2026-10-23T19:00:00.000Z",
+            "date_published": "2026-10-23T19:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Deployments now show build cache size",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://webkit.org/?p=18486",
+            "content_html": "Today iPhone Duo arrives, and with it, Safari 27.1.",
+            "url": "https://webkit.org/blog/18486/webkit-features-for-safari-27-1/",
+            "title": "WebKit Features for Safari 27.1 | WebKit",
+            "summary": "Today iPhone Duo arrives, and with it, Safari 27.1.",
+            "image": "https://webkit.org/wp-content/uploads/image-3-2.png",
+            "date_modified": "2026-10-23T17:00:59.000Z",
+            "date_published": "2026-10-23T17:00:59.000Z",
+            "tags": [
+                "News"
+            ],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "WebKit Features for Safari 27.1",
+                "blogTitle": "WebKit",
+                "blogLink": "https://webkit.org",
+                "blogLinkMd5Hash": "b730832646f3d89d16cb1f1d637b0261",
+                "favicon": "https://webkit.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/vercel-connect-adds-managed-stripe-api-keys",
+            "content_html": "can now create a separate for each agent or task. When you create a Stripe connector, you can now choose Managed API Key as the connection method. Vercel Connectrestricted Stripe API keyVercel creates the key in your Stripe account, limited to the permissions you pick. The existing MCP and bring-your-own API key methods are unchanged.type: embedded-entry-inline id: 3rOuKp0F4Nk80dMYJ5QX6UMost apps and agents run on Stripe’s default secret key, which has full access to the account. With per-agent ",
+            "url": "https://vercel.com/changelog/vercel-connect-adds-managed-stripe-api-keys",
+            "title": "Vercel Connect adds managed Stripe API keys | Vercel News",
+            "summary": "can now create a separate for each agent or task. When you create a Stripe connector, you can now choose Managed API Key as the connection method. Vercel Connectrestricted Stripe API keyVercel creates",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2LbnsC2Wg0YUHbvUO0lqcl/47adfabad64ec91f06365dda9914b5f2/image__50_.png",
+            "date_modified": "2026-10-23T17:00:00.000Z",
+            "date_published": "2026-10-23T17:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Vercel Connect adds managed Stripe API keys",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/blog/how-interfaze-serves-50-million-requests-a-month-on-vercel",
+            "content_html": "Interfaze on Vercel50 million requests a month Backend running on Fluid computeMultiple model providers behind one fallback layer with AI Gateway builds models for deterministic work that general-purpose LLMs handle poorly: document processing, OCR, object detection, web scraping, speech to text, and classification.InterfazeAs founder Yoeven Khemlani puts it, \"Most models aren't deterministic by nature. That's fine when you're drafting an essay. But when a hospital or a legal team needs to proce",
+            "url": "https://vercel.com/blog/how-interfaze-serves-50-million-requests-a-month-on-vercel",
+            "title": "How Interfaze serves 50 million requests a month on Vercel | Vercel News",
+            "summary": "Interfaze on Vercel50 million requests a month Backend running on Fluid computeMultiple model providers behind one fallback layer with AI Gateway builds models for deterministic work that general-purp",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6h86OtyTqrCzE6OGe6cBRT/e5bf944321812e0ff33e87a1d0b518bf/li_card_for_webinar_promotion_og_card.jpg",
+            "date_modified": "2026-10-23T04:00:00.000Z",
+            "date_published": "2026-10-23T04:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How Interfaze serves 50 million requests a month on Vercel",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/send-feedback-from-vercel-cli",
+            "content_html": "The now includes , which sends bugs, friction reports, and feature requests to the Vercel team from your terminal.Vercel CLIvercel feedbackCoding agents can also send feedback when they run into issues. Use with or to include structured context as pairs. Repeat the flag to describe the task, expected behavior, and what went wrong.vercel feedback-f--fieldkey=valueUpdate to the latest Vercel CLI and read the to get started. documentationvercel feedbackRead more",
+            "url": "https://vercel.com/changelog/send-feedback-from-vercel-cli",
+            "title": "Send feedback from the Vercel CLI | Vercel News",
+            "summary": "The now includes , which sends bugs, friction reports, and feature requests to the Vercel team from your terminal.Vercel CLIvercel feedbackCoding agents can also send feedback when they run into issue",
+            "image": "https://vercel.com/api/dynamic-og?title=Send%20feedback%20from%20the%20Vercel%20CLI&format=changelog",
+            "date_modified": "2026-10-23T02:00:00.000Z",
+            "date_published": "2026-10-23T02:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Send feedback from the Vercel CLI",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/kimi-k3-1-pro-and-kimi-k3-1-pro-highspeed-are-available-now-in-ai-gateway",
+            "content_html": "from is now available on , along with , a faster version for interactive use.Kimi K3.1 ProMoonshot AIAI GatewayKimi K3.1 Pro HighspeedK3.1 Pro is the first model in Moonshot's K3.1 series. It builds on with improvements in coding, 3D modeling, financial analysis, and agentic tasks, and keeps the 1M-token context window and image input.Kimi K3For coding, K3.1 Pro handles work ranging from small fixes in an existing codebase to building a full project, including long agent runs with many steps. It",
+            "url": "https://vercel.com/changelog/kimi-k3-1-pro-and-kimi-k3-1-pro-highspeed-are-available-now-in-ai-gateway",
+            "title": "Kimi K3.1 Pro and Kimi K3.1 Pro Highspeed are available now in AI Gateway | Vercel News",
+            "summary": "from is now available on , along with , a faster version for interactive use.Kimi K3.1 ProMoonshot AIAI GatewayKimi K3.1 Pro HighspeedK3.1 Pro is the first model in Moonshot's K3.1 series. It builds o",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/225AWAIWv2RMha71Mbfsw/edfbfcc4a6f9ff01d4be571d03d672f4/Vercel_x_Moonshot.png",
+            "date_modified": "2026-10-23T00:00:00.000Z",
+            "date_published": "2026-10-23T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Kimi K3.1 Pro and Kimi K3.1 Pro Highspeed are available now in AI Gateway",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/eight-more-tlds-now-eligible-for-a-free-domain-with-pro",
+            "content_html": "Every Pro team can claim a free domain for one year. That offer now includes , , , , , , , and , bringing the eligible TLDs to sixteen..co.studio.company.info.pro.live.digital.agencyThe offer still covers one domain per team, and premium domains are not eligible. After the first year, your domain will at the regular price shown at checkout when you claim it.renew automaticallyClaim yours at , and see the for the full list of eligible TLDs and terms.vercel.com/domainsfree domain FAQRead more",
+            "url": "https://vercel.com/changelog/eight-more-tlds-now-eligible-for-a-free-domain-with-pro",
+            "title": "Eight more TLDs now eligible for a free domain with Pro | Vercel News",
+            "summary": "Every Pro team can claim a free domain for one year. That offer now includes , , , , , , , and , bringing the eligible TLDs to sixteen..co.studio.company.info.pro.live.digital.agencyThe offer still co",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3xGudGxhsURfzv2GCCExnT/681cf9201e4b4bd24f83793aa83dfa3d/image__52_.png",
+            "date_modified": "2026-10-22T22:28:00.000Z",
+            "date_published": "2026-10-22T22:28:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Eight more TLDs now eligible for a free domain with Pro",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://webkit.org/?p=18482",
+            "content_html": "Safari Technology Preview Release 255 is now available for download for macOS Golden Gate and macOS Tahoe.",
+            "url": "https://webkit.org/blog/18482/release-notes-for-safari-technology-preview-255/",
+            "title": "Release Notes for Safari Technology Preview 255 | WebKit",
+            "summary": "Safari Technology Preview Release 255 is now available for download for macOS Golden Gate and macOS Tahoe.",
+            "image": "https://webkit.org/wp-content/themes/webkit/images/preview-card.jpg",
+            "date_modified": "2026-10-22T21:22:48.000Z",
+            "date_published": "2026-10-22T21:22:48.000Z",
+            "tags": [
+                "News"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Release Notes for Safari Technology Preview 255",
+                "blogTitle": "WebKit",
+                "blogLink": "https://webkit.org",
+                "blogLinkMd5Hash": "b730832646f3d89d16cb1f1d637b0261",
+                "favicon": "https://webkit.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://developer.apple.com/news/?id=yfo21auu",
+            "content_html": "Starting today, organizations and educational institutions can purchase subscriptions to apps in volume with multiseat purchasing. This makes it easy for organizations that use Apple Business or Apple School Manager to discover and purchase your auto-renewable subscription. Organizations can purchase the seats they need through a single Apple In-App Purchase, then assign and manage those seats using their existing device management tools. Organizations can also add and remove seats at any time d",
+            "url": "https://developer.apple.com/news/?id=yfo21auu",
+            "title": "Offer your subscriptions to businesses and schools  | Latest News - Apple Developer",
+            "summary": "Starting today, organizations and educational institutions can purchase subscriptions to apps in volume with multiseat purchasing. This makes it easy for organizations that use Apple Business or Apple",
+            "image": "https://developer.apple.com/news/images/og/app-store-connect-og.png",
+            "date_modified": "2026-10-22T18:00:08.000Z",
+            "date_published": "2026-10-22T18:00:08.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Offer your subscriptions to businesses and schools ",
+                "blogTitle": "Latest News - Apple Developer",
+                "blogLink": "https://developer.apple.com/news/",
+                "blogLinkMd5Hash": "a9b153323871c343ebedb8da4424c7a9",
+                "favicon": "https://developer.apple.com/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.docker.com/?p=95191",
+            "content_html": "On Tuesday, October 20, 2026, Docker began tracking two critical vulnerabilities in PHP, CVE-2026-109618 and CVE-2026-109619, commonly known as PHP2Shell.",
+            "url": "https://www.docker.com/blog/security-update-on-php2shell-impact-for-docker-customers/",
+            "title": "Security Update on PHP2Shell: Impact for Docker Customers | Docker",
+            "summary": "On Tuesday, October 20, 2026, Docker began tracking two critical vulnerabilities in PHP, CVE-2026-109618 and CVE-2026-109619, commonly known as PHP2Shell.",
+            "image": "https://www.docker.com/app/uploads/2025/03/image.png",
+            "date_modified": "2026-10-22T17:22:47.000Z",
+            "date_published": "2026-10-22T17:22:47.000Z",
+            "author": {
+                "name": "PeiFang Sung"
+            },
+            "tags": [
+                "Security"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Security Update on PHP2Shell: Impact for Docker Customers",
+                "blogTitle": "Docker",
+                "blogLink": "https://www.docker.com",
+                "blogLinkMd5Hash": "f841e611ccc9945a054d4dd416c917c4",
+                "favicon": "https://www.docker.com/app/uploads/2024/02/cropped-docker-logo-favicon-32x32.png"
+            }
+        },
+        {
+            "id": "https://www.docker.com/?p=95131",
+            "content_html": "Container security spans the image, build, and runtime. See the practical steps that shrink your attack surface and keep vulnerabilities out of production.",
+            "url": "https://www.docker.com/blog/docker-activestate-partnership/",
+            "title": "ActiveState Partners with Docker to Secure the Open Source in Enterprise Containers | Docker",
+            "summary": "Container security spans the image, build, and runtime. See the practical steps that shrink your attack surface and keep vulnerabilities out of production.",
+            "image": "https://www.docker.com/app/uploads/2025/03/image.png",
+            "date_modified": "2026-10-22T11:30:00.000Z",
+            "date_published": "2026-10-22T11:30:00.000Z",
+            "author": {
+                "name": "Jennifer Angeles"
+            },
+            "tags": [
+                "Products",
+                "Docker Hardened Images",
+                "Partnerships",
+                "Secure Software Supply Chain"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "ActiveState Partners with Docker to Secure the Open Source in Enterprise Containers",
+                "blogTitle": "Docker",
+                "blogLink": "https://www.docker.com",
+                "blogLinkMd5Hash": "f841e611ccc9945a054d4dd416c917c4",
+                "favicon": "https://www.docker.com/app/uploads/2024/02/cropped-docker-logo-favicon-32x32.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/blog/death-to-long-lived-static-credentials",
+            "content_html": "Fifteen years ago, TLS was something you'd use to protect the most sensitive areas of your app. Then Google, Let's Encrypt, the EFF, and others led the push for HTTPS everywhere, making encryption the default for every request. Without it, anyone between the browser and server can read and tamper with the traffic.OAuth, OIDC, DBSC, and related standards already provide building blocks for secure authentication, but standards alone do not make secure methods the norm. HTTPS needed tooling that ma",
+            "url": "https://vercel.com/blog/death-to-long-lived-static-credentials",
+            "title": "Death to long-lived static credentials | Vercel News",
+            "summary": "Fifteen years ago, TLS was something you'd use to protect the most sensitive areas of your app. Then Google, Let's Encrypt, the EFF, and others led the push for HTTPS everywhere, making encryption the",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4uDkSSA0pg2MjjoecBZkEn/13267551d5cc5dde67b857df686ab474/eliminating_long-lived_static_credentials_og_card.jpg",
+            "date_modified": "2026-10-22T04:00:00.000Z",
+            "date_published": "2026-10-22T04:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 2,
+                "originalTitle": "Death to long-lived static credentials",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://snyk.io/blog/php-patches-critical-unauthenticated-rces/",
+            "content_html": "Two critical flaws in PHP’s request lifecycle can enable unauthenticated remote code execution. Upgrade to a fixed release or install a vendor backport for older versions.",
+            "url": "https://snyk.io/blog/php-patches-critical-unauthenticated-rces/",
+            "title": "PHP Patches Two Critical Unauthenticated RCEs (CVE-2026-109618, CVE-2026-109619): Update Now | Blog RSS Feed | Snyk",
+            "summary": "Two critical flaws in PHP’s request lifecycle can enable unauthenticated remote code execution. Upgrade to a fixed release or install a vendor backport for older versions.",
+            "image": "https://res.cloudinary.com/snyk/image/upload/v1690813497/illustration-hero-ai.png",
+            "date_modified": "2026-10-22T04:00:00.000Z",
+            "date_published": "2026-10-22T04:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "PHP Patches Two Critical Unauthenticated RCEs (CVE-2026-109618, CVE-2026-109619): Update Now",
+                "blogTitle": "Blog RSS Feed | Snyk",
+                "blogLink": "https://snyk.io/",
+                "blogLinkMd5Hash": "b642d7e9918bfa01b6b8f48a03b7385d",
+                "favicon": "https://snyk.io/favicon.ico?favicon.43kax2m3a3ks6.ico"
+            }
+        },
+        {
+            "id": "https://snyk.io/blog/evo-remediation-agent-open-preview/",
+            "content_html": "The Evo Remediation Agent is now in Open Preview, bringing automated dependency resolution to Evo Agentic AppSec. AppSec teams can now run ongoing remediation",
+            "url": "https://snyk.io/blog/evo-remediation-agent-open-preview/",
+            "title": "Turn Your Vulnerability Backlog Into Pull Requests With Agentic Remediation | Blog RSS Feed | Snyk",
+            "summary": "The Evo Remediation Agent is now in Open Preview, bringing automated dependency resolution to Evo Agentic AppSec. AppSec teams can now run ongoing remediation",
+            "image": "https://res.cloudinary.com/snyk/image/upload/v1689708916/blog-feature-ai-lilac.jpg",
+            "date_modified": "2026-10-22T04:00:00.000Z",
+            "date_published": "2026-10-22T04:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Turn Your Vulnerability Backlog Into Pull Requests With Agentic Remediation",
+                "blogTitle": "Blog RSS Feed | Snyk",
+                "blogLink": "https://snyk.io/",
+                "blogLinkMd5Hash": "b642d7e9918bfa01b6b8f48a03b7385d",
+                "favicon": "https://snyk.io/favicon.ico?favicon.43kax2m3a3ks6.ico"
+            }
+        },
+        {
+            "id": "https://about.gitlab.com/blog/gitlab-helps-remediate-critical-php-flaws/",
+            "content_html": "GitLab is not affected by PHP2Shell (CVE-2026-109618 and CVE-2026-109619). The GitLab application is not written in PHP and does not run it to serve web requests, and our Security team has found no evidence of impact to GitLab-managed infrastructure. GitLab.com, GitLab Self-Managed, and GitLab Dedicated are not impacted.PHP is a widely used programming language that runs on web servers and powers popular platforms like WordPress, Drupal, and Magento, so a flaw in PHP itself can affect many websi",
+            "url": "https://about.gitlab.com/blog/gitlab-helps-remediate-critical-php-flaws/",
+            "title": "PHP2Shell: GitLab helps find and remediate critical PHP flaws | GitLab",
+            "summary": "GitLab is not affected by PHP2Shell (CVE-2026-109618 and CVE-2026-109619). The GitLab application is not written in PHP and does not run it to serve web requests, and our Security team has found no ev",
+            "image": "https://res.cloudinary.com/about-gitlab-com/image/upload/v1782237704/cj50chkvprjthczevmog.png",
+            "date_modified": "2026-10-22T00:00:00.000Z",
+            "date_published": "2026-10-22T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "PHP2Shell: GitLab helps find and remediate critical PHP flaws",
+                "blogTitle": "GitLab",
+                "blogLink": "https://about.gitlab.com/blog",
+                "blogLinkMd5Hash": "31f5e0e0d69f479b04aee9830f78e661",
+                "favicon": "https://about.gitlab.com/images/ico/favicon.ico"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/deploy-without-an-account-using-vercel-cli",
+            "content_html": "You can now deploy apps to Vercel without an account using . Share prototypes faster with a live URL before signing in to claim your project.Vercel CLIFrom a project directory that isn't linked to Vercel, run:The CLI builds your project locally when needed and returns a deployment URL you can share.Temporary deployments use the dedicated domain, separate from , and expire after one hour unless claimed.tmp.nowvercel.appTo keep your project live, open the claim link in the CLI output and sign in o",
+            "url": "https://vercel.com/changelog/deploy-without-an-account-using-vercel-cli",
+            "title": "Deploy without an account using Vercel CLI | Vercel News",
+            "summary": "You can now deploy apps to Vercel without an account using . Share prototypes faster with a live URL before signing in to claim your project.Vercel CLIFrom a project directory that isn't linked to Ver",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/42GEbXjC8L96Oizgv5VDxj/c651604b1b4582c4036421c37c134058/deploy_without_account_vercel_cli_og.png",
+            "date_modified": "2026-10-22T00:00:00.000Z",
+            "date_published": "2026-10-22T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Deploy without an account using Vercel CLI",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://www.elastic.co/blog/elastic-audi-revolut-f1-team-partnership",
+            "content_html": "We are excited to announce a new multi-year partnership between Elastic and Audi Revolut F1® Team. The partnership builds on an existing technical relationship: the team already uses Elastic to support investigations across its engineering software.",
+            "url": "https://www.elastic.co/blog/elastic-audi-revolut-f1-team-partnership",
+            "title": "How Elastic helps Audi Revolut F1® Team find what matters across engineering software | Elastic Blog - Elasticsearch, Kibana, and ELK Stack",
+            "summary": "We are excited to announce a new multi-year partnership between Elastic and Audi Revolut F1® Team. The partnership builds on an existing technical relationship: the team already uses Elastic to suppor",
+            "image": "https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blte81ee0c9e71578af/6ada67550c0e872c9f409e2a/IMG_1812_(1).png",
+            "date_modified": "2026-10-22T00:00:00.000Z",
+            "date_published": "2026-10-22T00:00:00.000Z",
+            "author": {
+                "name": "Melissa Rigney"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How Elastic helps Audi Revolut F1® Team find what matters across engineering software",
+                "blogTitle": "Elastic Blog - Elasticsearch, Kibana, and ELK Stack",
+                "blogLink": "https://www.elastic.co",
+                "blogLinkMd5Hash": "b82fa705cb0bce86fa0138055a46f9ae",
+                "favicon": "https://www.elastic.co/favicon.ico"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/routing-middleware-now-supports-python",
+            "content_html": "You can now write in Python for FastAPI, Flask, Django, and other Python frameworks. It runs before requests reach your app, and can rewrite, redirect, or answer them.routing middlewareTo set it up, point the entrypoint in at your proxy:proxyvercel.tomlYour middleware is an ASGI or WSGI app that runs separately from your main app, with only the packages in the dependency group of your . Add the packages your middleware imports to that group:vercel.proxypyproject.tomlThe package provides utilitie",
+            "url": "https://vercel.com/changelog/routing-middleware-now-supports-python",
+            "title": "Routing Middleware now supports Python | Vercel News",
+            "summary": "You can now write in Python for FastAPI, Flask, Django, and other Python frameworks. It runs before requests reach your app, and can rewrite, redirect, or answer them.routing middlewareTo set it up, p",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4giPCUqtvtLRTx9ZZMIeqC/67a02a8b478aba2fc54a010d296c1b95/image__48_.png",
+            "date_modified": "2026-10-21T17:00:00.000Z",
+            "date_published": "2026-10-21T17:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Routing Middleware now supports Python",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://www.docker.com/?p=95096",
+            "content_html": "Run AI agents in Docker Sandboxes with BAND AI. Learn how to connect isolated agents, collaborate across environments, and manage access securely.",
+            "url": "https://www.docker.com/blog/band-ai-agents-docker-sandboxes/",
+            "title": "Your Agent Runs in a Docker Sandbox. Now It Can Join a Team. | Docker",
+            "summary": "Run AI agents in Docker Sandboxes with BAND AI. Learn how to connect isolated agents, collaborate across environments, and manage access securely.",
+            "image": "https://www.docker.com/app/uploads/2025/03/image.png",
+            "date_modified": "2026-10-21T16:10:49.000Z",
+            "date_published": "2026-10-21T16:10:49.000Z",
+            "author": {
+                "name": "Jennifer Kohl"
+            },
+            "tags": [
+                "Products",
+                "Docker Sandboxes",
+                "Sandbox Kit"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Your Agent Runs in a Docker Sandbox. Now It Can Join a Team.",
+                "blogTitle": "Docker",
+                "blogLink": "https://www.docker.com",
+                "blogLinkMd5Hash": "f841e611ccc9945a054d4dd416c917c4",
+                "favicon": "https://www.docker.com/app/uploads/2024/02/cropped-docker-logo-favicon-32x32.png"
+            }
+        },
+        {
+            "id": "https://grafana.com/blog/spend-less-time-on-operational-busywork-and-resolve-incidents-faster-with-grafana-workflows/",
+            "content_html": "You're investigating checkout errors when someone asks who's coordinating the incident. Support needs an update, and another responder is looking for the runbook. You stop what you're doing to get everyone pointed in the same direction.They're all reasonable requests, but each one takes your attention away from understanding the problem. Yes, your team has a process for handling incidents, but carrying it out is another job for someone who's already busy.Grafana Workflows, available in public pr",
+            "url": "https://grafana.com/blog/spend-less-time-on-operational-busywork-and-resolve-incidents-faster-with-grafana-workflows/",
+            "title": "Spend less time on operational busywork and resolve incidents faster with Grafana Workflows | Grafana Labs blog on Grafana Labs",
+            "summary": "You're investigating checkout errors when someone asks who's coordinating the incident. Support needs an update, and another responder is looking for the runbook. You stop what you're doing to get eve",
+            "image": "https://a-us.storyblok.com/f/1022730/1920x1080/eb49274eb1/grafana-workflows-meta.png/m/1200x630/filters:quality(80)/",
+            "date_modified": "2026-10-21T15:06:02.000Z",
+            "date_published": "2026-10-21T15:06:02.000Z",
+            "author": {
+                "name": "Michael Wettick"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Spend less time on operational busywork and resolve incidents faster with Grafana Workflows",
+                "blogTitle": "Grafana Labs blog on Grafana Labs",
+                "blogLink": "https://grafana.com/blog/",
+                "blogLinkMd5Hash": "dd9c7fb7f400c5d5e3be535011dd5ad0",
+                "favicon": "https://grafana.com/favicon.ico?67f0da79a12facce"
+            }
+        },
+        {
+            "id": "https://snyk.io/blog/ai-model-risk-model-reach/",
+            "content_html": "A model’s risk score is only part of the picture: its impact depends on the data, tools, and actions its application can reach. Learn how security teams can verify that reach and choose targeted controls.",
+            "url": "https://snyk.io/blog/ai-model-risk-model-reach/",
+            "title": "AI Model Risk Depends on What the Model Can Reach | Blog RSS Feed | Snyk",
+            "summary": "A model’s risk score is only part of the picture: its impact depends on the data, tools, and actions its application can reach. Learn how security teams can verify that reach and choose targeted contr",
+            "image": "https://res.cloudinary.com/snyk/image/upload/v1689708916/blog-feature-ai-pink.jpg",
+            "date_modified": "2026-10-21T04:00:00.000Z",
+            "date_published": "2026-10-21T04:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AI Model Risk Depends on What the Model Can Reach",
+                "blogTitle": "Blog RSS Feed | Snyk",
+                "blogLink": "https://snyk.io/",
+                "blogLinkMd5Hash": "b642d7e9918bfa01b6b8f48a03b7385d",
+                "favicon": "https://snyk.io/favicon.ico?favicon.43kax2m3a3ks6.ico"
+            }
+        },
+        {
+            "id": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+            "content_html": "",
+            "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+            "title": "GitLab Critical Patch Release: 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10, 18.11.13 | GitLab",
+            "date_modified": "2026-10-21T00:00:00.000Z",
+            "date_published": "2026-10-21T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "GitLab Critical Patch Release: 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10, 18.11.13",
+                "blogTitle": "GitLab",
+                "blogLink": "https://about.gitlab.com/blog",
+                "blogLinkMd5Hash": "31f5e0e0d69f479b04aee9830f78e661",
+                "favicon": "https://docs.gitlab.com/favicon.ico"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/basetens-mammoth-1-and-elephant-1-now-available-on-ai-gateway-for-free",
+            "content_html": "and from Baseten are now available for free on AI Gateway for one week. Free access is available through October 27. These decision models classify text, route requests, and score content against criteria you define.Mammoth-1Elephant-1Mammoth-1 is the larger, 27B model, while Elephant-1 is a smaller, 9B option. Mammoth-1 is #1 on the Jev Decision Index and Elephant-1 is tied for #1 on the Artificial Analysis Decision Index.Both support a 16k-token context window and return choices, probabilities",
+            "url": "https://vercel.com/changelog/basetens-mammoth-1-and-elephant-1-now-available-on-ai-gateway-for-free",
+            "title": "Baseten's Mammoth-1 and Elephant-1 now available on AI Gateway for free | Vercel News",
+            "summary": "and from Baseten are now available for free on AI Gateway for one week. Free access is available through October 27. These decision models classify text, route requests, and score content against crit",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/64IlzA0rza7fJkJGDTwC6w/cf81d01d188db99a9e385dc44a8f5484/image.png",
+            "date_modified": "2026-10-21T00:00:00.000Z",
+            "date_published": "2026-10-21T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Baseten's Mammoth-1 and Elephant-1 now available on AI Gateway for free",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/skipped-monorepo-deployments-no-longer-count-against-limits",
+            "content_html": "Deployments that Vercel in a monorepo no longer count against your deployment rate limits. Teams with monorepos now get more deployments from the same limits.automatically skipsVercel skips a project's deployment when its source code and internal dependencies haven't changed, using 's package graph and lockfile analysis to determine which projects a commit affects. TurborepoSkipping is enabled by default for new monorepo projects. You can turn it on for existing projects under in the .Build and ",
+            "url": "https://vercel.com/changelog/skipped-monorepo-deployments-no-longer-count-against-limits",
+            "title": "Skipped monorepo deployments no longer count against limits | Vercel News",
+            "summary": "Deployments that Vercel in a monorepo no longer count against your deployment rate limits. Teams with monorepos now get more deployments from the same limits.automatically skipsVercel skips a project'",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2baD4s8r5p3SnOpcA1NM6P/5c0c09a93028b23c5fddce7a888a26f0/image.png",
+            "date_modified": "2026-10-21T00:00:00.000Z",
+            "date_published": "2026-10-21T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Skipped monorepo deployments no longer count against limits",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://www.elastic.co/blog/jina-model-inference-nvidia-rtx-gpus",
+            "content_html": "Elastic is accelerating Jina model inference with NVIDIA RTX Pro 6000 GPUs, delivering up to 8x faster embedding, 4x faster reranking, and 3.7x faster OCR to power search and agentic AI.",
+            "url": "https://www.elastic.co/blog/jina-model-inference-nvidia-rtx-gpus",
+            "title": "Elastic looks to speed up Jina Model Inference by 8x using NVIDIA RTX GPUs | Elastic Blog - Elasticsearch, Kibana, and ELK Stack",
+            "summary": "Elastic is accelerating Jina model inference with NVIDIA RTX Pro 6000 GPUs, delivering up to 8x faster embedding, 4x faster reranking, and 3.7x faster OCR to power search and agentic AI.",
+            "image": "https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt5a04a46e99074530/6ad8128bca19d53f2bc598a6/image2_(2).png",
+            "date_modified": "2026-10-21T00:00:00.000Z",
+            "date_published": "2026-10-21T00:00:00.000Z",
+            "author": {
+                "name": "Gregory Chase,Rachael Wade,Kapil Jadhav"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Elastic looks to speed up Jina Model Inference by 8x using NVIDIA RTX GPUs",
+                "blogTitle": "Elastic Blog - Elasticsearch, Kibana, and ELK Stack",
+                "blogLink": "https://www.elastic.co",
+                "blogLinkMd5Hash": "b82fa705cb0bce86fa0138055a46f9ae",
+                "favicon": "https://www.elastic.co/favicon.ico"
+            }
+        },
+        {
+            "id": "https://snyk.io/blog/ai-security-panel-unfiltered/",
+            "content_html": "AI is making attacks cheaper and faster, exposing risks organizations already carry. Four security leaders share why machine-speed defense and faster remediation are now essential.",
+            "url": "https://snyk.io/blog/ai-security-panel-unfiltered/",
+            "title": "AI Is Calling In Every Risk You've Accepted: Seven Insights From The AI Security Panel: Unfiltered | Blog RSS Feed | Snyk",
+            "summary": "AI is making attacks cheaper and faster, exposing risks organizations already carry. Four security leaders share why machine-speed defense and faster remediation are now essential.",
+            "image": "https://res.cloudinary.com/snyk/image/upload/v1710860899/AI_Background-min-crop.png",
+            "date_modified": "2026-10-21T00:00:00.000Z",
+            "date_published": "2026-10-21T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AI Is Calling In Every Risk You've Accepted: Seven Insights From The AI Security Panel: Unfiltered",
+                "blogTitle": "Blog RSS Feed | Snyk",
+                "blogLink": "https://snyk.io/",
+                "blogLinkMd5Hash": "b642d7e9918bfa01b6b8f48a03b7385d",
+                "favicon": "https://snyk.io/favicon.ico?favicon.43kax2m3a3ks6.ico"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/websocket-support-is-now-generally-available",
+            "content_html": "support in is now generally available.WebSocketVercel FunctionsSince the , Vercel CDN has served 300 million WebSocket connections, and now serves 15 million per day.public beta launched in late JuneCustomers use WebSockets for AI chat, streaming, and realtime multiplayer apps. WebSockets also power AI Gateway's .realtime modelsWebSocket connections follow the same limits and pricing as other Function invocations. With , CPU is billed only for the time spent processing messages. Active CPU prici",
+            "url": "https://vercel.com/changelog/websocket-support-is-now-generally-available",
+            "title": "WebSocket support is now generally available | Vercel News",
+            "summary": "support in is now generally available.WebSocketVercel FunctionsSince the , Vercel CDN has served 300 million WebSocket connections, and now serves 15 million per day.public beta launched in late JuneC",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7c4auyHqkLdgm8XogbfO8K/c09171a482d1b84ba3114b103984b4dd/image__47_.png",
+            "date_modified": "2026-10-20T20:00:00.000Z",
+            "date_published": "2026-10-20T20:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "WebSocket support is now generally available",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://grafana.com/blog/observabilitycon-2026-announcements/",
+            "content_html": "Today at ObservabilityCON 2026 in San Francisco, we unveiled a range of new Grafana Cloud capabilities designed to reshape cloud economics, bring richer context and deeper visibility across your systems and end-user experiences, and help teams move toward autonomous operations.Check out the keynote to learn more about the latest updates to the open agentic observability cloud, and read on for a quick recap of all the news from ObservabilityCON 2026.Autonomous operations with the help of AIWith G",
+            "url": "https://grafana.com/blog/observabilitycon-2026-announcements/",
+            "title": "ObservabilityCON 2026: A guide to all the announcements from Grafana Labs  | Grafana Labs blog on Grafana Labs",
+            "summary": "Today at ObservabilityCON 2026 in San Francisco, we unveiled a range of new Grafana Cloud capabilities designed to reshape cloud economics, bring richer context and deeper visibility across your syste",
+            "image": "https://a-us.storyblok.com/f/1022730/1920x1080/a72cbe3374/observabilitycon-2026-announcements-blog-meta.png/m/1200x630/filters:quality(80)/",
+            "date_modified": "2026-10-20T16:30:02.000Z",
+            "date_published": "2026-10-20T16:30:02.000Z",
+            "author": {
+                "name": "Grafana Labs Team"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "ObservabilityCON 2026: A guide to all the announcements from Grafana Labs ",
+                "blogTitle": "Grafana Labs blog on Grafana Labs",
+                "blogLink": "https://grafana.com/blog/",
+                "blogLinkMd5Hash": "dd9c7fb7f400c5d5e3be535011dd5ad0",
+                "favicon": "https://grafana.com/favicon.ico?67f0da79a12facce"
+            }
+        },
+        {
+            "id": "https://grafana.com/blog/grafana-ai-autonomous-operations/",
+            "content_html": "You've just finished a deployment, and though your service is up, you start to notice some requests are getting slower. To address the lag, someone—or, more likely, some group of people on your team—needs to watch the dashboards, decide whether the change matters, investigate what happened, and turn the findings into a fix. At each step you're gathering context—and often explaining that context again to the next person or tool. To make matters worse for the team responsible for the service, all ",
+            "url": "https://grafana.com/blog/grafana-ai-autonomous-operations/",
+            "title": "From production problem to proposed fix: Implement autonomous operations with Grafana AI | Grafana Labs blog on Grafana Labs",
+            "summary": "You've just finished a deployment, and though your service is up, you start to notice some requests are getting slower. To address the lag, someone—or, more likely, some group of people on your team—n",
+            "image": "https://a-us.storyblok.com/f/1022730/1920x1080/60c84689b9/grafana-ai-autonomous-operations.png/m/1200x630/filters:quality(80)/",
+            "date_modified": "2026-10-20T16:30:02.000Z",
+            "date_published": "2026-10-20T16:30:02.000Z",
+            "author": {
+                "name": "Maurice Rochau"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "From production problem to proposed fix: Implement autonomous operations with Grafana AI",
+                "blogTitle": "Grafana Labs blog on Grafana Labs",
+                "blogLink": "https://grafana.com/blog/",
+                "blogLinkMd5Hash": "dd9c7fb7f400c5d5e3be535011dd5ad0",
+                "favicon": "https://grafana.com/favicon.ico?67f0da79a12facce"
+            }
+        },
+        {
+            "id": "https://grafana.com/blog/grafana-ai-next-gen-visualization/",
+            "content_html": "Teams often spend as much time preparing information as discussing it: gathering charts, checking business reports, and finding the GitHub activity that explains a change. Every follow-up question can lead to yet another round of work. That's why, as part of ObservabilityCON 2026, we're excited to introduce Grafana Pages, a new feature in Grafana Cloud that gives you a canvas to describe what you need and build a live app in minutes, based on your real data, context, and interactions. From new t",
+            "url": "https://grafana.com/blog/grafana-ai-next-gen-visualization/",
+            "title": "Grafana Pages: Turn data into interactive experiences with the next evolution of Grafana | Grafana Labs blog on Grafana Labs",
+            "summary": "Teams often spend as much time preparing information as discussing it: gathering charts, checking business reports, and finding the GitHub activity that explains a change. Every follow-up question can",
+            "image": "https://a-us.storyblok.com/f/1022730/1920x1080/c38db6fd31/pages-meta.png/m/1200x630/filters:quality(80)/",
+            "date_modified": "2026-10-20T16:30:02.000Z",
+            "date_published": "2026-10-20T16:30:02.000Z",
+            "author": {
+                "name": "Maurice Rochau"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Grafana Pages: Turn data into interactive experiences with the next evolution of Grafana",
+                "blogTitle": "Grafana Labs blog on Grafana Labs",
+                "blogLink": "https://grafana.com/blog/",
+                "blogLinkMd5Hash": "dd9c7fb7f400c5d5e3be535011dd5ad0",
+                "favicon": "https://grafana.com/favicon.ico?67f0da79a12facce"
+            }
+        },
+        {
+            "id": "https://grafana.com/blog/cut-costs-keep-what-you-need-adaptive-telemetry/",
+            "content_html": "In the AI era, where telemetry is generated by every model call, tool invocation, and agent step, organizations need more help than ever when it comes to navigating the economics of observability.For a lot of teams, the default response is a \"data diet\" of shorter retention, which leaves services or environments out of collection, or basic sampling, which is more guesswork than strategy. Either way, you end up cutting to control the bill, and you risk losing the very data you need during an inci",
+            "url": "https://grafana.com/blog/cut-costs-keep-what-you-need-adaptive-telemetry/",
+            "title": "Break the link between data volume and your observability bill with Adaptive Telemetry | Grafana Labs blog on Grafana Labs",
+            "summary": "In the AI era, where telemetry is generated by every model call, tool invocation, and agent step, organizations need more help than ever when it comes to navigating the economics of observability.For ",
+            "image": "https://a-us.storyblok.com/f/1022730/1920x1080/9c2f79bbc8/adaptive-telemetry-cloud-economics-meta.png/m/1200x630/filters:quality(80)/",
+            "date_modified": "2026-10-20T16:30:02.000Z",
+            "date_published": "2026-10-20T16:30:02.000Z",
+            "author": {
+                "name": "JK Basra"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Break the link between data volume and your observability bill with Adaptive Telemetry",
+                "blogTitle": "Grafana Labs blog on Grafana Labs",
+                "blogLink": "https://grafana.com/blog/",
+                "blogLinkMd5Hash": "dd9c7fb7f400c5d5e3be535011dd5ad0",
+                "favicon": "https://grafana.com/favicon.ico?67f0da79a12facce"
+            }
+        },
+        {
+            "id": "https://grafana.com/blog/full-stack-observability-with-knowledge-graph/",
+            "content_html": "Most teams have telemetry from across their stack, but connecting those signals to understand what's happening and how it affects users isn't always easy. Critical context about service dependencies, ownership, and past incidents often lives across tools, runbooks, and conversations between team members.That’s why, today at ObservabilityCON 2026, we’re announcing new capabilities that advance full-stack observability across Grafana Cloud. Powering this experience is the Knowledge Graph, the runt",
+            "url": "https://grafana.com/blog/full-stack-observability-with-knowledge-graph/",
+            "title": "Full-stack observability in Grafana Cloud: More connections, richer context, and faster investigations for users and agents | Grafana Labs blog on Grafana Labs",
+            "summary": "Most teams have telemetry from across their stack, but connecting those signals to understand what's happening and how it affects users isn't always easy. Critical context about service dependencies, ",
+            "image": "https://a-us.storyblok.com/f/1022730/1920x1080/f2c2a044e2/full-stack-knowledge-graph-meta-image.png/m/1200x630/filters:quality(80)/",
+            "date_modified": "2026-10-20T16:30:02.000Z",
+            "date_published": "2026-10-20T16:30:02.000Z",
+            "author": {
+                "name": "Sarah Constant"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Full-stack observability in Grafana Cloud: More connections, richer context, and faster investigations for users and agents",
+                "blogTitle": "Grafana Labs blog on Grafana Labs",
+                "blogLink": "https://grafana.com/blog/",
+                "blogLinkMd5Hash": "dd9c7fb7f400c5d5e3be535011dd5ad0",
+                "favicon": "https://grafana.com/favicon.ico?67f0da79a12facce"
+            }
+        },
+        {
+            "id": "https://grafana.com/blog/grafana-marketplace/",
+            "content_html": "Earlier this year, we launched the Grafana Marketplace, a platform that gives independent software vendors, systems integrators, and developers in the Grafana community a new way to sell and distribute plugins built for Grafana.The Marketplace builds on our existing plugin catalog by enabling third-party partners and developers to earn revenue from their plugins and invest further in their development. For end users, these paid Marketplace plugins come with guarantees for ongoing updates and sup",
+            "url": "https://grafana.com/blog/grafana-marketplace/",
+            "title": "Expand what’s possible with Grafana: The Grafana Marketplace is now generally available | Grafana Labs blog on Grafana Labs",
+            "summary": "Earlier this year, we launched the Grafana Marketplace, a platform that gives independent software vendors, systems integrators, and developers in the Grafana community a new way to sell and distribut",
+            "image": "https://a-us.storyblok.com/f/1022730/1920x1080/a8ea237869/grafana-marketplace-launch-meta-image.png/m/1200x630/filters:quality(80)/",
+            "date_modified": "2026-10-20T16:30:02.000Z",
+            "date_published": "2026-10-20T16:30:02.000Z",
+            "author": {
+                "name": "Sofia Neroda"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Expand what’s possible with Grafana: The Grafana Marketplace is now generally available",
+                "blogTitle": "Grafana Labs blog on Grafana Labs",
+                "blogLink": "https://grafana.com/blog/",
+                "blogLinkMd5Hash": "dd9c7fb7f400c5d5e3be535011dd5ad0",
+                "favicon": "https://grafana.com/favicon.ico?67f0da79a12facce"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/deepseek-v4-1-flash-is-now-available-in-token-pass",
+            "content_html": "now includes DeepSeek V4.1 Flash, alongside Kimi K3 and GLM 5.3, each accessed through its preferred provider, with more models to come. The DeepSeek model uses the latest weights (1017).Token PassToken Pass is a $30/month subscription on Pro teams that grants $80 in monthly credit and runs through . Use it with any coding agent such as , , , etc. or build your own with the AI SDK, with Zero Data Retention enabled by default.AI GatewayfxPiClineCommand CodeAdd DeepSeek V4.1 Flash from the in your",
+            "url": "https://vercel.com/changelog/deepseek-v4-1-flash-is-now-available-in-token-pass",
+            "title": "DeepSeek V4.1 Flash is now available in Token Pass | Vercel News",
+            "summary": "now includes DeepSeek V4.1 Flash, alongside Kimi K3 and GLM 5.3, each accessed through its preferred provider, with more models to come. The DeepSeek model uses the latest weights (1017).Token PassTok",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3AZR3NtzCWP6v0OwTd1gAI/5c65b1f32d3aa739b0503ae4a739696e/image.png",
+            "date_modified": "2026-10-20T00:01:00.000Z",
+            "date_published": "2026-10-20T00:01:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "DeepSeek V4.1 Flash is now available in Token Pass",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://about.gitlab.com/blog/redesign-how-your-team-ships-software-with-ai-agents/",
+            "content_html": "AI agents are sending more and more code into review queues built for human-paced work. A coding assistant can speed up code writing, but it can’t show you whether review, security checks, and release approvals can keep pace with all that extra code. AI-native engineering — the practice of intentionally designing the engineering process so people and agents each do what they are best suited to — starts with identifying delivery bottlenecks, then deciding how much autonomy agents should have and ",
+            "url": "https://about.gitlab.com/blog/redesign-how-your-team-ships-software-with-ai-agents/",
+            "title": "Redesign how your team ships software with AI agents | GitLab",
+            "summary": "AI agents are sending more and more code into review queues built for human-paced work. A coding assistant can speed up code writing, but it can’t show you whether review, security checks, and release",
+            "image": "https://res.cloudinary.com/about-gitlab-com/image/upload/v1792421291/mfgvawlpuk9a2tdimsgn.png",
+            "date_modified": "2026-10-20T00:00:00.000Z",
+            "date_published": "2026-10-20T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Redesign how your team ships software with AI agents",
+                "blogTitle": "GitLab",
+                "blogLink": "https://about.gitlab.com/blog",
+                "blogLinkMd5Hash": "31f5e0e0d69f479b04aee9830f78e661",
+                "favicon": "https://about.gitlab.com/images/ico/favicon.ico"
+            }
+        },
+        {
+            "id": "https://about.gitlab.com/blog/gitlab-business-logic-security-analyzer/",
+            "content_html": "Broken object-level authorization ranks first on the OWASP API Security Top 10, and OWASP says that traditional static application security testing (SAST) tools struggle to find access control flaws. A missing authorization check is an absence of code, so a scanner that matches patterns has nothing to match. You can find the gap only if you already know what the endpoint is meant to enforce.We're building Business Logic Security Analyzer in GitLab Duo Agent Platform to catch business logic vulne",
+            "url": "https://about.gitlab.com/blog/gitlab-business-logic-security-analyzer/",
+            "title": "Uncover the business logic vulnerabilities SAST scanners miss | GitLab",
+            "summary": "Broken object-level authorization ranks first on the OWASP API Security Top 10, and OWASP says that traditional static application security testing (SAST) tools struggle to find access control flaws. ",
+            "image": "https://res.cloudinary.com/about-gitlab-com/image/upload/v1756122536/akivvcnafog9c4dhhzkp.png",
+            "date_modified": "2026-10-20T00:00:00.000Z",
+            "date_published": "2026-10-20T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Uncover the business logic vulnerabilities SAST scanners miss",
+                "blogTitle": "GitLab",
+                "blogLink": "https://about.gitlab.com/blog",
+                "blogLinkMd5Hash": "31f5e0e0d69f479b04aee9830f78e661",
+                "favicon": "https://about.gitlab.com/images/ico/favicon.ico"
+            }
+        },
+        {
+            "id": "https://about.gitlab.com/blog/ai-governance-dashboard/",
+            "content_html": "AI coding agents are writing and changing code, from GitLab Duo Agent Platform agents to externally connected agents like Claude Code, Cursor, and Codex. You are accountable for what those agents do, yet most of their activity stays invisible: which agents ran, who used them, and what they touched. Teams often struggle with understanding whether a developer used a tool or model that is approved or not.The AI Governance Dashboard, now in beta, gives you one place to see agent activity across your",
+            "url": "https://about.gitlab.com/blog/ai-governance-dashboard/",
+            "title": "AI Governance: One view of agent activity | GitLab",
+            "summary": "AI coding agents are writing and changing code, from GitLab Duo Agent Platform agents to externally connected agents like Claude Code, Cursor, and Codex. You are accountable for what those agents do, ",
+            "image": "https://res.cloudinary.com/about-gitlab-com/image/upload/v1773860699/gf9bdnis6ggrn4huvfrl.png",
+            "date_modified": "2026-10-20T00:00:00.000Z",
+            "date_published": "2026-10-20T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AI Governance: One view of agent activity",
+                "blogTitle": "GitLab",
+                "blogLink": "https://about.gitlab.com/blog",
+                "blogLinkMd5Hash": "31f5e0e0d69f479b04aee9830f78e661",
+                "favicon": "https://about.gitlab.com/images/ico/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.datadoghq.com/blog/engineering/software-supply-chain-policy-enforcement/",
+            "content_html": "Datadog built Turnstile to evaluate signed attestations and enforce software supply chain policies before container images are deployed.",
+            "url": "https://www.datadoghq.com/blog/engineering/software-supply-chain-policy-enforcement/",
+            "title": "Beyond container image signing: How we enforce software supply chain policies at Datadog | Datadog | Engineering blog",
+            "summary": "Datadog built Turnstile to evaluate signed attestations and enforce software supply chain policies before container images are deployed.",
+            "image": "https://web-assets.dd-static.net/42588/1792179196-hero-turnstile.jpg",
+            "date_modified": "2026-10-20T00:00:00.000Z",
+            "date_published": "2026-10-20T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Beyond container image signing: How we enforce software supply chain policies at Datadog",
+                "blogTitle": "Datadog | Engineering blog",
+                "blogLink": "https://www.datadoghq.com/",
+                "blogLinkMd5Hash": "646b1c8d905564bb86033934d13a3732"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/updates-to-hobby-and-pro-terms-of-service",
+            "content_html": "We are updating the Terms of Service for Hobby and Pro customers, effective October 19, 2026. The updates clarify some existing Vercel practices, expand terms on topics such as managed accounts and credits, and reflect applicable legal requirements, including certain cancellation and service-change rights for eligible consumers in the UK and EU.A new section sets out how credits work: plan-included credits expire at the end of the subscription term and purchased credits expire one year after pur",
+            "url": "https://vercel.com/changelog/updates-to-hobby-and-pro-terms-of-service",
+            "title": "Updates to Hobby and Pro Terms of Service | Vercel News",
+            "summary": "We are updating the Terms of Service for Hobby and Pro customers, effective October 19, 2026. The updates clarify some existing Vercel practices, expand terms on topics such as managed accounts and cr",
+            "image": "https://vercel.com/api/dynamic-og?title=Updates%20to%20Hobby%20and%20Pro%20Terms%20of%20Service&format=changelog",
+            "date_modified": "2026-10-19T18:39:47.247Z",
+            "date_published": "2026-10-19T18:39:47.247Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Updates to Hobby and Pro Terms of Service",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://grafana.com/blog/six-improvements-that-make-grafana-assistant-better-at-helping-your-workflows/",
+            "content_html": "When you ask Grafana Assistant to build a dashboard or investigate an alert, you're doing so because there's work to be done. To do that work effectively, you need the right data, changes you can inspect, and conclusions supported by evidence. You also want Assistant to avoid mistakes and act quickly.Over the past six months, our team has worked hard to improve what makes those outcomes possible. We’ve changed how agents find context, discover capabilities, edit dashboards, and recover from erro",
+            "url": "https://grafana.com/blog/six-improvements-that-make-grafana-assistant-better-at-helping-your-workflows/",
+            "title": "6 improvements that make Grafana Assistant better at helping your workflows | Grafana Labs blog on Grafana Labs",
+            "summary": "When you ask Grafana Assistant to build a dashboard or investigate an alert, you're doing so because there's work to be done. To do that work effectively, you need the right data, changes you can insp",
+            "image": "https://a-us.storyblok.com/f/1022730/1200x630/e7c70fd247/67c8b820-4330-4b4d-aeec-c8b47d0f3f93.jpeg/m/1200x630/filters:quality(80)/",
+            "date_modified": "2026-10-19T18:10:01.000Z",
+            "date_published": "2026-10-19T18:10:01.000Z",
+            "author": {
+                "name": "Maurice Rochau"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "6 improvements that make Grafana Assistant better at helping your workflows",
+                "blogTitle": "Grafana Labs blog on Grafana Labs",
+                "blogLink": "https://grafana.com/blog/",
+                "blogLinkMd5Hash": "dd9c7fb7f400c5d5e3be535011dd5ad0",
+                "favicon": "https://grafana.com/favicon.ico?67f0da79a12facce"
+            }
+        },
+        {
+            "id": "https://webkit.org/?p=18438",
+            "content_html": "Apple and WebKit have shipped protections against web tracking for a long time.",
+            "url": "https://webkit.org/blog/18438/blocking-identity-resolution-infrastructure/",
+            "title": "Blocking Identity Resolution Infrastructure | WebKit",
+            "summary": "Apple and WebKit have shipped protections against web tracking for a long time.",
+            "image": "https://webkit.org/wp-content/uploads/blocking-identity-resolution-01-light.png",
+            "date_modified": "2026-10-19T17:50:24.000Z",
+            "date_published": "2026-10-19T17:50:24.000Z",
+            "tags": [
+                "Privacy"
+            ],
+            "_custom": {
+                "hatenaCount": 2,
+                "originalTitle": "Blocking Identity Resolution Infrastructure",
+                "blogTitle": "WebKit",
+                "blogLink": "https://webkit.org",
+                "blogLinkMd5Hash": "b730832646f3d89d16cb1f1d637b0261",
+                "favicon": "https://webkit.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://vercel.com/blog/making-every-harness-durable",
+            "content_html": "Developers are familiar with running coding agents locally through harnesses like Pi, Claude Code, and others. They are reliable daily drivers for generating code, but keeping agents running around the clock requires your computer to be on and awake, which led to the laptop lid memes and Mac mini demand spike. Harness workloads are moving to the cloud. Individual developers are deploying always-on coding agent workflows, projects like OpenWork and HanaAgent use open-source harnesses as the engin",
+            "url": "https://vercel.com/blog/making-every-harness-durable",
+            "title": "Making every harness durable | Vercel News",
+            "summary": "Developers are familiar with running coding agents locally through harnesses like Pi, Claude Code, and others. They are reliable daily drivers for generating code, but keeping agents running around th",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/30zZgLs8jb3Rb8g9jfx6cq/df68e6cab0350e919a36a21f605232cb/image.png",
+            "date_modified": "2026-10-19T13:00:00.000Z",
+            "date_published": "2026-10-19T13:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Making every harness durable",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://about.gitlab.com/blog/three-developer-tasks-worth-handing-to-an-agent/",
+            "content_html": "You already have an AI assistant. It completes your code, explains code you didn’t write, and maybe even drafts a whole feature while you sip your coffee. An agent on GitLab picks up where your editor stops.The AI in your editor only knows what's open in your editor. It doesn't know that your merge request has been sitting in the queue for two days, or that your pipeline failed for the third time this week. Without your pipeline logs, it can’t offer a fix.GitLab Duo Agent Platform works within t",
+            "url": "https://about.gitlab.com/blog/three-developer-tasks-worth-handing-to-an-agent/",
+            "title": "Three developer tasks worth handing to an agent | GitLab",
+            "summary": "You already have an AI assistant. It completes your code, explains code you didn’t write, and maybe even drafts a whole feature while you sip your coffee. An agent on GitLab picks up where your editor",
+            "image": "https://res.cloudinary.com/about-gitlab-com/image/upload/v1772564423/mvuznp7fepbt6payidvm.png",
+            "date_modified": "2026-10-19T00:00:00.000Z",
+            "date_published": "2026-10-19T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Three developer tasks worth handing to an agent",
+                "blogTitle": "GitLab",
+                "blogLink": "https://about.gitlab.com/blog",
+                "blogLinkMd5Hash": "31f5e0e0d69f479b04aee9830f78e661",
+                "favicon": "https://about.gitlab.com/images/ico/favicon.ico"
+            }
+        },
+        {
+            "id": "https://about.gitlab.com/blog/gitlab-joins-open-secure-ai-alliance/",
+            "content_html": "When code becomes abundant trust becomes scarce.That is the argument GitLab CEO Bill Staples made in his recent essay: AI is collapsing the cost of producing software, and everything around production, including context, verification, governance, and evidence, becomes proportionally more important. Both security and collaboration are key elements to producing trust. AI widens what has to be trusted to include the agents that now write software along with the software that gets written.That is wh",
+            "url": "https://about.gitlab.com/blog/gitlab-joins-open-secure-ai-alliance/",
+            "title": "Building AI security in the open | GitLab",
+            "summary": "When code becomes abundant trust becomes scarce.That is the argument GitLab CEO Bill Staples made in his recent essay: AI is collapsing the cost of producing software, and everything around production",
+            "image": "https://res.cloudinary.com/about-gitlab-com/image/upload/v1773866173/vte9qh8rriznvyclhkes.png",
+            "date_modified": "2026-10-19T00:00:00.000Z",
+            "date_published": "2026-10-19T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Building AI security in the open",
+                "blogTitle": "GitLab",
+                "blogLink": "https://about.gitlab.com/blog",
+                "blogLinkMd5Hash": "31f5e0e0d69f479b04aee9830f78e661",
+                "favicon": "https://about.gitlab.com/images/ico/favicon.ico"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/deploy-with-vercel-drop-without-an-account",
+            "content_html": "You can now deploy static sites with without an account. Drag and drop a file, folder, or ZIP archive to get a live URL.Vercel DropDeployments without an account expire after one hour. To keep your site live, sign in or create an account and claim the project. and learn more in the Vercel Drop . Try Vercel DropdocumentationRead moreGet started",
+            "url": "https://vercel.com/changelog/deploy-with-vercel-drop-without-an-account",
+            "title": "Deploy with Vercel Drop without an account | Vercel News",
+            "summary": "You can now deploy static sites with without an account. Drag and drop a file, folder, or ZIP archive to get a live URL.Vercel DropDeployments without an account expire after one hour. To keep your si",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5oNoD0UnW2Hv7ZGvOmFRlK/7ec502dbd28920f3aab13bde14b40357/image__8_.png",
+            "date_modified": "2026-10-19T00:00:00.000Z",
+            "date_published": "2026-10-19T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Deploy with Vercel Drop without an account",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/mercury-3-now-available-on-ai-gateway",
+            "content_html": "is now available on AI Gateway with 50% off launch pricing. Inception reports strong results across a range of benchmarks, with generation speeds above 1,000 tokens per second.Mercury 3 from InceptionMercury 3 uses diffusion to generate text through parallel refinement. It brings improved reasoning to latency-sensitive workloads such as browser agents, real-time search, interactive education, and customer support. A 1M-token context window gives those applications room for long documents and ext",
+            "url": "https://vercel.com/changelog/mercury-3-now-available-on-ai-gateway",
+            "title": "Mercury 3 now available on AI Gateway | Vercel News",
+            "summary": "is now available on AI Gateway with 50% off launch pricing. Inception reports strong results across a range of benchmarks, with generation speeds above 1,000 tokens per second.Mercury 3 from Inception",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/20uKR2jzsglng2QIeliEe4/b4c0ae5af7a1ff5fbd9e4283ac2aedde/image.png",
+            "date_modified": "2026-10-19T00:00:00.000Z",
+            "date_published": "2026-10-19T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Mercury 3 now available on AI Gateway",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/minimax-m3-1-flash-now-available-on-ai-gateway-for-free",
+            "content_html": "from is now available on for free until Oct 22.MiniMax M3.1 FlashMiniMaxAI GatewayMiniMax M3.1 Flash is an open-weight multimodal model for coding and agentic work, with a 1M-token context window for long documents and multi-step agent sessions.Compared with earlier MiniMax models, M3.1 Flash improves on complex agentic tasks, coding, and cybersecurity. On the agent side, that covers multi-step business processes and computer use that carries a task from one application to the next. For coding, ",
+            "url": "https://vercel.com/changelog/minimax-m3-1-flash-now-available-on-ai-gateway-for-free",
+            "title": "MiniMax M3.1 Flash now available on AI Gateway for free | Vercel News",
+            "summary": "from is now available on for free until Oct 22.MiniMax M3.1 FlashMiniMaxAI GatewayMiniMax M3.1 Flash is an open-weight multimodal model for coding and agentic work, with a 1M-token context window for ",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/20yZQiIRVIrL4Y5mvQlsTe/3c8935388762292ca142432e205b9b9f/Vercel_x_MiniMax.png",
+            "date_modified": "2026-10-19T00:00:00.000Z",
+            "date_published": "2026-10-19T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "MiniMax M3.1 Flash now available on AI Gateway for free",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/ai-gateway-logs-now-show-session-affinity",
+            "content_html": "now have a that groups requests into sessions and shows how session affinity routed each one. Each row shows the or app that ran the session, such as Claude Code, Codex, or Cursor, along with its cost, models, providers, and how much of its input was cached across every turn.AI Gateway logsSessions viewcoding agentOpen a session to see its cache hit rate, duration, and path. The path lists each turn with its model and timing, and names the provider serving the session along with any earlier ones",
+            "url": "https://vercel.com/changelog/ai-gateway-logs-now-show-session-affinity",
+            "title": "AI Gateway logs now show session affinity | Vercel News",
+            "summary": "now have a that groups requests into sessions and shows how session affinity routed each one. Each row shows the or app that ran the session, such as Claude Code, Codex, or Cursor, along with its cost",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3kKsOoqZIhU3rm99IUsQSw/9b251ebd2321c49fdebede9ea57f9dca/image__120_.png",
+            "date_modified": "2026-10-18T20:03:00.000Z",
+            "date_published": "2026-10-18T20:03:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AI Gateway logs now show session affinity",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway",
+            "content_html": "is now available on .DeepSeek V4.1 Flash 1017AI GatewayDeepSeek V4.1 Flash 1017 is a minor update to that improves reasoning, coding, agentic tasks, and image understanding.DeepSeek V4.1 FlashThe coding gains show up in terminal work and in building and editing whole repositories, and the agentic gains in multi-step automation. With images, the model reads charts and handles visual reasoning more accurately when it can call tools.DeepSeek V4.1 Flash 1017 also finishes tasks faster and with short",
+            "url": "https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway",
+            "title": "DeepSeek V4.1 Flash 1017 now available on AI Gateway | Vercel News",
+            "summary": "is now available on .DeepSeek V4.1 Flash 1017AI GatewayDeepSeek V4.1 Flash 1017 is a minor update to that improves reasoning, coding, agentic tasks, and image understanding.DeepSeek V4.1 FlashThe codi",
+            "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/XjRrN5hZhlEhKtaKK82HX/21cb9a2fc8061a972c50e795f492248a/Vercel_x_DeepSeek.png",
+            "date_modified": "2026-10-17T00:00:00.000Z",
+            "date_published": "2026-10-17T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "DeepSeek V4.1 Flash 1017 now available on AI Gateway",
+                "blogTitle": "Vercel News",
+                "blogLink": "https://vercel.com/atom",
+                "blogLinkMd5Hash": "7ed6df025d104b7c70047ef463c232e3",
+                "favicon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-57x57.png"
+            }
+        },
+        {
+            "id": "https://developer.apple.com/news/?id=92th7e5i",
+            "content_html": "The App Review Guidelines have been revised to support new features, updated policies, and to provide clarification.App Review GuidelinesBefore You Submit: Added links to additional documentation. 1.2: Clarified app content and app types that are subject to this guideline, and potential Developer Code of Conduct violation for failing to implement appropriate safeguards or remediating violations after notice.2.3.14: New guideline covering creative assets.2.5.19: New guideline clarifies long-stand",
+            "url": "https://developer.apple.com/news/?id=92th7e5i",
+            "title": "Updated App Review Guidelines are now available | Latest News - Apple Developer",
+            "summary": "The App Review Guidelines have been revised to support new features, updated policies, and to provide clarification.App Review GuidelinesBefore You Submit: Added links to additional documentation. 1.2",
+            "image": "https://developer.apple.com/news/images/og/apple-developer-og.png",
+            "date_modified": "2026-10-16T20:05:42.000Z",
+            "date_published": "2026-10-16T20:05:42.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Updated App Review Guidelines are now available",
+                "blogTitle": "Latest News - Apple Developer",
+                "blogLink": "https://developer.apple.com/news/",
+                "blogLinkMd5Hash": "a9b153323871c343ebedb8da4424c7a9",
+                "favicon": "https://developer.apple.com/favicon.ico"
+            }
+        },
+        {
+            "id": "https://developer.apple.com/news/?id=vvzx6cul",
+            "content_html": "The App Review Guidelines are a core part of the safe and trusted experience that the App Store strives to offer users around the world — and the foundation of that trust is clear standards that are consistently enforced. As outlined in our App Review Guidelines, pornographic material has long been prohibited on the App Store — this includes apps that generate nudity or sexually explicit imagery, such as “nudification” apps that create sexually explicit images of real individuals without their c",
+            "url": "https://developer.apple.com/news/?id=vvzx6cul",
+            "title": "Strengthening App Review Guidelines against nonconsensual intimate imagery and bait-and-switch apps | Latest News - Apple Developer",
+            "summary": "The App Review Guidelines are a core part of the safe and trusted experience that the App Store strives to offer users around the world — and the foundation of that trust is clear standards that are c",
+            "image": "https://developer.apple.com/news/images/og/apple-developer-og.png",
+            "date_modified": "2026-10-16T20:00:56.000Z",
+            "date_published": "2026-10-16T20:00:56.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Strengthening App Review Guidelines against nonconsensual intimate imagery and bait-and-switch apps",
+                "blogTitle": "Latest News - Apple Developer",
+                "blogLink": "https://developer.apple.com/news/",
+                "blogLinkMd5Hash": "a9b153323871c343ebedb8da4424c7a9",
+                "favicon": "https://developer.apple.com/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.docker.com/?p=94981",
+            "content_html": "The 2026 Stack Overflow Developer Survey shows only 7% of developers trust AI output for important decisions. Here’s what that means for running agents safely.",
+            "url": "https://www.docker.com/blog/stack-overflow-survey-2026-ai-agent-trust/",
+            "title": "From Containers to Sandboxes: Developer Trust in the Agentic Era | Docker",
+            "summary": "The 2026 Stack Overflow Developer Survey shows only 7% of developers trust AI output for important decisions. Here’s what that means for running agents safely.",
+            "image": "https://www.docker.com/app/uploads/2025/03/image.png",
+            "date_modified": "2026-10-16T16:00:00.000Z",
+            "date_published": "2026-10-16T16:00:00.000Z",
+            "author": {
+                "name": "Jin Kim"
+            },
+            "tags": [
+                "Company",
+                "Research",
+                "Security",
+                "AI Agent",
+                "AI/ML",
+                "Cloud Sandboxes",
+                "Sandbox Kit",
+                "sandboxes",
+                "security"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "From Containers to Sandboxes: Developer Trust in the Agentic Era",
+                "blogTitle": "Docker",
+                "blogLink": "https://www.docker.com",
+                "blogLinkMd5Hash": "f841e611ccc9945a054d4dd416c917c4",
+                "favicon": "https://www.docker.com/app/uploads/2024/02/cropped-docker-logo-favicon-32x32.png"
+            }
+        }
+    ]
+}
