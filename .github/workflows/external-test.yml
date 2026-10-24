@@ -38,8 +38,8 @@ jobs:
         id: external-test
         run: npm run test-external -- --reporter=verbose --reporter=json --outputFile=test-results.json
 
-      - name: Comment test results on PR
-        if: github.event_name == 'pull_request' && !cancelled()
+      - name: Report external test results
+        if: ${{ !cancelled() && steps.external-test.outcome != 'skipped' }}
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
@@ -49,7 +49,7 @@ jobs:
             try {
               results = JSON.parse(fs.readFileSync('test-results.json', 'utf8'));
             } catch (e) {
-              console.log('No test results found');
+              core.setFailed('外部テストの結果JSONを読み込めませんでした');
               return;
             }
 
@@ -64,7 +64,7 @@ jobs:
             body += `|-----------|------|\n`;
             body += `| ✅ 成功 | ${passed} |\n`;
             body += `| ❌ 失敗 | ${failed} |\n`;
-            body += `| ⏭️ 未検証（提供元403など） | ${skipped} |\n`;
+            body += `| ⏭️ 未検証（外部取得不能など） | ${skipped} |\n`;
             body += `| 📊 合計 | ${total} |\n\n`;
 
             if (failed > 0 && results.testResults) {
@@ -87,13 +87,22 @@ jobs:
               body += `<details>\n<summary>未検証の取得元 (${skipped}件)</summary>\n\n`;
               for (const suite of results.testResults || []) {
                 for (const test of suite.assertionResults || []) {
-                  if (['pending', 'skipped'].includes(test.status)) body += `- ${test.fullName || test.title}\n`;
+                  if (['pending', 'skipped'].includes(test.status)) {
+                    body += `- ${test.fullName || test.title}\n`;
+                    const source = test.meta?.unverifiedSource;
+                    if (source) body += `  - ${source.url}: ${source.reason}\n`;
+                  }
                 }
               }
               body += `\n</details>\n\n`;
             }
 
-            body += `> ℹ️ 失敗はワークフローを失敗にします。提供元が403で拒否した対象は未検証として表示し、取得成功には数えません。\n`;
+            body += `> ℹ️ URL・XML・解析・生成の不具合はワークフローを失敗にします。403・408・429・5xx・通信エラーで取得できない対象は未検証とし、取得成功には数えません。\n`;
+
+            await core.summary.addRaw(body).write();
+            if (skipped > 0) core.warning(`外部テストの未検証が${skipped}件あります。対象と理由はジョブ概要を確認してください。`);
+            if (results.success === false || failed > 0) core.setFailed('外部テストに失敗があります');
+            if (context.eventName !== 'pull_request') return;
 
             // 既存のコメントを探して更新、なければ新規作成
             const comments = await github.paginate(github.rest.issues.listComments, {

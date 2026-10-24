@@ -1,15 +1,17 @@
 import type { TestContext } from 'vitest';
 import { logger } from '../../src/feed/logger';
-import { FeedHttpError } from '../../src/feed/source-request';
+import { FeedHttpError, isRetryableSourceError } from '../../src/feed/source-request';
 
-/** 提供元の取得拒否だけを未検証として明示し、解析・生成の不具合は失敗にする。 */
+/** 外部取得不能を未検証として記録し、URL・入力・解析・生成の不具合は失敗にする。 */
 export const providerCheck = async <T>(url: string, context: TestContext, run: () => Promise<T>): Promise<T> => {
   try {
     return await run();
   } catch (error) {
-    if (error instanceof FeedHttpError && error.status === 403) {
-      logger.warn('[external-test] 提供元が取得を拒否しています（未検証）', { url, status: error.status });
-      context.skip();
+    if ((error instanceof FeedHttpError && [403, 429].includes(error.status)) || isRetryableSourceError(error)) {
+      const reason = error instanceof Error ? `${error.name}: ${error.message}` : '外部サイトとの通信に失敗しました';
+      Object.assign(context.task.meta, { unverifiedSource: { url, reason } });
+      logger.warn('[external-test] 外部サイトから取得できません（未検証）', { url, reason });
+      context.skip(reason);
     }
     throw error;
   }
