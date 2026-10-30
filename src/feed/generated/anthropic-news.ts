@@ -13,6 +13,8 @@ const ARTICLE_SELECTOR = [
   'main a[class*="FeaturedGrid"][class*="__sideLink"]',
   'main a[class*="FeaturedGrid"][class*="__tileLink"]',
   'main a[class*="TableView"][class*="__title-link"]',
+  'main article > a[class*="_tileLink"]',
+  'main [data-listing-row] a[class*="_title-link"]',
 ].join(', ');
 const TITLE_SELECTOR = 'h2, h3, h4, [class*="PublicationList"][class*="__title"]';
 const CATEGORY_SELECTOR =
@@ -36,21 +38,21 @@ const extractArticle = (definition: GeneratedFeedDefinition, article: HtmlSelect
     throw new Error('公開できない記事URLです');
   }
   // 日付・カテゴリがリンクの外にあるレイアウトでは、同じカード・行だけを参照する。
-  const container = article.is('[class*="__tileLink"]')
+  const container = article.is('[class*="_tileLink"]')
     ? article.closest('article')
-    : article.is('[class*="TableView"][class*="__title-link"]')
+    : article.is('[class*="_title-link"]')
       ? article.closest('li')
       : article;
   const category = extractText(
     container,
-    `${CATEGORY_SELECTOR}, header [class*="TopicLink"], [class*="TableView"][class*="__category-link"]`,
+    `${CATEGORY_SELECTOR}, header [class*="TopicLink"], header a[href^="/news/"], [class*="_category-link"]`,
   );
   return {
     id: url,
     title,
     url,
     publishedAt: parseEnglishPublicationDate(extractText(container, 'time')),
-    summary: extractText(article, 'p') || extractText(container, 'a[class*="__above-link"] p'),
+    summary: extractText(article, 'p') || extractText(container, 'a[class*="_above-link"] p'),
     creator: '',
     categories: category ? [category] : [],
   };
