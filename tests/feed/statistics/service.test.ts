@@ -1,6 +1,7 @@
 import * as fs from 'node:fs/promises';
 import * as os from 'node:os';
 import * as path from 'node:path';
+import { gunzipSync } from 'node:zlib';
 import { load } from 'cheerio';
 import RssParser from 'rss-parser';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -34,6 +35,25 @@ afterEach(async () => {
 });
 
 describe('日次統計の保存と配信', () => {
+  it('旧JSONから全履歴を移行し、圧縮履歴の再実行でもRSSを維持する', async () => {
+    await generateStatistics([item], sections, published, output, firstTime);
+    const original = await generateStatistics([], sections, published, output, nextDay);
+    const rss = await fs.readFile(path.join(output, 'rss.xml'), 'utf-8');
+    await fs.mkdir(published);
+    await fs.writeFile(path.join(published, 'state.json'), JSON.stringify(original));
+    await fs.rm(path.join(output, 'state.json.gz'));
+    await fs.writeFile(path.join(output, 'state.json'), JSON.stringify(original));
+    const restored = await generateStatistics([], sections, published, output, nextDay);
+    expect(restored).toEqual(original);
+    expect(await readStatisticsState(output)).toEqual(original);
+    await expect(fs.access(path.join(output, 'state.json'))).rejects.toThrow();
+    expect(await fs.readFile(path.join(output, 'rss.xml'), 'utf-8')).toBe(rss);
+    await fs.cp(output, published, { recursive: true });
+    await fs.rm(output, { recursive: true });
+    expect(await generateStatistics([], sections, published, output, nextDay)).toEqual(original);
+    expect(await fs.readFile(path.join(output, 'rss.xml'), 'utf-8')).toBe(rss);
+  });
+
   it('公開履歴より新しいキャッシュの翻訳掲載記録を保持する', async () => {
     const source = { ...item, sourceFeedUrl: 'https://example.com/rss' };
     const currentSections: StatisticsSection[] = [
@@ -151,7 +171,7 @@ describe('日次統計の保存と配信', () => {
     expect(report.find('.ui-statistics-category-title 安全')).toHaveLength(0);
     expect(report.find('.ui-statistics-notice').text()).toContain('収集開始日');
     expect(html).toContain(statisticsFeedUrls.rss);
-    const saved = await fs.readFile(path.join(output, 'state.json'), 'utf-8');
+    const saved = gunzipSync(await fs.readFile(path.join(output, 'state.json.gz'))).toString('utf-8');
     expect(saved).not.toContain(item.link);
     expect(saved).not.toContain(item.title);
   });
@@ -246,7 +266,7 @@ describe('日次統計の保存と配信', () => {
   it('履歴へのシンボリックリンクを拒否する', async () => {
     await generateStatistics([item], sections, published, output, firstTime);
     await fs.mkdir(published, { recursive: true });
-    await fs.symlink(path.join(output, 'state.json'), path.join(published, 'state.json'));
+    await fs.symlink(path.join(output, 'state.json.gz'), path.join(published, 'state.json.gz'));
     await expect(readStatisticsState(published)).rejects.toThrow('不正');
   });
 });
