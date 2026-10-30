@@ -542,9 +542,9 @@ Pythonの依存バージョンはロックファイルで固定し、トーク�
 | RSS | [日次統計RSS](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/rss.xml) |
 | Atom | [日次統計Atom](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/atom.xml) |
 | JSON Feed | [日次統計JSON Feed](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/feed.json) |
-| 復元用の取得履歴 | [日次統計のstate.json](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/state.json) |
+| 復元用の取得履歴 | [日次統計のstate.json.gz](https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/statistics/daily/state.json.gz) |
 
-保存先は`src/site/feeds/statistics/daily/`です。取得履歴（schemaVersion: 3）には記事URLと取得元RSSのハッシュ、カテゴリID・表示名、公開日時、翻訳版への出力記録を保存します。レポートの内訳には取得元RSSの公開URL・表示名・種別・件数を保存します。記事本文・元記事URLを保存するためのフィールドはありません。公開済み`gh-pages`を主経路、Actions Cacheを副経路として復元し、通常の14日キャッシュ削除とは別に保持期間を管理します。同じ収集開始日時を持つキャッシュの未公開取得分も履歴に含めます。履歴の上限は20 MiBです。`gh-pages`が存在しない初回は履歴を初期化します。公開済みブランチの確認・取得に通信エラーがある場合はビルドエラーとし、履歴の初期化と区別します。保存履歴が不正で正常な復元元もない場合はビルドエラーとして公開を停止します。
+保存先は`src/site/feeds/statistics/daily/`です。取得履歴（schemaVersion: 3）には記事URLと取得元RSSのハッシュ、カテゴリID・表示名、公開日時、翻訳版への出力記録を保存します。レポートの内訳には取得元RSSの公開URL・表示名・種別・件数を保存します。記事本文・元記事URLを保存するためのフィールドはありません。公開済み`gh-pages`を主経路、Actions Cacheを副経路として復元し、通常の14日キャッシュ削除とは別に保持期間を管理します。同じ収集開始日時を持つキャッシュの未公開取得分も履歴に含めます。履歴は`state.json.gz`へ圧縮保存し、保存時20 MiB・展開後256 MiBを上限とします。いずれかの75%到達時にActionsへ容量を警告します。圧縮履歴がない場合だけ旧`state.json`（上限20 MiB）を読み、次回保存で全履歴を移行して出力先の旧ファイルを削除します。破損した圧縮履歴から同じ復元元の旧JSONへは切り替えません。`gh-pages`が存在しない初回は履歴を初期化します。公開済みブランチの確認・取得に通信エラーがある場合はビルドエラーとし、履歴の初期化と区別します。保存履歴が不正で正常な復元元もない場合はビルドエラーとして公開を停止します。
 
 
 ### 5.6. RSSの通知日時と元記事日時

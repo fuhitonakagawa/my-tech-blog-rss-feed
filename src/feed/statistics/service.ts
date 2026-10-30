@@ -1,13 +1,14 @@
+import * as fs from 'node:fs/promises';
+import * as path from 'node:path';
 import { sectionIdFromPath } from '../../resources/section-paths';
 import type { TranslatedFeedDefinition } from '../../resources/translated-feed-list';
 import type { CustomRssParserItem } from '../feed-crawler';
 import { FeedValidator } from '../feed-validator';
 import { logger } from '../logger';
 import { updateStatistics } from './aggregate';
-import { statisticsConfig } from './config';
 import { buildStatisticsFeed } from './feed-builder';
 import { type StatisticsSection, observationKey } from './observations';
-import { parseStatisticsState, readStatisticsState, writeStatisticsFile } from './state-store';
+import { readStatisticsState, serializeStatisticsState, writeStatisticsFile } from './state-store';
 import type { ArticleObservation, StatisticsState } from './types';
 
 /** 固定の公開パスで記録されたカテゴリを、現在の管理用IDへ対応付ける。 */
@@ -99,9 +100,7 @@ export const generateStatistics = async (
     new Set(sections.map((section) => section.id)),
   );
   const state = updateStatistics(previous, items, sections, currentDate, translations, translatedItems);
-  const json = `${JSON.stringify(state)}\n`;
-  if (Buffer.byteLength(json) > statisticsConfig.maxStateBytes) throw new Error('日次統計の保存上限を超えています');
-  parseStatisticsState(json);
+  const content = await serializeStatisticsState(state);
   const feeds = buildStatisticsFeed(state);
   const validator = new FeedValidator();
   await validator.assertXmlFeed('daily-statistics-rss', feeds.rss);
@@ -111,7 +110,12 @@ export const generateStatistics = async (
     writeStatisticsFile(outputDirectory, 'atom.xml', feeds.atom),
     writeStatisticsFile(outputDirectory, 'feed.json', feeds.json),
   ]);
-  await writeStatisticsFile(outputDirectory, 'state.json', json);
-  logger.info('[statistics] generated', { reports: state.reports.length, observations: state.observations.length });
+  await writeStatisticsFile(outputDirectory, 'state.json.gz', content);
+  await fs.rm(path.join(outputDirectory, 'state.json'), { force: true });
+  logger.info('[statistics] generated', {
+    reports: state.reports.length,
+    observations: state.observations.length,
+    storedBytes: content.byteLength,
+  });
   return state;
 };

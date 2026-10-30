@@ -33,6 +33,7 @@ export const parseStatisticsDefinition = (value: unknown): StatisticsDefinition 
 export const statisticsConfig = {
   ...parseStatisticsDefinition(definition),
   maxStateBytes: 20 * 1024 * 1024,
+  maxDecodedStateBytes: 256 * 1024 * 1024,
   feedPath: 'feeds/statistics/daily/',
   pagePath: 'statistics/daily/',
 };

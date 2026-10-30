@@ -1,12 +1,17 @@
 import { randomUUID } from 'node:crypto';
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
+import { promisify } from 'node:util';
+import { gunzip, gzip } from 'node:zlib';
 import { isPublishableHttpUrl } from '../../common/url-guard';
 import { removeInvalidUnicode } from '../common-util';
 import { statisticsConfig } from './config';
 import { dayStart, isDay, isIsoDate, jstDay, shiftDay } from './dates';
 import { observationKey } from './observations';
 import type { ArticleObservation, CategoryCount, DailyReport, SourceCount, StatisticsState } from './types';
+
+const compress = promisify(gzip);
+const decompress = promisify(gunzip);
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -185,24 +190,56 @@ export const parseStatisticsState = (json: string): StatisticsState => {
   };
 };
 
-/** 保存履歴が存在しない場合だけnullを返す。 */
+/** 履歴を削らず圧縮し、保存時と展開後の両方の上限を検証する。 */
+export const serializeStatisticsState = async (state: StatisticsState): Promise<Buffer> => {
+  const json = `${JSON.stringify(state)}\n`;
+  const decodedBytes = Buffer.byteLength(json);
+  if (decodedBytes > statisticsConfig.maxDecodedStateBytes) throw new Error('日次統計の展開上限を超えています');
+  parseStatisticsState(json);
+  const content = await compress(json);
+  if (content.byteLength > statisticsConfig.maxStateBytes) throw new Error('日次統計の保存上限を超えています');
+  if (
+    decodedBytes >= statisticsConfig.maxDecodedStateBytes * 0.75 ||
+    content.byteLength >= statisticsConfig.maxStateBytes * 0.75
+  ) {
+    console.warn(
+      `::warning::日次統計の履歴が容量上限の75%以上です。保存時 ${content.byteLength}/${statisticsConfig.maxStateBytes} bytes、展開後 ${decodedBytes}/${statisticsConfig.maxDecodedStateBytes} bytes`,
+    );
+  }
+  return content;
+};
+
+/** 圧縮履歴がない場合だけ旧JSONを読み、不正な圧縮履歴から旧形式へ戻らない。 */
 export const readStatisticsState = async (directory: string): Promise<StatisticsState | null> => {
-  const file = path.join(directory, 'state.json');
+  const compressedFile = path.join(directory, 'state.json.gz');
+  const compressedInfo = await fs.lstat(compressedFile).catch((error: NodeJS.ErrnoException) => {
+    if (error.code !== 'ENOENT') throw error;
+    return null;
+  });
+  const compressed = compressedInfo !== null;
+  const file = compressed ? compressedFile : path.join(directory, 'state.json');
   try {
-    const info = await fs.lstat(file);
+    const info = compressedInfo ?? (await fs.lstat(file));
     if (!info.isFile() || info.size > statisticsConfig.maxStateBytes)
       throw new Error('日次統計の保存ファイルが不正です');
-    const data = await fs.readFile(file, 'utf-8');
-    if (Buffer.byteLength(data) > statisticsConfig.maxStateBytes) throw new Error('日次統計の保存上限を超えています');
-    return parseStatisticsState(data);
+    const content = await fs.readFile(file);
+    if (content.byteLength > statisticsConfig.maxStateBytes) throw new Error('日次統計の保存上限を超えています');
+    const decoded = compressed
+      ? await decompress(content, { maxOutputLength: statisticsConfig.maxDecodedStateBytes })
+      : content;
+    return parseStatisticsState(decoded.toString('utf-8'));
   } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') return null;
+    if (!compressed && (error as NodeJS.ErrnoException).code === 'ENOENT') return null;
     throw error;
   }
 };
 
 /** ファイル単位で完全な内容を保存する。 */
-export const writeStatisticsFile = async (directory: string, fileName: string, content: string): Promise<void> => {
+export const writeStatisticsFile = async (
+  directory: string,
+  fileName: string,
+  content: string | Buffer,
+): Promise<void> => {
   await fs.mkdir(directory, { recursive: true });
   const temporary = path.join(directory, `${fileName}.${randomUUID()}.tmp`);
   try {
