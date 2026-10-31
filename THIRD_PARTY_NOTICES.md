@@ -30,6 +30,8 @@
 
 表は依存関係全体の再配布用ライセンス集ではありません。JavaScript側の依存関係は [npmロックファイル](https://github.com/fuhitonakagawa/my-tech-blog-rss-feed/blob/main/package-lock.json) で固定されています。ライブラリを同梱する配布物では、実際に含まれる直接・間接依存すべてのライセンス表示を保持する必要があります。
 
+Eleventyのファイルコピーに使う`minimatch`と、その間接依存`@isaacs/nonrecursive-glob-match`には、非コピーレフトの[Blue Oak Model License 1.0.0](https://blueoakcouncil.org/license/1.0.0)が適用されます。これらを同梱して配布する場合はライセンス本文またはリンクを保持してください。
+
 ## 利用・コード公開・再配布の区別
 
 - **ローカル・CIでの利用**: ライブラリを実行することと、そのライブラリのコピーを第三者へ配布することを区別します。
