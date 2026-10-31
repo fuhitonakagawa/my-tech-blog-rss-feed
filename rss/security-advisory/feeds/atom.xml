@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</id>
+    <title>GitHub Security Advisory｜企業テックブログRSS</title>
+    <updated>2026-10-31T13:04:29.862Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/atom.xml"/>
+    <subtitle>GitHub Security Advisoryセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[[pypdf] pypdf has possible infinite loop when hitting EOF in standard xref table during trailer search | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-5849-834g-hvw5</id>
+        <link href="https://github.com/advisories/GHSA-5849-834g-hvw5"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:13:16.000Z</updated>
+        <summary type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires opening an incomplete file without a trailer.PatchesThis has been fixed in pypdf==6.21.4.Wo]]></summary>
+        <content type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires opening an incomplete file without a trailer.PatchesThis has been fixed in pypdf==6.21.4.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #4289.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-5849-834g-hvw5https://nvd.nist.gov/vuln/detail/CVE-2026-119203https://github.com/py-pdf/pypdf/pull/4289https://github.com/py-pdf/pypdf/commit/06593f99378]]></content>
+        <published>2026-10-30T23:13:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pypdf] pypdf has possible large memory usage when parsing page tree | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-cggf-277g-3q54</id>
+        <link href="https://github.com/advisories/GHSA-cggf-277g-3q54"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:13:01.000Z</updated>
+        <summary type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires parsing the page tree with many shared resources.PatchesThis has been fixed in pypdf==6.2]]></summary>
+        <content type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires parsing the page tree with many shared resources.PatchesThis has been fixed in pypdf==6.21.4.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #4290.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-cggf-277g-3q54https://nvd.nist.gov/vuln/detail/CVE-2026-119204https://github.com/py-pdf/pypdf/pull/4290https://github.com/py-pdf/pypdf/commit/ea4ac]]></content>
+        <published>2026-10-30T23:13:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pypdf] pypdf has possible infinite loop when cloning dictionaries | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-mfr5-77xh-9j7h</id>
+        <link href="https://github.com/advisories/GHSA-mfr5-77xh-9j7h"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:12:20.000Z</updated>
+        <summary type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires cloning/duplicating a DictionaryObject.PatchesThis has been fixed in pypdf==6.21.4.Workarou]]></summary>
+        <content type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires cloning/duplicating a DictionaryObject.PatchesThis has been fixed in pypdf==6.21.4.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #4288.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-mfr5-77xh-9j7hhttps://nvd.nist.gov/vuln/detail/CVE-2026-119205https://github.com/py-pdf/pypdf/pull/4288https://github.com/py-pdf/pypdf/commit/f176db1a1f7f9af3e]]></content>
+        <published>2026-10-30T23:12:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[joi] joi: quadratic-time split in `string().email({ multiple: true })` allows denial of service | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-4528-x5fx-h6hg</id>
+        <link href="https://github.com/advisories/GHSA-4528-x5fx-h6hg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:10:23.000Z</updated>
+        <summary type="html"><![CDATA[SummaryJoi.string().email({ multiple: true }) takes quadratic time to split a value that contains a long run of whitespace. One request with 100 KB of spaces blocks the Node.js event loop for several ]]></summary>
+        <content type="html"><![CDATA[SummaryJoi.string().email({ multiple: true }) takes quadratic time to split a value that contains a long run of whitespace. One request with 100 KB of spaces blocks the Node.js event loop for several seconds, which causes a denial of service.DetailsWhen the multiple option is set, the email rule splits the value into addresses with a regular expression that removes whitespace on each side of the separator:const regex = new RegExp(`\\s*[${options.separator ? escapeRegex(options.separator) : ','}]]]></content>
+        <published>2026-10-30T23:10:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@hapi/joi] joi: quadratic-time split in `string().email({ multiple: true })` allows denial of service | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-4528-x5fx-h6hg</id>
+        <link href="https://github.com/advisories/GHSA-4528-x5fx-h6hg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:10:23.000Z</updated>
+        <summary type="html"><![CDATA[SummaryJoi.string().email({ multiple: true }) takes quadratic time to split a value that contains a long run of whitespace. One request with 100 KB of spaces blocks the Node.js event loop for several ]]></summary>
+        <content type="html"><![CDATA[SummaryJoi.string().email({ multiple: true }) takes quadratic time to split a value that contains a long run of whitespace. One request with 100 KB of spaces blocks the Node.js event loop for several seconds, which causes a denial of service.DetailsWhen the multiple option is set, the email rule splits the value into addresses with a regular expression that removes whitespace on each side of the separator:const regex = new RegExp(`\\s*[${options.separator ? escapeRegex(options.separator) : ','}]]]></content>
+        <published>2026-10-30T23:10:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[joi] joi: quadratic-time split in `string().email({ multiple: true })` allows denial of service | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-4528-x5fx-h6hg</id>
+        <link href="https://github.com/advisories/GHSA-4528-x5fx-h6hg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:10:23.000Z</updated>
+        <summary type="html"><![CDATA[SummaryJoi.string().email({ multiple: true }) takes quadratic time to split a value that contains a long run of whitespace. One request with 100 KB of spaces blocks the Node.js event loop for several ]]></summary>
+        <content type="html"><![CDATA[SummaryJoi.string().email({ multiple: true }) takes quadratic time to split a value that contains a long run of whitespace. One request with 100 KB of spaces blocks the Node.js event loop for several seconds, which causes a denial of service.DetailsWhen the multiple option is set, the email rule splits the value into addresses with a regular expression that removes whitespace on each side of the separator:const regex = new RegExp(`\\s*[${options.separator ? escapeRegex(options.separator) : ','}]]]></content>
+        <published>2026-10-30T23:10:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[content] @hapi/content: quadratic-time parsing of Content-Disposition parameters allows denial of service | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-8494-f6mr-cjpv</id>
+        <link href="https://github.com/advisories/GHSA-8494-f6mr-cjpv"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:10:13.000Z</updated>
+        <summary type="html"><![CDATA[SummaryContent.disposition() takes quadratic time when a Content-Disposition parameter contains a long token without =. One unauthenticated multipart request can block the Node.js event loop for sever]]></summary>
+        <content type="html"><![CDATA[SummaryContent.disposition() takes quadratic time when a Content-Disposition parameter contains a long token without =. One unauthenticated multipart request can block the Node.js event loop for several minutes.DetailsContent.disposition() reads the parameters with a global regular expression in String.prototype.replace():/([^\=\*\s]+)(\*)?\s*\=\s*(?:([^;'"\s]+\'[\w-]*\'[^;\s]+)|(?:\"([^"]*)\")|([^;\s]*))/gThe parameter name part ([^\=\*\s]+) has no anchor. When a run of name characters has no =]]></content>
+        <published>2026-10-30T23:10:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@hapi/content] @hapi/content: quadratic-time parsing of Content-Disposition parameters allows denial of service | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-8494-f6mr-cjpv</id>
+        <link href="https://github.com/advisories/GHSA-8494-f6mr-cjpv"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:10:13.000Z</updated>
+        <summary type="html"><![CDATA[SummaryContent.disposition() takes quadratic time when a Content-Disposition parameter contains a long token without =. One unauthenticated multipart request can block the Node.js event loop for sever]]></summary>
+        <content type="html"><![CDATA[SummaryContent.disposition() takes quadratic time when a Content-Disposition parameter contains a long token without =. One unauthenticated multipart request can block the Node.js event loop for several minutes.DetailsContent.disposition() reads the parameters with a global regular expression in String.prototype.replace():/([^\=\*\s]+)(\*)?\s*\=\s*(?:([^;'"\s]+\'[\w-]*\'[^;\s]+)|(?:\"([^"]*)\")|([^;\s]*))/gThe parameter name part ([^\=\*\s]+) has no anchor. When a run of name characters has no =]]></content>
+        <published>2026-10-30T23:10:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[minimatch] minimatch has potential denial of service via globparts amplification | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-g3hv-75wg-m249</id>
+        <link href="https://github.com/advisories/GHSA-g3hv-75wg-m249"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:09:55.000Z</updated>
+        <summary type="html"><![CDATA[minimatch 10.2.6 contains an attacker-controlled pattern amplification in firstPhasePreProcess() when optimizationLevel &gt;= 2.researcher: Reid Downing (b1nv0id)files: src/index.ts: 690-770src/index.ts:]]></summary>
+        <content type="html"><![CDATA[minimatch 10.2.6 contains an attacker-controlled pattern amplification in firstPhasePreProcess() when optimizationLevel &gt;= 2.researcher: Reid Downing (b1nv0id)files: src/index.ts: 690-770src/index.ts: 780-796issue:input-controlled growth of globParts during first-phase preprocessing, followed by quadratic second-phase processing.the **/../ transformation clones a globparts entry and appends the clone to the same globparts array:parts.splice(gs, 1)const other = parts.slice(0)other[gs] = '**'globP]]></content>
+        <published>2026-10-30T23:09:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[glob] Glob: AbortSignal cancellation bypass allows post-timeout filesystem traversal | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-3g3m-2fjr-6pw4</id>
+        <link href="https://github.com/advisories/GHSA-3g3m-2fjr-6pw4"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:09:11.000Z</updated>
+        <summary type="html"><![CDATA[SummaryIn glob 13.0.6, an aborted async walk rejects or emits an error but continues recursively reading directories in the background.The root cause is that abort branches in src/walker.ts call cb() ]]></summary>
+        <content type="html"><![CDATA[SummaryIn glob 13.0.6, an aborted async walk rejects or emits an error but continues recursively reading directories in the background.The root cause is that abort branches in src/walker.ts call cb() without returning. As a result, callers that rely on signal or AbortSignal.timeout() to bound glob traversal cost can still incur filesystem I/O and CPU work after the request has already been rejected.DetailsThis was reproduced on glob v13.0.6 (commit e80cb38ae60d6cbff9e75f39032a994858994d35).The R]]></content>
+        <published>2026-10-30T23:09:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Authlib] Authlib RFC 7592 examples omit registration-access-token client binding | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-c73q-w75p-j82v</id>
+        <link href="https://github.com/advisories/GHSA-c73q-w75p-j82v"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:09:04.000Z</updated>
+        <summary type="html"><![CDATA[DescriptionSummaryRFC 7592 (OAuth 2.0 Dynamic Client Registration Management Protocol) lets a previously registered client read, update, or delete its own registration, authenticated by a registration]]></summary>
+        <content type="html"><![CDATA[DescriptionSummaryRFC 7592 (OAuth 2.0 Dynamic Client Registration Management Protocol) lets a previously registered client read, update, or delete its own registration, authenticated by a registration_access_token issued specifically to that client at registration time. The entire security model of this protocol depends on the server verifying that the token presented in the request actually belongs to the client identified in the request, not merely that the token is valid for some client.Authl]]></content>
+        <published>2026-10-30T23:09:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pypdf] pypdf has possible long runtimes when retrieving page labels | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-42gh-23hr-vphw</id>
+        <link href="https://github.com/advisories/GHSA-42gh-23hr-vphw"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:08:55.000Z</updated>
+        <summary type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large runtimes. This requires retrieving the page labels of a file.PatchesThis has been fixed in pypdf==6.21.3.WorkaroundsI]]></summary>
+        <content type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large runtimes. This requires retrieving the page labels of a file.PatchesThis has been fixed in pypdf==6.21.3.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #4251.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-42gh-23hr-vphwhttps://nvd.nist.gov/vuln/detail/CVE-2026-119206https://github.com/py-pdf/pypdf/pull/4251https://github.com/py-pdf/pypdf/commit/b891fef37000cd86baa6e]]></content>
+        <published>2026-10-30T23:08:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pypdf] pypdf has possible large memory usage for exceptions in strict mode | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-4vqv-7265-gm2w</id>
+        <link href="https://github.com/advisories/GHSA-4vqv-7265-gm2w"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:08:39.000Z</updated>
+        <summary type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires loading an invalid dictionary.PatchesThis has been fixed in pypdf==6.21.3.WorkaroundsIf y]]></summary>
+        <content type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires loading an invalid dictionary.PatchesThis has been fixed in pypdf==6.21.3.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #4265.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-4vqv-7265-gm2whttps://nvd.nist.gov/vuln/detail/CVE-2026-119207https://github.com/py-pdf/pypdf/pull/4265https://github.com/py-pdf/pypdf/commit/64270258c0eced720f7960ae]]></content>
+        <published>2026-10-30T23:08:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pypdf] pypdf has possible long runtimes/large memory usage for encrypted PDF files | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-62m5-6wh8-28x7</id>
+        <link href="https://github.com/advisories/GHSA-62m5-6wh8-28x7"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:08:24.000Z</updated>
+        <summary type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large runtimes/memory usage. This requires accessing the page count of an encrypted PDF file, which itself declares a wrong]]></summary>
+        <content type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large runtimes/memory usage. This requires accessing the page count of an encrypted PDF file, which itself declares a wrong /Count value.PatchesThis has been fixed in pypdf==6.21.3.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #4270.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-62m5-6wh8-28x7https://nvd.nist.gov/vuln/detail/CVE-2026-119208https://github.com/py-pdf/pypdf]]></content>
+        <published>2026-10-30T23:08:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pypdf] pypdf has possible large memory usage when parsing cross-reference streams | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-x3rh-gjgm-fmqc</id>
+        <link href="https://github.com/advisories/GHSA-x3rh-gjgm-fmqc"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:07:28.000Z</updated>
+        <summary type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires opening a file with cross-reference streams.PatchesThis has been fixed in pypdf==6.21.3.W]]></summary>
+        <content type="html"><![CDATA[ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires opening a file with cross-reference streams.PatchesThis has been fixed in pypdf==6.21.3.WorkaroundsIf you cannot upgrade yet, consider applying the changes from PR #4269.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-x3rh-gjgm-fmqchttps://nvd.nist.gov/vuln/detail/CVE-2026-119209https://github.com/py-pdf/pypdf/pull/4269https://github.com/py-pdf/pypdf/commit/a93fe3a901]]></content>
+        <published>2026-10-30T23:07:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyasn1] pyasn1 has quadratic CPU consumption in constructed BIT STRING decoding | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-2qm8-x737-gmw5</id>
+        <link href="https://github.com/advisories/GHSA-2qm8-x737-gmw5"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:07:04.000Z</updated>
+        <summary type="html"><![CDATA[SummaryIn pyasn1 through 0.6.4, decoding a constructed BIT STRING with many fragments repeatedly shifts and copies the entire value accumulated so far. For fixed-size fragments, CPU time grows quadrat]]></summary>
+        <content type="html"><![CDATA[SummaryIn pyasn1 through 0.6.4, decoding a constructed BIT STRING with many fragments repeatedly shifts and copies the entire value accumulated so far. For fixed-size fragments, CPU time grows quadratically with the encoded input size. An application that passes sufficiently large, attacker-controlled ASN.1 data to an affected decoder can suffer CPU exhaustion during decode(); no conversion or formatting of the decoded value is required.The BER and CER decoders reach this path for constructed BI]]></content>
+        <published>2026-10-30T23:07:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyasn1] pyasn1 has quadratic-complexity denial of service in binary REAL decoding | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-mm57-4v3p-rchx</id>
+        <link href="https://github.com/advisories/GHSA-mm57-4v3p-rchx"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:06:46.000Z</updated>
+        <summary type="html"><![CDATA[SummaryIn pyasn1 0.6.4 and earlier, decoding a binary-encoded ASN.1 REAL with a large mantissa can consume CPU time quadratic in the mantissa length. The BER, CER, and DER decoders all use the affecte]]></summary>
+        <content type="html"><![CDATA[SummaryIn pyasn1 0.6.4 and earlier, decoding a binary-encoded ASN.1 REAL with a large mantissa can consume CPU time quadratic in the mantissa length. The BER, CER, and DER decoders all use the affected RealPayloadDecoder. An application is exposed when it passes attacker-controlled ASN.1 containing a REAL value to one of these decoders, either without an asn1Spec or with a schema that includes REAL. The work occurs inside decode(); the application does not need to convert, print, or otherwise us]]></content>
+        <published>2026-10-30T23:06:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyasn1] pyasn1 has quadratic-time denial of service in constructed string and indefinite-length ANY decoding | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-9m75-vc3g-4x39</id>
+        <link href="https://github.com/advisories/GHSA-9m75-vc3g-4x39"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:03:51.000Z</updated>
+        <summary type="html"><![CDATA[SummaryIn pyasn1 0.6.4 and earlier, decoding a constructed OCTET STRING or character string made of many fragments can spend disproportionate CPU time repeatedly copying the accumulated value. A separ]]></summary>
+        <content type="html"><![CDATA[SummaryIn pyasn1 0.6.4 and earlier, decoding a constructed OCTET STRING or character string made of many fragments can spend disproportionate CPU time repeatedly copying the accumulated value. A separate indefinite-length ANY path has the same problem while collecting the encoded components. The work grows roughly quadratically with the number of fixed-size fragments, although the input and decoded value grow linearly. An application that lets an attacker supply such ASN.1 input to an affected d]]></content>
+        <published>2026-10-30T23:03:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pyasn1] pyasn1 has quadratic CPU use in schemaless BER/CER/DER container decoding | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-fm9c-5rcf-2q5p</id>
+        <link href="https://github.com/advisories/GHSA-fm9c-5rcf-2q5p"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:03:37.000Z</updated>
+        <summary type="html"><![CDATA[SummaryWhen an application decodes attacker-controlled BER, CER, or DER data without an ASN.1 schema, a container with many distinct long tag IDs can cause quadratic CPU use. Repeated inputs can exhau]]></summary>
+        <content type="html"><![CDATA[SummaryWhen an application decodes attacker-controlled BER, CER, or DER data without an ASN.1 schema, a container with many distinct long tag IDs can cause quadratic CPU use. Repeated inputs can exhaust CPU and reduce service availability.DetailsConstructedPayloadDecoderBase._decodeComponentsSchemaless inserts every decoded component’s TagSet into a growing set, although it only needs to distinguish one tag set from two or more. Attacker-chosen tag IDs can have colliding TagSet hashes, making ea]]></content>
+        <published>2026-10-30T23:03:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: ASN.1 OID first arc truncation in asn1.oidToDer | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-4642-5mcj-2rqw</id>
+        <link href="https://github.com/advisories/GHSA-4642-5mcj-2rqw"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:02:40.000Z</updated>
+        <summary type="html"><![CDATA[Summaryasn1.oidToDer() did not range-check the first two arcs of an OID string, so an OID such as 0.42.840.113549.1.1.1 or 4294977127.18.840.113549.1.1.1 was encoded as the DER of a different OID (her]]></summary>
+        <content type="html"><![CDATA[Summaryasn1.oidToDer() did not range-check the first two arcs of an OID string, so an OID such as 0.42.840.113549.1.1.1 or 4294977127.18.840.113549.1.1.1 was encoded as the DER of a different OID (here rsaEncryption, 1.2.840.113549.1.1.1). This is an incomplete fix of CVE-2025-66030. Fixed in node-forge 1.4.1.DetailsX.690 section 8.19 encodes the first two arcs of an OID as one subidentifier, 40 * arc1 + arc2, where the first arc is 0, 1 or 2 and the second arc is at most 39 when the first is 0 ]]></content>
+        <published>2026-10-30T23:02:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: Prototype Pollution in forge.http cookie handling via a malicious Set-Cookie | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-6wvx-3r32-xmcg</id>
+        <link href="https://github.com/advisories/GHSA-6wvx-3r32-xmcg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:02:35.000Z</updated>
+        <summary type="html"><![CDATA[SummaryThe forge.http client stored cookies from Set-Cookie response headers in a plain object keyed by cookie name and path. A malicious server could use the cookie name __proto__ to add properties t]]></summary>
+        <content type="html"><![CDATA[SummaryThe forge.http client stored cookies from Set-Cookie response headers in a plain object keyed by cookie name and path. A malicious server could use the cookie name __proto__ to add properties to Object.prototype, use inherited names such as constructor to add properties to Object, and send an empty cookie value to delete Object.prototype properties. Fixed in node-forge 1.4.1.Detailsclient.setCookie() in lib/http.js stored a cookie with client.cookies[cookie.name][cookie.path] = cookie, cr]]></content>
+        <published>2026-10-30T23:02:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: TLS client crash when the server sends no certificate | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-525v-9gp9-w22h</id>
+        <link href="https://github.com/advisories/GHSA-525v-9gp9-w22h"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:02:30.000Z</updated>
+        <summary type="html"><![CDATA[SummaryThe forge TLS client's check for a missing server certificate read the wrong property and never ran. A malicious TLS server, or an on-path attacker who removes the server's Certificate message,]]></summary>
+        <content type="html"><![CDATA[SummaryThe forge TLS client's check for a missing server certificate read the wrong property and never ran. A malicious TLS server, or an on-path attacker who removes the server's Certificate message, can make connection.process() throw a TypeError, which crashes applications that use the forge TLS client. Fixed in node-forge 1.4.1.DetailsAfter ServerHelloDone, tls.handleServerHelloDone() in lib/tls.js is meant to reject a server that sent no certificate with a fatal insufficient_security alert,]]></content>
+        <published>2026-10-30T23:02:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: Regular expression denial of service in PEM decoding (pem.decode) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-7wch-p9px-956x</id>
+        <link href="https://github.com/advisories/GHSA-7wch-p9px-956x"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:02:25.000Z</updated>
+        <summary type="html"><![CDATA[Summarypem.decode(), which every node-forge API that parses PEM input uses, split messages with a regular expression that takes polynomial time on input without a matching END line, and parsed encapsu]]></summary>
+        <content type="html"><![CDATA[Summarypem.decode(), which every node-forge API that parses PEM input uses, split messages with a regular expression that takes polynomial time on input without a matching END line, and parsed encapsulated headers with regular expressions that take quadratic time on long header lines. A remote attacker can block the Node.js event loop for seconds to minutes with a crafted input of a few tens of kilobytes. Fixed in node-forge 1.4.1.Detailspem.decode() in lib/pem.js found PEM messages with this re]]></content>
+        <published>2026-10-30T23:02:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: Denial of Service via infinite loop in BigInteger.modInverse() with negative input (incomplete fix of CVE-2026-33891) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-h6cr-wjv9-3cpp</id>
+        <link href="https://github.com/advisories/GHSA-h6cr-wjv9-3cpp"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:02:20.000Z</updated>
+        <summary type="html"><![CDATA[SummaryBigInteger.prototype.modInverse() in node-forge's bundled jsbn library enters an infinite loop when the value or the modulus is negative, for example when a negative public exponent is passed t]]></summary>
+        <content type="html"><![CDATA[SummaryBigInteger.prototype.modInverse() in node-forge's bundled jsbn library enters an infinite loop when the value or the modulus is negative, for example when a negative public exponent is passed to forge.pki.rsa.generateKeyPair(). This is an incomplete fix of CVE-2026-33891 (GHSA-5m6q-g25r-mvwx), which handled only a zero value. Fixed in node-forge 1.4.1.DetailsbnModInverse() (lib/jsbn.js, exposed as forge.jsbn.BigInteger.prototype.modInverse) implements the binary extended Euclidean algorit]]></content>
+        <published>2026-10-30T23:02:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: verifyCertificateChain() removes trusted CA certificates with the same subject from the CA store | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-4487-j8r4-4g2f</id>
+        <link href="https://github.com/advisories/GHSA-4487-j8r4-4g2f"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:02:14.000Z</updated>
+        <summary type="html"><![CDATA[SummaryWhen a CA store created by pki.createCaStore() holds two or more certificates with the same subject name, pki.verifyCertificateChain() permanently removes those certificates from the store whil]]></summary>
+        <content type="html"><![CDATA[SummaryWhen a CA store created by pki.createCaStore() holds two or more certificates with the same subject name, pki.verifyCertificateChain() permanently removes those certificates from the store while trying each one as the issuer. A peer can send any certificate that names that subject as its issuer to make all later verifications against those CA certificates fail. Fixed in node-forge 1.4.1.Detailspki.verifyCertificateChain() (lib/x509.js) asks the CA store for the issuer of each certificate ]]></content>
+        <published>2026-10-30T23:02:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: AES-GCM authentication bypass via unvalidated tagLength option | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-5cwg-6vw7-rj6p</id>
+        <link href="https://github.com/advisories/GHSA-5cwg-6vw7-rj6p"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:02:09.000Z</updated>
+        <summary type="html"><![CDATA[SummaryThe AES-GCM mode in forge.cipher does not validate the tagLength option passed to start(). With a tagLength of 0 or a value that converts to 0 (such as null, false, '' or '0'), the authenticati]]></summary>
+        <content type="html"><![CDATA[SummaryThe AES-GCM mode in forge.cipher does not validate the tagLength option passed to start(). With a tagLength of 0 or a value that converts to 0 (such as null, false, '' or '0'), the authentication tag is empty, and decipher.finish() returns true for any ciphertext and additional data when the supplied tag is empty or missing. Fixed in node-forge 1.4.1.Detailsmodes.gcm.prototype.start() in lib/cipherModes.js stored the tagLength option without validation, and lib/cipher.js documented it as ]]></content>
+        <published>2026-10-30T23:02:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: PKCS#12 MAC forgery and constant-key PBE via zero iteration count | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-jc66-7q78-782g</id>
+        <link href="https://github.com/advisories/GHSA-jc66-7q78-782g"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:02:05.000Z</updated>
+        <summary type="html"><![CDATA[Summaryforge.pkcs12.pkcs12FromAsn1() accepts a PKCS#12 MAC iteration count of zero (or less) from the input, and the PKCS#12 key derivation function then returns a constant key that does not depend on]]></summary>
+        <content type="html"><![CDATA[Summaryforge.pkcs12.pkcs12FromAsn1() accepts a PKCS#12 MAC iteration count of zero (or less) from the input, and the PKCS#12 key derivation function then returns a constant key that does not depend on the password or salt. An attacker who does not know the password can modify a PKCS#12/PFX file and compute a MAC that verifies with any password; PKCS#12 PBE-encrypted private keys prepared the same way decrypt with any password. Fixed in node-forge 1.4.1.Detailsp12.pkcs12FromAsn1() in lib/pkcs12.j]]></content>
+        <published>2026-10-30T23:02:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: Denial of service in TLS record processing via a record interleaved with a fragmented handshake message | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-8hrf-8g6f-7xwp</id>
+        <link href="https://github.com/advisories/GHSA-8hrf-8g6f-7xwp"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:02:00.000Z</updated>
+        <summary type="html"><![CDATA[SummaryA connection created with forge.tls.createConnection() throws an uncaught TypeError from process() when it receives a record of another content type while waiting for the rest of a handshake me]]></summary>
+        <content type="html"><![CDATA[SummaryA connection created with forge.tls.createConnection() throws an uncaught TypeError from process() when it receives a record of another content type while waiting for the rest of a handshake message that was split across records. A peer can trigger this with 18 bytes before the handshake, without authentication, which terminates Node.js processes that use the documented socket wiring. Fixed in node-forge 1.4.1.DetailsIn lib/tls.js, _readRecord() handles a record that arrives while a hands]]></content>
+        <published>2026-10-30T23:02:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: Denial of service in TLS record processing via call stack exhaustion | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-hqq3-7jhf-c5jx</id>
+        <link href="https://github.com/advisories/GHSA-hqq3-7jhf-c5jx"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:01:54.000Z</updated>
+        <summary type="html"><![CDATA[SummaryConnections created with forge.tls.createConnection() processed received TLS records recursively, one stack level per record. A peer can send one chunk of thousands of small records, such as he]]></summary>
+        <content type="html"><![CDATA[SummaryConnections created with forge.tls.createConnection() processed received TLS records recursively, one stack level per record. A peer can send one chunk of thousands of small records, such as heartbeat records, which are accepted before the handshake, and process() throws RangeError: Maximum call stack size exceeded, which terminates Node.js processes that use the documented socket wiring. Fixed in node-forge 1.4.1.DetailsIn lib/tls.js, c.process() reads one record and passes it to _update]]></content>
+        <published>2026-10-30T23:01:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[node-forge] Forge: X.509 basicConstraints bypass in verifyCertificateChain() via deprecated extension OIDs 2.5.29.10 and 2.5.29.13 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-5x38-2vff-x55p</id>
+        <link href="https://github.com/advisories/GHSA-5x38-2vff-x55p"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:01:46.000Z</updated>
+        <summary type="html"><![CDATA[Summarynode-forge parses certificate extensions with the deprecated OIDs 2.5.29.10 and 2.5.29.13 as basicConstraints, and forge.pki.verifyCertificateChain() used the first extension with that name. A ]]></summary>
+        <content type="html"><![CDATA[Summarynode-forge parses certificate extensions with the deprecated OIDs 2.5.29.10 and 2.5.29.13 as basicConstraints, and forge.pki.verifyCertificateChain() used the first extension with that name. A certificate with a forged deprecated-OID extension (cA TRUE) before its genuine basicConstraints extension (cA FALSE) is accepted as a CA certificate, and the same technique can hide a pathLenConstraint. Fixed in node-forge 1.4.1.Detailslib/oids.js maps the deprecated certificate extension OIDs 2.5.]]></content>
+        <published>2026-10-30T23:01:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@nuxt/vite-builder] Nuxt dev server exposes generated appSecret through Vite file serving | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-3xf4-9g3c-4h4w</id>
+        <link href="https://github.com/advisories/GHSA-3xf4-9g3c-4h4w"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:01:12.000Z</updated>
+        <summary type="html"><![CDATA[ImpactWhen no appSecret is configured (via NUXT_APP_SECRET, NITRO_APP_SECRET or runtimeConfig.appSecret), nuxt dev generates a development secret and stores it in &lt;buildDir&gt;/app-secret (by default .nu]]></summary>
+        <content type="html"><![CDATA[ImpactWhen no appSecret is configured (via NUXT_APP_SECRET, NITRO_APP_SECRET or runtimeConfig.appSecret), nuxt dev generates a development secret and stores it in &lt;buildDir&gt;/app-secret (by default .nuxt/app-secret). The build directory is inside the directories that Nuxt passes to Vite's server.fs.allow, so the file can be fetched from the dev server:curl http://&lt;dev-server&gt;/_nuxt/@fs/&lt;absolute-path-to-project&gt;/.nuxt/app-secretAnyone who can read it can compute every secret derived from it with ]]></content>
+        <published>2026-10-30T23:01:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@nuxt/nitro-server] Nuxt: Dot segments in the request path bypass `server/middleware` path checks and server route rules on page routes | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-9v7c-q64q-vv33</id>
+        <link href="https://github.com/advisories/GHSA-9v7c-q64q-vv33"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:00:53.000Z</updated>
+        <summary type="html"><![CDATA[SummarySince 4.6.0, Nuxt resolves . and .. segments in the request path, including percent-encoded forms such as %2e, before rendering a page. Nitro's routing, Nitro's route rules and server/middlewar]]></summary>
+        <content type="html"><![CDATA[SummarySince 4.6.0, Nuxt resolves . and .. segments in the request path, including percent-encoded forms such as %2e, before rendering a page. Nitro's routing, Nitro's route rules and server/middleware see the path with those segments still in place. A request for /%2e/admin therefore renders the page at /admin, while server-side checks keyed on /admin do not apply.ImpactAn unauthenticated attacker can bypass server-side controls that match on the request path of a page route.server/middleware t]]></content>
+        <published>2026-10-30T23:00:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[graphql-core] GraphQL-core has denial of service via memory leak in aborted validations | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-mpqx-q82w-9x46</id>
+        <link href="https://github.com/advisories/GHSA-mpqx-q82w-9x46"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T22:58:31.000Z</updated>
+        <summary type="html"><![CDATA[SummaryWhen a validation was aborted because the document contained more errors than allowed by max_errors (100 by default), validate() raised a single module-level ValidationAbortedError instance. Py]]></summary>
+        <content type="html"><![CDATA[SummaryWhen a validation was aborted because the document contained more errors than allowed by max_errors (100 by default), validate() raised a single module-level ValidationAbortedError instance. Python appends the frames of every raise to the existing __traceback__ of an exception that is raised again, so every aborted validation extended the traceback of this shared error. That traceback kept the frames, and with them the document, the validation context and all errors of every aborted valid]]></content>
+        <published>2026-10-30T22:58:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[oauthlib] OAuthLib: Token grants can use attacker-supplied client_id for authorization after authenticating a different client | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-7984-qgvg-3j9c</id>
+        <link href="https://github.com/advisories/GHSA-7984-qgvg-3j9c"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T22:58:16.000Z</updated>
+        <summary type="html"><![CDATA[SummaryOAuthlib's token grant handlers can authenticate one client while authorizing the grant type and requested scopes using a different, attacker-supplied client_id from the request body.In affecte]]></summary>
+        <content type="html"><![CDATA[SummaryOAuthlib's token grant handlers can authenticate one client while authorizing the grant type and requested scopes using a different, attacker-supplied client_id from the request body.In affected token grant flows, authenticate_client(request) sets request.client to the authenticated client object, but OAuthlib does not require request.client_id to match request.client.client_id. If the request body already contains client_id=..., OAuthlib keeps that value and passes it to validate_grant_t]]></content>
+        <published>2026-10-30T22:58:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[openwisp-controller] OpenWISP Controller CA CRL REST API does not scope requests to managed organizations | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-9gh4-xw24-9xh5</id>
+        <link href="https://github.com/advisories/GHSA-9gh4-xw24-9xh5"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T22:58:10.000Z</updated>
+        <summary type="html"><![CDATA[SummaryThe authenticated REST API endpoint for downloading a CA Certificate Revocation List resolves the requested CA without applying the organization-scoped queryset used by the rest of the PKI API.]]></summary>
+        <content type="html"><![CDATA[SummaryThe authenticated REST API endpoint for downloading a CA Certificate Revocation List resolves the requested CA without applying the organization-scoped queryset used by the rest of the PKI API.An organization manager with CA view permission can request another organization's sequential CA ID and receive that CA's CRL. The endpoint is intended to be authenticated and organization-scoped, so it should use the same access-control path as GET /api/v1/controller/ca/&lt;id&gt;/.Affected endpointGET /]]></content>
+        <published>2026-10-30T22:58:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pypa/gh-action-pypi-publish] pypi-publish action revocation of CA in the chain that Sigstore uses in Trusted Publishing and Digital Attestations for PyPI | Security Advisory for Github Actions]]></title>
+        <id>https://github.com/advisories/GHSA-5xjx-3w67-w9x9</id>
+        <link href="https://github.com/advisories/GHSA-5xjx-3w67-w9x9"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T20:24:24.000Z</updated>
+        <summary type="html"><![CDATA[SummaryThe pypi-publish action versions before 1.14.2 used to bundle the emSign root CA trust store certificate through the certifi distribution. It has since been removed through the bundle and the n]]></summary>
+        <content type="html"><![CDATA[SummaryThe pypi-publish action versions before 1.14.2 used to bundle the emSign root CA trust store certificate through the certifi distribution. It has since been removed through the bundle and the new version no longer includes them.DetailsThe certifi-provided TLS trust store is typically used by many projects in the Python ecosystem, including Sigstore that pypi-publish relies on for Trusted Publishing and Digital Attestations.RelatedThe external compromise is being tracked at https://emudhra]]></content>
+        <published>2026-10-30T20:24:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[joserfc] joserfc: Compact JWS size guard allocates attacker-controlled segments before rejection | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-9pg5-8c7x-5hfx</id>
+        <link href="https://github.com/advisories/GHSA-9pg5-8c7x-5hfx"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T14:54:25.000Z</updated>
+        <summary type="html"><![CDATA[Summaryjoserfc 1.7.4 defines compact-JWS header, payload, and signature limits, butcalls value.split(b".") before validating them. Python bytes.split() copiesthe attacker-controlled segments, so the c]]></summary>
+        <content type="html"><![CDATA[Summaryjoserfc 1.7.4 defines compact-JWS header, payload, and signature limits, butcalls value.split(b".") before validating them. Python bytes.split() copiesthe attacker-controlled segments, so the current guard allocates roughly onecomplete payload before rejecting it.Reproduction.venv-research/bin/python 06-practical-testing/preauth-memory-profile.pyThe input is resident before a fork-isolated verifier runs, and every signatureis invalid.InputPeak RSS deltaAmplificationResult1 MiB1.11 MiB1.11]]></content>
+        <published>2026-10-30T14:54:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[joserfc] joserfc: Unbounded JWE General JSON `recipients` Array Leads to CPU Exhaustion (DoS) via Repeated RSA Private-Key Decryption | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-jpxq-7h8p-2q76</id>
+        <link href="https://github.com/advisories/GHSA-jpxq-7h8p-2q76"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T14:54:20.000Z</updated>
+        <summary type="html"><![CDATA[Summaryjoserfc.jwe.decrypt_json(), the library's public parser for JWE General JSON Serialization, accepts an attacker-controlled recipients array of unbounded length and performs one full private-key]]></summary>
+        <content type="html"><![CDATA[Summaryjoserfc.jwe.decrypt_json(), the library's public parser for JWE General JSON Serialization, accepts an attacker-controlled recipients array of unbounded length and performs one full private-key decryption operation (decrypt_cek) for every recipient present in the input, with no cap on recipient count. An unauthenticated network attacker who can send a JWE General JSON document to any endpoint that decrypts it with an RSA key (e.g. RSA-OAEP) can force the victim to perform an arbitrary, at]]></content>
+        <published>2026-10-30T14:54:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Twisted] Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-vpp8-g58w-m8mp</id>
+        <link href="https://github.com/advisories/GHSA-vpp8-g58w-m8mp"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-29T16:41:06.000Z</updated>
+        <summary type="html"><![CDATA[SummaryAn uncontrolled-resource-consumption vulnerability (CWE-400) in the Twisted HTTP/2 server lets any unauthenticated remote client exhaust server CPU over a single connection. A client that sends]]></summary>
+        <content type="html"><![CDATA[SummaryAn uncontrolled-resource-consumption vulnerability (CWE-400) in the Twisted HTTP/2 server lets any unauthenticated remote client exhaust server CPU over a single connection. A client that sends a request header block with END_STREAM and then immediately resets the stream makes the server route and render the request before it processes the reset. Reset streams are freed and never count against the concurrent-stream limit, and no reset-rate limiter exists, so the pattern can be repeated at]]></content>
+        <published>2026-10-29T16:41:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[praisonai] PraisonAI vulnerable to Remote Code Execution via Broken AST Sandbox | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-26mh-57q7-jfvr</id>
+        <link href="https://github.com/advisories/GHSA-26mh-57q7-jfvr"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-29T16:34:26.000Z</updated>
+        <summary type="html"><![CDATA[SummaryJobWorkflowExecutor._exec_inline_python() is designed to safely execute inline Python expressions from YAML workflow script: steps using AST validation. The function claims to block dangerous o]]></summary>
+        <content type="html"><![CDATA[SummaryJobWorkflowExecutor._exec_inline_python() is designed to safely execute inline Python expressions from YAML workflow script: steps using AST validation. The function claims to block dangerous operations by (a) checking all AST nodes against an allowlist, and (b) providing a builtins whitelist that omits import, exec, eval, and open.The sandbox is broken. The module import allowlist (allowed_modules) explicitly includes 'os', and the AST allowlist permits ast.Import, ast.ImportFrom, ast.Ca]]></content>
+        <published>2026-10-29T16:34:26.000Z</published>
+    </entry>
+</feed>

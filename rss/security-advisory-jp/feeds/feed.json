@@ -1,0 +1,810 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "GitHub Security Advisory - Translated Japanese｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/feed.json",
+    "description": "GitHub Security Advisory - Translated Japanese：enの記事を日本語に翻訳してまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://github.com/advisories/GHSA-5849-834g-hvw5",
+            "content_html": "Impactこの脆弱性を使用する攻撃者は、無限ループにつながるPDFを作成することができます。 トレーラーなしで不完全なファイルを開く必要があります。 Patchesこれはpypdf=6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4289 から変更を適用することを検討してください。 参考文献https://github.com/py-pdf/pypdf/security/advisories/GHSA-5849-834g-hvw5https://nvd.nist.gov/vuln/detail/CVE-2026-119203https://github.com/py-pdf/pypdf/pull/4289https://github.com/py-pdf/pypdf/commit/06593f993789a4b57b57b57b57bddhttps://github.com/pypdf/pypdf/pypdf/pypdf/pypdf/pypdf/zip/zip/",
+            "url": "https://github.com/advisories/GHSA-5849-834g-hvw5",
+            "title": "[pypdf] pypdf は、トレーラー検索中に標準の xref テーブルで EOF を打つときに無限ループが可能 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Impactこの脆弱性を使用する攻撃者は、無限ループにつながるPDFを作成することができます。 トレーラーなしで不完全なファイルを開く必要があります。 Patchesこれはpypdf=6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4289 から変更を適用することを検討してください。 参考文献https://github.com/py-pdf/pypd",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:13:16.000Z",
+            "date_published": "2026-10-30T23:13:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pypdf] pypdf has possible infinite loop when hitting EOF in standard xref table during trailer search",
+                "translatedTitle": "[pypdf] pypdf は、トレーラー検索中に標準の xref テーブルで EOF を打つときに無限ループが可能",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-cggf-277g-3q54",
+            "content_html": "Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 多くの共有リソースでページツリーを解析する必要があります。 パッチ これはpypdf==6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4290.Referenceshttps://github.com/py-pdf/pypdf/security/advisories/GHSA-cggf-277g-3q54https://nvd.nist.gov/vuln/detail/CVE-2026-119204https://github.com/py-pdf/pypdf/pull/4290https://github.com/pypdf/py-pdf/pypdf/pypdf/pypdf/zip/ipadvisores/privacy/privacy/privacy/ja/ja/ja/privacy/ja/ja/ja/privacy/privacy/ja/ja/privacy/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/",
+            "url": "https://github.com/advisories/GHSA-cggf-277g-3q54",
+            "title": "[pypdf] pypdf は、ページツリーを解析する際に大きなメモリ使用が可能 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 多くの共有リソースでページツリーを解析する必要があります。 パッチ これはpypdf==6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4290.Referenceshttps://github.com/py-pdf/pypdf/security/a",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:13:01.000Z",
+            "date_published": "2026-10-30T23:13:01.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pypdf] pypdf has possible large memory usage when parsing page tree",
+                "translatedTitle": "[pypdf] pypdf は、ページツリーを解析する際に大きなメモリ使用が可能",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mfr5-77xh-9j7h",
+            "content_html": "Impactこの脆弱性を使用する攻撃者は、無限ループにつながるPDFを作成することができます。 これは、辞書オブジェクトをクローニング/複製する必要があります。 パッチ これはpypdf==6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4288 から変更を適用することを検討してください。 参考:https://github.com/py-pdf/pypdf/security/advisories/GHSA-mfr5-77xh-9j7hhttps://nvd.nist.gov/vuln/detail/CVE-2026-119205https://github.com/py-pdf/pypdf/pull/4288https://github.com/py-pdf/pypdf/commit/f176db1a1f7f7f8f8f8f4github.comhttps://github.com/ja/ja/ja/ja/ja/ja/ja/ja/",
+            "url": "https://github.com/advisories/GHSA-mfr5-77xh-9j7h",
+            "title": "[pypdf] 辞書をクローンするとき、pypdf は無限ループが可能 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Impactこの脆弱性を使用する攻撃者は、無限ループにつながるPDFを作成することができます。 これは、辞書オブジェクトをクローニング/複製する必要があります。 パッチ これはpypdf==6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4288 から変更を適用することを検討してください。 参考:https://github.com/py-pdf/py",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:12:20.000Z",
+            "date_published": "2026-10-30T23:12:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pypdf] pypdf has possible infinite loop when cloning dictionaries",
+                "translatedTitle": "[pypdf] 辞書をクローンするとき、pypdf は無限ループが可能",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4528-x5fx-h6hg",
+            "content_html": "サマリーJoi.string().email({multiple: true }) は、空白の長い実行を含む値を分割するために量属性時間がかかります。 Node.jsイベントループを数秒間ブロックするスペースの100 KBの1つで、サービス拒否を引き起こします。 複数のオプションが設定されている場合、メールルールは、区切り文字の両側に空白を外す正規表現でアドレスに値を分割します。:const regex = new RegExp(`\\s*[${options.separator ?エスケープレレックス(options.separator) : ','}\\\\s*`);// ...const 電子メール = options.multiple ? value.split(regex) : [値];String.prototype.split は、値の各位置で一致します。 空白の実行中の各位置では、先頭の\\s*は残りの実行を読み込み、区切り文字やバックトラックはすべて見つかりません。 分離器のないn空白文字の実行は、n2の手順を要します。 これはデフォルトのセパレータとすべてのカスタムセパレー",
+            "url": "https://github.com/advisories/GHSA-4528-x5fx-h6hg",
+            "title": "[joi] joi: `string().email({multiple: true })` で区画時間分割されたサービスを拒否 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "サマリーJoi.string().email({multiple: true }) は、空白の長い実行を含む値を分割するために量属性時間がかかります。 Node.jsイベントループを数秒間ブロックするスペースの100 KBの1つで、サービス拒否を引き起こします。 複数のオプションが設定されている場合、メールルールは、区切り文字の両側に空白を外す正規表現でアドレスに値を分割します。:const re",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:10:23.000Z",
+            "date_published": "2026-10-30T23:10:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[joi] joi: quadratic-time split in `string().email({ multiple: true })` allows denial of service",
+                "translatedTitle": "[joi] joi: `string().email({multiple: true })` で区画時間分割されたサービスを拒否",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4528-x5fx-h6hg",
+            "content_html": "サマリーJoi.string().email({multiple: true }) は、空白の長い実行を含む値を分割するために量属性時間がかかります。 Node.jsイベントループを数秒間ブロックするスペースの100 KBの1つで、サービス拒否を引き起こします。 複数のオプションが設定されている場合、メールルールは、区切り文字の両側に空白を外す正規表現でアドレスに値を分割します。:const regex = new RegExp(`\\s*[${options.separator ?エスケープレレックス(options.separator) : ','}\\\\s*`);// ...const 電子メール = options.multiple ? value.split(regex) : [値];String.prototype.split は、値の各位置で一致します。 空白の実行中の各位置では、先頭の\\s*は残りの実行を読み込み、区切り文字やバックトラックはすべて見つかりません。 分離器のないn空白文字の実行は、n2の手順を要します。 これはデフォルトのセパレータとすべてのカスタムセパレー",
+            "url": "https://github.com/advisories/GHSA-4528-x5fx-h6hg",
+            "title": "[@hapi/joi] joi: `string().email({ 複数: true })` で区画時間割りでサービス拒否 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "サマリーJoi.string().email({multiple: true }) は、空白の長い実行を含む値を分割するために量属性時間がかかります。 Node.jsイベントループを数秒間ブロックするスペースの100 KBの1つで、サービス拒否を引き起こします。 複数のオプションが設定されている場合、メールルールは、区切り文字の両側に空白を外す正規表現でアドレスに値を分割します。:const re",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:10:23.000Z",
+            "date_published": "2026-10-30T23:10:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@hapi/joi] joi: quadratic-time split in `string().email({ multiple: true })` allows denial of service",
+                "translatedTitle": "[@hapi/joi] joi: `string().email({ 複数: true })` で区画時間割りでサービス拒否",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4528-x5fx-h6hg",
+            "content_html": "サマリーJoi.string().email({multiple: true }) は、空白の長い実行を含む値を分割するために量属性時間がかかります。 Node.jsイベントループを数秒間ブロックするスペースの100 KBの1つで、サービス拒否を引き起こします。 複数のオプションが設定されている場合、メールルールは、区切り文字の両側に空白を外す正規表現でアドレスに値を分割します。:const regex = new RegExp(`\\s*[${options.separator ?エスケープレレックス(options.separator) : ','}\\\\s*`);// ...const 電子メール = options.multiple ? value.split(regex) : [値];String.prototype.split は、値の各位置で一致します。 空白の実行中の各位置では、先頭の\\s*は残りの実行を読み込み、区切り文字やバックトラックはすべて見つかりません。 分離器のないn空白文字の実行は、n2の手順を要します。 これはデフォルトのセパレータとすべてのカスタムセパレー",
+            "url": "https://github.com/advisories/GHSA-4528-x5fx-h6hg",
+            "title": "[joi] joi: `string().email({multiple: true })` で区画時間分割されたサービスを拒否 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "サマリーJoi.string().email({multiple: true }) は、空白の長い実行を含む値を分割するために量属性時間がかかります。 Node.jsイベントループを数秒間ブロックするスペースの100 KBの1つで、サービス拒否を引き起こします。 複数のオプションが設定されている場合、メールルールは、区切り文字の両側に空白を外す正規表現でアドレスに値を分割します。:const re",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:10:23.000Z",
+            "date_published": "2026-10-30T23:10:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[joi] joi: quadratic-time split in `string().email({ multiple: true })` allows denial of service",
+                "translatedTitle": "[joi] joi: `string().email({multiple: true })` で区画時間分割されたサービスを拒否",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8494-f6mr-cjpv",
+            "content_html": "コンテンツ・ディスポジション・パラメータが = なしで長いトークンを含んだとき、ShrowContent.disposition() は定数時間かかります。 1つのunauthenticated multipartリクエストは、Node.jsイベントループを数分間ブロックできます。 DetailsContent.disposition() は String.prototype.replace():/([^\\=\\\\s]+)(\\*) のグローバル正規表現でパラメーターを読み込みますか? \\s*\\s*(?:([^;'\\s]+\\'[\\w-]*\\'[^;\\s]+)|(?:\\\"([^]*)\\\")\\\")|([^;\\s]*)/gパラメータ名部分([^\\=\\\\\\s]+)はアンカーがありません。 名前の文字の実行が = がないとき、マッチの試みはフルランを読み、失敗します。 グローバルなスキャンは、次の文字で再び始まり、残りの実行を再び読み込みます。 合計時間は、実行長さの四角に比例します。.@hapi/pez は、マルチパート/フォームのデータ ボディ内の各部分のヘッダにContent.disposit",
+            "url": "https://github.com/advisories/GHSA-8494-f6mr-cjpv",
+            "title": "[内容] @hapi/content: コンテンツ処理パラメータの量的時間解析により、サービス拒否が可能 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "コンテンツ・ディスポジション・パラメータが = なしで長いトークンを含んだとき、ShrowContent.disposition() は定数時間かかります。 1つのunauthenticated multipartリクエストは、Node.jsイベントループを数分間ブロックできます。 DetailsContent.disposition() は String.prototype.replace():",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:10:13.000Z",
+            "date_published": "2026-10-30T23:10:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[content] @hapi/content: quadratic-time parsing of Content-Disposition parameters allows denial of service",
+                "translatedTitle": "[内容] @hapi/content: コンテンツ処理パラメータの量的時間解析により、サービス拒否が可能",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8494-f6mr-cjpv",
+            "content_html": "コンテンツ・ディスポジション・パラメータが = なしで長いトークンを含んだとき、ShrowContent.disposition() は定数時間かかります。 1つのunauthenticated multipartリクエストは、Node.jsイベントループを数分間ブロックできます。 DetailsContent.disposition() は String.prototype.replace():/([^\\=\\\\s]+)(\\*) のグローバル正規表現でパラメーターを読み込みますか? \\s*\\s*(?:([^;'\\s]+\\'[\\w-]*\\'[^;\\s]+)|(?:\\\"([^]*)\\\")\\\")|([^;\\s]*)/gパラメータ名部分([^\\=\\\\\\s]+)はアンカーがありません。 名前の文字の実行が = がないとき、マッチの試みはフルランを読み、失敗します。 グローバルなスキャンは、次の文字で再び始まり、残りの実行を再び読み込みます。 合計時間は、実行長さの四角に比例します。.@hapi/pez は、マルチパート/フォームのデータ ボディ内の各部分のヘッダにContent.disposit",
+            "url": "https://github.com/advisories/GHSA-8494-f6mr-cjpv",
+            "title": "[@hapi/コンテンツ] @hapi/content:Content-Dispositionパラメータの量的時間解析により、サービス拒否が可能 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "コンテンツ・ディスポジション・パラメータが = なしで長いトークンを含んだとき、ShrowContent.disposition() は定数時間かかります。 1つのunauthenticated multipartリクエストは、Node.jsイベントループを数分間ブロックできます。 DetailsContent.disposition() は String.prototype.replace():",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:10:13.000Z",
+            "date_published": "2026-10-30T23:10:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@hapi/content] @hapi/content: quadratic-time parsing of Content-Disposition parameters allows denial of service",
+                "translatedTitle": "[@hapi/コンテンツ] @hapi/content:Content-Dispositionパラメータの量的時間解析により、サービス拒否が可能",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-g3hv-75wg-m249",
+            "content_html": "minimatch 10.2.6 には、最適化レベル &gt;= 2.researcher のとき、firstPhasePreProcess() で攻撃者制御パターン増幅が含まれています。 リードダウン(b1nv0id)ファイル: src/index.ts: 690-770src/index.ts: 780-796issue:第一相前処理中に globParts の入力制御成長, 続いて二次相処理. **/../ トランスフォーメーションは、グローバパートエントリをクローンに追加し、同じグオブジェクト配列にクローンを追加します。:parts.splice(gs, 1)const 他の = parts.slice(0)other[gs] = '**'globParts.push(その他)これは、doの中で発生します。(didSomething) フィックスポイントループは、生成されたエントリが再び処理できるようにします。 拡張された globparts 配列は、その後、第 2PhasePreProcess() によって処理されます。これは、ペアウェイトの比較を実行します。:for (let i",
+            "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249",
+            "title": "[minimatch] ミニマッチは、グラブパーツの増幅によるサービスの潜在的な拒否を持っています | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "minimatch 10.2.6 には、最適化レベル >= 2.researcher のとき、firstPhasePreProcess() で攻撃者制御パターン増幅が含まれています。 リードダウン(b1nv0id)ファイル: src/index.ts: 690-770src/index.ts: 780-796issue:第一相前処理中に globParts の入力制御成長, 続いて二次相処理. *",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:09:55.000Z",
+            "date_published": "2026-10-30T23:09:55.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[minimatch] minimatch has potential denial of service via globparts amplification",
+                "translatedTitle": "[minimatch] ミニマッチは、グラブパーツの増幅によるサービスの潜在的な拒否を持っています",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3g3m-2fjr-6pw4",
+            "content_html": "要約 13.0.6 では、中絶された非同期の散歩は、エラーを拒否したり、エラーを放出したりしますが、バックグラウンドで再帰的にディレクトリを読み込み続ける。 根本原因は、src/walker.ts の abort ブランチが返さずに cb() を呼び出すことです。 その結果、信号やAbortSignal.timeout() に依存する呼び出し側は、すでにリクエストが拒否された後、ファイルシステム I/O と CPU の作業をバインドすることができます。 詳細は、glibob v13.0.6 (commit e80cb38ae60d6cbff9e75f39032a994858994d35) で再現されました。 README は、信号オプションが glob ウォークをキャンセルする文書です。 ただし、src/walker.ts では、次のメソッドは cb() を呼び出します。 シグナル?.aborted は真だが返らない: GlobUtil.walkCB()GlobUtil.walkCB2()GlobUtil.walkCBSync()GlobUtil.walkCB2Sync() 例 vul",
+            "url": "https://github.com/advisories/GHSA-3g3m-2fjr-6pw4",
+            "title": "[グロブ] Glob: AbortSignalのキャンセルバイパスは、ポストタイムアウトのファイルシステム横断を可能にします | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "要約 13.0.6 では、中絶された非同期の散歩は、エラーを拒否したり、エラーを放出したりしますが、バックグラウンドで再帰的にディレクトリを読み込み続ける。 根本原因は、src/walker.ts の abort ブランチが返さずに cb() を呼び出すことです。 その結果、信号やAbortSignal.timeout() に依存する呼び出し側は、すでにリクエストが拒否された後、ファイルシステム ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:09:11.000Z",
+            "date_published": "2026-10-30T23:09:11.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[glob] Glob: AbortSignal cancellation bypass allows post-timeout filesystem traversal",
+                "translatedTitle": "[グロブ] Glob: AbortSignalのキャンセルバイパスは、ポストタイムアウトのファイルシステム横断を可能にします",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-c73q-w75p-j82v",
+            "content_html": "説明SummaryRFC 7592(OAuth 2.0 Dynamic Client Registration Management Protocol)は、以前に登録されたクライアントが、登録したクライアントを読み取り、更新、または独自の登録を削除し、登録時にそのクライアントに特別に発行されたregisteration_access_tokenによって認証されます。 このプロトコルのセキュリティモデル全体は、要求で提示されたトークンが要求で特定されたクライアントに実際に属していることを検証するサーバーに依存します。ただし、トークンは一部のクライアントで有効であるというわけではありません。 Authlib の ClientConfigurationEndpoint は、Authlib の ClientConfigurationEndpoint が構造で正しく制御フローを実装し、 Authenticate_token を呼び出して、Authlib の clientConfigurationEndpoint は check_permission を認証し、 \"Developers はサブクラ",
+            "url": "https://github.com/advisories/GHSA-c73q-w75p-j82v",
+            "title": "[ライブラリ] Authlib RFC 7592 の例省略登録-アクセストークンクライアントバインディング | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "説明SummaryRFC 7592(OAuth 2.0 Dynamic Client Registration Management Protocol)は、以前に登録されたクライアントが、登録したクライアントを読み取り、更新、または独自の登録を削除し、登録時にそのクライアントに特別に発行されたregisteration_access_tokenによって認証されます。 このプロトコルのセキュリティモ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:09:04.000Z",
+            "date_published": "2026-10-30T23:09:04.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[Authlib] Authlib RFC 7592 examples omit registration-access-token client binding",
+                "translatedTitle": "[ライブラリ] Authlib RFC 7592 の例省略登録-アクセストークンクライアントバインディング",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-42gh-23hr-vphw",
+            "content_html": "Impactこの脆弱性を使用する攻撃者は、大規模なランタイムにつながるPDFを作成することができます。 ファイルのページラベルの取得が必要です。 Patchesこれはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4251 から変更を適用することを検討してください。 参考:https://github.com/pypdf/pypdf/security/advisories/GHSA-42gh-23hr-vphwhttps://nvd.nist.gov/vuln/detail/CVE-2026-119206https://github.com/py-pdf/pypdf/pull/4251https://github.com/py-pdf/pypdf/commit/b891fef3cd86baa6github.com/ja/pypdf/pypdf/pypdf/pypdf/pypdf/pypdf/pll/zip/fab4fb86/",
+            "url": "https://github.com/advisories/GHSA-42gh-23hr-vphw",
+            "title": "[pypdf] pypdf は、ページラベルの取得時に長時間のランタイムが可能 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Impactこの脆弱性を使用する攻撃者は、大規模なランタイムにつながるPDFを作成することができます。 ファイルのページラベルの取得が必要です。 Patchesこれはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4251 から変更を適用することを検討してください。 参考:https://github.com/pypdf/pypdf/se",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:08:55.000Z",
+            "date_published": "2026-10-30T23:08:55.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pypdf] pypdf has possible long runtimes when retrieving page labels",
+                "translatedTitle": "[pypdf] pypdf は、ページラベルの取得時に長時間のランタイムが可能",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4vqv-7265-gm2w",
+            "content_html": "Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 これは、無効な辞書をロードする必要があります。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4265 から変更を適用することを検討してください。 参考文献https://github.com/py-pdf/pypdf/security/advisories/GHSA-4vqv-7265-gm2whttps://nvd.nist.gov/vuln/detail/CVE-2026-119207https://github.com/py-pdf/pypdf/pull/4265https://github.com/py-pdf/pypdf/commit/64270258c0eced720f7github.com/jahttps://github.com/py-pdf/pypdf/pypdf/py-jp/",
+            "url": "https://github.com/advisories/GHSA-4vqv-7265-gm2w",
+            "title": "[pypdf] pypdfは厳密なモードの例外のための大きい記憶使用法を可能にします | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 これは、無効な辞書をロードする必要があります。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4265 から変更を適用することを検討してください。 参考文献https://github.com/py-pdf/pypdf/",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:08:39.000Z",
+            "date_published": "2026-10-30T23:08:39.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pypdf] pypdf has possible large memory usage for exceptions in strict mode",
+                "translatedTitle": "[pypdf] pypdfは厳密なモードの例外のための大きい記憶使用法を可能にします",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-62m5-6wh8-28x7",
+            "content_html": "Impactこの脆弱性を使用する攻撃者は、大規模なランタイム/メモリ使用につながるPDFを作成することができます。 これは、暗号化されたPDFファイルのページ数にアクセスする必要があります。これにより、誤った/Count値が宣言されます。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4270 から変更を適用することを検討してください。 参考文献https://github.com/pypdf/pypdf/security/advisories/GHSA-62m5-6wh8-28x7https://nvd.nist.gov/vuln/detail/CVE-2026-119208https://github.com/py-pdf/pypdf/pull/4270https://github.com/py-pdf/pypdf/commit/82b1dc74496bb3efe64.comhttps://github.com/pypdf/pypdf/pypdf/pypdf/pypdf/pll/4270https://gi",
+            "url": "https://github.com/advisories/GHSA-62m5-6wh8-28x7",
+            "title": "[pypdf] pypdf は暗号化された PDF ファイルのための長いランタイム/大きい記憶使用法を可能にしました | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Impactこの脆弱性を使用する攻撃者は、大規模なランタイム/メモリ使用につながるPDFを作成することができます。 これは、暗号化されたPDFファイルのページ数にアクセスする必要があります。これにより、誤った/Count値が宣言されます。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4270 から変更を適用することを検討",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:08:24.000Z",
+            "date_published": "2026-10-30T23:08:24.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pypdf] pypdf has possible long runtimes/large memory usage for encrypted PDF files",
+                "translatedTitle": "[pypdf] pypdf は暗号化された PDF ファイルのための長いランタイム/大きい記憶使用法を可能にしました",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-x3rh-gjgm-fmqc",
+            "content_html": "Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 これは、クロスリファレンスストリームでファイルを開く必要があります。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4269 から変更を適用することを検討してください。 参考:https://github.com/pypdf/pypdf/security/advisories/GHSA-x3rh-gjgm-fmqchttps://nvd.nist.gov/vuln/detail/CVE-2026-119209https://github.com/py-pdf/pull/4269https://github.com/py-pdf/py-com/py-pdf/pypdf/pypdf/commit/a93afe3a901fdgithub/jfgjfgjfjfmqchttps://github.com/jfmfmqhtml",
+            "url": "https://github.com/advisories/GHSA-x3rh-gjgm-fmqc",
+            "title": "[pypdf] pypdf は、クロスリファレンスストリームを解析する際に大きなメモリ使用が可能 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 これは、クロスリファレンスストリームでファイルを開く必要があります。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4269 から変更を適用することを検討してください。 参考:https://github.com/pyp",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:07:28.000Z",
+            "date_published": "2026-10-30T23:07:28.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pypdf] pypdf has possible large memory usage when parsing cross-reference streams",
+                "translatedTitle": "[pypdf] pypdf は、クロスリファレンスストリームを解析する際に大きなメモリ使用が可能",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-2qm8-x737-gmw5",
+            "content_html": "まとめpyasn1 から 0.6.4 まで、多くのフラグメントを繰り返し構築した BIT ストリングをデコードし、これまでに蓄積した値全体をコピーします。 固定サイズの破片のために、CPU時間は符号化された入力サイズとquadraticallyを育てます。 影響を受けたデコーダに十分な大き攻撃制御ASN.1データを渡すアプリケーションは、デコーダ();デコーダ値の変換やフォーマットは必要ありません。 BER と CER のデコーダは、Asn1Spec の有無にかかわらず、BIT のストリング値のこのパスに到達します。 DER デコーダーは、スキーマレスデコードで BIT STRING を組み入れることを拒否しますが、そのスキーマ主導のパスは、一致する asn1Spec を与えられた場合、決定的な構成された BIT ストリングを受け付け、同じ脆弱なコードに到達します。 建設されたBITストリングは有効なDERではありません。このDER露出はデコーダーの許認可によるものです。 DERは無期限のフォームを拒否します。 これはCVE-2026-59885で固定されるOBJECT IDENTIF",
+            "url": "https://github.com/advisories/GHSA-2qm8-x737-gmw5",
+            "title": "[pyasn1] pyasn1 は、ビルドされた BIT ストリングデコードで定性 CPU 消費量を持っています | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "まとめpyasn1 から 0.6.4 まで、多くのフラグメントを繰り返し構築した BIT ストリングをデコードし、これまでに蓄積した値全体をコピーします。 固定サイズの破片のために、CPU時間は符号化された入力サイズとquadraticallyを育てます。 影響を受けたデコーダに十分な大き攻撃制御ASN.1データを渡すアプリケーションは、デコーダ();デコーダ値の変換やフォーマットは必要ありません",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:07:04.000Z",
+            "date_published": "2026-10-30T23:07:04.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyasn1] pyasn1 has quadratic CPU consumption in constructed BIT STRING decoding",
+                "translatedTitle": "[pyasn1] pyasn1 は、ビルドされた BIT ストリングデコードで定性 CPU 消費量を持っています",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mm57-4v3p-rchx",
+            "content_html": "概要pyasn1 0.6.4 以前では、大規模なマニッサでバイナリエンコードされた ASN.1 REAL をデコードして、マニッサの長さで CPU 時間量を消費することができます。 BER、CER、DERデコーダは、すべての影響を受ける RealPayloadDecoder を使用します。 このデコーダの1つにREAL値を含む攻撃制御ASN.1を渡すとアプリケーションが露出されます。 作業は、decode(); アプリケーションが変換、印刷、または結果のREALオブジェクトを使用する必要はありません。 これはCVE-2026-59886とは異なり、既に装飾されたREALをPythonフロートに変換することに懸念しています。 その問題は0.6.4で修正され、単独でデコードするアドバイザリー状態はトリガーしません。 根本原因および影響を受けた成分 バイナリREAL値の場合、 RealPayloadDecoder.valueDecoder v0.6.4 は mantissa を一度に 1 octet ビルドします:p = 0 while chunk: p &lt;&lt;= 8 p |= chunk[0",
+            "url": "https://github.com/advisories/GHSA-mm57-4v3p-rchx",
+            "title": "[pyasn1] pyasn1は、バイナリREALデコードにおけるサービスの量的複雑性denialを持っています | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "概要pyasn1 0.6.4 以前では、大規模なマニッサでバイナリエンコードされた ASN.1 REAL をデコードして、マニッサの長さで CPU 時間量を消費することができます。 BER、CER、DERデコーダは、すべての影響を受ける RealPayloadDecoder を使用します。 このデコーダの1つにREAL値を含む攻撃制御ASN.1を渡すとアプリケーションが露出されます。 作業は、de",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:06:46.000Z",
+            "date_published": "2026-10-30T23:06:46.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyasn1] pyasn1 has quadratic-complexity denial of service in binary REAL decoding",
+                "translatedTitle": "[pyasn1] pyasn1は、バイナリREALデコードにおけるサービスの量的複雑性denialを持っています",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-9m75-vc3g-4x39",
+            "content_html": "概要pyasn1 0.6.4 以前では、多くのフラグメントで作られた構築された OCTET ストリングまたは文字文字列をデコードすることで、蓄積された値を繰り返す CPU 時間を繰り返すことができます。 別の無期限の長さ ANY パスには、符号化されたコンポーネントを収集する際に同じ問題があります。 作業は固定サイズの断片の数で大体質的に成長しますが、入力とデコードされた値が線形に成長します。 影響を受けたデコーダーにそのようなASN.1入力を攻撃者がCPUの排気に苦しむことができるアプリケーション。 影響を受ける文字列パスはBERとCERで利用できます。 DER デコーダーは、特定の非 DER 構成された文字列も受け入れます: asn1Spec が univ を選択すると、決定的な長さの構成された OCTET ストリング。 OctetString や UTF8String などの文字列をスキーマなしで作成します。 Indefinite-length ANY は、 asn1Spec が univ を選択したときに BER と CER に影響されます。 任意の; DER は無期限の長さを",
+            "url": "https://github.com/advisories/GHSA-9m75-vc3g-4x39",
+            "title": "[pyasn1] pyasn1は、構築された文字列と無期限のANYデコードでサービスの質的な時間拒否を持っています | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "概要pyasn1 0.6.4 以前では、多くのフラグメントで作られた構築された OCTET ストリングまたは文字文字列をデコードすることで、蓄積された値を繰り返す CPU 時間を繰り返すことができます。 別の無期限の長さ ANY パスには、符号化されたコンポーネントを収集する際に同じ問題があります。 作業は固定サイズの断片の数で大体質的に成長しますが、入力とデコードされた値が線形に成長します。 影",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:03:51.000Z",
+            "date_published": "2026-10-30T23:03:51.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyasn1] pyasn1 has quadratic-time denial of service in constructed string and indefinite-length ANY decoding",
+                "translatedTitle": "[pyasn1] pyasn1は、構築された文字列と無期限のANYデコードでサービスの質的な時間拒否を持っています",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-fm9c-5rcf-2q5p",
+            "content_html": "概要アプリケーションがASN.1スキーマなしで攻撃者制御BER、CER、またはDERデータをデコードする場合、多くの異なる長いタグIDを持つコンテナは、定形CPU使用を引き起こす可能性があります。 繰り返された入力はCPUを排出し、サービスの可用性を減らすことができます。 DetailsConstructedPayloadDecoderBase._decodeComponentsSchemaless は、すべてのデコードされたコンポーネントの TagSet を成長させたセットに差し込みます。ただし、2 つ以上から設定された 1 つのタグを区別する必要があります。 攻撃側のタグ ID は、タグセットのハッシュを衝突させることができ、後々のインサートは、以前のタグの増加数と比較します。 このパスはv0.6.4に存在し、CERとDERのデコーダによって継承されます。 提案された修正は、すべてのデコードされたコンポーネントとその順序を保持しながら、2つの異なるタグセットを含む後に設定された分類を成長させを停止します。 CPython 3.12.10 で v0.6.4 で、コリジョン入力を 3,",
+            "url": "https://github.com/advisories/GHSA-fm9c-5rcf-2q5p",
+            "title": "[pyasn1] pyasn1 には、スキーマレス BER/CER/DER コンテナのデコードで定性 CPU を使用します。 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "概要アプリケーションがASN.1スキーマなしで攻撃者制御BER、CER、またはDERデータをデコードする場合、多くの異なる長いタグIDを持つコンテナは、定形CPU使用を引き起こす可能性があります。 繰り返された入力はCPUを排出し、サービスの可用性を減らすことができます。 DetailsConstructedPayloadDecoderBase._decodeComponentsSchemales",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:03:37.000Z",
+            "date_published": "2026-10-30T23:03:37.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pyasn1] pyasn1 has quadratic CPU use in schemaless BER/CER/DER container decoding",
+                "translatedTitle": "[pyasn1] pyasn1 には、スキーマレス BER/CER/DER コンテナのデコードで定性 CPU を使用します。",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4642-5mcj-2rqw",
+            "content_html": "Summaryasn1.oidToDer() は OID 文字列の最初の 2 つのアークを範囲でチェックしなかったため、OID は 0.42.840.113549.1.1.1 または 4294977127.18.840.113549.1.1.1 は、異なる OID の DER (here rsaEncryption, 1.2.840.113549.1.1.1) としてエンコードされました。 これは、CVE-2025-66030の不完全な修正です。 ノード・フォージ 1.4.1.DetailsX.690 セクション 8.19 は、最初のアークが 0 または 1 であるとき、OID の最初の 2 つのアークを、40 * arc1 + arc2 でエンコードします。最初のアークは 0 または 1 です。 lib/asn1.oidToDer() は、その値が範囲のチェック無しで計算され、16 ビットでそれを書きました。 したがって、生成されたアウトリガーファーストアーク 異なる OID のエンコーディング: 0.42.840.113549.1.1.1 は 40 * 0 + 42 = 42 と ",
+            "url": "https://github.com/advisories/GHSA-4642-5mcj-2rqw",
+            "title": "[ノード鍛造] フォージ: ASN.1 OID 初のアーク tuncation in asn1.oid トダー | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summaryasn1.oidToDer() は OID 文字列の最初の 2 つのアークを範囲でチェックしなかったため、OID は 0.42.840.113549.1.1.1 または 4294977127.18.840.113549.1.1.1 は、異なる OID の DER (here rsaEncryption, 1.2.840.113549.1.1.1) としてエンコードされました。 これは",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:02:40.000Z",
+            "date_published": "2026-10-30T23:02:40.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: ASN.1 OID first arc truncation in asn1.oidToDer",
+                "translatedTitle": "[ノード鍛造] フォージ: ASN.1 OID 初のアーク tuncation in asn1.oid トダー",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-6wvx-3r32-xmcg",
+            "content_html": "インフォメーション forge.http クライアントは、Cookie 名とパスによって鍵をつけたオブジェクトの Set-Cookie レスポンスヘッダーからクッキーを保存しました。 悪意のあるサーバーは、プロパティをオブジェクトに追加するために、クッキー名 __proto__ を使うことができます。 プロトタイプは、コンストラクタなどの継承された名前を使用してオブジェクトにプロパティを追加し、オブジェクトを削除するために空のクッキー値を送ります。 プロトタイプ特性。 lib/http.js の node-forge 1.4.1.Detailsclient.setCookie() では、クライアントでクッキーを保存しました。cookies[cookie.name][cookie.path] = クッキー、クライアントでクライアント.cookies[cookie.name] を生成します。 クッキー。 どちらの値は、 response.getCookies() を介してサーバーの Set-Cookie ヘッダーから来る。 また、継承されたプロパティ:_proto__ という名前のクッキー",
+            "url": "https://github.com/advisories/GHSA-6wvx-3r32-xmcg",
+            "title": "[ノード鍛造] フォージ:鍛造材の試作汚染。 http 悪意のあるセットクッキーによるクッキー処理 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "インフォメーション forge.http クライアントは、Cookie 名とパスによって鍵をつけたオブジェクトの Set-Cookie レスポンスヘッダーからクッキーを保存しました。 悪意のあるサーバーは、プロパティをオブジェクトに追加するために、クッキー名 __proto__ を使うことができます。 プロトタイプは、コンストラクタなどの継承された名前を使用してオブジェクトにプロパティを追加し、オ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:02:35.000Z",
+            "date_published": "2026-10-30T23:02:35.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: Prototype Pollution in forge.http cookie handling via a malicious Set-Cookie",
+                "translatedTitle": "[ノード鍛造] フォージ:鍛造材の試作汚染。 http 悪意のあるセットクッキーによるクッキー処理",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-525v-9gp9-w22h",
+            "content_html": "インフォメーション TLSクライアントの不足しているサーバー証明書のチェックは、間違ったプロパティを読み込み、実行しません。 悪意のある TLS サーバー、またはサーバーの証明書メッセージを削除したオンパス攻撃者、connection.process() は TypeError をスローし、フォーク TLS クライアントを使用するアプリケーションをクラッシュさせます。 lib/tls.js の node-forge 1.4.1.DetailsAfter ServerHelloDone, tls.handleServerHelloDone() は、アプリケーションの検証コールバックをコンサルティングした後、致命的な不十分な_security アラートで証明書を送信しないサーバーを拒否することを目的としています。 チェックテストした c.serverCertificate は、決して設定されていない (証明書は c.session.serverCertificate として保存されます) ので、実行しません。 クライアントのステートマシンは、ServerHello の直後に ServerH",
+            "url": "https://github.com/advisories/GHSA-525v-9gp9-w22h",
+            "title": "[ノード鍛造] Forge: サーバーが証明書を送らないとき TLS クライアントのクラッシュ | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "インフォメーション TLSクライアントの不足しているサーバー証明書のチェックは、間違ったプロパティを読み込み、実行しません。 悪意のある TLS サーバー、またはサーバーの証明書メッセージを削除したオンパス攻撃者、connection.process() は TypeError をスローし、フォーク TLS クライアントを使用するアプリケーションをクラッシュさせます。 lib/tls.js の n",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:02:30.000Z",
+            "date_published": "2026-10-30T23:02:30.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: TLS client crash when the server sends no certificate",
+                "translatedTitle": "[ノード鍛造] Forge: サーバーが証明書を送らないとき TLS クライアントのクラッシュ",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-7wch-p9px-956x",
+            "content_html": "PEM入力を解析するすべてのノード・フォージ・ API が使用するサマリーペム・デコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデ()は、エンド・ラインなしで入力時にポリノミアル・タイムを取る正規表現でカプセル化されたヘッダを解析します。 リモート攻撃者は、Node.jsイベントループを秒単位でブロックし、数10バイトの生成された入力で数分でブロックできます。 lib/pem.js の node-forge 1.4.1.Detailspem.decode() では、この正規表現で PEM メッセージが見つかりました:/\\s*----- BEGIN([A-Z0-9-]+)-----\\r?\\n?([\\x21-\\x7e\\s]+?(?:\\r?\\n\\r?\\n)?([:A-Za-z0-9+\\/=\\s]+?)-----END \\1-----/g オプションのヘッダグループとボディグループが隣接し、レイジー、共有文字(空白とベース64のアルファベット)であり、マッチはBEGINラベル(\\1)と同等なENDラインで終わる必要があります。 そのような END ラインが続く場合",
+            "url": "https://github.com/advisories/GHSA-7wch-p9px-956x",
+            "title": "[ノード鍛造] Forge:PEMデコード(pem.decode)におけるサービスの正規表現拒否 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "PEM入力を解析するすべてのノード・フォージ・ API が使用するサマリーペム・デコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデ()は、エンド・ラインなしで入力時にポリノミアル・タイムを取る正規表現でカプセル化されたヘッダを解析します。 リモート攻撃者は、Node.jsイベントループを秒単位でブロックし、数10バイトの生成された入力で数分でブロックできます。 lib",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:02:25.000Z",
+            "date_published": "2026-10-30T23:02:25.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: Regular expression denial of service in PEM decoding (pem.decode)",
+                "translatedTitle": "[ノード鍛造] Forge:PEMデコード(pem.decode)におけるサービスの正規表現拒否",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-h6cr-wjv9-3cpp",
+            "content_html": "Node-forge のバンドルされた jsbn ライブラリのサマリーBigInteger.prototype.modInverse() は、値や modulus が負の場合に無限ループに入ります。例えば、負のパブリック エクスポテントが forge.pki.rsa.generateKeyPair() に渡されます。 これはCVE-2026-33891(GHSA-5m6q-g25r-mvwx)の不完全な修正です。 node-forge 1.4.1.DetailsbnModInverse() (lib/jsbn.js では、forge.jsbn.BigInteger.prototype.modInverse として公開) では、バイナリ拡張された Euclidean アルゴリズム (応用暗号のハンドブック、Algorithm 14.61) を実装し、正の整数を定義しています。 ネガティブな操作でループは終了できません: rShift 演算シフトなので、負の値がゼロに移行しず、ループの終了条件(ゼロに達する)は決して会いません。 呼び出しスレッドは、100% CPU で無期限にスピンします",
+            "url": "https://github.com/advisories/GHSA-h6cr-wjv9-3cpp",
+            "title": "[ノード鍛造] Forge: 負の入力(CVE-2026-33891)で無限ループを介してサービスの拒否 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Node-forge のバンドルされた jsbn ライブラリのサマリーBigInteger.prototype.modInverse() は、値や modulus が負の場合に無限ループに入ります。例えば、負のパブリック エクスポテントが forge.pki.rsa.generateKeyPair() に渡されます。 これはCVE-2026-33891(GHSA-5m6q-g25r-mvwx)の不",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:02:20.000Z",
+            "date_published": "2026-10-30T23:02:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: Denial of Service via infinite loop in BigInteger.modInverse() with negative input (incomplete fix of CVE-2026-33891)",
+                "translatedTitle": "[ノード鍛造] Forge: 負の入力(CVE-2026-33891)で無限ループを介してサービスの拒否",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4487-j8r4-4g2f",
+            "content_html": "インフォメーション pki.createCaStore() によって作成された CA ストアが同じサブジェクト名で 2 つ以上の証明書を保持する場合、 pki.verifyCertificateChain() は、発行者として各々を試しながら、ストアからそれらの証明書を永久に削除します。 ピアは、その発行者の名前が、これらの CA 証明書に対する後続の検証を失敗させるために送信することができます。 Node-forge 1.4.1.Detailspki.verifyCertificateChain() (lib/x509.js) では、caStore.getIssuer() で各証明書の発行者に CA ストアを要求します。 ストアが同じ件名で複数の証明書を保持する場合、castore.getIssuer() は、addCertificate() によって構築された (castore.certs[hash)] のストア独自の内部配列を返します。 checkCertificateChain() は、候補の両親のリストとして直接配列を使用し、両親と呼ばれます。 各候補を試しながらシフト() ",
+            "url": "https://github.com/advisories/GHSA-4487-j8r4-4g2f",
+            "title": "[node-forge] Forge: 認証Chain() は、CA ストアから同じ件名で信頼できる CA 証明書を削除します。 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "インフォメーション pki.createCaStore() によって作成された CA ストアが同じサブジェクト名で 2 つ以上の証明書を保持する場合、 pki.verifyCertificateChain() は、発行者として各々を試しながら、ストアからそれらの証明書を永久に削除します。 ピアは、その発行者の名前が、これらの CA 証明書に対する後続の検証を失敗させるために送信することができます。",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:02:14.000Z",
+            "date_published": "2026-10-30T23:02:14.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: verifyCertificateChain() removes trusted CA certificates with the same subject from the CA store",
+                "translatedTitle": "[node-forge] Forge: 認証Chain() は、CA ストアから同じ件名で信頼できる CA 証明書を削除します。",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5cwg-6vw7-rj6p",
+            "content_html": "概要AES-GCMモードのフォージ。 cipher は start() に渡された tagLength オプションを検証しません。 0 または 0 (null、false、''、または '0' など) に変換する値の tagLength では、認証タグは空で、解読します。 Finish() は、指定したタグが空または欠落したときに、任意の ciphertext と追加のデータに対してtrueを返します。 lib/cipherModes.js の node-forge 1.4.1.Detailsmodes.gcm.prototype.start() では、 lib/cipherModes.js の lib/cipher.js が「0-128」を受け付けているように記述した tagLength オプションを保存しました。 データを処理した後、Finish() は 16 バイトのタグを truncate(16 %(tagLength/8) でトランク付けします。 0 に変換する taglength の場合、これは 16 % 0 = NaN で、NaN がタグを空にします。 decryptio",
+            "url": "https://github.com/advisories/GHSA-5cwg-6vw7-rj6p",
+            "title": "[ノード鍛造] Forge: AES-GCM認証バイパスは無効なタグ長オプションで | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "概要AES-GCMモードのフォージ。 cipher は start() に渡された tagLength オプションを検証しません。 0 または 0 (null、false、''、または '0' など) に変換する値の tagLength では、認証タグは空で、解読します。 Finish() は、指定したタグが空または欠落したときに、任意の ciphertext と追加のデータに対してtrueを返し",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:02:09.000Z",
+            "date_published": "2026-10-30T23:02:09.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: AES-GCM authentication bypass via unvalidated tagLength option",
+                "translatedTitle": "[ノード鍛造] Forge: AES-GCM認証バイパスは無効なタグ長オプションで",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jc66-7q78-782g",
+            "content_html": "概要forge.pkcs12.pkcs12FromAsn1()は、入力からゼロ(またはより少ない)のPKCS#12 MACの反復カウントを受け付け、PKCS#12キーの派生関数は、パスワードや塩に依存しない一定のキーを返します。 パスワードがわからない攻撃者は、PKCS#12/PFXファイルを修正し、任意のパスワードで検証するMACを計算することができます。 PKCS#12 PBE暗号化されたプライベートキーは、任意のパスワードで復号する方法を準備しました。 lib/pkcs12.js の node-forge 1.4.1.Detailsp12.pkcs12FromAsn1() では、入力から MAC の反復数 (MacData.iterations) を読み、それを PKCS#12 キーの派生関数 pki.pbe.generatePkcs12Key() を lib/pbe.js で読み込みます(また forge.pkcs.generateKey() として forge.pkcs.pkcs.generate() として公開されます) 少なくともチェックせずに、 1。 キーの派生物機能(",
+            "url": "https://github.com/advisories/GHSA-jc66-7q78-782g",
+            "title": "[ノード鍛造] フォージ: PKCS#12 MAC 偽造品と定数キー PBE ゼロ反復数 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "概要forge.pkcs12.pkcs12FromAsn1()は、入力からゼロ(またはより少ない)のPKCS#12 MACの反復カウントを受け付け、PKCS#12キーの派生関数は、パスワードや塩に依存しない一定のキーを返します。 パスワードがわからない攻撃者は、PKCS#12/PFXファイルを修正し、任意のパスワードで検証するMACを計算することができます。 PKCS#12 PBE暗号化されたプラ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:02:05.000Z",
+            "date_published": "2026-10-30T23:02:05.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: PKCS#12 MAC forgery and constant-key PBE via zero iteration count",
+                "translatedTitle": "[ノード鍛造] フォージ: PKCS#12 MAC 偽造品と定数キー PBE ゼロ反復数",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8hrf-8g6f-7xwp",
+            "content_html": "SummaryA は、forge.tls.createConnection() で生成された接続は、レコード全体に分割されたハンドシェイクメッセージの残りの部分を待っている間に、別のコンテンツタイプのレコードを受け取るときに、process() から未キャッチな TypeError をスローします。 ピアは、認証なしでハンドシェイクの前に18バイトでこれをトリガーできます。これは、文書化されたソケット配線を使用するNode.jsプロセスを終了します。 Node-forge 1.4.1.DetailsIn lib/tls.js では、_readRecord() はレコードを渡るハンドシェイクメッセージのスプリットが不完全な状態で到着するレコードを処理します。 レコードに他のコンテンツタイプ(change_cipher_spec, alert, application_data, Heartbeat)がある場合、正しく「無効なフラグメントレコード」を記述します。 c.error() は致命的な予期しない_message アラートで報告します。 その致命的なエラーは、接続を閉じてリセットしま",
+            "url": "https://github.com/advisories/GHSA-8hrf-8g6f-7xwp",
+            "title": "[ノード鍛造] フォージ:TLSレコード処理におけるサービスの拒否は、フラグメンドハンドシェイクメッセージで解釈されます | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryA は、forge.tls.createConnection() で生成された接続は、レコード全体に分割されたハンドシェイクメッセージの残りの部分を待っている間に、別のコンテンツタイプのレコードを受け取るときに、process() から未キャッチな TypeError をスローします。 ピアは、認証なしでハンドシェイクの前に18バイトでこれをトリガーできます。これは、文書化されたソケ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:02:00.000Z",
+            "date_published": "2026-10-30T23:02:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: Denial of service in TLS record processing via a record interleaved with a fragmented handshake message",
+                "translatedTitle": "[ノード鍛造] フォージ:TLSレコード処理におけるサービスの拒否は、フラグメンドハンドシェイクメッセージで解釈されます",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-hqq3-7jhf-c5jx",
+            "content_html": "処理された forge.tls.createConnection() によって作成されるサマリーコネクションは、レコードごとに 1 つのスタックレベルを再帰的に記録します。 ピアは、ハンドシェイクの前に受け入れられるハートビートレコードなどの数千の小さなレコードの1つのチャンクを送信し、プロセス() 投げる範囲 エラー: ドキュメントされたソケット配線を使用するNode.js プロセスを終了する、最大呼び出しスタックサイズが超過します。 Node-forge 1.4.1.DetailsIn lib/tls.js では、c.process() は 1 つのレコードを読み込み、_update() に渡します。これは ctTable からレコードタイプのハンドラを呼び出します。 すべてのハンドラ(tls.handleHeartbeat、tls.handleApplication) データ、tls.handle フラグメントされたメッセージ、tls.handle のハンドシェイク HelloRequest と handhake ハンドラは、c.process() を再び呼び出して、次のバッファ",
+            "url": "https://github.com/advisories/GHSA-hqq3-7jhf-c5jx",
+            "title": "[ノード鍛造] Forge: コールスタック排気によるTLSレコード処理におけるサービス拒否 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "処理された forge.tls.createConnection() によって作成されるサマリーコネクションは、レコードごとに 1 つのスタックレベルを再帰的に記録します。 ピアは、ハンドシェイクの前に受け入れられるハートビートレコードなどの数千の小さなレコードの1つのチャンクを送信し、プロセス() 投げる範囲 エラー: ドキュメントされたソケット配線を使用するNode.js プロセスを終了する、",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:01:54.000Z",
+            "date_published": "2026-10-30T23:01:54.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: Denial of service in TLS record processing via call stack exhaustion",
+                "translatedTitle": "[ノード鍛造] Forge: コールスタック排気によるTLSレコード処理におけるサービス拒否",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5x38-2vff-x55p",
+            "content_html": "要約ノード・フォージは、非推奨の OID 2.5.29.10 と 2.5.29.13 の証明書の拡張子を基本として解釈し、forge.pki.verifyCertificateChain() は、その名前の最初の拡張子を使用しました。 偽造された非推奨OID拡張子(cA TRUE)を持つ証明書は、本物の基本Constraintsエクステンション(cA FALSE)がCA証明書として受け入れられ、同じ技術はpathLenConstraintを隠すことができます。 Node-forge 1.4.1.Detailslib/oids.js では、非推奨の証明書拡張子 OIDs 2.5.29.10 と 2.5.29.13 を名前の BasicConstraints に固定します。RFC 5280 拡張子 2.5.29.19 と同じ名前です。 lib/x509.js の証明書ExtensionFromAsn1() は、拡張子を名前でデコードするので、これらの拡張子は同じ cA と pathLConstraint フィールドにデコードされます。 cert.getExtension() は、一致する名",
+            "url": "https://github.com/advisories/GHSA-5x38-2vff-x55p",
+            "title": "[ノード鍛造] Forge: X.509 BasicConstraints は、非推奨の拡張 OIDs 2.5.29.10 および 2.5.29.13 を介して、CertificateChain() でバイパスします。 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "要約ノード・フォージは、非推奨の OID 2.5.29.10 と 2.5.29.13 の証明書の拡張子を基本として解釈し、forge.pki.verifyCertificateChain() は、その名前の最初の拡張子を使用しました。 偽造された非推奨OID拡張子(cA TRUE)を持つ証明書は、本物の基本Constraintsエクステンション(cA FALSE)がCA証明書として受け入れられ、同",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:01:46.000Z",
+            "date_published": "2026-10-30T23:01:46.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[node-forge] Forge: X.509 basicConstraints bypass in verifyCertificateChain() via deprecated extension OIDs 2.5.29.10 and 2.5.29.13",
+                "translatedTitle": "[ノード鍛造] Forge: X.509 BasicConstraints は、非推奨の拡張 OIDs 2.5.29.10 および 2.5.29.13 を介して、CertificateChain() でバイパスします。",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3xf4-9g3c-4h4w",
+            "content_html": "ImpactSecret が設定されていないとき (NUXT_APP_SECRET、NITRO_APP_SECRET または runtimeConfig.appSecret 経由)、nuxt dev は開発シークレットを生成し、 &lt;buildDir&gt;/app-secret で保存します (デフォルト .nuxt/app-secret)。 ビルドディレクトリは、Nuxt が Vite の server.fs.allow に渡るディレクトリの中にあるので、 dev server:curl http://&lt;dev-server&gt;/_nuxt/@fs/&lt;absolute-path-to-project&gt;/.nuxt/app-secretAnyone から取得できます。 useSession で使用されるデフォルトパスワードを含む deriveSecret() で派生したすべての秘密を計算できるので、その dev サーバーで受け入れられるセッション Cookie を強制することができます。 Exploitation は dev サーバへ直接 HTTP アクセスを要求します。 nuxt dev は",
+            "url": "https://github.com/advisories/GHSA-3xf4-9g3c-4h4w",
+            "title": "[@nuxt/vite-builder] は、 Nuxt dev サーバが生成された appSecret を Vite ファイルで割る | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "ImpactSecret が設定されていないとき (NUXT_APP_SECRET、NITRO_APP_SECRET または runtimeConfig.appSecret 経由)、nuxt dev は開発シークレットを生成し、 <buildDir>/app-secret で保存します (デフォルト .nuxt/app-secret)。 ビルドディレクトリは、Nuxt が Vite の serve",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:01:12.000Z",
+            "date_published": "2026-10-30T23:01:12.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@nuxt/vite-builder] Nuxt dev server exposes generated appSecret through Vite file serving",
+                "translatedTitle": "[@nuxt/vite-builder] は、 Nuxt dev サーバが生成された appSecret を Vite ファイルで割る",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-9v7c-q64q-vv33",
+            "content_html": "概要 4.6.0 以降、Nuxt は . と ... のセグメントをリクエストパスで解決します。例えば、 %2e などのパーセントエンコードされたフォームを含む、ページをレンダリングする前に。 Nitroのルーティング、Nitroのルートルールとサーバー/ミドルウェアは、これらのセグメントのパスがまだ配置されていることを参照してください。 /%2e/admin のリクエストは、 /admin でページをレンダーします。サーバー側のチェックは /admin では適用されません。 ImpactA unauthenticated攻撃は、ページのルートのリクエストパスに一致するサーバー側の制御をバイパスできます。 event.path (または event.node.req.url) をチェックする server/middleware は skipped:export デフォルトで定義されます。 eventHandler((event) =&gt; { if(event.path.startsWith('/admin')&amp;&amp;&amp;!isAuthenticated(event) { スロー createE",
+            "url": "https://github.com/advisories/GHSA-9v7c-q64q-vv33",
+            "title": "[@nuxt/nitro-server] は、 Nuxt: リクエストパスの Dot セグメントは `server/middleware` のパスチェックとサーバーのルートのルールをパスします。 | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "概要 4.6.0 以降、Nuxt は . と ... のセグメントをリクエストパスで解決します。例えば、 %2e などのパーセントエンコードされたフォームを含む、ページをレンダリングする前に。 Nitroのルーティング、Nitroのルートルールとサーバー/ミドルウェアは、これらのセグメントのパスがまだ配置されていることを参照してください。 /%2e/admin のリクエストは、 /admin でペ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T23:00:53.000Z",
+            "date_published": "2026-10-30T23:00:53.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@nuxt/nitro-server] Nuxt: Dot segments in the request path bypass `server/middleware` path checks and server route rules on page routes",
+                "translatedTitle": "[@nuxt/nitro-server] は、 Nuxt: リクエストパスの Dot セグメントは `server/middleware` のパスチェックとサーバーのルートのルールをパスします。",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mpqx-q82w-9x46",
+            "content_html": "ドキュメントが max_errors (100 をデフォルトで許可するよりもエラーが含まれているため、バリデーションが中止された場合、valid() は単一の module-level ValidationAbortedError インスタンスを上げました。 Python は、再び上げられた例外の既存の __traceback__ にすべての昇給のフレームを付加します。そのため、すべての中絶された検証は、この共有されたエラーのトレースバックを拡張します。 そのトレースバックは、フレームを保ち、文書、検証コンテキスト、あらゆる中絶された検証のすべてのエラーが、プロセスの寿命のために生きています。 DetailsAny クライアントは、100 を超える検証エラーで小さなドキュメントを送信することで、退屈な検証をトリガーできます。例えば、101 の未知のフィールド。 認証は不要で、検証が実行前に実行されるため、深さ制限器や複雑性の解析器は防ぎません。 CPython 3.12で約124 KiBを永続的に保持し、上限なし、プロセスが再起動または殺されたまで、すべてのリクエストでメモリが増加しま",
+            "url": "https://github.com/advisories/GHSA-mpqx-q82w-9x46",
+            "title": "[グラフコール] グラフ QLコアは、中絶された検証でメモリリークを介してサービスの拒否を持っています | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "ドキュメントが max_errors (100 をデフォルトで許可するよりもエラーが含まれているため、バリデーションが中止された場合、valid() は単一の module-level ValidationAbortedError インスタンスを上げました。 Python は、再び上げられた例外の既存の __traceback__ にすべての昇給のフレームを付加します。そのため、すべての中絶された",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T22:58:31.000Z",
+            "date_published": "2026-10-30T22:58:31.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[graphql-core] GraphQL-core has denial of service via memory leak in aborted validations",
+                "translatedTitle": "[グラフコール] グラフ QLコアは、中絶された検証でメモリリークを介してサービスの拒否を持っています",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-7984-qgvg-3j9c",
+            "content_html": "サマリーOAuthlibのトークン付与ハンドラは、付与タイプを承認し、ボディから異なる、攻撃者によるクライアントを要求したスコープを認証することができます。 影響を受けたトークン付与フローでは、Authorate_client(request) はリクエストをセットします。 クライアントは、認証されたクライアントオブジェクトに対して、OAuthlib はリクエストを要求しません。client_id は、request.client.client_id と一致しません。 ボディリクエストが既に client_id=... が含まれている場合、 OAuthlib は、その値を保持し、それを validate_grant_type() と validate_scopes() に渡します。 その結果、認証された低優先機密クライアントは、それ自体として認証することができ、トークンリクエストボディに別のクライアントのclient_idを提出し、他のクライアントのアイデンティティの下で実行するために付与およびスコープ検証を引き起こします。 欠陥のある表面 影響を受けるパブリック・サーフェスは、:cl",
+            "url": "https://github.com/advisories/GHSA-7984-qgvg-3j9c",
+            "title": "[oauthlib] は、 OAuthLib: トークン付与は、異なるクライアントを認証した後に、認証のために、攻撃者によるクライアント ID を使うことができます。 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "サマリーOAuthlibのトークン付与ハンドラは、付与タイプを承認し、ボディから異なる、攻撃者によるクライアントを要求したスコープを認証することができます。 影響を受けたトークン付与フローでは、Authorate_client(request) はリクエストをセットします。 クライアントは、認証されたクライアントオブジェクトに対して、OAuthlib はリクエストを要求しません。client_id",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T22:58:16.000Z",
+            "date_published": "2026-10-30T22:58:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[oauthlib] OAuthLib: Token grants can use attacker-supplied client_id for authorization after authenticating a different client",
+                "translatedTitle": "[oauthlib] は、 OAuthLib: トークン付与は、異なるクライアントを認証した後に、認証のために、攻撃者によるクライアント ID を使うことができます。",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-9gh4-xw24-9xh5",
+            "content_html": "インフォメーション CA Certificate Revocation List をダウンロードするための認証された REST API エンドポイントは、PKI API の残りの部分で使用される組織スコープのクエリセットを適用せずに、要求された CA を解決します。 CAビュー権限を持つ組織管理者は、別の組織のシーケンシャルCA IDを要求し、CAのCRLを受け取ることができます。 エンドポイントは認証され、組織スコープ化されたものであるため、GET /api/v1/controller/ca/&lt;id&gt;/.Affected endpointGET /api/v1/controller/ca/&lt;integer-id&gt;/crlCrlDownloadView は ProtectedAPIMixin を継承し、関連するモデル権限を持つ認証された組織管理者が必要です。 しかし、recover() は get_object_or_404(Ca、pk=kwargs[\"pk\"]) で CA を解決します。 このバイパスは、filterByOrganizationManaged とオブジェクトレベルのパ",
+            "url": "https://github.com/advisories/GHSA-9gh4-xw24-9xh5",
+            "title": "[openwisp コントローラ] OpenWISP コントローラー CA CRL REST API は、管理された組織へのリクエストをスコープ化しません。 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "インフォメーション CA Certificate Revocation List をダウンロードするための認証された REST API エンドポイントは、PKI API の残りの部分で使用される組織スコープのクエリセットを適用せずに、要求された CA を解決します。 CAビュー権限を持つ組織管理者は、別の組織のシーケンシャルCA IDを要求し、CAのCRLを受け取ることができます。 エンドポイント",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T22:58:10.000Z",
+            "date_published": "2026-10-30T22:58:10.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[openwisp-controller] OpenWISP Controller CA CRL REST API does not scope requests to managed organizations",
+                "translatedTitle": "[openwisp コントローラ] OpenWISP コントローラー CA CRL REST API は、管理された組織へのリクエストをスコープ化しません。",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5xjx-3w67-w9x9",
+            "content_html": "インフォメーション pypi-publish アクションバージョン 1.14.2 以前は、 certifi ディストリビューションを通じて emSign ルート CA トラストストア証明書をバンドルするために使用されます。 バンドルと新しいバージョンを使わずに削除したためです。 DetailsThe certifi-provided TLS の信頼ストアは、通常、Trusted パブリッシングやデジタルアテスタンスにpypi-publish が依存している Sigstore を含む、多くのプロジェクトで使用されます。 関連記事 外部の妥協はhttps://emudhra.we-have-a-problem.comReferenceshttps://github.com/pypa/gh-action-pypi-publish/security/advisories/GHSA-5xjx-3w67-w9x9https://github.com/advisories/GHSA-5xjx9x9",
+            "url": "https://github.com/advisories/GHSA-5xjx-3w67-w9x9",
+            "title": "[pypa/gh-action-pypi-publish] SigstoreがPyPIのTrusted PublishingやDigital Attestationsで使用しているチェーンにおけるCAのpypi-publishアクションの取消 | Security Advisory for Github Actions",
+            "summary": "インフォメーション pypi-publish アクションバージョン 1.14.2 以前は、 certifi ディストリビューションを通じて emSign ルート CA トラストストア証明書をバンドルするために使用されます。 バンドルと新しいバージョンを使わずに削除したためです。 DetailsThe certifi-provided TLS の信頼ストアは、通常、Trusted パブリッシングやデ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T20:24:24.000Z",
+            "date_published": "2026-10-30T20:24:24.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[pypa/gh-action-pypi-publish] pypi-publish action revocation of CA in the chain that Sigstore uses in Trusted Publishing and Digital Attestations for PyPI",
+                "translatedTitle": "[pypa/gh-action-pypi-publish] SigstoreがPyPIのTrusted PublishingやDigital Attestationsで使用しているチェーンにおけるCAのpypi-publishアクションの取消",
+                "blogTitle": "Security Advisory for Github Actions",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Aactions",
+                "blogLinkMd5Hash": "087871ca82b856eb22fbc0e3c58220c4",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-9pg5-8c7x-5hfx",
+            "content_html": "これらを検証する前に、Sharijoserfc 1.7.4 は、コンパクト JWS ヘッダ、ペイロード、およびシグネチャリミットを定義します。 Python bytes.split() は、攻撃者制御のセグメントをコピーします。そのため、現在のガードは、拒否する前に、大まかに1つの完全なペイロードを割り当てます。 Reproduction.venv-research/bin/python 06-practical-testing/preauth-memory-profile.py 入力はフォーク隔離された修飾子が実行される前に居住者であり、すべてのシグネチャは無効です。 InputPeak RSS deltaAmplificationResult1 MiB1.11 MiB1.11×size reject4 MiB4.04 MiB4.04 MiB1.01×size reject8 MiB8.04 MiB1.01×size reject16 MiB16.04 MiB1.00×size reject32 MiB31.74 MiB0.99×size rejected64 MiB63.80 Mi",
+            "url": "https://github.com/advisories/GHSA-9pg5-8c7x-5hfx",
+            "title": "[joserfc] joserfc: コンパクトなJWSサイズガードは、拒絶前の攻撃者制御セグメントを割り当てます | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "これらを検証する前に、Sharijoserfc 1.7.4 は、コンパクト JWS ヘッダ、ペイロード、およびシグネチャリミットを定義します。 Python bytes.split() は、攻撃者制御のセグメントをコピーします。そのため、現在のガードは、拒否する前に、大まかに1つの完全なペイロードを割り当てます。 Reproduction.venv-research/bin/python 06-p",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T14:54:25.000Z",
+            "date_published": "2026-10-30T14:54:25.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[joserfc] joserfc: Compact JWS size guard allocates attacker-controlled segments before rejection",
+                "translatedTitle": "[joserfc] joserfc: コンパクトなJWSサイズガードは、拒絶前の攻撃者制御セグメントを割り当てます",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jpxq-7h8p-2q76",
+            "content_html": "概要joserfc.jwe.decrypt_json()、JWE General JSON Serialization のライブラリのパブリックパーサは、攻撃者制御の受信者の配列を未だに制限し、入力中のすべての受信者に 1 つの完全秘密鍵の復号化操作 (decrypt_cek) を実行します。 RSAキー(例えばRSA-OAEP)で復号化したエンドポイントにJWE General JSON文書を送信できるネットワーク攻撃者は、犠牲者に対して、単一の、比較的小さなHTTPリクエストからRSAの秘密鍵の復号化操作の任意の、攻撃者-chosen番号を実行することができます。 これにより、攻撃者は非常に非対称的な CPU 排気 (サービスの Denial) の原始性を与えます: ローカルの再生は、受信者数 (~396 バイト/受信者) で線形に成長するリクエストのサイズを示しています。サーバー側の CPU 時間はロックステップで成長します (受信者カウントの成長と復号化時間の成長間の 1:1 比)、ライブラリの唯一の文書化された緩和ノブ、検証_all_recipients= False は C",
+            "url": "https://github.com/advisories/GHSA-jpxq-7h8p-2q76",
+            "title": "[joserfc] joserfc: ウンバウンドJWE一般JSONの予想 Arrayは、繰り返しRSAプライベートキー復号によるCPU排気(DoS)につながります | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "概要joserfc.jwe.decrypt_json()、JWE General JSON Serialization のライブラリのパブリックパーサは、攻撃者制御の受信者の配列を未だに制限し、入力中のすべての受信者に 1 つの完全秘密鍵の復号化操作 (decrypt_cek) を実行します。 RSAキー(例えばRSA-OAEP)で復号化したエンドポイントにJWE General JSON文書を送",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-30T14:54:20.000Z",
+            "date_published": "2026-10-30T14:54:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[joserfc] joserfc: Unbounded JWE General JSON `recipients` Array Leads to CPU Exhaustion (DoS) via Repeated RSA Private-Key Decryption",
+                "translatedTitle": "[joserfc] joserfc: ウンバウンドJWE一般JSONの予想 Arrayは、繰り返しRSAプライベートキー復号によるCPU排気(DoS)につながります",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vpp8-g58w-m8mp",
+            "content_html": "概要ツイストされた HTTP/2 サーバの制御不能なリソース消費脆弱性 (CWE-400) は、単一の接続を介して、任意の非認証リモートクライアント排気サーバー CPU を 1 つの接続にすることができます。 リクエストヘッダーブロックをEND_で送信するクライアント STREAM は、ストリームを即座にリセットすると、サーバーのルートが作成され、リセットを処理する前にリクエストがレンダリングされます。 リセットストリームは解放され、同時ストリームの制限に対してカウントされず、リセットレートリミッタが存在しないので、パターンは1つの接続でラインレートで繰り返すことができます。 これは、HTTP/2 Rapid Resetクラス、CVE-2023-44487です。 ニュース H2Connection.dataReceived では、h2 イベントが処理されます。 HEADERS(END_STREAM) は RST_STREAM の利回りに続きます RequestReceived, StreamEnded, その後 StreamReset, リセットが処理される前に、リクエストはストリーム",
+            "url": "https://github.com/advisories/GHSA-vpp8-g58w-m8mp",
+            "title": "【2回】 ツイスト: 急流の調整による歪んだHTTP/2サーバーのサービスのUnauthenticatedリモート・デニアル | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "概要ツイストされた HTTP/2 サーバの制御不能なリソース消費脆弱性 (CWE-400) は、単一の接続を介して、任意の非認証リモートクライアント排気サーバー CPU を 1 つの接続にすることができます。 リクエストヘッダーブロックをEND_で送信するクライアント STREAM は、ストリームを即座にリセットすると、サーバーのルートが作成され、リセットを処理する前にリクエストがレンダリングされ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-29T16:41:06.000Z",
+            "date_published": "2026-10-29T16:41:06.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[Twisted] Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset",
+                "translatedTitle": "【2回】 ツイスト: 急流の調整による歪んだHTTP/2サーバーのサービスのUnauthenticatedリモート・デニアル",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-26mh-57q7-jfvr",
+            "content_html": "概要JobWorkflowExecutor._exec_inline_python() は YAML ワークフロースクリプトからインライン Python 式を安全に実行するように設計されています: AST 検証を使用する手順。 関数は、(a) によって危険な操作をブロックすることを要求します。すべての AST ノードを allowlist にチェックし、(b) は、インポート、exec、eval を省略し、オープンする組み込みのホワイトリストを提供します。 サンドボックスが壊れています。 モジュールのインポートの allowlist (allowed_modules) は 'os' と AST の allowlist は ast を許可します。 インポート、ast.ImportFrom、ast.Call、ast。 属性ノード。 これは、次の悪意のあるワークフロースクリプトを意味します: ステップは、すべてのAST検証チェックを通過し、エラーなしで実行します。 ScenarioAttacker は、インポート os を含むステップ: os.system(...) スクリプトで YAML ",
+            "url": "https://github.com/advisories/GHSA-26mh-57q7-jfvr",
+            "title": "[praisonai] PraisonAI が Broken AST Sandbox 経由でリモートコード実行に脆弱 | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "概要JobWorkflowExecutor._exec_inline_python() は YAML ワークフロースクリプトからインライン Python 式を安全に実行するように設計されています: AST 検証を使用する手順。 関数は、(a) によって危険な操作をブロックすることを要求します。すべての AST ノードを allowlist にチェックし、(b) は、インポート、exec、eval ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-10-29T16:34:26.000Z",
+            "date_published": "2026-10-29T16:34:26.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[praisonai] PraisonAI vulnerable to Remote Code Execution via Broken AST Sandbox",
+                "translatedTitle": "[praisonai] PraisonAI が Broken AST Sandbox 経由でリモートコード実行に脆弱",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        }
+    ]
+}

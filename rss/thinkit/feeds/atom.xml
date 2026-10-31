@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/</id>
+    <title>Think IT｜企業テックブログRSS</title>
+    <updated>2026-10-31T13:04:29.644Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/feeds/atom.xml"/>
+    <subtitle>Think ITセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[Linuxカーネルに重要な脆弱性「CVE-2026-98432」─ IPv4経由で遠隔DoSのおそれ | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39685</id>
+        <link href="https://thinkit.co.jp/news/39685"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39685.png?itok=QaPoEWeV" type="image/png"/>
+        <updated>2026-10-30T15:54:40.000Z</updated>
+        <summary type="html"><![CDATA[Linuxカーネルに重要な脆弱性「CVE-2026-98432」─ IPv4経由で遠隔DoSのおそれ 認証なしで攻撃可能、確認の上アップデートをkawahara2026年10月31日シェア ポスト はてブ 優先するニュース提供元に追加 Linux kernel CVE teamは10月15日(現地時間)、IPv4のTCP処理における脆弱性「CVE-2026-98432」について注意喚起を発表してお]]></summary>
+        <content type="html"><![CDATA[Linuxカーネルに重要な脆弱性「CVE-2026-98432」─ IPv4経由で遠隔DoSのおそれ 認証なしで攻撃可能、確認の上アップデートをkawahara2026年10月31日シェア ポスト はてブ 優先するニュース提供元に追加 Linux kernel CVE teamは10月15日(現地時間)、IPv4のTCP処理における脆弱性「CVE-2026-98432」について注意喚起を発表しており、その後、各セキュリティベンダーなどが注意を呼びかけている。 「CVE-2026-98432」は、TCP接続要求を処理するLinuxカーネルのIPv4ネットワーク機能に存在するuse-after-freeの脆弱性。認証されていない遠隔の攻撃者が、外部へ公開されたTCPサービスに細工した通信を送ることで、カーネルクラッシュやメモリー破壊を引き起こす危険がある。 TCP接続要求を受け取ったLinuxカーネルは、要求ソケットが保持するIPv4オプションを新しい接続用ソケットへ引き継ぐ。この際、別のCPUが同じ接続要求の再送SYNを並行して処理すると、SYN/ACKパケットの生成中に参照しているオプ]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-30T15:54:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「クラウドネイティブは進化する」AI時代に再び広がる可能性とは? ――CloudNative Days共同チェアに聞く | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39677</id>
+        <link href="https://thinkit.co.jp/article/39677"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39677/int_cndw2026_chair_main_.png?itok=HVlOiDBH" type="image/png"/>
+        <updated>2026-10-29T21:45:00.000Z</updated>
+        <author>
+            <name>Innerstudio 鍋島 理人</name>
+        </author>
+        <category label="クラウド"/>
+        <category label="仮想化／コンテナ"/>
+        <category label="開発ツール"/>
+        <category label="OSS"/>
+        <category label="インタビュー"/>
+        <published>2026-10-29T21:45:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LFが欧州OSSと低品質AI生成PRを指す「AIスロップ」問題の2つのレポートを公開、OSERAは100日で本格稼働、ほか | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39661</id>
+        <link href="https://thinkit.co.jp/article/39661"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39661/ren_LFwatch_cover_main_27.jpeg?itok=ePu_5cao" type="image/jpeg"/>
+        <updated>2026-10-29T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[LFが欧州OSSと低品質AI生成PRを指す「AIスロップ」問題の2つのレポートを公開、OSERAは100日で本格稼働、ほかitoh2026年10月30日月刊Linux Foundationウォッチシェア ポスト はてブ 優先するニュース提供元に追加 「主権」の次は「参加」ーLFが「2026年 欧州オープンソースの現状」レポートを公開Linux Foundation(以下、LF)は2026年10月7]]></summary>
+        <content type="html"><![CDATA[LFが欧州OSSと低品質AI生成PRを指す「AIスロップ」問題の2つのレポートを公開、OSERAは100日で本格稼働、ほかitoh2026年10月30日月刊Linux Foundationウォッチシェア ポスト はてブ 優先するニュース提供元に追加 「主権」の次は「参加」ーLFが「2026年 欧州オープンソースの現状」レポートを公開Linux Foundation(以下、LF)は2026年10月7日、チェコ・プラハで開催された「Open Source Summit Europe」において、LF Europe、LF Research、NeoNephosとの共同によるレポート「2026 State of Open Source in Europe」(2026年 欧州オープンソースの現状)を公開しました。今年で5回目となる年次レポートで、欧州の組織におけるオープンソースの活用状況、ガバナンス、そしてデジタル主権への取り組みを分析しています。なお、同イベントはLinux誕生35周年を記念する節目の開催でもありました。【参照】2026 State of Open Source Europehtt]]></content>
+        <author>
+            <name>吉田 行男</name>
+        </author>
+        <category label="ITインフラ"/>
+        <category label="技術解説"/>
+        <published>2026-10-29T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[地球上の「まっすぐ」を理解してST_Touches()の意外な判定結果の謎を解こう | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39650</id>
+        <link href="https://thinkit.co.jp/article/39650"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39650/ren_mysql-gis_cover.png?itok=BX_9943_" type="image/png"/>
+        <updated>2026-10-29T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[地球上の「まっすぐ」を理解してST_Touches()の意外な判定結果の謎を解こうitoh2026年10月30日MySQLで学ぶGIS入門シェア ポスト はてブ 優先するニュース提供元に追加 はじめに前回は、基準ポリゴンの下の辺にぴったり接するように作ったはずのポリゴンが、ST_Touches()で 0(FALSE)と判定される動作を紹介しました。一見接しているように見えるこのポリゴンが接していな]]></summary>
+        <content type="html"><![CDATA[地球上の「まっすぐ」を理解してST_Touches()の意外な判定結果の謎を解こうitoh2026年10月30日MySQLで学ぶGIS入門シェア ポスト はてブ 優先するニュース提供元に追加 はじめに前回は、基準ポリゴンの下の辺にぴったり接するように作ったはずのポリゴンが、ST_Touches()で 0(FALSE)と判定される動作を紹介しました。一見接しているように見えるこのポリゴンが接していないというのはどういうことなのか。「まっすぐ」とは何かというテーマを軸に、読み解きます。前回のおさらい今回のテーマに関係する2つのポリゴンを示します。@polyが基準ポリゴン、@poly4がその下辺に接するつもりで作った対象のポリゴンです。mysql&gt; SET @poly = ST_GeomFromText( -&gt; 'POLYGON((35 135, 35 135.01, 35.01 135.01, 35.01 135, 35 135))', 6668);mysql&gt; SET @poly4 = ST_GeomFromText( -&gt; 'POLYGON((34.996 135.006, 34.99]]></content>
+        <author>
+            <name>坂井 恵 (さかい けい)</name>
+        </author>
+        <category label="データベース"/>
+        <category label="技術解説"/>
+        <published>2026-10-29T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「WordPress 7.1.4」などがリリース ─ コア更新中のリモートコード実行問題などを修正 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39680</id>
+        <link href="https://thinkit.co.jp/news/39680"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39680.png?itok=HwOinkYS" type="image/png"/>
+        <updated>2026-10-29T15:28:52.000Z</updated>
+        <summary type="html"><![CDATA[「WordPress 7.1.4」などがリリース ─ コア更新中のリモートコード実行問題などを修正 複数の保存型XSSや未公開Customizer情報の漏えいにも対応、旧系列にも修正版kawahara2026年10月30日シェア ポスト はてブ 優先するニュース提供元に追加 WordPress development teamは10月28日(現地時間)、オープンソースのコンテンツ管理システム「Wo]]></summary>
+        <content type="html"><![CDATA[「WordPress 7.1.4」などがリリース ─ コア更新中のリモートコード実行問題などを修正 複数の保存型XSSや未公開Customizer情報の漏えいにも対応、旧系列にも修正版kawahara2026年10月30日シェア ポスト はてブ 優先するニュース提供元に追加 WordPress development teamは10月28日(現地時間)、オープンソースのコンテンツ管理システム「WordPress 7.1.4」をリリースした。 「WordPress 7.1.4」は、複数の脆弱性に対応したセキュリティリリース。コアの更新処理における競合状態によって、更新中にリモートコード実行へつながる可能性がある問題のほか、ブロックやInteractivity API、Customizerなどに存在する複数の保存型クロスサイトスクリプティング(XSS)問題が修正された。 「WordPress 7.1.4」の主な修正点は次の通り。 特に重要度が高いのは、WordPressコアの更新処理に存在した競合状態で、更新処理が行われている時間帯にリモートコード実行へつながる可能性があるという。 保存型]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-29T15:28:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[悪用までの猶予が「1分」に迫るフロンティアAI時代に開発と本番を貫く脆弱性管理が必要 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39673</id>
+        <link href="https://thinkit.co.jp/article/39673"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39673/rep_ai-days-2026_ibm_main.jpg?itok=FqXD1Omq" type="image/jpg"/>
+        <updated>2026-10-28T23:30:00.000Z</updated>
+        <summary type="html"><![CDATA[悪用までの猶予が「1分」に迫るフロンティアAI時代に開発と本番を貫く脆弱性管理が必要itoh2026年10月29日「インプレス AI Days 2026」レポートシェア ポスト はてブ 優先するニュース提供元に追加 Sponsored by: 日本アイ・ビー・エム株式会社提供：日本アイ・ビー・エム株式会社フロンティアAI(最先端AIモデル)の進化により、脆弱性の発見から悪用までの時間が急速に縮まっ]]></summary>
+        <content type="html"><![CDATA[悪用までの猶予が「1分」に迫るフロンティアAI時代に開発と本番を貫く脆弱性管理が必要itoh2026年10月29日「インプレス AI Days 2026」レポートシェア ポスト はてブ 優先するニュース提供元に追加 Sponsored by: 日本アイ・ビー・エム株式会社提供：日本アイ・ビー・エム株式会社フロンティアAI(最先端AIモデル)の進化により、脆弱性の発見から悪用までの時間が急速に縮まっている。脆弱性のすべてに手を打つのが現実的でなくなる中、企業にはリスクに基づいて優先順位を付け、修正を素早く本番環境へ反映する体制が欠かせない。日本IBM ソフトウェア事業統括 オートメーション・プラットフォーム事業部 オートメーション・プラットフォーム テクニカルセールスの河野 哲也 氏が「インプレス AI Days 2026」(主催：インプレス、2026年9月15日〜16日)に登壇し、開発段階と本番環境の両面から脆弱性を管理するモデルの具体像を話した。 「脆弱性の数が増えているだけではない。即座に悪用されることが問題になっている」--。日本IBM ソフトウェア事業統括 オートメーション・プ]]></content>
+        <author>
+            <name>阿部 欽一 (キットフック)</name>
+        </author>
+        <category label="ITインフラ"/>
+        <category label="システム開発"/>
+        <category label="AI・人工知能"/>
+        <category label="システム運用"/>
+        <category label="セキュリティ"/>
+        <category label="イベント"/>
+        <published>2026-10-28T23:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【AIに相談して買う時代、購入まで任せたい？】調査から見えたAIコマースの課題 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39652</id>
+        <link href="https://thinkit.co.jp/article/39652"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/ren_gen-ai-times_main_35.png?itok=XudJkoK8" type="image/png"/>
+        <updated>2026-10-28T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[【AIに相談して買う時代、購入まで任せたい？】調査から見えたAIコマースの課題kaoringo2026年10月29日Gen AI Timesシェア ポスト はてブ 優先するニュース提供元に追加 本連載は、生成AIコミュニティ「IKIGAI lab.」で活動するメンバーが、それぞれの専門領域で培ってきた知見を持ち寄りながら、生成AIを取り巻く動向を技術・ビジネス・ガバナンスの観点から整理しお届けして]]></summary>
+        <content type="html"><![CDATA[【AIに相談して買う時代、購入まで任せたい？】調査から見えたAIコマースの課題kaoringo2026年10月29日Gen AI Timesシェア ポスト はてブ 優先するニュース提供元に追加 本連載は、生成AIコミュニティ「IKIGAI lab.」で活動するメンバーが、それぞれの専門領域で培ってきた知見を持ち寄りながら、生成AIを取り巻く動向を技術・ビジネス・ガバナンスの観点から整理しお届けしています。NTTデータが2026年9月30日に公表した「GenAI生活者インサイトレポート2026 ISSUE 02」では、AIが買い物の意思決定に与える影響が拡大しつつあることが見えてきました。同年8月に全国の15〜69歳のAI利用経験者3,948人を対象に実施した調査では、商品・サービスの購入・利用時にAIを使った人の約7割が、AIの提案を参考に採用した経験があると回答。その割合は3月の前回調査から約8ポイント上昇しており、商品を選ぶ際にAIの提案を取り入れる動きが広がっています。ChatGPTやGeminiに買い物の相談ができること自体は、すでに知られています。では、AIが購買判断に使われ]]></content>
+        <author>
+            <name>鍋谷 美帆</name>
+        </author>
+        <category label="AI・人工知能"/>
+        <category label="ニュース"/>
+        <published>2026-10-28T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Auth0のデベロッパーアドボケイト池原大然さん | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39649</id>
+        <link href="https://thinkit.co.jp/article/39649"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39649/ren_devrel_carrier-guide_cover.png?itok=anyIVY90" type="image/png"/>
+        <updated>2026-10-28T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Auth0のデベロッパーアドボケイト池原大然さんitoh2026年10月29日DevRelキャリア図鑑シェア ポスト はてブ 優先するニュース提供元に追加 はじめにDevRelに関わる人たちは増えている一方で「なぜDevRelに関わるようになったのか」「どういったキャリアを歩んで現在があるのか」については、あまり明らかにされていません。それぞれ異なるキャリアを歩んできていますが、その共通項を探って]]></summary>
+        <content type="html"><![CDATA[Auth0のデベロッパーアドボケイト池原大然さんitoh2026年10月29日DevRelキャリア図鑑シェア ポスト はてブ 優先するニュース提供元に追加 はじめにDevRelに関わる人たちは増えている一方で「なぜDevRelに関わるようになったのか」「どういったキャリアを歩んで現在があるのか」については、あまり明らかにされていません。それぞれ異なるキャリアを歩んできていますが、その共通項を探っていこうというのが本連載の目的です。DevRelとしてのキャリアに興味がある方に、ぜひ読んでほしいです。第6回目となる今回は、Auth0のデベロッパーアドボケイトを務める池原大然さんに、これまでのキャリアとDevRelとの関わりについてお話を伺いました。偶然の登壇から始まったDevRelキャリア池原さんが開発会社のプログラマー・SEとして、エンジニアとしてのキャリアを歩み始めたのは26〜27歳になる頃でした。その後、外資系企業に転職してテクニカルサポートを担当します。DevRelにつながる最初の出来事は、当時の会社でデベロッパーエバンジェリストの担当者が退職したことでした。すでに社としてカンファ]]></content>
+        <author>
+            <name>中津川 篤司</name>
+        </author>
+        <category label="システム開発"/>
+        <category label="運用・管理"/>
+        <category label="キャリア・人材"/>
+        <category label="インタビュー"/>
+        <published>2026-10-28T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub Copilotの「Assisted permissions」提供開始 ─ 安全と判断した操作を自動承認 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39676</id>
+        <link href="https://thinkit.co.jp/news/39676"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39676.png?itok=2CyDxFIe" type="image/png"/>
+        <updated>2026-10-28T14:12:41.000Z</updated>
+        <summary type="html"><![CDATA[GitHub Copilotの「Assisted permissions」提供開始 ─ 安全と判断した操作を自動承認 Copilot CLI、Copilotアプリ、Visual Studio Codeに対応、企業管理者向け制御も用意 kawahara2026年10月28日シェア ポスト はてブ 優先するニュース提供元に追加 GitHubは10月26日(現地時間)、GitHub Copilotの権限]]></summary>
+        <content type="html"><![CDATA[GitHub Copilotの「Assisted permissions」提供開始 ─ 安全と判断した操作を自動承認 Copilot CLI、Copilotアプリ、Visual Studio Codeに対応、企業管理者向け制御も用意 kawahara2026年10月28日シェア ポスト はてブ 優先するニュース提供元に追加 GitHubは10月26日(現地時間)、GitHub Copilotの権限承認機能「Assisted permissions」を提供開始した。 「GitHub Copilot」は、コードの生成や補完、質問への回答、ファイル編集、コマンド実行などを支援するAI開発ツール。Assisted permissionsは、Copilotがコマンドの実行やファイルへのアクセス、URLの参照などを要求した際に、大規模言語モデルを利用して操作の安全性を評価する機能となる。 従来の手動承認では、許可されていない操作を実行するたびに利用者の確認が必要だったが、すべての操作を無条件で承認する「Allow All」では、個々の操作に対する監督が行われない。Assisted permissi]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-28T14:12:41.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【クラウドネイティブ会議】負荷検証を「やった」で終わらせない、実際のアクセスログとAIでシナリオを継続的に育てる仕組み | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39659</id>
+        <link href="https://thinkit.co.jp/article/39659"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39659/39659_main.jpg?itok=c9xw0Pk6" type="image/jpg"/>
+        <updated>2026-10-28T00:10:00.000Z</updated>
+        <summary type="html"><![CDATA[【クラウドネイティブ会議】負荷検証を「やった」で終わらせない、実際のアクセスログとAIでシナリオを継続的に育てる仕組みiioka2026年10月28日「クラウドネイティブ会議」レポートシェア ポスト はてブ 優先するニュース提供元に追加 タクシー配車サービスを安定して運用するには、需要のピークを想定した負荷検証が欠かせない。しかし十分なトラフィックを流していても、実際の利用パターンをシナリオが網羅]]></summary>
+        <content type="html"><![CDATA[【クラウドネイティブ会議】負荷検証を「やった」で終わらせない、実際のアクセスログとAIでシナリオを継続的に育てる仕組みiioka2026年10月28日「クラウドネイティブ会議」レポートシェア ポスト はてブ 優先するニュース提供元に追加 タクシー配車サービスを安定して運用するには、需要のピークを想定した負荷検証が欠かせない。しかし十分なトラフィックを流していても、実際の利用パターンをシナリオが網羅していなければ、障害を防げないことがある。「クラウドネイティブ会議」のセッション「継続的な負荷検証を目指して」では、GO株式会社の山下和彦氏が、サービス障害から得た教訓をもとに、Grafana Loki、Claude Code、k1LoW/runnを組み合わせ、本番環境のアクセスログから負荷検証シナリオを継続的に作成・検証する仕組みを紹介した。本稿では、人の作業サイクルをAIに移しながら、最終判断を人が担う取り組みをレポートする。負荷の大きさではなくシナリオの網羅性が問題だったGO株式会社の山下和彦氏は「継続的な負荷検証を目指して」と題し、タクシー配車サービスで発生した障害と、その経験を踏まえ]]></content>
+        <author>
+            <name>木村 慎治</name>
+        </author>
+        <category label="クラウド"/>
+        <category label="イベント"/>
+        <published>2026-10-28T00:10:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Visual Basic.NET」の「WPF」でデスクトップゲーム「Color」を開発してみよう | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39648</id>
+        <link href="https://thinkit.co.jp/article/39648"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39648/ren_game-prog_etc_cover.png?itok=bteojTWG" type="image/png"/>
+        <updated>2026-10-27T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[「Visual Basic.NET」の「WPF」でデスクトップゲーム「Color」を開発してみようitoh2026年10月28日ゲーム実装で身に付くプログラミングシェア ポスト はてブ 優先するニュース提供元に追加 はじめにこの連載では、さまざまなプログラミング言語やライブラリで同じゲームを開発することで、容易にそのプログラミング言語に入門します。第12回の今回はプログラミング言語「Visual ]]></summary>
+        <content type="html"><![CDATA[「Visual Basic.NET」の「WPF」でデスクトップゲーム「Color」を開発してみようitoh2026年10月28日ゲーム実装で身に付くプログラミングシェア ポスト はてブ 優先するニュース提供元に追加 はじめにこの連載では、さまざまなプログラミング言語やライブラリで同じゲームを開発することで、容易にそのプログラミング言語に入門します。第12回の今回はプログラミング言語「Visual Basic.NET」(VB.NET)を使って、次のURLのようなColorゲームを作ります。こちらからアセットをダウンロードしておいてください。ColorゲームについてColorゲームの内容は第1回でも解説した通り、ゲームを開始したら、赤緑青の色ブロックをクリックします。すると背景色にその色が混ぜられるので、どんどんクリックして真っ白な背景にしていこうというゲームです。プログラミング言語についてVisual Basic.NETはMicrosoftが提供するVisual Basic(VB)を.NET環境で動作するように発展させた言語です。VB.NETでできることは、Windows向けのデスクトッ]]></content>
+        <author>
+            <name>大西 武 (オオニシ タケシ)</name>
+        </author>
+        <category label="開発言語"/>
+        <category label="Web開発"/>
+        <category label="技術解説"/>
+        <published>2026-10-27T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「RefreshOS 3.1」リリース ─ 独自APTリポジトリを導入 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39670</id>
+        <link href="https://thinkit.co.jp/news/39670"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39670.png?itok=upfJGO8s" type="image/png"/>
+        <updated>2026-10-27T16:20:55.000Z</updated>
+        <summary type="html"><![CDATA[「RefreshOS 3.1」リリース ─ 独自APTリポジトリを導入 Debian 13.7までの更新を反映、Steamなどに必要な32ビットソフトウェアにも対応 kawahara2026年10月28日シェア ポスト はてブ 優先するニュース提供元に追加 eXybit Technologiesは10月27日(現地時間)、DebianベースのLinuxディストリビューション「RefreshOS 3]]></summary>
+        <content type="html"><![CDATA[「RefreshOS 3.1」リリース ─ 独自APTリポジトリを導入 Debian 13.7までの更新を反映、Steamなどに必要な32ビットソフトウェアにも対応 kawahara2026年10月28日シェア ポスト はてブ 優先するニュース提供元に追加 eXybit Technologiesは10月27日(現地時間)、DebianベースのLinuxディストリビューション「RefreshOS 3.1」をリリースした。 「RefreshOS」は、Debian StableをベースにKDE Plasmaデスクトップを組み合わせたLinuxディストリビューション。ドライバやコーデック、ファームウェア、主要なデスクトップアプリケーションを設定済みの状態で提供し、導入後すぐに利用できる環境を提供する。 「RefreshOS 3.1」では、Debian 13.7までのパッケージ更新を反映するとともに、RefreshOS独自のAPTリポジトリを導入した。32bit版ソフトウェアとの互換性や、英語以外の環境におけるメニュー項目も改善されている。ハイライトは次の通り。 今回の中心となる変更は、公式AP]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-27T16:20:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「KDE Plasma 6.8.2」リリース ─ マルチディスプレイやRDPの問題を修正 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39669</id>
+        <link href="https://thinkit.co.jp/news/39669"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39669.png?itok=lmPfSqlg" type="image/png"/>
+        <updated>2026-10-27T15:27:50.000Z</updated>
+        <summary type="html"><![CDATA[「KDE Plasma 6.8.2」リリース ─ マルチディスプレイやRDPの問題を修正 デスクトップアイコン、タスクマネージャー、壁紙、入力メソッドなどの回帰に対応kawahara2026年10月28日シェア ポスト はてブ 優先するニュース提供元に追加 KDE.orgは10月27日(現地時間)、デスクトップ環境「KDE Plasma 6.8.2」をリリースした。 「KDE Plasma」は、L]]></summary>
+        <content type="html"><![CDATA[「KDE Plasma 6.8.2」リリース ─ マルチディスプレイやRDPの問題を修正 デスクトップアイコン、タスクマネージャー、壁紙、入力メソッドなどの回帰に対応kawahara2026年10月28日シェア ポスト はてブ 優先するニュース提供元に追加 KDE.orgは10月27日(現地時間)、デスクトップ環境「KDE Plasma 6.8.2」をリリースした。 「KDE Plasma」は、LinuxやBSDなどのUnix系OSで利用されるオープンソースのデスクトップ環境。ウィンドウ管理やパネル、システム設定、アプリケーションランチャーなどを提供し、高いカスタマイズ性を特徴とする。 「KDE Plasma 6.8.2」のハイライトは次の通り。 KDE Plasmaは、Webサイトから入手できる。(川原 龍人/びぎねっと)[関連リンク]リリースアナウンス この記事をシェアしてください シェアする ポストする &gt;ブクマする noteで書く 優先するニュース提供元にThink ITを追加 前の記事「Kali Linux 2026.3」リリース ─ イメージ構築スクリプトを刷新 次の記事「]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-27T15:27:50.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[自律型ペネトレーションテストの結果は信頼できるのか? OWASP APTSが求める記録と検証 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39637</id>
+        <link href="https://thinkit.co.jp/article/39637"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39637/ren_ai-security-risk_cover3.png?itok=-WiD8ER5" type="image/png"/>
+        <updated>2026-10-26T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[自律型ペネトレーションテストの結果は信頼できるのか? OWASP APTSが求める記録と検証itoh2026年10月27日AIにまつわるセキュリティあれこれシェア ポスト はてブ 優先するニュース提供元に追加 今回扱う範囲前回まで、OWASPの「Autonomous Penetration Testing Standard (APTS)」の8つのドメインのうち、実行時の安全性に関わる4つを見てきま]]></summary>
+        <content type="html"><![CDATA[自律型ペネトレーションテストの結果は信頼できるのか? OWASP APTSが求める記録と検証itoh2026年10月27日AIにまつわるセキュリティあれこれシェア ポスト はてブ 優先するニュース提供元に追加 今回扱う範囲前回まで、OWASPの「Autonomous Penetration Testing Standard (APTS)」の8つのドメインのうち、実行時の安全性に関わる4つを見てきました (APTS v0.1.0を対象)。スコープ強制(Scope Enforcement)、安全制御(Safety Controls)、人間による監督(Human Oversight)、段階的な自律性(Graduated Autonomy)です。 これらは、ペネトレーションテスト(以下、ペンテスト)中に対象システムへ与える影響を抑えるための要件でした。今回は、残りの4つのドメインを扱います。 監査可能性(Auditability)、操作耐性(Manipulation Resistance)、サプライチェーン信頼性(Supply Chain Trust)、報告(Reporting)です。前半の4]]></content>
+        <author>
+            <name>小竹 泰一</name>
+        </author>
+        <category label="AI・人工知能"/>
+        <category label="セキュリティ"/>
+        <category label="技術解説"/>
+        <published>2026-10-26T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[17件の障害をすべて解決、平均2分21秒――Cognitionの「Devin Oncall」が本番インシデントの一次対応を担う | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39664</id>
+        <link href="https://thinkit.co.jp/article/39664"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39664/ren_3-list-tech-news_cover.png?itok=v0Hlwd0d" type="image/png"/>
+        <updated>2026-10-26T21:25:00.000Z</updated>
+        <summary type="html"><![CDATA[17件の障害をすべて解決、平均2分21秒――Cognitionの「Devin Oncall」が本番インシデントの一次対応を担うitoh2026年10月27日編集部が読み解く! 3行でわかるテックニュースシェア ポスト はてブ 優先するニュース提供元に追加 📌 このニュース、3行で押さえるなら 📌Cognitionが、本番環境で発生するアラートやバグ報告をAIソフトウェアエンジニア「Devin」が自]]></summary>
+        <content type="html"><![CDATA[17件の障害をすべて解決、平均2分21秒――Cognitionの「Devin Oncall」が本番インシデントの一次対応を担うitoh2026年10月27日編集部が読み解く! 3行でわかるテックニュースシェア ポスト はてブ 優先するニュース提供元に追加 📌 このニュース、3行で押さえるなら 📌Cognitionが、本番環境で発生するアラートやバグ報告をAIソフトウェアエンジニア「Devin」が自動で調査し、開発チームによる本番インシデントの原因究明と解決を支援する「Devin Oncall」の一般提供を開始した。すでに世界有数の大企業で導入され、日々数千件に上る本番環境のアラートを処理している実際の本番障害をもとにしたSREベンチマーク「SREGym」で最高スコアを記録し、SREGym-Lite(17の障害)でエンドツーエンド成功率100%を達成した。本ベンチマークは、稼働中のシステムにおける障害の根本原因を特定し、同一の実行過程で問題を緩和することを求めるものメインのエージェントと並行して非同期に動作する「レビュー」エージェントが、相関関係と因果関係の混同、矛盾するテレメトリの見落]]></content>
+        <author>
+            <name>Think IT編集部</name>
+        </author>
+        <category label="AI・人工知能"/>
+        <category label="運用・管理"/>
+        <category label="システム運用"/>
+        <category label="運用監視"/>
+        <category label="ニュース"/>
+        <published>2026-10-26T21:25:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Kali Linux 2026.3」リリース ─ イメージ構築スクリプトを刷新 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39665</id>
+        <link href="https://thinkit.co.jp/news/39665"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39665.png?itok=By0c2D00" type="image/png"/>
+        <updated>2026-10-26T14:53:53.000Z</updated>
+        <summary type="html"><![CDATA[「Kali Linux 2026.3」リリース ─ イメージ構築スクリプトを刷新 KDE Plasma 6.7とLinux 7.1.5を採用、6種類のセキュリティツールを追加kawahara2026年10月26日シェア ポスト はてブ 優先するニュース提供元に追加 kali.orgは10月26日(現地時間)、ペネトレーションテスト向けLinuxディストリビューション「Kali Linux 2026]]></summary>
+        <content type="html"><![CDATA[「Kali Linux 2026.3」リリース ─ イメージ構築スクリプトを刷新 KDE Plasma 6.7とLinux 7.1.5を採用、6種類のセキュリティツールを追加kawahara2026年10月26日シェア ポスト はてブ 優先するニュース提供元に追加 kali.orgは10月26日(現地時間)、ペネトレーションテスト向けLinuxディストリビューション「Kali Linux 2026.3」をリリースした。 「Kali Linux」は、侵入テスト、デジタルフォレンジック、脆弱性調査などに用いるツール群を収録したDebianベースのLinuxディストリビューション。「Kali Linux 2026.3」では、公式イメージの生成に使用するビルドスクリプトを刷新したほか、KDE Plasma 6.7、Linux 7.1.5、126件のパッケージ更新、6種類の新しいセキュリティツールを収録した。 「Kali Linux 2026.3」のハイライトは次の通り。 「Kali Linux 2026.3」は、Webサイトからダウンロードできる。(川原 龍人/びぎねっと)[関連リンク]Kal]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-26T14:53:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Python 3.15.2/3.14.10/3.13.18/3.12.16/3.11.18」リリース ─ 侵害されたeMudhraのCA鍵をブロック | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39663</id>
+        <link href="https://thinkit.co.jp/news/39663"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39663.png?itok=1-Q6RTm5" type="image/png"/>
+        <updated>2026-10-26T07:52:48.000Z</updated>
+        <summary type="html"><![CDATA[「Python 3.15.2/3.14.10/3.13.18/3.12.16/3.11.18」リリース ─ 侵害されたeMudhraのCA鍵をブロック 「tarfile」の脆弱性にも対応、アップデートを kawahara2026年10月26日シェア ポスト はてブ 優先するニュース提供元に追加 Python Software Foundationは10月25日(現地時間)、プログラミング言語「Py]]></summary>
+        <content type="html"><![CDATA[「Python 3.15.2/3.14.10/3.13.18/3.12.16/3.11.18」リリース ─ 侵害されたeMudhraのCA鍵をブロック 「tarfile」の脆弱性にも対応、アップデートを kawahara2026年10月26日シェア ポスト はてブ 優先するニュース提供元に追加 Python Software Foundationは10月25日(現地時間)、プログラミング言語「Python 3.15.2/3.14.10/3.13.18/3.12.16/3.11.18」をリリースした。 「Python」は、簡潔な構文と豊富なライブラリを特徴とするオープンソースのプログラミング言語。Webアプリケーション、データ分析、機械学習、科学技術計算、システム管理など幅広い分野で利用されている。 「Python 3.15.2」は、Python 3.15系列の最新メンテナンスリリース。侵害されたeMudhra／emSignの中間認証局(CA)鍵へ緊急対応するセキュリティアップデート、tarfileで展開先を置き換えるリンクをブロックするようになるなど、Python 3.15.1から約1]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-26T07:52:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【クラウドネイティブ会議】クラウドネイティブDBが乗り越えてきた3つの壁から学ぶ分散システム設計の指針 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39658</id>
+        <link href="https://thinkit.co.jp/article/39658"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39658/39658_main.jpg?itok=TzuoRX-C" type="image/jpg"/>
+        <updated>2026-10-25T21:01:00.000Z</updated>
+        <summary type="html"><![CDATA[【クラウドネイティブ会議】クラウドネイティブDBが乗り越えてきた3つの壁から学ぶ分散システム設計の指針iioka2026年10月26日「クラウドネイティブ会議」レポートシェア ポスト はてブ 優先するニュース提供元に追加 株式会社hacomonoのプリンシパルエンジニア（分散システム）の上田義明氏が「クラウドネイティブ会議 2026」に登壇し、「クラウドネイティブDBはいかにして制約を克服したか？]]></summary>
+        <content type="html"><![CDATA[【クラウドネイティブ会議】クラウドネイティブDBが乗り越えてきた3つの壁から学ぶ分散システム設計の指針iioka2026年10月26日「クラウドネイティブ会議」レポートシェア ポスト はてブ 優先するニュース提供元に追加 株式会社hacomonoのプリンシパルエンジニア（分散システム）の上田義明氏が「クラウドネイティブ会議 2026」に登壇し、「クラウドネイティブDBはいかにして制約を克服したか？ ～進化の歴史から紐解く、スケーラブルアーキテクチャの設計指針～」と題したセッションを実施した。セッションの内容は、データベースが書き込み性能、I/O、強い一貫性という3つの壁をどのように乗り越えてきたのかを解説したものだ。ここでは、クラウドネイティブDBの進化をたどりながら、そこから導かれる分散システム設計の指針を紹介する。クラウドネイティブDBを形づくる3つの壁と共通原則セッションの冒頭では「クラウドネイティブDBとは何か」が整理された。上田氏はCNCFの「Cloud Native Definition v1.1」から、動的にスケールできる能力、回復性・管理力・可観測性を備えた疎結合システ]]></content>
+        <author>
+            <name>木村 慎治</name>
+        </author>
+        <category label="クラウド"/>
+        <category label="イベント"/>
+        <published>2026-10-25T21:01:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenXRの新拡張機能公開、Meta最新決算発表 ほか | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39657</id>
+        <link href="https://thinkit.co.jp/article/39657"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39657/39657_main.jpg?itok=8SFayHh2" type="image/jpg"/>
+        <updated>2026-10-25T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[OpenXRの新拡張機能公開、Meta最新決算発表 ほかiioka2026年10月26日週刊VRウォッチシェア ポスト はてブ 優先するニュース提供元に追加 今週も、バーチャル領域の最新動向をお届けします。Khronos GroupからはXRアプリのマルチウィンドウ表示を実現するOpenXRの新拡張機能「空間コンテナ」が公開されました。Metaの2026年第3四半期決算では、AIスマートグラスの堅]]></summary>
+        <content type="html"><![CDATA[OpenXRの新拡張機能公開、Meta最新決算発表 ほかiioka2026年10月26日週刊VRウォッチシェア ポスト はてブ 優先するニュース提供元に追加 今週も、バーチャル領域の最新動向をお届けします。Khronos GroupからはXRアプリのマルチウィンドウ表示を実現するOpenXRの新拡張機能「空間コンテナ」が公開されました。Metaの2026年第3四半期決算では、AIスマートグラスの堅調な伸びと今後の黒字化に向けた投資戦略が明かされています。また、眼鏡市場がAR技術を取り入れた「Linse Display」のクラウドファンディングを開始したほか、SnapのARグラス「SPECS」に俳優のロバート・ダウニー・Jr.が役員として参画するなど、日常や産業で活躍するスマートグラスの話題が目立ちました。OpenXR、新拡張機能「空間コンテナ」が公開KhronosのOpenXRワーキンググループは、XRアプリをPCのウィンドウのように扱える新拡張機能「空間コンテナ」を公開しました。従来の画面全体を使う没入型体験に加え、システム上の共通規格空間内で複数アプリを並べて表示・操作できる仕組み]]></content>
+        <author>
+            <name>Mogura VR</name>
+        </author>
+        <category label="VR／AR"/>
+        <category label="ニュース"/>
+        <published>2026-10-25T21:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「nginx 1.31.8」リリース ─ HTTP/3利用時の異常終了を修正 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39660</id>
+        <link href="https://thinkit.co.jp/news/39660"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39660.png?itok=5ouQbV8T" type="image/png"/>
+        <updated>2026-10-25T12:31:52.000Z</updated>
+        <summary type="html"><![CDATA[「nginx 1.31.8」リリース ─ HTTP/3利用時の異常終了を修正 working_directoryの相対パス基準を変更、kTLSやSolarisビルドの問題にも対応kawahara2026年10月25日シェア ポスト はてブ 優先するニュース提供元に追加 nginx開発チームは10月21日(現地時間)、オープンソースのWebサーバ／リバースプロキシ「nginx 1.31.8」をリリー]]></summary>
+        <content type="html"><![CDATA[「nginx 1.31.8」リリース ─ HTTP/3利用時の異常終了を修正 working_directoryの相対パス基準を変更、kTLSやSolarisビルドの問題にも対応kawahara2026年10月25日シェア ポスト はてブ 優先するニュース提供元に追加 nginx開発チームは10月21日(現地時間)、オープンソースのWebサーバ／リバースプロキシ「nginx 1.31.8」をリリースした。 「nginx」は、Webサーバ、リバースプロキシ、コンテンツキャッシュ、ロードバランサとして利用できるオープンソースソフトウェア。TCP／UDPやメールのプロキシ機能も備え、高い同時接続処理性能を特徴とする。 「nginx 1.31.8」は、mainline系列「1.31系列」の最新版。HTTP/3使用時にワーカープロセスがSIGBUSで異常終了する問題や、「working_directory」ディレクティブの処理、kernel TLS利用時のログ出力、Solarisでのビルドなどが修正された。 「nginx 1.31.8」のハイライトは次の通り。 内部JSONパーサーのAPIも変更]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-25T12:31:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「BIND 9.20.30/9.21.27」リリース ─ 深刻度「High」の脆弱性4件を修正 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39656</id>
+        <link href="https://thinkit.co.jp/news/39656"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39656.png?itok=XIglV8Ox" type="image/png"/>
+        <updated>2026-10-23T17:41:44.000Z</updated>
+        <summary type="html"><![CDATA[「BIND 9.20.30/9.21.27」リリース ─ 深刻度「High」の脆弱性4件を修正 潜在的なリモートコード実行やCPU・メモリー枯渇、namedの異常終了に対応kawahara2026年10月24日シェア ポスト はてブ 優先するニュース提供元に追加 ISCは10月21日(現地時間)、DNSサーバソフトウェア「BIND 9.20.30」をリリースした。開発系列の「BIND 9.21.2]]></summary>
+        <content type="html"><![CDATA[「BIND 9.20.30/9.21.27」リリース ─ 深刻度「High」の脆弱性4件を修正 潜在的なリモートコード実行やCPU・メモリー枯渇、namedの異常終了に対応kawahara2026年10月24日シェア ポスト はてブ 優先するニュース提供元に追加 ISCは10月21日(現地時間)、DNSサーバソフトウェア「BIND 9.20.30」をリリースした。開発系列の「BIND 9.21.27」と、サポート契約者向けの「BIND 9.20.30-S1」も同時に公開されている。 BINDは、ドメイン名とIPアドレスを対応付けるDNSの権威サーバーやキャッシュDNSサーバーとして利用されるオープンソースソフトウェア。BIND 9.20系列は、本番環境向けの安定版で長期サポートを受けられるExtended Support Version(ESV)に位置付けられている。 「BIND 9.20.30」のハイライトは次の通り。 CVE-2026-94300では、GSS-TSIGで署名されたUDPメッセージを再送することで、named内部のKerberos関連状態が破損する。攻撃者が有効な署名]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-23T17:41:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Samba 4.25.1」リリース ─ Ceph RGWモジュールのアクセス制御回避を修正 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39655</id>
+        <link href="https://thinkit.co.jp/news/39655"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39655.png?itok=1RD8FIzo" type="image/png"/>
+        <updated>2026-10-23T17:18:38.000Z</updated>
+        <summary type="html"><![CDATA[「Samba 4.25.1」リリース ─ Ceph RGWモジュールのアクセス制御回避を修正 CTDBや大文字・小文字を扱うファイル操作、macOS／i686ビルドなど13件に対応kawahara2026年10月24日シェア ポスト はてブ 優先するニュース提供元に追加 Samba Teamは10月23日(現地時間)、オープンソースのファイル／プリント共有ソフトウェア「Samba 4.25.1」を]]></summary>
+        <content type="html"><![CDATA[「Samba 4.25.1」リリース ─ Ceph RGWモジュールのアクセス制御回避を修正 CTDBや大文字・小文字を扱うファイル操作、macOS／i686ビルドなど13件に対応kawahara2026年10月24日シェア ポスト はてブ 優先するニュース提供元に追加 Samba Teamは10月23日(現地時間)、オープンソースのファイル／プリント共有ソフトウェア「Samba 4.25.1」をリリースした。 「Samba 4.25.1」は、Samba 4.25系列の最新安定版となるポイントリリース。ハイライトは次の通り。 CVE-2026-109411は、vfs_ceph_rgwで大文字・小文字を区別しないファイルオープンを処理する際、アクセス制御を回避できる問題。脆弱性の影響を受けるのはSamba 4.25.0でvfs_ceph_rgwを利用している場合。該当環境では4.25.1への早期更新が推奨される。 「Samba 4.25.1」は、Webサイトから入手できる。(川原 龍人/びぎねっと)[関連リンク]リリースノート この記事をシェアしてください シェアする ポストする &gt;ブク]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-23T17:18:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「OpenSSL 4.1.0」リリース ─ DTLS 1.3とGREASEに対応 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39654</id>
+        <link href="https://thinkit.co.jp/news/39654"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39654.png?itok=2zvk-oBw" type="image/png"/>
+        <updated>2026-10-23T16:46:28.000Z</updated>
+        <summary type="html"><![CDATA[「OpenSSL 4.1.0」リリース ─ DTLS 1.3とGREASEに対応 ML-KEM／ML-DSAやAES-CBCを高速化、IKEv2向けKDFも追加kawahara2026年10月24日シェア ポスト はてブ 優先するニュース提供元に追加 OpenSSL Projectは10月23日(現地時間)、暗号化通信ライブラリ「OpenSSL 4.1.0」をリリースした。 「OpenSSL 4.]]></summary>
+        <content type="html"><![CDATA[「OpenSSL 4.1.0」リリース ─ DTLS 1.3とGREASEに対応 ML-KEM／ML-DSAやAES-CBCを高速化、IKEv2向けKDFも追加kawahara2026年10月24日シェア ポスト はてブ 優先するニュース提供元に追加 OpenSSL Projectは10月23日(現地時間)、暗号化通信ライブラリ「OpenSSL 4.1.0」をリリースした。 「OpenSSL 4.1.0」は、新機能を追加したフィーチャーリリースに相当する。UDPなどのデータグラム通信向けにDTLS 1.3を実装したほか、TLSの拡張性を維持するGREASE、IKEv2用の鍵導出関数、DTLS対応のSSLリスナーAPIなどを追加した。 「OpenSSL 4.1.0」のハイライトは次の通り。 DTLSは、UDPのように到達や順序が保証されない通信上で、TLSと同様の暗号化と認証を提供するプロトコル。リアルタイム通信、IoT、VPNなど、TCPを利用しにくい用途で使われる。OpenSSL 4.1.0ではDTLS 1.3に加え、サーバが複数のDTLS接続を待ち受けるためのSSLリスナーAPIも]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-10-23T16:46:28.000Z</published>
+    </entry>
+</feed>

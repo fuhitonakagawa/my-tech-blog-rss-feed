@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/</id>
+    <title>DevelopersIO｜企業テックブログRSS</title>
+    <updated>2026-10-31T13:04:29.667Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/feeds/atom.xml"/>
+    <subtitle>DevelopersIOセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[【AWS 初心者向け】EBS のルートボリュームを拡張して、Linux 上の容量の変化を確認してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/ec2-ebs-root-volume-expansion-linux/</id>
+        <link href="https://dev.classmethod.jp/articles/ec2-ebs-root-volume-expansion-linux/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790869733/eyecatch/zy7tbilxmvuvrdlsmcso.png" type="image/png"/>
+        <updated>2026-10-31T12:54:13.000Z</updated>
+        <summary type="html"><![CDATA[EBS のサイズを変更したのに、Linux 上で使える容量が増えず、迷ったことはありませんか？この記事では、Amazon Linux 2023 のルートボリュームを実際に拡張しながら、ディスク・パーティション・ファイルシステムの違いと、各操作による容量の変化を初心者向けに解説します。]]></summary>
+        <content type="html"><![CDATA[EBS のサイズを変更したのに、Linux 上で使える容量が増えず、迷ったことはありませんか？この記事では、Amazon Linux 2023 のルートボリュームを実際に拡張しながら、ディスク・パーティション・ファイルシステムの違いと、各操作による容量の変化を初心者向けに解説します。]]></content>
+        <author>
+            <name>fujise-yu</name>
+        </author>
+        <published>2026-10-31T12:54:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Terraform の -minimal-refresh で plan 時間を短縮できるか検証してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/terraform-minimal-refresh/</id>
+        <link href="https://dev.classmethod.jp/articles/terraform-minimal-refresh/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790873937/eyecatch/ma15ec6n4lgie08l3h7s.png" type="image/png"/>
+        <updated>2026-10-31T11:20:52.000Z</updated>
+        <summary type="html"><![CDATA[Terraform 1.17 で追加された `-minimal-refresh` オプションを実際に試してみました。3 階層構成で refresh 回数がどれだけ削減され、plan 時間が短くなるかを検証した結果をお伝えします。]]></summary>
+        <content type="html"><![CDATA[Terraform 1.17 で追加された `-minimal-refresh` オプションを実際に試してみました。3 階層構成で refresh 回数がどれだけ削減され、plan 時間が短くなるかを検証した結果をお伝えします。]]></content>
+        <author>
+            <name>あきやま</name>
+        </author>
+        <published>2026-10-31T11:20:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Terraform で Aurora PostgreSQL のポスト量子 TLS 鍵交換を設定できるか検証してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aurora-postgresql-pq-tls-terraform/</id>
+        <link href="https://dev.classmethod.jp/articles/aurora-postgresql-pq-tls-terraform/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790869589/eyecatch/zpad5fm2g3l6znng6pld.png" type="image/png"/>
+        <updated>2026-10-31T10:14:29.000Z</updated>
+        <summary type="html"><![CDATA[Aurora PostgreSQL 18 でポスト量子 TLS が利用可能になりました。クラスタパラメータ `ssl_groups` の設定方法を Terraform で試しましたので、その結果をお伝えします。]]></summary>
+        <content type="html"><![CDATA[Aurora PostgreSQL 18 でポスト量子 TLS が利用可能になりました。クラスタパラメータ `ssl_groups` の設定方法を Terraform で試しましたので、その結果をお伝えします。]]></content>
+        <author>
+            <name>あきやま</name>
+        </author>
+        <published>2026-10-31T10:14:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code v2.1.316 の主要アップデート - サブエージェントの effort 指定と Opus 4.8 fast mode の非推奨 | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/20261031-cc-updates-v2-1-316/</id>
+        <link href="https://dev.classmethod.jp/articles/20261031-cc-updates-v2-1-316/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790874959/eyecatch/ka9xwy5wvmdbaykvguvl.png" type="image/png"/>
+        <updated>2026-10-31T09:53:16.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code v2.1.316 がリリースされました。サブエージェントの effort を環境変数で指定できるようになり、セキュリティ関連の修正も多数含まれています。本日は、CLAUDE_CODE_SUBAGENT_EFFORT を試してみました。]]></summary>
+        <content type="html"><![CDATA[Claude Code v2.1.316 がリリースされました。サブエージェントの effort を環境変数で指定できるようになり、セキュリティ関連の修正も多数含まれています。本日は、CLAUDE_CODE_SUBAGENT_EFFORT を試してみました。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-10-31T09:53:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CORTEX_USER ・CORTEX_AGENT_USERデータベースロールによるCoCo in Snowsightの表示制御を確認してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/display-control-coco-in-snowsight-with-cortex_user-cortex_agent_user/</id>
+        <link href="https://dev.classmethod.jp/articles/display-control-coco-in-snowsight-with-cortex_user-cortex_agent_user/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790874280/eyecatch/wsr0koxw01pat9lxglvp.png" type="image/png"/>
+        <updated>2026-10-31T09:29:04.000Z</updated>
+        <summary type="html"><![CDATA[Snowflake CoCo in Snowsightの利用制御向けのロールが変更されるため、新しい方法と、一部ユーザーのみに表示させる具体的な実装方法を確認してみました。]]></summary>
+        <content type="html"><![CDATA[Snowflake CoCo in Snowsightの利用制御向けのロールが変更されるため、新しい方法と、一部ユーザーのみに表示させる具体的な実装方法を確認してみました。]]></content>
+        <author>
+            <name>nayuta</name>
+        </author>
+        <published>2026-10-31T09:29:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ハロウィン仕様のKiroのサイトにアクセスして「Kiroween」に参加しよう！ | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/join-to-kiroween-2026/</id>
+        <link href="https://dev.classmethod.jp/articles/join-to-kiroween-2026/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1793430837/eyecatch/stjorvntgfhdz02ch426.png" type="image/png"/>
+        <updated>2026-10-31T07:45:22.000Z</updated>
+        <summary type="html"><![CDATA[Kiroかわいい！ハロウィン仕様のKiroを観察してみました！それはそれとしてKiroのハッカソンも12月4日までやっていますよ！]]></summary>
+        <content type="html"><![CDATA[Kiroかわいい！ハロウィン仕様のKiroを観察してみました！それはそれとしてKiroのハッカソンも12月4日までやっていますよ！]]></content>
+        <author>
+            <name>臼田佳祐</name>
+        </author>
+        <published>2026-10-31T07:45:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Superlogical の Rex の beta 版を試してみる | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/reona-superlogical-rex-beta-try/</id>
+        <link href="https://dev.classmethod.jp/articles/reona-superlogical-rex-beta-try/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1793424639/eyecatch/ts00e7oa7d1yo9vmigob.png" type="image/png"/>
+        <updated>2026-10-31T06:24:59.000Z</updated>
+        <summary type="html"><![CDATA[Superlogical のターミナルアプリ Rex がテスト公開されたので、macOS 版を入れて触ってみました。セッション永続化、リモート接続、Claude Code との連携まで、実際に試した結果をお伝えします。]]></summary>
+        <content type="html"><![CDATA[Superlogical のターミナルアプリ Rex がテスト公開されたので、macOS 版を入れて触ってみました。セッション永続化、リモート接続、Claude Code との連携まで、実際に試した結果をお伝えします。]]></content>
+        <author>
+            <name>嶋田怜央成 / Reona Shimada</name>
+        </author>
+        <published>2026-10-31T06:24:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[aws updateコマンドでmacOSとCloudShell環境をアップデートして違いを見てみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/check-aws-update-diff/</id>
+        <link href="https://dev.classmethod.jp/articles/check-aws-update-diff/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790870442/eyecatch/jro5rfekrpuctx4ryksf.png" type="image/png"/>
+        <updated>2026-10-31T06:17:57.000Z</updated>
+        <summary type="html"><![CDATA[aws updateコマンドを使って実際にバージョンアップしてみました！実はaws --versionにインストール方法が反映されていたのでそれをちょっと調べてみました]]></summary>
+        <content type="html"><![CDATA[aws updateコマンドを使って実際にバージョンアップしてみました！実はaws --versionにインストール方法が反映されていたのでそれをちょっと調べてみました]]></content>
+        <author>
+            <name>臼田佳祐</name>
+        </author>
+        <published>2026-10-31T06:17:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「基本から分かる！AWSセキュリティ運用の考え方と任せ方」というタイトルで登壇しました | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aws-security-operations-basics/</id>
+        <link href="https://dev.classmethod.jp/articles/aws-security-operations-basics/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1793423182/eyecatch/g7rlsgjxmgogm7nkyvji.webp" type="image/webp"/>
+        <updated>2026-10-31T05:06:39.000Z</updated>
+        <summary type="html"><![CDATA[AWSセキュリティを基礎から積み上げていき、どうやってAWSのセキュリティサービスに任せつつ運用していくのか、という話をしました。一朝一夕ではうまくいきませんが、現在地を把握して進んでいきましょう！]]></summary>
+        <content type="html"><![CDATA[AWSセキュリティを基礎から積み上げていき、どうやってAWSのセキュリティサービスに任せつつ運用していくのか、という話をしました。一朝一夕ではうまくいきませんが、現在地を把握して進んでいきましょう！]]></content>
+        <author>
+            <name>臼田佳祐</name>
+        </author>
+        <published>2026-10-31T05:06:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows の ChatGPT デスクトップアプリを Amazon Bedrock Runtime に接続して利用する設定手順 | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/chatgpt-desktop-windows-bedrock-runtime-setup/</id>
+        <link href="https://dev.classmethod.jp/articles/chatgpt-desktop-windows-bedrock-runtime-setup/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790870640/eyecatch/fqat5yzhltnknpjit83r.png" type="image/png"/>
+        <updated>2026-10-31T02:15:13.000Z</updated>
+        <summary type="html"><![CDATA[Mac ユーザーが Windows で試したときの備忘録です。]]></summary>
+        <content type="html"><![CDATA[Mac ユーザーが Windows で試したときの備忘録です。]]></content>
+        <author>
+            <name>大村 保貴</name>
+        </author>
+        <published>2026-10-31T02:15:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI 時代の新たなCMS「EmDash」を AWS 環境で動かして、WordPress からの移行を試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/emdash-cms-mcp-wordpress-migration/</id>
+        <link href="https://dev.classmethod.jp/articles/emdash-cms-mcp-wordpress-migration/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/348VnC3440CoUtpS4pd5NS/8a7182ab96a0851a72a88d40328811b3/aws.png" type="image/png"/>
+        <updated>2026-10-31T00:45:00.000Z</updated>
+        <summary type="html"><![CDATA[WordPress に近い操作感ながら AI にも対応したCMS 「EmDash」 を AWS へデプロイして、AI エージェントからの記事投稿と WordPress からの移行を試しました。]]></summary>
+        <content type="html"><![CDATA[WordPress に近い操作感ながら AI にも対応したCMS 「EmDash」 を AWS へデプロイして、AI エージェントからの記事投稿と WordPress からの移行を試しました。]]></content>
+        <author>
+            <name>M.Shimizu</name>
+        </author>
+        <published>2026-10-31T00:45:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Inspector の ECR 再スキャン設定で発生した「リクエストに失敗しました」の解消方法を教えてください | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/tsnote-inspector-please-tell-me-how-to-resolve-the-request-failed-caused-by-amazon-inspectors-ecr-rescan-settings/</id>
+        <link href="https://dev.classmethod.jp/articles/tsnote-inspector-please-tell-me-how-to-resolve-the-request-failed-caused-by-amazon-inspectors-ecr-rescan-settings/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790871136/eyecatch/eltfqn1zsuh6xkc1aahx.png" type="image/png"/>
+        <updated>2026-10-30T22:58:59.000Z</updated>
+        <author>
+            <name>MN</name>
+        </author>
+        <published>2026-10-30T22:58:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] AWS SAM CLI の sam build で、npm workspaces モノレポの依存インストールが1回で済むようになりました | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/samcli-11710-npm-workspaces-monorepo-build/</id>
+        <link href="https://dev.classmethod.jp/articles/samcli-11710-npm-workspaces-monorepo-build/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-07eaebd66be96825f09534c76d05964b/7c8c45cd92c42f6391edbb4b7133429b/aws-sam.png" type="image/png"/>
+        <updated>2026-10-30T17:23:37.000Z</updated>
+        <summary type="html"><![CDATA[速くなった]]></summary>
+        <content type="html"><![CDATA[速くなった]]></content>
+        <author>
+            <name>いわさ</name>
+        </author>
+        <published>2026-10-30T17:23:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Kiro] Kiro IDE? CLI? Crew? Choose the App According to Your Style | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/kiro-product-compare/</id>
+        <link href="https://dev.classmethod.jp/articles/kiro-product-compare/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790874832/eyecatch/ka0q8r1fii0ptkuwmyu2.png" type="image/png"/>
+        <updated>2026-10-30T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[There are three different Kiro applications—IDE, CLI, and Crew—so it can be hard to know which one to use. I tested them all using the same Snake game to compare them and figure out the best use case ]]></summary>
+        <content type="html"><![CDATA[There are three different Kiro applications—IDE, CLI, and Crew—so it can be hard to know which one to use. I tested them all using the same Snake game to compare them and figure out the best use case for each]]></content>
+        <author>
+            <name>AnonymousPenguin</name>
+        </author>
+        <published>2026-10-30T16:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CloudflareのWaiting RoomでHTTPヘッダを参照するバイパスルールをダッシュボードから作成してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/cloudflare-waiting-room-http-request-headers-bypass-rule/</id>
+        <link href="https://dev.classmethod.jp/articles/cloudflare-waiting-room-http-request-headers-bypass-rule/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790873572/eyecatch/lgkaiblfabbtxehaw8t0.jpg" type="image/jpg"/>
+        <updated>2026-10-30T15:54:46.000Z</updated>
+        <summary type="html"><![CDATA[CloudflareのWaiting Roomで、あるHTTPリクエストヘッダが特定の値の場合に待合室をバイパスするルールを作成してみました。バイパスルール画面の式ビルダーでは作成できないのでカスタムルール画面で式を作成し、バイパスルール画面の式編集でその式を記載するのがポイントです。]]></summary>
+        <content type="html"><![CDATA[CloudflareのWaiting Roomで、あるHTTPリクエストヘッダが特定の値の場合に待合室をバイパスするルールを作成してみました。バイパスルール画面の式ビルダーでは作成できないのでカスタムルール画面で式を作成し、バイパスルール画面の式編集でその式を記載するのがポイントです。]]></content>
+        <author>
+            <name>清水俊也</name>
+        </author>
+        <published>2026-10-30T15:54:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Control Towerのコントロール、何から設定する？ | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/control-tower-controls-getting-started/</id>
+        <link href="https://dev.classmethod.jp/articles/control-tower-controls-getting-started/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790870717/eyecatch/ceut2lkmou3bjbvhhqp3.png" type="image/png"/>
+        <updated>2026-10-30T14:59:04.000Z</updated>
+        <summary type="html"><![CDATA[AWS Control Towerのコントロールは1,600個以上もあり、初めてみた方は何から手をつければいいのか分からないのではないでしょうか…。というわけで本記事では、コントロールの分類方法と優先順位を整理して、実装に向けた考え方をまとめました。]]></summary>
+        <content type="html"><![CDATA[AWS Control Towerのコントロールは1,600個以上もあり、初めてみた方は何から手をつければいいのか分からないのではないでしょうか…。というわけで本記事では、コントロールの分類方法と優先順位を整理して、実装に向けた考え方をまとめました。]]></content>
+        <author>
+            <name>あかいけ</name>
+        </author>
+        <published>2026-10-30T14:59:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「ここ 3 年くらいの CloudWatch アップデート について丸っと解説します」というタイトルで登壇しました #devio2026 | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/cloudwatc-upadte-summary-devio-2026/</id>
+        <link href="https://dev.classmethod.jp/articles/cloudwatc-upadte-summary-devio-2026/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/1dD7b8HkT2sbiJzUIewMTD/e5cdc6f33c4fdd9d798f11a4564612ff/eyecatch_developersio_darktone_1200x630.jpg" type="image/jpg"/>
+        <updated>2026-10-30T14:53:51.000Z</updated>
+        <summary type="html"><![CDATA[CloudWatch めっちゃ進化してるぞ！！]]></summary>
+        <content type="html"><![CDATA[CloudWatch めっちゃ進化してるぞ！！]]></content>
+        <author>
+            <name>枡川 健太郎</name>
+        </author>
+        <published>2026-10-30T14:53:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【書評】 「Amazon Bedrock実践ガイド」を読みながらRAGの精度改善をしてみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/bedrock-practical-guide-book-review/</id>
+        <link href="https://dev.classmethod.jp/articles/bedrock-practical-guide-book-review/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1793370244/eyecatch/nodkt7cfltywvoxflvf9.png" type="image/png"/>
+        <updated>2026-10-30T14:37:19.000Z</updated>
+        <summary type="html"><![CDATA[待ちに待った同僚のBedrock実践ガイドが出版されます！おめでとう！ということで書評を書きましたす]]></summary>
+        <content type="html"><![CDATA[待ちに待った同僚のBedrock実践ガイドが出版されます！おめでとう！ということで書評を書きましたす]]></content>
+        <author>
+            <name>よなみね</name>
+        </author>
+        <published>2026-10-30T14:37:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows の ChatGPT デスクトップアプリ with Bedrock を設定したら CreateInference の権限エラーになったときの確認ポイント | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/chatgpt-desktop-windows-bedrock-createinference-permission-error/</id>
+        <link href="https://dev.classmethod.jp/articles/chatgpt-desktop-windows-bedrock-createinference-permission-error/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790870640/eyecatch/fqat5yzhltnknpjit83r.png" type="image/png"/>
+        <updated>2026-10-30T14:17:52.000Z</updated>
+        <summary type="html"><![CDATA[Windows x ChatGPT デスクトップアプリ with Bedrock でハマったところの備忘録です。]]></summary>
+        <content type="html"><![CDATA[Windows x ChatGPT デスクトップアプリ with Bedrock でハマったところの備忘録です。]]></content>
+        <author>
+            <name>大村 保貴</name>
+        </author>
+        <published>2026-10-30T14:17:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kiro CLI V3 の 新機能 「Approve for me」 どの様な操作が確認になるか試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/kiro-cli-v3-approve-for-me/</id>
+        <link href="https://dev.classmethod.jp/articles/kiro-cli-v3-approve-for-me/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790874832/eyecatch/ka0q8r1fii0ptkuwmyu2.png" type="image/png"/>
+        <updated>2026-10-30T14:06:39.000Z</updated>
+        <summary type="html"><![CDATA[Kiro CLI V3 の Approve for me で、どの操作が承認され、どの操作が確認に回るかを試しました。rm -rf、force push、/tmp への書き込みは確認なしで承認され、スクリプトを sh に渡す操作は確認に回りました。.git や .kiro/hooks への書き込みの確認と、.kiro/settings への書き込みの拒否は、固定規則によるものでした。]]></summary>
+        <content type="html"><![CDATA[Kiro CLI V3 の Approve for me で、どの操作が承認され、どの操作が確認に回るかを試しました。rm -rf、force push、/tmp への書き込みは確認なしで承認され、スクリプトを sh に渡す操作は確認に回りました。.git や .kiro/hooks への書き込みの確認と、.kiro/settings への書き込みの拒否は、固定規則によるものでした。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-10-30T14:06:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] AWS Step FunctionsのワークフローをAgentCore Gateway経由でAIエージェントのツールとして使えるようになりました！ | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/step-functions-agentcore-gateway-tools/</id>
+        <link href="https://dev.classmethod.jp/articles/step-functions-agentcore-gateway-tools/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790875048/eyecatch/edq4dfptctqlcwjhffhs.png" type="image/png"/>
+        <updated>2026-10-30T13:46:38.000Z</updated>
+        <summary type="html"><![CDATA[AgentCore GatewayのターゲットにStep Functionsが対応しました！！]]></summary>
+        <content type="html"><![CDATA[AgentCore GatewayのターゲットにStep Functionsが対応しました！！]]></content>
+        <author>
+            <name>神野 雄大</name>
+        </author>
+        <published>2026-10-30T13:46:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Patch Manager】 Windows Update との違いは？ 適用されるパッチの範囲と、自動更新を無効化したときの Scan を確認してみた！ | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/patch-manager-windows-update-difference/</id>
+        <link href="https://dev.classmethod.jp/articles/patch-manager-windows-update-difference/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1793364158/eyecatch/gmc5mtb6mxxy2qphywtr.png" type="image/png"/>
+        <updated>2026-10-30T12:56:06.000Z</updated>
+        <summary type="html"><![CDATA[EC2 の Windows Server のパッチ適用を Patch Manager に一本化するための、検証結果を Q&amp;A と実機確認で整理しました。月次の更新が対象に含まれるのか、自動更新の無効化方法で動作が変わるのかなど、本番環境で気をつけたいポイントをまとめています。]]></summary>
+        <content type="html"><![CDATA[EC2 の Windows Server のパッチ適用を Patch Manager に一本化するための、検証結果を Q&amp;A と実機確認で整理しました。月次の更新が対象に含まれるのか、自動更新の無効化方法で動作が変わるのかなど、本番環境で気をつけたいポイントをまとめています。]]></content>
+        <author>
+            <name>lee-huisu</name>
+        </author>
+        <published>2026-10-30T12:56:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Kiro Crew v0.10.0 でワーカーごとにバックエンドを指定できるようになったので、Kiro Crew から Claude Code の Slack コネクターを使ってみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/kiro-crew-v0100-worker-backend/</id>
+        <link href="https://dev.classmethod.jp/articles/kiro-crew-v0100-worker-backend/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/4uTbTE9O9jUJCOs80dZ0Ao/e2da592b5eaaad0f5993d6ff64a12467/aws-kiro.png" type="image/png"/>
+        <updated>2026-10-30T12:51:31.000Z</updated>
+        <summary type="html"><![CDATA[セッションやエージェントでバックエンドを使い分けることができる神機能が来た...]]></summary>
+        <content type="html"><![CDATA[セッションやエージェントでバックエンドを使い分けることができる神機能が来た...]]></content>
+        <author>
+            <name>いわさ</name>
+        </author>
+        <published>2026-10-30T12:51:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[aws loginで使用するIAM権限と、権限不足時の挙動を確認してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/202610-aws-login-test/</id>
+        <link href="https://dev.classmethod.jp/articles/202610-aws-login-test/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790870442/eyecatch/jro5rfekrpuctx4ryksf.png" type="image/png"/>
+        <updated>2026-10-30T11:22:53.000Z</updated>
+        <summary type="html"><![CDATA[aws loginを実行する際に必須となるIAM権限について、実機での動作検証を通じて確認します。ポリシー有無による成否の違いと、SignInLocalDevelopmentAccessマネージドポリシーに含まれる各actionの役割を確認します。]]></summary>
+        <content type="html"><![CDATA[aws loginを実行する際に必須となるIAM権限について、実機での動作検証を通じて確認します。ポリシー有無による成否の違いと、SignInLocalDevelopmentAccessマネージドポリシーに含まれる各actionの役割を確認します。]]></content>
+        <author>
+            <name>tsureyama.sota</name>
+        </author>
+        <published>2026-10-30T11:22:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[miseの1Passwordの環境変数読み込みのたびに数秒待たされるのを、fnoxのdaemonで解消してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/mise-secret-cache-fnox-daemon/</id>
+        <link href="https://dev.classmethod.jp/articles/mise-secret-cache-fnox-daemon/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1791981290/eyecatch/fizuzxyjcwziewc5qmkk.png" type="image/png"/>
+        <updated>2026-10-30T11:10:28.000Z</updated>
+        <summary type="html"><![CDATA[miseの[env]で1Passwordから読み込んでいたトークンが、miseのアップデート後はEnterのたびに読み直されるようになりました。原因を調べて、hook_env.chpwd_onlyとfnoxのdaemonで0.01秒前後まで戻した記録です。]]></summary>
+        <content type="html"><![CDATA[miseの[env]で1Passwordから読み込んでいたトークンが、miseのアップデート後はEnterのたびに読み直されるようになりました。原因を調べて、hook_env.chpwd_onlyとfnoxのdaemonで0.01秒前後まで戻した記録です。]]></content>
+        <author>
+            <name>yokoyama-t</name>
+        </author>
+        <published>2026-10-30T11:10:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CVE-2026-111497に対するAWS Lambdaのランタイム更新を確かめてみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/lambda-cve-2026-111497-runtime-update/</id>
+        <link href="https://dev.classmethod.jp/articles/lambda-cve-2026-111497-runtime-update/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790870214/eyecatch/ylyxq1jyowp2zpiyvccj.png" type="image/png"/>
+        <updated>2026-10-30T10:05:06.000Z</updated>
+        <summary type="html"><![CDATA[CVE-2026-111497（HTTP2Shell）というBrotliの脆弱性に対して、AWS Lambdaのマネージドランタイムが修正版を展開しています。本ブログではNode.js 24を対象に実際に確認してみました。]]></summary>
+        <content type="html"><![CDATA[CVE-2026-111497（HTTP2Shell）というBrotliの脆弱性に対して、AWS Lambdaのマネージドランタイムが修正版を展開しています。本ブログではNode.js 24を対象に実際に確認してみました。]]></content>
+        <author>
+            <name>あかいけ</name>
+        </author>
+        <published>2026-10-30T10:05:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[製造業の調達業務でのWork IQ活用について | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/20261030_mbt_ms_workiq/</id>
+        <link href="https://dev.classmethod.jp/articles/20261030_mbt_ms_workiq/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790873843/eyecatch/iuq3vglu1ctyfe09da4q.jpg" type="image/jpg"/>
+        <updated>2026-10-30T09:39:05.000Z</updated>
+        <summary type="html"><![CDATA[製造業の調達部門のバックオフィスの業務は手作業が多く、書類管理や各種監査対応に課題を抱えています。MicrosoftのWork IQを活用した業務改善の方法について考えます。]]></summary>
+        <content type="html"><![CDATA[製造業の調達部門のバックオフィスの業務は手作業が多く、書類管理や各種監査対応に課題を抱えています。MicrosoftのWork IQを活用した業務改善の方法について考えます。]]></content>
+        <author>
+            <name>hosomi-noriko@製造BT部</name>
+        </author>
+        <published>2026-10-30T09:39:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Amazon Connect】顧客情報 CSV を Customer Profiles に登録してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/amazon-connect-customer-profiles-csv-s3/</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-connect-customer-profiles-csv-s3/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-a14da8621c55bd17addadcead8e0e00f/c928a36480d9593938e8d8f65ba92537/amazon-connect" type="image//ct0aopd36mqt/wp-thumbnail-a14da8621c55bd17addadcead8e0e00f/c928a36480d9593938e8d8f65ba92537/amazon-connect"/>
+        <updated>2026-10-30T09:00:48.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Connect Customer Profiles に顧客情報を登録する手順を紹介します。CSV ファイルから簡単にデータを取り込み、エージェントワークスペースで顧客情報を活用する方法をまとめました。]]></summary>
+        <content type="html"><![CDATA[Amazon Connect Customer Profiles に顧客情報を登録する手順を紹介します。CSV ファイルから簡単にデータを取り込み、エージェントワークスペースで顧客情報を活用する方法をまとめました。]]></content>
+        <author>
+            <name>フニ</name>
+        </author>
+        <published>2026-10-30T09:00:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code v2.1.314 の主要アップデート - 作業ディレクトリ外の書き込み拒否とサンドボックス・フックの適用漏れ修正 | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/20261030-cc-updates-v2-1-314/</id>
+        <link href="https://dev.classmethod.jp/articles/20261030-cc-updates-v2-1-314/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/v1790874959/eyecatch/ka9xwy5wvmdbaykvguvl.png" type="image/png"/>
+        <updated>2026-10-30T08:53:06.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code v2.1.314がリリースされました。今回は119件の変更が入り、特に権限とサンドボックスまわりの改善が目立ちます。作業ディレクトリ外への書き込み拒否設定の追加やセキュリティ関連の修正など、注目のアップデートを紹介します。]]></summary>
+        <content type="html"><![CDATA[Claude Code v2.1.314がリリースされました。今回は119件の変更が入り、特に権限とサンドボックスまわりの改善が目立ちます。作業ディレクトリ外への書き込み拒否設定の追加やセキュリティ関連の修正など、注目のアップデートを紹介します。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-10-30T08:53:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2026年10月 Flociアップデートまとめ、Lambda durable functionsとCognitoのMFAが入った | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/floci-2026-10-lambda-durable-functions-cognito-mfa-update/</id>
+        <link href="https://dev.classmethod.jp/articles/floci-2026-10-lambda-durable-functions-cognito-mfa-update/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/dDhdaHbCt0jlaT1iZ78rL/436e348850c88ec11d9cc02ee09802b4/eyecatch_floci_1200x630.png" type="image/png"/>
+        <updated>2026-10-30T08:29:00.000Z</updated>
+        <summary type="html"><![CDATA[AWSエミュレータFlociの2.2.0と2.3.0の更新をまとめました。Lambda durable functions、CognitoのTOTP MFA、S3のバケットポリシー評価、EventBridgeの再試行とDLQを2.3.0で動かし、SageMakerなど新サービス6件やリリース日程の変更も取り上げます。]]></summary>
+        <content type="html"><![CDATA[AWSエミュレータFlociの2.2.0と2.3.0の更新をまとめました。Lambda durable functions、CognitoのTOTP MFA、S3のバケットポリシー評価、EventBridgeの再試行とDLQを2.3.0で動かし、SageMakerなど新サービス6件やリリース日程の変更も取り上げます。]]></content>
+        <author>
+            <name>武田隆志</name>
+        </author>
+        <published>2026-10-30T08:29:00.000Z</published>
+    </entry>
+</feed>
