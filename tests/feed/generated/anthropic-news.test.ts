@@ -24,6 +24,39 @@ afterEach(() => {
 });
 
 describe('Anthropic Newsroomの抽出', () => {
+  it('モジュール名のないCSSクラスでもカードと一覧行から記事を抽出する', () => {
+    const items = extract(`<main><article>
+      <article><header><a href="/news/announcements">Announcements</a><time>Oct 28, 2026</time></header>
+        <a class="newHash_tileLink" href="/claude-release"><h2>注目記事</h2><p>注目概要</p></a>
+      </article>
+      <ul>
+        <li data-listing-row="first"><a class="anotherHash_title-link" href="/claude-release"><h3>重複</h3></a><time>Oct 28, 2026</time></li>
+        <li data-listing-row="second">
+          <a class="anotherHash_title-link" href="/research/article"><h3>研究記事</h3></a>
+          <a class="anotherHash_above-link" href="/research/article"><p>研究概要</p></a>
+          <a class="anotherHash_category-link" href="/news/research">Research</a><time>Oct 27, 2026</time>
+          <div aria-hidden="true"><a class="anotherHash_details-title" href="/research/article"><h3>詳細の重複</h3></a></div>
+        </li>
+        <li data-listing-row="invalid"><a class="anotherHash_title-link" href="/news/no-date"><h3>日付なし</h3></a></li>
+      </ul>
+    </article></main>`);
+    expect(items).toHaveLength(2);
+    expect(items[0]).toMatchObject({
+      url: 'https://www.anthropic.com/claude-release',
+      title: '注目記事',
+      summary: '注目概要',
+      publishedAt: '2026-10-28T00:00:00.000Z',
+      categories: ['Announcements'],
+    });
+    expect(items[1]).toMatchObject({
+      url: 'https://www.anthropic.com/research/article',
+      title: '研究記事',
+      summary: '研究概要',
+      publishedAt: '2026-10-27T00:00:00.000Z',
+      categories: ['Research'],
+    });
+  });
+
   it('注目記事と通常一覧を扱い、URL重複時は先頭の記事を保持する', () => {
     const items = extract(`
       <nav>${listArticle('/news/navigation', 'Sep 1, 2026')}</nav>

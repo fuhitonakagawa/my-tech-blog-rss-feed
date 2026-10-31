@@ -21,7 +21,7 @@ export const claudeArticleId = (url: string): string => {
 export const extractClaudeArticles: GeneratedFeedExtractor = (definition, html) => {
   const $ = load(html);
   const items = new Map<string, ReturnType<GeneratedFeedExtractor>[number]>();
-  $('main [data-card-group="true"] > a[data-cta-position="resourcesTypeIndex"]').each((_, element) => {
+  $('main [data-card-group="true"] > a:has(h3)').each((_, element) => {
     const card = $(element);
     const title = removeInvalidUnicode(card.find('h3').first().text()).replace(/\s+/g, ' ').trim();
     const href = card.attr('href') ?? '';

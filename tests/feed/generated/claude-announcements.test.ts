@@ -24,6 +24,32 @@ afterEach(() => {
 });
 
 describe('Claude Product announcementsの生成フィード', () => {
+  it('計測属性のない新しいカードでも対象グリッドだけを抽出し、GUIDを保持する', () => {
+    const card = article('Oct 28, 2026', '/resources/articles/release', '新しい記事').replace(
+      'data-cta-position="resourcesTypeIndex"',
+      'class="ResourceCard-module__newHash__card"',
+    );
+    const items = extract(`<nav><div data-card-group="true">${card}</div></nav>
+      <main><div class="carousel">${article('Oct 29, 2026', '/blog/featured')}</div>
+        <div data-card-group="true">${card}${card}
+          <a href="/resources/articles/no-date"><h3>日付なし</h3></a>
+          <a href="/resources/articles/no-title"><div><span>Oct 28, 2026</span></div></a>
+          <a href="javascript:alert(1)"><div><span>Oct 28, 2026</span></div><h3>不正URL</h3></a>
+        </div>
+      </main>`);
+    expect(items).toEqual([
+      {
+        id: 'https://claude.com/blog/release',
+        url: 'https://claude.com/resources/articles/release',
+        title: '新しい記事',
+        publishedAt: '2026-10-28T00:00:00.000Z',
+        summary: '',
+        creator: '',
+        categories: ['Product announcements'],
+      },
+    ]);
+  });
+
   it('グリッドの記事だけを抽出しリスト表示やナビゲーションの重複を含めない', () => {
     const card = article('September 25, 2026');
     const items = extract(`
