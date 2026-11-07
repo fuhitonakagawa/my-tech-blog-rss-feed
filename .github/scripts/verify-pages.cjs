@@ -7,17 +7,25 @@ module.exports = async ({ github, context, core }, options = {}) => {
   const branch = (await github.rest.repos.getBranch({ owner, repo, branch: 'gh-pages' })).data;
   const sha = branch.commit.sha;
   const started = Date.now();
-  const timeout = options.timeout || 8 * 60 * 1000;
+  // Pagesは1試行で最大10分待つ。初回と再試行2回、起動・公開反映待ちの余裕を確保する。
+  // generate-feed.ymlのdeployジョブは、この確認時間に配置処理の余裕を加えた上限にする。
+  const timeout = options.timeout || 40 * 60 * 1000;
   const pause = options.pause || ((ms) => new Promise((resolve) => setTimeout(resolve, ms)));
   const read = options.fetch || globalThis.fetch;
   let retries = 0;
   let retriedAttempt = 0;
   let url = '';
+  let lastState = 'Pages実行待ち';
   while (Date.now() - started < timeout) {
     const runs = (await github.rest.actions.listWorkflowRunsForRepo({ owner, repo, head_sha: sha, per_page: 20 })).data.workflow_runs;
     const run = runs.find((entry) => entry.path === 'dynamic/pages/pages-build-deployment');
     if (run) {
       url = run.html_url;
+      const state = `attempt=${run.run_attempt}, status=${run.status}, conclusion=${run.conclusion || 'pending'}`;
+      if (state !== lastState) {
+        core.info(`Pages公開の状態: ${state}: ${url}`);
+        lastState = state;
+      }
       if (run.status === 'completed' && run.conclusion === 'success') {
         try {
           const response = await read(`https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/feeds/delivery/index.json?deployment=${sha}&t=${Date.now()}`, { signal: AbortSignal.timeout(10000) });
@@ -41,5 +49,5 @@ module.exports = async ({ github, context, core }, options = {}) => {
     }
     await pause(10000);
   }
-  throw new Error(`Pages公開または実URLの反映を期限内に確認できませんでした: ${url || sha}`);
+  throw new Error(`Pages公開または実URLの反映を期限内に確認できませんでした (${lastState}, 再試行=${retries}/2): ${url || sha}`);
 };

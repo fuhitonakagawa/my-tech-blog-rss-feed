@@ -131,7 +131,8 @@ jobs:
     name: Deploy Site
     needs: [build, save-acquisition]
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    # Pages確認40分に、成果物の取得・gh-pagesへの配置の余裕を加える。
+    timeout-minutes: 45
     permissions:
       contents: write
       actions: write
