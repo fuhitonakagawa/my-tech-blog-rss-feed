@@ -1,0 +1,1126 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Database - Translated Japanese｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/feeds/feed.json",
+    "description": "Database - Translated Japanese：enの記事を日本語に翻訳してまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://www.postgresql.org/about/news/agensgraph-218-released-graph-database-on-postgresql-18-with-expanded-iso-gql-support-3437/",
+            "content_html": "アジェンスグラフ開発 2.18シリーズの最新バージョンであるAgensGraph v2.18.6.1をリリースしました。 アジェンズ グラフは、PostgreSQL 18.6 上に構築されたオープンソースのグラフデータベースで、同じデータで SQL とグラフのクエリを実行し、同じトランザクションでも同じステートメントで作成されます。 AgensGraph 2.18は、ISO GQL規格(ISO/IEC 39075)、プロパティグラフの国際標準クエリ言語に対する主要なステップです。 AgensGraph を GQL: 2.18 で行なうことにコミットしています。 GQL 節の最初のセットを openCypher と一緒に追加し、今後リリースのフォローが増えます。 パフォーマンスは、このリリースの他の焦点でした。 可変長のトラバースは、各ホップでエッジラベルのインデックスを使用します。これにより、2.17はすべてのホップでラベル全体をスキャンしました。 公開の soc-Pokec グラフ(30,000,000 エッジ)では、2 ホップのトラバーサールが 20 秒以内に終了しなかった 2 ホ",
+            "url": "https://www.postgresql.org/about/news/agensgraph-218-released-graph-database-on-postgresql-18-with-expanded-iso-gql-support-3437/",
+            "title": "AgensGraph 2.18 リリース: PostgreSQL 18 のグラフデータベースを拡張した ISO GQL サポート | PostgreSQL news",
+            "summary": "アジェンスグラフ開発 2.18シリーズの最新バージョンであるAgensGraph v2.18.6.1をリリースしました。 アジェンズ グラフは、PostgreSQL 18.6 上に構築されたオープンソースのグラフデータベースで、同じデータで SQL とグラフのクエリを実行し、同じトランザクションでも同じステートメントで作成されます。 AgensGraph 2.18は、ISO GQL規格(ISO/I",
+            "date_modified": "2026-11-07T00:00:00.000Z",
+            "date_published": "2026-11-07T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AgensGraph 2.18 Released: Graph Database on PostgreSQL 18 with Expanded ISO GQL Support",
+                "translatedTitle": "AgensGraph 2.18 リリース: PostgreSQL 18 のグラフデータベースを拡張した ISO GQL サポート",
+                "blogTitle": "PostgreSQL news",
+                "blogLink": "https://www.postgresql.org/",
+                "blogLinkMd5Hash": "9898fa08ab53ad93fe00c36437b6a72b",
+                "favicon": "https://www.postgresql.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.postgresql.org/about/news/brume-fk-safe-pseudonymization-for-postgresql-test-and-debug-copies-3434/",
+            "content_html": "Brume 2.1 は、テスト、デバッグ、デモ用のPostgreSQLデータベースのデテミニズリスティック、外部キーセーフな疑似コピーを作成するオープンソース (Apache 2.0) ツールです。 なぜブルーム? 開発チームは、バグを再現したり、テストを実行したり、デモを準備したりするために、現実的なデータを必要とすることが多いが、実際の個人データを公開するプロダクションをコピーすることが多い。 古典的なマスキングスクリプトは、参照の整合性を破る傾向があります。これにより、トリガーを無効にしたり、制約を中断したり、壊れた結合を手で修復したりすることができます。 Brume は、ソースデータベースの対象となるサブセットを、対象データベースまたは .sql ファイルにコピーし、何かが書かれている前に、個人データをフライに変換します。 外部キーは、ターゲットに有効なエンドツーエンドを保持します。 ブルームはソースデータベースからのみ読み込まれます。 主な特長 列レベルの戦略: 実質的な合成値のためのFAKE, 部分的にはMASK, 片方ハッシュのためのHASH, NULLIFYは、機密デー",
+            "url": "https://www.postgresql.org/about/news/brume-fk-safe-pseudonymization-for-postgresql-test-and-debug-copies-3434/",
+            "title": "Brume:PostgreSQLテストとデバッグコピー用のFK-safe擬似化 | PostgreSQL news",
+            "summary": "Brume 2.1 は、テスト、デバッグ、デモ用のPostgreSQLデータベースのデテミニズリスティック、外部キーセーフな疑似コピーを作成するオープンソース (Apache 2.0) ツールです。 なぜブルーム? 開発チームは、バグを再現したり、テストを実行したり、デモを準備したりするために、現実的なデータを必要とすることが多いが、実際の個人データを公開するプロダクションをコピーすることが多い。",
+            "date_modified": "2026-11-07T00:00:00.000Z",
+            "date_published": "2026-11-07T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Brume: FK-safe pseudonymization for PostgreSQL test and debug copies",
+                "translatedTitle": "Brume:PostgreSQLテストとデバッグコピー用のFK-safe擬似化",
+                "blogTitle": "PostgreSQL news",
+                "blogLink": "https://www.postgresql.org/",
+                "blogLinkMd5Hash": "9898fa08ab53ad93fe00c36437b6a72b",
+                "favicon": "https://www.postgresql.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.postgresql.org/about/news/heapdeck-an-on-call-monitor-for-postgresql-on-iphone-and-ipad-3436/",
+            "content_html": "HeapDeck は、iPhone と iPad 用の App Store で PostgreSQL 13 から 19 の呼び出しで、エンジニア向けの新しいネイティブアプリです。 10 個のタイルで 1 つの健康の頂点に開きます。 ロック画面は pg_blocking_pids() からツリーを上にあるrootブロッカーで描画し、停止するセッションを自由にカウントします。 他の画面は pg_stat_active、トランザクション ID のラップアラウンドとデッドタプル、レプリケーションのラグとスロット、pg_stat_statements をカバーします。 アプリは、直接接続またはSSHトンネルを使用して、TLSとピン留めされた指紋。 ベンダーサーバーは、電話とデータベース間では接続できません。 アラートを開いて送信する時に機能しますので、既存のアラートの横に行きます。 1つのサーバーを監視することは自由です。 HeapDeck Proは、複数のサーバーとアクションを追加するワンタイムアプリ内購入です。キャンセル、終了、VACUUM、スロットをドロップして書き込みます。 https:",
+            "url": "https://www.postgresql.org/about/news/heapdeck-an-on-call-monitor-for-postgresql-on-iphone-and-ipad-3436/",
+            "title": "HeapDeck: iPhoneとiPadでPostgreSQL用のオンコールモニター | PostgreSQL news",
+            "summary": "HeapDeck は、iPhone と iPad 用の App Store で PostgreSQL 13 から 19 の呼び出しで、エンジニア向けの新しいネイティブアプリです。 10 個のタイルで 1 つの健康の頂点に開きます。 ロック画面は pg_blocking_pids() からツリーを上にあるrootブロッカーで描画し、停止するセッションを自由にカウントします。 他の画面は pg_sta",
+            "date_modified": "2026-11-07T00:00:00.000Z",
+            "date_published": "2026-11-07T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "HeapDeck: an on-call monitor for PostgreSQL on iPhone and iPad",
+                "translatedTitle": "HeapDeck: iPhoneとiPadでPostgreSQL用のオンコールモニター",
+                "blogTitle": "PostgreSQL news",
+                "blogLink": "https://www.postgresql.org/",
+                "blogLinkMd5Hash": "9898fa08ab53ad93fe00c36437b6a72b",
+                "favicon": "https://www.postgresql.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.postgresql.org/about/news/pg-observability-map-100-released-3427/",
+            "content_html": "PostgreSQL の保守性、メトリック、内部診断ビューを視覚化し、探求するインタラクティブな Web ベースのツールである PG の保守性マップの初回リリース(1.0.0)をお知らせします。 主な特長とハイライト:PostgreSQLシステムビュー、関数、統計のインタラクティブなビジュアルマッピング。 アーキテクチャのコンテキスト化:各項目は、関連するPostgreSQLのアーキテクチャセクションに直接マップされます。 PostgreSQL 版(PG 19サポートを含む)で簡単にナビゲーションできます。 軽量なインターフェイス、Webブラウザで直接アクセス可能。 リンクとリソース: ライブインタラクティブデモ: meob.github.io/pg-observability-map/Source コードとドキュメント: github.com/meob/pg-observability-map",
+            "url": "https://www.postgresql.org/about/news/pg-observability-map-100-released-3427/",
+            "title": "PGの観察性地図1.0.0は解放しました | PostgreSQL news",
+            "summary": "PostgreSQL の保守性、メトリック、内部診断ビューを視覚化し、探求するインタラクティブな Web ベースのツールである PG の保守性マップの初回リリース(1.0.0)をお知らせします。 主な特長とハイライト:PostgreSQLシステムビュー、関数、統計のインタラクティブなビジュアルマッピング。 アーキテクチャのコンテキスト化:各項目は、関連するPostgreSQLのアーキテクチャセクシ",
+            "date_modified": "2026-11-07T00:00:00.000Z",
+            "date_published": "2026-11-07T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "PG Observability Map 1.0.0 Released",
+                "translatedTitle": "PGの観察性地図1.0.0は解放しました",
+                "blogTitle": "PostgreSQL news",
+                "blogLink": "https://www.postgresql.org/",
+                "blogLinkMd5Hash": "9898fa08ab53ad93fe00c36437b6a72b",
+                "favicon": "https://www.postgresql.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.databricks.com/blog/read-dont-copy-replacing-file-feeds-opensharing-part-2-how-implement",
+            "content_html": "多くのデータ共有アーキテクチャは、馴染みのあるパターンから始まります。 プロバイダー輸出...",
+            "url": "https://www.databricks.com/blog/read-dont-copy-replacing-file-feeds-opensharing-part-2-how-implement",
+            "title": "読み込み、コピーしないでください: ファイルのフィードを OpenSharing で置き換える - パート 2 (実装方法) | Databricks",
+            "summary": "多くのデータ共有アーキテクチャは、馴染みのあるパターンから始まります。 プロバイダー輸出...",
+            "image": "https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3_0.png",
+            "date_modified": "2026-11-06T22:13:00.000Z",
+            "date_published": "2026-11-06T22:13:00.000Z",
+            "tags": [
+                "Engineering",
+                "Tutorials"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Read, don't copy: replacing file feeds with OpenSharing - Part 2 (How to Implement)",
+                "translatedTitle": "読み込み、コピーしないでください: ファイルのフィードを OpenSharing で置き換える - パート 2 (実装方法)",
+                "blogTitle": "Databricks",
+                "blogLink": "https://www.databricks.com",
+                "blogLinkMd5Hash": "f6cce8cfd7239d663c716aad957c585c",
+                "favicon": "https://www.databricks.com/en-blog-assets/favicon-32x32.png?v=c9b9916c3b27dc51866c46b79a6e9b88"
+            }
+        },
+        {
+            "id": "https://www.databricks.com/blog/read-dont-copy-replacing-file-and-api-feeds-opensharing-part-1-why",
+            "content_html": "SFTP や API で顧客からデータをインジェストするのであれば、おそらく...",
+            "url": "https://www.databricks.com/blog/read-dont-copy-replacing-file-and-api-feeds-opensharing-part-1-why",
+            "title": "読み込み、コピーしないでください: ファイルと API フィードを OpenSharing に置き換える - Part 1 (なぜ) | Databricks",
+            "summary": "SFTP や API で顧客からデータをインジェストするのであれば、おそらく...",
+            "image": "https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3_0.png",
+            "date_modified": "2026-11-06T22:10:00.000Z",
+            "date_published": "2026-11-06T22:10:00.000Z",
+            "tags": [
+                "Data Strategy",
+                "Insights"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Read, don't copy: replacing file and API feeds with OpenSharing - Part 1 (The Why)",
+                "translatedTitle": "読み込み、コピーしないでください: ファイルと API フィードを OpenSharing に置き換える - Part 1 (なぜ)",
+                "blogTitle": "Databricks",
+                "blogLink": "https://www.databricks.com",
+                "blogLinkMd5Hash": "f6cce8cfd7239d663c716aad957c585c",
+                "favicon": "https://www.databricks.com/en-blog-assets/favicon-32x32.png?v=c9b9916c3b27dc51866c46b79a6e9b88"
+            }
+        },
+        {
+            "id": "https://clickhouse.com/blog/a-month-with-walshadow-clickhouse-managed-postgres",
+            "content_html": "ASAHI秀彦は、WalShadowのプライベートプレビューテストの月を共有し、ClickPipesとレプリケーションレイテンシーを比較し、データの正確性、スキーマの変更、および回復を確認します。",
+            "url": "https://clickhouse.com/blog/a-month-with-walshadow-clickhouse-managed-postgres",
+            "title": "ClickHouseマネージドPostgresでWalShadowで1ヶ月から学んだこと | ClickHouse Blog",
+            "summary": "ASAHI秀彦は、WalShadowのプライベートプレビューテストの月を共有し、ClickPipesとレプリケーションレイテンシーを比較し、データの正確性、スキーマの変更、および回復を確認します。",
+            "image": "https://clickhouse.com/_next/image?url=%2Fuploads%2FIMG_5912_4fde8778dc.jpg&w=1200&h=630&q=75",
+            "date_modified": "2026-11-06T16:16:22.000Z",
+            "date_published": "2026-11-06T16:16:22.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "What I learned from a month with WalShadow on ClickHouse Managed Postgres",
+                "translatedTitle": "ClickHouseマネージドPostgresでWalShadowで1ヶ月から学んだこと",
+                "blogTitle": "ClickHouse Blog",
+                "blogLink": "https://clickhouse.com/blog",
+                "blogLinkMd5Hash": "1d8a43990a7816e1a389ec59226c1b95",
+                "favicon": "https://clickhouse.com/favicon.ico?favicon.1-9m4wq8d-w30.ico"
+            }
+        },
+        {
+            "id": "https://www.databricks.com/blog/how-public-sector-organizations-can-govern-ai-scale",
+            "content_html": "すべての政府のCIOは、AIを採用し、より速く移動し、より多くのことをやります...",
+            "url": "https://www.databricks.com/blog/how-public-sector-organizations-can-govern-ai-scale",
+            "title": "パブリックセクター組織がAIをスケールで管理できる方法 | Databricks",
+            "summary": "すべての政府のCIOは、AIを採用し、より速く移動し、より多くのことをやります...",
+            "image": "https://www.databricks.com/sites/default/files/2026-11/image1.png",
+            "date_modified": "2026-11-06T15:14:29.000Z",
+            "date_published": "2026-11-06T15:14:29.000Z",
+            "tags": [
+                "Industries",
+                "Unity Gateway",
+                "Public Sector"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How public sector organizations can govern AI at scale",
+                "translatedTitle": "パブリックセクター組織がAIをスケールで管理できる方法",
+                "blogTitle": "Databricks",
+                "blogLink": "https://www.databricks.com",
+                "blogLinkMd5Hash": "f6cce8cfd7239d663c716aad957c585c",
+                "favicon": "https://www.databricks.com/en-blog-assets/favicon-32x32.png?v=c9b9916c3b27dc51866c46b79a6e9b88"
+            }
+        },
+        {
+            "id": "https://clickhouse.com/blog/clickhouse-release-26-10",
+            "content_html": "ClickHouse 26.10 は、機能の構成、より柔軟な参加、より高速なグループによる問い合わせ、ディスクスピルリング、実験的な列のキャッシュ、および Freeform および SQLite フォーマットを導入しています。",
+            "url": "https://clickhouse.com/blog/clickhouse-release-26-10",
+            "title": "ClickHouse リリース 26.10 | ClickHouse Blog",
+            "summary": "ClickHouse 26.10 は、機能の構成、より柔軟な参加、より高速なグループによる問い合わせ、ディスクスピルリング、実験的な列のキャッシュ、および Freeform および SQLite フォーマットを導入しています。",
+            "image": "https://clickhouse.com/_next/image?url=%2Fuploads%2FBlog_Cover_1200x630_14_380a4d0d49.png&w=1200&h=630&q=75",
+            "date_modified": "2026-11-06T11:45:40.000Z",
+            "date_published": "2026-11-06T11:45:40.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "ClickHouse release 26.10",
+                "translatedTitle": "ClickHouse リリース 26.10",
+                "blogTitle": "ClickHouse Blog",
+                "blogLink": "https://clickhouse.com/blog",
+                "blogLinkMd5Hash": "1d8a43990a7816e1a389ec59226c1b95",
+                "favicon": "https://clickhouse.com/favicon.ico?favicon.1-9m4wq8d-w30.ico"
+            }
+        },
+        {
+            "id": "https://github.com/milvus-io/milvus/releases/tag/pkg%2Fv2.6.27",
+            "content_html": "サインオフバイ:コンクイXia © 2018 www.zilliz.com 著作権所有",
+            "url": "https://github.com/milvus-io/milvus/releases/tag/pkg%2Fv2.6.27",
+            "title": "pkg/v2.6.27: 強化: Bump milvus と v2.6.27 にプロト (#55193) | Release notes from milvus",
+            "summary": "サインオフバイ:コンクイXia © 2018 www.zilliz.com 著作権所有",
+            "image": "https://repository-images.githubusercontent.com/208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b",
+            "date_modified": "2026-11-06T06:18:02.000Z",
+            "date_published": "2026-11-06T06:18:02.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "pkg/v2.6.27: enhance: Bump milvus & proto to v2.6.27 (#55193)",
+                "translatedTitle": "pkg/v2.6.27: 強化: Bump milvus と v2.6.27 にプロト (#55193)",
+                "blogTitle": "Release notes from milvus",
+                "blogLink": "https://github.com/milvus-io/milvus/releases",
+                "blogLinkMd5Hash": "9e2ce3ffe9c5ff966da7a36bb06a0e85",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/milvus-io/milvus/releases/tag/v2.6.27",
+            "content_html": "サインオフバイ:コンクイXia © 2018 www.zilliz.com 著作権所有",
+            "url": "https://github.com/milvus-io/milvus/releases/tag/v2.6.27",
+            "title": "強化: Bump milvus と v2.6.27 にプロト (#55193) | Release notes from milvus",
+            "summary": "サインオフバイ:コンクイXia © 2018 www.zilliz.com 著作権所有",
+            "image": "https://repository-images.githubusercontent.com/208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b",
+            "date_modified": "2026-11-06T06:18:02.000Z",
+            "date_published": "2026-11-06T06:18:02.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "enhance: Bump milvus & proto to v2.6.27 (#55193)",
+                "translatedTitle": "強化: Bump milvus と v2.6.27 にプロト (#55193)",
+                "blogTitle": "Release notes from milvus",
+                "blogLink": "https://github.com/milvus-io/milvus/releases",
+                "blogLinkMd5Hash": "9e2ce3ffe9c5ff966da7a36bb06a0e85",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://neon.com/docs/changelog/2026-11-06",
+            "content_html": "すべてのアカウントは、AI Gatewayクレジットを購入することができます。 AI Gateway は、アップロードされた写真の記述、または回答など、アプリに AI 機能を追加することができます。",
+            "url": "https://neon.com/docs/changelog/2026-11-06",
+            "title": "すべてのアカウントのAIゲートウェイクレジット, コンソールでのプロジェクトの回復, 最大16 CUまでの自動更新, より多くのリリース - 11月 06, 2026 | Changelog — Neon Docs",
+            "summary": "すべてのアカウントは、AI Gatewayクレジットを購入することができます。 AI Gateway は、アップロードされた写真の記述、または回答など、アプリに AI 機能を追加することができます。",
+            "image": "https://neon.com/docs/og?title=Q2hhbmdlbG9nIC0gTm92IDA2LCAyMDI2",
+            "date_modified": "2026-11-06T00:00:00.000Z",
+            "date_published": "2026-11-06T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AI Gateway credits for all accounts, project recovery in the Console, automatic updates up to 16 CU, and more release - Nov 06, 2026",
+                "translatedTitle": "すべてのアカウントのAIゲートウェイクレジット, コンソールでのプロジェクトの回復, 最大16 CUまでの自動更新, より多くのリリース - 11月 06, 2026",
+                "blogTitle": "Changelog — Neon Docs",
+                "blogLink": "https://neon.com",
+                "blogLinkMd5Hash": "536d058100f998227f02474ca5dda4fc",
+                "favicon": "https://neon.com/favicon/favicon.svg"
+            }
+        },
+        {
+            "id": "https://www.databricks.com/blog/real-time-fraud-detection-feature-views",
+            "content_html": "リアルタイムの不正検知は、3つの機能に依存します。 顧客が何をしたか...",
+            "url": "https://www.databricks.com/blog/real-time-fraud-detection-feature-views",
+            "title": "機能ビューによるリアルタイムの不正検知 | Databricks",
+            "summary": "リアルタイムの不正検知は、3つの機能に依存します。 顧客が何をしたか...",
+            "image": "https://www.databricks.com/sites/default/files/2026-11/real-time-fraud-detection-with-feature-views-og.png",
+            "date_modified": "2026-11-05T23:23:36.000Z",
+            "date_published": "2026-11-05T23:23:36.000Z",
+            "tags": [
+                "Platform",
+                "Data Science and ML"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Real-time fraud detection with Feature Views",
+                "translatedTitle": "機能ビューによるリアルタイムの不正検知",
+                "blogTitle": "Databricks",
+                "blogLink": "https://www.databricks.com",
+                "blogLinkMd5Hash": "f6cce8cfd7239d663c716aad957c585c",
+                "favicon": "https://www.databricks.com/en-blog-assets/favicon-32x32.png?v=c9b9916c3b27dc51866c46b79a6e9b88"
+            }
+        },
+        {
+            "id": "https://www.databricks.com/blog/builders-guide-scaling-databricks-apps",
+            "content_html": "おめでとうございます。Databricks Apps にアプリを組み、カップルからなくなってしまいました。",
+            "url": "https://www.databricks.com/blog/builders-guide-scaling-databricks-apps",
+            "title": "データブリックアプリをスケーリングするためのビルダーのガイド | Databricks",
+            "summary": "おめでとうございます。Databricks Apps にアプリを組み、カップルからなくなってしまいました。",
+            "image": "https://www.databricks.com/sites/default/files/blog_images/a-builder-s-guide-to-scaling-databricks-blog-img-og.png",
+            "date_modified": "2026-11-05T18:00:00.000Z",
+            "date_published": "2026-11-05T18:00:00.000Z",
+            "tags": [
+                "Data Strategy",
+                "Best Practices"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "A builder’s guide to scaling Databricks Apps",
+                "translatedTitle": "データブリックアプリをスケーリングするためのビルダーのガイド",
+                "blogTitle": "Databricks",
+                "blogLink": "https://www.databricks.com",
+                "blogLinkMd5Hash": "f6cce8cfd7239d663c716aad957c585c",
+                "favicon": "https://www.databricks.com/en-blog-assets/favicon-32x32.png?v=c9b9916c3b27dc51866c46b79a6e9b88"
+            }
+        },
+        {
+            "id": "https://www.databricks.com/blog/which-data-collaboration-tool-opensharing-clean-rooms-marketplace",
+            "content_html": "過去の表にまつわる世界が広がっています。 安全に共有できるようになりました。",
+            "url": "https://www.databricks.com/blog/which-data-collaboration-tool-opensharing-clean-rooms-marketplace",
+            "title": "データコラボレーション ツール: オープンシェアリング、クリーンルーム、マーケットプレイス | Databricks",
+            "summary": "過去の表にまつわる世界が広がっています。 安全に共有できるようになりました。",
+            "image": "https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3.png",
+            "date_modified": "2026-11-05T16:29:00.000Z",
+            "date_published": "2026-11-05T16:29:00.000Z",
+            "tags": [
+                "Data Strategy",
+                "Best Practices"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Which Data Collaboration Tool: OpenSharing, Clean Rooms, Marketplace",
+                "translatedTitle": "データコラボレーション ツール: オープンシェアリング、クリーンルーム、マーケットプレイス",
+                "blogTitle": "Databricks",
+                "blogLink": "https://www.databricks.com",
+                "blogLinkMd5Hash": "f6cce8cfd7239d663c716aad957c585c",
+                "favicon": "https://www.databricks.com/en-blog-assets/favicon-32x32.png?v=c9b9916c3b27dc51866c46b79a6e9b88"
+            }
+        },
+        {
+            "id": "https://www.databricks.com/blog/delta-sharing-opensharing-what-changed-whats-next",
+            "content_html": "デルタの共有は、何千もの組織がライブデータを交換する方法でした...",
+            "url": "https://www.databricks.com/blog/delta-sharing-opensharing-what-changed-whats-next",
+            "title": "デルタの共有からOpenSharing:変更されたもの、次 | Databricks",
+            "summary": "デルタの共有は、何千もの組織がライブデータを交換する方法でした...",
+            "image": "https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3.png",
+            "date_modified": "2026-11-05T16:25:00.000Z",
+            "date_published": "2026-11-05T16:25:00.000Z",
+            "tags": [
+                "Data Strategy",
+                "Insights"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "From Delta Sharing to OpenSharing: what changed, what's next",
+                "translatedTitle": "デルタの共有からOpenSharing:変更されたもの、次",
+                "blogTitle": "Databricks",
+                "blogLink": "https://www.databricks.com",
+                "blogLinkMd5Hash": "f6cce8cfd7239d663c716aad957c585c",
+                "favicon": "https://www.databricks.com/en-blog-assets/favicon-32x32.png?v=c9b9916c3b27dc51866c46b79a6e9b88"
+            }
+        },
+        {
+            "id": "https://www.databricks.com/blog/push-based-cdc-unity-catalog-zerobus-ingest-and-debezium",
+            "content_html": "運用データベースのデータでは、ビジネスの決定、およびその分析の多くを促進します。",
+            "url": "https://www.databricks.com/blog/push-based-cdc-unity-catalog-zerobus-ingest-and-debezium",
+            "title": "プッシュベースCDCをユニティカタログにゼロバスインジェストとデベジウム | Databricks",
+            "summary": "運用データベースのデータでは、ビジネスの決定、およびその分析の多くを促進します。",
+            "image": "https://www.databricks.com/sites/default/files/2026-11/push-based-cdc-flow-headline-2400x1256.png",
+            "date_modified": "2026-11-05T12:48:00.000Z",
+            "date_published": "2026-11-05T12:48:00.000Z",
+            "tags": [
+                "Engineering"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Push-based CDC into Unity Catalog with Zerobus Ingest and Debezium",
+                "translatedTitle": "プッシュベースCDCをユニティカタログにゼロバスインジェストとデベジウム",
+                "blogTitle": "Databricks",
+                "blogLink": "https://www.databricks.com",
+                "blogLinkMd5Hash": "f6cce8cfd7239d663c716aad957c585c",
+                "favicon": "https://www.databricks.com/en-blog-assets/favicon-32x32.png?v=c9b9916c3b27dc51866c46b79a6e9b88"
+            }
+        },
+        {
+            "id": "https://neon.com/blog/lakebase-postgres-reads-never-touch-object-storage",
+            "content_html": "オブジェクトストレージのpostgresを実行するための最も一般的な引数は、オブジェクトストレージがバックアップしたPostgresが遅いPostgresである必要があることです。 前提は正しいですが、結論はそうではありません。",
+            "url": "https://neon.com/blog/lakebase-postgres-reads-never-touch-object-storage",
+            "title": "Lakebase Postgresはオブジェクトストレージ上に構築されていますが、99.99999%の読み込みは決して触れません | Blog — Neon Docs",
+            "summary": "オブジェクトストレージのpostgresを実行するための最も一般的な引数は、オブジェクトストレージがバックアップしたPostgresが遅いPostgresである必要があることです。 前提は正しいですが、結論はそうではありません。",
+            "image": "https://cdn.neonapi.io/public/images/pages/blog/lakebase-postgres-reads-never-touch-object-storage/social-1.jpg",
+            "date_modified": "2026-11-05T12:00:00.000Z",
+            "date_published": "2026-11-05T12:00:00.000Z",
+            "author": {
+                "name": "Carlota Soto"
+            },
+            "tags": [
+                "Engineering"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Lakebase Postgres is built on object storage, but 99.99999% of reads never touch it",
+                "translatedTitle": "Lakebase Postgresはオブジェクトストレージ上に構築されていますが、99.99999%の読み込みは決して触れません",
+                "blogTitle": "Blog — Neon Docs",
+                "blogLink": "https://neon.com",
+                "blogLinkMd5Hash": "536d058100f998227f02474ca5dda4fc",
+                "favicon": "https://neon.com/favicon/favicon.svg"
+            }
+        },
+        {
+            "id": "https://neon.com/blog/save-tokens-with-neon-function-templates",
+            "content_html": "エージェントは既にNeon関数を自分で起動することができますが、最初にベストプラクティスを研究するトークンを消費します。 ネオン関数レジストリのテンプレートは、それをスキップし、作業コードから始めることを可能にします。",
+            "url": "https://neon.com/blog/save-tokens-with-neon-function-templates",
+            "title": "Neon Function テンプレートでトークンを保存 | Blog — Neon Docs",
+            "summary": "エージェントは既にNeon関数を自分で起動することができますが、最初にベストプラクティスを研究するトークンを消費します。 ネオン関数レジストリのテンプレートは、それをスキップし、作業コードから始めることを可能にします。",
+            "image": "https://cdn.neonapi.io/public/images/pages/blog/save-tokens-with-neon-function-templates/social.jpg",
+            "date_modified": "2026-11-05T12:00:00.000Z",
+            "date_published": "2026-11-05T12:00:00.000Z",
+            "author": {
+                "name": "Dominik Koch"
+            },
+            "tags": [
+                "Product"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Save tokens with Neon Function templates",
+                "translatedTitle": "Neon Function テンプレートでトークンを保存",
+                "blogTitle": "Blog — Neon Docs",
+                "blogLink": "https://neon.com",
+                "blogLinkMd5Hash": "536d058100f998227f02474ca5dda4fc",
+                "favicon": "https://neon.com/favicon/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/milvus-io/milvus/releases/tag/v3.0.4",
+            "content_html": "v3.0.4リリース日: 2026年10月26日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンゴー SDK バージョン3.0.43.0.23.0.63.0.103.0.0 Milvus v3.0.4 リリースのお知らせ このリリースは、一括インポート、コンパクト化、およびフィルタリングおよびグループ化された検索を高速化し、ストレージV3のレイジー列グループロードを追加し、インポート、コレクションの読み込み、および部分的な更新書き込みにハングを固定します。 改善点 並列およびプレッチャングバイト範囲の入力チャンクを読んで、ソートのコンパクト化読み取りスループットを改善しました(#53437)、パーケット、ランス、およびVortexファイル(#53894)別々のタスク(#54064)を別々のタスクに専用のパッケージにプロキシDMLタスクをリファクタリング(#54064) 密閉されたセグメントの検索のすべての出力フィールドは、検索自体(#54074)と同じセグメントのスナップショットから埋め込まれていることを確認しま",
+            "url": "https://github.com/milvus-io/milvus/releases/tag/v3.0.4",
+            "title": "ミルバス-3.0.4 | Release notes from milvus",
+            "summary": "v3.0.4リリース日: 2026年10月26日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンゴー SDK バージョン3.0.43.0.23.0.63.0.103.0.0 Milvus v3.0.4 リリースのお知らせ このリリースは、一括インポート、コンパクト化、およびフィルタリングおよびグループ化された検索を高速化し、",
+            "image": "https://opengraph.githubassets.com/2f0c1282f06a9e16551c68ee386b39d78630f11d7986bb81084e876985a11a19/milvus-io/milvus/releases/tag/v3.0.4",
+            "date_modified": "2026-11-05T06:25:10.000Z",
+            "date_published": "2026-11-05T06:25:10.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "milvus-3.0.4",
+                "translatedTitle": "ミルバス-3.0.4",
+                "blogTitle": "Release notes from milvus",
+                "blogLink": "https://github.com/milvus-io/milvus/releases",
+                "blogLinkMd5Hash": "9e2ce3ffe9c5ff966da7a36bb06a0e85",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://duckdb.org/2026/11/05/jetbrains-datagrip.html",
+            "content_html": "JetBrains のユーザーは、複数のデータベース接続を 1 つのクエリで共有するデータを要求しました。 独自のクロスデータベースクエリエンジンを構築するよりも、DuckDBのカスタムテーブル機能を使用して、DuckDBの既存のクエリ実行に接続します。 そのため、DuckDB は代替品を上回るようになり、その統合が次へ進むところです。",
+            "url": "https://duckdb.org/2026/11/05/jetbrains-datagrip.html",
+            "title": "JetBrains が DuckDB で DataGrip にクロス・データベース・クエリーを組み込む方法 | DuckDB",
+            "summary": "JetBrains のユーザーは、複数のデータベース接続を 1 つのクエリで共有するデータを要求しました。 独自のクロスデータベースクエリエンジンを構築するよりも、DuckDBのカスタムテーブル機能を使用して、DuckDBの既存のクエリ実行に接続します。 そのため、DuckDB は代替品を上回るようになり、その統合が次へ進むところです。",
+            "image": "https://duckdb.org/images/blog/thumbs/datagrip.png",
+            "date_modified": "2026-11-05T00:00:00.000Z",
+            "date_published": "2026-11-05T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How JetBrains Built Cross-Database Queries into DataGrip with DuckDB",
+                "translatedTitle": "JetBrains が DuckDB で DataGrip にクロス・データベース・クエリーを組み込む方法",
+                "blogTitle": "DuckDB",
+                "blogLink": "https://duckdb.org/",
+                "blogLinkMd5Hash": "ccf85810461dd3f71386b5312261b18e",
+                "favicon": "https://duckdb.org/images/favicon/favicon.ico"
+            }
+        },
+        {
+            "id": "https://redis.io/blog/introducing-the-joint-reference-architecture-for-enterprise-grade-redis-on-vmware-cloud-foundation-9-1/",
+            "content_html": "ブロードコムとRedisMovによるVMwareの共同参照アーキテクチャは、不正検知、ストリーミング分析、AIエージェント、および機能ストアの構築をエンタープライズレベルのリアルタイムデータチームにキャッシュするだけでなく、同時負荷で高速なデータアクセスが必要になります。 スタッフ",
+            "url": "https://redis.io/blog/introducing-the-joint-reference-architecture-for-enterprise-grade-redis-on-vmware-cloud-foundation-9-1/",
+            "title": "VMware Cloud Foundation 9.1 で企業レベルの Redis の共同リファレンスアーキテクチャを導入 | Redis Blog",
+            "summary": "ブロードコムとRedisMovによるVMwareの共同参照アーキテクチャは、不正検知、ストリーミング分析、AIエージェント、および機能ストアの構築をエンタープライズレベルのリアルタイムデータチームにキャッシュするだけでなく、同時負荷で高速なデータアクセスが必要になります。 スタッフ",
+            "image": "https://cdn.sanity.io/images/sy1jschh/production/f0e021588fb93bc20610b40761cbf2cecffa6a34-1200x628.png",
+            "date_modified": "2026-11-05T00:00:00.000Z",
+            "date_published": "2026-11-05T00:00:00.000Z",
+            "author": {
+                "name": "Mike  Moss "
+            },
+            "tags": [
+                "Tech"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Introducing the joint reference architecture for enterprise-grade Redis on VMware Cloud Foundation 9.1",
+                "translatedTitle": "VMware Cloud Foundation 9.1 で企業レベルの Redis の共同リファレンスアーキテクチャを導入",
+                "blogTitle": "Redis Blog",
+                "blogLink": "https://redis.io/en/blog",
+                "blogLinkMd5Hash": "ddf9e3652c5e2fa7e8254559980f64e0",
+                "favicon": "https://redis.io/favicon.ico?favicon.037vg_892ut9f.ico"
+            }
+        },
+        {
+            "id": "https://www.databricks.com/blog/introducing-apache-spark-43-now-available-databricks-runtime-19",
+            "content_html": "導入事例 Apache Spark 4.3 は、Real-Time モードにステートフルな処理を実現しました。",
+            "url": "https://www.databricks.com/blog/introducing-apache-spark-43-now-available-databricks-runtime-19",
+            "title": "Apache Spark®の紹介 4.3 - Databricks Runtime 19で利用可能になりました | Databricks",
+            "summary": "導入事例 Apache Spark 4.3 は、Real-Time モードにステートフルな処理を実現しました。",
+            "image": "https://www.databricks.com/sites/default/files/2026-10/2026-09-Blog-Introducing-Apache-Spark-R-4.3-OG-1200x628-2x.png",
+            "date_modified": "2026-11-05T00:00:00.000Z",
+            "date_published": "2026-11-05T00:00:00.000Z",
+            "tags": [
+                "Engineering",
+                "Open Source"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Introducing Apache Spark® 4.3 - Now available in Databricks Runtime 19",
+                "translatedTitle": "Apache Spark®の紹介 4.3 - Databricks Runtime 19で利用可能になりました",
+                "blogTitle": "Databricks",
+                "blogLink": "https://www.databricks.com",
+                "blogLinkMd5Hash": "f6cce8cfd7239d663c716aad957c585c",
+                "favicon": "https://www.databricks.com/en-blog-assets/favicon-32x32.png?v=c9b9916c3b27dc51866c46b79a6e9b88"
+            }
+        },
+        {
+            "id": "https://www.mongodb.com/company/blog/innovation/why-actionable-banking-is-critical-stepping-stone-full-autonomy",
+            "content_html": "今日は自分の財政的な健康として重要なことはほとんどありません。 私たちのほとんどは、預金が清算するときのように、私たちの銀行口座で何が起こっているかのトップに滞在したいです, 私たちは、クレジットカードの制限に達している場合, または我々は最終的にその30年間の住宅ローンを支払い、その夢の休暇のための資金を解放したり、私たちの子供の大学の授業料を支払うことができます. しかし、取引が起こるとき、私たちは常にすぐにフィードバックを得ません。 その情報はしばしばou内のバックエンドに座っています",
+            "url": "https://www.mongodb.com/company/blog/innovation/why-actionable-banking-is-critical-stepping-stone-full-autonomy",
+            "title": "なぜ実用的な銀行は、完全なAutonomyに重要なステップストーンです | MongoDB Blog",
+            "summary": "今日は自分の財政的な健康として重要なことはほとんどありません。 私たちのほとんどは、預金が清算するときのように、私たちの銀行口座で何が起こっているかのトップに滞在したいです, 私たちは、クレジットカードの制限に達している場合, または我々は最終的にその30年間の住宅ローンを支払い、その夢の休暇のための資金を解放したり、私たちの子供の大学の授業料を支払うことができます. しかし、取引が起こるとき、私",
+            "image": "https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt2b69c260a9316ffd/6aeb65797111f54d3e2f75ad/Blog_Meta_Image_Template_Brand_Refresh_(1).png",
+            "date_modified": "2026-11-05T00:00:00.000Z",
+            "date_published": "2026-11-05T00:00:00.000Z",
+            "tags": [
+                "Industry Solutions"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Why Actionable Banking Is the Critical Stepping Stone to Full Autonomy",
+                "translatedTitle": "なぜ実用的な銀行は、完全なAutonomyに重要なステップストーンです",
+                "blogTitle": "MongoDB Blog",
+                "blogLink": "https://www.mongodb.com/blog",
+                "blogLinkMd5Hash": "bd5c3c3a166e038c117c87c988e43a75",
+                "favicon": "https://www.mongodb.com/assets/images/global/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-vercel-ai-sdk-integration-persistent-memory-applications",
+            "content_html": "MongoDB Vercel AI SDK 統合のリリースを発表し、MongoDB Atlas で永続的なメモリストアで、Vercel の SDK で構築されたAI アプリケーションとエージェントを提供している。 オープンソースとして、通常はnpmで利用できます。",
+            "url": "https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-vercel-ai-sdk-integration-persistent-memory-applications",
+            "title": "MongoDB Vercel AI SDKの統合:AIアプリケーションの永続的記憶 | MongoDB Blog",
+            "summary": "MongoDB Vercel AI SDK 統合のリリースを発表し、MongoDB Atlas で永続的なメモリストアで、Vercel の SDK で構築されたAI アプリケーションとエージェントを提供している。 オープンソースとして、通常はnpmで利用できます。",
+            "image": "https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt2cd0926f1352bc5e/6aebad862f17b0fe6938ee4b/Blog_Meta_Image_Template_Brand_Refresh_(2).png",
+            "date_modified": "2026-11-05T00:00:00.000Z",
+            "date_published": "2026-11-05T00:00:00.000Z",
+            "tags": [
+                "Home"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Introducing the MongoDB Vercel AI SDK Integration: Persistent Memory for AI Applications",
+                "translatedTitle": "MongoDB Vercel AI SDKの統合:AIアプリケーションの永続的記憶",
+                "blogTitle": "MongoDB Blog",
+                "blogLink": "https://www.mongodb.com/blog",
+                "blogLinkMd5Hash": "bd5c3c3a166e038c117c87c988e43a75",
+                "favicon": "https://www.mongodb.com/assets/images/global/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.mongodb.com/company/blog/technical/building-an-agentic-warehouse-management-system-part-3-tools-decisions-actions",
+            "content_html": "まだ最初の2つの部分を読んでいない場合は、AIエージェントが値とパート2を追加し、エージェントの設計と計画を開始することをお勧めします。 そこで、AIエージェントが値を追加できる場所を議論し、JavaとSpring AIで実装の第一歩を築いたWMSシナリオを導入しました。",
+            "url": "https://www.mongodb.com/company/blog/technical/building-an-agentic-warehouse-management-system-part-3-tools-decisions-actions",
+            "title": "有力倉庫管理システムの構築パート3:ツール、意思決定、行動 | MongoDB Blog",
+            "summary": "まだ最初の2つの部分を読んでいない場合は、AIエージェントが値とパート2を追加し、エージェントの設計と計画を開始することをお勧めします。 そこで、AIエージェントが値を追加できる場所を議論し、JavaとSpring AIで実装の第一歩を築いたWMSシナリオを導入しました。",
+            "image": "https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt056161a3e0f7d092/6aeb6de71a6f6e393f53cb00/Agentic_Warehouse_Management_Part_3_meta.png",
+            "date_modified": "2026-11-05T00:00:00.000Z",
+            "date_published": "2026-11-05T00:00:00.000Z",
+            "tags": [
+                "Builder Blog"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Building an Agentic Warehouse Management System—Part 3: Tools, Decisions, and Actions",
+                "translatedTitle": "有力倉庫管理システムの構築パート3:ツール、意思決定、行動",
+                "blogTitle": "MongoDB Blog",
+                "blogLink": "https://www.mongodb.com/blog",
+                "blogLinkMd5Hash": "bd5c3c3a166e038c117c87c988e43a75",
+                "favicon": "https://www.mongodb.com/assets/images/global/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.postgresql.org/about/news/autobase-212-released-3430/",
+            "content_html": "Autobase 2.12 リリースのお知らせ HighlightsBuilt-inモニタリングダッシュボード 自動ベースは、監視システムを置き換えることを意図していません。 代わりに、Netdataと統合し、リアルタイムインフラストラクチャ監視に最適なソリューションの1つを検討しています。 Autobase プラットフォームには、Netdata エージェントが機能する組み込みダッシュボードが組み込まれており、以下のような重要なメトリックへのアクセスが便利です。 システム — CPU、メモリ、ディスク、ネットワークのパフォーマンス ポストグレ SQL — データベースの健康とパフォーマンスPgBouncer — 接続プール メトリックとインデックス — 統計とパフォーマンスの洞察 ライブデモサンドボックスのダッシュボードをご覧ください: https://demo.autobase.techMulti-AZ 導入事例 PostgreSQL クラスターをAWS、GCP、Azure にプロビジョニングする場合、Autobase はデフォルトで複数の空室ゾーン(AZ)を渡るノードを配布していま",
+            "url": "https://www.postgresql.org/about/news/autobase-212-released-3430/",
+            "title": "Autobase 2.12 リリース | PostgreSQL news",
+            "summary": "Autobase 2.12 リリースのお知らせ HighlightsBuilt-inモニタリングダッシュボード 自動ベースは、監視システムを置き換えることを意図していません。 代わりに、Netdataと統合し、リアルタイムインフラストラクチャ監視に最適なソリューションの1つを検討しています。 Autobase プラットフォームには、Netdata エージェントが機能する組み込みダッシュボードが組み",
+            "date_modified": "2026-11-05T00:00:00.000Z",
+            "date_published": "2026-11-05T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Autobase 2.12 released",
+                "translatedTitle": "Autobase 2.12 リリース",
+                "blogTitle": "PostgreSQL news",
+                "blogLink": "https://www.postgresql.org/",
+                "blogLinkMd5Hash": "9898fa08ab53ad93fe00c36437b6a72b",
+                "favicon": "https://www.postgresql.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.postgresql.org/about/news/mydbr-77-brings-web-reporting-to-postgresql-3424/",
+            "content_html": "ヘルシンキ、フィンランド、2026-10-28 - myDBR.comは、SQLデータベースのWebベースのレポートプラットフォームであるmyDBRでPostgreSQLのサポートを発表しました。 PostgreSQL 12 以降では、myDBR のオブジェクトとレポートの両方を、MySQL、MariaDB、Microsoft SQL Server が既に持っているサポートとともに保持できるようになりました。 myDBRとは? myDBR は、SQL を終了するレポートポータルに変えます。 開発者は、データベース内のレポートロジックを記述します。 myDBR は Web インターフェイスを供給します。: パラメーター フォーム、テーブル、チャート、マップ、ドリルダウン、スケジューリング、ユーザー管理、Excel、PDF、CSV へのエクスポート。 ユーザーはブラウザだけを必要とし、独立したレポートデザイナーや独自のクエリ言語は学習できません。 クエリを書くことができれば、レポートを公開することができます。 PostgreSQL のサポートは、PL/pgSQL 関数として報告する。 レポ",
+            "url": "https://www.postgresql.org/about/news/mydbr-77-brings-web-reporting-to-postgresql-3424/",
+            "title": "myDBR 7.7 は PostgreSQL に Web レポートをもたらす | PostgreSQL news",
+            "summary": "ヘルシンキ、フィンランド、2026-10-28 - myDBR.comは、SQLデータベースのWebベースのレポートプラットフォームであるmyDBRでPostgreSQLのサポートを発表しました。 PostgreSQL 12 以降では、myDBR のオブジェクトとレポートの両方を、MySQL、MariaDB、Microsoft SQL Server が既に持っているサポートとともに保持できるように",
+            "date_modified": "2026-11-05T00:00:00.000Z",
+            "date_published": "2026-11-05T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "myDBR 7.7 brings web reporting to PostgreSQL",
+                "translatedTitle": "myDBR 7.7 は PostgreSQL に Web レポートをもたらす",
+                "blogTitle": "PostgreSQL news",
+                "blogLink": "https://www.postgresql.org/",
+                "blogLinkMd5Hash": "9898fa08ab53ad93fe00c36437b6a72b",
+                "favicon": "https://www.postgresql.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.postgresql.org/about/news/reindb-read-only-performance-monitoring-for-postgresql-first-database-free-3432/",
+            "content_html": "Bandleiは、PostgreSQL、セルフマネージド、Amazon RDS、AuroraでReinDB、読み取り専用パフォーマンス監視をリリースしました。 ReinDB は、データベースとステートメント毎時、pg_stat_statements を使って、各データベースとステートメントの通常のルックが何であるかを学び、変更コストごとに追加のデータベース時間によってランク付けされたドリフトをフラグします。 各フラグは、計画履歴を含むエビデンスを表示し、DBAがテストできる固定スクリプトで、各ステップの undo が示します。 ReinDB はデータベースに何もインストールせず、読み込み専用のログインが必要です。 Linux または Windows でホストされている、または独自の AWS または Google Cloud アカウントで実行します。 MySQL、SQL Server、Oracleも対応しています。 初回のデータベースは1人で無料で、時間制限なし、カードなしです。 無料の109ページガイド、Rein In Your Databaseは、その背後にあるチューニング方法をカバ",
+            "url": "https://www.postgresql.org/about/news/reindb-read-only-performance-monitoring-for-postgresql-first-database-free-3432/",
+            "title": "ReinDB: PostgreSQL の読み取り専用パフォーマンス監視、最初のデータベース無料 | PostgreSQL news",
+            "summary": "Bandleiは、PostgreSQL、セルフマネージド、Amazon RDS、AuroraでReinDB、読み取り専用パフォーマンス監視をリリースしました。 ReinDB は、データベースとステートメント毎時、pg_stat_statements を使って、各データベースとステートメントの通常のルックが何であるかを学び、変更コストごとに追加のデータベース時間によってランク付けされたドリフトをフラ",
+            "date_modified": "2026-11-05T00:00:00.000Z",
+            "date_published": "2026-11-05T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "ReinDB: read-only performance monitoring for PostgreSQL, first database free",
+                "translatedTitle": "ReinDB: PostgreSQL の読み取り専用パフォーマンス監視、最初のデータベース無料",
+                "blogTitle": "PostgreSQL news",
+                "blogLink": "https://www.postgresql.org/",
+                "blogLinkMd5Hash": "9898fa08ab53ad93fe00c36437b6a72b",
+                "favicon": "https://www.postgresql.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.databricks.com/blog/enterprise-case-open-weight-models-databricks",
+            "content_html": "Databricks のフィールド エンジニアとして、エンタープライズ AI の展開で日々を過ごしています。",
+            "url": "https://www.databricks.com/blog/enterprise-case-open-weight-models-databricks",
+            "title": "Databricks の Open-Weight モデルのエンタープライズ ケース | Databricks",
+            "summary": "Databricks のフィールド エンジニアとして、エンタープライズ AI の展開で日々を過ごしています。",
+            "image": "https://www.databricks.com/sites/default/files/2026-10/enterprise-case-open-weight-models-databricks-blog-og.png",
+            "date_modified": "2026-11-04T20:00:00.000Z",
+            "date_published": "2026-11-04T20:00:00.000Z",
+            "tags": [
+                "Platform",
+                "AI Research"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "The Enterprise Case for Open-Weight Models on Databricks",
+                "translatedTitle": "Databricks の Open-Weight モデルのエンタープライズ ケース",
+                "blogTitle": "Databricks",
+                "blogLink": "https://www.databricks.com",
+                "blogLinkMd5Hash": "f6cce8cfd7239d663c716aad957c585c",
+                "favicon": "https://www.databricks.com/en-blog-assets/favicon-32x32.png?v=c9b9916c3b27dc51866c46b79a6e9b88"
+            }
+        },
+        {
+            "id": "https://neon.com/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon",
+            "content_html": "Kylonは、あなたのAI会社ハーネスです - あなたのチーム、そのエージェント、そして彼らのツールが共有部屋で一緒に働くことができるワークスペース。",
+            "url": "https://neon.com/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon",
+            "title": "人やエージェントがネオンでアプリをビルドするキロンルーム内 | Blog — Neon Docs",
+            "summary": "Kylonは、あなたのAI会社ハーネスです - あなたのチーム、そのエージェント、そして彼らのツールが共有部屋で一緒に働くことができるワークスペース。",
+            "image": "https://cdn.neonapi.io/public/images/pages/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon/social.jpg",
+            "date_modified": "2026-11-04T12:00:00.000Z",
+            "date_published": "2026-11-04T12:00:00.000Z",
+            "author": {
+                "name": "Carlota Soto"
+            },
+            "tags": [
+                "Case Studies"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Inside a Kylon room, where people and agents build apps on Neon",
+                "translatedTitle": "人やエージェントがネオンでアプリをビルドするキロンルーム内",
+                "blogTitle": "Blog — Neon Docs",
+                "blogLink": "https://neon.com",
+                "blogLinkMd5Hash": "536d058100f998227f02474ca5dda4fc",
+                "favicon": "https://neon.com/favicon/favicon.svg"
+            }
+        },
+        {
+            "id": "https://neon.com/blog/is-mcp-good-yet",
+            "content_html": "エージェントは、独自のスキルがそうでなくても、当社のCLI上で当社のMCPサーバーを選択します。 ここでは、新しいステートレス仕様がMCPをはるかに良くする理由と使用番号が示すものです。",
+            "url": "https://neon.com/blog/is-mcp-good-yet",
+            "title": "MCPは良いですか? | Blog — Neon Docs",
+            "summary": "エージェントは、独自のスキルがそうでなくても、当社のCLI上で当社のMCPサーバーを選択します。 ここでは、新しいステートレス仕様がMCPをはるかに良くする理由と使用番号が示すものです。",
+            "image": "https://cdn.neonapi.io/public/images/pages/blog/is-mcp-good-yet/social.png",
+            "date_modified": "2026-11-04T09:00:00.000Z",
+            "date_published": "2026-11-04T09:00:00.000Z",
+            "author": {
+                "name": "Andre Landgraf"
+            },
+            "tags": [
+                "Product"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Is MCP good yet?",
+                "translatedTitle": "MCPは良いですか?",
+                "blogTitle": "Blog — Neon Docs",
+                "blogLink": "https://neon.com",
+                "blogLinkMd5Hash": "536d058100f998227f02474ca5dda4fc",
+                "favicon": "https://neon.com/favicon/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/milvus-io/milvus/releases/tag/v2.6.26",
+            "content_html": "v2.6.26の 発売日: 2026年10月26日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンGo SDK バージョン2.6.262.6.172.6.172.6.272.6.5 Milvus v2.6.26 リリースのお知らせ このリリースは、RPC メッセージのデコードを高速化し、大規模な検索とクエリリクエストのプロキシメモリ使用量をカットし、クエリノードがnullable と NGRAM のフィルタリングでクラッシュし、コレクションの読み込みとジョブのインポート中にハングし、コーディネーターの起動後に後退できるタイムスタンプを切断します。 改善点 検索、クエリ、インサート、およびupsert RPCメッセージのデコードを高速なprotobufデコーダーで設定し、デフォルトで有効化し、common.enableFastPB(#53994、#54002)で切り替え可能 テキストアナライザは、Tantivyのアップグレードが、既存のテキストインデックスとBM25データ(#54029、#54098)にミスされたマ",
+            "url": "https://github.com/milvus-io/milvus/releases/tag/v2.6.26",
+            "title": "ミルバス-2.6.26 | Release notes from milvus",
+            "summary": "v2.6.26の 発売日: 2026年10月26日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンGo SDK バージョン2.6.262.6.172.6.172.6.272.6.5 Milvus v2.6.26 リリースのお知らせ このリリースは、RPC メッセージのデコードを高速化し、大規模な検索とクエリリクエストのプロキ",
+            "image": "https://opengraph.githubassets.com/08be8c265dd485c1b3ef38a483f84b05d7d8f479077e00edfe78a5eb88f98be8/milvus-io/milvus/releases/tag/v2.6.26",
+            "date_modified": "2026-11-04T08:03:37.000Z",
+            "date_published": "2026-11-04T08:03:37.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "milvus-2.6.26",
+                "translatedTitle": "ミルバス-2.6.26",
+                "blogTitle": "Release notes from milvus",
+                "blogLink": "https://github.com/milvus-io/milvus/releases",
+                "blogLinkMd5Hash": "9e2ce3ffe9c5ff966da7a36bb06a0e85",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://clickhouse.com/blog/mongodb-cdc-connector-clickpipes-ga",
+            "content_html": "モンゴDB ClickPipe 用の CDC コネクタは、通常、並列のスナップショット、タイプされた列に構造化されたインジェクション、ラグおよびリソースメトリック、および Terraform および OpenAPI サポートが利用できます。",
+            "url": "https://clickhouse.com/blog/mongodb-cdc-connector-clickpipes-ga",
+            "title": "ClickPipes 用の MongoDB CDC コネクタは、一般的に利用可能になりました | ClickHouse Blog",
+            "summary": "モンゴDB ClickPipe 用の CDC コネクタは、通常、並列のスナップショット、タイプされた列に構造化されたインジェクション、ラグおよびリソースメトリック、および Terraform および OpenAPI サポートが利用できます。",
+            "image": "https://clickhouse.com/_next/image?url=%2Fuploads%2FMongo_DB_Click_Pipes_GA_28ee291c8e.png&w=1200&h=630&q=75",
+            "date_modified": "2026-11-04T02:00:00.000Z",
+            "date_published": "2026-11-04T02:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "MongoDB CDC connector for ClickPipes is now generally available",
+                "translatedTitle": "ClickPipes 用の MongoDB CDC コネクタは、一般的に利用可能になりました",
+                "blogTitle": "ClickHouse Blog",
+                "blogLink": "https://clickhouse.com/blog",
+                "blogLinkMd5Hash": "1d8a43990a7816e1a389ec59226c1b95",
+                "favicon": "https://clickhouse.com/favicon.ico?favicon.1-9m4wq8d-w30.ico"
+            }
+        },
+        {
+            "id": "https://clickhouse.com/blog/fencing-a-postgres-primary-that-might-still-be-alive",
+            "content_html": "スタンバイのプロモーションは、古いポストグレのプライマリが書き込むのを止めません。 ClickHouse Managed Postgres の背後にある制御面が、ベアメタル、AWS、GCP で塀をフェンス化し、設計が失敗した理由はここにあります。",
+            "url": "https://clickhouse.com/blog/fencing-a-postgres-primary-that-might-still-be-alive",
+            "title": "生き残っているかもしれないポストグレスプライマリを囲む | ClickHouse Blog",
+            "summary": "スタンバイのプロモーションは、古いポストグレのプライマリが書き込むのを止めません。 ClickHouse Managed Postgres の背後にある制御面が、ベアメタル、AWS、GCP で塀をフェンス化し、設計が失敗した理由はここにあります。",
+            "image": "https://clickhouse.com/_next/image?url=%2Fuploads%2Fpostgres_fencing_nov2026_banner_fd0fdfefc0.png&w=1200&h=630&q=75",
+            "date_modified": "2026-11-04T00:30:00.000Z",
+            "date_published": "2026-11-04T00:30:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Fencing a Postgres primary that might still be alive",
+                "translatedTitle": "生き残っているかもしれないポストグレスプライマリを囲む",
+                "blogTitle": "ClickHouse Blog",
+                "blogLink": "https://clickhouse.com/blog",
+                "blogLinkMd5Hash": "1d8a43990a7816e1a389ec59226c1b95",
+                "favicon": "https://clickhouse.com/favicon.ico?favicon.1-9m4wq8d-w30.ico"
+            }
+        },
+        {
+            "id": "https://redis.io/blog/agents-are-software-introducing-the-next-chapter-of-redis-iris/",
+            "content_html": "Redis Irisの次の章は、ここにAIモデルとインフラストラクチャは、企業にとって十分ですが、いくつかのチームは、エージェントとの繰り返し、生産レベルの成功を見ています。 これは、エージェントが正しいコンテキストを欠いているので、適切なタイミングで、...",
+            "url": "https://redis.io/blog/agents-are-software-introducing-the-next-chapter-of-redis-iris/",
+            "title": "エージェントはソフトウェアです:Redis Irisの次の章を紹介します | Redis Blog",
+            "summary": "Redis Irisの次の章は、ここにAIモデルとインフラストラクチャは、企業にとって十分ですが、いくつかのチームは、エージェントとの繰り返し、生産レベルの成功を見ています。 これは、エージェントが正しいコンテキストを欠いているので、適切なタイミングで、...",
+            "image": "https://redis.io/_next/static/immutable/media/open-graph.2wot1rsqh2ybe.png",
+            "date_modified": "2026-11-04T00:00:00.000Z",
+            "date_published": "2026-11-04T00:00:00.000Z",
+            "author": {
+                "name": "Rowan Trollope"
+            },
+            "tags": [
+                "Tech",
+                "Announcements"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Agents Are Software: Introducing the Next Chapter of Redis Iris",
+                "translatedTitle": "エージェントはソフトウェアです:Redis Irisの次の章を紹介します",
+                "blogTitle": "Redis Blog",
+                "blogLink": "https://redis.io/en/blog",
+                "blogLinkMd5Hash": "ddf9e3652c5e2fa7e8254559980f64e0",
+                "favicon": "https://redis.io/favicon.ico?favicon.037vg_892ut9f.ico"
+            }
+        },
+        {
+            "id": "https://redis.io/blog/the-next-chapter-of-redis-iris-what-agents-need-to-work-in-the-real-world/",
+            "content_html": "先日は、キャンセルしたフライトを扱っているカスタマーサポートAIエージェントとチャットしていました。 体験は大変でした。 エージェントは、実際にいくつかの機能しか持っていなかったことを伝えることができ、これは明らかにそれらの1つではありませんでした。 私はデベルのとき確信しています...",
+            "url": "https://redis.io/blog/the-next-chapter-of-redis-iris-what-agents-need-to-work-in-the-real-world/",
+            "title": "Redis Irisの次の章: エージェントが現実世界で働く必要があるもの | Redis Blog",
+            "summary": "先日は、キャンセルしたフライトを扱っているカスタマーサポートAIエージェントとチャットしていました。 体験は大変でした。 エージェントは、実際にいくつかの機能しか持っていなかったことを伝えることができ、これは明らかにそれらの1つではありませんでした。 私はデベルのとき確信しています...",
+            "image": "https://redis.io/_next/static/immutable/media/open-graph.2wot1rsqh2ybe.png",
+            "date_modified": "2026-11-04T00:00:00.000Z",
+            "date_published": "2026-11-04T00:00:00.000Z",
+            "author": {
+                "name": "Simba Khadder"
+            },
+            "tags": [
+                "Tech"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "The next chapter of Redis Iris: what agents need to work in the real world",
+                "translatedTitle": "Redis Irisの次の章: エージェントが現実世界で働く必要があるもの",
+                "blogTitle": "Redis Blog",
+                "blogLink": "https://redis.io/en/blog",
+                "blogLinkMd5Hash": "ddf9e3652c5e2fa7e8254559980f64e0",
+                "favicon": "https://redis.io/favicon.ico?favicon.037vg_892ut9f.ico"
+            }
+        },
+        {
+            "id": "https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-google-adk-integration-durable-memory-agent-state",
+            "content_html": "MongoDB Google ADKインテグレーション(MongoDB Google ADKインテグレーション)は、エージェントの状態に耐久性のあるメモリを作成するために必要なビルディングブロックを開発者に提供することをお知らせします。",
+            "url": "https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-google-adk-integration-durable-memory-agent-state",
+            "title": "MongoDBの紹介 Googleアドク 統合: 代理店の状態のための耐久の記憶 | MongoDB Blog",
+            "summary": "MongoDB Google ADKインテグレーション(MongoDB Google ADKインテグレーション)は、エージェントの状態に耐久性のあるメモリを作成するために必要なビルディングブロックを開発者に提供することをお知らせします。",
+            "image": "https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt066fb7ef33dff28c/6aea0764ebc5746b61ac0f50/MongoDB_Google_ADK_Integration_Meta.png",
+            "date_modified": "2026-11-04T00:00:00.000Z",
+            "date_published": "2026-11-04T00:00:00.000Z",
+            "tags": [
+                "Home"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Introducing the MongoDB Google ADK Integration: Durable Memory for Agent State",
+                "translatedTitle": "MongoDBの紹介 Googleアドク 統合: 代理店の状態のための耐久の記憶",
+                "blogTitle": "MongoDB Blog",
+                "blogLink": "https://www.mongodb.com/blog",
+                "blogLinkMd5Hash": "bd5c3c3a166e038c117c87c988e43a75",
+                "favicon": "https://www.mongodb.com/assets/images/global/favicon.ico"
+            }
+        },
+        {
+            "id": "https://clickhouse.com/blog/whats-new-in-clickstack-october-2026",
+            "content_html": "9月と10月ClickStackリリースは、すべてのチャートタイプのためのアドホックダッシュボードフィルタ、PromQL、ClickStackクエリトレース、トレースログタブ、チャートエクスプローラからのアラート、および検索ページの長いリストとコレクターの改善をもたらします。",
+            "url": "https://clickhouse.com/blog/whats-new-in-clickstack-october-2026",
+            "title": "ClickStackの新機能 - 9月と10月 '26 | ClickHouse Blog",
+            "summary": "9月と10月ClickStackリリースは、すべてのチャートタイプのためのアドホックダッシュボードフィルタ、PromQL、ClickStackクエリトレース、トレースログタブ、チャートエクスプローラからのアラート、および検索ページの長いリストとコレクターの改善をもたらします。",
+            "image": "https://clickhouse.com/_next/image?url=%2Fuploads%2Fclickstack_whatsnew_nov2026_banner_1fc0bc6417.png&w=1200&h=630&q=75",
+            "date_modified": "2026-11-03T19:09:52.000Z",
+            "date_published": "2026-11-03T19:09:52.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "What's new in ClickStack - September and October '26",
+                "translatedTitle": "ClickStackの新機能 - 9月と10月 '26",
+                "blogTitle": "ClickHouse Blog",
+                "blogLink": "https://clickhouse.com/blog",
+                "blogLinkMd5Hash": "1d8a43990a7816e1a389ec59226c1b95",
+                "favicon": "https://clickhouse.com/favicon.ico?favicon.1-9m4wq8d-w30.ico"
+            }
+        },
+        {
+            "id": "https://clickhouse.com/blog/does-your-application-need-local-data-or-faster-postgres",
+            "content_html": "ローカル同期は高速で読み込みますが、別のデータレイヤーを管理します。 AIエージェントがトレードオフを変更し、NVMe-backed Postgresがアーキテクチャを簡素化できる方法をご覧ください。",
+            "url": "https://clickhouse.com/blog/does-your-application-need-local-data-or-faster-postgres",
+            "title": "アプリケーションはローカルデータやPostgresの高速化が必要ですか? | ClickHouse Blog",
+            "summary": "ローカル同期は高速で読み込みますが、別のデータレイヤーを管理します。 AIエージェントがトレードオフを変更し、NVMe-backed Postgresがアーキテクチャを簡素化できる方法をご覧ください。",
+            "image": "https://clickhouse.com/_next/image?url=%2Fuploads%2FDoes_your_application_need_local_data_or_faster_Postgres_b56df64c5a.jpg&w=1200&h=630&q=75",
+            "date_modified": "2026-11-03T14:55:13.000Z",
+            "date_published": "2026-11-03T14:55:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Does your application need local data or faster Postgres?",
+                "translatedTitle": "アプリケーションはローカルデータやPostgresの高速化が必要ですか?",
+                "blogTitle": "ClickHouse Blog",
+                "blogLink": "https://clickhouse.com/blog",
+                "blogLinkMd5Hash": "1d8a43990a7816e1a389ec59226c1b95",
+                "favicon": "https://clickhouse.com/favicon.ico?favicon.1-9m4wq8d-w30.ico"
+            }
+        },
+        {
+            "id": "https://github.com/milvus-io/milvus/releases/tag/v3.0.5",
+            "content_html": "v3.0.5リリース日: 2026年10月30日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンGo SDK バージョン3.0.53.0.23.0.63.0.123.0.0 Milvus v3.0.5 リリースのお知らせ このリリースでは、QueryCoord でリソースグループ-aware ロードステータスを追加し、複数のパスでメモリの使用を削減します。 また、コオルディネータの再起動、ローリングアップグレード、過渡エッチングエラーに関する安定性の問題も修正します。 改善点 QueryCoord で、リソースグループごとのロードパーセンテージとシャードリーダの読み込みのパーセンテージを追加し、各シャードリーダーにレプリカのリソースグループをタグ付けしたので、クエリは単一のリソースグループ(#52500、#52711)内でルーティングできます。 解読した投稿ブロックを直接借りて、非採点条件のクエリでコピーを削減(#54469) Knowhere を v3.0.17 にアップグレードし、Knowhere API (",
+            "url": "https://github.com/milvus-io/milvus/releases/tag/v3.0.5",
+            "title": "ミルバス-3.0.5 | Release notes from milvus",
+            "summary": "v3.0.5リリース日: 2026年10月30日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンGo SDK バージョン3.0.53.0.23.0.63.0.123.0.0 Milvus v3.0.5 リリースのお知らせ このリリースでは、QueryCoord でリソースグループ-aware ロードステータスを追加し、複数の",
+            "image": "https://opengraph.githubassets.com/777cec08a555ea3257021112db62f5eee5114273862684fd8b0cb9cc12c71f6c/milvus-io/milvus/releases/tag/v3.0.5",
+            "date_modified": "2026-11-03T13:23:47.000Z",
+            "date_published": "2026-11-03T13:23:47.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "milvus-3.0.5",
+                "translatedTitle": "ミルバス-3.0.5",
+                "blogTitle": "Release notes from milvus",
+                "blogLink": "https://github.com/milvus-io/milvus/releases",
+                "blogLinkMd5Hash": "9e2ce3ffe9c5ff966da7a36bb06a0e85",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://supabase.com/blog/claude-issued-enterprise-managed-auth-for-mcp",
+            "content_html": "Claude は、ID プロバイダーができない場合、Supabase MCP サーバーでエンタープライズ管理の auth の ID アサーションを発行できるようになりました。",
+            "url": "https://supabase.com/blog/claude-issued-enterprise-managed-auth-for-mcp",
+            "title": "MCPのエンタープライズ管理のauth: Claudeは、アイデンティティの主張を発行できるようになりました | Supabase Blog",
+            "summary": "Claude は、ID プロバイダーができない場合、Supabase MCP サーバーでエンタープライズ管理の auth の ID アサーションを発行できるようになりました。",
+            "image": "https://supabase.com/images/blog/2026-11-03-claude-issued-enterprise-managed-auth-for-mcp/og.png",
+            "date_modified": "2026-11-03T07:00:00.000Z",
+            "date_published": "2026-11-03T07:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Enterprise-managed auth for MCP: Claude can now issue the identity assertion",
+                "translatedTitle": "MCPのエンタープライズ管理のauth: Claudeは、アイデンティティの主張を発行できるようになりました",
+                "blogTitle": "Supabase Blog",
+                "blogLink": "https://supabase.com",
+                "blogLinkMd5Hash": "0b97611dd71b93f64c2addf586934a88",
+                "favicon": "https://supabase.com/favicon/favicon.ico"
+            }
+        },
+        {
+            "id": "https://duckdb.org/2026/11/03/bringing-local-analytics-to-the-quants-desktop.html",
+            "content_html": "銀行とヘッジファンド用のkdb +ベースのデータプラットフォームを構築した後、ライアン・ハミルトンは、特殊なインフラや高価なライセンスなしで小規模なチームにお勧めできる分析エンジンを望んでいました。 ダック DBは、QStudioとPulseに高速なローカル分析をもたらすために、小規模で埋め込まれた方法を与え、PeachQのオープンソースプロジェクトを立ち上げました。",
+            "url": "https://duckdb.org/2026/11/03/bringing-local-analytics-to-the-quants-desktop.html",
+            "title": "Quant のデスクトップにローカル アナリティクスをもたらす | DuckDB",
+            "summary": "銀行とヘッジファンド用のkdb +ベースのデータプラットフォームを構築した後、ライアン・ハミルトンは、特殊なインフラや高価なライセンスなしで小規模なチームにお勧めできる分析エンジンを望んでいました。 ダック DBは、QStudioとPulseに高速なローカル分析をもたらすために、小規模で埋め込まれた方法を与え、PeachQのオープンソースプロジェクトを立ち上げました。",
+            "image": "https://duckdb.org/images/blog/thumbs/quants-desktop.png",
+            "date_modified": "2026-11-03T00:00:00.000Z",
+            "date_published": "2026-11-03T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Bringing Local Analytics to the Quant's Desktop",
+                "translatedTitle": "Quant のデスクトップにローカル アナリティクスをもたらす",
+                "blogTitle": "DuckDB",
+                "blogLink": "https://duckdb.org/",
+                "blogLinkMd5Hash": "ccf85810461dd3f71386b5312261b18e",
+                "favicon": "https://duckdb.org/images/favicon/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.mongodb.com/company/blog/product-release-announcements/bring-live-atlas-data-into-microsoft-365-copilot",
+            "content_html": "MongoDBのアトラスのためのフェデレーションされたコピロットのコネクターは、組織にコピロットの経験を渡る仕事の流れに生きている操作データを持って来るために管理された方法を与えます。",
+            "url": "https://www.mongodb.com/company/blog/product-release-announcements/bring-live-atlas-data-into-microsoft-365-copilot",
+            "title": "ライブモンゴDB マイクロソフト 365 Copilot にアトラス データ | MongoDB Blog",
+            "summary": "MongoDBのアトラスのためのフェデレーションされたコピロットのコネクターは、組織にコピロットの経験を渡る仕事の流れに生きている操作データを持って来るために管理された方法を与えます。",
+            "image": "https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt2db5c8bdf4cae5a0/6ae8c13a6f64a90a795b1910/Bring_Live_Atlas_Data_Into_Microsoft_365_Meta.png",
+            "date_modified": "2026-11-03T00:00:00.000Z",
+            "date_published": "2026-11-03T00:00:00.000Z",
+            "tags": [
+                "Home"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Bring Live MongoDB Atlas Data Into Microsoft 365 Copilot",
+                "translatedTitle": "ライブモンゴDB マイクロソフト 365 Copilot にアトラス データ",
+                "blogTitle": "MongoDB Blog",
+                "blogLink": "https://www.mongodb.com/blog",
+                "blogLinkMd5Hash": "bd5c3c3a166e038c117c87c988e43a75",
+                "favicon": "https://www.mongodb.com/assets/images/global/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.postgresql.org/about/news/pgbadger-v133-has-been-released-3435/",
+            "content_html": "Antananarivo、マダガスカル - 11月03、2026pgBadgerpg Badger は PostgreSQL のログファイルに基づいて、速度が非常に詳細なレポート用に構築された PostgreSQL のパフォーマンスアナライザです。 pgBadger 13.3 が本日リリースされました。このリリースは、ユーザーが報告した修正と適用されたパッチのメンテナンスリリースです。 アイテムのリストが &gt; の場合、凡例とマウスオーバーのグラフにスクロールを追加します。 10.-explodeオプションが使用される場合、いくつかの問題を修正します。 リモートホストの監視モードにリモートログのフィルタを追加して、すべてのログをインポートしません。 ログ内のマルチラインステートメントでいくつかの問題を修正しました。 log_min_duration_statement と auto_explain の両方で報告された同じ実行を修正しました。 説明計画のコピーを追加します。 auto_explain プランから「クエリパラメータ:...」を処理します。 --dbuser でフィルタリングす",
+            "url": "https://www.postgresql.org/about/news/pgbadger-v133-has-been-released-3435/",
+            "title": "pgbadger v13.3 リリース | PostgreSQL news",
+            "summary": "Antananarivo、マダガスカル - 11月03、2026pgBadgerpg Badger は PostgreSQL のログファイルに基づいて、速度が非常に詳細なレポート用に構築された PostgreSQL のパフォーマンスアナライザです。 pgBadger 13.3 が本日リリースされました。このリリースは、ユーザーが報告した修正と適用されたパッチのメンテナンスリリースです。 アイテムの",
+            "date_modified": "2026-11-03T00:00:00.000Z",
+            "date_published": "2026-11-03T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "pgbadger v13.3 has been released",
+                "translatedTitle": "pgbadger v13.3 リリース",
+                "blogTitle": "PostgreSQL news",
+                "blogLink": "https://www.postgresql.org/",
+                "blogLinkMd5Hash": "9898fa08ab53ad93fe00c36437b6a72b",
+                "favicon": "https://www.postgresql.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://clickhouse.com/blog/openrouter-llm-routing-observability-clickhouse-cloud",
+            "content_html": "OpenRouter は ClickHouse を使用します。 顧客分析、公共モデルのランキング、内部AIエージェント、および500以上のモデルを横断する単一のストアとしてクラウド化し、月間リクエストは33xから19.7億に増加しました。",
+            "url": "https://clickhouse.com/blog/openrouter-llm-routing-observability-clickhouse-cloud",
+            "title": "OpenRouter が ClickHouse Cloud で 1 日 740,000,000 LLM リクエストを監視、理解、行動する方法 | ClickHouse Blog",
+            "summary": "OpenRouter は ClickHouse を使用します。 顧客分析、公共モデルのランキング、内部AIエージェント、および500以上のモデルを横断する単一のストアとしてクラウド化し、月間リクエストは33xから19.7億に増加しました。",
+            "image": "https://clickhouse.com/_next/image?url=%2Fuploads%2Fopenrouter_nov2026_banner_yellow_691da56b54.png&w=1200&h=630&q=75",
+            "date_modified": "2026-11-02T16:53:28.000Z",
+            "date_published": "2026-11-02T16:53:28.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "How OpenRouter observes, understands, and acts on 740 million LLM requests a day with ClickHouse Cloud",
+                "translatedTitle": "OpenRouter が ClickHouse Cloud で 1 日 740,000,000 LLM リクエストを監視、理解、行動する方法",
+                "blogTitle": "ClickHouse Blog",
+                "blogLink": "https://clickhouse.com/blog",
+                "blogLinkMd5Hash": "1d8a43990a7816e1a389ec59226c1b95",
+                "favicon": "https://clickhouse.com/favicon.ico?favicon.1-9m4wq8d-w30.ico"
+            }
+        },
+        {
+            "id": "https://clickhouse.com/blog/clickhousectl-v0-5-0",
+            "content_html": "Clickhousectl v0.5.0 はローカルからクラウドへ UDFs を取り、ClickHouse Managed Postgres の保守性を追加し、コマンド サーフェスを標準化し、すべてのクラウド コマンド ニーズごとに API-key パーミッションをリストします。",
+            "url": "https://clickhouse.com/blog/clickhousectl-v0-5-0",
+            "title": "Clickhousectl v0.5.0 で新しいもの | ClickHouse Blog",
+            "summary": "Clickhousectl v0.5.0 はローカルからクラウドへ UDFs を取り、ClickHouse Managed Postgres の保守性を追加し、コマンド サーフェスを標準化し、すべてのクラウド コマンド ニーズごとに API-key パーミッションをリストします。",
+            "image": "https://clickhouse.com/_next/image?url=%2Fuploads%2FWhat_s_new_in_clickhousectl_v0_5_0_205cad271c.jpg&w=1200&h=630&q=75",
+            "date_modified": "2026-11-02T14:45:00.000Z",
+            "date_published": "2026-11-02T14:45:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "What's new in clickhousectl v0.5.0",
+                "translatedTitle": "Clickhousectl v0.5.0 で新しいもの",
+                "blogTitle": "ClickHouse Blog",
+                "blogLink": "https://clickhouse.com/blog",
+                "blogLinkMd5Hash": "1d8a43990a7816e1a389ec59226c1b95",
+                "favicon": "https://clickhouse.com/favicon.ico?favicon.1-9m4wq8d-w30.ico"
+            }
+        },
+        {
+            "id": "https://neon.com/blog/managed-better-auth-oauth-provider-mcp",
+            "content_html": "管理されたBetter AuthはOAuth Providerプラグインをサポートしています。 auth インスタンスを OAuth 2.1 認可サーバーに変えるので、他のアプリや MCP クライアントはアプリでユーザーをサインインできます。",
+            "url": "https://neon.com/blog/managed-better-auth-oauth-provider-mcp",
+            "title": "より良い管理 Auth は OAuth プロバイダーで、MCP サポート | Blog — Neon Docs",
+            "summary": "管理されたBetter AuthはOAuth Providerプラグインをサポートしています。 auth インスタンスを OAuth 2.1 認可サーバーに変えるので、他のアプリや MCP クライアントはアプリでユーザーをサインインできます。",
+            "image": "https://cdn.neonapi.io/public/images/pages/blog/managed-better-auth-oauth-provider-mcp/social.jpg",
+            "date_modified": "2026-11-02T12:00:00.000Z",
+            "date_published": "2026-11-02T12:00:00.000Z",
+            "author": {
+                "name": "Shridhar Deshmukh"
+            },
+            "tags": [
+                "Product"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Managed Better Auth is now an OAuth provider, with MCP support",
+                "translatedTitle": "より良い管理 Auth は OAuth プロバイダーで、MCP サポート",
+                "blogTitle": "Blog — Neon Docs",
+                "blogLink": "https://neon.com",
+                "blogLinkMd5Hash": "536d058100f998227f02474ca5dda4fc",
+                "favicon": "https://neon.com/favicon/favicon.svg"
+            }
+        },
+        {
+            "id": "https://qdrant.tech/blog/qdrant-1.20-performance/",
+            "content_html": "Qdrant 1.20 では、検索をより安く、より高速にできる 2 つの主要な機能を出荷しました。2 つの新しい量子化ネイティブ データ型 (turbo8 と Turbo16) と、ネストされたフィールドの高度なメタデータインデックス。 私たちは、パフォーマンスとコストの改善を測定し、必要なくありません。そして、このブログ記事では、私たちの調査結果を通して行きます。 ディスクの使用量を減らします。RecallStoringベクターは、常に主費用です。これは、風邪時にディスクを費やし、暖かいときにメモリを消費します。",
+            "url": "https://qdrant.tech/blog/qdrant-1.20-performance/",
+            "title": "より速く、より安いQdrant 1.20で検索 | Qdrant - Vector Search Engine",
+            "summary": "Qdrant 1.20 では、検索をより安く、より高速にできる 2 つの主要な機能を出荷しました。2 つの新しい量子化ネイティブ データ型 (turbo8 と Turbo16) と、ネストされたフィールドの高度なメタデータインデックス。 私たちは、パフォーマンスとコストの改善を測定し、必要なくありません。そして、このブログ記事では、私たちの調査結果を通して行きます。 ディスクの使用量を減らします。",
+            "image": "https://qdrant.tech/blog/qdrant-1.20-performance/preview/social_preview.jpg",
+            "date_modified": "2026-11-02T01:00:00.000Z",
+            "date_published": "2026-11-02T01:00:00.000Z",
+            "author": {
+                "name": "info@qdrant.tech (Andrey Vasnetsov)"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Faster and Cheaper Search With Qdrant 1.20",
+                "translatedTitle": "より速く、より安いQdrant 1.20で検索",
+                "blogTitle": "Qdrant - Vector Search Engine",
+                "blogLink": "https://qdrant.tech/",
+                "blogLinkMd5Hash": "acd962acb4e708910c3b57a126f600ec",
+                "favicon": "https://qdrant.tech/favicon/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.mongodb.com/company/blog/product-release-announcements/introducing-atlas-sharding-advisor-know-when-how-scale-sharded-clusters",
+            "content_html": "アプリケーションが成長するにつれて、データベースチームは、データの配布、ワークロードの管理、およびインフラストラクチャのスケールに関するより複雑な決定を行う必要があります。 シャーディングは、MongoDBを水平にスケールアップすることを可能にしますが、シャードされたクラスターを管理することで、独自の課題について紹介することができます。 クラスターの健康を理解し、不均等な負荷を診断し、適切なシャードキーを選択すると、複数のビューにわたってメトリックを組み合わせて、専門的専門知識に依存する必要があります。",
+            "url": "https://www.mongodb.com/company/blog/product-release-announcements/introducing-atlas-sharding-advisor-know-when-how-scale-sharded-clusters",
+            "title": "MongoDBの紹介 アトラスシャーディングアドバイザー: いつ、どのようにシャードクラスターをスケールするかを知る | MongoDB Blog",
+            "summary": "アプリケーションが成長するにつれて、データベースチームは、データの配布、ワークロードの管理、およびインフラストラクチャのスケールに関するより複雑な決定を行う必要があります。 シャーディングは、MongoDBを水平にスケールアップすることを可能にしますが、シャードされたクラスターを管理することで、独自の課題について紹介することができます。 クラスターの健康を理解し、不均等な負荷を診断し、適切なシャー",
+            "image": "https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt104f6d2d1dca44dd/6ae8a87b55b211b156b7ee20/Blog_Meta_Image_Template_Brand_Refresh.png",
+            "date_modified": "2026-11-02T00:00:00.000Z",
+            "date_published": "2026-11-02T00:00:00.000Z",
+            "tags": [
+                "Home"
+            ],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Introducing MongoDB Atlas Sharding Advisor: Know When and How to Scale Sharded Clusters",
+                "translatedTitle": "MongoDBの紹介 アトラスシャーディングアドバイザー: いつ、どのようにシャードクラスターをスケールするかを知る",
+                "blogTitle": "MongoDB Blog",
+                "blogLink": "https://www.mongodb.com/blog",
+                "blogLinkMd5Hash": "bd5c3c3a166e038c117c87c988e43a75",
+                "favicon": "https://www.mongodb.com/assets/images/global/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.postgresql.org/about/news/hypopg-145-is-out-3428/",
+            "content_html": "台南、台湾 - 日 1 11月 2026HypoPG 1.4.5I は、バージョン 1.4.5 のリリースを発表し、HypoPG の拡張機能を追加し、PostgreSQL9.2 以降と互換性があります。 変更履歴 バグ修正: 仮説インデックスで長期的に立っているthoを修正_estimate_index(Julien Rouhaud)Fixは、クラッシュ(Julien Rouhaud)リンク&amp;クレジットにつながることができます バグを報告したユーザーの皆様、CHANGELOGファイルで引用されている方はありがとうございました。 ハイポPGはオープンプロジェクトです。 より良いツールを構築するための任意の貢献を歓迎します。 github.com/HypoPG/hypopg.Linksでgithubrepositoryを使用して、アイデア、機能のリクエスト、パッチを送信する必要があります。 ダウンロード: github.com/HypoPG/hypopg/releases バグトラッカー: github.com/HypoPG/hypopg/issues",
+            "url": "https://www.postgresql.org/about/news/hypopg-145-is-out-3428/",
+            "title": "HypoPG 1.4.5 リリース! | PostgreSQL news",
+            "summary": "台南、台湾 - 日 1 11月 2026HypoPG 1.4.5I は、バージョン 1.4.5 のリリースを発表し、HypoPG の拡張機能を追加し、PostgreSQL9.2 以降と互換性があります。 変更履歴 バグ修正: 仮説インデックスで長期的に立っているthoを修正_estimate_index(Julien Rouhaud)Fixは、クラッシュ(Julien Rouhaud)リンク&クレ",
+            "date_modified": "2026-11-02T00:00:00.000Z",
+            "date_published": "2026-11-02T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "HypoPG 1.4.5 is out!",
+                "translatedTitle": "HypoPG 1.4.5 リリース!",
+                "blogTitle": "PostgreSQL news",
+                "blogLink": "https://www.postgresql.org/",
+                "blogLinkMd5Hash": "9898fa08ab53ad93fe00c36437b6a72b",
+                "favicon": "https://www.postgresql.org/favicon.ico"
+            }
+        },
+        {
+            "id": "https://www.postgresql.org/about/news/security-release-for-psqlodbc-3431/",
+            "content_html": "PostgreSQLについて ODBC プロジェクトは、複数のセキュリティの問題を修正するためにバージョン18.00.0006をリリースしました。",
+            "url": "https://www.postgresql.org/about/news/security-release-for-psqlodbc-3431/",
+            "title": "psqlodbcのセキュリティリリース | PostgreSQL news",
+            "summary": "PostgreSQLについて ODBC プロジェクトは、複数のセキュリティの問題を修正するためにバージョン18.00.0006をリリースしました。",
+            "date_modified": "2026-11-02T00:00:00.000Z",
+            "date_published": "2026-11-02T00:00:00.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Security release for psqlodbc",
+                "translatedTitle": "psqlodbcのセキュリティリリース",
+                "blogTitle": "PostgreSQL news",
+                "blogLink": "https://www.postgresql.org/",
+                "blogLinkMd5Hash": "9898fa08ab53ad93fe00c36437b6a72b",
+                "favicon": "https://www.postgresql.org/favicon.ico"
+            }
+        }
+    ]
+}

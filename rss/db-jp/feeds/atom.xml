@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/</id>
+    <title>Database - Translated Japanese｜企業テックブログRSS</title>
+    <updated>2026-11-07T13:06:06.709Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db-jp/feeds/atom.xml"/>
+    <subtitle>Database - Translated Japanese：enの記事を日本語に翻訳してまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[AgensGraph 2.18 リリース: PostgreSQL 18 のグラフデータベースを拡張した ISO GQL サポート | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/agensgraph-218-released-graph-database-on-postgresql-18-with-expanded-iso-gql-support-3437/</id>
+        <link href="https://www.postgresql.org/about/news/agensgraph-218-released-graph-database-on-postgresql-18-with-expanded-iso-gql-support-3437/"/>
+        <updated>2026-11-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[アジェンスグラフ開発 2.18シリーズの最新バージョンであるAgensGraph v2.18.6.1をリリースしました。 アジェンズ グラフは、PostgreSQL 18.6 上に構築されたオープンソースのグラフデータベースで、同じデータで SQL とグラフのクエリを実行し、同じトランザクションでも同じステートメントで作成されます。 AgensGraph 2.18は、ISO GQL規格(ISO/I]]></summary>
+        <content type="html"><![CDATA[アジェンスグラフ開発 2.18シリーズの最新バージョンであるAgensGraph v2.18.6.1をリリースしました。 アジェンズ グラフは、PostgreSQL 18.6 上に構築されたオープンソースのグラフデータベースで、同じデータで SQL とグラフのクエリを実行し、同じトランザクションでも同じステートメントで作成されます。 AgensGraph 2.18は、ISO GQL規格(ISO/IEC 39075)、プロパティグラフの国際標準クエリ言語に対する主要なステップです。 AgensGraph を GQL: 2.18 で行なうことにコミットしています。 GQL 節の最初のセットを openCypher と一緒に追加し、今後リリースのフォローが増えます。 パフォーマンスは、このリリースの他の焦点でした。 可変長のトラバースは、各ホップでエッジラベルのインデックスを使用します。これにより、2.17はすべてのホップでラベル全体をスキャンしました。 公開の soc-Pokec グラフ(30,000,000 エッジ)では、2 ホップのトラバーサールが 20 秒以内に終了しなかった 2 ホ]]></content>
+        <published>2026-11-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Brume:PostgreSQLテストとデバッグコピー用のFK-safe擬似化 | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/brume-fk-safe-pseudonymization-for-postgresql-test-and-debug-copies-3434/</id>
+        <link href="https://www.postgresql.org/about/news/brume-fk-safe-pseudonymization-for-postgresql-test-and-debug-copies-3434/"/>
+        <updated>2026-11-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Brume 2.1 は、テスト、デバッグ、デモ用のPostgreSQLデータベースのデテミニズリスティック、外部キーセーフな疑似コピーを作成するオープンソース (Apache 2.0) ツールです。 なぜブルーム? 開発チームは、バグを再現したり、テストを実行したり、デモを準備したりするために、現実的なデータを必要とすることが多いが、実際の個人データを公開するプロダクションをコピーすることが多い。]]></summary>
+        <content type="html"><![CDATA[Brume 2.1 は、テスト、デバッグ、デモ用のPostgreSQLデータベースのデテミニズリスティック、外部キーセーフな疑似コピーを作成するオープンソース (Apache 2.0) ツールです。 なぜブルーム? 開発チームは、バグを再現したり、テストを実行したり、デモを準備したりするために、現実的なデータを必要とすることが多いが、実際の個人データを公開するプロダクションをコピーすることが多い。 古典的なマスキングスクリプトは、参照の整合性を破る傾向があります。これにより、トリガーを無効にしたり、制約を中断したり、壊れた結合を手で修復したりすることができます。 Brume は、ソースデータベースの対象となるサブセットを、対象データベースまたは .sql ファイルにコピーし、何かが書かれている前に、個人データをフライに変換します。 外部キーは、ターゲットに有効なエンドツーエンドを保持します。 ブルームはソースデータベースからのみ読み込まれます。 主な特長 列レベルの戦略: 実質的な合成値のためのFAKE, 部分的にはMASK, 片方ハッシュのためのHASH, NULLIFYは、機密デー]]></content>
+        <published>2026-11-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HeapDeck: iPhoneとiPadでPostgreSQL用のオンコールモニター | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/heapdeck-an-on-call-monitor-for-postgresql-on-iphone-and-ipad-3436/</id>
+        <link href="https://www.postgresql.org/about/news/heapdeck-an-on-call-monitor-for-postgresql-on-iphone-and-ipad-3436/"/>
+        <updated>2026-11-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[HeapDeck は、iPhone と iPad 用の App Store で PostgreSQL 13 から 19 の呼び出しで、エンジニア向けの新しいネイティブアプリです。 10 個のタイルで 1 つの健康の頂点に開きます。 ロック画面は pg_blocking_pids() からツリーを上にあるrootブロッカーで描画し、停止するセッションを自由にカウントします。 他の画面は pg_sta]]></summary>
+        <content type="html"><![CDATA[HeapDeck は、iPhone と iPad 用の App Store で PostgreSQL 13 から 19 の呼び出しで、エンジニア向けの新しいネイティブアプリです。 10 個のタイルで 1 つの健康の頂点に開きます。 ロック画面は pg_blocking_pids() からツリーを上にあるrootブロッカーで描画し、停止するセッションを自由にカウントします。 他の画面は pg_stat_active、トランザクション ID のラップアラウンドとデッドタプル、レプリケーションのラグとスロット、pg_stat_statements をカバーします。 アプリは、直接接続またはSSHトンネルを使用して、TLSとピン留めされた指紋。 ベンダーサーバーは、電話とデータベース間では接続できません。 アラートを開いて送信する時に機能しますので、既存のアラートの横に行きます。 1つのサーバーを監視することは自由です。 HeapDeck Proは、複数のサーバーとアクションを追加するワンタイムアプリ内購入です。キャンセル、終了、VACUUM、スロットをドロップして書き込みます。 https:]]></content>
+        <published>2026-11-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PGの観察性地図1.0.0は解放しました | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/pg-observability-map-100-released-3427/</id>
+        <link href="https://www.postgresql.org/about/news/pg-observability-map-100-released-3427/"/>
+        <updated>2026-11-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[PostgreSQL の保守性、メトリック、内部診断ビューを視覚化し、探求するインタラクティブな Web ベースのツールである PG の保守性マップの初回リリース(1.0.0)をお知らせします。 主な特長とハイライト:PostgreSQLシステムビュー、関数、統計のインタラクティブなビジュアルマッピング。 アーキテクチャのコンテキスト化:各項目は、関連するPostgreSQLのアーキテクチャセクシ]]></summary>
+        <content type="html"><![CDATA[PostgreSQL の保守性、メトリック、内部診断ビューを視覚化し、探求するインタラクティブな Web ベースのツールである PG の保守性マップの初回リリース(1.0.0)をお知らせします。 主な特長とハイライト:PostgreSQLシステムビュー、関数、統計のインタラクティブなビジュアルマッピング。 アーキテクチャのコンテキスト化:各項目は、関連するPostgreSQLのアーキテクチャセクションに直接マップされます。 PostgreSQL 版(PG 19サポートを含む)で簡単にナビゲーションできます。 軽量なインターフェイス、Webブラウザで直接アクセス可能。 リンクとリソース: ライブインタラクティブデモ: meob.github.io/pg-observability-map/Source コードとドキュメント: github.com/meob/pg-observability-map]]></content>
+        <published>2026-11-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[読み込み、コピーしないでください: ファイルのフィードを OpenSharing で置き換える - パート 2 (実装方法) | Databricks]]></title>
+        <id>https://www.databricks.com/blog/read-dont-copy-replacing-file-feeds-opensharing-part-2-how-implement</id>
+        <link href="https://www.databricks.com/blog/read-dont-copy-replacing-file-feeds-opensharing-part-2-how-implement"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3_0.png" type="image/png"/>
+        <updated>2026-11-06T22:13:00.000Z</updated>
+        <summary type="html"><![CDATA[多くのデータ共有アーキテクチャは、馴染みのあるパターンから始まります。 プロバイダー輸出...]]></summary>
+        <content type="html"><![CDATA[多くのデータ共有アーキテクチャは、馴染みのあるパターンから始まります。 プロバイダー輸出...]]></content>
+        <category label="Engineering"/>
+        <category label="Tutorials"/>
+        <published>2026-11-06T22:13:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[読み込み、コピーしないでください: ファイルと API フィードを OpenSharing に置き換える - Part 1 (なぜ) | Databricks]]></title>
+        <id>https://www.databricks.com/blog/read-dont-copy-replacing-file-and-api-feeds-opensharing-part-1-why</id>
+        <link href="https://www.databricks.com/blog/read-dont-copy-replacing-file-and-api-feeds-opensharing-part-1-why"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3_0.png" type="image/png"/>
+        <updated>2026-11-06T22:10:00.000Z</updated>
+        <summary type="html"><![CDATA[SFTP や API で顧客からデータをインジェストするのであれば、おそらく...]]></summary>
+        <content type="html"><![CDATA[SFTP や API で顧客からデータをインジェストするのであれば、おそらく...]]></content>
+        <category label="Data Strategy"/>
+        <category label="Insights"/>
+        <published>2026-11-06T22:10:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ClickHouseマネージドPostgresでWalShadowで1ヶ月から学んだこと | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/a-month-with-walshadow-clickhouse-managed-postgres</id>
+        <link href="https://clickhouse.com/blog/a-month-with-walshadow-clickhouse-managed-postgres"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2FIMG_5912_4fde8778dc.jpg&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-06T16:16:22.000Z</updated>
+        <summary type="html"><![CDATA[ASAHI秀彦は、WalShadowのプライベートプレビューテストの月を共有し、ClickPipesとレプリケーションレイテンシーを比較し、データの正確性、スキーマの変更、および回復を確認します。]]></summary>
+        <content type="html"><![CDATA[ASAHI秀彦は、WalShadowのプライベートプレビューテストの月を共有し、ClickPipesとレプリケーションレイテンシーを比較し、データの正確性、スキーマの変更、および回復を確認します。]]></content>
+        <published>2026-11-06T16:16:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[パブリックセクター組織がAIをスケールで管理できる方法 | Databricks]]></title>
+        <id>https://www.databricks.com/blog/how-public-sector-organizations-can-govern-ai-scale</id>
+        <link href="https://www.databricks.com/blog/how-public-sector-organizations-can-govern-ai-scale"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/image1.png" type="image/png"/>
+        <updated>2026-11-06T15:14:29.000Z</updated>
+        <summary type="html"><![CDATA[すべての政府のCIOは、AIを採用し、より速く移動し、より多くのことをやります...]]></summary>
+        <content type="html"><![CDATA[すべての政府のCIOは、AIを採用し、より速く移動し、より多くのことをやります...]]></content>
+        <category label="Industries"/>
+        <category label="Unity Gateway"/>
+        <category label="Public Sector"/>
+        <published>2026-11-06T15:14:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ClickHouse リリース 26.10 | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/clickhouse-release-26-10</id>
+        <link href="https://clickhouse.com/blog/clickhouse-release-26-10"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2FBlog_Cover_1200x630_14_380a4d0d49.png&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-06T11:45:40.000Z</updated>
+        <summary type="html"><![CDATA[ClickHouse 26.10 は、機能の構成、より柔軟な参加、より高速なグループによる問い合わせ、ディスクスピルリング、実験的な列のキャッシュ、および Freeform および SQLite フォーマットを導入しています。]]></summary>
+        <content type="html"><![CDATA[ClickHouse 26.10 は、機能の構成、より柔軟な参加、より高速なグループによる問い合わせ、ディスクスピルリング、実験的な列のキャッシュ、および Freeform および SQLite フォーマットを導入しています。]]></content>
+        <published>2026-11-06T11:45:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pkg/v2.6.27: 強化: Bump milvus と v2.6.27 にプロト (#55193) | Release notes from milvus]]></title>
+        <id>https://github.com/milvus-io/milvus/releases/tag/pkg%2Fv2.6.27</id>
+        <link href="https://github.com/milvus-io/milvus/releases/tag/pkg%2Fv2.6.27"/>
+        <link rel="enclosure" href="https://repository-images.githubusercontent.com/208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b" type="image//208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b"/>
+        <updated>2026-11-06T06:18:02.000Z</updated>
+        <summary type="html"><![CDATA[サインオフバイ:コンクイXia © 2018 www.zilliz.com 著作権所有]]></summary>
+        <content type="html"><![CDATA[サインオフバイ:コンクイXia © 2018 www.zilliz.com 著作権所有]]></content>
+        <published>2026-11-06T06:18:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[強化: Bump milvus と v2.6.27 にプロト (#55193) | Release notes from milvus]]></title>
+        <id>https://github.com/milvus-io/milvus/releases/tag/v2.6.27</id>
+        <link href="https://github.com/milvus-io/milvus/releases/tag/v2.6.27"/>
+        <link rel="enclosure" href="https://repository-images.githubusercontent.com/208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b" type="image//208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b"/>
+        <updated>2026-11-06T06:18:02.000Z</updated>
+        <summary type="html"><![CDATA[サインオフバイ:コンクイXia © 2018 www.zilliz.com 著作権所有]]></summary>
+        <content type="html"><![CDATA[サインオフバイ:コンクイXia © 2018 www.zilliz.com 著作権所有]]></content>
+        <published>2026-11-06T06:18:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[すべてのアカウントのAIゲートウェイクレジット, コンソールでのプロジェクトの回復, 最大16 CUまでの自動更新, より多くのリリース - 11月 06, 2026 | Changelog — Neon Docs]]></title>
+        <id>https://neon.com/docs/changelog/2026-11-06</id>
+        <link href="https://neon.com/docs/changelog/2026-11-06"/>
+        <link rel="enclosure" href="https://neon.com/docs/og?title=Q2hhbmdlbG9nIC0gTm92IDA2LCAyMDI2" type="image//docs/og"/>
+        <updated>2026-11-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[すべてのアカウントは、AI Gatewayクレジットを購入することができます。 AI Gateway は、アップロードされた写真の記述、または回答など、アプリに AI 機能を追加することができます。]]></summary>
+        <content type="html"><![CDATA[すべてのアカウントは、AI Gatewayクレジットを購入することができます。 AI Gateway は、アップロードされた写真の記述、または回答など、アプリに AI 機能を追加することができます。]]></content>
+        <published>2026-11-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[機能ビューによるリアルタイムの不正検知 | Databricks]]></title>
+        <id>https://www.databricks.com/blog/real-time-fraud-detection-feature-views</id>
+        <link href="https://www.databricks.com/blog/real-time-fraud-detection-feature-views"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/real-time-fraud-detection-with-feature-views-og.png" type="image/png"/>
+        <updated>2026-11-05T23:23:36.000Z</updated>
+        <summary type="html"><![CDATA[リアルタイムの不正検知は、3つの機能に依存します。 顧客が何をしたか...]]></summary>
+        <content type="html"><![CDATA[リアルタイムの不正検知は、3つの機能に依存します。 顧客が何をしたか...]]></content>
+        <category label="Platform"/>
+        <category label="Data Science and ML"/>
+        <published>2026-11-05T23:23:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[データブリックアプリをスケーリングするためのビルダーのガイド | Databricks]]></title>
+        <id>https://www.databricks.com/blog/builders-guide-scaling-databricks-apps</id>
+        <link href="https://www.databricks.com/blog/builders-guide-scaling-databricks-apps"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/blog_images/a-builder-s-guide-to-scaling-databricks-blog-img-og.png" type="image/png"/>
+        <updated>2026-11-05T18:00:00.000Z</updated>
+        <summary type="html"><![CDATA[おめでとうございます。Databricks Apps にアプリを組み、カップルからなくなってしまいました。]]></summary>
+        <content type="html"><![CDATA[おめでとうございます。Databricks Apps にアプリを組み、カップルからなくなってしまいました。]]></content>
+        <category label="Data Strategy"/>
+        <category label="Best Practices"/>
+        <published>2026-11-05T18:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[データコラボレーション ツール: オープンシェアリング、クリーンルーム、マーケットプレイス | Databricks]]></title>
+        <id>https://www.databricks.com/blog/which-data-collaboration-tool-opensharing-clean-rooms-marketplace</id>
+        <link href="https://www.databricks.com/blog/which-data-collaboration-tool-opensharing-clean-rooms-marketplace"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3.png" type="image/png"/>
+        <updated>2026-11-05T16:29:00.000Z</updated>
+        <summary type="html"><![CDATA[過去の表にまつわる世界が広がっています。 安全に共有できるようになりました。]]></summary>
+        <content type="html"><![CDATA[過去の表にまつわる世界が広がっています。 安全に共有できるようになりました。]]></content>
+        <category label="Data Strategy"/>
+        <category label="Best Practices"/>
+        <published>2026-11-05T16:29:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[デルタの共有からOpenSharing:変更されたもの、次 | Databricks]]></title>
+        <id>https://www.databricks.com/blog/delta-sharing-opensharing-what-changed-whats-next</id>
+        <link href="https://www.databricks.com/blog/delta-sharing-opensharing-what-changed-whats-next"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3.png" type="image/png"/>
+        <updated>2026-11-05T16:25:00.000Z</updated>
+        <summary type="html"><![CDATA[デルタの共有は、何千もの組織がライブデータを交換する方法でした...]]></summary>
+        <content type="html"><![CDATA[デルタの共有は、何千もの組織がライブデータを交換する方法でした...]]></content>
+        <category label="Data Strategy"/>
+        <category label="Insights"/>
+        <published>2026-11-05T16:25:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[プッシュベースCDCをユニティカタログにゼロバスインジェストとデベジウム | Databricks]]></title>
+        <id>https://www.databricks.com/blog/push-based-cdc-unity-catalog-zerobus-ingest-and-debezium</id>
+        <link href="https://www.databricks.com/blog/push-based-cdc-unity-catalog-zerobus-ingest-and-debezium"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/push-based-cdc-flow-headline-2400x1256.png" type="image/png"/>
+        <updated>2026-11-05T12:48:00.000Z</updated>
+        <summary type="html"><![CDATA[運用データベースのデータでは、ビジネスの決定、およびその分析の多くを促進します。]]></summary>
+        <content type="html"><![CDATA[運用データベースのデータでは、ビジネスの決定、およびその分析の多くを促進します。]]></content>
+        <category label="Engineering"/>
+        <published>2026-11-05T12:48:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lakebase Postgresはオブジェクトストレージ上に構築されていますが、99.99999%の読み込みは決して触れません | Blog — Neon Docs]]></title>
+        <id>https://neon.com/blog/lakebase-postgres-reads-never-touch-object-storage</id>
+        <link href="https://neon.com/blog/lakebase-postgres-reads-never-touch-object-storage"/>
+        <link rel="enclosure" href="https://cdn.neonapi.io/public/images/pages/blog/lakebase-postgres-reads-never-touch-object-storage/social-1.jpg" type="image/jpg"/>
+        <updated>2026-11-05T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[オブジェクトストレージのpostgresを実行するための最も一般的な引数は、オブジェクトストレージがバックアップしたPostgresが遅いPostgresである必要があることです。 前提は正しいですが、結論はそうではありません。]]></summary>
+        <content type="html"><![CDATA[オブジェクトストレージのpostgresを実行するための最も一般的な引数は、オブジェクトストレージがバックアップしたPostgresが遅いPostgresである必要があることです。 前提は正しいですが、結論はそうではありません。]]></content>
+        <author>
+            <name>Carlota Soto</name>
+        </author>
+        <category label="Engineering"/>
+        <published>2026-11-05T12:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Neon Function テンプレートでトークンを保存 | Blog — Neon Docs]]></title>
+        <id>https://neon.com/blog/save-tokens-with-neon-function-templates</id>
+        <link href="https://neon.com/blog/save-tokens-with-neon-function-templates"/>
+        <link rel="enclosure" href="https://cdn.neonapi.io/public/images/pages/blog/save-tokens-with-neon-function-templates/social.jpg" type="image/jpg"/>
+        <updated>2026-11-05T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[エージェントは既にNeon関数を自分で起動することができますが、最初にベストプラクティスを研究するトークンを消費します。 ネオン関数レジストリのテンプレートは、それをスキップし、作業コードから始めることを可能にします。]]></summary>
+        <content type="html"><![CDATA[エージェントは既にNeon関数を自分で起動することができますが、最初にベストプラクティスを研究するトークンを消費します。 ネオン関数レジストリのテンプレートは、それをスキップし、作業コードから始めることを可能にします。]]></content>
+        <author>
+            <name>Dominik Koch</name>
+        </author>
+        <category label="Product"/>
+        <published>2026-11-05T12:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ミルバス-3.0.4 | Release notes from milvus]]></title>
+        <id>https://github.com/milvus-io/milvus/releases/tag/v3.0.4</id>
+        <link href="https://github.com/milvus-io/milvus/releases/tag/v3.0.4"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/2f0c1282f06a9e16551c68ee386b39d78630f11d7986bb81084e876985a11a19/milvus-io/milvus/releases/tag/v3.0.4" type="image/4"/>
+        <updated>2026-11-05T06:25:10.000Z</updated>
+        <summary type="html"><![CDATA[v3.0.4リリース日: 2026年10月26日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンゴー SDK バージョン3.0.43.0.23.0.63.0.103.0.0 Milvus v3.0.4 リリースのお知らせ このリリースは、一括インポート、コンパクト化、およびフィルタリングおよびグループ化された検索を高速化し、]]></summary>
+        <content type="html"><![CDATA[v3.0.4リリース日: 2026年10月26日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンゴー SDK バージョン3.0.43.0.23.0.63.0.103.0.0 Milvus v3.0.4 リリースのお知らせ このリリースは、一括インポート、コンパクト化、およびフィルタリングおよびグループ化された検索を高速化し、ストレージV3のレイジー列グループロードを追加し、インポート、コレクションの読み込み、および部分的な更新書き込みにハングを固定します。 改善点 並列およびプレッチャングバイト範囲の入力チャンクを読んで、ソートのコンパクト化読み取りスループットを改善しました(#53437)、パーケット、ランス、およびVortexファイル(#53894)別々のタスク(#54064)を別々のタスクに専用のパッケージにプロキシDMLタスクをリファクタリング(#54064) 密閉されたセグメントの検索のすべての出力フィールドは、検索自体(#54074)と同じセグメントのスナップショットから埋め込まれていることを確認しま]]></content>
+        <published>2026-11-05T06:25:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JetBrains が DuckDB で DataGrip にクロス・データベース・クエリーを組み込む方法 | DuckDB]]></title>
+        <id>https://duckdb.org/2026/11/05/jetbrains-datagrip.html</id>
+        <link href="https://duckdb.org/2026/11/05/jetbrains-datagrip.html"/>
+        <link rel="enclosure" href="https://duckdb.org/images/blog/thumbs/datagrip.png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[JetBrains のユーザーは、複数のデータベース接続を 1 つのクエリで共有するデータを要求しました。 独自のクロスデータベースクエリエンジンを構築するよりも、DuckDBのカスタムテーブル機能を使用して、DuckDBの既存のクエリ実行に接続します。 そのため、DuckDB は代替品を上回るようになり、その統合が次へ進むところです。]]></summary>
+        <content type="html"><![CDATA[JetBrains のユーザーは、複数のデータベース接続を 1 つのクエリで共有するデータを要求しました。 独自のクロスデータベースクエリエンジンを構築するよりも、DuckDBのカスタムテーブル機能を使用して、DuckDBの既存のクエリ実行に接続します。 そのため、DuckDB は代替品を上回るようになり、その統合が次へ進むところです。]]></content>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VMware Cloud Foundation 9.1 で企業レベルの Redis の共同リファレンスアーキテクチャを導入 | Redis Blog]]></title>
+        <id>https://redis.io/blog/introducing-the-joint-reference-architecture-for-enterprise-grade-redis-on-vmware-cloud-foundation-9-1/</id>
+        <link href="https://redis.io/blog/introducing-the-joint-reference-architecture-for-enterprise-grade-redis-on-vmware-cloud-foundation-9-1/"/>
+        <link rel="enclosure" href="https://cdn.sanity.io/images/sy1jschh/production/f0e021588fb93bc20610b40761cbf2cecffa6a34-1200x628.png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ブロードコムとRedisMovによるVMwareの共同参照アーキテクチャは、不正検知、ストリーミング分析、AIエージェント、および機能ストアの構築をエンタープライズレベルのリアルタイムデータチームにキャッシュするだけでなく、同時負荷で高速なデータアクセスが必要になります。 スタッフ]]></summary>
+        <content type="html"><![CDATA[ブロードコムとRedisMovによるVMwareの共同参照アーキテクチャは、不正検知、ストリーミング分析、AIエージェント、および機能ストアの構築をエンタープライズレベルのリアルタイムデータチームにキャッシュするだけでなく、同時負荷で高速なデータアクセスが必要になります。 スタッフ]]></content>
+        <author>
+            <name>Mike  Moss </name>
+        </author>
+        <category label="Tech"/>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Apache Spark®の紹介 4.3 - Databricks Runtime 19で利用可能になりました | Databricks]]></title>
+        <id>https://www.databricks.com/blog/introducing-apache-spark-43-now-available-databricks-runtime-19</id>
+        <link href="https://www.databricks.com/blog/introducing-apache-spark-43-now-available-databricks-runtime-19"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-10/2026-09-Blog-Introducing-Apache-Spark-R-4.3-OG-1200x628-2x.png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[導入事例 Apache Spark 4.3 は、Real-Time モードにステートフルな処理を実現しました。]]></summary>
+        <content type="html"><![CDATA[導入事例 Apache Spark 4.3 は、Real-Time モードにステートフルな処理を実現しました。]]></content>
+        <category label="Engineering"/>
+        <category label="Open Source"/>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[なぜ実用的な銀行は、完全なAutonomyに重要なステップストーンです | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/innovation/why-actionable-banking-is-critical-stepping-stone-full-autonomy</id>
+        <link href="https://www.mongodb.com/company/blog/innovation/why-actionable-banking-is-critical-stepping-stone-full-autonomy"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt2b69c260a9316ffd/6aeb65797111f54d3e2f75ad/Blog_Meta_Image_Template_Brand_Refresh_(1).png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[今日は自分の財政的な健康として重要なことはほとんどありません。 私たちのほとんどは、預金が清算するときのように、私たちの銀行口座で何が起こっているかのトップに滞在したいです, 私たちは、クレジットカードの制限に達している場合, または我々は最終的にその30年間の住宅ローンを支払い、その夢の休暇のための資金を解放したり、私たちの子供の大学の授業料を支払うことができます. しかし、取引が起こるとき、私]]></summary>
+        <content type="html"><![CDATA[今日は自分の財政的な健康として重要なことはほとんどありません。 私たちのほとんどは、預金が清算するときのように、私たちの銀行口座で何が起こっているかのトップに滞在したいです, 私たちは、クレジットカードの制限に達している場合, または我々は最終的にその30年間の住宅ローンを支払い、その夢の休暇のための資金を解放したり、私たちの子供の大学の授業料を支払うことができます. しかし、取引が起こるとき、私たちは常にすぐにフィードバックを得ません。 その情報はしばしばou内のバックエンドに座っています]]></content>
+        <category label="Industry Solutions"/>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MongoDB Vercel AI SDKの統合:AIアプリケーションの永続的記憶 | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-vercel-ai-sdk-integration-persistent-memory-applications</id>
+        <link href="https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-vercel-ai-sdk-integration-persistent-memory-applications"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt2cd0926f1352bc5e/6aebad862f17b0fe6938ee4b/Blog_Meta_Image_Template_Brand_Refresh_(2).png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[MongoDB Vercel AI SDK 統合のリリースを発表し、MongoDB Atlas で永続的なメモリストアで、Vercel の SDK で構築されたAI アプリケーションとエージェントを提供している。 オープンソースとして、通常はnpmで利用できます。]]></summary>
+        <content type="html"><![CDATA[MongoDB Vercel AI SDK 統合のリリースを発表し、MongoDB Atlas で永続的なメモリストアで、Vercel の SDK で構築されたAI アプリケーションとエージェントを提供している。 オープンソースとして、通常はnpmで利用できます。]]></content>
+        <category label="Home"/>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[有力倉庫管理システムの構築パート3:ツール、意思決定、行動 | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/technical/building-an-agentic-warehouse-management-system-part-3-tools-decisions-actions</id>
+        <link href="https://www.mongodb.com/company/blog/technical/building-an-agentic-warehouse-management-system-part-3-tools-decisions-actions"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt056161a3e0f7d092/6aeb6de71a6f6e393f53cb00/Agentic_Warehouse_Management_Part_3_meta.png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[まだ最初の2つの部分を読んでいない場合は、AIエージェントが値とパート2を追加し、エージェントの設計と計画を開始することをお勧めします。 そこで、AIエージェントが値を追加できる場所を議論し、JavaとSpring AIで実装の第一歩を築いたWMSシナリオを導入しました。]]></summary>
+        <content type="html"><![CDATA[まだ最初の2つの部分を読んでいない場合は、AIエージェントが値とパート2を追加し、エージェントの設計と計画を開始することをお勧めします。 そこで、AIエージェントが値を追加できる場所を議論し、JavaとSpring AIで実装の第一歩を築いたWMSシナリオを導入しました。]]></content>
+        <category label="Builder Blog"/>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Autobase 2.12 リリース | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/autobase-212-released-3430/</id>
+        <link href="https://www.postgresql.org/about/news/autobase-212-released-3430/"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Autobase 2.12 リリースのお知らせ HighlightsBuilt-inモニタリングダッシュボード 自動ベースは、監視システムを置き換えることを意図していません。 代わりに、Netdataと統合し、リアルタイムインフラストラクチャ監視に最適なソリューションの1つを検討しています。 Autobase プラットフォームには、Netdata エージェントが機能する組み込みダッシュボードが組み]]></summary>
+        <content type="html"><![CDATA[Autobase 2.12 リリースのお知らせ HighlightsBuilt-inモニタリングダッシュボード 自動ベースは、監視システムを置き換えることを意図していません。 代わりに、Netdataと統合し、リアルタイムインフラストラクチャ監視に最適なソリューションの1つを検討しています。 Autobase プラットフォームには、Netdata エージェントが機能する組み込みダッシュボードが組み込まれており、以下のような重要なメトリックへのアクセスが便利です。 システム — CPU、メモリ、ディスク、ネットワークのパフォーマンス ポストグレ SQL — データベースの健康とパフォーマンスPgBouncer — 接続プール メトリックとインデックス — 統計とパフォーマンスの洞察 ライブデモサンドボックスのダッシュボードをご覧ください: https://demo.autobase.techMulti-AZ 導入事例 PostgreSQL クラスターをAWS、GCP、Azure にプロビジョニングする場合、Autobase はデフォルトで複数の空室ゾーン(AZ)を渡るノードを配布していま]]></content>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[myDBR 7.7 は PostgreSQL に Web レポートをもたらす | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/mydbr-77-brings-web-reporting-to-postgresql-3424/</id>
+        <link href="https://www.postgresql.org/about/news/mydbr-77-brings-web-reporting-to-postgresql-3424/"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ヘルシンキ、フィンランド、2026-10-28 - myDBR.comは、SQLデータベースのWebベースのレポートプラットフォームであるmyDBRでPostgreSQLのサポートを発表しました。 PostgreSQL 12 以降では、myDBR のオブジェクトとレポートの両方を、MySQL、MariaDB、Microsoft SQL Server が既に持っているサポートとともに保持できるように]]></summary>
+        <content type="html"><![CDATA[ヘルシンキ、フィンランド、2026-10-28 - myDBR.comは、SQLデータベースのWebベースのレポートプラットフォームであるmyDBRでPostgreSQLのサポートを発表しました。 PostgreSQL 12 以降では、myDBR のオブジェクトとレポートの両方を、MySQL、MariaDB、Microsoft SQL Server が既に持っているサポートとともに保持できるようになりました。 myDBRとは? myDBR は、SQL を終了するレポートポータルに変えます。 開発者は、データベース内のレポートロジックを記述します。 myDBR は Web インターフェイスを供給します。: パラメーター フォーム、テーブル、チャート、マップ、ドリルダウン、スケジューリング、ユーザー管理、Excel、PDF、CSV へのエクスポート。 ユーザーはブラウザだけを必要とし、独立したレポートデザイナーや独自のクエリ言語は学習できません。 クエリを書くことができれば、レポートを公開することができます。 PostgreSQL のサポートは、PL/pgSQL 関数として報告する。 レポ]]></content>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ReinDB: PostgreSQL の読み取り専用パフォーマンス監視、最初のデータベース無料 | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/reindb-read-only-performance-monitoring-for-postgresql-first-database-free-3432/</id>
+        <link href="https://www.postgresql.org/about/news/reindb-read-only-performance-monitoring-for-postgresql-first-database-free-3432/"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Bandleiは、PostgreSQL、セルフマネージド、Amazon RDS、AuroraでReinDB、読み取り専用パフォーマンス監視をリリースしました。 ReinDB は、データベースとステートメント毎時、pg_stat_statements を使って、各データベースとステートメントの通常のルックが何であるかを学び、変更コストごとに追加のデータベース時間によってランク付けされたドリフトをフラ]]></summary>
+        <content type="html"><![CDATA[Bandleiは、PostgreSQL、セルフマネージド、Amazon RDS、AuroraでReinDB、読み取り専用パフォーマンス監視をリリースしました。 ReinDB は、データベースとステートメント毎時、pg_stat_statements を使って、各データベースとステートメントの通常のルックが何であるかを学び、変更コストごとに追加のデータベース時間によってランク付けされたドリフトをフラグします。 各フラグは、計画履歴を含むエビデンスを表示し、DBAがテストできる固定スクリプトで、各ステップの undo が示します。 ReinDB はデータベースに何もインストールせず、読み込み専用のログインが必要です。 Linux または Windows でホストされている、または独自の AWS または Google Cloud アカウントで実行します。 MySQL、SQL Server、Oracleも対応しています。 初回のデータベースは1人で無料で、時間制限なし、カードなしです。 無料の109ページガイド、Rein In Your Databaseは、その背後にあるチューニング方法をカバ]]></content>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Databricks の Open-Weight モデルのエンタープライズ ケース | Databricks]]></title>
+        <id>https://www.databricks.com/blog/enterprise-case-open-weight-models-databricks</id>
+        <link href="https://www.databricks.com/blog/enterprise-case-open-weight-models-databricks"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-10/enterprise-case-open-weight-models-databricks-blog-og.png" type="image/png"/>
+        <updated>2026-11-04T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Databricks のフィールド エンジニアとして、エンタープライズ AI の展開で日々を過ごしています。]]></summary>
+        <content type="html"><![CDATA[Databricks のフィールド エンジニアとして、エンタープライズ AI の展開で日々を過ごしています。]]></content>
+        <category label="Platform"/>
+        <category label="AI Research"/>
+        <published>2026-11-04T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[人やエージェントがネオンでアプリをビルドするキロンルーム内 | Blog — Neon Docs]]></title>
+        <id>https://neon.com/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon</id>
+        <link href="https://neon.com/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon"/>
+        <link rel="enclosure" href="https://cdn.neonapi.io/public/images/pages/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon/social.jpg" type="image/jpg"/>
+        <updated>2026-11-04T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Kylonは、あなたのAI会社ハーネスです - あなたのチーム、そのエージェント、そして彼らのツールが共有部屋で一緒に働くことができるワークスペース。]]></summary>
+        <content type="html"><![CDATA[Kylonは、あなたのAI会社ハーネスです - あなたのチーム、そのエージェント、そして彼らのツールが共有部屋で一緒に働くことができるワークスペース。]]></content>
+        <author>
+            <name>Carlota Soto</name>
+        </author>
+        <category label="Case Studies"/>
+        <published>2026-11-04T12:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MCPは良いですか? | Blog — Neon Docs]]></title>
+        <id>https://neon.com/blog/is-mcp-good-yet</id>
+        <link href="https://neon.com/blog/is-mcp-good-yet"/>
+        <link rel="enclosure" href="https://cdn.neonapi.io/public/images/pages/blog/is-mcp-good-yet/social.png" type="image/png"/>
+        <updated>2026-11-04T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[エージェントは、独自のスキルがそうでなくても、当社のCLI上で当社のMCPサーバーを選択します。 ここでは、新しいステートレス仕様がMCPをはるかに良くする理由と使用番号が示すものです。]]></summary>
+        <content type="html"><![CDATA[エージェントは、独自のスキルがそうでなくても、当社のCLI上で当社のMCPサーバーを選択します。 ここでは、新しいステートレス仕様がMCPをはるかに良くする理由と使用番号が示すものです。]]></content>
+        <author>
+            <name>Andre Landgraf</name>
+        </author>
+        <category label="Product"/>
+        <published>2026-11-04T09:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ミルバス-2.6.26 | Release notes from milvus]]></title>
+        <id>https://github.com/milvus-io/milvus/releases/tag/v2.6.26</id>
+        <link href="https://github.com/milvus-io/milvus/releases/tag/v2.6.26"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/08be8c265dd485c1b3ef38a483f84b05d7d8f479077e00edfe78a5eb88f98be8/milvus-io/milvus/releases/tag/v2.6.26" type="image/26"/>
+        <updated>2026-11-04T08:03:37.000Z</updated>
+        <summary type="html"><![CDATA[v2.6.26の 発売日: 2026年10月26日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンGo SDK バージョン2.6.262.6.172.6.172.6.272.6.5 Milvus v2.6.26 リリースのお知らせ このリリースは、RPC メッセージのデコードを高速化し、大規模な検索とクエリリクエストのプロキ]]></summary>
+        <content type="html"><![CDATA[v2.6.26の 発売日: 2026年10月26日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンGo SDK バージョン2.6.262.6.172.6.172.6.272.6.5 Milvus v2.6.26 リリースのお知らせ このリリースは、RPC メッセージのデコードを高速化し、大規模な検索とクエリリクエストのプロキシメモリ使用量をカットし、クエリノードがnullable と NGRAM のフィルタリングでクラッシュし、コレクションの読み込みとジョブのインポート中にハングし、コーディネーターの起動後に後退できるタイムスタンプを切断します。 改善点 検索、クエリ、インサート、およびupsert RPCメッセージのデコードを高速なprotobufデコーダーで設定し、デフォルトで有効化し、common.enableFastPB(#53994、#54002)で切り替え可能 テキストアナライザは、Tantivyのアップグレードが、既存のテキストインデックスとBM25データ(#54029、#54098)にミスされたマ]]></content>
+        <published>2026-11-04T08:03:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ClickPipes 用の MongoDB CDC コネクタは、一般的に利用可能になりました | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/mongodb-cdc-connector-clickpipes-ga</id>
+        <link href="https://clickhouse.com/blog/mongodb-cdc-connector-clickpipes-ga"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2FMongo_DB_Click_Pipes_GA_28ee291c8e.png&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-04T02:00:00.000Z</updated>
+        <summary type="html"><![CDATA[モンゴDB ClickPipe 用の CDC コネクタは、通常、並列のスナップショット、タイプされた列に構造化されたインジェクション、ラグおよびリソースメトリック、および Terraform および OpenAPI サポートが利用できます。]]></summary>
+        <content type="html"><![CDATA[モンゴDB ClickPipe 用の CDC コネクタは、通常、並列のスナップショット、タイプされた列に構造化されたインジェクション、ラグおよびリソースメトリック、および Terraform および OpenAPI サポートが利用できます。]]></content>
+        <published>2026-11-04T02:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[生き残っているかもしれないポストグレスプライマリを囲む | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/fencing-a-postgres-primary-that-might-still-be-alive</id>
+        <link href="https://clickhouse.com/blog/fencing-a-postgres-primary-that-might-still-be-alive"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2Fpostgres_fencing_nov2026_banner_fd0fdfefc0.png&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-04T00:30:00.000Z</updated>
+        <summary type="html"><![CDATA[スタンバイのプロモーションは、古いポストグレのプライマリが書き込むのを止めません。 ClickHouse Managed Postgres の背後にある制御面が、ベアメタル、AWS、GCP で塀をフェンス化し、設計が失敗した理由はここにあります。]]></summary>
+        <content type="html"><![CDATA[スタンバイのプロモーションは、古いポストグレのプライマリが書き込むのを止めません。 ClickHouse Managed Postgres の背後にある制御面が、ベアメタル、AWS、GCP で塀をフェンス化し、設計が失敗した理由はここにあります。]]></content>
+        <published>2026-11-04T00:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[エージェントはソフトウェアです:Redis Irisの次の章を紹介します | Redis Blog]]></title>
+        <id>https://redis.io/blog/agents-are-software-introducing-the-next-chapter-of-redis-iris/</id>
+        <link href="https://redis.io/blog/agents-are-software-introducing-the-next-chapter-of-redis-iris/"/>
+        <link rel="enclosure" href="https://redis.io/_next/static/immutable/media/open-graph.2wot1rsqh2ybe.png" type="image/png"/>
+        <updated>2026-11-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Redis Irisの次の章は、ここにAIモデルとインフラストラクチャは、企業にとって十分ですが、いくつかのチームは、エージェントとの繰り返し、生産レベルの成功を見ています。 これは、エージェントが正しいコンテキストを欠いているので、適切なタイミングで、...]]></summary>
+        <content type="html"><![CDATA[Redis Irisの次の章は、ここにAIモデルとインフラストラクチャは、企業にとって十分ですが、いくつかのチームは、エージェントとの繰り返し、生産レベルの成功を見ています。 これは、エージェントが正しいコンテキストを欠いているので、適切なタイミングで、...]]></content>
+        <author>
+            <name>Rowan Trollope</name>
+        </author>
+        <category label="Tech"/>
+        <category label="Announcements"/>
+        <published>2026-11-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Redis Irisの次の章: エージェントが現実世界で働く必要があるもの | Redis Blog]]></title>
+        <id>https://redis.io/blog/the-next-chapter-of-redis-iris-what-agents-need-to-work-in-the-real-world/</id>
+        <link href="https://redis.io/blog/the-next-chapter-of-redis-iris-what-agents-need-to-work-in-the-real-world/"/>
+        <link rel="enclosure" href="https://redis.io/_next/static/immutable/media/open-graph.2wot1rsqh2ybe.png" type="image/png"/>
+        <updated>2026-11-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[先日は、キャンセルしたフライトを扱っているカスタマーサポートAIエージェントとチャットしていました。 体験は大変でした。 エージェントは、実際にいくつかの機能しか持っていなかったことを伝えることができ、これは明らかにそれらの1つではありませんでした。 私はデベルのとき確信しています...]]></summary>
+        <content type="html"><![CDATA[先日は、キャンセルしたフライトを扱っているカスタマーサポートAIエージェントとチャットしていました。 体験は大変でした。 エージェントは、実際にいくつかの機能しか持っていなかったことを伝えることができ、これは明らかにそれらの1つではありませんでした。 私はデベルのとき確信しています...]]></content>
+        <author>
+            <name>Simba Khadder</name>
+        </author>
+        <category label="Tech"/>
+        <published>2026-11-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MongoDBの紹介 Googleアドク 統合: 代理店の状態のための耐久の記憶 | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-google-adk-integration-durable-memory-agent-state</id>
+        <link href="https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-google-adk-integration-durable-memory-agent-state"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt066fb7ef33dff28c/6aea0764ebc5746b61ac0f50/MongoDB_Google_ADK_Integration_Meta.png" type="image/png"/>
+        <updated>2026-11-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[MongoDB Google ADKインテグレーション(MongoDB Google ADKインテグレーション)は、エージェントの状態に耐久性のあるメモリを作成するために必要なビルディングブロックを開発者に提供することをお知らせします。]]></summary>
+        <content type="html"><![CDATA[MongoDB Google ADKインテグレーション(MongoDB Google ADKインテグレーション)は、エージェントの状態に耐久性のあるメモリを作成するために必要なビルディングブロックを開発者に提供することをお知らせします。]]></content>
+        <category label="Home"/>
+        <published>2026-11-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ClickStackの新機能 - 9月と10月 '26 | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/whats-new-in-clickstack-october-2026</id>
+        <link href="https://clickhouse.com/blog/whats-new-in-clickstack-october-2026"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2Fclickstack_whatsnew_nov2026_banner_1fc0bc6417.png&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-03T19:09:52.000Z</updated>
+        <summary type="html"><![CDATA[9月と10月ClickStackリリースは、すべてのチャートタイプのためのアドホックダッシュボードフィルタ、PromQL、ClickStackクエリトレース、トレースログタブ、チャートエクスプローラからのアラート、および検索ページの長いリストとコレクターの改善をもたらします。]]></summary>
+        <content type="html"><![CDATA[9月と10月ClickStackリリースは、すべてのチャートタイプのためのアドホックダッシュボードフィルタ、PromQL、ClickStackクエリトレース、トレースログタブ、チャートエクスプローラからのアラート、および検索ページの長いリストとコレクターの改善をもたらします。]]></content>
+        <published>2026-11-03T19:09:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[アプリケーションはローカルデータやPostgresの高速化が必要ですか? | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/does-your-application-need-local-data-or-faster-postgres</id>
+        <link href="https://clickhouse.com/blog/does-your-application-need-local-data-or-faster-postgres"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2FDoes_your_application_need_local_data_or_faster_Postgres_b56df64c5a.jpg&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-03T14:55:13.000Z</updated>
+        <summary type="html"><![CDATA[ローカル同期は高速で読み込みますが、別のデータレイヤーを管理します。 AIエージェントがトレードオフを変更し、NVMe-backed Postgresがアーキテクチャを簡素化できる方法をご覧ください。]]></summary>
+        <content type="html"><![CDATA[ローカル同期は高速で読み込みますが、別のデータレイヤーを管理します。 AIエージェントがトレードオフを変更し、NVMe-backed Postgresがアーキテクチャを簡素化できる方法をご覧ください。]]></content>
+        <published>2026-11-03T14:55:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ミルバス-3.0.5 | Release notes from milvus]]></title>
+        <id>https://github.com/milvus-io/milvus/releases/tag/v3.0.5</id>
+        <link href="https://github.com/milvus-io/milvus/releases/tag/v3.0.5"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/777cec08a555ea3257021112db62f5eee5114273862684fd8b0cb9cc12c71f6c/milvus-io/milvus/releases/tag/v3.0.5" type="image/5"/>
+        <updated>2026-11-03T13:23:47.000Z</updated>
+        <summary type="html"><![CDATA[v3.0.5リリース日: 2026年10月30日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンGo SDK バージョン3.0.53.0.23.0.63.0.123.0.0 Milvus v3.0.5 リリースのお知らせ このリリースでは、QueryCoord でリソースグループ-aware ロードステータスを追加し、複数の]]></summary>
+        <content type="html"><![CDATA[v3.0.5リリース日: 2026年10月30日 Milvus バージョン SDKPython バージョンNode.js SDK バージョン Java SDK バージョンGo SDK バージョン3.0.53.0.23.0.63.0.123.0.0 Milvus v3.0.5 リリースのお知らせ このリリースでは、QueryCoord でリソースグループ-aware ロードステータスを追加し、複数のパスでメモリの使用を削減します。 また、コオルディネータの再起動、ローリングアップグレード、過渡エッチングエラーに関する安定性の問題も修正します。 改善点 QueryCoord で、リソースグループごとのロードパーセンテージとシャードリーダの読み込みのパーセンテージを追加し、各シャードリーダーにレプリカのリソースグループをタグ付けしたので、クエリは単一のリソースグループ(#52500、#52711)内でルーティングできます。 解読した投稿ブロックを直接借りて、非採点条件のクエリでコピーを削減(#54469) Knowhere を v3.0.17 にアップグレードし、Knowhere API (]]></content>
+        <published>2026-11-03T13:23:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MCPのエンタープライズ管理のauth: Claudeは、アイデンティティの主張を発行できるようになりました | Supabase Blog]]></title>
+        <id>https://supabase.com/blog/claude-issued-enterprise-managed-auth-for-mcp</id>
+        <link href="https://supabase.com/blog/claude-issued-enterprise-managed-auth-for-mcp"/>
+        <link rel="enclosure" href="https://supabase.com/images/blog/2026-11-03-claude-issued-enterprise-managed-auth-for-mcp/og.png" type="image/png"/>
+        <updated>2026-11-03T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Claude は、ID プロバイダーができない場合、Supabase MCP サーバーでエンタープライズ管理の auth の ID アサーションを発行できるようになりました。]]></summary>
+        <content type="html"><![CDATA[Claude は、ID プロバイダーができない場合、Supabase MCP サーバーでエンタープライズ管理の auth の ID アサーションを発行できるようになりました。]]></content>
+        <published>2026-11-03T07:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quant のデスクトップにローカル アナリティクスをもたらす | DuckDB]]></title>
+        <id>https://duckdb.org/2026/11/03/bringing-local-analytics-to-the-quants-desktop.html</id>
+        <link href="https://duckdb.org/2026/11/03/bringing-local-analytics-to-the-quants-desktop.html"/>
+        <link rel="enclosure" href="https://duckdb.org/images/blog/thumbs/quants-desktop.png" type="image/png"/>
+        <updated>2026-11-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[銀行とヘッジファンド用のkdb +ベースのデータプラットフォームを構築した後、ライアン・ハミルトンは、特殊なインフラや高価なライセンスなしで小規模なチームにお勧めできる分析エンジンを望んでいました。 ダック DBは、QStudioとPulseに高速なローカル分析をもたらすために、小規模で埋め込まれた方法を与え、PeachQのオープンソースプロジェクトを立ち上げました。]]></summary>
+        <content type="html"><![CDATA[銀行とヘッジファンド用のkdb +ベースのデータプラットフォームを構築した後、ライアン・ハミルトンは、特殊なインフラや高価なライセンスなしで小規模なチームにお勧めできる分析エンジンを望んでいました。 ダック DBは、QStudioとPulseに高速なローカル分析をもたらすために、小規模で埋め込まれた方法を与え、PeachQのオープンソースプロジェクトを立ち上げました。]]></content>
+        <published>2026-11-03T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ライブモンゴDB マイクロソフト 365 Copilot にアトラス データ | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/product-release-announcements/bring-live-atlas-data-into-microsoft-365-copilot</id>
+        <link href="https://www.mongodb.com/company/blog/product-release-announcements/bring-live-atlas-data-into-microsoft-365-copilot"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt2db5c8bdf4cae5a0/6ae8c13a6f64a90a795b1910/Bring_Live_Atlas_Data_Into_Microsoft_365_Meta.png" type="image/png"/>
+        <updated>2026-11-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[MongoDBのアトラスのためのフェデレーションされたコピロットのコネクターは、組織にコピロットの経験を渡る仕事の流れに生きている操作データを持って来るために管理された方法を与えます。]]></summary>
+        <content type="html"><![CDATA[MongoDBのアトラスのためのフェデレーションされたコピロットのコネクターは、組織にコピロットの経験を渡る仕事の流れに生きている操作データを持って来るために管理された方法を与えます。]]></content>
+        <category label="Home"/>
+        <published>2026-11-03T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pgbadger v13.3 リリース | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/pgbadger-v133-has-been-released-3435/</id>
+        <link href="https://www.postgresql.org/about/news/pgbadger-v133-has-been-released-3435/"/>
+        <updated>2026-11-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Antananarivo、マダガスカル - 11月03、2026pgBadgerpg Badger は PostgreSQL のログファイルに基づいて、速度が非常に詳細なレポート用に構築された PostgreSQL のパフォーマンスアナライザです。 pgBadger 13.3 が本日リリースされました。このリリースは、ユーザーが報告した修正と適用されたパッチのメンテナンスリリースです。 アイテムの]]></summary>
+        <content type="html"><![CDATA[Antananarivo、マダガスカル - 11月03、2026pgBadgerpg Badger は PostgreSQL のログファイルに基づいて、速度が非常に詳細なレポート用に構築された PostgreSQL のパフォーマンスアナライザです。 pgBadger 13.3 が本日リリースされました。このリリースは、ユーザーが報告した修正と適用されたパッチのメンテナンスリリースです。 アイテムのリストが &gt; の場合、凡例とマウスオーバーのグラフにスクロールを追加します。 10.-explodeオプションが使用される場合、いくつかの問題を修正します。 リモートホストの監視モードにリモートログのフィルタを追加して、すべてのログをインポートしません。 ログ内のマルチラインステートメントでいくつかの問題を修正しました。 log_min_duration_statement と auto_explain の両方で報告された同じ実行を修正しました。 説明計画のコピーを追加します。 auto_explain プランから「クエリパラメータ:...」を処理します。 --dbuser でフィルタリングす]]></content>
+        <published>2026-11-03T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenRouter が ClickHouse Cloud で 1 日 740,000,000 LLM リクエストを監視、理解、行動する方法 | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/openrouter-llm-routing-observability-clickhouse-cloud</id>
+        <link href="https://clickhouse.com/blog/openrouter-llm-routing-observability-clickhouse-cloud"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2Fopenrouter_nov2026_banner_yellow_691da56b54.png&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-02T16:53:28.000Z</updated>
+        <summary type="html"><![CDATA[OpenRouter は ClickHouse を使用します。 顧客分析、公共モデルのランキング、内部AIエージェント、および500以上のモデルを横断する単一のストアとしてクラウド化し、月間リクエストは33xから19.7億に増加しました。]]></summary>
+        <content type="html"><![CDATA[OpenRouter は ClickHouse を使用します。 顧客分析、公共モデルのランキング、内部AIエージェント、および500以上のモデルを横断する単一のストアとしてクラウド化し、月間リクエストは33xから19.7億に増加しました。]]></content>
+        <published>2026-11-02T16:53:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Clickhousectl v0.5.0 で新しいもの | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/clickhousectl-v0-5-0</id>
+        <link href="https://clickhouse.com/blog/clickhousectl-v0-5-0"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2FWhat_s_new_in_clickhousectl_v0_5_0_205cad271c.jpg&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-02T14:45:00.000Z</updated>
+        <summary type="html"><![CDATA[Clickhousectl v0.5.0 はローカルからクラウドへ UDFs を取り、ClickHouse Managed Postgres の保守性を追加し、コマンド サーフェスを標準化し、すべてのクラウド コマンド ニーズごとに API-key パーミッションをリストします。]]></summary>
+        <content type="html"><![CDATA[Clickhousectl v0.5.0 はローカルからクラウドへ UDFs を取り、ClickHouse Managed Postgres の保守性を追加し、コマンド サーフェスを標準化し、すべてのクラウド コマンド ニーズごとに API-key パーミッションをリストします。]]></content>
+        <published>2026-11-02T14:45:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[より良い管理 Auth は OAuth プロバイダーで、MCP サポート | Blog — Neon Docs]]></title>
+        <id>https://neon.com/blog/managed-better-auth-oauth-provider-mcp</id>
+        <link href="https://neon.com/blog/managed-better-auth-oauth-provider-mcp"/>
+        <link rel="enclosure" href="https://cdn.neonapi.io/public/images/pages/blog/managed-better-auth-oauth-provider-mcp/social.jpg" type="image/jpg"/>
+        <updated>2026-11-02T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[管理されたBetter AuthはOAuth Providerプラグインをサポートしています。 auth インスタンスを OAuth 2.1 認可サーバーに変えるので、他のアプリや MCP クライアントはアプリでユーザーをサインインできます。]]></summary>
+        <content type="html"><![CDATA[管理されたBetter AuthはOAuth Providerプラグインをサポートしています。 auth インスタンスを OAuth 2.1 認可サーバーに変えるので、他のアプリや MCP クライアントはアプリでユーザーをサインインできます。]]></content>
+        <author>
+            <name>Shridhar Deshmukh</name>
+        </author>
+        <category label="Product"/>
+        <published>2026-11-02T12:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[より速く、より安いQdrant 1.20で検索 | Qdrant - Vector Search Engine]]></title>
+        <id>https://qdrant.tech/blog/qdrant-1.20-performance/</id>
+        <link href="https://qdrant.tech/blog/qdrant-1.20-performance/"/>
+        <link rel="enclosure" href="https://qdrant.tech/blog/qdrant-1.20-performance/preview/social_preview.jpg" type="image/jpg"/>
+        <updated>2026-11-02T01:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Qdrant 1.20 では、検索をより安く、より高速にできる 2 つの主要な機能を出荷しました。2 つの新しい量子化ネイティブ データ型 (turbo8 と Turbo16) と、ネストされたフィールドの高度なメタデータインデックス。 私たちは、パフォーマンスとコストの改善を測定し、必要なくありません。そして、このブログ記事では、私たちの調査結果を通して行きます。 ディスクの使用量を減らします。]]></summary>
+        <content type="html"><![CDATA[Qdrant 1.20 では、検索をより安く、より高速にできる 2 つの主要な機能を出荷しました。2 つの新しい量子化ネイティブ データ型 (turbo8 と Turbo16) と、ネストされたフィールドの高度なメタデータインデックス。 私たちは、パフォーマンスとコストの改善を測定し、必要なくありません。そして、このブログ記事では、私たちの調査結果を通して行きます。 ディスクの使用量を減らします。RecallStoringベクターは、常に主費用です。これは、風邪時にディスクを費やし、暖かいときにメモリを消費します。]]></content>
+        <author>
+            <name>info@qdrant.tech (Andrey Vasnetsov)</name>
+        </author>
+        <published>2026-11-02T01:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MongoDBの紹介 アトラスシャーディングアドバイザー: いつ、どのようにシャードクラスターをスケールするかを知る | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/product-release-announcements/introducing-atlas-sharding-advisor-know-when-how-scale-sharded-clusters</id>
+        <link href="https://www.mongodb.com/company/blog/product-release-announcements/introducing-atlas-sharding-advisor-know-when-how-scale-sharded-clusters"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt104f6d2d1dca44dd/6ae8a87b55b211b156b7ee20/Blog_Meta_Image_Template_Brand_Refresh.png" type="image/png"/>
+        <updated>2026-11-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[アプリケーションが成長するにつれて、データベースチームは、データの配布、ワークロードの管理、およびインフラストラクチャのスケールに関するより複雑な決定を行う必要があります。 シャーディングは、MongoDBを水平にスケールアップすることを可能にしますが、シャードされたクラスターを管理することで、独自の課題について紹介することができます。 クラスターの健康を理解し、不均等な負荷を診断し、適切なシャー]]></summary>
+        <content type="html"><![CDATA[アプリケーションが成長するにつれて、データベースチームは、データの配布、ワークロードの管理、およびインフラストラクチャのスケールに関するより複雑な決定を行う必要があります。 シャーディングは、MongoDBを水平にスケールアップすることを可能にしますが、シャードされたクラスターを管理することで、独自の課題について紹介することができます。 クラスターの健康を理解し、不均等な負荷を診断し、適切なシャードキーを選択すると、複数のビューにわたってメトリックを組み合わせて、専門的専門知識に依存する必要があります。]]></content>
+        <category label="Home"/>
+        <published>2026-11-02T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HypoPG 1.4.5 リリース! | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/hypopg-145-is-out-3428/</id>
+        <link href="https://www.postgresql.org/about/news/hypopg-145-is-out-3428/"/>
+        <updated>2026-11-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[台南、台湾 - 日 1 11月 2026HypoPG 1.4.5I は、バージョン 1.4.5 のリリースを発表し、HypoPG の拡張機能を追加し、PostgreSQL9.2 以降と互換性があります。 変更履歴 バグ修正: 仮説インデックスで長期的に立っているthoを修正_estimate_index(Julien Rouhaud)Fixは、クラッシュ(Julien Rouhaud)リンク&amp;クレ]]></summary>
+        <content type="html"><![CDATA[台南、台湾 - 日 1 11月 2026HypoPG 1.4.5I は、バージョン 1.4.5 のリリースを発表し、HypoPG の拡張機能を追加し、PostgreSQL9.2 以降と互換性があります。 変更履歴 バグ修正: 仮説インデックスで長期的に立っているthoを修正_estimate_index(Julien Rouhaud)Fixは、クラッシュ(Julien Rouhaud)リンク&amp;クレジットにつながることができます バグを報告したユーザーの皆様、CHANGELOGファイルで引用されている方はありがとうございました。 ハイポPGはオープンプロジェクトです。 より良いツールを構築するための任意の貢献を歓迎します。 github.com/HypoPG/hypopg.Linksでgithubrepositoryを使用して、アイデア、機能のリクエスト、パッチを送信する必要があります。 ダウンロード: github.com/HypoPG/hypopg/releases バグトラッカー: github.com/HypoPG/hypopg/issues]]></content>
+        <published>2026-11-02T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[psqlodbcのセキュリティリリース | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/security-release-for-psqlodbc-3431/</id>
+        <link href="https://www.postgresql.org/about/news/security-release-for-psqlodbc-3431/"/>
+        <updated>2026-11-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[PostgreSQLについて ODBC プロジェクトは、複数のセキュリティの問題を修正するためにバージョン18.00.0006をリリースしました。]]></summary>
+        <content type="html"><![CDATA[PostgreSQLについて ODBC プロジェクトは、複数のセキュリティの問題を修正するためにバージョン18.00.0006をリリースしました。]]></content>
+        <published>2026-11-02T00:00:00.000Z</published>
+    </entry>
+</feed>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</id>
+    <title>GitHub Security Advisory｜企業テックブログRSS</title>
+    <updated>2026-11-07T13:05:24.833Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/atom.xml"/>
+    <subtitle>GitHub Security Advisoryセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[[GeoNode] GeoNode has Stored XSS in Documents metadata abstract field | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-r4hm-p9f9-fj9v</id>
+        <link href="https://github.com/advisories/GHSA-r4hm-p9f9-fj9v"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-06T19:50:34.000Z</updated>
+        <summary type="html"><![CDATA[The abstract metadata of documents is not sanitised. It’s possible to store arbitrary HTML (and JS) that will be executed when visiting the page.Referenceshttps://github.com/GeoNode/geonode/security/a]]></summary>
+        <content type="html"><![CDATA[The abstract metadata of documents is not sanitised. It’s possible to store arbitrary HTML (and JS) that will be executed when visiting the page.Referenceshttps://github.com/GeoNode/geonode/security/advisories/GHSA-r4hm-p9f9-fj9vhttps://github.com/GeoNode/geonode/pull/14322https://github.com/GeoNode/geonode/pull/14343https://github.com/GeoNode/geonode/commit/0803857b22eba5b55729145ef401b1bc1c23e332https://github.com/GeoNode/geonode/commit/730d8fae206ea5b051f630718aeecae1bf7b5760https://github.co]]></content>
+        <published>2026-11-06T19:50:34.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[GeoNode] GeoNode has Unrestricted File Upload | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-fqpv-mq26-pr4j</id>
+        <link href="https://github.com/advisories/GHSA-fqpv-mq26-pr4j"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-06T19:41:23.000Z</updated>
+        <summary type="html"><![CDATA[The upload service validation can be circumvented with specially crafted requests, allowing for the storage and serving of malicious files.Referenceshttps://github.com/GeoNode/geonode/security/advisor]]></summary>
+        <content type="html"><![CDATA[The upload service validation can be circumvented with specially crafted requests, allowing for the storage and serving of malicious files.Referenceshttps://github.com/GeoNode/geonode/security/advisories/GHSA-fqpv-mq26-pr4jhttps://github.com/GeoNode/geonode/pull/14223https://github.com/GeoNode/geonode/pull/14224https://github.com/GeoNode/geonode/commit/16ec8b3914fe87d0a258c14cf73b0a4295bb072fhttps://github.com/GeoNode/geonode/commit/239a6b49c925957197033831df5f20c4c13a14dahttps://github.com/GeoN]]></content>
+        <published>2026-11-06T19:41:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[GeoNode] GeoNode has OS command injection via uploaded file layer name | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-9fpx-fr6j-2vh6</id>
+        <link href="https://github.com/advisories/GHSA-9fpx-fr6j-2vh6"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-06T19:39:38.000Z</updated>
+        <summary type="html"><![CDATA[Arbitrary OS commands can be executed on the GeoNode by uploading a vector file with a crafted layer name.Referenceshttps://github.com/GeoNode/geonode/security/advisories/GHSA-9fpx-fr6j-2vh6https://gi]]></summary>
+        <content type="html"><![CDATA[Arbitrary OS commands can be executed on the GeoNode by uploading a vector file with a crafted layer name.Referenceshttps://github.com/GeoNode/geonode/security/advisories/GHSA-9fpx-fr6j-2vh6https://github.com/GeoNode/geonode/commit/1408290c0bb54872924a9b334a516db9758a2180https://github.com/advisories/GHSA-9fpx-fr6j-2vh6]]></content>
+        <published>2026-11-06T19:39:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[filecoin-pin] filecoin-pin: Unbounded DAG pinning can exhaust server resources | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-m5ph-mmg5-6w5h</id>
+        <link href="https://github.com/advisories/GHSA-m5ph-mmg5-6w5h"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-05T18:07:30.000Z</updated>
+        <summary type="html"><![CDATA[SummaryThe IPFS Pinning Service API implementation accepts a caller-controlled CID through POST /pins, queues background processing, and then recursively fetches the full DAG with helia.pins.add(cid).]]></summary>
+        <content type="html"><![CDATA[SummaryThe IPFS Pinning Service API implementation accepts a caller-controlled CID through POST /pins, queues background processing, and then recursively fetches the full DAG with helia.pins.add(cid). The route and background pinning path do not enforce a request rate limit, per-user quota, maximum DAG byte count, maximum block count, traversal timeout, or concurrent pinning limit.An authenticated caller, or an unauthenticated caller when the server is started with ALLOW_NO_AUTH=true, can submit]]></content>
+        <published>2026-11-05T18:07:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[banks] Banks: Unsafe importlib.import_module of attacker-controlled Tool.import_path in CompletionExtension allows RCE | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-64vx-6h2c-rjh7</id>
+        <link href="https://github.com/advisories/GHSA-64vx-6h2c-rjh7"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-05T17:51:02.000Z</updated>
+        <summary type="html"><![CDATA[Summary banks parses Tool JSON objects from the rendered body of {% completion %} blocks and later resolves their import_path field through importlib.import_module(...) + getattr(...) to obtain the ca]]></summary>
+        <content type="html"><![CDATA[Summary banks parses Tool JSON objects from the rendered body of {% completion %} blocks and later resolves their import_path field through importlib.import_module(...) + getattr(...) to obtain the callable that handles a tool call. There is no allowlist or sanitization on import_path, so any importable Python attribute (e.g. os.system, subprocess.getoutput) can be selected. When the LLM emits a tool_calls entry whose function.name matches the attacker-supplied tool name, the resolved callable i]]></content>
+        <published>2026-11-05T17:51:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@payloadcms/storage-vercel-blob] @payloadcms/storage-vercel-blob has access control bypass of uploads in Vercel Storage adapter | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-mc8m-rr6c-r5qr</id>
+        <link href="https://github.com/advisories/GHSA-mc8m-rr6c-r5qr"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-04T17:00:39.000Z</updated>
+        <summary type="html"><![CDATA[ImpactIn affected configurations, client upload access does not consistently align with the associated collection’s access configuration.You are affected if:You use client uploads with @payloadcms/sto]]></summary>
+        <content type="html"><![CDATA[ImpactIn affected configurations, client upload access does not consistently align with the associated collection’s access configuration.You are affected if:You use client uploads with @payloadcms/storage-vercel-blob.Authenticated users can access the client-upload route.Applications that do not enable client uploads are not affected.PatchesClient uploads now require authentication and the appropriate collection-level access before upload access is granted.Users should upgrade Payload packages t]]></content>
+        <published>2026-11-04T17:00:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@payloadcms/storage-vercel-blob] @payloadcms/storage-vercel-blob has access control bypass of uploads in Vercel Storage adapter | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-mc8m-rr6c-r5qr</id>
+        <link href="https://github.com/advisories/GHSA-mc8m-rr6c-r5qr"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-04T17:00:39.000Z</updated>
+        <summary type="html"><![CDATA[ImpactIn affected configurations, client upload access does not consistently align with the associated collection’s access configuration.You are affected if:You use client uploads with @payloadcms/sto]]></summary>
+        <content type="html"><![CDATA[ImpactIn affected configurations, client upload access does not consistently align with the associated collection’s access configuration.You are affected if:You use client uploads with @payloadcms/storage-vercel-blob.Authenticated users can access the client-upload route.Applications that do not enable client uploads are not affected.PatchesClient uploads now require authentication and the appropriate collection-level access before upload access is granted.Users should upgrade Payload packages t]]></content>
+        <published>2026-11-04T17:00:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[odf-kit] odf-kit: HTML injection leading to XSS in odtToHtml() and odsToHtml() via unescaped style attribute values | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-3cgg-c5pp-57h6</id>
+        <link href="https://github.com/advisories/GHSA-3cgg-c5pp-57h6"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-04T16:14:34.000Z</updated>
+        <summary type="html"><![CDATA[SummaryODF style attribute values are interpolated into style="..." attributes without HTML-escaping in both of odf-kit's to-HTML renderers (odtToHtml and odsToHtml). A double-quote character inside a]]></summary>
+        <content type="html"><![CDATA[SummaryODF style attribute values are interpolated into style="..." attributes without HTML-escaping in both of odf-kit's to-HTML renderers (odtToHtml and odsToHtml). A double-quote character inside an attacker-controlled style value breaks out of the attribute, allowing arbitrary HTML/attribute injection — and therefore script execution (XSS) — from a crafted .odt or .ods file wherever the rendered output is inserted as HTML, which is the documented purpose of both functions.DetailsODT renderer]]></content>
+        <published>2026-11-04T16:14:34.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[stanza] Stanza: RCE via pickle deserialization in the lemmatizer | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-gh9r-c94j-cmp5</id>
+        <link href="https://github.com/advisories/GHSA-gh9r-c94j-cmp5"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-03T20:29:16.000Z</updated>
+        <summary type="html"><![CDATA[TL;DRLoading an attacker-supplied lemma .pt runs arbitrary code as the loading user. Since 1.14.0 the lemmatizer stores pos_dict as a gzip-compressed pickle in the checkpoint's dicts field (a bytes va]]></summary>
+        <content type="html"><![CDATA[TL;DRLoading an attacker-supplied lemma .pt runs arbitrary code as the loading user. Since 1.14.0 the lemmatizer stores pos_dict as a gzip-compressed pickle in the checkpoint's dicts field (a bytes value). torch.load(weights_only=True) treats bytes as a primitive and passes it through unexamined, so its allowlist never sees the inner stream. Trainer.load then feeds those bytes to an unrestricted pickle.loads: the only bare pickle.loads in the tree. Result: weights_only=True gives no protection h]]></content>
+        <published>2026-11-03T20:29:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@enspirit/elo] Elo JavaScript emitter has sandbox escape to arbitrary Node.js / browser code execution via unfiltered `.constructor` member access | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-33r5-xmm8-v6x5</id>
+        <link href="https://github.com/advisories/GHSA-33r5-xmm8-v6x5"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-03T17:53:42.000Z</updated>
+        <summary type="html"><![CDATA[SummaryAn unauthenticated attacker who controls a string passed to any Elo JavaScript-emission path — defaultFormats.elo.parse(), the bin/elo CLI, or the live browser playground at elo-lang.org/try — ]]></summary>
+        <content type="html"><![CDATA[SummaryAn unauthenticated attacker who controls a string passed to any Elo JavaScript-emission path — defaultFormats.elo.parse(), the bin/elo CLI, or the live browser playground at elo-lang.org/try — can execute arbitrary code in the host JavaScript runtime. A payload built from the .constructor.constructor chain compiles, without modification, to a live Function invocation in the emitted JavaScript, escaping any sandbox assumption around "Elo is a safe data/DSL language."Vulnerable sink and roo]]></content>
+        <published>2026-11-03T17:53:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@enspirit/elo] Elo Ruby backend has Remote Code Execution via unescaped `#{...}` interpolation in emitted string literals and subtype-constraint labels | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-7w38-ggh5-v542</id>
+        <link href="https://github.com/advisories/GHSA-7w38-ggh5-v542"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-03T17:51:30.000Z</updated>
+        <summary type="html"><![CDATA[SummaryElo's Ruby backend emits attacker-controlled text into Ruby double-quoted strings without escaping the # character. Because # begins Ruby's interpolation sequences — #{expr}, #@ivar, #@@cvar, #]]></summary>
+        <content type="html"><![CDATA[SummaryElo's Ruby backend emits attacker-controlled text into Ruby double-quoted strings without escaping the # character. Because # begins Ruby's interpolation sequences — #{expr}, #@ivar, #@@cvar, #$gvar — and any expression wrapped in #{...} may use backticks for shell execution, an Elo program that contains a crafted string literal or a labelled subtype constraint compiles to Ruby that evaluates attacker-chosen Ruby, and through backticks runs attacker-chosen shell commands, at runtime.The s]]></content>
+        <published>2026-11-03T17:51:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[minimatch] minimatch has potential denial of service via globparts amplification | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-g3hv-75wg-m249</id>
+        <link href="https://github.com/advisories/GHSA-g3hv-75wg-m249"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T23:09:55.000Z</updated>
+        <summary type="html"><![CDATA[minimatch 10.2.6 contains an attacker-controlled pattern amplification in firstPhasePreProcess() when optimizationLevel &gt;= 2.researcher: Reid Downing (b1nv0id)files: src/index.ts: 690-770src/index.ts:]]></summary>
+        <content type="html"><![CDATA[minimatch 10.2.6 contains an attacker-controlled pattern amplification in firstPhasePreProcess() when optimizationLevel &gt;= 2.researcher: Reid Downing (b1nv0id)files: src/index.ts: 690-770src/index.ts: 780-796issue:input-controlled growth of globParts during first-phase preprocessing, followed by quadratic second-phase processing.the **/../ transformation clones a globparts entry and appends the clone to the same globparts array:parts.splice(gs, 1)const other = parts.slice(0)other[gs] = '**'globP]]></content>
+        <published>2026-10-30T23:09:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pypa/gh-action-pypi-publish] pypi-publish action revocation of CA in the chain that Sigstore uses in Trusted Publishing and Digital Attestations for PyPI | Security Advisory for Github Actions]]></title>
+        <id>https://github.com/advisories/GHSA-5xjx-3w67-w9x9</id>
+        <link href="https://github.com/advisories/GHSA-5xjx-3w67-w9x9"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-10-30T20:24:24.000Z</updated>
+        <summary type="html"><![CDATA[SummaryThe pypi-publish action versions before 1.14.2 used to bundle the emSign root CA trust store certificate through the certifi distribution. It has since been removed through the bundle and the n]]></summary>
+        <content type="html"><![CDATA[SummaryThe pypi-publish action versions before 1.14.2 used to bundle the emSign root CA trust store certificate through the certifi distribution. It has since been removed through the bundle and the new version no longer includes them.DetailsThe certifi-provided TLS trust store is typically used by many projects in the Python ecosystem, including Sigstore that pypi-publish relies on for Trusted Publishing and Digital Attestations.RelatedThe external compromise is being tracked at https://emudhra]]></content>
+        <published>2026-10-30T20:24:24.000Z</published>
+    </entry>
+</feed>

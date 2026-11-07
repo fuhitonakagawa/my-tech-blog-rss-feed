@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db/</id>
+    <title>Database｜企業テックブログRSS</title>
+    <updated>2026-11-07T13:05:24.745Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/db/feeds/atom.xml"/>
+    <subtitle>Databaseセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[AgensGraph 2.18 Released: Graph Database on PostgreSQL 18 with Expanded ISO GQL Support | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/agensgraph-218-released-graph-database-on-postgresql-18-with-expanded-iso-gql-support-3437/</id>
+        <link href="https://www.postgresql.org/about/news/agensgraph-218-released-graph-database-on-postgresql-18-with-expanded-iso-gql-support-3437/"/>
+        <updated>2026-11-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The AgensGraph Development Team is pleased to announce the release of AgensGraph v2.18.6.1, the latest version in the 2.18 series. AgensGraph is an open-source graph database, built on PostgreSQL 18.6]]></summary>
+        <content type="html"><![CDATA[The AgensGraph Development Team is pleased to announce the release of AgensGraph v2.18.6.1, the latest version in the 2.18 series. AgensGraph is an open-source graph database, built on PostgreSQL 18.6, that runs SQL and graph queries over the same data, in the same transaction and even in the same statement.AgensGraph 2.18 is a major step toward the ISO GQL standard (ISO/IEC 39075), the international standard query language for property graphs. We are committed to bringing AgensGraph in line wit]]></content>
+        <published>2026-11-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Brume: FK-safe pseudonymization for PostgreSQL test and debug copies | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/brume-fk-safe-pseudonymization-for-postgresql-test-and-debug-copies-3434/</id>
+        <link href="https://www.postgresql.org/about/news/brume-fk-safe-pseudonymization-for-postgresql-test-and-debug-copies-3434/"/>
+        <updated>2026-11-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Brume 2.1, an open source (Apache 2.0) tool that creates deterministic, foreign-key-safe pseudonymized copies of PostgreSQL databases for testing, debugging and demos, is now available.Why Brume?Devel]]></summary>
+        <content type="html"><![CDATA[Brume 2.1, an open source (Apache 2.0) tool that creates deterministic, foreign-key-safe pseudonymized copies of PostgreSQL databases for testing, debugging and demos, is now available.Why Brume?Development teams often need realistic data to reproduce bugs, run tests or prepare demos, but copying production exposes real personal data. Classic masking scripts also tend to break referential integrity, which forces you to disable triggers, suspend constraints or repair broken joins by hand.Brume co]]></content>
+        <published>2026-11-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HeapDeck: an on-call monitor for PostgreSQL on iPhone and iPad | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/heapdeck-an-on-call-monitor-for-postgresql-on-iphone-and-ipad-3436/</id>
+        <link href="https://www.postgresql.org/about/news/heapdeck-an-on-call-monitor-for-postgresql-on-iphone-and-ipad-3436/"/>
+        <updated>2026-11-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[HeapDeck is a new native app for engineers on call for PostgreSQL 13 to 19, on the App Store for iPhone and iPad.It opens on one health verdict with ten tiles. The Locks screen draws the tree from pg_]]></summary>
+        <content type="html"><![CDATA[HeapDeck is a new native app for engineers on call for PostgreSQL 13 to 19, on the App Store for iPhone and iPad.It opens on one health verdict with ten tiles. The Locks screen draws the tree from pg_blocking_pids() with the root blocker on top and counts the sessions that stopping it would free. Other screens cover pg_stat_activity, transaction ID wraparound and dead tuples, replication lag and slots, and pg_stat_statements.The app uses a direct connection or an SSH tunnel, with TLS and pinned ]]></content>
+        <published>2026-11-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PG Observability Map 1.0.0 Released | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/pg-observability-map-100-released-3427/</id>
+        <link href="https://www.postgresql.org/about/news/pg-observability-map-100-released-3427/"/>
+        <updated>2026-11-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We are pleased to announce the initial release (1.0.0) of PG Observability Map, a interactive web-based tool designed to visualize and explore PostgreSQL observability, metrics, and internal diagnosti]]></summary>
+        <content type="html"><![CDATA[We are pleased to announce the initial release (1.0.0) of PG Observability Map, a interactive web-based tool designed to visualize and explore PostgreSQL observability, metrics, and internal diagnostic views.Key Features &amp; Highlights:Interactive visual mapping of PostgreSQL system views, functions, and statistics.Architectural contextualization: each item is mapped directly to its corresponding PostgreSQL architectural section.Easy navigation across PostgreSQL versions (including PG 19 support).]]></content>
+        <published>2026-11-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Read, don't copy: replacing file feeds with OpenSharing - Part 2 (How to Implement) | Databricks]]></title>
+        <id>https://www.databricks.com/blog/read-dont-copy-replacing-file-feeds-opensharing-part-2-how-implement</id>
+        <link href="https://www.databricks.com/blog/read-dont-copy-replacing-file-feeds-opensharing-part-2-how-implement"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3_0.png" type="image/png"/>
+        <updated>2026-11-06T22:13:00.000Z</updated>
+        <summary type="html"><![CDATA[Many data-sharing architectures begin with a familiar pattern: A provider exports...]]></summary>
+        <content type="html"><![CDATA[Many data-sharing architectures begin with a familiar pattern: A provider exports...]]></content>
+        <category label="Engineering"/>
+        <category label="Tutorials"/>
+        <published>2026-11-06T22:13:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Read, don't copy: replacing file and API feeds with OpenSharing - Part 1 (The Why) | Databricks]]></title>
+        <id>https://www.databricks.com/blog/read-dont-copy-replacing-file-and-api-feeds-opensharing-part-1-why</id>
+        <link href="https://www.databricks.com/blog/read-dont-copy-replacing-file-and-api-feeds-opensharing-part-1-why"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3_0.png" type="image/png"/>
+        <updated>2026-11-06T22:10:00.000Z</updated>
+        <summary type="html"><![CDATA[If you ingest data from your customers over SFTP or APIs, you have probably asked...]]></summary>
+        <content type="html"><![CDATA[If you ingest data from your customers over SFTP or APIs, you have probably asked...]]></content>
+        <category label="Data Strategy"/>
+        <category label="Insights"/>
+        <published>2026-11-06T22:10:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What I learned from a month with WalShadow on ClickHouse Managed Postgres | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/a-month-with-walshadow-clickhouse-managed-postgres</id>
+        <link href="https://clickhouse.com/blog/a-month-with-walshadow-clickhouse-managed-postgres"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2FIMG_5912_4fde8778dc.jpg&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-06T16:16:22.000Z</updated>
+        <summary type="html"><![CDATA[Hidehiko ASAHI shares a month of WalShadow private-preview testing, comparing replication latency with ClickPipes and checking data correctness, schema changes, and recovery.]]></summary>
+        <content type="html"><![CDATA[Hidehiko ASAHI shares a month of WalShadow private-preview testing, comparing replication latency with ClickPipes and checking data correctness, schema changes, and recovery.]]></content>
+        <published>2026-11-06T16:16:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How public sector organizations can govern AI at scale | Databricks]]></title>
+        <id>https://www.databricks.com/blog/how-public-sector-organizations-can-govern-ai-scale</id>
+        <link href="https://www.databricks.com/blog/how-public-sector-organizations-can-govern-ai-scale"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/image1.png" type="image/png"/>
+        <updated>2026-11-06T15:14:29.000Z</updated>
+        <summary type="html"><![CDATA[Every government CIO has the same mandate right now: adopt AI, move faster, do more...]]></summary>
+        <content type="html"><![CDATA[Every government CIO has the same mandate right now: adopt AI, move faster, do more...]]></content>
+        <category label="Industries"/>
+        <category label="Unity Gateway"/>
+        <category label="Public Sector"/>
+        <published>2026-11-06T15:14:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ClickHouse release 26.10 | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/clickhouse-release-26-10</id>
+        <link href="https://clickhouse.com/blog/clickhouse-release-26-10"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2FBlog_Cover_1200x630_14_380a4d0d49.png&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-06T11:45:40.000Z</updated>
+        <summary type="html"><![CDATA[ClickHouse 26.10 introduces function composition, more flexible joins, faster GROUP BY queries, disk spilling for IN subqueries, an experimental columns cache, and Freeform and SQLite formats.]]></summary>
+        <content type="html"><![CDATA[ClickHouse 26.10 introduces function composition, more flexible joins, faster GROUP BY queries, disk spilling for IN subqueries, an experimental columns cache, and Freeform and SQLite formats.]]></content>
+        <published>2026-11-06T11:45:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[enhance: Bump milvus &amp; proto to v2.6.27 (#55193) | Release notes from milvus]]></title>
+        <id>https://github.com/milvus-io/milvus/releases/tag/v2.6.27</id>
+        <link href="https://github.com/milvus-io/milvus/releases/tag/v2.6.27"/>
+        <link rel="enclosure" href="https://repository-images.githubusercontent.com/208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b" type="image//208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b"/>
+        <updated>2026-11-06T06:18:02.000Z</updated>
+        <summary type="html"><![CDATA[Signed-off-by: Congqi Xia congqi.xia@zilliz.com]]></summary>
+        <content type="html"><![CDATA[Signed-off-by: Congqi Xia congqi.xia@zilliz.com]]></content>
+        <published>2026-11-06T06:18:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pkg/v2.6.27: enhance: Bump milvus &amp; proto to v2.6.27 (#55193) | Release notes from milvus]]></title>
+        <id>https://github.com/milvus-io/milvus/releases/tag/pkg%2Fv2.6.27</id>
+        <link href="https://github.com/milvus-io/milvus/releases/tag/pkg%2Fv2.6.27"/>
+        <link rel="enclosure" href="https://repository-images.githubusercontent.com/208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b" type="image//208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b"/>
+        <updated>2026-11-06T06:18:02.000Z</updated>
+        <summary type="html"><![CDATA[Signed-off-by: Congqi Xia congqi.xia@zilliz.com]]></summary>
+        <content type="html"><![CDATA[Signed-off-by: Congqi Xia congqi.xia@zilliz.com]]></content>
+        <published>2026-11-06T06:18:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI Gateway credits for all accounts, project recovery in the Console, automatic updates up to 16 CU, and more release - Nov 06, 2026 | Changelog — Neon Docs]]></title>
+        <id>https://neon.com/docs/changelog/2026-11-06</id>
+        <link href="https://neon.com/docs/changelog/2026-11-06"/>
+        <link rel="enclosure" href="https://neon.com/docs/og?title=Q2hhbmdlbG9nIC0gTm92IDA2LCAyMDI2" type="image//docs/og"/>
+        <updated>2026-11-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[All accounts can purchase AI Gateway credits. The AI Gateway lets you add AI features to your app, like summarizing notes, describing uploaded photos, or answer...]]></summary>
+        <content type="html"><![CDATA[All accounts can purchase AI Gateway credits. The AI Gateway lets you add AI features to your app, like summarizing notes, describing uploaded photos, or answer...]]></content>
+        <published>2026-11-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Real-time fraud detection with Feature Views | Databricks]]></title>
+        <id>https://www.databricks.com/blog/real-time-fraud-detection-feature-views</id>
+        <link href="https://www.databricks.com/blog/real-time-fraud-detection-feature-views"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/real-time-fraud-detection-with-feature-views-og.png" type="image/png"/>
+        <updated>2026-11-05T23:23:36.000Z</updated>
+        <summary type="html"><![CDATA[Real-time fraud detection depends on three kinds of features: what a customer did...]]></summary>
+        <content type="html"><![CDATA[Real-time fraud detection depends on three kinds of features: what a customer did...]]></content>
+        <category label="Platform"/>
+        <category label="Data Science and ML"/>
+        <published>2026-11-05T23:23:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A builder’s guide to scaling Databricks Apps | Databricks]]></title>
+        <id>https://www.databricks.com/blog/builders-guide-scaling-databricks-apps</id>
+        <link href="https://www.databricks.com/blog/builders-guide-scaling-databricks-apps"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/blog_images/a-builder-s-guide-to-scaling-databricks-blog-img-og.png" type="image/png"/>
+        <updated>2026-11-05T18:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Congratulations, you've built an app on Databricks Apps, and it's gone from a couple...]]></summary>
+        <content type="html"><![CDATA[Congratulations, you've built an app on Databricks Apps, and it's gone from a couple...]]></content>
+        <category label="Data Strategy"/>
+        <category label="Best Practices"/>
+        <published>2026-11-05T18:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Which Data Collaboration Tool: OpenSharing, Clean Rooms, Marketplace | Databricks]]></title>
+        <id>https://www.databricks.com/blog/which-data-collaboration-tool-opensharing-clean-rooms-marketplace</id>
+        <link href="https://www.databricks.com/blog/which-data-collaboration-tool-opensharing-clean-rooms-marketplace"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3.png" type="image/png"/>
+        <updated>2026-11-05T16:29:00.000Z</updated>
+        <summary type="html"><![CDATA[The world of sharing has extended far past tables. We can now securely share all...]]></summary>
+        <content type="html"><![CDATA[The world of sharing has extended far past tables. We can now securely share all...]]></content>
+        <category label="Data Strategy"/>
+        <category label="Best Practices"/>
+        <published>2026-11-05T16:29:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[From Delta Sharing to OpenSharing: what changed, what's next | Databricks]]></title>
+        <id>https://www.databricks.com/blog/delta-sharing-opensharing-what-changed-whats-next</id>
+        <link href="https://www.databricks.com/blog/delta-sharing-opensharing-what-changed-whats-next"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/Copy-of-Industry-Blog-OG-Images-3.png" type="image/png"/>
+        <updated>2026-11-05T16:25:00.000Z</updated>
+        <summary type="html"><![CDATA[Delta Sharing has been the way thousands of organizations exchange live data across...]]></summary>
+        <content type="html"><![CDATA[Delta Sharing has been the way thousands of organizations exchange live data across...]]></content>
+        <category label="Data Strategy"/>
+        <category label="Insights"/>
+        <published>2026-11-05T16:25:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Push-based CDC into Unity Catalog with Zerobus Ingest and Debezium | Databricks]]></title>
+        <id>https://www.databricks.com/blog/push-based-cdc-unity-catalog-zerobus-ingest-and-debezium</id>
+        <link href="https://www.databricks.com/blog/push-based-cdc-unity-catalog-zerobus-ingest-and-debezium"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-11/push-based-cdc-flow-headline-2400x1256.png" type="image/png"/>
+        <updated>2026-11-05T12:48:00.000Z</updated>
+        <summary type="html"><![CDATA[Data in operational databases drives business decisions, and much of that analysis...]]></summary>
+        <content type="html"><![CDATA[Data in operational databases drives business decisions, and much of that analysis...]]></content>
+        <category label="Engineering"/>
+        <published>2026-11-05T12:48:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lakebase Postgres is built on object storage, but 99.99999% of reads never touch it | Blog — Neon Docs]]></title>
+        <id>https://neon.com/blog/lakebase-postgres-reads-never-touch-object-storage</id>
+        <link href="https://neon.com/blog/lakebase-postgres-reads-never-touch-object-storage"/>
+        <link rel="enclosure" href="https://cdn.neonapi.io/public/images/pages/blog/lakebase-postgres-reads-never-touch-object-storage/social-1.jpg" type="image/jpg"/>
+        <updated>2026-11-05T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The most common argument against running Postgres on object storage is that a Postgres backed by object storage must be a slow Postgres. The premise is right, but the conclusion isn't.]]></summary>
+        <content type="html"><![CDATA[The most common argument against running Postgres on object storage is that a Postgres backed by object storage must be a slow Postgres. The premise is right, but the conclusion isn't.]]></content>
+        <author>
+            <name>Carlota Soto</name>
+        </author>
+        <category label="Engineering"/>
+        <published>2026-11-05T12:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Save tokens with Neon Function templates | Blog — Neon Docs]]></title>
+        <id>https://neon.com/blog/save-tokens-with-neon-function-templates</id>
+        <link href="https://neon.com/blog/save-tokens-with-neon-function-templates"/>
+        <link rel="enclosure" href="https://cdn.neonapi.io/public/images/pages/blog/save-tokens-with-neon-function-templates/social.jpg" type="image/jpg"/>
+        <updated>2026-11-05T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Agents can already bootstrap a Neon Function on their own, but they spend tokens researching best practices first. A template from the Neon Function Registry lets them skip that and start from working]]></summary>
+        <content type="html"><![CDATA[Agents can already bootstrap a Neon Function on their own, but they spend tokens researching best practices first. A template from the Neon Function Registry lets them skip that and start from working code.]]></content>
+        <author>
+            <name>Dominik Koch</name>
+        </author>
+        <category label="Product"/>
+        <published>2026-11-05T12:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[milvus-3.0.4 | Release notes from milvus]]></title>
+        <id>https://github.com/milvus-io/milvus/releases/tag/v3.0.4</id>
+        <link href="https://github.com/milvus-io/milvus/releases/tag/v3.0.4"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/2f0c1282f06a9e16551c68ee386b39d78630f11d7986bb81084e876985a11a19/milvus-io/milvus/releases/tag/v3.0.4" type="image/4"/>
+        <updated>2026-11-05T06:25:10.000Z</updated>
+        <summary type="html"><![CDATA[v3.0.4Release date: October 26, 2026Milvus VersionPython SDK VersionNode.js SDK VersionJava SDK VersionGo SDK Version3.0.43.0.23.0.63.0.103.0.0We are excited to announce the release of Milvus v3.0.4! ]]></summary>
+        <content type="html"><![CDATA[v3.0.4Release date: October 26, 2026Milvus VersionPython SDK VersionNode.js SDK VersionJava SDK VersionGo SDK Version3.0.43.0.23.0.63.0.103.0.0We are excited to announce the release of Milvus v3.0.4! This release speeds up bulk import, compaction, and filtered and grouped search, adds lazy column-group loading for Storage V3, and fixes hangs in import, collection loading, and partial-update writes, along with several access control issues and CVEs.ImprovementsImproved sort compaction read throug]]></content>
+        <published>2026-11-05T06:25:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why Actionable Banking Is the Critical Stepping Stone to Full Autonomy | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/innovation/why-actionable-banking-is-critical-stepping-stone-full-autonomy</id>
+        <link href="https://www.mongodb.com/company/blog/innovation/why-actionable-banking-is-critical-stepping-stone-full-autonomy"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt2b69c260a9316ffd/6aeb65797111f54d3e2f75ad/Blog_Meta_Image_Template_Brand_Refresh_(1).png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Almost nothing is as important to someone today as their financial health. Most of us want to stay on top of what's happening with our bank accounts, like when a deposit clears so we can pay bills, if]]></summary>
+        <content type="html"><![CDATA[Almost nothing is as important to someone today as their financial health. Most of us want to stay on top of what's happening with our bank accounts, like when a deposit clears so we can pay bills, if we're reaching our credit card limit, or if we have finally paid off that 30-year mortgage and can free up funds for that dream vacation or paying for our kid's college tuition. But we don't always get immediate feedback when transactions happen. That information often sits on the backend within ou]]></content>
+        <category label="Industry Solutions"/>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing the MongoDB Vercel AI SDK Integration: Persistent Memory for AI Applications | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-vercel-ai-sdk-integration-persistent-memory-applications</id>
+        <link href="https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-vercel-ai-sdk-integration-persistent-memory-applications"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt2cd0926f1352bc5e/6aebad862f17b0fe6938ee4b/Blog_Meta_Image_Template_Brand_Refresh_(2).png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We are excited to announce the release of the MongoDB Vercel AI SDK integration, which provides AI applications and agents built with Vercel’s SDK with a persistent memory store in MongoDB Atlas. It's]]></summary>
+        <content type="html"><![CDATA[We are excited to announce the release of the MongoDB Vercel AI SDK integration, which provides AI applications and agents built with Vercel’s SDK with a persistent memory store in MongoDB Atlas. It's now open source and generally available on npm.]]></content>
+        <category label="Home"/>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Building an Agentic Warehouse Management System—Part 3: Tools, Decisions, and Actions | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/technical/building-an-agentic-warehouse-management-system-part-3-tools-decisions-actions</id>
+        <link href="https://www.mongodb.com/company/blog/technical/building-an-agentic-warehouse-management-system-part-3-tools-decisions-actions"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt056161a3e0f7d092/6aeb6de71a6f6e393f53cb00/Agentic_Warehouse_Management_Part_3_meta.png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[If you haven’t read the first two parts yet, I recommend starting with Part 1: Where AI Agents Add Value and Part 2: Designing and Planning the Agent. There, we introduced the WMS scenario, discussed ]]></summary>
+        <content type="html"><![CDATA[If you haven’t read the first two parts yet, I recommend starting with Part 1: Where AI Agents Add Value and Part 2: Designing and Planning the Agent. There, we introduced the WMS scenario, discussed where an AI agent can add value, and built the first stages of the implementation with Java and Spring AI.]]></content>
+        <category label="Builder Blog"/>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[myDBR 7.7 brings web reporting to PostgreSQL | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/mydbr-77-brings-web-reporting-to-postgresql-3424/</id>
+        <link href="https://www.postgresql.org/about/news/mydbr-77-brings-web-reporting-to-postgresql-3424/"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Helsinki, Finland, 2026-10-28 - myDBR.com announced PostgreSQL support in myDBR, its web-based reporting platform for SQL databases. PostgreSQL 12 or later can now hold both myDBR's own objects and th]]></summary>
+        <content type="html"><![CDATA[Helsinki, Finland, 2026-10-28 - myDBR.com announced PostgreSQL support in myDBR, its web-based reporting platform for SQL databases. PostgreSQL 12 or later can now hold both myDBR's own objects and the reports, alongside the MySQL, MariaDB and Microsoft SQL Server support that myDBR already has.What is myDBR?myDBR turns SQL into a finished reporting portal. A developer writes the report logic in the database. myDBR supplies the web interface: parameter forms, tables, charts, maps, drill-downs, s]]></content>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ReinDB: read-only performance monitoring for PostgreSQL, first database free | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/reindb-read-only-performance-monitoring-for-postgresql-first-database-free-3432/</id>
+        <link href="https://www.postgresql.org/about/news/reindb-read-only-performance-monitoring-for-postgresql-first-database-free-3432/"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Bandlei has released ReinDB, read-only performance monitoring for PostgreSQL, self-managed or on Amazon RDS and Aurora.ReinDB learns what normal looks like for each database and statement, hour by hou]]></summary>
+        <content type="html"><![CDATA[Bandlei has released ReinDB, read-only performance monitoring for PostgreSQL, self-managed or on Amazon RDS and Aurora.ReinDB learns what normal looks like for each database and statement, hour by hour, using pg_stat_statements, and flags what drifts from it, ranked by the extra database time each change costs. Each flag shows the evidence, including plan history, and a fix script your DBA can test, with an undo for each step.ReinDB installs nothing in your database and needs one read-only login]]></content>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Autobase 2.12 released | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/autobase-212-released-3430/</id>
+        <link href="https://www.postgresql.org/about/news/autobase-212-released-3430/"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We are pleased to announce the release of Autobase 2.12!HighlightsBuilt-in Monitoring DashboardsAutobase isn't intended to replace your monitoring system. Instead, we've integrated with Netdata, which]]></summary>
+        <content type="html"><![CDATA[We are pleased to announce the release of Autobase 2.12!HighlightsBuilt-in Monitoring DashboardsAutobase isn't intended to replace your monitoring system. Instead, we've integrated with Netdata, which we consider one of the best solutions for real-time infrastructure monitoring.Autobase Platform now includes built-in dashboards powered by the Netdata agent, providing convenient access to key metrics for:System — CPU, memory, disk, and network performancePostgreSQL — database health and performan]]></content>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing the joint reference architecture for enterprise-grade Redis on VMware Cloud Foundation 9.1 | Redis Blog]]></title>
+        <id>https://redis.io/blog/introducing-the-joint-reference-architecture-for-enterprise-grade-redis-on-vmware-cloud-foundation-9-1/</id>
+        <link href="https://redis.io/blog/introducing-the-joint-reference-architecture-for-enterprise-grade-redis-on-vmware-cloud-foundation-9-1/"/>
+        <link rel="enclosure" href="https://cdn.sanity.io/images/sy1jschh/production/f0e021588fb93bc20610b40761cbf2cecffa6a34-1200x628.png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Joint reference architecture from VMware by Broadcom and RedisMoving beyond caching to enterprise-grade real-time dataTeams building fraud detection, streaming analytics, AI agents, and feature stores]]></summary>
+        <content type="html"><![CDATA[Joint reference architecture from VMware by Broadcom and RedisMoving beyond caching to enterprise-grade real-time dataTeams building fraud detection, streaming analytics, AI agents, and feature stores need fast data access under concurrent load. R...]]></content>
+        <author>
+            <name>Mike  Moss </name>
+        </author>
+        <category label="Tech"/>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How JetBrains Built Cross-Database Queries into DataGrip with DuckDB | DuckDB]]></title>
+        <id>https://duckdb.org/2026/11/05/jetbrains-datagrip.html</id>
+        <link href="https://duckdb.org/2026/11/05/jetbrains-datagrip.html"/>
+        <link rel="enclosure" href="https://duckdb.org/images/blog/thumbs/datagrip.png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[JetBrains users had long asked to join data across different database connections in a single query. Rather than build its own cross-database query engine, JetBrains embedded DuckDB in DataGrip, using]]></summary>
+        <content type="html"><![CDATA[JetBrains users had long asked to join data across different database connections in a single query. Rather than build its own cross-database query engine, JetBrains embedded DuckDB in DataGrip, using DuckDB’s custom table functions to connect it to the IDE’s existing query execution. This is why DuckDB won out over the alternatives, and where the integration goes next.]]></content>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing Apache Spark® 4.3 - Now available in Databricks Runtime 19 | Databricks]]></title>
+        <id>https://www.databricks.com/blog/introducing-apache-spark-43-now-available-databricks-runtime-19</id>
+        <link href="https://www.databricks.com/blog/introducing-apache-spark-43-now-available-databricks-runtime-19"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-10/2026-09-Blog-Introducing-Apache-Spark-R-4.3-OG-1200x628-2x.png" type="image/png"/>
+        <updated>2026-11-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[IntroductionApache Spark 4.3 brings stateful processing to Real-Time Mode, achieving...]]></summary>
+        <content type="html"><![CDATA[IntroductionApache Spark 4.3 brings stateful processing to Real-Time Mode, achieving...]]></content>
+        <category label="Engineering"/>
+        <category label="Open Source"/>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Enterprise Case for Open-Weight Models on Databricks | Databricks]]></title>
+        <id>https://www.databricks.com/blog/enterprise-case-open-weight-models-databricks</id>
+        <link href="https://www.databricks.com/blog/enterprise-case-open-weight-models-databricks"/>
+        <link rel="enclosure" href="https://www.databricks.com/sites/default/files/2026-10/enterprise-case-open-weight-models-databricks-blog-og.png" type="image/png"/>
+        <updated>2026-11-04T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[As field engineers at Databricks, we spend our days inside enterprise AI deployments,...]]></summary>
+        <content type="html"><![CDATA[As field engineers at Databricks, we spend our days inside enterprise AI deployments,...]]></content>
+        <category label="Platform"/>
+        <category label="AI Research"/>
+        <published>2026-11-04T20:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Inside a Kylon room, where people and agents build apps on Neon | Blog — Neon Docs]]></title>
+        <id>https://neon.com/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon</id>
+        <link href="https://neon.com/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon"/>
+        <link rel="enclosure" href="https://cdn.neonapi.io/public/images/pages/blog/inside-a-kylon-room-where-people-and-agents-build-apps-on-neon/social.jpg" type="image/jpg"/>
+        <updated>2026-11-04T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Kylon is your AI company harness - a workspace where your team, their agents, and their tools can work together in shared rooms.]]></summary>
+        <content type="html"><![CDATA[Kylon is your AI company harness - a workspace where your team, their agents, and their tools can work together in shared rooms.]]></content>
+        <author>
+            <name>Carlota Soto</name>
+        </author>
+        <category label="Case Studies"/>
+        <published>2026-11-04T12:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Is MCP good yet? | Blog — Neon Docs]]></title>
+        <id>https://neon.com/blog/is-mcp-good-yet</id>
+        <link href="https://neon.com/blog/is-mcp-good-yet"/>
+        <link rel="enclosure" href="https://cdn.neonapi.io/public/images/pages/blog/is-mcp-good-yet/social.png" type="image/png"/>
+        <updated>2026-11-04T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Agents pick our MCP server over our CLI, even when our own skills say otherwise. Here's what our usage numbers show and why the new stateless spec makes MCP a lot better.]]></summary>
+        <content type="html"><![CDATA[Agents pick our MCP server over our CLI, even when our own skills say otherwise. Here's what our usage numbers show and why the new stateless spec makes MCP a lot better.]]></content>
+        <author>
+            <name>Andre Landgraf</name>
+        </author>
+        <category label="Product"/>
+        <published>2026-11-04T09:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[milvus-2.6.26 | Release notes from milvus]]></title>
+        <id>https://github.com/milvus-io/milvus/releases/tag/v2.6.26</id>
+        <link href="https://github.com/milvus-io/milvus/releases/tag/v2.6.26"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/08be8c265dd485c1b3ef38a483f84b05d7d8f479077e00edfe78a5eb88f98be8/milvus-io/milvus/releases/tag/v2.6.26" type="image/26"/>
+        <updated>2026-11-04T08:03:37.000Z</updated>
+        <summary type="html"><![CDATA[v2.6.26Release date: October 26, 2026Milvus VersionPython SDK VersionNode.js SDK VersionJava SDK VersionGo SDK Version2.6.262.6.172.6.172.6.272.6.5We are excited to announce the release of Milvus v2.6]]></summary>
+        <content type="html"><![CDATA[v2.6.26Release date: October 26, 2026Milvus VersionPython SDK VersionNode.js SDK VersionJava SDK VersionGo SDK Version2.6.262.6.172.6.172.6.272.6.5We are excited to announce the release of Milvus v2.6.26! This release speeds up RPC message decoding, cuts Proxy memory usage for large search and query requests, and fixes QueryNode crashes in nullable and NGRAM filtering, hangs during collection loading and import jobs, and timestamps that could go backward after coordinator startup.ImprovementsSpe]]></content>
+        <published>2026-11-04T08:03:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MongoDB CDC connector for ClickPipes is now generally available | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/mongodb-cdc-connector-clickpipes-ga</id>
+        <link href="https://clickhouse.com/blog/mongodb-cdc-connector-clickpipes-ga"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2FMongo_DB_Click_Pipes_GA_28ee291c8e.png&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-04T02:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The MongoDB CDC connector for ClickPipes is now generally available, with parallel snapshotting, structured ingestion into typed columns, lag and resource metrics, and Terraform and OpenAPI support.]]></summary>
+        <content type="html"><![CDATA[The MongoDB CDC connector for ClickPipes is now generally available, with parallel snapshotting, structured ingestion into typed columns, lag and resource metrics, and Terraform and OpenAPI support.]]></content>
+        <published>2026-11-04T02:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fencing a Postgres primary that might still be alive | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/fencing-a-postgres-primary-that-might-still-be-alive</id>
+        <link href="https://clickhouse.com/blog/fencing-a-postgres-primary-that-might-still-be-alive"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2Fpostgres_fencing_nov2026_banner_fd0fdfefc0.png&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-04T00:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Promoting a standby doesn't stop the old Postgres primary from taking writes. Here's how the control plane behind ClickHouse Managed Postgres fences it on bare metal, AWS and GCP, and why the design i]]></summary>
+        <content type="html"><![CDATA[Promoting a standby doesn't stop the old Postgres primary from taking writes. Here's how the control plane behind ClickHouse Managed Postgres fences it on bare metal, AWS and GCP, and why the design is fail-open.]]></content>
+        <published>2026-11-04T00:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing the MongoDB Google ADK Integration: Durable Memory for Agent State | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-google-adk-integration-durable-memory-agent-state</id>
+        <link href="https://www.mongodb.com/company/blog/product-release-announcements/introducing-mongodb-google-adk-integration-durable-memory-agent-state"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt066fb7ef33dff28c/6aea0764ebc5746b61ac0f50/MongoDB_Google_ADK_Integration_Meta.png" type="image/png"/>
+        <updated>2026-11-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We’re excited to announce the MongoDB Google ADK Integration, which provides developers with the building blocks they need to create durable memory for agent state.]]></summary>
+        <content type="html"><![CDATA[We’re excited to announce the MongoDB Google ADK Integration, which provides developers with the building blocks they need to create durable memory for agent state.]]></content>
+        <category label="Home"/>
+        <published>2026-11-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The next chapter of Redis Iris: what agents need to work in the real world | Redis Blog]]></title>
+        <id>https://redis.io/blog/the-next-chapter-of-redis-iris-what-agents-need-to-work-in-the-real-world/</id>
+        <link href="https://redis.io/blog/the-next-chapter-of-redis-iris-what-agents-need-to-work-in-the-real-world/"/>
+        <link rel="enclosure" href="https://redis.io/_next/static/immutable/media/open-graph.2wot1rsqh2ybe.png" type="image/png"/>
+        <updated>2026-11-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The other day, I was chatting with a customer support AI agent dealing with a cancelled flight. The experience was terrible. You could tell the agent realistically only had a few functions, and this w]]></summary>
+        <content type="html"><![CDATA[The other day, I was chatting with a customer support AI agent dealing with a cancelled flight. The experience was terrible. You could tell the agent realistically only had a few functions, and this was clearly not one of them. I’m sure when the devel...]]></content>
+        <author>
+            <name>Simba Khadder</name>
+        </author>
+        <category label="Tech"/>
+        <published>2026-11-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Agents Are Software: Introducing the Next Chapter of Redis Iris | Redis Blog]]></title>
+        <id>https://redis.io/blog/agents-are-software-introducing-the-next-chapter-of-redis-iris/</id>
+        <link href="https://redis.io/blog/agents-are-software-introducing-the-next-chapter-of-redis-iris/"/>
+        <link rel="enclosure" href="https://redis.io/_next/static/immutable/media/open-graph.2wot1rsqh2ybe.png" type="image/png"/>
+        <updated>2026-11-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The next chapter of Redis Iris is hereAI models and infrastructure are now good enough for the enterprise, yet few teams are seeing repeatable, production-level success with agents. This is because ag]]></summary>
+        <content type="html"><![CDATA[The next chapter of Redis Iris is hereAI models and infrastructure are now good enough for the enterprise, yet few teams are seeing repeatable, production-level success with agents. This is because agents lack the right context, at the right time, r...]]></content>
+        <author>
+            <name>Rowan Trollope</name>
+        </author>
+        <category label="Tech"/>
+        <category label="Announcements"/>
+        <published>2026-11-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What's new in ClickStack - September and October '26 | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/whats-new-in-clickstack-october-2026</id>
+        <link href="https://clickhouse.com/blog/whats-new-in-clickstack-october-2026"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2Fclickstack_whatsnew_nov2026_banner_1fc0bc6417.png&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-03T19:09:52.000Z</updated>
+        <summary type="html"><![CDATA[The September and October ClickStack releases bring ad hoc dashboard filters, PromQL for every chart type, ClickStack query tracing, a Trace logs tab, alerts from the chart explorer, and a long list o]]></summary>
+        <content type="html"><![CDATA[The September and October ClickStack releases bring ad hoc dashboard filters, PromQL for every chart type, ClickStack query tracing, a Trace logs tab, alerts from the chart explorer, and a long list of search page and collector improvements.]]></content>
+        <published>2026-11-03T19:09:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Does your application need local data or faster Postgres? | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/does-your-application-need-local-data-or-faster-postgres</id>
+        <link href="https://clickhouse.com/blog/does-your-application-need-local-data-or-faster-postgres"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2FDoes_your_application_need_local_data_or_faster_Postgres_b56df64c5a.jpg&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-03T14:55:13.000Z</updated>
+        <summary type="html"><![CDATA[Local synchronization makes reads fast, but adds another data layer to manage. Explore how AI agents change the trade-off and when NVMe-backed Postgres can simplify the architecture.]]></summary>
+        <content type="html"><![CDATA[Local synchronization makes reads fast, but adds another data layer to manage. Explore how AI agents change the trade-off and when NVMe-backed Postgres can simplify the architecture.]]></content>
+        <published>2026-11-03T14:55:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[milvus-3.0.5 | Release notes from milvus]]></title>
+        <id>https://github.com/milvus-io/milvus/releases/tag/v3.0.5</id>
+        <link href="https://github.com/milvus-io/milvus/releases/tag/v3.0.5"/>
+        <link rel="enclosure" href="https://opengraph.githubassets.com/777cec08a555ea3257021112db62f5eee5114273862684fd8b0cb9cc12c71f6c/milvus-io/milvus/releases/tag/v3.0.5" type="image/5"/>
+        <updated>2026-11-03T13:23:47.000Z</updated>
+        <summary type="html"><![CDATA[v3.0.5Release date: October 30, 2026Milvus VersionPython SDK VersionNode.js SDK VersionJava SDK VersionGo SDK Version3.0.53.0.23.0.63.0.123.0.0We are excited to announce the release of Milvus v3.0.5! ]]></summary>
+        <content type="html"><![CDATA[v3.0.5Release date: October 30, 2026Milvus VersionPython SDK VersionNode.js SDK VersionJava SDK VersionGo SDK Version3.0.53.0.23.0.63.0.123.0.0We are excited to announce the release of Milvus v3.0.5! This release adds resource-group-aware load status in QueryCoord, reduces memory use in several paths. It also fixes stability issues around coordinator restarts, rolling upgrades and transient etcd errors.ImprovementsAdded per-resource-group load percentage and shard-leader readiness in QueryCoord,]]></content>
+        <published>2026-11-03T13:23:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Enterprise-managed auth for MCP: Claude can now issue the identity assertion | Supabase Blog]]></title>
+        <id>https://supabase.com/blog/claude-issued-enterprise-managed-auth-for-mcp</id>
+        <link href="https://supabase.com/blog/claude-issued-enterprise-managed-auth-for-mcp"/>
+        <link rel="enclosure" href="https://supabase.com/images/blog/2026-11-03-claude-issued-enterprise-managed-auth-for-mcp/og.png" type="image/png"/>
+        <updated>2026-11-03T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Claude can now issue the identity assertion for enterprise-managed auth on the Supabase MCP server when your identity provider can't.]]></summary>
+        <content type="html"><![CDATA[Claude can now issue the identity assertion for enterprise-managed auth on the Supabase MCP server when your identity provider can't.]]></content>
+        <published>2026-11-03T07:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bring Live MongoDB Atlas Data Into Microsoft 365 Copilot | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/product-release-announcements/bring-live-atlas-data-into-microsoft-365-copilot</id>
+        <link href="https://www.mongodb.com/company/blog/product-release-announcements/bring-live-atlas-data-into-microsoft-365-copilot"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt2db5c8bdf4cae5a0/6ae8c13a6f64a90a795b1910/Bring_Live_Atlas_Data_Into_Microsoft_365_Meta.png" type="image/png"/>
+        <updated>2026-11-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The federated Copilot connector for MongoDB Atlas gives organizations a governed way to bring live operational data into the flow of work across Copilot experiences.]]></summary>
+        <content type="html"><![CDATA[The federated Copilot connector for MongoDB Atlas gives organizations a governed way to bring live operational data into the flow of work across Copilot experiences.]]></content>
+        <category label="Home"/>
+        <published>2026-11-03T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pgbadger v13.3 has been released | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/pgbadger-v133-has-been-released-3435/</id>
+        <link href="https://www.postgresql.org/about/news/pgbadger-v133-has-been-released-3435/"/>
+        <updated>2026-11-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Antananarivo, Madagascar - November 03, 2026pgBadgerpgBadger is a PostgreSQL performance analyzer, built for speed withfully detailed reports based on your PostgreSQL log files.pgBadger 13.3 was relea]]></summary>
+        <content type="html"><![CDATA[Antananarivo, Madagascar - November 03, 2026pgBadgerpgBadger is a PostgreSQL performance analyzer, built for speed withfully detailed reports based on your PostgreSQL log files.pgBadger 13.3 was released today, this is a maintenance release that fixesissues and applied patches reported by users since last release.Add scroll on legend and mouseover graphs when the list of item is &gt; 10.Fix several issues when the --explode option is used.Add filter of remote logs in watch mode on the remote host t]]></content>
+        <published>2026-11-03T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bringing Local Analytics to the Quant's Desktop | DuckDB]]></title>
+        <id>https://duckdb.org/2026/11/03/bringing-local-analytics-to-the-quants-desktop.html</id>
+        <link href="https://duckdb.org/2026/11/03/bringing-local-analytics-to-the-quants-desktop.html"/>
+        <link rel="enclosure" href="https://duckdb.org/images/blog/thumbs/quants-desktop.png" type="image/png"/>
+        <updated>2026-11-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[After years building kdb+-based data platforms for banks and hedge funds, Ryan Hamilton wanted an analytical engine he could recommend to smaller teams without specialized infrastructure or expensive ]]></summary>
+        <content type="html"><![CDATA[After years building kdb+-based data platforms for banks and hedge funds, Ryan Hamilton wanted an analytical engine he could recommend to smaller teams without specialized infrastructure or expensive licensing. DuckDB gave him a small, embedded way to bring fast local analytics into QStudio and Pulse, and it is now shaping his next open-source project, PeachQ.]]></content>
+        <published>2026-11-03T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How OpenRouter observes, understands, and acts on 740 million LLM requests a day with ClickHouse Cloud | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/openrouter-llm-routing-observability-clickhouse-cloud</id>
+        <link href="https://clickhouse.com/blog/openrouter-llm-routing-observability-clickhouse-cloud"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2Fopenrouter_nov2026_banner_yellow_691da56b54.png&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-02T16:53:28.000Z</updated>
+        <summary type="html"><![CDATA[OpenRouter uses ClickHouse Cloud as the single store behind customer analytics, public model rankings, internal AI agents, and routing across 500+ models, as monthly requests grew 33x to 19.7 billion.]]></summary>
+        <content type="html"><![CDATA[OpenRouter uses ClickHouse Cloud as the single store behind customer analytics, public model rankings, internal AI agents, and routing across 500+ models, as monthly requests grew 33x to 19.7 billion.]]></content>
+        <published>2026-11-02T16:53:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What's new in clickhousectl v0.5.0 | ClickHouse Blog]]></title>
+        <id>https://clickhouse.com/blog/clickhousectl-v0-5-0</id>
+        <link href="https://clickhouse.com/blog/clickhousectl-v0-5-0"/>
+        <link rel="enclosure" href="https://clickhouse.com/_next/image?url=%2Fuploads%2FWhat_s_new_in_clickhousectl_v0_5_0_205cad271c.jpg&amp;w=1200&amp;h=630&amp;q=75" type="image//_next/image"/>
+        <updated>2026-11-02T14:45:00.000Z</updated>
+        <summary type="html"><![CDATA[clickhousectl v0.5.0 takes UDFs from local to Cloud, adds ClickHouse Managed Postgres observability, standardises the command surface, and lists the API-key permissions every Cloud command needs.]]></summary>
+        <content type="html"><![CDATA[clickhousectl v0.5.0 takes UDFs from local to Cloud, adds ClickHouse Managed Postgres observability, standardises the command surface, and lists the API-key permissions every Cloud command needs.]]></content>
+        <published>2026-11-02T14:45:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Managed Better Auth is now an OAuth provider, with MCP support | Blog — Neon Docs]]></title>
+        <id>https://neon.com/blog/managed-better-auth-oauth-provider-mcp</id>
+        <link href="https://neon.com/blog/managed-better-auth-oauth-provider-mcp"/>
+        <link rel="enclosure" href="https://cdn.neonapi.io/public/images/pages/blog/managed-better-auth-oauth-provider-mcp/social.jpg" type="image/jpg"/>
+        <updated>2026-11-02T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Managed Better Auth now supports the OAuth Provider plugin. It turns your auth instance into an OAuth 2.1 authorization server, so other apps and MCP clients can sign users in with your app.]]></summary>
+        <content type="html"><![CDATA[Managed Better Auth now supports the OAuth Provider plugin. It turns your auth instance into an OAuth 2.1 authorization server, so other apps and MCP clients can sign users in with your app.]]></content>
+        <author>
+            <name>Shridhar Deshmukh</name>
+        </author>
+        <category label="Product"/>
+        <published>2026-11-02T12:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Faster and Cheaper Search With Qdrant 1.20 | Qdrant - Vector Search Engine]]></title>
+        <id>https://qdrant.tech/blog/qdrant-1.20-performance/</id>
+        <link href="https://qdrant.tech/blog/qdrant-1.20-performance/"/>
+        <link rel="enclosure" href="https://qdrant.tech/blog/qdrant-1.20-performance/preview/social_preview.jpg" type="image/jpg"/>
+        <updated>2026-11-02T01:00:00.000Z</updated>
+        <summary type="html"><![CDATA[With Qdrant 1.20, we shipped two main features that can make your search cheaper and faster: two new quantization-native datatypes (turbo8 and turbo16) and advanced metadata indexing for nested fields]]></summary>
+        <content type="html"><![CDATA[With Qdrant 1.20, we shipped two main features that can make your search cheaper and faster: two new quantization-native datatypes (turbo8 and turbo16) and advanced metadata indexing for nested fields. We measured the performance and cost improvements so you don’t have to, and in this blog post we go through our findings.Reduce Your Disk Usage, Not Your RecallStoring vectors is always the main expense when it comes to semantic search: they cost disk when cold, and memory when warm.]]></content>
+        <author>
+            <name>info@qdrant.tech (Andrey Vasnetsov)</name>
+        </author>
+        <published>2026-11-02T01:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing MongoDB Atlas Sharding Advisor: Know When and How to Scale Sharded Clusters | MongoDB Blog]]></title>
+        <id>https://www.mongodb.com/company/blog/product-release-announcements/introducing-atlas-sharding-advisor-know-when-how-scale-sharded-clusters</id>
+        <link href="https://www.mongodb.com/company/blog/product-release-announcements/introducing-atlas-sharding-advisor-know-when-how-scale-sharded-clusters"/>
+        <link rel="enclosure" href="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt104f6d2d1dca44dd/6ae8a87b55b211b156b7ee20/Blog_Meta_Image_Template_Brand_Refresh.png" type="image/png"/>
+        <updated>2026-11-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[As applications grow, database teams need to make increasingly complex decisions about how to distribute data, manage workloads, and scale their infrastructure. Sharding enables MongoDB to scale horiz]]></summary>
+        <content type="html"><![CDATA[As applications grow, database teams need to make increasingly complex decisions about how to distribute data, manage workloads, and scale their infrastructure. Sharding enables MongoDB to scale horizontally, but managing a sharded cluster can introduce its own challenges. Understanding cluster health, diagnosing uneven load, and choosing an appropriate shard key can require piecing together metrics across multiple views and relying on specialized expertise.]]></content>
+        <category label="Home"/>
+        <published>2026-11-02T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security release for psqlodbc | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/security-release-for-psqlodbc-3431/</id>
+        <link href="https://www.postgresql.org/about/news/security-release-for-psqlodbc-3431/"/>
+        <updated>2026-11-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The PostgreSQL ODBC project has released version 18.00.0006 to fix multiple security issues see the Changelog for details]]></summary>
+        <content type="html"><![CDATA[The PostgreSQL ODBC project has released version 18.00.0006 to fix multiple security issues see the Changelog for details]]></content>
+        <published>2026-11-02T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HypoPG 1.4.5 is out! | PostgreSQL news]]></title>
+        <id>https://www.postgresql.org/about/news/hypopg-145-is-out-3428/</id>
+        <link href="https://www.postgresql.org/about/news/hypopg-145-is-out-3428/"/>
+        <updated>2026-11-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Tainan, Taiwan - Sun 1 Nov 2026HypoPG 1.4.5I'm pleased to announce the release of the version 1.4.5 of HypoPG, anextension adding support for Hypothetical Indexes, compatible with PostgreSQL9.2 and ab]]></summary>
+        <content type="html"><![CDATA[Tainan, Taiwan - Sun 1 Nov 2026HypoPG 1.4.5I'm pleased to announce the release of the version 1.4.5 of HypoPG, anextension adding support for Hypothetical Indexes, compatible with PostgreSQL9.2 and above.ChangelogBug fixes:Fix long standing thinko in hypo_estimate_index (Julien Rouhaud)Fix relid handling in hypothetical indexes, that could lead to a crash (Julien Rouhaud)Links &amp; CreditsThank to the users who reported bugs, they are all cited in the CHANGELOG file.HypoPG is an open project. Any c]]></content>
+        <published>2026-11-02T00:00:00.000Z</published>
+    </entry>
+</feed>

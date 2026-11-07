@@ -1,0 +1,450 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Zenn Securityタグ｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/feeds/feed.json",
+    "description": "Zenn Securityタグセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://zenn.dev/komlock_lab/articles/chainalysis-what-it-does-2026",
+            "content_html": "こんにちは！ブロックチェーン×AI Agentで自律経済圏を創るKomlock lab（Pacific Meta Group）でエンジニアをしている小原（@brto_0224）です。2026年10月30日、ブロックチェーン分析企業のChainalysisが不正アクセスを受けたことを公表し、11月に入ると取引所向けの監視サービスなども相次いで停止しました。Chainalysisという名前はよく耳にするものの、何をしている会社なのかと聞かれると、うまく説明できませんでした。そこでこの件をきっかけに、Chainalysisが何をしているのか、そしてよく一緒に語られるAMLとは何なのかを見直し...",
+            "url": "https://zenn.dev/komlock_lab/articles/chainalysis-what-it-does-2026",
+            "title": "Chainalysisは何をしているのか――ハッキングから理解するAML・監視・資金追跡 | Zennの「Security」のフィード",
+            "summary": "こんにちは！ブロックチェーン×AI Agentで自律経済圏を創るKomlock lab（Pacific Meta Group）でエンジニアをしている小原（@brto_0224）です。2026年10月30日、ブロックチェーン分析企業のChainalysisが不正アクセスを受けたことを公表し、11月に入ると取引所向けの監視サービスなども相次いで停止しました。Chainalysisという名前はよく耳にす",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--Homazojn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Chainalysis%25E3%2581%25AF%25E4%25BD%2595%25E3%2582%2592%25E3%2581%2597%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258B%25E2%2580%2595%25E2%2580%2595%25E3%2583%258F%25E3%2583%2583%25E3%2582%25AD%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%258B%25E3%2582%2589%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258BAML%25E3%2583%25BB%25E7%259B%25A3%25E8%25A6%2596%25E3%2583%25BB%25E8%25B3%2587%25E9%2587%2591%25E8%25BF%25BD%25E8%25B7%25A1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kobara%2520Toi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzM4OTQ5NWM0ZmEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Komlock%2520lab%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2U4MjYwMWZiMGQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T12:51:07.000Z",
+            "date_published": "2026-11-07T12:51:07.000Z",
+            "author": {
+                "name": "Kobara Toi"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Chainalysisは何をしているのか――ハッキングから理解するAML・監視・資金追跡",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/0rv3/articles/53791e17b687d7",
+            "content_html": "はじめに前編では、「海外IPブロック」を入口ごとに分解した設計と、実験前に固定した予想P1〜P6を置きました。https://zenn.dev/0rv3/articles/b4121b5721b556この結果編では、個人環境で実際に組んで測った結果を、予想への採点として報告します。先に結論の要約だけ置いておきます。GeoIPの国判定は、今回の範囲では「だいたい当たる」。ただし当たることと、遮断に使えることは別だった管理系の入口では、国よりもIP許可リストのほうが判定も運用も素直だったWebhookは国で切らず署名で受ける設計が、実測でもそのまま機能したTorの出口は接...",
+            "url": "https://zenn.dev/0rv3/articles/53791e17b687d7",
+            "title": "「海外IPブロック」はどこまで効くのか — 個人環境で測ってみた（結果編） | Zennの「Security」のフィード",
+            "summary": "はじめに前編では、「海外IPブロック」を入口ごとに分解した設計と、実験前に固定した予想P1〜P6を置きました。https://zenn.dev/0rv3/articles/b4121b5721b556この結果編では、個人環境で実際に組んで測った結果を、予想への採点として報告します。先に結論の要約だけ置いておきます。GeoIPの国判定は、今回の範囲では「だいたい当たる」。ただし当たることと、遮断に使",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--kVo5iNDr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258C%25E6%25B5%25B7%25E5%25A4%2596IP%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2580%258D%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%2593%25E3%2581%25BE%25E3%2581%25A7%25E5%258A%25B9%25E3%2581%258F%25E3%2581%25AE%25E3%2581%258B%2520%25E2%2580%2594%2520%25E5%2580%258B%25E4%25BA%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A7%25E6%25B8%25AC%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2588%25E7%25B5%2590%25E6%259E%259C%25E7%25B7%25A8%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:0rv3%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hNMlI2cmMwdkpIVm9SLTFDWFN5MkFTUVYwQWk2cXFLMUhzM2NuYlNzPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T12:25:00.000Z",
+            "date_published": "2026-11-07T12:25:00.000Z",
+            "author": {
+                "name": "0rv3"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "「海外IPブロック」はどこまで効くのか — 個人環境で測ってみた（結果編）",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/tkishioka/articles/sonarqube-cloud-free-plan",
+            "content_html": "はじめに情報漏洩など、セキュリティ関連の悲しいニュースが続いています。個人開発のアプリも他人事ではありません。今後、セキュリティを置き去りにした開発は、リスクがどんどん大きくなっていくはずです。個人開発でも、今は問題が起きていなくても、セキュリティの勉強も兼ねて、コードを検証するレイヤーをしっかり設けておくことをおすすめします。そこで、まず無料で試せる選択肢として、SonarQubeの無料プランを紹介します。SonarQubeには、自分でサーバーを立てて使うCommunity Build（無料・オープンソース）と、SonarがホストするSonarQube CloudのFreeプラ...",
+            "url": "https://zenn.dev/tkishioka/articles/sonarqube-cloud-free-plan",
+            "title": "情報漏洩が続く今、個人開発のコードは大丈夫？無料でできるセキュリティ検証 | Zennの「Security」のフィード",
+            "summary": "はじめに情報漏洩など、セキュリティ関連の悲しいニュースが続いています。個人開発のアプリも他人事ではありません。今後、セキュリティを置き去りにした開発は、リスクがどんどん大きくなっていくはずです。個人開発でも、今は問題が起きていなくても、セキュリティの勉強も兼ねて、コードを検証するレイヤーをしっかり設けておくことをおすすめします。そこで、まず無料で試せる選択肢として、SonarQubeの無料プランを",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--xLz52Gdx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2583%2585%25E5%25A0%25B1%25E6%25BC%258F%25E6%25B4%25A9%25E3%2581%258C%25E7%25B6%259A%25E3%2581%258F%25E4%25BB%258A%25E3%2580%2581%25E5%2580%258B%25E4%25BA%25BA%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25AE%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25AF%25E5%25A4%25A7%25E4%25B8%2588%25E5%25A4%25AB%25EF%25BC%259F%25E7%2584%25A1%25E6%2596%2599%25E3%2581%25A7%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E6%25A4%259C%25E8%25A8%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takuto%2520Kishioka%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGQ2U3c5elN5Yk9sYmFwUzRNazUyUS1JMFBjMUZDU2Q4dEFqaThKRjBTS3FhLWFBPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T11:29:54.000Z",
+            "date_published": "2026-11-07T11:29:54.000Z",
+            "author": {
+                "name": "Takuto Kishioka"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "情報漏洩が続く今、個人開発のコードは大丈夫？無料でできるセキュリティ検証",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/yui10/articles/ai-security-incidents-ethics-2026",
+            "content_html": "!シリーズ「AIと社会の基本」の番外編です。2025〜2026年に起きたAIとセキュリティの事件を、第2回で扱ったAI倫理の原則にあてはめて整理します。事件の事実は、当事者の公表資料や報道で確認したものです。2026年11月時点の情報です。 この記事の要点この1年ほどで、AIが攻撃の作業の大半をこなすサイバー攻撃、生成AIで作ったプログラムによる10代の不正アクセス、AIエージェントを乗っ取る攻撃、評価中のAIエージェントが許可なく外部に働きかけた事例などが、相次いで公表されました。事件を並べると、問題の中心が「AIが何を出力するか」から「AIに何をさせるか」に移っているこ...",
+            "url": "https://zenn.dev/yui10/articles/ai-security-incidents-ethics-2026",
+            "title": "最近のAIセキュリティ事件から考えるAI倫理【AIと社会の基本 番外編】 | Zennの「Security」のフィード",
+            "summary": "!シリーズ「AIと社会の基本」の番外編です。2025〜2026年に起きたAIとセキュリティの事件を、第2回で扱ったAI倫理の原則にあてはめて整理します。事件の事実は、当事者の公表資料や報道で確認したものです。2026年11月時点の情報です。 この記事の要点この1年ほどで、AIが攻撃の作業の大半をこなすサイバー攻撃、生成AIで作ったプログラムによる10代の不正アクセス、AIエージェントを乗っ取る攻撃",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--e3MaK484--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259C%2580%25E8%25BF%2591%25E3%2581%25AEAI%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E4%25BA%258B%25E4%25BB%25B6%25E3%2581%258B%25E3%2582%2589%25E8%2580%2583%25E3%2581%2588%25E3%2582%258BAI%25E5%2580%25AB%25E7%2590%2586%25E3%2580%2590AI%25E3%2581%25A8%25E7%25A4%25BE%25E4%25BC%259A%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%2520%25E7%2595%25AA%25E5%25A4%2596%25E7%25B7%25A8%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yui10%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzEzYzc4NTkxZTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T09:23:39.000Z",
+            "date_published": "2026-11-07T09:23:39.000Z",
+            "author": {
+                "name": "yui10"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "最近のAIセキュリティ事件から考えるAI倫理【AIと社会の基本 番外編】",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/yoshinn/articles/datagram_transport_layer",
+            "content_html": "通信にはトランスポートレイヤーという通信の順序や送達性を制御するレイヤーがあります。このレイヤの中ではセキュリティやデータの送達性が重要な場合はTLSが使われ、リアルタイム性が重要な場合はUDPが使われていました。ですがリアルタイム性も、セキュリティやデータの送達性ともに両立したい場面があります。そんな場面で使われるトランスポートレイヤーの通信規則がDTLSと呼ばれるプロトコルです。 DLTSとはDTLS（Datagram Transport Layer Security） は、UDPなどの「データグラム型・非信頼性」通信を暗号化するためのプロトコルです。 TLSとの違い...",
+            "url": "https://zenn.dev/yoshinn/articles/datagram_transport_layer",
+            "title": "セキュリティ確保しながらリアルタイム性を確保するDTLS | Zennの「Security」のフィード",
+            "summary": "通信にはトランスポートレイヤーという通信の順序や送達性を制御するレイヤーがあります。このレイヤの中ではセキュリティやデータの送達性が重要な場合はTLSが使われ、リアルタイム性が重要な場合はUDPが使われていました。ですがリアルタイム性も、セキュリティやデータの送達性ともに両立したい場面があります。そんな場面で使われるトランスポートレイヤーの通信規則がDTLSと呼ばれるプロトコルです。 DLTSとは",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--FQygj_K1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E7%25A2%25BA%25E4%25BF%259D%25E3%2581%2597%25E3%2581%25AA%25E3%2581%258C%25E3%2582%2589%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25A0%25E6%2580%25A7%25E3%2582%2592%25E7%25A2%25BA%25E4%25BF%259D%25E3%2581%2599%25E3%2582%258BDTLS%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yoshishinnze%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2EyMDYyNmU3YzAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T08:35:59.000Z",
+            "date_published": "2026-11-07T08:35:59.000Z",
+            "author": {
+                "name": "yoshishinnze"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "セキュリティ確保しながらリアルタイム性を確保するDTLS",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/hotskills/articles/f346c6bfe61fec",
+            "content_html": "はじめにClaude Code、Codex、Cursor などの AI エージェントには「スキル」（SKILL.md を含むフォルダ）を追加できます。npm パッケージなら中身を少し見てから入れるのに、スキルはそのままインストールしてしまいがちです。そこで、GitHub でスキルを配布しているリポジトリを毎時ランキングし、それぞれが何を実行するかを示すサイト hotskills.dev（英語）を作りました。この記事では、その過程で集めたデータを紹介します。 対象と方法GitHub のコード検索・トピック検索・awesome リストから候補を集め、ファイルツリーだけでスキル...",
+            "url": "https://zenn.dev/hotskills/articles/f346c6bfe61fec",
+            "title": "エージェントスキルのリポジトリを毎時ランキングしてわかったこと：人気リポジトリの78%がネットワークか広いシェルを使う | Zennの「Security」のフィード",
+            "summary": "はじめにClaude Code、Codex、Cursor などの AI エージェントには「スキル」（SKILL.md を含むフォルダ）を追加できます。npm パッケージなら中身を少し見てから入れるのに、スキルはそのままインストールしてしまいがちです。そこで、GitHub でスキルを配布しているリポジトリを毎時ランキングし、それぞれが何を実行するかを示すサイト hotskills.dev（英語）を作",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--xKVRQm0T--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25AB%25E3%2581%25AE%25E3%2583%25AA%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E3%2582%2592%25E6%25AF%258E%25E6%2599%2582%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25AD%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2597%25E3%2581%25A6%25E3%2582%258F%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%25EF%25BC%259A%25E4%25BA%25BA%25E6%25B0%2597%25E3%2583%25AA%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E3%2581%25AE78%2525%25E3%2581%258C%25E3%2583%258D%25E3%2583%2583%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2581%258B%25E5%25BA%2583%25E3%2581%2584%25E3%2582%25B7%25E3%2582%25A7%25E3%2583%25AB%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hotskills%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvaC5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T08:11:08.000Z",
+            "date_published": "2026-11-07T08:11:08.000Z",
+            "author": {
+                "name": "hotskills"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "エージェントスキルのリポジトリを毎時ランキングしてわかったこと：人気リポジトリの78%がネットワークか広いシェルを使う",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/miki_mini/articles/5478ee196e395b",
+            "content_html": "美容系勤務独学初心者マリー・アントワネット系エンジニア目指してます！今回は 入ったあとが見えない なら わざと入れてみればいいじゃない（でもおすすめはしない）👸🍰です。読了時間の目安：約 10分!3行まとめ偽物のSSHサーバー（ハニーポット）を28日置いたら、146,412回 つながれた。置く前の1時間は 2回 だった来たのは ほぼ全部ロボット。同じ台本の使い回しが99%以上で、人間は見つからなかったそれでも、世に出て18時間半の新作 が届き、736台が同じ合鍵 を置いていった。止めたのは、昔からある基本の手当てだった📌 この記事でわかること：ネットに置いたサー...",
+            "url": "https://zenn.dev/miki_mini/articles/5478ee196e395b",
+            "title": "初心者がハニーポットを置いてみたけど、おすすめはしない話（28日で14万回来た） | Zennの「Security」のフィード",
+            "summary": "美容系勤務独学初心者マリー・アントワネット系エンジニア目指してます！今回は 入ったあとが見えない なら わざと入れてみればいいじゃない（でもおすすめはしない）👸🍰です。読了時間の目安：約 10分!3行まとめ偽物のSSHサーバー（ハニーポット）を28日置いたら、146,412回 つながれた。置く前の1時間は 2回 だった来たのは ほぼ全部ロボット。同じ台本の使い回しが99%以上で、人間は見つからなか",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--sg0Y3JB9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E3%2581%258C%25E3%2583%258F%25E3%2583%258B%25E3%2583%25BC%25E3%2583%259D%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E7%25BD%25AE%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2581%2591%25E3%2581%25A9%25E3%2580%2581%25E3%2581%258A%25E3%2581%2599%25E3%2581%2599%25E3%2582%2581%25E3%2581%25AF%25E3%2581%2597%25E3%2581%25AA%25E3%2581%2584%25E8%25A9%25B1%25EF%25BC%258828%25E6%2597%25A5%25E3%2581%25A714%25E4%25B8%2587%25E5%259B%259E%25E6%259D%25A5%25E3%2581%259F%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:miki-mini%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2FmNzU4ZmQ0ZjYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T08:00:08.000Z",
+            "date_published": "2026-11-07T08:00:08.000Z",
+            "author": {
+                "name": "miki-mini"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "初心者がハニーポットを置いてみたけど、おすすめはしない話（28日で14万回来た）",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/shangyuan/articles/bbe4e256a2886d",
+            "content_html": "はじめにNWの勉強あるあるなんですが、DNSの概要は知っていても、ゾーンとはなにか、それに登録されてるレコードとはなにか、権威サーバとリゾルバの違いなどを、手を動かして実体験する経験を持つのは難しいです。そこで、Kali Linux 上に BIND9 を立てて、下記項目を自分の目で確かめてみることにしました。「DNSの最小単位は、ゾーン＋レコード」である、とはどういうことか権威サーバが「持ち主として答える」とはどういうことか（aa フラグ）リゾルバが「聞いて回って答える」とはどういうことか（ra フラグ、キャッシュ）その違いは、パケットではどう見えるのか（Wiresha...",
+            "url": "https://zenn.dev/shangyuan/articles/bbe4e256a2886d",
+            "title": "Kali Linux に BIND9 で権威DNSとリゾルバを立てて、dig と Wireshark で違いを見てみた | Zennの「Security」のフィード",
+            "summary": "はじめにNWの勉強あるあるなんですが、DNSの概要は知っていても、ゾーンとはなにか、それに登録されてるレコードとはなにか、権威サーバとリゾルバの違いなどを、手を動かして実体験する経験を持つのは難しいです。そこで、Kali Linux 上に BIND9 を立てて、下記項目を自分の目で確かめてみることにしました。「DNSの最小単位は、ゾーン＋レコード」である、とはどういうことか権威サーバが「持ち主とし",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--wy4gE4_t--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kali%2520Linux%2520%25E3%2581%25AB%2520BIND9%2520%25E3%2581%25A7%25E6%25A8%25A9%25E5%25A8%2581DNS%25E3%2581%25A8%25E3%2583%25AA%25E3%2582%25BE%25E3%2583%25AB%25E3%2583%2590%25E3%2582%2592%25E7%25AB%258B%25E3%2581%25A6%25E3%2581%25A6%25E3%2580%2581dig%2520%25E3%2581%25A8%2520Wireshark%2520%25E3%2581%25A7%25E9%2581%2595%25E3%2581%2584%25E3%2582%2592%25E8%25A6%258B%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:PB_%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzBkNmJlYzJmODkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T07:09:11.000Z",
+            "date_published": "2026-11-07T07:09:11.000Z",
+            "author": {
+                "name": "PB_"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Kali Linux に BIND9 で権威DNSとリゾルバを立てて、dig と Wireshark で違いを見てみた",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/tomipetit/articles/zero-wire-github-actions",
+            "content_html": "はじめに2026年11月、Cloudflare Radar に Zero Wire という脆弱性インテリジェンスのフィードが公開されました。全 CVE を網羅するのではなく、Web アプリやランタイム、インターネットに公開されたサービスなど「外向きのソフトウェアの重大な CVE」に絞って、ニュースのように読めるブリーフィングを出してくれるものです。https://blog.cloudflare.com/zero-wire/読み物としても便利ですが、せっかく RSS もあるので、自分の公開サーバーに影響するかを毎朝自動で判定する仕組みを GitHub Actions で作ってみま...",
+            "url": "https://zenn.dev/tomipetit/articles/zero-wire-github-actions",
+            "title": "Cloudflare Zero Wire × GitHub Actions × Claude で公開サーバーの脆弱性チェックを自動化 | Zennの「Security」のフィード",
+            "summary": "はじめに2026年11月、Cloudflare Radar に Zero Wire という脆弱性インテリジェンスのフィードが公開されました。全 CVE を網羅するのではなく、Web アプリやランタイム、インターネットに公開されたサービスなど「外向きのソフトウェアの重大な CVE」に絞って、ニュースのように読めるブリーフィングを出してくれるものです。https://blog.cloudflare.c",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--codVjztu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloudflare%2520Zero%2520Wire%2520%25C3%2597%2520GitHub%2520Actions%2520%25C3%2597%2520Claude%2520%25E3%2581%25A7%25E5%2585%25AC%25E9%2596%258B%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25AE%25E8%2584%2586%25E5%25BC%25B1...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tomi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q2ZjRjNzJlMjAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T06:44:47.000Z",
+            "date_published": "2026-11-07T06:44:47.000Z",
+            "author": {
+                "name": "tomi"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Cloudflare Zero Wire × GitHub Actions × Claude で公開サーバーの脆弱性チェックを自動化",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/anfangd/articles/ct-log-hostname-exposure-ca-ct",
+            "content_html": "!この記事は、Claude と一緒に公式ドキュメントや RFC を調べ、構成図を作りながら整理した内容をまとめたものです。各記述の根拠は、記事中のリンク先で確認できます。 はじめに「CT Log でホスト名が知られるから、Host ヘッダー付きの攻撃が増えた」という話を見かけて、そもそも CT Log とは何なのか、CA（認証局）とどうつながっているのかを整理しました。AWS で Web リクエストを受ける構成の話は、別の記事にまとめています。この記事はその前提知識の深掘りです。https://zenn.dev/anfangd/articles/aws-web-ingres...",
+            "url": "https://zenn.dev/anfangd/articles/ct-log-hostname-exposure-ca-ct",
+            "title": "証明書を取るとホスト名が知られるのはなぜ？ CT Log の仕組みを CA と CT の流れから理解する | Zennの「Security」のフィード",
+            "summary": "!この記事は、Claude と一緒に公式ドキュメントや RFC を調べ、構成図を作りながら整理した内容をまとめたものです。各記述の根拠は、記事中のリンク先で確認できます。 はじめに「CT Log でホスト名が知られるから、Host ヘッダー付きの攻撃が増えた」という話を見かけて、そもそも CT Log とは何なのか、CA（認証局）とどうつながっているのかを整理しました。AWS で Web リクエス",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--f-HAiNS9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25A8%25BC%25E6%2598%258E%25E6%259B%25B8%25E3%2582%2592%25E5%258F%2596%25E3%2582%258B%25E3%2581%25A8%25E3%2583%259B%25E3%2582%25B9%25E3%2583%2588%25E5%2590%258D%25E3%2581%258C%25E7%259F%25A5%25E3%2582%2589%25E3%2582%258C%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%259C%25EF%25BC%259F%2520CT%2520Log%2520%25E3%2581%25AE%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E3%2582%2592%2520CA%2520%25E3%2581%25A8%2520CT%2520%25E3%2581%25AE%25E6%25B5%2581%25E3%2582%258C%25E3%2581%258B%25E3%2582%2589%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:anfangd%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2o3WG94b0pXRUJUWUZmVFlZbURHRkw0eExldXpXQXdhSzVHa1FnVGc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T06:26:05.000Z",
+            "date_published": "2026-11-07T06:26:05.000Z",
+            "author": {
+                "name": "anfangd"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "証明書を取るとホスト名が知られるのはなぜ？ CT Log の仕組みを CA と CT の流れから理解する",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/masaru21/articles/9ef0ec6558fe67",
+            "content_html": "自分が管理しているサイトのトップページで、CSP（Content Security Policy）を試してみました。開発者ツールを開いて再読み込みすると、コンソールには violates という言葉がいくつも並びました。ページは普段どおり表示されています。「セキュリティポリシーに違反した」と言われて最初に浮かんだのは、「これって、サイトが改ざんされたら分かるということ？」 という疑問でした。ところが、警告に出てきた宛先の一つは、自分で導入したGoogle Analyticsでした。なぜ正規のアクセス解析が引っかかったのか。この一件から、CSPの仕組みをたどってみます。 CSPでは...",
+            "url": "https://zenn.dev/masaru21/articles/9ef0ec6558fe67",
+            "title": "CSPの警告が出た。これって改ざん？ 自分のサイトでReport-Onlyを試して分かったこと | Zennの「Security」のフィード",
+            "summary": "自分が管理しているサイトのトップページで、CSP（Content Security Policy）を試してみました。開発者ツールを開いて再読み込みすると、コンソールには violates という言葉がいくつも並びました。ページは普段どおり表示されています。「セキュリティポリシーに違反した」と言われて最初に浮かんだのは、「これって、サイトが改ざんされたら分かるということ？」 という疑問でした。ところ",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--0LdvKzn0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CSP%25E3%2581%25AE%25E8%25AD%25A6%25E5%2591%258A%25E3%2581%258C%25E5%2587%25BA%25E3%2581%259F%25E3%2580%2582%25E3%2581%2593%25E3%2582%258C%25E3%2581%25A3%25E3%2581%25A6%25E6%2594%25B9%25E3%2581%2596%25E3%2582%2593%25EF%25BC%259F%2520%25E8%2587%25AA%25E5%2588%2586%25E3%2581%25AE%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2588%25E3%2581%25A7Report-Only%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E5%2588%2586%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:lonely_creator_m%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hzOWNVVzBjY3NDOXZPcXFwd0QtZktPblJpbmM4YnFYWG9LVDhVQmxvPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T05:53:08.000Z",
+            "date_published": "2026-11-07T05:53:08.000Z",
+            "author": {
+                "name": "lonely_creator_m"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "CSPの警告が出た。これって改ざん？ 自分のサイトでReport-Onlyを試して分かったこと",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/sk8jp/articles/a08590c3a45170",
+            "content_html": "はじめにPHP のセッションを、AWS SDK for PHP の Aws\\DynamoDb\\SessionHandler で DynamoDB に保存しているサービスがあります。このセッションの保存データを、認証付き暗号（AEAD）で暗号化する作りに変えました。あわせて、IAM の dynamodb:LeadingKeys で、環境ごとに触れる行を絞りました。作りそのものは単純で、SessionHandlerInterface を実装した薄いラッパーを SDK の前に挟むだけです。ただ、SDK の内部の細かい挙動に、3 回つまずきました。SDK は、テーブルのキーの先頭の ...",
+            "url": "https://zenn.dev/sk8jp/articles/a08590c3a45170",
+            "title": "AWS SDK for PHP の DynamoDB セッションを暗号化したら、SDK の「細かい挙動」に 3 回つまずいた話 | Zennの「Security」のフィード",
+            "summary": "はじめにPHP のセッションを、AWS SDK for PHP の Aws\\DynamoDb\\SessionHandler で DynamoDB に保存しているサービスがあります。このセッションの保存データを、認証付き暗号（AEAD）で暗号化する作りに変えました。あわせて、IAM の dynamodb:LeadingKeys で、環境ごとに触れる行を絞りました。作りそのものは単純で、Session",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--nTHkKGG9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520SDK%2520for%2520PHP%2520%25E3%2581%25AE%2520DynamoDB%2520%25E3%2582%25BB%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%2592%25E6%259A%2597%25E5%258F%25B7%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589%25E3%2580%2581SDK%2520%25E3%2581%25AE%25E3%2580%258C%25E7%25B4%25B0%25E3%2581%258B%25E3%2581%2584%25E6%258C%2599%25E5%258B%2595%25E3%2580%258D%25E3%2581%25AB%25203%2520%25E5%259B%259E...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:YAZ%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSThuekJzVGpOdUdqdXplU0tYcDc0c0F2WTFQS3JNQWp4ekJyQzZPQmtUNFEyT2F0Sm09czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T04:39:39.000Z",
+            "date_published": "2026-11-07T04:39:39.000Z",
+            "author": {
+                "name": "YAZ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AWS SDK for PHP の DynamoDB セッションを暗号化したら、SDK の「細かい挙動」に 3 回つまずいた話",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/aoi_sato8734/articles/safeline-how-to-enable-sni-for-an-20261106-ee3e20a",
+            "content_html": "SafeLineはWebアプリケーションの前に置かれ、HTTP/HTTPSトラフィックを検査して悪性リクエストを遮断する自己ホスト型WAFです。内部ではnginxベースのリバースプロキシとして動作し、検査後に残った通信を本来のアプリケーションへ転送します。SNI（Server Name Indication）はTLS拡張のひとつです。ハンドシェイク時にクライアントがホスト名を送ることで、複数の証明書を持つサーバーが適切な証明書を選べるようにします。これはTLS一般の挙動であり、それ自体が製品の設定項目として用意されているわけではありません。ここでは、ドキュメント化された操作だけを使い、...",
+            "url": "https://zenn.dev/aoi_sato8734/articles/safeline-how-to-enable-sni-for-an-20261106-ee3e20a",
+            "title": "SafeLineでHTTPS上流にSNIを設定するには——ドキュメントに基づく運用確認ガイド | Zennの「Security」のフィード",
+            "summary": "SafeLineはWebアプリケーションの前に置かれ、HTTP/HTTPSトラフィックを検査して悪性リクエストを遮断する自己ホスト型WAFです。内部ではnginxベースのリバースプロキシとして動作し、検査後に残った通信を本来のアプリケーションへ転送します。SNI（Server Name Indication）はTLS拡張のひとつです。ハンドシェイク時にクライアントがホスト名を送ることで、複数の証明",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--LHBPJSZc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SafeLine%25E3%2581%25A7HTTPS%25E4%25B8%258A%25E6%25B5%2581%25E3%2581%25ABSNI%25E3%2582%2592%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AB%25E3%2581%25AF%25E2%2580%2594%25E2%2580%2594%25E3%2583%2589%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AB%25E5%259F%25BA%25E3%2581%25A5%25E3%2581%258F%25E9%2581%258B%25E7%2594%25A8%25E7%25A2%25BA%25E8%25AA%258D%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E4%25BD%2590%25E8%2597%25A4%2520%25E8%2591%25B58734%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFmMzgzNGRiOWQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T02:45:28.000Z",
+            "date_published": "2026-11-07T02:45:28.000Z",
+            "author": {
+                "name": "佐藤 葵8734"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "SafeLineでHTTPS上流にSNIを設定するには——ドキュメントに基づく運用確認ガイド",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/norman6464/articles/php2shell-fragnesia-kev-chain",
+            "content_html": "PHP2Shell で RCE されても、取れるのは www-data や nobody です。root ではありません。PHP のワーカーはそう動くように作られているからです。だから攻撃者は、もう 1 つ CVE を足しました。Linux kernel の Fragnesia（CVE-2026-46300） です。CISA の KEV には、この 2 件が 2 日違いで入っています。この記事は、PHP2Shell（CVE-2026-109618 / 109619）を修正版に上げて「対応完了」とした人に向けて書いています。「kernel の話はインフラ担当の領域」と流しかけたなら、1...",
+            "url": "https://zenn.dev/norman6464/articles/php2shell-fragnesia-kev-chain",
+            "title": "RCE の次に何が要るか：PHP2Shell と Fragnesia が KEV に 2 日違いで入った理由 | Zennの「Security」のフィード",
+            "summary": "PHP2Shell で RCE されても、取れるのは www-data や nobody です。root ではありません。PHP のワーカーはそう動くように作られているからです。だから攻撃者は、もう 1 つ CVE を足しました。Linux kernel の Fragnesia（CVE-2026-46300） です。CISA の KEV には、この 2 件が 2 日違いで入っています。この記事は、",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--NauwR6as--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:RCE%2520%25E3%2581%25AE%25E6%25AC%25A1%25E3%2581%25AB%25E4%25BD%2595%25E3%2581%258C%25E8%25A6%2581%25E3%2582%258B%25E3%2581%258B%25EF%25BC%259APHP2Shell%2520%25E3%2581%25A8%2520Fragnesia%2520%25E3%2581%258C%2520KEV%2520%25E3%2581%25AB%25202%2520%25E6%2597%25A5%25E9%2581%2595%25E3%2581%2584%25E3%2581%25A7%25E5%2585%25A5%25E3%2581%25A3%25E3%2581%259F%25E7%2590%2586%25E7%2594%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tekuteku%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzRmM2M0ZDAwNDEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-07T01:41:31.000Z",
+            "date_published": "2026-11-07T01:41:31.000Z",
+            "author": {
+                "name": "tekuteku"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "RCE の次に何が要るか：PHP2Shell と Fragnesia が KEV に 2 日違いで入った理由",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/yairocho/articles/e2a29fe347cdb3",
+            "content_html": "前回までと、この記事の位置づけ非エンジニアの会社員が、知識ゼロからスマホだけでCTFを始めた実践記録の第3回です。第2回では、CTFの仕組みを超入門で整理しました。https://zenn.dev/yairocho/articles/fc189dea2351be予告どおり、今回は「スマホだけの道具箱」の話です。ただし、道具の網羅的な説明や使い分けの体系は本の第3章にまとめたので、この記事では複製を避けて、わたしが実際に使ってきた道具箱の実物と、使用感のエピソードだけを紹介します。 なぜスマホに道具箱が必要だったかわたしは腰痛の都合で、PCの前に長く座れません。CTFの入門...",
+            "url": "https://zenn.dev/yairocho/articles/e2a29fe347cdb3",
+            "title": "わたしが実際に使っているスマホだけの道具箱：練習アプリの中身を公開します | Zennの「Security」のフィード",
+            "summary": "前回までと、この記事の位置づけ非エンジニアの会社員が、知識ゼロからスマホだけでCTFを始めた実践記録の第3回です。第2回では、CTFの仕組みを超入門で整理しました。https://zenn.dev/yairocho/articles/fc189dea2351be予告どおり、今回は「スマホだけの道具箱」の話です。ただし、道具の網羅的な説明や使い分けの体系は本の第3章にまとめたので、この記事では複製を",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--33IcXM58--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%258F%25E3%2581%259F%25E3%2581%2597%25E3%2581%258C%25E5%25AE%259F%25E9%259A%259B%25E3%2581%25AB%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25AE%25E9%2581%2593%25E5%2585%25B7%25E7%25AE%25B1%25EF%25BC%259A%25E7%25B7%25B4%25E7%25BF%2592%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25AE%25E4%25B8%25AD%25E8%25BA%25AB%25E3%2582%2592%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2584%25E3%2581%2584%25E3%2582%258D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDUwN2U3MDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-06T23:21:30.000Z",
+            "date_published": "2026-11-06T23:21:30.000Z",
+            "author": {
+                "name": "やいろ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "わたしが実際に使っているスマホだけの道具箱：練習アプリの中身を公開します",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/ament3/articles/ai-digest-2026-11-05-1656",
+            "content_html": "海外の技術コミュニティで注目を集めている最新トピックの中から、日本のエンジニアが今すぐ実務に活かせる重要なトレンドをピックアップしました。今回は、OpenAIが公開した画像生成・編集モデルの最新版「Images 2.6」のAPI活用法と、米ホワイトハウスネットワークで検出され話題となった「Residential Proxy（住宅用プロキシ）」の脅威とその防御設計について深掘りします。単なるニュースの要約にとどまらず、実際のプロダクトやインフラ設計にどう落とし込むか、コード例と具体的な運用ポイントを交えて解説します。 何が発表されたのか今回注目した2つの重要な動向の概要は以下の通りで...",
+            "url": "https://zenn.dev/ament3/articles/ai-digest-2026-11-05-1656",
+            "title": "OpenAI Images 2.6の活用とレジデンシャルプロキシ検知：海外事例から学ぶ実務設計 | Zennの「Security」のフィード",
+            "summary": "海外の技術コミュニティで注目を集めている最新トピックの中から、日本のエンジニアが今すぐ実務に活かせる重要なトレンドをピックアップしました。今回は、OpenAIが公開した画像生成・編集モデルの最新版「Images 2.6」のAPI活用法と、米ホワイトハウスネットワークで検出され話題となった「Residential Proxy（住宅用プロキシ）」の脅威とその防御設計について深掘りします。単なるニュース",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--U3T8RseA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%2520Images%25202.6%25E3%2581%25AE%25E6%25B4%25BB%25E7%2594%25A8%25E3%2581%25A8%25E3%2583%25AC%25E3%2582%25B8%25E3%2583%2587%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A3%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25AD%25E3%2582%25B7%25E6%25A4%259C%25E7%259F%25A5%25EF%25BC%259A%25E6%25B5%25B7%25E5%25A4%2596%25E4%25BA%258B%25E4%25BE%258B%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2581%25B6%25E5%25AE%259F%25E5%258B%2599%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%2594%25B0%25E4%25B8%25AD%25E6%25A0%25B9%25E5%25B0%258F%25E4%25BB%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2ZJTlVWMXNGNFFjSFpoSkNrbTBOMGJENEo3Y2dMNHZMMjRvdjJIam01akRnNXlLeHU9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-06T17:33:31.000Z",
+            "date_published": "2026-11-06T17:33:31.000Z",
+            "author": {
+                "name": "田中根小介"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "OpenAI Images 2.6の活用とレジデンシャルプロキシ検知：海外事例から学ぶ実務設計",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/numekudi/articles/6490b434455baa",
+            "content_html": "その負債、本当に返す必要ある？先日の記事を、こんな一文で締めた。そして、その負債は返すときが必ず来る。いきなりだが、必ずしもそうではない。サービスごと廃止すれば、返さずに終わらせられる負債もある。踏み倒しである。もちろん、利用者のデータを放り投げて夜逃げしようという話ではない。不要になったシステムを、わざわざ綺麗に作り直してから捨てる必要はないという話だ。技術的負債の話になると、返す方法ばかり考えがちだ。でも、そのシステムを今後も維持する前提から疑っていい。 負債と利益は同時に存在する古い設計のシステムでも、利益を生み続けていることはある。変更要求が少なく...",
+            "url": "https://zenn.dev/numekudi/articles/6490b434455baa",
+            "title": "技術的負債は踏み倒したっていい | Zennの「Security」のフィード",
+            "summary": "その負債、本当に返す必要ある？先日の記事を、こんな一文で締めた。そして、その負債は返すときが必ず来る。いきなりだが、必ずしもそうではない。サービスごと廃止すれば、返さずに終わらせられる負債もある。踏み倒しである。もちろん、利用者のデータを放り投げて夜逃げしようという話ではない。不要になったシステムを、わざわざ綺麗に作り直してから捨てる必要はないという話だ。技術的負債の話になると、返す方法ばかり考え",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s---xZIG_4g--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%258A%2580%25E8%25A1%2593%25E7%259A%2584%25E8%25B2%25A0%25E5%2582%25B5%25E3%2581%25AF%25E8%25B8%258F%25E3%2581%25BF%25E5%2580%2592%25E3%2581%2597%25E3%2581%259F%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:numekudi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzc3Nzg0YTRkOWQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-06T15:04:20.000Z",
+            "date_published": "2026-11-06T15:04:20.000Z",
+            "author": {
+                "name": "numekudi"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "技術的負債は踏み倒したっていい",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/paokkyu/articles/55f87f92dac191",
+            "content_html": "第13報の記載をもとに筆者が作図!3行でいうと2025年10月、アスクルがランサムウェア[1]攻撃を受けて受注と出荷を止め、約74万件の情報の流出が確認された入口は、例外的に多要素認証を適用していなかった業務委託先の管理者アカウントだった侵入から暗号化まで136日（日付から筆者が計算）。攻撃は一度に起きるのではなく、段階を踏んで進む はじめにこの記事は、アスクルが2025年12月12日に公表したランサムウェア攻撃の影響調査結果および安全性強化に向けた取り組みのご報告（第13報）を、セキュリティを学びたい人向けに整理したものです。第13報は、他の企業や組織の対策の...",
+            "url": "https://zenn.dev/paokkyu/articles/55f87f92dac191",
+            "title": "全出荷停止と約74万件の流出、多要素認証が未適用の委託先アカウント1つから136日後 ── アスクルのランサムウェア被害報告 | Zennの「Security」のフィード",
+            "summary": "第13報の記載をもとに筆者が作図!3行でいうと2025年10月、アスクルがランサムウェア[1]攻撃を受けて受注と出荷を止め、約74万件の情報の流出が確認された入口は、例外的に多要素認証を適用していなかった業務委託先の管理者アカウントだった侵入から暗号化まで136日（日付から筆者が計算）。攻撃は一度に起きるのではなく、段階を踏んで進む はじめにこの記事は、アスクルが2025年12月12日に公表したラ",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--WqawP6LG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%2585%25A8%25E5%2587%25BA%25E8%258D%25B7%25E5%2581%259C%25E6%25AD%25A2%25E3%2581%25A8%25E7%25B4%258474%25E4%25B8%2587%25E4%25BB%25B6%25E3%2581%25AE%25E6%25B5%2581%25E5%2587%25BA%25E3%2580%2581%25E5%25A4%259A%25E8%25A6%2581%25E7%25B4%25A0%25E8%25AA%258D%25E8%25A8%25BC%25E3%2581%258C%25E6%259C%25AA%25E9%2581%25A9%25E7%2594%25A8%25E3%2581%25AE%25E5%25A7%2594%25E8%25A8%2597%25E5%2585%2588%25E3%2582%25A2%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25881%25E3%2581%25A4%25E3%2581%258B%25E3%2582%2589136%25E6%2597%25A5%25E5%25BE%258C%2520%25E2%2594%2580%25E2%2594%2580%2520%25E3%2582%25A2%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AB%25E3%2581%25AE%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25B5%25E3%2583%25A0%25E3%2582%25A6%25E3%2582%25A7...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E5%259B%259B%25E8%25A7%2592%25E3%2581%2584%25E3%2581%25B1%25E3%2581%258A%25E3%2581%25A4%25E3%2581%258D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzUwNDA1MmNhMTQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-06T15:00:05.000Z",
+            "date_published": "2026-11-06T15:00:05.000Z",
+            "author": {
+                "name": "四角いぱおつき"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "全出荷停止と約74万件の流出、多要素認証が未適用の委託先アカウント1つから136日後 ── アスクルのランサムウェア被害報告",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/hydenori24/articles/cairn-smartscreen-checksum",
+            "content_html": "自作の Windows アプリ「Cairn」をダウンロードして初めて起動すると、「Windows によって PC が保護されました」という SmartScreen の警告が出ることがある。理由はシンプルで、配布ファイルにコード署名をしていないから。怪しいものを入れたわけじゃない。でも、使う側からすれば確かめようがないので、確かめ方を書いておく。 確かめ方Releases には、配布ファイルと一緒に SHA256SUMS.txt を置いている。ダウンロードしたファイルのハッシュ値を計算して、この中の値と同じなら、配布したときのまま変わっていない。コマンドプロンプトなら。cert...",
+            "url": "https://zenn.dev/hydenori24/articles/cairn-smartscreen-checksum",
+            "title": "Cairnを初めて起動すると警告が出る理由と、ファイルの確かめ方 | Zennの「Security」のフィード",
+            "summary": "自作の Windows アプリ「Cairn」をダウンロードして初めて起動すると、「Windows によって PC が保護されました」という SmartScreen の警告が出ることがある。理由はシンプルで、配布ファイルにコード署名をしていないから。怪しいものを入れたわけじゃない。でも、使う側からすれば確かめようがないので、確かめ方を書いておく。 確かめ方Releases には、配布ファイルと一緒に",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--fiqkZk3K--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cairn%25E3%2582%2592%25E5%2588%259D%25E3%2582%2581%25E3%2581%25A6%25E8%25B5%25B7%25E5%258B%2595%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8%25E8%25AD%25A6%25E5%2591%258A%25E3%2581%258C%25E5%2587%25BA%25E3%2582%258B%25E7%2590%2586%25E7%2594%25B1%25E3%2581%25A8%25E3%2580%2581%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E7%25A2%25BA%25E3%2581%258B%25E3%2582%2581%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B2%25E3%2581%25A7%25E3%2581%25AE%25E3%2582%258A%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZGZTMmpxVko2OFozSkxJNWdiRGc1cV9oMld0N0JBdXVvZGRwbGR6aXFNPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-06T14:52:12.000Z",
+            "date_published": "2026-11-06T14:52:12.000Z",
+            "author": {
+                "name": "ひでのり"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Cairnを初めて起動すると警告が出る理由と、ファイルの確かめ方",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/kotanpolin/articles/apt-package-swap",
+            "content_html": "先に、3行で2026年11月4日、DebianやUbuntuでソフトを入れる道具「APT」に、署名の確認をすり抜けて中身をすり替えられる穴（CVE-2026-109518）が公表された。すり替えられたプログラムは管理者（root）の権限で動きうる。狙われるのは、パッケージを入れようとしているときです。通信の途中で暗号化していないHTTPを書き換えられる場合に加え、Ubuntuは悪意のあるミラーも同じ穴を使えるとしています。TLS（HTTPS）が守るのは、通信の途中の攻撃です。Debian 12以降・Ubuntu 22.04以降は、やり直しの設定（Retries=3）が初期設定で...",
+            "url": "https://zenn.dev/kotanpolin/articles/apt-package-swap",
+            "title": "apt updateをサボると何が起きる？ パッケージのすり替え攻撃 | Zennの「Security」のフィード",
+            "summary": "先に、3行で2026年11月4日、DebianやUbuntuでソフトを入れる道具「APT」に、署名の確認をすり抜けて中身をすり替えられる穴（CVE-2026-109518）が公表された。すり替えられたプログラムは管理者（root）の権限で動きうる。狙われるのは、パッケージを入れようとしているときです。通信の途中で暗号化していないHTTPを書き換えられる場合に加え、Ubuntuは悪意のあるミラーも同",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--9qZknGu1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:apt%2520update%25E3%2582%2592%25E3%2582%25B5%25E3%2583%259C%25E3%2582%258B%25E3%2581%25A8%25E4%25BD%2595%25E3%2581%258C%25E8%25B5%25B7%25E3%2581%258D%25E3%2582%258B%25EF%25BC%259F%2520%25E3%2583%2591%25E3%2583%2583%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B8%25E3%2581%25AE%25E3%2581%2599%25E3%2582%258A%25E6%259B%25BF%25E3%2581%2588%25E6%2594%25BB%25E6%2592%2583%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25B3%25E3%2582%25BF%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSXhkRExha1Ewbkluay1lY1E1UTNtdkVINEpiaDRmV3hQMWoyWFd3WmVmVU03cDk2RT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-06T14:47:13.000Z",
+            "date_published": "2026-11-06T14:47:13.000Z",
+            "author": {
+                "name": "コタ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "apt updateをサボると何が起きる？ パッケージのすり替え攻撃",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        }
+    ]
+}
