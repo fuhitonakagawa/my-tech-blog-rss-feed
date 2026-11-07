@@ -78,6 +78,80 @@ it('Pagesの失敗が続けば再試行は2回で止め、緑表示にしない'
   expect(github.rest.actions.reRunWorkflowFailedJobs).toHaveBeenCalledTimes(2);
 });
 
+it('Pagesの初回公開が8分を超えて成功しても再実行せずに反映を確認する', async () => {
+  const github = fixture();
+  const started = Date.now();
+  github.rest.actions.listWorkflowRunsForRepo.mockImplementation(async () => ({
+    data: {
+      workflow_runs: [
+        { ...run(1, 'success'), status: Date.now() - started >= 9 * 60 * 1000 ? 'completed' : 'in_progress' },
+      ],
+    },
+  }));
+  const { timeout: _timeout, ...config } = options();
+  await verifyPages({ github, context, core }, config);
+  expect(config.fetch).toHaveBeenCalledTimes(1);
+  expect(github.rest.actions.reRunWorkflowFailedJobs).not.toHaveBeenCalled();
+});
+
+it.each(['success', 'failure'])('Pagesが各試行に11分かかっても3回目の%sまで確認する', async (conclusion) => {
+  const github = fixture();
+  let attempt = 1;
+  let attemptStarted = Date.now();
+  github.rest.actions.reRunWorkflowFailedJobs.mockImplementation(async () => {
+    attempt++;
+    attemptStarted = Date.now();
+  });
+  // Pagesの起動待ち1分とデプロイの上限10分を含め、実際のタイムアウト順序を再現する。
+  github.rest.actions.listWorkflowRunsForRepo.mockImplementation(async () => {
+    const completed = Date.now() - attemptStarted >= 11 * 60 * 1000;
+    return {
+      data: {
+        workflow_runs: [
+          {
+            ...run(attempt, attempt === 3 ? conclusion : 'failure'),
+            status: completed ? 'completed' : 'in_progress',
+            conclusion: completed ? (attempt === 3 ? conclusion : 'failure') : null,
+          },
+        ],
+      },
+    };
+  });
+  const { timeout: _timeout, ...config } = options();
+  const started = Date.now();
+  if (conclusion === 'success') {
+    // Pages成功後も、公開URLの古い履歴では完了にしない。
+    config.fetch.mockResolvedValueOnce({ ok: true, json: async () => ({ ...manifest, updatedAt: 'old' }) });
+    await verifyPages({ github, context, core }, config);
+    expect(config.fetch).toHaveBeenCalledTimes(2);
+  } else {
+    await expect(verifyPages({ github, context, core }, config)).rejects.toThrow('再試行後');
+    expect(config.fetch).not.toHaveBeenCalled();
+  }
+  expect(Date.now() - started).toBeGreaterThan(33 * 60 * 1000);
+  expect(github.rest.actions.reRunWorkflowFailedJobs).toHaveBeenCalledTimes(2);
+});
+
+it('Pagesが実行中のままなら有限時間で失敗し、配置ジョブには確認を完了する余裕がある', async () => {
+  const github = fixture();
+  github.rest.actions.listWorkflowRunsForRepo.mockResolvedValue({
+    data: { workflow_runs: [{ ...run(1, ''), status: 'in_progress', conclusion: null }] },
+  });
+  const { timeout: _timeout, ...config } = options();
+  const started = Date.now();
+  await expect(verifyPages({ github, context, core }, config)).rejects.toThrow(
+    'attempt=1, status=in_progress, conclusion=pending, 再試行=0/2',
+  );
+  const elapsed = Date.now() - started;
+  expect(elapsed).toBe(40 * 60 * 1000);
+  expect(github.rest.actions.reRunWorkflowFailedJobs).not.toHaveBeenCalled();
+  expect(config.fetch).not.toHaveBeenCalled();
+  expect(core.info).toHaveBeenCalledTimes(1);
+  const workflow = await fs.readFile('.github/workflows/generate-feed.yml', 'utf8');
+  const deployTimeout = Number(workflow.split('\n  deploy:')[1].match(/timeout-minutes: (\d+)/)?.[1]);
+  expect(deployTimeout * 60 * 1000).toBeGreaterThanOrEqual(elapsed + 5 * 60 * 1000);
+});
+
 it('取得記録の読み込み権限エラーを初回扱いにせず、不正パスを保存しない', async () => {
   const github = { rest: { git: { getRef: vi.fn().mockRejectedValue({ status: 403 }), createBlob: vi.fn() } } };
   await expect(acquisition.restore({ github, context, core }, directory)).rejects.toMatchObject({ status: 403 });
