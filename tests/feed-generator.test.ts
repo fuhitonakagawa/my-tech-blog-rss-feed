@@ -18,6 +18,24 @@ const testFeedMeta: AggregatedFeedMeta = {
 };
 
 describe('FeedGenerator', () => {
+  it.each([
+    ['https://halfnarp.events.ccc.de', 'https://halfnarp.events.ccc.de/'],
+    ['https://example.com/article', 'https://example.com/article'],
+    ['https://example.com/article/', 'https://example.com/article/'],
+    ['https://example.com?topic=rss&lang=ja#updates', 'https://example.com/?topic=rss&lang=ja#updates'],
+    ['https://example.com/releases#2026-11-06', 'https://example.com/releases#2026-11-06'],
+    ['https://example.com/releases#2026-11-07', 'https://example.com/releases#2026-11-07'],
+  ])('XMLのURL正規化でも記事の識別情報とJSONの原表記を保持する: %s', async (link, expectedLink) => {
+    const item = makeSourceItem({ link });
+    const result = new FeedGenerator().generateFeeds([item], new Map(), new Map(), 200, 500, testFeedMeta);
+    const rss = await new FeedValidator().assertXmlFeed('rss', result.feedDistributionSet.rss);
+    const atom = await new FeedValidator().assertXmlFeed('atom', result.feedDistributionSet.atom);
+    expect(rss.items.map((entry) => entry.link)).toEqual([expectedLink]);
+    expect(atom.items.map((entry) => entry.link)).toEqual([expectedLink]);
+    expect(rss.items[0].guid).toBe(item.guid);
+    expect(JSON.parse(result.feedDistributionSet.json).items[0]).toMatchObject({ url: link, id: item.guid });
+  });
+
   it.each(['https://example.com/\uFFFE.ico', 'data:image/svg+xml,<svg>\uFFFF</svg>'])(
     'OGP由来faviconの禁止文字で正常記事のRSSを壊さない: %j',
     async (favicon) => {

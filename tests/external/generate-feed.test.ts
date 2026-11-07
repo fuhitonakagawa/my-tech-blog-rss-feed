@@ -52,7 +52,9 @@ describe('フィード生成', async () => {
     const parsedAtom = await validator.assertXmlFeed('atom', atom);
     const items: { url: string }[] = JSON.parse(json).items;
     expect(crawlFeedsResult.feeds.length).toBeGreaterThan(0);
-    expect(parsedRss.items.map((item) => item.link)).toEqual(items.map((item) => item.url));
-    expect(parsedAtom.items.map((item) => item.link)).toEqual(items.map((item) => item.url));
+    // feedのXML出力はURLを正規化する。JSONの原表記との差を許容し、パス・クエリ・フラグメントは照合する。
+    const expectedLinks = items.map((item) => new URL(item.url).href);
+    expect(parsedRss.items.map((item) => item.link)).toEqual(expectedLinks);
+    expect(parsedAtom.items.map((item) => item.link)).toEqual(expectedLinks);
   });
 });
