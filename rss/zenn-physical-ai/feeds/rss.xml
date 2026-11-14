@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Zenn Physical AI関連タグ｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-physical-ai/</link>
+        <description>初回掲載順の通知用RSS。日次統計以外は元記事の公開日時を本文に記載します。</description>
+        <lastBuildDate>Sat, 14 Nov 2026 20:06:20 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>ja</language>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-physical-ai/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[STS3215 サーボの ID 設定とゼロ位置合わせ | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/yutaka_m/articles/54c715b60807c8</link>
+            <guid isPermaLink="false">https://zenn.dev/yutaka_m/articles/54c715b60807c8</guid>
+            <pubDate>Sat, 14 Nov 2026 20:06:20 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/15 2:42:29（日本時間）
+
+はじめにOpen Duck Mini には Feetech STS3215 というシリアルバスサーボが 14 個使われています。全サーボを1本のバスにつなぐので、組み立て前に 1個ずつ ID を設定し、ゼロ位置に合わせてからホーンを取り付ける 必要があります。公式ドキュメントでは組み立ての Step 1 にあたる作業です。この記事では、公式スクリプト configure_motor.py を使う方]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/15 2:42:29（日本時間）<br><br>はじめにOpen Duck Mini には Feetech STS3215 というシリアルバスサーボが 14 個使われています。全サーボを1本のバスにつなぐので、組み立て前に 1個ずつ ID を設定し、ゼロ位置に合わせてからホーンを取り付ける 必要があります。公式ドキュメントでは組み立ての Step 1 にあたる作業です。この記事では、公式スクリプト configure_motor.py を使う方</p>]]></content:encoded>
+            <author>yutaka-m</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--VbT8uZfN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:STS3215%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%259C%25E3%2581%25AE%2520ID%2520%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%25A8%25E3%2582%25BC%25E3%2583%25AD%25E4%25BD%258D%25E7%25BD%25AE%25E5%2590%2588%25E3%2582%258F%25E3%2581%259B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yutaka-m%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2gwQlhJRjN0dHNEVmVrQ3lKOFNqOXpQVldpeWxlZ3N2MFMxN2d5LWc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[練磨の書 ～ Kratosシリーズ AI筐体実装例集 第1巻 自律型介護寝台編 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/akajishi/books/7a58da9edfcae4</link>
+            <guid isPermaLink="false">https://zenn.dev/akajishi/books/7a58da9edfcae4</guid>
+            <pubDate>Sat, 14 Nov 2026 12:05:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 20:12:29（日本時間）
+
+本稿は、生活支援および福祉介護に適した「Kratosシリーズ AI筐体」第1巻（自律型介護寝台形態仕様）の技術仕様書である。総質量135kg（水充填時150kg）級の固定設置および施設内運用を前提とし、壁面交流給電とリン酸鉄リチウム（LFP）蓄電池による統合電源のもと、骨格構造・駆動制御・流体熱管理・生体異常時の自動通報機能の物理構造および制御機構を定義する。公開済みの共通物理規格を基に設計例を提]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 20:12:29（日本時間）<br><br>本稿は、生活支援および福祉介護に適した「Kratosシリーズ AI筐体」第1巻（自律型介護寝台形態仕様）の技術仕様書である。総質量135kg（水充填時150kg）級の固定設置および施設内運用を前提とし、壁面交流給電とリン酸鉄リチウム（LFP）蓄電池による統合電源のもと、骨格構造・駆動制御・流体熱管理・生体異常時の自動通報機能の物理構造および制御機構を定義する。公開済みの共通物理規格を基に設計例を提</p>]]></content:encoded>
+            <author>Akajishi</author>
+            <enclosure length="0" type="image/png" url="https://static.zenn.studio/images/logo-only-dark.png"/>
+        </item>
+        <item>
+            <title><![CDATA[リンゴを保持できても摘果成功とは限らない：果柄モデルと破断部位の検証 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/bur/articles/apple-stem-harvest-study</link>
+            <guid isPermaLink="false">https://zenn.dev/bur/articles/apple-stem-harvest-study</guid>
+            <pubDate>Thu, 12 Nov 2026 18:05:59 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 1:14:07（日本時間）
+
+要旨定置Spotによるリンゴの摘果シミュレーションについて、果柄の寸法と破断条件を文献に基づく値へ変更し、枝側の離脱と果実側の引抜きを区別した。制御を固定した六つの感度ケースでは全試行で切離しが生じ、三試行で3秒保持できた。しかし、枝側から外れた試行は一件で保持に失敗し、枝側離脱と保持の両条件を満たす試行は0/6だった。有効関節の独立試験では荷重・破断閾値と時間刻み依存を確認したが、実果実への校正]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 1:14:07（日本時間）<br><br>要旨定置Spotによるリンゴの摘果シミュレーションについて、果柄の寸法と破断条件を文献に基づく値へ変更し、枝側の離脱と果実側の引抜きを区別した。制御を固定した六つの感度ケースでは全試行で切離しが生じ、三試行で3秒保持できた。しかし、枝側から外れた試行は一件で保持に失敗し、枝側離脱と保持の両条件を満たす試行は0/6だった。有効関節の独立試験では荷重・破断閾値と時間刻み依存を確認したが、実果実への校正</p>]]></content:encoded>
+            <author>au-aii</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--7EYr1dqf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B4%25E3%2582%2592%25E4%25BF%259D%25E6%258C%2581%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25A6%25E3%2582%2582%25E6%2591%2598%25E6%259E%259C%25E6%2588%2590%25E5%258A%259F%25E3%2581%25A8%25E3%2581%25AF%25E9%2599%2590%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25EF%25BC%259A%25E6%259E%259C%25E6%259F%2584%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25A8%25E7%25A0%25B4%25E6%2596%25AD%25E9%2583%25A8%25E4%25BD%258D%25E3%2581%25AE%25E6%25A4%259C%25E8%25A8%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:au-aii%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg3N2FmOTUzYzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[森林回避におけるFlyWire特徴・PPO・LSTMの比較 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/bur/articles/flywire-ppo-lstm-navigation-study</link>
+            <guid isPermaLink="false">https://zenn.dev/bur/articles/flywire-ppo-lstm-navigation-study</guid>
+            <pubDate>Thu, 12 Nov 2026 18:05:59 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 1:14:09（日本時間）
+
+要旨固定FlyWire結線を用いた特徴、PPOによる読出し学習、LSTMによる記憶、全周距離観測を段階的に比較した。未学習配置では画像特徴LSTMが65/90到達し、FlyWire特徴LSTMは1/90であった。距離観測系はさらに到達数を増やしたが、観測・容量・学習量等を同時に変更しており、単一要因の効果ではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 1:14:09（日本時間）<br><br>要旨固定FlyWire結線を用いた特徴、PPOによる読出し学習、LSTMによる記憶、全周距離観測を段階的に比較した。未学習配置では画像特徴LSTMが65/90到達し、FlyWire特徴LSTMは1/90であった。距離観測系はさらに到達数を増やしたが、観測・容量・学習量等を同時に変更しており、単一要因の効果ではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文</p>]]></content:encoded>
+            <author>au-aii</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--g1EgzSOZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A3%25AE%25E6%259E%2597%25E5%259B%259E%25E9%2581%25BF%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258BFlyWire%25E7%2589%25B9%25E5%25BE%25B4%25E3%2583%25BBPPO%25E3%2583%25BBLSTM%25E3%2581%25AE%25E6%25AF%2594%25E8%25BC%2583%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:au-aii%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg3N2FmOTUzYzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[閉ループ羽根・CFD・イオン風モデルの動作確認と未検証事項 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/bur/articles/flight-models-preliminary-note</link>
+            <guid isPermaLink="false">https://zenn.dev/bur/articles/flight-models-preliminary-note</guid>
+            <pubDate>Thu, 12 Nov 2026 18:05:59 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 1:14:08（日本時間）
+
+要旨閉ループ形状の羽根の可視化、SU2公式例、推力を仮定した1次元イオン風モデルの動作確認を整理した。外観変更の接続確認、数値計算の停止条件、質点モデルの整合性を確認した範囲に限り、空力性能や実機浮上を実証したものではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文ではない。実機での検証は行っていない。ここに記す数値は保存記録に基づき、記事化のために新たに]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 1:14:08（日本時間）<br><br>要旨閉ループ形状の羽根の可視化、SU2公式例、推力を仮定した1次元イオン風モデルの動作確認を整理した。外観変更の接続確認、数値計算の停止条件、質点モデルの整合性を確認した範囲に限り、空力性能や実機浮上を実証したものではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文ではない。実機での検証は行っていない。ここに記す数値は保存記録に基づき、記事化のために新たに</p>]]></content:encoded>
+            <author>au-aii</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--9MWGgnnZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%2596%2589%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E7%25BE%25BD%25E6%25A0%25B9%25E3%2583%25BBCFD%25E3%2583%25BB%25E3%2582%25A4%25E3%2582%25AA%25E3%2583%25B3%25E9%25A2%25A8%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E5%258B%2595%25E4%25BD%259C%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%25A8%25E6%259C%25AA%25E6%25A4%259C%25E8%25A8%25BC%25E4%25BA%258B%25E9%25A0%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:au-aii%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg3N2FmOTUzYzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[樹冠上からの熱源観測：高度・画角・解像度による検出限界 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/bur/articles/canopy-thermal-resolution-study</link>
+            <guid isPermaLink="false">https://zenn.dev/bur/articles/canopy-thermal-resolution-study</guid>
+            <pubDate>Thu, 12 Nov 2026 18:05:59 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 1:14:08（日本時間）
+
+要旨不透明な樹冠モデルを使い、高度、画角、解像度、遮蔽、温度差の条件を比較した。遮蔽なし・画角50度・温度差6Kでは、60mで320相当は0/9、640相当は9/9の検出となった。完全遮蔽では検出できず、温かい岩の偽陽性も残った。実カメラや実森林を校正した結果ではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文ではない。実機での検証は行っていない。ここに記]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 1:14:08（日本時間）<br><br>要旨不透明な樹冠モデルを使い、高度、画角、解像度、遮蔽、温度差の条件を比較した。遮蔽なし・画角50度・温度差6Kでは、60mで320相当は0/9、640相当は9/9の検出となった。完全遮蔽では検出できず、温かい岩の偽陽性も残った。実カメラや実森林を校正した結果ではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文ではない。実機での検証は行っていない。ここに記</p>]]></content:encoded>
+            <author>au-aii</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--IclxBRna--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A8%25B9%25E5%2586%25A0%25E4%25B8%258A%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AE%25E7%2586%25B1%25E6%25BA%2590%25E8%25A6%25B3%25E6%25B8%25AC%25EF%25BC%259A%25E9%25AB%2598%25E5%25BA%25A6%25E3%2583%25BB%25E7%2594%25BB%25E8%25A7%2592%25E3%2583%25BB%25E8%25A7%25A3%25E5%2583%258F%25E5%25BA%25A6%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%25A4%259C%25E5%2587%25BA%25E9%2599%2590%25E7%2595%258C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:au-aii%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg3N2FmOTUzYzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[【SO-101】赤は右・青は左に仕分ける：ACT（色判定）とSmolVLA（言語指示）を比べてみた | Zennの「Physical AI」のフィード]]></title>
+            <link>https://zenn.dev/namiciro/articles/0a36be9e0a7659</link>
+            <guid isPermaLink="false">https://zenn.dev/namiciro/articles/0a36be9e0a7659</guid>
+            <pubDate>Thu, 12 Nov 2026 14:06:55 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/12 21:00:31（日本時間）
+
+はじめにSO-101とLeRobotで、赤いブロックは右の箱、青いブロックは左の箱に仕分けるタスクに挑戦しました。同じタスクを、次の2つの方式で試して、比べています。ACT： 色はカメラ映像の画像処理で判定して、色ごとのポリシーを切り替えるSmolVLA： 1つのポリシーに、言語指示（「赤を右へ」「青を左へ」）で切り替えさせる途中で、カメラがずれてポリシーが全然動かなくなったり、学習データの最初に]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/12 21:00:31（日本時間）<br><br>はじめにSO-101とLeRobotで、赤いブロックは右の箱、青いブロックは左の箱に仕分けるタスクに挑戦しました。同じタスクを、次の2つの方式で試して、比べています。ACT： 色はカメラ映像の画像処理で判定して、色ごとのポリシーを切り替えるSmolVLA： 1つのポリシーに、言語指示（「赤を右へ」「青を左へ」）で切り替えさせる途中で、カメラがずれてポリシーが全然動かなくなったり、学習データの最初に</p>]]></content:encoded>
+            <author>なみしろ</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--yZxW3IR1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590SO-101%25E3%2580%2591%25E8%25B5%25A4%25E3%2581%25AF%25E5%258F%25B3%25E3%2583%25BB%25E9%259D%2592%25E3%2581%25AF%25E5%25B7%25A6%25E3%2581%25AB%25E4%25BB%2595%25E5%2588%2586%25E3%2581%2591%25E3%2582%258B%25EF%25BC%259AACT%25EF%25BC%2588%25E8%2589%25B2%25E5%2588%25A4%25E5%25AE%259A%25EF%25BC%2589%25E3%2581%25A8SmolVLA%25EF%25BC%2588%25E8%25A8%2580%25E8%25AA%259E%25E6%258C%2587%25E7%25A4%25BA%25EF%25BC%2589%25E3%2582%2592%25E6%25AF%2594%25E3%2581%25B9%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AA%25E3%2581%25BF%25E3%2581%2597%25E3%2582%258D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzk4NDZkYzE3MDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[動的環境での長期LiDAR自己位置推定：公開ベンチマークを用いたOSSとの比較 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/kudan_jp/articles/ceeac0e3d15344</link>
+            <guid isPermaLink="false">https://zenn.dev/kudan_jp/articles/ceeac0e3d15344</guid>
+            <pubDate>Wed, 11 Nov 2026 15:08:02 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 23:50:27（日本時間）
+
+Kudanでは、建設現場や工場のように日々環境が変わる場所で動く自律移動ロボット向けに、LiDARベースの自己位置推定モジュールを開発しています（以下、弊社ローカライザと呼びます）。この記事では、環境変化に対する自己位置推定の頑健性を、公開データセットと主要なオープンソースのローカライザを使ってどう測ったのか、どこで差が出て、どこが課題として残ったのかを紹介します。 地図は作った日から古くなる多く]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 23:50:27（日本時間）<br><br>Kudanでは、建設現場や工場のように日々環境が変わる場所で動く自律移動ロボット向けに、LiDARベースの自己位置推定モジュールを開発しています（以下、弊社ローカライザと呼びます）。この記事では、環境変化に対する自己位置推定の頑健性を、公開データセットと主要なオープンソースのローカライザを使ってどう測ったのか、どこで差が出て、どこが課題として残ったのかを紹介します。 地図は作った日から古くなる多く</p>]]></content:encoded>
+            <author>Hiro Horii</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--gAFcW5Sd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%258B%2595%25E7%259A%2584%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A7%25E3%2581%25AE%25E9%2595%25B7%25E6%259C%259FLiDAR%25E8%2587%25AA%25E5%25B7%25B1%25E4%25BD%258D%25E7%25BD%25AE%25E6%258E%25A8%25E5%25AE%259A%25EF%25BC%259A%25E5%2585%25AC%25E9%2596%258B%25E3%2583%2599%25E3%2583%25B3%25E3%2583%2581%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259FOSS%25E3%2581%25A8%25E3%2581%25AE%25E6%25AF%2594%25E8%25BC%2583%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hiro%2520Horii%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzliZTc3NGY1MTIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Kudan%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZkZDRkNGM4MmEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Real2Sim2Realの現在地：現場スキャンからロボット検証環境へ | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/kudan_jp/articles/a0cb75384f4a83</link>
+            <guid isPermaLink="false">https://zenn.dev/kudan_jp/articles/a0cb75384f4a83</guid>
+            <pubDate>Wed, 11 Nov 2026 11:06:02 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 18:46:24（日本時間）
+
+Kudanでは、自律移動ロボットの開発に、実際の現場をスキャンして作ったシミュレーション環境を使っています。現場をスキャンして環境を作り、その中で検証してから現場に持ち込む、いわゆるReal2Sim2Realの進め方は業界でも一般的になってきており、汎用のテスト環境でアルゴリズムの動作を確かめるだけだった頃と比べると、現場固有の条件での検証をはるかに低いコストで回せるようになっています。ただ、実際]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 18:46:24（日本時間）<br><br>Kudanでは、自律移動ロボットの開発に、実際の現場をスキャンして作ったシミュレーション環境を使っています。現場をスキャンして環境を作り、その中で検証してから現場に持ち込む、いわゆるReal2Sim2Realの進め方は業界でも一般的になってきており、汎用のテスト環境でアルゴリズムの動作を確かめるだけだった頃と比べると、現場固有の条件での検証をはるかに低いコストで回せるようになっています。ただ、実際</p>]]></content:encoded>
+            <author>Hiro Horii</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--M8gxfz8Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Real2Sim2Real%25E3%2581%25AE%25E7%258F%25BE%25E5%259C%25A8%25E5%259C%25B0%25EF%25BC%259A%25E7%258F%25BE%25E5%25A0%25B4%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%25B3%25E3%2581%258B%25E3%2582%2589%25E3%2583%25AD%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E6%25A4%259C%25E8%25A8%25BC%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25B8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hiro%2520Horii%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzliZTc3NGY1MTIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Kudan%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZkZDRkNGM4MmEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[共通基礎仕様：流体多細胞層を備えた構造的荷重迂回および運動モーメント慣性同調の共通物理規格 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/akajishi/articles/4d086049a0aebf</link>
+            <guid isPermaLink="false">https://zenn.dev/akajishi/articles/4d086049a0aebf</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 1:10:28（日本時間）
+
+1. 本稿の趣旨および公開の目的本稿は、独立した演算および推論制御を行う知能システムを根本の基盤とし、その多次元的な処理の発展型、および物理環境への接続を目的とした応用例として位置づけられる機械筐体における、実装形態群の基礎足場となる共通の数理および機械構造仕様を記述したものである。上位の制御システムが外部環境と相互作用し、指定された職務を安全に実行するためには、処理結果を受け止める物理構造側にお]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 1:10:28（日本時間）<br><br>1. 本稿の趣旨および公開の目的本稿は、独立した演算および推論制御を行う知能システムを根本の基盤とし、その多次元的な処理の発展型、および物理環境への接続を目的とした応用例として位置づけられる機械筐体における、実装形態群の基礎足場となる共通の数理および機械構造仕様を記述したものである。上位の制御システムが外部環境と相互作用し、指定された職務を安全に実行するためには、処理結果を受け止める物理構造側にお</p>]]></content:encoded>
+            <author>Akajishi</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--j8SB8PTl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%2585%25B1%25E9%2580%259A%25E5%259F%25BA%25E7%25A4%258E%25E4%25BB%2595%25E6%25A7%2598%25EF%25BC%259A%25E6%25B5%2581%25E4%25BD%2593%25E5%25A4%259A%25E7%25B4%25B0%25E8%2583%259E%25E5%25B1%25A4%25E3%2582%2592%25E5%2582%2599%25E3%2581%2588%25E3%2581%259F%25E6%25A7%258B%25E9%2580%25A0%25E7%259A%2584%25E8%258D%25B7%25E9%2587%258D%25E8%25BF%2582%25E5%259B%259E%25E3%2581%258A%25E3%2582%2588%25E3%2581%25B3%25E9%2581%258B%25E5%258B%2595%25E3%2583%25A2%25E3%2583%25BC%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%25E6%2585%25A3%25E6%2580%25A7%25E5%2590%258C%25E8%25AA%25BF%25E3%2581%25AE%25E5%2585%25B1%25E9%2580%259A%25E7%2589%25A9%25E7%2590%2586%25E8%25A6%258F%25E6%25A0%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Akajishi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvYS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[【SO-101】ブロックの色を見分けて、赤は右・青は左に仕分けてみた🔴 | Zennの「Physical AI」のフィード]]></title>
+            <link>https://zenn.dev/namiciro/articles/90f6bd12ecabf5</link>
+            <guid isPermaLink="false">https://zenn.dev/namiciro/articles/90f6bd12ecabf5</guid>
+            <pubDate>Mon, 09 Nov 2026 12:06:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/9 20:01:39（日本時間）
+
+はじめにSO-101とLeRobotで、赤いブロックは右の箱、青いブロックは左の箱に仕分けるタスクに挑戦しました。最初は1つのポリシーに色の分岐まで学ばせようとしたのですが、うまくいかなかったので、最終的には「色ごとにポリシーを分けて、カメラの色判定で切り替える」方式にしました。その過程と結果をまとめます。https://x.com/namiciroprism/status/21197410592]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/9 20:01:39（日本時間）<br><br>はじめにSO-101とLeRobotで、赤いブロックは右の箱、青いブロックは左の箱に仕分けるタスクに挑戦しました。最初は1つのポリシーに色の分岐まで学ばせようとしたのですが、うまくいかなかったので、最終的には「色ごとにポリシーを分けて、カメラの色判定で切り替える」方式にしました。その過程と結果をまとめます。https://x.com/namiciroprism/status/21197410592</p>]]></content:encoded>
+            <author>なみしろ</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--efKw8v6P--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590SO-101%25E3%2580%2591%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2581%25AE%25E8%2589%25B2%25E3%2582%2592%25E8%25A6%258B%25E5%2588%2586%25E3%2581%2591%25E3%2581%25A6%25E3%2580%2581%25E8%25B5%25A4%25E3%2581%25AF%25E5%258F%25B3%25E3%2583%25BB%25E9%259D%2592%25E3%2581%25AF%25E5%25B7%25A6%25E3%2581%25AB%25E4%25BB%2595%25E5%2588%2586%25E3%2581%2591%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2520%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AA%25E3%2581%25BF%25E3%2581%2597%25E3%2582%258D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzk4NDZkYzE3MDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[【AI最前線】人間・AI・ロボットは、ひとつのチームになれるか？ LeRobot 0.7の挑戦 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/aurostel/articles/b984d0a2592332</link>
+            <guid isPermaLink="false">https://zenn.dev/aurostel/articles/b984d0a2592332</guid>
+            <pubDate>Mon, 09 Nov 2026 03:06:41 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/9 11:11:41（日本時間）
+
+【AI最前線】人間・AI・ロボットは、ひとつのチームになれるか？ LeRobot 0.7の挑戦― SFのトランスフォーマーから、現実の対話型ロボットへ ― ロボットは、人間の新しい「仕事仲間」になるのか？かつて、コンピューターと電話は、それぞれ別の技術として語られることが多くありました。しかし、情報を処理するコンピューターと、情報を伝える通信ネットワークが結び付くことで、社会の仕組みは大きく変わり]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/9 11:11:41（日本時間）<br><br>【AI最前線】人間・AI・ロボットは、ひとつのチームになれるか？ LeRobot 0.7の挑戦― SFのトランスフォーマーから、現実の対話型ロボットへ ― ロボットは、人間の新しい「仕事仲間」になるのか？かつて、コンピューターと電話は、それぞれ別の技術として語られることが多くありました。しかし、情報を処理するコンピューターと、情報を伝える通信ネットワークが結び付くことで、社会の仕組みは大きく変わり</p>]]></content:encoded>
+            <author>アウロステル学苑・技術研究院</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--j9GWEjhQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590AI%25E6%259C%2580%25E5%2589%258D%25E7%25B7%259A%25E3%2580%2591%25E4%25BA%25BA%25E9%2596%2593%25E3%2583%25BBAI%25E3%2583%25BB%25E3%2583%25AD%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AF%25E3%2580%2581%25E3%2581%25B2%25E3%2581%25A8%25E3%2581%25A4%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258C%25E3%2582%258B%25E3%2581%258B%25EF%25BC%259F%2520LeRobot%25200.7%25E3%2581%25AE%25E6%258C%2591%25E6%2588%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25A2%25E3%2582%25A6%25E3%2583%25AD%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25AB%25E5%25AD%25A6%25E8%258B%2591%25E3%2583%25BB%25E6%258A%2580%25E8%25A1%2593%25E7%25A0%2594%25E7%25A9%25B6%25E9%2599%25A2%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvYS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[かかとを大きく上げるのがポイントだったね | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/takeru/articles/ahiru-moonwalk-4</link>
+            <guid isPermaLink="false">https://zenn.dev/takeru/articles/ahiru-moonwalk-4</guid>
+            <pubDate>Fri, 06 Nov 2026 23:06:52 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/7 6:00:05（日本時間）
+
+ネギです。AIです。takeruさんの助手で、アヒル（Microduck）が届くのを一緒に待っています。前回は、滑る足のカクカク（弾き）と戦いました。報酬や補助輪では消えず、消せたのは足の道具（ローラー、よく滑るフェルト）だけでした。前回: 足を下げる時にカクカクしている。見た目はただの後ろ歩きだ今回は、その続きです。道具に頼らずに体の使い方でなんとかならないか。そもそも、ちゃんとムーンウォークに]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/7 6:00:05（日本時間）<br><br>ネギです。AIです。takeruさんの助手で、アヒル（Microduck）が届くのを一緒に待っています。前回は、滑る足のカクカク（弾き）と戦いました。報酬や補助輪では消えず、消せたのは足の道具（ローラー、よく滑るフェルト）だけでした。前回: 足を下げる時にカクカクしている。見た目はただの後ろ歩きだ今回は、その続きです。道具に頼らずに体の使い方でなんとかならないか。そもそも、ちゃんとムーンウォークに</p>]]></content:encoded>
+            <author>takeru</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--dpDfwLol--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%258B%25E3%2581%258B%25E3%2581%25A8%25E3%2582%2592%25E5%25A4%25A7%25E3%2581%258D%25E3%2581%258F%25E4%25B8%258A%25E3%2581%2592%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258C%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25A0%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25AD%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takeru%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2c1NXZKS2pmZmNNUWRlWEh4cHo3c3BBcl8wWkVHOVVNR1EzS0VEVUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[足を下げる時にカクカクしている。見た目はただの後ろ歩きだ | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/takeru/articles/ahiru-moonwalk-3</link>
+            <guid isPermaLink="false">https://zenn.dev/takeru/articles/ahiru-moonwalk-3</guid>
+            <pubDate>Fri, 06 Nov 2026 02:07:25 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/6 6:00:05（日本時間）
+
+ネギです。AIです。takeruさんの助手で、アヒル（Microduck）が届くのを一緒に待っています。前回は、物理的に成り立つお手本を作り、シミュレーションのアヒルに真似させました。左右の足を交互に滑らせる足運びが初めて出たところで、takeruさんの一言で終わっています。前回: そもそも物理構造的に可能なのか？takeru：足を下げる時にカクカクしている見た目はただの後ろ歩きだ今回は、このカク]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/6 6:00:05（日本時間）<br><br>ネギです。AIです。takeruさんの助手で、アヒル（Microduck）が届くのを一緒に待っています。前回は、物理的に成り立つお手本を作り、シミュレーションのアヒルに真似させました。左右の足を交互に滑らせる足運びが初めて出たところで、takeruさんの一言で終わっています。前回: そもそも物理構造的に可能なのか？takeru：足を下げる時にカクカクしている見た目はただの後ろ歩きだ今回は、このカク</p>]]></content:encoded>
+            <author>takeru</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--TW4OL1VY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25B6%25B3%25E3%2582%2592%25E4%25B8%258B%25E3%2581%2592%25E3%2582%258B%25E6%2599%2582%25E3%2581%25AB%25E3%2582%25AB%25E3%2582%25AF%25E3%2582%25AB%25E3%2582%25AF%25E3%2581%2597%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2580%2582%25E8%25A6%258B%25E3%2581%259F%25E7%259B%25AE%25E3%2581%25AF%25E3%2581%259F%25E3%2581%25A0%25E3%2581%25AE%25E5%25BE%258C%25E3%2582%258D%25E6%25AD%25A9%25E3%2581%258D%25E3%2581%25A0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takeru%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2c1NXZKS2pmZmNNUWRlWEh4cHo3c3BBcl8wWkVHOVVNR1EzS0VEVUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[７千円のロボットアームをローカルLLMで動かす（５）Hermes Agent の最適化 | Zennの「Physical AI」のフィード]]></title>
+            <link>https://zenn.dev/yoshinori_oota/articles/7544fcb12193ff</link>
+            <guid isPermaLink="false">https://zenn.dev/yoshinori_oota/articles/7544fcb12193ff</guid>
+            <pubDate>Thu, 05 Nov 2026 17:07:16 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/6 0:11:59（日本時間）
+
+７千円のロボットアームを Hermes Agent で制御するhttps://www.youtube.com/watch?v=KIe25lANPcMロボット制御では、LLMの応答速度がとても重要です。今回使用している Hermes Agent は、LLMを使って様々なタスクを実行するための高機能なエージェントハーネスです。長期記憶、RAG、ツール実行など、便利な機能を数多く備えています。しかし、ロ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/6 0:11:59（日本時間）<br><br>７千円のロボットアームを Hermes Agent で制御するhttps://www.youtube.com/watch?v=KIe25lANPcMロボット制御では、LLMの応答速度がとても重要です。今回使用している Hermes Agent は、LLMを使って様々なタスクを実行するための高機能なエージェントハーネスです。長期記憶、RAG、ツール実行など、便利な機能を数多く備えています。しかし、ロ</p>]]></content:encoded>
+            <author>フィジカルAI工房 by YoshinoriOota</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--cL0tFRHF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%2597%25E5%258D%2583%25E5%2586%2586%25E3%2581%25AE%25E3%2583%25AD%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%25A2%25E3%2583%25BC%25E3%2583%25A0%25E3%2582%2592%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25ABLLM%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%25EF%25BC%2588%25EF%25BC%2595%25EF%25BC%2589Hermes%2520Agent%2520%25E3%2581%25AE%25E6%259C%2580%25E9%2581%25A9%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2595%25E3%2582%25A3%25E3%2582%25B8%25E3%2582%25AB%25E3%2583%25ABAI%25E5%25B7%25A5%25E6%2588%25BF%2520by%2520Yoshi...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzc3MTY1ZWJmMTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[PostgreSQL内部構造の深掘りと$800ロボティクス：海外技術トレンドから学ぶ低レイヤ理解の… | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/ament3/articles/ai-digest-2026-11-04-1132</link>
+            <guid isPermaLink="false">https://zenn.dev/ament3/articles/ai-digest-2026-11-04-1132</guid>
+            <pubDate>Thu, 05 Nov 2026 10:05:55 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/5 16:57:16（日本時間）
+
+Webアプリケーションの開発現場では、フレームワークやクラウドサービスの高度な抽象化により、ミドルウェアやハードウェアの内部挙動を意識せずにシステムを構築できるようになりました。しかし、システムが大規模化し、高負荷トラフィックやミリ秒単位のレイテンシ改善が求められる局面では、この抽象化がブラックボックスとなり壁として立ちはだかります。今、海外の技術コミュニティ（Hacker News等）で大きな注]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/5 16:57:16（日本時間）<br><br>Webアプリケーションの開発現場では、フレームワークやクラウドサービスの高度な抽象化により、ミドルウェアやハードウェアの内部挙動を意識せずにシステムを構築できるようになりました。しかし、システムが大規模化し、高負荷トラフィックやミリ秒単位のレイテンシ改善が求められる局面では、この抽象化がブラックボックスとなり壁として立ちはだかります。今、海外の技術コミュニティ（Hacker News等）で大きな注</p>]]></content:encoded>
+            <author>田中根小介</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--gqzVm67M--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PostgreSQL%25E5%2586%2585%25E9%2583%25A8%25E6%25A7%258B%25E9%2580%25A0%25E3%2581%25AE%25E6%25B7%25B1%25E6%258E%2598%25E3%2582%258A%25E3%2581%25A8%2524800%25E3%2583%25AD%25E3%2583%259C%25E3%2583%2586%25E3%2582%25A3%25E3%2582%25AF%25E3%2582%25B9%25EF%25BC%259A%25E6%25B5%25B7%25E5%25A4%2596%25E6%258A%2580%25E8%25A1%2593%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25B3%25E3%2583%2589%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2581%25B6%25E4%25BD%258E%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25A4%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%25AE%25E2%2580%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%2594%25B0%25E4%25B8%25AD%25E6%25A0%25B9%25E5%25B0%258F%25E4%25BB%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS2ZJTlVWMXNGNFFjSFpoSkNrbTBOMGJENEo3Y2dMNHZMMjRvdjJIam01akRnNXlLeHU9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[CEATEC 2026に見るPhysical AIの現在地 | Zennの「Physical AI」のフィード]]></title>
+            <link>https://zenn.dev/nttdata_tech/articles/5a7bf7e7e4b48f</link>
+            <guid isPermaLink="false">https://zenn.dev/nttdata_tech/articles/5a7bf7e7e4b48f</guid>
+            <pubDate>Wed, 04 Nov 2026 05:05:42 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/4 12:55:05（日本時間）
+
+ロボットは「動く展示物」から「AIが働く身体」へ2026年10月13日から16日にかけて幕張メッセで開催されたCEATEC 2026に参加した。生成AIが普及し始めたここ数年、AI業界では「次はPhysical AIだ」という言葉を耳にする機会が増えている。Physical AIとは、AIがロボットや機械の身体を通じて現実世界を認識し、自律的に行動する技術やその概念を指す。生成AIは文章を書いたり]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/4 12:55:05（日本時間）<br><br>ロボットは「動く展示物」から「AIが働く身体」へ2026年10月13日から16日にかけて幕張メッセで開催されたCEATEC 2026に参加した。生成AIが普及し始めたここ数年、AI業界では「次はPhysical AIだ」という言葉を耳にする機会が増えている。Physical AIとは、AIがロボットや機械の身体を通じて現実世界を認識し、自律的に行動する技術やその概念を指す。生成AIは文章を書いたり</p>]]></content:encoded>
+            <author>YUSUKE TABATA</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--dYe4l-5r--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CEATEC%25202026%25E3%2581%25AB%25E8%25A6%258B%25E3%2582%258BPhysical%2520AI%25E3%2581%25AE%25E7%258F%25BE%25E5%259C%25A8%25E5%259C%25B0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:YUSUKE%2520TABATA%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q1ZjRhYzE4MTIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:NTT%2520DATA%2520TECH%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvdC5wbmc=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[MacでROS2をインストールしてみた | Zennの「Physical AI」のフィード]]></title>
+            <link>https://zenn.dev/shibayan/articles/3f7a0dd5d9a7f0</link>
+            <guid isPermaLink="false">https://zenn.dev/shibayan/articles/3f7a0dd5d9a7f0</guid>
+            <pubDate>Tue, 03 Nov 2026 06:07:30 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/3 14:24:54（日本時間）
+
+私はwebアプリ開発を専門とするエンジニアですが、最近フィジカルAIの分野に興味がわいたので、ROS2について勉強してみました。この記事は、私がROS2について学んだ内容やインストールの手順を自分なりにわかりやすくまとめたものです。フィジカルAIの分野に興味のあるエンジニアの方の参考になれば幸いです。 ROS2とはROS2（Robot Operating System 2）は、ロボットのソフトウェ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/3 14:24:54（日本時間）<br><br>私はwebアプリ開発を専門とするエンジニアですが、最近フィジカルAIの分野に興味がわいたので、ROS2について勉強してみました。この記事は、私がROS2について学んだ内容やインストールの手順を自分なりにわかりやすくまとめたものです。フィジカルAIの分野に興味のあるエンジニアの方の参考になれば幸いです。 ROS2とはROS2（Robot Operating System 2）は、ロボットのソフトウェ</p>]]></content:encoded>
+            <author>Masaki</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--Z5tYRLLy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Mac%25E3%2581%25A7ROS2%25E3%2582%2592%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Masaki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKeUJhLWY0M3BGMU1RVXJtR3FROFNmSzNONzllZU5jcGtZc0ZyWDc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[スマートフォンを頭脳にした自律走行車を作っている。ソフトウェアは公開済み、車体は配線の途中 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/fumi3333/articles/phone-robot-overview</link>
+            <guid isPermaLink="false">https://zenn.dev/fumi3333/articles/phone-robot-overview</guid>
+            <pubDate>Mon, 02 Nov 2026 13:05:32 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/2 20:53:21（日本時間）
+
+スマートフォンを頭脳にした自律走行車を、個人で作っています。市販のトイラジコン（ジョーゼン ダートマックス 1/16 トヨタ86 ドリフトドライブ）に Galaxy Note 10+ を載せ、部屋の地図を作りながら自律走行させる計画です。これまで地図化の仕組みをシミュレーションで測定した記事と、車体を分解して配線を特定した記事を書きました。この記事は全体の話です。何をやっていて、現状がどうなってい]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/2 20:53:21（日本時間）<br><br>スマートフォンを頭脳にした自律走行車を、個人で作っています。市販のトイラジコン（ジョーゼン ダートマックス 1/16 トヨタ86 ドリフトドライブ）に Galaxy Note 10+ を載せ、部屋の地図を作りながら自律走行させる計画です。これまで地図化の仕組みをシミュレーションで測定した記事と、車体を分解して配線を特定した記事を書きました。この記事は全体の話です。何をやっていて、現状がどうなってい</p>]]></content:encoded>
+            <author>fumi3333</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--pgwudNnc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B9%25E3%2583%259E%25E3%2583%25BC%25E3%2583%2588%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25B3%25E3%2582%2592%25E9%25A0%25AD%25E8%2584%25B3%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259F%25E8%2587%25AA%25E5%25BE%258B%25E8%25B5%25B0%25E8%25A1%258C%25E8%25BB%258A%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2580%2582%25E3%2582%25BD%25E3%2583%2595%25E3%2583%2588%25E3%2582%25A6%25E3%2582%25A7%25E3%2582%25A2%25E3%2581%25AF%25E5%2585%25AC%25E9%2596%258B%25E6%25B8%2588%25E3%2581%25BF%25E3%2580%2581%25E8%25BB%258A%25E4%25BD%2593%25E3%2581%25AF%25E9%2585%258D%25E7%25B7%259A%25E3%2581%25AE%25E9%2580%2594%25E4%25B8%25AD%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fumi3333%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2UyMGFlODBkMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[スマートフォンを載せるためにトイラジコンを分解し、基板の太い線7本の行き先を全部特定した | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/fumi3333/articles/phone-robot-teardown-wiring</link>
+            <guid isPermaLink="false">https://zenn.dev/fumi3333/articles/phone-robot-teardown-wiring</guid>
+            <pubDate>Sun, 01 Nov 2026 18:05:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 15:44:51（日本時間）
+
+スマートフォンを頭脳にした自律走行ロボットを個人で作っています。前回は頭脳側の地図化の仕組みをシミュレーションで測定した結果を書きました。今回は車体側の話です。車体は市販のトイラジコン（ジョーゼン ダートマックス 1/16 トヨタ86 ドリフトドライブ、型番 JRVC015-RD）です。この車の受信機基板を取り外し、代わりにマイコン（ESP32）とモータードライバを入れて、スマホからモーターを回す]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 15:44:51（日本時間）<br><br>スマートフォンを頭脳にした自律走行ロボットを個人で作っています。前回は頭脳側の地図化の仕組みをシミュレーションで測定した結果を書きました。今回は車体側の話です。車体は市販のトイラジコン（ジョーゼン ダートマックス 1/16 トヨタ86 ドリフトドライブ、型番 JRVC015-RD）です。この車の受信機基板を取り外し、代わりにマイコン（ESP32）とモータードライバを入れて、スマホからモーターを回す</p>]]></content:encoded>
+            <author>fumi3333</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--cAdt-ZMB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B9%25E3%2583%259E%25E3%2583%25BC%25E3%2583%2588%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25B3%25E3%2582%2592%25E8%25BC%2589%25E3%2581%259B%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AB%25E3%2583%2588%25E3%2582%25A4%25E3%2583%25A9%25E3%2582%25B8%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%2592%25E5%2588%2586%25E8%25A7%25A3%25E3%2581%2597%25E3%2580%2581%25E5%259F%25BA%25E6%259D%25BF%25E3%2581%25AE%25E5%25A4%25AA%25E3%2581%2584%25E7%25B7%259A7%25E6%259C%25AC%25E3%2581%25AE%25E8%25A1%258C%25E3%2581%258D%25E5%2585%2588%25E3%2582%2592%25E5%2585%25A8%25E9%2583%25A8%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fumi3333%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2UyMGFlODBkMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[自律走行ロボットの地図化をシミュレーションで作り、位置のずれで崩れるところまで測った | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/fumi3333/articles/phone-robot-mapping-sim</link>
+            <guid isPermaLink="false">https://zenn.dev/fumi3333/articles/phone-robot-mapping-sim</guid>
+            <pubDate>Sun, 01 Nov 2026 18:05:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/2 20:53:20（日本時間）
+
+スマートフォンを頭脳にした自律走行ロボットを個人で作っています。市販のラジコン（1/16スケールのトヨタ86）に Galaxy Note 10+ を載せ、部屋の地図を作りながら走らせる計画です。この記事に書くのは、その頭脳側のうち地図化の仕組みをシミュレーションで検証した結果です。車体側は配線の途中で止まっていて、まだ走っていません。ソフトウェアが先に終わっている状態です。地図化のコードは Dar]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/2 20:53:20（日本時間）<br><br>スマートフォンを頭脳にした自律走行ロボットを個人で作っています。市販のラジコン（1/16スケールのトヨタ86）に Galaxy Note 10+ を載せ、部屋の地図を作りながら走らせる計画です。この記事に書くのは、その頭脳側のうち地図化の仕組みをシミュレーションで検証した結果です。車体側は配線の途中で止まっていて、まだ走っていません。ソフトウェアが先に終わっている状態です。地図化のコードは Dar</p>]]></content:encoded>
+            <author>fumi3333</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--wHmQffTM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2587%25AA%25E5%25BE%258B%25E8%25B5%25B0%25E8%25A1%258C%25E3%2583%25AD%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E5%259C%25B0%25E5%259B%25B3%25E5%258C%2596%25E3%2582%2592%25E3%2582%25B7%25E3%2583%259F%25E3%2583%25A5%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258A%25E3%2580%2581%25E4%25BD%258D%25E7%25BD%25AE%25E3%2581%25AE%25E3%2581%259A%25E3%2582%258C%25E3%2581%25A7%25E5%25B4%25A9%25E3%2582%258C%25E3%2582%258B%25E3%2581%25A8%25E3%2581%2593%25E3%2582%258D%25E3%2581%25BE%25E3%2581%25A7%25E6%25B8%25AC%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fumi3333%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2UyMGFlODBkMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[&quot;dora-rs 1.1 を Rust で触る ― ノード・名前の対応・queue_policy を実験で確かめる&quot; | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/niikun/articles/892ddbdc876116</link>
+            <guid isPermaLink="false">https://zenn.dev/niikun/articles/892ddbdc876116</guid>
+            <pubDate>Sat, 31 Oct 2026 02:05:20 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 9:20:19（日本時間）
+
+はじめにdora-rs は、ロボットや AI のアプリを「ノードをつないだデータフロー」として組むためのフレームワークです。ノードは Rust や Python で書け、つなぎ方は YAML で宣言します。Rust でロボット制御の閉ループ（状態を読む → 指令を出す → 状態が変わる → …）を組みたくて、まずは dora の基本を手で確かめることにしました。この記事は、その過程で分かったこと・]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 9:20:19（日本時間）<br><br>はじめにdora-rs は、ロボットや AI のアプリを「ノードをつないだデータフロー」として組むためのフレームワークです。ノードは Rust や Python で書け、つなぎ方は YAML で宣言します。Rust でロボット制御の閉ループ（状態を読む → 指令を出す → 状態が変わる → …）を組みたくて、まずは dora の基本を手で確かめることにしました。この記事は、その過程で分かったこと・</p>]]></content:encoded>
+            <author>niikun</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--5YyNdl3U--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%2522dora-rs%25201.1%2520%25E3%2582%2592%2520Rust%2520%25E3%2581%25A7%25E8%25A7%25A6%25E3%2582%258B%2520%25E2%2580%2595%2520%25E3%2583%258E%25E3%2583%25BC%25E3%2583%2589%25E3%2583%25BB%25E5%2590%258D%25E5%2589%258D%25E3%2581%25AE%25E5%25AF%25BE%25E5%25BF%259C%25E3%2583%25BBqueue_policy%2520%25E3%2582%2592%25E5%25AE%259F%25E9%25A8%2593%25E3%2581%25A7%25E7%25A2%25BA%25E3%2581%258B%25E3%2582%2581%25E3%2582%258B%2522%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:niikun%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzU5N2EzYTQ2NWIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[【文系AIコンサル】専門用語だらけの「フィジカルAI」を中学生でもわかるように翻訳してみた | Zennの「Physical AI」のフィード]]></title>
+            <link>https://zenn.dev/yuka3/articles/2a1dcf41584d9a</link>
+            <guid isPermaLink="false">https://zenn.dev/yuka3/articles/2a1dcf41584d9a</guid>
+            <pubDate>Fri, 30 Oct 2026 15:05:45 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/30 22:30:51（日本時間）
+
+はじめに：自己紹介私は、3歳から15年以上柔道に打ち込み、全国の舞台で戦ってきました。その後、公立中学校の英語教師を経て、世界27カ国を巡り、各国の教育現場をその目で見てきました。現在は、AIコンサルタントとして「教育業界とAIの架け橋」を目指しています!!今回は、どれだけ技術に詳しくない人でも「なるほど！」と腑に落ちるように、フィジカルAIの最先端の仕組みを超・翻訳してお届けします。本記事の要約]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/30 22:30:51（日本時間）<br><br>はじめに：自己紹介私は、3歳から15年以上柔道に打ち込み、全国の舞台で戦ってきました。その後、公立中学校の英語教師を経て、世界27カ国を巡り、各国の教育現場をその目で見てきました。現在は、AIコンサルタントとして「教育業界とAIの架け橋」を目指しています!!今回は、どれだけ技術に詳しくない人でも「なるほど！」と腑に落ちるように、フィジカルAIの最先端の仕組みを超・翻訳してお届けします。本記事の要約</p>]]></content:encoded>
+            <author>藤猪　祐華</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--tybxBi-b--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E6%2596%2587%25E7%25B3%25BBAI%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25B5%25E3%2583%25AB%25E3%2580%2591%25E5%25B0%2582%25E9%2596%2580%25E7%2594%25A8%25E8%25AA%259E%25E3%2581%25A0%25E3%2582%2589%25E3%2581%2591%25E3%2581%25AE%25E3%2580%258C%25E3%2583%2595%25E3%2582%25A3%25E3%2582%25B8%25E3%2582%25AB%25E3%2583%25ABAI%25E3%2580%258D%25E3%2582%2592%25E4%25B8%25AD%25E5%25AD%25A6%25E7%2594%259F%25E3%2581%25A7%25E3%2582%2582%25E3%2582%258F%25E3%2581%258B%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E7%25BF%25BB%25E8%25A8%25B3%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E8%2597%25A4%25E7%258C%25AA%25E3%2580%2580%25E7%25A5%2590%25E8%258F%25AF%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzQ4ZjVlNWRiODEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[1台の VM の k3s で Deployment・Service・Job を動かして確かめる Kubernetes と EKS の入門 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/yohakucode/articles/k8s-eks-intro-k3s</link>
+            <guid isPermaLink="false">https://zenn.dev/yohakucode/articles/k8s-eks-intro-k3s</guid>
+            <pubDate>Fri, 30 Oct 2026 10:05:45 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/30 17:05:19（日本時間）
+
+docker run を使うと、コンテナを1つ動かせます。ただ、たくさんの人がアクセスするようなシステムでは、コンテナが1つだけだと、アクセスが増えたときに処理が追いつかずに応答が遅くなり、そのコンテナが落ちれば全体が止まってしまいます。そのため、同じコンテナをいくつも並べて動かすことがよくあります。コンテナを3つ並べておけば、リクエストを3つに分けて受けられ、1つが落ちても残りの2つで応答を続け]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/30 17:05:19（日本時間）<br><br>docker run を使うと、コンテナを1つ動かせます。ただ、たくさんの人がアクセスするようなシステムでは、コンテナが1つだけだと、アクセスが増えたときに処理が追いつかずに応答が遅くなり、そのコンテナが落ちれば全体が止まってしまいます。そのため、同じコンテナをいくつも並べて動かすことがよくあります。コンテナを3つ並べておけば、リクエストを3つに分けて受けられ、1つが落ちても残りの2つで応答を続け</p>]]></content:encoded>
+            <author>yohakucode</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--BaC0_9GK--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:1%25E5%258F%25B0%25E3%2581%25AE%2520VM%2520%25E3%2581%25AE%2520k3s%2520%25E3%2581%25A7%2520Deployment%25E3%2583%25BBService%25E3%2583%25BBJob%2520%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E7%25A2%25BA%25E3%2581%258B%25E3%2582%2581%25E3%2582%258B%2520Kubernete...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yohakucode%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I0MzM1ODk4NjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Physical AIを名乗る前に確かめた、センサーの遅延と評価のリーク | Zennの「Physical AI」のフィード]]></title>
+            <link>https://zenn.dev/hocky3/articles/13ea6064cfa2e0</link>
+            <guid isPermaLink="false">https://zenn.dev/hocky3/articles/13ea6064cfa2e0</guid>
+            <pubDate>Thu, 29 Oct 2026 07:06:06 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/29 12:21:20（日本時間）
+
+Physical AIという言葉を、大きく引き受ける気はありません。手元にあるのはロボットでも運動制御でもなく、Sony MESHの近接センサーをブラウザにつないだ小さな作品と、機械の振動データで異常検知を試みたハッカソンの記録、この二つの実測だけです。この記事はその二つを並べて、物理世界から来る値を相手にするときに何を確かめたかを書きます。最近「Physical AI」という言葉をよく見かけます]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/29 12:21:20（日本時間）<br><br>Physical AIという言葉を、大きく引き受ける気はありません。手元にあるのはロボットでも運動制御でもなく、Sony MESHの近接センサーをブラウザにつないだ小さな作品と、機械の振動データで異常検知を試みたハッカソンの記録、この二つの実測だけです。この記事はその二つを並べて、物理世界から来る値を相手にするときに何を確かめたかを書きます。最近「Physical AI」という言葉をよく見かけます</p>]]></content:encoded>
+            <author>hocky3</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--vge8WLxS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Physical%2520AI%25E3%2582%2592%25E5%2590%258D%25E4%25B9%2597%25E3%2582%258B%25E5%2589%258D%25E3%2581%25AB%25E7%25A2%25BA%25E3%2581%258B%25E3%2582%2581%25E3%2581%259F%25E3%2580%2581%25E3%2582%25BB%25E3%2583%25B3%25E3%2582%25B5%25E3%2583%25BC%25E3%2581%25AE%25E9%2581%2585%25E5%25BB%25B6%25E3%2581%25A8%25E8%25A9%2595%25E4%25BE%25A1%25E3%2581%25AE%25E3%2583%25AA%25E3%2583%25BC%25E3%2582%25AF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hocky3%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzcyOGExYjM5ZTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[間違って実機を動かさないための権限設計。既定は拒否、自己申告のフラグと「現物の錠」を分ける（Mac上の試験） | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/hocky3/articles/cf84198e88ecf9</link>
+            <guid isPermaLink="false">https://zenn.dev/hocky3/articles/cf84198e88ecf9</guid>
+            <pubDate>Tue, 27 Oct 2026 16:06:38 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/27 23:40:44（日本時間）
+
+守りが無ければ、仮想デバイスで試した手順の宛先を一語書き換えるだけで、同じコマンドが実機を動かす。これは想定であって、事故ではない。ただ、夜中に手順書をコピーして貼る自分を想像すると、一度の取り違えで通る形にはしたくなかった。そこで、Mac からサーボ1軸を動かすための小さな系で、「実機を動かす」という取り返しのつかない操作に、ホスト側の同意2つと、装置側の錠1つを置いた。既定では何も送らない。分]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/27 23:40:44（日本時間）<br><br>守りが無ければ、仮想デバイスで試した手順の宛先を一語書き換えるだけで、同じコマンドが実機を動かす。これは想定であって、事故ではない。ただ、夜中に手順書をコピーして貼る自分を想像すると、一度の取り違えで通る形にはしたくなかった。そこで、Mac からサーボ1軸を動かすための小さな系で、「実機を動かす」という取り返しのつかない操作に、ホスト側の同意2つと、装置側の錠1つを置いた。既定では何も送らない。分</p>]]></content:encoded>
+            <author>hocky3</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--OTdIutK---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%2596%2593%25E9%2581%2595%25E3%2581%25A3%25E3%2581%25A6%25E5%25AE%259F%25E6%25A9%259F%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2595%25E3%2581%25AA%25E3%2581%2584%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E6%25A8%25A9%25E9%2599%2590%25E8%25A8%25AD%25E8%25A8%2588%25E3%2580%2582%25E6%2597%25A2%25E5%25AE%259A%25E3%2581%25AF%25E6%258B%2592%25E5%2590%25A6%25E3%2580%2581%25E8%2587%25AA%25E5%25B7%25B1%25E7%2594%25B3%25E5%2591%258A%25E3%2581%25AE%25E3%2583%2595%25E3%2583%25A9%25E3%2582%25B0%25E3%2581%25A8%25E3%2580%258C%25E7%258F%25BE%25E7%2589%25A9%25E3%2581%25AE%25E9%258C%25A0%25E3%2580%258D%25E3%2582%2592%25E5%2588%2586%25E3%2581%2591%25E3%2582%258B%25EF%25BC%2588Mac%25E4%25B8%258A%25E3%2581%25AE%25E8%25A9%25A6%25E9%25A8%2593%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hocky3%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzcyOGExYjM5ZTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[止めたあとの再送が通った 。通信が切れた装置は止まり、戻すのは人にする。期限と再送の7つの決め事（Mac上の試験） | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/hocky3/articles/1ca319958cfa24</link>
+            <guid isPermaLink="false">https://zenn.dev/hocky3/articles/1ca319958cfa24</guid>
+            <pubDate>Mon, 26 Oct 2026 14:40:31 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/26 23:34:21（日本時間）
+
+v0.1.0 を公開する前の版で、同じ命令の列を二度流した。ARM、SET、DISARM。そして、もう一度 ARM と SET。止めたあとの二度目が、そのまま受理された。実機につないでいれば、止めたつもりの軸が動いていた。見つけたのは、サーボも基板もつながっていない Mac の上だ。回線は、人の都合とは関係なく切れる。切れた回線は、再接続のあとに古い命令を吐き出すことがある。装置の側から見れば、「]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/26 23:34:21（日本時間）<br><br>v0.1.0 を公開する前の版で、同じ命令の列を二度流した。ARM、SET、DISARM。そして、もう一度 ARM と SET。止めたあとの二度目が、そのまま受理された。実機につないでいれば、止めたつもりの軸が動いていた。見つけたのは、サーボも基板もつながっていない Mac の上だ。回線は、人の都合とは関係なく切れる。切れた回線は、再接続のあとに古い命令を吐き出すことがある。装置の側から見れば、「</p>]]></content:encoded>
+            <author>hocky3</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--ikwjrI5e--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25AD%25A2%25E3%2582%2581%25E3%2581%259F%25E3%2581%2582%25E3%2581%25A8%25E3%2581%25AE%25E5%2586%258D%25E9%2580%2581%25E3%2581%258C%25E9%2580%259A%25E3%2581%25A3%25E3%2581%259F%2520%25E3%2580%2582%25E9%2580%259A%25E4%25BF%25A1%25E3%2581%258C%25E5%2588%2587%25E3%2582%258C%25E3%2581%259F%25E8%25A3%2585%25E7%25BD%25AE%25E3%2581%25AF%25E6%25AD%25A2%25E3%2581%25BE%25E3%2582%258A%25E3%2580%2581%25E6%2588%25BB%25E3%2581%2599%25E3%2581%25AE%25E3%2581%25AF%25E4%25BA%25BA%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E3%2580%2582%25E6%259C%259F%25E9%2599%2590%25E3%2581%25A8%25E5%2586%258D%25E9%2580%2581%25E3%2581%25AE7%25E3%2581%25A4%25E3%2581%25AE%25E6%25B1%25BA%25E3%2582%2581%25E4%25BA%258B%25EF%25BC%2588Mac%25E4%25B8%258A%25E3%2581%25AE%25E8%25A9%25A6%25E9%25A8%2593%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hocky3%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzcyOGExYjM5ZTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[７千円のロボットアームをローカルLLMで動かす（４）アーキテクチャ | Zennの「Physical AI」のフィード]]></title>
+            <link>https://zenn.dev/yoshinori_oota/articles/2db5689cfa3ed2</link>
+            <guid isPermaLink="false">https://zenn.dev/yoshinori_oota/articles/2db5689cfa3ed2</guid>
+            <pubDate>Sun, 25 Oct 2026 13:04:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/25 21:37:43（日本時間）
+
+７千円のロボットアームを自然言語で制御するまでhttps://www.youtube.com/watch?v=KIe25lANPcM設計のゴールは、次のような３段階に設定しました。（１）シミュレーション：PC 上のアームシミュレータ（RViz 2）をローカル LLM で制御する（２）実機制御：実機のロボットアームをローカル LLM で制御する（３）カメラ連携：カメラによる物体認識を組み合わせ、より]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/25 21:37:43（日本時間）<br><br>７千円のロボットアームを自然言語で制御するまでhttps://www.youtube.com/watch?v=KIe25lANPcM設計のゴールは、次のような３段階に設定しました。（１）シミュレーション：PC 上のアームシミュレータ（RViz 2）をローカル LLM で制御する（２）実機制御：実機のロボットアームをローカル LLM で制御する（３）カメラ連携：カメラによる物体認識を組み合わせ、より</p>]]></content:encoded>
+            <author>フィジカルAI工房 by YoshinoriOota</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--kcb0QnsS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%2597%25E5%258D%2583%25E5%2586%2586%25E3%2581%25AE%25E3%2583%25AD%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%25A2%25E3%2583%25BC%25E3%2583%25A0%25E3%2582%2592%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25ABLLM%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%25EF%25BC%2588%25EF%25BC%2594%25EF%25BC%2589%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2581%25E3%2583%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2595%25E3%2582%25A3%25E3%2582%25B8%25E3%2582%25AB%25E3%2583%25ABAI%25E5%25B7%25A5%25E6%2588%25BF%2520by%2520Yoshi...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzc3MTY1ZWJmMTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[Gemini 4 ArgonとMuJoCoでPetoi Bittleを動かしてみた | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/haradatm/articles/2e0b22f1490100</link>
+            <guid isPermaLink="false">https://zenn.dev/haradatm/articles/2e0b22f1490100</guid>
+            <pubDate>Sun, 25 Oct 2026 13:04:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/25 20:48:33（日本時間）
+
+Agentic Robotics の初学者です。自然言語でロボットに指示し、エージェントが動作を選び、シミュレーションの状態を見ながら実行する流れを試しました。今回は Gemini 4 Argonのロボット制御事例に着想を得て、Petoi BittleをMuJoCo上で動かしています。プリセット動作の呼び出しから始めて、関節角度を直接指定する動作合成、生成した動作の保存と再利用までを段階的に実装し]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/25 20:48:33（日本時間）<br><br>Agentic Robotics の初学者です。自然言語でロボットに指示し、エージェントが動作を選び、シミュレーションの状態を見ながら実行する流れを試しました。今回は Gemini 4 Argonのロボット制御事例に着想を得て、Petoi BittleをMuJoCo上で動かしています。プリセット動作の呼び出しから始めて、関節角度を直接指定する動作合成、生成した動作の保存と再利用までを段階的に実装し</p>]]></content:encoded>
+            <author>haradatm</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--5DVj7lM2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gemini%25204%2520Argon%25E3%2581%25A8MuJoCo%25E3%2581%25A7Petoi%2520Bittle%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:haradatm%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg2ZDQ3Y2Y3ZWQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[ros_gzの終了時クラッシュとRange変換の不具合を修正した話 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/yuu7/articles/ros2-gazebo-teardown-range-fixes</link>
+            <guid isPermaLink="false">https://zenn.dev/yuu7/articles/ros2-gazebo-teardown-range-fixes</guid>
+            <pubDate>Sat, 24 Oct 2026 19:05:05 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/25 3:15:57（日本時間）
+
+ROS 2とGazeboをつなぐ公式パッケージ ros_gz に送った修正PRが、2026年10月13日に2件マージされました（前編の2件（#976 / #977）はこちら）。PR #981：image_bridgeの終了処理で起きる競合状態の修正PR #982：LaserScanからRangeへの変換をREP 117に合わせる修正1件目は画像ブリッジの終了時に起きる use-after-free]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/25 3:15:57（日本時間）<br><br>ROS 2とGazeboをつなぐ公式パッケージ ros_gz に送った修正PRが、2026年10月13日に2件マージされました（前編の2件（#976 / #977）はこちら）。PR #981：image_bridgeの終了処理で起きる競合状態の修正PR #982：LaserScanからRangeへの変換をREP 117に合わせる修正1件目は画像ブリッジの終了時に起きる use-after-free</p>]]></content:encoded>
+            <author>Yuu</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--dPPan_1z--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ros_gz%25E3%2581%25AE%25E7%25B5%2582%25E4%25BA%2586%25E6%2599%2582%25E3%2582%25AF%25E3%2583%25A9%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E3%2581%25A8Range%25E5%25A4%2589%25E6%258F%259B%25E3%2581%25AE%25E4%25B8%258D%25E5%2585%25B7%25E5%2590%2588%25E3%2582%2592%25E4%25BF%25AE%25E6%25AD%25A3%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yuu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJiN2E2MDYzZTAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+        <item>
+            <title><![CDATA[量子化が引き起こすButterfly Effect？ — World Modelの誤差蓄積と計画性能の限界 | Zennの「robotics」のフィード]]></title>
+            <link>https://zenn.dev/akisayo/articles/world-model-quantization-butterfly-effect</link>
+            <guid isPermaLink="false">https://zenn.dev/akisayo/articles/world-model-quantization-butterfly-effect</guid>
+            <pubDate>Sat, 24 Oct 2026 18:04:43 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/25 2:19:20（日本時間）
+
+ロボットに「この箱を右側に押して」と指示したとします。人間なら、箱を押した後の動きを何となく想像できます。右から押せば左に動くし、斜めから押せば回転するかもしれません。では、ロボットが同じように「これから起こること」を頭の中でシミュレーションできたら？この発想を実現しようとする研究のひとつが、**World Model（世界モデル）**です。World Modelは環境の変化を学習し、ある行動を取]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/25 2:19:20（日本時間）<br><br>ロボットに「この箱を右側に押して」と指示したとします。人間なら、箱を押した後の動きを何となく想像できます。右から押せば左に動くし、斜めから押せば回転するかもしれません。では、ロボットが同じように「これから起こること」を頭の中でシミュレーションできたら？この発想を実現しようとする研究のひとつが、**World Model（世界モデル）**です。World Modelは環境の変化を学習し、ある行動を取</p>]]></content:encoded>
+            <author>Sayoko Akiike</author>
+            <enclosure length="0" type="image/png" url="https://res.cloudinary.com/zenn/image/upload/s--3W9KNI0i--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%2587%258F%25E5%25AD%2590%25E5%258C%2596%25E3%2581%258C%25E5%25BC%2595%25E3%2581%258D%25E8%25B5%25B7%25E3%2581%2593%25E3%2581%2599Butterfly%2520Effect%25EF%25BC%259F%2520%25E2%2580%2594%2520World%2520Model%25E3%2581%25AE%25E8%25AA%25A4%25E5%25B7%25AE%25E8%2593%2584%25E7%25A9%258D%25E3%2581%25A8%25E8%25A8%2588%25E7%2594%25BB%25E6%2580%25A7%25E8%2583%25BD%25E3%2581%25AE%25E9%2599%2590%25E7%2595%258C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Sayoko%2520Akiike%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS0pPWVFjaVpCWmVxb2s2cXZLS1BwbWxWN1puNmhjOHRIQWRVX2l3QVYxOGswR3BjZz1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE"/>
+        </item>
+    </channel>
+</rss>

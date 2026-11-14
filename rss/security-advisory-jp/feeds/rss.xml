@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>GitHub Security Advisory - Translated Japanese｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/</link>
+        <description>初回掲載順の通知用RSS。日次統計以外は元記事の公開日時を本文に記載します。</description>
+        <lastBuildDate>Sat, 14 Nov 2026 08:06:11 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>ja</language>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[[nltk] NLTK: Tree.chomsky_normal_formのサービスのクアドラティックタイムCPUの拒否リスト.pop(0) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-r53h-rw34-8h97</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r53h-rw34-8h97</guid>
+            <pubDate>Sat, 14 Nov 2026 08:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 9:07:59（日本時間）
+
+サマリーTree.chomsky_normal_form() は、解析ツリーとデフォルトを適切に解析します。 N の子を持つノードでは、右要素のブランチを繰り返し、list.pop(0) で作業リストの最初の要素を削除し、残りのすべての要素を毎回シフトし、広いノードのコストを一元化します。 攻撃者を増大させたツリーバンクツリーをチョムスキー・ノーマル・フォームに変換するアプリケーションは、1つの広]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 9:07:59（日本時間）<br><br>サマリーTree.chomsky_normal_form() は、解析ツリーとデフォルトを適切に解析します。 N の子を持つノードでは、右要素のブランチを繰り返し、list.pop(0) で作業リストの最初の要素を削除し、残りのすべての要素を毎回シフトし、広いノードのコストを一元化します。 攻撃者を増大させたツリーバンクツリーをチョムスキー・ノーマル・フォームに変換するアプリケーションは、1つの広</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: ConllCorpusReader SRLインスタンスビルダーによるサービスQuadratic-time CPUの拒否 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-v8f3-6phw-6mh9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-v8f3-6phw-6mh9</guid>
+            <pubDate>Sat, 14 Nov 2026 08:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 9:05:57（日本時間）
+
+概要ConllCorpusReader.srl_instances() は、CoNLL の corpus ブロックから semantic-role-labeling インスタンスをビルドします。 P 述語と P スパン 列を持つ文ブロックでは、インスタンス ビルダーは、各述語の頭を検索し、O(P^2 * R) 作業を行なうときに、各述語ごとに各スパン 列(および各スパン) を再スキャンします。 最]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 9:05:57（日本時間）<br><br>概要ConllCorpusReader.srl_instances() は、CoNLL の corpus ブロックから semantic-role-labeling インスタンスをビルドします。 P 述語と P スパン 列を持つ文ブロックでは、インスタンス ビルダーは、各述語の頭を検索し、O(P^2 * R) 作業を行なうときに、各述語ごとに各スパン 列(および各スパン) を再スキャンします。 最</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: CCG lexicon パーサ (fromstring) におけるサービスのクアドラティック・タイム CPU のデニール | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-89p3-fcch-88ph</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-89p3-fcch-88ph</guid>
+            <pubDate>Sat, 14 Nov 2026 08:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 9:08:50（日本時間）
+
+インフォメーション パブリックCCG lexiconパーサーnltk.ccg.lexicon。 fromstring は、入力幅の量的である 2 個のピュア Python ループでコールアインフルエンサード lexicon テキストを解析します。 信頼できないCCG lexicon文字列を解析するサービスは、リクエストワーカーを主演する、数メガバイト入力で単一スレッドCPUの10秒に駆動することが]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 9:08:50（日本時間）<br><br>インフォメーション パブリックCCG lexiconパーサーnltk.ccg.lexicon。 fromstring は、入力幅の量的である 2 個のピュア Python ループでコールアインフルエンサード lexicon テキストを解析します。 信頼できないCCG lexicon文字列を解析するサービスは、リクエストワーカーを主演する、数メガバイト入力で単一スレッドCPUの10秒に駆動することが</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] 重複アドバイザリー: ConllCorpusReader SRL インスタンス ビルダーのQuadratic-time CPU denialによるネストされたスパンレスキャン | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-qvhx-rvgc-jhwf</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-qvhx-rvgc-jhwf</guid>
+            <pubDate>Sat, 14 Nov 2026 08:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:16（日本時間）
+
+重複アドバイザリー GHSA-v8f3-6phw-6mh9 の重複であるため、このアドバイザリーは撤退しました。 このリンクは、外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、ConllCorpusReader._get_srl_instancesで、リモート攻撃者がネストされたスパンrescansを介してCPUを排気することを可能にするサービス脆弱性の量的]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:16（日本時間）<br><br>重複アドバイザリー GHSA-v8f3-6phw-6mh9 の重複であるため、このアドバイザリーは撤退しました。 このリンクは、外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、ConllCorpusReader._get_srl_instancesで、リモート攻撃者がネストされたスパンrescansを介してCPUを排気することを可能にするサービス脆弱性の量的</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] 重複アドバイザリー: Tree.chomsky_normal_form のサービスのクアドラティックタイム CPU 拒否リスト.pop(0) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-6665-2vj3-h76r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6665-2vj3-h76r</guid>
+            <pubDate>Sat, 14 Nov 2026 08:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:16（日本時間）
+
+重複アドバイザリー GHSA-r53h-rw34-8h97 の重複であるため、このアドバイザリーは撤退しました。 このリンクは、外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、Tree.chomsky_normal_formでサービス脆弱性の拒否が含まれているため、リモート攻撃者はリスト.pop(0)を使用して、量差時間右因子の偏差でCPUを排気することがで]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:16（日本時間）<br><br>重複アドバイザリー GHSA-r53h-rw34-8h97 の重複であるため、このアドバイザリーは撤退しました。 このリンクは、外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、Tree.chomsky_normal_formでサービス脆弱性の拒否が含まれているため、リモート攻撃者はリスト.pop(0)を使用して、量差時間右因子の偏差でCPUを排気することがで</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@sveltejs/kit] は、 SvelteKit: アダプターノードは、`reroute` が malformed のパス名を書き換えると、未処理の URIError でクラッシュします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-mw6w-2fmv-pvw3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mw6w-2fmv-pvw3</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:51:44（日本時間）
+
+再ルートが無効なパーセントエンコードされたパスを有効なパスにしたとき、サーバーをクラッシュする比較をトリガーする可能性があります。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-mw6w-2admv-pvw3https://github.com/sveltejs/kit/pull/17620https://github.co]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:51:44（日本時間）<br><br>再ルートが無効なパーセントエンコードされたパスを有効なパスにしたとき、サーバーをクラッシュする比較をトリガーする可能性があります。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-mw6w-2admv-pvw3https://github.com/sveltejs/kit/pull/17620https://github.co</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] 重複アドバイザリー: BllipParser は、pathsec チェックなしで bllipparser C 拡張への呼び出しをパスします。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-f7j6-hf97-9v99</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-f7j6-hf97-9v99</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:16（日本時間）
+
+重複アドバイザリー GHSA-fg9w-wfp5-j933 の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4 前の 3.10.0 から元の説明NLTK には、BllipParser の任意のファイル読み取り脆弱性が含まれているため、攻撃者が NLTK のデータルートの外側のファイルを開くことができます。 parser_model]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:16（日本時間）<br><br>重複アドバイザリー GHSA-fg9w-wfp5-j933 の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4 前の 3.10.0 から元の説明NLTK には、BllipParser の任意のファイル読み取り脆弱性が含まれているため、攻撃者が NLTK のデータルートの外側のファイルを開くことができます。 parser_model</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@nuxt/nitro-server] は、 Nuxt: GHSA-9v7c-q64q-v33 の不完全な修正:リクエストパスの先頭の `/` は `server/middleware` のパスチェックとサーバのルートのルールをパスします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r99w-jh2x-3mg9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r99w-jh2x-3mg9</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 4:32:21（日本時間）
+
+概要4.6.0以降、Nuxt は、ページをレンダーする前にホストを持つ URL として // から始まるリクエストパスをパースします。 Nitro のルーティング、Nitro のルートルールとサーバー/ミドルウェアは //x/admin のパスを参照しているので、サーバ側は /admin 上でキーをオンにチェックしません。 4.6.3 の GHSA-9v7c-q64q-vv33 の固定はドット セ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 4:32:21（日本時間）<br><br>概要4.6.0以降、Nuxt は、ページをレンダーする前にホストを持つ URL として // から始まるリクエストパスをパースします。 Nitro のルーティング、Nitro のルートルールとサーバー/ミドルウェアは //x/admin のパスを参照しているので、サーバ側は /admin 上でキーをオンにチェックしません。 4.6.3 の GHSA-9v7c-q64q-vv33 の固定はドット セ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] 重複アドバイザリー:save_maxent_params / load_maxent_params のパストラバース 任意のファイル READ/WRITE を許可する | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-g5wx-957h-f4wj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-g5wx-957h-f4wj</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:16（日本時間）
+
+重複アドバイザリー GHSA-59f9-gqg8-mqpj の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、save_maxent_params() と load_maxent_params() のパストラバーサルの脆弱性が含まれているため、pathsec ファイルシステム制限機構を迂回します]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:16（日本時間）<br><br>重複アドバイザリー GHSA-59f9-gqg8-mqpj の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、save_maxent_params() と load_maxent_params() のパストラバーサルの脆弱性が含まれているため、pathsec ファイルシステム制限機構を迂回します</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] 重複アドバイザリー: NLTK CCG lexicon パーサー (fromstring) の広範なブラケット ボディおよびオペレータ チェーンのサービスの Quadratic 時間 CPU の拒否 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-jh6r-h4rx-2j3w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jh6r-h4rx-2j3w</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:16（日本時間）
+
+重複アドバイザリー GHSA-89p3-fcch-88ph の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、CCG lexiconパーサーのデニアルが含まれているため、リモート攻撃者がCPUを排気することを可能にします。 攻撃者は、長いフラットブラケットボディまたはオペレータチェーンでlexi]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:16（日本時間）<br><br>重複アドバイザリー GHSA-89p3-fcch-88ph の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、CCG lexiconパーサーのデニアルが含まれているため、リモート攻撃者がCPUを排気することを可能にします。 攻撃者は、長いフラットブラケットボディまたはオペレータチェーンでlexi</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@sveltejs/adapter-node] は、 SvelteKit: `@sveltejs/adapter-node` は `fetch 経由で特定のリクエストをプロキシする際にクラッシュします ツイート | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-rqw3-x7hx-mm3p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-rqw3-x7hx-mm3p</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:36:53（日本時間）
+
+影響を受けるバージョンでは、@sveltejs/adapter-node は、サーバーがクラッシュし、サーバーがサーバーをクラッシュさせ、サーバーにそのサーバーにルーティングされた他のリクエストにサービスを拒否するというコンテキストで、ヘッダを不変なリクエストに追加しようとします。 参考:https://github.com/sveltejs/kit/security/advisories/GHS]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:36:53（日本時間）<br><br>影響を受けるバージョンでは、@sveltejs/adapter-node は、サーバーがクラッシュし、サーバーがサーバーをクラッシュさせ、サーバーにそのサーバーにルーティングされた他のリクエストにサービスを拒否するというコンテキストで、ヘッダを不変なリクエストに追加しようとします。 参考:https://github.com/sveltejs/kit/security/advisories/GHS</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@sveltejs/adapter-vercel] は、 SvelteKit: プレレンダーされたパスは、@sveltejs/adapter-vercel および @sveltejs/adapter-static で生成された Vercel ルート構成の正規表現として解釈されます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jf9x-2fg2-hx4w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jf9x-2fg2-hx4w</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:43:23（日本時間）
+
+攻撃者がプレンダーフェーズ中にクロールされたリンクに影響を与える可能性がある場合、そのリンクは、Vercel ルーティング設定の正規表現として解釈される可能性があります。 https://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620h]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:43:23（日本時間）<br><br>攻撃者がプレンダーフェーズ中にクロールされたリンクに影響を与える可能性がある場合、そのリンクは、Vercel ルーティング設定の正規表現として解釈される可能性があります。 https://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620h</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] 重複アドバイザリー: YCOECorpusReader の Symlink エスケープで psd/pos ディレクトリーのsymlink は、データサンドボックス内の corpus ルートの外側のファイルを読みます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-7r4r-6ppg-7ff8</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7r4r-6ppg-7ff8</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:17（日本時間）
+
+重複アドバイザリー GHSA-qg35-44qx-7vrrの重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4 前の 3.10.0 から元の説明NLTK には、psd または pos ディレクトリのシンリンクを植えることにより、攻撃者がコルパスのルートの外でファイルを読み込むことを可能にする YCOECorpusReader の対角]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:17（日本時間）<br><br>重複アドバイザリー GHSA-qg35-44qx-7vrrの重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4 前の 3.10.0 から元の説明NLTK には、psd または pos ディレクトリのシンリンクを植えることにより、攻撃者がコルパスのルートの外でファイルを読み込むことを可能にする YCOECorpusReader の対角</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: BllipParser が空のモデルパスをブlipparser に渡します パスチェックなしのC拡張子、任意の読み取りを有効にします | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-fg9w-wfp5-j933</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-fg9w-wfp5-j933</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 8:20:56（日本時間）
+
+ネイティブblipparserへのnltk/parse/bllip.pyの手発信者によるファイルシステムパス NLTKのpathsecのバリデーションを通さないC拡張。 コンストラクタパラメータparser_model、reranker_features、reranker_weights、および代替のparser_unified_model_dir()エントリーポイント、C拡張子の load_pa]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 8:20:56（日本時間）<br><br>ネイティブblipparserへのnltk/parse/bllip.pyの手発信者によるファイルシステムパス NLTKのpathsecのバリデーションを通さないC拡張。 コンストラクタパラメータparser_model、reranker_features、reranker_weights、および代替のparser_unified_model_dir()エントリーポイント、C拡張子の load_pa</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@sveltejs/adapter-cloudflare] は、 SvelteKit: プレレンダーされたリダイレクトパスは、`@sveltejs/adapter-cloudflare によって生成された `_redirects` ファイルに任意のルールを注入することができます ツイート | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5wg4-q3ww-283h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5wg4-q3ww-283h</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:39:15（日本時間）
+
+攻撃者がプレレンダリング中にクロールされたリンクに影響を与えることができれば、Cloudflareプラットフォームに追加されるリダイレクトエントリは、ビルドの適応段階で生成されたリダイレクトに影響することができます。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-5wg4-q3w-283hhttps://github.com]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:39:15（日本時間）<br><br>攻撃者がプレレンダリング中にクロールされたリンクに影響を与えることができれば、Cloudflareプラットフォームに追加されるリダイレクトエントリは、ビルドの適応段階で生成されたリダイレクトに影響することができます。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-5wg4-q3w-283hhttps://github.com</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: TreebankWordTokenizer.span_tokenizeでQuadratic CPUの排気をlist.pop(0)で引用復元ループ | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-ffr9-mgrr-wcvr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-ffr9-mgrr-wcvr</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 6:08:55（日本時間）
+
+概要TreebankWordTokenizer.span_tokenizeは、NLTKのトークナイザーパッケージには、その引用修復ステップで保護されていないO(n^2)処理ループが含まれています。 メソッドが二重引用文字(例えば &#39;&quot; * n)の長い実行を含むテキストで呼び出されると、引用符で一度にlist.pop(0)操作を実行し、list.pop(0)はO(length)なので、入力長さの四角]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 6:08:55（日本時間）<br><br>概要TreebankWordTokenizer.span_tokenizeは、NLTKのトークナイザーパッケージには、その引用修復ステップで保護されていないO(n^2)処理ループが含まれています。 メソッドが二重引用文字(例えば &#39;&quot; * n)の長い実行を含むテキストで呼び出されると、引用符で一度にlist.pop(0)操作を実行し、list.pop(0)はO(length)なので、入力長さの四角</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: 法的性におけるクアドラティックCPU排気SyllableTokenizer.tokenizeは、保護されていないオンセット逆転ループを介して | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-gpwc-27cw-rh9r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gpwc-27cw-rh9r</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 6:16:34（日本時間）
+
+概要レガシリティSyllableTokenizer.tokenizeは、NLTKのトークナイザーパッケージに保護されていないO(n^2)処理ループが含まれています。 メソッドは、vowels(例えば「a」* n)の長い実行で構成される単一のトークンで呼び出されると、トークンの長さの四角にCPU時間の比例を消費します。 このパブリックトークナイザー API に信頼できないトークンを供給できる攻撃者は]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 6:16:34（日本時間）<br><br>概要レガシリティSyllableTokenizer.tokenizeは、NLTKのトークナイザーパッケージに保護されていないO(n^2)処理ループが含まれています。 メソッドは、vowels(例えば「a」* n)の長い実行で構成される単一のトークンで呼び出されると、トークンの長さの四角にCPU時間の比例を消費します。 このパブリックトークナイザー API に信頼できないトークンを供給できる攻撃者は</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@astrojs/node] は、 Astro: @astrojs/node のイメージエンドポイントは、ケースに敏感なファイルシステム上の出力ディレクトリの case-variant の兄弟からファイルを読むことができます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r3h5-4585-7x3w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r3h5-4585-7x3w</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 3:35:59（日本時間）
+
+インフォメーション @astrojs/node アダプターで使用している /_image エンドポイントは、ディスクから読み込む前に、リクエストされたローカルイメージがビルド出力ディレクトリ内にあることを確認します。 そのチェックは、ケースを無感覚にパスします。 ケースに敏感なファイルシステム(Linuxなど)では、レターケースのみの出力ディレクトリとは異なるディレクトリですが、チェックを通過しま]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 3:35:59（日本時間）<br><br>インフォメーション @astrojs/node アダプターで使用している /_image エンドポイントは、ディスクから読み込む前に、リクエストされたローカルイメージがビルド出力ディレクトリ内にあることを確認します。 そのチェックは、ケースを無感覚にパスします。 ケースに敏感なファイルシステム(Linuxなど)では、レターケースのみの出力ディレクトリとは異なるディレクトリですが、チェックを通過しま</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[トルネード] トルネード: トリプルスラッシュリダイレクトパスでリダイレクトを開く | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-5cjw-f85j-cv6r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5cjw-f85j-cv6r</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:31:22（日本時間）
+
+ブラウザとPythonのurllibパースURLの違いにより、ブラウザはプロトコルレベルのリダイレクトとして3つ以上のスラッシュから始まる文字列を扱います。 つまり、RedirectHandler のオープンリダイレクト (CVE-2026-116578, commit cc75ab0e) の 6.6.0 の修正は未完成です。 Tornado 6.6.1 は、このケースを正しく処理するために、オー]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:31:22（日本時間）<br><br>ブラウザとPythonのurllibパースURLの違いにより、ブラウザはプロトコルレベルのリダイレクトとして3つ以上のスラッシュから始まる文字列を扱います。 つまり、RedirectHandler のオープンリダイレクト (CVE-2026-116578, commit cc75ab0e) の 6.6.0 の修正は未完成です。 Tornado 6.6.1 は、このケースを正しく処理するために、オー</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: SteppingRecursiveDescentParser.parse() でアンビジーまたは自己埋め込む文法で CPU 消費をアンバウンド | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-8fx7-8jr8-84rv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8fx7-8jr8-84rv</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 6:02:19（日本時間）
+
+概要nltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse() は、壁クロックやステップ制限なしの、曖昧または自己埋め込まれたコンテキストフリーの文法を上に移動したトップダウン検索を実行します。 文法に影響を及ぼし、このパーサを使用する発信者に短い入力を短時間供給できる俳優は、CPUコアを無期限にピン留めし、サービスの拒否を]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 6:02:19（日本時間）<br><br>概要nltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse() は、壁クロックやステップ制限なしの、曖昧または自己埋め込まれたコンテキストフリーの文法を上に移動したトップダウン検索を実行します。 文法に影響を及ぼし、このパーサを使用する発信者に短い入力を短時間供給できる俳優は、CPUコアを無期限にピン留めし、サービスの拒否を</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] 重複アドバイザリー: TreebankWordTokenizer.span_tokenize のクアドラティック CPU 排気を list.pop(0) で引用復元ループ | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-rg32-vgf9-927c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-rg32-vgf9-927c</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:17（日本時間）
+
+重複アドバイザリー GHSA-ffr9-mgrr-wcvrの重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前の3.2.5から元の説明NLTKには、ツリーバンクWordTokenizer.span_tokenizeでアルゴリズム的な複雑性脆弱性が含まれているため、リモート攻撃者が繰り返しリスト.pop(0)呼び出しを介して量子C]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:17（日本時間）<br><br>重複アドバイザリー GHSA-ffr9-mgrr-wcvrの重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前の3.2.5から元の説明NLTKには、ツリーバンクWordTokenizer.span_tokenizeでアルゴリズム的な複雑性脆弱性が含まれているため、リモート攻撃者が繰り返しリスト.pop(0)呼び出しを介して量子C</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@opentelemetry/instrumentation-http ] は、 OpenTelemetry JavaScript: センシティブ情報のログファイルへの侵入およびセンシティブ情報の露出@opentelemetry/instrumentation-httpの不正なアクター | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-3v2p-hm54-8qcq</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3v2p-hm54-8qcq</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 4:29:20（日本時間）
+
+概要@opentelemetry/instrumentation-http は、発信 (クライアント) のセンシティブ URL クエリパラメーターがスパンではなく、着信(サーバー)スパンで行いません。 server-span パスは、 url.query 属性に 生のクエリ文字列の動詞を書きます。そのため、インバウンドリクエスト URL に埋め込まれた認証情報です。AWS は、 AWS のプリサイ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 4:29:20（日本時間）<br><br>概要@opentelemetry/instrumentation-http は、発信 (クライアント) のセンシティブ URL クエリパラメーターがスパンではなく、着信(サーバー)スパンで行いません。 server-span パスは、 url.query 属性に 生のクエリ文字列の動詞を書きます。そのため、インバウンドリクエスト URL に埋め込まれた認証情報です。AWS は、 AWS のプリサイ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: YCOECorpusReader の Symlink エスケープで psd/pos ディレクトリのsymlink は、データサンドボックス内の corpus ルートの外側のファイルを読みます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-qg35-44qx-7vrr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-qg35-44qx-7vrr</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:55:16（日本時間）
+
+概要YCOECorpusReader は、root が self.root.join(&quot;psd&quot;) と self.root.join(&quot;pos&quot;) (nltk/corpus/reader/ycoe.py) から派生している 2 つのネストされた corpus サブリーダーをビルドします。 FileSystemPathPointer.join()(nltk/data.py) は、純粋にlexical]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:55:16（日本時間）<br><br>概要YCOECorpusReader は、root が self.root.join(&quot;psd&quot;) と self.root.join(&quot;pos&quot;) (nltk/corpus/reader/ycoe.py) から派生している 2 つのネストされた corpus サブリーダーをビルドします。 FileSystemPathPointer.join()(nltk/data.py) は、純粋にlexical</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ag-psd] ag-psd は、細工した PSD 寸法を解析する際にメモリを排気することができます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-qfx6-q44v-9qqw</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-qfx6-q44v-9qqw</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 8:19:38（日本時間）
+
+サマリーreadPsd() は、宣言されたヘッダジオメトリ(幅 x 高さ x チャネル x 深さ、および各層の長方形)からイメージ/レイヤーバッファをコミットし、それらの値を実際のデータに対して有効化します。 巨大な幾何学を宣言する小さな細工のPSDは多角形割り当てを強制します。 ImpactOn ag-psd 30.2.0, Node 24, 52 バイトの PSD は readPsd(buf)]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 8:19:38（日本時間）<br><br>サマリーreadPsd() は、宣言されたヘッダジオメトリ(幅 x 高さ x チャネル x 深さ、および各層の長方形)からイメージ/レイヤーバッファをコミットし、それらの値を実際のデータに対して有効化します。 巨大な幾何学を宣言する小さな細工のPSDは多角形割り当てを強制します。 ImpactOn ag-psd 30.2.0, Node 24, 52 バイトの PSD は readPsd(buf)</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[宇宙] Astro: 動的タグ名の属性注射によるXSS | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-mh32-jxcr-mh9f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mh32-jxcr-mh9f</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 3:39:54（日本時間）
+
+動的タグ (const Tag = ...; &lt;Tag /&gt;) が文字列に解決すると、Astro は生の HTML 要素名としてレンダリングされます。 name は属性を注入できる文字を削除するためにフィルタリングされたが、フィルタは / を処理しなかった。 HTML パーサは、タグ内のタグを属性区切り文字として扱いますので、 img/src/onerror=alert(1) のようなタグ名は、o]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 3:39:54（日本時間）<br><br>動的タグ (const Tag = ...; &lt;Tag /&gt;) が文字列に解決すると、Astro は生の HTML 要素名としてレンダリングされます。 name は属性を注入できる文字を削除するためにフィルタリングされたが、フィルタは / を処理しなかった。 HTML パーサは、タグ内のタグを属性区切り文字として扱いますので、 img/src/onerror=alert(1) のようなタグ名は、o</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[dnspython] dnspython は、メモリと CPU の使用が多すぎる | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-vvf4-9x63-8xvv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-vvf4-9x63-8xvv</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:19:13（日本時間）
+
+インフォメーション 悪意のある作成されたゾーンファイルでは、WKSレコードを使用して、過度のメモリとCPUを消費し、メモリの排気のためにプロセスを終了する可能性があります。 DetailsThe from_text() パーサーは、WKS レコードサービス番号が 0 から 65535 の inclusive の間であることを確認しません。 その後、この番号を使用してビットマップのサイズを変更して、]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:19:13（日本時間）<br><br>インフォメーション 悪意のある作成されたゾーンファイルでは、WKSレコードを使用して、過度のメモリとCPUを消費し、メモリの排気のためにプロセスを終了する可能性があります。 DetailsThe from_text() パーサーは、WKS レコードサービス番号が 0 から 65535 の inclusive の間であることを確認しません。 その後、この番号を使用してビットマップのサイズを変更して、</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] 重複アドバイザリー: NLTK SteppingRecursiveDescentParser.parse() でアンビジーまたは自己埋め込む文法 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-4hvg-fv5c-9936</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4hvg-fv5c-9936</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:17（日本時間）
+
+重複アドバイザリー GHSA-8fx7-8jr8-84rv の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、SteppingRecursiveDescentParser.parse()で制御されていないリソース消費脆弱性が含まれているため、max_timeの期限やステップ制限が欠けています。 ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:17（日本時間）<br><br>重複アドバイザリー GHSA-8fx7-8jr8-84rv の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、SteppingRecursiveDescentParser.parse()で制御されていないリソース消費脆弱性が含まれているため、max_timeの期限やステップ制限が欠けています。 </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[soupsieve ] Soup Sieve: CSS_ESCAPES/IDENTIFIERで9ランのセレクターコンパイルでexpenential ReDoS | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-6655-6qjp-jx7x</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6655-6qjp-jx7x</guid>
+            <pubDate>Fri, 13 Nov 2026 19:08:35 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 1:39:43（日本時間）
+
+概要IDENTIFIER/CSS_ESCAPES regex (css_parser.py:119-124) は、非整形セレクターの属性名またはタグ位置にある、あいまいな digit-escapes (&#92;9) の実行で指数関数的なバックトラックを展示します。 公開のsupsieve.compile()とBeautySoup .select()でコンパイル時に火をつけます。 PoC(svsvsv.c]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 1:39:43（日本時間）<br><br>概要IDENTIFIER/CSS_ESCAPES regex (css_parser.py:119-124) は、非整形セレクターの属性名またはタグ位置にある、あいまいな digit-escapes (&#92;9) の実行で指数関数的なバックトラックを展示します。 公開のsupsieve.compile()とBeautySoup .select()でコンパイル時に火をつけます。 PoC(svsvsv.c</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@nuxt/schema] は、 Nuxt の dev サーバは、 stray lockfile または ワークスペース ファイルを使用して、親ディレクトリからファイルを提供します。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-mjrq-cffv-q4qc</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mjrq-cffv-q4qc</guid>
+            <pubDate>Fri, 13 Nov 2026 19:08:35 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 3:11:49（日本時間）
+
+サマリーNuxtは、デフォルトのワークスペースとしてワークスペースを宣言しない親ディレクトリを選ぶことができます Dir: プロジェクトが git リポジトリ内にある場合、または pnpm-workspace を持つ最も遠くにあるディレクトリ。 yaml または deno.json ファイル、設定のみを保持するファイル。 Vite の dev サーバは、 /_nuxt/@fs/ ワークスペースのフ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 3:11:49（日本時間）<br><br>サマリーNuxtは、デフォルトのワークスペースとしてワークスペースを宣言しない親ディレクトリを選ぶことができます Dir: プロジェクトが git リポジトリ内にある場合、または pnpm-workspace を持つ最も遠くにあるディレクトリ。 yaml または deno.json ファイル、設定のみを保持するファイル。 Vite の dev サーバは、 /_nuxt/@fs/ ワークスペースのフ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api [opentelemetry-api] [opentelemetry-api [opentelemetry-api] [opentelemetry-api [opentelemetry-api] [opentelemetry-api [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] - [opentelemetry-api [オープンディレクトリー OpenTelemetry Python API: 量的時間追跡解析によるサービスの拒否 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-mf5v-w3w3-f6cg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mf5v-w3w3-f6cg</guid>
+            <pubDate>Fri, 13 Nov 2026 19:08:35 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 1:43:18（日本時間）
+
+サマリーTraceContextTextMapPropagator.extract() in opentelemetry-apiは、特別に作られたトレースの値を処理する際に、サービス(ReDoS)の正規表現拒否に脆弱です。 トレース・コンテキスト・プレフィックスを含むマルフォーメード・バリューは、長い空白のシーケンスと埋め込まれたニューラインが、クォリティカル・タイム・レグックス・バックトラッキン]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 1:43:18（日本時間）<br><br>サマリーTraceContextTextMapPropagator.extract() in opentelemetry-apiは、特別に作られたトレースの値を処理する際に、サービス(ReDoS)の正規表現拒否に脆弱です。 トレース・コンテキスト・プレフィックスを含むマルフォーメード・バリューは、長い空白のシーケンスと埋め込まれたニューラインが、クォリティカル・タイム・レグックス・バックトラッキン</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[envd] コマンド: 要件パス横断とTOCTOUによるホストファイル開示 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-jv6m-48w5-5rpr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jv6m-48w5-5rpr</guid>
+            <pubDate>Fri, 13 Nov 2026 19:08:35 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 3:05:15（日本時間）
+
+Summaryenvd の install.python_packages(requirements=...) は、ホストのビルドコンテキスト以外のファイルを読むことができます。 依存エントリとして解釈されるコンテンツは、ビルドログとビルドステップメタデータに表示できます。 コミットf576c92, v1.3.5でリリース, パスの封入検証を追加しましたが、symlinkの解像度と要件ファイルを開]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 3:05:15（日本時間）<br><br>Summaryenvd の install.python_packages(requirements=...) は、ホストのビルドコンテキスト以外のファイルを読むことができます。 依存エントリとして解釈されるコンテンツは、ビルドログとビルドステップメタデータに表示できます。 コミットf576c92, v1.3.5でリリース, パスの封入検証を追加しましたが、symlinkの解像度と要件ファイルを開</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[soupsieve ] スープ ふるい: CSS パーサーで制御されていない再帰により、ネストされた擬似クラスセレクターが Python 呼び出しスタックを排気 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-7g44-g9rc-x53w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7g44-g9rc-x53w</guid>
+            <pubDate>Fri, 13 Nov 2026 19:08:35 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 1:34:59（日本時間）
+
+概要スープ ネストされた擬似クラスセレクター(:is()、 :not()、 :has() の値を制限することなく、CSSセレクターのパーサを再帰します。 CSSセレクターの文字列をsupsieve.compile()、supsieve.select()、またはBeauty Soupのsup.select()/sup.select_one()に供給できる、未処理のRecursion Limit(約1]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 1:34:59（日本時間）<br><br>概要スープ ネストされた擬似クラスセレクター(:is()、 :not()、 :has() の値を制限することなく、CSSセレクターのパーサを再帰します。 CSSセレクターの文字列をsupsieve.compile()、supsieve.select()、またはBeauty Soupのsup.select()/sup.select_one()に供給できる、未処理のRecursion Limit(約1</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: `css` ヘルパーは、テンプレートと補間値の間のクローズタグの分割をエスケープせず、HTML 注射が可能 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-3gg2-335m-rxc6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3gg2-335m-rxc6</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:22:36（日本時間）
+
+インフォメーション hono/css の csss ヘルパーは、&lt;style&gt; 要素を閉じることができないように、&lt; を補間値の中に渡します。 チェックは各値の内側にのみ表示されます。 値が &lt; で終わる前のテキストは、そのテンプレート自体や以前の補間値であっても、/ がエスケープされず、結合された出力には unescaped クローズタグが含まれています。 DetailsInterpolated]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:22:36（日本時間）<br><br>インフォメーション hono/css の csss ヘルパーは、&lt;style&gt; 要素を閉じることができないように、&lt; を補間値の中に渡します。 チェックは各値の内側にのみ表示されます。 値が &lt; で終わる前のテキストは、そのテンプレート自体や以前の補間値であっても、/ がエスケープされず、結合された出力には unescaped クローズタグが含まれています。 DetailsInterpolated</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: `validator(&#39;form&#39;)` は、`multipart/form-data` リクエストのバリデーションを余分パラメータでスキップします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4h7h-rv7c-7m2v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4h7h-rv7c-7m2v</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:30:45（日本時間）
+
+サマリーバリディエーター(&#39;form&#39;)は、マルチパート/フォーム・データ・コンテンツ・タイプのみを認識し、単一のバウンダリ・パラメータは何もない。 charset などの別の法的パラメーター、または ; の後に追加の空白の場合には、フォームとして認識されません。 バリデーションコールバックは空のオブジェクトを受け取りますが、c.req.parseBody() はボディをフォームとしてパースします]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:30:45（日本時間）<br><br>サマリーバリディエーター(&#39;form&#39;)は、マルチパート/フォーム・データ・コンテンツ・タイプのみを認識し、単一のバウンダリ・パラメータは何もない。 charset などの別の法的パラメーター、または ; の後に追加の空白の場合には、フォームとして認識されません。 バリデーションコールバックは空のオブジェクトを受け取りますが、c.req.parseBody() はボディをフォームとしてパースします</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ルシオ] ルシオ: SSHチャレンジトークンによる不正な管理者の偽装 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-x585-4vv8-2mh2</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x585-4vv8-2mh2</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 10:09:54（日本時間）
+
+サマリーSSHチャレンジトークンは、認証トークン検証プロセス中に有効な認証情報として誤って受け入れられています。 SSHチャレンジトークンは、その後のSSHキー交換で使用するための短命のnonceとして意図されていますが、認証トークンを検証する機能は、これらの認証トークンと実際の認証トークン間で区別しません。 チャレンジトークンは、事前認証を要求せずにヘッダーを介して提供されるアカウント名に基づい]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 10:09:54（日本時間）<br><br>サマリーSSHチャレンジトークンは、認証トークン検証プロセス中に有効な認証情報として誤って受け入れられています。 SSHチャレンジトークンは、その後のSSHキー交換で使用するための短命のnonceとして意図されていますが、認証トークンを検証する機能は、これらの認証トークンと実際の認証トークン間で区別しません。 チャレンジトークンは、事前認証を要求せずにヘッダーを介して提供されるアカウント名に基づい</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: `csrf()` は、ハイパーリンク監査(`text/ping`)によって送信されたリクエストをチェックしません。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-46wx-v44x-9hh2</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-46wx-v44x-9hh2</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:31:25（日本時間）
+
+サマリーcsrf() は、Content-Type が 3 種類の HTML フォームの 1 つである場合にのみリクエストを検証します。 Chromiumのハイパーリンク監査(&lt;a ping&gt;)は、そのリストにないユーザーのクッキーとコンテンツタイプテキスト/pingでクロスオリジンPOSTを送信します。 ミドルウェアは、そのような要求のためにオリジンまたはSec-Fetch-Siteを見ていませ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:31:25（日本時間）<br><br>サマリーcsrf() は、Content-Type が 3 種類の HTML フォームの 1 つである場合にのみリクエストを検証します。 Chromiumのハイパーリンク監査(&lt;a ping&gt;)は、そのリストにないユーザーのクッキーとコンテンツタイプテキスト/pingでクロスオリジンPOSTを送信します。 ミドルウェアは、そのような要求のためにオリジンまたはSec-Fetch-Siteを見ていませ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[【バシフトプ】ベーシックフトプ:未キャッチタイプ __proto___ 実名で MLSD ディレクトリリストパーサのエラーは Client.list() で DoS を引き起こします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5pm8-86m8-9m6r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5pm8-86m8-9m6r</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 6:42:12（日本時間）
+
+概要basic-ftp の MLSD ディレクトリリストパーサー (src/parseListMLSD.ts) は、FTP サーバの応答から取られた事実名で直接キー化されたプレーン オブジェクトの literal 内のファクト ハンドラー関数を探し上げます。 実際の名前 &quot;proto&quot; を含むディレクトリリストの行は、このルックアップをオブジェクトに解決します。 未定義の代わりにプロトタイプ(継承]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 6:42:12（日本時間）<br><br>概要basic-ftp の MLSD ディレクトリリストパーサー (src/parseListMLSD.ts) は、FTP サーバの応答から取られた事実名で直接キー化されたプレーン オブジェクトの literal 内のファクト ハンドラー関数を探し上げます。 実際の名前 &quot;proto&quot; を含むディレクトリリストの行は、このルックアップをオブジェクトに解決します。 未定義の代わりにプロトタイプ(継承</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: `mount()` と `app.mount()` は、マウントプレフィックス内でスコープされたミドルウェアを迂回するパスを転送できます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4m76-xfj5-7975</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4m76-xfj5-7975</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:24:11（日本時間）
+
+サマリーmount() と app.mount() はリクエストパスからマウントプレフィックスを削除し、マウントされたアプリケーションに残りを転送します。 そのステップで2つの間違いは、外部アプリケーションが/app/admin/*の認証チェックなど、パススコープミドルウェアで保護するマウントされたアプリケーションのルートに到達するように作成されたリクエストに到達させます。 元のパスの外部アプリケ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:24:11（日本時間）<br><br>サマリーmount() と app.mount() はリクエストパスからマウントプレフィックスを削除し、マウントされたアプリケーションに残りを転送します。 そのステップで2つの間違いは、外部アプリケーションが/app/admin/*の認証チェックなど、パススコープミドルウェアで保護するマウントされたアプリケーションのルートに到達するように作成されたリクエストに到達させます。 元のパスの外部アプリケ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@grpc/grpc-js-xds] @grpc/grpc-js: VirtualHostとRouteリソースのRBACオーバーライドコンフィグは適用されません | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-gg5j-6742-v827</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gg5j-6742-v827</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 7:55:47（日本時間）
+
+@grpc/grpc-js-xds のサマリーXdsServer は、RBACPerRoute のオーバーライドをマッチングルートや VirtualHost リソースから適用しません。 信頼できるxDS制御平面が広範なトップレベルのALLOWポリシーと厳格なオーバーライドを供給する場合、XdsServer ACKはリソースを割り当てますが、トップレベルのポリシーの下でRPCを評価する。 詳細オーバ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 7:55:47（日本時間）<br><br>@grpc/grpc-js-xds のサマリーXdsServer は、RBACPerRoute のオーバーライドをマッチングルートや VirtualHost リソースから適用しません。 信頼できるxDS制御平面が広範なトップレベルのALLOWポリシーと厳格なオーバーライドを供給する場合、XdsServer ACKはリソースを割り当てますが、トップレベルのポリシーの下でRPCを評価する。 詳細オーバ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[枕]枕: タグが画像サイズを上書きしたときに、ヒープバッファのオーバーフローをlibtiffでTIFFに保存 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-xcvg-w56q-r89m</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xcvg-w56q-r89m</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:34:43（日本時間）
+
+========================================================================================================================================================================================================]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:34:43（日本時間）<br><br>========================================================================================================================================================================================================</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve]] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [s] [soupsieve] [soupsieve] [soupsieve] [s] [soupsieve [s] [soupsieve [s]] [s] [soupsieve [s]] [s] [soupsieve [soupsieve [s]]]]]] [s] [s]] [s] [s] [s] [s] [soupsieve [s]]]]]]]]] [s] [s]] [soupsieve [s]]] [s] [soupsieve [s] [soupsieve [s] ] [s]]]]] [s]]] [sou-[s] ] [sou スープシーブ: 子孫のコンビネータのサービスの多項式典 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-mmhr-3c5m-f64f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mmhr-3c5m-f64f</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 9:49:46（日本時間）
+
+サマリーは、子孫のコンビネータ(a b)を使用するセレクターを一致させることで、文書が深くネストされ、セレクター内の各子孫のコンビネータが度を上げます。 n ネストされた要素のチェーンで k の子孫のコンビネータを持つセレクターが O(n^(k+1) 時間を要します。 アプリケーションがSoup Sieve(directly、またはBeauty Soup&#39;s select()、select_one]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 9:49:46（日本時間）<br><br>サマリーは、子孫のコンビネータ(a b)を使用するセレクターを一致させることで、文書が深くネストされ、セレクター内の各子孫のコンビネータが度を上げます。 n ネストされた要素のチェーンで k の子孫のコンビネータを持つセレクターが O(n^(k+1) 時間を要します。 アプリケーションがSoup Sieve(directly、またはBeauty Soup&#39;s select()、select_one</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[Pillow] 枕: TIFF と EXIFD のメモリ DoS をオーバーラップタグデータで解析 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-wqgw-9xfh-qf2g</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-wqgw-9xfh-qf2g</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:35:39（日本時間）
+
+========================================================================================================================================================================================================]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:35:39（日本時間）<br><br>========================================================================================================================================================================================================</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@grpc/grpc-js-xds] @grpc/grpc-js: Safe_regex は、変更されたパターンの部分的な文字列マッチングを誤って適用します | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r7hq-q2xm-6c5m</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r7hq-q2xm-6c5m</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:21:57（日本時間）
+
+インフォメーション StringMatcher/PathMatcher for Safe_regex は、周囲のグループなしで RE2 を ^${regex}$ としてビルドします。 変更が最も低い優先順位を持つため、パターン &quot;a|b|c&quot; は /^a|b|c$/ -- &quot;starts with a&quot; OR &quot;contains b&quot; OR &quot;ends with c&quot; にコンパイルします。 reg]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:21:57（日本時間）<br><br>インフォメーション StringMatcher/PathMatcher for Safe_regex は、周囲のグループなしで RE2 を ^${regex}$ としてビルドします。 変更が最も低い優先順位を持つため、パターン &quot;a|b|c&quot; は /^a|b|c$/ -- &quot;starts with a&quot; OR &quot;contains b&quot; OR &quot;ends with c&quot; にコンパイルします。 reg</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@hono/node-server] @hono/node-server:非同期WebSocketのアップグレード中にソケットで「ECONNRESET」をアンハンドリング | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-qv5m-9pm6-hqp3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-qv5m-9pm6-hqp3</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 6:32:48（日本時間）
+
+概要While @hono/node-server は、Hono アプリケーションが WebSocket のアップグレードリクエストを処理するのを待ちます。ソケットにはエラーリスナーはありません。 クライアントが TCP 接続をその間にリセットすると、結果の ECONNRESET は、未処理の &#39;error&#39; イベントとして放出され、プロセスが終了します。 詳細アップグレードハンドラは、任意のリス]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 6:32:48（日本時間）<br><br>概要While @hono/node-server は、Hono アプリケーションが WebSocket のアップグレードリクエストを処理するのを待ちます。ソケットにはエラーリスナーはありません。 クライアントが TCP 接続をその間にリセットすると、結果の ECONNRESET は、未処理の &#39;error&#39; イベントとして放出され、プロセスが終了します。 詳細アップグレードハンドラは、任意のリス</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@astrojs/svelte] は、 Astro: @astrojs/svelte の unescaped スロット名で XSS を反映 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-f4j9-crrj-867q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-f4j9-crrj-867q</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 7:34:04（日本時間）
+
+インフォメーション @astrojs/svelte レンダラーは、&lt;astro-slot&gt; 要素の Svelte コンポーネントに渡された細長かったコンテンツをラップし、HTML エスケープせずに、スロット名をその名前属性に書きます。 &quot; を含むスロット名は、属性を終了し、任意の HTML をページに注入できます。 例えば、リクエストからスロット名を取るページ:---インポート &#39;../compo]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 7:34:04（日本時間）<br><br>インフォメーション @astrojs/svelte レンダラーは、&lt;astro-slot&gt; 要素の Svelte コンポーネントに渡された細長かったコンテンツをラップし、HTML エスケープせずに、スロット名をその名前属性に書きます。 &quot; を含むスロット名は、属性を終了し、任意の HTML をページに注入できます。 例えば、リクエストからスロット名を取るページ:---インポート &#39;../compo</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@astrojs/固体js] Astro: @astrojs/solid-js の unescaped スロット名で XSS を反映 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jmv2-qgxf-f995</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jmv2-qgxf-f995</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 7:34:44（日本時間）
+
+インフォメーション @astrojs/solid-js レンダラーは、&lt;astro-slot&gt; 要素の Solid コンポーネントに渡されたスロット コンテンツをラップし、HTML エスケープなしで、スロット名をその名前属性に書きます。 &quot; を含むスロット名は、属性を終了し、任意の HTML をページに注入できます。 例えば、リクエストからスロット名を取るページ:---インポート &#39;../comp]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 7:34:44（日本時間）<br><br>インフォメーション @astrojs/solid-js レンダラーは、&lt;astro-slot&gt; 要素の Solid コンポーネントに渡されたスロット コンテンツをラップし、HTML エスケープなしで、スロット名をその名前属性に書きます。 &quot; を含むスロット名は、属性を終了し、任意の HTML をページに注入できます。 例えば、リクエストからスロット名を取るページ:---インポート &#39;../comp</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[【本郷】 Hono: RegExpRouterは、いくつかのルートセットのワイルドカードミドルウェアをスキップし、エンコードされた行のターミネーターを持つパス | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h7mg-cq63-vhpq</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h7mg-cq63-vhpq</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:23:30（日本時間）
+
+デフォルトSmartRouterがほとんどのアプリケーションで選択するShariRegExpRouterは、ワイルドカードのミドルウェアを3つのケースでスキップしました。そのため、ミドルウェアが登録されていないルートハンドラが実行されます。/api/:tenant{[^/]+}/admin/*のような明示的なデフォルトパターンでパラメータが書かれているMiddlewareは、/api/:tenan]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:23:30（日本時間）<br><br>デフォルトSmartRouterがほとんどのアプリケーションで選択するShariRegExpRouterは、ワイルドカードのミドルウェアを3つのケースでスキップしました。そのため、ミドルウェアが登録されていないルートハンドラが実行されます。/api/:tenant{[^/]+}/admin/*のような明示的なデフォルトパターンでパラメータが書かれているMiddlewareは、/api/:tenan</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[【バシフトプ】 ベーシックフトプ: パスワード(または履歴書ダウンロードパス)がCR / LFを含むときに例外がNode.jsプロセスをクラッシュさせる | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r4jh-29pc-gfqr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r4jh-29pc-gfqr</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 7:23:50（日本時間）
+
+サマリーClient.login() は FTPContext.send() を制御ソケットのデータイベントハンドラの内部から呼び出します。 send() は、CR、LF、NUL に投げ、投げるのをキャッチしません。 &#92;r&#92;n を含むパスワードで、不正な例外を発生させ、Node.js プロセス全体を終了します。 返された約束を拒否しません。 FTPパスワードとして不信な入力を通過するアプリケーショ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 7:23:50（日本時間）<br><br>サマリーClient.login() は FTPContext.send() を制御ソケットのデータイベントハンドラの内部から呼び出します。 send() は、CR、LF、NUL に投げ、投げるのをキャッチしません。 &#92;r&#92;n を含むパスワードで、不正な例外を発生させ、Node.js プロセス全体を終了します。 返された約束を拒否しません。 FTPパスワードとして不信な入力を通過するアプリケーショ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@hono/node-server] @hono/node-server: リクエストパスのバックスラッシュはパスセパレータとして解析され、パスベースのアクセス制御をリバースプロキシでバイパス | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jpvv-r467-5p4w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jpvv-r467-5p4w</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 6:28:02（日本時間）
+
+サマリー@hono/node-server は、/ としてパスのバックスラッシュを処理し、.. セグメントを解決する whatWG URL パーサに未加工リクエストターゲットを渡します。 /admin&#92;secret または /public&#92;.&#92;admin/secret は /admin/secret としてアプリケーションに到達します。 RFC 3986 に続くリバースプロキシは、バックスラッシュ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 6:28:02（日本時間）<br><br>サマリー@hono/node-server は、/ としてパスのバックスラッシュを処理し、.. セグメントを解決する whatWG URL パーサに未加工リクエストターゲットを渡します。 /admin&#92;secret または /public&#92;.&#92;admin/secret は /admin/secret としてアプリケーションに到達します。 RFC 3986 に続くリバースプロキシは、バックスラッシュ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [soupsieve]] [soupsieve] [soupsieve] [soupsieve] [soupsieve] [s] [soupsieve] [soupsieve] [soupsieve] [s] [soupsieve [s] [soupsieve [s]] [s] [soupsieve [s]] [s] [soupsieve [soupsieve [s]]]]]] [s] [s]] [s] [s] [s] [s] [soupsieve [s]]]]]]]]] [s] [s]] [soupsieve [s]]] [s] [soupsieve [s] [soupsieve [s] ] [s]]]]] [s]]] [sou-[s] ] [sou スープ ふるい: :has() 内の一般的な兄弟コンビネータは、四角形の時間の信頼できない HTML にマッチします | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-4j63-6c4x-wfg4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4j63-6c4x-wfg4</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 9:45:18（日本時間）
+
+インフォメーション div:has(a ~ b) のような :has() 内の一般的な兄弟コンビネーションコンビネーションコンビネーションコンビネータを div:has() に入れるセレクターをマッチングし、 信頼できない HTML が O(n2) で実行される 兄弟要素の数。 数千の兄弟を持つ単一の小さな文書は、CPUの1分のプロセスを結びつけるので、制御しないHTML上のこの形状の固定セレクタ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 9:45:18（日本時間）<br><br>インフォメーション div:has(a ~ b) のような :has() 内の一般的な兄弟コンビネーションコンビネーションコンビネーションコンビネータを div:has() に入れるセレクターをマッチングし、 信頼できない HTML が O(n2) で実行される 兄弟要素の数。 数千の兄弟を持つ単一の小さな文書は、CPUの1分のプロセスを結びつけるので、制御しないHTML上のこの形状の固定セレクタ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[signalk-server] シグナルKサーバー:不正なWebSocketクライアントに露出したバッファログ | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7m8x-x364-m26j</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7m8x-x364-m26j</guid>
+            <pubDate>Thu, 12 Nov 2026 22:07:02 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 4:14:00（日本時間）
+
+インフォメーション 認証されていないWebSocketクライアントは、ログパスを購読し、バッファされたサーバーログを受け取ることができます。 WebSocket接続を介してログインが発生したため、認証の前にWebSocket接続が意図的に許可されます。 ただし、ログサブスクリプションパスは、アクセス制御:if ( Array.isArray(msg.subscribe)&amp; msg.subscrib]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 4:14:00（日本時間）<br><br>インフォメーション 認証されていないWebSocketクライアントは、ログパスを購読し、バッファされたサーバーログを受け取ることができます。 WebSocket接続を介してログインが発生したため、認証の前にWebSocket接続が意図的に許可されます。 ただし、ログサブスクリプションパスは、アクセス制御:if ( Array.isArray(msg.subscribe)&amp; msg.subscrib</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@microsoft/aspire-cli-osx-x64] マイクロソフトセキュリティアドバイザリーCVE-2026-120792 - Aspire情報開示脆弱性 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-q6jf-24jf-m3cg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-q6jf-24jf-m3cg</guid>
+            <pubDate>Wed, 11 Nov 2026 03:06:44 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 9:31:23（日本時間）
+
+エグゼクティブサマリーマイクロソフトは、このセキュリティアドバイザリーを解放し、Aspire CLIの脆弱性に関する情報を提供します。 このアドバイザリーは、影響を受けるアプリケーションやコンポーネントの更新に関するガイダンスを提供します。 Aspire CLI で使用している安全な一時的なファイルは、ローカル攻撃者が機密設定情報を取得できるようにします。 この問題の通知は https://git]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 9:31:23（日本時間）<br><br>エグゼクティブサマリーマイクロソフトは、このセキュリティアドバイザリーを解放し、Aspire CLIの脆弱性に関する情報を提供します。 このアドバイザリーは、影響を受けるアプリケーションやコンポーネントの更新に関するガイダンスを提供します。 Aspire CLI で使用している安全な一時的なファイルは、ローカル攻撃者が機密設定情報を取得できるようにします。 この問題の通知は https://git</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[react-server-dom-turbopack] [react-server-dom-turbopack] - [react-server-dom-turbopack] - [react-server-dom-turbopack] - [react-server-dom-turbopack] - [react-server-dom-turbopack] - [react-server-dom-turbopack - [react-server-server-dom-turbopack] - [react-server-server-dom-dom-turbopack - [react-server-server-dom-dom-turbopack] - [react-server-server-server-server-server-server-dom-dom-dom-dom-dom-dom-dom-dom-dom-turbopack (react-dom-dom-dom-dom-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t- React: React Server コンポーネントの非認証リモートコード実行 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xqc2-xf4c-x3h3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xqc2-xf4c-x3h3</guid>
+            <pubDate>Wed, 11 Nov 2026 03:06:44 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 7:44:12（日本時間）
+
+React Server コンポーネントをサポートするフレームワークをターゲティングする ImpactCrafted ペイロードは、リモートコードの実行につながることができます。 これは、複数の型配列と攻撃者の制御値を転送する応答が非常にまれなケースにのみ影響します。 すぐに更新することをお勧めします。 脆弱性は、19.0.0 から 19.0.8、19.1.0 から 19.1.9、19.2.0 か]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 7:44:12（日本時間）<br><br>React Server コンポーネントをサポートするフレームワークをターゲティングする ImpactCrafted ペイロードは、リモートコードの実行につながることができます。 これは、複数の型配列と攻撃者の制御値を転送する応答が非常にまれなケースにのみ影響します。 すぐに更新することをお勧めします。 脆弱性は、19.0.0 から 19.0.8、19.1.0 から 19.1.9、19.2.0 か</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@microsoft/aspire-cli] の検索結果 マイクロソフトセキュリティアドバイザリーCVE-2026-120778 - Privilegeの脆弱性の上昇を促す | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-m63f-xhvm-6mv5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-m63f-xhvm-6mv5</guid>
+            <pubDate>Wed, 11 Nov 2026 03:06:44 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 9:30:06（日本時間）
+
+エグゼクティブサマリーマイクロソフトは、このセキュリティアドバイザリーを解放し、Aspire CLIの脆弱性に関する情報を提供します。 このアドバイザリーは、影響を受けるアプリケーションやコンポーネントの更新に関するガイダンスを提供します。 Aspire CLI で生成されたビルドが使用している非安全な一時ディレクトリは、ローカル攻撃者が MSBuild の応答ファイル検出に影響を及ぼし、CLI ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 9:30:06（日本時間）<br><br>エグゼクティブサマリーマイクロソフトは、このセキュリティアドバイザリーを解放し、Aspire CLIの脆弱性に関する情報を提供します。 このアドバイザリーは、影響を受けるアプリケーションやコンポーネントの更新に関するガイダンスを提供します。 Aspire CLI で生成されたビルドが使用している非安全な一時ディレクトリは、ローカル攻撃者が MSBuild の応答ファイル検出に影響を及ぼし、CLI </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[compose-lint] 作曲: プルリクエストに埋め込まれたファイルパスは、コマンドラインエラーメッセージでCIワークフローコマンドを注入できます。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-8v59-qmwv-4p6q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8v59-qmwv-4p6q</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:58:53（日本時間）
+
+Impact0.31.0 は GHSA-6f4g-xm8v-pgv6 を修正しました。Compose ファイルのテキストが GitHub Actions のワークフローコマンドを compose-lint の出力で実行します。 Fix コマンドオープナがコンズ・リントの出力でエスケープしますが、引数のパーサーのエラーメッセージではありません。 レポジトリパスがコンポジットの引数を -- なしで到達]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:58:53（日本時間）<br><br>Impact0.31.0 は GHSA-6f4g-xm8v-pgv6 を修正しました。Compose ファイルのテキストが GitHub Actions のワークフローコマンドを compose-lint の出力で実行します。 Fix コマンドオープナがコンズ・リントの出力でエスケープしますが、引数のパーサーのエラーメッセージではありません。 レポジトリパスがコンポジットの引数を -- なしで到達</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[compose-lint] 作曲: プルリクエストのテキストは、Compose-lint 0.31.0 の出力で CI のワークフローコマンドを発行できます。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-r7j4-crjv-h467</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r7j4-crjv-h467</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 3:28:35（日本時間）
+
+Impact0.31.0 は GHSA-6f4g-xm8v-pgv6 を修正しました。Compose ファイルのテキストが GitHub Actions のワークフローコマンドを compose-lint の出力で実行します。 修正はコマンドオープナをすべてのコンポース・リント・プリントでエスケープし、0.31.0変更ログは「両方のオープナ(またAzure Pipelinesを覆う)をエスケープす]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 3:28:35（日本時間）<br><br>Impact0.31.0 は GHSA-6f4g-xm8v-pgv6 を修正しました。Compose ファイルのテキストが GitHub Actions のワークフローコマンドを compose-lint の出力で実行します。 修正はコマンドオープナをすべてのコンポース・リント・プリントでエスケープし、0.31.0変更ログは「両方のオープナ(またAzure Pipelinesを覆う)をエスケープす</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] フォージ: TLS クライアントがセッションなしで受信したハンドシェイクレコードでクラッシュ | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-j8rw-jp99-435v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-j8rw-jp99-435v</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:14:26（日本時間）
+
+SummaryA forge.tls クライアントは、接続から不要な TypeError をスローします。 process() セッションがない場合、 ServerHello を受け取るとき: close_notify アラートまたは close() の呼び出し後、または handhake() が呼び出される前に。 悪意のあるサーバーまたはオンパスの攻撃者は、Node.js プロセスを終了するため]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:14:26（日本時間）<br><br>SummaryA forge.tls クライアントは、接続から不要な TypeError をスローします。 process() セッションがない場合、 ServerHello を受け取るとき: close_notify アラートまたは close() の呼び出し後、または handhake() が呼び出される前に。 悪意のあるサーバーまたはオンパスの攻撃者は、Node.js プロセスを終了するため</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[モンゴス] Mongoose は、水和、設定、およびマージ時に継承されたプロパティに移動し、組み込み関数(サービス拒否)と共有スキーマの状態を上書きできるようにします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8332-j7wj-wjw4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8332-j7wj-wjw4</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 5:56:16（日本時間）
+
+インフォメーション 3つのMongooseコードは、プロパティがオブジェクトの所有であるか、またはそのプロトタイプから継承されているかをチェックすることなく、プロパティ名でデータをオブジェクトにコピーします。 Model.hydrate() によって使用されるデータベース(init()) からドキュメントを読み込む 新しいモデル(obj)、doc.set()、doc.$set()で使われるドキュメ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 5:56:16（日本時間）<br><br>インフォメーション 3つのMongooseコードは、プロパティがオブジェクトの所有であるか、またはそのプロトタイプから継承されているかをチェックすることなく、プロパティ名でデータをオブジェクトにコピーします。 Model.hydrate() によって使用されるデータベース(init()) からドキュメントを読み込む 新しいモデル(obj)、doc.set()、doc.$set()で使われるドキュメ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[モンゴス] Mongoose: 継承されたプロパティ(例: __t: &#39;constructor&#39;)のマッチングする差別化要因のキー値がスキーマの鋳造を迂回し、有毒な収集が可能 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-wr5m-5jph-8m96</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-wr5m-5jph-8m96</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 5:57:18（日本時間）
+
+SummaryMongoose は、登録したディスクリマイネータのプレーンオブジェクト(__t をデフォルトで)、Model.discriminators[doc._t] でディスクリマイネータキー値(__t)を調べて使用するディスクリマイネータモデルまたはスキーマを選択します。 ユーザーの文書やクエリフィルタからその値が来ます。 lookup は自身のプロパティをチェックしなかったため、Obje]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 5:57:18（日本時間）<br><br>SummaryMongoose は、登録したディスクリマイネータのプレーンオブジェクト(__t をデフォルトで)、Model.discriminators[doc._t] でディスクリマイネータキー値(__t)を調べて使用するディスクリマイネータモデルまたはスキーマを選択します。 ユーザーの文書やクエリフィルタからその値が来ます。 lookup は自身のプロパティをチェックしなかったため、Obje</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[モンゴス] Mongoose: Schema.prototype.virtual() によるプロトタイプ汚染 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6972-9mcm-vhwj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6972-9mcm-vhwj</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 5:46:33（日本時間）
+
+Schema.prototype.virtual() によるサマリープロトタイプ汚染 — CVE-2022-2564 / CVE-2022-24304 保護された Schema.path()/add() が、仮想化されていないため、すべての維持されたリリースラインで同じバグのクラスはまだ悪用されます。 DetailsIn lib/schema.js, Schema.prototype.virtua]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 5:46:33（日本時間）<br><br>Schema.prototype.virtual() によるサマリープロトタイプ汚染 — CVE-2022-2564 / CVE-2022-24304 保護された Schema.path()/add() が、仮想化されていないため、すべての維持されたリリースラインで同じバグのクラスはまだ悪用されます。 DetailsIn lib/schema.js, Schema.prototype.virtua</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] フォージ:フォージのReDoS。 http 応答ヘッダーとクッキートリミング | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6cv4-p8m7-4r25</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6cv4-p8m7-4r25</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:16:22（日本時間）
+
+forge.http は、レスポンスヘッダと Set-Cookie の値を正規表現 /&#92;s*$/ でトリムします。これは、空白の長い実行時に四角形の時間がかかります。 サーバまたはオンパスの攻撃者は、1つの大きな応答ヘッダで数分でforge.httpクライアントをブロックできます。 lib/http.js の node-forge 1.4.3.Details_trimString() では、str]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:16:22（日本時間）<br><br>forge.http は、レスポンスヘッダと Set-Cookie の値を正規表現 /&#92;s*$/ でトリムします。これは、空白の長い実行時に四角形の時間がかかります。 サーバまたはオンパスの攻撃者は、1つの大きな応答ヘッダで数分でforge.httpクライアントをブロックできます。 lib/http.js の node-forge 1.4.3.Details_trimString() では、str</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] フォージ: Ed25519 のシグネチャ認証は、小規模の公開鍵を受け入れます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6889-vf6x-f3g5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6889-vf6x-f3g5</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:18:23（日本時間）
+
+要約25519.verify() は、アイデンティティポイントなどの小さな注文の公開鍵を拒否しません。 そのようなキーでは、S = 0 と小文字の R の署名が多くのメッセージに対して確認したり、個人キーなしで、すべてのメッセージのキーを識別します。 lib/ed25519.js のnode-forge 1.4.3.Detailscrypto_sign_open() では、パブリックキー A を ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:18:23（日本時間）<br><br>要約25519.verify() は、アイデンティティポイントなどの小さな注文の公開鍵を拒否しません。 そのようなキーでは、S = 0 と小文字の R の署名が多くのメッセージに対して確認したり、個人キーなしで、すべてのメッセージのキーを識別します。 lib/ed25519.js のnode-forge 1.4.3.Detailscrypto_sign_open() では、パブリックキー A を </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[モンゴス] Mongoose: 接続レベルの衛生 フィルターは適用されません | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-gg4r-jv3p-qx3c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gg4r-jv3p-qx3c</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 4:56:12（日本時間）
+
+サマリーサニタイズ フィルターはクエリセレクターの注入を停止するために存在します:$eqのフィルタ値で{ $ne: null }などの演算子オブジェクトをラップするので、それらは文字通り一致しています。 mongoose.connect() または createConnection(uri, { sanitizeFilter: true }) との接続を設定し、接続が有効になっているが、クエリは適]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 4:56:12（日本時間）<br><br>サマリーサニタイズ フィルターはクエリセレクターの注入を停止するために存在します:$eqのフィルタ値で{ $ne: null }などの演算子オブジェクトをラップするので、それらは文字通り一致しています。 mongoose.connect() または createConnection(uri, { sanitizeFilter: true }) との接続を設定し、接続が有効になっているが、クエリは適</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[compose-lint] 作曲: プルリクエストのテキストは、stdout で JSON と SARIF の出力で CI のワークフローコマンドを発行できます。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-hr4h-4c45-v4q4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-hr4h-4c45-v4q4</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:40:50（日本時間）
+
+Impact0.31.0 は GHSA-6f4g-xm8v-pgv6 を修正しました。Compose ファイルのテキストが GitHub Actions のワークフローコマンドを compose-lint の出力で実行します。 --format json と --format sarif の出力は、その修正を通過しません。そのため、サービス名内の ##[ は、出力が stdout に印刷されるとき]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:40:50（日本時間）<br><br>Impact0.31.0 は GHSA-6f4g-xm8v-pgv6 を修正しました。Compose ファイルのテキストが GitHub Actions のワークフローコマンドを compose-lint の出力で実行します。 --format json と --format sarif の出力は、その修正を通過しません。そのため、サービス名内の ##[ は、出力が stdout に印刷されるとき</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] compose-lint: プルリクエストのシンリンクによってトリガーされたSARIF-directoryエラーによるワークフローコマンドインジェクション | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-xcf7-88g6-7xr8</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xcf7-88g6-7xr8</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:50:54（日本時間）
+
+ImpactIn Action タグ v0.30.0 と v0.31.0 は、 sarif-file: 作成できないサブディレクトリのファイルの名前です。 Action は、エラーメッセージのディレクトリの解決されたパスを出力します。 v0.31.0 では、アクションがコマンド処理をオフにするウィンドウの外にあるメッセージが、v0.30.0 はそのようなウィンドウがありません。 プルは、名前に新し]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:50:54（日本時間）<br><br>ImpactIn Action タグ v0.30.0 と v0.31.0 は、 sarif-file: 作成できないサブディレクトリのファイルの名前です。 Action は、エラーメッセージのディレクトリの解決されたパスを出力します。 v0.31.0 では、アクションがコマンド処理をオフにするウィンドウの外にあるメッセージが、v0.30.0 はそのようなウィンドウがありません。 プルは、名前に新し</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[fast-xml-parser] 速い xml-parser: Quadratic CPU消費スキャン 未確定な停止ノードタグ | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-474x-hrwr-fgx4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-474x-hrwr-fgx4</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:09:44（日本時間）
+
+インフォメーション デフォルトでない stopNode のオプションでは、さまざまな &quot;&lt;a&quot; フラグメントとクローズなし &quot;&gt;&quot; を持つストップノードのボディが、 readStopNodeData() が、すべての &quot;&lt;&quot; から残りの入力全体を再スキャンします。 失敗したルカヘッドは、キャッシュもバインドもないので、パーサーが投げる前に、フラグメントコストO(n2)を削減します。 可用性のみ (]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:09:44（日本時間）<br><br>インフォメーション デフォルトでない stopNode のオプションでは、さまざまな &quot;&lt;a&quot; フラグメントとクローズなし &quot;&gt;&quot; を持つストップノードのボディが、 readStopNodeData() が、すべての &quot;&lt;&quot; から残りの入力全体を再スキャンします。 失敗したルカヘッドは、キャッシュもバインドもないので、パーサーが投げる前に、フラグメントコストO(n2)を削減します。 可用性のみ (</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge: TLS クライアントがサポートされていない ServerHello 圧縮方法でクラッシュ | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-w4xr-hqv8-ch44</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-w4xr-hqv8-ch44</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:17:14（日本時間）
+
+SummaryA forge.tls クライアントは ServerHello で任意の圧縮方法を受け入れていますが、圧縮しか提供していません。 未知の方法は、サーバーが認証される前に、クライアントが ServerHelloDone を扱うときに、connection.process() が不正なエラーをスローします。 悪意のあるサーバーまたはオンパスの攻撃者は、Node.js プロセスを終了するた]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:17:14（日本時間）<br><br>SummaryA forge.tls クライアントは ServerHello で任意の圧縮方法を受け入れていますが、圧縮しか提供していません。 未知の方法は、サーバーが認証される前に、クライアントが ServerHelloDone を扱うときに、connection.process() が不正なエラーをスローします。 悪意のあるサーバーまたはオンパスの攻撃者は、Node.js プロセスを終了するた</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[bitcoinjs-lib] ビットコインjs-lib: ブロックルート計算の検出されていないメルクルノードの重複は、鍛造されたトランザクションリストを検証します | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8vv3-6qpc-gpw6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8vv3-6qpc-gpw6</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:25（日本時間）
+
+概要速い足首 ルートは、最後のノードを単独でハッシュすることで、オッズレベルをパットします。 それがそうしたことを報告していないし、チェックTxRootsは繰り返されたトランザクションを探すことはありません。 したがって、ピアは、パッドを埋めるためにトランザクションを複製し、異なるトランザクションリストでブロックを生成することができますが、同じマークルルート。 ブロックハッシュとブロックIDは変更]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:25（日本時間）<br><br>概要速い足首 ルートは、最後のノードを単独でハッシュすることで、オッズレベルをパットします。 それがそうしたことを報告していないし、チェックTxRootsは繰り返されたトランザクションを探すことはありません。 したがって、ピアは、パッドを埋めるためにトランザクションを複製し、異なるトランザクションリストでブロックを生成することができますが、同じマークルルート。 ブロックハッシュとブロックIDは変更</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge: AES/DES CBCおよびECBの復号化の不完全なPKCS#7のパディングの検証 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-2vgq-wchc-25w7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2vgq-wchc-25w7</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:46（日本時間）
+
+CBC および ECB モードでのサマリーdecipher.finish() は malformed PKCS#7 パディング を受け付けました: 最後のバイトのみがチェックされ、4 ブロックの制限に対して、一致するパディングバイトが誤ったため、ゼロカウントとオーバーサイズのカウントが受け入れられ、最大 4 ブロックのプレーンテキストが黙って削除できます。 lib/cipherModes.js の]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:46（日本時間）<br><br>CBC および ECB モードでのサマリーdecipher.finish() は malformed PKCS#7 パディング を受け付けました: 最後のバイトのみがチェックされ、4 ブロックの制限に対して、一致するパディングバイトが誤ったため、ゼロカウントとオーバーサイズのカウントが受け入れられ、最大 4 ブロックのプレーンテキストが黙って削除できます。 lib/cipherModes.js の</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] フォージ:非canonical DigestInfoの符号化によるRSA PKCS#1 v1.5の署名のforgery | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6qrw-m8cv-hcxf</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6qrw-m8cv-hcxf</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:34（日本時間）
+
+概要RSASSA-PKCS1-v1_5 署名検証(publicKey.verify() デフォルトスキームで、X.509 証明書と PKCS#7 検証) では、NLL パラメータなどの DigestInfo の非正規の BER エンコーディングが受け入れられ、コンテンツと非最小限の長さで使用できます。 これらは、承認されたDigestInfo内の攻撃制御バイトを残します。これにより、署名は、RSA]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:34（日本時間）<br><br>概要RSASSA-PKCS1-v1_5 署名検証(publicKey.verify() デフォルトスキームで、X.509 証明書と PKCS#7 検証) では、NLL パラメータなどの DigestInfo の非正規の BER エンコーディングが受け入れられ、コンテンツと非最小限の長さで使用できます。 これらは、承認されたDigestInfo内の攻撃制御バイトを残します。これにより、署名は、RSA</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[gpustack] GPUStack: 複数のクラスターとリソースのエンドポイントの認可を欠損すると、クロスユーザーアクセスとクラスターの買収が可能 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-3hch-x692-6qj3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3hch-x692-6qj3</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:20（日本時間）
+
+ImpactA 認証非管理ユーザは、GPUStack の Kubernetes API プロキシにアクセスできないKubernetes クラスターにアクセスすることができます。 cluster_apiserver_proxy ハンドラは、選択したクラスターへのリクエストを転送する前に、リソースレベルの認可チェックを行いませんでした。 Kubernetes ServiceAccountの認証情報を使]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:20（日本時間）<br><br>ImpactA 認証非管理ユーザは、GPUStack の Kubernetes API プロキシにアクセスできないKubernetes クラスターにアクセスすることができます。 cluster_apiserver_proxy ハンドラは、選択したクラスターへのリクエストを転送する前に、リソースレベルの認可チェックを行いませんでした。 Kubernetes ServiceAccountの認証情報を使</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[gpustack] GPUStack: SAML コールバックは、統一された SAMLResponse を信頼し、認証バイパスとアカウントの買収が可能 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-62m9-f875-rqw6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-62m9-f875-rqw6</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:15（日本時間）
+
+ImpactThe コールバック Base64 は、投稿した XML をデコードし、NameID と属性を読み取り、ユーザーを解決またはプロビジョニングし、gpustack_session JWT をミントトしますが、OneLogin_Saml2_Auth.process_response() は、シグネチャ、イサ、オーディエンス、宛先、時間条件を検証するステップを呼び出しません。 資格情報は必要]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:15（日本時間）<br><br>ImpactThe コールバック Base64 は、投稿した XML をデコードし、NameID と属性を読み取り、ユーザーを解決またはプロビジョニングし、gpustack_session JWT をミントトしますが、OneLogin_Saml2_Auth.process_response() は、シグネチャ、イサ、オーディエンス、宛先、時間条件を検証するステップを呼び出しません。 資格情報は必要</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] compose-lint: .env はプロジェクト外でsymlinkを読んで、CI ジョブの環境を調べることができます | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-6wcv-rj3c-mhv3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6wcv-rj3c-mhv3</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:56:56（日本時間）
+
+Impactcompose-lint は Compose ファイルの横にある .env ファイルから ${VAR} 参照で埋めます。 プロジェクトディレクトリの外で何も読み込むことを意味し、env_file: には、: と extends: paths がチェックされます。 .env は読み込みません。 .env が symlink の場合、コンポース・リントは、その点をどこからでもフォローします]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:56:56（日本時間）<br><br>Impactcompose-lint は Compose ファイルの横にある .env ファイルから ${VAR} 参照で埋めます。 プロジェクトディレクトリの外で何も読み込むことを意味し、env_file: には、: と extends: paths がチェックされます。 .env は読み込みません。 .env が symlink の場合、コンポース・リントは、その点をどこからでもフォローします</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] compose-lint:プロジェクト外で連結された `.compose-lint.yml` が読み込まれ、パースのエラーはターゲットの一部を引用します | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-88f4-frh5-gmcr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-88f4-frh5-gmcr</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:07（日本時間）
+
+Impactcompose-lint は、 Compose ファイルの横にある .compose-lint.yml ポリシーファイルを自動的に読み込みます。 プロジェクトディレクトリの外で何も読めないという意味ですが、そのファイルがシンリンクであれば、その点を指すところです。 プルは .compose-lint.yml を CI ランナーのファイルへのリンクとしてリクエストできます。 ターゲットが]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:07（日本時間）<br><br>Impactcompose-lint は、 Compose ファイルの横にある .compose-lint.yml ポリシーファイルを自動的に読み込みます。 プロジェクトディレクトリの外で何も読めないという意味ですが、そのファイルがシンリンクであれば、その点を指すところです。 プルは .compose-lint.yml を CI ランナーのファイルへのリンクとしてリクエストできます。 ターゲットが</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[静的] Altair: iframe サンドボックス内の攻撃制御スクリプト URL による DOM ベースの XSS | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-752m-7p75-49gf</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-752m-7p75-49gf</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:27（日本時間）
+
+概要Altair 8.5.7 は、iframe-sandbox クエリ文字列から直接プラグイン構成を受け入れます。 plugin_sandbox_opts に「scripts」と、スクリプト内の攻撃者制御 URL が含まれているとき ウルス、サンドボックスページは、古典的な &lt;script src=&quot;...&quot;&gt; 要素を作成し、提供されたスクリプトを読み込みます。 意図したプラグインフローでは、この]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:27（日本時間）<br><br>概要Altair 8.5.7 は、iframe-sandbox クエリ文字列から直接プラグイン構成を受け入れます。 plugin_sandbox_opts に「scripts」と、スクリプト内の攻撃者制御 URL が含まれているとき ウルス、サンドボックスページは、古典的な &lt;script src=&quot;...&quot;&gt; 要素を作成し、提供されたスクリプトを読み込みます。 意図したプラグインフローでは、この</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@nuxt/content] の一覧 Nuxt コンテンツ: コンテンツクエリ API による非認証 SQLite 関数 DoS | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xxrh-5hgg-gj4h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xxrh-5hgg-gj4h</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:12（日本時間）
+
+インフォメーション ポスト @nuxt/content の /_nuxt_content/:collection/query エンドポイントは HTTP リクエストボディから攻撃者制御の sql フィールドを受け入れ、不十分なバリデータ (assertSafeQuery) を通過した後、ローカル SQLite データベースに対して実行します。 validator は、SQL コマンドのキーワードの]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:12（日本時間）<br><br>インフォメーション ポスト @nuxt/content の /_nuxt_content/:collection/query エンドポイントは HTTP リクエストボディから攻撃者制御の sql フィールドを受け入れ、不十分なバリデータ (assertSafeQuery) を通過した後、ローカル SQLite データベースに対して実行します。 validator は、SQL コマンドのキーワードの</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ag2] AG2: SandboxShellTool のニューラインインジェクションは、allow=[...] と readonly=True を渡します。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-2h4w-29cv-2cmv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2h4w-29cv-2cmv</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:17（日本時間）
+
+サマリーサンドボックスシェル ツールの制限モード — allow=[...] (explicit コマンド allowlist) と readonly=True (implicit READONLY_COMMANDS allowlist) — は、コマンド文字列内の新しい行文字を埋め込むことでバイパスできます。 フィルタは、シェルメタキャラクタの単一行セットのみを検査しますが、シェルは、; ステー]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:17（日本時間）<br><br>サマリーサンドボックスシェル ツールの制限モード — allow=[...] (explicit コマンド allowlist) と readonly=True (implicit READONLY_COMMANDS allowlist) — は、コマンド文字列内の新しい行文字を埋め込むことでバイパスできます。 フィルタは、シェルメタキャラクタの単一行セットのみを検査しますが、シェルは、; ステー</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[compose-lint] compose-lint: `fix --apply` は、セキュリティ設定を含む、ユーザーが選択しなかった行を削除できます。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-65v8-q222-64xx</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-65v8-q222-64xx</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:02（日本時間）
+
+Impactcompose-lint の修正 --apply は、その固定子がファイルの位置に機能する行番号を変換します。 YAMLパーサーは、キャリッジリターン、U + 0085、U + 2028、U + 2029をラインブレイクとして扱いますが、変換は&#92;nのみカウントされます。 クォートされた値の中のこれらの文字の1つで、ほとんどのエディタと差分ビューが表示されず、後で1行ごとに編集します。 ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:02（日本時間）<br><br>Impactcompose-lint の修正 --apply は、その固定子がファイルの位置に機能する行番号を変換します。 YAMLパーサーは、キャリッジリターン、U + 0085、U + 2028、U + 2029をラインブレイクとして扱いますが、変換は&#92;nのみカウントされます。 クォートされた値の中のこれらの文字の1つで、ほとんどのエディタと差分ビューが表示されず、後で1行ごとに編集します。 </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge: ASN.1 リソース排気を BIT STRING で asn1.from でデコードします。 ダー | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-rhr8-3pm8-cq29</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-rhr8-3pm8-cq29</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:41（日本時間）
+
+デフォルトでは、BIT STRINGs の内容を ASN.1 にデコードします。 そのデコードは、maxDepth 再帰制限(CVE-2025-66031の不完全な修正)を無視し、ネストされた BIT ストリングをデコードし、各レベルのデコードされたコンテンツの完全なコピーを保持するので、小さな DER または PEM の入力(証明書、キー、PKCS 構造)は、過度な CPU 時間とメモリを使用し]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:41（日本時間）<br><br>デフォルトでは、BIT STRINGs の内容を ASN.1 にデコードします。 そのデコードは、maxDepth 再帰制限(CVE-2025-66031の不完全な修正)を無視し、ネストされた BIT ストリングをデコードし、各レベルのデコードされたコンテンツの完全なコピーを保持するので、小さな DER または PEM の入力(証明書、キー、PKCS 構造)は、過度な CPU 時間とメモリを使用し</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge: X.509 pathLenConstraint は、keyUsage なしで CA 証明書の 認証Chain() によって強制されない | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h46v-rmh6-fq4f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h46v-rmh6-fq4f</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:43（日本時間）
+
+Summaryforge.pki.verifyCertificateChain() は、CA 証明書の BasicConstraints の pathLenConstraint のパスを強制します。その証明書がキーUsage 拡張子を持っているときのみ、拡張機能を使用します。 pathLenConstraint と KeyUsage なしの CA 証明書では、制約が許されるよりも、以下の CA 証]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:43（日本時間）<br><br>Summaryforge.pki.verifyCertificateChain() は、CA 証明書の BasicConstraints の pathLenConstraint のパスを強制します。その証明書がキーUsage 拡張子を持っているときのみ、拡張機能を使用します。 pathLenConstraint と KeyUsage なしの CA 証明書では、制約が許されるよりも、以下の CA 証</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@effect/プラットフォーム] 効果: @effect/platform makeCookie() のドメイン、パス、および名前のフィールドによる Cookie 属性の注入 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-chp3-j5qr-2vfr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-chp3-j5qr-2vfr</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:32（日本時間）
+
+ImpactCookie() の名前、ドメイン、およびパスフィールドを regex で検証し、 ;、Set-Cookie ヘッダーの属性区切り文字を 許可しました。 SerializeCookie() は、これらのフィールドの動詞を記述するため、不信な入力を任意の入力に渡した発信者は、任意の属性をヘッダに追加することができます。 例えば、&quot;legit.com; Domain=.parent.tld]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:32（日本時間）<br><br>ImpactCookie() の名前、ドメイン、およびパスフィールドを regex で検証し、 ;、Set-Cookie ヘッダーの属性区切り文字を 許可しました。 SerializeCookie() は、これらのフィールドの動詞を記述するため、不信な入力を任意の入力に渡した発信者は、任意の属性をヘッダに追加することができます。 例えば、&quot;legit.com; Domain=.parent.tld</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@ohif/extension-dicom-pdf] OHIFビューア:DOMベースのクロスサイトスクリプト(XSS)をMIMEタイプのドキュメントで表示 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xwgp-w3pj-q5h3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xwgp-w3pj-q5h3</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:51（日本時間）
+
+攻撃者が自分の JavaScript コードを Web ページのソースに注入することができるときに、XSS (クロスサイトスクリプト) 脆弱性が発生し、被害者のブラウザによって処理されます。 この脆弱性の一般的な原因は、適切なフィルタリングなしで脆弱なアプリケーション内で表示する前に、ユーザが指定したデータを検証することができません。 脆弱性を悪用するには、攻撃者はJavaScriptの実行をトリ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:51（日本時間）<br><br>攻撃者が自分の JavaScript コードを Web ページのソースに注入することができるときに、XSS (クロスサイトスクリプト) 脆弱性が発生し、被害者のブラウザによって処理されます。 この脆弱性の一般的な原因は、適切なフィルタリングなしで脆弱なアプリケーション内で表示する前に、ユーザが指定したデータを検証することができません。 脆弱性を悪用するには、攻撃者はJavaScriptの実行をトリ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-opcua-address-space] ノード・オプカ: Namespace-Level RBAC フェイルオープン - 匿名書き込み/コール バイパス 経由 アンバウンド `デフォルト権限 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xggf-m53x-jc3f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xggf-m53x-jc3f</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:56:52（日本時間）
+
+インフォメーション unauthenticated (匿名) クライアントは、明示的なパーノード権限を欠く任意のノード上の保護された変数とコール特権メソッドを書くことができます。 これは、OPC UA Part 3, §5.2.9 で定義された継承モデルは、明示的なロールパーミッション属性のないノードが名前空間 DefaultRolePermissions を継承する。 OPC 10000-3 §]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:56:52（日本時間）<br><br>インフォメーション unauthenticated (匿名) クライアントは、明示的なパーノード権限を欠く任意のノード上の保護された変数とコール特権メソッドを書くことができます。 これは、OPC UA Part 3, §5.2.9 で定義された継承モデルは、明示的なロールパーミッション属性のないノードが名前空間 DefaultRolePermissions を継承する。 OPC 10000-3 §</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] 作曲: プルは、C-generated `.env` からその検索結果にコンパス リント クォートするシークレットをリクエストできます。 | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-jf3h-8jvx-vcrg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jf3h-8jvx-vcrg</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:05（日本時間）
+
+ImpactSince 0.22.0, Compose が .env から ${VAR} の参照をコンパスファイル以外に満たします。 ドキュメンテーションでは、環境下で値を記述します。: .env から解決されることはありません。 しかし、画像: 値が解決され、 CL-0004 と CL-0019 は、そのメッセージと修正テキストの解決イメージを引用します。 CI のワークフローの中には、その .]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:05（日本時間）<br><br>ImpactSince 0.22.0, Compose が .env から ${VAR} の参照をコンパスファイル以外に満たします。 ドキュメンテーションでは、環境下で値を記述します。: .env から解決されることはありません。 しかし、画像: 値が解決され、 CL-0004 と CL-0019 は、そのメッセージと修正テキストの解決イメージを引用します。 CI のワークフローの中には、その .</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[OctoPrint] OctoPrint:保存された接続パラメータを使用してXSSを保存 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-p623-mxf7-qxjm</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-p623-mxf7-qxjm</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:29（日本時間）
+
+バージョン 2.0.0rc6 までの ImpactOctoPrint バージョン 2.0.0rc1 は、特別に設計されたデフォルトポートまたはバンドルされたシリアル コネクタ プラグインの設定により、API 経由で提供される新しいデフォルトで、接続中に提供されるクロスサイト スクリプトを許容します。 パッチ 脆弱性は 2.0.0rc7.Workaround にパッチ適用されます。 printerC]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:29（日本時間）<br><br>バージョン 2.0.0rc6 までの ImpactOctoPrint バージョン 2.0.0rc1 は、特別に設計されたデフォルトポートまたはバンドルされたシリアル コネクタ プラグインの設定により、API 経由で提供される新しいデフォルトで、接続中に提供されるクロスサイト スクリプトを許容します。 パッチ 脆弱性は 2.0.0rc7.Workaround にパッチ適用されます。 printerC</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge: 発行者のRSA署名スキームで検証された証明書署名 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-9wg5-mj3p-v49q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9wg5-mj3p-v49q</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:48（日本時間）
+
+証明書を確認すると、ノード・フォージがRSAパディング・スキーム(PKCS#1 v1.5 または RSASSA-PSS)と、発行者の証明書の独自の署名アルゴリズムから、証明書が検証される代わりにPSSパラメーターを選択します。 RSASSA-PSS で署名された証明書は、PKCS#1 v1.5 署名で検証証明書Chain() を渡すことができます。 lib/x509.js の node-forge]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:48（日本時間）<br><br>証明書を確認すると、ノード・フォージがRSAパディング・スキーム(PKCS#1 v1.5 または RSASSA-PSS)と、発行者の証明書の独自の署名アルゴリズムから、証明書が検証される代わりにPSSパラメーターを選択します。 RSASSA-PSS で署名された証明書は、PKCS#1 v1.5 署名で検証証明書Chain() を渡すことができます。 lib/x509.js の node-forge</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] 作曲: コミットされたsymplinkはコンパス・リントがプロジェクト外からその出力にファイルを引用します | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-whr6-fgpq-fpv9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-whr6-fgpq-fpv9</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:10（日本時間）
+
+ImpactLikeドッカー プロジェクトのファイルを読み込むときにコンパス、コンパスリントは、symlinks に従います。 Compose とは異なり、 0.24.0 までのコンポース・リントは、プロジェクト外からその出力にファイルの内容を置くことができ、プルリクエストの著者はそれを読み込むことができます。 プルは、CI ランナーのファイルで指す名前のコンポース・リント・読み取りで、sympl]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:10（日本時間）<br><br>ImpactLikeドッカー プロジェクトのファイルを読み込むときにコンパス、コンパスリントは、symlinks に従います。 Compose とは異なり、 0.24.0 までのコンポース・リントは、プロジェクト外からその出力にファイルの内容を置くことができ、プルリクエストの著者はそれを読み込むことができます。 プルは、CI ランナーのファイルで指す名前のコンポース・リント・読み取りで、sympl</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] 作曲: GitHub Actions のワークフローコマンドを compose-lint Action でコンパイルできます。 | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-6f4g-xm8v-pgv6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6f4g-xm8v-pgv6</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:56:59（日本時間）
+
+ImpactThe GitHub Actions ランナーは、コマンドとしてステップの出力で特定のテキストを処理します。 レガシーフォーム ##[command] は、任意の行で認識されます。 compose-lint のテキストレポートは、サービス名、環境キー、 Compose ファイルの行を印刷し、 ##[ を中和しません。 compose-lint Action の内部では、プルリクエストの]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:56:59（日本時間）<br><br>ImpactThe GitHub Actions ランナーは、コマンドとしてステップの出力で特定のテキストを処理します。 レガシーフォーム ##[command] は、任意の行で認識されます。 compose-lint のテキストレポートは、サービス名、環境キー、 Compose ファイルの行を印刷し、 ##[ を中和しません。 compose-lint Action の内部では、プルリクエストの</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] compose-lint: GHSA-jf3h-8jvx-vcrg の不完全な修正: 発見の限界で停止された実行は、CI 生成された `.env` から秘密を引用します | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-rm8w-w798-g545</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-rm8w-w798-g545</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:22（日本時間）
+
+ImpactThisは、GHSA-jf3h-8jvx-vcrg の不完全な修正です。 0.32.0 は、その値ではなく、埋め込まれた .env をシブルに引用しました。 同じリリースでは、ドキュメントごとに20,000件見つかり、引用のステップ前にストップがチェックされます。 これまでの研究成果をテキスト、JSON、SARIF 出力で解決した値で報告するラン。 つまり、--allow-partia]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:22（日本時間）<br><br>ImpactThisは、GHSA-jf3h-8jvx-vcrg の不完全な修正です。 0.32.0 は、その値ではなく、埋め込まれた .env をシブルに引用しました。 同じリリースでは、ドキュメントごとに20,000件見つかり、引用のステップ前にストップがチェックされます。 これまでの研究成果をテキスト、JSON、SARIF 出力で解決した値で報告するラン。 つまり、--allow-partia</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[urwid] Urwid: handle_short_request() は非 ASCII POST ボディ (UnicodeEncodeError DoS) でクラッシュします。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-cp25-j9x5-p5xm</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-cp25-j9x5-p5xm</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:05:06（日本時間）
+
+urwid/display/web.py の handle_short_request() 関数は、非 ASCII バイトを含む POST リクエスト ボディを処理するときに、未処理の UnicodeEncodeError を上げます。 関数は POST 入力を読み、名前付きパイプに書く前に ASCII にエンコードします。 0x7F の上の任意のバイト値では、CGI プロセスが処理されていない例]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:05:06（日本時間）<br><br>urwid/display/web.py の handle_short_request() 関数は、非 ASCII バイトを含む POST リクエスト ボディを処理するときに、未処理の UnicodeEncodeError を上げます。 関数は POST 入力を読み、名前付きパイプに書く前に ASCII にエンコードします。 0x7F の上の任意のバイト値では、CGI プロセスが処理されていない例</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[zizmor] zizmor: GitHubの認証情報をクリアテキストでデバッグする | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-f42p-wjw5-97qh</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-f42p-wjw5-97qh</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:56:25（日本時間）
+
+要約1.27.0 暴露 GitHubアクセストークンは、デバッグレベルのロギングが有効になっているときにクリアテキストでアクセスします。 環境変数(GH_TOKEN、GITHUB_TOKEN、ZIZMOR_GITHUB_TOKEN)、または対応するコマンドラインオプション(--gh-token、--github-token、-zizmor-github-token)を介して供給されるトークンは、パ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:56:25（日本時間）<br><br>要約1.27.0 暴露 GitHubアクセストークンは、デバッグレベルのロギングが有効になっているときにクリアテキストでアクセスします。 環境変数(GH_TOKEN、GITHUB_TOKEN、ZIZMOR_GITHUB_TOKEN)、または対応するコマンドラインオプション(--gh-token、--github-token、-zizmor-github-token)を介して供給されるトークンは、パ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ロギングレダクタ] Redactor:非プリミティブオブジェクトの str/repr のデータが赤字化されていない | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-w7qv-268h-9h3f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-w7qv-268h-9h3f</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 3:15:18（日本時間）
+
+非プリミティブオブジェクトの str/repr のデータが赤字化されていないため、カスタム __str_ と __repr_ 関数のために赤字化されているべきログの PII の漏洩につながる パッチ 問題はバージョン0.0.7.Workaroundsでパッチを当てました パッチなし。 参考:https://github.com/armurox/loggingredactor/security/ad]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 3:15:18（日本時間）<br><br>非プリミティブオブジェクトの str/repr のデータが赤字化されていないため、カスタム __str_ と __repr_ 関数のために赤字化されているべきログの PII の漏洩につながる パッチ 問題はバージョン0.0.7.Workaroundsでパッチを当てました パッチなし。 参考:https://github.com/armurox/loggingredactor/security/ad</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[分子] Moleculer: TCP トランスポート パケット パーサの負の長さフィールドを介してサービスの非浸透性拒否 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h89v-g948-47vp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h89v-g948-47vp</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:31:16（日本時間）
+
+インフォメーション TCP トランスポーターのパケットパーサ (src/transporters/tcp/parser.js) は、Buffer.prototype.read でパケット長フィールドを読みます。 Int32BE, 署名された読み込み. 長さフィールドに記号ビットセットが負の長さを収めているクラフトしたパケット。 パーサは、 パケット = パケット = パケット = パケット.sli]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:31:16（日本時間）<br><br>インフォメーション TCP トランスポーターのパケットパーサ (src/transporters/tcp/parser.js) は、Buffer.prototype.read でパケット長フィールドを読みます。 Int32BE, 署名された読み込み. 長さフィールドに記号ビットセットが負の長さを収めているクラフトしたパケット。 パーサは、 パケット = パケット = パケット = パケット.sli</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[fastapi-code-generator] fastapiコードジェネレーター: オペレーションサマリーによるコールタイム RCE → エスケープされたルートハンドラー docstring | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-h667-4jj2-cgv4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h667-4jj2-cgv4</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 3:50:00（日本時間）
+
+概要fastapi-code-generator(koxudaxi)は、生成されたルートハンドラのdocstringとして、操作の要約を、 &quot;&quot;をエスケープせずに三分引用された文字列を使用して生成されたルートハンドラのdocstringとして放出します。 まとめの &quot;&quot;は、docstringを閉じ、concatenationを介して、ハンドラボディの式ステートメントになるライブ式を注入します。 こ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 3:50:00（日本時間）<br><br>概要fastapi-code-generator(koxudaxi)は、生成されたルートハンドラのdocstringとして、操作の要約を、 &quot;&quot;をエスケープせずに三分引用された文字列を使用して生成されたルートハンドラのdocstringとして放出します。 まとめの &quot;&quot;は、docstringを閉じ、concatenationを介して、ハンドラボディの式ステートメントになるライブ式を注入します。 こ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[fastapi-code-generator] fastapiコードジェネレーター: 応答ステータスコードキー→ unescaped @app.get(..., responses={...})によるインポートタイムRCE 予測 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-6xmv-cjr5-w3q8</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6xmv-cjr5-w3q8</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 4:46:27（日本時間）
+
+Summaryfastapi-code-generator (koxudaxi) は、操作の余分な応答をルートデコレータの responses={...} の dict に出力し、各応答のステータスコードキーを &#39; をエスケープせずにシングルクォートされた文字列リテラルとして使用します。 ステータスコードキーの &#39; は dict-key 文字列を閉じ、concatenation を介して、デコレー]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 4:46:27（日本時間）<br><br>Summaryfastapi-code-generator (koxudaxi) は、操作の余分な応答をルートデコレータの responses={...} の dict に出力し、各応答のステータスコードキーを &#39; をエスケープせずにシングルクォートされた文字列リテラルとして使用します。 ステータスコードキーの &#39; は dict-key 文字列を閉じ、concatenation を介して、デコレー</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[kiwitcms] Kiwi TCMSアカウントの確認は、プロトコルに依存するURLを介してリダイレクトを開きます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-gcwf-c25f-p9rv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gcwf-c25f-p9rv</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 8:24:14（日本時間）
+
+概要 Kiwi TCMS バージョン 16.1 では、アカウントの確認エンドポイントの CVE-2026-54724 (無効な次のパラメーターを使用してオープンリダイレクト) の修正が不完全です。 バリデーションは、リダイレクト URL がローカルであるかどうかをチェックするために startwith(&quot;/&quot;) を使用しますが、これは、/ から始まる //evil.com のようなプロトコルに依存]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 8:24:14（日本時間）<br><br>概要 Kiwi TCMS バージョン 16.1 では、アカウントの確認エンドポイントの CVE-2026-54724 (無効な次のパラメーターを使用してオープンリダイレクト) の修正が不完全です。 バリデーションは、リダイレクト URL がローカルであるかどうかをチェックするために startwith(&quot;/&quot;) を使用しますが、これは、/ から始まる //evil.com のようなプロトコルに依存</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[isomorphic-git] isomorphic-git: チェックアウト中にディレクトリのsymlinkを介して作業ツリーの外に書き込む任意のファイル (ポテンシャルRCE) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-9qw7-j9xw-fv9c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9qw7-j9xw-fv9c</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 4:53:44（日本時間）
+
+サマリーギット。 checkout は、先頭のパスをチェックせずに、ディレクトリのsymlink を介して作業ツリーファイルを書き込みます。そのため、悪意のあるリポジトリは、意図した作業ディレクトリの外に書き込むことができます。 欠陥は isomorphic-git のチェックアウトロジック自体にあり、fs プロバイダーとは独立しています。 影響は、設定されたファイルシステムに依存します。最悪の場]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 4:53:44（日本時間）<br><br>サマリーギット。 checkout は、先頭のパスをチェックせずに、ディレクトリのsymlink を介して作業ツリーファイルを書き込みます。そのため、悪意のあるリポジトリは、意図した作業ディレクトリの外に書き込むことができます。 欠陥は isomorphic-git のチェックアウトロジック自体にあり、fs プロバイダーとは独立しています。 影響は、設定されたファイルシステムに依存します。最悪の場</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[gpustack] GPUStack:信頼できるループバックソース(逆プロキシTCPピアまたはX-GPUStack-Real-IPヘッダー)による認証バイパス | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-gj9m-f8ph-pmhr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gj9m-f8ph-pmhr</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:15:27（日本時間）
+
+ImpactIn GPUStack 前の v2.2.0, get_current_user (gpustack/api/auth.py) は、そのソースが組み込みの管理者アカウントにループバックと見なされるリクエストを、 force_auth_localhost は False である (デフォルト). &quot;source&quot; は client_ip_getter によって派生しています。これは 2 つ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:15:27（日本時間）<br><br>ImpactIn GPUStack 前の v2.2.0, get_current_user (gpustack/api/auth.py) は、そのソースが組み込みの管理者アカウントにループバックと見なされるリクエストを、 force_auth_localhost は False である (デフォルト). &quot;source&quot; は client_ip_getter によって派生しています。これは 2 つ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ag-psd] ag-psd: PSDレイヤーデコード(totalMemoryLimitバイパス)で制御されていないメモリ割り当て | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6w3r-6hpr-hp6p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6w3r-6hpr-hp6p</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:08:28（日本時間）
+
+sg-psd の readPsd() 関数は、信頼できない PSD ファイルを解析する際にメモリ使用量をカプセル化するためのトータルメモリリミットオプションを受け付けますが、この制限はレイヤーイメージバッファ割り当てパスに転送されません。 プロパティ名の不一致 (totalMemoryLimit とメモリーリミット) は、 createImageDataBitDepth 内のサイズのガードが無条件]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:08:28（日本時間）<br><br>sg-psd の readPsd() 関数は、信頼できない PSD ファイルを解析する際にメモリ使用量をカプセル化するためのトータルメモリリミットオプションを受け付けますが、この制限はレイヤーイメージバッファ割り当てパスに転送されません。 プロパティ名の不一致 (totalMemoryLimit とメモリーリミット) は、 createImageDataBitDepth 内のサイズのガードが無条件</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@tsparticles/mcp-server] は、 tsParticles: @tsparticles/mcp-server で HTTP リクエスト ボディバッファリングされていない リモートDoSへのリード | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-447x-qqwf-m7xq</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-447x-qqwf-m7xq</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:10:46（日本時間）
+
+インフォメーション @tsparticles/mcp-server の HTTP サーバ モードは、JSON を呼び出す前に、すべてのリクエスト ボディ チャンクをインメモリー Buffer[] 配列に蓄積します。 パセ。 unauthenticated リモート 攻撃者は Node.js プロセスのメモリを排出し、サービス拒否を引き起こす POST /mcp に任意の大体をストリームすることがで]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:10:46（日本時間）<br><br>インフォメーション @tsparticles/mcp-server の HTTP サーバ モードは、JSON を呼び出す前に、すべてのリクエスト ボディ チャンクをインメモリー Buffer[] 配列に蓄積します。 パセ。 unauthenticated リモート 攻撃者は Node.js プロセスのメモリを排出し、サービス拒否を引き起こす POST /mcp に任意の大体をストリームすることがで</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[fastapi-code-generator] fastapiコードジェネレーター: ルートパスでインポートタイム RCE → unescaped @app.get(&#39;...&#39;)デコレータ | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-p2mm-64f6-gmpp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-p2mm-64f6-gmpp</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 4:48:08（日本時間）
+
+まとめfastapi-code-generator (koxudaxi) は、生成されたメインに OpenAPI パスを出力します。 &#39; をエスケープすることなく、py ルートデコレータをシングルクォート文字列リテラル (@app.get(&#39;/u/&lt;path&gt;/x&#39;) として設定します。 パスの &#39; はデコレータの文字列を閉じ、concatenation を介して、デコレータの引数がメインのときに]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 4:48:08（日本時間）<br><br>まとめfastapi-code-generator (koxudaxi) は、生成されたメインに OpenAPI パスを出力します。 &#39; をエスケープすることなく、py ルートデコレータをシングルクォート文字列リテラル (@app.get(&#39;/u/&lt;path&gt;/x&#39;) として設定します。 パスの &#39; はデコレータの文字列を閉じ、concatenation を介して、デコレータの引数がメインのときに</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[fast-agent-mcp] 速いエージェント: `fast-agent はデフォルトで認証なしで HTTP を 0.0.0.0 にバインドします。 --shell では、これは非認証リモートコマンド実行です | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-9vhv-g5hf-m7m7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9vhv-g5hf-m7m7</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:01:34（日本時間）
+
+概要ファストエージェントは、MCP 上でエージェントを公開します。 デフォルトでは、認証(auth=None)なしでポート8000でHTTPトランスポート境界を0.0.0.0(すべてのインターフェイス)使用し、警告を出力しません。 ポートに到達できる任意のホストは、露出したエージェントツールを呼び出すことができます。 サーバが --shell (-x であるとき、README クイックスタート u]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:01:34（日本時間）<br><br>概要ファストエージェントは、MCP 上でエージェントを公開します。 デフォルトでは、認証(auth=None)なしでポート8000でHTTPトランスポート境界を0.0.0.0(すべてのインターフェイス)使用し、警告を出力しません。 ポートに到達できる任意のホストは、露出したエージェントツールを呼び出すことができます。 サーバが --shell (-x であるとき、README クイックスタート u</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@anthropic-ai/claude-code] は、 クロードコード:編集ツールのTOCTOUレースは、ワークスペースの外にファイル書き込みを許可します | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5xjx-9qx6-jcrv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5xjx-9qx6-jcrv</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:42:03（日本時間）
+
+クロード コード 検証済み ツールのターゲットをポイント・イン・タイムのパス名とシンリンクの解像度を使用して編集します。これは、アンダーリー・ディレクトリ・インオードやファイル・ディスクリプターにバインドされていないものです。 macOS では、Claude Code の Bash Sandbox 内で実行されるプロセスは、結果の時刻をチェックして、作業空間の親ディレクトリを検証完了後、symli]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:42:03（日本時間）<br><br>クロード コード 検証済み ツールのターゲットをポイント・イン・タイムのパス名とシンリンクの解像度を使用して編集します。これは、アンダーリー・ディレクトリ・インオードやファイル・ディスクリプターにバインドされていないものです。 macOS では、Claude Code の Bash Sandbox 内で実行されるプロセスは、結果の時刻をチェックして、作業空間の親ディレクトリを検証完了後、symli</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[コードグラフ] コード グラフ RAG: MCP paginated read_file パス traversal/arbitrary ファイルの読み込み | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-vvr2-h2jp-838m</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-vvr2-h2jp-838m</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:21:32（日本時間）
+
+インフォメーション codebase_rag/mcp/tools.py の read_file MCP ツールには、paginated ブランチにパストラバーサルの脆弱性が含まれています(オフセットまたは上限が供給される場合)。 ハンドラは、解決されたパスが設定されたプロジェクトルート内に残っていることを検証せずに、Path(self.project_root)/file_pathを使用してファイ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:21:32（日本時間）<br><br>インフォメーション codebase_rag/mcp/tools.py の read_file MCP ツールには、paginated ブランチにパストラバーサルの脆弱性が含まれています(オフセットまたは上限が供給される場合)。 ハンドラは、解決されたパスが設定されたプロジェクトルート内に残っていることを検証せずに、Path(self.project_root)/file_pathを使用してファイ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[イソモルフィック-git] isomorphic-git: 「..」ツリー・エントリー名によるパス・トラバースは、作業ディレクトリの外側にクローン/チェックアウトのファイルを書きます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-cw2g-2vwq-88w6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-cw2g-2vwq-88w6</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 5:13:52（日本時間）
+
+サマリーソモルフィックのツリーパーサ(src/models/GitTree.js)は、それぞれのエントリ名をパス区切り文字/&#92;に対してのみ検証します。 スタンドアローン予約名を .. 拒否しないので、悪意のあるリポジトリは、単一のクローン/チェックアウト時に、作業ディレクトリ(無期限)外にファイルを書き込みます。 ホストバックのfsプロバイダで動作します。 詳細ガードは http:// src/m]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 5:13:52（日本時間）<br><br>サマリーソモルフィックのツリーパーサ(src/models/GitTree.js)は、それぞれのエントリ名をパス区切り文字/&#92;に対してのみ検証します。 スタンドアローン予約名を .. 拒否しないので、悪意のあるリポジトリは、単一のクローン/チェックアウト時に、作業ディレクトリ(無期限)外にファイルを書き込みます。 ホストバックのfsプロバイダで動作します。 詳細ガードは http:// src/m</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[コードグラフ] コードグラフ RAG 構造ツールは、root のシンリンクを追従 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-85gg-2gfq-q95m</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-85gg-2gfq-q95m</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:16:41（日本時間）
+
+コードグラフが解析するソースコードリポジトリに含まれているシンボルリンクを取得することができるリモート/ローカルの攻撃者は、構造的_search と構造的_replace ツール(AstGrepService のバックアップ、MCP ツールとエージェント型 AI ツールとして公開される)を読み込み、--------------------------------------------------]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:16:41（日本時間）<br><br>コードグラフが解析するソースコードリポジトリに含まれているシンボルリンクを取得することができるリモート/ローカルの攻撃者は、構造的_search と構造的_replace ツール(AstGrepService のバックアップ、MCP ツールとエージェント型 AI ツールとして公開される)を読み込み、--------------------------------------------------</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@tsparticles/mcp-server] は、 tsParticles: 単一の匿名の MCP セッションは HTTP モードを一元化し、新しいクライアントを否定できます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h7c4-q426-7jh9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h7c4-q426-7jh9</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:14:51（日本時間）
+
+インフォメーション @tsparticles/mcp-server の HTTP モードは、単一のステートフルな StreamableHTTPServerTransport インスタンスを作成し、すべてのクライアントに再利用します。 MCP エンドポイントを初期化する最初の匿名クライアントは、共有された輸送状態を主張し、その後のクライアントは独自のセッションを作成できません。 これは、コミット02]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:14:51（日本時間）<br><br>インフォメーション @tsparticles/mcp-server の HTTP モードは、単一のステートフルな StreamableHTTPServerTransport インスタンスを作成し、すべてのクライアントに再利用します。 MCP エンドポイントを初期化する最初の匿名クライアントは、共有された輸送状態を主張し、その後のクライアントは独自のセッションを作成できません。 これは、コミット02</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[isomorphic-git] isomorphic-git: 円記号参照は、非決定解像度(DoS)を引き起こします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-96wc-2m84-2cj7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-96wc-2m84-2cj7</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 4:58:32（日本時間）
+
+インフォメーション 悪意のあるサーバーは、円のsymref=機能(→b→a)を宣伝することができます。 isomorphic-git は、緩いsymrefs としてディスクに書き込み、GitRefManager.resolve() は、深さの制限とサイクルの検出を行わないため、後続の操作で 1 つ(ログ、ステータス、チェックアウト、ブランチ、...) ループを永遠に解決します。単一のクローンからの]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 4:58:32（日本時間）<br><br>インフォメーション 悪意のあるサーバーは、円のsymref=機能(→b→a)を宣伝することができます。 isomorphic-git は、緩いsymrefs としてディスクに書き込み、GitRefManager.resolve() は、深さの制限とサイクルの検出を行わないため、後続の操作で 1 つ(ログ、ステータス、チェックアウト、ブランチ、...) ループを永遠に解決します。単一のクローンからの</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@tsparticles/mcp-server] は、 tsParticles: マルフォームされたJSONリクエストは、@tsparticles/mcp-server HTTPプロセスを解除できます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4p8p-pjpq-2w7h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4p8p-pjpq-2w7h</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:13:55（日本時間）
+
+インフォメーション @tsparticles/mcp-server の HTTP モードは、リクエストローカルのエラー境界外にある JSON.parse() で /mcpp リクエスト ボディを呼び出します。 JSON リクエストは、非同期リクエストハンドラが Node.js プロセスを投げ、終了させます。 これは、コミット0266d469aaa2d719cb66a9c6bf09aded4186e]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:13:55（日本時間）<br><br>インフォメーション @tsparticles/mcp-server の HTTP モードは、リクエストローカルのエラー境界外にある JSON.parse() で /mcpp リクエスト ボディを呼び出します。 JSON リクエストは、非同期リクエストハンドラが Node.js プロセスを投げ、終了させます。 これは、コミット0266d469aaa2d719cb66a9c6bf09aded4186e</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[GeoNode] ジオノードが制限されていないファイルアップロード | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-fqpv-mq26-pr4j</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-fqpv-mq26-pr4j</guid>
+            <pubDate>Fri, 06 Nov 2026 22:06:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/7 4:41:23（日本時間）
+
+アップロードサービスのバリデーションは、特別に作られたリクエストで回避できます。これにより、ストレージと悪意のあるファイルのサービングが可能になります。 参考:https://github.com/GeoNode/geonode/security/advisories/GHSA-fqpv-mq26-pr4jhttps://github.com/GeoNode/geonode/pull/14223h]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/7 4:41:23（日本時間）<br><br>アップロードサービスのバリデーションは、特別に作られたリクエストで回避できます。これにより、ストレージと悪意のあるファイルのサービングが可能になります。 参考:https://github.com/GeoNode/geonode/security/advisories/GHSA-fqpv-mq26-pr4jhttps://github.com/GeoNode/geonode/pull/14223h</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[GeoNode] GeoNodeは、アップロードされたファイルレイヤー名でOSコマンドインジェクションを持っています | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-9fpx-fr6j-2vh6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9fpx-fr6j-2vh6</guid>
+            <pubDate>Fri, 06 Nov 2026 22:06:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/7 4:39:38（日本時間）
+
+作成されたレイヤー名でベクトルファイルをアップロードすることで、GeoNode上で任意のOSコマンドを実行できます。 参考:https://github.com/GeoNode/geonode/security/advisories/GHSA-9fpx-fr6j-2vh6https://github.com/GeoNode/geonode/commit/1408290c0bb54872924a9b]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/7 4:39:38（日本時間）<br><br>作成されたレイヤー名でベクトルファイルをアップロードすることで、GeoNode上で任意のOSコマンドを実行できます。 参考:https://github.com/GeoNode/geonode/security/advisories/GHSA-9fpx-fr6j-2vh6https://github.com/GeoNode/geonode/commit/1408290c0bb54872924a9b</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[GeoNode] GeoNodeは、ドキュメントメタデータ抽象フィールドにXSSを保存しました | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-r4hm-p9f9-fj9v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r4hm-p9f9-fj9v</guid>
+            <pubDate>Fri, 06 Nov 2026 22:06:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/7 4:50:34（日本時間）
+
+文書の抽象的なメタデータは、気化しません。 このページにアクセスしたときに実行される任意のHTML(およびJS)を保存することができます。 参考:https://github.com/GeoNode/geonode/security/advisories/GHSA-r4hm-adp9f9-fj9vhttps://github.com/GeoNode/geonode/pull/14322https:]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/7 4:50:34（日本時間）<br><br>文書の抽象的なメタデータは、気化しません。 このページにアクセスしたときに実行される任意のHTML(およびJS)を保存することができます。 参考:https://github.com/GeoNode/geonode/security/advisories/GHSA-r4hm-adp9f9-fj9vhttps://github.com/GeoNode/geonode/pull/14322https:</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[filecoin-pin]ファイルコインピン: Unbounded DAG のピン留めはサーバー資源を排出できます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-m5ph-mmg5-6w5h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-m5ph-mmg5-6w5h</guid>
+            <pubDate>Thu, 05 Nov 2026 22:05:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/6 3:07:30（日本時間）
+
+概要IPFS パイニングサービス API の実装は、POST /pins を通して、発信者制御の CID を受け入れ、背景処理をキューに入れ、それから helia.pins.add(cid) で完全な DAG を再帰的にフェッチします。 ルートと背景ピニングパスは、リクエストレートの制限、ユーザーごとのクォータ、最大DAGバイトのカウント、最大ブロック数、トラバーサルタイムアウト、または同時ピニン]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/6 3:07:30（日本時間）<br><br>概要IPFS パイニングサービス API の実装は、POST /pins を通して、発信者制御の CID を受け入れ、背景処理をキューに入れ、それから helia.pins.add(cid) で完全な DAG を再帰的にフェッチします。 ルートと背景ピニングパスは、リクエストレートの制限、ユーザーごとのクォータ、最大DAGバイトのカウント、最大ブロック数、トラバーサルタイムアウト、または同時ピニン</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[銀行] 銀行: unsafe importlib.import_module の attacker-controlled Tool.import_path の completeExtension | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-64vx-6h2c-rjh7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-64vx-6h2c-rjh7</guid>
+            <pubDate>Thu, 05 Nov 2026 22:05:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/6 2:51:02（日本時間）
+
+概要銀行の小包 ツール JSON は {% 完了 %} ブロックのレンダーされたボディからオブジェクトをオブジェクト化し、その後は importlib.import_module(...) + getattr(...) を使用して、ツールコールを処理するコール可能な取得を行います。 import_path に allowlist や sanitization がないため、インポート可能な Pyth]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/6 2:51:02（日本時間）<br><br>概要銀行の小包 ツール JSON は {% 完了 %} ブロックのレンダーされたボディからオブジェクトをオブジェクト化し、その後は importlib.import_module(...) + getattr(...) を使用して、ツールコールを処理するコール可能な取得を行います。 import_path に allowlist や sanitization がないため、インポート可能な Pyth</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[odf-kit] odf-kit: odtToHtml() および odsToHtml() を unescaped style 属性値で XSS に導く HTML 注射 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-3cgg-c5pp-57h6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3cgg-c5pp-57h6</guid>
+            <pubDate>Wed, 04 Nov 2026 19:05:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/5 1:14:34（日本時間）
+
+サマリーODF スタイルの属性値は、odf-kit の to-HTML レンダラー (odtToHtml と odsToHtml) の両方で HTML-escaping なしで style=&quot;...&quot; 属性に補間されます。 攻撃者制御のスタイル値内部のダブルクォート文字は、任意の HTML/attribute 注射を許可し、したがって、スクリプトの実行 (XSS) — は、レンダリングされた出力が]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/5 1:14:34（日本時間）<br><br>サマリーODF スタイルの属性値は、odf-kit の to-HTML レンダラー (odtToHtml と odsToHtml) の両方で HTML-escaping なしで style=&quot;...&quot; 属性に補間されます。 攻撃者制御のスタイル値内部のダブルクォート文字は、任意の HTML/attribute 注射を許可し、したがって、スクリプトの実行 (XSS) — は、レンダリングされた出力が</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@payloadcms/storage-vercel-blob] @payloadcms/storage-vercel-blob は、Vercel ストレージ アダプターのアップロードのアクセス制御バイパスを持っています | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-mc8m-rr6c-r5qr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mc8m-rr6c-r5qr</guid>
+            <pubDate>Wed, 04 Nov 2026 19:05:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/5 2:00:39（日本時間）
+
+ImpactIn は、影響を受ける構成、クライアントのアップロードアクセスは、一貫して関連するコレクションのアクセス設定と整合しません。 クライアントのアップロードを@payloadcms/storage-vercel-blobで使用している場合に影響します。 認証されたユーザーは、クライアント・アップロード・ルートにアクセスすることができます。 クライアントのアップロードを有効にしないアプリケー]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/5 2:00:39（日本時間）<br><br>ImpactIn は、影響を受ける構成、クライアントのアップロードアクセスは、一貫して関連するコレクションのアクセス設定と整合しません。 クライアントのアップロードを@payloadcms/storage-vercel-blobで使用している場合に影響します。 認証されたユーザーは、クライアント・アップロード・ルートにアクセスすることができます。 クライアントのアップロードを有効にしないアプリケー</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[スタンザ] スタンザ:レマタイザーのピックルのdeserializationによるRCE | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-gh9r-c94j-cmp5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gh9r-c94j-cmp5</guid>
+            <pubDate>Wed, 04 Nov 2026 00:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/4 5:29:16（日本時間）
+
+TL;DRLoading 攻撃者対応の lemma .pt は、ロードユーザーとして任意のコードを実行します。 lemmatizer が pos_dict をチェックポイントの dicts フィールド (バイト値) の gzip 圧縮ピックルとして格納する 1.14.0 以降。 torch.load(weights_only=True) は、プリミティブとしてバイトを扱い、examined を通過]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/4 5:29:16（日本時間）<br><br>TL;DRLoading 攻撃者対応の lemma .pt は、ロードユーザーとして任意のコードを実行します。 lemmatizer が pos_dict をチェックポイントの dicts フィールド (バイト値) の gzip 圧縮ピックルとして格納する 1.14.0 以降。 torch.load(weights_only=True) は、プリミティブとしてバイトを扱い、examined を通過</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@enspirit/elo] は、 Elo Ruby バックエンドには、エスケープされた `#{...}` によるリモート・コードの実行が放出された文字列のリテラルとサブタイプ・コンストラント・ラベルの補間 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7w38-ggh5-v542</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7w38-ggh5-v542</guid>
+            <pubDate>Tue, 03 Nov 2026 19:07:19 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/4 2:51:30（日本時間）
+
+インフォメーション Elo の Ruby バックエンドは、# 文字をエスケープすることなく、攻撃制御テキストを Ruby のダブルクォート文字列に出力します。 # は Ruby の補間シーケンスを開始します — #{expr}, #@ivar, #@cvar, #$gvar — と #{...} で包まれた任意の式は、シェルの実行にバックティックスを使うかもしれません。Elo プログラムは、作成さ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/4 2:51:30（日本時間）<br><br>インフォメーション Elo の Ruby バックエンドは、# 文字をエスケープすることなく、攻撃制御テキストを Ruby のダブルクォート文字列に出力します。 # は Ruby の補間シーケンスを開始します — #{expr}, #@ivar, #@cvar, #$gvar — と #{...} で包まれた任意の式は、シェルの実行にバックティックスを使うかもしれません。Elo プログラムは、作成さ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@enspirit/elo] は、 Elo JavaScript のエミッタは、 arbitrary Node.js にサンドボックスエスケープをエスケープしています。 / ブラウザコードの実行は、フィルタリングされていない `.constructor` のメンバアクセスを介して実行します。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-33r5-xmm8-v6x5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-33r5-xmm8-v6x5</guid>
+            <pubDate>Tue, 03 Nov 2026 19:07:19 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/4 2:53:42（日本時間）
+
+概要Elo JavaScript-emissionパスに渡された文字列を制御する未認証の攻撃者 — defaultFormats.elo.parse(), bin/elo CLI, または elo-lang でライブブラウザのプレイグラウンド. org/try — ホスト JavaScript ランタイムで任意のコードを実行できます。 .constructor.constructor チェーンから]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/4 2:53:42（日本時間）<br><br>概要Elo JavaScript-emissionパスに渡された文字列を制御する未認証の攻撃者 — defaultFormats.elo.parse(), bin/elo CLI, または elo-lang でライブブラウザのプレイグラウンド. org/try — ホスト JavaScript ランタイムで任意のコードを実行できます。 .constructor.constructor チェーンから</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@enspirit/elo] は、 Elo バックエンドには、プログラム的な AST フィールドの無効なエミッションによるコード注入があります。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-x9rp-7wh3-2rj5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x9rp-7wh3-2rj5</guid>
+            <pubDate>Tue, 03 Nov 2026 19:07:19 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/4 2:48:09（日本時間）
+
+サマリーEloのプログラマティックAST APIは、ランタイムタイプや構文検証なしで多くのノードフィールドで任意の値を受け入れます。 各バックエンドのエミネーションステージは、エスケープパスなしで生成されたソースに直接値を補います。 JSON-deserialised入力、プラグイン出力、またはその他の非タイプのソースからASTを出力するインテグレータは、エミネーションされたJavaScript、]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/4 2:48:09（日本時間）<br><br>サマリーEloのプログラマティックAST APIは、ランタイムタイプや構文検証なしで多くのノードフィールドで任意の値を受け入れます。 各バックエンドのエミネーションステージは、エスケープパスなしで生成されたソースに直接値を補います。 JSON-deserialised入力、プラグイン出力、またはその他の非タイプのソースからASTを出力するインテグレータは、エミネーションされたJavaScript、</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@バイトベース/dbhub] DBHub: MySQLとMaria DBコメント解釈は、読み取り専用のSQL検証をバイパスします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-j656-3hf2-fvjc</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-j656-3hf2-fvjc</guid>
+            <pubDate>Mon, 02 Nov 2026 21:06:20 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/3 2:57:51（日本時間）
+
+MySQL と MariaDB のコネクターに読み取り専用モードをバイパスできます。 読み取り専用モードでは、コールアは、データベースがAIエージェントに露出したときに、読み取り専用モードが提供される保護を破る任意の書き込みとDDLステートメント(例えばDROP TABLE)を実行できます。 根本原因 問題は、DBHub の SQL パーサが単一行コメントを処理し、 MySQL と MariaDB]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/3 2:57:51（日本時間）<br><br>MySQL と MariaDB のコネクターに読み取り専用モードをバイパスできます。 読み取り専用モードでは、コールアは、データベースがAIエージェントに露出したときに、読み取り専用モードが提供される保護を破る任意の書き込みとDDLステートメント(例えばDROP TABLE)を実行できます。 根本原因 問題は、DBHub の SQL パーサが単一行コメントを処理し、 MySQL と MariaDB</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@sd-jwt/デコード] SDのJWT JS: 拒否された代わりに、改ざんされた開示をサイレントに落としました | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-f9j6-8p6x-r9j6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-f9j6-8p6x-r9j6</guid>
+            <pubDate>Mon, 02 Nov 2026 21:06:20 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/3 2:54:39（日本時間）
+
+要約SD-JWTプレゼンテーションにおける1つのディスクロージャーが改ざんされるので、そのダイジェストが発行者サインされた_sd配列と一致しなくなった場合、@sd-jwt/decode 0.19.0はプレゼンテーションを拒否しません。 著名なディスクロージャーをサイレントにドロップし、リスクを削減し、成功を報告します。 発行者シグネチャは非接触で有効です。 これは、ダウングレード/省略プリミティブ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/3 2:54:39（日本時間）<br><br>要約SD-JWTプレゼンテーションにおける1つのディスクロージャーが改ざんされるので、そのダイジェストが発行者サインされた_sd配列と一致しなくなった場合、@sd-jwt/decode 0.19.0はプレゼンテーションを拒否しません。 著名なディスクロージャーをサイレントにドロップし、リスクを削減し、成功を報告します。 発行者シグネチャは非接触で有効です。 これは、ダウングレード/省略プリミティブ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf は、ページラベルの取得時に長時間のランタイムが可能 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-42gh-23hr-vphw</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-42gh-23hr-vphw</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:08:55（日本時間）
+
+Impactこの脆弱性を使用する攻撃者は、大規模なランタイムにつながるPDFを作成することができます。 ファイルのページラベルの取得が必要です。 Patchesこれはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4251 から変更を適用することを検討してください。 参考:https://github.com/pypdf/pypdf/se]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:08:55（日本時間）<br><br>Impactこの脆弱性を使用する攻撃者は、大規模なランタイムにつながるPDFを作成することができます。 ファイルのページラベルの取得が必要です。 Patchesこれはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4251 から変更を適用することを検討してください。 参考:https://github.com/pypdf/pypdf/se</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pyasn1] pyasn1は、構築された文字列と無期限のANYデコードでサービスの質的な時間拒否を持っています | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-9m75-vc3g-4x39</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9m75-vc3g-4x39</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:03:51（日本時間）
+
+概要pyasn1 0.6.4 以前では、多くのフラグメントで作られた構築された OCTET ストリングまたは文字文字列をデコードすることで、蓄積された値を繰り返す CPU 時間を繰り返すことができます。 別の無期限の長さ ANY パスには、符号化されたコンポーネントを収集する際に同じ問題があります。 作業は固定サイズの断片の数で大体質的に成長しますが、入力とデコードされた値が線形に成長します。 影]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:03:51（日本時間）<br><br>概要pyasn1 0.6.4 以前では、多くのフラグメントで作られた構築された OCTET ストリングまたは文字文字列をデコードすることで、蓄積された値を繰り返す CPU 時間を繰り返すことができます。 別の無期限の長さ ANY パスには、符号化されたコンポーネントを収集する際に同じ問題があります。 作業は固定サイズの断片の数で大体質的に成長しますが、入力とデコードされた値が線形に成長します。 影</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] 辞書をクローンするとき、pypdf は無限ループが可能 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-mfr5-77xh-9j7h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mfr5-77xh-9j7h</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:12:20（日本時間）
+
+Impactこの脆弱性を使用する攻撃者は、無限ループにつながるPDFを作成することができます。 これは、辞書オブジェクトをクローニング/複製する必要があります。 パッチ これはpypdf==6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4288 から変更を適用することを検討してください。 参考:https://github.com/py-pdf/py]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:12:20（日本時間）<br><br>Impactこの脆弱性を使用する攻撃者は、無限ループにつながるPDFを作成することができます。 これは、辞書オブジェクトをクローニング/複製する必要があります。 パッチ これはpypdf==6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4288 から変更を適用することを検討してください。 参考:https://github.com/py-pdf/py</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge: コールスタック排気によるTLSレコード処理におけるサービス拒否 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-hqq3-7jhf-c5jx</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-hqq3-7jhf-c5jx</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:01:54（日本時間）
+
+処理された forge.tls.createConnection() によって作成されるサマリーコネクションは、レコードごとに 1 つのスタックレベルを再帰的に記録します。 ピアは、ハンドシェイクの前に受け入れられるハートビートレコードなどの数千の小さなレコードの1つのチャンクを送信し、プロセス() 投げる範囲 エラー: ドキュメントされたソケット配線を使用するNode.js プロセスを終了する、]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:01:54（日本時間）<br><br>処理された forge.tls.createConnection() によって作成されるサマリーコネクションは、レコードごとに 1 つのスタックレベルを再帰的に記録します。 ピアは、ハンドシェイクの前に受け入れられるハートビートレコードなどの数千の小さなレコードの1つのチャンクを送信し、プロセス() 投げる範囲 エラー: ドキュメントされたソケット配線を使用するNode.js プロセスを終了する、</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pyasn1] pyasn1 には、スキーマレス BER/CER/DER コンテナのデコードで定性 CPU を使用します。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-fm9c-5rcf-2q5p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-fm9c-5rcf-2q5p</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:03:37（日本時間）
+
+概要アプリケーションがASN.1スキーマなしで攻撃者制御BER、CER、またはDERデータをデコードする場合、多くの異なる長いタグIDを持つコンテナは、定形CPU使用を引き起こす可能性があります。 繰り返された入力はCPUを排出し、サービスの可用性を減らすことができます。 DetailsConstructedPayloadDecoderBase._decodeComponentsSchemales]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:03:37（日本時間）<br><br>概要アプリケーションがASN.1スキーマなしで攻撃者制御BER、CER、またはDERデータをデコードする場合、多くの異なる長いタグIDを持つコンテナは、定形CPU使用を引き起こす可能性があります。 繰り返された入力はCPUを排出し、サービスの可用性を減らすことができます。 DetailsConstructedPayloadDecoderBase._decodeComponentsSchemales</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] フォージ: PKCS#12 MAC 偽造品と定数キー PBE ゼロ反復数 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jc66-7q78-782g</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jc66-7q78-782g</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:05（日本時間）
+
+概要forge.pkcs12.pkcs12FromAsn1()は、入力からゼロ(またはより少ない)のPKCS#12 MACの反復カウントを受け付け、PKCS#12キーの派生関数は、パスワードや塩に依存しない一定のキーを返します。 パスワードがわからない攻撃者は、PKCS#12/PFXファイルを修正し、任意のパスワードで検証するMACを計算することができます。 PKCS#12 PBE暗号化されたプラ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:05（日本時間）<br><br>概要forge.pkcs12.pkcs12FromAsn1()は、入力からゼロ(またはより少ない)のPKCS#12 MACの反復カウントを受け付け、PKCS#12キーの派生関数は、パスワードや塩に依存しない一定のキーを返します。 パスワードがわからない攻撃者は、PKCS#12/PFXファイルを修正し、任意のパスワードで検証するMACを計算することができます。 PKCS#12 PBE暗号化されたプラ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[グロブ] Glob: AbortSignalのキャンセルバイパスは、ポストタイムアウトのファイルシステム横断を可能にします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-3g3m-2fjr-6pw4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3g3m-2fjr-6pw4</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:09:11（日本時間）
+
+要約 13.0.6 では、中絶された非同期の散歩は、エラーを拒否したり、エラーを放出したりしますが、バックグラウンドで再帰的にディレクトリを読み込み続ける。 根本原因は、src/walker.ts の abort ブランチが返さずに cb() を呼び出すことです。 その結果、信号やAbortSignal.timeout() に依存する呼び出し側は、すでにリクエストが拒否された後、ファイルシステム ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:09:11（日本時間）<br><br>要約 13.0.6 では、中絶された非同期の散歩は、エラーを拒否したり、エラーを放出したりしますが、バックグラウンドで再帰的にディレクトリを読み込み続ける。 根本原因は、src/walker.ts の abort ブランチが返さずに cb() を呼び出すことです。 その結果、信号やAbortSignal.timeout() に依存する呼び出し側は、すでにリクエストが拒否された後、ファイルシステム </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@nuxt/vite-builder] は、 Nuxt dev サーバが生成された appSecret を Vite ファイルで割る | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-3xf4-9g3c-4h4w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3xf4-9g3c-4h4w</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:01:12（日本時間）
+
+ImpactSecret が設定されていないとき (NUXT_APP_SECRET、NITRO_APP_SECRET または runtimeConfig.appSecret 経由)、nuxt dev は開発シークレットを生成し、 &lt;buildDir&gt;/app-secret で保存します (デフォルト .nuxt/app-secret)。 ビルドディレクトリは、Nuxt が Vite の serve]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:01:12（日本時間）<br><br>ImpactSecret が設定されていないとき (NUXT_APP_SECRET、NITRO_APP_SECRET または runtimeConfig.appSecret 経由)、nuxt dev は開発シークレットを生成し、 &lt;buildDir&gt;/app-secret で保存します (デフォルト .nuxt/app-secret)。 ビルドディレクトリは、Nuxt が Vite の serve</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pyasn1] pyasn1 は、ビルドされた BIT ストリングデコードで定性 CPU 消費量を持っています | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-2qm8-x737-gmw5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2qm8-x737-gmw5</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:07:04（日本時間）
+
+まとめpyasn1 から 0.6.4 まで、多くのフラグメントを繰り返し構築した BIT ストリングをデコードし、これまでに蓄積した値全体をコピーします。 固定サイズの破片のために、CPU時間は符号化された入力サイズとquadraticallyを育てます。 影響を受けたデコーダに十分な大き攻撃制御ASN.1データを渡すアプリケーションは、デコーダ();デコーダ値の変換やフォーマットは必要ありません]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:07:04（日本時間）<br><br>まとめpyasn1 から 0.6.4 まで、多くのフラグメントを繰り返し構築した BIT ストリングをデコードし、これまでに蓄積した値全体をコピーします。 固定サイズの破片のために、CPU時間は符号化された入力サイズとquadraticallyを育てます。 影響を受けたデコーダに十分な大き攻撃制御ASN.1データを渡すアプリケーションは、デコーダ();デコーダ値の変換やフォーマットは必要ありません</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: 認証Chain() は、CA ストアから同じ件名で信頼できる CA 証明書を削除します。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4487-j8r4-4g2f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4487-j8r4-4g2f</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:14（日本時間）
+
+インフォメーション pki.createCaStore() によって作成された CA ストアが同じサブジェクト名で 2 つ以上の証明書を保持する場合、 pki.verifyCertificateChain() は、発行者として各々を試しながら、ストアからそれらの証明書を永久に削除します。 ピアは、その発行者の名前が、これらの CA 証明書に対する後続の検証を失敗させるために送信することができます。]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:14（日本時間）<br><br>インフォメーション pki.createCaStore() によって作成された CA ストアが同じサブジェクト名で 2 つ以上の証明書を保持する場合、 pki.verifyCertificateChain() は、発行者として各々を試しながら、ストアからそれらの証明書を永久に削除します。 ピアは、その発行者の名前が、これらの CA 証明書に対する後続の検証を失敗させるために送信することができます。</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge: AES-GCM認証バイパスは無効なタグ長オプションで | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5cwg-6vw7-rj6p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5cwg-6vw7-rj6p</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:09（日本時間）
+
+概要AES-GCMモードのフォージ。 cipher は start() に渡された tagLength オプションを検証しません。 0 または 0 (null、false、&#39;&#39;、または &#39;0&#39; など) に変換する値の tagLength では、認証タグは空で、解読します。 Finish() は、指定したタグが空または欠落したときに、任意の ciphertext と追加のデータに対してtrueを返し]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:09（日本時間）<br><br>概要AES-GCMモードのフォージ。 cipher は start() に渡された tagLength オプションを検証しません。 0 または 0 (null、false、&#39;&#39;、または &#39;0&#39; など) に変換する値の tagLength では、認証タグは空で、解読します。 Finish() は、指定したタグが空または欠落したときに、任意の ciphertext と追加のデータに対してtrueを返し</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pyasn1] pyasn1は、バイナリREALデコードにおけるサービスの量的複雑性denialを持っています | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-mm57-4v3p-rchx</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mm57-4v3p-rchx</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:06:46（日本時間）
+
+概要pyasn1 0.6.4 以前では、大規模なマニッサでバイナリエンコードされた ASN.1 REAL をデコードして、マニッサの長さで CPU 時間量を消費することができます。 BER、CER、DERデコーダは、すべての影響を受ける RealPayloadDecoder を使用します。 このデコーダの1つにREAL値を含む攻撃制御ASN.1を渡すとアプリケーションが露出されます。 作業は、de]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:06:46（日本時間）<br><br>概要pyasn1 0.6.4 以前では、大規模なマニッサでバイナリエンコードされた ASN.1 REAL をデコードして、マニッサの長さで CPU 時間量を消費することができます。 BER、CER、DERデコーダは、すべての影響を受ける RealPayloadDecoder を使用します。 このデコーダの1つにREAL値を含む攻撃制御ASN.1を渡すとアプリケーションが露出されます。 作業は、de</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] フォージ:鍛造材の試作汚染。 http 悪意のあるセットクッキーによるクッキー処理 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6wvx-3r32-xmcg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6wvx-3r32-xmcg</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:35（日本時間）
+
+インフォメーション forge.http クライアントは、Cookie 名とパスによって鍵をつけたオブジェクトの Set-Cookie レスポンスヘッダーからクッキーを保存しました。 悪意のあるサーバーは、プロパティをオブジェクトに追加するために、クッキー名 __proto__ を使うことができます。 プロトタイプは、コンストラクタなどの継承された名前を使用してオブジェクトにプロパティを追加し、オ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:35（日本時間）<br><br>インフォメーション forge.http クライアントは、Cookie 名とパスによって鍵をつけたオブジェクトの Set-Cookie レスポンスヘッダーからクッキーを保存しました。 悪意のあるサーバーは、プロパティをオブジェクトに追加するために、クッキー名 __proto__ を使うことができます。 プロトタイプは、コンストラクタなどの継承された名前を使用してオブジェクトにプロパティを追加し、オ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] フォージ: ASN.1 OID 初のアーク tuncation in asn1.oid トダー | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4642-5mcj-2rqw</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4642-5mcj-2rqw</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:40（日本時間）
+
+Summaryasn1.oidToDer() は OID 文字列の最初の 2 つのアークを範囲でチェックしなかったため、OID は 0.42.840.113549.1.1.1 または 4294977127.18.840.113549.1.1.1 は、異なる OID の DER (here rsaEncryption, 1.2.840.113549.1.1.1) としてエンコードされました。 これは]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:40（日本時間）<br><br>Summaryasn1.oidToDer() は OID 文字列の最初の 2 つのアークを範囲でチェックしなかったため、OID は 0.42.840.113549.1.1.1 または 4294977127.18.840.113549.1.1.1 は、異なる OID の DER (here rsaEncryption, 1.2.840.113549.1.1.1) としてエンコードされました。 これは</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf は暗号化された PDF ファイルのための長いランタイム/大きい記憶使用法を可能にしました | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-62m5-6wh8-28x7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-62m5-6wh8-28x7</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:08:24（日本時間）
+
+Impactこの脆弱性を使用する攻撃者は、大規模なランタイム/メモリ使用につながるPDFを作成することができます。 これは、暗号化されたPDFファイルのページ数にアクセスする必要があります。これにより、誤った/Count値が宣言されます。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4270 から変更を適用することを検討]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:08:24（日本時間）<br><br>Impactこの脆弱性を使用する攻撃者は、大規模なランタイム/メモリ使用につながるPDFを作成することができます。 これは、暗号化されたPDFファイルのページ数にアクセスする必要があります。これにより、誤った/Count値が宣言されます。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4270 から変更を適用することを検討</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge: X.509 BasicConstraints は、非推奨の拡張 OIDs 2.5.29.10 および 2.5.29.13 を介して、CertificateChain() でバイパスします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5x38-2vff-x55p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5x38-2vff-x55p</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:01:46（日本時間）
+
+要約ノード・フォージは、非推奨の OID 2.5.29.10 と 2.5.29.13 の証明書の拡張子を基本として解釈し、forge.pki.verifyCertificateChain() は、その名前の最初の拡張子を使用しました。 偽造された非推奨OID拡張子(cA TRUE)を持つ証明書は、本物の基本Constraintsエクステンション(cA FALSE)がCA証明書として受け入れられ、同]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:01:46（日本時間）<br><br>要約ノード・フォージは、非推奨の OID 2.5.29.10 と 2.5.29.13 の証明書の拡張子を基本として解釈し、forge.pki.verifyCertificateChain() は、その名前の最初の拡張子を使用しました。 偽造された非推奨OID拡張子(cA TRUE)を持つ証明書は、本物の基本Constraintsエクステンション(cA FALSE)がCA証明書として受け入れられ、同</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf は、クロスリファレンスストリームを解析する際に大きなメモリ使用が可能 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-x3rh-gjgm-fmqc</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x3rh-gjgm-fmqc</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:07:28（日本時間）
+
+Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 これは、クロスリファレンスストリームでファイルを開く必要があります。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4269 から変更を適用することを検討してください。 参考:https://github.com/pyp]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:07:28（日本時間）<br><br>Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 これは、クロスリファレンスストリームでファイルを開く必要があります。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4269 から変更を適用することを検討してください。 参考:https://github.com/pyp</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf は、トレーラー検索中に標準の xref テーブルで EOF を打つときに無限ループが可能 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-5849-834g-hvw5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5849-834g-hvw5</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:13:16（日本時間）
+
+Impactこの脆弱性を使用する攻撃者は、無限ループにつながるPDFを作成することができます。 トレーラーなしで不完全なファイルを開く必要があります。 Patchesこれはpypdf=6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4289 から変更を適用することを検討してください。 参考文献https://github.com/py-pdf/pypd]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:13:16（日本時間）<br><br>Impactこの脆弱性を使用する攻撃者は、無限ループにつながるPDFを作成することができます。 トレーラーなしで不完全なファイルを開く必要があります。 Patchesこれはpypdf=6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4289 から変更を適用することを検討してください。 参考文献https://github.com/py-pdf/pypd</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[joi] joi: `string().email({multiple: true })` で区画時間分割されたサービスを拒否 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4528-x5fx-h6hg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4528-x5fx-h6hg</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:10:23（日本時間）
+
+サマリーJoi.string().email({multiple: true }) は、空白の長い実行を含む値を分割するために量属性時間がかかります。 Node.jsイベントループを数秒間ブロックするスペースの100 KBの1つで、サービス拒否を引き起こします。 複数のオプションが設定されている場合、メールルールは、区切り文字の両側に空白を外す正規表現でアドレスに値を分割します。:const re]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:10:23（日本時間）<br><br>サマリーJoi.string().email({multiple: true }) は、空白の長い実行を含む値を分割するために量属性時間がかかります。 Node.jsイベントループを数秒間ブロックするスペースの100 KBの1つで、サービス拒否を引き起こします。 複数のオプションが設定されている場合、メールルールは、区切り文字の両側に空白を外す正規表現でアドレスに値を分割します。:const re</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge: サーバーが証明書を送らないとき TLS クライアントのクラッシュ | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-525v-9gp9-w22h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-525v-9gp9-w22h</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:30（日本時間）
+
+インフォメーション TLSクライアントの不足しているサーバー証明書のチェックは、間違ったプロパティを読み込み、実行しません。 悪意のある TLS サーバー、またはサーバーの証明書メッセージを削除したオンパス攻撃者、connection.process() は TypeError をスローし、フォーク TLS クライアントを使用するアプリケーションをクラッシュさせます。 lib/tls.js の n]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:30（日本時間）<br><br>インフォメーション TLSクライアントの不足しているサーバー証明書のチェックは、間違ったプロパティを読み込み、実行しません。 悪意のある TLS サーバー、またはサーバーの証明書メッセージを削除したオンパス攻撃者、connection.process() は TypeError をスローし、フォーク TLS クライアントを使用するアプリケーションをクラッシュさせます。 lib/tls.js の n</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[oauthlib] は、 OAuthLib: トークン付与は、異なるクライアントを認証した後に、認証のために、攻撃者によるクライアント ID を使うことができます。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-7984-qgvg-3j9c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7984-qgvg-3j9c</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 7:58:16（日本時間）
+
+サマリーOAuthlibのトークン付与ハンドラは、付与タイプを承認し、ボディから異なる、攻撃者によるクライアントを要求したスコープを認証することができます。 影響を受けたトークン付与フローでは、Authorate_client(request) はリクエストをセットします。 クライアントは、認証されたクライアントオブジェクトに対して、OAuthlib はリクエストを要求しません。client_id]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 7:58:16（日本時間）<br><br>サマリーOAuthlibのトークン付与ハンドラは、付与タイプを承認し、ボディから異なる、攻撃者によるクライアントを要求したスコープを認証することができます。 影響を受けたトークン付与フローでは、Authorate_client(request) はリクエストをセットします。 クライアントは、認証されたクライアントオブジェクトに対して、OAuthlib はリクエストを要求しません。client_id</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[グラフコール] グラフ QLコアは、中絶された検証でメモリリークを介してサービスの拒否を持っています | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-mpqx-q82w-9x46</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mpqx-q82w-9x46</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 7:58:31（日本時間）
+
+ドキュメントが max_errors (100 をデフォルトで許可するよりもエラーが含まれているため、バリデーションが中止された場合、valid() は単一の module-level ValidationAbortedError インスタンスを上げました。 Python は、再び上げられた例外の既存の __traceback__ にすべての昇給のフレームを付加します。そのため、すべての中絶された]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 7:58:31（日本時間）<br><br>ドキュメントが max_errors (100 をデフォルトで許可するよりもエラーが含まれているため、バリデーションが中止された場合、valid() は単一の module-level ValidationAbortedError インスタンスを上げました。 Python は、再び上げられた例外の既存の __traceback__ にすべての昇給のフレームを付加します。そのため、すべての中絶された</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] フォージ:TLSレコード処理におけるサービスの拒否は、フラグメンドハンドシェイクメッセージで解釈されます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8hrf-8g6f-7xwp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8hrf-8g6f-7xwp</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:00（日本時間）
+
+SummaryA は、forge.tls.createConnection() で生成された接続は、レコード全体に分割されたハンドシェイクメッセージの残りの部分を待っている間に、別のコンテンツタイプのレコードを受け取るときに、process() から未キャッチな TypeError をスローします。 ピアは、認証なしでハンドシェイクの前に18バイトでこれをトリガーできます。これは、文書化されたソケ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:00（日本時間）<br><br>SummaryA は、forge.tls.createConnection() で生成された接続は、レコード全体に分割されたハンドシェイクメッセージの残りの部分を待っている間に、別のコンテンツタイプのレコードを受け取るときに、process() から未キャッチな TypeError をスローします。 ピアは、認証なしでハンドシェイクの前に18バイトでこれをトリガーできます。これは、文書化されたソケ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ライブラリ] Authlib RFC 7592 の例省略登録-アクセストークンクライアントバインディング | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-c73q-w75p-j82v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-c73q-w75p-j82v</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:09:04（日本時間）
+
+説明SummaryRFC 7592(OAuth 2.0 Dynamic Client Registration Management Protocol)は、以前に登録されたクライアントが、登録したクライアントを読み取り、更新、または独自の登録を削除し、登録時にそのクライアントに特別に発行されたregisteration_access_tokenによって認証されます。 このプロトコルのセキュリティモ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:09:04（日本時間）<br><br>説明SummaryRFC 7592(OAuth 2.0 Dynamic Client Registration Management Protocol)は、以前に登録されたクライアントが、登録したクライアントを読み取り、更新、または独自の登録を削除し、登録時にそのクライアントに特別に発行されたregisteration_access_tokenによって認証されます。 このプロトコルのセキュリティモ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@hapi/コンテンツ] @hapi/content:Content-Dispositionパラメータの量的時間解析により、サービス拒否が可能 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8494-f6mr-cjpv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8494-f6mr-cjpv</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:10:13（日本時間）
+
+コンテンツ・ディスポジション・パラメータが = なしで長いトークンを含んだとき、ShrowContent.disposition() は定数時間かかります。 1つのunauthenticated multipartリクエストは、Node.jsイベントループを数分間ブロックできます。 DetailsContent.disposition() は String.prototype.replace():]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:10:13（日本時間）<br><br>コンテンツ・ディスポジション・パラメータが = なしで長いトークンを含んだとき、ShrowContent.disposition() は定数時間かかります。 1つのunauthenticated multipartリクエストは、Node.jsイベントループを数分間ブロックできます。 DetailsContent.disposition() は String.prototype.replace():</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@nuxt/nitro-server] は、 Nuxt: リクエストパスの Dot セグメントは `server/middleware` のパスチェックとサーバーのルートのルールをパスします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-9v7c-q64q-vv33</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9v7c-q64q-vv33</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:00:53（日本時間）
+
+概要 4.6.0 以降、Nuxt は . と ... のセグメントをリクエストパスで解決します。例えば、 %2e などのパーセントエンコードされたフォームを含む、ページをレンダリングする前に。 Nitroのルーティング、Nitroのルートルールとサーバー/ミドルウェアは、これらのセグメントのパスがまだ配置されていることを参照してください。 /%2e/admin のリクエストは、 /admin でペ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:00:53（日本時間）<br><br>概要 4.6.0 以降、Nuxt は . と ... のセグメントをリクエストパスで解決します。例えば、 %2e などのパーセントエンコードされたフォームを含む、ページをレンダリングする前に。 Nitroのルーティング、Nitroのルートルールとサーバー/ミドルウェアは、これらのセグメントのパスがまだ配置されていることを参照してください。 /%2e/admin のリクエストは、 /admin でペ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf は、ページツリーを解析する際に大きなメモリ使用が可能 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-cggf-277g-3q54</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-cggf-277g-3q54</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:13:01（日本時間）
+
+Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 多くの共有リソースでページツリーを解析する必要があります。 パッチ これはpypdf==6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4290.Referenceshttps://github.com/py-pdf/pypdf/security/a]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:13:01（日本時間）<br><br>Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 多くの共有リソースでページツリーを解析する必要があります。 パッチ これはpypdf==6.21.4で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4290.Referenceshttps://github.com/py-pdf/pypdf/security/a</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[openwisp コントローラ] OpenWISP コントローラー CA CRL REST API は、管理された組織へのリクエストをスコープ化しません。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-9gh4-xw24-9xh5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9gh4-xw24-9xh5</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 7:58:10（日本時間）
+
+インフォメーション CA Certificate Revocation List をダウンロードするための認証された REST API エンドポイントは、PKI API の残りの部分で使用される組織スコープのクエリセットを適用せずに、要求された CA を解決します。 CAビュー権限を持つ組織管理者は、別の組織のシーケンシャルCA IDを要求し、CAのCRLを受け取ることができます。 エンドポイント]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 7:58:10（日本時間）<br><br>インフォメーション CA Certificate Revocation List をダウンロードするための認証された REST API エンドポイントは、PKI API の残りの部分で使用される組織スコープのクエリセットを適用せずに、要求された CA を解決します。 CAビュー権限を持つ組織管理者は、別の組織のシーケンシャルCA IDを要求し、CAのCRLを受け取ることができます。 エンドポイント</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge:PEMデコード(pem.decode)におけるサービスの正規表現拒否 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7wch-p9px-956x</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7wch-p9px-956x</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:25（日本時間）
+
+PEM入力を解析するすべてのノード・フォージ・ API が使用するサマリーペム・デコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデ()は、エンド・ラインなしで入力時にポリノミアル・タイムを取る正規表現でカプセル化されたヘッダを解析します。 リモート攻撃者は、Node.jsイベントループを秒単位でブロックし、数10バイトの生成された入力で数分でブロックできます。 lib]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:25（日本時間）<br><br>PEM入力を解析するすべてのノード・フォージ・ API が使用するサマリーペム・デコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデコーデ()は、エンド・ラインなしで入力時にポリノミアル・タイムを取る正規表現でカプセル化されたヘッダを解析します。 リモート攻撃者は、Node.jsイベントループを秒単位でブロックし、数10バイトの生成された入力で数分でブロックできます。 lib</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ノード鍛造] Forge: 負の入力(CVE-2026-33891)で無限ループを介してサービスの拒否 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h6cr-wjv9-3cpp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h6cr-wjv9-3cpp</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:20（日本時間）
+
+Node-forge のバンドルされた jsbn ライブラリのサマリーBigInteger.prototype.modInverse() は、値や modulus が負の場合に無限ループに入ります。例えば、負のパブリック エクスポテントが forge.pki.rsa.generateKeyPair() に渡されます。 これはCVE-2026-33891(GHSA-5m6q-g25r-mvwx)の不]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:20（日本時間）<br><br>Node-forge のバンドルされた jsbn ライブラリのサマリーBigInteger.prototype.modInverse() は、値や modulus が負の場合に無限ループに入ります。例えば、負のパブリック エクスポテントが forge.pki.rsa.generateKeyPair() に渡されます。 これはCVE-2026-33891(GHSA-5m6q-g25r-mvwx)の不</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdfは厳密なモードの例外のための大きい記憶使用法を可能にします | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-4vqv-7265-gm2w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4vqv-7265-gm2w</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:08:39（日本時間）
+
+Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 これは、無効な辞書をロードする必要があります。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4265 から変更を適用することを検討してください。 参考文献https://github.com/py-pdf/pypdf/]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:08:39（日本時間）<br><br>Impactこの脆弱性を使用する攻撃者は、大きなメモリ使用率につながるPDFを作成することができます。 これは、無効な辞書をロードする必要があります。 パッチ これはpypdf==6.21.3で固定されています。 ワークアラウンド まだアップグレードできない場合は、PR #4265 から変更を適用することを検討してください。 参考文献https://github.com/py-pdf/pypdf/</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[minimatch] ミニマッチは、グラブパーツの増幅によるサービスの潜在的な拒否を持っています | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-g3hv-75wg-m249</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-g3hv-75wg-m249</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:09:55（日本時間）
+
+minimatch 10.2.6 には、最適化レベル &gt;= 2.researcher のとき、firstPhasePreProcess() で攻撃者制御パターン増幅が含まれています。 リードダウン(b1nv0id)ファイル: src/index.ts: 690-770src/index.ts: 780-796issue:第一相前処理中に globParts の入力制御成長, 続いて二次相処理. *]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:09:55（日本時間）<br><br>minimatch 10.2.6 には、最適化レベル &gt;= 2.researcher のとき、firstPhasePreProcess() で攻撃者制御パターン増幅が含まれています。 リードダウン(b1nv0id)ファイル: src/index.ts: 690-770src/index.ts: 780-796issue:第一相前処理中に globParts の入力制御成長, 続いて二次相処理. *</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypa/gh-action-pypi-publish] SigstoreがPyPIのTrusted PublishingやDigital Attestationsで使用しているチェーンにおけるCAのpypi-publishアクションの取消 | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-5xjx-3w67-w9x9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5xjx-3w67-w9x9</guid>
+            <pubDate>Fri, 30 Oct 2026 22:05:36 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 5:24:24（日本時間）
+
+インフォメーション pypi-publish アクションバージョン 1.14.2 以前は、 certifi ディストリビューションを通じて emSign ルート CA トラストストア証明書をバンドルするために使用されます。 バンドルと新しいバージョンを使わずに削除したためです。 DetailsThe certifi-provided TLS の信頼ストアは、通常、Trusted パブリッシングやデ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 5:24:24（日本時間）<br><br>インフォメーション pypi-publish アクションバージョン 1.14.2 以前は、 certifi ディストリビューションを通じて emSign ルート CA トラストストア証明書をバンドルするために使用されます。 バンドルと新しいバージョンを使わずに削除したためです。 DetailsThe certifi-provided TLS の信頼ストアは、通常、Trusted パブリッシングやデ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[joserfc] joserfc: ウンバウンドJWE一般JSONの予想 Arrayは、繰り返しRSAプライベートキー復号によるCPU排気(DoS)につながります | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-jpxq-7h8p-2q76</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jpxq-7h8p-2q76</guid>
+            <pubDate>Fri, 30 Oct 2026 17:23:31 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/30 23:54:20（日本時間）
+
+概要joserfc.jwe.decrypt_json()、JWE General JSON Serialization のライブラリのパブリックパーサは、攻撃者制御の受信者の配列を未だに制限し、入力中のすべての受信者に 1 つの完全秘密鍵の復号化操作 (decrypt_cek) を実行します。 RSAキー(例えばRSA-OAEP)で復号化したエンドポイントにJWE General JSON文書を送]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/30 23:54:20（日本時間）<br><br>概要joserfc.jwe.decrypt_json()、JWE General JSON Serialization のライブラリのパブリックパーサは、攻撃者制御の受信者の配列を未だに制限し、入力中のすべての受信者に 1 つの完全秘密鍵の復号化操作 (decrypt_cek) を実行します。 RSAキー(例えばRSA-OAEP)で復号化したエンドポイントにJWE General JSON文書を送</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[joserfc] joserfc: コンパクトなJWSサイズガードは、拒絶前の攻撃者制御セグメントを割り当てます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-9pg5-8c7x-5hfx</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9pg5-8c7x-5hfx</guid>
+            <pubDate>Fri, 30 Oct 2026 17:23:31 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/30 23:54:25（日本時間）
+
+これらを検証する前に、Sharijoserfc 1.7.4 は、コンパクト JWS ヘッダ、ペイロード、およびシグネチャリミットを定義します。 Python bytes.split() は、攻撃者制御のセグメントをコピーします。そのため、現在のガードは、拒否する前に、大まかに1つの完全なペイロードを割り当てます。 Reproduction.venv-research/bin/python 06-p]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/30 23:54:25（日本時間）<br><br>これらを検証する前に、Sharijoserfc 1.7.4 は、コンパクト JWS ヘッダ、ペイロード、およびシグネチャリミットを定義します。 Python bytes.split() は、攻撃者制御のセグメントをコピーします。そのため、現在のガードは、拒否する前に、大まかに1つの完全なペイロードを割り当てます。 Reproduction.venv-research/bin/python 06-p</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[【2回】 ツイスト: 急流の調整による歪んだHTTP/2サーバーのサービスのUnauthenticatedリモート・デニアル | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-vpp8-g58w-m8mp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-vpp8-g58w-m8mp</guid>
+            <pubDate>Thu, 29 Oct 2026 18:06:02 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/30 1:41:06（日本時間）
+
+概要ツイストされた HTTP/2 サーバの制御不能なリソース消費脆弱性 (CWE-400) は、単一の接続を介して、任意の非認証リモートクライアント排気サーバー CPU を 1 つの接続にすることができます。 リクエストヘッダーブロックをEND_で送信するクライアント STREAM は、ストリームを即座にリセットすると、サーバーのルートが作成され、リセットを処理する前にリクエストがレンダリングされ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/30 1:41:06（日本時間）<br><br>概要ツイストされた HTTP/2 サーバの制御不能なリソース消費脆弱性 (CWE-400) は、単一の接続を介して、任意の非認証リモートクライアント排気サーバー CPU を 1 つの接続にすることができます。 リクエストヘッダーブロックをEND_で送信するクライアント STREAM は、ストリームを即座にリセットすると、サーバーのルートが作成され、リセットを処理する前にリクエストがレンダリングされ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[praisonai] PraisonAI が Broken AST Sandbox 経由でリモートコード実行に脆弱 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-26mh-57q7-jfvr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-26mh-57q7-jfvr</guid>
+            <pubDate>Thu, 29 Oct 2026 18:06:02 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/30 1:34:26（日本時間）
+
+概要JobWorkflowExecutor._exec_inline_python() は YAML ワークフロースクリプトからインライン Python 式を安全に実行するように設計されています: AST 検証を使用する手順。 関数は、(a) によって危険な操作をブロックすることを要求します。すべての AST ノードを allowlist にチェックし、(b) は、インポート、exec、eval ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/30 1:34:26（日本時間）<br><br>概要JobWorkflowExecutor._exec_inline_python() は YAML ワークフロースクリプトからインライン Python 式を安全に実行するように設計されています: AST 検証を使用する手順。 関数は、(a) によって危険な操作をブロックすることを要求します。すべての AST ノードを allowlist にチェックし、(b) は、インポート、exec、eval </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+    </channel>
+</rss>

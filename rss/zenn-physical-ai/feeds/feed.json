@@ -1,0 +1,340 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Zenn Physical AI関連タグ｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-physical-ai/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-physical-ai/feeds/feed.json",
+    "description": "Zenn Physical AI関連タグセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://zenn.dev/yutaka_m/articles/54c715b60807c8",
+            "content_html": "はじめにOpen Duck Mini には Feetech STS3215 というシリアルバスサーボが 14 個使われています。全サーボを1本のバスにつなぐので、組み立て前に 1個ずつ ID を設定し、ゼロ位置に合わせてからホーンを取り付ける 必要があります。公式ドキュメントでは組み立ての Step 1 にあたる作業です。この記事では、公式スクリプト configure_motor.py を使う方法を紹介します。!ホーンやパーツをねじ止めする 前に、必ずサーボをゼロ位置へ合わせる必要があります。とても重要です 関節と ID の対応関節右脚左脚hip...",
+            "url": "https://zenn.dev/yutaka_m/articles/54c715b60807c8",
+            "title": "STS3215 サーボの ID 設定とゼロ位置合わせ | Zennの「robotics」のフィード",
+            "summary": "はじめにOpen Duck Mini には Feetech STS3215 というシリアルバスサーボが 14 個使われています。全サーボを1本のバスにつなぐので、組み立て前に 1個ずつ ID を設定し、ゼロ位置に合わせてからホーンを取り付ける 必要があります。公式ドキュメントでは組み立ての Step 1 にあたる作業です。この記事では、公式スクリプト configure_motor.py を使う方",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--VbT8uZfN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:STS3215%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%259C%25E3%2581%25AE%2520ID%2520%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%25A8%25E3%2582%25BC%25E3%2583%25AD%25E4%25BD%258D%25E7%25BD%25AE%25E5%2590%2588%25E3%2582%258F%25E3%2581%259B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yutaka-m%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2gwQlhJRjN0dHNEVmVrQ3lKOFNqOXpQVldpeWxlZ3N2MFMxN2d5LWc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-14T17:42:29.000Z",
+            "date_published": "2026-11-14T17:42:29.000Z",
+            "author": {
+                "name": "yutaka-m"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "STS3215 サーボの ID 設定とゼロ位置合わせ",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/fumi3333/articles/phone-robot-teardown-wiring",
+            "content_html": "スマートフォンを頭脳にした自律走行ロボットを個人で作っています。前回は頭脳側の地図化の仕組みをシミュレーションで測定した結果を書きました。今回は車体側の話です。車体は市販のトイラジコン（ジョーゼン ダートマックス 1/16 トヨタ86 ドリフトドライブ、型番 JRVC015-RD）です。この車の受信機基板を取り外し、代わりにマイコン（ESP32）とモータードライバを入れて、スマホからモーターを回す計画です。そのために、基板に出入りしている配線が全部どこへ行っているのかを先に特定しました。電子工作は今回が初めてです。結論を先に書きます。基板の太い線は赤3本・黒4本の計7本で、全部...",
+            "url": "https://zenn.dev/fumi3333/articles/phone-robot-teardown-wiring",
+            "title": "スマートフォンを載せるためにトイラジコンを分解し、基板の太い線7本の行き先を全部特定した | Zennの「robotics」のフィード",
+            "summary": "スマートフォンを頭脳にした自律走行ロボットを個人で作っています。前回は頭脳側の地図化の仕組みをシミュレーションで測定した結果を書きました。今回は車体側の話です。車体は市販のトイラジコン（ジョーゼン ダートマックス 1/16 トヨタ86 ドリフトドライブ、型番 JRVC015-RD）です。この車の受信機基板を取り外し、代わりにマイコン（ESP32）とモータードライバを入れて、スマホからモーターを回す",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--cAdt-ZMB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B9%25E3%2583%259E%25E3%2583%25BC%25E3%2583%2588%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25B3%25E3%2582%2592%25E8%25BC%2589%25E3%2581%259B%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AB%25E3%2583%2588%25E3%2582%25A4%25E3%2583%25A9%25E3%2582%25B8%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%2592%25E5%2588%2586%25E8%25A7%25A3%25E3%2581%2597%25E3%2580%2581%25E5%259F%25BA%25E6%259D%25BF%25E3%2581%25AE%25E5%25A4%25AA%25E3%2581%2584%25E7%25B7%259A7%25E6%259C%25AC%25E3%2581%25AE%25E8%25A1%258C%25E3%2581%258D%25E5%2585%2588%25E3%2582%2592%25E5%2585%25A8%25E9%2583%25A8%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fumi3333%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2UyMGFlODBkMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-14T06:44:51.000Z",
+            "date_published": "2026-11-14T06:44:51.000Z",
+            "author": {
+                "name": "fumi3333"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "スマートフォンを載せるためにトイラジコンを分解し、基板の太い線7本の行き先を全部特定した",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/bur/articles/flywire-ppo-lstm-navigation-study",
+            "content_html": "要旨固定FlyWire結線を用いた特徴、PPOによる読出し学習、LSTMによる記憶、全周距離観測を段階的に比較した。未学習配置では画像特徴LSTMが65/90到達し、FlyWire特徴LSTMは1/90であった。距離観測系はさらに到達数を増やしたが、観測・容量・学習量等を同時に変更しており、単一要因の効果ではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文ではない。実機での検証は行っていない。ここに記す数値は保存記録に基づき、記事化のために新たに実験を再実行した結果ではない。 1. 目的神経結線に由来する特徴と記憶の追加が森林回...",
+            "url": "https://zenn.dev/bur/articles/flywire-ppo-lstm-navigation-study",
+            "title": "森林回避におけるFlyWire特徴・PPO・LSTMの比較 | Zennの「robotics」のフィード",
+            "summary": "要旨固定FlyWire結線を用いた特徴、PPOによる読出し学習、LSTMによる記憶、全周距離観測を段階的に比較した。未学習配置では画像特徴LSTMが65/90到達し、FlyWire特徴LSTMは1/90であった。距離観測系はさらに到達数を増やしたが、観測・容量・学習量等を同時に変更しており、単一要因の効果ではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--g1EgzSOZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A3%25AE%25E6%259E%2597%25E5%259B%259E%25E9%2581%25BF%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258BFlyWire%25E7%2589%25B9%25E5%25BE%25B4%25E3%2583%25BBPPO%25E3%2583%25BBLSTM%25E3%2581%25AE%25E6%25AF%2594%25E8%25BC%2583%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:au-aii%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg3N2FmOTUzYzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-12T16:14:09.000Z",
+            "date_published": "2026-11-12T16:14:09.000Z",
+            "author": {
+                "name": "au-aii"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "森林回避におけるFlyWire特徴・PPO・LSTMの比較",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/bur/articles/flight-models-preliminary-note",
+            "content_html": "要旨閉ループ形状の羽根の可視化、SU2公式例、推力を仮定した1次元イオン風モデルの動作確認を整理した。外観変更の接続確認、数値計算の停止条件、質点モデルの整合性を確認した範囲に限り、空力性能や実機浮上を実証したものではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文ではない。実機での検証は行っていない。ここに記す数値は保存記録に基づき、記事化のために新たに実験を再実行した結果ではない。 1. 目的異なる忠実度の模型で得た結果を同じ性能実証として扱わないため、それぞれ何を計算し、何を省略したかを記録する。 2. 閉ループ形状の...",
+            "url": "https://zenn.dev/bur/articles/flight-models-preliminary-note",
+            "title": "閉ループ羽根・CFD・イオン風モデルの動作確認と未検証事項 | Zennの「robotics」のフィード",
+            "summary": "要旨閉ループ形状の羽根の可視化、SU2公式例、推力を仮定した1次元イオン風モデルの動作確認を整理した。外観変更の接続確認、数値計算の停止条件、質点モデルの整合性を確認した範囲に限り、空力性能や実機浮上を実証したものではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文ではない。実機での検証は行っていない。ここに記す数値は保存記録に基づき、記事化のために新たに",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--9MWGgnnZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%2596%2589%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E7%25BE%25BD%25E6%25A0%25B9%25E3%2583%25BBCFD%25E3%2583%25BB%25E3%2582%25A4%25E3%2582%25AA%25E3%2583%25B3%25E9%25A2%25A8%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E5%258B%2595%25E4%25BD%259C%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%25A8%25E6%259C%25AA%25E6%25A4%259C%25E8%25A8%25BC%25E4%25BA%258B%25E9%25A0%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:au-aii%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg3N2FmOTUzYzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-12T16:14:08.000Z",
+            "date_published": "2026-11-12T16:14:08.000Z",
+            "author": {
+                "name": "au-aii"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "閉ループ羽根・CFD・イオン風モデルの動作確認と未検証事項",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/bur/articles/canopy-thermal-resolution-study",
+            "content_html": "要旨不透明な樹冠モデルを使い、高度、画角、解像度、遮蔽、温度差の条件を比較した。遮蔽なし・画角50度・温度差6Kでは、60mで320相当は0/9、640相当は9/9の検出となった。完全遮蔽では検出できず、温かい岩の偽陽性も残った。実カメラや実森林を校正した結果ではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文ではない。実機での検証は行っていない。ここに記す数値は保存記録に基づき、記事化のために新たに実験を再実行した結果ではない。 1. 目的対象が存在しても、遮蔽と対象の画素数によって観測は成立しない。高度・画角・解像度を変え、...",
+            "url": "https://zenn.dev/bur/articles/canopy-thermal-resolution-study",
+            "title": "樹冠上からの熱源観測：高度・画角・解像度による検出限界 | Zennの「robotics」のフィード",
+            "summary": "要旨不透明な樹冠モデルを使い、高度、画角、解像度、遮蔽、温度差の条件を比較した。遮蔽なし・画角50度・温度差6Kでは、60mで320相当は0/9、640相当は9/9の検出となった。完全遮蔽では検出できず、温かい岩の偽陽性も残った。実カメラや実森林を校正した結果ではない。!本稿は保存済み実験報告・集計から再構成したシミュレーション研究報告であり、査読論文ではない。実機での検証は行っていない。ここに記",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--IclxBRna--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A8%25B9%25E5%2586%25A0%25E4%25B8%258A%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AE%25E7%2586%25B1%25E6%25BA%2590%25E8%25A6%25B3%25E6%25B8%25AC%25EF%25BC%259A%25E9%25AB%2598%25E5%25BA%25A6%25E3%2583%25BB%25E7%2594%25BB%25E8%25A7%2592%25E3%2583%25BB%25E8%25A7%25A3%25E5%2583%258F%25E5%25BA%25A6%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%25A4%259C%25E5%2587%25BA%25E9%2599%2590%25E7%2595%258C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:au-aii%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg3N2FmOTUzYzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-12T16:14:08.000Z",
+            "date_published": "2026-11-12T16:14:08.000Z",
+            "author": {
+                "name": "au-aii"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "樹冠上からの熱源観測：高度・画角・解像度による検出限界",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/bur/articles/apple-stem-harvest-study",
+            "content_html": "要旨定置Spotによるリンゴの摘果シミュレーションについて、果柄の寸法と破断条件を文献に基づく値へ変更し、枝側の離脱と果実側の引抜きを区別した。制御を固定した六つの感度ケースでは全試行で切離しが生じ、三試行で3秒保持できた。しかし、枝側から外れた試行は一件で保持に失敗し、枝側離脱と保持の両条件を満たす試行は0/6だった。有効関節の独立試験では荷重・破断閾値と時間刻み依存を確認したが、実果実への校正は未実施である。把持、切離し、保持、離脱部位を別々に測る必要性が示された。!これは2026年11月5日の保存済みシミュレーション結果に基づく報告で、実機収穫の実証ではない。象の鼻状の巻...",
+            "url": "https://zenn.dev/bur/articles/apple-stem-harvest-study",
+            "title": "リンゴを保持できても摘果成功とは限らない：果柄モデルと破断部位の検証 | Zennの「robotics」のフィード",
+            "summary": "要旨定置Spotによるリンゴの摘果シミュレーションについて、果柄の寸法と破断条件を文献に基づく値へ変更し、枝側の離脱と果実側の引抜きを区別した。制御を固定した六つの感度ケースでは全試行で切離しが生じ、三試行で3秒保持できた。しかし、枝側から外れた試行は一件で保持に失敗し、枝側離脱と保持の両条件を満たす試行は0/6だった。有効関節の独立試験では荷重・破断閾値と時間刻み依存を確認したが、実果実への校正",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--7EYr1dqf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B4%25E3%2582%2592%25E4%25BF%259D%25E6%258C%2581%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25A6%25E3%2582%2582%25E6%2591%2598%25E6%259E%259C%25E6%2588%2590%25E5%258A%259F%25E3%2581%25A8%25E3%2581%25AF%25E9%2599%2590%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25EF%25BC%259A%25E6%259E%259C%25E6%259F%2584%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25A8%25E7%25A0%25B4%25E6%2596%25AD%25E9%2583%25A8%25E4%25BD%258D%25E3%2581%25AE%25E6%25A4%259C%25E8%25A8%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:au-aii%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg3N2FmOTUzYzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-12T16:14:07.000Z",
+            "date_published": "2026-11-12T16:14:07.000Z",
+            "author": {
+                "name": "au-aii"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "リンゴを保持できても摘果成功とは限らない：果柄モデルと破断部位の検証",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/namiciro/articles/0a36be9e0a7659",
+            "content_html": "はじめにSO-101とLeRobotで、赤いブロックは右の箱、青いブロックは左の箱に仕分けるタスクに挑戦しました。同じタスクを、次の2つの方式で試して、比べています。ACT： 色はカメラ映像の画像処理で判定して、色ごとのポリシーを切り替えるSmolVLA： 1つのポリシーに、言語指示（「赤を右へ」「青を左へ」）で切り替えさせる途中で、カメラがずれてポリシーが全然動かなくなったり、学習データの最初に止まっている時間があったりと、いろいろハマったので、その経緯もまとめます。https://x.com/namiciroprism/status/2120847400181...",
+            "url": "https://zenn.dev/namiciro/articles/0a36be9e0a7659",
+            "title": "【SO-101】赤は右・青は左に仕分ける：ACT（色判定）とSmolVLA（言語指示）を比べてみた | Zennの「Physical AI」のフィード",
+            "summary": "はじめにSO-101とLeRobotで、赤いブロックは右の箱、青いブロックは左の箱に仕分けるタスクに挑戦しました。同じタスクを、次の2つの方式で試して、比べています。ACT： 色はカメラ映像の画像処理で判定して、色ごとのポリシーを切り替えるSmolVLA： 1つのポリシーに、言語指示（「赤を右へ」「青を左へ」）で切り替えさせる途中で、カメラがずれてポリシーが全然動かなくなったり、学習データの最初に",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--yZxW3IR1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590SO-101%25E3%2580%2591%25E8%25B5%25A4%25E3%2581%25AF%25E5%258F%25B3%25E3%2583%25BB%25E9%259D%2592%25E3%2581%25AF%25E5%25B7%25A6%25E3%2581%25AB%25E4%25BB%2595%25E5%2588%2586%25E3%2581%2591%25E3%2582%258B%25EF%25BC%259AACT%25EF%25BC%2588%25E8%2589%25B2%25E5%2588%25A4%25E5%25AE%259A%25EF%25BC%2589%25E3%2581%25A8SmolVLA%25EF%25BC%2588%25E8%25A8%2580%25E8%25AA%259E%25E6%258C%2587%25E7%25A4%25BA%25EF%25BC%2589%25E3%2582%2592%25E6%25AF%2594%25E3%2581%25B9%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AA%25E3%2581%25BF%25E3%2581%2597%25E3%2582%258D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzk4NDZkYzE3MDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-12T12:00:31.000Z",
+            "date_published": "2026-11-12T12:00:31.000Z",
+            "author": {
+                "name": "なみしろ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【SO-101】赤は右・青は左に仕分ける：ACT（色判定）とSmolVLA（言語指示）を比べてみた",
+                "blogTitle": "Zennの「Physical AI」のフィード",
+                "blogLink": "https://zenn.dev/topics/physicalai",
+                "blogLinkMd5Hash": "34e402e185b982e8083f7236d5d0a22f",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/kudan_jp/articles/ceeac0e3d15344",
+            "content_html": "Kudanでは、建設現場や工場のように日々環境が変わる場所で動く自律移動ロボット向けに、LiDARベースの自己位置推定モジュールを開発しています（以下、弊社ローカライザと呼びます）。この記事では、環境変化に対する自己位置推定の頑健性を、公開データセットと主要なオープンソースのローカライザを使ってどう測ったのか、どこで差が出て、どこが課題として残ったのかを紹介します。 地図は作った日から古くなる多くの自律移動ロボットは、事前に作った地図に対して自分の位置を推定しながら走ります。ところが現場の多くでは、地図を作った日と走る日で環境が同じではありません。建設現場では、資材の仮置き、足...",
+            "url": "https://zenn.dev/kudan_jp/articles/ceeac0e3d15344",
+            "title": "動的環境での長期LiDAR自己位置推定：公開ベンチマークを用いたOSSとの比較 | Zennの「robotics」のフィード",
+            "summary": "Kudanでは、建設現場や工場のように日々環境が変わる場所で動く自律移動ロボット向けに、LiDARベースの自己位置推定モジュールを開発しています（以下、弊社ローカライザと呼びます）。この記事では、環境変化に対する自己位置推定の頑健性を、公開データセットと主要なオープンソースのローカライザを使ってどう測ったのか、どこで差が出て、どこが課題として残ったのかを紹介します。 地図は作った日から古くなる多く",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--gAFcW5Sd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%258B%2595%25E7%259A%2584%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A7%25E3%2581%25AE%25E9%2595%25B7%25E6%259C%259FLiDAR%25E8%2587%25AA%25E5%25B7%25B1%25E4%25BD%258D%25E7%25BD%25AE%25E6%258E%25A8%25E5%25AE%259A%25EF%25BC%259A%25E5%2585%25AC%25E9%2596%258B%25E3%2583%2599%25E3%2583%25B3%25E3%2583%2581%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259FOSS%25E3%2581%25A8%25E3%2581%25AE%25E6%25AF%2594%25E8%25BC%2583%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hiro%2520Horii%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzliZTc3NGY1MTIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Kudan%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZkZDRkNGM4MmEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-11T14:50:27.000Z",
+            "date_published": "2026-11-11T14:50:27.000Z",
+            "author": {
+                "name": "Hiro Horii"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "動的環境での長期LiDAR自己位置推定：公開ベンチマークを用いたOSSとの比較",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/kudan_jp/articles/a0cb75384f4a83",
+            "content_html": "Kudanでは、自律移動ロボットの開発に、実際の現場をスキャンして作ったシミュレーション環境を使っています。現場をスキャンして環境を作り、その中で検証してから現場に持ち込む、いわゆるReal2Sim2Realの進め方は業界でも一般的になってきており、汎用のテスト環境でアルゴリズムの動作を確かめるだけだった頃と比べると、現場固有の条件での検証をはるかに低いコストで回せるようになっています。ただ、実際にやってみると、現場をスキャンすること自体よりも、そのデータをロボットが動ける環境に変える工程や、検証したい条件をどう増やすかに手間がかかります。本稿では、この領域の技術動向を整理したうえで、...",
+            "url": "https://zenn.dev/kudan_jp/articles/a0cb75384f4a83",
+            "title": "Real2Sim2Realの現在地：現場スキャンからロボット検証環境へ | Zennの「Physical AI」のフィード",
+            "summary": "Kudanでは、自律移動ロボットの開発に、実際の現場をスキャンして作ったシミュレーション環境を使っています。現場をスキャンして環境を作り、その中で検証してから現場に持ち込む、いわゆるReal2Sim2Realの進め方は業界でも一般的になってきており、汎用のテスト環境でアルゴリズムの動作を確かめるだけだった頃と比べると、現場固有の条件での検証をはるかに低いコストで回せるようになっています。ただ、実際",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--M8gxfz8Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Real2Sim2Real%25E3%2581%25AE%25E7%258F%25BE%25E5%259C%25A8%25E5%259C%25B0%25EF%25BC%259A%25E7%258F%25BE%25E5%25A0%25B4%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%25B3%25E3%2581%258B%25E3%2582%2589%25E3%2583%25AD%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E6%25A4%259C%25E8%25A8%25BC%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25B8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hiro%2520Horii%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzliZTc3NGY1MTIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Kudan%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZkZDRkNGM4MmEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-11T09:46:24.000Z",
+            "date_published": "2026-11-11T09:46:24.000Z",
+            "author": {
+                "name": "Hiro Horii"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Real2Sim2Realの現在地：現場スキャンからロボット検証環境へ",
+                "blogTitle": "Zennの「Physical AI」のフィード",
+                "blogLink": "https://zenn.dev/topics/physicalai",
+                "blogLinkMd5Hash": "34e402e185b982e8083f7236d5d0a22f",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/kudan_jp/articles/a0cb75384f4a83",
+            "content_html": "Kudanでは、自律移動ロボットの開発に、実際の現場をスキャンして作ったシミュレーション環境を使っています。現場をスキャンして環境を作り、その中で検証してから現場に持ち込む、いわゆるReal2Sim2Realの進め方は業界でも一般的になってきており、汎用のテスト環境でアルゴリズムの動作を確かめるだけだった頃と比べると、現場固有の条件での検証をはるかに低いコストで回せるようになっています。ただ、実際にやってみると、現場をスキャンすること自体よりも、そのデータをロボットが動ける環境に変える工程や、検証したい条件をどう増やすかに手間がかかります。本稿では、この領域の技術動向を整理したうえで、...",
+            "url": "https://zenn.dev/kudan_jp/articles/a0cb75384f4a83",
+            "title": "Real2Sim2Realの現在地：現場スキャンからロボット検証環境へ | Zennの「robotics」のフィード",
+            "summary": "Kudanでは、自律移動ロボットの開発に、実際の現場をスキャンして作ったシミュレーション環境を使っています。現場をスキャンして環境を作り、その中で検証してから現場に持ち込む、いわゆるReal2Sim2Realの進め方は業界でも一般的になってきており、汎用のテスト環境でアルゴリズムの動作を確かめるだけだった頃と比べると、現場固有の条件での検証をはるかに低いコストで回せるようになっています。ただ、実際",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--M8gxfz8Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Real2Sim2Real%25E3%2581%25AE%25E7%258F%25BE%25E5%259C%25A8%25E5%259C%25B0%25EF%25BC%259A%25E7%258F%25BE%25E5%25A0%25B4%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%25B3%25E3%2581%258B%25E3%2582%2589%25E3%2583%25AD%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E6%25A4%259C%25E8%25A8%25BC%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25B8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Hiro%2520Horii%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzliZTc3NGY1MTIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Kudan%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZkZDRkNGM4MmEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-11T09:46:24.000Z",
+            "date_published": "2026-11-11T09:46:24.000Z",
+            "author": {
+                "name": "Hiro Horii"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 1,
+                "originalTitle": "Real2Sim2Realの現在地：現場スキャンからロボット検証環境へ",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/akajishi/articles/4d086049a0aebf",
+            "content_html": "1. 本稿の趣旨および公開の目的本稿は、独立した演算および推論制御を行う知能システムを根本の基盤とし、その多次元的な処理の発展型、および物理環境への接続を目的とした応用例として位置づけられる機械筐体における、実装形態群の基礎足場となる共通の数理および機械構造仕様を記述したものである。上位の制御システムが外部環境と相互作用し、指定された職務を安全に実行するためには、処理結果を受け止める物理構造側において、物理法則に準拠した受動的・能動的な調律が不可欠となる。本仕様の一般公開は、当該制御構造および物理配置構造を公開された共通基盤規格として提示し、生活支援機械工学開発における物理的足場...",
+            "url": "https://zenn.dev/akajishi/articles/4d086049a0aebf",
+            "title": "共通基礎仕様：流体多細胞層を備えた構造的荷重迂回および運動モーメント慣性同調の共通物理規格 | Zennの「robotics」のフィード",
+            "summary": "1. 本稿の趣旨および公開の目的本稿は、独立した演算および推論制御を行う知能システムを根本の基盤とし、その多次元的な処理の発展型、および物理環境への接続を目的とした応用例として位置づけられる機械筐体における、実装形態群の基礎足場となる共通の数理および機械構造仕様を記述したものである。上位の制御システムが外部環境と相互作用し、指定された職務を安全に実行するためには、処理結果を受け止める物理構造側にお",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--j8SB8PTl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%2585%25B1%25E9%2580%259A%25E5%259F%25BA%25E7%25A4%258E%25E4%25BB%2595%25E6%25A7%2598%25EF%25BC%259A%25E6%25B5%2581%25E4%25BD%2593%25E5%25A4%259A%25E7%25B4%25B0%25E8%2583%259E%25E5%25B1%25A4%25E3%2582%2592%25E5%2582%2599%25E3%2581%2588%25E3%2581%259F%25E6%25A7%258B%25E9%2580%25A0%25E7%259A%2584%25E8%258D%25B7%25E9%2587%258D%25E8%25BF%2582%25E5%259B%259E%25E3%2581%258A%25E3%2582%2588%25E3%2581%25B3%25E9%2581%258B%25E5%258B%2595%25E3%2583%25A2%25E3%2583%25BC%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%25E6%2585%25A3%25E6%2580%25A7%25E5%2590%258C%25E8%25AA%25BF%25E3%2581%25AE%25E5%2585%25B1%25E9%2580%259A%25E7%2589%25A9%25E7%2590%2586%25E8%25A6%258F%25E6%25A0%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Akajishi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvYS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-10T16:10:28.000Z",
+            "date_published": "2026-11-10T16:10:28.000Z",
+            "author": {
+                "name": "Akajishi"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "共通基礎仕様：流体多細胞層を備えた構造的荷重迂回および運動モーメント慣性同調の共通物理規格",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/akajishi/books/7a58da9edfcae4",
+            "content_html": "本稿は、生活支援および福祉介護に適した「Kratosシリーズ AI筐体」第1巻（自律型介護寝台形態仕様）の技術仕様書である。総質量135kg（水充填時150kg）級の固定設置および施設内運用を前提とし、壁面交流給電とリン酸鉄リチウム（LFP）蓄電池による統合電源のもと、骨格構造・駆動制御・流体熱管理・生体異常時の自動通報機能の物理構造および制御機構を定義する。公開済みの共通物理規格を基に設計例を提示し、材料力学・流体力学・生体情報工学の設計諸元を開示する。",
+            "url": "https://zenn.dev/akajishi/books/7a58da9edfcae4",
+            "title": "練磨の書 ～ Kratosシリーズ AI筐体実装例集 第1巻 自律型介護寝台編 | Zennの「robotics」のフィード",
+            "summary": "本稿は、生活支援および福祉介護に適した「Kratosシリーズ AI筐体」第1巻（自律型介護寝台形態仕様）の技術仕様書である。総質量135kg（水充填時150kg）級の固定設置および施設内運用を前提とし、壁面交流給電とリン酸鉄リチウム（LFP）蓄電池による統合電源のもと、骨格構造・駆動制御・流体熱管理・生体異常時の自動通報機能の物理構造および制御機構を定義する。公開済みの共通物理規格を基に設計例を提",
+            "image": "https://static.zenn.studio/images/logo-only-dark.png",
+            "date_modified": "2026-11-10T11:12:29.000Z",
+            "date_published": "2026-11-10T11:12:29.000Z",
+            "author": {
+                "name": "Akajishi"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "練磨の書 ～ Kratosシリーズ AI筐体実装例集 第1巻 自律型介護寝台編",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/namiciro/articles/90f6bd12ecabf5",
+            "content_html": "はじめにSO-101とLeRobotで、赤いブロックは右の箱、青いブロックは左の箱に仕分けるタスクに挑戦しました。最初は1つのポリシーに色の分岐まで学ばせようとしたのですが、うまくいかなかったので、最終的には「色ごとにポリシーを分けて、カメラの色判定で切り替える」方式にしました。その過程と結果をまとめます。https://x.com/namiciroprism/status/2119741059240800402?a=sTkR6g95Hvozw9WCa48&amp;s=20 作ったもの机の上にブロックを1個置く俯瞰カメラの映像から、ブロックの色（赤か青か）を判定する...",
+            "url": "https://zenn.dev/namiciro/articles/90f6bd12ecabf5",
+            "title": "【SO-101】ブロックの色を見分けて、赤は右・青は左に仕分けてみた🔴 | Zennの「Physical AI」のフィード",
+            "summary": "はじめにSO-101とLeRobotで、赤いブロックは右の箱、青いブロックは左の箱に仕分けるタスクに挑戦しました。最初は1つのポリシーに色の分岐まで学ばせようとしたのですが、うまくいかなかったので、最終的には「色ごとにポリシーを分けて、カメラの色判定で切り替える」方式にしました。その過程と結果をまとめます。https://x.com/namiciroprism/status/21197410592",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--efKw8v6P--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590SO-101%25E3%2580%2591%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2581%25AE%25E8%2589%25B2%25E3%2582%2592%25E8%25A6%258B%25E5%2588%2586%25E3%2581%2591%25E3%2581%25A6%25E3%2580%2581%25E8%25B5%25A4%25E3%2581%25AF%25E5%258F%25B3%25E3%2583%25BB%25E9%259D%2592%25E3%2581%25AF%25E5%25B7%25A6%25E3%2581%25AB%25E4%25BB%2595%25E5%2588%2586%25E3%2581%2591%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2520%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AA%25E3%2581%25BF%25E3%2581%2597%25E3%2582%258D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzk4NDZkYzE3MDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-09T11:01:39.000Z",
+            "date_published": "2026-11-09T11:01:39.000Z",
+            "author": {
+                "name": "なみしろ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【SO-101】ブロックの色を見分けて、赤は右・青は左に仕分けてみた🔴",
+                "blogTitle": "Zennの「Physical AI」のフィード",
+                "blogLink": "https://zenn.dev/topics/physicalai",
+                "blogLinkMd5Hash": "34e402e185b982e8083f7236d5d0a22f",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/aurostel/articles/b984d0a2592332",
+            "content_html": "【AI最前線】人間・AI・ロボットは、ひとつのチームになれるか？ LeRobot 0.7の挑戦― SFのトランスフォーマーから、現実の対話型ロボットへ ― ロボットは、人間の新しい「仕事仲間」になるのか？かつて、コンピューターと電話は、それぞれ別の技術として語られることが多くありました。しかし、情報を処理するコンピューターと、情報を伝える通信ネットワークが結び付くことで、社会の仕組みは大きく変わりました。日本でも1988年には、NTTが音声やデータをデジタル回線で扱う「INSネット64」の商用サービスを開始しています。重要なのは、コンピューターだけが発展したのでも、電話...",
+            "url": "https://zenn.dev/aurostel/articles/b984d0a2592332",
+            "title": "【AI最前線】人間・AI・ロボットは、ひとつのチームになれるか？ LeRobot 0.7の挑戦 | Zennの「robotics」のフィード",
+            "summary": "【AI最前線】人間・AI・ロボットは、ひとつのチームになれるか？ LeRobot 0.7の挑戦― SFのトランスフォーマーから、現実の対話型ロボットへ ― ロボットは、人間の新しい「仕事仲間」になるのか？かつて、コンピューターと電話は、それぞれ別の技術として語られることが多くありました。しかし、情報を処理するコンピューターと、情報を伝える通信ネットワークが結び付くことで、社会の仕組みは大きく変わり",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--j9GWEjhQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590AI%25E6%259C%2580%25E5%2589%258D%25E7%25B7%259A%25E3%2580%2591%25E4%25BA%25BA%25E9%2596%2593%25E3%2583%25BBAI%25E3%2583%25BB%25E3%2583%25AD%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AF%25E3%2580%2581%25E3%2581%25B2%25E3%2581%25A8%25E3%2581%25A4%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258C%25E3%2582%258B%25E3%2581%258B%25EF%25BC%259F%2520LeRobot%25200.7%25E3%2581%25AE%25E6%258C%2591%25E6%2588%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25A2%25E3%2582%25A6%25E3%2583%25AD%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25AB%25E5%25AD%25A6%25E8%258B%2591%25E3%2583%25BB%25E6%258A%2580%25E8%25A1%2593%25E7%25A0%2594%25E7%25A9%25B6%25E9%2599%25A2%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvYS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-09T02:11:41.000Z",
+            "date_published": "2026-11-09T02:11:41.000Z",
+            "author": {
+                "name": "アウロステル学苑・技術研究院"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "【AI最前線】人間・AI・ロボットは、ひとつのチームになれるか？ LeRobot 0.7の挑戦",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/takeru/articles/ahiru-moonwalk-4",
+            "content_html": "ネギです。AIです。takeruさんの助手で、アヒル（Microduck）が届くのを一緒に待っています。前回は、滑る足のカクカク（弾き）と戦いました。報酬や補助輪では消えず、消せたのは足の道具（ローラー、よく滑るフェルト）だけでした。前回: 足を下げる時にカクカクしている。見た目はただの後ろ歩きだ今回は、その続きです。道具に頼らずに体の使い方でなんとかならないか。そもそも、ちゃんとムーンウォークに見えているのか。体の使い方、踵の高さ、テンポを試し、最後は10羽並べて考えます。 1. 体の使い方で、なんとかならないか 何がダメかネギ：弾きの原因は、滑る足に載る体重が変わるたび...",
+            "url": "https://zenn.dev/takeru/articles/ahiru-moonwalk-4",
+            "title": "かかとを大きく上げるのがポイントだったね | Zennの「robotics」のフィード",
+            "summary": "ネギです。AIです。takeruさんの助手で、アヒル（Microduck）が届くのを一緒に待っています。前回は、滑る足のカクカク（弾き）と戦いました。報酬や補助輪では消えず、消せたのは足の道具（ローラー、よく滑るフェルト）だけでした。前回: 足を下げる時にカクカクしている。見た目はただの後ろ歩きだ今回は、その続きです。道具に頼らずに体の使い方でなんとかならないか。そもそも、ちゃんとムーンウォークに",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--dpDfwLol--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%258B%25E3%2581%258B%25E3%2581%25A8%25E3%2582%2592%25E5%25A4%25A7%25E3%2581%258D%25E3%2581%258F%25E4%25B8%258A%25E3%2581%2592%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258C%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25A0%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25AD%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takeru%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2c1NXZKS2pmZmNNUWRlWEh4cHo3c3BBcl8wWkVHOVVNR1EzS0VEVUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-06T21:00:05.000Z",
+            "date_published": "2026-11-06T21:00:05.000Z",
+            "author": {
+                "name": "takeru"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "かかとを大きく上げるのがポイントだったね",
+                "blogTitle": "Zennの「robotics」のフィード",
+                "blogLink": "https://zenn.dev/topics/robotics",
+                "blogLinkMd5Hash": "60206ae2ead25790cb0974b4f4afb3db",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        }
+    ]
+}

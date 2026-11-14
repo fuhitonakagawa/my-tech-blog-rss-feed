@@ -1,0 +1,903 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "GitHub Security Advisory｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/feed.json",
+    "description": "GitHub Security Advisoryセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://github.com/advisories/GHSA-89p3-fcch-88ph",
+            "content_html": "SummaryThe public CCG lexicon parser nltk.ccg.lexicon.fromstring parses caller-influenced lexicon text with two pure-Python loops whose cost is quadratic in the input width. A service that parses an untrusted CCG lexicon string can be driven into tens of seconds of single-threaded CPU by a few-megabyte input, starving the request worker. No authentication or user interaction is required.Root CausematchBrackets consumes a bracket body one character at a time with inside = inside + rest[0]; rest =",
+            "url": "https://github.com/advisories/GHSA-89p3-fcch-88ph",
+            "title": "[nltk] NLTK: Quadratic-time CPU denial of service in CCG lexicon parser (fromstring) on wide bracket bodies and operator chains | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryThe public CCG lexicon parser nltk.ccg.lexicon.fromstring parses caller-influenced lexicon text with two pure-Python loops whose cost is quadratic in the input width. A service that parses an u",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-14T00:08:50.000Z",
+            "date_published": "2026-11-14T00:08:50.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] NLTK: Quadratic-time CPU denial of service in CCG lexicon parser (fromstring) on wide bracket bodies and operator chains",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-r53h-rw34-8h97",
+            "content_html": "SummaryTree.chomsky_normal_form() binarizes a parse tree and defaults to right factoring. For a node with N children the right-factor branch repeatedly removes the first element of a working list with list.pop(0), which shifts all remaining elements each time, so binarizing one wide node costs O(N^2). An application that converts an attacker-supplied treebank tree to Chomsky Normal Form can be forced into tens of seconds of single-threaded CPU by one wide flat tree. No authentication or user int",
+            "url": "https://github.com/advisories/GHSA-r53h-rw34-8h97",
+            "title": "[nltk] NLTK: Quadratic-time CPU denial of service in Tree.chomsky_normal_form right-factor binarization via list.pop(0) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryTree.chomsky_normal_form() binarizes a parse tree and defaults to right factoring. For a node with N children the right-factor branch repeatedly removes the first element of a working list with",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-14T00:07:59.000Z",
+            "date_published": "2026-11-14T00:07:59.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] NLTK: Quadratic-time CPU denial of service in Tree.chomsky_normal_form right-factor binarization via list.pop(0)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-v8f3-6phw-6mh9",
+            "content_html": "SummaryConllCorpusReader.srl_instances() builds semantic-role-labeling instances from a CoNLL corpus block. For a sentence block with P predicates and P span columns, the instance builder rescans every span column (and every span within it) once per predicate while searching for each predicate's head, giving O(P^2 * R) work. A single well-formed block that places the head span in the last column forces the full scan on every predicate, so an application that reads an attacker-supplied CoNLL SRL ",
+            "url": "https://github.com/advisories/GHSA-v8f3-6phw-6mh9",
+            "title": "[nltk] NLTK: Quadratic-time CPU denial of service in ConllCorpusReader SRL instance builder via nested span rescan | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryConllCorpusReader.srl_instances() builds semantic-role-labeling instances from a CoNLL corpus block. For a sentence block with P predicates and P span columns, the instance builder rescans ever",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-14T00:05:57.000Z",
+            "date_published": "2026-11-14T00:05:57.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] NLTK: Quadratic-time CPU denial of service in ConllCorpusReader SRL instance builder via nested span rescan",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-fg9w-wfp5-j933",
+            "content_html": "SummaryBllipParser in nltk/parse/bllip.py hands caller-supplied filesystem paths to the native bllipparser C extension without routing them through NLTK's pathsec validation. The constructor parameters parser_model, reranker_features, and reranker_weights, and the alternative from_unified_model_dir() entry point, flow directly to the C extension's load_parser_model() and load_reranker_model() calls, which open and read the given path at the OS level. Any application that passes an attacker-influ",
+            "url": "https://github.com/advisories/GHSA-fg9w-wfp5-j933",
+            "title": "[nltk] NLTK: BllipParser passes caller-supplied model paths to the bllipparser C extension with no pathsec check, enabling arbitrary read | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryBllipParser in nltk/parse/bllip.py hands caller-supplied filesystem paths to the native bllipparser C extension without routing them through NLTK's pathsec validation. The constructor parameter",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T23:20:56.000Z",
+            "date_published": "2026-11-13T23:20:56.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] NLTK: BllipParser passes caller-supplied model paths to the bllipparser C extension with no pathsec check, enabling arbitrary read",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qfx6-q44v-9qqw",
+            "content_html": "SummaryreadPsd() commits the image/layer buffers from the declared header geometry (width x height x channels x depth, and per-layer rectangles) before validating those values against the actual data. A tiny crafted PSD declaring huge geometry forces a multi-gigabyte allocation.ImpactOn ag-psd 30.2.0, Node 24, a 52-byte PSD makes readPsd(buf) commit ~3.17 GB (measured peak RSS) in ~0.45 s before throwing a catchable RangeError (\"Offset is outside the bounds of the DataView\") — about 61,000,000x ",
+            "url": "https://github.com/advisories/GHSA-qfx6-q44v-9qqw",
+            "title": "[ag-psd] ag-psd can exhaust memory when parsing crafted PSD dimensions | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryreadPsd() commits the image/layer buffers from the declared header geometry (width x height x channels x depth, and per-layer rectangles) before validating those values against the actual data.",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T23:19:38.000Z",
+            "date_published": "2026-11-13T23:19:38.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[ag-psd] ag-psd can exhaust memory when parsing crafted PSD dimensions",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-gpwc-27cw-rh9r",
+            "content_html": "SummaryLegalitySyllableTokenizer.tokenize in the NLTK tokenizer package contains an unguarded O(n^2) processing loop. When the method is called on a single token that consists of a long run of vowels (for example \"a\" * n), it consumes CPU time proportional to the square of the token length. An attacker who can supply an untrusted token to this public tokenizer API can force a single request to saturate one CPU core for a prolonged period, degrading availability of any service that syllabifies at",
+            "url": "https://github.com/advisories/GHSA-gpwc-27cw-rh9r",
+            "title": "[nltk] NLTK: Quadratic CPU exhaustion in LegalitySyllableTokenizer.tokenize via unguarded onset reversal loop | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryLegalitySyllableTokenizer.tokenize in the NLTK tokenizer package contains an unguarded O(n^2) processing loop. When the method is called on a single token that consists of a long run of vowels ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T21:16:34.000Z",
+            "date_published": "2026-11-13T21:16:34.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] NLTK: Quadratic CPU exhaustion in LegalitySyllableTokenizer.tokenize via unguarded onset reversal loop",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-ffr9-mgrr-wcvr",
+            "content_html": "SummaryTreebankWordTokenizer.span_tokenize in the NLTK tokenizer package contains an unguarded O(n^2) processing loop in its quote-restoration step. When the method is invoked on text containing a long run of double-quote characters (for example '\"' * n), it performs a list.pop(0) operation once per quote token, and because list.pop(0) is O(length), the total cost grows with the square of the input length. An attacker who can supply untrusted text to this public span-tokenization API can force a",
+            "url": "https://github.com/advisories/GHSA-ffr9-mgrr-wcvr",
+            "title": "[nltk] NLTK: Quadratic CPU exhaustion in TreebankWordTokenizer.span_tokenize via list.pop(0) in quote-restore loop | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryTreebankWordTokenizer.span_tokenize in the NLTK tokenizer package contains an unguarded O(n^2) processing loop in its quote-restoration step. When the method is invoked on text containing a lon",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T21:08:55.000Z",
+            "date_published": "2026-11-13T21:08:55.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] NLTK: Quadratic CPU exhaustion in TreebankWordTokenizer.span_tokenize via list.pop(0) in quote-restore loop",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-8fx7-8jr8-84rv",
+            "content_html": "Summarynltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse() performs an unbounded top-down search over ambiguous or self-embedding context-free grammars with no wall-clock or step limit. An actor who can influence the grammar and supply a short input to a caller that uses this parser can force a single parse() call to pin a CPU core indefinitely, producing a denial of service. The related base class RecursiveDescentParser gained a max_time wall-clock deadline, but the stepping subc",
+            "url": "https://github.com/advisories/GHSA-8fx7-8jr8-84rv",
+            "title": "[nltk] NLTK: Unbounded CPU consumption in SteppingRecursiveDescentParser.parse() with ambiguous or self-embedding grammars | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Summarynltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse() performs an unbounded top-down search over ambiguous or self-embedding context-free grammars with no wall-clock or step limit.",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T21:02:19.000Z",
+            "date_published": "2026-11-13T21:02:19.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] NLTK: Unbounded CPU consumption in SteppingRecursiveDescentParser.parse() with ambiguous or self-embedding grammars",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qg35-44qx-7vrr",
+            "content_html": "SummaryYCOECorpusReader builds two nested corpus sub-readers whose roots are derived from self.root.join(\"psd\") and self.root.join(\"pos\") (nltk/corpus/reader/ycoe.py). Because FileSystemPathPointer.join() (nltk/data.py) performs a purely lexical containment check and never resolves symlinks, and because CorpusReader.__init__ (nltk/corpus/reader/api.py) validates a sub-reader root only against the global NLTK data sandbox and not against the enclosing corpus root, a directory symlink named psd or",
+            "url": "https://github.com/advisories/GHSA-qg35-44qx-7vrr",
+            "title": "[nltk] NLTK: Symlink escape in YCOECorpusReader lets a psd/pos directory symlink read files outside the corpus root within the data sandbox | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryYCOECorpusReader builds two nested corpus sub-readers whose roots are derived from self.root.join(\"psd\") and self.root.join(\"pos\") (nltk/corpus/reader/ycoe.py). Because FileSystemPathPointer.jo",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:55:16.000Z",
+            "date_published": "2026-11-13T20:55:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] NLTK: Symlink escape in YCOECorpusReader lets a psd/pos directory symlink read files outside the corpus root within the data sandbox",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mw6w-2fmv-pvw3",
+            "content_html": "When reroute turned an invalid percent-encoded path into a valid path, it could potentially trigger a comparison that would crash the server.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-mw6w-2fmv-pvw3https://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5af4e2edf17e0da11ddhttps://github.com/sveltejs/kit/commit/7993d5ebab017cb1be898a0b1c57371c5da06557https://github.com/sveltejs/kit/releases/tag/@sveltejs/kit@2.70.4https://githu",
+            "url": "https://github.com/advisories/GHSA-mw6w-2fmv-pvw3",
+            "title": "[@sveltejs/kit] SvelteKit: adapter-node crashes with an unhandled URIError when `reroute` rewrites malformed pathnames | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "When reroute turned an invalid percent-encoded path into a valid path, it could potentially trigger a comparison that would crash the server.Referenceshttps://github.com/sveltejs/kit/security/advisori",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:51:44.000Z",
+            "date_published": "2026-11-13T20:51:44.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@sveltejs/kit] SvelteKit: adapter-node crashes with an unhandled URIError when `reroute` rewrites malformed pathnames",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mw6w-2fmv-pvw3",
+            "content_html": "When reroute turned an invalid percent-encoded path into a valid path, it could potentially trigger a comparison that would crash the server.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-mw6w-2fmv-pvw3https://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5af4e2edf17e0da11ddhttps://github.com/sveltejs/kit/commit/7993d5ebab017cb1be898a0b1c57371c5da06557https://github.com/sveltejs/kit/releases/tag/@sveltejs/kit@2.70.4https://githu",
+            "url": "https://github.com/advisories/GHSA-mw6w-2fmv-pvw3",
+            "title": "[@sveltejs/kit] SvelteKit: adapter-node crashes with an unhandled URIError when `reroute` rewrites malformed pathnames | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "When reroute turned an invalid percent-encoded path into a valid path, it could potentially trigger a comparison that would crash the server.Referenceshttps://github.com/sveltejs/kit/security/advisori",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:51:44.000Z",
+            "date_published": "2026-11-13T20:51:44.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@sveltejs/kit] SvelteKit: adapter-node crashes with an unhandled URIError when `reroute` rewrites malformed pathnames",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jf9x-2fg2-hx4w",
+            "content_html": "If an attacker could influence a link that was crawled during the prerender phase, that link could later be interpreted as a regex in the Vercel routing configuration.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5af4e2edf17e0da11ddhttps://github.com/sveltejs/kit/commit/2ed61a6aa3ac230b89e3528654c587847d1525a0https://github.com/sveltejs/kit/releases/tag/@svelte",
+            "url": "https://github.com/advisories/GHSA-jf9x-2fg2-hx4w",
+            "title": "[@sveltejs/adapter-static] SvelteKit: Prerendered paths are interpreted as regular expressions in Vercel route config generated by @sveltejs/adapter-vercel and @sveltejs/adapter-static | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "If an attacker could influence a link that was crawled during the prerender phase, that link could later be interpreted as a regex in the Vercel routing configuration.Referenceshttps://github.com/svel",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:43:23.000Z",
+            "date_published": "2026-11-13T20:43:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@sveltejs/adapter-static] SvelteKit: Prerendered paths are interpreted as regular expressions in Vercel route config generated by @sveltejs/adapter-vercel and @sveltejs/adapter-static",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jf9x-2fg2-hx4w",
+            "content_html": "If an attacker could influence a link that was crawled during the prerender phase, that link could later be interpreted as a regex in the Vercel routing configuration.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5af4e2edf17e0da11ddhttps://github.com/sveltejs/kit/commit/2ed61a6aa3ac230b89e3528654c587847d1525a0https://github.com/sveltejs/kit/releases/tag/@svelte",
+            "url": "https://github.com/advisories/GHSA-jf9x-2fg2-hx4w",
+            "title": "[@sveltejs/adapter-vercel] SvelteKit: Prerendered paths are interpreted as regular expressions in Vercel route config generated by @sveltejs/adapter-vercel and @sveltejs/adapter-static | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "If an attacker could influence a link that was crawled during the prerender phase, that link could later be interpreted as a regex in the Vercel routing configuration.Referenceshttps://github.com/svel",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:43:23.000Z",
+            "date_published": "2026-11-13T20:43:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@sveltejs/adapter-vercel] SvelteKit: Prerendered paths are interpreted as regular expressions in Vercel route config generated by @sveltejs/adapter-vercel and @sveltejs/adapter-static",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jf9x-2fg2-hx4w",
+            "content_html": "If an attacker could influence a link that was crawled during the prerender phase, that link could later be interpreted as a regex in the Vercel routing configuration.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5af4e2edf17e0da11ddhttps://github.com/sveltejs/kit/commit/2ed61a6aa3ac230b89e3528654c587847d1525a0https://github.com/sveltejs/kit/releases/tag/@svelte",
+            "url": "https://github.com/advisories/GHSA-jf9x-2fg2-hx4w",
+            "title": "[@sveltejs/adapter-static] SvelteKit: Prerendered paths are interpreted as regular expressions in Vercel route config generated by @sveltejs/adapter-vercel and @sveltejs/adapter-static | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "If an attacker could influence a link that was crawled during the prerender phase, that link could later be interpreted as a regex in the Vercel routing configuration.Referenceshttps://github.com/svel",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:43:23.000Z",
+            "date_published": "2026-11-13T20:43:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@sveltejs/adapter-static] SvelteKit: Prerendered paths are interpreted as regular expressions in Vercel route config generated by @sveltejs/adapter-vercel and @sveltejs/adapter-static",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jf9x-2fg2-hx4w",
+            "content_html": "If an attacker could influence a link that was crawled during the prerender phase, that link could later be interpreted as a regex in the Vercel routing configuration.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5af4e2edf17e0da11ddhttps://github.com/sveltejs/kit/commit/2ed61a6aa3ac230b89e3528654c587847d1525a0https://github.com/sveltejs/kit/releases/tag/@svelte",
+            "url": "https://github.com/advisories/GHSA-jf9x-2fg2-hx4w",
+            "title": "[@sveltejs/adapter-vercel] SvelteKit: Prerendered paths are interpreted as regular expressions in Vercel route config generated by @sveltejs/adapter-vercel and @sveltejs/adapter-static | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "If an attacker could influence a link that was crawled during the prerender phase, that link could later be interpreted as a regex in the Vercel routing configuration.Referenceshttps://github.com/svel",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:43:23.000Z",
+            "date_published": "2026-11-13T20:43:23.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@sveltejs/adapter-vercel] SvelteKit: Prerendered paths are interpreted as regular expressions in Vercel route config generated by @sveltejs/adapter-vercel and @sveltejs/adapter-static",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5wg4-q3ww-283h",
+            "content_html": "If an attacker can influence the links crawled during prerendering, they can influence the redirects entries that are added to the Cloudflare platform redirects generated during the adapt phase of the build.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-5wg4-q3ww-283hhttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5af4e2edf17e0da11ddhttps://github.com/sveltejs/kit/commit/679e0d84ea9951bb4f1e458a599066b5a451b08ahttps://gith",
+            "url": "https://github.com/advisories/GHSA-5wg4-q3ww-283h",
+            "title": "[@sveltejs/adapter-cloudflare] SvelteKit: Prerendered redirect paths can inject arbitrary rules into the `_redirects` file generated by `@sveltejs/adapter-cloudflare` | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "If an attacker can influence the links crawled during prerendering, they can influence the redirects entries that are added to the Cloudflare platform redirects generated during the adapt phase of the",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:39:15.000Z",
+            "date_published": "2026-11-13T20:39:15.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@sveltejs/adapter-cloudflare] SvelteKit: Prerendered redirect paths can inject arbitrary rules into the `_redirects` file generated by `@sveltejs/adapter-cloudflare`",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5wg4-q3ww-283h",
+            "content_html": "If an attacker can influence the links crawled during prerendering, they can influence the redirects entries that are added to the Cloudflare platform redirects generated during the adapt phase of the build.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-5wg4-q3ww-283hhttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5af4e2edf17e0da11ddhttps://github.com/sveltejs/kit/commit/679e0d84ea9951bb4f1e458a599066b5a451b08ahttps://gith",
+            "url": "https://github.com/advisories/GHSA-5wg4-q3ww-283h",
+            "title": "[@sveltejs/adapter-cloudflare] SvelteKit: Prerendered redirect paths can inject arbitrary rules into the `_redirects` file generated by `@sveltejs/adapter-cloudflare` | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "If an attacker can influence the links crawled during prerendering, they can influence the redirects entries that are added to the Cloudflare platform redirects generated during the adapt phase of the",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:39:15.000Z",
+            "date_published": "2026-11-13T20:39:15.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@sveltejs/adapter-cloudflare] SvelteKit: Prerendered redirect paths can inject arbitrary rules into the `_redirects` file generated by `@sveltejs/adapter-cloudflare`",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-rqw3-x7hx-mm3p",
+            "content_html": "In affected versions, @sveltejs/adapter-node can attempt to add a header to an immutable request in a context that causes the server to crash, denying service to any other requests routed to that server.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-rqw3-x7hx-mm3phttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/04756a1f7a4f73e34f1934895340a46de84fc164https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5af4e2edf17e0da11ddhttps://github.c",
+            "url": "https://github.com/advisories/GHSA-rqw3-x7hx-mm3p",
+            "title": "[@sveltejs/adapter-node] SvelteKit: `@sveltejs/adapter-node` crashes when proxying certain requests via `fetch` | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "In affected versions, @sveltejs/adapter-node can attempt to add a header to an immutable request in a context that causes the server to crash, denying service to any other requests routed to that serv",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:36:53.000Z",
+            "date_published": "2026-11-13T20:36:53.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@sveltejs/adapter-node] SvelteKit: `@sveltejs/adapter-node` crashes when proxying certain requests via `fetch`",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-rqw3-x7hx-mm3p",
+            "content_html": "In affected versions, @sveltejs/adapter-node can attempt to add a header to an immutable request in a context that causes the server to crash, denying service to any other requests routed to that server.Referenceshttps://github.com/sveltejs/kit/security/advisories/GHSA-rqw3-x7hx-mm3phttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/04756a1f7a4f73e34f1934895340a46de84fc164https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5af4e2edf17e0da11ddhttps://github.c",
+            "url": "https://github.com/advisories/GHSA-rqw3-x7hx-mm3p",
+            "title": "[@sveltejs/adapter-node] SvelteKit: `@sveltejs/adapter-node` crashes when proxying certain requests via `fetch` | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "In affected versions, @sveltejs/adapter-node can attempt to add a header to an immutable request in a context that causes the server to crash, denying service to any other requests routed to that serv",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:36:53.000Z",
+            "date_published": "2026-11-13T20:36:53.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@sveltejs/adapter-node] SvelteKit: `@sveltejs/adapter-node` crashes when proxying certain requests via `fetch`",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-5cjw-f85j-cv6r",
+            "content_html": "SummaryDue to differences in the way browsers and Python's urllib parse urls, browsers treat a string starting with three or more slashes as a protocol-level redirect, while urllib does not. This means that the 6.6.0 fix for the RedirectHandler open redirect (CVE-2026-116578, commit cc75ab0e) is incomplete. Tornado 6.6.1 improves the open-redirect detection to handle this case correctly, as well as fixing a regression in the 6.6.0 implementation.Referenceshttps://github.com/tornadoweb/tornado/se",
+            "url": "https://github.com/advisories/GHSA-5cjw-f85j-cv6r",
+            "title": "[tornado] Tornado: Open redirect via triple-slash redirect paths | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryDue to differences in the way browsers and Python's urllib parse urls, browsers treat a string starting with three or more slashes as a protocol-level redirect, while urllib does not. This mean",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:31:22.000Z",
+            "date_published": "2026-11-13T20:31:22.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tornado] Tornado: Open redirect via triple-slash redirect paths",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-vvf4-9x63-8xvv",
+            "content_html": "SummaryA maliciously crafted zone file could use a WKS record to consume excessive memory and CPU, possibly causing the process to exit due to memory exhaustion.DetailsThe from_text() parser does not check that a WKS record service number is between 0 and 65535 inclusive. It then uses this number to resize the bitmap to accommodate a bit with that offset. This can cause extremely large memory allocations, and also extends the array very inefficiently, wasting CPU.Proof of conceptThis demonstrate",
+            "url": "https://github.com/advisories/GHSA-vvf4-9x63-8xvv",
+            "title": "[dnspython] dnspython has excessive memory and CPU use | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryA maliciously crafted zone file could use a WKS record to consume excessive memory and CPU, possibly causing the process to exit due to memory exhaustion.DetailsThe from_text() parser does not ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T20:19:13.000Z",
+            "date_published": "2026-11-13T20:19:13.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[dnspython] dnspython has excessive memory and CPU use",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-r99w-jh2x-3mg9",
+            "content_html": "SummarySince 4.6.0, Nuxt parses a request path that starts with // as a URL with a host before rendering a page, so //x/admin renders the page at /admin. Nitro's routing, Nitro's route rules and server/middleware see the path as //x/admin, so server-side checks keyed on /admin do not apply. The fix for GHSA-9v7c-q64q-vv33 in 4.6.3 covered dot segments but not this form.ImpactAn unauthenticated attacker can bypass server-side controls that match on the request path of a page route.A route-scoped ",
+            "url": "https://github.com/advisories/GHSA-r99w-jh2x-3mg9",
+            "title": "[@nuxt/nitro-server] Nuxt: Incomplete fix for GHSA-9v7c-q64q-vv33: a leading `//` in the request path bypasses `server/middleware` path checks and server route rules on page routes | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummarySince 4.6.0, Nuxt parses a request path that starts with // as a URL with a host before rendering a page, so //x/admin renders the page at /admin. Nitro's routing, Nitro's route rules and serve",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T19:32:21.000Z",
+            "date_published": "2026-11-13T19:32:21.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@nuxt/nitro-server] Nuxt: Incomplete fix for GHSA-9v7c-q64q-vv33: a leading `//` in the request path bypasses `server/middleware` path checks and server route rules on page routes",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-3v2p-hm54-8qcq",
+            "content_html": "Summary@opentelemetry/instrumentation-http redacts sensitive URL query parameters on outgoing (client) spans but not on incoming (server) spans. The server-span path writes the raw query string verbatim into the url.query attribute, so credentials embedded in inbound request URLs — AWS presigned-URL signatures, Azure SAS tokens (sig), GCS signed-URL signatures — are exported in plaintext to the configured tracing backend.Configuring the redactedQueryParams option does not change this, as this ap",
+            "url": "https://github.com/advisories/GHSA-3v2p-hm54-8qcq",
+            "title": "[@opentelemetry/instrumentation-http] OpenTelemetry JavaScript: Insertion of Sensitive Information into Log File and Exposure of Sensitive Information to an Unauthorized Actor in @opentelemetry/instrumentation-http | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summary@opentelemetry/instrumentation-http redacts sensitive URL query parameters on outgoing (client) spans but not on incoming (server) spans. The server-span path writes the raw query string verbat",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T19:29:20.000Z",
+            "date_published": "2026-11-13T19:29:20.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@opentelemetry/instrumentation-http] OpenTelemetry JavaScript: Insertion of Sensitive Information into Log File and Exposure of Sensitive Information to an Unauthorized Actor in @opentelemetry/instrumentation-http",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mh32-jxcr-mh9f",
+            "content_html": "SummaryWhen a dynamic tag (const Tag = ...; &lt;Tag /&gt;) resolves to a string, Astro renders it as a raw HTML element name. The name was filtered to remove characters that could inject attributes, but the filter did not handle /. Because HTML parsers treat / inside a tag as an attribute separator, a tag name such as img/src/onerror=alert(1) was rendered as an &lt;img&gt; element with an onerror attribute. The JSX renderer used for MDX did not filter string tag names at all.For example:---const Tag = Astro",
+            "url": "https://github.com/advisories/GHSA-mh32-jxcr-mh9f",
+            "title": "[astro] Astro: XSS via attribute injection in dynamic tag names | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryWhen a dynamic tag (const Tag = ...; <Tag />) resolves to a string, Astro renders it as a raw HTML element name. The name was filtered to remove characters that could inject attributes, but the",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T18:39:54.000Z",
+            "date_published": "2026-11-13T18:39:54.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[astro] Astro: XSS via attribute injection in dynamic tag names",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-r3h5-4585-7x3w",
+            "content_html": "SummaryThe /_image endpoint used by the @astrojs/node adapter checks that a requested local image is inside the build output directory before reading it from disk. That check compared paths case-insensitively. On case-sensitive filesystems (such as Linux), a directory whose path differs from the output directory only by letter case is a different directory, but it passed the check.For example, with the client output directory at /srv/app/dist/client/, a request such as:/_image?href=/../../DIST/c",
+            "url": "https://github.com/advisories/GHSA-r3h5-4585-7x3w",
+            "title": "[astro] Astro: Image endpoint in @astrojs/node can read files from a case-variant sibling of the output directory on case-sensitive filesystems | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe /_image endpoint used by the @astrojs/node adapter checks that a requested local image is inside the build output directory before reading it from disk. That check compared paths case-insen",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T18:35:59.000Z",
+            "date_published": "2026-11-13T18:35:59.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[astro] Astro: Image endpoint in @astrojs/node can read files from a case-variant sibling of the output directory on case-sensitive filesystems",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-r3h5-4585-7x3w",
+            "content_html": "SummaryThe /_image endpoint used by the @astrojs/node adapter checks that a requested local image is inside the build output directory before reading it from disk. That check compared paths case-insensitively. On case-sensitive filesystems (such as Linux), a directory whose path differs from the output directory only by letter case is a different directory, but it passed the check.For example, with the client output directory at /srv/app/dist/client/, a request such as:/_image?href=/../../DIST/c",
+            "url": "https://github.com/advisories/GHSA-r3h5-4585-7x3w",
+            "title": "[@astrojs/node] Astro: Image endpoint in @astrojs/node can read files from a case-variant sibling of the output directory on case-sensitive filesystems | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryThe /_image endpoint used by the @astrojs/node adapter checks that a requested local image is inside the build output directory before reading it from disk. That check compared paths case-insen",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T18:35:59.000Z",
+            "date_published": "2026-11-13T18:35:59.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@astrojs/node] Astro: Image endpoint in @astrojs/node can read files from a case-variant sibling of the output directory on case-sensitive filesystems",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mjrq-cffv-q4qc",
+            "content_html": "SummaryNuxt can pick a parent directory that does not declare a workspace as its default workspaceDir: the farthest directory with a lockfile when the project is not inside a git repository, or the farthest directory with a pnpm-workspace.yaml or deno.json file, even one that only holds settings. The Vite dev server allows /_nuxt/@fs/ requests for any file under workspaceDir. A stray lockfile or settings file in a parent directory, such as the home directory, therefore lets anyone who can reach ",
+            "url": "https://github.com/advisories/GHSA-mjrq-cffv-q4qc",
+            "title": "[@nuxt/schema] Nuxt dev server serves files from a parent directory with a stray lockfile or workspace file | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "SummaryNuxt can pick a parent directory that does not declare a workspace as its default workspaceDir: the farthest directory with a lockfile when the project is not inside a git repository, or the fa",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T18:11:49.000Z",
+            "date_published": "2026-11-13T18:11:49.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[@nuxt/schema] Nuxt dev server serves files from a parent directory with a stray lockfile or workspace file",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jv6m-48w5-5rpr",
+            "content_html": "Summaryenvd’s install.python_packages(requirements=...) could read files outside the build context on the host. Content interpreted as dependency entries could appear in build logs and build-step metadata.Commit f576c92, released in v1.3.5, added path containment validation but left a time-of-check/time-of-use (TOCTOU) race between symlink resolution and opening the requirements file. Commit 9d575b3 addresses this race by opening requirements files through a directory-rooted filesystem handle.De",
+            "url": "https://github.com/advisories/GHSA-jv6m-48w5-5rpr",
+            "title": "[envd] envd: Host file disclosure through requirements path traversal and TOCTOU | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Summaryenvd’s install.python_packages(requirements=...) could read files outside the build context on the host. Content interpreted as dependency entries could appear in build logs and build-step meta",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T18:05:15.000Z",
+            "date_published": "2026-11-13T18:05:15.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[envd] envd: Host file disclosure through requirements path traversal and TOCTOU",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-mf5v-w3w3-f6cg",
+            "content_html": "SummaryTraceContextTextMapPropagator.extract() in opentelemetry-api is vulnerable to regular expression denial of service (ReDoS) when processing a specially crafted traceparent value.A malformed value containing a trace-context prefix followed by a long whitespace sequence and an embedded newline triggers quadratic-time regex backtracking. Applications that extract trace context from untrusted carriers accepting such strings can experience excessive CPU consumption and request-processing delays",
+            "url": "https://github.com/advisories/GHSA-mf5v-w3w3-f6cg",
+            "title": "[opentelemetry-api] OpenTelemetry Python API: Denial of service through quadratic-time traceparent parsing | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "SummaryTraceContextTextMapPropagator.extract() in opentelemetry-api is vulnerable to regular expression denial of service (ReDoS) when processing a specially crafted traceparent value.A malformed valu",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T16:43:18.000Z",
+            "date_published": "2026-11-13T16:43:18.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[opentelemetry-api] OpenTelemetry Python API: Denial of service through quadratic-time traceparent parsing",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-rg32-vgf9-927c",
+            "content_html": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-ffr9-mgrr-wcvr. This link is maintained to preserve external references.Original DescriptionNLTK from 3.2.5 before 3.10.4 contains an algorithmic complexity vulnerability in TreebankWordTokenizer.span_tokenize that allows remote attackers to cause quadratic CPU consumption through repeated list.pop(0) calls. Attackers can submit long runs of double-quote characters to services span-tokenizing untrusted text, exh",
+            "url": "https://github.com/advisories/GHSA-rg32-vgf9-927c",
+            "title": "[nltk] Duplicate Advisory: Quadratic CPU exhaustion in TreebankWordTokenizer.span_tokenize via list.pop(0) in quote-restore loop | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-ffr9-mgrr-wcvr. This link is maintained to preserve external references.Original DescriptionNLTK from 3.2.5 before ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T12:31:17.000Z",
+            "date_published": "2026-11-13T12:31:17.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] Duplicate Advisory: Quadratic CPU exhaustion in TreebankWordTokenizer.span_tokenize via list.pop(0) in quote-restore loop",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4hvg-fv5c-9936",
+            "content_html": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-8fx7-8jr8-84rv. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 contains an uncontrolled resource consumption vulnerability in SteppingRecursiveDescentParser.parse() that lacks any max_time deadline or step limit. Attackers influencing the grammar can supply an ambiguous self-embedding grammar and short token input to force unbounded top-down search, pinning CPU cor",
+            "url": "https://github.com/advisories/GHSA-4hvg-fv5c-9936",
+            "title": "[nltk] Duplicate Advisory: Unbounded CPU consumption in NLTK SteppingRecursiveDescentParser.parse() with ambiguous or self-embedding grammars | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-8fx7-8jr8-84rv. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T12:31:17.000Z",
+            "date_published": "2026-11-13T12:31:17.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] Duplicate Advisory: Unbounded CPU consumption in NLTK SteppingRecursiveDescentParser.parse() with ambiguous or self-embedding grammars",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-7r4r-6ppg-7ff8",
+            "content_html": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-qg35-44qx-7vrr. This link is maintained to preserve external references.Original DescriptionNLTK from 3.10.0 before 3.10.4 contains a symlink escape vulnerability in YCOECorpusReader that allows attackers to read files outside the corpus root by planting psd or pos directory symlinks. Attackers controlling a YCOE corpus can make parsed_sents() and tagged_words() return file content from other corpora or temporar",
+            "url": "https://github.com/advisories/GHSA-7r4r-6ppg-7ff8",
+            "title": "[nltk] Duplicate Advisory: Symlink escape in YCOECorpusReader lets a psd/pos directory symlink read files outside the corpus root within the data sandbox | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-qg35-44qx-7vrr. This link is maintained to preserve external references.Original DescriptionNLTK from 3.10.0 before",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T12:31:17.000Z",
+            "date_published": "2026-11-13T12:31:17.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] Duplicate Advisory: Symlink escape in YCOECorpusReader lets a psd/pos directory symlink read files outside the corpus root within the data sandbox",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-6665-2vj3-h76r",
+            "content_html": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-r53h-rw34-8h97. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 contains a denial of service vulnerability in Tree.chomsky_normal_form that allows remote attackers to exhaust CPU through quadratic-time right-factor binarization using list.pop(0). Attackers can supply a wide flat treebank tree parsed by Tree.fromstring to force tens of seconds of single-threaded CPU ",
+            "url": "https://github.com/advisories/GHSA-6665-2vj3-h76r",
+            "title": "[nltk] Duplicate Advisory: Quadratic-time CPU denial of service in Tree.chomsky_normal_form right-factor binarization via list.pop(0) | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-r53h-rw34-8h97. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T12:31:16.000Z",
+            "date_published": "2026-11-13T12:31:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] Duplicate Advisory: Quadratic-time CPU denial of service in Tree.chomsky_normal_form right-factor binarization via list.pop(0)",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-qvhx-rvgc-jhwf",
+            "content_html": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-v8f3-6phw-6mh9. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 contains a quadratic-time denial of service vulnerability in ConllCorpusReader._get_srl_instances that allows remote attackers to exhaust CPU through nested span rescans. Attackers can supply a crafted CoNLL SRL corpus with many predicates and span columns, placing the head span last, to pin a core for ",
+            "url": "https://github.com/advisories/GHSA-qvhx-rvgc-jhwf",
+            "title": "[nltk] Duplicate Advisory: Quadratic-time CPU denial of service in ConllCorpusReader SRL instance builder via nested span rescan | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-v8f3-6phw-6mh9. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T12:31:16.000Z",
+            "date_published": "2026-11-13T12:31:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] Duplicate Advisory: Quadratic-time CPU denial of service in ConllCorpusReader SRL instance builder via nested span rescan",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-f7j6-hf97-9v99",
+            "content_html": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-fg9w-wfp5-j933. This link is maintained to preserve external references.Original DescriptionNLTK from 3.10.0 before 3.10.4 contains an arbitrary file read vulnerability in BllipParser that allows attackers to open files outside NLTK data roots by supplying unvalidated model paths. Attackers controlling parser_model, reranker_features, reranker_weights, or from_unified_model_dir() input can make the bllipparser C",
+            "url": "https://github.com/advisories/GHSA-f7j6-hf97-9v99",
+            "title": "[nltk] Duplicate Advisory: BllipParser passes caller-supplied model paths to the bllipparser C extension with no pathsec check, enabling arbitrary read | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-fg9w-wfp5-j933. This link is maintained to preserve external references.Original DescriptionNLTK from 3.10.0 before",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T12:31:16.000Z",
+            "date_published": "2026-11-13T12:31:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] Duplicate Advisory: BllipParser passes caller-supplied model paths to the bllipparser C extension with no pathsec check, enabling arbitrary read",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jh6r-h4rx-2j3w",
+            "content_html": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-89p3-fcch-88ph. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 contains a denial of service vulnerability in the CCG lexicon parser fromstring that allows remote attackers to exhaust CPU by supplying wide inputs. Attackers can submit lexicon text with long flat bracket bodies or operator chains, triggering quadratic string re-slicing in matchBrackets and augParseCa",
+            "url": "https://github.com/advisories/GHSA-jh6r-h4rx-2j3w",
+            "title": "[nltk] Duplicate Advisory: Quadratic-time CPU denial of service in NLTK CCG lexicon parser (fromstring) on wide bracket bodies and operator chains | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-89p3-fcch-88ph. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T12:31:16.000Z",
+            "date_published": "2026-11-13T12:31:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] Duplicate Advisory: Quadratic-time CPU denial of service in NLTK CCG lexicon parser (fromstring) on wide bracket bodies and operator chains",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-g5wx-957h-f4wj",
+            "content_html": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-59f9-gqg8-mqpj. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 contains a path traversal vulnerability in save_maxent_params() and load_maxent_params() that bypasses the pathsec filesystem restriction mechanism. Attackers who control the tab_dir argument can read or overwrite model parameter files outside permitted data roots, because the functions call Python's bu",
+            "url": "https://github.com/advisories/GHSA-g5wx-957h-f4wj",
+            "title": "[nltk] Duplicate Advisory: Path Traversal in save_maxent_params / load_maxent_params Allow Arbitrary File READ/WRITE | Security Advisory for Python packages hosted at PyPI.org",
+            "summary": "Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-59f9-gqg8-mqpj. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-13T12:31:16.000Z",
+            "date_published": "2026-11-13T12:31:16.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[nltk] Duplicate Advisory: Path Traversal in save_maxent_params / load_maxent_params Allow Arbitrary File READ/WRITE",
+                "blogTitle": "Security Advisory for Python packages hosted at PyPI.org",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip",
+                "blogLinkMd5Hash": "218eb82de313149914fad992ddfdc78e",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-46wx-v44x-9hh2",
+            "content_html": "Summarycsrf() validates a request only when its Content-Type is one of the three types an HTML form can send. Chromium's hyperlink auditing (&lt;a ping&gt;) sends a cross-origin POST with the user's cookies and the content type text/ping, which is not in that list. The middleware does not look at Origin or Sec-Fetch-Site for such a request, so it is passed to the handler.DetailsThe middleware skips the origin check when the content type is not one that a form submission produces. The assumption was th",
+            "url": "https://github.com/advisories/GHSA-46wx-v44x-9hh2",
+            "title": "[hono] Hono: `csrf()` does not check requests sent by hyperlink auditing (`text/ping`) | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summarycsrf() validates a request only when its Content-Type is one of the three types an HTML form can send. Chromium's hyperlink auditing (<a ping>) sends a cross-origin POST with the user's cookies",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-12T23:31:25.000Z",
+            "date_published": "2026-11-12T23:31:25.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[hono] Hono: `csrf()` does not check requests sent by hyperlink auditing (`text/ping`)",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4h7h-rv7c-7m2v",
+            "content_html": "Summaryvalidator('form') only recognizes a multipart/form-data Content-Type that carries nothing but a single boundary parameter. A request with another legal parameter, such as charset, or with extra whitespace after the ; is not recognized as a form. The validation callback then receives an empty object, while c.req.parseBody() still parses the body as a form.DetailsThe check that decides whether a request body is a form was written as a strict pattern over the whole Content-Type value. Any pa",
+            "url": "https://github.com/advisories/GHSA-4h7h-rv7c-7m2v",
+            "title": "[hono] Hono: `validator('form')` skips validation for `multipart/form-data` requests with extra parameters | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summaryvalidator('form') only recognizes a multipart/form-data Content-Type that carries nothing but a single boundary parameter. A request with another legal parameter, such as charset, or with extra",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-12T23:30:45.000Z",
+            "date_published": "2026-11-12T23:30:45.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[hono] Hono: `validator('form')` skips validation for `multipart/form-data` requests with extra parameters",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-4m76-xfj5-7975",
+            "content_html": "Summarymount() and app.mount() remove the mount prefix from the request path and forward the rest to the mounted application. Two mistakes in that step let a crafted request reach a route of the mounted application that the outer application protects with path-scoped middleware, such as an authentication check on /app/admin/*. The outer application routes on the original path, so the middleware does not run.DetailsDynamic prefix (all affected versions): for a mount such as /api/:tenant/*, the pr",
+            "url": "https://github.com/advisories/GHSA-4m76-xfj5-7975",
+            "title": "[hono] Hono: `mount()` and `app.mount()` can forward a path that bypasses middleware scoped inside the mount prefix | Security Advisory for JavaScript packages hosted at npmjs.com",
+            "summary": "Summarymount() and app.mount() remove the mount prefix from the request path and forward the rest to the mounted application. Two mistakes in that step let a crafted request reach a route of the mount",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-12T23:24:11.000Z",
+            "date_published": "2026-11-12T23:24:11.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[hono] Hono: `mount()` and `app.mount()` can forward a path that bypasses middleware scoped inside the mount prefix",
+                "blogTitle": "Security Advisory for JavaScript packages hosted at npmjs.com",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm",
+                "blogLinkMd5Hash": "1093f3c8d7e9f3d6e56ed3ce1786ac28",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-xcf7-88g6-7xr8",
+            "content_html": "ImpactIn Action tags v0.30.0 and v0.31.0, when sarif-file: names a file in a subdirectory that can't be created, the Action prints the directory's resolved path in an error message. In v0.31.0 that message is outside the window in which the Action turns command processing off, and v0.30.0 has no such window. A pull request can commit a symlink on that path to a directory whose name contains a newline followed by a command.A pull request can therefore create annotations, fold or hide parts of the",
+            "url": "https://github.com/advisories/GHSA-xcf7-88g6-7xr8",
+            "title": "[tmatens/compose-lint]  compose-lint: Workflow command injection through SARIF-directory errors triggered by pull request symlinks  | Security Advisory for Github Actions",
+            "summary": "ImpactIn Action tags v0.30.0 and v0.31.0, when sarif-file: names a file in a subdirectory that can't be created, the Action prints the directory's resolved path in an error message. In v0.31.0 that me",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-10T21:50:54.000Z",
+            "date_published": "2026-11-10T21:50:54.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tmatens/compose-lint]  compose-lint: Workflow command injection through SARIF-directory errors triggered by pull request symlinks ",
+                "blogTitle": "Security Advisory for Github Actions",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Aactions",
+                "blogLinkMd5Hash": "087871ca82b856eb22fbc0e3c58220c4",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-rm8w-w798-g545",
+            "content_html": "ImpactThis is an incomplete fix for GHSA-jf3h-8jvx-vcrg. 0.32.0 made findings quote the ${NAME} a sibling .env filled in, instead of its value. The same release added a stop at 20,000 findings per document, and that stop is checked before the quoting step. A run that hits it reports the findings graded so far with the resolved values still in them, in text, JSON and SARIF output. That happens with or without --allow-partial-coverage.The attack is the one GHSA-jf3h-8jvx-vcrg describes. In a CI wo",
+            "url": "https://github.com/advisories/GHSA-rm8w-w798-g545",
+            "title": "[tmatens/compose-lint] compose-lint: Incomplete fix for GHSA-jf3h-8jvx-vcrg: a run stopped at the finding limit quotes a secret from a CI-generated `.env` | Security Advisory for Github Actions",
+            "summary": "ImpactThis is an incomplete fix for GHSA-jf3h-8jvx-vcrg. 0.32.0 made findings quote the ${NAME} a sibling .env filled in, instead of its value. The same release added a stop at 20,000 findings per doc",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-10T15:57:22.000Z",
+            "date_published": "2026-11-10T15:57:22.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tmatens/compose-lint] compose-lint: Incomplete fix for GHSA-jf3h-8jvx-vcrg: a run stopped at the finding limit quotes a secret from a CI-generated `.env`",
+                "blogTitle": "Security Advisory for Github Actions",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Aactions",
+                "blogLinkMd5Hash": "087871ca82b856eb22fbc0e3c58220c4",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-whr6-fgpq-fpv9",
+            "content_html": "ImpactLike Docker Compose, compose-lint follows symlinks when it reads a project's files. Unlike Compose, compose-lint up to 0.24.0 could then put the contents of a file from outside the project into its output, where the author of a pull request can read it.A pull request can commit a symlink, under a name compose-lint reads, pointing at a file on the CI runner:The Compose file itself (0.2.0–0.24.0). A compose.yml that is a symlink, whether the pre-commit hook passes its name or the Action or a",
+            "url": "https://github.com/advisories/GHSA-whr6-fgpq-fpv9",
+            "title": "[tmatens/compose-lint] compose-lint: A committed symlink makes compose-lint quote a file from outside the project into its output | Security Advisory for Github Actions",
+            "summary": "ImpactLike Docker Compose, compose-lint follows symlinks when it reads a project's files. Unlike Compose, compose-lint up to 0.24.0 could then put the contents of a file from outside the project into ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-10T15:57:10.000Z",
+            "date_published": "2026-11-10T15:57:10.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tmatens/compose-lint] compose-lint: A committed symlink makes compose-lint quote a file from outside the project into its output",
+                "blogTitle": "Security Advisory for Github Actions",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Aactions",
+                "blogLinkMd5Hash": "087871ca82b856eb22fbc0e3c58220c4",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-88f4-frh5-gmcr",
+            "content_html": "Impactcompose-lint automatically reads a .compose-lint.yml policy file beside the Compose file. It is meant to read nothing outside the project directory, but it follows that file if it is a symlink, wherever it points.A pull request can commit .compose-lint.yml as a symlink to a file on the CI runner. If the target is not valid YAML, the error compose-lint reports quotes part of the line the parser failed on. That quote reaches the job log (standard error), JSON errors[], and the SARIF toolExec",
+            "url": "https://github.com/advisories/GHSA-88f4-frh5-gmcr",
+            "title": "[tmatens/compose-lint] compose-lint: A `.compose-lint.yml` symlinked outside the project is read, and a parse error quotes part of the target | Security Advisory for Github Actions",
+            "summary": "Impactcompose-lint automatically reads a .compose-lint.yml policy file beside the Compose file. It is meant to read nothing outside the project directory, but it follows that file if it is a symlink, ",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-10T15:57:07.000Z",
+            "date_published": "2026-11-10T15:57:07.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tmatens/compose-lint] compose-lint: A `.compose-lint.yml` symlinked outside the project is read, and a parse error quotes part of the target",
+                "blogTitle": "Security Advisory for Github Actions",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Aactions",
+                "blogLinkMd5Hash": "087871ca82b856eb22fbc0e3c58220c4",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-jf3h-8jvx-vcrg",
+            "content_html": "ImpactSince 0.22.0, compose-lint fills in ${VAR} references from the .env beside the Compose file, as Compose does. The documentation says values under environment: are never resolved from a .env, \"that is where secrets live\". But image: values are resolved, and CL-0004 and CL-0019 quote the resolved image in their message and fix text.Some CI workflows write secrets into that .env before linting or building. In such a workflow, a pull request that changes one line to image: \"${DB_PASSWORD}\", or",
+            "url": "https://github.com/advisories/GHSA-jf3h-8jvx-vcrg",
+            "title": "[tmatens/compose-lint] compose-lint: A pull request can make compose-lint quote a secret from a CI-generated `.env` into its findings | Security Advisory for Github Actions",
+            "summary": "ImpactSince 0.22.0, compose-lint fills in ${VAR} references from the .env beside the Compose file, as Compose does. The documentation says values under environment: are never resolved from a .env, \"th",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-10T15:57:05.000Z",
+            "date_published": "2026-11-10T15:57:05.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tmatens/compose-lint] compose-lint: A pull request can make compose-lint quote a secret from a CI-generated `.env` into its findings",
+                "blogTitle": "Security Advisory for Github Actions",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Aactions",
+                "blogLinkMd5Hash": "087871ca82b856eb22fbc0e3c58220c4",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-6f4g-xm8v-pgv6",
+            "content_html": "ImpactThe GitHub Actions runner treats certain text in a step's output as commands. The legacy form, ##[command], is recognized anywhere in a line. compose-lint's text report prints service names, environment keys and lines of the Compose file, and it does not neutralize ##[. Inside the compose-lint Action, a Compose file from a pull request can therefore:create fake error or warning annotations on the pull request (##[error], ##[warning])fold the rest of the log, including the real verdict, out",
+            "url": "https://github.com/advisories/GHSA-6f4g-xm8v-pgv6",
+            "title": "[tmatens/compose-lint] compose-lint: Compose file text can issue GitHub Actions workflow commands through the compose-lint Action | Security Advisory for Github Actions",
+            "summary": "ImpactThe GitHub Actions runner treats certain text in a step's output as commands. The legacy form, ##[command], is recognized anywhere in a line. compose-lint's text report prints service names, env",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-10T15:56:59.000Z",
+            "date_published": "2026-11-10T15:56:59.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tmatens/compose-lint] compose-lint: Compose file text can issue GitHub Actions workflow commands through the compose-lint Action",
+                "blogTitle": "Security Advisory for Github Actions",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Aactions",
+                "blogLinkMd5Hash": "087871ca82b856eb22fbc0e3c58220c4",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        },
+        {
+            "id": "https://github.com/advisories/GHSA-6wcv-rj3c-mhv3",
+            "content_html": "Impactcompose-lint fills in ${VAR} references from the .env file next to the Compose file. It is meant to read nothing outside the project directory, and env_file:, include: and extends: paths are checked for that. The .env read is not. If .env is a symlink, compose-lint follows it wherever it points.A pull request can add a .env symlink to any file on the CI runner and a Compose file that references a variable from it. compose-lint substitutes the value and quotes it in finding messages, which ",
+            "url": "https://github.com/advisories/GHSA-6wcv-rj3c-mhv3",
+            "title": "[tmatens/compose-lint] compose-lint: .env read through a symlink outside the project can expose the CI job's environment | Security Advisory for Github Actions",
+            "summary": "Impactcompose-lint fills in ${VAR} references from the .env file next to the Compose file. It is meant to read nothing outside the project directory, and env_file:, include: and extends: paths are che",
+            "image": "https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png",
+            "date_modified": "2026-11-10T15:56:56.000Z",
+            "date_published": "2026-11-10T15:56:56.000Z",
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "[tmatens/compose-lint] compose-lint: .env read through a symlink outside the project can expose the CI job's environment",
+                "blogTitle": "Security Advisory for Github Actions",
+                "blogLink": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Aactions",
+                "blogLinkMd5Hash": "087871ca82b856eb22fbc0e3c58220c4",
+                "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+            }
+        }
+    ]
+}

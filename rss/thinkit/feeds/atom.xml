@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/</id>
+    <title>Think IT｜企業テックブログRSS</title>
+    <updated>2026-11-14T20:05:18.964Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/thinkit/feeds/atom.xml"/>
+    <subtitle>Think ITセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[「X.Org Server 21.1.26／Xwayland 24.1.15」リリース ─ 8件の脆弱性を修正 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39729</id>
+        <link href="https://thinkit.co.jp/news/39729"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39729.png?itok=b6wN3FYA" type="image/png"/>
+        <updated>2026-11-14T17:53:40.000Z</updated>
+        <summary type="html"><![CDATA[「X.Org Server 21.1.26／Xwayland 24.1.15」リリース ─ 8件の脆弱性を修正 境界外書き込みや整数オーバーフローに対処、メモリ破壊や情報漏洩を防止kawahara2026年11月15日シェア ポスト はてブ 優先するニュース提供元に追加 X.Org Projectは11月10日(現地時間)、X Window Systemのディスプレイサーバ「X.Org Serve]]></summary>
+        <content type="html"><![CDATA[「X.Org Server 21.1.26／Xwayland 24.1.15」リリース ─ 8件の脆弱性を修正 境界外書き込みや整数オーバーフローに対処、メモリ破壊や情報漏洩を防止kawahara2026年11月15日シェア ポスト はてブ 優先するニュース提供元に追加 X.Org Projectは11月10日(現地時間)、X Window Systemのディスプレイサーバ「X.Org Server 21.1.26」、およびWayland環境でX11アプリケーションを動作させる「Xwayland 24.1.15」をリリースした。 X.Org Serverは、LinuxやBSDなどで広く利用されるX11ディスプレイサーバ。XwaylandはX.Org Serverのコードを基盤とし、Waylandコンポジター上で従来のX11アプリケーションとの互換性を提供する。 「X.Org Server 21.1.26」と「Xwayland 24.1.15」のハイライトは次の通り。 X.Org Server／Xwaylandは、Webサイトからダウンロードできる。(川原 龍人/びぎねっと)[関連リンク]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-11-14T17:53:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MySQLの「ST_GeometryType()」「ST_IsValid()」などの関数でジオメトリデータの情報を取り出してみよう | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39700</id>
+        <link href="https://thinkit.co.jp/article/39700"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/97/39700/ren_mysql-gis_cover.png?itok=UP0vkcR_" type="image/png"/>
+        <updated>2026-11-12T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[MySQLの「ST_GeometryType()」「ST_IsValid()」などの関数でジオメトリデータの情報を取り出してみようitoh2026年11月13日MySQLで学ぶGIS入門シェア ポスト はてブ 優先するニュース提供元に追加 はじめに地理情報データは、MySQLの中にバイナリで格納されています。「ST_GeomFromText()で登録して、ST_AsText()で取り出す」という一]]></summary>
+        <content type="html"><![CDATA[MySQLの「ST_GeometryType()」「ST_IsValid()」などの関数でジオメトリデータの情報を取り出してみようitoh2026年11月13日MySQLで学ぶGIS入門シェア ポスト はてブ 優先するニュース提供元に追加 はじめに地理情報データは、MySQLの中にバイナリで格納されています。「ST_GeomFromText()で登録して、ST_AsText()で取り出す」という一手間を、ここまで何回も繰り返してきました。これら以外にも、MySQLにはデータの特徴を知る関数がたくさんあります。今回は地理情報データとさらに親密になれる、そういった関数群を紹介します。今回紹介する関数今回は、以下の関数を紹介します。 ST_GeometryType(g) ジオメトリの種類 ST_SRID(g) 空間参照系のID ST_Dimension(g) 図形の次元 ST_Latitude(p) 点の緯度 ST_Longitude(p) 点の経度 ST_X(p) 点のX座標 ST_Y(p) 点のY座標 ST_NumPoints(g) 図形を構成する点の数 ST_IsValid(g) 図形]]></content>
+        <author>
+            <name>itoh</name>
+        </author>
+        <published>2026-11-12T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[デジタル主権時代、データとモデルの持ち方は企業が主体的に定める | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39709</id>
+        <link href="https://thinkit.co.jp/article/39709"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/97/39709/rep_ai-days-2026_SailPoint_main.jpg?itok=Iv-_vVnH" type="image/jpg"/>
+        <updated>2026-11-12T21:25:00.000Z</updated>
+        <summary type="html"><![CDATA[デジタル主権時代、データとモデルの持ち方は企業が主体的に定めるitoh2026年11月13日「インプレス AI Days 2026」レポートシェア ポスト はてブ 優先するニュース提供元に追加 Sponsored by: Cohere Inc.提供：Cohere Inc.生成AI(人工知能)の開発競争が米中二強体制に傾く中、企業が自社のデータとインフラの上でAI技術を安全にコントロールする「ソブリ]]></summary>
+        <content type="html"><![CDATA[デジタル主権時代、データとモデルの持ち方は企業が主体的に定めるitoh2026年11月13日「インプレス AI Days 2026」レポートシェア ポスト はてブ 優先するニュース提供元に追加 Sponsored by: Cohere Inc.提供：Cohere Inc.生成AI(人工知能)の開発競争が米中二強体制に傾く中、企業が自社のデータとインフラの上でAI技術を安全にコントロールする「ソブリンAI」の重要性が増している。カナダ発のAIスタートアップであるCohere日本法人でカントリーマネージャーを務める趙 顕周 氏が「インプレス AI Days 2026」(主催：インプレス、2026年9月15日〜16日)に登壇し、国内企業のAI活用の課題と、ソブリンAI基盤が満たすべき条件を解説した。「AI(人工知能)技術はもはや、国家安全保障や経済安全保障に直結し、さらには外交カードとなり得る。市場の関心は、AIをいかにコントロールしていくかへと大きくシフトしている」--。カナダCohere日本法人 カントリーマネージャーの趙 顕周 氏はこう指摘する(写真1)。 写真1：カナダCohere日]]></content>
+        <author>
+            <name>伊藤 真美</name>
+        </author>
+        <category label="システム開発"/>
+        <category label="AI・人工知能"/>
+        <category label="システム運用"/>
+        <category label="セキュリティ"/>
+        <category label="イベント"/>
+        <published>2026-11-12T21:25:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Red Hat Enterprise Linux 10.3／9.9」リリース ─ Sealed ImagesとMCPサーバーを正式提供 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39727</id>
+        <link href="https://thinkit.co.jp/news/39727"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39727.png?itok=hXdLVAsQ" type="image/png"/>
+        <updated>2026-11-12T14:09:25.000Z</updated>
+        <summary type="html"><![CDATA[「Red Hat Enterprise Linux 10.3／9.9」リリース ─ Sealed ImagesとMCPサーバーを正式提供 RHEL 9.9から10.3へのLeapp更新に対応、GCC 16やNode.js 26なども収録kawahara2026年11月12日シェア ポスト はてブ 優先するニュース提供元に追加 Red Hatは11月11日(現地時間)、「Red Hat Enterp]]></summary>
+        <content type="html"><![CDATA[「Red Hat Enterprise Linux 10.3／9.9」リリース ─ Sealed ImagesとMCPサーバーを正式提供 RHEL 9.9から10.3へのLeapp更新に対応、GCC 16やNode.js 26なども収録kawahara2026年11月12日シェア ポスト はてブ 優先するニュース提供元に追加 Red Hatは11月11日(現地時間)、「Red Hat Enterprise Linux(RHEL) 10.3」と「RHEL 9.9」をリリースした。 RHEL 10.3と9.9は、それぞれRHEL 10系と9系の正式なマイナーリリース。セキュリティとAIを利用した運用支援を中心に機能を強化し、コンパイラやプログラミング言語、Web開発環境も更新した。 ハイライトは次の通り。 Sealed Imagesは、利用者が管理するSecure Boot鍵を使い、OSの起動経路とルートファイルシステムを検証する機能。ルートファイルシステムを読み取り専用とし、署名された状態から改変された内容をカーネルが読み出し時に拒否する。多数のシステムへ同一のOSイメージを展開する環境]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-11-12T14:09:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【AIとの共創】企業の強みが新しいサービスに変わる | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39698</id>
+        <link href="https://thinkit.co.jp/article/39698"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/ren_gen-ai-times_main_35.png?itok=XudJkoK8" type="image/png"/>
+        <updated>2026-11-11T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[【AIとの共創】企業の強みが新しいサービスに変わるkaoringo2026年11月12日Gen AI Timesシェア ポスト はてブ 優先するニュース提供元に追加 本連載は、生成AIコミュニティ「IKIGAI lab.」で活動するメンバーが、それぞれの専門領域で培ってきた知見を持ち寄りながら、生成AIを取り巻く動向を技術・ビジネス・ガバナンスの観点から整理しお届けしています。はじめに銀行のアプリ]]></summary>
+        <content type="html"><![CDATA[【AIとの共創】企業の強みが新しいサービスに変わるkaoringo2026年11月12日Gen AI Timesシェア ポスト はてブ 優先するニュース提供元に追加 本連載は、生成AIコミュニティ「IKIGAI lab.」で活動するメンバーが、それぞれの専門領域で培ってきた知見を持ち寄りながら、生成AIを取り巻く動向を技術・ビジネス・ガバナンスの観点から整理しお届けしています。はじめに銀行のアプリを開いたものの、目的の手続きがどこにあるのか分からない。新商品のアイデアを考えても、どんな人に喜ばれるのか見通せない。便利なサービスが増えても、私たちの日常にはまだ小さな行き詰まりがあります。もし、やりたいことを言葉にするだけで必要な画面につながったり、企画の段階でさまざまな生活者の反応を検討できたりしたら、どうでしょうか。生成AIの活用は、メールの下書きや資料の要約といった業務効率化から、サービスの使い方や価値の届け方を変える取り組みへと広がっています。その鍵になるのが、企業が培ってきた顧客接点、データ、専門知識との組み合わせです。今回は企業における生成AIとの共創事例を5つ取り上げます。そ]]></content>
+        <author>
+            <name>前田 優希</name>
+        </author>
+        <category label="AI・人工知能"/>
+        <category label="ニュース"/>
+        <published>2026-11-11T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Proxmox VE」のVMとLXCの違いを理解して仮想マシンを作成してみよう | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39699</id>
+        <link href="https://thinkit.co.jp/article/39699"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39699/ren_proxmox-ve_utilize_main.png?itok=zht8UCVD" type="image/png"/>
+        <updated>2026-11-11T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[「Proxmox VE」のVMとLXCの違いを理解して仮想マシンを作成してみようitoh2026年11月12日現場エンジニアのための「Proxmox VE」活用術シェア ポスト はてブ 優先するニュース提供元に追加 はじめに前回は、「Proxmox VE」ホストのアップデート方法と、その理解に必要なパッケージ、カーネル、リポジトリについて解説しました。実際の構築ではホストを最新の状態にしたら、ネッ]]></summary>
+        <content type="html"><![CDATA[「Proxmox VE」のVMとLXCの違いを理解して仮想マシンを作成してみようitoh2026年11月12日現場エンジニアのための「Proxmox VE」活用術シェア ポスト はてブ 優先するニュース提供元に追加 はじめに前回は、「Proxmox VE」ホストのアップデート方法と、その理解に必要なパッケージ、カーネル、リポジトリについて解説しました。実際の構築ではホストを最新の状態にしたら、ネットワークやストレージの設定を行うことが多いと思いますが、今回はとりあえず使ってみることを優先し、Proxmox VE上で動作する仮想マシン(VM)やLinuxコンテナ(LXC)を設定・実行していきます。そのため、今回はProxmox VEで利用できるVMとLXCの違いや、VMを新規作成する際のポイントについて解説していきます。Proxmox VEのVM・LXCとはProxmox VEでは、仮想マシン(VM)とLinuxコンテナ(LXC)を作成できます。VMは仮想的なCPU、メモリ、ディスク、ネットワークを用意し、その上でゲストOSを動かす仕組みです。ゲストOSから見ると1台の独立したコンピュー]]></content>
+        <author>
+            <name>鶴田 佑理香</name>
+        </author>
+        <category label="ITインフラ"/>
+        <category label="サーバー"/>
+        <category label="仮想化／コンテナ"/>
+        <category label="OSS"/>
+        <category label="技術解説"/>
+        <published>2026-11-11T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Tails 7.17」リリース ─ Tor Browser 16.0.1を収録 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39726</id>
+        <link href="https://thinkit.co.jp/news/39726"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39726.png?itok=yDMk2eYU" type="image/png"/>
+        <updated>2026-11-11T16:27:54.000Z</updated>
+        <summary type="html"><![CDATA[「Tails 7.17」リリース ─ Tor Browser 16.0.1を収録 Firefox ESRの脆弱性81件を修正、Tor 0.4.9.16とLinux 6.12.116へ更新kawahara2026年11月12日シェア ポスト はてブ 優先するニュース提供元に追加 Tails開発チームは11月11日(現地時間)、匿名性とプライバシー保護を重視したLinuxディストリビューション「Tai]]></summary>
+        <content type="html"><![CDATA[「Tails 7.17」リリース ─ Tor Browser 16.0.1を収録 Firefox ESRの脆弱性81件を修正、Tor 0.4.9.16とLinux 6.12.116へ更新kawahara2026年11月12日シェア ポスト はてブ 優先するニュース提供元に追加 Tails開発チームは11月11日(現地時間)、匿名性とプライバシー保護を重視したLinuxディストリビューション「Tails 7.17」をリリースした。 「Tails」は、インターネット通信をTorネットワーク経由で行い、利用したコンピューターへ可能な限り痕跡を残さないことを目的とするライブLinuxディストリビューション。USBメモリなどから起動でき、必要なデータや設定は暗号化されたPersistent Storageへ保存できる。 「Tails 7.17」のハイライトは次の通り。 Tor Browser 16.0.1はFirefox ESR 153.7.0を基盤とし、Mozillaのセキュリティアドバイザリに掲載された81件の脆弱性を修正した。このうち51件は重要度が「高」、21件は「中」、9件は「低」と評]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-11-11T16:27:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「OpenVPN 2.7.9」リリース ─ 対話型サービスやDLL読み込みを強化 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39725</id>
+        <link href="https://thinkit.co.jp/news/39725"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39725.png?itok=0Gpj7ulX" type="image/png"/>
+        <updated>2026-11-11T14:55:44.000Z</updated>
+        <summary type="html"><![CDATA[「OpenVPN 2.7.9」リリース ─ 対話型サービスやDLL読み込みを強化 Linuxのtun／tap処理を改善、2件の脆弱性を修正kawahara2026年11月11日シェア ポスト はてブ 優先するニュース提供元に追加 OpenVPN Community Projectは11月5日(現地時間)、オープンソースのVPNソフトウェア「OpenVPN 2.7.9」をリリースした。 「OpenV]]></summary>
+        <content type="html"><![CDATA[「OpenVPN 2.7.9」リリース ─ 対話型サービスやDLL読み込みを強化 Linuxのtun／tap処理を改善、2件の脆弱性を修正kawahara2026年11月11日シェア ポスト はてブ 優先するニュース提供元に追加 OpenVPN Community Projectは11月5日(現地時間)、オープンソースのVPNソフトウェア「OpenVPN 2.7.9」をリリースした。 「OpenVPN」は、SSL／TLSを利用して安全な通信経路を構築するVPNソフトウェア。クライアント／サーバー型のVPNや拠点間接続などに利用でき、Windows、Linux、BSD、macOSなどのプラットフォームに対応する。 「OpenVPN 2.7.9」のハイライトは次の通り。 Linuxでは、利用可能な環境でtun／tapインターフェースへ「IFF_BACKPRESSURE」フラグを設定するようになった。ユーザ空間側の処理が遅れた場合にも、カーネルが受信パケットを一律に破棄せず、キューイング規則に基づいて優先順位を適用しやすくなる。 「OpenVPN Community Edition」は、We]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-11-11T14:55:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Linux Lite 8.2」リリース ─ Linux 7.3ベースの独自カーネルを採用 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39724</id>
+        <link href="https://thinkit.co.jp/news/39724"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39724.png?itok=aiXLlYmb" type="image/png"/>
+        <updated>2026-11-11T14:33:30.000Z</updated>
+        <summary type="html"><![CDATA[「Linux Lite 8.2」リリース ─ Linux 7.3ベースの独自カーネルを採用 暗号化インストールやNVIDIA対応も改善kawahara2026年11月11日シェア ポスト はてブ 優先するニュース提供元に追加 Linux Lite Projectは11月1日(現地時間)、Linuxディストリビューション「Linux Lite 8.2」をリリースした。 「Linux Lite」は、W]]></summary>
+        <content type="html"><![CDATA[「Linux Lite 8.2」リリース ─ Linux 7.3ベースの独自カーネルを採用 暗号化インストールやNVIDIA対応も改善kawahara2026年11月11日シェア ポスト はてブ 優先するニュース提供元に追加 Linux Lite Projectは11月1日(現地時間)、Linuxディストリビューション「Linux Lite 8.2」をリリースした。 「Linux Lite」は、WindowsからLinuxへの移行や比較的軽量なデスクトップ環境での利用を意識したLinuxディストリビューション。Ubuntu LTSを基盤とし、デスクトップ環境にはXfce、ディスプレイマネージャーにはLightDMを採用している。 「Linux Lite 8.2」は、Ubuntu 26.04.1 LTS「Resolute」を基盤とするアップデートリリース。コードネームは「Hematite」で、Linux 7.3を基に独自の調整を加えた「Linux Lite Advanced Performance Kernels」を収録する。ハイライトは次の通り。 Linux Liteは、Webサイトか]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-11-11T14:33:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIは「間引きましょう」と言った。私は「全部出す」と断った。 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39691</id>
+        <link href="https://thinkit.co.jp/article/39691"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39691/ren_ai-engineer_judgment_main.png?itok=4thkEfxW" type="image/png"/>
+        <updated>2026-11-10T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[AIは「間引きましょう」と言った。私は「全部出す」と断った。itoh2026年11月11日AI時代のエンジニア 判断力の鍛え方シェア ポスト はてブ 優先するニュース提供元に追加 はじめにこんにちは。私は、複数の地図SDKを宣言的UIから同じように扱えるライブラリを、OSSとしてAIを使って開発しています。同じ地図の上に情報を表示するだけなのにGoogle MapsやMapbox、ArcGISなど]]></summary>
+        <content type="html"><![CDATA[AIは「間引きましょう」と言った。私は「全部出す」と断った。itoh2026年11月11日AI時代のエンジニア 判断力の鍛え方シェア ポスト はてブ 優先するニュース提供元に追加 はじめにこんにちは。私は、複数の地図SDKを宣言的UIから同じように扱えるライブラリを、OSSとしてAIを使って開発しています。同じ地図の上に情報を表示するだけなのにGoogle MapsやMapbox、ArcGISなどの地図SDKごとに操作するためのAPIが違います。だから全て同じように扱えるようにしたら便利になるライブラリです。ただし、本連載の内容は地図SDKの話ではありません。「このような抽象化ライブラリの開発をどう行うか」「AIとの向き合い方」の話です。前回、日本全国の郵便局、約24,000箇所を表示する話をしました。今回はその続きとして、約14万本の街路樹データを地図に載せたときに踏んだ地雷と、AIと一緒に原因を探して解決するまでの話をします。ただ、本当に書きたいのはチューニングの手順ではありません。この半年でコードを書いているのが私ではなくAIになりました。 それでも開発が成立しているのはなぜか。]]></content>
+        <author>
+            <name>勝又 雅史</name>
+        </author>
+        <category label="システム開発"/>
+        <category label="設計／手法／テスト"/>
+        <category label="モバイル"/>
+        <category label="AI・人工知能"/>
+        <category label="技術解説"/>
+        <published>2026-11-10T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ClickHouse Cloudが実現した広告運用SaaS「ATOM」のデータ基盤革新、パフォーマンスを向上しながら、運用負荷とコストを削減 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39679</id>
+        <link href="https://thinkit.co.jp/article/39679"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39679/int_clickhouse_01_main.jpg?itok=2NnYR9E8" type="image/jpg"/>
+        <updated>2026-11-10T21:20:00.000Z</updated>
+        <summary type="html"><![CDATA[ClickHouse Cloudが実現した広告運用SaaS「ATOM」のデータ基盤革新、パフォーマンスを向上しながら、運用負荷とコストを削減itoh2026年11月11日インタビューシェア ポスト はてブ 優先するニュース提供元に追加 Sponsored by: ClickHouse株式会社提供：ClickHouse株式会社広告代理店向け広告運用支援SaaS「ATOM」を提供するSO Techno]]></summary>
+        <content type="html"><![CDATA[ClickHouse Cloudが実現した広告運用SaaS「ATOM」のデータ基盤革新、パフォーマンスを向上しながら、運用負荷とコストを削減itoh2026年11月11日インタビューシェア ポスト はてブ 優先するニュース提供元に追加 Sponsored by: ClickHouse株式会社提供：ClickHouse株式会社広告代理店向け広告運用支援SaaS「ATOM」を提供するSO Technologiesは、データ量や集計処理の負荷増に伴う性能・運用負荷・インフラコストの課題を解消するため、OSS版ClickHouseから有償版の「ClickHouse Cloud」へとデータ基盤を移行した。オートスケール機能などを活用してインフラを最適化することで、インフラコストを大幅に削減。さらにデータ投入時間も短縮するなど、性能と運用効率の向上を実現している。複雑化する広告運用業務の効率化を自動化で支援する「ATOM」「稼ぐ力をこの国の隅々まで」というミッションを掲げ、テクノロジーとマーケティングの力を通じて日本の中小企業や地方企業の成長支援ソリューションを提供するSO Technologie]]></content>
+        <author>
+            <name>伊藤 秀樹 (いとう ひでき)</name>
+        </author>
+        <category label="システム開発"/>
+        <category label="データベース"/>
+        <category label="設計／手法／テスト"/>
+        <category label="クラウド（SaaS）"/>
+        <category label="インタビュー"/>
+        <published>2026-11-10T21:20:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Open Source Summit KoreaからAIの光と影を丁寧に解説するJim Zemlin氏のキーノートを紹介（前編） | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39723</id>
+        <link href="https://thinkit.co.jp/article/39723"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/97/39723/39723_main.jpg?itok=PlL9aGLB" type="image/jpg"/>
+        <updated>2026-11-10T20:59:00.000Z</updated>
+        <summary type="html"><![CDATA[Open Source Summit KoreaからAIの光と影を丁寧に解説するJim Zemlin氏のキーノートを紹介（前編）iioka2026年11月11日Open Source Summit Korea 2026レポートシェア ポスト はてブ 優先するニュース提供元に追加 2026年8月11日と12日の2日間、韓国のソウルで開催されたOpen Source Summit Koreaのキーノー]]></summary>
+        <content type="html"><![CDATA[Open Source Summit KoreaからAIの光と影を丁寧に解説するJim Zemlin氏のキーノートを紹介（前編）iioka2026年11月11日Open Source Summit Korea 2026レポートシェア ポスト はてブ 優先するニュース提供元に追加 2026年8月11日と12日の2日間、韓国のソウルで開催されたOpen Source Summit KoreaのキーノートとしてThe Linux FoundationのCEO、Jim Zemlin氏が行ったプレゼンテーションを紹介する。この稿では前半の部分、AIによって良くなった光の部分を紹介する。 Zemlin氏のセッションに先だって韓国の国会議員であるLim Munyeong（林文泳）氏が登壇し、挨拶を行った。 東南アジアで行われるこのようなカンファレンスでは、往々にして国家議員や省庁のトップに近い人材または学術界の権威ある研究者などが登壇することで、政府や学術界に認められたカンファレンスであると演出することが多い。これによって参加者にとっては権威のあるイベントとして出自の組織にアピールできるし、開催する]]></content>
+        <author>
+            <name>松下 康之 - Yasuyuki Matsushita</name>
+        </author>
+        <category label="OSS"/>
+        <category label="AI・人工知能"/>
+        <category label="イベント"/>
+        <published>2026-11-10T20:59:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[生成AI・AIエージェントを成果につなげる「仕事の設計」 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/page/39722</id>
+        <link href="https://thinkit.co.jp/page/39722"/>
+        <updated>2026-11-10T09:06:40.000Z</updated>
+        <summary type="html"><![CDATA[生成AI・AIエージェントを成果につなげる「仕事の設計」nishi-d2026年11月10日シェア ポスト はてブ 優先するニュース提供元に追加 無料で本PDF冊子をダウンロード この記事をシェアしてください シェアする ポストする &gt;ブクマする noteで書く 優先するニュース提供元にThink ITを追加 前の記事WebGLで作る3Dラインアニメーション入門 関連記事 業界情報やナレッジが詰ま]]></summary>
+        <content type="html"><![CDATA[生成AI・AIエージェントを成果につなげる「仕事の設計」nishi-d2026年11月10日シェア ポスト はてブ 優先するニュース提供元に追加 無料で本PDF冊子をダウンロード この記事をシェアしてください シェアする ポストする &gt;ブクマする noteで書く 優先するニュース提供元にThink ITを追加 前の記事WebGLで作る3Dラインアニメーション入門 関連記事 業界情報やナレッジが詰まったメルマガやソーシャルぜひご覧くださいメルマガ Facebook X(エックス) BlueSky Googleニュース RSS Think ITでは、技術情報が詰まったメールマガジン「Think IT Weekly」の配信サービスを提供しています。メルマガ会員登録を済ませれば、メルマガだけでなく、さまざまな限定特典を入手できるようになります。]]></content>
+        <author>
+            <name>nishi-d</name>
+        </author>
+        <published>2026-11-10T09:06:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「手でコードを書く最後の世代」に何が求められるのか――日本CTO協会 今村 雅幸代表理事に聞く、AI時代のCTOの役割とエンジニアのキャリア | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39668</id>
+        <link href="https://thinkit.co.jp/article/39668"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39668/rep_cto-a_Interview_main.jpg?itok=-uuDQF5i" type="image/jpg"/>
+        <updated>2026-11-09T21:35:00.000Z</updated>
+        <summary type="html"><![CDATA[「手でコードを書く最後の世代」に何が求められるのか――日本CTO協会 今村 雅幸代表理事に聞く、AI時代のCTOの役割とエンジニアのキャリアitoh2026年11月10日インタビューシェア ポスト はてブ 優先するニュース提供元に追加 AIの急速な進化により、ソフトウェア開発の現場は大きく変わりつつある。その変化を最も強く受け止めているのが、技術組織を率いるCTO(最高技術責任者)だ。1000人を]]></summary>
+        <content type="html"><![CDATA[「手でコードを書く最後の世代」に何が求められるのか――日本CTO協会 今村 雅幸代表理事に聞く、AI時代のCTOの役割とエンジニアのキャリアitoh2026年11月10日インタビューシェア ポスト はてブ 優先するニュース提供元に追加 AIの急速な進化により、ソフトウェア開発の現場は大きく変わりつつある。その変化を最も強く受け止めているのが、技術組織を率いるCTO(最高技術責任者)だ。1000人を超えるCTOが集まる一般社団法人日本CTO協会は2026年7月、活動方針と体制を刷新した。その旗を振るのが、2025年7月に代表理事に就任した今村 雅幸氏である。今村氏はヤフーのエンジニアとしてキャリアをスタートし、スタートアップの創業CTOから上場企業のCTOまで、あらゆるフェーズを経験してきた。AI時代にCTOの役割はどう変わったのか。そして現場で働く30代のエンジニアは今、何を意識すべきなのか。今村氏に話を聞いた。「何十年に一度」のタイミングで代表理事を引き受けた理由今村氏が日本CTO協会に関わり始めたのは2021年。以来、コミュニティやテックブランディングを担当する理事として活動してき]]></content>
+        <author>
+            <name>伊藤 隆司（Think IT編集部）</name>
+        </author>
+        <category label="システム開発"/>
+        <category label="AI・人工知能"/>
+        <category label="働き方"/>
+        <category label="キャリア・人材"/>
+        <category label="インタビュー"/>
+        <published>2026-11-09T21:35:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VirtualBoxを使ったLinuxネットワーク実習用仮想マシンの構築 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39646</id>
+        <link href="https://thinkit.co.jp/article/39646"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/95/39585/ren_linux-nw-kiso_main.png?itok=lDovql7H" type="image/png"/>
+        <updated>2026-11-09T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[VirtualBoxを使ったLinuxネットワーク実習用仮想マシンの構築iwasa-ta@impre…2026年11月10日基礎から学ぶLinuxネットワーク実習シェア ポスト はてブ 優先するニュース提供元に追加 実習用仮想マシンの準備この後、実習で使用する仮想マシンを準備します。「Linux標準教科書」や「Linuxサーバー構築標準教科書」などを参考に、仮想マシンを作成し、ゲストOSをインスト]]></summary>
+        <content type="html"><![CDATA[VirtualBoxを使ったLinuxネットワーク実習用仮想マシンの構築iwasa-ta@impre…2026年11月10日基礎から学ぶLinuxネットワーク実習シェア ポスト はてブ 優先するニュース提供元に追加 実習用仮想マシンの準備この後、実習で使用する仮想マシンを準備します。「Linux標準教科書」や「Linuxサーバー構築標準教科書」などを参考に、仮想マシンを作成し、ゲストOSをインストールしてください。・「Linux標準教科書」https://linuc.org/textbooks/linux/・「Linuxサーバー構築標準教科書」https://linuc.org/textbooks/server/仮想マシンの作成手順はまったく同じですが、本教科書でのポイントは以下の通りです。ゲストOSはAlmaLinux 9.8仮想ネットワークはネットワークアダプター1を「NAT」、ネットワークアダプター2を「ホストオンリーアダプター」に設定 ネットワークアダプター1を「NAT」に設定 ネットワークアダプター2を「ホストオンリーアダプター」に設定仮想マシンのマウスがうまく動作しない仮想]]></content>
+        <author>
+            <name>宮原 徹（みやはら とおる）</name>
+        </author>
+        <category label="サーバー"/>
+        <category label="ネットワーク"/>
+        <category label="OS"/>
+        <category label="技術解説"/>
+        <published>2026-11-09T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Zabbix 8.0 LTS」リリース ─ OpenTelemetry対応で統合オブザーバビリティを強化 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39720</id>
+        <link href="https://thinkit.co.jp/news/39720"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39720.png?itok=HsAeavm3" type="image/png"/>
+        <updated>2026-11-09T09:55:46.000Z</updated>
+        <summary type="html"><![CDATA[「Zabbix 8.0 LTS」リリース ─ OpenTelemetry対応で統合オブザーバビリティを強化 複合イベント処理、公式MCPサーバー、ClickHouse履歴ストレージを追加kawahara2026年11月9日シェア ポスト はてブ 優先するニュース提供元に追加 Zabbix Teamは11月5日(現地時間)、オープンソースの統合監視ソフトウェア「Zabbix 8.0.0」をリリースし]]></summary>
+        <content type="html"><![CDATA[「Zabbix 8.0 LTS」リリース ─ OpenTelemetry対応で統合オブザーバビリティを強化 複合イベント処理、公式MCPサーバー、ClickHouse履歴ストレージを追加kawahara2026年11月9日シェア ポスト はてブ 優先するニュース提供元に追加 Zabbix Teamは11月5日(現地時間)、オープンソースの統合監視ソフトウェア「Zabbix 8.0.0」をリリースした。Zabbix 8.0系列の最初の正式版で、長期サポート(LTS)版として提供される。 「Zabbix」は、サーバーやネットワーク機器、クラウド、仮想環境、コンテナ、アプリケーションなどを一元的に監視できるソフトウェア。監視データの収集、障害検知、可視化、通知、レポート作成などの機能を備える。 「Zabbix 8.0 LTS」では、OpenTelemetryに基づくアプリケーションパフォーマンス監視（APM）を追加した。従来のインフラ監視データに加え、アプリケーションのメトリクス、ログ、トレースを収集、可視化できる。また、複合イベント処理やAIエージェントと連携するMCPサーバー、Click]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-11-09T09:55:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「systemd 262.2」などリリース ─ 200件の変更を取り込み、仮想化やネットワークを改善 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39719</id>
+        <link href="https://thinkit.co.jp/news/39719"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39719.png?itok=xYgNpAkw" type="image/png"/>
+        <updated>2026-11-09T09:16:54.000Z</updated>
+        <summary type="html"><![CDATA[「systemd 262.2」などリリース ─ 200件の変更を取り込み、仮想化やネットワークを改善 vmspawn、systemd-resolved、journald、udev、PID 1などを幅広く修正kawahara2026年11月9日シェア ポスト はてブ 優先するニュース提供元に追加 Linux向けシステム／サービスマネージャー「systemd 262.2」が11月5日(現地時間)、リリ]]></summary>
+        <content type="html"><![CDATA[「systemd 262.2」などリリース ─ 200件の変更を取り込み、仮想化やネットワークを改善 vmspawn、systemd-resolved、journald、udev、PID 1などを幅広く修正kawahara2026年11月9日シェア ポスト はてブ 優先するニュース提供元に追加 Linux向けシステム／サービスマネージャー「systemd 262.2」が11月5日(現地時間)、リリースされた。11月6日に261系列の261.5、11月7日には260.7と259.11も公開された。 「systemd 262.2」は、現行の262系列に対する正式なアップデートリリース。262.1以降の200件のコミットが取り込まれ、291ファイルが変更された。仮想マシン起動ツールsystemd-vmspawnのほか、PID 1、ネットワーク、ログ、デバイス管理、ディスク処理などが幅広く修正されている。 ハイライトは次の通り。 Systemdは、GitHubから入手できる。(川原 龍人/びぎねっと)[関連リンク]Release(262.2)Release(261.5)Release(260.]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-11-09T09:16:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIで開発が加速する時代、品質保証はどう変わる? Tricentisが示すAIエージェント活用の実像 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39675</id>
+        <link href="https://thinkit.co.jp/article/39675"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39675/rep_ai-days-2026_Tricentis-jp_main.jpg?itok=q8RMbXCf" type="image/jpg"/>
+        <updated>2026-11-08T21:45:00.000Z</updated>
+        <summary type="html"><![CDATA[AIで開発が加速する時代、品質保証はどう変わる? Tricentisが示すAIエージェント活用の実像itoh2026年11月9日「インプレス AI Days 2026」レポートシェア ポスト はてブ 優先するニュース提供元に追加 Sponsored by: Tricentis Japan合同会社提供：Tricentis Japan合同会社生成AIやAIエージェントの普及でソフトウェア開発が加速する]]></summary>
+        <content type="html"><![CDATA[AIで開発が加速する時代、品質保証はどう変わる? Tricentisが示すAIエージェント活用の実像itoh2026年11月9日「インプレス AI Days 2026」レポートシェア ポスト はてブ 優先するニュース提供元に追加 Sponsored by: Tricentis Japan合同会社提供：Tricentis Japan合同会社生成AIやAIエージェントの普及でソフトウェア開発が加速する一方、品質保証やテストの現場には新たな負荷が生じている。「インプレス AI Days 2026」に登壇したTricentis Japanの土川弘晃氏は、開発工程からテスト工程へ移りつつあるボトルネックの構造変化と、同社が提唱する「AI Workspace」を活用した品質保証のあり方を解説。AI時代においてQA(品質保証)担当者の役割がどう変化していくのかを示した。AIで開発が速くなるほど「テスト」がボトルネックになるソフトウェア品質保証のソリューションを提供するTricentisは、グローバルで3000社以上の導入実績を持つ。同社のポートフォリオは、テスト計画や欠陥・レポーティング管理を行う「]]></content>
+        <author>
+            <name>木村 慎治</name>
+        </author>
+        <category label="システム開発"/>
+        <category label="設計／手法／テスト"/>
+        <category label="AI・人工知能"/>
+        <category label="システム運用"/>
+        <category label="イベント"/>
+        <published>2026-11-08T21:45:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[しゃぶ葉のテーブルで学ぶMITM 〜届かなかった六穀豚が教えてくれた通信暗号化の大切さ〜 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39689</id>
+        <link href="https://thinkit.co.jp/article/39689"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/96/39689/ren_sec_vulnerability_main_2_0.png?itok=cR6UYm9j" type="image/png"/>
+        <updated>2026-11-08T21:30:00.000Z</updated>
+        <summary type="html"><![CDATA[しゃぶ葉のテーブルで学ぶMITM 〜届かなかった六穀豚が教えてくれた通信暗号化の大切さ〜itoh2026年11月9日脆弱性診断の現場からシェア ポスト はてブ 優先するニュース提供元に追加 株式会社ステラセキュリティ代表の小竹(@tkmru)です。先日のしゃぶ葉での出来事です。キッチンから私の席へ運ばれてくるはずの六穀豚が、配膳ロボの移動中にいつの間にか別のテーブルの人に取られていた——https]]></summary>
+        <content type="html"><![CDATA[しゃぶ葉のテーブルで学ぶMITM 〜届かなかった六穀豚が教えてくれた通信暗号化の大切さ〜itoh2026年11月9日脆弱性診断の現場からシェア ポスト はてブ 優先するニュース提供元に追加 株式会社ステラセキュリティ代表の小竹(@tkmru)です。先日のしゃぶ葉での出来事です。キッチンから私の席へ運ばれてくるはずの六穀豚が、配膳ロボの移動中にいつの間にか別のテーブルの人に取られていた——https://x.com/tkmru/status/2002579456326795725 https://x.com/tkmru/status/2047276578422558738配膳ロボはプログラムされたルートに従って順番にテーブルを巡回するため、私のテーブルにたどり着くまでに他の客席の横をいくつも通過します。そして、ロボには「今まさに皿に手を伸ばしているのが正しい宛先の客か」を確認する手段がありません。 最終的には店員さんに事情を説明し、改めて豚肉を持ってきていただくことで事なきを得ました。通信で言えば「パケットがロストしたので再送してもらった」状態であり、本来は不要だったコスト(追加の調理・]]></content>
+        <author>
+            <name>小竹 泰一</name>
+        </author>
+        <category label="セキュリティ"/>
+        <category label="技術解説"/>
+        <published>2026-11-08T21:30:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新型ARグラス「XREAL AURA」が国内予約開始、ShiftallとTBS共同開発の超低遅延配信デバイス ほか | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/article/39716</id>
+        <link href="https://thinkit.co.jp/article/39716"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/images/article_node/nid/3/97/39716/39716_main.jpg?itok=vkRduhtR" type="image/jpg"/>
+        <updated>2026-11-08T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[新型ARグラス「XREAL AURA」が国内予約開始、ShiftallとTBS共同開発の超低遅延配信デバイス ほかiioka2026年11月9日週刊VRウォッチシェア ポスト はてブ 優先するニュース提供元に追加 今週も、バーチャル領域の最新動向をお届けします。GoogleとXREALが共同開発したAndroid XR搭載の新型ARグラス「XREAL AURA」が日本で予約受付を開始しました。Sh]]></summary>
+        <content type="html"><![CDATA[新型ARグラス「XREAL AURA」が国内予約開始、ShiftallとTBS共同開発の超低遅延配信デバイス ほかiioka2026年11月9日週刊VRウォッチシェア ポスト はてブ 優先するニュース提供元に追加 今週も、バーチャル領域の最新動向をお届けします。GoogleとXREALが共同開発したAndroid XR搭載の新型ARグラス「XREAL AURA」が日本で予約受付を開始しました。ShiftallとTBSによる超低遅延配信デバイス「HOMRA 4K」の共同開発。さらにLumaからはChatGPTやClaude上で広告素材の制作・分析を完結できる「Luma MCP」が登場、声を出さずに文字入力できるスマートグラス「Subvocal」まで紹介していきます。新型ARグラス「XREAL AURA」、日本で予約開始 発売記念価格199,900円から GoogleとXREALはAndroid XRを搭載した有線XRグラス「XREAL AURA」を発表し、日本でも11月2日より予約受付を開始しました。年内限定の発売記念価格は199,900円（税込）からで、11月中旬より順次出荷されます。]]></content>
+        <author>
+            <name>Mogura VR</name>
+        </author>
+        <category label="VR／AR"/>
+        <category label="ニュース"/>
+        <published>2026-11-08T21:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Apache HTTP Server 2.4.70」リリース ─ Windowsでのクラッシュなどを修正 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39715</id>
+        <link href="https://thinkit.co.jp/news/39715"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39715.png?itok=MfI-Y-Yt" type="image/png"/>
+        <updated>2026-11-08T06:03:54.000Z</updated>
+        <summary type="html"><![CDATA[「Apache HTTP Server 2.4.70」リリース ─ Windowsでのクラッシュなどを修正 mod_dav_lockのヒープバッファーオーバーフローやmod_substituteの整数オーバーフローにも対応kawahara2026年11月8日シェア ポスト はてブ 優先するニュース提供元に追加 Apache Software Foundationは11月6日(現地時間)、オープンソ]]></summary>
+        <content type="html"><![CDATA[「Apache HTTP Server 2.4.70」リリース ─ Windowsでのクラッシュなどを修正 mod_dav_lockのヒープバッファーオーバーフローやmod_substituteの整数オーバーフローにも対応kawahara2026年11月8日シェア ポスト はてブ 優先するニュース提供元に追加 Apache Software Foundationは11月6日(現地時間)、オープンソースのWebサーバ「Apache HTTP Server 2.4.70」をリリースした。 Apache HTTP Server 2.4.70は、2.4系列の最新アップデートリリース。前版の2.4.69でWindows環境の「mod_authnz_ldap」に発生したクラッシュを修正したほか、mod_dav_lock、mod_substitute、mod_cache、mod_cgidに関する変更が行われた。 Apache HTTP Server 2.4.70のハイライトは次の通り。 Apache HTTP Server 2.4.70は、Webサイトから入手できる。(川原 龍人/びぎねっと)[関連]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-11-08T06:03:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Artix Linux 2026.11」安定版ISO公開 ─ Plasma版をWaylandへ移行 | Think IT（シンクイット）]]></title>
+        <id>https://thinkit.co.jp/news/39714</id>
+        <link href="https://thinkit.co.jp/news/39714"/>
+        <link rel="enclosure" href="https://thinkit.co.jp/sites/default/files/styles/1200x630/public/bancho_default_images/node-39714.png?itok=nn9BrFUJ" type="image/png"/>
+        <updated>2026-11-08T05:16:35.000Z</updated>
+        <summary type="html"><![CDATA[「Artix Linux 2026.11」安定版ISO公開 ─ Plasma版をWaylandへ移行 OpenRCとdinitのユーザーサービス対応を正式実装kawahara2026年11月8日シェア ポスト はてブ 優先するニュース提供元に追加 artixlinux.orgは11月4日(現地時間)、Linuxディストリビューション「Artix Linux」の2026年11月版となる安定版ISOを]]></summary>
+        <content type="html"><![CDATA[「Artix Linux 2026.11」安定版ISO公開 ─ Plasma版をWaylandへ移行 OpenRCとdinitのユーザーサービス対応を正式実装kawahara2026年11月8日シェア ポスト はてブ 優先するニュース提供元に追加 artixlinux.orgは11月4日(現地時間)、Linuxディストリビューション「Artix Linux」の2026年11月版となる安定版ISOを公開した。2026年では3回目で、同年最後の公式ISOリリースとなる。 「Artix Linux」は、Arch Linuxをベースとするローリングリリース型のLinuxディストリビューション。systemdを採用せず、OpenRC、runit、s6、dinitからinitシステムを選択できることを特徴としている。 今回のISOは、直近の週次ビルドを安定版へ昇格した新規インストール用スナップショット。ハイライトは次の通り。 Artix Linuxは、Webサイトから入手できる。(川原 龍人/びぎねっと)[関連リンク]NEWSリリースノート この記事をシェアしてください シェアする ポストする &gt;]]></content>
+        <author>
+            <name>kawahara</name>
+        </author>
+        <published>2026-11-08T05:16:35.000Z</published>
+    </entry>
+</feed>

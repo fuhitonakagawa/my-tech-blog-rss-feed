@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/</id>
+    <title>GitHub Security Advisory - Translated Japanese｜企業テックブログRSS</title>
+    <updated>2026-11-14T20:06:01.797Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/atom.xml"/>
+    <subtitle>GitHub Security Advisory - Translated Japanese：enの記事を日本語に翻訳してまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK: CCG lexicon パーサ (fromstring) におけるサービスのクアドラティック・タイム CPU のデニール | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-89p3-fcch-88ph</id>
+        <link href="https://github.com/advisories/GHSA-89p3-fcch-88ph"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-14T00:08:50.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション パブリックCCG lexiconパーサーnltk.ccg.lexicon。 fromstring は、入力幅の量的である 2 個のピュア Python ループでコールアインフルエンサード lexicon テキストを解析します。 信頼できないCCG lexicon文字列を解析するサービスは、リクエストワーカーを主演する、数メガバイト入力で単一スレッドCPUの10秒に駆動することが]]></summary>
+        <content type="html"><![CDATA[インフォメーション パブリックCCG lexiconパーサーnltk.ccg.lexicon。 fromstring は、入力幅の量的である 2 個のピュア Python ループでコールアインフルエンサード lexicon テキストを解析します。 信頼できないCCG lexicon文字列を解析するサービスは、リクエストワーカーを主演する、数メガバイト入力で単一スレッドCPUの10秒に駆動することができます。 認証やユーザーインタラクションは必要ありません。 根本原因マッチ ブラケットは、内部 = + rest[0] で 1 文字を 1 文字ずつ、ブラケット ボディを消費します。残り = rest[1:] です。 rest = rest[1:] tail re-slice は、すべての反復で残りの文字列全体をコピーするので、フラットブラケット本体は O(n^2) を負担します。 augParseCategory は残りの部分を運転します != "": オペレータ ループは、長いオペレータ チェーン上の O(n^2) であるオペレータ 1 人のオペレータが 1 回 (rest = app[]]></content>
+        <published>2026-11-14T00:08:50.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK: Tree.chomsky_normal_formのサービスのクアドラティックタイムCPUの拒否リスト.pop(0) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-r53h-rw34-8h97</id>
+        <link href="https://github.com/advisories/GHSA-r53h-rw34-8h97"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-14T00:07:59.000Z</updated>
+        <summary type="html"><![CDATA[サマリーTree.chomsky_normal_form() は、解析ツリーとデフォルトを適切に解析します。 N の子を持つノードでは、右要素のブランチを繰り返し、list.pop(0) で作業リストの最初の要素を削除し、残りのすべての要素を毎回シフトし、広いノードのコストを一元化します。 攻撃者を増大させたツリーバンクツリーをチョムスキー・ノーマル・フォームに変換するアプリケーションは、1つの広]]></summary>
+        <content type="html"><![CDATA[サマリーTree.chomsky_normal_form() は、解析ツリーとデフォルトを適切に解析します。 N の子を持つノードでは、右要素のブランチを繰り返し、list.pop(0) で作業リストの最初の要素を削除し、残りのすべての要素を毎回シフトし、広いノードのコストを一元化します。 攻撃者を増大させたツリーバンクツリーをチョムスキー・ノーマル・フォームに変換するアプリケーションは、1つの広いフラット・ツリーによって単一スレッドCPUの10秒に強制することができます。 認証やユーザーインタラクションは必要ありません。 根本原因 デフォルトの右要素ブランチでは、変換は、ノードの N の子の上にループ内の curNode[0:] = [nodeCopy.pop(0), newNode] を実行します。list.pop(0) は O(レン) で、残りの要素を 1 つずつシフトします。N-2 を縮小した長さ N リストに実行すると、この合計は O(N^2) になります。 左ファクターブランチは、代わりにnodeCopy.pop()(最後の要素の削除)を使用しており、O(1)とリニア全体で]]></content>
+        <published>2026-11-14T00:07:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK: ConllCorpusReader SRLインスタンスビルダーによるサービスQuadratic-time CPUの拒否 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-v8f3-6phw-6mh9</id>
+        <link href="https://github.com/advisories/GHSA-v8f3-6phw-6mh9"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-14T00:05:57.000Z</updated>
+        <summary type="html"><![CDATA[概要ConllCorpusReader.srl_instances() は、CoNLL の corpus ブロックから semantic-role-labeling インスタンスをビルドします。 P 述語と P スパン 列を持つ文ブロックでは、インスタンス ビルダーは、各述語の頭を検索し、O(P^2 * R) 作業を行なうときに、各述語ごとに各スパン 列(および各スパン) を再スキャンします。 最]]></summary>
+        <content type="html"><![CDATA[概要ConllCorpusReader.srl_instances() は、CoNLL の corpus ブロックから semantic-role-labeling インスタンスをビルドします。 P 述語と P スパン 列を持つ文ブロックでは、インスタンス ビルダーは、各述語の頭を検索し、O(P^2 * R) 作業を行なうときに、各述語ごとに各スパン 列(および各スパン) を再スキャンします。 最後の列にヘッドスパンを配置する単一の整形ブロックは、すべての述語でフルスキャンを強制するので、攻撃者を支持したCoNLL SRL corpusを単一のスレッドCPUの10秒に駆動することができます。 認証やユーザーインタラクションは必要ありません。 Root Cause_get_srl_instances は、ブロックの P 述語の上に反復します。各述語では、各スパンリストと各スパンをスキャンし、各スパン内では、述語を含むスパンタグ付き V または C-V が見つかった場合にのみ停止する内部ブレイクを使用します。 ソールのヘッドスパンが最後のスパン列に配置されると、以前の列が一致しないため、.]]></content>
+        <published>2026-11-14T00:05:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK: BllipParser が空のモデルパスをブlipparser に渡します パスチェックなしのC拡張子、任意の読み取りを有効にします | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-fg9w-wfp5-j933</id>
+        <link href="https://github.com/advisories/GHSA-fg9w-wfp5-j933"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T23:20:56.000Z</updated>
+        <summary type="html"><![CDATA[ネイティブblipparserへのnltk/parse/bllip.pyの手発信者によるファイルシステムパス NLTKのpathsecのバリデーションを通さないC拡張。 コンストラクタパラメータparser_model、reranker_features、reranker_weights、および代替のparser_unified_model_dir()エントリーポイント、C拡張子の load_pa]]></summary>
+        <content type="html"><![CDATA[ネイティブblipparserへのnltk/parse/bllip.pyの手発信者によるファイルシステムパス NLTKのpathsecのバリデーションを通さないC拡張。 コンストラクタパラメータparser_model、reranker_features、reranker_weights、および代替のparser_unified_model_dir()エントリーポイント、C拡張子の load_parser_model() および load_reranker_model() に直接流れ、OSレベルで指定されたパスをオープンおよび読み込みます。 この API に攻撃者のインフルエンサードパスを渡る任意のアプリケーションは、ファイルシステム上の任意の場所から選択した攻撃者のファイルを読みます, 他のすべての NLTK ツールのラッパーがアクセスを許可する NLTK データのルートの外側. NLTK 3.10.0 の Root 原因, SECURITY.md は、デフォルトで有効な厳格な執行と一元化された I/O セキュリティ モジュール (nltk.pathsec) を一元化しました, その]]></content>
+        <published>2026-11-13T23:20:56.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ag-psd] ag-psd は、細工した PSD 寸法を解析する際にメモリを排気することができます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-qfx6-q44v-9qqw</id>
+        <link href="https://github.com/advisories/GHSA-qfx6-q44v-9qqw"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T23:19:38.000Z</updated>
+        <summary type="html"><![CDATA[サマリーreadPsd() は、宣言されたヘッダジオメトリ(幅 x 高さ x チャネル x 深さ、および各層の長方形)からイメージ/レイヤーバッファをコミットし、それらの値を実際のデータに対して有効化します。 巨大な幾何学を宣言する小さな細工のPSDは多角形割り当てを強制します。 ImpactOn ag-psd 30.2.0, Node 24, 52 バイトの PSD は readPsd(buf)]]></summary>
+        <content type="html"><![CDATA[サマリーreadPsd() は、宣言されたヘッダジオメトリ(幅 x 高さ x チャネル x 深さ、および各層の長方形)からイメージ/レイヤーバッファをコミットし、それらの値を実際のデータに対して有効化します。 巨大な幾何学を宣言する小さな細工のPSDは多角形割り当てを強制します。 ImpactOn ag-psd 30.2.0, Node 24, 52 バイトの PSD は readPsd(buf) コミットをします ~3.17 GB (測定ピーク RSS) を ~0.45 s に投げる前に、 キャッチ可能な RangeError ("Offset は DataView の境界外にあります") — 約 61,000,000x 増幅. バリデーションの前にバッファがコミットされるので、 allocation OOM-kills は、本質的に任意のホスト(uncatchable)上のエラーの前にプロセスを割り当て、 同時リクエストの排気メモリ。 ag-psd で不信な PSD を読み込み、リモート DoS.This に公開されているサービスは #39 と #206 と異なり、本物では大きな ]]></content>
+        <published>2026-11-13T23:19:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK: 法的性におけるクアドラティックCPU排気SyllableTokenizer.tokenizeは、保護されていないオンセット逆転ループを介して | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-gpwc-27cw-rh9r</id>
+        <link href="https://github.com/advisories/GHSA-gpwc-27cw-rh9r"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T21:16:34.000Z</updated>
+        <summary type="html"><![CDATA[概要レガシリティSyllableTokenizer.tokenizeは、NLTKのトークナイザーパッケージに保護されていないO(n^2)処理ループが含まれています。 メソッドは、vowels(例えば「a」* n)の長い実行で構成される単一のトークンで呼び出されると、トークンの長さの四角にCPU時間の比例を消費します。 このパブリックトークナイザー API に信頼できないトークンを供給できる攻撃者は]]></summary>
+        <content type="html"><![CDATA[概要レガシリティSyllableTokenizer.tokenizeは、NLTKのトークナイザーパッケージに保護されていないO(n^2)処理ループが含まれています。 メソッドは、vowels(例えば「a」* n)の長い実行で構成される単一のトークンで呼び出されると、トークンの長さの四角にCPU時間の比例を消費します。 このパブリックトークナイザー API に信頼できないトークンを供給できる攻撃者は、攻撃者制御のテキストをシルバライズする任意のサービスの可用性を低下させるために 1 つの CPU コアを飽和させるために単一のリクエストを強制することができます。 認証、特別な設定、またはユーザーインタラクションは必要ありません。 根本原因 メソッドはリバースでトークンを歩き、最初のvowelが見た後のすべての反復で、会員テストchar_lower + current_onset[:-1]を自己で評価します。 法律_onsets。 set Legal_onsets は onset() によって作成され、先頭の vowel まで文字のみを返すため、すべてのメンバーは vowel-free です]]></content>
+        <published>2026-11-13T21:16:34.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK: TreebankWordTokenizer.span_tokenizeでQuadratic CPUの排気をlist.pop(0)で引用復元ループ | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-ffr9-mgrr-wcvr</id>
+        <link href="https://github.com/advisories/GHSA-ffr9-mgrr-wcvr"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T21:08:55.000Z</updated>
+        <summary type="html"><![CDATA[概要TreebankWordTokenizer.span_tokenizeは、NLTKのトークナイザーパッケージには、その引用修復ステップで保護されていないO(n^2)処理ループが含まれています。 メソッドが二重引用文字(例えば '" * n)の長い実行を含むテキストで呼び出されると、引用符で一度にlist.pop(0)操作を実行し、list.pop(0)はO(length)なので、入力長さの四角]]></summary>
+        <content type="html"><![CDATA[概要TreebankWordTokenizer.span_tokenizeは、NLTKのトークナイザーパッケージには、その引用修復ステップで保護されていないO(n^2)処理ループが含まれています。 メソッドが二重引用文字(例えば '" * n)の長い実行を含むテキストで呼び出されると、引用符で一度にlist.pop(0)操作を実行し、list.pop(0)はO(length)なので、入力長さの四角で合計コストが成長します。 このパブリック span-tokenization API に不信なテキストを供給できる攻撃者は、1 つの CPU コアを長期間飽和させ、可用性を低下させる単一のリクエストを強制することができます。 認証、特別な設定、またはユーザーインタラクションは必要ありません。 ルート CauseInside span_tokenize は、入力にダブルまたはリピートされた引用符が含まれているとき、コードはマッチしたリストで、引用符ごとに1つのエントリを持つリストを作成し、引用符である各トークンのmatched.pop(0) を呼び出すという理解でトークンを再構築します。 Py]]></content>
+        <published>2026-11-13T21:08:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK: SteppingRecursiveDescentParser.parse() でアンビジーまたは自己埋め込む文法で CPU 消費をアンバウンド | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-8fx7-8jr8-84rv</id>
+        <link href="https://github.com/advisories/GHSA-8fx7-8jr8-84rv"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T21:02:19.000Z</updated>
+        <summary type="html"><![CDATA[概要nltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse() は、壁クロックやステップ制限なしの、曖昧または自己埋め込まれたコンテキストフリーの文法を上に移動したトップダウン検索を実行します。 文法に影響を及ぼし、このパーサを使用する発信者に短い入力を短時間供給できる俳優は、CPUコアを無期限にピン留めし、サービスの拒否を]]></summary>
+        <content type="html"><![CDATA[概要nltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse() は、壁クロックやステップ制限なしの、曖昧または自己埋め込まれたコンテキストフリーの文法を上に移動したトップダウン検索を実行します。 文法に影響を及ぼし、このパーサを使用する発信者に短い入力を短時間供給できる俳優は、CPUコアを無期限にピン留めし、サービスの拒否を生成することができます。 関連するベースクラスRecursiveDescentParserはmax_timeウォールクロックの期限を得ましたが、ステップサブクラスは独自のステップループを駆動し、アームをなくしたり、その期限を満たしたり、コンストラクタがmax_timeパラメータを受け入れないため、ガードはこのパスで有効にすることはできません。 Root CauseRecursiveDescentParser は、_parse 内の再帰的検索をバインドします: 最初のステップで壁クロックの期限をアームし、タイムアウトを上げます max_time (デフォルト 5.0 秒) が終わるとエラー。 S]]></content>
+        <published>2026-11-13T21:02:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK: YCOECorpusReader の Symlink エスケープで psd/pos ディレクトリのsymlink は、データサンドボックス内の corpus ルートの外側のファイルを読みます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-qg35-44qx-7vrr</id>
+        <link href="https://github.com/advisories/GHSA-qg35-44qx-7vrr"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:55:16.000Z</updated>
+        <summary type="html"><![CDATA[概要YCOECorpusReader は、root が self.root.join("psd") と self.root.join("pos") (nltk/corpus/reader/ycoe.py) から派生している 2 つのネストされた corpus サブリーダーをビルドします。 FileSystemPathPointer.join()(nltk/data.py) は、純粋にlexical]]></summary>
+        <content type="html"><![CDATA[概要YCOECorpusReader は、root が self.root.join("psd") と self.root.join("pos") (nltk/corpus/reader/ycoe.py) から派生している 2 つのネストされた corpus サブリーダーをビルドします。 FileSystemPathPointer.join()(nltk/data.py) は、純粋にlexical 封入チェックを実行し、symplinks を解決しないため、CollusReader.__init__(nltk/corpus/reader/api.py) は、グローバル NLTK のデータサンドボックスに対してのみサブリーダールートを検証し、エンクロージャーのルートに対しては、psd または posed というディレクトリーのsymplink は、YCO-E-E-E-E-E のサブリーダーを外部に割り当てます。 パスセックの下に読み込まれたYCOEのコルパスの内容を制御する攻撃者。 ENFORCE=True は、許可されたデータサンドボックス内の他の場所からファイルコンテンツを返し、パス]]></content>
+        <published>2026-11-13T20:55:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@sveltejs/kit] は、 SvelteKit: アダプターノードは、`reroute` が malformed のパス名を書き換えると、未処理の URIError でクラッシュします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-mw6w-2fmv-pvw3</id>
+        <link href="https://github.com/advisories/GHSA-mw6w-2fmv-pvw3"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:51:44.000Z</updated>
+        <summary type="html"><![CDATA[再ルートが無効なパーセントエンコードされたパスを有効なパスにしたとき、サーバーをクラッシュする比較をトリガーする可能性があります。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-mw6w-2admv-pvw3https://github.com/sveltejs/kit/pull/17620https://github.co]]></summary>
+        <content type="html"><![CDATA[再ルートが無効なパーセントエンコードされたパスを有効なパスにしたとき、サーバーをクラッシュする比較をトリガーする可能性があります。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-mw6w-2admv-pvw3https://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5e2edf17e0da11https://github.com/github.com/sveltejs/ja/sveltejs/ja/ja/ja/sveltejs/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/]]></content>
+        <published>2026-11-13T20:51:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@sveltejs/kit] は、 SvelteKit: アダプターノードは、`reroute` が malformed のパス名を書き換えると、未処理の URIError でクラッシュします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-mw6w-2fmv-pvw3</id>
+        <link href="https://github.com/advisories/GHSA-mw6w-2fmv-pvw3"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:51:44.000Z</updated>
+        <summary type="html"><![CDATA[再ルートが無効なパーセントエンコードされたパスを有効なパスにしたとき、サーバーをクラッシュする比較をトリガーする可能性があります。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-mw6w-2admv-pvw3https://github.com/sveltejs/kit/pull/17620https://github.co]]></summary>
+        <content type="html"><![CDATA[再ルートが無効なパーセントエンコードされたパスを有効なパスにしたとき、サーバーをクラッシュする比較をトリガーする可能性があります。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-mw6w-2admv-pvw3https://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46cac20aa5e2edf17e0da11https://github.com/github.com/sveltejs/ja/sveltejs/ja/ja/ja/sveltejs/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/]]></content>
+        <published>2026-11-13T20:51:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@sveltejs/adapter-static] は、 SvelteKit: プレレンダーされたパスは、@sveltejs/adapter-vercel および @sveltejs/adapter-static で生成された Vercel ルート構成の正規表現として解釈されます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-jf9x-2fg2-hx4w</id>
+        <link href="https://github.com/advisories/GHSA-jf9x-2fg2-hx4w"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:43:23.000Z</updated>
+        <summary type="html"><![CDATA[攻撃者がプレンダーフェーズ中にクロールされたリンクに影響を与える可能性がある場合、そのリンクは、Vercel ルーティング設定の正規表現として解釈される可能性があります。 https://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620h]]></summary>
+        <content type="html"><![CDATA[攻撃者がプレンダーフェーズ中にクロールされたリンクに影響を与える可能性がある場合、そのリンクは、Vercel ルーティング設定の正規表現として解釈される可能性があります。 https://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cac20aa5e2edf17e0da11df17e0da11https://github.com/github.com/sveltejs/ja/ja/sveltejs/ja/ja/ja/ja/svelteja/ja/ja/ja/]]></content>
+        <published>2026-11-13T20:43:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@sveltejs/adapter-vercel] は、 SvelteKit: プレレンダーされたパスは、@sveltejs/adapter-vercel および @sveltejs/adapter-static で生成された Vercel ルート構成の正規表現として解釈されます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-jf9x-2fg2-hx4w</id>
+        <link href="https://github.com/advisories/GHSA-jf9x-2fg2-hx4w"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:43:23.000Z</updated>
+        <summary type="html"><![CDATA[攻撃者がプレンダーフェーズ中にクロールされたリンクに影響を与える可能性がある場合、そのリンクは、Vercel ルーティング設定の正規表現として解釈される可能性があります。 https://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620h]]></summary>
+        <content type="html"><![CDATA[攻撃者がプレンダーフェーズ中にクロールされたリンクに影響を与える可能性がある場合、そのリンクは、Vercel ルーティング設定の正規表現として解釈される可能性があります。 https://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cac20aa5e2edf17e0da11df17e0da11https://github.com/github.com/sveltejs/ja/ja/sveltejs/ja/ja/ja/ja/svelteja/ja/ja/ja/]]></content>
+        <published>2026-11-13T20:43:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@sveltejs/adapter-static] は、 SvelteKit: プレレンダーされたパスは、@sveltejs/adapter-vercel および @sveltejs/adapter-static で生成された Vercel ルート構成の正規表現として解釈されます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-jf9x-2fg2-hx4w</id>
+        <link href="https://github.com/advisories/GHSA-jf9x-2fg2-hx4w"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:43:23.000Z</updated>
+        <summary type="html"><![CDATA[攻撃者がプレンダーフェーズ中にクロールされたリンクに影響を与える可能性がある場合、そのリンクは、Vercel ルーティング設定の正規表現として解釈される可能性があります。 https://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620h]]></summary>
+        <content type="html"><![CDATA[攻撃者がプレンダーフェーズ中にクロールされたリンクに影響を与える可能性がある場合、そのリンクは、Vercel ルーティング設定の正規表現として解釈される可能性があります。 https://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cac20aa5e2edf17e0da11df17e0da11https://github.com/github.com/sveltejs/ja/ja/sveltejs/ja/ja/ja/ja/svelteja/ja/ja/ja/]]></content>
+        <published>2026-11-13T20:43:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@sveltejs/adapter-vercel] は、 SvelteKit: プレレンダーされたパスは、@sveltejs/adapter-vercel および @sveltejs/adapter-static で生成された Vercel ルート構成の正規表現として解釈されます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-jf9x-2fg2-hx4w</id>
+        <link href="https://github.com/advisories/GHSA-jf9x-2fg2-hx4w"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:43:23.000Z</updated>
+        <summary type="html"><![CDATA[攻撃者がプレンダーフェーズ中にクロールされたリンクに影響を与える可能性がある場合、そのリンクは、Vercel ルーティング設定の正規表現として解釈される可能性があります。 https://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620h]]></summary>
+        <content type="html"><![CDATA[攻撃者がプレンダーフェーズ中にクロールされたリンクに影響を与える可能性がある場合、そのリンクは、Vercel ルーティング設定の正規表現として解釈される可能性があります。 https://github.com/sveltejs/kit/security/advisories/GHSA-jf9x-2fg2-hx4whttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cac20aa5e2edf17e0da11df17e0da11https://github.com/github.com/sveltejs/ja/ja/sveltejs/ja/ja/ja/ja/svelteja/ja/ja/ja/]]></content>
+        <published>2026-11-13T20:43:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@sveltejs/adapter-cloudflare] は、 SvelteKit: プレレンダーされたリダイレクトパスは、`@sveltejs/adapter-cloudflare によって生成された `_redirects` ファイルに任意のルールを注入することができます ツイート | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-5wg4-q3ww-283h</id>
+        <link href="https://github.com/advisories/GHSA-5wg4-q3ww-283h"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:39:15.000Z</updated>
+        <summary type="html"><![CDATA[攻撃者がプレレンダリング中にクロールされたリンクに影響を与えることができれば、Cloudflareプラットフォームに追加されるリダイレクトエントリは、ビルドの適応段階で生成されたリダイレクトに影響することができます。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-5wg4-q3w-283hhttps://github.com]]></summary>
+        <content type="html"><![CDATA[攻撃者がプレレンダリング中にクロールされたリンクに影響を与えることができれば、Cloudflareプラットフォームに追加されるリダイレクトエントリは、ビルドの適応段階で生成されたリダイレクトに影響することができます。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-5wg4-q3w-283hhttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46ca5e2edf17e0da11https://github.com/sveltejs/ja/sveltejs/ja/ja/ja/sveltejs/ja/ja/ja/ja/ja/ja/sveltejapanese/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja]]></content>
+        <published>2026-11-13T20:39:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@sveltejs/adapter-cloudflare] は、 SvelteKit: プレレンダーされたリダイレクトパスは、`@sveltejs/adapter-cloudflare によって生成された `_redirects` ファイルに任意のルールを注入することができます ツイート | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-5wg4-q3ww-283h</id>
+        <link href="https://github.com/advisories/GHSA-5wg4-q3ww-283h"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:39:15.000Z</updated>
+        <summary type="html"><![CDATA[攻撃者がプレレンダリング中にクロールされたリンクに影響を与えることができれば、Cloudflareプラットフォームに追加されるリダイレクトエントリは、ビルドの適応段階で生成されたリダイレクトに影響することができます。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-5wg4-q3w-283hhttps://github.com]]></summary>
+        <content type="html"><![CDATA[攻撃者がプレレンダリング中にクロールされたリンクに影響を与えることができれば、Cloudflareプラットフォームに追加されるリダイレクトエントリは、ビルドの適応段階で生成されたリダイレクトに影響することができます。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-5wg4-q3w-283hhttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/0a2e58cbccdd46ca5e2edf17e0da11https://github.com/sveltejs/ja/sveltejs/ja/ja/ja/sveltejs/ja/ja/ja/ja/ja/ja/sveltejapanese/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja]]></content>
+        <published>2026-11-13T20:39:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@sveltejs/adapter-node] は、 SvelteKit: `@sveltejs/adapter-node` は `fetch 経由で特定のリクエストをプロキシする際にクラッシュします ツイート | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-rqw3-x7hx-mm3p</id>
+        <link href="https://github.com/advisories/GHSA-rqw3-x7hx-mm3p"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:36:53.000Z</updated>
+        <summary type="html"><![CDATA[影響を受けるバージョンでは、@sveltejs/adapter-node は、サーバーがクラッシュし、サーバーがサーバーをクラッシュさせ、サーバーにそのサーバーにルーティングされた他のリクエストにサービスを拒否するというコンテキストで、ヘッダを不変なリクエストに追加しようとします。 参考:https://github.com/sveltejs/kit/security/advisories/GHS]]></summary>
+        <content type="html"><![CDATA[影響を受けるバージョンでは、@sveltejs/adapter-node は、サーバーがクラッシュし、サーバーがサーバーをクラッシュさせ、サーバーにそのサーバーにルーティングされた他のリクエストにサービスを拒否するというコンテキストで、ヘッダを不変なリクエストに追加しようとします。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-rqw3-x7hx-mm3phttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/04756a1f73e34f1995340a46de84fc164https://github.com/sveltejs/github.com/sveltejs/com/sveltejs/kit/com/com/ja/ja/ja/svelteja/ja/ja/]]></content>
+        <published>2026-11-13T20:36:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@sveltejs/adapter-node] は、 SvelteKit: `@sveltejs/adapter-node` は `fetch 経由で特定のリクエストをプロキシする際にクラッシュします ツイート | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-rqw3-x7hx-mm3p</id>
+        <link href="https://github.com/advisories/GHSA-rqw3-x7hx-mm3p"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:36:53.000Z</updated>
+        <summary type="html"><![CDATA[影響を受けるバージョンでは、@sveltejs/adapter-node は、サーバーがクラッシュし、サーバーがサーバーをクラッシュさせ、サーバーにそのサーバーにルーティングされた他のリクエストにサービスを拒否するというコンテキストで、ヘッダを不変なリクエストに追加しようとします。 参考:https://github.com/sveltejs/kit/security/advisories/GHS]]></summary>
+        <content type="html"><![CDATA[影響を受けるバージョンでは、@sveltejs/adapter-node は、サーバーがクラッシュし、サーバーがサーバーをクラッシュさせ、サーバーにそのサーバーにルーティングされた他のリクエストにサービスを拒否するというコンテキストで、ヘッダを不変なリクエストに追加しようとします。 参考:https://github.com/sveltejs/kit/security/advisories/GHSA-rqw3-x7hx-mm3phttps://github.com/sveltejs/kit/pull/17620https://github.com/sveltejs/kit/commit/04756a1f73e34f1995340a46de84fc164https://github.com/sveltejs/github.com/sveltejs/com/sveltejs/kit/com/com/ja/ja/ja/svelteja/ja/ja/]]></content>
+        <published>2026-11-13T20:36:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[トルネード] トルネード: トリプルスラッシュリダイレクトパスでリダイレクトを開く | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-5cjw-f85j-cv6r</id>
+        <link href="https://github.com/advisories/GHSA-5cjw-f85j-cv6r"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:31:22.000Z</updated>
+        <summary type="html"><![CDATA[ブラウザとPythonのurllibパースURLの違いにより、ブラウザはプロトコルレベルのリダイレクトとして3つ以上のスラッシュから始まる文字列を扱います。 つまり、RedirectHandler のオープンリダイレクト (CVE-2026-116578, commit cc75ab0e) の 6.6.0 の修正は未完成です。 Tornado 6.6.1 は、このケースを正しく処理するために、オー]]></summary>
+        <content type="html"><![CDATA[ブラウザとPythonのurllibパースURLの違いにより、ブラウザはプロトコルレベルのリダイレクトとして3つ以上のスラッシュから始まる文字列を扱います。 つまり、RedirectHandler のオープンリダイレクト (CVE-2026-116578, commit cc75ab0e) の 6.6.0 の修正は未完成です。 Tornado 6.6.1 は、このケースを正しく処理するために、オープンリダイレクト検出を改善し、6.6.0 の実装で回帰を修正しました。 参考:https://github.com/tornadoweb/tornado/security/advisories/GHSA-5cjw-f85j-cv6rhttps://nvd.nist.gov/vuln/detail/CVE-2026-126347https://github.com/tornadoweb/tornado/commit/c503241622c0efe7c40110d89834ce8b7feedhttps://github.com/tornadoweb/tornadoweb/tornado/com/]]></content>
+        <published>2026-11-13T20:31:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[dnspython] dnspython は、メモリと CPU の使用が多すぎる | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-vvf4-9x63-8xvv</id>
+        <link href="https://github.com/advisories/GHSA-vvf4-9x63-8xvv"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T20:19:13.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション 悪意のある作成されたゾーンファイルでは、WKSレコードを使用して、過度のメモリとCPUを消費し、メモリの排気のためにプロセスを終了する可能性があります。 DetailsThe from_text() パーサーは、WKS レコードサービス番号が 0 から 65535 の inclusive の間であることを確認しません。 その後、この番号を使用してビットマップのサイズを変更して、]]></summary>
+        <content type="html"><![CDATA[インフォメーション 悪意のある作成されたゾーンファイルでは、WKSレコードを使用して、過度のメモリとCPUを消費し、メモリの排気のためにプロセスを終了する可能性があります。 DetailsThe from_text() パーサーは、WKS レコードサービス番号が 0 から 65535 の inclusive の間であることを確認しません。 その後、この番号を使用してビットマップのサイズを変更して、そのオフセットでビットを収容します。 これは、非常に大きなメモリ割り当てを引き起こし、また、非常に非効率的な配列を拡張することができ、CPUを浪費します。 概念の証拠 これは、過度なメモリやCPUの消費を原因しない値で、サービス番号を制限する失敗を示しています。rd = dns.rdata.from_text("IN", "WKS", "10.0.0.1 udp 65536") ImpactIf dnspython は、攻撃者が型と rdata テキストを制御することができるゾーンファイルフォーマットを読み込み、プログラムは、過度なメモリや CPU を消費し、サービスを拒否することができます。]]></content>
+        <published>2026-11-13T20:19:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@nuxt/nitro-server] は、 Nuxt: GHSA-9v7c-q64q-v33 の不完全な修正:リクエストパスの先頭の `/` は `server/middleware` のパスチェックとサーバのルートのルールをパスします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-r99w-jh2x-3mg9</id>
+        <link href="https://github.com/advisories/GHSA-r99w-jh2x-3mg9"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T19:32:21.000Z</updated>
+        <summary type="html"><![CDATA[概要4.6.0以降、Nuxt は、ページをレンダーする前にホストを持つ URL として // から始まるリクエストパスをパースします。 Nitro のルーティング、Nitro のルートルールとサーバー/ミドルウェアは //x/admin のパスを参照しているので、サーバ側は /admin 上でキーをオンにチェックしません。 4.6.3 の GHSA-9v7c-q64q-vv33 の固定はドット セ]]></summary>
+        <content type="html"><![CDATA[概要4.6.0以降、Nuxt は、ページをレンダーする前にホストを持つ URL として // から始まるリクエストパスをパースします。 Nitro のルーティング、Nitro のルートルールとサーバー/ミドルウェアは //x/admin のパスを参照しているので、サーバ側は /admin 上でキーをオンにチェックしません。 4.6.3 の GHSA-9v7c-q64q-vv33 の固定はドット セグメントをカバーしますが、このフォームではありません。 ImpactA unauthenticated攻撃は、ページのルートのリクエストパスに一致するサーバー側の制御をバイパスできます。 route-scoped サーバハンドラは skipped:// nuxt.config.tsexport デフォルトでは、NuxtConfig({ serverHandlers: [{ route: '/admin', middleware: true, ハンドラ: '~/server/admin-guard.ts' },}// server/admin-guard.tsexport のデフォルトでは、Ev]]></content>
+        <published>2026-11-13T19:32:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@opentelemetry/instrumentation-http ] は、 OpenTelemetry JavaScript: センシティブ情報のログファイルへの侵入およびセンシティブ情報の露出@opentelemetry/instrumentation-httpの不正なアクター | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-3v2p-hm54-8qcq</id>
+        <link href="https://github.com/advisories/GHSA-3v2p-hm54-8qcq"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T19:29:20.000Z</updated>
+        <summary type="html"><![CDATA[概要@opentelemetry/instrumentation-http は、発信 (クライアント) のセンシティブ URL クエリパラメーターがスパンではなく、着信(サーバー)スパンで行いません。 server-span パスは、 url.query 属性に 生のクエリ文字列の動詞を書きます。そのため、インバウンドリクエスト URL に埋め込まれた認証情報です。AWS は、 AWS のプリサイ]]></summary>
+        <content type="html"><![CDATA[概要@opentelemetry/instrumentation-http は、発信 (クライアント) のセンシティブ URL クエリパラメーターがスパンではなく、着信(サーバー)スパンで行いません。 server-span パスは、 url.query 属性に 生のクエリ文字列の動詞を書きます。そのため、インバウンドリクエスト URL に埋め込まれた認証情報です。AWS は、 AWS のプリサイン入り URL 署名、 Azure SAS トークン (sig)、 GCS 署名-URL 署名、 設定されたトレースバックエンドにプレーンテキストでエクスポートされます。 赤字の設定 QueryParams オプションはこれを変更しません。これは、発信(クライアント)スパンのみに適用されます。 インパクト情報開示・認証漏れ(CWE-200、CWE-532、機密情報の送信) 誰が影響を受けているか: Node.js サービスは @opentelemetry/instrumentation-http で管理されています。直接または @opentelemetry/auto-instrument-no]]></content>
+        <published>2026-11-13T19:29:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[宇宙] Astro: 動的タグ名の属性注射によるXSS | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-mh32-jxcr-mh9f</id>
+        <link href="https://github.com/advisories/GHSA-mh32-jxcr-mh9f"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T18:39:54.000Z</updated>
+        <summary type="html"><![CDATA[動的タグ (const Tag = ...; &lt;Tag /&gt;) が文字列に解決すると、Astro は生の HTML 要素名としてレンダリングされます。 name は属性を注入できる文字を削除するためにフィルタリングされたが、フィルタは / を処理しなかった。 HTML パーサは、タグ内のタグを属性区切り文字として扱いますので、 img/src/onerror=alert(1) のようなタグ名は、o]]></summary>
+        <content type="html"><![CDATA[動的タグ (const Tag = ...; &lt;Tag /&gt;) が文字列に解決すると、Astro は生の HTML 要素名としてレンダリングされます。 name は属性を注入できる文字を削除するためにフィルタリングされたが、フィルタは / を処理しなかった。 HTML パーサは、タグ内のタグを属性区切り文字として扱いますので、 img/src/onerror=alert(1) のようなタグ名は、onerror 属性を持つ &lt;img&gt; 要素としてレンダリングされました。 MDX で使用される JSX レンダーは、文字列タグ名をまったくフィルタリングしませんでした。 例えば:---const タグ = Astro.url.searchParams.get('as') ?? 'div';---&lt;Tag&gt;hello&lt;/Timg&gt;rendered ?as=/src/onerror=alert(1) ライブ HTML として。 ImpactReflected または保存されたクロスサイトスクリプト, しかし、信頼できない入力を使用するアプリケーションでのみ (リクエストパラメーターや制御されていな]]></content>
+        <published>2026-11-13T18:39:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[宇宙] Astro: @astrojs/node のイメージエンドポイントは、ケースに敏感なファイルシステム上の出力ディレクトリの case-variant の兄弟からファイルを読むことができます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-r3h5-4585-7x3w</id>
+        <link href="https://github.com/advisories/GHSA-r3h5-4585-7x3w"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T18:35:59.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション @astrojs/node アダプターで使用している /_image エンドポイントは、ディスクから読み込む前に、リクエストされたローカルイメージがビルド出力ディレクトリ内にあることを確認します。 そのチェックは、ケースを無感覚にパスします。 ケースに敏感なファイルシステム(Linuxなど)では、レターケースのみの出力ディレクトリとは異なるディレクトリですが、チェックを通過しま]]></summary>
+        <content type="html"><![CDATA[インフォメーション @astrojs/node アダプターで使用している /_image エンドポイントは、ディスクから読み込む前に、リクエストされたローカルイメージがビルド出力ディレクトリ内にあることを確認します。 そのチェックは、ケースを無感覚にパスします。 ケースに敏感なファイルシステム(Linuxなど)では、レターケースのみの出力ディレクトリとは異なるディレクトリですが、チェックを通過します。 例えば、クライアントの出力ディレクトリは /srv/app/dist/client/ で、/_image?href=/./../././DIST/client/secret.png&amp;w=32&amp;f=pngresolved to /srv/app/DIST/client/secret.png で、そのファイルが出力ディレクトリの外にあるにもかかわらず動作します。 ImpactA unauthenticated 攻撃者は、出力ディレクトリの外からイメージファイルを読み込むことができますが、以下のすべてのファイルが真の場合のみです。 このサイトでは、@astrojs/node アダプターでオンデ]]></content>
+        <published>2026-11-13T18:35:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@astrojs/node] は、 Astro: @astrojs/node のイメージエンドポイントは、ケースに敏感なファイルシステム上の出力ディレクトリの case-variant の兄弟からファイルを読むことができます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-r3h5-4585-7x3w</id>
+        <link href="https://github.com/advisories/GHSA-r3h5-4585-7x3w"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T18:35:59.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション @astrojs/node アダプターで使用している /_image エンドポイントは、ディスクから読み込む前に、リクエストされたローカルイメージがビルド出力ディレクトリ内にあることを確認します。 そのチェックは、ケースを無感覚にパスします。 ケースに敏感なファイルシステム(Linuxなど)では、レターケースのみの出力ディレクトリとは異なるディレクトリですが、チェックを通過しま]]></summary>
+        <content type="html"><![CDATA[インフォメーション @astrojs/node アダプターで使用している /_image エンドポイントは、ディスクから読み込む前に、リクエストされたローカルイメージがビルド出力ディレクトリ内にあることを確認します。 そのチェックは、ケースを無感覚にパスします。 ケースに敏感なファイルシステム(Linuxなど)では、レターケースのみの出力ディレクトリとは異なるディレクトリですが、チェックを通過します。 例えば、クライアントの出力ディレクトリは /srv/app/dist/client/ で、/_image?href=/./../././DIST/client/secret.png&amp;w=32&amp;f=pngresolved to /srv/app/DIST/client/secret.png で、そのファイルが出力ディレクトリの外にあるにもかかわらず動作します。 ImpactA unauthenticated 攻撃者は、出力ディレクトリの外からイメージファイルを読み込むことができますが、以下のすべてのファイルが真の場合のみです。 このサイトでは、@astrojs/node アダプターでオンデ]]></content>
+        <published>2026-11-13T18:35:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@nuxt/schema] は、 Nuxt の dev サーバは、 stray lockfile または ワークスペース ファイルを使用して、親ディレクトリからファイルを提供します。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-mjrq-cffv-q4qc</id>
+        <link href="https://github.com/advisories/GHSA-mjrq-cffv-q4qc"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T18:11:49.000Z</updated>
+        <summary type="html"><![CDATA[サマリーNuxtは、デフォルトのワークスペースとしてワークスペースを宣言しない親ディレクトリを選ぶことができます Dir: プロジェクトが git リポジトリ内にある場合、または pnpm-workspace を持つ最も遠くにあるディレクトリ。 yaml または deno.json ファイル、設定のみを保持するファイル。 Vite の dev サーバは、 /_nuxt/@fs/ ワークスペースのフ]]></summary>
+        <content type="html"><![CDATA[サマリーNuxtは、デフォルトのワークスペースとしてワークスペースを宣言しない親ディレクトリを選ぶことができます Dir: プロジェクトが git リポジトリ内にある場合、または pnpm-workspace を持つ最も遠くにあるディレクトリ。 yaml または deno.json ファイル、設定のみを保持するファイル。 Vite の dev サーバは、 /_nuxt/@fs/ ワークスペースのファイルに対するリクエストを可能にします。 ディール stray lockfile または、ホームディレクトリなどの親ディレクトリーにある設定ファイル。そのため、dev サーバがそのディレクトリと下にあるすべてのファイルを読み込みます。 ImpactThis は開発サーバーにのみ影響します。プロダクションビルドは影響を受けません。 以下のいずれかを保持する必要があります。 親ディレクトリには、:a lockfile (package-lock.json, pnpm-lock.yaml, yarn.lock, bun.lock など) のいずれかが含まれていますが、プロジェクトは git リポジト]]></content>
+        <published>2026-11-13T18:11:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[envd] コマンド: 要件パス横断とTOCTOUによるホストファイル開示 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-jv6m-48w5-5rpr</id>
+        <link href="https://github.com/advisories/GHSA-jv6m-48w5-5rpr"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T18:05:15.000Z</updated>
+        <summary type="html"><![CDATA[Summaryenvd の install.python_packages(requirements=...) は、ホストのビルドコンテキスト以外のファイルを読むことができます。 依存エントリとして解釈されるコンテンツは、ビルドログとビルドステップメタデータに表示できます。 コミットf576c92, v1.3.5でリリース, パスの封入検証を追加しましたが、symlinkの解像度と要件ファイルを開]]></summary>
+        <content type="html"><![CDATA[Summaryenvd の install.python_packages(requirements=...) は、ホストのビルドコンテキスト以外のファイルを読むことができます。 依存エントリとして解釈されるコンテンツは、ビルドログとビルドステップメタデータに表示できます。 コミットf576c92, v1.3.5でリリース, パスの封入検証を追加しましたが、symlinkの解像度と要件ファイルを開くためのタイムオブチェック/タイムオブユース(TOCTOU)レースを左に. Commit 9d575b3 は、ディレクトリ・ルート・ファイルシステム・ハンドルを介して要件・ファイルを開くことで、このレースに対処します。 Detailsenvd は、そのコンテンツが pip インストールビルドステップに直接埋め込むことができるかどうかをホストの要件ファイルを読み込みます。 v0.3.38で読み込まれた脆弱なホストサイドの要件が導入されました。 バージョン v1.3.5 は静的パスのエスケープのための封入チェックを追加しましたが、TOCTOU レースに脆弱なままになりました。 完全な修正はv1.3]]></content>
+        <published>2026-11-13T18:05:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] [opentelemetry-api [opentelemetry-api] [opentelemetry-api [opentelemetry-api] [opentelemetry-api [opentelemetry-api] [opentelemetry-api [opentelemetry-api] [opentelemetry-api] [opentelemetry-api] - [opentelemetry-api [オープンディレクトリー OpenTelemetry Python API: 量的時間追跡解析によるサービスの拒否 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-mf5v-w3w3-f6cg</id>
+        <link href="https://github.com/advisories/GHSA-mf5v-w3w3-f6cg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T16:43:18.000Z</updated>
+        <summary type="html"><![CDATA[サマリーTraceContextTextMapPropagator.extract() in opentelemetry-apiは、特別に作られたトレースの値を処理する際に、サービス(ReDoS)の正規表現拒否に脆弱です。 トレース・コンテキスト・プレフィックスを含むマルフォーメード・バリューは、長い空白のシーケンスと埋め込まれたニューラインが、クォリティカル・タイム・レグックス・バックトラッキン]]></summary>
+        <content type="html"><![CDATA[サマリーTraceContextTextMapPropagator.extract() in opentelemetry-apiは、特別に作られたトレースの値を処理する際に、サービス(ReDoS)の正規表現拒否に脆弱です。 トレース・コンテキスト・プレフィックスを含むマルフォーメード・バリューは、長い空白のシーケンスと埋め込まれたニューラインが、クォリティカル・タイム・レグックス・バックトラッキングをトリガーします。 このような文字列を受け入れる信頼できるキャリアからトレースコンテキストを抽出するアプリケーションは、過度のCPU消費と要求処理遅延が発生する可能性があります。 抽出が非同期サーバーのイベントループスレッドで実行されると、単一の悪意のあるメッセージは、そのイベントループによって処理された無関係なリクエストを遅らせることができます。 暴露条件 Exploitation は、組み込みの改行を保存し、十分な価値を許すキャリアを通じて、影響を受けるプロパゲーターに到達するために、攻撃者制御の入力が必要です。 HTTPヘッダ値の構成は、埋め込まれたニューラインを含まない。 ただし、H]]></content>
+        <published>2026-11-13T16:43:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] 重複アドバイザリー: NLTK SteppingRecursiveDescentParser.parse() でアンビジーまたは自己埋め込む文法 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-4hvg-fv5c-9936</id>
+        <link href="https://github.com/advisories/GHSA-4hvg-fv5c-9936"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T12:31:17.000Z</updated>
+        <summary type="html"><![CDATA[重複アドバイザリー GHSA-8fx7-8jr8-84rv の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、SteppingRecursiveDescentParser.parse()で制御されていないリソース消費脆弱性が含まれているため、max_timeの期限やステップ制限が欠けています。 ]]></summary>
+        <content type="html"><![CDATA[重複アドバイザリー GHSA-8fx7-8jr8-84rv の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、SteppingRecursiveDescentParser.parse()で制御されていないリソース消費脆弱性が含まれているため、max_timeの期限やステップ制限が欠けています。 文法に影響する攻撃者は、アンビジーな自己埋め込まれた文法とショートトークンの入力を提供して、アンバウンドのトップダウン検索を強制し、CPUコアをピン留めし、ワーカープールを排気することができます。 参考文献https://github.com/nltk/nltk/security/advisories/GHSA-8fx7-8jr8-84rvhttps://nvd.nist.gov/vuln/detail/CVE-2026-126303https://www.vulncheck.com/advisories/nltk-before-3.10.4-denial-of-service-via-ste]]></content>
+        <published>2026-11-13T12:31:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] 重複アドバイザリー: YCOECorpusReader の Symlink エスケープで psd/pos ディレクトリーのsymlink は、データサンドボックス内の corpus ルートの外側のファイルを読みます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-7r4r-6ppg-7ff8</id>
+        <link href="https://github.com/advisories/GHSA-7r4r-6ppg-7ff8"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T12:31:17.000Z</updated>
+        <summary type="html"><![CDATA[重複アドバイザリー GHSA-qg35-44qx-7vrrの重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4 前の 3.10.0 から元の説明NLTK には、psd または pos ディレクトリのシンリンクを植えることにより、攻撃者がコルパスのルートの外でファイルを読み込むことを可能にする YCOECorpusReader の対角]]></summary>
+        <content type="html"><![CDATA[重複アドバイザリー GHSA-qg35-44qx-7vrrの重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4 前の 3.10.0 から元の説明NLTK には、psd または pos ディレクトリのシンリンクを植えることにより、攻撃者がコルパスのルートの外でファイルを読み込むことを可能にする YCOECorpusReader の対角的なエスケープ脆弱性が含まれています。 YCOE の corpus を制御する攻撃者は、parsed_sents() と tag_words() は、NLTK のデータサンドボックス内の他の corpora または一時ファイルからファイルコンテンツを返すことができます。 参考文献https://github.com/nltk/nltk/security/advisories/GHSA-qg35-44qx-7vrrhttps://nvd.nist.gov/vuln/detail/CVE-2026-126304https://www.vulncheck.com/advisories/nltk-3.]]></content>
+        <published>2026-11-13T12:31:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] 重複アドバイザリー: TreebankWordTokenizer.span_tokenize のクアドラティック CPU 排気を list.pop(0) で引用復元ループ | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-rg32-vgf9-927c</id>
+        <link href="https://github.com/advisories/GHSA-rg32-vgf9-927c"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T12:31:17.000Z</updated>
+        <summary type="html"><![CDATA[重複アドバイザリー GHSA-ffr9-mgrr-wcvrの重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前の3.2.5から元の説明NLTKには、ツリーバンクWordTokenizer.span_tokenizeでアルゴリズム的な複雑性脆弱性が含まれているため、リモート攻撃者が繰り返しリスト.pop(0)呼び出しを介して量子C]]></summary>
+        <content type="html"><![CDATA[重複アドバイザリー GHSA-ffr9-mgrr-wcvrの重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前の3.2.5から元の説明NLTKには、ツリーバンクWordTokenizer.span_tokenizeでアルゴリズム的な複雑性脆弱性が含まれているため、リモート攻撃者が繰り返しリスト.pop(0)呼び出しを介して量子CPU消費を引き起こすことを可能にします。 攻撃者は、信頼できないテキストをスパントークン化し、CPUコアを排出し、可用性を低下させるサービスに、二重引用文字の長い実行を提出することができます。 参考:https://github.com/nltk/nltk/security/advisories/GHSA-ffr9-mgrr-wcvrhttps://nvd.nist.gov/vuln/detail/CVE-2026-126300https://www.vulncheck.com/advisories/nltk-from-3.2.5-before-3.10.4-cpu-exhaustion-vi]]></content>
+        <published>2026-11-13T12:31:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] 重複アドバイザリー: Tree.chomsky_normal_form のサービスのクアドラティックタイム CPU 拒否リスト.pop(0) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-6665-2vj3-h76r</id>
+        <link href="https://github.com/advisories/GHSA-6665-2vj3-h76r"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T12:31:16.000Z</updated>
+        <summary type="html"><![CDATA[重複アドバイザリー GHSA-r53h-rw34-8h97 の重複であるため、このアドバイザリーは撤退しました。 このリンクは、外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、Tree.chomsky_normal_formでサービス脆弱性の拒否が含まれているため、リモート攻撃者はリスト.pop(0)を使用して、量差時間右因子の偏差でCPUを排気することがで]]></summary>
+        <content type="html"><![CDATA[重複アドバイザリー GHSA-r53h-rw34-8h97 の重複であるため、このアドバイザリーは撤退しました。 このリンクは、外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、Tree.chomsky_normal_formでサービス脆弱性の拒否が含まれているため、リモート攻撃者はリスト.pop(0)を使用して、量差時間右因子の偏差でCPUを排気することができます。 攻撃者は、ツリーによってパースされた広いフラットツリーバンクツリーを供給することができます。 fromstring は処理糸を妨げる単一踏まれた CPU の消費の秒の 10 に強制します。 参考文献https://github.com/nltk/nltk/security/advisories/GHSA-r53h-rw34-8h97https://nvd.nist.gov/vuln/detail/CVE-2026-126298https://www.vulncheck.com/advisories/nltk-before-3.10.4-quadratic-cpu-denial-of-]]></content>
+        <published>2026-11-13T12:31:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] 重複アドバイザリー: BllipParser は、pathsec チェックなしで bllipparser C 拡張への呼び出しをパスします。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-f7j6-hf97-9v99</id>
+        <link href="https://github.com/advisories/GHSA-f7j6-hf97-9v99"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T12:31:16.000Z</updated>
+        <summary type="html"><![CDATA[重複アドバイザリー GHSA-fg9w-wfp5-j933 の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4 前の 3.10.0 から元の説明NLTK には、BllipParser の任意のファイル読み取り脆弱性が含まれているため、攻撃者が NLTK のデータルートの外側のファイルを開くことができます。 parser_model]]></summary>
+        <content type="html"><![CDATA[重複アドバイザリー GHSA-fg9w-wfp5-j933 の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4 前の 3.10.0 から元の説明NLTK には、BllipParser の任意のファイル読み取り脆弱性が含まれているため、攻撃者が NLTK のデータルートの外側のファイルを開くことができます。 parser_model, reranker_features, reranker_weights, or from_unified_model_dir() 入力を制御する攻撃者は、Blipparser C 拡張子が FIFO やデバイスで機密ファイルやブロックを読み込むことができます。 参考:https://github.com/nltk/nltk/security/advisories/GHSA-fg9wfp5-j933https://nvd.nist.gov/vuln/detail/CVE-2026-126295https://www.vulncheck.com/advisories/nltk-3.10.0-b]]></content>
+        <published>2026-11-13T12:31:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] 重複アドバイザリー:save_maxent_params / load_maxent_params のパストラバース 任意のファイル READ/WRITE を許可する | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-g5wx-957h-f4wj</id>
+        <link href="https://github.com/advisories/GHSA-g5wx-957h-f4wj"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T12:31:16.000Z</updated>
+        <summary type="html"><![CDATA[重複アドバイザリー GHSA-59f9-gqg8-mqpj の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、save_maxent_params() と load_maxent_params() のパストラバーサルの脆弱性が含まれているため、pathsec ファイルシステム制限機構を迂回します]]></summary>
+        <content type="html"><![CDATA[重複アドバイザリー GHSA-59f9-gqg8-mqpj の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、save_maxent_params() と load_maxent_params() のパストラバーサルの脆弱性が含まれているため、pathsec ファイルシステム制限機構を迂回します。 tab_dir 引数をコントロールするアスターターは、許可されたデータルートの外部のモデルパラメータファイルを読み書きしたり書きしたりできます。なぜなら、関数は Python の組み込み open() を直接呼び出します。 参考:https://github.com/nltk/nltk/security/advisories/GHSA-59f9-gqg8-mqpjhttps://nvd.nist.gov/vuln/detail/CVE-2026-126296https://www.vulncheck.com/advisories/nltk-before-3.10.4-path-traver]]></content>
+        <published>2026-11-13T12:31:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] 重複アドバイザリー: NLTK CCG lexicon パーサー (fromstring) の広範なブラケット ボディおよびオペレータ チェーンのサービスの Quadratic 時間 CPU の拒否 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-jh6r-h4rx-2j3w</id>
+        <link href="https://github.com/advisories/GHSA-jh6r-h4rx-2j3w"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T12:31:16.000Z</updated>
+        <summary type="html"><![CDATA[重複アドバイザリー GHSA-89p3-fcch-88ph の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、CCG lexiconパーサーのデニアルが含まれているため、リモート攻撃者がCPUを排気することを可能にします。 攻撃者は、長いフラットブラケットボディまたはオペレータチェーンでlexi]]></summary>
+        <content type="html"><![CDATA[重複アドバイザリー GHSA-89p3-fcch-88ph の重複であるため、このアドバイザリーは撤退しました。 このリンクは外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、CCG lexiconパーサーのデニアルが含まれているため、リモート攻撃者がCPUを排気することを可能にします。 攻撃者は、長いフラットブラケットボディまたはオペレータチェーンでlexiconテキストを提出することができます, クォードの文字列は、マッチで再スライスをトリガーするBracketsとaugParseCategoryは、ワーカースレッドをブロックします. 参考文献https://github.com/nltk/nltk/security/advisories/GHSA-89p3-fcch-88phhttps://nvd.nist.gov/vuln/detail/CVE-2026-126299https://www.vulncheck.com/advisories/nltk-before-3.10.4-quadratic-of-service-via-ccg-lex]]></content>
+        <published>2026-11-13T12:31:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] 重複アドバイザリー: ConllCorpusReader SRL インスタンス ビルダーのQuadratic-time CPU denialによるネストされたスパンレスキャン | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-qvhx-rvgc-jhwf</id>
+        <link href="https://github.com/advisories/GHSA-qvhx-rvgc-jhwf"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-13T12:31:16.000Z</updated>
+        <summary type="html"><![CDATA[重複アドバイザリー GHSA-v8f3-6phw-6mh9 の重複であるため、このアドバイザリーは撤退しました。 このリンクは、外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、ConllCorpusReader._get_srl_instancesで、リモート攻撃者がネストされたスパンrescansを介してCPUを排気することを可能にするサービス脆弱性の量的]]></summary>
+        <content type="html"><![CDATA[重複アドバイザリー GHSA-v8f3-6phw-6mh9 の重複であるため、このアドバイザリーは撤退しました。 このリンクは、外部参照を保持するために維持されます。 3.10.4以前のオリジナルの説明NLTKには、ConllCorpusReader._get_srl_instancesで、リモート攻撃者がネストされたスパンrescansを介してCPUを排気することを可能にするサービス脆弱性の量的時間密度が含まれています。 攻撃者は、多くの述語とスパンの列で製造されたCoNLL SRLのコルパスを供給し、ヘッドスパンを最後に配置して、数分のコアをピン留めすることができます。 参考文献https://github.com/nltk/nltk/security/advisories/GHSA-v8f3-6phw-6mh9https://nvd.nist.gov/vuln/detail/CVE-2026-126297https://www.vulncheck.com/advisories/nltk-before-3.10.4-cpu-denial-of-service-via-conllco]]></content>
+        <published>2026-11-13T12:31:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[hono] Hono: `csrf()` は、ハイパーリンク監査(`text/ping`)によって送信されたリクエストをチェックしません。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-46wx-v44x-9hh2</id>
+        <link href="https://github.com/advisories/GHSA-46wx-v44x-9hh2"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-12T23:31:25.000Z</updated>
+        <summary type="html"><![CDATA[サマリーcsrf() は、Content-Type が 3 種類の HTML フォームの 1 つである場合にのみリクエストを検証します。 Chromiumのハイパーリンク監査(&lt;a ping&gt;)は、そのリストにないユーザーのクッキーとコンテンツタイプテキスト/pingでクロスオリジンPOSTを送信します。 ミドルウェアは、そのような要求のためにオリジンまたはSec-Fetch-Siteを見ていませ]]></summary>
+        <content type="html"><![CDATA[サマリーcsrf() は、Content-Type が 3 種類の HTML フォームの 1 つである場合にのみリクエストを検証します。 Chromiumのハイパーリンク監査(&lt;a ping&gt;)は、そのリストにないユーザーのクッキーとコンテンツタイプテキスト/pingでクロスオリジンPOSTを送信します。 ミドルウェアは、そのような要求のためにオリジンまたはSec-Fetch-Siteを見ていませんので、ハンドラに渡されます。 詳細ミドルウェアは、フォームの送信が生成されるものではなく、コンテンツタイプが生成されたときにオリジンチェックをスキップします。 仮定は、他のコンテンツタイプが CORS のプリフライトを必要とするため、資格情報でクロスオリジンを送信することはできませんでした。 Hyperlink の監査は例外です。 Chrome と Edge は、 ping をプリフライトなしで認証された POST として送信し、 固定されたボディと コンテンツタイプ: テキスト/ピング。 別の起源のページでは、POST をアプリケーションの任意の URL にトリガーできます。 origin]]></content>
+        <published>2026-11-12T23:31:25.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[hono] Hono: `validator('form')` は、`multipart/form-data` リクエストのバリデーションを余分パラメータでスキップします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-4h7h-rv7c-7m2v</id>
+        <link href="https://github.com/advisories/GHSA-4h7h-rv7c-7m2v"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-12T23:30:45.000Z</updated>
+        <summary type="html"><![CDATA[サマリーバリディエーター('form')は、マルチパート/フォーム・データ・コンテンツ・タイプのみを認識し、単一のバウンダリ・パラメータは何もない。 charset などの別の法的パラメーター、または ; の後に追加の空白の場合には、フォームとして認識されません。 バリデーションコールバックは空のオブジェクトを受け取りますが、c.req.parseBody() はボディをフォームとしてパースします]]></summary>
+        <content type="html"><![CDATA[サマリーバリディエーター('form')は、マルチパート/フォーム・データ・コンテンツ・タイプのみを認識し、単一のバウンダリ・パラメータは何もない。 charset などの別の法的パラメーター、または ; の後に追加の空白の場合には、フォームとして認識されません。 バリデーションコールバックは空のオブジェクトを受け取りますが、c.req.parseBody() はボディをフォームとしてパースします。 詳細はリクエストボディがフォームであるかを、Content-Type 値全体に厳密なパターンとして記述したかどうかを判断するチェックです。 ; boundary=... がチェックに失敗しないパラメータリスト。 失敗すると、ミドルウェアはボディを読み取り、検証コールバックに空のオブジェクトを渡しません。 コールバックが空のオブジェクトを受け入れると、リクエストはハンドラに進み、c.req.parseBody() または c.req.formData().application/x-www-form-urlencoded は影響を受けません。 multipart/form-data ブランチ]]></content>
+        <published>2026-11-12T23:30:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[hono] Hono: `mount()` と `app.mount()` は、マウントプレフィックス内でスコープされたミドルウェアを迂回するパスを転送できます。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-4m76-xfj5-7975</id>
+        <link href="https://github.com/advisories/GHSA-4m76-xfj5-7975"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-12T23:24:11.000Z</updated>
+        <summary type="html"><![CDATA[サマリーmount() と app.mount() はリクエストパスからマウントプレフィックスを削除し、マウントされたアプリケーションに残りを転送します。 そのステップで2つの間違いは、外部アプリケーションが/app/admin/*の認証チェックなど、パススコープミドルウェアで保護するマウントされたアプリケーションのルートに到達するように作成されたリクエストに到達させます。 元のパスの外部アプリケ]]></summary>
+        <content type="html"><![CDATA[サマリーmount() と app.mount() はリクエストパスからマウントプレフィックスを削除し、マウントされたアプリケーションに残りを転送します。 そのステップで2つの間違いは、外部アプリケーションが/app/admin/*の認証チェックなど、パススコープミドルウェアで保護するマウントされたアプリケーションのルートに到達するように作成されたリクエストに到達させます。 元のパスの外部アプリケーションルートは、ミドルウェアは実行しません。 DetailsDynamic 接頭辞 (すべての影響を受けたバージョン): /api/:tenant/* のようなマウントの場合、接頭辞はマッチした接頭辞ではなく、ルートパターンの長さによって削除されました。 要求が長いかより短い最初の区分が中間で切られるので/api/a/xxxxx/admin/secretは/admin/secretとして取付けられた適用に達します。 再正規化(4.1.12.21以降): 転送されたパスは、デコードされたリクエストパスからビルドされ、 url.pathname に割り当てられ、デコードされたバックスラッシュをオ]]></content>
+        <published>2026-11-12T23:24:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[tmatens/compose-lint] compose-lint: プルリクエストのシンリンクによってトリガーされたSARIF-directoryエラーによるワークフローコマンドインジェクション | Security Advisory for Github Actions]]></title>
+        <id>https://github.com/advisories/GHSA-xcf7-88g6-7xr8</id>
+        <link href="https://github.com/advisories/GHSA-xcf7-88g6-7xr8"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-10T21:50:54.000Z</updated>
+        <summary type="html"><![CDATA[ImpactIn Action タグ v0.30.0 と v0.31.0 は、 sarif-file: 作成できないサブディレクトリのファイルの名前です。 Action は、エラーメッセージのディレクトリの解決されたパスを出力します。 v0.31.0 では、アクションがコマンド処理をオフにするウィンドウの外にあるメッセージが、v0.30.0 はそのようなウィンドウがありません。 プルは、名前に新し]]></summary>
+        <content type="html"><![CDATA[ImpactIn Action タグ v0.30.0 と v0.31.0 は、 sarif-file: 作成できないサブディレクトリのファイルの名前です。 Action は、エラーメッセージのディレクトリの解決されたパスを出力します。 v0.31.0 では、アクションがコマンド処理をオフにするウィンドウの外にあるメッセージが、v0.30.0 はそのようなウィンドウがありません。 プルは、名前に新しい行が続くディレクトリに、そのパスにsymlinkをリクエストすることができます。 そのため、ジョブログのアノテーション、フォールド、または非表示の部分を作成したり、 CI がそれを上回るときに、 ランナーが受け入れるコマンドを発行したりできます。 パス/失敗の結果は変更されません。 アクションのみが影響され、sarif-file: サブディレクトリにポイントされるときのみ。 文書化された設定、sarif-file: 結果。 リポジトリのルートでsarifは影響しません。 compose-lint パッケージ、先頭コミットのホックおよび Docker イメージはこのメッセージを印刷しません。 ]]></content>
+        <published>2026-11-10T21:50:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[tmatens/compose-lint] compose-lint: GHSA-jf3h-8jvx-vcrg の不完全な修正: 発見の限界で停止された実行は、CI 生成された `.env` から秘密を引用します | Security Advisory for Github Actions]]></title>
+        <id>https://github.com/advisories/GHSA-rm8w-w798-g545</id>
+        <link href="https://github.com/advisories/GHSA-rm8w-w798-g545"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-10T15:57:22.000Z</updated>
+        <summary type="html"><![CDATA[ImpactThisは、GHSA-jf3h-8jvx-vcrg の不完全な修正です。 0.32.0 は、その値ではなく、埋め込まれた .env をシブルに引用しました。 同じリリースでは、ドキュメントごとに20,000件見つかり、引用のステップ前にストップがチェックされます。 これまでの研究成果をテキスト、JSON、SARIF 出力で解決した値で報告するラン。 つまり、--allow-partia]]></summary>
+        <content type="html"><![CDATA[ImpactThisは、GHSA-jf3h-8jvx-vcrg の不完全な修正です。 0.32.0 は、その値ではなく、埋め込まれた .env をシブルに引用しました。 同じリリースでは、ドキュメントごとに20,000件見つかり、引用のステップ前にストップがチェックされます。 これまでの研究成果をテキスト、JSON、SARIF 出力で解決した値で報告するラン。 つまり、--allow-partial-coverage で、または --allow-partial-coverage なしで起こります。 攻撃は、GHSA-jf3h-8jvx-vcrg の1つです。 Compose ファイルの横にある .env に秘密を記述する CI ワークフローでは、プルリクエストはイメージに行を変えます: "${DB_PASSWORD}"。 また、使用する各サービスごとに1回、エイリアスリストがグレードアップされるため、200行の検索結果が2万件を突破しました。 秘密の値は、ジョブログ、JSON 出力、コードスキャンにアップロードされた SARIF に到達する検索で引用されます。 GitHub は、ジョブ]]></content>
+        <published>2026-11-10T15:57:22.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[tmatens/compose-lint] 作曲: コミットされたsymplinkはコンパス・リントがプロジェクト外からその出力にファイルを引用します | Security Advisory for Github Actions]]></title>
+        <id>https://github.com/advisories/GHSA-whr6-fgpq-fpv9</id>
+        <link href="https://github.com/advisories/GHSA-whr6-fgpq-fpv9"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-10T15:57:10.000Z</updated>
+        <summary type="html"><![CDATA[ImpactLikeドッカー プロジェクトのファイルを読み込むときにコンパス、コンパスリントは、symlinks に従います。 Compose とは異なり、 0.24.0 までのコンポース・リントは、プロジェクト外からその出力にファイルの内容を置くことができ、プルリクエストの著者はそれを読み込むことができます。 プルは、CI ランナーのファイルで指す名前のコンポース・リント・読み取りで、sympl]]></summary>
+        <content type="html"><![CDATA[ImpactLikeドッカー プロジェクトのファイルを読み込むときにコンパス、コンパスリントは、symlinks に従います。 Compose とは異なり、 0.24.0 までのコンポース・リントは、プロジェクト外からその出力にファイルの内容を置くことができ、プルリクエストの著者はそれを読み込むことができます。 プルは、CI ランナーのファイルで指す名前のコンポース・リント・読み取りで、symplink をコミットできます。 Composeファイル自体(0.2.0〜0.24.0)。 コンポーズ。 yml は、プレコミットのホックがその名前やアクションを渡すか、または bare の実行が .compose.override.yml (0.22.0-0.24.0) で、コンポーズ・リントが自動的にマージします。 Compose ファイルの .env にある COMPOSE_FILE エントリー (0.22.0-0.24.0) です。 ターゲットが YAML が有効な場合、パースエラーは失敗した行を引用します。 同じファイルがある場合、Docker Compose は行番号のみを報告します。]]></content>
+        <published>2026-11-10T15:57:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[tmatens/compose-lint] compose-lint:プロジェクト外で連結された `.compose-lint.yml` が読み込まれ、パースのエラーはターゲットの一部を引用します | Security Advisory for Github Actions]]></title>
+        <id>https://github.com/advisories/GHSA-88f4-frh5-gmcr</id>
+        <link href="https://github.com/advisories/GHSA-88f4-frh5-gmcr"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-10T15:57:07.000Z</updated>
+        <summary type="html"><![CDATA[Impactcompose-lint は、 Compose ファイルの横にある .compose-lint.yml ポリシーファイルを自動的に読み込みます。 プロジェクトディレクトリの外で何も読めないという意味ですが、そのファイルがシンリンクであれば、その点を指すところです。 プルは .compose-lint.yml を CI ランナーのファイルへのリンクとしてリクエストできます。 ターゲットが]]></summary>
+        <content type="html"><![CDATA[Impactcompose-lint は、 Compose ファイルの横にある .compose-lint.yml ポリシーファイルを自動的に読み込みます。 プロジェクトディレクトリの外で何も読めないという意味ですが、そのファイルがシンリンクであれば、その点を指すところです。 プルは .compose-lint.yml を CI ランナーのファイルへのリンクとしてリクエストできます。 ターゲットが YAML が有効な場合、エラー compose-lint はパーサーが失敗した行の一部を引用します。 これは、ジョブログ(標準エラー)、JSON エラー[]、SARIF ツールExecutionNotifications に達し、アクションはコードスキャンにアップロードします。 実行出口2.を読むことができるのは小さいです。 引用符はエラー位置の周りの約30文字にカットされ、攻撃者はパーサが失敗するターゲットの行を選択することはできません。 INI スタイルの認証ファイルでは、2番目の行の開始(aws_access_key_id = 以降は値の最初の文字)でした。 KEY=value フォー]]></content>
+        <published>2026-11-10T15:57:07.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[tmatens/compose-lint] 作曲: プルは、C-generated `.env` からその検索結果にコンパス リント クォートするシークレットをリクエストできます。 | Security Advisory for Github Actions]]></title>
+        <id>https://github.com/advisories/GHSA-jf3h-8jvx-vcrg</id>
+        <link href="https://github.com/advisories/GHSA-jf3h-8jvx-vcrg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-10T15:57:05.000Z</updated>
+        <summary type="html"><![CDATA[ImpactSince 0.22.0, Compose が .env から ${VAR} の参照をコンパスファイル以外に満たします。 ドキュメンテーションでは、環境下で値を記述します。: .env から解決されることはありません。 しかし、画像: 値が解決され、 CL-0004 と CL-0019 は、そのメッセージと修正テキストの解決イメージを引用します。 CI のワークフローの中には、その .]]></summary>
+        <content type="html"><![CDATA[ImpactSince 0.22.0, Compose が .env から ${VAR} の参照をコンパスファイル以外に満たします。 ドキュメンテーションでは、環境下で値を記述します。: .env から解決されることはありません。 しかし、画像: 値が解決され、 CL-0004 と CL-0019 は、そのメッセージと修正テキストの解決イメージを引用します。 CI のワークフローの中には、その .env に秘密を埋め込むか、または構築する前に記述します。 そのようなワークフローでは、一つの行をイメージに変えるリクエストのプル: "${DB_PASSWORD}"、またはイメージ: "nginx:${DB_PASSWORD}"、検索で引用された秘密の値を取得します。 結果は、ジョブログ、JSON 出力、SARIF が Code Scanning にアップロードされました。 GitHub は、ジョブログに登録されたシークレットをマスクしますが、アップロードされた JSON や SARIF のアーティファクトやコードスキャンのアラートテキストには含まれていません。 パス/失敗の結果は影響しませ]]></content>
+        <published>2026-11-10T15:57:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[tmatens/compose-lint] 作曲: GitHub Actions のワークフローコマンドを compose-lint Action でコンパイルできます。 | Security Advisory for Github Actions]]></title>
+        <id>https://github.com/advisories/GHSA-6f4g-xm8v-pgv6</id>
+        <link href="https://github.com/advisories/GHSA-6f4g-xm8v-pgv6"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-10T15:56:59.000Z</updated>
+        <summary type="html"><![CDATA[ImpactThe GitHub Actions ランナーは、コマンドとしてステップの出力で特定のテキストを処理します。 レガシーフォーム ##[command] は、任意の行で認識されます。 compose-lint のテキストレポートは、サービス名、環境キー、 Compose ファイルの行を印刷し、 ##[ を中和しません。 compose-lint Action の内部では、プルリクエストの]]></summary>
+        <content type="html"><![CDATA[ImpactThe GitHub Actions ランナーは、コマンドとしてステップの出力で特定のテキストを処理します。 レガシーフォーム ##[command] は、任意の行で認識されます。 compose-lint のテキストレポートは、サービス名、環境キー、 Compose ファイルの行を印刷し、 ##[ を中和しません。 compose-lint Action の内部では、プルリクエストの Compose ファイルをコンパイルできます。 したがって、プルリクエスト (#[error], ##[warning]) で偽のエラーや警告アノテーションを生成します。 ログの残りの部分 (##[add-mask]) は、ログの残りの部分(###[add-mask])に対して選択された文字列をブランクアウトします。 GitHub は、非推奨の set-output log コマンドを削除して延期しました。そのため、ランナーは引き続きそれを表彰しています。 GitHub-hosted ランナーの Action のテスト実行では、Compose ファイルの ::set-output 行が処理さ]]></content>
+        <published>2026-11-10T15:56:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[tmatens/compose-lint] compose-lint: .env はプロジェクト外でsymlinkを読んで、CI ジョブの環境を調べることができます | Security Advisory for Github Actions]]></title>
+        <id>https://github.com/advisories/GHSA-6wcv-rj3c-mhv3</id>
+        <link href="https://github.com/advisories/GHSA-6wcv-rj3c-mhv3"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-10T15:56:56.000Z</updated>
+        <summary type="html"><![CDATA[Impactcompose-lint は Compose ファイルの横にある .env ファイルから ${VAR} 参照で埋めます。 プロジェクトディレクトリの外で何も読み込むことを意味し、env_file: には、: と extends: paths がチェックされます。 .env は読み込みません。 .env が symlink の場合、コンポース・リントは、その点をどこからでもフォローします]]></summary>
+        <content type="html"><![CDATA[Impactcompose-lint は Compose ファイルの横にある .env ファイルから ${VAR} 参照で埋めます。 プロジェクトディレクトリの外で何も読み込むことを意味し、env_file: には、: と extends: paths がチェックされます。 .env は読み込みません。 .env が symlink の場合、コンポース・リントは、その点をどこからでもフォローします。 プルは、 .env の .env の .env の .env の .env の . を CI の ランナーと 変数を参照する Compose ファイルに追加できます。 compose-lint は値を代入し、メッセージを見つけることでそれを引用します。これはログと JSON と SARIF の出力に移動します。 最悪のターゲットは /proc/self/environ、linter 独自の環境です。 Compose ファイルは最初の変数の名前だけを参照する必要があります。なぜなら、そのファイルは改行ではなく NUL バイトで変数を分離するため、置換された値は環境の残りの部分です。 そこに置]]></content>
+        <published>2026-11-10T15:56:56.000Z</published>
+    </entry>
+</feed>

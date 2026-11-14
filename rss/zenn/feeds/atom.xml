@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn/</id>
+    <title>Zenn トレンド｜企業テックブログRSS</title>
+    <updated>2026-11-14T20:05:18.931Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn/feeds/atom.xml"/>
+    <subtitle>Zenn トレンドセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[1時間で作るPerlOS: Yet Another Perl Computer | Zennのトレンド]]></title>
+        <id>https://zenn.dev/takesako/articles/e9b10360d889ca</id>
+        <link href="https://zenn.dev/takesako/articles/e9b10360d889ca"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--awvuSY3e--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:1%25E6%2599%2582%25E9%2596%2593%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258BPerlOS%253A%2520Yet%2520Another%2520Perl%2520Computer%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takesako%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1NCSlhhaTdSYy1OZTh1MXQzQ1JwUmJrMlZPbW9wajVYckI4UTZKZTBfaGg2cnpBOWs9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-14T07:09:37.000Z</updated>
+        <summary type="html"><![CDATA[PerlOS を作って低レイヤーを学ぼう普段書いているC言語のプログラムで疑問に思ったことはないでしょうか？#include &lt;stdio.h&gt;で使われる標準ライブラリの実体は、どこにあるのか？main関数が呼ばれるまで、誰がどんなことをしているのか？printf関数は、どうやって文字を画面に出しているのか？この記事では、組み込み用のPerl言語処理系「microperl」を自作OSに組み込み、起]]></summary>
+        <content type="html"><![CDATA[PerlOS を作って低レイヤーを学ぼう普段書いているC言語のプログラムで疑問に思ったことはないでしょうか？#include &lt;stdio.h&gt;で使われる標準ライブラリの実体は、どこにあるのか？main関数が呼ばれるまで、誰がどんなことをしているのか？printf関数は、どうやって文字を画面に出しているのか？この記事では、組み込み用のPerl言語処理系「microperl」を自作OSに組み込み、起動するとPerlのシェルが使える「PerlOS」を作る手順を解説します。最初はC言語で自作OSの数十行のコードを書いて、仮想環境QEMUを用いてシリアルコン...]]></content>
+        <author>
+            <name>takesako</name>
+        </author>
+        <published>2026-11-14T07:09:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ハッカソン初心者に伝えたい、失敗から学んだチーム開発前の3つの準備 | Zennのトレンド]]></title>
+        <id>https://zenn.dev/kinuuu/articles/hackathon-team-dev-preparation</id>
+        <link href="https://zenn.dev/kinuuu/articles/hackathon-team-dev-preparation"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--8dzogc7G--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%258F%25E3%2583%2583%25E3%2582%25AB%25E3%2582%25BD%25E3%2583%25B3%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E3%2581%25AB%25E4%25BC%259D%25E3%2581%2588%25E3%2581%259F%25E3%2581%2584%25E3%2580%2581%25E5%25A4%25B1%25E6%2595%2597%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2582%2593%25E3%2581%25A0%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%25E9%2596%258B%25E7%2599%25BA%25E5%2589%258D%25E3%2581%25AE3%25E3%2581%25A4%25E3%2581%25AE%25E6%25BA%2596%25E5%2582%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2VkNDI2MWEyMTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-14T04:01:19.000Z</updated>
+        <summary type="html"><![CDATA[ハッカソンで開発を始める前に、チームで確認しておきたいことが3つあります。全員が同じアプリを起動できるかGitで変更を共有し、取り込めるか担当するタスクの内容と、完了条件が伝わっているかこれまでに20回ほどハッカソンに参加し、主にチームの取りまとめ役として、企画から開発・デプロイまでを担当してきました。その中で、開発を始めるときの流れや初心者向けの説明をドキュメントにまとめたり、PRテンプレートや]]></summary>
+        <content type="html"><![CDATA[ハッカソンで開発を始める前に、チームで確認しておきたいことが3つあります。全員が同じアプリを起動できるかGitで変更を共有し、取り込めるか担当するタスクの内容と、完了条件が伝わっているかこれまでに20回ほどハッカソンに参加し、主にチームの取りまとめ役として、企画から開発・デプロイまでを担当してきました。その中で、開発を始めるときの流れや初心者向けの説明をドキュメントにまとめたり、PRテンプレートやAIによるPRレビューを取り入れたりして、チーム開発の進め方を改善してきました。!この記事の対象読者これからハッカソンに参加する人個人開発の経験はあるが、Gitを使ったチー...]]></content>
+        <author>
+            <name>ki</name>
+        </author>
+        <published>2026-11-14T04:01:19.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【2026/11/13時点】Claude Duet を Team プランで触ってみた（組織で使うときの注意点つき） | Zennのトレンド]]></title>
+        <id>https://zenn.dev/canly/articles/e2bd67c9a4c18b</id>
+        <link href="https://zenn.dev/canly/articles/e2bd67c9a4c18b"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--6yr60NmA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%25902026%252F11%252F13%25E6%2599%2582%25E7%2582%25B9%25E3%2580%2591Claude%2520Duet%2520%25E3%2582%2592%2520Team%2520%25E3%2583%2597%25E3%2583%25A9%25E3%2583%25B3%25E3%2581%25A7%25E8%25A7%25A6%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2588%25E7%25B5%2584%25E7%25B9%2594%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2586%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AE%25E6%25B3%25A8%25E6%2584%258F%25E7%2582%25B9%25E3%2581%25A4%25E3%2581%258D%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%25B5%25E3%2581%258F%25E3%2581%25A0%25EF%25BC%2588fukuda%2520ryu%25EF%25BC%2589%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2EwYjI3NWVjYTkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25AB%25E3%2583%25B3%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzEyMjRmMTIyZTMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-13T23:45:16.000Z</updated>
+        <summary type="html"><![CDATA[はじめに2026/11/13、Claude Duet が Claude の Team プランの管理画面に出てきました。筆者が見た範囲でも、X で「Team の管理画面に出た」という報告がいくつもあり、カンリーの管理画面にも 2026/11/13 の午前に「Claude Duet（ベータ）」のページが出ていました。組織で ON にして実際に触ってみたので、Duet で何ができるかと、組織で使うときに]]></summary>
+        <content type="html"><![CDATA[はじめに2026/11/13、Claude Duet が Claude の Team プランの管理画面に出てきました。筆者が見た範囲でも、X で「Team の管理画面に出た」という報告がいくつもあり、カンリーの管理画面にも 2026/11/13 の午前に「Claude Duet（ベータ）」のページが出ていました。組織で ON にして実際に触ってみたので、Duet で何ができるかと、組織で使うときに管理者側で何をどこまで縛れるかをまとめます。!2026/11/13 時点の公式ヘルプでは、提供範囲は米国の Pro / Max / Ultra（ウェイトリスト制）で、Team / E...]]></content>
+        <author>
+            <name>ふくだ（fukuda ryu）</name>
+        </author>
+        <published>2026-11-13T23:45:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Emulatorで、CloudFront＋API Gateway＋Cognitoの構成をローカルで動かしてみた | Zennのトレンド]]></title>
+        <id>https://zenn.dev/visionarray/articles/2978284b5a9706</id>
+        <link href="https://zenn.dev/visionarray/articles/2978284b5a9706"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--oY83KaBO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520Emulator%25E3%2581%25A7%25E3%2580%2581CloudFront%25EF%25BC%258BAPI%2520Gateway%25EF%25BC%258BCognito%25E3%2581%25AE%25E6%25A7%258B%25E6%2588%2590%25E3%2582%2592%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Daisuke%2520Kobayashi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Y3MjYwMDU1MGEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2593%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25AC%25E3%2582%25A4%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzFiZTM1MjQyYTUuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-13T11:31:59.000Z</updated>
+        <summary type="html"><![CDATA[はじめに2026年11月11日に、AWSのAPIを手元で動かせる「AWS Emulator」が一般公開されました。AWS CLIやSDKのエンドポイントをローカルに変えるだけで、コードを変えずにS3やDynamoDBを使えるというものです。S3にファイルを置く、DynamoDBに書いて読む、くらいなら動くだろうと思ったので、もう少し欲張ってみました。CloudFront、S3、API Gatewa]]></summary>
+        <content type="html"><![CDATA[はじめに2026年11月11日に、AWSのAPIを手元で動かせる「AWS Emulator」が一般公開されました。AWS CLIやSDKのエンドポイントをローカルに変えるだけで、コードを変えずにS3やDynamoDBを使えるというものです。S3にファイルを置く、DynamoDBに書いて読む、くらいなら動くだろうと思ったので、もう少し欲張ってみました。CloudFront、S3、API Gateway、Lambda、DynamoDB、Cognitoを組み合わせて、Cognitoオーソライザーと IAM 認証でAPIを守る構成です。これがローカルでどこまで動くのかを、実際に組んで確か...]]></content>
+        <author>
+            <name>Daisuke Kobayashi</name>
+        </author>
+        <published>2026-11-13T11:31:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ng: Neovim のためのシンプルな GUI | Zennのトレンド]]></title>
+        <id>https://zenn.dev/shougo/articles/ng-nvim-simple-gui</id>
+        <link href="https://zenn.dev/shougo/articles/ng-nvim-simple-gui"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--e2mw8YdH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ng%253A%2520Neovim%2520%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2582%25B7%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E3%2581%25AA%2520GUI%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shougo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2llTXlqT3huMG12REN6SFFNMWZNeGlYd3Z4dmw5cVk1ZzVBN2lWPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-13T10:49:55.000Z</updated>
+        <summary type="html"><![CDATA[はじめに私は今回 Linux 向けの Neovim GUIとして「ng」を作りました。Go で書いた、最小限の GUI クライアントです。https://github.com/Shougo/ngng は Neovim の上に新しいエディタを作るものではありません。Neovim のための、ただの UI です。GVim が Vim にとってそうであるように、ng は Neovim に GUI の窓を与]]></summary>
+        <content type="html"><![CDATA[はじめに私は今回 Linux 向けの Neovim GUIとして「ng」を作りました。Go で書いた、最小限の GUI クライアントです。https://github.com/Shougo/ngng は Neovim の上に新しいエディタを作るものではありません。Neovim のための、ただの UI です。GVim が Vim にとってそうであるように、ng は Neovim に GUI の窓を与えるだけです。リポジトリ: Shougo/ngライセンス: MIT対応: Linux（X11 と Wayland）、Neovim の最新安定版と nightlyこの記事で...]]></content>
+        <author>
+            <name>Shougo</name>
+        </author>
+        <published>2026-11-13T10:49:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[困ったらAIにすぐ聞く3年目エンジニアが社会人になって読んだ技術書 10冊. | Zennのトレンド]]></title>
+        <id>https://zenn.dev/atrae/articles/032b9fccca0ff7</id>
+        <link href="https://zenn.dev/atrae/articles/032b9fccca0ff7"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--7XZMg8Y2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%259B%25B0%25E3%2581%25A3%25E3%2581%259F%25E3%2582%2589AI%25E3%2581%25AB%25E3%2581%2599%25E3%2581%2590%25E8%2581%259E%25E3%2581%258F3%25E5%25B9%25B4%25E7%259B%25AE%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%258C%25E7%25A4%25BE%25E4%25BC%259A%25E4%25BA%25BA%25E3%2581%25AB%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%25A6%25E8%25AA%25AD%25E3%2582%2593%25E3%2581%25A0%25E6%258A%2580%25E8%25A1%2593%25E6%259B%25B8%252010%25E5%2586%258A.%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:shin%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNkNjlkZmQ0ZmYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Atrae%2520Tech%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WU0yZEZERnU2em1sd1dSNFlxcVItYTM0em05YTh6VG9kMGo1MlA9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-13T07:46:50.000Z</updated>
+        <summary type="html"><![CDATA[いつの間にか新卒3年目になり,バックエンドエンジニアとしてAIエージェントの基盤開発に携わっています.最近では困ったことがあったらAIに聞くことが多く,朝から晩までAIと会話していることもあります.でも,AIで解決できないことを体系的に学べるので,本を読むのも好きです.書物は学ぶことに特化されているので,読むことでエンジニアとしてステップアップできると思っています.社会人になってから3年で読んでよ]]></summary>
+        <content type="html"><![CDATA[いつの間にか新卒3年目になり,バックエンドエンジニアとしてAIエージェントの基盤開発に携わっています.最近では困ったことがあったらAIに聞くことが多く,朝から晩までAIと会話していることもあります.でも,AIで解決できないことを体系的に学べるので,本を読むのも好きです.書物は学ぶことに特化されているので,読むことでエンジニアとしてステップアップできると思っています.社会人になってから3年で読んでよかった本を10冊まとめました. アーキテクチャ 1.マイクロサービスアーキテクチャ 第2版Webアプリケーションのアーキテクチャ,2大巨塔の1つ.マイクロサービスに興味のある人...]]></content>
+        <author>
+            <name>shin</name>
+        </author>
+        <published>2026-11-13T07:46:50.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[5年後のエンジニアは、何に責任を持つのだろうか | Zennのトレンド]]></title>
+        <id>https://zenn.dev/ara_ta3/articles/thinking-about-engineers-five-years-from-now</id>
+        <link href="https://zenn.dev/ara_ta3/articles/thinking-about-engineers-five-years-from-now"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--ckwHRgR_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:5%25E5%25B9%25B4%25E5%25BE%258C%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%25AF%25E3%2580%2581%25E4%25BD%2595%25E3%2581%25AB%25E8%25B2%25AC%25E4%25BB%25BB%25E3%2582%2592%25E6%258C%2581%25E3%2581%25A4%25E3%2581%25AE%25E3%2581%25A0%25E3%2582%258D%25E3%2581%2586%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ara_ta3%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzIwMmNmMDMwYzUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-13T05:03:44.000Z</updated>
+        <summary type="html"><![CDATA[はじめに最近は、AI Agentを使ってコードを書くことが日常になりました。その一方で、自分で直接コードを書く頻度は本当に減ったと感じています。何年もかけて少しずつ変わったというより、ここ2年も経たないうちの変化です。今や新しいモデルが出るたびに、Artificial Analysisのグラフを眺めています。少し前まで十分良いと思っていた性能を上回りつつ、速度も出て、コストとのバランスも良いのはど]]></summary>
+        <content type="html"><![CDATA[はじめに最近は、AI Agentを使ってコードを書くことが日常になりました。その一方で、自分で直接コードを書く頻度は本当に減ったと感じています。何年もかけて少しずつ変わったというより、ここ2年も経たないうちの変化です。今や新しいモデルが出るたびに、Artificial Analysisのグラフを眺めています。少し前まで十分良いと思っていた性能を上回りつつ、速度も出て、コストとのバランスも良いのはどのあたりか。モデルと推論にかける労力（Reasoning Effort）の組み合わせを見て、「このへんが良さそうかな」と思ったものを試す日々になっています。そんな中で、ふと「5年後くら...]]></content>
+        <author>
+            <name>ara_ta3</name>
+        </author>
+        <published>2026-11-13T05:03:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【pstack】AIに敵対的レビューをさせるな。トークンは検証に使え | Zennのトレンド]]></title>
+        <id>https://zenn.dev/karamage/articles/5c3f8370b2b370</id>
+        <link href="https://zenn.dev/karamage/articles/5c3f8370b2b370"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--WCCj0x2z--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590pstack%25E3%2580%2591AI%25E3%2581%25AB%25E6%2595%25B5%25E5%25AF%25BE%25E7%259A%2584%25E3%2583%25AC%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%2592%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%25E3%2581%25AA%25E3%2580%2582%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%25B3%25E3%2581%25AF%25E6%25A4%259C%25E8%25A8%25BC%25E3%2581%25AB%25E4%25BD%25BF%25E3%2581%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:karamage%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzc0NTAwMmJiMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-13T02:48:24.000Z</updated>
+        <summary type="html"><![CDATA[AIが書いたコードをマルチエージェントで多角的な視点で別のAIに容赦なく叩かせ、それを何往復もループで繰り返せば品質は上がっていくはず。。。純粋無垢な私はずっと、そう信じていた頃がありました。ところが、かなりトークンを注ぎ込んだPRからあっさり本番バグが出てしまい、以下の疑問にはじめて気づきました。問い: AI同士の敵対的レビューで、成果物は本当に信頼できるものになるのか?結論: なりません。その]]></summary>
+        <content type="html"><![CDATA[AIが書いたコードをマルチエージェントで多角的な視点で別のAIに容赦なく叩かせ、それを何往復もループで繰り返せば品質は上がっていくはず。。。純粋無垢な私はずっと、そう信じていた頃がありました。ところが、かなりトークンを注ぎ込んだPRからあっさり本番バグが出てしまい、以下の疑問にはじめて気づきました。問い: AI同士の敵対的レビューで、成果物は本当に信頼できるものになるのか?結論: なりません。そのトークンは実際に動かして確かめる「検証」に使うべきです理由: コードの差分だけを渡されたAIは、揚げ足取りといつか必要になるかもという未来を先取りした提案に迷い込むからですこの...]]></content>
+        <author>
+            <name>karamage</name>
+        </author>
+        <published>2026-11-13T02:48:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[仕組み編：Two-Towerによる検索システム（学習・推論・配信） | Zennのトレンド]]></title>
+        <id>https://zenn.dev/ca_kagglers/articles/two-tower-mechanism</id>
+        <link href="https://zenn.dev/ca_kagglers/articles/two-tower-mechanism"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--HtWE-K4h--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E7%25B7%25A8%25EF%25BC%259ATwo-Tower%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%25A4%259C%25E7%25B4%25A2%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25EF%25BC%2588%25E5%25AD%25A6%25E7%25BF%2592%25E3%2583%25BB%25E6%258E%25A8%25E8%25AB%2596%25E3%2583%25BB%25E9%2585%258D%25E4%25BF%25A1%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ihiratch%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Q3MDk0ZDk5ZTguanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:CA%2520Kaggle%25E3%2582%25BC%25E3%2583%259F%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzMWM2MTViOGEuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-13T01:55:36.000Z</updated>
+        <summary type="html"><![CDATA[はじめにihiratchです。本記事では、検索・推薦タスクで使われる Two-Tower モデルについて解説します。Two-Tower は、クエリとアイテムをそれぞれ別のニューラルネットワークでベクトルに変換し、その類似度から関連度を評価するモデルです。アイテム側のベクトルを事前に計算しておけるため、大量の候補から効率よく検索することができます。本記事は「仕組み編」として、検索タスクから始まり、T]]></summary>
+        <content type="html"><![CDATA[はじめにihiratchです。本記事では、検索・推薦タスクで使われる Two-Tower モデルについて解説します。Two-Tower は、クエリとアイテムをそれぞれ別のニューラルネットワークでベクトルに変換し、その類似度から関連度を評価するモデルです。アイテム側のベクトルを事前に計算しておけるため、大量の候補から効率よく検索することができます。本記事は「仕組み編」として、検索タスクから始まり、Two-Tower の構造・推論・学習・配信までを説明します。学習については、特に負例のサンプリングについて深掘りします。実際のデータセットを使った実装・学習・評価は、別の「実験編」で扱...]]></content>
+        <author>
+            <name>ihiratch</name>
+        </author>
+        <published>2026-11-13T01:55:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最強オープンウェイトモデル Kimi-K3.1-Pro をセルフホストして独自ベンチで比べてみた | Zennのトレンド]]></title>
+        <id>https://zenn.dev/fixstars/articles/kimi-k31-pro-benchmark</id>
+        <link href="https://zenn.dev/fixstars/articles/kimi-k31-pro-benchmark"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--lwxa1dc1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259C%2580%25E5%25BC%25B7%25E3%2582%25AA%25E3%2583%25BC%25E3%2583%2597%25E3%2583%25B3%25E3%2582%25A6%25E3%2582%25A7%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%2520Kimi-K3.1-Pro%2520%25E3%2582%2592%25E3%2582%25BB%25E3%2583%25AB%25E3%2583%2595%25E3%2583%259B%25E3%2582%25B9%25E3%2583%2588%25E3%2581%2597%25E3%2581%25A6%25E7%258B%25AC%25E8%2587%25AA%25E3%2583%2599%25E3%2583%25B3%25E3%2583%2581%25E3%2581%25A7%25E6%25AF%2594%25E3%2581%25B9%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:iizuka%2520kota%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2M4YTI5OTEwMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Fixstars%2520Tech%2520Blog%2520%252F...%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3AybDFZTlpMZEo4Q0RoanRDYlFpNkgtS1Uxb3BRaDdRQm5oUjlPSmZYeXNYaWswRT1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-12T23:50:35.000Z</updated>
+        <summary type="html"><![CDATA[Kimi-K3.1-Pro は、中国のベンチャー企業 Moonshot AI が開発したオープンウェイトの大規模言語モデルです。サイズは 2.8T-A104B と 2026/11/12 時点で公開されている主要なモデルでは最大、 Artificial Analysis v5 指標では 46 点であり二番手 (DeepSeek-V4.1-Flash-1017, 33 点) を大きく引き離しています。]]></summary>
+        <content type="html"><![CDATA[Kimi-K3.1-Pro は、中国のベンチャー企業 Moonshot AI が開発したオープンウェイトの大規模言語モデルです。サイズは 2.8T-A104B と 2026/11/12 時点で公開されている主要なモデルでは最大、 Artificial Analysis v5 指標では 46 点であり二番手 (DeepSeek-V4.1-Flash-1017, 33 点) を大きく引き離しています。スペックを見る限り、 Kimi-K3.1-Pro は最強のオープンウェイトモデルといえるでしょう。弊社では以前 Kimi-K3 の Day1 検証 を行いましたが、今回はデプロイ設定やタスク...]]></content>
+        <author>
+            <name>iizuka kota</name>
+        </author>
+        <published>2026-11-12T23:50:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIで膨らみ続けるテストケースを、リスクベースドテストで選んで回すまでの記録 | Zennのトレンド]]></title>
+        <id>https://zenn.dev/pivotmedia/articles/risk-based-testing-for-uat</id>
+        <link href="https://zenn.dev/pivotmedia/articles/risk-based-testing-for-uat"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--BfX_dzk8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2581%25A7%25E8%2586%25A8%25E3%2582%2589%25E3%2581%25BF%25E7%25B6%259A%25E3%2581%2591%25E3%2582%258B%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%2592%25E3%2580%2581%25E3%2583%25AA%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%2599%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2589%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25A7%25E9%2581%25B8%25E3%2582%2593%25E3%2581%25A7%25E5%259B%259E%25E3%2581%2599%25E3%2581%25BE%25E3%2581%25A7%25E3%2581%25AE%25E8%25A8%2598%25E9%258C%25B2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Keisuke%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzdkYTUzMjYzZmQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:PIVOT%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTFJYQzlDOE1LYkVjMThnR1NXWUdQbHd5R0ZFajBiWU5ZX0tTUXBZYUVxNHlnLXd3PXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-12T11:41:36.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこんにちは。ビジネス映像メディア「PIVOT」で、QAエンジニア兼PjMをしている ケイスケ です。PIVOTのモバイルアプリ（iOS / Android）では、AIでテストケースを書くようになってから、ケースの数が増え続けています。リリース前のUAT（受け入れテスト）で全件を回すのが難しくなってきたので、リスクベースドテスト（RBT）で回すケースを選ぶことにしました。ルールは一度では決ま]]></summary>
+        <content type="html"><![CDATA[はじめにこんにちは。ビジネス映像メディア「PIVOT」で、QAエンジニア兼PjMをしている ケイスケ です。PIVOTのモバイルアプリ（iOS / Android）では、AIでテストケースを書くようになってから、ケースの数が増え続けています。リリース前のUAT（受け入れテスト）で全件を回すのが難しくなってきたので、リスクベースドテスト（RBT）で回すケースを選ぶことにしました。ルールは一度では決まらず、何度も作り直しています。この記事は、その途中で試したことと分かったことの記録です。 前提 テストケースを仕様書として使っているPIVOTでは、テストケースを仕様書としても...]]></content>
+        <author>
+            <name>Keisuke</name>
+        </author>
+        <published>2026-11-12T11:41:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS EmulatorはAWS Blocksのモックを置き換えるのか？実際に動かして見えた「三つ目の層」 | Zennのトレンド]]></title>
+        <id>https://zenn.dev/genda_jp/articles/18d1f780f6b41f</id>
+        <link href="https://zenn.dev/genda_jp/articles/18d1f780f6b41f"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--IMp5HKw3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520Emulator%25E3%2581%25AFAWS%2520Blocks%25E3%2581%25AE%25E3%2583%25A2%25E3%2583%2583%25E3%2582%25AF%25E3%2582%2592%25E7%25BD%25AE%25E3%2581%258D%25E6%258F%259B%25E3%2581%2588%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258B%25EF%25BC%259F%25E5%25AE%259F%25E9%259A%259B%25E3%2581%25AB%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E8%25A6%258B%25E3%2581%2588%25E3%2581%259F%25E3%2580%258C%25E4%25B8%2589%25E3%2581%25A4%25E7%259B%25AE%25E3%2581%25AE%25E5%25B1%25A4%25E3%2580%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ikenyal%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNiM2M1MjhkNjguanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:GENDA%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2I5MzI2NGQ4NzcuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-12T05:20:41.000Z</updated>
+        <summary type="html"><![CDATA[2026年11月11日（米国時間）、AWSが AWS Emulator をリリースしました。AWS SDKやAWS CLIの呼び出しを、クラウドではなく手元のエミュレーターが受けて、AWSと同じ形の応答を返すツールです。https://github.com/aws/aws-emulatorニュースを見て、真っ先に頭に浮かんだのはこれでした。「AWS Blocksのモックって、もういらなくなるの？」]]></summary>
+        <content type="html"><![CDATA[2026年11月11日（米国時間）、AWSが AWS Emulator をリリースしました。AWS SDKやAWS CLIの呼び出しを、クラウドではなく手元のエミュレーターが受けて、AWSと同じ形の応答を返すツールです。https://github.com/aws/aws-emulatorニュースを見て、真っ先に頭に浮かんだのはこれでした。「AWS Blocksのモックって、もういらなくなるの？」AWS Blocksには、パブリックプレビューの段階から微力ながらコントリビュートしています。以前の記事では、BlocksがAmplifyやApp Studioと何が違うのかを整理しまし...]]></content>
+        <author>
+            <name>ikenyal</name>
+        </author>
+        <published>2026-11-12T05:20:41.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIエージェントが決定を勝手に変えてしまった5つのパターンと工夫 | Zennのトレンド]]></title>
+        <id>https://zenn.dev/dress_code/articles/568fd547315abe</id>
+        <link href="https://zenn.dev/dress_code/articles/568fd547315abe"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--UQdRqE-I--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2581%258C%25E6%25B1%25BA%25E5%25AE%259A%25E3%2582%2592%25E5%258B%259D%25E6%2589%258B%25E3%2581%25AB%25E5%25A4%2589%25E3%2581%2588%25E3%2581%25A6%25E3%2581%2597%25E3%2581%25BE%25E3%2581%25A3%25E3%2581%259F5%25E3%2581%25A4%25E3%2581%25AE%25E3%2583%2591%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%25E3%2581%25A8%25E5%25B7%25A5%25E5%25A4%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%2584%25E3%2581%25A3%25E3%2581%2597%25E3%2583%25BC%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzRiOGMxZmU1MDUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_40%2Cl_default:og-publication-connect-mark-v1_hx1oxd%2Cw_40%2Cx_214%2Cy_155/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:DRESS%2520CODE%2520TECH%2520BLOG%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzdiZjU2MDZlYjMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-12T03:00:05.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは。Dress Code の HR Force チームで給与ドメインを担当している、いっしーです。僕はほぼ一日中、Claude Code や Codex に何かしら任せています。仕事では、決定とその理由を ADR に、実装する動作を OpenSpec の仕様書に残し、エージェントにはそれらを読ませてから作業させています。ところが、決めたはずのことが、いつのまにか変わっていることがあります。]]></summary>
+        <content type="html"><![CDATA[こんにちは。Dress Code の HR Force チームで給与ドメインを担当している、いっしーです。僕はほぼ一日中、Claude Code や Codex に何かしら任せています。仕事では、決定とその理由を ADR に、実装する動作を OpenSpec の仕様書に残し、エージェントにはそれらを読ませてから作業させています。ところが、決めたはずのことが、いつのまにか変わっていることがあります。たとえば、仕様について質問しただけなのに、仕様を変える指示として記録されていたことがありました。了承していない提案が、次の作業では決定済みとして扱われていたこともあります。この記事で...]]></content>
+        <author>
+            <name>いっしー</name>
+        </author>
+        <published>2026-11-12T03:00:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Node.js 22 / 24 / 26 の脆弱性、自分のアプリが影響を受けるか確認する方法【2026年11月】 | Zennのトレンド]]></title>
+        <id>https://zenn.dev/rakko_inc/articles/nodejs-security-nov-2026-proxy</id>
+        <link href="https://zenn.dev/rakko_inc/articles/nodejs-security-nov-2026-proxy"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--6OzWDvpq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Node.js%252022%2520%252F%252024%2520%252F%252026%2520%25E3%2581%25AE%25E8%2584%2586%25E5%25BC%25B1%25E6%2580%25A7%25E3%2580%2581%25E8%2587%25AA%25E5%2588%2586%25E3%2581%25AE%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%258C%25E5%25BD%25B1%25E9%259F%25BF%25E3%2582%2592%25E5%258F%2597%25E3%2581%2591%25E3%2582%258B%25E3%2581%258B%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%25E3%2580%25902026%25E5%25B9%25B411%25E6%259C%2588%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:maya%2520honey%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzQ1MDcwYmU3MTAuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%25A9%25E3%2583%2583%25E3%2582%25B3%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2VhYzdkNmY1MzcuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-12T02:31:30.000Z</updated>
+        <summary type="html"><![CDATA[Next.js や NestJS でアプリを書いていて、「Node.js の脆弱性が公表されたけれど、自分のアプリは対象なのか」を自分で判断したい人に向けた記事です。2026年11月11日に、Node.js 22・24・26 系のセキュリティリリースが公表されました。深刻度が High の 7 件は、ロードバランサーや nginx の後ろで Node.js を動かしている構成には届きません。 TL]]></summary>
+        <content type="html"><![CDATA[Next.js や NestJS でアプリを書いていて、「Node.js の脆弱性が公表されたけれど、自分のアプリは対象なのか」を自分で判断したい人に向けた記事です。2026年11月11日に、Node.js 22・24・26 系のセキュリティリリースが公表されました。深刻度が High の 7 件は、ロードバランサーや nginx の後ろで Node.js を動かしている構成には届きません。 TL;DR今回の High の 7 件は、Node.js が自分で暗号化の通信（TLS）や HTTP/2 を処理しているときに起きる不具合でした。ロードバランサーや nginx が手前で...]]></content>
+        <author>
+            <name>maya honey</name>
+        </author>
+        <published>2026-11-12T02:31:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Software Factoryの先へ：全社の仕事をAI-NativeにするUbieの内製クラウドエージェント基盤 | Zennのトレンド]]></title>
+        <id>https://zenn.dev/ubie_dev/articles/45501469c9c044</id>
+        <link href="https://zenn.dev/ubie_dev/articles/45501469c9c044"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--ZTNzeUs4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Software%2520Factory%25E3%2581%25AE%25E5%2585%2588%25E3%2581%25B8%25EF%25BC%259A%25E5%2585%25A8%25E7%25A4%25BE%25E3%2581%25AE%25E4%25BB%2595%25E4%25BA%258B%25E3%2582%2592AI-Native%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258BUbie%25E3%2581%25AE%25E5%2586%2585%25E8%25A3%25BD%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25A6%25E3%2583%2589%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E5%259F%25BA%25E7%259B%25A4%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Yuku%2520Kotani%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2VlOWMzMWRhODMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Ubie%2520%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2Y3MDA4NDZkNjYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-12T00:44:52.000Z</updated>
+        <summary type="html"><![CDATA[Ubie CTO の @yukukotani です。Ubie では 2023 年、GPT-3.5 Turbo が出た頃から、Web UI や Slack を起点に動くクラウドエージェント基盤を内製してきました（当時の様子）。2025 年には、Software Factory を目指して、クラウド型エンジニアリングエージェント Uvin の開発も始めました（当時の様子）。一貫してクラウドエージェント]]></summary>
+        <content type="html"><![CDATA[Ubie CTO の @yukukotani です。Ubie では 2023 年、GPT-3.5 Turbo が出た頃から、Web UI や Slack を起点に動くクラウドエージェント基盤を内製してきました（当時の様子）。2025 年には、Software Factory を目指して、クラウド型エンジニアリングエージェント Uvin の開発も始めました（当時の様子）。一貫してクラウドエージェントに Bet しています。https://zenn.dev/ubie_dev/articles/9258ddaa5f8caaこの3年間で形を変えながら、現在はクラウドエージェント基盤 Re...]]></content>
+        <author>
+            <name>Yuku Kotani</name>
+        </author>
+        <published>2026-11-12T00:44:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SlackでMarkdown記法が使えるようになっていた | Zennのトレンド]]></title>
+        <id>https://zenn.dev/lnest_knowledge/articles/ed5977bd7b6c1f</id>
+        <link href="https://zenn.dev/lnest_knowledge/articles/ed5977bd7b6c1f"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s---I7Uh2R2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2581%25A7Markdown%25E8%25A8%2598%25E6%25B3%2595%25E3%2581%258C%25E4%25BD%25BF%25E3%2581%2588%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:shown_it%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzI5NDcwY2E5ZjcuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%25AA%25E3%2583%2590%25E3%2583%258A%25E3%2583%25AC%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2NjNWMzMjhmOTYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-11T05:52:02.000Z</updated>
+        <summary type="html"><![CDATA[!2026年11月11日時点の検証です。Markdownの文字列をメッセージ入力欄に貼り付けて投稿し、表示はmacOS版Slackとブラウザ版（Chrome）で確認しました。機能の導入日や、すべてのワークスペース・端末で同じ動作になるかは確認していません。 メッセージ内に表が表示される今回、使いどころが多そうだと感じたのが表です。次のようなパイプ区切りのMarkdownを貼り付けました。| 左寄せ]]></summary>
+        <content type="html"><![CDATA[!2026年11月11日時点の検証です。Markdownの文字列をメッセージ入力欄に貼り付けて投稿し、表示はmacOS版Slackとブラウザ版（Chrome）で確認しました。機能の導入日や、すべてのワークスペース・端末で同じ動作になるかは確認していません。 メッセージ内に表が表示される今回、使いどころが多そうだと感じたのが表です。次のようなパイプ区切りのMarkdownを貼り付けました。| 左寄せ | 中央寄せ | 右寄せ || :--- | :---: | ---: || りんご | A | 100 || **太字** | `code` | 200 || [リンク...]]></content>
+        <author>
+            <name>shown_it</name>
+        </author>
+        <published>2026-11-11T05:52:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ISUCON2026 で優勝しました（準備編） | Zennのトレンド]]></title>
+        <id>https://zenn.dev/luvtechno/articles/isucon2026-preparation</id>
+        <link href="https://zenn.dev/luvtechno/articles/isucon2026-preparation"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--FlBezkdp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ISUCON2026%2520%25E3%2581%25A7%25E5%2584%25AA%25E5%258B%259D%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%25EF%25BC%2588%25E6%25BA%2596%25E5%2582%2599%25E7%25B7%25A8%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yoshinori%2520Kawasaki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTEpMVlQ2WjlNQlhlcndlbDZoY1JYUDVLSjAxYWNITUdNcmUwVThZTG5EaDY4PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-11T05:05:46.000Z</updated>
+        <summary type="html"><![CDATA[はじめにこんにちは！ @kawasy です。当日編に続いて、この記事では3か月の準備期間に何をしていたかを、時系列で追いながら振り返ります。 モチベーション私は土曜日はいつも、子どもを習い事に連れて行っています。Slack でレギュレーションの「AI 利用可」を見かけたとき、全部 AI に任せられれば、いつもどおりの土曜日を過ごしながら参加できるかもしれないと思いました。それが開発のきっかけでした]]></summary>
+        <content type="html"><![CDATA[はじめにこんにちは！ @kawasy です。当日編に続いて、この記事では3か月の準備期間に何をしていたかを、時系列で追いながら振り返ります。 モチベーション私は土曜日はいつも、子どもを習い事に連れて行っています。Slack でレギュレーションの「AI 利用可」を見かけたとき、全部 AI に任せられれば、いつもどおりの土曜日を過ごしながら参加できるかもしれないと思いました。それが開発のきっかけでした。もう1つは、人間が手を出さずに、エージェントだけでどこまでできるのか試してみたかったからです。AIエージェントを使ったソフトウェア開発では、人間が途中で判断する HITL（hu...]]></content>
+        <author>
+            <name>Yoshinori Kawasaki</name>
+        </author>
+        <published>2026-11-11T05:05:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[退屈なCoding AgentはMuseにやらせよう | Zennのトレンド]]></title>
+        <id>https://zenn.dev/watany/articles/342b9815dd0553</id>
+        <link href="https://zenn.dev/watany/articles/342b9815dd0553"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--QJhA1p5Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%2580%2580%25E5%25B1%2588%25E3%2581%25AACoding%2520Agent%25E3%2581%25AFMuse%25E3%2581%25AB%25E3%2582%2584%25E3%2582%2589%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:watany%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzJiYjJiYTdkZjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-10T02:35:05.000Z</updated>
+        <summary type="html"><![CDATA[はじめに旧FacebookのMetaが開発したパーソナルAIエージェントのMuseがすごく良くて、意味不明なくらいずっと触ってる。紹介コード: 7L990R を入れるとトークンがもらえるのでよろしくね。https://muse.ai/Museは触ると魅力がわかるタイプのプロダクトで、使ってないとClaudeやCodexで良いじゃん、なんで今更驚き屋してんの？って思われる。そんな捻くれた俺たちでも触]]></summary>
+        <content type="html"><![CDATA[はじめに旧FacebookのMetaが開発したパーソナルAIエージェントのMuseがすごく良くて、意味不明なくらいずっと触ってる。紹介コード: 7L990R を入れるとトークンがもらえるのでよろしくね。https://muse.ai/Museは触ると魅力がわかるタイプのプロダクトで、使ってないとClaudeやCodexで良いじゃん、なんで今更驚き屋してんの？って思われる。そんな捻くれた俺たちでも触りやすい使い方を紹介します。 Museにコードを書かせる大前提として、Muse(無料)の中身「Muse Spark 1.3」はコードが割と書ける方のモデルだ。型落ちとは言え、GP...]]></content>
+        <author>
+            <name>watany</name>
+        </author>
+        <published>2026-11-10T02:35:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Codeで最近使っているTips【2026/11】 | Zennのトレンド]]></title>
+        <id>https://zenn.dev/oikon/articles/claude-code-recipe</id>
+        <link href="https://zenn.dev/oikon/articles/claude-code-recipe"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--Oceq9aco--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%2520Code%25E3%2581%25A7%25E6%259C%2580%25E8%25BF%2591%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258BTips%25E3%2580%25902026%252F11%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Oikon%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzYyMTkzODY4NjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-09T22:01:05.000Z</updated>
+        <summary type="html"><![CDATA[Oikonです。気がつけば2026年も終わりが見えてきました。今年はありがたいことにClaude Codeの書籍を2冊出版させていただきました。Claude Code実践入門 [生成AI深掘りガイド]（SBクリエイティブ）Claude Code実践レシピ集（技術評論社）新刊のClaude Code実践レシピ集は、個人的に好きなClaude CodeのTipsをベースに、割と好き勝手に書かせていただ]]></summary>
+        <content type="html"><![CDATA[Oikonです。気がつけば2026年も終わりが見えてきました。今年はありがたいことにClaude Codeの書籍を2冊出版させていただきました。Claude Code実践入門 [生成AI深掘りガイド]（SBクリエイティブ）Claude Code実践レシピ集（技術評論社）新刊のClaude Code実践レシピ集は、個人的に好きなClaude CodeのTipsをベースに、割と好き勝手に書かせていただきました笑。新しいClaude Code本の発売記念に、この記事では私が最近使っているClaude CodeのTipsを紹介します。 Claude Codeで最近使っている...]]></content>
+        <author>
+            <name>Oikon</name>
+        </author>
+        <published>2026-11-09T22:01:05.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[脆弱性問題を解決するためにRustに移行するべきなのか？ | Zennのトレンド]]></title>
+        <id>https://zenn.dev/garasubo/articles/72340052cdd871</id>
+        <link href="https://zenn.dev/garasubo/articles/72340052cdd871"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--zFb8jqDC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2584%2586%25E5%25BC%25B1%25E6%2580%25A7%25E5%2595%258F%25E9%25A1%258C%25E3%2582%2592%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2581%2599%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25ABRust%25E3%2581%25AB%25E7%25A7%25BB%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2581%25B9%25E3%2581%258D%25E3%2581%25AA%25E3%2581%25AE%25E3%2581%258B%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25AC%25E3%2583%25A9%25E3%2582%25B9%25E3%2583%259C%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2VjOTBhZjcxNWUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-09T13:51:19.000Z</updated>
+        <summary type="html"><![CDATA[近年、AIの発達により攻撃側の脆弱性発見能力が大幅に向上したことにより、セキュリティ対策の重要性がより高まっています。最近、PHPの脆弱性であるPHP2Shellが発見されました。これはOpenAIの支援を受けたサイバーセキュリティ企業[1]が発見しました。一部の技術者、中には政治家の方もメモリ安全性が保証されているRustのような言語への移行を目指すべきだという意見が見られました。確かに、熱心な]]></summary>
+        <content type="html"><![CDATA[近年、AIの発達により攻撃側の脆弱性発見能力が大幅に向上したことにより、セキュリティ対策の重要性がより高まっています。最近、PHPの脆弱性であるPHP2Shellが発見されました。これはOpenAIの支援を受けたサイバーセキュリティ企業[1]が発見しました。一部の技術者、中には政治家の方もメモリ安全性が保証されているRustのような言語への移行を目指すべきだという意見が見られました。確かに、熱心なRust愛好家は以前からこのような主張をすることは見かけますが、実際の主張の妥当性としてはどうか、いくつかの実プロダクトでの例や分析を見ていこうと思います。 PHP2ShellとはP...]]></content>
+        <author>
+            <name>ガラスボー</name>
+        </author>
+        <published>2026-11-09T13:51:19.000Z</published>
+    </entry>
+</feed>

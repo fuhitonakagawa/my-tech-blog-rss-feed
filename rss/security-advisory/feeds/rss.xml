@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>GitHub Security Advisory｜企業テックブログRSS</title>
+        <link>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</link>
+        <description>初回掲載順の通知用RSS。日次統計以外は元記事の公開日時を本文に記載します。</description>
+        <lastBuildDate>Sat, 14 Nov 2026 08:06:11 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <copyright>fuhitonakagawa/my-tech-blog-rss-feed</copyright>
+        <atom:link href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[[nltk] NLTK: Quadratic-time CPU denial of service in Tree.chomsky_normal_form right-factor binarization via list.pop(0) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-r53h-rw34-8h97</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r53h-rw34-8h97</guid>
+            <pubDate>Sat, 14 Nov 2026 08:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 9:07:59（日本時間）
+
+SummaryTree.chomsky_normal_form() binarizes a parse tree and defaults to right factoring. For a node with N children the right-factor branch repeatedly removes the first element of a working list with]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 9:07:59（日本時間）<br><br>SummaryTree.chomsky_normal_form() binarizes a parse tree and defaults to right factoring. For a node with N children the right-factor branch repeatedly removes the first element of a working list with</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: Quadratic-time CPU denial of service in ConllCorpusReader SRL instance builder via nested span rescan | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-v8f3-6phw-6mh9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-v8f3-6phw-6mh9</guid>
+            <pubDate>Sat, 14 Nov 2026 08:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 9:05:57（日本時間）
+
+SummaryConllCorpusReader.srl_instances() builds semantic-role-labeling instances from a CoNLL corpus block. For a sentence block with P predicates and P span columns, the instance builder rescans ever]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 9:05:57（日本時間）<br><br>SummaryConllCorpusReader.srl_instances() builds semantic-role-labeling instances from a CoNLL corpus block. For a sentence block with P predicates and P span columns, the instance builder rescans ever</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: Quadratic-time CPU denial of service in CCG lexicon parser (fromstring) on wide bracket bodies and operator chains | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-89p3-fcch-88ph</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-89p3-fcch-88ph</guid>
+            <pubDate>Sat, 14 Nov 2026 08:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 9:08:50（日本時間）
+
+SummaryThe public CCG lexicon parser nltk.ccg.lexicon.fromstring parses caller-influenced lexicon text with two pure-Python loops whose cost is quadratic in the input width. A service that parses an u]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 9:08:50（日本時間）<br><br>SummaryThe public CCG lexicon parser nltk.ccg.lexicon.fromstring parses caller-influenced lexicon text with two pure-Python loops whose cost is quadratic in the input width. A service that parses an u</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] Duplicate Advisory: Quadratic-time CPU denial of service in ConllCorpusReader SRL instance builder via nested span rescan | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-qvhx-rvgc-jhwf</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-qvhx-rvgc-jhwf</guid>
+            <pubDate>Sat, 14 Nov 2026 08:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:16（日本時間）
+
+Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-v8f3-6phw-6mh9. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:16（日本時間）<br><br>Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-v8f3-6phw-6mh9. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] Duplicate Advisory: Quadratic-time CPU denial of service in Tree.chomsky_normal_form right-factor binarization via list.pop(0) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-6665-2vj3-h76r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6665-2vj3-h76r</guid>
+            <pubDate>Sat, 14 Nov 2026 08:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:16（日本時間）
+
+Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-r53h-rw34-8h97. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:16（日本時間）<br><br>Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-r53h-rw34-8h97. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@sveltejs/kit] SvelteKit: adapter-node crashes with an unhandled URIError when `reroute` rewrites malformed pathnames | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-mw6w-2fmv-pvw3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mw6w-2fmv-pvw3</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:51:44（日本時間）
+
+When reroute turned an invalid percent-encoded path into a valid path, it could potentially trigger a comparison that would crash the server.Referenceshttps://github.com/sveltejs/kit/security/advisori]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:51:44（日本時間）<br><br>When reroute turned an invalid percent-encoded path into a valid path, it could potentially trigger a comparison that would crash the server.Referenceshttps://github.com/sveltejs/kit/security/advisori</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] Duplicate Advisory: BllipParser passes caller-supplied model paths to the bllipparser C extension with no pathsec check, enabling arbitrary read | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-f7j6-hf97-9v99</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-f7j6-hf97-9v99</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:16（日本時間）
+
+Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-fg9w-wfp5-j933. This link is maintained to preserve external references.Original DescriptionNLTK from 3.10.0 before]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:16（日本時間）<br><br>Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-fg9w-wfp5-j933. This link is maintained to preserve external references.Original DescriptionNLTK from 3.10.0 before</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@nuxt/nitro-server] Nuxt: Incomplete fix for GHSA-9v7c-q64q-vv33: a leading `//` in the request path bypasses `server/middleware` path checks and server route rules on page routes | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r99w-jh2x-3mg9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r99w-jh2x-3mg9</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 4:32:21（日本時間）
+
+SummarySince 4.6.0, Nuxt parses a request path that starts with // as a URL with a host before rendering a page, so //x/admin renders the page at /admin. Nitro&#39;s routing, Nitro&#39;s route rules and serve]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 4:32:21（日本時間）<br><br>SummarySince 4.6.0, Nuxt parses a request path that starts with // as a URL with a host before rendering a page, so //x/admin renders the page at /admin. Nitro&#39;s routing, Nitro&#39;s route rules and serve</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] Duplicate Advisory: Path Traversal in save_maxent_params / load_maxent_params Allow Arbitrary File READ/WRITE | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-g5wx-957h-f4wj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-g5wx-957h-f4wj</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:16（日本時間）
+
+Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-59f9-gqg8-mqpj. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:16（日本時間）<br><br>Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-59f9-gqg8-mqpj. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] Duplicate Advisory: Quadratic-time CPU denial of service in NLTK CCG lexicon parser (fromstring) on wide bracket bodies and operator chains | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-jh6r-h4rx-2j3w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jh6r-h4rx-2j3w</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:16（日本時間）
+
+Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-89p3-fcch-88ph. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:16（日本時間）<br><br>Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-89p3-fcch-88ph. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@sveltejs/adapter-node] SvelteKit: `@sveltejs/adapter-node` crashes when proxying certain requests via `fetch` | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-rqw3-x7hx-mm3p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-rqw3-x7hx-mm3p</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:36:53（日本時間）
+
+In affected versions, @sveltejs/adapter-node can attempt to add a header to an immutable request in a context that causes the server to crash, denying service to any other requests routed to that serv]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:36:53（日本時間）<br><br>In affected versions, @sveltejs/adapter-node can attempt to add a header to an immutable request in a context that causes the server to crash, denying service to any other requests routed to that serv</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@sveltejs/adapter-vercel] SvelteKit: Prerendered paths are interpreted as regular expressions in Vercel route config generated by @sveltejs/adapter-vercel and @sveltejs/adapter-static | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jf9x-2fg2-hx4w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jf9x-2fg2-hx4w</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:43:23（日本時間）
+
+If an attacker could influence a link that was crawled during the prerender phase, that link could later be interpreted as a regex in the Vercel routing configuration.Referenceshttps://github.com/svel]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:43:23（日本時間）<br><br>If an attacker could influence a link that was crawled during the prerender phase, that link could later be interpreted as a regex in the Vercel routing configuration.Referenceshttps://github.com/svel</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] Duplicate Advisory: Symlink escape in YCOECorpusReader lets a psd/pos directory symlink read files outside the corpus root within the data sandbox | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-7r4r-6ppg-7ff8</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7r4r-6ppg-7ff8</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:17（日本時間）
+
+Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-qg35-44qx-7vrr. This link is maintained to preserve external references.Original DescriptionNLTK from 3.10.0 before]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:17（日本時間）<br><br>Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-qg35-44qx-7vrr. This link is maintained to preserve external references.Original DescriptionNLTK from 3.10.0 before</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: BllipParser passes caller-supplied model paths to the bllipparser C extension with no pathsec check, enabling arbitrary read | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-fg9w-wfp5-j933</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-fg9w-wfp5-j933</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 8:20:56（日本時間）
+
+SummaryBllipParser in nltk/parse/bllip.py hands caller-supplied filesystem paths to the native bllipparser C extension without routing them through NLTK&#39;s pathsec validation. The constructor parameter]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 8:20:56（日本時間）<br><br>SummaryBllipParser in nltk/parse/bllip.py hands caller-supplied filesystem paths to the native bllipparser C extension without routing them through NLTK&#39;s pathsec validation. The constructor parameter</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@sveltejs/adapter-cloudflare] SvelteKit: Prerendered redirect paths can inject arbitrary rules into the `_redirects` file generated by `@sveltejs/adapter-cloudflare` | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5wg4-q3ww-283h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5wg4-q3ww-283h</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:39:15（日本時間）
+
+If an attacker can influence the links crawled during prerendering, they can influence the redirects entries that are added to the Cloudflare platform redirects generated during the adapt phase of the]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:39:15（日本時間）<br><br>If an attacker can influence the links crawled during prerendering, they can influence the redirects entries that are added to the Cloudflare platform redirects generated during the adapt phase of the</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: Quadratic CPU exhaustion in TreebankWordTokenizer.span_tokenize via list.pop(0) in quote-restore loop | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-ffr9-mgrr-wcvr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-ffr9-mgrr-wcvr</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 6:08:55（日本時間）
+
+SummaryTreebankWordTokenizer.span_tokenize in the NLTK tokenizer package contains an unguarded O(n^2) processing loop in its quote-restoration step. When the method is invoked on text containing a lon]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 6:08:55（日本時間）<br><br>SummaryTreebankWordTokenizer.span_tokenize in the NLTK tokenizer package contains an unguarded O(n^2) processing loop in its quote-restoration step. When the method is invoked on text containing a lon</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: Quadratic CPU exhaustion in LegalitySyllableTokenizer.tokenize via unguarded onset reversal loop | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-gpwc-27cw-rh9r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gpwc-27cw-rh9r</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 6:16:34（日本時間）
+
+SummaryLegalitySyllableTokenizer.tokenize in the NLTK tokenizer package contains an unguarded O(n^2) processing loop. When the method is called on a single token that consists of a long run of vowels ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 6:16:34（日本時間）<br><br>SummaryLegalitySyllableTokenizer.tokenize in the NLTK tokenizer package contains an unguarded O(n^2) processing loop. When the method is called on a single token that consists of a long run of vowels </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@astrojs/node] Astro: Image endpoint in @astrojs/node can read files from a case-variant sibling of the output directory on case-sensitive filesystems | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r3h5-4585-7x3w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r3h5-4585-7x3w</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 3:35:59（日本時間）
+
+SummaryThe /_image endpoint used by the @astrojs/node adapter checks that a requested local image is inside the build output directory before reading it from disk. That check compared paths case-insen]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 3:35:59（日本時間）<br><br>SummaryThe /_image endpoint used by the @astrojs/node adapter checks that a requested local image is inside the build output directory before reading it from disk. That check compared paths case-insen</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tornado] Tornado: Open redirect via triple-slash redirect paths | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-5cjw-f85j-cv6r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5cjw-f85j-cv6r</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:31:22（日本時間）
+
+SummaryDue to differences in the way browsers and Python&#39;s urllib parse urls, browsers treat a string starting with three or more slashes as a protocol-level redirect, while urllib does not. This mean]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:31:22（日本時間）<br><br>SummaryDue to differences in the way browsers and Python&#39;s urllib parse urls, browsers treat a string starting with three or more slashes as a protocol-level redirect, while urllib does not. This mean</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: Unbounded CPU consumption in SteppingRecursiveDescentParser.parse() with ambiguous or self-embedding grammars | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-8fx7-8jr8-84rv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8fx7-8jr8-84rv</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 6:02:19（日本時間）
+
+Summarynltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse() performs an unbounded top-down search over ambiguous or self-embedding context-free grammars with no wall-clock or step limit.]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 6:02:19（日本時間）<br><br>Summarynltk.parse.recursivedescent.SteppingRecursiveDescentParser.parse() performs an unbounded top-down search over ambiguous or self-embedding context-free grammars with no wall-clock or step limit.</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] Duplicate Advisory: Quadratic CPU exhaustion in TreebankWordTokenizer.span_tokenize via list.pop(0) in quote-restore loop | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-rg32-vgf9-927c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-rg32-vgf9-927c</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:17（日本時間）
+
+Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-ffr9-mgrr-wcvr. This link is maintained to preserve external references.Original DescriptionNLTK from 3.2.5 before ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:17（日本時間）<br><br>Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-ffr9-mgrr-wcvr. This link is maintained to preserve external references.Original DescriptionNLTK from 3.2.5 before </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@opentelemetry/instrumentation-http] OpenTelemetry JavaScript: Insertion of Sensitive Information into Log File and Exposure of Sensitive Information to an Unauthorized Actor in @opentelemetry/instrumentation-http | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-3v2p-hm54-8qcq</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3v2p-hm54-8qcq</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 4:29:20（日本時間）
+
+Summary@opentelemetry/instrumentation-http redacts sensitive URL query parameters on outgoing (client) spans but not on incoming (server) spans. The server-span path writes the raw query string verbat]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 4:29:20（日本時間）<br><br>Summary@opentelemetry/instrumentation-http redacts sensitive URL query parameters on outgoing (client) spans but not on incoming (server) spans. The server-span path writes the raw query string verbat</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] NLTK: Symlink escape in YCOECorpusReader lets a psd/pos directory symlink read files outside the corpus root within the data sandbox | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-qg35-44qx-7vrr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-qg35-44qx-7vrr</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:55:16（日本時間）
+
+SummaryYCOECorpusReader builds two nested corpus sub-readers whose roots are derived from self.root.join(&quot;psd&quot;) and self.root.join(&quot;pos&quot;) (nltk/corpus/reader/ycoe.py). Because FileSystemPathPointer.jo]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:55:16（日本時間）<br><br>SummaryYCOECorpusReader builds two nested corpus sub-readers whose roots are derived from self.root.join(&quot;psd&quot;) and self.root.join(&quot;pos&quot;) (nltk/corpus/reader/ycoe.py). Because FileSystemPathPointer.jo</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ag-psd] ag-psd can exhaust memory when parsing crafted PSD dimensions | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-qfx6-q44v-9qqw</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-qfx6-q44v-9qqw</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 8:19:38（日本時間）
+
+SummaryreadPsd() commits the image/layer buffers from the declared header geometry (width x height x channels x depth, and per-layer rectangles) before validating those values against the actual data.]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 8:19:38（日本時間）<br><br>SummaryreadPsd() commits the image/layer buffers from the declared header geometry (width x height x channels x depth, and per-layer rectangles) before validating those values against the actual data.</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[astro] Astro: XSS via attribute injection in dynamic tag names | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-mh32-jxcr-mh9f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mh32-jxcr-mh9f</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 3:39:54（日本時間）
+
+SummaryWhen a dynamic tag (const Tag = ...; &lt;Tag /&gt;) resolves to a string, Astro renders it as a raw HTML element name. The name was filtered to remove characters that could inject attributes, but the]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 3:39:54（日本時間）<br><br>SummaryWhen a dynamic tag (const Tag = ...; &lt;Tag /&gt;) resolves to a string, Astro renders it as a raw HTML element name. The name was filtered to remove characters that could inject attributes, but the</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[dnspython] dnspython has excessive memory and CPU use | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-vvf4-9x63-8xvv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-vvf4-9x63-8xvv</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 5:19:13（日本時間）
+
+SummaryA maliciously crafted zone file could use a WKS record to consume excessive memory and CPU, possibly causing the process to exit due to memory exhaustion.DetailsThe from_text() parser does not ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 5:19:13（日本時間）<br><br>SummaryA maliciously crafted zone file could use a WKS record to consume excessive memory and CPU, possibly causing the process to exit due to memory exhaustion.DetailsThe from_text() parser does not </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[nltk] Duplicate Advisory: Unbounded CPU consumption in NLTK SteppingRecursiveDescentParser.parse() with ambiguous or self-embedding grammars | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-4hvg-fv5c-9936</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4hvg-fv5c-9936</guid>
+            <pubDate>Sat, 14 Nov 2026 00:08:21 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 21:31:17（日本時間）
+
+Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-8fx7-8jr8-84rv. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 21:31:17（日本時間）<br><br>Duplicate AdvisoryThis advisory has been withdrawn because it is a duplicate of GHSA-8fx7-8jr8-84rv. This link is maintained to preserve external references.Original DescriptionNLTK before 3.10.4 cont</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[soupsieve] Soup Sieve: Exponential ReDoS in selector compilation via &#92;9-run in CSS_ESCAPES/IDENTIFIER | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-6655-6qjp-jx7x</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6655-6qjp-jx7x</guid>
+            <pubDate>Fri, 13 Nov 2026 19:08:35 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 1:39:43（日本時間）
+
+SummaryThe IDENTIFIER/CSS_ESCAPES regex (css_parser.py:119-124) exhibits exponential backtracking on a run of ambiguous digit-escapes (&#92;9) in an attribute-name or tag position of an otherwise well-for]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 1:39:43（日本時間）<br><br>SummaryThe IDENTIFIER/CSS_ESCAPES regex (css_parser.py:119-124) exhibits exponential backtracking on a run of ambiguous digit-escapes (&#92;9) in an attribute-name or tag position of an otherwise well-for</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@nuxt/schema] Nuxt dev server serves files from a parent directory with a stray lockfile or workspace file | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-mjrq-cffv-q4qc</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mjrq-cffv-q4qc</guid>
+            <pubDate>Fri, 13 Nov 2026 19:08:35 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 3:11:49（日本時間）
+
+SummaryNuxt can pick a parent directory that does not declare a workspace as its default workspaceDir: the farthest directory with a lockfile when the project is not inside a git repository, or the fa]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 3:11:49（日本時間）<br><br>SummaryNuxt can pick a parent directory that does not declare a workspace as its default workspaceDir: the farthest directory with a lockfile when the project is not inside a git repository, or the fa</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[opentelemetry-api] OpenTelemetry Python API: Denial of service through quadratic-time traceparent parsing | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-mf5v-w3w3-f6cg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mf5v-w3w3-f6cg</guid>
+            <pubDate>Fri, 13 Nov 2026 19:08:35 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 1:43:18（日本時間）
+
+SummaryTraceContextTextMapPropagator.extract() in opentelemetry-api is vulnerable to regular expression denial of service (ReDoS) when processing a specially crafted traceparent value.A malformed valu]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 1:43:18（日本時間）<br><br>SummaryTraceContextTextMapPropagator.extract() in opentelemetry-api is vulnerable to regular expression denial of service (ReDoS) when processing a specially crafted traceparent value.A malformed valu</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[envd] envd: Host file disclosure through requirements path traversal and TOCTOU | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-jv6m-48w5-5rpr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jv6m-48w5-5rpr</guid>
+            <pubDate>Fri, 13 Nov 2026 19:08:35 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 3:05:15（日本時間）
+
+Summaryenvd’s install.python_packages(requirements=...) could read files outside the build context on the host. Content interpreted as dependency entries could appear in build logs and build-step meta]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 3:05:15（日本時間）<br><br>Summaryenvd’s install.python_packages(requirements=...) could read files outside the build context on the host. Content interpreted as dependency entries could appear in build logs and build-step meta</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[soupsieve] Soup Sieve: Uncontrolled recursion in CSS parser lets nested pseudo-class selectors exhaust the Python call stack | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-7g44-g9rc-x53w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7g44-g9rc-x53w</guid>
+            <pubDate>Fri, 13 Nov 2026 19:08:35 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/14 1:34:59（日本時間）
+
+SummaryThe Soup Sieve CSS selector parser recurses once per level of nested pseudo-class selector (:is(), :not(), :where(), :has()) without any limit on nesting depth. An unauthenticated attacker who ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/14 1:34:59（日本時間）<br><br>SummaryThe Soup Sieve CSS selector parser recurses once per level of nested pseudo-class selector (:is(), :not(), :where(), :has()) without any limit on nesting depth. An unauthenticated attacker who </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: `css` helper does not escape a closing tag split between the template and an interpolated value, allowing HTML injection | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-3gg2-335m-rxc6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3gg2-335m-rxc6</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:22:36（日本時間）
+
+SummaryThe css helper in hono/css escapes a / that follows &lt; inside an interpolated value so that a value cannot close the &lt;style&gt; element. The check only looks inside each value. When the text before]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:22:36（日本時間）<br><br>SummaryThe css helper in hono/css escapes a / that follows &lt; inside an interpolated value so that a value cannot close the &lt;style&gt; element. The check only looks inside each value. When the text before</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: `validator(&#39;form&#39;)` skips validation for `multipart/form-data` requests with extra parameters | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4h7h-rv7c-7m2v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4h7h-rv7c-7m2v</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:30:45（日本時間）
+
+Summaryvalidator(&#39;form&#39;) only recognizes a multipart/form-data Content-Type that carries nothing but a single boundary parameter. A request with another legal parameter, such as charset, or with extra]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:30:45（日本時間）<br><br>Summaryvalidator(&#39;form&#39;) only recognizes a multipart/form-data Content-Type that carries nothing but a single boundary parameter. A request with another legal parameter, such as charset, or with extra</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[rucio] Rucio: Unauthenticated administrator impersonation through SSH challenge tokens | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-x585-4vv8-2mh2</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x585-4vv8-2mh2</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 10:09:54（日本時間）
+
+SummarySSH challenge tokens are mistakenly accepted as valid credentials during the authentication token validation process.While an SSH challenge token is intended as a short-lived nonce for use in a]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 10:09:54（日本時間）<br><br>SummarySSH challenge tokens are mistakenly accepted as valid credentials during the authentication token validation process.While an SSH challenge token is intended as a short-lived nonce for use in a</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: `csrf()` does not check requests sent by hyperlink auditing (`text/ping`) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-46wx-v44x-9hh2</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-46wx-v44x-9hh2</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:31:25（日本時間）
+
+Summarycsrf() validates a request only when its Content-Type is one of the three types an HTML form can send. Chromium&#39;s hyperlink auditing (&lt;a ping&gt;) sends a cross-origin POST with the user&#39;s cookies]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:31:25（日本時間）<br><br>Summarycsrf() validates a request only when its Content-Type is one of the three types an HTML form can send. Chromium&#39;s hyperlink auditing (&lt;a ping&gt;) sends a cross-origin POST with the user&#39;s cookies</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[basic-ftp] basic-ftp: Uncaught TypeError in MLSD directory-listing parser via __proto__ fact name causes DoS in Client.list() | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5pm8-86m8-9m6r</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5pm8-86m8-9m6r</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 6:42:12（日本時間）
+
+Summarybasic-ftp&#39;s MLSD directory-listing parser (src/parseListMLSD.ts) looks up fact-handler functions in a plain object literal keyed directly by fact names taken from the FTP server&#39;s response, wit]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 6:42:12（日本時間）<br><br>Summarybasic-ftp&#39;s MLSD directory-listing parser (src/parseListMLSD.ts) looks up fact-handler functions in a plain object literal keyed directly by fact names taken from the FTP server&#39;s response, wit</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: `mount()` and `app.mount()` can forward a path that bypasses middleware scoped inside the mount prefix | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4m76-xfj5-7975</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4m76-xfj5-7975</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:24:11（日本時間）
+
+Summarymount() and app.mount() remove the mount prefix from the request path and forward the rest to the mounted application. Two mistakes in that step let a crafted request reach a route of the mount]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:24:11（日本時間）<br><br>Summarymount() and app.mount() remove the mount prefix from the request path and forward the rest to the mounted application. Two mistakes in that step let a crafted request reach a route of the mount</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@grpc/grpc-js-xds] @grpc/grpc-js: RBAC override configs in VirtualHost and Route resources are not applied | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-gg5j-6742-v827</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gg5j-6742-v827</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 7:55:47（日本時間）
+
+SummaryXdsServer in @grpc/grpc-js-xds does not apply RBACPerRoute overrides from matching Route or VirtualHost resources. When a trusted xDS control plane supplies a broad top-level ALLOW policy and a]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 7:55:47（日本時間）<br><br>SummaryXdsServer in @grpc/grpc-js-xds does not apply RBACPerRoute overrides from matching Route or VirtualHost resources. When a trusted xDS control plane supplies a broad top-level ALLOW policy and a</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[Pillow] Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-xcvg-w56q-r89m</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xcvg-w56q-r89m</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:34:43（日本時間）
+
+============================================================================ANT-2026-CS7N494P [high] CWE-787 memory-safetyHeap buffer overflow saving TIFF with libtiff when tags override image sizeLoc]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:34:43（日本時間）<br><br>============================================================================ANT-2026-CS7N494P [high] CWE-787 memory-safetyHeap buffer overflow saving TIFF with libtiff when tags override image sizeLoc</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[soupsieve] Soup Sieve: Polynomial-time denial of service in the descendant combinator | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-mmhr-3c5m-f64f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mmhr-3c5m-f64f</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 9:49:46（日本時間）
+
+SummaryMatching a selector that uses the descendant combinator (a b) takes time that grows polynomially with how deeply the document is nested, and each extra descendant combinator in the selector rai]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 9:49:46（日本時間）<br><br>SummaryMatching a selector that uses the descendant combinator (a b) takes time that grows polynomially with how deeply the document is nested, and each extra descendant combinator in the selector rai</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[Pillow] Pillow: Memory DoS in TIFF and EXIF IFD parsing via overlapping tag data | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-wqgw-9xfh-qf2g</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-wqgw-9xfh-qf2g</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:35:39（日本時間）
+
+============================================================================ANT-2026-D7STJUWL [medium] CWE-770 dosMemory DoS in TIFF and EXIF IFD parsing via overlapping tag dataLocation: src/PIL/Tiff]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:35:39（日本時間）<br><br>============================================================================ANT-2026-D7STJUWL [medium] CWE-770 dosMemory DoS in TIFF and EXIF IFD parsing via overlapping tag dataLocation: src/PIL/Tiff</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@grpc/grpc-js-xds] @grpc/grpc-js: safe_regex incorrectly applies partial string matching for patterns with alternation | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r7hq-q2xm-6c5m</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r7hq-q2xm-6c5m</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:21:57（日本時間）
+
+SummaryThe StringMatcher/PathMatcher for safe_regex builds its RE2 as ^${regex}$ with no surrounding group. Because alternation has the lowest precedence, a pattern &quot;a|b|c&quot; compiles to /^a|b|c$/ -- &quot;s]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:21:57（日本時間）<br><br>SummaryThe StringMatcher/PathMatcher for safe_regex builds its RE2 as ^${regex}$ with no surrounding group. Because alternation has the lowest precedence, a pattern &quot;a|b|c&quot; compiles to /^a|b|c$/ -- &quot;s</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@hono/node-server] @hono/node-server: Unhandled `ECONNRESET` on the socket during an asynchronous WebSocket upgrade crashes the process | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-qv5m-9pm6-hqp3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-qv5m-9pm6-hqp3</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 6:32:48（日本時間）
+
+SummaryWhile @hono/node-server waits for the Hono application to handle a WebSocket upgrade request, the socket has no error listener. If the client resets the TCP connection during that time, the res]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 6:32:48（日本時間）<br><br>SummaryWhile @hono/node-server waits for the Hono application to handle a WebSocket upgrade request, the socket has no error listener. If the client resets the TCP connection during that time, the res</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@astrojs/svelte] Astro: Reflected XSS via unescaped slot names in @astrojs/svelte | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-f4j9-crrj-867q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-f4j9-crrj-867q</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 7:34:04（日本時間）
+
+SummaryThe @astrojs/svelte renderer wraps slotted content passed to Svelte components in an &lt;astro-slot&gt; element, and writes the slot name into its name attribute without HTML escaping. A slot name co]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 7:34:04（日本時間）<br><br>SummaryThe @astrojs/svelte renderer wraps slotted content passed to Svelte components in an &lt;astro-slot&gt; element, and writes the slot name into its name attribute without HTML escaping. A slot name co</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@astrojs/solid-js] Astro: Reflected XSS via unescaped slot names in @astrojs/solid-js | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jmv2-qgxf-f995</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jmv2-qgxf-f995</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 7:34:44（日本時間）
+
+SummaryThe @astrojs/solid-js renderer wraps named slot content passed to Solid components in an &lt;astro-slot&gt; element, and writes the slot name into its name attribute without HTML escaping. A slot nam]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 7:34:44（日本時間）<br><br>SummaryThe @astrojs/solid-js renderer wraps named slot content passed to Solid components in an &lt;astro-slot&gt; element, and writes the slot name into its name attribute without HTML escaping. A slot nam</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[hono] Hono: RegExpRouter skips wildcard middleware for some route sets and for paths with an encoded line terminator | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h7mg-cq63-vhpq</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h7mg-cq63-vhpq</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 8:23:30（日本時間）
+
+SummaryRegExpRouter, which the default SmartRouter selects for most applications, skipped wildcard middleware in three cases, so a route handler ran without the middleware registered for it:Middleware]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 8:23:30（日本時間）<br><br>SummaryRegExpRouter, which the default SmartRouter selects for most applications, skipped wildcard middleware in three cases, so a route handler ran without the middleware registered for it:Middleware</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[basic-ftp] basic-ftp: Uncaught exception crashes the Node.js process when a password (or resumed-download path) contains CR/LF | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-r4jh-29pc-gfqr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r4jh-29pc-gfqr</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 7:23:50（日本時間）
+
+SummaryClient.login() calls FTPContext.send() from inside the control-socket data event handler. send() throws on CR, LF or NUL, and nothing catches the throw. A password containing &#92;r&#92;n therefore rai]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 7:23:50（日本時間）<br><br>SummaryClient.login() calls FTPContext.send() from inside the control-socket data event handler. send() throws on CR, LF or NUL, and nothing catches the throw. A password containing &#92;r&#92;n therefore rai</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@hono/node-server] @hono/node-server: Backslash in the request path is parsed as a path separator, bypassing path-based access control at a reverse proxy | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jpvv-r467-5p4w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jpvv-r467-5p4w</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 6:28:02（日本時間）
+
+Summary@hono/node-server passes the raw request-target to the WHATWG URL parser, which treats a backslash in the path as / and then resolves .. segments. A request for /admin&#92;secret or /public&#92;..&#92;admi]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 6:28:02（日本時間）<br><br>Summary@hono/node-server passes the raw request-target to the WHATWG URL parser, which treats a backslash in the path as / and then resolves .. segments. A request for /admin&#92;secret or /public&#92;..&#92;admi</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[soupsieve] Soup Sieve: General sibling combinator inside :has() matches untrusted HTML in quadratic time | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-4j63-6c4x-wfg4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4j63-6c4x-wfg4</guid>
+            <pubDate>Fri, 13 Nov 2026 03:07:48 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 9:45:18（日本時間）
+
+SummaryMatching a selector that puts a general-sibling combinator inside :has(), such as div:has(a ~ b), against untrusted HTML runs in O(n²) time in the number of sibling elements. A single small doc]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 9:45:18（日本時間）<br><br>SummaryMatching a selector that puts a general-sibling combinator inside :has(), such as div:has(a ~ b), against untrusted HTML runs in O(n²) time in the number of sibling elements. A single small doc</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[signalk-server] Signal K Server: Buffered logs exposed to unauthenticated WebSocket clients | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7m8x-x364-m26j</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7m8x-x364-m26j</guid>
+            <pubDate>Thu, 12 Nov 2026 22:07:02 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/13 4:14:00（日本時間）
+
+SummaryAn unauthenticated WebSocket client can subscribe to the log path and receive buffered server logs.WebSocket connections are intentionally permitted before authentication because login occurs o]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/13 4:14:00（日本時間）<br><br>SummaryAn unauthenticated WebSocket client can subscribe to the log path and receive buffered server logs.WebSocket connections are intentionally permitted before authentication because login occurs o</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@microsoft/aspire-cli-osx-x64] Microsoft Security Advisory CVE-2026-120792 - Aspire Information Disclosure Vulnerability | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-q6jf-24jf-m3cg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-q6jf-24jf-m3cg</guid>
+            <pubDate>Wed, 11 Nov 2026 03:06:44 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 9:31:23（日本時間）
+
+Executive summaryMicrosoft is releasing this security advisory to provide information about a vulnerability in the Aspire CLI. This advisory provides guidance on updating affected applications and com]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 9:31:23（日本時間）<br><br>Executive summaryMicrosoft is releasing this security advisory to provide information about a vulnerability in the Aspire CLI. This advisory provides guidance on updating affected applications and com</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[react-server-dom-turbopack] React: Unauthenticated Remote Code Execution in React Server Components | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xqc2-xf4c-x3h3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xqc2-xf4c-x3h3</guid>
+            <pubDate>Wed, 11 Nov 2026 03:06:44 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 7:44:12（日本時間）
+
+ImpactCrafted payloads targeting frameworks supporting React Server Components can lead to remote code execution. This only affects extremely rare cases where responses transport multiple typed arrays]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 7:44:12（日本時間）<br><br>ImpactCrafted payloads targeting frameworks supporting React Server Components can lead to remote code execution. This only affects extremely rare cases where responses transport multiple typed arrays</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@microsoft/aspire-cli] Microsoft Security Advisory CVE-2026-120778 - Aspire Elevation of Privilege Vulnerability | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-m63f-xhvm-6mv5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-m63f-xhvm-6mv5</guid>
+            <pubDate>Wed, 11 Nov 2026 03:06:44 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 9:30:06（日本時間）
+
+Executive summaryMicrosoft is releasing this security advisory to provide information about a vulnerability in the Aspire CLI. This advisory provides guidance on updating affected applications and com]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 9:30:06（日本時間）<br><br>Executive summaryMicrosoft is releasing this security advisory to provide information about a vulnerability in the Aspire CLI. This advisory provides guidance on updating affected applications and com</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[compose-lint] compose-lint: File paths embedded in pull requests can inject CI workflow commands through command-line error messages  | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-8v59-qmwv-4p6q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8v59-qmwv-4p6q</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:58:53（日本時間）
+
+Impact0.31.0 fixed GHSA-6f4g-xm8v-pgv6, where text from a Compose file became GitHub Actions workflow commands in compose-lint&#39;s output. The fix escapes the command openers in compose-lint&#39;s own outpu]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:58:53（日本時間）<br><br>Impact0.31.0 fixed GHSA-6f4g-xm8v-pgv6, where text from a Compose file became GitHub Actions workflow commands in compose-lint&#39;s output. The fix escapes the command openers in compose-lint&#39;s own outpu</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[compose-lint] compose-lint: Text in a pull request can still issue CI workflow commands through compose-lint 0.31.0&#39;s output | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-r7j4-crjv-h467</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r7j4-crjv-h467</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 3:28:35（日本時間）
+
+Impact0.31.0 fixed GHSA-6f4g-xm8v-pgv6, where text from a Compose file became GitHub Actions workflow commands in compose-lint&#39;s output. The fix escapes the command openers in everything compose-lint ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 3:28:35（日本時間）<br><br>Impact0.31.0 fixed GHSA-6f4g-xm8v-pgv6, where text from a Compose file became GitHub Actions workflow commands in compose-lint&#39;s output. The fix escapes the command openers in everything compose-lint </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: TLS client crash on a handshake record received without a session | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-j8rw-jp99-435v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-j8rw-jp99-435v</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:14:26（日本時間）
+
+SummaryA forge.tls client throws an uncaught TypeError from connection.process() when it receives a ServerHello while it has no session: after a close_notify alert or a call to close(), or before hand]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:14:26（日本時間）<br><br>SummaryA forge.tls client throws an uncaught TypeError from connection.process() when it receives a ServerHello while it has no session: after a close_notify alert or a call to close(), or before hand</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[mongoose] Mongoose walks into inherited properties when hydrating, setting, and merging, allowing overwrites of built-in functions (denial of service) and shared schema state | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8332-j7wj-wjw4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8332-j7wj-wjw4</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 5:56:16（日本時間）
+
+SummaryThree Mongoose code paths copy data into objects by property name without checking whether the property is the object&#39;s own or inherited from its prototype:Loading a document from the database ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 5:56:16（日本時間）<br><br>SummaryThree Mongoose code paths copy data into objects by property name without checking whether the property is the object&#39;s own or inherited from its prototype:Loading a document from the database </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[mongoose] Mongoose: Discriminator key values matching inherited properties (e.g. __t: &#39;constructor&#39;) bypass schema casting and can poison collections | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-wr5m-5jph-8m96</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-wr5m-5jph-8m96</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 5:57:18（日本時間）
+
+SummaryMongoose chooses which discriminator model or schema to use by looking up the discriminator key value (__t by default) in a plain object of registered discriminators, for example Model.discrimi]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 5:57:18（日本時間）<br><br>SummaryMongoose chooses which discriminator model or schema to use by looking up the discriminator key value (__t by default) in a plain object of registered discriminators, for example Model.discrimi</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[mongoose] Mongoose: Prototype pollution via Schema.prototype.virtual() | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6972-9mcm-vhwj</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6972-9mcm-vhwj</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 5:46:33（日本時間）
+
+SummaryPrototype pollution via Schema.prototype.virtual() — the 2022 fix for CVE-2022-2564 / CVE-2022-24304 protected Schema.path()/add() but never virtual(), so the same class of bug is still exploit]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 5:46:33（日本時間）<br><br>SummaryPrototype pollution via Schema.prototype.virtual() — the 2022 fix for CVE-2022-2564 / CVE-2022-24304 protected Schema.path()/add() but never virtual(), so the same class of bug is still exploit</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: ReDoS in forge.http response header and cookie trimming | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6cv4-p8m7-4r25</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6cv4-p8m7-4r25</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:16:22（日本時間）
+
+forge.http trims response header and Set-Cookie values with the regular expression /&#92;s*$/, which takes quadratic time on a long run of whitespace followed by another character. A server or on-path att]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:16:22（日本時間）<br><br>forge.http trims response header and Set-Cookie values with the regular expression /&#92;s*$/, which takes quadratic time on a long run of whitespace followed by another character. A server or on-path att</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: Ed25519 signature verification accepts small-order public keys | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6889-vf6x-f3g5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6889-vf6x-f3g5</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:18:23（日本時間）
+
+Summaryed25519.verify() does not reject public keys of small order, such as the identity point. Under such a key, a signature with S = 0 and a small-order R verifies for many messages, or for every me]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:18:23（日本時間）<br><br>Summaryed25519.verify() does not reject public keys of small order, such as the identity point. Under such a key, a signature with S = 0 and a small-order R verifies for many messages, or for every me</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[mongoose] Mongoose: Connection-level sanitizeFilter not applied | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-gg4r-jv3p-qx3c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gg4r-jv3p-qx3c</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 4:56:12（日本時間）
+
+SummarysanitizeFilter exists to stop query selector injection: it wraps operator objects such as { $ne: null } in filter values in $eq, so they are matched literally. Set on a connection with mongoose]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 4:56:12（日本時間）<br><br>SummarysanitizeFilter exists to stop query selector injection: it wraps operator objects such as { $ne: null } in filter values in $eq, so they are matched literally. Set on a connection with mongoose</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[compose-lint] compose-lint: Text in a pull request can issue CI workflow commands through JSON and SARIF output on stdout | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-hr4h-4c45-v4q4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-hr4h-4c45-v4q4</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:40:50（日本時間）
+
+Impact0.31.0 fixed GHSA-6f4g-xm8v-pgv6, where text from a Compose file became GitHub Actions workflow commands in compose-lint&#39;s output. --format json and --format sarif output never passed through th]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:40:50（日本時間）<br><br>Impact0.31.0 fixed GHSA-6f4g-xm8v-pgv6, where text from a Compose file became GitHub Actions workflow commands in compose-lint&#39;s output. --format json and --format sarif output never passed through th</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint]  compose-lint: Workflow command injection through SARIF-directory errors triggered by pull request symlinks  | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-xcf7-88g6-7xr8</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xcf7-88g6-7xr8</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:50:54（日本時間）
+
+ImpactIn Action tags v0.30.0 and v0.31.0, when sarif-file: names a file in a subdirectory that can&#39;t be created, the Action prints the directory&#39;s resolved path in an error message. In v0.31.0 that me]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:50:54（日本時間）<br><br>ImpactIn Action tags v0.30.0 and v0.31.0, when sarif-file: names a file in a subdirectory that can&#39;t be created, the Action prints the directory&#39;s resolved path in an error message. In v0.31.0 that me</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[fast-xml-parser] fast-xml-parser: Quadratic CPU consumption scanning unterminated stop-node tags | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-474x-hrwr-fgx4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-474x-hrwr-fgx4</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:09:44（日本時間）
+
+SummaryWith the non-default stopNodes option, a stop node&#39;s body with many &quot;&lt;a &quot; fragments and no closing &quot;&gt;&quot; anywhere after makes readStopNodeData() rescan the entire remaining input from every &quot;&lt;&quot;. ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:09:44（日本時間）<br><br>SummaryWith the non-default stopNodes option, a stop node&#39;s body with many &quot;&lt;a &quot; fragments and no closing &quot;&gt;&quot; anywhere after makes readStopNodeData() rescan the entire remaining input from every &quot;&lt;&quot;. </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: TLS client crash on an unsupported ServerHello compression method | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-w4xr-hqv8-ch44</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-w4xr-hqv8-ch44</guid>
+            <pubDate>Tue, 10 Nov 2026 22:07:46 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 6:17:14（日本時間）
+
+SummaryA forge.tls client accepts any compression method in the ServerHello, although it only offers no compression. An unknown method makes connection.process() throw an uncaught Error when the clien]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 6:17:14（日本時間）<br><br>SummaryA forge.tls client accepts any compression method in the ServerHello, although it only offers no compression. An unknown method makes connection.process() throw an uncaught Error when the clien</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[bitcoinjs-lib] bitcoinjs-lib: Undetected merkle node duplication in block root computation validates a forged transaction list | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8vv3-6qpc-gpw6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8vv3-6qpc-gpw6</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:25（日本時間）
+
+SummaryfastMerkleRoot pads an odd level by hashing the last node with itself. It does not report that it did so, and checkTxRoots never looks for repeated transactions. A peer can therefore duplicate ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:25（日本時間）<br><br>SummaryfastMerkleRoot pads an odd level by hashing the last node with itself. It does not report that it did so, and checkTxRoots never looks for repeated transactions. A peer can therefore duplicate </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: Incomplete PKCS#7 padding validation in AES/DES CBC and ECB decryption | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-2vgq-wchc-25w7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2vgq-wchc-25w7</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:46（日本時間）
+
+Summarydecipher.finish() in CBC and ECB mode accepted malformed PKCS#7 padding: only the last byte was checked, against a limit of four blocks, so mismatched padding bytes, a zero count and oversized ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:46（日本時間）<br><br>Summarydecipher.finish() in CBC and ECB mode accepted malformed PKCS#7 padding: only the last byte was checked, against a limit of four blocks, so mismatched padding bytes, a zero count and oversized </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: RSA PKCS#1 v1.5 signature forgery via non-canonical DigestInfo encoding | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6qrw-m8cv-hcxf</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6qrw-m8cv-hcxf</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:34（日本時間）
+
+SummaryRSASSA-PKCS1-v1_5 signature verification (publicKey.verify() with the default scheme, also used by X.509 certificate and PKCS#7 verification) accepted non-canonical BER encodings of the DigestI]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:34（日本時間）<br><br>SummaryRSASSA-PKCS1-v1_5 signature verification (publicKey.verify() with the default scheme, also used by X.509 certificate and PKCS#7 verification) accepted non-canonical BER encodings of the DigestI</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[gpustack] GPUStack: Missing authorization on several cluster and resource endpoints allows cross-user access and cluster takeover | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-3hch-x692-6qj3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3hch-x692-6qj3</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:20（日本時間）
+
+ImpactAn authenticated non-administrative user could access a Kubernetes cluster they are not authorized to access through GPUStack&#39;s Kubernetes API proxy.The cluster_apiserver_proxy handler did not p]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:20（日本時間）<br><br>ImpactAn authenticated non-administrative user could access a Kubernetes cluster they are not authorized to access through GPUStack&#39;s Kubernetes API proxy.The cluster_apiserver_proxy handler did not p</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[gpustack] GPUStack: SAML callback trusts an unverified SAMLResponse, allowing authentication bypass and account takeover | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-62m9-f875-rqw6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-62m9-f875-rqw6</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:15（日本時間）
+
+ImpactThe callback Base64-decodes the posted XML, reads NameID and attributes, resolves or provisions the user, and mints a gpustack_session JWT — but never calls OneLogin_Saml2_Auth.process_response(]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:15（日本時間）<br><br>ImpactThe callback Base64-decodes the posted XML, reads NameID and attributes, resolves or provisions the user, and mints a gpustack_session JWT — but never calls OneLogin_Saml2_Auth.process_response(</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] compose-lint: .env read through a symlink outside the project can expose the CI job&#39;s environment | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-6wcv-rj3c-mhv3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6wcv-rj3c-mhv3</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:56:56（日本時間）
+
+Impactcompose-lint fills in ${VAR} references from the .env file next to the Compose file. It is meant to read nothing outside the project directory, and env_file:, include: and extends: paths are che]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:56:56（日本時間）<br><br>Impactcompose-lint fills in ${VAR} references from the .env file next to the Compose file. It is meant to read nothing outside the project directory, and env_file:, include: and extends: paths are che</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] compose-lint: A `.compose-lint.yml` symlinked outside the project is read, and a parse error quotes part of the target | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-88f4-frh5-gmcr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-88f4-frh5-gmcr</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:07（日本時間）
+
+Impactcompose-lint automatically reads a .compose-lint.yml policy file beside the Compose file. It is meant to read nothing outside the project directory, but it follows that file if it is a symlink, ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:07（日本時間）<br><br>Impactcompose-lint automatically reads a .compose-lint.yml policy file beside the Compose file. It is meant to read nothing outside the project directory, but it follows that file if it is a symlink, </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[altair-static] Altair: DOM-based XSS via attacker-controlled script URLs in the iframe sandbox | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-752m-7p75-49gf</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-752m-7p75-49gf</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:27（日本時間）
+
+SummaryAltair 8.5.7 accepts plugin configuration directly from the iframe-sandbox query string.When plugin_sandbox_opts contains type: &quot;scripts&quot; and an attacker-controlled URL in scriptUrls, the sandb]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:27（日本時間）<br><br>SummaryAltair 8.5.7 accepts plugin configuration directly from the iframe-sandbox query string.When plugin_sandbox_opts contains type: &quot;scripts&quot; and an attacker-controlled URL in scriptUrls, the sandb</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@nuxt/content] Nuxt Content: Unauthenticated SQLite Function DoS via Content Query API | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xxrh-5hgg-gj4h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xxrh-5hgg-gj4h</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:12（日本時間）
+
+SummaryThe POST /__nuxt_content/:collection/query endpoint in @nuxt/content accepts an attacker-controlled sql field from the HTTP request body and executes it against a local SQLite database after pa]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:12（日本時間）<br><br>SummaryThe POST /__nuxt_content/:collection/query endpoint in @nuxt/content accepts an attacker-controlled sql field from the HTTP request body and executes it against a local SQLite database after pa</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ag2] AG2: Newline injection in SandboxShellTool bypasses allowed=[...] and readonly=True, enabling arbitrary command execution | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-2h4w-29cv-2cmv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2h4w-29cv-2cmv</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:17（日本時間）
+
+SummarySandboxShellTool&#39;s restricted modes — allowed=[...] (explicit command allowlist) and readonly=True (implicit READONLY_COMMANDS allowlist) — can both be bypassed by embedding a newline character]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:17（日本時間）<br><br>SummarySandboxShellTool&#39;s restricted modes — allowed=[...] (explicit command allowlist) and readonly=True (implicit READONLY_COMMANDS allowlist) — can both be bypassed by embedding a newline character</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[compose-lint] compose-lint: `fix --apply` can delete a line the user did not select, including a security setting | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-65v8-q222-64xx</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-65v8-q222-64xx</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:02（日本時間）
+
+Impactcompose-lint fix --apply converts the line numbers its fixers work with into positions in the file. The YAML parser treats a lone carriage return, U+0085, U+2028 and U+2029 as line breaks, but t]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:02（日本時間）<br><br>Impactcompose-lint fix --apply converts the line numbers its fixers work with into positions in the file. The YAML parser treats a lone carriage return, U+0085, U+2028 and U+2029 as line breaks, but t</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: ASN.1 resource exhaustion via BIT STRING decoding in asn1.fromDer | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-rhr8-3pm8-cq29</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-rhr8-3pm8-cq29</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:41（日本時間）
+
+Summaryasn1.fromDer() decodes the contents of BIT STRINGs as ASN.1 by default. That decode ignored the maxDepth recursion limit (an incomplete fix of CVE-2025-66031) and also decoded nested BIT STRING]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:41（日本時間）<br><br>Summaryasn1.fromDer() decodes the contents of BIT STRINGs as ASN.1 by default. That decode ignored the maxDepth recursion limit (an incomplete fix of CVE-2025-66031) and also decoded nested BIT STRING</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: X.509 pathLenConstraint not enforced by verifyCertificateChain() for CA certificates without keyUsage | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h46v-rmh6-fq4f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h46v-rmh6-fq4f</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:43（日本時間）
+
+Summaryforge.pki.verifyCertificateChain() enforces the pathLenConstraint of a CA certificate&#39;s basicConstraints extension only when that certificate also has a keyUsage extension. For a CA certificate]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:43（日本時間）<br><br>Summaryforge.pki.verifyCertificateChain() enforces the pathLenConstraint of a CA certificate&#39;s basicConstraints extension only when that certificate also has a keyUsage extension. For a CA certificate</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@effect/platform] Effect: Cookie attribute injection via domain, path, and name fields in @effect/platform makeCookie() | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-chp3-j5qr-2vfr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-chp3-j5qr-2vfr</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:32（日本時間）
+
+ImpactThe name, domain, and path fields of makeCookie() were validated with a regex that allows ;, the attribute separator in Set-Cookie headers. Because serializeCookie() writes those fields verbatim]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:32（日本時間）<br><br>ImpactThe name, domain, and path fields of makeCookie() were validated with a regex that allows ;, the attribute separator in Set-Cookie headers. Because serializeCookie() writes those fields verbatim</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@ohif/extension-dicom-pdf] OHIF Viewers: DOM-Based Cross Site Scripting (XSS) through MIME type of document | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xwgp-w3pj-q5h3</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xwgp-w3pj-q5h3</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:51（日本時間）
+
+SummaryAn XSS (Cross-Site Scripting) vulnerability occurs when an attacker is able to inject their own JavaScript code into a web page&#39;s source, which is subsequently processed by the victim&#39;s browser]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:51（日本時間）<br><br>SummaryAn XSS (Cross-Site Scripting) vulnerability occurs when an attacker is able to inject their own JavaScript code into a web page&#39;s source, which is subsequently processed by the victim&#39;s browser</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-opcua-address-space] node-opcua: Namespace-Level RBAC Fail-Open - Anonymous Write/Call Bypass via Unbound `DefaultRolePermissions | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-xggf-m53x-jc3f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-xggf-m53x-jc3f</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:56:52（日本時間）
+
+SummaryAn unauthenticated (Anonymous) client can Write protected Variables and Call privileged Methods on any Node that lacks explicit per-node permissions.This follows the inheritance model defined b]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:56:52（日本時間）<br><br>SummaryAn unauthenticated (Anonymous) client can Write protected Variables and Call privileged Methods on any Node that lacks explicit per-node permissions.This follows the inheritance model defined b</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] compose-lint: A pull request can make compose-lint quote a secret from a CI-generated `.env` into its findings | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-jf3h-8jvx-vcrg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jf3h-8jvx-vcrg</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:05（日本時間）
+
+ImpactSince 0.22.0, compose-lint fills in ${VAR} references from the .env beside the Compose file, as Compose does. The documentation says values under environment: are never resolved from a .env, &quot;th]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:05（日本時間）<br><br>ImpactSince 0.22.0, compose-lint fills in ${VAR} references from the .env beside the Compose file, as Compose does. The documentation says values under environment: are never resolved from a .env, &quot;th</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[OctoPrint] OctoPrint: Stored XSS via saved connection parameters | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-p623-mxf7-qxjm</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-p623-mxf7-qxjm</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:29（日本時間）
+
+ImpactOctoPrint versions 2.0.0rc1 up until version 2.0.0rc6 are susceptible to cross-site scripting via a specially crafted default port or baudrate setting on the bundled Serial Connector plugin, sup]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:29（日本時間）<br><br>ImpactOctoPrint versions 2.0.0rc1 up until version 2.0.0rc6 are susceptible to cross-site scripting via a specially crafted default port or baudrate setting on the bundled Serial Connector plugin, sup</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: Certificate signature verified with the issuer&#39;s RSA signature scheme | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-9wg5-mj3p-v49q</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9wg5-mj3p-v49q</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:48（日本時間）
+
+SummaryWhen verifying a certificate, node-forge chose the RSA padding scheme (PKCS#1 v1.5 or RSASSA-PSS) and PSS parameters from the issuer certificate&#39;s own signature algorithm instead of the certifi]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:48（日本時間）<br><br>SummaryWhen verifying a certificate, node-forge chose the RSA padding scheme (PKCS#1 v1.5 or RSASSA-PSS) and PSS parameters from the issuer certificate&#39;s own signature algorithm instead of the certifi</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] compose-lint: A committed symlink makes compose-lint quote a file from outside the project into its output | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-whr6-fgpq-fpv9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-whr6-fgpq-fpv9</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:10（日本時間）
+
+ImpactLike Docker Compose, compose-lint follows symlinks when it reads a project&#39;s files. Unlike Compose, compose-lint up to 0.24.0 could then put the contents of a file from outside the project into ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:10（日本時間）<br><br>ImpactLike Docker Compose, compose-lint follows symlinks when it reads a project&#39;s files. Unlike Compose, compose-lint up to 0.24.0 could then put the contents of a file from outside the project into </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] compose-lint: Compose file text can issue GitHub Actions workflow commands through the compose-lint Action | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-6f4g-xm8v-pgv6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6f4g-xm8v-pgv6</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:56:59（日本時間）
+
+ImpactThe GitHub Actions runner treats certain text in a step&#39;s output as commands. The legacy form, ##[command], is recognized anywhere in a line. compose-lint&#39;s text report prints service names, env]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:56:59（日本時間）<br><br>ImpactThe GitHub Actions runner treats certain text in a step&#39;s output as commands. The legacy form, ##[command], is recognized anywhere in a line. compose-lint&#39;s text report prints service names, env</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[tmatens/compose-lint] compose-lint: Incomplete fix for GHSA-jf3h-8jvx-vcrg: a run stopped at the finding limit quotes a secret from a CI-generated `.env` | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-rm8w-w798-g545</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-rm8w-w798-g545</guid>
+            <pubDate>Tue, 10 Nov 2026 17:09:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/11 0:57:22（日本時間）
+
+ImpactThis is an incomplete fix for GHSA-jf3h-8jvx-vcrg. 0.32.0 made findings quote the ${NAME} a sibling .env filled in, instead of its value. The same release added a stop at 20,000 findings per doc]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/11 0:57:22（日本時間）<br><br>ImpactThis is an incomplete fix for GHSA-jf3h-8jvx-vcrg. 0.32.0 made findings quote the ${NAME} a sibling .env filled in, instead of its value. The same release added a stop at 20,000 findings per doc</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[urwid] Urwid: handle_short_request() crashes on non-ASCII POST body (UnicodeEncodeError DoS) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-cp25-j9x5-p5xm</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-cp25-j9x5-p5xm</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:05:06（日本時間）
+
+SummaryThe handle_short_request() function in urwid/display/web.py raises an unhandled UnicodeEncodeError when processing a POST request body containing non-ASCII bytes. The function reads POST input ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:05:06（日本時間）<br><br>SummaryThe handle_short_request() function in urwid/display/web.py raises an unhandled UnicodeEncodeError when processing a POST request body containing non-ASCII bytes. The function reads POST input </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[zizmor] zizmor: Debug logging prints available GitHub credentials in cleartext | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-f42p-wjw5-97qh</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-f42p-wjw5-97qh</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:56:25（日本時間）
+
+Summaryzizmor 1.27.0 exposes GitHub access tokens in cleartext when debug-level logging is enabled. Tokens supplied via environment variables (GH_TOKEN, GITHUB_TOKEN, ZIZMOR_GITHUB_TOKEN), or the corr]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:56:25（日本時間）<br><br>Summaryzizmor 1.27.0 exposes GitHub access tokens in cleartext when debug-level logging is enabled. Tokens supplied via environment variables (GH_TOKEN, GITHUB_TOKEN, ZIZMOR_GITHUB_TOKEN), or the corr</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[loggingredactor] Logging Redactor: PII data in str/repr of non primitive objects was not being redacted | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-w7qv-268h-9h3f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-w7qv-268h-9h3f</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 3:15:18（日本時間）
+
+ImpactPII data in str/repr of non primitive objects was not being redacted, leading to leakage of PII in logs that should have been redacted for custom __str__ and __repr__ functionsPatchesThe problem]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 3:15:18（日本時間）<br><br>ImpactPII data in str/repr of non primitive objects was not being redacted, leading to leakage of PII in logs that should have been redacted for custom __str__ and __repr__ functionsPatchesThe problem</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[moleculer] Moleculer: Unauthenticated Denial of Service via negative length field in the TCP transporter packet parser | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h89v-g948-47vp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h89v-g948-47vp</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:31:16（日本時間）
+
+SummaryThe TCP transporter&#39;s packet parser (src/transporters/tcp/parser.js) reads the packet length field with Buffer.prototype.readInt32BE, a signed read. A crafted packet whose length field has the ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:31:16（日本時間）<br><br>SummaryThe TCP transporter&#39;s packet parser (src/transporters/tcp/parser.js) reads the packet length field with Buffer.prototype.readInt32BE, a signed read. A crafted packet whose length field has the </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[fastapi-code-generator] fastapi-code-generator: Call-time RCE via operation summary -&gt; unescaped route-handler docstring | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-h667-4jj2-cgv4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h667-4jj2-cgv4</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 3:50:00（日本時間）
+
+Summaryfastapi-code-generator (koxudaxi) emits an operation&#39;s summary as the generated route handler&#39;s docstring, using a triple-quoted string without escaping &quot;&quot;&quot;. A &quot;&quot;&quot; in the summary closes the doc]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 3:50:00（日本時間）<br><br>Summaryfastapi-code-generator (koxudaxi) emits an operation&#39;s summary as the generated route handler&#39;s docstring, using a triple-quoted string without escaping &quot;&quot;&quot;. A &quot;&quot;&quot; in the summary closes the doc</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[fastapi-code-generator] fastapi-code-generator: Import-time RCE via response status-code key -&gt; unescaped @app.get(..., responses={...}) dict | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-6xmv-cjr5-w3q8</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6xmv-cjr5-w3q8</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 4:46:27（日本時間）
+
+Summaryfastapi-code-generator (koxudaxi) emits an operation&#39;s extra responses into the route decorator&#39;s responses={...} dict, using each response&#39;s status-code key as a single-quoted string literal w]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 4:46:27（日本時間）<br><br>Summaryfastapi-code-generator (koxudaxi) emits an operation&#39;s extra responses into the route decorator&#39;s responses={...} dict, using each response&#39;s status-code key as a single-quoted string literal w</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[kiwitcms] Kiwi TCMS account confirmation open redirect through protocol-relative URLs | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-gcwf-c25f-p9rv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gcwf-c25f-p9rv</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 8:24:14（日本時間）
+
+SummaryIn Kiwi TCMS version 16.1, the fix for CVE-2026-54724 (open redirect via unvalidated next parameter) in the account confirmation endpoint is incomplete. The validation uses startswith(&quot;/&quot;) to c]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 8:24:14（日本時間）<br><br>SummaryIn Kiwi TCMS version 16.1, the fix for CVE-2026-54724 (open redirect via unvalidated next parameter) in the account confirmation endpoint is incomplete. The validation uses startswith(&quot;/&quot;) to c</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[isomorphic-git] isomorphic-git: Arbitrary file write outside of working tree via directory symlink during checkout (potential RCE) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-9qw7-j9xw-fv9c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9qw7-j9xw-fv9c</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 4:53:44（日本時間）
+
+Summarygit.checkout writes working-tree files through a directory symlink without checking the leading path, so a malicious repository can write outside the intended working directory. The defect is i]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 4:53:44（日本時間）<br><br>Summarygit.checkout writes working-tree files through a directory symlink without checking the leading path, so a malicious repository can write outside the intended working directory. The defect is i</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[gpustack] GPUStack: Authentication bypass via trusted loopback source (reverse-proxy TCP peer or X-GPUStack-Real-IP header) grants unauthenticated admin | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-gj9m-f8ph-pmhr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gj9m-f8ph-pmhr</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:15:27（日本時間）
+
+ImpactIn GPUStack before v2.2.0, get_current_user (in gpustack/api/auth.py) promotes any request whose source is considered loopback to the built-in administrator account when force_auth_localhost is ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:15:27（日本時間）<br><br>ImpactIn GPUStack before v2.2.0, get_current_user (in gpustack/api/auth.py) promotes any request whose source is considered loopback to the built-in administrator account when force_auth_localhost is </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[ag-psd] ag-psd: Uncontrolled Memory Allocation in PSD Layer Decoding (totalMemoryLimit bypass) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6w3r-6hpr-hp6p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6w3r-6hpr-hp6p</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:08:28（日本時間）
+
+SummaryThe readPsd() function in ag-psd accepts a totalMemoryLimit option to cap memory usage when parsing untrusted PSD files, but this limit is never forwarded to the layer image buffer allocation p]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:08:28（日本時間）<br><br>SummaryThe readPsd() function in ag-psd accepts a totalMemoryLimit option to cap memory usage when parsing untrusted PSD files, but this limit is never forwarded to the layer image buffer allocation p</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@tsparticles/mcp-server] tsParticles: Unbounded HTTP Request Body Buffering in @tsparticles/mcp-server Leads to Remote DoS | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-447x-qqwf-m7xq</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-447x-qqwf-m7xq</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:10:46（日本時間）
+
+SummaryThe HTTP server mode of @tsparticles/mcp-server accumulates all incoming request body chunks into an in-memory Buffer[] array with no size limit before calling JSON.parse. An unauthenticated re]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:10:46（日本時間）<br><br>SummaryThe HTTP server mode of @tsparticles/mcp-server accumulates all incoming request body chunks into an in-memory Buffer[] array with no size limit before calling JSON.parse. An unauthenticated re</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[fastapi-code-generator] fastapi-code-generator: Import-time RCE via route path -&gt; unescaped @app.get(&#39;...&#39;) decorator | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-p2mm-64f6-gmpp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-p2mm-64f6-gmpp</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 4:48:08（日本時間）
+
+Summaryfastapi-code-generator (koxudaxi) emits the OpenAPI path into the generated main.py route decorator as a single-quoted string literal (@app.get(&#39;/u/&lt;path&gt;/x&#39;)) without escaping the &#39;. A &#39; in th]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 4:48:08（日本時間）<br><br>Summaryfastapi-code-generator (koxudaxi) emits the OpenAPI path into the generated main.py route decorator as a single-quoted string literal (@app.get(&#39;/u/&lt;path&gt;/x&#39;)) without escaping the &#39;. A &#39; in th</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[fast-agent-mcp] fast-agent: `fast-agent serve` binds HTTP to 0.0.0.0 with no authentication by default; with --shell this is unauthenticated remote command execution | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-9vhv-g5hf-m7m7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9vhv-g5hf-m7m7</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:01:34（日本時間）
+
+Summaryfast-agent serve exposes the agent over MCP. By default it uses HTTP transport bound to 0.0.0.0 (all interfaces) on port 8000 with no authentication (auth=None) and prints no warning. Any host ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:01:34（日本時間）<br><br>Summaryfast-agent serve exposes the agent over MCP. By default it uses HTTP transport bound to 0.0.0.0 (all interfaces) on port 8000 with no authentication (auth=None) and prints no warning. Any host </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@anthropic-ai/claude-code] Claude Code: TOCTOU Race in Edit Tool Allows File Writes Outside the Workspace | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5xjx-9qx6-jcrv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5xjx-9qx6-jcrv</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:42:03（日本時間）
+
+Claude Code validated Edit tool targets using point-in-time pathname and symlink resolution that was not bound to the underlying directory inodes or file descriptors. On macOS, a process running insid]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:42:03（日本時間）<br><br>Claude Code validated Edit tool targets using point-in-time pathname and symlink resolution that was not bound to the underlying directory inodes or file descriptors. On macOS, a process running insid</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[code-graph-rag] Code Graph RAG: MCP paginated read_file path traversal / arbitrary file read | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-vvr2-h2jp-838m</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-vvr2-h2jp-838m</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:21:32（日本時間）
+
+SummaryThe read_file MCP tool in codebase_rag/mcp/tools.py contains a path traversal vulnerability in its paginated branch (when offset or limit is supplied). The handler constructs a file path using ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:21:32（日本時間）<br><br>SummaryThe read_file MCP tool in codebase_rag/mcp/tools.py contains a path traversal vulnerability in its paginated branch (when offset or limit is supplied). The handler constructs a file path using </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[isomorphic-git] isomorphic-git: Path traversal via a &quot;..&quot; tree-entry name writes files outside the working directory on clone/checkout | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-cw2g-2vwq-88w6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-cw2g-2vwq-88w6</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 5:13:52（日本時間）
+
+Summaryisomorphic-git&#39;s tree parser (src/models/GitTree.js) validates each entry name only against the path separators / and &#92;. It does not reject the standalone reserved name .., so a malicious repos]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 5:13:52（日本時間）<br><br>Summaryisomorphic-git&#39;s tree parser (src/models/GitTree.js) validates each entry name only against the path separators / and &#92;. It does not reject the standalone reserved name .., so a malicious repos</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[code-graph-rag] Code Graph RAG structural tools follow out-of-root symlinks | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-85gg-2gfq-q95m</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-85gg-2gfq-q95m</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 7:16:41（日本時間）
+
+A remote/local attacker who can get a symbolic link included in a source-code repository that code-graph-rag analyzes can cause the structural_search and structural_replace tools (backed by AstGrepSer]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 7:16:41（日本時間）<br><br>A remote/local attacker who can get a symbolic link included in a source-code repository that code-graph-rag analyzes can cause the structural_search and structural_replace tools (backed by AstGrepSer</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@tsparticles/mcp-server] tsParticles: A single anonymous MCP session can monopolize HTTP mode and deny new clients | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h7c4-q426-7jh9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h7c4-q426-7jh9</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:14:51（日本時間）
+
+SummaryThe HTTP mode of @tsparticles/mcp-server creates a single stateful StreamableHTTPServerTransport instance and reuses it for all clients. The first anonymous client that initializes the MCP endp]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:14:51（日本時間）<br><br>SummaryThe HTTP mode of @tsparticles/mcp-server creates a single stateful StreamableHTTPServerTransport instance and reuses it for all clients. The first anonymous client that initializes the MCP endp</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[isomorphic-git] isomorphic-git: Circular symbolic references cause non-terminating resolution (DoS) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-96wc-2m84-2cj7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-96wc-2m84-2cj7</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 4:58:32（日本時間）
+
+SummaryA malicious server can advertise circular symref= capabilities (e.g. a → b and b → a). isomorphic-git writes them to disk as loose symrefs, and GitRefManager.resolve() follows them with no dept]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 4:58:32（日本時間）<br><br>SummaryA malicious server can advertise circular symref= capabilities (e.g. a → b and b → a). isomorphic-git writes them to disk as loose symrefs, and GitRefManager.resolve() follows them with no dept</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@tsparticles/mcp-server] tsParticles: Malformed JSON requests can terminate the @tsparticles/mcp-server HTTP process | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4p8p-pjpq-2w7h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4p8p-pjpq-2w7h</guid>
+            <pubDate>Tue, 10 Nov 2026 01:09:07 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/10 6:13:55（日本時間）
+
+SummaryThe HTTP mode of @tsparticles/mcp-server parses incoming /mcp request bodies with JSON.parse() outside a request-local error boundary. A single malformed JSON request causes the async request h]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/10 6:13:55（日本時間）<br><br>SummaryThe HTTP mode of @tsparticles/mcp-server parses incoming /mcp request bodies with JSON.parse() outside a request-local error boundary. A single malformed JSON request causes the async request h</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[GeoNode] GeoNode has Unrestricted File Upload | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-fqpv-mq26-pr4j</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-fqpv-mq26-pr4j</guid>
+            <pubDate>Fri, 06 Nov 2026 22:06:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/7 4:41:23（日本時間）
+
+The upload service validation can be circumvented with specially crafted requests, allowing for the storage and serving of malicious files.Referenceshttps://github.com/GeoNode/geonode/security/advisor]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/7 4:41:23（日本時間）<br><br>The upload service validation can be circumvented with specially crafted requests, allowing for the storage and serving of malicious files.Referenceshttps://github.com/GeoNode/geonode/security/advisor</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[GeoNode] GeoNode has OS command injection via uploaded file layer name | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-9fpx-fr6j-2vh6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9fpx-fr6j-2vh6</guid>
+            <pubDate>Fri, 06 Nov 2026 22:06:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/7 4:39:38（日本時間）
+
+Arbitrary OS commands can be executed on the GeoNode by uploading a vector file with a crafted layer name.Referenceshttps://github.com/GeoNode/geonode/security/advisories/GHSA-9fpx-fr6j-2vh6https://gi]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/7 4:39:38（日本時間）<br><br>Arbitrary OS commands can be executed on the GeoNode by uploading a vector file with a crafted layer name.Referenceshttps://github.com/GeoNode/geonode/security/advisories/GHSA-9fpx-fr6j-2vh6https://gi</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[GeoNode] GeoNode has Stored XSS in Documents metadata abstract field | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-r4hm-p9f9-fj9v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-r4hm-p9f9-fj9v</guid>
+            <pubDate>Fri, 06 Nov 2026 22:06:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/7 4:50:34（日本時間）
+
+The abstract metadata of documents is not sanitised. It’s possible to store arbitrary HTML (and JS) that will be executed when visiting the page.Referenceshttps://github.com/GeoNode/geonode/security/a]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/7 4:50:34（日本時間）<br><br>The abstract metadata of documents is not sanitised. It’s possible to store arbitrary HTML (and JS) that will be executed when visiting the page.Referenceshttps://github.com/GeoNode/geonode/security/a</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[filecoin-pin] filecoin-pin: Unbounded DAG pinning can exhaust server resources | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-m5ph-mmg5-6w5h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-m5ph-mmg5-6w5h</guid>
+            <pubDate>Thu, 05 Nov 2026 22:05:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/6 3:07:30（日本時間）
+
+SummaryThe IPFS Pinning Service API implementation accepts a caller-controlled CID through POST /pins, queues background processing, and then recursively fetches the full DAG with helia.pins.add(cid).]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/6 3:07:30（日本時間）<br><br>SummaryThe IPFS Pinning Service API implementation accepts a caller-controlled CID through POST /pins, queues background processing, and then recursively fetches the full DAG with helia.pins.add(cid).</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[banks] Banks: Unsafe importlib.import_module of attacker-controlled Tool.import_path in CompletionExtension allows RCE | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-64vx-6h2c-rjh7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-64vx-6h2c-rjh7</guid>
+            <pubDate>Thu, 05 Nov 2026 22:05:53 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/6 2:51:02（日本時間）
+
+Summary banks parses Tool JSON objects from the rendered body of {% completion %} blocks and later resolves their import_path field through importlib.import_module(...) + getattr(...) to obtain the ca]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/6 2:51:02（日本時間）<br><br>Summary banks parses Tool JSON objects from the rendered body of {% completion %} blocks and later resolves their import_path field through importlib.import_module(...) + getattr(...) to obtain the ca</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[odf-kit] odf-kit: HTML injection leading to XSS in odtToHtml() and odsToHtml() via unescaped style attribute values | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-3cgg-c5pp-57h6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3cgg-c5pp-57h6</guid>
+            <pubDate>Wed, 04 Nov 2026 19:05:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/5 1:14:34（日本時間）
+
+SummaryODF style attribute values are interpolated into style=&quot;...&quot; attributes without HTML-escaping in both of odf-kit&#39;s to-HTML renderers (odtToHtml and odsToHtml). A double-quote character inside a]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/5 1:14:34（日本時間）<br><br>SummaryODF style attribute values are interpolated into style=&quot;...&quot; attributes without HTML-escaping in both of odf-kit&#39;s to-HTML renderers (odtToHtml and odsToHtml). A double-quote character inside a</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@payloadcms/storage-vercel-blob] @payloadcms/storage-vercel-blob has access control bypass of uploads in Vercel Storage adapter | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-mc8m-rr6c-r5qr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mc8m-rr6c-r5qr</guid>
+            <pubDate>Wed, 04 Nov 2026 19:05:58 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/5 2:00:39（日本時間）
+
+ImpactIn affected configurations, client upload access does not consistently align with the associated collection’s access configuration.You are affected if:You use client uploads with @payloadcms/sto]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/5 2:00:39（日本時間）<br><br>ImpactIn affected configurations, client upload access does not consistently align with the associated collection’s access configuration.You are affected if:You use client uploads with @payloadcms/sto</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[stanza] Stanza: RCE via pickle deserialization in the lemmatizer | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-gh9r-c94j-cmp5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-gh9r-c94j-cmp5</guid>
+            <pubDate>Wed, 04 Nov 2026 00:06:11 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/4 5:29:16（日本時間）
+
+TL;DRLoading an attacker-supplied lemma .pt runs arbitrary code as the loading user. Since 1.14.0 the lemmatizer stores pos_dict as a gzip-compressed pickle in the checkpoint&#39;s dicts field (a bytes va]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/4 5:29:16（日本時間）<br><br>TL;DRLoading an attacker-supplied lemma .pt runs arbitrary code as the loading user. Since 1.14.0 the lemmatizer stores pos_dict as a gzip-compressed pickle in the checkpoint&#39;s dicts field (a bytes va</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@enspirit/elo] Elo Ruby backend has Remote Code Execution via unescaped `#{...}` interpolation in emitted string literals and subtype-constraint labels | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7w38-ggh5-v542</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7w38-ggh5-v542</guid>
+            <pubDate>Tue, 03 Nov 2026 19:07:19 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/4 2:51:30（日本時間）
+
+SummaryElo&#39;s Ruby backend emits attacker-controlled text into Ruby double-quoted strings without escaping the # character. Because # begins Ruby&#39;s interpolation sequences — #{expr}, #@ivar, #@@cvar, #]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/4 2:51:30（日本時間）<br><br>SummaryElo&#39;s Ruby backend emits attacker-controlled text into Ruby double-quoted strings without escaping the # character. Because # begins Ruby&#39;s interpolation sequences — #{expr}, #@ivar, #@@cvar, #</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@enspirit/elo] Elo JavaScript emitter has sandbox escape to arbitrary Node.js / browser code execution via unfiltered `.constructor` member access | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-33r5-xmm8-v6x5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-33r5-xmm8-v6x5</guid>
+            <pubDate>Tue, 03 Nov 2026 19:07:19 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/4 2:53:42（日本時間）
+
+SummaryAn unauthenticated attacker who controls a string passed to any Elo JavaScript-emission path — defaultFormats.elo.parse(), the bin/elo CLI, or the live browser playground at elo-lang.org/try — ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/4 2:53:42（日本時間）<br><br>SummaryAn unauthenticated attacker who controls a string passed to any Elo JavaScript-emission path — defaultFormats.elo.parse(), the bin/elo CLI, or the live browser playground at elo-lang.org/try — </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@enspirit/elo] Elo backends have code injection via unvalidated emission of programmatic AST fields | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-x9rp-7wh3-2rj5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x9rp-7wh3-2rj5</guid>
+            <pubDate>Tue, 03 Nov 2026 19:07:19 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/4 2:48:09（日本時間）
+
+SummaryElo&#39;s programmatic AST API accepts arbitrary values in many node fields without runtime type or syntax validation. Each backend&#39;s emit stage interpolates those values straight into the generate]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/4 2:48:09（日本時間）<br><br>SummaryElo&#39;s programmatic AST API accepts arbitrary values in many node fields without runtime type or syntax validation. Each backend&#39;s emit stage interpolates those values straight into the generate</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@bytebase/dbhub] DBHub: MySQL and MariaDB comment interpretation bypasses read-only SQL validation | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-j656-3hf2-fvjc</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-j656-3hf2-fvjc</guid>
+            <pubDate>Mon, 02 Nov 2026 21:06:20 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/3 2:57:51（日本時間）
+
+The read-only mode can be bypassed on the MySQL and MariaDB connectors. In read-only mode a caller can still execute arbitrary write and DDL statements (for example DROP TABLE), which defeats the prot]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/3 2:57:51（日本時間）<br><br>The read-only mode can be bypassed on the MySQL and MariaDB connectors. In read-only mode a caller can still execute arbitrary write and DDL statements (for example DROP TABLE), which defeats the prot</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@sd-jwt/decode] SD JWT JS: Tampered disclosures silently dropped instead of rejected | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-f9j6-8p6x-r9j6</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-f9j6-8p6x-r9j6</guid>
+            <pubDate>Mon, 02 Nov 2026 21:06:20 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/11/3 2:54:39（日本時間）
+
+SummaryWhen one Disclosure in an SD-JWT presentation is tampered so its digest no longer matches the Issuer-signed _sd array, @sd-jwt/decode 0.19.0 does not reject the presentation. It silently drops ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/11/3 2:54:39（日本時間）<br><br>SummaryWhen one Disclosure in an SD-JWT presentation is tampered so its digest no longer matches the Issuer-signed _sd array, @sd-jwt/decode 0.19.0 does not reject the presentation. It silently drops </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf has possible long runtimes when retrieving page labels | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-42gh-23hr-vphw</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-42gh-23hr-vphw</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:08:55（日本時間）
+
+ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large runtimes. This requires retrieving the page labels of a file.PatchesThis has been fixed in pypdf==6.21.3.WorkaroundsI]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:08:55（日本時間）<br><br>ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large runtimes. This requires retrieving the page labels of a file.PatchesThis has been fixed in pypdf==6.21.3.WorkaroundsI</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pyasn1] pyasn1 has quadratic-time denial of service in constructed string and indefinite-length ANY decoding | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-9m75-vc3g-4x39</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9m75-vc3g-4x39</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:03:51（日本時間）
+
+SummaryIn pyasn1 0.6.4 and earlier, decoding a constructed OCTET STRING or character string made of many fragments can spend disproportionate CPU time repeatedly copying the accumulated value. A separ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:03:51（日本時間）<br><br>SummaryIn pyasn1 0.6.4 and earlier, decoding a constructed OCTET STRING or character string made of many fragments can spend disproportionate CPU time repeatedly copying the accumulated value. A separ</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf has possible infinite loop when cloning dictionaries | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-mfr5-77xh-9j7h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mfr5-77xh-9j7h</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:12:20（日本時間）
+
+ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires cloning/duplicating a DictionaryObject.PatchesThis has been fixed in pypdf==6.21.4.Workarou]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:12:20（日本時間）<br><br>ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires cloning/duplicating a DictionaryObject.PatchesThis has been fixed in pypdf==6.21.4.Workarou</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: Denial of service in TLS record processing via call stack exhaustion | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-hqq3-7jhf-c5jx</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-hqq3-7jhf-c5jx</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:01:54（日本時間）
+
+SummaryConnections created with forge.tls.createConnection() processed received TLS records recursively, one stack level per record. A peer can send one chunk of thousands of small records, such as he]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:01:54（日本時間）<br><br>SummaryConnections created with forge.tls.createConnection() processed received TLS records recursively, one stack level per record. A peer can send one chunk of thousands of small records, such as he</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pyasn1] pyasn1 has quadratic CPU use in schemaless BER/CER/DER container decoding | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-fm9c-5rcf-2q5p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-fm9c-5rcf-2q5p</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:03:37（日本時間）
+
+SummaryWhen an application decodes attacker-controlled BER, CER, or DER data without an ASN.1 schema, a container with many distinct long tag IDs can cause quadratic CPU use. Repeated inputs can exhau]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:03:37（日本時間）<br><br>SummaryWhen an application decodes attacker-controlled BER, CER, or DER data without an ASN.1 schema, a container with many distinct long tag IDs can cause quadratic CPU use. Repeated inputs can exhau</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: PKCS#12 MAC forgery and constant-key PBE via zero iteration count | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-jc66-7q78-782g</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jc66-7q78-782g</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:05（日本時間）
+
+Summaryforge.pkcs12.pkcs12FromAsn1() accepts a PKCS#12 MAC iteration count of zero (or less) from the input, and the PKCS#12 key derivation function then returns a constant key that does not depend on]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:05（日本時間）<br><br>Summaryforge.pkcs12.pkcs12FromAsn1() accepts a PKCS#12 MAC iteration count of zero (or less) from the input, and the PKCS#12 key derivation function then returns a constant key that does not depend on</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[glob] Glob: AbortSignal cancellation bypass allows post-timeout filesystem traversal | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-3g3m-2fjr-6pw4</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3g3m-2fjr-6pw4</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:09:11（日本時間）
+
+SummaryIn glob 13.0.6, an aborted async walk rejects or emits an error but continues recursively reading directories in the background.The root cause is that abort branches in src/walker.ts call cb() ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:09:11（日本時間）<br><br>SummaryIn glob 13.0.6, an aborted async walk rejects or emits an error but continues recursively reading directories in the background.The root cause is that abort branches in src/walker.ts call cb() </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@nuxt/vite-builder] Nuxt dev server exposes generated appSecret through Vite file serving | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-3xf4-9g3c-4h4w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-3xf4-9g3c-4h4w</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:01:12（日本時間）
+
+ImpactWhen no appSecret is configured (via NUXT_APP_SECRET, NITRO_APP_SECRET or runtimeConfig.appSecret), nuxt dev generates a development secret and stores it in &lt;buildDir&gt;/app-secret (by default .nu]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:01:12（日本時間）<br><br>ImpactWhen no appSecret is configured (via NUXT_APP_SECRET, NITRO_APP_SECRET or runtimeConfig.appSecret), nuxt dev generates a development secret and stores it in &lt;buildDir&gt;/app-secret (by default .nu</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pyasn1] pyasn1 has quadratic CPU consumption in constructed BIT STRING decoding | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-2qm8-x737-gmw5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-2qm8-x737-gmw5</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:07:04（日本時間）
+
+SummaryIn pyasn1 through 0.6.4, decoding a constructed BIT STRING with many fragments repeatedly shifts and copies the entire value accumulated so far. For fixed-size fragments, CPU time grows quadrat]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:07:04（日本時間）<br><br>SummaryIn pyasn1 through 0.6.4, decoding a constructed BIT STRING with many fragments repeatedly shifts and copies the entire value accumulated so far. For fixed-size fragments, CPU time grows quadrat</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: verifyCertificateChain() removes trusted CA certificates with the same subject from the CA store | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4487-j8r4-4g2f</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4487-j8r4-4g2f</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:14（日本時間）
+
+SummaryWhen a CA store created by pki.createCaStore() holds two or more certificates with the same subject name, pki.verifyCertificateChain() permanently removes those certificates from the store whil]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:14（日本時間）<br><br>SummaryWhen a CA store created by pki.createCaStore() holds two or more certificates with the same subject name, pki.verifyCertificateChain() permanently removes those certificates from the store whil</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: AES-GCM authentication bypass via unvalidated tagLength option | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5cwg-6vw7-rj6p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5cwg-6vw7-rj6p</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:09（日本時間）
+
+SummaryThe AES-GCM mode in forge.cipher does not validate the tagLength option passed to start(). With a tagLength of 0 or a value that converts to 0 (such as null, false, &#39;&#39; or &#39;0&#39;), the authenticati]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:09（日本時間）<br><br>SummaryThe AES-GCM mode in forge.cipher does not validate the tagLength option passed to start(). With a tagLength of 0 or a value that converts to 0 (such as null, false, &#39;&#39; or &#39;0&#39;), the authenticati</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pyasn1] pyasn1 has quadratic-complexity denial of service in binary REAL decoding | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-mm57-4v3p-rchx</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mm57-4v3p-rchx</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:06:46（日本時間）
+
+SummaryIn pyasn1 0.6.4 and earlier, decoding a binary-encoded ASN.1 REAL with a large mantissa can consume CPU time quadratic in the mantissa length. The BER, CER, and DER decoders all use the affecte]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:06:46（日本時間）<br><br>SummaryIn pyasn1 0.6.4 and earlier, decoding a binary-encoded ASN.1 REAL with a large mantissa can consume CPU time quadratic in the mantissa length. The BER, CER, and DER decoders all use the affecte</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: Prototype Pollution in forge.http cookie handling via a malicious Set-Cookie | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-6wvx-3r32-xmcg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-6wvx-3r32-xmcg</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:35（日本時間）
+
+SummaryThe forge.http client stored cookies from Set-Cookie response headers in a plain object keyed by cookie name and path. A malicious server could use the cookie name __proto__ to add properties t]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:35（日本時間）<br><br>SummaryThe forge.http client stored cookies from Set-Cookie response headers in a plain object keyed by cookie name and path. A malicious server could use the cookie name __proto__ to add properties t</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: ASN.1 OID first arc truncation in asn1.oidToDer | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4642-5mcj-2rqw</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4642-5mcj-2rqw</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:40（日本時間）
+
+Summaryasn1.oidToDer() did not range-check the first two arcs of an OID string, so an OID such as 0.42.840.113549.1.1.1 or 4294977127.18.840.113549.1.1.1 was encoded as the DER of a different OID (her]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:40（日本時間）<br><br>Summaryasn1.oidToDer() did not range-check the first two arcs of an OID string, so an OID such as 0.42.840.113549.1.1.1 or 4294977127.18.840.113549.1.1.1 was encoded as the DER of a different OID (her</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf has possible long runtimes/large memory usage for encrypted PDF files | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-62m5-6wh8-28x7</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-62m5-6wh8-28x7</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:08:24（日本時間）
+
+ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large runtimes/memory usage. This requires accessing the page count of an encrypted PDF file, which itself declares a wrong]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:08:24（日本時間）<br><br>ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large runtimes/memory usage. This requires accessing the page count of an encrypted PDF file, which itself declares a wrong</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: X.509 basicConstraints bypass in verifyCertificateChain() via deprecated extension OIDs 2.5.29.10 and 2.5.29.13 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-5x38-2vff-x55p</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5x38-2vff-x55p</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:01:46（日本時間）
+
+Summarynode-forge parses certificate extensions with the deprecated OIDs 2.5.29.10 and 2.5.29.13 as basicConstraints, and forge.pki.verifyCertificateChain() used the first extension with that name. A ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:01:46（日本時間）<br><br>Summarynode-forge parses certificate extensions with the deprecated OIDs 2.5.29.10 and 2.5.29.13 as basicConstraints, and forge.pki.verifyCertificateChain() used the first extension with that name. A </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf has possible large memory usage when parsing cross-reference streams | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-x3rh-gjgm-fmqc</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-x3rh-gjgm-fmqc</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:07:28（日本時間）
+
+ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires opening a file with cross-reference streams.PatchesThis has been fixed in pypdf==6.21.3.W]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:07:28（日本時間）<br><br>ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires opening a file with cross-reference streams.PatchesThis has been fixed in pypdf==6.21.3.W</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf has possible infinite loop when hitting EOF in standard xref table during trailer search | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-5849-834g-hvw5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5849-834g-hvw5</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:13:16（日本時間）
+
+ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires opening an incomplete file without a trailer.PatchesThis has been fixed in pypdf==6.21.4.Wo]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:13:16（日本時間）<br><br>ImpactAn attacker who uses this vulnerability can craft a PDF which leads to an infinite loop. This requires opening an incomplete file without a trailer.PatchesThis has been fixed in pypdf==6.21.4.Wo</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[joi] joi: quadratic-time split in `string().email({ multiple: true })` allows denial of service | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-4528-x5fx-h6hg</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4528-x5fx-h6hg</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:10:23（日本時間）
+
+SummaryJoi.string().email({ multiple: true }) takes quadratic time to split a value that contains a long run of whitespace. One request with 100 KB of spaces blocks the Node.js event loop for several ]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:10:23（日本時間）<br><br>SummaryJoi.string().email({ multiple: true }) takes quadratic time to split a value that contains a long run of whitespace. One request with 100 KB of spaces blocks the Node.js event loop for several </p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: TLS client crash when the server sends no certificate | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-525v-9gp9-w22h</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-525v-9gp9-w22h</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:30（日本時間）
+
+SummaryThe forge TLS client&#39;s check for a missing server certificate read the wrong property and never ran. A malicious TLS server, or an on-path attacker who removes the server&#39;s Certificate message,]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:30（日本時間）<br><br>SummaryThe forge TLS client&#39;s check for a missing server certificate read the wrong property and never ran. A malicious TLS server, or an on-path attacker who removes the server&#39;s Certificate message,</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[oauthlib] OAuthLib: Token grants can use attacker-supplied client_id for authorization after authenticating a different client | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-7984-qgvg-3j9c</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7984-qgvg-3j9c</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 7:58:16（日本時間）
+
+SummaryOAuthlib&#39;s token grant handlers can authenticate one client while authorizing the grant type and requested scopes using a different, attacker-supplied client_id from the request body.In affecte]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 7:58:16（日本時間）<br><br>SummaryOAuthlib&#39;s token grant handlers can authenticate one client while authorizing the grant type and requested scopes using a different, attacker-supplied client_id from the request body.In affecte</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[graphql-core] GraphQL-core has denial of service via memory leak in aborted validations | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-mpqx-q82w-9x46</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-mpqx-q82w-9x46</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 7:58:31（日本時間）
+
+SummaryWhen a validation was aborted because the document contained more errors than allowed by max_errors (100 by default), validate() raised a single module-level ValidationAbortedError instance. Py]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 7:58:31（日本時間）<br><br>SummaryWhen a validation was aborted because the document contained more errors than allowed by max_errors (100 by default), validate() raised a single module-level ValidationAbortedError instance. Py</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: Denial of service in TLS record processing via a record interleaved with a fragmented handshake message | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8hrf-8g6f-7xwp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8hrf-8g6f-7xwp</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:00（日本時間）
+
+SummaryA connection created with forge.tls.createConnection() throws an uncaught TypeError from process() when it receives a record of another content type while waiting for the rest of a handshake me]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:00（日本時間）<br><br>SummaryA connection created with forge.tls.createConnection() throws an uncaught TypeError from process() when it receives a record of another content type while waiting for the rest of a handshake me</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[Authlib] Authlib RFC 7592 examples omit registration-access-token client binding | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-c73q-w75p-j82v</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-c73q-w75p-j82v</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:09:04（日本時間）
+
+DescriptionSummaryRFC 7592 (OAuth 2.0 Dynamic Client Registration Management Protocol) lets a previously registered client read, update, or delete its own registration, authenticated by a registration]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:09:04（日本時間）<br><br>DescriptionSummaryRFC 7592 (OAuth 2.0 Dynamic Client Registration Management Protocol) lets a previously registered client read, update, or delete its own registration, authenticated by a registration</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@hapi/content] @hapi/content: quadratic-time parsing of Content-Disposition parameters allows denial of service | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-8494-f6mr-cjpv</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-8494-f6mr-cjpv</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:10:13（日本時間）
+
+SummaryContent.disposition() takes quadratic time when a Content-Disposition parameter contains a long token without =. One unauthenticated multipart request can block the Node.js event loop for sever]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:10:13（日本時間）<br><br>SummaryContent.disposition() takes quadratic time when a Content-Disposition parameter contains a long token without =. One unauthenticated multipart request can block the Node.js event loop for sever</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[@nuxt/nitro-server] Nuxt: Dot segments in the request path bypass `server/middleware` path checks and server route rules on page routes | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-9v7c-q64q-vv33</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9v7c-q64q-vv33</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:00:53（日本時間）
+
+SummarySince 4.6.0, Nuxt resolves . and .. segments in the request path, including percent-encoded forms such as %2e, before rendering a page. Nitro&#39;s routing, Nitro&#39;s route rules and server/middlewar]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:00:53（日本時間）<br><br>SummarySince 4.6.0, Nuxt resolves . and .. segments in the request path, including percent-encoded forms such as %2e, before rendering a page. Nitro&#39;s routing, Nitro&#39;s route rules and server/middlewar</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf has possible large memory usage when parsing page tree | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-cggf-277g-3q54</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-cggf-277g-3q54</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:13:01（日本時間）
+
+ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires parsing the page tree with many shared resources.PatchesThis has been fixed in pypdf==6.2]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:13:01（日本時間）<br><br>ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires parsing the page tree with many shared resources.PatchesThis has been fixed in pypdf==6.2</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[openwisp-controller] OpenWISP Controller CA CRL REST API does not scope requests to managed organizations | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-9gh4-xw24-9xh5</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9gh4-xw24-9xh5</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 7:58:10（日本時間）
+
+SummaryThe authenticated REST API endpoint for downloading a CA Certificate Revocation List resolves the requested CA without applying the organization-scoped queryset used by the rest of the PKI API.]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 7:58:10（日本時間）<br><br>SummaryThe authenticated REST API endpoint for downloading a CA Certificate Revocation List resolves the requested CA without applying the organization-scoped queryset used by the rest of the PKI API.</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: Regular expression denial of service in PEM decoding (pem.decode) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-7wch-p9px-956x</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-7wch-p9px-956x</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:25（日本時間）
+
+Summarypem.decode(), which every node-forge API that parses PEM input uses, split messages with a regular expression that takes polynomial time on input without a matching END line, and parsed encapsu]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:25（日本時間）<br><br>Summarypem.decode(), which every node-forge API that parses PEM input uses, split messages with a regular expression that takes polynomial time on input without a matching END line, and parsed encapsu</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[node-forge] Forge: Denial of Service via infinite loop in BigInteger.modInverse() with negative input (incomplete fix of CVE-2026-33891) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-h6cr-wjv9-3cpp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-h6cr-wjv9-3cpp</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:02:20（日本時間）
+
+SummaryBigInteger.prototype.modInverse() in node-forge&#39;s bundled jsbn library enters an infinite loop when the value or the modulus is negative, for example when a negative public exponent is passed t]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:02:20（日本時間）<br><br>SummaryBigInteger.prototype.modInverse() in node-forge&#39;s bundled jsbn library enters an infinite loop when the value or the modulus is negative, for example when a negative public exponent is passed t</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypdf] pypdf has possible large memory usage for exceptions in strict mode | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-4vqv-7265-gm2w</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-4vqv-7265-gm2w</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:08:39（日本時間）
+
+ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires loading an invalid dictionary.PatchesThis has been fixed in pypdf==6.21.3.WorkaroundsIf y]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:08:39（日本時間）<br><br>ImpactAn attacker who uses this vulnerability can craft a PDF which leads to large memory usage. This requires loading an invalid dictionary.PatchesThis has been fixed in pypdf==6.21.3.WorkaroundsIf y</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[minimatch] minimatch has potential denial of service via globparts amplification | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+            <link>https://github.com/advisories/GHSA-g3hv-75wg-m249</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-g3hv-75wg-m249</guid>
+            <pubDate>Sat, 31 Oct 2026 01:26:18 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 8:09:55（日本時間）
+
+minimatch 10.2.6 contains an attacker-controlled pattern amplification in firstPhasePreProcess() when optimizationLevel &gt;= 2.researcher: Reid Downing (b1nv0id)files: src/index.ts: 690-770src/index.ts:]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 8:09:55（日本時間）<br><br>minimatch 10.2.6 contains an attacker-controlled pattern amplification in firstPhasePreProcess() when optimizationLevel &gt;= 2.researcher: Reid Downing (b1nv0id)files: src/index.ts: 690-770src/index.ts:</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[pypa/gh-action-pypi-publish] pypi-publish action revocation of CA in the chain that Sigstore uses in Trusted Publishing and Digital Attestations for PyPI | Security Advisory for Github Actions]]></title>
+            <link>https://github.com/advisories/GHSA-5xjx-3w67-w9x9</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-5xjx-3w67-w9x9</guid>
+            <pubDate>Fri, 30 Oct 2026 22:05:36 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/31 5:24:24（日本時間）
+
+SummaryThe pypi-publish action versions before 1.14.2 used to bundle the emSign root CA trust store certificate through the certifi distribution. It has since been removed through the bundle and the n]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/31 5:24:24（日本時間）<br><br>SummaryThe pypi-publish action versions before 1.14.2 used to bundle the emSign root CA trust store certificate through the certifi distribution. It has since been removed through the bundle and the n</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[joserfc] joserfc: Unbounded JWE General JSON `recipients` Array Leads to CPU Exhaustion (DoS) via Repeated RSA Private-Key Decryption | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-jpxq-7h8p-2q76</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-jpxq-7h8p-2q76</guid>
+            <pubDate>Fri, 30 Oct 2026 17:23:31 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/30 23:54:20（日本時間）
+
+Summaryjoserfc.jwe.decrypt_json(), the library&#39;s public parser for JWE General JSON Serialization, accepts an attacker-controlled recipients array of unbounded length and performs one full private-key]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/30 23:54:20（日本時間）<br><br>Summaryjoserfc.jwe.decrypt_json(), the library&#39;s public parser for JWE General JSON Serialization, accepts an attacker-controlled recipients array of unbounded length and performs one full private-key</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[joserfc] joserfc: Compact JWS size guard allocates attacker-controlled segments before rejection | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-9pg5-8c7x-5hfx</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-9pg5-8c7x-5hfx</guid>
+            <pubDate>Fri, 30 Oct 2026 17:23:31 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/30 23:54:25（日本時間）
+
+Summaryjoserfc 1.7.4 defines compact-JWS header, payload, and signature limits, butcalls value.split(b&quot;.&quot;) before validating them. Python bytes.split() copiesthe attacker-controlled segments, so the c]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/30 23:54:25（日本時間）<br><br>Summaryjoserfc 1.7.4 defines compact-JWS header, payload, and signature limits, butcalls value.split(b&quot;.&quot;) before validating them. Python bytes.split() copiesthe attacker-controlled segments, so the c</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[Twisted] Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-vpp8-g58w-m8mp</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-vpp8-g58w-m8mp</guid>
+            <pubDate>Thu, 29 Oct 2026 18:06:02 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/30 1:41:06（日本時間）
+
+SummaryAn uncontrolled-resource-consumption vulnerability (CWE-400) in the Twisted HTTP/2 server lets any unauthenticated remote client exhaust server CPU over a single connection. A client that sends]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/30 1:41:06（日本時間）<br><br>SummaryAn uncontrolled-resource-consumption vulnerability (CWE-400) in the Twisted HTTP/2 server lets any unauthenticated remote client exhaust server CPU over a single connection. A client that sends</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+        <item>
+            <title><![CDATA[[praisonai] PraisonAI vulnerable to Remote Code Execution via Broken AST Sandbox | Security Advisory for Python packages hosted at PyPI.org]]></title>
+            <link>https://github.com/advisories/GHSA-26mh-57q7-jfvr</link>
+            <guid isPermaLink="false">https://github.com/advisories/GHSA-26mh-57q7-jfvr</guid>
+            <pubDate>Thu, 29 Oct 2026 18:06:02 GMT</pubDate>
+            <description><![CDATA[元記事公開：2026/10/30 1:34:26（日本時間）
+
+SummaryJobWorkflowExecutor._exec_inline_python() is designed to safely execute inline Python expressions from YAML workflow script: steps using AST validation. The function claims to block dangerous o]]></description>
+            <content:encoded><![CDATA[<p>元記事公開：2026/10/30 1:34:26（日本時間）<br><br>SummaryJobWorkflowExecutor._exec_inline_python() is designed to safely execute inline Python expressions from YAML workflow script: steps using AST validation. The function claims to block dangerous o</p>]]></content:encoded>
+            <enclosure length="0" type="image/png" url="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png"/>
+        </item>
+    </channel>
+</rss>
