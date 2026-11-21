@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/</id>
+    <title>DevelopersIO｜企業テックブログRSS</title>
+    <updated>2026-11-21T18:05:08.250Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/feeds/atom.xml"/>
+    <subtitle>DevelopersIOセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[層を 3 回通す 26B の MoE「Inkling 2 Mini」を DGX Spark で動かしてみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/dgx-spark-inkling-2-mini-first-touch/</id>
+        <link href="https://dev.classmethod.jp/articles/dgx-spark-inkling-2-mini-first-touch/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/1dD7b8HkT2sbiJzUIewMTD/e5cdc6f33c4fdd9d798f11a4564612ff/eyecatch_developersio_darktone_1200x630.jpg" type="image/jpg"/>
+        <updated>2026-11-21T15:23:44.000Z</updated>
+        <summary type="html"><![CDATA[公開翌日の Inkling 2 Mini を、vLLM の DGX Spark 向けレシピのまま動かしました。262K コンテキストで 380 秒で起動し、単発 37.83 tok/s。日本語 10 課題は思考を low に下げても 9/9、40 個のツールから選ぶ課題は 1/6 でした。]]></summary>
+        <content type="html"><![CDATA[公開翌日の Inkling 2 Mini を、vLLM の DGX Spark 向けレシピのまま動かしました。262K コンテキストで 380 秒で起動し、単発 37.83 tok/s。日本語 10 課題は思考を low に下げても 9/9、40 個のツールから選ぶ課題は 1/6 でした。]]></content>
+        <author>
+            <name>森茂洋 / Hiroshi Morishige</name>
+        </author>
+        <published>2026-11-21T15:23:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iOSアプリ開発の気になる変更まとめ（2026/11/21）：Bitriseのセキュリティインシデント、Xcode 27.3 beta 2ほか | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/ios-dev-weekly-changes-20261121/</id>
+        <link href="https://dev.classmethod.jp/articles/ios-dev-weekly-changes-20261121/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1795264937/eyecatch/fdf87uwvifrdyazfcvbj.png" type="image/png"/>
+        <updated>2026-11-21T12:48:17.000Z</updated>
+        <summary type="html"><![CDATA[Bitriseのインシデント報告書で示された顧客への影響と対応や、GitHubアカウント乗っ取りによるCIシークレット窃取を整理した。GitHub Actionsでシミュレータのランタイムがアンマウントされる問題や、CocoaPods trunkの読み取り専用化にも触れた。]]></summary>
+        <content type="html"><![CDATA[Bitriseのインシデント報告書で示された顧客への影響と対応や、GitHubアカウント乗っ取りによるCIシークレット窃取を整理した。GitHub Actionsでシミュレータのランタイムがアンマウントされる問題や、CocoaPods trunkの読み取り専用化にも触れた。]]></content>
+        <author>
+            <name>和田 健司</name>
+        </author>
+        <published>2026-11-21T12:48:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon DynamoDB のベクトル検索で範囲比較・IN・OR/NOT のインラインフィルタが使えるようになったので試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/20211121-amazon-dynamodb-vector-filters/</id>
+        <link href="https://dev.classmethod.jp/articles/20211121-amazon-dynamodb-vector-filters/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790869637/eyecatch/al8si2nrv9fl1dauekoz.png" type="image/png"/>
+        <updated>2026-11-21T11:13:48.000Z</updated>
+        <summary type="html"><![CDATA[Amazon DynamoDB のベクトル検索で、インラインフィルタに範囲比較・IN・OR・NOT が追加されました。アプリ側で絞り込むと 0 件だった「価格 10000 以下」の類似検索が、インラインフィルタでは 5 件返りました。AWS CLI で各演算子の動作と制約を検証します。]]></summary>
+        <content type="html"><![CDATA[Amazon DynamoDB のベクトル検索で、インラインフィルタに範囲比較・IN・OR・NOT が追加されました。アプリ側で絞り込むと 0 件だった「価格 10000 以下」の類似検索が、インラインフィルタでは 5 件返りました。AWS CLI で各演算子の動作と制約を検証します。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-11-21T11:13:48.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows の Claude Desktop を aws login で Amazon Bedrock を使う設定手順 | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/claude-desktop-windows-bedrock-aws-login/</id>
+        <link href="https://dev.classmethod.jp/articles/claude-desktop-windows-bedrock-aws-login/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-e3065182082062711612153bbdcf1d96/c04359de689df2f56eb066576ab63fb5/amazon-bedrock" type="image//ct0aopd36mqt/wp-thumbnail-e3065182082062711612153bbdcf1d96/c04359de689df2f56eb066576ab63fb5/amazon-bedrock"/>
+        <updated>2026-11-21T10:28:02.000Z</updated>
+        <summary type="html"><![CDATA[Windows の Claude Desktop から aws login の認証情報で Amazon Bedrock を使えるようにする手順をまとめました。]]></summary>
+        <content type="html"><![CDATA[Windows の Claude Desktop から aws login の認証情報で Amazon Bedrock を使えるようにする手順をまとめました。]]></content>
+        <author>
+            <name>大村 保貴</name>
+        </author>
+        <published>2026-11-21T10:28:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon Bedrock AgentCore IdentityのディスカバリーURLがOAuth 2.0の認可サーバーメタデータに対応しました！ | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/agentcore-identity-oauth2-discovery/</id>
+        <link href="https://dev.classmethod.jp/articles/agentcore-identity-oauth2-discovery/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790875048/eyecatch/edq4dfptctqlcwjhffhs.png" type="image/png"/>
+        <updated>2026-11-21T08:25:40.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Bedrock AgentCore Identityのディスカバリー機能がRFC 8414（OAuth 2.0）に対応しました！]]></summary>
+        <content type="html"><![CDATA[Amazon Bedrock AgentCore Identityのディスカバリー機能がRFC 8414（OAuth 2.0）に対応しました！]]></content>
+        <author>
+            <name>神野 雄大</name>
+        </author>
+        <published>2026-11-21T08:25:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code v2.1.330 の主要アップデート - チャートを描く組み込み mod easel の追加と deniedMcpServers の挙動変更 | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/20261121-cc-updates-v2-1-330/</id>
+        <link href="https://dev.classmethod.jp/articles/20261121-cc-updates-v2-1-330/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790874959/eyecatch/ka9xwy5wvmdbaykvguvl.png" type="image/png"/>
+        <updated>2026-11-21T07:13:38.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code v2.1.330 では、チャートを描く組み込み mod「easel」が追加されました。描画までの手順に加え、コンパクト直後や WebFetch のフリーズの修正、/loop の最大 30 日化、deniedMcpServers と rm の承認対象の変更など、142 件の変更の要点を紹介します。]]></summary>
+        <content type="html"><![CDATA[Claude Code v2.1.330 では、チャートを描く組み込み mod「easel」が追加されました。描画までの手順に加え、コンパクト直後や WebFetch のフリーズの修正、/loop の最大 30 日化、deniedMcpServers と rm の承認対象の変更など、142 件の変更の要点を紹介します。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-11-21T07:13:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS ParallelCluster 3.16.2 と 3.16.3 のアップデート内容紹介 | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aws-parallelcluster-3-16-2-3-16-3-released/</id>
+        <link href="https://dev.classmethod.jp/articles/aws-parallelcluster-3-16-2-3-16-3-released/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-b7a97109267e33040a02666309325eb5/0ce782e59c1b66fe6bdad2e6c8370893/aws-parallelcluster" type="image//ct0aopd36mqt/wp-thumbnail-b7a97109267e33040a02666309325eb5/0ce782e59c1b66fe6bdad2e6c8370893/aws-parallelcluster"/>
+        <updated>2026-11-21T05:47:39.000Z</updated>
+        <summary type="html"><![CDATA[ParallelCluster 3.16.2 で公式 AMI のルートボリュームが 50 GiB に増え、Ubuntu 22.04 の終了も予告されました。]]></summary>
+        <content type="html"><![CDATA[ParallelCluster 3.16.2 で公式 AMI のルートボリュームが 50 GiB に増え、Ubuntu 22.04 の終了も予告されました。]]></content>
+        <author>
+            <name>大村 保貴</name>
+        </author>
+        <published>2026-11-21T05:47:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon Bedrock AgentCore Identityがプライベート認証局（CA）に対応しました！ | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/bedrock-agentcore-identity-private-ca/</id>
+        <link href="https://dev.classmethod.jp/articles/bedrock-agentcore-identity-private-ca/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790875048/eyecatch/edq4dfptctqlcwjhffhs.png" type="image/png"/>
+        <updated>2026-11-21T04:41:02.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Bedrock AgentCore IdentityがプライベートCAの証明書に対応しました！]]></summary>
+        <content type="html"><![CDATA[Amazon Bedrock AgentCore IdentityがプライベートCAの証明書に対応しました！]]></content>
+        <author>
+            <name>神野 雄大</name>
+        </author>
+        <published>2026-11-21T04:41:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon SageMaker Studio でマウントせずに s3fs で Amazon S3 のファイルを直接読めるか確認してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/amazon-sagemaker-studio-s3fs/</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-sagemaker-studio-s3fs/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-4e6e510f2f74e1cc7d0ec360f38d138a/c00e9d7f4e47022543b37632bc20bcc0/amazon-sagemaker" type="image//ct0aopd36mqt/wp-thumbnail-4e6e510f2f74e1cc7d0ec360f38d138a/c00e9d7f4e47022543b37632bc20bcc0/amazon-sagemaker"/>
+        <updated>2026-11-21T02:15:57.000Z</updated>
+        <summary type="html"><![CDATA[Mountpoint や S3 Files を使わなくても、SageMaker Studio の JupyterLab から s3fs で S3 のファイルを直接読めました。]]></summary>
+        <content type="html"><![CDATA[Mountpoint や S3 Files を使わなくても、SageMaker Studio の JupyterLab から s3fs で S3 のファイルを直接読めました。]]></content>
+        <author>
+            <name>大村 保貴</name>
+        </author>
+        <published>2026-11-21T02:15:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ACCOUNT_USAGEの履歴はACCOUNTADMINでなくても見られる。SNOWFLAKEデータベースロールで付与する方法 | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/snowflake-database-role-system-views/</id>
+        <link href="https://dev.classmethod.jp/articles/snowflake-database-role-system-views/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790874280/eyecatch/wsr0koxw01pat9lxglvp.png" type="image/png"/>
+        <updated>2026-11-21T00:00:11.000Z</updated>
+        <summary type="html"><![CDATA[Snowflakeのクエリ履歴やクレジット確認をACCOUNTADMINでしか行えないと思い込んでいませんか？実は、SNOWFLAKEデータベースロールを付与すれば、ACCOUNTADMIN以外のロールでもアカウント使用状況のビューを読めるようになります。その方法と設定方法を解説します。]]></summary>
+        <content type="html"><![CDATA[Snowflakeのクエリ履歴やクレジット確認をACCOUNTADMINでしか行えないと思い込んでいませんか？実は、SNOWFLAKEデータベースロールを付与すれば、ACCOUNTADMIN以外のロールでもアカウント使用状況のビューを読めるようになります。その方法と設定方法を解説します。]]></content>
+        <author>
+            <name>荒木智仁</name>
+        </author>
+        <published>2026-11-21T00:00:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Lambda durable functions の OpenTelemetry サポートを試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/lambda-durable-functions-opentelemetry-tracing/</id>
+        <link href="https://dev.classmethod.jp/articles/lambda-durable-functions-opentelemetry-tracing/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870214/eyecatch/ylyxq1jyowp2zpiyvccj.png" type="image/png"/>
+        <updated>2026-11-20T18:43:50.000Z</updated>
+        <summary type="html"><![CDATA[OpenTelemetry プラグインにより、複数回の invocation に分かれる durable execution が、1つの trace ID にまとまります。step の所要時間や retry を1本のトレースで追えるため、ボトルネックや障害の原因の特定に役立つ可能性があります。]]></summary>
+        <content type="html"><![CDATA[OpenTelemetry プラグインにより、複数回の invocation に分かれる durable execution が、1つの trace ID にまとまります。step の所要時間や retry を1本のトレースで追えるため、ボトルネックや障害の原因の特定に役立つ可能性があります。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T18:43:50.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon EMR Serverless の新機能「Flex execution」を試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/amazon-emr-serverless-flex-execution/</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-emr-serverless-flex-execution/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870381/eyecatch/l5xfo0fjei6ty6569usz.png" type="image/png"/>
+        <updated>2026-11-20T18:36:31.000Z</updated>
+        <summary type="html"><![CDATA[Amazon EMR Serverless の Flex execution は、余剰のコンピューティング容量を活用し、コストを最大 60% 削減できるとされている実行オプションです。これをジョブ投入時のオプション1つで有効にして試しました。同じスクリプトとジョブ定義で、Standard のジョブと Flex のジョブを同一アプリケーションに投入し、同じ集計結果が得られることを確認しました。]]></summary>
+        <content type="html"><![CDATA[Amazon EMR Serverless の Flex execution は、余剰のコンピューティング容量を活用し、コストを最大 60% 削減できるとされている実行オプションです。これをジョブ投入時のオプション1つで有効にして試しました。同じスクリプトとジョブ定義で、Standard のジョブと Flex のジョブを同一アプリケーションに投入し、同じ集計結果が得られることを確認しました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T18:36:31.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] AWS SAM CLI でも customer-managed runtimes を使えるようになったので、awk でカスタムランタイムを作ってみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/sam-cli-lambda-customer-managed-runtime/</id>
+        <link href="https://dev.classmethod.jp/articles/sam-cli-lambda-customer-managed-runtime/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-07eaebd66be96825f09534c76d05964b/7c8c45cd92c42f6391edbb4b7133429b/aws-sam.png" type="image/png"/>
+        <updated>2026-11-20T17:13:56.000Z</updated>
+        <summary type="html"><![CDATA[SAM CLIも対応]]></summary>
+        <content type="html"><![CDATA[SAM CLIも対応]]></content>
+        <author>
+            <name>いわさ</name>
+        </author>
+        <published>2026-11-20T17:13:56.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon S3 Tables のレプリカを書き込み可能なテーブルに昇格できるようになったので試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/20261120-amazon-s3-tables-replication-writable-tables/</id>
+        <link href="https://dev.classmethod.jp/articles/20261120-amazon-s3-tables-replication-writable-tables/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790869710/eyecatch/hi1gtfwh62jd1b8aibbd.png" type="image/png"/>
+        <updated>2026-11-20T17:12:58.000Z</updated>
+        <summary type="html"><![CDATA[Amazon S3 Tables の読み取り専用レプリカを書き込み可能なテーブルに昇格できるようになりました。namespace とテーブル名は変わらず、リージョン障害時に書き込み先を切り替えられます。東京から大阪で、コンソールからの切り離しと Athena での書き込みを試しました。]]></summary>
+        <content type="html"><![CDATA[Amazon S3 Tables の読み取り専用レプリカを書き込み可能なテーブルに昇格できるようになりました。namespace とテーブル名は変わらず、リージョン障害時に書き込み先を切り替えられます。東京から大阪で、コンソールからの切り離しと Athena での書き込みを試しました。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-11-20T17:12:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon ECR のプライベートレジストリがサポートしたグローバル認証トークンを試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aws-ecr-global-authentication-token/</id>
+        <link href="https://dev.classmethod.jp/articles/aws-ecr-global-authentication-token/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870242/eyecatch/jwg14hxf8jlckb2hrftl.png" type="image/png"/>
+        <updated>2026-11-20T14:59:32.000Z</updated>
+        <summary type="html"><![CDATA[us-east-1 で発行した1つのトークンで、ap-northeast-1 と eu-west-1 のプライベートレジストリに docker login、push、pull できました。トークンの発行手順と、複数リージョンでの使い方を紹介します。]]></summary>
+        <content type="html"><![CDATA[us-east-1 で発行した1つのトークンで、ap-northeast-1 と eu-west-1 のプライベートレジストリに docker login、push、pull できました。トークンの発行手順と、複数リージョンでの使い方を紹介します。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T14:59:32.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon S3 の PQ-TLS を CloudTrail のログ記録（keyExchange）で確認してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/amazon-s3-pq-tls-cloudtrail-key-exchange/</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-s3-pq-tls-cloudtrail-key-exchange/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790869710/eyecatch/hi1gtfwh62jd1b8aibbd.png" type="image/png"/>
+        <updated>2026-11-20T14:59:00.000Z</updated>
+        <summary type="html"><![CDATA[Amazon S3 のリクエストごとの TLS 鍵交換方式が CloudTrail の tlsDetails.keyExchange に記録されるようになりました。curl で固定した鍵交換と CloudTrail の値は一致し、AWS CLI の Docker イメージは版によって値が分かれました。]]></summary>
+        <content type="html"><![CDATA[Amazon S3 のリクエストごとの TLS 鍵交換方式が CloudTrail の tlsDetails.keyExchange に記録されるようになりました。curl で固定した鍵交換と CloudTrail の値は一致し、AWS CLI の Docker イメージは版によって値が分かれました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T14:59:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Site-to-Site VPN がポスト量子の追加鍵交換（ML-KEM-768）に対応したので、接続して VPN ログを見てみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aws-site-to-site-vpn-post-quantum-key-exchange/</id>
+        <link href="https://dev.classmethod.jp/articles/aws-site-to-site-vpn-post-quantum-key-exchange/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870854/eyecatch/zypabfgpfs4j75v09yeu.png" type="image/png"/>
+        <updated>2026-11-20T14:28:46.000Z</updated>
+        <summary type="html"><![CDATA[AWS Site-to-Site VPN がポスト量子の鍵交換に対応しました。トンネルオプションで追加鍵交換 ML-KEM-768 を指定し、strongSwan を入れた EC2 との間でトンネルを確立して、選ばれた方式を AWS 側の VPN ログと strongSwan のログで確かめました。指定方法と確認方法を紹介します。]]></summary>
+        <content type="html"><![CDATA[AWS Site-to-Site VPN がポスト量子の鍵交換に対応しました。トンネルオプションで追加鍵交換 ML-KEM-768 を指定し、strongSwan を入れた EC2 との間でトンネルを確立して、選ばれた方式を AWS 側の VPN ログと strongSwan のログで確かめました。指定方法と確認方法を紹介します。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T14:28:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS STS の GetScopedCredentials で一時認証情報の権限とセッション期間を絞ってみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aws-sts-getscopedcredentials-scope-down/</id>
+        <link href="https://dev.classmethod.jp/articles/aws-sts-getscopedcredentials-scope-down/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790871188/eyecatch/yurdvuwee3qtyik2d7ap.png" type="image/png"/>
+        <updated>2026-11-20T14:08:06.000Z</updated>
+        <summary type="html"><![CDATA[AWS STS の GetScopedCredentials で、既存の一時認証情報から権限とセッション期間を絞った認証情報を発行しました。発行した認証情報の ARN は呼び出し元と同じで、権限と期間は呼び出し元の範囲に収まりました。発行の呼び出しは CloudTrail に記録されました。]]></summary>
+        <content type="html"><![CDATA[AWS STS の GetScopedCredentials で、既存の一時認証情報から権限とセッション期間を絞った認証情報を発行しました。発行した認証情報の ARN は呼び出し元と同じで、権限と期間は呼び出し元の範囲に収まりました。発行の呼び出しは CloudTrail に記録されました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T14:08:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Route 53 の Private Endpoint Health Checks を試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/route53-private-endpoint-health-checks/</id>
+        <link href="https://dev.classmethod.jp/articles/route53-private-endpoint-health-checks/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870887/eyecatch/oa2tajbz1u8ialkh962f.png" type="image/png"/>
+        <updated>2026-11-20T14:02:33.000Z</updated>
+        <summary type="html"><![CDATA[内部 ALB のヘルスチェックを Private Endpoint Health Checks で試し、IP アドレスと FQDN のどちらでも HTTP / HTTPS でヘルスチェックでき、Route 53 のレコードを利用したフェイルオーバー動作も確認できました。]]></summary>
+        <content type="html"><![CDATA[内部 ALB のヘルスチェックを Private Endpoint Health Checks で試し、IP アドレスと FQDN のどちらでも HTTP / HTTPS でヘルスチェックでき、Route 53 のレコードを利用したフェイルオーバー動作も確認できました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T14:02:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon Cognito のアプリクライアントシークレットを AWS Secrets Manager で管理できるようになったので試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/cognito-client-secret-secrets-manager/</id>
+        <link href="https://dev.classmethod.jp/articles/cognito-client-secret-secrets-manager/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-a818da17018141da489a79231ff888af/262f4f06026559b98b1fdec52f1a2176/amazon-cognito" type="image//ct0aopd36mqt/wp-thumbnail-a818da17018141da489a79231ff888af/262f4f06026559b98b1fdec52f1a2176/amazon-cognito"/>
+        <updated>2026-11-20T13:25:33.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Cognito のアプリクライアントシークレットを AWS Secrets Manager で管理できるようになりました。実際にアプリクライアントで有効にし、ローテーションの前後でどのシークレットが使えるのかを検証しました。]]></summary>
+        <content type="html"><![CDATA[Amazon Cognito のアプリクライアントシークレットを AWS Secrets Manager で管理できるようになりました。実際にアプリクライアントで有効にし、ローテーションの前後でどのシークレットが使えるのかを検証しました。]]></content>
+        <author>
+            <name>荒巻 美南海</name>
+        </author>
+        <published>2026-11-20T13:25:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Lambda Durable Execution SDK for Rust が GA になったので試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aws-lambda-durable-sdk-rust-ga/</id>
+        <link href="https://dev.classmethod.jp/articles/aws-lambda-durable-sdk-rust-ga/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870214/eyecatch/ylyxq1jyowp2zpiyvccj.png" type="image/png"/>
+        <updated>2026-11-20T13:10:47.000Z</updated>
+        <summary type="html"><![CDATA[Lambda durable functions の処理を Rust で書ける SDK が GA になりました。Quickstart の関数を Cargo Lambda でビルドして provided.al2023 に載せ、同期 invoke で実行して、CloudWatch Logs の実行記録を確認しました。]]></summary>
+        <content type="html"><![CDATA[Lambda durable functions の処理を Rust で書ける SDK が GA になりました。Quickstart の関数を Cargo Lambda でビルドして provided.al2023 に載せ、同期 invoke で実行して、CloudWatch Logs の実行記録を確認しました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T13:10:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code v2.1.329 の主要アップデート - 信頼ダイアログのフック警告と Code Mode のフック失敗時の挙動変更 | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/20261120-cc-updates-v2-1-329/</id>
+        <link href="https://dev.classmethod.jp/articles/20261120-cc-updates-v2-1-329/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790874959/eyecatch/ka9xwy5wvmdbaykvguvl.png" type="image/png"/>
+        <updated>2026-11-20T12:36:11.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code v2.1.329 の主要アップデートを解説します。信頼ダイアログでフックを宣言したファイルが分かるようになり、実機で表示を確認しました。Code Mode のフックのエラー時の挙動変更や、~/.claude.json がリセットされる問題と VS Code の IME 入力の不具合の修正も紹介します。]]></summary>
+        <content type="html"><![CDATA[Claude Code v2.1.329 の主要アップデートを解説します。信頼ダイアログでフックを宣言したファイルが分かるようになり、実機で表示を確認しました。Code Mode のフックのエラー時の挙動変更や、~/.claude.json がリセットされる問題と VS Code の IME 入力の不具合の修正も紹介します。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-11-20T12:36:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Cognito のアプリクライアントシークレットを AWS Secrets Manager で管理できるようになったので試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/cognito-app-client-secret-secrets-manager/</id>
+        <link href="https://dev.classmethod.jp/articles/cognito-app-client-secret-secrets-manager/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790871156/eyecatch/wagokraibjktomkouqin.png" type="image/png"/>
+        <updated>2026-11-20T12:29:10.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Cognito のアプリクライアントシークレットを AWS Secrets Manager で管理できるようになりました。新規のアプリクライアントで有効化すると応答に ClientSecretArn が返ること、Secrets Manager から取得した値で認証できることを AWS CLI で確認しました。]]></summary>
+        <content type="html"><![CDATA[Amazon Cognito のアプリクライアントシークレットを AWS Secrets Manager で管理できるようになりました。新規のアプリクライアントで有効化すると応答に ClientSecretArn が返ること、Secrets Manager から取得した値で認証できることを AWS CLI で確認しました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T12:29:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] AWS STS の GetScopedCredentials で権限と有効期間を絞った認証情報を作ってみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aws-sts-get-scoped-credentials/</id>
+        <link href="https://dev.classmethod.jp/articles/aws-sts-get-scoped-credentials/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-7bf2dfb6b7a0dd9b7561e87b396ccdc3/018019c86ac567eceba7268550750d9f/aws-iam" type="image//ct0aopd36mqt/wp-thumbnail-7bf2dfb6b7a0dd9b7561e87b396ccdc3/018019c86ac567eceba7268550750d9f/aws-iam"/>
+        <updated>2026-11-20T12:17:46.000Z</updated>
+        <summary type="html"><![CDATA[AWS STS に追加された GetScopedCredentials を AWS CLI から呼び出し、ID を変えずに権限と有効期間がどう絞られるのかを検証しました。また、絞り込みを重ねたときの上限や必要な許可も確かめてみました。]]></summary>
+        <content type="html"><![CDATA[AWS STS に追加された GetScopedCredentials を AWS CLI から呼び出し、ID を変えずに権限と有効期間がどう絞られるのかを検証しました。また、絞り込みを重ねたときの上限や必要な許可も確かめてみました。]]></content>
+        <author>
+            <name>荒巻 美南海</name>
+        </author>
+        <published>2026-11-20T12:17:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Security Hub修復手順】[ELB.13] Application、Network、Gateway Load Balancer は、複数のアベイラビリティーゾーンにまたがっている必要があります | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/securityhub-fsbp-remediation-elb-13/</id>
+        <link href="https://dev.classmethod.jp/articles/securityhub-fsbp-remediation-elb-13/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790871196/eyecatch/wr309ednrjrbdx9mtsnl.png" type="image/png"/>
+        <updated>2026-11-20T10:43:09.000Z</updated>
+        <summary type="html"><![CDATA[AWS Security Hubで検出されるロードバランサーの高可用性に関するコントロール「ELB.13」の修復手順をご紹介します。]]></summary>
+        <content type="html"><![CDATA[AWS Security Hubで検出されるロードバランサーの高可用性に関するコントロール「ELB.13」の修復手順をご紹介します。]]></content>
+        <author>
+            <name>katsumata</name>
+        </author>
+        <published>2026-11-20T10:43:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon EC2 Detailed Monitoring のメトリクスカテゴリで CPU 使用率を 10 秒周期で取得してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/ec2-detailed-monitoring-10-second-cpu-metrics/</id>
+        <link href="https://dev.classmethod.jp/articles/ec2-detailed-monitoring-10-second-cpu-metrics/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870021/eyecatch/eugkoepwmyirwgiv7nzi.png" type="image/png"/>
+        <updated>2026-11-20T10:13:35.000Z</updated>
+        <summary type="html"><![CDATA[Amazon EC2 Detailed Monitoring のメトリクスカテゴリで、CPU 使用率を 10 秒周期で取得しました。インスタンス内の設定なしで、1 分値が 33% 前後の負荷でも 10 秒値は 100% を示し、OpenTelemetry 形式の指標は PromQL で取得できました。]]></summary>
+        <content type="html"><![CDATA[Amazon EC2 Detailed Monitoring のメトリクスカテゴリで、CPU 使用率を 10 秒周期で取得しました。インスタンス内の設定なしで、1 分値が 33% 前後の負荷でも 10 秒値は 100% を示し、OpenTelemetry 形式の指標は PromQL で取得できました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T10:13:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[t9g.medium と t4g.medium の性能を Next.js ビルド・OpenSSL・dd で実測してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/ec2-t9g-vs-t4g-medium-performance/</id>
+        <link href="https://dev.classmethod.jp/articles/ec2-t9g-vs-t4g-medium-performance/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870021/eyecatch/eugkoepwmyirwgiv7nzi.png" type="image/png"/>
+        <updated>2026-11-20T10:03:11.000Z</updated>
+        <summary type="html"><![CDATA[Amazon EC2 の t9g.medium と t4g.medium で Next.js ビルド・OpenSSL・dd を実測しました。ビルド時間の中央値は t4g.medium の 34.9 秒に対し t9g.medium は 12.2 秒でした。CPU 情報と CloudWatch のバースト関連メトリクスも確認しています。]]></summary>
+        <content type="html"><![CDATA[Amazon EC2 の t9g.medium と t4g.medium で Next.js ビルド・OpenSSL・dd を実測しました。ビルド時間の中央値は t4g.medium の 34.9 秒に対し t9g.medium は 12.2 秒でした。CPU 情報と CloudWatch のバースト関連メトリクスも確認しています。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T10:03:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Aurora DSQL で大陸をまたぐマルチリージョンクラスター（東京とバージニア）を作成してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aws-aurora-dsql-intercontinental-multi-region/</id>
+        <link href="https://dev.classmethod.jp/articles/aws-aurora-dsql-intercontinental-multi-region/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1795164284/eyecatch/asio74xafr6d9vvjwl5t.jpg" type="image/jpg"/>
+        <updated>2026-11-20T09:36:40.000Z</updated>
+        <summary type="html"><![CDATA[別大陸にある東京とバージニア北部をピア、オレゴンを witness として、Amazon Aurora DSQL のマルチリージョンクラスターを作成しました。ピアリングから2分以内に両クラスターが ACTIVE になり、どちらのエンドポイントで書き込んだ行も、もう一方の Region の SELECT で読み取れることを確認しました。]]></summary>
+        <content type="html"><![CDATA[別大陸にある東京とバージニア北部をピア、オレゴンを witness として、Amazon Aurora DSQL のマルチリージョンクラスターを作成しました。ピアリングから2分以内に両クラスターが ACTIVE になり、どちらのエンドポイントで書き込んだ行も、もう一方の Region の SELECT で読み取れることを確認しました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T09:36:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Aurora DSQL の書き込みスループットが最大 50% 向上すると発表されたので確かめてみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aurora-dsql-higher-write-throughput/</id>
+        <link href="https://dev.classmethod.jp/articles/aurora-dsql-higher-write-throughput/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1795164284/eyecatch/asio74xafr6d9vvjwl5t.jpg" type="image/jpg"/>
+        <updated>2026-11-20T08:45:13.000Z</updated>
+        <summary type="html"><![CDATA[新規クラスターで、1トランザクションで 3,000 行の INSERT と UPDATE を試しました。既存クラスターでは、10月下旬を境に CommitLatency が約 25% 改善していました。]]></summary>
+        <content type="html"><![CDATA[新規クラスターで、1トランザクションで 3,000 行の INSERT と UPDATE を試しました。既存クラスターでは、10月下旬を境に CommitLatency が約 25% 改善していました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-20T08:45:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Claude Code] 自律ループの完了判定は"検証"で行う | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/claude-code-verification-loop/</id>
+        <link href="https://dev.classmethod.jp/articles/claude-code-verification-loop/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/3KBTm8tdpO9RJJuaVvVzod/a9964bb03097b448b2327edc6920bf9f/Claude.png" type="image/png"/>
+        <updated>2026-11-20T08:38:58.000Z</updated>
+        <summary type="html"><![CDATA[Claude Codeで自律ループを確実に終了させるには、レビュー繰り返しではなく、テストやビルドなど客観的な検証チェックを提供すべき。実験結果から、チェック提供時のみ判定根拠が明確に記録される重要性を解説。]]></summary>
+        <content type="html"><![CDATA[Claude Codeで自律ループを確実に終了させるには、レビュー繰り返しではなく、テストやビルドなど客観的な検証チェックを提供すべき。実験結果から、チェック提供時のみ判定根拠が明確に記録される重要性を解説。]]></content>
+        <author>
+            <name>中村 修太</name>
+        </author>
+        <published>2026-11-20T08:38:58.000Z</published>
+    </entry>
+</feed>

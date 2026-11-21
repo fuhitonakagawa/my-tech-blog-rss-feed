@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/</id>
+    <title>GitHub Security Advisory - Translated Japanese｜企業テックブログRSS</title>
+    <updated>2026-11-21T18:05:09.512Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/atom.xml"/>
+    <subtitle>GitHub Security Advisory - Translated Japanese：enの記事を日本語に翻訳してまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[[@budibase/サーバ] Budibase: ワンタイムの init ガード (`POST /api/global/users/init`) の tenant-confusion バイパスによる、未認証のグローバル admin &amp; データベースの作成 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-25qc-m4pw-2w8r</id>
+        <link href="https://github.com/advisories/GHSA-25qc-m4pw-2w8r"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:50:01.000Z</updated>
+        <summary type="html"><![CDATA[説明概要 自己ホストされている、シングルテナントのBudibaseインスタンス(multiTenancy:false)では、パブリックブートストラップエンドポイントPOST /api/global/users/initは、インスタンスが暫定された後に完全に悪用されます。 "already initialized" ガード (checkAnyUserExists())) は、攻撃者制御テナントから派]]></summary>
+        <content type="html"><![CDATA[説明概要 自己ホストされている、シングルテナントのBudibaseインスタンス(multiTenancy:false)では、パブリックブートストラップエンドポイントPOST /api/global/users/initは、インスタンスが暫定された後に完全に悪用されます。 "already initialized" ガード (checkAnyUserExists())) は、攻撃者制御テナントから派生するテナントスコープのデータベースコンテキスト内で評価されます。 リクエストボディに差し込みます。 テナント層がテナントの制約がないため 単一テナントのデプロイメントで唯一の正当なテナント(デフォルト)にId, 未認証の攻撃者は、ガードが空のユーザーリストを見るように、未使用のテナント名を単に供給し、エンドポイントは、新しいCouchDBデータベース(&lt;tenantId&gt;_global-db)を作成し、グローバル管理者ユーザー文書(admin.global = true, builder.global = true)を内部で作成します。認証なし、CSRFトークンなし。 これは(a) 恒久的に]]></content>
+        <published>2026-11-20T23:50:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@budibase/サーバ] Budibase: ブディベースビルダーでXSSを格納するクロスプライビレッジは、CSPレスビルダーの起源にある`jsonFormatter.format()`で壊れたHTMLエスケープを介してレンダリングされた。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-r2q3-7m4h-63qg</id>
+        <link href="https://github.com/advisories/GHSA-r2q3-7m4h-63qg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:49:47.000Z</updated>
+        <summary type="html"><![CDATA[説明概要 低特権のアプリケーションエンドユーザ(role BASIC)は、ビルダーや管理者ではなく、パブリックなデータ収集フォーム、不正な訪問者)は、通常の行データに HTML/JavaScript ペイロードを保存できます。 ビルダーまたは管理者がそのテーブルをBudibase Builderで開き、Previewが値(データセクションフォーミュラ列エディタ、またはバインディングドローダ)を表す]]></summary>
+        <content type="html"><![CDATA[説明概要 低特権のアプリケーションエンドユーザ(role BASIC)は、ビルダーや管理者ではなく、パブリックなデータ収集フォーム、不正な訪問者)は、通常の行データに HTML/JavaScript ペイロードを保存できます。 ビルダーまたは管理者がそのテーブルをBudibase Builderで開き、Previewが値(データセクションフォーミュラ列エディタ、またはバインディングドローダ)を表すハンドルバーのバインディングを評価すると、保存された値は、生のHTMLとしてレンダリングされ、攻撃者のJavaScriptはBuilderの原点で実行されます。 Builder SPA は nginx によって、Content-Security-Policy (CSP ミドルウェアは、サーバーレンダリングされた公開アプリのドキュメントを /builder/ ではなく飾るのみ) で提供されます。 従って注入されたスクリプトはプロダクトの最も信任の表面でunrestricted動きます-データソースを作成できるadmin/builderのセッションはオートメーションによってサーバー側のJavaSc]]></content>
+        <published>2026-11-20T23:49:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[wcmatch] wcmatch:マルチスターパターン(デフォルトフラグ)に対する信頼できない名前に一致するポリノミアルタイムReDoS | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-53pm-wgxf-c6qf</id>
+        <link href="https://github.com/advisories/GHSA-53pm-wgxf-c6qf"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:49:18.000Z</updated>
+        <summary type="html"><![CDATA[デフォルトフラグで、複数の * ワイルドカードを含むパターンは、多項式時間、k 星の O(n^k) で処理されたファイル名を拒否します。 パターンは、*_*_*_*_*_*.csv のような普通の開発者の定数です。マッチする文字列だけは、攻撃者から来ます。 255バイトのファイル名(共通ファイルシステムの最大値)は、73 s を fnmatch.fnmatch() と 86 s を glob.gl]]></summary>
+        <content type="html"><![CDATA[デフォルトフラグで、複数の * ワイルドカードを含むパターンは、多項式時間、k 星の O(n^k) で処理されたファイル名を拒否します。 パターンは、*_*_*_*_*_*.csv のような普通の開発者の定数です。マッチする文字列だけは、攻撃者から来ます。 255バイトのファイル名(共通ファイルシステムの最大値)は、73 s を fnmatch.fnmatch() と 86 s を glob.globmatch() で取得します。 標準ライブラリのfnmatchは、ミリ秒単位で同じ入力を処理します。 これは GHSA-84v8-qmgq-9g88 とは異なります。このケースでは、アドバイザリーが extglob パターンをカバーしていますが、このケースではフラグや攻撃者制御パターンは必要ありません。 DetailsEvery * は、 .*? (_STAR, wcmatch/_wcparse.py:212; _PATH_STAR [^/]*?, :218) に翻訳され、 _handle_star (:1405-1424):*_*_*_*_*_*.csv -&gt; ^(?s:(?=.)(?!]]></content>
+        <published>2026-11-20T23:49:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[inscriptis] Inscriptis: get_text() の &lt;table&gt; 要素をシブルする Quadratic メモリの成長 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-q87h-c5m7-659j</id>
+        <link href="https://github.com/advisories/GHSA-q87h-c5m7-659j"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:48:51.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション すべての兄弟&lt;table&gt;は親のインデントの別のレベルを加えます、従ってget_text()の出力のサイズは表の数と質的に成長します。 下記の測定では、240 KBのHTML文書が約1億文字を生成し、1 GBのメモリを使用する。 Detailstable_end_handler() (model/tag/table_tag.py) は、レンダリングされたテーブルを HtmlEl]]></summary>
+        <content type="html"><![CDATA[インフォメーション すべての兄弟&lt;table&gt;は親のインデントの別のレベルを加えます、従ってget_text()の出力のサイズは表の数と質的に成長します。 下記の測定では、240 KBのHTML文書が約1億文字を生成し、1 GBのメモリを使用する。 Detailstable_end_handler() (model/tag/table_tag.py) は、レンダリングされたテーブルを HtmlElement.write_verbatim_text() (model/html_element.py) で親要素に書きます。 block-level 親の場合、 write_verbatim_text() は、親の padding_inline をプレフィックススタックにプッシュする Canvas.open_block() を呼び出します。 以下の close_block() はポップアップしません。Canvas.close_tag() は prefix.remove_last_prefix() を呼び出します。 従って各テーブルは積み重ねの1つの余分パッドを入れる記入項目を残します。 今回は]]></content>
+        <published>2026-11-20T23:48:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[svglib] svglib: svg2rlg の &lt;use&gt; 参照をネストした &lt;use&gt; による指数関数リソース消費 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-555j-qj3j-c8jv</id>
+        <link href="https://github.com/advisories/GHSA-555j-qj3j-c8jv"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:47:58.000Z</updated>
+        <summary type="html"><![CDATA[サマリーsvg2rlg() は &lt;use&gt; 参照を拡張し、合計数の拡張を制限することなく展開します。 直接サイクルのみが拒否されます(CircularRefError)。 N &lt;use&gt; 要素を含むグループでは、ネスティングレベルごとに N の作業を複数行っているので、約 1.4 KB の SVG は svglib クローンを作成し、100,000 ノードを超えるノードをレンダリングし、 CPU ]]></summary>
+        <content type="html"><![CDATA[サマリーsvg2rlg() は &lt;use&gt; 参照を拡張し、合計数の拡張を制限することなく展開します。 直接サイクルのみが拒否されます(CircularRefError)。 N &lt;use&gt; 要素を含むグループでは、ネスティングレベルごとに N の作業を複数行っているので、約 1.4 KB の SVG は svglib クローンを作成し、100,000 ノードを超えるノードをレンダリングし、 CPU 時間と数百のメモリを 10 秒単位で取得します。 各追加レベルは、約 245 バイト ドキュメントと ~10 年までに複数の時間を追加します。 これは、XML "billion 笑" 攻撃の SVG &lt;use&gt; バリアント (librsvg CVE-2019-20446) と同じクラスです。 DetailsSvgRenderer.renderUse() src/svglib/svglib.py:try: 項目 = self.xlink_href_target(node, group=group) を除く CircularRefError: node.parent.etree_element.r]]></content>
+        <published>2026-11-20T23:47:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[memtomem-stm] memtomem-stm: 同時 LTM 回復は、再接続を複製したり、キャンセルされた輸送セッションを再使用することができます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-72jh-722p-rqr3</id>
+        <link href="https://github.com/advisories/GHSA-72jh-722p-rqr3"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:38:15.000Z</updated>
+        <summary type="html"><![CDATA[同時サーフェック RPC 障害は、同一の汚れたセッションに対して複数の再接続をトリガーし、後再接続時のキャンセルは、中断されたプロトコル交換にもかかわらず、交換セッションの再利用可能な状態を残すことができます。 プライベート・フィックスは、モノトニック・セッションの生成、汚れた世代ごとのシールドされた共有リコネクションフライト、および検索、アクセス・カウント、およびスクラッチ・RPCを横断する生成]]></summary>
+        <content type="html"><![CDATA[同時サーフェック RPC 障害は、同一の汚れたセッションに対して複数の再接続をトリガーし、後再接続時のキャンセルは、中断されたプロトコル交換にもかかわらず、交換セッションの再利用可能な状態を残すことができます。 プライベート・フィックスは、モノトニック・セッションの生成、汚れた世代ごとのシールドされた共有リコネクションフライト、および検索、アクセス・カウント、およびスクラッチ・RPCを横断する生成・アウェア・リノベーション・ハンドリングを導入しています。 重複再接続のサブケースが0.1.24で導入されました。 キャンセルの回復は、ブラーのリストされた範囲に影響します。 参考:https://github.com/memtomem/memtomem-stm/security/advisories/GHSA-72jh-722p-rqr3https://nvd.nist.gov/vuln/detail/CVE-2026-77331https://github.com/memtomem/memtomem-stm/commit/761db1802df7ce4881ff4c3amvvvvu/det]]></content>
+        <published>2026-11-20T23:38:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[memtomem-stm] memtomem-stm: 表面化されたメモリデータは、Markdownの互換性境界をエスケープできます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-43hx-xm7w-3mhj</id>
+        <link href="https://github.com/advisories/GHSA-43hx-xm7w-3mhj"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:37:39.000Z</updated>
+        <summary type="html"><![CDATA[信頼できない長期および作業記憶分野は、MarkdownまたはHTML互換構造を表面記憶封筒に導入できます。 熟練したメモリは、構造的境界や視覚的に隠蔽されたコンテンツを作成することがあります。 プライベート・フィックスは、不信なフィールドを一行のデータとしてシリアライズし、コピー可能なメモリ識別子を検証し、明示的な信頼できないデータ・プリセットをピン留めします。 通常の自然言語の説得力は残りのモデ]]></summary>
+        <content type="html"><![CDATA[信頼できない長期および作業記憶分野は、MarkdownまたはHTML互換構造を表面記憶封筒に導入できます。 熟練したメモリは、構造的境界や視覚的に隠蔽されたコンテンツを作成することがあります。 プライベート・フィックスは、不信なフィールドを一行のデータとしてシリアライズし、コピー可能なメモリ識別子を検証し、明示的な信頼できないデータ・プリセットをピン留めします。 通常の自然言語の説得力は残りのモデルレベルのリスクを残します。 参考:https://github.com/memtomem/memtomem-stm/security/advisories/GHSA-43hx-xm7w-3mjhttps://nvd.nist.gov/vuln/detail/CVE-2026-77332https://github.com/memtomem/memtomem-stm/commit/3d50ba61cbfafba6db26evdev/detail/CVE-2026-77332https://github.com/memtomem-stm/mem/memamem-stm/com/com/com/c]]></content>
+        <published>2026-11-20T23:37:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ait-gui] AIT-GUI のルートチェーンは、サーバープロセスで非認証の Python の実行を可能にします | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-jrjx-9jjw-747m</id>
+        <link href="https://github.com/advisories/GHSA-jrjx-9jjw-747m"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:36:41.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション AIT-GUIサーバーを指示し、任意のPythonスクリプトを実行できる未認証の呼び出し元が、セキュリティの問題が存在します。 攻撃ベクトルは、設定されたスクリプトディレクトリ制限を迂回する絶対ファイルパスを含む悪意のあるPOST /script/runリクエストで、GET /を通してセッションクッキーを取得することを含みます。 Patches2.5.1Impactこの脆弱性は]]></summary>
+        <content type="html"><![CDATA[インフォメーション AIT-GUIサーバーを指示し、任意のPythonスクリプトを実行できる未認証の呼び出し元が、セキュリティの問題が存在します。 攻撃ベクトルは、設定されたスクリプトディレクトリ制限を迂回する絶対ファイルパスを含む悪意のあるPOST /script/runリクエストで、GET /を通してセッションクッキーを取得することを含みます。 Patches2.5.1Impactこの脆弱性は、AIT-GUIサーバー上での未処理のリモートコード実行を可能にします。 ネットワークアクセスを持つ任意の攻撃者は、デーモン特権で任意のPythonコードを実行できます。 詳細チェーン:POST /tlm/query は、AIT-GUI 静的ディレクトリの下の field_in.txt にユーザ制御フィールドの値を書きます。 提供されたdataDirに.pcapファイルがない場合、そのファイルを削除する前に、このルートは予想される400 Bad Requestを返します。 POST /script/runは受け入れます scriptPath=../static/fields_in.txt.AI]]></content>
+        <published>2026-11-20T23:36:41.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[エーデス] Aedesは、例外と非制御のリソース消費を未だにキャッチしています | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-xxqp-5qx8-gj5q</id>
+        <link href="https://github.com/advisories/GHSA-xxqp-5qx8-gj5q"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:32:35.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション リモート・デニアル・オブ・サービス(DoS)の脆弱性は、リモート・クライアントがAedes MQTTブローカー・プロセスの完全なクラッシュを引き起こすことを可能にします。 これは、特別に作られた MQTT メッセージ(PUBLISH または SUBSCRIBE 経由)を送信したり、非常に再帰的なトピック文字列を含む、Will メッセージを設定することによって達成されます(例えば]]></summary>
+        <content type="html"><![CDATA[インフォメーション リモート・デニアル・オブ・サービス(DoS)の脆弱性は、リモート・クライアントがAedes MQTTブローカー・プロセスの完全なクラッシュを引き起こすことを可能にします。 これは、特別に作られた MQTT メッセージ(PUBLISH または SUBSCRIBE 経由)を送信したり、非常に再帰的なトピック文字列を含む、Will メッセージを設定することによって達成されます(例えば、数千の '/' 区切り文字)。 入力バリデーションとエラー処理の欠如は、Node.jsアプリケーション全体に用語集する、内部ルーティングライブラリ内の不正な例外につながります。 DetailsThe Aedes ブローカーは、MQTT トピック文字列の深さや構造の複雑さに制限を強制できません。 クライアントが再帰の余りなレベルを持つトピックに公開または購読する場合、内部ルーティングロジックはqlobberライブラリ(mqemitter経由)にキャッシングすると、qlobber._split_words関数内のハードコードされた制限が到達します。 この関数は、ハードエラーをスローします: あま]]></content>
+        <published>2026-11-20T23:32:35.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ckan] CKAN: セッションの修正 ニュース | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-6499-jgj4-2wpf</id>
+        <link href="https://github.com/advisories/GHSA-6499-jgj4-2wpf"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T16:25:26.000Z</updated>
+        <summary type="html"><![CDATA[コンテンツ Web ユーザ登録フォームは、サーバー側のセッションストレージ(CKAN では、Cookie ベースのセッションストレージをデフォルトで使用)で設定されている場合、セッションの修正に脆弱です。 攻撃者は、犠牲者のブラウザにクッキーを設定するか、犠牲者の現在の有効なセッションを盗む必要があります。 セッション識別子は登録後に再生成されます。 パッチ http://github.com/c]]></summary>
+        <content type="html"><![CDATA[コンテンツ Web ユーザ登録フォームは、サーバー側のセッションストレージ(CKAN では、Cookie ベースのセッションストレージをデフォルトで使用)で設定されている場合、セッションの修正に脆弱です。 攻撃者は、犠牲者のブラウザにクッキーを設定するか、犠牲者の現在の有効なセッションを盗む必要があります。 セッション識別子は登録後に再生成されます。 パッチ http://github.com/ckan/security/advisories/GHSA-6499-jgj4-2.html/ja/ja/]]></content>
+        <published>2026-11-20T16:25:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ckan] CKAN: セッションの修正 ニュース | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-6499-jgj4-2wpf</id>
+        <link href="https://github.com/advisories/GHSA-6499-jgj4-2wpf"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T16:25:26.000Z</updated>
+        <summary type="html"><![CDATA[コンテンツ Web ユーザ登録フォームは、サーバー側のセッションストレージ(CKAN では、Cookie ベースのセッションストレージをデフォルトで使用)で設定されている場合、セッションの修正に脆弱です。 攻撃者は、犠牲者のブラウザにクッキーを設定するか、犠牲者の現在の有効なセッションを盗む必要があります。 セッション識別子は登録後に再生成されます。 パッチ http://github.com/c]]></summary>
+        <content type="html"><![CDATA[コンテンツ Web ユーザ登録フォームは、サーバー側のセッションストレージ(CKAN では、Cookie ベースのセッションストレージをデフォルトで使用)で設定されている場合、セッションの修正に脆弱です。 攻撃者は、犠牲者のブラウザにクッキーを設定するか、犠牲者の現在の有効なセッションを盗む必要があります。 セッション識別子は登録後に再生成されます。 パッチ http://github.com/ckan/security/advisories/GHSA-6499-jgj4-2.html/ja/ja/]]></content>
+        <published>2026-11-20T16:25:26.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ストーリーblok-backup] ストーリーblok-backup: バックアップ出力のunsanitized Storyblokコンポーネント名による保存されたパストラバース | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-vcx7-pfrh-mcfg</id>
+        <link href="https://github.com/advisories/GHSA-vcx7-pfrh-mcfg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T14:55:18.000Z</updated>
+        <summary type="html"><![CDATA[概要storyblok-backup は、Threeblok コンポーネントの unsanitized 名を使用してファイルを書きます。これは、コンテンツタイプまたはスキーマ定義です。 これは、パストラバースシーケンスを含むコンポーネント名で、意図したバックアップディレクトリの外にバックアップファイルを書き込むことができます。 ソースのThreeblokスペースでコンポーネント管理アクセスを持つ誰]]></summary>
+        <content type="html"><![CDATA[概要storyblok-backup は、Threeblok コンポーネントの unsanitized 名を使用してファイルを書きます。これは、コンテンツタイプまたはスキーマ定義です。 これは、パストラバースシーケンスを含むコンポーネント名で、意図したバックアップディレクトリの外にバックアップファイルを書き込むことができます。 ソースのThreeblokスペースでコンポーネント管理アクセスを持つ誰でも、サーバーアクセスではなく、任意のファイルが後でそのスペースに対してバックアップを実行している人のマシンに書き込みを引き起こす悪意のあるコンポーネント名を植えることができます。 DetailsThe writeJson 関数は、フォルダー、ファイル名、コンテンツを取り、バックアップディレクトリ、フォルダー、ファイル名を文字列として直接連結することで出力ファイルパスをビルドし、パスの sanitization や includement チェックは行いません。 コンポーネントリソースタイプは、特に使用されるファイル名は、Storyblok CMSのコンポーネント管理アクセスを持つ人によって無]]></content>
+        <published>2026-11-20T14:55:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[amqtt] aMQTT: 非マネージドQoS 2セッションハンドシェイクでのメモリリークによるサービス拒否(DoS) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-wcqj-wx85-c75p</id>
+        <link href="https://github.com/advisories/GHSA-wcqj-wx85-c75p"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T14:54:50.000Z</updated>
+        <summary type="html"><![CDATA[Impactamqtt は、関連するクライアントが切断した後に割り当てられた未完成の MQTT QoS 2 トランザクションによるサービスのリモート拒否に脆弱です。 MQTT QoS 2は4ステップの手掛かりを使用して、正確にオンス配送を提供します。 クライアントが QoS 2 トランザクションを開始したが、ハンドシェイクが完了する前に切断されると、amqtt は関連するトランザクションの状態とパ]]></summary>
+        <content type="html"><![CDATA[Impactamqtt は、関連するクライアントが切断した後に割り当てられた未完成の MQTT QoS 2 トランザクションによるサービスのリモート拒否に脆弱です。 MQTT QoS 2は4ステップの手掛かりを使用して、正確にオンス配送を提供します。 クライアントが QoS 2 トランザクションを開始したが、ハンドシェイクが完了する前に切断されると、amqtt は関連するトランザクションの状態とパケット識別子を保持し、有効期限のメカニズムなしで削除します。 QoS 1 トランザクションはタイムアウト機構によって保護されます。デフォルトは 5 秒で、放棄された状態が解放されるようにします。 QoS 2 トランザクションの不完全な時間処理は適用されません。 攻撃者は、繰り返しブローカーに接続し、QoS 2取引を開始し、ハンドシェイクを完了する前に切断することができます。 各不完全なトランザクションは、メモリに割り当てられた状態を残します。 このプロセスを繰り返すと、ブローカーのメモリ消費が継続的に成長するようになります。 成功した悪用は、次の原因を引き起こす可能性があります。 ブローカーの]]></content>
+        <published>2026-11-20T14:54:50.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[amqtt] aMQTT: 非効率的な正規表現の複雑さと制御されていないリソース消費と不適切な入力検証 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-2hjf-7455-w946</id>
+        <link href="https://github.com/advisories/GHSA-2hjf-7455-w946"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T14:43:41.000Z</updated>
+        <summary type="html"><![CDATA[Impactamqttは、不適切なMQTTのトピックフィルタ検証と触媒の定期的な圧縮バックトラックを組み合わせた、サービスのリモート拒否に脆弱です。 1つのクライアントは、特別な制作されたSUBSCRIBEパケットを1つのPUBLISHパケットに送ることで、ブローカー全体を凍結することができます。 脆弱性は、2つの欠陥によって引き起こされます:add_subscription() は、単一のレベル]]></summary>
+        <content type="html"><![CDATA[Impactamqttは、不適切なMQTTのトピックフィルタ検証と触媒の定期的な圧縮バックトラックを組み合わせた、サービスのリモート拒否に脆弱です。 1つのクライアントは、特別な制作されたSUBSCRIBEパケットを1つのPUBLISHパケットに送ることで、ブローカー全体を凍結することができます。 脆弱性は、2つの欠陥によって引き起こされます:add_subscription() は、単一のレベルのワイルドカード + のサブ文字列チェックを使用して、/ + と +/ の配置を検証するのではなく、それぞれ/-delimited レベルの + が正確に + であることを検証します。 これにより、MQTT-4.7.1-3._matches() で要求されるように、戻りコード 0x80 で拒否された代わりに、 "+/" + "+" * 60 などのmalformed フィルタは、すべての + 文字を貪欲正規表現フラグメントに変換 [^/]* になり、結果の式を re.fullmatch() で評価することができます。 隣接する + 文字を含むフィルタは、部分的にマッチするトピックと一致したとき]]></content>
+        <published>2026-11-20T14:43:41.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[js-toml] js-toml は `load()` で制御されていない再帰を可能にし、 `RangeError` (スタック排気) を深くネストした入力に導きます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-3g82-77xr-68x5</id>
+        <link href="https://github.com/advisories/GHSA-3g82-77xr-68x5"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T14:40:45.000Z</updated>
+        <summary type="html"><![CDATA[サマリーロード() は、再帰的デセントパーサ(Chevrotain)と導電性ツリーウォーク通訳者を使用して、信頼できないTOMLを解析します。 パーサーやインタプリタが最大のネスティング/キー深さを強制します。 深いネスティング(配列、インラインテーブル)や、V8のコールスタックを過ぎた長いドットキードライブが再帰し、 load() は、アンキャッチされていない RangeError: 最大コール]]></summary>
+        <content type="html"><![CDATA[サマリーロード() は、再帰的デセントパーサ(Chevrotain)と導電性ツリーウォーク通訳者を使用して、信頼できないTOMLを解析します。 パーサーやインタプリタが最大のネスティング/キー深さを強制します。 深いネスティング(配列、インラインテーブル)や、V8のコールスタックを過ぎた長いドットキードライブが再帰し、 load() は、アンキャッチされていない RangeError: 最大コールスタックサイズを上回ります。 これは2つの理由で問題です。 サービスの拒否 小さなペイロード (≈2 KB) 確実に解析. ユーザが指定したTOMLを解析する任意のサービスでは、 未処理の RangeError は、 ワーカー/プロセス (500 / 再起動ループ) をクラッシュできます。 エラー契約違反。 ライブラリは、SyntaxParseError 経由で無効な入力 (src/load/exception.ts を参照してください。テストスイート全体が SyntaxParseError をアサートします)。 この契約に従うコンシューマー —try { load(input); }catc]]></content>
+        <published>2026-11-20T14:40:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@appium/storage-plugin] appium では、@appium/storage-plugin で非公開の任意のファイル/ディレクトリ削除が可能 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-jwgx-mp9m-jwcr</id>
+        <link href="https://github.com/advisories/GHSA-jwgx-mp9m-jwcr"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T14:34:30.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション Appium ストレージ プラグインは HTTP エンドポイント POST /storage/delete を公開し、ユーザが指定した名前を取り、サーバー ストレージ フォルダーから削除します。 ハンドラは、名前を path.join(storageRoot、name) に直接渡し、パスのサニタイゼーションなしで fs.rimraf() を渡します。 .../ シーケンスを含む]]></summary>
+        <content type="html"><![CDATA[インフォメーション Appium ストレージ プラグインは HTTP エンドポイント POST /storage/delete を公開し、ユーザが指定した名前を取り、サーバー ストレージ フォルダーから削除します。 ハンドラは、名前を path.join(storageRoot、name) に直接渡し、パスのサニタイゼーションなしで fs.rimraf() を渡します。 .../ シーケンスを含む名前を送信することで、非認証リモートクライアントは、ストレージルートをエスケープし、Appium プロセスユーザが、ホストファイルシステム上のどこにいても、任意のファイルとディレクトリを削除することができます。 同じプラグインのアップロードパスは fs.sanitizeName (requireValidItemOptions) で名前をバリデーションしますが、削除パスは不正なバリデーションを行わない非対称ではありません。 詳細公開ビルド(node_modules/@appium/storage-plugin/build/lib/storage.js)、およびソース(packages/stor]]></content>
+        <published>2026-11-20T14:34:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ep_エーテルパッドライト] Etherpad: 事前の任意のファイル読み込み | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-mc8w-wjhw-45x5</id>
+        <link href="https://github.com/advisories/GHSA-mc8w-wjhw-45x5"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T00:23:45.000Z</updated>
+        <summary type="html"><![CDATA[Etherpad の /static/* ハンドラで、未処理のパス・トラバーショナル/任意のファイル読み込みの脆弱性は、サーバーのファイルシステム(GET /static/plugins/ep_etherpad-lite/static/.%5C.%5C.%5C.%5C.%5C.%5C.%C.%5C.%C.%C.%C.%C.%5C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%]]></summary>
+        <content type="html"><![CDATA[Etherpad の /static/* ハンドラで、未処理のパス・トラバーショナル/任意のファイル読み込みの脆弱性は、サーバーのファイルシステム(GET /static/plugins/ep_etherpad-lite/static/.%5C.%5C.%5C.%5C.%5C.%5C.%C.%5C.%C.%C.%C.%C.%5C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C.%C. %C.%C.%C.%C.%C.%C.%C.%C.%C. 認証ミドルウェアの前にエンドポイントがマウントされるため、認証情報、セッション、構成変更は必要ありません。 読み込まれたプリミティブは、設定を破棄することにより、典型的なデプロイメントで、完全なサーバーにエスカレートできます。 json /クレデンシャル.json /proc/self/environ、adminパスワードを含む、攻撃者にadminセ]]></content>
+        <published>2026-11-20T00:23:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[jupyter-mcp-server] - アダルトアフィリエイトプログラム モデルログイン Jupyter MCP Server: ブラウザーDNS のリバインドは、管理ルートで Jupyter バックエンドをハイジャックできます。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-9x8x-crjq-g64h</id>
+        <link href="https://github.com/advisories/GHSA-9x8x-crjq-g64h"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T00:12:51.000Z</updated>
+        <summary type="html"><![CDATA[datalayer/jupyter-mcp-server のスタンドアローンの合理化-http モードは、/mcp で鍛造されたホストとオリジンヘッダーを拒否しますが、同じアプリケーションにマウントされたカスタム管理ルートは、同じブラウザオリジン保護を受けません。 悪意のあるウェブサイトは、ホスト名が127.0.0.1またはプライベートターゲットアドレスに解決し、MCPサーバーのアクティブなJup]]></summary>
+        <content type="html"><![CDATA[datalayer/jupyter-mcp-server のスタンドアローンの合理化-http モードは、/mcp で鍛造されたホストとオリジンヘッダーを拒否しますが、同じアプリケーションにマウントされたカスタム管理ルートは、同じブラウザオリジン保護を受けません。 悪意のあるウェブサイトは、ホスト名が127.0.0.1またはプライベートターゲットアドレスに解決し、MCPサーバーのアクティブなJuppyterバックエンドを置き換えるために、PUT /api/connectを送信し、攻撃元を保持することができます。 ルートはブラウザのリクエストを受け付け、サーバーは攻撃者制御インフラストラクチャに対してカーネルクライアントを起動します。 保護された/mcpのエンドポイントは、意図したブラウザ起源の境界を示しています。 MCP_TOKEN の設定により、/mcp は、ブラウザーのヘッダ:POST /mcp をAuthorization で拒否します。ベアラー SCAN_MCP_TOKENHost: attacker.example:8142Origin: http://attacker.ex]]></content>
+        <published>2026-11-20T00:12:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[jupyter-mcp-server] - アダルトアフィリエイトプログラム モデルログイン ジュピター MCP サーバ: 不正な管理ルートは、スタンドアローン HTTP モードの Jupyter バックエンドをハイジャックできます。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-24pw-rf5p-mgp7</id>
+        <link href="https://github.com/advisories/GHSA-24pw-rf5p-mgp7"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T00:12:14.000Z</updated>
+        <summary type="html"><![CDATA[datalayer/jupyter-mcp-server では、スタンドアローンのstreamable-http モードは /mcp の MCP_TOKEN が必要ですが、同じアプリケーションにマウントされたカスタム管理のルートはトークンを強制しません。 未認証のネットワーク発信者は、PUT /api/connect を呼び出すことができます。Juppyter バックエンド URL とトークンフィ]]></summary>
+        <content type="html"><![CDATA[datalayer/jupyter-mcp-server では、スタンドアローンのstreamable-http モードは /mcp の MCP_TOKEN が必要ですが、同じアプリケーションにマウントされたカスタム管理のルートはトークンを強制しません。 未認証のネットワーク発信者は、PUT /api/connect を呼び出すことができます。Juppyter バックエンド URL とトークンフィールドを選択し、サーバーのコンテキストをリセットし、MCP サーバーが攻撃者制御インフラストラクチャに対してカーネルクライアントを起動します。 同じ欠落認証は、状態変更の DELETE /api/stop ルートに影響します。 意図した認証境界は、セキュリティガイドで文書化され、起動時に強制されます:docs/docs/reference/security/index.mdx:15 すべての MCP エンドポイントでは、Bearer トークン認証が必要です。docs/docs/reference/security/index.mdx:25 バージョンで起動します。 1.0.0、MCP クライア]]></content>
+        <published>2026-11-20T00:12:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[flyto-core] Flyto2 Core: DNS のリバインドによる SSRF ガードバイパス (validate_url_ssrf はピンなしで接続を解決します) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-6pm8-6f34-9v3g</id>
+        <link href="https://github.com/advisories/GHSA-6pm8-6f34-9v3g"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T00:11:24.000Z</updated>
+        <summary type="html"><![CDATA[[MEDIUM] SSRF ガードは DNS のリバインドを経由してバイパスします。 - validate_url_ssrf は pinningCWE: CWE-918 (SSRF) / CWE-367 (TOCTOU) なしで接続を解決します。 CVSS v3.1:Av:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N = 6.8 媒体(AC:H)は、攻撃制御DNSを低/ゼロTT]]></summary>
+        <content type="html"><![CDATA[[MEDIUM] SSRF ガードは DNS のリバインドを経由してバイパスします。 - validate_url_ssrf は pinningCWE: CWE-918 (SSRF) / CWE-367 (TOCTOU) なしで接続を解決します。 CVSS v3.1:Av:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N = 6.8 媒体(AC:H)は、攻撃制御DNSを低/ゼロTTLで必要とし、ガードのルックアップと接続のルックアップの間の応答を反転します。S:C — ガードがブロックする目的で内部/メタデータサービスに到達します。C:H - eg. クラウド認証情報 169.254 コンポーネント: フライトコア (PyPI フライトコア), ヘッド ae2b38e (v2.26.7). src/core/utils.py::validate_url_ssrf (resolution at getaddrinfo ~L512, is_private_ip check ～L515) とすべての消費者: Guarded_aiohttp_request(), enforce]]></content>
+        <published>2026-11-20T00:11:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[flyto-core] Flyto2 Core: http.paginate は、SSRF の無効化なしで、サーバが指定した次のページ URL (リンクヘッダー/カーソル) に従います。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-2mr3-rxrq-238c</id>
+        <link href="https://github.com/advisories/GHSA-2mr3-rxrq-238c"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T00:10:14.000Z</updated>
+        <summary type="html"><![CDATA[概要http.paginate は、初期の base_url だけを検証し、各フォローアップ URL を再検証することなく、ループ内の HTTPC 5988 リンク: rel="next" ヘッダー、カーソル/オフセット URL) を、サーバが指定したペジネーション ターゲット (RFC 5988 リンク: rel="next" ヘッダー、カーソル/オフセット URL) に従います。 攻撃者の1ペ]]></summary>
+        <content type="html"><![CDATA[概要http.paginate は、初期の base_url だけを検証し、各フォローアップ URL を再検証することなく、ループ内の HTTPC 5988 リンク: rel="next" ヘッダー、カーソル/オフセット URL) を、サーバが指定したペジネーション ターゲット (RFC 5988 リンク: rel="next" ヘッダー、カーソル/オフセット URL) に従います。 攻撃者の1ページ目の応答は、内部アドレスの横に点在し、内部ボディが返された項目に集約される第2次SSRFを引き起こします。 ルート 原因 rc/core/modules/atomic/http/paginate.py:495 は base_url を検証します(最初の URL のみ)。 pagination ループ _paginate_link_header は、 _parse_link_header (:203) で next_url を読み込み、url=next_url (:208) を設定し、session.request(method, url) (:196) をループで検証しないコール (:18]]></content>
+        <published>2026-11-20T00:10:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[flyto-core] Flyto2 Core: SSRF ガードは、解決された IP を検証しますが、ホスト名で接続することで、DNS がTOCTOUを結合できるようにします。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-pfg2-w999-497v</id>
+        <link href="https://github.com/advisories/GHSA-pfg2-w999-497v"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T00:09:23.000Z</updated>
+        <summary type="html"><![CDATA[サマリーvalidate_url_ssrf はホスト名を解決し、IP をプライベートレンジにチェックし、IP を破棄し、ホスト名 URL 文字列を返します。 aiohttp は、接続時に新しい独立した DNS 解像度を実行します。 ホスト名(TTL 0、パブリックIPと内部IPを交互に)DNSを制御する攻撃者は、最初のルックアップで検証を渡し、2番目の内部IPに接続します。 SECURITY_SS]]></summary>
+        <content type="html"><![CDATA[サマリーvalidate_url_ssrf はホスト名を解決し、IP をプライベートレンジにチェックし、IP を破棄し、ホスト名 URL 文字列を返します。 aiohttp は、接続時に新しい独立した DNS 解像度を実行します。 ホスト名(TTL 0、パブリックIPと内部IPを交互に)DNSを制御する攻撃者は、最初のルックアップで検証を渡し、2番目の内部IPに接続します。 SECURITY_SSRF.md ライン 63 明示的に DNS リバインドが防止されると主張する; それはない。 ルート 原因 rc/core/utils.py:523 は、検証後にホスト名 URL を返します。 解決された IP は決してピン留めされません。 http/ と utils.py のリポジトリは、TCPConnector / resolver / response.history / on_request_redirect / IP-pinning が NONE を返します。 各モジュールは、呼び出しごとに新しい ClientSession をビルド → 接続時間 getaddrinfo は、バリデ]]></content>
+        <published>2026-11-20T00:09:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[flyto-core] Flyto2 Core: 保護されていないデータで書き込む任意のファイル。*/file.* モジュール(CVE-2026-67429) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-p34x-fmph-9fjx</id>
+        <link href="https://github.com/advisories/GHSA-p34x-fmph-9fjx"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T00:09:02.000Z</updated>
+        <summary type="html"><![CDATA[[CRITICAL] 保護されていないデータを経由して任意のファイル書き込み.* / file.* 書き込みモジュール — GHSA-2956CWEの不完全な修正: CWE-22 (パストラバーサル) / CWE-73 (ファイル名またはパスの外部制御); 影響は、CWE-94 (ファイルオーバーライトによるコード実行)に達します。 CVSS v3.1: AV:N/AC:L/PR:L/UI:N/S]]></summary>
+        <content type="html"><![CDATA[[CRITICAL] 保護されていないデータを経由して任意のファイル書き込み.* / file.* 書き込みモジュール — GHSA-2956CWEの不完全な修正: CWE-22 (パストラバーサル) / CWE-73 (ファイル名またはパスの外部制御); 影響は、CWE-94 (ファイルオーバーライトによるコード実行)に達します。 CVSS v3.1: AV:N/AC:L/PR:L/UI:N/S:C/C:H/A:H = 9.3 クリティカル (S:C ) 書き込みは、ホストファイルシステム/その他のコンポーネントに意図されたサンドボックスのコンフィニュレーションをエスケープするため)。 AV:N — MCP サーバー/レシピエンジン(execute_module) 経由で到達可能。 AC:L — 決定的。 PR:L — モジュール/受信(GHSA-2956と同じ攻撃モデル)を実行できるクライアント。 CVE-2026-55786)ごとのHTTP MCP面で非認証。 UI:N. S:C — FLYTO_SANDBOX_DIR をエスケープします。 C/I/A:H — 任意のコンテンツは]]></content>
+        <published>2026-11-20T00:09:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[django-docutils] django-docutils unsafe Docutils デフォルトでは、ローカルファイル開示、SSRF、および保存された XSS が許可されます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-86mf-q4h5-69gp</id>
+        <link href="https://github.com/advisories/GHSA-86mf-q4h5-69gp"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T00:08:12.000Z</updated>
+        <summary type="html"><![CDATA[0.30.0 が再構造化される前の要約されたjango-docutils 保護されたWebセーフなデフォルトなしでDoctilsを通してテキスト。 publish_doctree、publish_html_from_source、publish_html_from_doctree、publish_parts_from_doctree、{% rst %}テンプレートタグ、rstテンプレートフィルタ、]]></summary>
+        <content type="html"><![CDATA[0.30.0 が再構造化される前の要約されたjango-docutils 保護されたWebセーフなデフォルトなしでDoctilsを通してテキスト。 publish_doctree、publish_html_from_source、publish_html_from_doctree、publish_parts_from_doctree、{% rst %}テンプレートタグ、rstテンプレートフィルタ、DoctilsTemplates、DoctilsViewなどのパブリックレンダリングパスは、ローカルファイル、fetch URL-backedコンテンツ、または生のHTMLを読み込み、Docutils-controlled RSTをDocutilsディレクティブで処理できます。 問題は、Docutilsファイルインサート、未加工ディレクティブ、ローカルの docutils を無効にすることで 0.30.0 で固定されます。 conf はデフォルトで、安全でない URI のスキームを処理し、HTML が放出される前に doctree をサニタイズすることによって処理します。 アプリケーションは、]]></content>
+        <published>2026-11-20T00:08:12.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK: ZIPパッケージ抽出物は、NLTKデータルートの外にファイルを上書きし、 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-wr3g-j6qj-xpgh</id>
+        <link href="https://github.com/advisories/GHSA-wr3g-j6qj-xpgh"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T23:59:15.000Z</updated>
+        <summary type="html"><![CDATA[サマリーNLTKはセキュリティラッパー、nltk.pathsecを出荷します。 ZipFileは、信頼できるデータルートへのアーカイブ抽出とリンクベースのエスケープをブロックすることを目的としています。 nltk.download() がパッケージをインストールすると、抽出書は、そのパスがデータルートの外にあるファイルへのハードリンクであるかどうかをチェックせずに、各メンバーのターゲットパスを開き]]></summary>
+        <content type="html"><![CDATA[サマリーNLTKはセキュリティラッパー、nltk.pathsecを出荷します。 ZipFileは、信頼できるデータルートへのアーカイブ抽出とリンクベースのエスケープをブロックすることを目的としています。 nltk.download() がパッケージをインストールすると、抽出書は、そのパスがデータルートの外にあるファイルへのハードリンクであるかどうかをチェックせずに、各メンバーのターゲットパスを開きます。 共有または予測可能なNLTKデータルート(例えば~/nltk_data、グループ書き込み可能な/usr/share/nltk_data、または共有コンテナのボリューム)の中で書き込むことができるローカルの俳優は、すぐにインストールされたパッケージが書き込みされるメンバーパスでインルートのハードリンクを事前に植えることができます。 犠牲者が後でダウンロードを実行するとき, 抽出は、そのハードリンクを介して外部ルートターゲットをトランクし、上書き. これは、以前の固定ダウンローダのハードリンクの問題と同じ弱点クラスですが、修正はパッケージ抽出書き込みシンクに達しなかったので、最新の公開され]]></content>
+        <published>2026-11-19T23:59:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK: AllowlistUnpickler は numpy のサブモジュールローカルファイル-I/O シンクを否定しません | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-c59x-vh6j-3w8v</id>
+        <link href="https://github.com/advisories/GHSA-c59x-vh6j-3w8v"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T23:58:53.000Z</updated>
+        <summary type="html"><![CDATA[概要nltk.picklesec.allowlisted_pickle_load は、エクスポート名で危険なグローバルリストをキー化したので、numpy の file-I/O はサブモジュールに住んでおり、 __module__ === "numpy" で再エクスポートされていない。 モデルファイルで付与されたTransitionParser.parse(depgraphs, modelFile)]]></summary>
+        <content type="html"><![CDATA[概要nltk.picklesec.allowlisted_pickle_load は、エクスポート名で危険なグローバルリストをキー化したので、numpy の file-I/O はサブモジュールに住んでおり、 __module__ === "numpy" で再エクスポートされていない。 モデルファイルで付与されたTransitionParser.parse(depgraphs, modelFile)、生成されたプロトコル4のピクルスの名前numpy.lib._npyio_impl.recfromtxt(任意のファイル読み取り、結果はallowlisted_pickle_load)またはnumpy.lib.format.recfrom(recfrom)、recfrom(recfromtxt)、およびnumpy.lib.openfile(rec)の呼び出し元に返されます。 Affectednltk &gt;= 3.10.0 と &lt;= 3.10.3 (unpickler と TransitionParser モデルパスの割り当て)。 numpy をインストールする必要があります。 リプロダクション ]]></content>
+        <published>2026-11-19T23:58:53.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nltk] NLTK corpus-readerビューメソッドは、スコープ付きルートのサンドボックスを中間方向のシンリンクで迂回します。 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-g58v-j9g9-5gfg</id>
+        <link href="https://github.com/advisories/GHSA-g58v-j9g9-5gfg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T23:56:30.000Z</updated>
+        <summary type="html"><![CDATA[影響を受ける:PyPI nltk &gt;= 3.9.4 — CorpusReader.abspath()/abspath() と PlaintextCorpusReader / SyntaxCorpusReaderビューメソッドは動的に再現されています:nltk 3.9.4 (8/9、スコープドエスケープチェック)、3.10.3(ホイール、9/9チェック)、マスター 6818767b9 (9/9チェッ]]></summary>
+        <content type="html"><![CDATA[影響を受ける:PyPI nltk &gt;= 3.9.4 — CorpusReader.abspath()/abspath() と PlaintextCorpusReader / SyntaxCorpusReaderビューメソッドは動的に再現されています:nltk 3.9.4 (8/9、スコープドエスケープチェック)、3.10.3(ホイール、9/9チェック)、マスター 6818767b9 (9/9チェック) ソース参照(file:line)は、303f6e2b(リリースタグv3.10.3)をコミットすることです。 リリースされた nltk ホイールの行番号は、このタグを正確に一致させます。 master 6818767b9 には、同じコード (pathsec.py は +44 の行が追加されたコメントから再数値化されます) が含まれています。 3.9.4 では、同じロジックは、以前の行番号(api.py:222-236 for open()、api.py:161-203 for abspath()/abspaths()、data.py:382-388 で、ポインタが開いている、pathsec]]></content>
+        <published>2026-11-19T23:56:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[コードウェア] CodeWhale: exec_shell 並列読み取り専用分類器 auto-approves fd/rg/git grep exec フラグでサイレント RCE を有効にします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-3mgh-93r5-r7jf</id>
+        <link href="https://github.com/advisories/GHSA-3mgh-93r5-r7jf"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:48:14.000Z</updated>
+        <summary type="html"><![CDATA[メンターの解像度 CodeWhale のメンテナは、このレポートを検証しました。 CodeWhale 0.8.67 以降は影響を受けます。 バージョン 0.9.0 コミットの修正が含まれています 208421b9d23d81cea3311a1eeb2a2ea81d637686. ユーザーは0.9.0以降にアップグレードする必要があります。 元のレポーター分析は、以下に保存されます。 DeepSee]]></summary>
+        <content type="html"><![CDATA[メンターの解像度 CodeWhale のメンテナは、このレポートを検証しました。 CodeWhale 0.8.67 以降は影響を受けます。 バージョン 0.9.0 コミットの修正が含まれています 208421b9d23d81cea3311a1eeb2a2ea81d637686. ユーザーは0.9.0以降にアップグレードする必要があります。 元のレポーター分析は、以下に保存されます。 DeepSeek-TUI(CodeWhale)のインタラクティブエージェントプロファイルは、承認プロンプト(config.rs:3725-3736)の背後にあるすべてのシェルコマンドをゲートするために明示的に文書化されています。 しかし、ExecShellTool::approval_requirement_for(&amp;tool_input)は、任意のコマンドの分類器が「parallel read-only」(shell.rs:2314-2320)にAutoに必須の要件を下げます。 auto_approve check run (turn_loop.rs:37-38) の前に auto で false を返す]]></content>
+        <published>2026-11-19T22:48:14.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[コードウェア] CodeWhale: 自動化 auto_approve のデフォルトは true で、サイレント再発エージェントの実行のためのタスクパスの硬化の修正をバイパス | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-8hp3-xxrg-v9c8</id>
+        <link href="https://github.com/advisories/GHSA-8hp3-xxrg-v9c8"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:47:33.000Z</updated>
+        <summary type="html"><![CDATA[メンターの解像度 CodeWhale のメンテナは、このレポートを検証しました。 CodeWhale 0.8.67 以降は影響を受けます。 バージョン 0.9.0 コミットの修正が含まれています 208421b9d23d81cea3311a1eeb2a2ea81d637686. ユーザーは0.9.0以降にアップグレードする必要があります。 元のレポーター分析は、以下に保存されます。 概要CVE-2]]></summary>
+        <content type="html"><![CDATA[メンターの解像度 CodeWhale のメンテナは、このレポートを検証しました。 CodeWhale 0.8.67 以降は影響を受けます。 バージョン 0.9.0 コミットの修正が含まれています 208421b9d23d81cea3311a1eeb2a2ea81d637686. ユーザーは0.9.0以降にアップグレードする必要があります。 元のレポーター分析は、以下に保存されます。 概要CVE-2026-45374 (GHSA-72w5-pf8h-xfp4) タスクパスを硬化させ、自動承認を明示的に選択する必要があります。add_task は req.auto_approve.unwrap_or(false) (task_manager.rs:868) を使用します。 自動化サブシステムが一気に固められなかった。 AutomationRecord::task_auto_approve() は、省略された auto_approve を DEFAULT_AUTOMATION_AUTO_APPROVE = true (automation_manager.rs:29、101-103) に解決]]></content>
+        <published>2026-11-19T22:47:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@bitcoin-js/tiny-secp256k1-asmjs] Tiny-secp256k1: 無視された無駄のない失敗の後のStaleの緩衝は無効な無限のtweakを受け入れます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-hj9c-qx2w-g7mh</id>
+        <link href="https://github.com/advisories/GHSA-hj9c-qx2w-g7mh"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:43:45.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション 3つの引数xOnlyPointAddTweak パスをチェックすると、wasm の失敗のリターンを無視し、変更されていない入力バッファを比較します。 tweak結果が無限点であるとき、この stale-buffer の比較は、無効な派生のためにtrueを返すことができます。 DetailsxOnlyPoint追加微調整 index.tsに2つのコードパスがあります。 calle]]></summary>
+        <content type="html"><![CDATA[インフォメーション 3つの引数xOnlyPointAddTweak パスをチェックすると、wasm の失敗のリターンを無視し、変更されていない入力バッファを比較します。 tweak結果が無限点であるとき、この stale-buffer の比較は、無効な派生のためにtrueを返すことができます。 DetailsxOnlyPoint追加微調整 index.tsに2つのコードパスがあります。 caller omits tweakParity がセッションの戻り値を破棄し、共有入力バッファが保持する値を比較します。.try { X_ONLY_PUBLIC_KEY_INPUT.set(ポイント)、X_ONLY_PUBLIC_KEY_INPUT2.set(resToCheck)、TWEAK_INPUT.set(tweak)、もし(hasParity) { が戻りました。 {TweakParity=Addt=Tweak(get) キー = X_ONLY_PUBLIC_KEY_INPUT.slice(0), validate.X_ONLY_PUBLIC_KEY_SIZE; 返し比較(newKey, r]]></content>
+        <published>2026-11-19T22:43:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[tiny-secp256k1] Tiny-secp256k1: 無視された無駄のない失敗の後のStaleの緩衝は無効な無限のtweakを受け入れます | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-hj9c-qx2w-g7mh</id>
+        <link href="https://github.com/advisories/GHSA-hj9c-qx2w-g7mh"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:43:45.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション 3つの引数xOnlyPointAddTweak パスをチェックすると、wasm の失敗のリターンを無視し、変更されていない入力バッファを比較します。 tweak結果が無限点であるとき、この stale-buffer の比較は、無効な派生のためにtrueを返すことができます。 DetailsxOnlyPoint追加微調整 index.tsに2つのコードパスがあります。 calle]]></summary>
+        <content type="html"><![CDATA[インフォメーション 3つの引数xOnlyPointAddTweak パスをチェックすると、wasm の失敗のリターンを無視し、変更されていない入力バッファを比較します。 tweak結果が無限点であるとき、この stale-buffer の比較は、無効な派生のためにtrueを返すことができます。 DetailsxOnlyPoint追加微調整 index.tsに2つのコードパスがあります。 caller omits tweakParity がセッションの戻り値を破棄し、共有入力バッファが保持する値を比較します。.try { X_ONLY_PUBLIC_KEY_INPUT.set(ポイント)、X_ONLY_PUBLIC_KEY_INPUT2.set(resToCheck)、TWEAK_INPUT.set(tweak)、もし(hasParity) { が戻りました。 {TweakParity=Addt=Tweak(get) キー = X_ONLY_PUBLIC_KEY_INPUT.slice(0), validate.X_ONLY_PUBLIC_KEY_SIZE; 返し比較(newKey, r]]></content>
+        <published>2026-11-19T22:43:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[次へ] Next.js: Next.js Edge のランタイム ルートの内部応答ヘッダーによる HttpOnly Cookie の露出 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-f3mh-rxg3-f5g2</id>
+        <link href="https://github.com/advisories/GHSA-f3mh-rxg3-f5g2"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:23:21.000Z</updated>
+        <summary type="html"><![CDATA[Next.js アプリケーションは、Edge のランタイム ルートで NextResponse を経由してクッキーを設定 — App Router のルート ハンドラと Pages Router Edge API のルート — パブリック レスポンスに内部 x-middleware-set-cookie ヘッダーを送信し、Cookie 値とその属性を複製します。 これにより、アプリケーションが影響]]></summary>
+        <content type="html"><![CDATA[Next.js アプリケーションは、Edge のランタイム ルートで NextResponse を経由してクッキーを設定 — App Router のルート ハンドラと Pages Router Edge API のルート — パブリック レスポンスに内部 x-middleware-set-cookie ヘッダーを送信し、Cookie 値とその属性を複製します。 これにより、アプリケーションが影響を受ける応答に敏感なクッキーを設定したときに、同じ起源で実行される JavaScript で読みやすく、セッショントークンなどの HttpOnly Cookie が作成されます。 参考:https://github.com/vercel/next.js/security/advisories/GHSA-f3mh-adxg3-f5g2https://nvd.nist.gov/vuln/detail/CVE-2026-119346https://github.com/vercel/next.js/commit/809be725f03ec7aa4c658ba2b7a084cb8cb8cb4cb8cb]]></content>
+        <published>2026-11-19T22:23:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[次へ] Next.js: Next.js Edge のランタイム ルートの内部応答ヘッダーによる HttpOnly Cookie の露出 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-f3mh-rxg3-f5g2</id>
+        <link href="https://github.com/advisories/GHSA-f3mh-rxg3-f5g2"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:23:21.000Z</updated>
+        <summary type="html"><![CDATA[Next.js アプリケーションは、Edge のランタイム ルートで NextResponse を経由してクッキーを設定 — App Router のルート ハンドラと Pages Router Edge API のルート — パブリック レスポンスに内部 x-middleware-set-cookie ヘッダーを送信し、Cookie 値とその属性を複製します。 これにより、アプリケーションが影響]]></summary>
+        <content type="html"><![CDATA[Next.js アプリケーションは、Edge のランタイム ルートで NextResponse を経由してクッキーを設定 — App Router のルート ハンドラと Pages Router Edge API のルート — パブリック レスポンスに内部 x-middleware-set-cookie ヘッダーを送信し、Cookie 値とその属性を複製します。 これにより、アプリケーションが影響を受ける応答に敏感なクッキーを設定したときに、同じ起源で実行される JavaScript で読みやすく、セッショントークンなどの HttpOnly Cookie が作成されます。 参考:https://github.com/vercel/next.js/security/advisories/GHSA-f3mh-adxg3-f5g2https://nvd.nist.gov/vuln/detail/CVE-2026-119346https://github.com/vercel/next.js/commit/809be725f03ec7aa4c658ba2b7a084cb8cb8cb4cb8cb]]></content>
+        <published>2026-11-19T22:23:21.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[次へ] Next.js: SVG 拒絶反応による画像の最適化 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-7qx7-33qx-rqx2</id>
+        <link href="https://github.com/advisories/GHSA-7qx7-33qx-rqx2"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:23:06.000Z</updated>
+        <summary type="html"><![CDATA[自己ホストされたデプロイメントでは、SVG サポートが危険なAllowSVG: false (デフォルト) で無効になっている場合でも、SVG が攻撃者対応の SVG を処理するために、Next.js イメージオプティマイザ (/_next/image) が作ることができます。 これにより、SVGパーサーは、無効な状態を維持し、サービスおよびSVGデコーダーの脆弱性に対する暴露を増加させることを目]]></summary>
+        <content type="html"><![CDATA[自己ホストされたデプロイメントでは、SVG サポートが危険なAllowSVG: false (デフォルト) で無効になっている場合でも、SVG が攻撃者対応の SVG を処理するために、Next.js イメージオプティマイザ (/_next/image) が作ることができます。 これにより、SVGパーサーは、無効な状態を維持し、サービスおよびSVGデコーダーの脆弱性に対する暴露を増加させることを目的としたアプリケーションに到達します。 参考:https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2https://nvd.nist.gov/vuln/detail/CVE-2026-119347https://github.com/vercel/next.js/commit/4f133352e639589ad9872b9b5530785b18b55v/githubhttps://github.com/Vercel/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/]]></content>
+        <published>2026-11-19T22:23:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[次へ] Next.js: SVG 拒絶反応による画像の最適化 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-7qx7-33qx-rqx2</id>
+        <link href="https://github.com/advisories/GHSA-7qx7-33qx-rqx2"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:23:06.000Z</updated>
+        <summary type="html"><![CDATA[自己ホストされたデプロイメントでは、SVG サポートが危険なAllowSVG: false (デフォルト) で無効になっている場合でも、SVG が攻撃者対応の SVG を処理するために、Next.js イメージオプティマイザ (/_next/image) が作ることができます。 これにより、SVGパーサーは、無効な状態を維持し、サービスおよびSVGデコーダーの脆弱性に対する暴露を増加させることを目]]></summary>
+        <content type="html"><![CDATA[自己ホストされたデプロイメントでは、SVG サポートが危険なAllowSVG: false (デフォルト) で無効になっている場合でも、SVG が攻撃者対応の SVG を処理するために、Next.js イメージオプティマイザ (/_next/image) が作ることができます。 これにより、SVGパーサーは、無効な状態を維持し、サービスおよびSVGデコーダーの脆弱性に対する暴露を増加させることを目的としたアプリケーションに到達します。 参考:https://github.com/vercel/next.js/security/advisories/GHSA-7qx7-33qx-rqx2https://nvd.nist.gov/vuln/detail/CVE-2026-119347https://github.com/vercel/next.js/commit/4f133352e639589ad9872b9b5530785b18b55v/githubhttps://github.com/Vercel/ja/ja/ja/ja/ja/ja/ja/ja/ja/ja/]]></content>
+        <published>2026-11-19T22:23:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[次へ] Next.js: 自己ホストされた Next.js アプリケーションにおけるクロスクライエント応答の注入と開示 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-pc58-hwjq-p385</id>
+        <link href="https://github.com/advisories/GHSA-pc58-hwjq-p385"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:20:34.000Z</updated>
+        <summary type="html"><![CDATA[自己ホストされた Next.js アプリケーション (アプリ ルータ ルート ハンドラとフェッチ キャッシュ) は、フェッチされたアップストリーム レスポンスを unchanged を返すと、宣言された framing が実際に送信されたボディと一致しない応答を出すことができます。 このようなアプリケーションが HTTP/1.1 リバースプロキシの背後にある場合、パイプライン化された応答キューイン]]></summary>
+        <content type="html"><![CDATA[自己ホストされた Next.js アプリケーション (アプリ ルータ ルート ハンドラとフェッチ キャッシュ) は、フェッチされたアップストリーム レスポンスを unchanged を返すと、宣言された framing が実際に送信されたボディと一致しない応答を出すことができます。 このようなアプリケーションが HTTP/1.1 リバースプロキシの背後にある場合、パイプライン化された応答キューイングを許すと、熟練した上流応答は、クライアント間の応答を非同期化し、他のクライアントの応答の応答注入と開示を可能にします。 参考:https://github.com/vercel/next.js/security/advisories/GHSA-pc58-hwjq-p385https://nvd.nist.gov/vuln/detail/CVE-2026-119348https://github.com/vercel/next.js/commit/2842833a5a1e5fef0c5fb8c96df7474e2githubhttps://github.com/vercel/jp/ja/ja/]]></content>
+        <published>2026-11-19T22:20:34.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[次へ] Next.js: 自己ホストされた Next.js アプリケーションにおけるクロスクライエント応答の注入と開示 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-pc58-hwjq-p385</id>
+        <link href="https://github.com/advisories/GHSA-pc58-hwjq-p385"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:20:34.000Z</updated>
+        <summary type="html"><![CDATA[自己ホストされた Next.js アプリケーション (アプリ ルータ ルート ハンドラとフェッチ キャッシュ) は、フェッチされたアップストリーム レスポンスを unchanged を返すと、宣言された framing が実際に送信されたボディと一致しない応答を出すことができます。 このようなアプリケーションが HTTP/1.1 リバースプロキシの背後にある場合、パイプライン化された応答キューイン]]></summary>
+        <content type="html"><![CDATA[自己ホストされた Next.js アプリケーション (アプリ ルータ ルート ハンドラとフェッチ キャッシュ) は、フェッチされたアップストリーム レスポンスを unchanged を返すと、宣言された framing が実際に送信されたボディと一致しない応答を出すことができます。 このようなアプリケーションが HTTP/1.1 リバースプロキシの背後にある場合、パイプライン化された応答キューイングを許すと、熟練した上流応答は、クライアント間の応答を非同期化し、他のクライアントの応答の応答注入と開示を可能にします。 参考:https://github.com/vercel/next.js/security/advisories/GHSA-pc58-hwjq-p385https://nvd.nist.gov/vuln/detail/CVE-2026-119348https://github.com/vercel/next.js/commit/2842833a5a1e5fef0c5fb8c96df7474e2githubhttps://github.com/vercel/jp/ja/ja/]]></content>
+        <published>2026-11-19T22:20:34.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[next] Next.js: クロスユーザーキャッシュの開示とNext.jsでの中毒は、バイナリ引数でキャッシュを使用する | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-rhh4-g77r-r9qj</id>
+        <link href="https://github.com/advisories/GHSA-rhh4-g77r-r9qj"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:20:11.000Z</updated>
+        <summary type="html"><![CDATA[バイナリ引数(Uint8ArrayやBlob値など)を渡すNext.js App Routerアプリケーションは、使用キャッシュディレクティブを使用して機能することで、異なる引数に対して同一のキャッシュキーを生成し、キャッシュされた結果がユーザー間で共有されることを可能にします。キャッシュされたデータやキャッシュ中毒のクロスユーザー開示。 これは、バイナリ引数で使用キャッシュを使用してアプリケーシ]]></summary>
+        <content type="html"><![CDATA[バイナリ引数(Uint8ArrayやBlob値など)を渡すNext.js App Routerアプリケーションは、使用キャッシュディレクティブを使用して機能することで、異なる引数に対して同一のキャッシュキーを生成し、キャッシュされた結果がユーザー間で共有されることを可能にします。キャッシュされたデータやキャッシュ中毒のクロスユーザー開示。 これは、バイナリ引数で使用キャッシュを使用してアプリケーションに影響を与えます。 参考:https://github.com/vercel/next.js/security/advisories/GHSA-rhh4-g77r-r9qjhttps://nvd.nist.gov/vuln/detail/CVE-2026-119349https://github.com/vercel/next.js/commit/6596840a0fa3c2633735b05e41ca3d9ab01e41https://github.com/vercel/jahttps://github.com/vercel/overcel/ja/ja/ja/ja/ja/ja/ja/ja]]></content>
+        <published>2026-11-19T22:20:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[次へ] Next.js: リクエストに応じてCacheコンポーネントの共有フォールバックシェルのキャッシュ中毒 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-vvgp-ww4w-46vf</id>
+        <link href="https://github.com/advisories/GHSA-vvgp-ww4w-46vf"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-19T22:18:08.000Z</updated>
+        <summary type="html"><![CDATA[Next.js の自己ホスト型アプリケーションは、次の起動時に機能し、cacheComponents で構築されます。ただし、Partial Prefetching なしでは、プレンダーのプレースホルダーとして、リクエストに応じたルートのパラメータ値を受け入れます。 1つのunauthenticated GETは、ルートの家族が共有するフォールバックシェルのキャッシュエントリを毒することができます]]></summary>
+        <content type="html"><![CDATA[Next.js の自己ホスト型アプリケーションは、次の起動時に機能し、cacheComponents で構築されます。ただし、Partial Prefetching なしでは、プレンダーのプレースホルダーとして、リクエストに応じたルートのパラメータ値を受け入れます。 1つのunauthenticated GETは、ルートの家族が共有するフォールバックシェルのキャッシュエントリを毒することができます。 そのようなルートは、プレースホルダとして決して有望なパラメータを保持するシェルから提供されます。そのため、これらのパラメータのすべての値は、1つのキャッシュエントリを共有します。 パーマのパーマのパーセントエンコード、括弧付きの名前と等しいパスセグメントは、未解決のプレースホルダとして扱われ、パラムが不良であるだけ。 上記のレイアウトは、ブロックレンダー中にその具体的な値がシェルにレンダリングされ、その結果はHTTPステータスを含む、共有キーの下に保存されます。 アプリケーションによっては、保存されたエントリは以下の1つです。 レイアウトがnotFound(): で値を拒否したときに永続的]]></content>
+        <published>2026-11-19T22:18:08.000Z</published>
+    </entry>
+</feed>

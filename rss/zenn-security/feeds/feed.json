@@ -1,0 +1,450 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Zenn Securityタグ｜企業テックブログRSS",
+    "home_page_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/",
+    "feed_url": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/feeds/feed.json",
+    "description": "Zenn Securityタグセクションのブログ更新をまとめたRSSフィード",
+    "icon": "https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png",
+    "items": [
+        {
+            "id": "https://zenn.dev/nishi0001/articles/git-ls-files-z-trim-leading-space",
+            "content_html": "hundred-days の公開前検査スクリプトは、名前が空白（やタブ、改行）で始まるファイルを、検査せずに飛ばすことがありました。主な原因は2つです。git ls-files -z の出力に trim() を掛けていたことと、読めなかったファイルを黙って飛ばす catch があったことです。直したのは trim() のほうで、catch は今も残っています。この記事では、最小の再現コード、3つの版で試した結果、直し方、回帰テストを書きます。修正は、PR151 の2つ目のコミットです（2026-10-15、1つ目の約18分後）。前の記事（CIを54分から23分にした話）と同じPRです。...",
+            "url": "https://zenn.dev/nishi0001/articles/git-ls-files-z-trim-leading-space",
+            "title": "git ls-files -z の出力に trim() を掛けて、先頭が空白のファイルを検査から落としていた | Zennの「Security」のフィード",
+            "summary": "hundred-days の公開前検査スクリプトは、名前が空白（やタブ、改行）で始まるファイルを、検査せずに飛ばすことがありました。主な原因は2つです。git ls-files -z の出力に trim() を掛けていたことと、読めなかったファイルを黙って飛ばす catch があったことです。直したのは trim() のほうで、catch は今も残っています。この記事では、最小の再現コード、3つの",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--dIrs8FGP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:git%2520ls-files%2520-z%2520%25E3%2581%25AE%25E5%2587%25BA%25E5%258A%259B%25E3%2581%25AB%2520trim%2528%2529%2520%25E3%2582%2592%25E6%258E%259B%25E3%2581%2591%25E3%2581%25A6%25E3%2580%2581%25E5%2585%2588%25E9%25A0%25AD%25E3%2581%258C%25E7%25A9%25BA%25E7%2599%25BD%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E6%25A4%259C%25E6%259F%25BB%25E3%2581%258B%25E3%2582%2589%25E8%2590%25BD%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2581%2584%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E8%25A5%25BF%25E5%258E%259F%25E4%25B8%2580%25E8%25BC%259D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlFEVlNTc0dVbDBHZFhJaUFBTUdmVEx6VEhUUHBYcm92OVRzT3VQV3VIR3FUbF9WX3o9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T13:49:29.000Z",
+            "date_published": "2026-11-21T13:49:29.000Z",
+            "author": {
+                "name": "西原一輝"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "git ls-files -z の出力に trim() を掛けて、先頭が空白のファイルを検査から落としていた",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/mojabes_sec/articles/c8e8403a60818e",
+            "content_html": "導入 — 「見に行く」から「届く」へ第1回では、接続の一覧を定期的に見に行く「ポーリング」で監視を試した。curl.exe https://example.com の通信は全体で約0.3秒、別の測定では約84ミリ秒で終わる。1秒間隔で見に行っても10回中1回しか本体を捕捉できず、見逃した分は「どのプロセスの通信だったか分からない痕跡」としてしか残らなかった。ポーリングの問題は間隔を詰めても原理的に解消しない。そこで今回は方式そのものを変える。見に行くのではなく、発生した瞬間に OS が知らせてくれる仕組み、ETW（Event Tracing for Windows）を使う。ET...",
+            "url": "https://zenn.dev/mojabes_sec/articles/c8e8403a60818e",
+            "title": "Windows のネットワーク監視を自作する — 第2回：ETW へ移行する ― プロセス名解決の落とし穴 | Zennの「Security」のフィード",
+            "summary": "導入 — 「見に行く」から「届く」へ第1回では、接続の一覧を定期的に見に行く「ポーリング」で監視を試した。curl.exe https://example.com の通信は全体で約0.3秒、別の測定では約84ミリ秒で終わる。1秒間隔で見に行っても10回中1回しか本体を捕捉できず、見逃した分は「どのプロセスの通信だったか分からない痕跡」としてしか残らなかった。ポーリングの問題は間隔を詰めても原理的に",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--3XZHP1H5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%2520%25E3%2581%25AE%25E3%2583%258D%25E3%2583%2583%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E7%259B%25A3%25E8%25A6%2596%25E3%2582%2592%25E8%2587%25AA%25E4%25BD%259C%25E3%2581%2599%25E3%2582%258B%2520%25E2%2580%2594%2520%25E7%25AC%25AC2%25E5%259B%259E%25EF%25BC%259AETW%2520%25E3%2581%25B8%25E7%25A7%25BB%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%2520%25E2%2580%2595%2520%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25BB%25E3%2582%25B9%25E5%2590%258D%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2581%25AE%25E8%2590%25BD%25E3%2581%25A8%25E3%2581%2597%25E7%25A9%25B4%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mojabes%25EF%25BD%259C%25E3%2581%2597%25E3%2581%258F%25E3%2581%25BF%25E3%2582%2592%25E6%25A4%259C%25E8%25A8%25BC%25E3%2581%2599%25E3%2582%258B%25E3%2582%25BB%25E3%2582%25AD...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2E4YTlhODk0MmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T13:21:58.000Z",
+            "date_published": "2026-11-21T13:21:58.000Z",
+            "author": {
+                "name": "mojabes｜しくみを検証するセキュリティコンサル"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Windows のネットワーク監視を自作する — 第2回：ETW へ移行する ― プロセス名解決の落とし穴",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/yubel/articles/find-security-holes-zap-sandbox-and-mcp",
+            "content_html": "やりたかったこと自分のサービスの穴を探すのに、手元の道具が2つ欲しくなりました。外から自分で突いてみるものと、本番に実際に何が来ているかを見るものです。どちらもAIエージェントから使える形にしました。ZAPをローカルのsandboxで実走させる。 外部サービスにも本番にも触らず、自分のマシンで何度でも走らせられるようにしたNew RelicをMCPで繋ぐ。 本番のトラフィックをその場でクエリできるようにして、調べる手順をスキルに固定した 1. ZAPをローカルのsandboxで実走させるZAPを実際に走らせます。モックではありません。どこで走らせるかを2つ決め...",
+            "url": "https://zenn.dev/yubel/articles/find-security-holes-zap-sandbox-and-mcp",
+            "title": "AIにセキュリティホールを探させるために、ZAPをローカルのsandboxで走らせ、New RelicをMCPで繋いだ | Zennの「Security」のフィード",
+            "summary": "やりたかったこと自分のサービスの穴を探すのに、手元の道具が2つ欲しくなりました。外から自分で突いてみるものと、本番に実際に何が来ているかを見るものです。どちらもAIエージェントから使える形にしました。ZAPをローカルのsandboxで実走させる。 外部サービスにも本番にも触らず、自分のマシンで何度でも走らせられるようにしたNew RelicをMCPで繋ぐ。 本番のトラフィックをその場でクエリできる",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--kxN_le0_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2581%25AB%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E3%2583%259B%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%2592%25E6%258E%25A2%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AB%25E3%2580%2581ZAP%25E3%2582%2592%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2581%25AEsandbox%25E3%2581%25A7%25E8%25B5%25B0%25E3%2582%2589%25E3%2581%259B%25E3%2580%2581New%2520Relic%25E3%2582%2592MCP%25E3%2581%25A7%25E7%25B9%258B%25E3%2581%2584%25E3%2581%25A0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yubel%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pBaHpQVGpRZlR1aGdGUWloZ0VBaUFHTVl5NXFuNUZlRUJsdE9hPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T13:21:05.000Z",
+            "date_published": "2026-11-21T13:21:05.000Z",
+            "author": {
+                "name": "yubel"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AIにセキュリティホールを探させるために、ZAPをローカルのsandboxで走らせ、New RelicをMCPで繋いだ",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/pythona/articles/incident-record-temp-vs-official",
+            "content_html": "1ヶ月後に飛んできた質問11月のある日、非エンジニアの担当者がニュース記事のリンクを持って聞きに来ました。「10月のPHPの脆弱性、あのときは修正版が無くて、機能を止めてしのいだだけでしたよね? 正式な修正はもう入ったんですか?」一瞬、何を聞かれているのか分かりませんでした。10月にニュースになった致命的なRCEは、公開当日に正式な修正版を適用済みです。「修正版が無い」状態だったのは、その2日後に公開された別のCVEの方。しかし相手の記憶の中では、この2件が1つの事件に合体していました。そして白状すると、答える側の私も最初「8.3.36を入れました」と間違ったバージョンを...",
+            "url": "https://zenn.dev/pythona/articles/incident-record-temp-vs-official",
+            "title": "1ヶ月後、記憶は混ざる — 事故記録に残すべき「暫定か正式か」の一行 | Zennの「Security」のフィード",
+            "summary": "1ヶ月後に飛んできた質問11月のある日、非エンジニアの担当者がニュース記事のリンクを持って聞きに来ました。「10月のPHPの脆弱性、あのときは修正版が無くて、機能を止めてしのいだだけでしたよね? 正式な修正はもう入ったんですか?」一瞬、何を聞かれているのか分かりませんでした。10月にニュースになった致命的なRCEは、公開当日に正式な修正版を適用済みです。「修正版が無い」状態だったのは、その2日後に",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--OCa_T_WZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:1%25E3%2583%25B6%25E6%259C%2588%25E5%25BE%258C%25E3%2580%2581%25E8%25A8%2598%25E6%2586%25B6%25E3%2581%25AF%25E6%25B7%25B7%25E3%2581%2596%25E3%2582%258B%2520%25E2%2580%2594%2520%25E4%25BA%258B%25E6%2595%2585%25E8%25A8%2598%25E9%258C%25B2%25E3%2581%25AB%25E6%25AE%258B%25E3%2581%2599%25E3%2581%25B9%25E3%2581%258D%25E3%2580%258C%25E6%259A%25AB%25E5%25AE%259A%25E3%2581%258B%25E6%25AD%25A3%25E5%25BC%258F%25E3%2581%258B%25E3%2580%258D%25E3%2581%25AE%25E4%25B8%2580%25E8%25A1%258C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:pythona%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWYyMnNwblpxQUFneElIVXpxRDdlU1dfdzJmbldBWTZNVzNYWDFHX2VOSjI0SUV3PXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T11:54:01.000Z",
+            "date_published": "2026-11-21T11:54:01.000Z",
+            "author": {
+                "name": "pythona"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "1ヶ月後、記憶は混ざる — 事故記録に残すべき「暫定か正式か」の一行",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/devoctane/articles/php-security-release-night-standby",
+            "content_html": "2026年11月19日の23時、PHPの緊急セキュリティリリースの発表を待っていました。「待っていた」と書くと大げさですが、事前告知が出ていたので、その時間に机の前にいた、というだけの話です。ただ、前回のことがあるので、今回は最初から影響調査に入れるように備えていました。 前回の教訓：php2shellのとき、サイトが止まった少し前のことですが、php2shellと呼ばれる脆弱性への対応をしたことがあります。そのときは担当していたサイトが止まりました。攻撃を受けたわけではなく、対応に伴う停止です。リリース前に脆弱性の情報が出回っていた時期で、予防的にサイトを止める判断が広く取られ...",
+            "url": "https://zenn.dev/devoctane/articles/php-security-release-night-standby",
+            "title": "PHPの緊急セキュリティリリースに、23時待機で備えた話。前回は復旧まで4営業日かかった | Zennの「Security」のフィード",
+            "summary": "2026年11月19日の23時、PHPの緊急セキュリティリリースの発表を待っていました。「待っていた」と書くと大げさですが、事前告知が出ていたので、その時間に机の前にいた、というだけの話です。ただ、前回のことがあるので、今回は最初から影響調査に入れるように備えていました。 前回の教訓：php2shellのとき、サイトが止まった少し前のことですが、php2shellと呼ばれる脆弱性への対応をしたこと",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--Ip5u0evF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PHP%25E3%2581%25AE%25E7%25B7%258A%25E6%2580%25A5%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E3%2583%25AA%25E3%2583%25AA%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25AB%25E3%2580%258123%25E6%2599%2582%25E5%25BE%2585%25E6%25A9%259F%25E3%2581%25A7%25E5%2582%2599%25E3%2581%2588%25E3%2581%259F%25E8%25A9%25B1%25E3%2580%2582%25E5%2589%258D%25E5%259B%259E%25E3%2581%25AF%25E5%25BE%25A9%25E6%2597%25A7%25E3%2581%25BE%25E3%2581%25A74%25E5%2596%25B6%25E6%25A5%25AD%25E6%2597%25A5%25E3%2581%258B%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:DevOctane%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzZmZDM1NGUyZWYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T11:16:20.000Z",
+            "date_published": "2026-11-21T11:16:20.000Z",
+            "author": {
+                "name": "DevOctane"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "PHPの緊急セキュリティリリースに、23時待機で備えた話。前回は復旧まで4営業日かかった",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/zeuslab/articles/df65e8457149ea",
+            "content_html": "手順書に「必ずこうする」と書いても、AIのエージェントがいつも守るとは限りません。当方の作業でも、「返事は日本語で」という常設の決まりが、長い会話が要約された後に抜け落ちたことがありました。文章で書いた決まりは、あくまで「お願い」です。この記事では、エージェントが読む3つのファイルと、実際に呼び出しを断る「フック」を並べ、それぞれが何に向いているかを、当方の記録の数字と一緒に整理します。数字は、当方のイベントの記録（2026-11-12 10:35〜2026-11-14 02:50 UTC・1,924件、そのうち道具の呼び出し1,431件）から数えたものです。当方の環境の値で、ほかの...",
+            "url": "https://zenn.dev/zeuslab/articles/df65e8457149ea",
+            "title": "手順書は「お願い」、フックは「決まり」——CLAUDE.md・AGENTS.md・SKILL.md と、機械で断る関所を自分の記録で比べる | Zennの「Security」のフィード",
+            "summary": "手順書に「必ずこうする」と書いても、AIのエージェントがいつも守るとは限りません。当方の作業でも、「返事は日本語で」という常設の決まりが、長い会話が要約された後に抜け落ちたことがありました。文章で書いた決まりは、あくまで「お願い」です。この記事では、エージェントが読む3つのファイルと、実際に呼び出しを断る「フック」を並べ、それぞれが何に向いているかを、当方の記録の数字と一緒に整理します。数字は、当",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--Diu1e13_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2589%258B%25E9%25A0%2586%25E6%259B%25B8%25E3%2581%25AF%25E3%2580%258C%25E3%2581%258A%25E9%25A1%2598%25E3%2581%2584%25E3%2580%258D%25E3%2580%2581%25E3%2583%2595%25E3%2583%2583%25E3%2582%25AF%25E3%2581%25AF%25E3%2580%258C%25E6%25B1%25BA%25E3%2581%25BE%25E3%2582%258A%25E3%2580%258D%25E2%2580%2594%25E2%2580%2594CLAUDE.md%25E3%2583%25BBAGENTS.md%25E3%2583%25BBSKILL.md%2520%25E3%2581%25A8%25E3%2580%2581%25E6%25A9%259F%25E6%25A2%25B0%25E3%2581%25A7%25E6%2596%25AD%25E3%2582%258B...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ZEUS%2520LAB%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzUxNWUwYmUyNWIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T10:26:49.000Z",
+            "date_published": "2026-11-21T10:26:49.000Z",
+            "author": {
+                "name": "ZEUS LAB"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "手順書は「お願い」、フックは「決まり」——CLAUDE.md・AGENTS.md・SKILL.md と、機械で断る関所を自分の記録で比べる",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/neuralalpha/books/ai-security-ops-rules",
+            "content_html": "AI エージェントに調べもの・投稿・販売・公開を任せると、AI は「目」（読めるもの）、「手」（できる操作）、「鍵」（ログインやキー）を持ちます。IPA「情報セキュリティ10大脅威 2026」で初選出・3位の「AIの利用をめぐるサイバーリスク」と OWASP の AI エージェント向け10大リスクを、1人〜数人の運用に置き換え、いくつもの事業を AI で回している筆者が実際に使っている決まり（秘密情報の置き場所、権限の段階、外の文章に従わない、入れる前に読む、人が承認する操作、起きたときの手順）を、実際の出来事と点検方法つきで解説します。攻撃の手順は書きません。1〜2章は無料。",
+            "url": "https://zenn.dev/neuralalpha/books/ai-security-ops-rules",
+            "title": "AI に鍵を渡す前に ― 個人・小さなチームのための AI 時代のセキュリティ運用ルール | Zennの「Security」のフィード",
+            "summary": "AI エージェントに調べもの・投稿・販売・公開を任せると、AI は「目」（読めるもの）、「手」（できる操作）、「鍵」（ログインやキー）を持ちます。IPA「情報セキュリティ10大脅威 2026」で初選出・3位の「AIの利用をめぐるサイバーリスク」と OWASP の AI エージェント向け10大リスクを、1人〜数人の運用に置き換え、いくつもの事業を AI で回している筆者が実際に使っている決まり（秘密",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--rRGxvKdR--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYm9va19jb3Zlci9iYzIxMGQxZmE2LnBuZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg?_a=BACMTiAE",
+            "date_modified": "2026-11-21T09:26:42.000Z",
+            "date_published": "2026-11-21T09:26:42.000Z",
+            "author": {
+                "name": "NeuralAlpha"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AI に鍵を渡す前に ― 個人・小さなチームのための AI 時代のセキュリティ運用ルール",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/yairocho/articles/83c1edb596e45a",
+            "content_html": "前回までと、この記事の位置づけ非エンジニアの会社員が知識ゼロからスマホだけでCTFを始めた実践記録の第6回です。第5回ではCyLab Academyで通算11問目まで進んだ記録を書きました。https://zenn.dev/yairocho/articles/6f33ca7dbbab5b今回はその同じ日の続きです。11月8日、パスワードクラックのシリーズの残りであるレベル4とレベル5を解いて、シリーズを最後まで終えました。短い記録になります。先に正直に書いておくと、前回の末尾で予告した「復習を回すこと」と「Python入門を問題の中で使うこと」は、まだできていません。今回は完...",
+            "url": "https://zenn.dev/yairocho/articles/83c1edb596e45a",
+            "title": "パスワードクラックのシリーズを最後まで解いた日：候補100個と辞書を機械に回した記録 | Zennの「Security」のフィード",
+            "summary": "前回までと、この記事の位置づけ非エンジニアの会社員が知識ゼロからスマホだけでCTFを始めた実践記録の第6回です。第5回ではCyLab Academyで通算11問目まで進んだ記録を書きました。https://zenn.dev/yairocho/articles/6f33ca7dbbab5b今回はその同じ日の続きです。11月8日、パスワードクラックのシリーズの残りであるレベル4とレベル5を解いて、シリ",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s---zW6i_H4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2591%25E3%2582%25B9%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E3%2582%25AF%25E3%2583%25A9%25E3%2583%2583%25E3%2582%25AF%25E3%2581%25AE%25E3%2582%25B7%25E3%2583%25AA%25E3%2583%25BC%25E3%2582%25BA%25E3%2582%2592%25E6%259C%2580%25E5%25BE%258C%25E3%2581%25BE%25E3%2581%25A7%25E8%25A7%25A3%25E3%2581%2584%25E3%2581%259F%25E6%2597%25A5%25EF%25BC%259A%25E5%2580%2599%25E8%25A3%259C100%25E5%2580%258B%25E3%2581%25A8%25E8%25BE%259E%25E6%259B%25B8%25E3%2582%2592%25E6%25A9%259F%25E6%25A2%25B0%25E3%2581%25AB%25E5%259B%259E%25E3%2581%2597%25E3%2581%259F%25E8%25A8%2598%25E9%258C%25B2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2584%25E3%2581%2584%25E3%2582%258D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2MzZDUwN2U3MDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T09:03:16.000Z",
+            "date_published": "2026-11-21T09:03:16.000Z",
+            "author": {
+                "name": "やいろ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "パスワードクラックのシリーズを最後まで解いた日：候補100個と辞書を機械に回した記録",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/pecopeko/articles/browser-local-reversible-pii-vault-chrome-mv3",
+            "content_html": "はじめに：業務文書をLLMに貼る前の「伏せ字」はなぜ現場で破綻するのかChatGPT・Claude・Gemini に請求書・問い合わせメール・障害ログを貼って要約やチェックを頼みたい場面は日常茶飯事です。しかし、社内の情報セキュリティ規定では「マイナンバー・適格請求書T番号・法人カード番号・顧客メールアドレスをそのまま外部LLMへ送るな」と定められています。この対策として手元で簡易スクリプトやブラウザ拡張を作ろうとすると、ほぼ全員が次の 3つの壁 にぶつかります。不可逆な [REDACTED] 置換はLLMの推論を壊す：文書内に2社のT番号が登場するとき、両方を [REDA...",
+            "url": "https://zenn.dev/pecopeko/articles/browser-local-reversible-pii-vault-chrome-mv3",
+            "title": "ChatGPT/Claude送信前に機密をローカル可逆マスクするChrome MV3拡張と誤検知対策 | Zennの「Security」のフィード",
+            "summary": "はじめに：業務文書をLLMに貼る前の「伏せ字」はなぜ現場で破綻するのかChatGPT・Claude・Gemini に請求書・問い合わせメール・障害ログを貼って要約やチェックを頼みたい場面は日常茶飯事です。しかし、社内の情報セキュリティ規定では「マイナンバー・適格請求書T番号・法人カード番号・顧客メールアドレスをそのまま外部LLMへ送るな」と定められています。この対策として手元で簡易スクリプトやブラ",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--3lh3XIPn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%252FClaude%25E9%2580%2581%25E4%25BF%25A1%25E5%2589%258D%25E3%2581%25AB%25E6%25A9%259F%25E5%25AF%2586%25E3%2582%2592%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E5%258F%25AF%25E9%2580%2586%25E3%2583%259E%25E3%2582%25B9%25E3%2582%25AF%25E3%2581%2599%25E3%2582%258BChrome%2520MV3%25E6%258B%25A1%25E5%25BC%25B5%25E3%2581%25A8%25E8%25AA%25A4%25E6%25A4%259C%25E7%259F%25A5%25E5%25AF%25BE%25E7%25AD%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shumpei%2520Wakabayashi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzU3ODRjZjczMDYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T08:35:28.000Z",
+            "date_published": "2026-11-21T08:35:28.000Z",
+            "author": {
+                "name": "Shumpei Wakabayashi"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "ChatGPT/Claude送信前に機密をローカル可逆マスクするChrome MV3拡張と誤検知対策",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/idea_mart/articles/738a6c2e5eeab3",
+            "content_html": "サイトの右下に、丸いチャットのボタン。押すと WhatsApp や LINE に移って、お店と直接やり取りができる。問い合わせや予約を受けるのに便利なので、付けているサイトはたくさんあります。私はWordPressの保守をしていて、旅行会社や整体院のサイトなど、これまで500件以上のPHP更新やトラブル対応をしてきました。こうしたボタンは、制作会社が何年も前に付けて、それきり誰も更新していないことがよくあります。実際に、よく使われているチャットボタンのプラグイン Click to Chat でも重大な脆弱性が公表され、修正版が出ています。この記事では、「そもそもうちのボタンは何なのか...",
+            "url": "https://zenn.dev/idea_mart/articles/738a6c2e5eeab3",
+            "title": "WordPressのチャットボタン（Click to Chatなど）を付けたままのサイトで確かめること：制作会社に付けてもらった方へ | Zennの「Security」のフィード",
+            "summary": "サイトの右下に、丸いチャットのボタン。押すと WhatsApp や LINE に移って、お店と直接やり取りができる。問い合わせや予約を受けるのに便利なので、付けているサイトはたくさんあります。私はWordPressの保守をしていて、旅行会社や整体院のサイトなど、これまで500件以上のPHP更新やトラブル対応をしてきました。こうしたボタンは、制作会社が何年も前に付けて、それきり誰も更新していないこと",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--6tZgmXZj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:WordPress%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2582%25BF%25E3%2583%25B3%25EF%25BC%2588Click%2520to%2520Chat%25E3%2581%25AA%25E3%2581%25A9%25EF%25BC%2589%25E3%2582%2592%25E4%25BB%2598%25E3%2581%2591%25E3%2581%259F%25E3%2581%25BE%25E3%2581%25BE%25E3%2581%25AE%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2588%25E3%2581%25A7%25E7%25A2%25BA%25E3%2581%258B%25E3%2582%2581%25E3%2582%258B%25E3%2581%2593%25E3%2581%25A8%25EF%25BC%259A%25E5%2588%25B6%25E4%25BD%259C%25E4%25BC%259A%25E7%25A4%25BE%25E3%2581%25AB...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25A2%25E3%2582%25A4%25E3%2583%2587%25E3%2582%25A2%25E3%2583%259E%25E3%2583%25BC%25E3%2583%2588%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzY2MTFiMDI1YmIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T08:09:32.000Z",
+            "date_published": "2026-11-21T08:09:32.000Z",
+            "author": {
+                "name": "アイデアマート"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "WordPressのチャットボタン（Click to Chatなど）を付けたままのサイトで確かめること：制作会社に付けてもらった方へ",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/r_goto/articles/sast-legacy-code-sonarqube",
+            "content_html": "クリエーションライン株式会社の Tech Blog に掲載した記事の要約です。元の記事：「巨大な既存コードにSASTは導入できない」は本当？開発を止めずに始めるレガシーコードのセキュリティ対策｜DevSecOps.Clean as You Code とは、これから書くコード（新規・変更コード）の品質とセキュリティだけに集中する、SonarQube が提唱するやり方です。巨大なレガシーコードに SAST を入れると、既存コードの大量の指摘で開発が止まりかねません。しかし、過去のコードを直す予算も時間もなく、リリースも止められません。それでも、脆弱性を放っておくリスクからは逃げられない...",
+            "url": "https://zenn.dev/r_goto/articles/sast-legacy-code-sonarqube",
+            "title": "SonarQube で新規コードだけを守る、レガシーコードへの SAST 導入 | Zennの「Security」のフィード",
+            "summary": "クリエーションライン株式会社の Tech Blog に掲載した記事の要約です。元の記事：「巨大な既存コードにSASTは導入できない」は本当？開発を止めずに始めるレガシーコードのセキュリティ対策｜DevSecOps.Clean as You Code とは、これから書くコード（新規・変更コード）の品質とセキュリティだけに集中する、SonarQube が提唱するやり方です。巨大なレガシーコードに SA",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--BvZyi8EI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SonarQube%2520%25E3%2581%25A7%25E6%2596%25B0%25E8%25A6%258F%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25A0%25E3%2581%2591%25E3%2582%2592%25E5%25AE%2588%25E3%2582%258B%25E3%2580%2581%25E3%2583%25AC%25E3%2582%25AC%25E3%2582%25B7%25E3%2583%25BC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25B8%25E3%2581%25AE%2520SAST%2520%25E5%25B0%258E%25E5%2585%25A5%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Ryuji%2520Goto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSzc5MHZDdk51eGNwOXZ0VlplUWFjVy1HYnppLUxPX0ZFeGQwM2hka2w1cno2Qjc2MVVFdz1zMjUwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T08:05:41.000Z",
+            "date_published": "2026-11-21T08:05:41.000Z",
+            "author": {
+                "name": "Ryuji Goto"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "SonarQube で新規コードだけを守る、レガシーコードへの SAST 導入",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/techsslash/articles/0fe45f09ee4d6f",
+            "content_html": "Got a Text Claiming to Be From HMRC? How to Report It to 7726 and Stay SafeThe text arrives out of nowhere. It says you are owed a tax refund, or that you owe money and face arrest, or that your National Insurance number has been suspended. It looks official. It has the right logo, the right t...",
+            "url": "https://zenn.dev/techsslash/articles/0fe45f09ee4d6f",
+            "title": "HMRC Text Scam? How to Report It to 7726 and Stay Safe | Zennの「Security」のフィード",
+            "summary": "Got a Text Claiming to Be From HMRC? How to Report It to 7726 and Stay SafeThe text arrives out of nowhere. It says you are owed a tax refund, or that you owe money and face arrest, or that your Natio",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--TFqNOvQr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:HMRC%2520Text%2520Scam%253F%2520How%2520to%2520Report%2520It%2520to%25207726%2520and%2520Stay%2520Safe%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Techs%2520Slash%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSUUzNXU2ZElHaU5tcU1ZbVZqRmNmLXZObGdiRHFJcVFTUXpGNlhmOF9Bd2pJX0lBPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T07:39:33.000Z",
+            "date_published": "2026-11-21T07:39:33.000Z",
+            "author": {
+                "name": "Techs Slash"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "HMRC Text Scam? How to Report It to 7726 and Stay Safe",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/sk8jp/articles/601289cfe7f32a",
+            "content_html": "はじめに前回の記事「Security Hub CSPM を有効にせず、Claude Code と FSBP の 363 項目を「1 つずつ」点検する計画を立てた」で、AWS の基準（FSBP）の項目を、Claude Code と一緒に 1 つずつ点検する計画を書きました。この記事は、その点検の 2 項目目で起きたことの記録です。点検したのは「ルートユーザーにハードウェアの MFA を使っているか」という項目でした。結果は「仮想 MFA なので不適合」。そこで「ほかの守りがあるので、例外として受け入れる」と決めようとしたところ、その前提の 1 つだったルートのサインインの通知が、...",
+            "url": "https://zenn.dev/sk8jp/articles/601289cfe7f32a",
+            "title": "ルートのサインインの通知、設定はあるのに鳴らなかった | Zennの「Security」のフィード",
+            "summary": "はじめに前回の記事「Security Hub CSPM を有効にせず、Claude Code と FSBP の 363 項目を「1 つずつ」点検する計画を立てた」で、AWS の基準（FSBP）の項目を、Claude Code と一緒に 1 つずつ点検する計画を書きました。この記事は、その点検の 2 項目目で起きたことの記録です。点検したのは「ルートユーザーにハードウェアの MFA を使っているか」",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--6N7F2zph--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2588%25E3%2581%25AE%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%25AE%25E9%2580%259A%25E7%259F%25A5%25E3%2580%2581%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%25AF%25E3%2581%2582%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25AB%25E9%25B3%25B4%25E3%2582%2589%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:YAZ%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSThuekJzVGpOdUdqdXplU0tYcDc0c0F2WTFQS3JNQWp4ekJyQzZPQmtUNFEyT2F0Sm09czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T07:38:46.000Z",
+            "date_published": "2026-11-21T07:38:46.000Z",
+            "author": {
+                "name": "YAZ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "ルートのサインインの通知、設定はあるのに鳴らなかった",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/mspal/articles/9c5914ca8108da",
+            "content_html": "はじめに2026年11月18日、OpenAIはCodexのサンドボックスの内部構造を解説した技術記事「Inside the Codex sandbox」を公開しました。Codexは、ソースコードの編集だけでなく、テストやビルドなども自動で実行できるAIコーディングエージェントです。非常に便利な一方で、AIが意図しないコマンドを実行してしまうリスクもあります。例えば、重要なファイルを書き換えたり、機密情報を外部に送信したりする可能性があります。こうしたリスクを抑えるために使われているのが、サンドボックスという仕組みです。サンドボックスとは？サンドボックスとは、プログラムを...",
+            "url": "https://zenn.dev/mspal/articles/9c5914ca8108da",
+            "title": "Codexのサンドボックス内部構造を図で読み解く | Zennの「Security」のフィード",
+            "summary": "はじめに2026年11月18日、OpenAIはCodexのサンドボックスの内部構造を解説した技術記事「Inside the Codex sandbox」を公開しました。Codexは、ソースコードの編集だけでなく、テストやビルドなども自動で実行できるAIコーディングエージェントです。非常に便利な一方で、AIが意図しないコマンドを実行してしまうリスクもあります。例えば、重要なファイルを書き換えたり、機",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--T4vHTIdz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Codex%25E3%2581%25AE%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2589%25E3%2583%259C%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25B9%25E5%2586%2585%25E9%2583%25A8%25E6%25A7%258B%25E9%2580%25A0%25E3%2582%2592%25E5%259B%25B3%25E3%2581%25A7%25E8%25AA%25AD%25E3%2581%25BF%25E8%25A7%25A3%25E3%2581%258F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:issei%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2EzMmMwMTk3NDEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T06:59:43.000Z",
+            "date_published": "2026-11-21T06:59:43.000Z",
+            "author": {
+                "name": "issei"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Codexのサンドボックス内部構造を図で読み解く",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/kd_yuta/articles/ses2026-vibeguard-adoption-points",
+            "content_html": "近藤悠太です。2026 年 9 月 11 日に、情報処理学会のソフトウェアエンジニアリングシンポジウム 2026（SES2026、慶應義塾大学 日吉キャンパス）で、一般論文「AI生成コードの採用判断点に基づくマルチコンテキストセキュリティ診断配置方式の提案とVibeGuardによる検証」を発表しました。セッションはコード解析・セキュリティ・テスト支援で、単著の論文です。この記事では、論文の考え方と評価の結果を、論文に書いた限定とあわせて紹介します。数値は論文の時点（VibeGuard 0.3.3、ルール 71 件）のものです。 扱った問題生成AI が出力したコードには、SQL の...",
+            "url": "https://zenn.dev/kd_yuta/articles/ses2026-vibeguard-adoption-points",
+            "title": "SES2026 で、AI 生成コードを採用する場面に診断を置く方式を発表しました（VibeGuard） | Zennの「Security」のフィード",
+            "summary": "近藤悠太です。2026 年 9 月 11 日に、情報処理学会のソフトウェアエンジニアリングシンポジウム 2026（SES2026、慶應義塾大学 日吉キャンパス）で、一般論文「AI生成コードの採用判断点に基づくマルチコンテキストセキュリティ診断配置方式の提案とVibeGuardによる検証」を発表しました。セッションはコード解析・セキュリティ・テスト支援で、単著の論文です。この記事では、論文の考え方と",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--LneBcSoA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SES2026%2520%25E3%2581%25A7%25E3%2580%2581AI%2520%25E7%2594%259F%25E6%2588%2590%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E6%258E%25A1%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%25E5%25A0%25B4%25E9%259D%25A2%25E3%2581%25AB%25E8%25A8%25BA%25E6%2596%25AD%25E3%2582%2592%25E7%25BD%25AE%25E3%2581%258F%25E6%2596%25B9%25E5%25BC%258F%25E3%2582%2592%25E7%2599%25BA%25E8%25A1%25A8%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%25EF%25BC%2588VibeGuard%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E8%25BF%2591%25E8%2597%25A4%25E6%2582%25A0%25E5%25A4%25AA%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2UyNDY5Nzc3YzYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T05:19:38.000Z",
+            "date_published": "2026-11-21T05:19:38.000Z",
+            "author": {
+                "name": "近藤悠太"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "SES2026 で、AI 生成コードを採用する場面に診断を置く方式を発表しました（VibeGuard）",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/naochan_t_souji/articles/76bc6555ab2cd3",
+            "content_html": "はじめにチケットや限定商品の二次流通における価格高騰や大量購入への対策は、長らく「不正な自動化プログラム（BOT）を検知してアクセスを遮断する」アプローチが主流でした。しかし、アクセス手段の分散化と自動化が高度化した現在、検知ロジックの強化だけでは「1箇所でも回避されると複製が容易な買い占め側」と「誤検知による正規利用者の機会損失を懸念しながらルール更新を続ける運営側」の対応コストが増大し続ける構造にあります。本記事では、この構造的課題を解決するためのプロトタイプ設計として考案した「あんしん正価モデル（Anshin-Seika Model）」の技術アーキテクチャと経済検証シミュレ...",
+            "url": "https://zenn.dev/naochan_t_souji/articles/76bc6555ab2cd3",
+            "title": "一律遮断から「期待ROIの最適化」へ。JPKI×ゼロ知識証明（ZKP）による適正価格流通アーキテクチャの設計とシミュレーション | Zennの「Security」のフィード",
+            "summary": "はじめにチケットや限定商品の二次流通における価格高騰や大量購入への対策は、長らく「不正な自動化プログラム（BOT）を検知してアクセスを遮断する」アプローチが主流でした。しかし、アクセス手段の分散化と自動化が高度化した現在、検知ロジックの強化だけでは「1箇所でも回避されると複製が容易な買い占め側」と「誤検知による正規利用者の機会損失を懸念しながらルール更新を続ける運営側」の対応コストが増大し続ける構",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--lcWFqx-P--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25B8%2580%25E5%25BE%258B%25E9%2581%25AE%25E6%2596%25AD%25E3%2581%258B%25E3%2582%2589%25E3%2580%258C%25E6%259C%259F%25E5%25BE%2585ROI%25E3%2581%25AE%25E6%259C%2580%25E9%2581%25A9%25E5%258C%2596%25E3%2580%258D%25E3%2581%25B8%25E3%2580%2582JPKI%25C3%2597%25E3%2582%25BC%25E3%2583%25AD%25E7%259F%25A5%25E8%25AD%2598%25E8%25A8%25BC%25E6%2598%258E%25EF%25BC%2588ZKP%25EF%25BC%2589%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E9%2581%25A9%25E6%25AD%25A3%25E4%25BE%25A1%25E6%25A0%25BC%25E6%25B5%2581%25E9%2580%259A%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2581%25E3%2583%25A3%25E3%2581%25AE%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%25A8%25E3%2582%25B7%25E3%2583%259F...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AA%25E3%2581%258A%25E3%2581%25A1%25E3%2582%2583%25E3%2582%2593%25E3%2583%2588%25E3%2582%25A4%25E3%2583%25AC%25E3%2581%259D%25E3%2581%2586%25E3%2581%2598%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTDRfRlZFeUxKU1A3QmtWbnh2clBkSFY4UGc1Vl9ldE43MVQ1cUVmcFpSMi1sNkhnPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T04:44:05.000Z",
+            "date_published": "2026-11-21T04:44:05.000Z",
+            "author": {
+                "name": "なおちゃんトイレそうじ"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "一律遮断から「期待ROIの最適化」へ。JPKI×ゼロ知識証明（ZKP）による適正価格流通アーキテクチャの設計とシミュレーション",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/kamijo_aoto/articles/claude-code-hook-japanese-path",
+            "content_html": "Claude Code の PreToolUse フックで「ファイルの書き込みを全部拒否する」安全装置を Python で書き、日本語 Windows で試しました。書き込み先のフォルダ結果work（英数字）止めた日本語書き込まれた同じフック、同じ設定で、フォルダの名前が日本語のときだけ、書き込みが通りました。画面にもエラーは出ません。原因と、直し方は2行です。 再現した環境Windows 11、Windows PowerShell 5.1、システムのコードページ 932（日本語 Windows の既定）Python 3.13.7Cl...",
+            "url": "https://zenn.dev/kamijo_aoto/articles/claude-code-hook-japanese-path",
+            "title": "Claude Code の「全部拒否する」フックが、日本語のフォルダでだけ書き込みを通した | Zennの「Security」のフィード",
+            "summary": "Claude Code の PreToolUse フックで「ファイルの書き込みを全部拒否する」安全装置を Python で書き、日本語 Windows で試しました。書き込み先のフォルダ結果work（英数字）止めた日本語書き込まれた同じフック、同じ設定で、フォルダの名前が日本語のときだけ、書き込みが通りました。画面にもエラーは出ません。原因と、直し方は2行です。 再現した環境Windows 11、",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--JP_S07el--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%2520Code%2520%25E3%2581%25AE%25E3%2580%258C%25E5%2585%25A8%25E9%2583%25A8%25E6%258B%2592%25E5%2590%25A6%25E3%2581%2599%25E3%2582%258B%25E3%2580%258D%25E3%2583%2595%25E3%2583%2583%25E3%2582%25AF%25E3%2581%258C%25E3%2580%2581%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AB%25E3%2583%2580%25E3%2581%25A7%25E3%2581%25A0%25E3%2581%2591%25E6%259B%25B8%25E3%2581%258D%25E8%25BE%25BC%25E3%2581%25BF%25E3%2582%2592%25E9%2580%259A%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E4%25B8%258A%25E6%259D%25A1%25E7%25A2%25A7%25E6%2596%2597%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2UwNjY3ZGViNGIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T04:35:40.000Z",
+            "date_published": "2026-11-21T04:35:40.000Z",
+            "author": {
+                "name": "上条碧斗"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "Claude Code の「全部拒否する」フックが、日本語のフォルダでだけ書き込みを通した",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/tyuya/articles/pages-old-deployment-keeps-secret",
+            "content_html": "11月20日、Cloudflare Pages に置いていた試作アプリの認証を戻しました。認証を外していたシークレットを消して、デプロイし直します。本番のURLに聞くと、返事は \"role\":\"none\" でした。認証が効いています。同じプロジェクトの、2か月前のデプロイの個別URLにも3つ聞きました（抜粋）。{\"role\":\"admin\", ……, \"name\":\"試用（認証なし）\", ……}3つとも、認証なしの管理者として通しました。ただ、古いデプロイのコード...",
+            "url": "https://zenn.dev/tyuya/articles/pages-old-deployment-keeps-secret",
+            "title": "シークレットを消して再デプロイしても、古いデプロイには残っていた（Cloudflare Pages） | Zennの「Security」のフィード",
+            "summary": "11月20日、Cloudflare Pages に置いていた試作アプリの認証を戻しました。認証を外していたシークレットを消して、デプロイし直します。本番のURLに聞くと、返事は \"role\":\"none\" でした。認証が効いています。同じプロジェクトの、2か月前のデプロイの個別URLにも3つ聞きました（抜粋）。{\"role\":\"admin\", ……, \"name\":\"試用（認証なし）\", ……}3",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--ETiy0aOI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B7%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%25AC%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E6%25B6%2588%25E3%2581%2597%25E3%2581%25A6%25E5%2586%258D%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E3%2581%2597%25E3%2581%25A6%25E3%2582%2582%25E3%2580%2581%25E5%258F%25A4%25E3%2581%2584%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E3%2581%25AB%25E3%2581%25AF%25E6%25AE%258B%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2581%259F%25EF%25BC%2588Cloudflare%2520Pages%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuya0620%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzg4MGEzZTQwNTQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T02:12:08.000Z",
+            "date_published": "2026-11-21T02:12:08.000Z",
+            "author": {
+                "name": "yuya0620"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "シークレットを消して再デプロイしても、古いデプロイには残っていた（Cloudflare Pages）",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/whocallmeuknote/articles/c0744e2a826aef",
+            "content_html": "「この番号は誰？」と調べて見つかる投稿には、実際に起きたことと、投稿者がそこから考えたことが同じ文章の中に並んでいます。自動音声についての一件の投稿を例に、文章を観察・内容・推測・助言の層に分けて記録する方法を整理します。推測を捨てるのではなく、根拠の強さが違うものとして別の欄に置く、という考え方です。運営側からの案内： 本記事はウェブサイト whocallme.co.uk による宣伝を含む編集記事で、AIの補助を受けて起草しています。以下の分類表とYAMLは、記録方法を説明するための手作業の例です。著者がこの電話を受けた記録や、音声を分析した結果ではありません。 題材の投稿03...",
+            "url": "https://zenn.dev/whocallmeuknote/articles/c0744e2a826aef",
+            "title": "この番号は誰？ 自動音声についての投稿を、観察・内容・推測・助言の層に分けて記録する | Zennの「Security」のフィード",
+            "summary": "「この番号は誰？」と調べて見つかる投稿には、実際に起きたことと、投稿者がそこから考えたことが同じ文章の中に並んでいます。自動音声についての一件の投稿を例に、文章を観察・内容・推測・助言の層に分けて記録する方法を整理します。推測を捨てるのではなく、根拠の強さが違うものとして別の欄に置く、という考え方です。運営側からの案内： 本記事はウェブサイト whocallme.co.uk による宣伝を含む編集記",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--NErp39Dg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%2593%25E3%2581%25AE%25E7%2595%25AA%25E5%258F%25B7%25E3%2581%25AF%25E8%25AA%25B0%25EF%25BC%259F%2520%25E8%2587%25AA%25E5%258B%2595%25E9%259F%25B3%25E5%25A3%25B0%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25AE%25E6%258A%2595%25E7%25A8%25BF%25E3%2582%2592%25E3%2580%2581%25E8%25A6%25B3%25E5%25AF%259F%25E3%2583%25BB%25E5%2586%2585%25E5%25AE%25B9%25E3%2583%25BB%25E6%258E%25A8%25E6%25B8%25AC%25E3%2583%25BB%25E5%258A%25A9%25E8%25A8%2580%25E3%2581%25AE%25E5%25B1%25A4%25E3%2581%25AB%25E5%2588%2586%25E3%2581%2591%25E3%2581%25A6%25E8%25A8%2598%25E9%258C%25B2%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:WhoCallMe%2520UK%2520Notes%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvdy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T01:06:38.000Z",
+            "date_published": "2026-11-21T01:06:38.000Z",
+            "author": {
+                "name": "WhoCallMe UK Notes"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "この番号は誰？ 自動音声についての投稿を、観察・内容・推測・助言の層に分けて記録する",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        },
+        {
+            "id": "https://zenn.dev/mizutamari/articles/local-llm-vol023",
+            "content_html": "前回のあらすじプライバシーが欲しくて、手元のMacにプライバシーLLMを作っている。macOSの「別ユーザー」で別室を作り、AIの記憶は、パスワード付きの金庫にしまう。部屋の中には囲いを作り、出口には関所を置いた。ただ、ここまで部屋にいたのは、ただ寝ているだけの「AI役」でした。今回は、いよいよ本物のAIを部屋に入れる話です。 頭脳と秘書部屋に入れるAIは、2つでできています。頭脳：言葉を考える本体。Macの上で動いている秘書：頭脳に「次はどうする？」と聞きながら、ファイルを書いたり探したりする頭脳は考えるだけで、手足を持ちません。実際にファイルに触...",
+            "url": "https://zenn.dev/mizutamari/articles/local-llm-vol023",
+            "title": "AI体験記 Vol.23：プライバシーが欲しくて・・・（入室編） | Zennの「Security」のフィード",
+            "summary": "前回のあらすじプライバシーが欲しくて、手元のMacにプライバシーLLMを作っている。macOSの「別ユーザー」で別室を作り、AIの記憶は、パスワード付きの金庫にしまう。部屋の中には囲いを作り、出口には関所を置いた。ただ、ここまで部屋にいたのは、ただ寝ているだけの「AI役」でした。今回は、いよいよ本物のAIを部屋に入れる話です。 頭脳と秘書部屋に入れるAIは、2つでできています。頭脳：言葉を考える本",
+            "image": "https://res.cloudinary.com/zenn/image/upload/s--Xd-QRZz0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E4%25BD%2593%25E9%25A8%2593%25E8%25A8%2598%2520Vol.23%25EF%25BC%259A%25E3%2583%2597%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2590%25E3%2582%25B7%25E3%2583%25BC%25E3%2581%258C%25E6%25AC%25B2%25E3%2581%2597%25E3%2581%258F%25E3%2581%25A6%25E3%2583%25BB%25E3%2583%25BB%25E3%2583%25BB%25EF%25BC%2588%25E5%2585%25A5%25E5%25AE%25A4%25E7%25B7%25A8%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shikou%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzgzZWRjYzYyZTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE",
+            "date_modified": "2026-11-21T00:53:20.000Z",
+            "date_published": "2026-11-21T00:53:20.000Z",
+            "author": {
+                "name": "Shikou"
+            },
+            "tags": [],
+            "_custom": {
+                "hatenaCount": 0,
+                "originalTitle": "AI体験記 Vol.23：プライバシーが欲しくて・・・（入室編）",
+                "blogTitle": "Zennの「Security」のフィード",
+                "blogLink": "https://zenn.dev/topics/security",
+                "blogLinkMd5Hash": "241aaab326af1f60710afd6bbc79e573",
+                "favicon": "https://static.zenn.studio/images/logo-transparent.png"
+            }
+        }
+    ]
+}
