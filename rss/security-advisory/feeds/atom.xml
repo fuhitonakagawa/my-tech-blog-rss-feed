@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/</id>
+    <title>GitHub Security Advisory｜企業テックブログRSS</title>
+    <updated>2026-11-28T18:05:32.051Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory/feeds/atom.xml"/>
+    <subtitle>GitHub Security Advisoryセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[[@waline/client] @waline/client vulnerable to stored XSS through unsanitized comment edit previews | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-crj3-q72p-ggqm</id>
+        <link href="https://github.com/advisories/GHSA-crj3-q72p-ggqm"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-25T15:26:23.000Z</updated>
+        <summary type="html"><![CDATA[Summary@waline/client renders the comment editor's live preview with marked and no sanitizer (utils/markdown.ts), and the preview is injected with v-html.When a comment is edited, the editor is seeded]]></summary>
+        <content type="html"><![CDATA[Summary@waline/client renders the comment editor's live preview with marked and no sanitizer (utils/markdown.ts), and the preview is injected with v-html.When a comment is edited, the editor is seeded with the comment's raw, un-sanitized body (orig).Only administrators and the comment owner can edit. So an administrator who clicks Edit on an attacker's comment renders that attacker's raw HTML in their own session: an unauthenticated commenter achieves privilege-escalation stored XSS against a mo]]></content>
+        <published>2026-11-25T15:26:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[soapbar] soapbar: verify_envelope_bsp accepts an unauthenticated embedded certificate (signature forgery / authentication bypass) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-859w-52fx-hcm6</id>
+        <link href="https://github.com/advisories/GHSA-859w-52fx-hcm6"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-24T22:41:44.000Z</updated>
+        <summary type="html"><![CDATA[Impactverify_envelope_bsp() derived its trust anchor from the message it wasverifying. It read the X.509 certificate out of the caller-untrustedwsse:BinarySecurityToken, validated only that certificat]]></summary>
+        <content type="html"><![CDATA[Impactverify_envelope_bsp() derived its trust anchor from the message it wasverifying. It read the X.509 certificate out of the caller-untrustedwsse:BinarySecurityToken, validated only that certificate's not-before /not-after dates, and then verified the signature against that same certificate.There was no CA-chain validation, no issuer/subject allowlist, and no pinning.A successful verify_envelope_bsp() therefore proved only that the envelope wassigned by whoever supplied the embedded certifica]]></content>
+        <published>2026-11-24T22:41:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ruflo] ruflo MCP bridge allows unauthenticated remote code execution in default Docker Compose deployments | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-c4hm-4h84-2cf3</id>
+        <link href="https://github.com/advisories/GHSA-c4hm-4h84-2cf3"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-24T21:01:10.000Z</updated>
+        <summary type="html"><![CDATA[The MCP bridge shipping in ruflo/docker-compose.yml exposed POST /mcp with no authentication. The docker-compose defaults bound the bridge and MongoDB to all interfaces. Combined, an unauthenticated n]]></summary>
+        <content type="html"><![CDATA[The MCP bridge shipping in ruflo/docker-compose.yml exposed POST /mcp with no authentication. The docker-compose defaults bound the bridge and MongoDB to all interfaces. Combined, an unauthenticated network attacker could invoke tools/call → terminal_execute inside the bridge container, obtain a shell as node (uid 1000), read every provider API key from the container env, spawn attacker-controlled swarms on the victim's keys, and persist a poisoned pattern into the AgentDB learning store that st]]></content>
+        <published>2026-11-24T21:01:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[isomorphic-git] isomorphic-git allows unbounded memory allocation from attacker-controlled delta target size (DoS) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-9x82-4j54-863h</id>
+        <link href="https://github.com/advisories/GHSA-9x82-4j54-863h"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-23T21:07:02.000Z</updated>
+        <summary type="html"><![CDATA[SummaryWhen applying a delta object from a packfile, isomorphic-git reads a server-controlled targetSize and calls Buffer.alloc(targetSize) with no upper bound. A single malicious HTTP response to git]]></summary>
+        <content type="html"><![CDATA[SummaryWhen applying a delta object from a packfile, isomorphic-git reads a server-controlled targetSize and calls Buffer.alloc(targetSize) with no upper bound. A single malicious HTTP response to git.clone()/git.fetch() can force a ~2 GB allocation → memory exhaustion / DoS (process killed on memory-constrained hosts).Detailssrc/utils/applyDelta.js:const sourceSize = readVarIntLE(reader)const targetSize = readVarIntLE(reader) // attacker-controlled…target = Buffer.alloc(targetSize)A pack with o]]></content>
+        <published>2026-11-23T21:07:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[i18next] i18next deepExtend recurses into inherited built-ins, allowing corruption of shared built-in objects (DoS) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-6jcc-5g8w-32mx</id>
+        <link href="https://github.com/advisories/GHSA-6jcc-5g8w-32mx"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-23T20:53:00.000Z</updated>
+        <summary type="html"><![CDATA[SummarydeepExtend in src/utils.js (reached via the public addResourceBundle(lng, ns, data, deep, overwrite) API) checked key existence with the in operator, which walks the prototype chain. A source k]]></summary>
+        <content type="html"><![CDATA[SummarydeepExtend in src/utils.js (reached via the public addResourceBundle(lng, ns, data, deep, overwrite) API) checked key existence with the in operator, which walks the prototype chain. A source key matching an inherited built-in (e.g. hasOwnProperty, toString, valueOf) therefore caused the function to recurse into the shared object on Object.prototype. With overwrite: true, a nested value could overwrite a property of that shared built-in — for example setting Object.prototype.hasOwnPropert]]></content>
+        <published>2026-11-23T20:53:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[xo-server] Xen Orchestra: Empty-object login token | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-2r3w-c2vx-fv5g</id>
+        <link href="https://github.com/advisories/GHSA-2r3w-c2vx-fv5g"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-23T17:29:29.000Z</updated>
+        <summary type="html"><![CDATA[SummaryREST cookie parsing turns authenticationToken=j:%7B%7D into {}. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats {} as an ]]></summary>
+        <content type="html"><![CDATA[SummaryREST cookie parsing turns authenticationToken=j:%7B%7D into {}. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats {} as an unfiltered lookup and returns its first token; the provider authenticates as that token's owner if it is unexpired. The authenticated /rest/v0/users/me/authentication_tokens route then returns reusable login token IDs.DetailsIn packages/xo-server/src/api/session.mjs, function signIn(credentials) has]]></content>
+        <published>2026-11-23T17:29:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@budibase/server] Budibase: Unauthenticated global-admin &amp; database creation via tenant-confusion bypass of the one-time init guard (`POST /api/global/users/init`) | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-25qc-m4pw-2w8r</id>
+        <link href="https://github.com/advisories/GHSA-25qc-m4pw-2w8r"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:50:01.000Z</updated>
+        <summary type="html"><![CDATA[DescriptionSummaryOn a self-hosted, single-tenant Budibase instance (multiTenancy:false), the public bootstrap endpoint POST /api/global/users/init remains fully exploitable after the instance has bee]]></summary>
+        <content type="html"><![CDATA[DescriptionSummaryOn a self-hosted, single-tenant Budibase instance (multiTenancy:false), the public bootstrap endpoint POST /api/global/users/init remains fully exploitable after the instance has been provisioned. Its "already initialised" guard (checkAnyUserExists()) is evaluated inside a tenant-scoped database context derived from an attacker-controlled tenantId in the request body. Because the tenancy layer never constrains that tenantId to the only legitimate tenant (default) on a single-te]]></content>
+        <published>2026-11-20T23:50:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@budibase/server] Budibase: Cross-privilege Stored XSS in the Budibase Builder via broken HTML-escaping in `jsonFormatter.format()` rendered through `{@html}` in the CSP-less Builder origin | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-r2q3-7m4h-63qg</id>
+        <link href="https://github.com/advisories/GHSA-r2q3-7m4h-63qg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:49:47.000Z</updated>
+        <summary type="html"><![CDATA[DescriptionSummaryA low-privileged application end-user (role BASIC - not a builder or admin, and on a public data-collection form, an unauthenticated visitor) can store an HTML/JavaScript payload in ]]></summary>
+        <content type="html"><![CDATA[DescriptionSummaryA low-privileged application end-user (role BASIC - not a builder or admin, and on a public data-collection form, an unauthenticated visitor) can store an HTML/JavaScript payload in ordinary row data. When a builder or admin later opens that table in the Budibase Builder and evaluates any Handlebars binding whose Preview surfaces the value (the Data-section Formula column editor, or any binding drawer), the stored value is rendered as raw HTML and the attacker's JavaScript exec]]></content>
+        <published>2026-11-20T23:49:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[wcmatch] wcmatch: Polynomial-time ReDoS when matching untrusted names against multi-star patterns (default flags) | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-53pm-wgxf-c6qf</id>
+        <link href="https://github.com/advisories/GHSA-53pm-wgxf-c6qf"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:49:18.000Z</updated>
+        <summary type="html"><![CDATA[SummaryWith default flags, a pattern that contains several * wildcards takes polynomial time, O(n^k) for k stars, to reject a crafted file name. The pattern is an ordinary developer constant such as *]]></summary>
+        <content type="html"><![CDATA[SummaryWith default flags, a pattern that contains several * wildcards takes polynomial time, O(n^k) for k stars, to reject a crafted file name. The pattern is an ordinary developer constant such as *_*_*_*_*.csv; only the string being matched comes from the attacker. A 255-byte file name (the maximum on common filesystems) takes 73 s with fnmatch.fnmatch() and 86 s with glob.globmatch(). The standard library's fnmatch handles the same input in under a millisecond.This is different from GHSA-84v]]></content>
+        <published>2026-11-20T23:49:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[inscriptis] Inscriptis: Quadratic memory growth from sibling &lt;table&gt; elements in get_text() | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-q87h-c5m7-659j</id>
+        <link href="https://github.com/advisories/GHSA-q87h-c5m7-659j"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:48:51.000Z</updated>
+        <summary type="html"><![CDATA[SummaryEvery sibling &lt;table&gt; adds another level of the parent's indentation, so the size of get_text() output grows quadratically with the number of tables. In the measurements below, a 240 KB HTML do]]></summary>
+        <content type="html"><![CDATA[SummaryEvery sibling &lt;table&gt; adds another level of the parent's indentation, so the size of get_text() output grows quadratically with the number of tables. In the measurements below, a 240 KB HTML document produces about 1 billion characters and uses about 1 GB of memory.Detailstable_end_handler() (model/tag/table_tag.py) writes the rendered table into the parent element with HtmlElement.write_verbatim_text() (model/html_element.py). For a block-level parent, write_verbatim_text() calls canvas.]]></content>
+        <published>2026-11-20T23:48:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[svglib] svglib: Exponential resource consumption via nested &lt;use&gt; references in svg2rlg | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-555j-qj3j-c8jv</id>
+        <link href="https://github.com/advisories/GHSA-555j-qj3j-c8jv"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:47:58.000Z</updated>
+        <summary type="html"><![CDATA[Summarysvg2rlg() expands &lt;use&gt; references without any limit on the total number of expansions. Only direct cycles are rejected (CircularRefError). A group containing N &lt;use&gt; elements that point to ano]]></summary>
+        <content type="html"><![CDATA[Summarysvg2rlg() expands &lt;use&gt; references without any limit on the total number of expansions. Only direct cycles are rejected (CircularRefError). A group containing N &lt;use&gt; elements that point to another such group multiplies the work by N per nesting level, so an SVG of about 1.4 KB makes svglib clone and render over 100,000 nodes, taking tens of seconds of CPU time and hundreds of MiB of memory. Each additional level adds about 245 bytes to the document and multiplies time by ~10.This is the ]]></content>
+        <published>2026-11-20T23:47:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[memtomem-stm] memtomem-stm: Concurrent LTM recovery can duplicate reconnects or reuse a cancelled transport session | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-72jh-722p-rqr3</id>
+        <link href="https://github.com/advisories/GHSA-72jh-722p-rqr3"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:38:15.000Z</updated>
+        <summary type="html"><![CDATA[Concurrent surfacing RPC failures can trigger more than one reconnect for the same dirty session, and cancellation during a post-reconnect retry can leave the replacement session reusable despite an i]]></summary>
+        <content type="html"><![CDATA[Concurrent surfacing RPC failures can trigger more than one reconnect for the same dirty session, and cancellation during a post-reconnect retry can leave the replacement session reusable despite an interrupted protocol exchange. The private fix introduces monotonic session generations, one shielded shared reconnect flight per dirty generation, and generation-aware cancellation handling across search, access-count, and scratch RPCs. The duplicate-reconnect subcase was introduced in 0.1.24; cance]]></content>
+        <published>2026-11-20T23:38:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[memtomem-stm] memtomem-stm: Surfaced memory data can escape the Markdown compatibility boundary | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-43hx-xm7w-3mhj</id>
+        <link href="https://github.com/advisories/GHSA-43hx-xm7w-3mhj"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:37:39.000Z</updated>
+        <summary type="html"><![CDATA[Untrusted long-term and working-memory fields can introduce Markdown or HTML-compatible structure into the surfaced-memory envelope. A crafted memory may create misleading structural boundaries or vis]]></summary>
+        <content type="html"><![CDATA[Untrusted long-term and working-memory fields can introduce Markdown or HTML-compatible structure into the surfaced-memory envelope. A crafted memory may create misleading structural boundaries or visually conceal content. The private fix serializes every untrusted field as inert single-line data, validates copyable memory identifiers, and pins an explicit untrusted-data preamble. Ordinary natural-language persuasion remains a residual model-level risk.Referenceshttps://github.com/memtomem/memto]]></content>
+        <published>2026-11-20T23:37:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ait-gui] AIT-GUI route chain allows unauthenticated Python execution in server process | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-jrjx-9jjw-747m</id>
+        <link href="https://github.com/advisories/GHSA-jrjx-9jjw-747m"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:36:41.000Z</updated>
+        <summary type="html"><![CDATA[SummaryA security issue exists where unauthenticated callers can instruct the AIT-GUI server to execute arbitrary Python scripts. The attack vector involves obtaining a session cookie through GET /, f]]></summary>
+        <content type="html"><![CDATA[SummaryA security issue exists where unauthenticated callers can instruct the AIT-GUI server to execute arbitrary Python scripts. The attack vector involves obtaining a session cookie through GET /, followed by a malicious POST /script/run request containing an absolute file path that bypasses the configured script directory restrictions.Patches2.5.1ImpactThis vulnerability allows unauthenticated remote code execution on the AIT-GUI server. Any attacker with network access can execute arbitrary ]]></content>
+        <published>2026-11-20T23:36:41.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[aedes] Aedes has Uncaught Exception and Uncontrolled Resource Consumption | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-xxqp-5qx8-gj5q</id>
+        <link href="https://github.com/advisories/GHSA-xxqp-5qx8-gj5q"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:32:35.000Z</updated>
+        <summary type="html"><![CDATA[SummaryA remote Denial of Service (DoS) vulnerability, allows any remote client to cause a complete crash of the Aedes MQTT broker process. This is achieved by sending a specially crafted MQTT message]]></summary>
+        <content type="html"><![CDATA[SummaryA remote Denial of Service (DoS) vulnerability, allows any remote client to cause a complete crash of the Aedes MQTT broker process. This is achieved by sending a specially crafted MQTT message (via PUBLISH or SUBSCRIBE), or by setting a Will message with such a topic, containing a highly recursive topic string (e.g., with thousands of '/' delimiters). The lack of input validation and error handling leads to an uncaught exception in an internal routing library, terminating the entire Node]]></content>
+        <published>2026-11-20T23:32:35.000Z</published>
+    </entry>
+</feed>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/</id>
+    <title>Zenn Securityタグ｜企業テックブログRSS</title>
+    <updated>2026-11-28T18:05:32.151Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/zenn-security/feeds/atom.xml"/>
+    <subtitle>Zenn Securityタグセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[オープンソースでも、使い方は送られる？ T3 Codeのテレメトリーを初学者向けに整理する | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/kotanpolin/articles/t3code-telemetry-2026-11-24</id>
+        <link href="https://zenn.dev/kotanpolin/articles/t3code-telemetry-2026-11-24"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--iTOpBXfl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AA%25E3%2583%25BC%25E3%2583%2597%25E3%2583%25B3%25E3%2582%25BD%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25A7%25E3%2582%2582%25E3%2580%2581%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2581%25AF%25E9%2580%2581%25E3%2582%2589%25E3%2582%258C%25E3%2582%258B%25EF%25BC%259F%2520T3%2520Code%25E3%2581%25AE%25E3%2583%2586%25E3%2583%25AC%25E3%2583%25A1%25E3%2583%2588%25E3%2583%25AA%25E3%2583%25BC%25E3%2582%2592%25E5%2588%259D%25E5%25AD%25A6%25E8%2580%2585%25E5%2590%2591%25E3%2581%2591%25E3%2581%25AB%25E6%2595%25B4%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25B3%25E3%2582%25BF%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSXhkRExha1Ewbkluay1lY1E1UTNtdkVINEpiaDRmV3hQMWoyWFd3WmVmVU03cDk2RT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T17:53:07.000Z</updated>
+        <summary type="html"><![CDATA[2026年11月24日、Xで「T3 Codeが初期設定のまま利用データを外へ送っている」という中国語の長文が広がりました。リポジトリと公式文書で中核の事実は確認できます。一方、「公式サイトが3か月以上ゼロテレメトリーを掲げていた」「設定スイッチのPRはすべてメンテナーに拒絶された」などは、日付や手続きの書き方が一次情報とずれます。 コードと公式文書によれば、普段送られるのは使ったモデル名、成否、ト]]></summary>
+        <content type="html"><![CDATA[2026年11月24日、Xで「T3 Codeが初期設定のまま利用データを外へ送っている」という中国語の長文が広がりました。リポジトリと公式文書で中核の事実は確認できます。一方、「公式サイトが3か月以上ゼロテレメトリーを掲げていた」「設定スイッチのPRはすべてメンテナーに拒絶された」などは、日付や手続きの書き方が一次情報とずれます。 コードと公式文書によれば、普段送られるのは使ったモデル名、成否、トークン数、所要時間、OSやバージョン、プロジェクトやスレッドの数、使った機能の名前、ハッシュした識別子です。指示文（プロンプト）、AIの返事、ファイルの中身、パスワードやトークンそのものを製品イ...]]></content>
+        <author>
+            <name>コタ</name>
+        </author>
+        <published>2026-11-28T17:53:07.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[機微情報を外部AIに送らないための、入力とAPIの設計 | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/legacytoolsdev/articles/0c328923130eec</id>
+        <link href="https://zenn.dev/legacytoolsdev/articles/0c328923130eec"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--XUVjMlOg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A9%259F%25E5%25BE%25AE%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%2592%25E5%25A4%2596%25E9%2583%25A8AI%25E3%2581%25AB%25E9%2580%2581%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2580%2581%25E5%2585%25A5%25E5%258A%259B%25E3%2581%25A8API%25E3%2581%25AE%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:k-wada%2520%257C%2520Legacy%2520Tools%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzQ2YjVjODE4YzMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T17:15:00.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは、k-wadaです。 たとえば来店予約システムにAIを組み込むとき、僕が最初に決めたいのは、顧客に何を入力してもらうかです。予約変更が予約番号と希望日時で済むなら、変更理由を尋ねる必要はありません。「変更理由」という欄を一つ設けるだけで、顧客がそこに書いた病歴まで企業が預かることになります。 この記事で扱う設計方針は、業務に不要な機微情報は収集しない。外部AIとの連携は、送信内容に機微情]]></summary>
+        <content type="html"><![CDATA[こんにちは、k-wadaです。 たとえば来店予約システムにAIを組み込むとき、僕が最初に決めたいのは、顧客に何を入力してもらうかです。予約変更が予約番号と希望日時で済むなら、変更理由を尋ねる必要はありません。「変更理由」という欄を一つ設けるだけで、顧客がそこに書いた病歴まで企業が預かることになります。 この記事で扱う設計方針は、業務に不要な機微情報は収集しない。外部AIとの連携は、送信内容に機微情報が含まれていないことを確認できた場合に限るというものです。 AIを使うかどうかにかかわらず、情報を受け取った時点で、誰が読めるのか、どこに記録が残るのかが問題になります。理由欄の内容が応対履歴...]]></content>
+        <author>
+            <name>k-wada | Legacy Tools</name>
+        </author>
+        <published>2026-11-28T17:15:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mac アプリをスマホから遠隔操作する認証の実装 | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/tanashun/articles/remote-access-passkey-binding</id>
+        <link href="https://zenn.dev/tanashun/articles/remote-access-passkey-binding"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--ud0sm_Jn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Mac%2520%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E3%2581%258B%25E3%2582%2589%25E9%2581%25A0%25E9%259A%2594%25E6%2593%258D%25E4%25BD%259C%25E3%2581%2599%25E3%2582%258B%25E8%25AA%258D%25E8%25A8%25BC%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tanashun%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHdqb3lGMndkQXM2NDFUZ0Y3bzlTYWh3NV85cFpzNXNoLVZPRW9WWnZFU1FzcU9nakM9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T15:41:50.000Z</updated>
+        <summary type="html"><![CDATA[自分の Mac をスマホから操作する入口を作るなら、パスキーだけでは足りません。iCloud キーチェーンに保存したパスキーは、ほかの端末にも同期されます。「本人」は確かめられても、「登録したこの端末」には限れないのです。 外出先のスマホから、Mac の Claude Code を操作したい でも、Mac でコマンドを動かせる入口を、ネットワークに開けるのは怖い パスキーでログインさせれば安心、と]]></summary>
+        <content type="html"><![CDATA[自分の Mac をスマホから操作する入口を作るなら、パスキーだけでは足りません。iCloud キーチェーンに保存したパスキーは、ほかの端末にも同期されます。「本人」は確かめられても、「登録したこの端末」には限れないのです。 外出先のスマホから、Mac の Claude Code を操作したい でも、Mac でコマンドを動かせる入口を、ネットワークに開けるのは怖い パスキーでログインさせれば安心、と言ってよいのか分からない この記事を読むと、こうした入口で、何を何で確かめればよいかが分かります。後半には、Tailscale を使って、自分の iPhone から使えるようにする手順も載せてい...]]></content>
+        <author>
+            <name>tanashun</name>
+        </author>
+        <published>2026-11-28T15:41:50.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[他人の SKILL.md や MCP 設定を入れる前に見る4つの形と、正規表現では見えないもの | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/zeuslab/articles/8fa152e19e3edc</id>
+        <link href="https://zenn.dev/zeuslab/articles/8fa152e19e3edc"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--pKmzz1fj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BB%2596%25E4%25BA%25BA%25E3%2581%25AE%2520SKILL.md%2520%25E3%2582%2584%2520MCP%2520%25E8%25A8%25AD%25E5%25AE%259A%25E3%2582%2592%25E5%2585%25A5%25E3%2582%258C%25E3%2582%258B%25E5%2589%258D%25E3%2581%25AB%25E8%25A6%258B%25E3%2582%258B4%25E3%2581%25A4%25E3%2581%25AE%25E5%25BD%25A2%25E3%2581%25A8%25E3%2580%2581%25E6%25AD%25A3%25E8%25A6%258F%25E8%25A1%25A8%25E7%258F%25BE%25E3%2581%25A7%25E3%2581%25AF%25E8%25A6%258B%25E3%2581%2588%25E3%2581%25AA%25E3%2581%2584%25E3%2582%2582%25E3%2581%25AE%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ZEUS%2520LAB%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzUxNWUwYmUyNWIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T15:19:51.000Z</updated>
+        <summary type="html"><![CDATA[便利そうな SKILL.md を見つけて、フォルダに置く。MCP の設定例を README から写して、自分の設定に足す。すぐに終わる作業ですが、置いたものは「エージェントが従って動く文章」であり、手元で起動する型の MCP 設定なら「自分の端末で起動されるコマンド」でもあります。読まずに入れるのは、知らない人のシェルスクリプトを読まずに実行するのに近い行為です。 とはいえ、毎回すべてを精読するの]]></summary>
+        <content type="html"><![CDATA[便利そうな SKILL.md を見つけて、フォルダに置く。MCP の設定例を README から写して、自分の設定に足す。すぐに終わる作業ですが、置いたものは「エージェントが従って動く文章」であり、手元で起動する型の MCP 設定なら「自分の端末で起動されるコマンド」でもあります。読まずに入れるのは、知らない人のシェルスクリプトを読まずに実行するのに近い行為です。 とはいえ、毎回すべてを精読するのは続きません。当方は、入れる前に「まず目が行くべき場所」を光らせる点検を使っています。この記事では、その点検が見ている4つの形を正規表現ごと載せ、見本の29行に実際にかけた結果（当たった12行・...]]></content>
+        <author>
+            <name>ZEUS LAB</name>
+        </author>
+        <published>2026-11-28T15:19:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cloudflare Radar実測データで見る日本のAIボット比率と個人VPS・ブログの無料防御メモ | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/auto_tool_lab/articles/cloudflare-radar-jp-ai-bot-defense-2026</id>
+        <link href="https://zenn.dev/auto_tool_lab/articles/cloudflare-radar-jp-ai-bot-defense-2026"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--IYkQGVlI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloudflare%2520Radar%25E5%25AE%259F%25E6%25B8%25AC%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25A7%25E8%25A6%258B%25E3%2582%258B%25E6%2597%25A5%25E6%259C%25AC%25E3%2581%25AEAI%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E6%25AF%2594%25E7%258E%2587%25E3%2581%25A8%25E5%2580%258B%25E4%25BA%25BAVPS%25E3%2583%25BB%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%25E3%2581%25AE%25E7%2584%25A1%25E6%2596%2599%25E9%2598%25B2%25E5%25BE%25A1%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:AutoToolLab%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWcxM3Y2SnN2UndQSnNZeTF5ZjBKWjZnVXN6NXUxcWQtVWVXSW45TkJqR3FOZ3ZnPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T15:01:46.000Z</updated>
+        <summary type="html"><![CDATA[本記事は SiliconBench で検証した Cloudflare Radar API v4（対象期間: 2026-10-31T14:00:00Z 〜 2026-11-28T14:00:00Z、直近 28 日間）の公開実測データをもとにした技術ダイジェストです。詳細なSVGグラフ・FAQを含む完全版は末尾のリンク先をご参照ください。 個人ブログや軽量 VPS のアクセスログに AI クローラーが]]></summary>
+        <content type="html"><![CDATA[本記事は SiliconBench で検証した Cloudflare Radar API v4（対象期間: 2026-10-31T14:00:00Z 〜 2026-11-28T14:00:00Z、直近 28 日間）の公開実測データをもとにした技術ダイジェストです。詳細なSVGグラフ・FAQを含む完全版は末尾のリンク先をご参照ください。 個人ブログや軽量 VPS のアクセスログに AI クローラーが増えたと感じる背景は、Cloudflare Radar の観測数値にもはっきり表れています。 特筆すべき点は以下の 3 つです。 日本（JP）の AI ボットシェアは ClaudeBot（13....]]></content>
+        <author>
+            <name>AutoToolLab</name>
+        </author>
+        <published>2026-11-28T15:01:46.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude Code に「渡してよい情報か」を3区分で判断する手順と、棚卸し表を自動で振り分ける PowerShell | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/chukidx_dev/articles/claudecode-data-3-categories</id>
+        <link href="https://zenn.dev/chukidx_dev/articles/claudecode-data-3-categories"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--6s6SEooz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Claude%2520Code%2520%25E3%2581%25AB%25E3%2580%258C%25E6%25B8%25A1%25E3%2581%2597%25E3%2581%25A6%25E3%2582%2588%25E3%2581%2584%25E6%2583%2585%25E5%25A0%25B1%25E3%2581%258B%25E3%2580%258D%25E3%2582%25923%25E5%258C%25BA%25E5%2588%2586%25E3%2581%25A7%25E5%2588%25A4%25E6%2596%25AD%25E3%2581%2599%25E3%2582%258B%25E6%2589%258B%25E9%25A0%2586%25E3%2581%25A8%25E3%2580%2581%25E6%25A3%259A%25E5%258D%25B8%25E3%2581%2597%25E8%25A1%25A8%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E3%2581%25A7%25E6%258C%25AF%25E3%2582%258A%25E5%2588%2586%25E3%2581%2591%25E3%2582%258B%2520PowerShell%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E4%25B8%25AD%25E5%25B0%258FDX%25E3%2583%25A9%25E3%2583%259C%2528chukidx%2529%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2UyZTIzYmM5NzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T14:04:13.000Z</updated>
+        <summary type="html"><![CDATA[Claude Code(Anthropic 社が提供する、ターミナルで動く AI コーディングエージェント)を業務に入れようとすると、多くの職場で「この情報を AI に読ませてよいのか」という問いで手が止まります。この記事では、その問いを「渡してよい/加工すれば渡せる/渡さない」の3区分に落とす考え方と判断の手順、そして業務で触る情報の一覧(棚卸し表)に区分を自動で付ける PowerShell ス]]></summary>
+        <content type="html"><![CDATA[Claude Code(Anthropic 社が提供する、ターミナルで動く AI コーディングエージェント)を業務に入れようとすると、多くの職場で「この情報を AI に読ませてよいのか」という問いで手が止まります。この記事では、その問いを「渡してよい/加工すれば渡せる/渡さない」の3区分に落とす考え方と判断の手順、そして業務で触る情報の一覧(棚卸し表)に区分を自動で付ける PowerShell スクリプトを公開します。 この記事で手に入るもの: 情報を3区分に分ける考え方と、迷わないための判断の順番 棚卸し表(CSV)の書き方と、区分を付けるスクリプト全文 実際に動かした結果(Excel...]]></content>
+        <author>
+            <name>中小DXラボ(chukidx)</name>
+        </author>
+        <published>2026-11-28T14:04:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JWTシークレットキーは「文字数」ではなく「バイト数」で確認しよう | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/garyvov/articles/e06c8ab38966b5</id>
+        <link href="https://zenn.dev/garyvov/articles/e06c8ab38966b5"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--Q6B66lhJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:JWT%25E3%2582%25B7%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%25AC%25E3%2583%2583%25E3%2583%2588%25E3%2582%25AD%25E3%2583%25BC%25E3%2581%25AF%25E3%2580%258C%25E6%2596%2587%25E5%25AD%2597%25E6%2595%25B0%25E3%2580%258D%25E3%2581%25A7%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%258F%25E3%2580%258C%25E3%2583%2590%25E3%2582%25A4%25E3%2583%2588%25E6%2595%25B0%25E3%2580%258D%25E3%2581%25A7%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Gary%2520Yan%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWViallqaDZsV1hrQ09aUGJNRTVzRDNHUUxVT0dTanJLTE0zTVpGQk43R3JxaFYweGM9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T13:38:42.000Z</updated>
+        <summary type="html"><![CDATA[JWT（JSON Web Token）の署名に使うシークレットキーは、アプリケーションの安全性を左右します。ところが「32文字のランダム文字列を設定したからHS256は安全」と考えてしまうケースが少なくありません。実際に効いているのは文字数ではなくバイト数です。 この記事では、シークレットキーの長さをバイト数で確認する方法と、実務でそのまま使える生成・確認の手順をまとめます。 HMAC-SHA25]]></summary>
+        <content type="html"><![CDATA[JWT（JSON Web Token）の署名に使うシークレットキーは、アプリケーションの安全性を左右します。ところが「32文字のランダム文字列を設定したからHS256は安全」と考えてしまうケースが少なくありません。実際に効いているのは文字数ではなくバイト数です。 この記事では、シークレットキーの長さをバイト数で確認する方法と、実務でそのまま使える生成・確認の手順をまとめます。 HMAC-SHA256（HS256）では、推奨される鍵長は 256 ビット = 32 バイトです。ここでいう 32 は「32文字」ではなく「32バイト」です。 openssl rand -hex 32 が生成するの...]]></content>
+        <author>
+            <name>Gary Yan</name>
+        </author>
+        <published>2026-11-28T13:38:42.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[条件付きアクセスがあればSSEは不要？ ―「サインインの瞬間」と「通信の中身」で、アクセス制御の線を引く | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/yohei_tech/articles/e0630b0891b80e</id>
+        <link href="https://zenn.dev/yohei_tech/articles/e0630b0891b80e"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--QBeU2MxJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259D%25A1%25E4%25BB%25B6%25E4%25BB%2598%25E3%2581%258D%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%258C%25E3%2581%2582%25E3%2582%258C%25E3%2581%25B0SSE%25E3%2581%25AF%25E4%25B8%258D%25E8%25A6%2581%25EF%25BC%259F%2520%25E2%2580%2595%25E3%2580%258C%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%25AE%25E7%259E%25AC%25E9%2596%2593%25E3%2580%258D%25E3%2581%25A8%25E3%2580%258C%25E9%2580%259A%25E4%25BF%25A1%25E3%2581%25AE%25E4%25B8%25AD%25E8%25BA%25AB%25E3%2580%258D%25E3%2581%25A7%25E3%2580%2581%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E5%2588%25B6%25E5%25BE%25A1%25E3%2581%25AE%25E7%25B7%259A%25E3%2582%2592%25E5%25BC%2595%25E3%2581%258F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yohei_tech%2520%257C%2520AX%25E3%2583%25BBDX...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzE5ZGEzOGQwZjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T13:27:44.000Z</updated>
+        <summary type="html"><![CDATA[この記事の情報は2026年11月時点のものです。各製品の機能やライセンスの範囲は変わることがあります。検討の際は最新の公式情報を確認してください。 前回の記事「M365 A5を入れるとゼロトラスト？」では、ライセンスの線引きを扱いました。今回はその続編で、アクセス制御の線引きを扱います。 校務DXの検討では、次のような質問をよく受けます。 「条件付きアクセスを入れたので、もう SSE はいらないで]]></summary>
+        <content type="html"><![CDATA[この記事の情報は2026年11月時点のものです。各製品の機能やライセンスの範囲は変わることがあります。検討の際は最新の公式情報を確認してください。 前回の記事「M365 A5を入れるとゼロトラスト？」では、ライセンスの線引きを扱いました。今回はその続編で、アクセス制御の線引きを扱います。 校務DXの検討では、次のような質問をよく受けます。 「条件付きアクセスを入れたので、もう SSE はいらないですよね？」 結論を先に書きます。多くの学校では、条件付きアクセスや Context-Aware Access（CAA）で足ります。ただし、それで守れる範囲には線があります。その線を超えるニーズが...]]></content>
+        <author>
+            <name>yohei_tech | AX・DX・セキュリティ</name>
+        </author>
+        <published>2026-11-28T13:27:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[リモートワークと海外サービス利用にExpressVPNを使う理由｜安全な接続と快適な通信のための入門ガイド | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/aisupportworks/articles/f3dd448a9f7670</id>
+        <link href="https://zenn.dev/aisupportworks/articles/f3dd448a9f7670"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s---_8i9i8q--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AA%25E3%2583%25A2%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2581%25A8%25E6%25B5%25B7%25E5%25A4%2596%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%25ABExpressVPN%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E7%2590%2586%25E7%2594%25B1%25EF%25BD%259C%25E5%25AE%2589%25E5%2585%25A8%25E3%2581%25AA%25E6%258E%25A5%25E7%25B6%259A%25E3%2581%25A8%25E5%25BF%25AB%25E9%2581%25A9%25E3%2581%25AA%25E9%2580%259A%25E4%25BF%25A1%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E5%2585%25A5%25E9%2596%2580%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:AI%25E3%2582%25B5%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%25B9%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHZFQ1ljMXV6cWktZ1Rlb19lV2t4eW9kMHFHdjRoeGE1dE5XWi10eGg1X29rYndNNF89czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T13:14:49.000Z</updated>
+        <summary type="html"><![CDATA[リモートワークが当たり前になり、カフェやコワーキングスペース、ホテル、出張先の空港など、自宅やオフィス以外の場所から仕事をする機会が増えました。同時に、海外のWebサービスや動画配信、海外拠点のサーバー、海外のクラウドツールを使う場面も日常的になっています。 そのときに意外と見落とされがちなのが、「今つないでいる回線は本当に安全か」「海外サービスに安定してアクセスできているか」という点です。この記]]></summary>
+        <content type="html"><![CDATA[リモートワークが当たり前になり、カフェやコワーキングスペース、ホテル、出張先の空港など、自宅やオフィス以外の場所から仕事をする機会が増えました。同時に、海外のWebサービスや動画配信、海外拠点のサーバー、海外のクラウドツールを使う場面も日常的になっています。 そのときに意外と見落とされがちなのが、「今つないでいる回線は本当に安全か」「海外サービスに安定してアクセスできているか」という点です。この記事では、その対策としてVPN（Virtual Private Network）を使い、ExpressVPNを具体例として紹介します。なぜリモートワークと海外サービス利用にVPNが役立つのか、Ex...]]></content>
+        <author>
+            <name>AIサポートワークス</name>
+        </author>
+        <published>2026-11-28T13:14:49.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[安全にパスキー認証を実装する | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/yasuakiomokawa/articles/61c5d1488d4fca</id>
+        <link href="https://zenn.dev/yasuakiomokawa/articles/61c5d1488d4fca"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--1I59KUsB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25AE%2589%25E5%2585%25A8%25E3%2581%25AB%25E3%2583%2591%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25BC%25E8%25AA%258D%25E8%25A8%25BC%25E3%2582%2592%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yasuaki%2520Omokawa%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzNmOTUyODI3YjYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T11:52:57.000Z</updated>
+        <summary type="html"><![CDATA[パスキー認証をはじめて実装する人 パスキーの概念は知っていて、自分のプロダクトに入れる時に気を付ける所を先に知っておきたい人 WebAuthn の仕様の解説でも、library の使い方の解説でもありません。実装して分かった、安全に関わる注意点の記録です。 前回の記事「実践パスキー認証設計」は、実装の前に書いた設計の記録でした。この記事はその設計で実装した後のふりかえりです。 題名の「安全に」には]]></summary>
+        <content type="html"><![CDATA[パスキー認証をはじめて実装する人 パスキーの概念は知っていて、自分のプロダクトに入れる時に気を付ける所を先に知っておきたい人 WebAuthn の仕様の解説でも、library の使い方の解説でもありません。実装して分かった、安全に関わる注意点の記録です。 前回の記事「実践パスキー認証設計」は、実装の前に書いた設計の記録でした。この記事はその設計で実装した後のふりかえりです。 題名の「安全に」には 2 つの意味があります。1 つは攻撃者に破られないこと。もう 1 つは開発者がうっかり守りを外せないことです。私は後者を仕組みで保証すると、実装の品質とスピードが上がると考えています。 以下、...]]></content>
+        <author>
+            <name>Yasuaki Omokawa</name>
+        </author>
+        <published>2026-11-28T11:52:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI時代のセキュリティ地図 ― 5つの制御点で「何が変わり、何が変わらないか」を整理 | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/show1313/articles/4944cc71cf615b</id>
+        <link href="https://zenn.dev/show1313/articles/4944cc71cf615b"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--BtYqO-Cv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25AE%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E5%259C%25B0%25E5%259B%25B3%2520%25E2%2580%2595%25205%25E3%2581%25A4%25E3%2581%25AE%25E5%2588%25B6%25E5%25BE%25A1%25E7%2582%25B9%25E3%2581%25A7%25E3%2580%258C%25E4%25BD%2595%25E3%2581%258C%25E5%25A4%2589%25E3%2582%258F%25E3%2582%258A%25E3%2580%2581%25E4%25BD%2595%25E3%2581%258C%25E5%25A4%2589%25E3%2582%258F%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25E3%2581%258B%25E3%2580%258D%25E3%2582%2592%25E6%2595%25B4%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shojiro%2520Ishio%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyL2YzNTZkNWIzYmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T11:00:06.000Z</updated>
+        <summary type="html"><![CDATA[本記事は個人の見解であり、所属する組織の公式見解ではありません。また、AI Agent向けセキュリティ製品のカテゴリ名や定義はベンダー・調査会社ごとに異なり、市場は形成途上です。記載内容は2026年11月時点の整理であり、今後変わる可能性があります。 AI Agentが社内に入り込み、攻撃者もAgentを使い始めました。「AI向けのセキュリティ製品が次々に出てくるが、既存の製品とどう違うのか」「全]]></summary>
+        <content type="html"><![CDATA[本記事は個人の見解であり、所属する組織の公式見解ではありません。また、AI Agent向けセキュリティ製品のカテゴリ名や定義はベンダー・調査会社ごとに異なり、市場は形成途上です。記載内容は2026年11月時点の整理であり、今後変わる可能性があります。 AI Agentが社内に入り込み、攻撃者もAgentを使い始めました。「AI向けのセキュリティ製品が次々に出てくるが、既存の製品とどう違うのか」「全部入れ替えるのか、足すだけで済むのか」という疑問を持つ方は多いと思います。 本記事では、従来のセキュリティ製品の地図を出発点に、AI Agent時代に何が変わり、何が変わらないのかを整理します。...]]></content>
+        <author>
+            <name>Shojiro Ishio</name>
+        </author>
+        <published>2026-11-28T11:00:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI×Security Conference 2026参加レポート：5社の講演から学んだ、AI時代のセキュリティに必要な4つのこと | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/shachikutoshi/articles/7e754b48100af6</id>
+        <link href="https://zenn.dev/shachikutoshi/articles/7e754b48100af6"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--Ue0Cz1SM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25C3%2597Security%2520Conference%25202026%25E5%258F%2582%25E5%258A%25A0%25E3%2583%25AC%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25EF%25BC%259A5%25E7%25A4%25BE%25E3%2581%25AE%25E8%25AC%259B%25E6%25BC%2594%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2582%2593%25E3%2581%25A0%25E3%2580%2581AI%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25AE%25E3%2582%25BB%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E3%2581%25AB...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A1%25E3%2582%2583%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T08:56:56.000Z</updated>
+        <summary type="html"><![CDATA[2026年10月28日、Findy主催の「AI×Security Conference 2026」に参加してきました。 近年生成AIを活用した開発が急速に普及しています。私自身も普段の業務でAIを利用したコード生成や実装を行っており、開発効率が向上する一方で外部パッケージをどこまで信用してよいのか、エージェントにどこまで権限を与えていいのか考える機会が増えていました。 今回の記事では、特に印象に残]]></summary>
+        <content type="html"><![CDATA[2026年10月28日、Findy主催の「AI×Security Conference 2026」に参加してきました。 近年生成AIを活用した開発が急速に普及しています。私自身も普段の業務でAIを利用したコード生成や実装を行っており、開発効率が向上する一方で外部パッケージをどこまで信用してよいのか、エージェントにどこまで権限を与えていいのか考える機会が増えていました。 今回の記事では、特に印象に残ったGitHub、Docker、Postman、GMO、Ikotas Labsの講演の内容を紹介します。 最初に今回の講演を通じて特に重要だと感じたことを4つ挙げます。 npmなどの外部パッケー...]]></content>
+        <author>
+            <name>としちゃん</name>
+        </author>
+        <published>2026-11-28T08:56:56.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Continuum for Code Vulnerabilities を PHP リポジトリで検証してみた | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/mafukuda/articles/aws-continuum-code-vuln-review</id>
+        <link href="https://zenn.dev/mafukuda/articles/aws-continuum-code-vuln-review"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--oN8wmKF9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520Continuum%2520for%2520Code%2520Vulnerabilities%2520%25E3%2582%2592%2520PHP%2520%25E3%2583%25AA%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E3%2581%25A7%25E6%25A4%259C%25E8%25A8%25BC%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Hook%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dHU3ZMRUg2V2ZILTA1VEVSZ1ZVczZZWTMyREFZUDZESEhqMlJtNUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T08:38:45.000Z</updated>
+        <summary type="html"><![CDATA[GA した AWS Continuum for Code Vulnerabilities を、実在の PHP リポジトリ（自前コード約4.5万行）に S3 連携で実際にかけて、公称どおりの精度・挙動なのかを確かめました。 TL;DR 自動検出に加え、精度を測るため 既知・修正済み・“ウソ” の検出を投入。課題は計 22件（重大5・高7・中6・低4）。 誤検知抑制は効いた：わざと作ったウソ（安全なコ]]></summary>
+        <content type="html"><![CDATA[GA した AWS Continuum for Code Vulnerabilities を、実在の PHP リポジトリ（自前コード約4.5万行）に S3 連携で実際にかけて、公称どおりの精度・挙動なのかを確かめました。 TL;DR 自動検出に加え、精度を測るため 既知・修正済み・“ウソ” の検出を投入。課題は計 22件（重大5・高7・中6・低4）。 誤検知抑制は効いた：わざと作ったウソ（安全なコード）や、すでに直っている指摘を「悪用可能」に昇格させなかった。 一方で公称との差：この PHP では 攻撃コードの実行（動的検証）は行われず、判定はソース解析のみ（Static / SOURC...]]></content>
+        <author>
+            <name>Hook</name>
+        </author>
+        <published>2026-11-28T08:38:45.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Someone Opened Links From "Zero Data Retention" Prompts Days Later | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/neotechpark/articles/ab8de45074873e</id>
+        <link href="https://zenn.dev/neotechpark/articles/ab8de45074873e"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s---DqHLddZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Someone%2520Opened%2520Links%2520From%2520%2522Zero%2520Data%2520Retention%2522%2520Prompts%2520D...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NeoTechPark%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzMwODIzODBlOWEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T07:41:51.000Z</updated>
+        <summary type="html"><![CDATA[Say you paste an error log into a coding agent. Somewhere in that log is a staging URL with a token in the query string. You don't worry about it, because you picked a provider with the "Zero Data Ret]]></summary>
+        <content type="html"><![CDATA[Say you paste an error log into a coding agent. Somewhere in that log is a staging URL with a token in the query string. You don't worry about it, because you picked a provider with the "Zero Data Retention" label. The prompt gets processed and thrown away. That's the deal. On November 21, some O...]]></content>
+        <author>
+            <name>NeoTechPark</name>
+        </author>
+        <published>2026-11-28T07:41:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「エージェントの権限」ではなく「実行の境界」で守る：AIエージェント時代のサンドボックス設計メモ | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/vakeeshmoorthy/articles/f83d093a7bc6e4</id>
+        <link href="https://zenn.dev/vakeeshmoorthy/articles/f83d093a7bc6e4"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--ves1Z-tf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258C%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AE%25E6%25A8%25A9%25E9%2599%2590%25E3%2580%258D%25E3%2581%25A7%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%258F%25E3%2580%258C%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%25AE%25E5%25A2%2583%25E7%2595%258C%25E3%2580%258D%25E3%2581%25A7%25E5%25AE%2588%25E3%2582%258B%25EF%25BC%259AAI%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25B3%25E3%2583%2588%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25AE%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2589%25E3%2583%259C%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25B9%25E8%25A8%25AD%25E8%25A8%2588%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Vakeesh%2520Moorthy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvdi5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T07:32:10.000Z</updated>
+        <summary type="html"><![CDATA[AIエージェントの安全性というと、プロンプトインジェクション対策や権限の最小化が語られがちです。もちろん大事ですが、もう一段下の層、実行の境界も同じくらい重要だと感じています。 このメモでは、その境界の置き方を整理し、最後に公式ドキュメントどおりの手順で Firecracker microVM のサンドボックスを起動するところまで書きます。 私は Sandscale の創業メンバーの Vakees]]></summary>
+        <content type="html"><![CDATA[AIエージェントの安全性というと、プロンプトインジェクション対策や権限の最小化が語られがちです。もちろん大事ですが、もう一段下の層、実行の境界も同じくらい重要だと感じています。 このメモでは、その境界の置き方を整理し、最後に公式ドキュメントどおりの手順で Firecracker microVM のサンドボックスを起動するところまで書きます。 私は Sandscale の創業メンバーの Vakeesh です。利益相反があるので、先に書いておきます。 コーディングエージェントは、コードを書くだけでなく、人間がレビューする前に実行することがあります。ツール呼び出しも同様です。そのコードを、共有...]]></content>
+        <author>
+            <name>Vakeesh Moorthy</name>
+        </author>
+        <published>2026-11-28T07:32:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MCP 公式の filesystem サーバーを読み取り専用にする2つの起動オプション、拒否のされ方が違った | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/ma2no4413/articles/mcp-filesystem-readonly-jsonrpc-verify</id>
+        <link href="https://zenn.dev/ma2no4413/articles/mcp-filesystem-readonly-jsonrpc-verify"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--LRLdbAwR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:MCP%2520%25E5%2585%25AC%25E5%25BC%258F%25E3%2581%25AE%2520filesystem%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2582%2592%25E8%25AA%25AD%25E3%2581%25BF%25E5%258F%2596%25E3%2582%258A%25E5%25B0%2582%25E7%2594%25A8%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B2%25E3%2581%25A4%25E3%2581%25AE%25E8%25B5%25B7%25E5%258B%2595%25E3%2582%25AA%25E3%2583%2597%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2580%2581%25E6%258B%2592%25E5%2590%25A6%25E3%2581%25AE%25E3%2581%2595%25E3%2582%258C%25E6%2596%25B9%25E3%2581%258C%25E9%2581%2595%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ma2no4413%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzllYjUzNmUwMjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T07:00:59.000Z</updated>
+        <summary type="html"><![CDATA[MCP の公式 filesystem サーバー（@modelcontextprotocol/server-filesystem）に、ファイルを読むだけに絞れる --read-only と、一部のディレクトリだけ保護する --read-only-dir があります。 AI エージェントにファイルを読ませると、読んだ文書に仕込まれた指示（プロンプトインジェクション）で、エージェントが書き込みのツールを]]></summary>
+        <content type="html"><![CDATA[MCP の公式 filesystem サーバー（@modelcontextprotocol/server-filesystem）に、ファイルを読むだけに絞れる --read-only と、一部のディレクトリだけ保護する --read-only-dir があります。 AI エージェントにファイルを読ませると、読んだ文書に仕込まれた指示（プロンプトインジェクション）で、エージェントが書き込みのツールを呼ぶことがあります。そのとき効くのは、クライアントの画面や承認の設定とは別に、サーバー自身が書き込みを拒否するかどうかです。README を読めば仕様はわかりますが、「クライアント側の設定に関係...]]></content>
+        <author>
+            <name>ma2no4413</name>
+        </author>
+        <published>2026-11-28T07:00:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIに「消していい？」と聞かれたら — 副作用を予算化する6プロセス設計 | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/kohaku912/articles/e64aafabbd01cc</id>
+        <link href="https://zenn.dev/kohaku912/articles/e64aafabbd01cc"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--NpAVCXN9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2581%25AB%25E3%2580%258C%25E6%25B6%2588%25E3%2581%2597%25E3%2581%25A6%25E3%2581%2584%25E3%2581%2584%25EF%25BC%259F%25E3%2580%258D%25E3%2581%25A8%25E8%2581%259E%25E3%2581%258B%25E3%2582%258C%25E3%2581%259F%25E3%2582%2589%2520%25E2%2580%2594%2520%25E5%2589%25AF%25E4%25BD%259C%25E7%2594%25A8%25E3%2582%2592%25E4%25BA%2588%25E7%25AE%2597%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B6%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25BB%25E3%2582%25B9%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kohaku%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTDFQRjI1ejlRemlLTkwtZXRmN1pLSjZwTl9rZTlXbHBETWs3RmhLZHZRVjJFTThXRU49czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T06:31:39.000Z</updated>
+        <summary type="html"><![CDATA[対象: AIエージェントを業務や個人ツールに組み込み始めた人。 前提: LLMの性能を上げる話はしません。壊れる範囲を小さくする話だけをします。 エージェントにファイルを書かせ、コマンドを実行させ、メールを送らせていると、ある日こうなります。 テスト用のつもりで本番のDBを更新した 「整理して」と言ったら、消してほしくないファイルまで消えた 失敗した処理をリトライし続けて、APIを叩きすぎた どれ]]></summary>
+        <content type="html"><![CDATA[対象: AIエージェントを業務や個人ツールに組み込み始めた人。 前提: LLMの性能を上げる話はしません。壊れる範囲を小さくする話だけをします。 エージェントにファイルを書かせ、コマンドを実行させ、メールを送らせていると、ある日こうなります。 テスト用のつもりで本番のDBを更新した 「整理して」と言ったら、消してほしくないファイルまで消えた 失敗した処理をリトライし続けて、APIを叩きすぎた どれも「LLMが馬鹿だった」で片づけられます。ですが、同じモデルを使っていても、壊れない構成は作れます。 この記事では、私が6プロセスの自律システム AEGIS を作る中で残った設計だけを書きます。...]]></content>
+        <author>
+            <name>Kohaku</name>
+        </author>
+        <published>2026-11-28T06:31:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[社内向けAmazon BedrockをPoCから本番水準に引き上げる5つのTerraform実務設計 | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/cerezohack/articles/acad49303f793a</id>
+        <link href="https://zenn.dev/cerezohack/articles/acad49303f793a"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s---FEc1_84--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25A4%25BE%25E5%2586%2585%25E5%2590%2591%25E3%2581%2591Amazon%2520Bedrock%25E3%2582%2592PoC%25E3%2581%258B%25E3%2582%2589%25E6%259C%25AC%25E7%2595%25AA%25E6%25B0%25B4%25E6%25BA%2596%25E3%2581%25AB%25E5%25BC%2595%25E3%2581%258D%25E4%25B8%258A%25E3%2581%2592%25E3%2582%258B5%25E3%2581%25A4%25E3%2581%25AETerraform%25E5%25AE%259F%25E5%258B%2599%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:CloudInfra%2520Kit%2520Lab%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTEZ2clFiNVJWT0J3QlFKYVhTQ2VDWG9DRUhLT3NBSmx4d01jRzBFeFY2YkJ5NXNyeTg9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T06:25:02.000Z</updated>
+        <summary type="html"><![CDATA[この記事の対象読者 社内でAmazon Bedrockを使ったチャット・業務自動化PoCを進めている情シス・インフラ担当の方 顧客向けに「閉域・監査ログ・ガードレール・予算制御」を満たすBedrock基盤を設計したいSIer・SREの方 Amazon BedrockをBoto3やLangChainから呼び出すだけなら、数行のコードで動きます。 しかし、いざ**社内本番導入やセキュリティチェック（情]]></summary>
+        <content type="html"><![CDATA[この記事の対象読者 社内でAmazon Bedrockを使ったチャット・業務自動化PoCを進めている情シス・インフラ担当の方 顧客向けに「閉域・監査ログ・ガードレール・予算制御」を満たすBedrock基盤を設計したいSIer・SREの方 Amazon BedrockをBoto3やLangChainから呼び出すだけなら、数行のコードで動きます。 しかし、いざ**社内本番導入やセキュリティチェック（情シス・監査審査）**の段階になると、必ず次の5つを問われます。 「プロンプトや社内データがインターネットを経由しないか？」 「誰がいつ何を聞き、AIが何を返したか監査ログを暗号化して残せるか？」...]]></content>
+        <author>
+            <name>CloudInfra Kit Lab</name>
+        </author>
+        <published>2026-11-28T06:25:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「なんとなく Bearer」から卒業する AI と一次情報で学ぶ Web 認証 | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/daiju81/articles/272b98f9271c8c</id>
+        <link href="https://zenn.dev/daiju81/articles/272b98f9271c8c"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--wdgERpSi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258C%25E3%2581%25AA%25E3%2582%2593%25E3%2581%25A8%25E3%2581%25AA%25E3%2581%258F%2520Bearer%25E3%2580%258D%25E3%2581%258B%25E3%2582%2589%25E5%258D%2592%25E6%25A5%25AD%25E3%2581%2599%25E3%2582%258B%2520AI%2520%25E3%2581%25A8%25E4%25B8%2580%25E6%25AC%25A1%25E6%2583%2585%25E5%25A0%25B1%25E3%2581%25A7%25E5%25AD%25A6%25E3%2581%25B6%2520Web%2520%25E8%25AA%258D%25E8%25A8%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Daiju%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdGF0aWMuemVubi5zdHVkaW8vdXNlci11cGxvYWQvYXZhdGFyLzcyZjdiNGU0NjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T05:21:23.000Z</updated>
+        <summary type="html"><![CDATA[この記事は、私が Web 認証を学んだ過程を記録した個人のキャッチアップです。一次情報と照らし合わせて書いていますが、内容の正確性や最新性は保証できません。業務やプロダクトに適用する場合は、公式ドキュメントや仕様を確認し、ご自身の判断と責任で担保してください。 React でフロントエンドを書いてきましたが、Cookie 認証とトークン認証の違いを、人に説明できるほどに理解していませんでした。 認]]></summary>
+        <content type="html"><![CDATA[この記事は、私が Web 認証を学んだ過程を記録した個人のキャッチアップです。一次情報と照らし合わせて書いていますが、内容の正確性や最新性は保証できません。業務やプロダクトに適用する場合は、公式ドキュメントや仕様を確認し、ご自身の判断と責任で担保してください。 React でフロントエンドを書いてきましたが、Cookie 認証とトークン認証の違いを、人に説明できるほどに理解していませんでした。 認証の部分のコードを見てみても、Bearer が付いているからトークン認証かな、Cookie にセッション ID が入っているからセッション認証かな、くらいにしか思えていませんでした。 この記事は...]]></content>
+        <author>
+            <name>Daiju</name>
+        </author>
+        <published>2026-11-28T05:21:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[コードを実行する MCP サーバーを入れる前に確認したい10項目 | Zennの「Security」のフィード]]></title>
+        <id>https://zenn.dev/sandscale/articles/e5e2e8a240f72d</id>
+        <link href="https://zenn.dev/sandscale/articles/e5e2e8a240f72d"/>
+        <link rel="enclosure" href="https://res.cloudinary.com/zenn/image/upload/s--e9KEt6z1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%2520MCP%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2582%2592%25E5%2585%25A5%25E3%2582%258C%25E3%2582%258B%25E5%2589%258D%25E3%2581%25AB%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2597%25E3%2581%259F%25E3%2581%258410%25E9%25A0%2585%25E7%259B%25AE%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Sandscale%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACMTiAE" type="image/png"/>
+        <updated>2026-11-28T05:16:36.000Z</updated>
+        <summary type="html"><![CDATA[MCP のツールにコード実行を許すと、モデルが読んだ文章がそのままコマンドになり得ます。この記事では、コードを実行する MCP サーバーを AI エージェントにつなぐ前に確認したい10項目を、自社のサーバーも含めて、理由とともに整理します。 この記事は、サンドボックスサービス Sandscale を提供しているチームが書いています。各項目の「Sandscale の場合」は、同サービスの公式ドキュメ]]></summary>
+        <content type="html"><![CDATA[MCP のツールにコード実行を許すと、モデルが読んだ文章がそのままコマンドになり得ます。この記事では、コードを実行する MCP サーバーを AI エージェントにつなぐ前に確認したい10項目を、自社のサーバーも含めて、理由とともに整理します。 この記事は、サンドボックスサービス Sandscale を提供しているチームが書いています。各項目の「Sandscale の場合」は、同サービスの公式ドキュメントと MCP 仕様に基づく記述であり、筆者が新たに計測したり試験したりした結果ではありません。チェックリスト自体は、どの MCP サーバーにも当てはめられるように書いています。 コード実行 M...]]></content>
+        <author>
+            <name>Sandscale</name>
+        </author>
+        <published>2026-11-28T05:16:36.000Z</published>
+    </entry>
+</feed>

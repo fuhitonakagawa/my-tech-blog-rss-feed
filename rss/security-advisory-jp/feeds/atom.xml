@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/</id>
+    <title>GitHub Security Advisory - Translated Japanese｜企業テックブログRSS</title>
+    <updated>2026-11-28T18:05:46.334Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/security-advisory-jp/feeds/atom.xml"/>
+    <subtitle>GitHub Security Advisory - Translated Japanese：enの記事を日本語に翻訳してまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[[@waline/client] @waline/client は、無許可コメント編集プレビューで XSS を格納する脆弱性 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-crj3-q72p-ggqm</id>
+        <link href="https://github.com/advisories/GHSA-crj3-q72p-ggqm"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-25T15:26:23.000Z</updated>
+        <summary type="html"><![CDATA[概要@waline/client はコメントエディタのライブプレビューをマークし、sanitizer (utils/markdown.ts) でレンダリングし、プレビューは v-html で注入されます。 コメントが編集されると、エディタはコメントの生、未使用のボディ(orig)で表示されます。 管理者とコメント所有者のみが編集できます。 そのため、攻撃者のコメントで編集する管理者は、攻撃者の生の]]></summary>
+        <content type="html"><![CDATA[概要@waline/client はコメントエディタのライブプレビューをマークし、sanitizer (utils/markdown.ts) でレンダリングし、プレビューは v-html で注入されます。 コメントが編集されると、エディタはコメントの生、未使用のボディ(orig)で表示されます。 管理者とコメント所有者のみが編集できます。 そのため、攻撃者のコメントで編集する管理者は、攻撃者の生のHTMLを独自のセッションでレンダリングします。未認証のコメント担当者は、単一の編集クリックでモデレータに対して特権エスカレーション保存されたXSSを達成します。 Detailspackages/client/src/utils/markdown.ts:18-37 はマーク付きのマークダウンをレンダリングし、sanitization 無しで未加工 HTML を返す (クライアントは DOMPurify を束ねない): マークされたリターン。 parse(parseEmoji(content, emojiMap) を文字列として指定します。packages/client/src/componen]]></content>
+        <published>2026-11-25T15:26:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[soapbar] 石けんバー: check_envelope_bsp は、未認証の埋め込まれた証明書(署名の偽造/認証バイパス)を受け入れる | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-859w-52fx-hcm6</id>
+        <link href="https://github.com/advisories/GHSA-859w-52fx-hcm6"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-24T22:41:44.000Z</updated>
+        <summary type="html"><![CDATA[Impactverify_envelope_bsp() は、メッセージからその信頼のアンカーを生成しました。 これは、発信者-untrustedwsse:BinarySecurityTokenからX.509証明書を読み取り、証明書の非before /not-afterの日付だけを検証し、同じ証明書に対する署名を確認しました。 CA チェーンのバリデーション、イシュアー/サブジェールリスト、ピニッシ]]></summary>
+        <content type="html"><![CDATA[Impactverify_envelope_bsp() は、メッセージからその信頼のアンカーを生成しました。 これは、発信者-untrustedwsse:BinarySecurityTokenからX.509証明書を読み取り、証明書の非before /not-afterの日付だけを検証し、同じ証明書に対する署名を確認しました。 CA チェーンのバリデーション、イシュアー/サブジェールリスト、ピニッシングはありませんでした。 成功しているのは、check_envelope_bsp() ですから、エンベロープが埋め込まれた証明書を誰に提供したかだけを証明しました。それは信頼できるパーティーによって署名されたことではありません。 自分の証明書を採掘する攻撃者, 偽造封筒に署名し、トークンの証明書が認証を通過する. 認証として成功したBSP検証を処理する消費者は、(署名の偽造/認証バイパス).verify_envelope() (呼び出し主がx509_certをピン留め) は注目されています。この欠陥は、信頼できるアンカーがメッセージから来たBSPの変種に特異的でした。 Affected ver]]></content>
+        <published>2026-11-24T22:41:44.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ruflo] ruflo MCP ブリッジは、デフォルトの Docker Compose デプロイで未認証のリモート・コードの実行を可能にします | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-c4hm-4h84-2cf3</id>
+        <link href="https://github.com/advisories/GHSA-c4hm-4h84-2cf3"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-24T21:01:10.000Z</updated>
+        <summary type="html"><![CDATA[ruflo/docker-compose.yml で出荷する MCP 橋は認証なしで POST /mcp を露出しました。 docker-compose のデフォルトはブリッジと MongoDB をすべてのインターフェイスにバインドします。 組み合わせて、未認証のネットワーク攻撃者は、ブリッジコンテナ内のツール/コール→ターミナル_実行を呼び出すことができ、シェルをノード(uid 1000)として]]></summary>
+        <content type="html"><![CDATA[ruflo/docker-compose.yml で出荷する MCP 橋は認証なしで POST /mcp を露出しました。 docker-compose のデフォルトはブリッジと MongoDB をすべてのインターフェイスにバインドします。 組み合わせて、未認証のネットワーク攻撃者は、ブリッジコンテナ内のツール/コール→ターミナル_実行を呼び出すことができ、シェルをノード(uid 1000)として取得し、コンテナのエンブからすべてのプロバイダAPIキーを読み込み、犠牲者のキーに攻撃者制御のスファームをスプーンし、将来のAIがインスタンスのすべてのユーザーのために出力されるAgentDB学習ストアに有毒なパターンを主張します。 Terminal_execute に言及するツールブロックリストは、 autopilot フローでのみ強制されました。 POST /mcp と POST /mcp/:group はそれをバイパスしました。 ADR-166フェーズ1-3(ブランチセキュリティ/adr-166-mcp-bridge-rce、PR #2521):デフォルトで曲がるループバック。 パブリッ]]></content>
+        <published>2026-11-24T21:01:10.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[isomorphic-git] isomorphic-git は、攻撃者制御の delta ターゲット サイズ (DoS) から未結合のメモリ割り当てを可能にします。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-9x82-4j54-863h</id>
+        <link href="https://github.com/advisories/GHSA-9x82-4j54-863h"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-23T21:07:02.000Z</updated>
+        <summary type="html"><![CDATA[サマリーpackfile から delta オブジェクトを適用する際、 isomorphic-git は、サーバ制御の targetSize を読み込み、Buffer.alloc(targetSize) を上限なしで呼びます。 git.clone()/git.fetch() に対する 1 つの悪意のある HTTP レスポンスは ~2 GB の割り当て → メモリの排気 / DoS (メモリ制約され]]></summary>
+        <content type="html"><![CDATA[サマリーpackfile から delta オブジェクトを適用する際、 isomorphic-git は、サーバ制御の targetSize を読み込み、Buffer.alloc(targetSize) を上限なしで呼びます。 git.clone()/git.fetch() に対する 1 つの悪意のある HTTP レスポンスは ~2 GB の割り当て → メモリの排気 / DoS (メモリ制約されたホストで処理された) を強制できます。 Detailssrc/utils/applyDelta.js:const sourceSize = readVarIntLE(リーダー)const targetSize = readVarIntLE(リーダー) // 攻撃者制御...ターゲット = Buffer.alloc(ターゲットサイズ) ヘッダーが targetsize = 0x7FFFFFFF (~2 GB) を宣言する 1 つの OBJ_REF_DELTA と 1 バイトのオプは、フルアロケーションを前面に引き起こします。 その後の size-mismatch エラーは GitPackInd]]></content>
+        <published>2026-11-23T21:07:02.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[i18next] i18next は、継承された組み込みオブジェクト(DoS)の破損を可能にし、再発を拡張します。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-6jcc-5g8w-32mx</id>
+        <link href="https://github.com/advisories/GHSA-6jcc-5g8w-32mx"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-23T20:53:00.000Z</updated>
+        <summary type="html"><![CDATA[src/utils.js でサマリーデプス 拡張 (パブリック addResourceBundle(lng、ns、データ、ディープ、上書き) API) は、プロトタイプチェーンを歩く演算子でキーの存在をチェックしました。 継承された組み込み(例:hasOwnProperty、toString、valueOf)と一致するソースキーは、オブジェクトの共有オブジェクトに再発する機能を引き起こしました。 ]]></summary>
+        <content type="html"><![CDATA[src/utils.js でサマリーデプス 拡張 (パブリック addResourceBundle(lng、ns、データ、ディープ、上書き) API) は、プロトタイプチェーンを歩く演算子でキーの存在をチェックしました。 継承された組み込み(例:hasOwnProperty、toString、valueOf)と一致するソースキーは、オブジェクトの共有オブジェクトに再発する機能を引き起こしました。 プロトタイプ。 overwrite: true を使うと、ネストされた値は、その共有組み込みのプロパティを上書きできます。例えば、設定 Object.prototype.hasOwnProperty.call は非callable 値に — プロセス全体で破損し、サービスの回復不能な拒否を引き起こします。 これは、CVE-2026-48713(i18next-fs-backend)とCVE-2026-48714(i18next-http-middleware)と異なるパッケージでsetPath/key-walkingを介してプロトタイプ汚染である。 この問題は、異なるメカニズム(DeepExt]]></content>
+        <published>2026-11-23T20:53:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[xo-server] Xen Orchestra:空のオブジェクトのログイントークン | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-2r3w-c2vx-fv5g</id>
+        <link href="https://github.com/advisories/GHSA-2r3w-c2vx-fv5g"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-23T17:29:29.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション Cookie の解析 ターン認証 Token=j:%7B%7D を {} に変換します。 REST 認証は、文字列を必要としずに XO トークンプロバイダにオブジェクトを渡します。 トークンコレクションは、未濾過されたルックアップとして {} を処理し、最初のトークンを返します。このプロバイダーは、そのトークンの所有者として、未確認であれば認証されます。 認証された /rest]]></summary>
+        <content type="html"><![CDATA[インフォメーション Cookie の解析 ターン認証 Token=j:%7B%7D を {} に変換します。 REST 認証は、文字列を必要としずに XO トークンプロバイダにオブジェクトを渡します。 トークンコレクションは、未濾過されたルックアップとして {} を処理し、最初のトークンを返します。このプロバイダーは、そのトークンの所有者として、未確認であれば認証されます。 認証された /rest/v0/users/me/authentication_tokens は、再利用可能なログイントークン ID を返します。DetailsIn パッケージ/xo-server/src/api/session.mjs では、SignIn(credentials) は、 パラメータ (deprecated SignWithToken とは異なり、トークンを宣言します: { type: 'string') なので、認証情報は行いません。 トークンは、JSON value.packages/xo-server/src/xo-mixins/authentication.mjs、トークンプロバイダー:thi]]></content>
+        <published>2026-11-23T17:29:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@budibase/サーバ] Budibase: ワンタイムの init ガード (`POST /api/global/users/init`) の tenant-confusion バイパスによる、未認証のグローバル admin &amp; データベースの作成 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-25qc-m4pw-2w8r</id>
+        <link href="https://github.com/advisories/GHSA-25qc-m4pw-2w8r"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:50:01.000Z</updated>
+        <summary type="html"><![CDATA[説明概要 自己ホストされている、シングルテナントのBudibaseインスタンス(multiTenancy:false)では、パブリックブートストラップエンドポイントPOST /api/global/users/initは、インスタンスが暫定された後に完全に悪用されます。 "already initialized" ガード (checkAnyUserExists())) は、攻撃者制御テナントから派]]></summary>
+        <content type="html"><![CDATA[説明概要 自己ホストされている、シングルテナントのBudibaseインスタンス(multiTenancy:false)では、パブリックブートストラップエンドポイントPOST /api/global/users/initは、インスタンスが暫定された後に完全に悪用されます。 "already initialized" ガード (checkAnyUserExists())) は、攻撃者制御テナントから派生するテナントスコープのデータベースコンテキスト内で評価されます。 リクエストボディに差し込みます。 テナント層がテナントの制約がないため 単一テナントのデプロイメントで唯一の正当なテナント(デフォルト)にId, 未認証の攻撃者は、ガードが空のユーザーリストを見るように、未使用のテナント名を単に供給し、エンドポイントは、新しいCouchDBデータベース(&lt;tenantId&gt;_global-db)を作成し、グローバル管理者ユーザー文書(admin.global = true, builder.global = true)を内部で作成します。認証なし、CSRFトークンなし。 これは(a) 恒久的に]]></content>
+        <published>2026-11-20T23:50:01.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[@budibase/サーバ] Budibase: ブディベースビルダーでXSSを格納するクロスプライビレッジは、CSPレスビルダーの起源にある`jsonFormatter.format()`で壊れたHTMLエスケープを介してレンダリングされた。 | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-r2q3-7m4h-63qg</id>
+        <link href="https://github.com/advisories/GHSA-r2q3-7m4h-63qg"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:49:47.000Z</updated>
+        <summary type="html"><![CDATA[説明概要 低特権のアプリケーションエンドユーザ(role BASIC)は、ビルダーや管理者ではなく、パブリックなデータ収集フォーム、不正な訪問者)は、通常の行データに HTML/JavaScript ペイロードを保存できます。 ビルダーまたは管理者がそのテーブルをBudibase Builderで開き、Previewが値(データセクションフォーミュラ列エディタ、またはバインディングドローダ)を表す]]></summary>
+        <content type="html"><![CDATA[説明概要 低特権のアプリケーションエンドユーザ(role BASIC)は、ビルダーや管理者ではなく、パブリックなデータ収集フォーム、不正な訪問者)は、通常の行データに HTML/JavaScript ペイロードを保存できます。 ビルダーまたは管理者がそのテーブルをBudibase Builderで開き、Previewが値(データセクションフォーミュラ列エディタ、またはバインディングドローダ)を表すハンドルバーのバインディングを評価すると、保存された値は、生のHTMLとしてレンダリングされ、攻撃者のJavaScriptはBuilderの原点で実行されます。 Builder SPA は nginx によって、Content-Security-Policy (CSP ミドルウェアは、サーバーレンダリングされた公開アプリのドキュメントを /builder/ ではなく飾るのみ) で提供されます。 従って注入されたスクリプトはプロダクトの最も信任の表面でunrestricted動きます-データソースを作成できるadmin/builderのセッションはオートメーションによってサーバー側のJavaSc]]></content>
+        <published>2026-11-20T23:49:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[wcmatch] wcmatch:マルチスターパターン(デフォルトフラグ)に対する信頼できない名前に一致するポリノミアルタイムReDoS | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-53pm-wgxf-c6qf</id>
+        <link href="https://github.com/advisories/GHSA-53pm-wgxf-c6qf"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:49:18.000Z</updated>
+        <summary type="html"><![CDATA[デフォルトフラグで、複数の * ワイルドカードを含むパターンは、多項式時間、k 星の O(n^k) で処理されたファイル名を拒否します。 パターンは、*_*_*_*_*_*.csv のような普通の開発者の定数です。マッチする文字列だけは、攻撃者から来ます。 255バイトのファイル名(共通ファイルシステムの最大値)は、73 s を fnmatch.fnmatch() と 86 s を glob.gl]]></summary>
+        <content type="html"><![CDATA[デフォルトフラグで、複数の * ワイルドカードを含むパターンは、多項式時間、k 星の O(n^k) で処理されたファイル名を拒否します。 パターンは、*_*_*_*_*_*.csv のような普通の開発者の定数です。マッチする文字列だけは、攻撃者から来ます。 255バイトのファイル名(共通ファイルシステムの最大値)は、73 s を fnmatch.fnmatch() と 86 s を glob.globmatch() で取得します。 標準ライブラリのfnmatchは、ミリ秒単位で同じ入力を処理します。 これは GHSA-84v8-qmgq-9g88 とは異なります。このケースでは、アドバイザリーが extglob パターンをカバーしていますが、このケースではフラグや攻撃者制御パターンは必要ありません。 DetailsEvery * は、 .*? (_STAR, wcmatch/_wcparse.py:212; _PATH_STAR [^/]*?, :218) に翻訳され、 _handle_star (:1405-1424):*_*_*_*_*_*.csv -&gt; ^(?s:(?=.)(?!]]></content>
+        <published>2026-11-20T23:49:18.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[inscriptis] Inscriptis: get_text() の &lt;table&gt; 要素をシブルする Quadratic メモリの成長 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-q87h-c5m7-659j</id>
+        <link href="https://github.com/advisories/GHSA-q87h-c5m7-659j"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:48:51.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション すべての兄弟&lt;table&gt;は親のインデントの別のレベルを加えます、従ってget_text()の出力のサイズは表の数と質的に成長します。 下記の測定では、240 KBのHTML文書が約1億文字を生成し、1 GBのメモリを使用する。 Detailstable_end_handler() (model/tag/table_tag.py) は、レンダリングされたテーブルを HtmlEl]]></summary>
+        <content type="html"><![CDATA[インフォメーション すべての兄弟&lt;table&gt;は親のインデントの別のレベルを加えます、従ってget_text()の出力のサイズは表の数と質的に成長します。 下記の測定では、240 KBのHTML文書が約1億文字を生成し、1 GBのメモリを使用する。 Detailstable_end_handler() (model/tag/table_tag.py) は、レンダリングされたテーブルを HtmlElement.write_verbatim_text() (model/html_element.py) で親要素に書きます。 block-level 親の場合、 write_verbatim_text() は、親の padding_inline をプレフィックススタックにプッシュする Canvas.open_block() を呼び出します。 以下の close_block() はポップアップしません。Canvas.close_tag() は prefix.remove_last_prefix() を呼び出します。 従って各テーブルは積み重ねの1つの余分パッドを入れる記入項目を残します。 今回は]]></content>
+        <published>2026-11-20T23:48:51.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[svglib] svglib: svg2rlg の &lt;use&gt; 参照をネストした &lt;use&gt; による指数関数リソース消費 | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-555j-qj3j-c8jv</id>
+        <link href="https://github.com/advisories/GHSA-555j-qj3j-c8jv"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:47:58.000Z</updated>
+        <summary type="html"><![CDATA[サマリーsvg2rlg() は &lt;use&gt; 参照を拡張し、合計数の拡張を制限することなく展開します。 直接サイクルのみが拒否されます(CircularRefError)。 N &lt;use&gt; 要素を含むグループでは、ネスティングレベルごとに N の作業を複数行っているので、約 1.4 KB の SVG は svglib クローンを作成し、100,000 ノードを超えるノードをレンダリングし、 CPU ]]></summary>
+        <content type="html"><![CDATA[サマリーsvg2rlg() は &lt;use&gt; 参照を拡張し、合計数の拡張を制限することなく展開します。 直接サイクルのみが拒否されます(CircularRefError)。 N &lt;use&gt; 要素を含むグループでは、ネスティングレベルごとに N の作業を複数行っているので、約 1.4 KB の SVG は svglib クローンを作成し、100,000 ノードを超えるノードをレンダリングし、 CPU 時間と数百のメモリを 10 秒単位で取得します。 各追加レベルは、約 245 バイト ドキュメントと ~10 年までに複数の時間を追加します。 これは、XML "billion 笑" 攻撃の SVG &lt;use&gt; バリアント (librsvg CVE-2019-20446) と同じクラスです。 DetailsSvgRenderer.renderUse() src/svglib/svglib.py:try: 項目 = self.xlink_href_target(node, group=group) を除く CircularRefError: node.parent.etree_element.r]]></content>
+        <published>2026-11-20T23:47:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[memtomem-stm] memtomem-stm: 同時 LTM 回復は、再接続を複製したり、キャンセルされた輸送セッションを再使用することができます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-72jh-722p-rqr3</id>
+        <link href="https://github.com/advisories/GHSA-72jh-722p-rqr3"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:38:15.000Z</updated>
+        <summary type="html"><![CDATA[同時サーフェック RPC 障害は、同一の汚れたセッションに対して複数の再接続をトリガーし、後再接続時のキャンセルは、中断されたプロトコル交換にもかかわらず、交換セッションの再利用可能な状態を残すことができます。 プライベート・フィックスは、モノトニック・セッションの生成、汚れた世代ごとのシールドされた共有リコネクションフライト、および検索、アクセス・カウント、およびスクラッチ・RPCを横断する生成]]></summary>
+        <content type="html"><![CDATA[同時サーフェック RPC 障害は、同一の汚れたセッションに対して複数の再接続をトリガーし、後再接続時のキャンセルは、中断されたプロトコル交換にもかかわらず、交換セッションの再利用可能な状態を残すことができます。 プライベート・フィックスは、モノトニック・セッションの生成、汚れた世代ごとのシールドされた共有リコネクションフライト、および検索、アクセス・カウント、およびスクラッチ・RPCを横断する生成・アウェア・リノベーション・ハンドリングを導入しています。 重複再接続のサブケースが0.1.24で導入されました。 キャンセルの回復は、ブラーのリストされた範囲に影響します。 参考:https://github.com/memtomem/memtomem-stm/security/advisories/GHSA-72jh-722p-rqr3https://nvd.nist.gov/vuln/detail/CVE-2026-77331https://github.com/memtomem/memtomem-stm/commit/761db1802df7ce4881ff4c3amvvvvu/det]]></content>
+        <published>2026-11-20T23:38:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[memtomem-stm] memtomem-stm: 表面化されたメモリデータは、Markdownの互換性境界をエスケープできます | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-43hx-xm7w-3mhj</id>
+        <link href="https://github.com/advisories/GHSA-43hx-xm7w-3mhj"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:37:39.000Z</updated>
+        <summary type="html"><![CDATA[信頼できない長期および作業記憶分野は、MarkdownまたはHTML互換構造を表面記憶封筒に導入できます。 熟練したメモリは、構造的境界や視覚的に隠蔽されたコンテンツを作成することがあります。 プライベート・フィックスは、不信なフィールドを一行のデータとしてシリアライズし、コピー可能なメモリ識別子を検証し、明示的な信頼できないデータ・プリセットをピン留めします。 通常の自然言語の説得力は残りのモデ]]></summary>
+        <content type="html"><![CDATA[信頼できない長期および作業記憶分野は、MarkdownまたはHTML互換構造を表面記憶封筒に導入できます。 熟練したメモリは、構造的境界や視覚的に隠蔽されたコンテンツを作成することがあります。 プライベート・フィックスは、不信なフィールドを一行のデータとしてシリアライズし、コピー可能なメモリ識別子を検証し、明示的な信頼できないデータ・プリセットをピン留めします。 通常の自然言語の説得力は残りのモデルレベルのリスクを残します。 参考:https://github.com/memtomem/memtomem-stm/security/advisories/GHSA-43hx-xm7w-3mjhttps://nvd.nist.gov/vuln/detail/CVE-2026-77332https://github.com/memtomem/memtomem-stm/commit/3d50ba61cbfafba6db26evdev/detail/CVE-2026-77332https://github.com/memtomem-stm/mem/memamem-stm/com/com/com/c]]></content>
+        <published>2026-11-20T23:37:39.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ait-gui] AIT-GUI のルートチェーンは、サーバープロセスで非認証の Python の実行を可能にします | Security Advisory for Python packages hosted at PyPI.org]]></title>
+        <id>https://github.com/advisories/GHSA-jrjx-9jjw-747m</id>
+        <link href="https://github.com/advisories/GHSA-jrjx-9jjw-747m"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:36:41.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション AIT-GUIサーバーを指示し、任意のPythonスクリプトを実行できる未認証の呼び出し元が、セキュリティの問題が存在します。 攻撃ベクトルは、設定されたスクリプトディレクトリ制限を迂回する絶対ファイルパスを含む悪意のあるPOST /script/runリクエストで、GET /を通してセッションクッキーを取得することを含みます。 Patches2.5.1Impactこの脆弱性は]]></summary>
+        <content type="html"><![CDATA[インフォメーション AIT-GUIサーバーを指示し、任意のPythonスクリプトを実行できる未認証の呼び出し元が、セキュリティの問題が存在します。 攻撃ベクトルは、設定されたスクリプトディレクトリ制限を迂回する絶対ファイルパスを含む悪意のあるPOST /script/runリクエストで、GET /を通してセッションクッキーを取得することを含みます。 Patches2.5.1Impactこの脆弱性は、AIT-GUIサーバー上での未処理のリモートコード実行を可能にします。 ネットワークアクセスを持つ任意の攻撃者は、デーモン特権で任意のPythonコードを実行できます。 詳細チェーン:POST /tlm/query は、AIT-GUI 静的ディレクトリの下の field_in.txt にユーザ制御フィールドの値を書きます。 提供されたdataDirに.pcapファイルがない場合、そのファイルを削除する前に、このルートは予想される400 Bad Requestを返します。 POST /script/runは受け入れます scriptPath=../static/fields_in.txt.AI]]></content>
+        <published>2026-11-20T23:36:41.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[エーデス] Aedesは、例外と非制御のリソース消費を未だにキャッチしています | Security Advisory for JavaScript packages hosted at npmjs.com]]></title>
+        <id>https://github.com/advisories/GHSA-xxqp-5qx8-gj5q</id>
+        <link href="https://github.com/advisories/GHSA-xxqp-5qx8-gj5q"/>
+        <link rel="enclosure" href="https://github.githubassets.com/assets/advisory-database-show-f32c8207dfb2.png" type="image/png"/>
+        <updated>2026-11-20T23:32:35.000Z</updated>
+        <summary type="html"><![CDATA[インフォメーション リモート・デニアル・オブ・サービス(DoS)の脆弱性は、リモート・クライアントがAedes MQTTブローカー・プロセスの完全なクラッシュを引き起こすことを可能にします。 これは、特別に作られた MQTT メッセージ(PUBLISH または SUBSCRIBE 経由)を送信したり、非常に再帰的なトピック文字列を含む、Will メッセージを設定することによって達成されます(例えば]]></summary>
+        <content type="html"><![CDATA[インフォメーション リモート・デニアル・オブ・サービス(DoS)の脆弱性は、リモート・クライアントがAedes MQTTブローカー・プロセスの完全なクラッシュを引き起こすことを可能にします。 これは、特別に作られた MQTT メッセージ(PUBLISH または SUBSCRIBE 経由)を送信したり、非常に再帰的なトピック文字列を含む、Will メッセージを設定することによって達成されます(例えば、数千の '/' 区切り文字)。 入力バリデーションとエラー処理の欠如は、Node.jsアプリケーション全体に用語集する、内部ルーティングライブラリ内の不正な例外につながります。 DetailsThe Aedes ブローカーは、MQTT トピック文字列の深さや構造の複雑さに制限を強制できません。 クライアントが再帰の余りなレベルを持つトピックに公開または購読する場合、内部ルーティングロジックはqlobberライブラリ(mqemitter経由)にキャッシングすると、qlobber._split_words関数内のハードコードされた制限が到達します。 この関数は、ハードエラーをスローします: あま]]></content>
+        <published>2026-11-20T23:32:35.000Z</published>
+    </entry>
+</feed>

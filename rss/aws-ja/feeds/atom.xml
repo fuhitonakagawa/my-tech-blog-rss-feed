@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-ja/</id>
+    <title>AWS 日本語｜企業テックブログRSS</title>
+    <updated>2026-11-28T18:05:32.019Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-ja/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/aws-ja/feeds/atom.xml"/>
+    <subtitle>AWS 日本語セクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[AI の安全性は緊急ブレーキ頼みではなく、より優れたエンジニアリングで実現 | Amazon Web Services ブログ]]></title>
+        <id>https://aws.amazon.com/jp/blogs/news/aws-ceo-ai-safety-engineering/</id>
+        <link href="https://aws.amazon.com/jp/blogs/news/aws-ceo-ai-safety-engineering/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/11/27/aisafety-hero-amazonnews-ck112026-1120x630.png" type="image/png"/>
+        <updated>2026-11-27T12:24:32.000Z</updated>
+        <summary type="html"><![CDATA[AI の安全性は、緊急ブレーキだけに頼るのではなく、エンジニアリングで確保すべきです。信頼できる AI システムを構築するための実践的なツールは既に存在します。本記事では、AWS CEO の Matt Garman が、AI エージェントへの独自のアイデンティティの付与、最小権限、封じ込めの境界、監視対象から独立した監視、自動推論による制御の検証など、実績のあるセキュリティの基本原則を AI に適]]></summary>
+        <content type="html"><![CDATA[AI の安全性は、緊急ブレーキだけに頼るのではなく、エンジニアリングで確保すべきです。信頼できる AI システムを構築するための実践的なツールは既に存在します。本記事では、AWS CEO の Matt Garman が、AI エージェントへの独自のアイデンティティの付与、最小権限、封じ込めの境界、監視対象から独立した監視、自動推論による制御の検証など、実績のあるセキュリティの基本原則を AI に適用する方法を紹介します。また、Nitro や Firecracker を活用し、モデルとは独立してインフラストラクチャレベルで分離を強制する AWS の取り組みも解説します。]]></content>
+        <author>
+            <name>中島 章博</name>
+        </author>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Artificial Intelligence"/>
+        <category label="aws"/>
+        <category label="Innovation"/>
+        <category label="Security Blog"/>
+        <published>2026-11-27T12:24:32.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS のセキュリティ新機能: API と AI エンドポイントの検出から保護までを実現 | Amazon Web Services ブログ]]></title>
+        <id>https://aws.amazon.com/jp/blogs/news/introducing-api-and-ai-security-on-aws-from-discovery-to-protection/</id>
+        <link href="https://aws.amazon.com/jp/blogs/news/introducing-api-and-ai-security-on-aws-from-discovery-to-protection/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/11/26/main-image-2x1-1-1260x630-1.jpg" type="image/jpg"/>
+        <updated>2026-11-27T12:23:09.000Z</updated>
+        <summary type="html"><![CDATA[AI エージェントが API を直接呼び出すようになった今、API と AI エンドポイントを検出して保護するために AWS が 2026 年 11 月に一般提供を開始した 3 つの新機能を紹介します。Amazon API Gateway の API Portal は、シャドー API を含む各種 API と、MCP サーバーなどの AI エンドポイントを同じインベントリにまとめます。AWS WA]]></summary>
+        <content type="html"><![CDATA[AI エージェントが API を直接呼び出すようになった今、API と AI エンドポイントを検出して保護するために AWS が 2026 年 11 月に一般提供を開始した 3 つの新機能を紹介します。Amazon API Gateway の API Portal は、シャドー API を含む各種 API と、MCP サーバーなどの AI エンドポイントを同じインベントリにまとめます。AWS WAF の API Security マネージドルールグループは、トークン改ざんやオブジェクトレベルの認可の不備 (BOLA) などの不正使用に対応します。AI Security マネージドルールグループは、MCP と A2A のプロトコル違反を検出し、Amazon Bedrock Guardrails と連携してプロンプト攻撃をチェックします。ラベルを使った独自ルールの作成方法も解説します。]]></content>
+        <author>
+            <name>中島 章博</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="Artificial Intelligence"/>
+        <category label="AWS WAF"/>
+        <category label="Intermediate (200)"/>
+        <category label="Launch"/>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Security Blog"/>
+        <published>2026-11-27T12:23:09.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Enterprise-Managed Authorization で実現する AI エージェントによる AWS への安全なアクセス | Amazon Web Services ブログ]]></title>
+        <id>https://aws.amazon.com/jp/blogs/news/secure-agentic-access-to-aws-with-enterprise-managed-authorization/</id>
+        <link href="https://aws.amazon.com/jp/blogs/news/secure-agentic-access-to-aws-with-enterprise-managed-authorization/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/11/27/Secure-Agentic-Access-to-AWS-4-1.jpg" type="image/jpg"/>
+        <updated>2026-11-27T12:22:24.000Z</updated>
+        <summary type="html"><![CDATA[AWS サインインが、ID-JAG を使用した Enterprise-Managed Authorization (EMA) のサポートを開始しました。Okta などの既存のエンタープライズ IdP を通じて、AI エージェントによる AWS MCP Server へのアクセスを一元的かつ安全に認可できます。ユーザーが追加の長期的な認証情報を管理する必要はありません。この記事では、EMA と ID]]></summary>
+        <content type="html"><![CDATA[AWS サインインが、ID-JAG を使用した Enterprise-Managed Authorization (EMA) のサポートを開始しました。Okta などの既存のエンタープライズ IdP を通じて、AI エージェントによる AWS MCP Server へのアクセスを一元的かつ安全に認可できます。ユーザーが追加の長期的な認証情報を管理する必要はありません。この記事では、EMA と ID-JAG の仕組み、Okta と IAM ロールを使った設定手順、AWS CloudTrail による認可アクティビティの確認方法、セキュリティのベストプラクティスを紹介します。]]></content>
+        <author>
+            <name>中島 章博</name>
+        </author>
+        <category label="Artificial Intelligence"/>
+        <category label="AWS Identity and Access Management (IAM)"/>
+        <category label="Developer Tools"/>
+        <category label="Intermediate (200)"/>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Technical How-to"/>
+        <category label="AWS IAM"/>
+        <category label="Security Blog"/>
+        <published>2026-11-27T12:22:24.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Network Firewall で自動インターネットファイアウォールモード (プレビュー) の提供を開始 | Amazon Web Services ブログ]]></title>
+        <id>https://aws.amazon.com/jp/blogs/news/aws-network-firewall-introduces-automated-internet-firewall-mode-preview/</id>
+        <link href="https://aws.amazon.com/jp/blogs/news/aws-network-firewall-introduces-automated-internet-firewall-mode-preview/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/11/27/aif-main-image-1200x600-1-1.jpg" type="image/jpg"/>
+        <updated>2026-11-27T12:21:30.000Z</updated>
+        <summary type="html"><![CDATA[AWS Network Firewall の自動インターネットファイアウォールモード (プレビュー) では、一元的に定義したルールを各 VPC のインターネットゲートウェイで適用します。アウトバウンド専用の IPv4 接続には、組み込みの NAT を使用します。VPC ごとにファイアウォールエンドポイントや NAT ゲートウェイをデプロイする必要はありません。この記事では、仕組みとサブネットの接続]]></summary>
+        <content type="html"><![CDATA[AWS Network Firewall の自動インターネットファイアウォールモード (プレビュー) では、一元的に定義したルールを各 VPC のインターネットゲートウェイで適用します。アウトバウンド専用の IPv4 接続には、組み込みの NAT を使用します。VPC ごとにファイアウォールエンドポイントや NAT ゲートウェイをデプロイする必要はありません。この記事では、仕組みとサブネットの接続タイプ、AWS Network Security Manager でのポリシー管理、監視モードから始める導入手順、既存の VPC の移行方法を紹介します。]]></content>
+        <author>
+            <name>中島 章博</name>
+        </author>
+        <category label="Announcements"/>
+        <category label="AWS Network Firewall"/>
+        <category label="Intermediate (200)"/>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Technical How-to"/>
+        <category label="Security Blog"/>
+        <published>2026-11-27T12:21:30.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Network Firewall のコンテキスト対応ルールのご紹介: IP アドレスではなく AWS リソースに基づくトラフィック照合 | Amazon Web Services ブログ]]></title>
+        <id>https://aws.amazon.com/jp/blogs/news/introducing-context-aware-rules-for-aws-network-firewall/</id>
+        <link href="https://aws.amazon.com/jp/blogs/news/introducing-context-aware-rules-for-aws-network-firewall/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/11/27/4026.main_-1.jpg" type="image/jpg"/>
+        <updated>2026-11-27T12:20:58.000Z</updated>
+        <summary type="html"><![CDATA[AWS Network Firewall がコンテキスト対応ルールをサポートするようになりました。このルールは、IP アドレスではなく送信元や送信先の AWS リソースに基づいてトラフィックを照合します。VPC、サブネット、セキュリティグループ、Transit Gateway アタッチメントを指定でき、VPC に接続された Lambda 関数がスケールアウトする場合など、短期間しか存在しないワーク]]></summary>
+        <content type="html"><![CDATA[AWS Network Firewall がコンテキスト対応ルールをサポートするようになりました。このルールは、IP アドレスではなく送信元や送信先の AWS リソースに基づいてトラフィックを照合します。VPC、サブネット、セキュリティグループ、Transit Gateway アタッチメントを指定でき、VPC に接続された Lambda 関数がスケールアウトする場合など、短期間しか存在しないワークロードにもルールが追随します。この記事では、コンテキストストアとトランジットゲートウェイによる仕組み、複数のアカウントにわたる設定手順、ログに記録されるコンテキストを紹介します。]]></content>
+        <author>
+            <name>中島 章博</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Announcements"/>
+        <category label="AWS Network Firewall"/>
+        <category label="Launch"/>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Technical How-to"/>
+        <category label="Security Blog"/>
+        <category label="technical How-to"/>
+        <published>2026-11-27T12:20:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Network Firewall の Next Generation ポリシーの紹介: アクセス制御と脅威防御を個別のエンジンで実現 | Amazon Web Services ブログ]]></title>
+        <id>https://aws.amazon.com/jp/blogs/news/introducing-aws-network-firewall-next-generation-policy/</id>
+        <link href="https://aws.amazon.com/jp/blogs/news/introducing-aws-network-firewall-next-generation-policy/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/11/27/Next-Generation-policy-main-image-1200x600-1-1.jpg" type="image/jpg"/>
+        <updated>2026-11-27T12:20:13.000Z</updated>
+        <summary type="html"><![CDATA[AWS Network Firewall の Next Generation ポリシーでは、アクセス制御を担うファイアウォールエンジンと脅威防御を担う IPS エンジンが分離され、それぞれが独自のルール容量を持ちます。この記事では、Classic ポリシーとの違い、ファイアウォールエンジンがフックとアクションスコープを使ってトラフィックを評価する仕組み、各エンジンが記録するログの読み方、監視モード]]></summary>
+        <content type="html"><![CDATA[AWS Network Firewall の Next Generation ポリシーでは、アクセス制御を担うファイアウォールエンジンと脅威防御を担う IPS エンジンが分離され、それぞれが独自のルール容量を持ちます。この記事では、Classic ポリシーとの違い、ファイアウォールエンジンがフックとアクションスコープを使ってトラフィックを評価する仕組み、各エンジンが記録するログの読み方、監視モードでの検証方法を説明します。さらに、ドメイン許可リストと脅威防御を組み合わせたポリシーの作成例も紹介します。]]></content>
+        <author>
+            <name>中島 章博</name>
+        </author>
+        <category label="Advanced (300)"/>
+        <category label="Announcements"/>
+        <category label="AWS Network Firewall"/>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Technical How-to"/>
+        <category label="Security Blog"/>
+        <published>2026-11-27T12:20:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS-LC でポスト量子暗号の更新を日常的な作業にするアプローチ | Amazon Web Services ブログ]]></title>
+        <id>https://aws.amazon.com/jp/blogs/news/make-post-quantum-cryptography-updates-routine-with-aws-lc/</id>
+        <link href="https://aws.amazon.com/jp/blogs/news/make-post-quantum-cryptography-updates-routine-with-aws-lc/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/11/27/main-2841.png" type="image/png"/>
+        <updated>2026-11-27T12:19:13.000Z</updated>
+        <summary type="html"><![CDATA[ポスト量子暗号 (PQC) への移行を見据え、暗号アルゴリズムの更新を日常的な作業にするための考え方を紹介します。AWS が保守する暗号ライブラリ AWS-LC が、互換性、保証、パフォーマンスという 3 つの特性をどのように実現しているかを説明します。OpenSSL 互換の API、形式的検証、ML-KEM と ML-DSA の最適化に加え、ハイブリッドポスト量子鍵交換と ML-DSA 証明書が]]></summary>
+        <content type="html"><![CDATA[ポスト量子暗号 (PQC) への移行を見据え、暗号アルゴリズムの更新を日常的な作業にするための考え方を紹介します。AWS が保守する暗号ライブラリ AWS-LC が、互換性、保証、パフォーマンスという 3 つの特性をどのように実現しているかを説明します。OpenSSL 互換の API、形式的検証、ML-KEM と ML-DSA の最適化に加え、ハイブリッドポスト量子鍵交換と ML-DSA 証明書が TLS ハンドシェイクに与える影響の測定結果も紹介します。]]></content>
+        <author>
+            <name>中島 章博</name>
+        </author>
+        <category label="Expert (400)"/>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Technical How-to"/>
+        <category label="cryptography"/>
+        <category label="post-quantum cryptography"/>
+        <category label="Security Blog"/>
+        <published>2026-11-27T12:19:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Cognito の Plus 機能プラン: 99.99% のサービスコミットメントを踏まえた可用性計画 | Amazon Web Services ブログ]]></title>
+        <id>https://aws.amazon.com/jp/blogs/news/planning-for-99-99-percent-availability-with-the-amazon-cognito-plus-feature-plan/</id>
+        <link href="https://aws.amazon.com/jp/blogs/news/planning-for-99-99-percent-availability-with-the-amazon-cognito-plus-feature-plan/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/11/27/AWS-Security-Blog-99.99_-Hero-Image-1.jpg" type="image/jpg"/>
+        <updated>2026-11-27T12:17:52.000Z</updated>
+        <summary type="html"><![CDATA[AWS は、Amazon Cognito の Plus 機能プランのユーザープールについて、2026 年 11 月 1 日から月間稼働率に関する SLA のサービスコミットメントを従来の 99.9% から 99.99% に引き上げました。既に Plus を利用しているユーザープールには自動的に適用されます。この記事では、引き上げの理由、サービスクレジット、5 分単位の区間で可用性を測定する方法、2]]></summary>
+        <content type="html"><![CDATA[AWS は、Amazon Cognito の Plus 機能プランのユーザープールについて、2026 年 11 月 1 日から月間稼働率に関する SLA のサービスコミットメントを従来の 99.9% から 99.99% に引き上げました。既に Plus を利用しているユーザープールには自動的に適用されます。この記事では、引き上げの理由、サービスクレジット、5 分単位の区間で可用性を測定する方法、2025 年 11 月から 2026 年 10 月までの可用性の実績を紹介します。あわせて、AWS マネジメントコンソールなどでユーザープールを Plus に切り替える手順も説明します。]]></content>
+        <author>
+            <name>中島 章博</name>
+        </author>
+        <category label="Amazon Cognito"/>
+        <category label="Intermediate (200)"/>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Technical How-to"/>
+        <category label="Security Blog"/>
+        <published>2026-11-27T12:17:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Cognito のポイントインタイムリカバリ (PITR) によるアイデンティティデータの保護 | Amazon Web Services ブログ]]></title>
+        <id>https://aws.amazon.com/jp/blogs/news/protect-identity-data-with-point-in-time-recovery-in-amazon-cognito/</id>
+        <link href="https://aws.amazon.com/jp/blogs/news/protect-identity-data-with-point-in-time-recovery-in-amazon-cognito/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/11/27/Blog-Post_thumbnail.png" type="image/png"/>
+        <updated>2026-11-27T12:17:00.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Cognito ユーザープールのポイントインタイムリカバリ (PITR) を使用して、誤った一括操作の後にユーザープールを復旧し、アイデンティティデータを保護する方法を紹介します。リカバリの開始、プレビューでの影響件数の確認、承認またはキャンセルという 3 つのステップを説明します。あわせて、sub 識別子やアプリケーションの統合が変わらない点や、開始と承認の権限分離などのセキュリテ]]></summary>
+        <content type="html"><![CDATA[Amazon Cognito ユーザープールのポイントインタイムリカバリ (PITR) を使用して、誤った一括操作の後にユーザープールを復旧し、アイデンティティデータを保護する方法を紹介します。リカバリの開始、プレビューでの影響件数の確認、承認またはキャンセルという 3 つのステップを説明します。あわせて、sub 識別子やアプリケーションの統合が変わらない点や、開始と承認の権限分離などのセキュリティに関する考慮事項も解説します。]]></content>
+        <author>
+            <name>中島 章博</name>
+        </author>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="Security Blog"/>
+        <published>2026-11-27T12:17:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Nitro System がお客様の最も機密性の高いデータを保護する仕組み | Amazon Web Services ブログ]]></title>
+        <id>https://aws.amazon.com/jp/blogs/news/aws-nitro-system-customer-data-privacy/</id>
+        <link href="https://aws.amazon.com/jp/blogs/news/aws-nitro-system-customer-data-privacy/"/>
+        <link rel="enclosure" href="https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2026/11/27/eyecatch_How-the-AWS-Nitro-System-prote.jpg" type="image/jpg"/>
+        <updated>2026-11-27T12:15:56.000Z</updated>
+        <summary type="html"><![CDATA[AWS Nitro System は、新しい世代のすべての Amazon EC2 インスタンスを支える独自のハードウェアとソフトウェアです。AWS のオペレーターがお客様のデータにアクセスする手段を一切持たないように設計されています。本記事では、Xen ハイパーバイザーから Nitro Card への処理の移行と、転送中の暗号化やメモリ暗号化などの保護機能を紹介します。さらに、分離を担う Nitr]]></summary>
+        <content type="html"><![CDATA[AWS Nitro System は、新しい世代のすべての Amazon EC2 インスタンスを支える独自のハードウェアとソフトウェアです。AWS のオペレーターがお客様のデータにアクセスする手段を一切持たないように設計されています。本記事では、Xen ハイパーバイザーから Nitro Card への処理の移行と、転送中の暗号化やメモリ暗号化などの保護機能を紹介します。さらに、分離を担う Nitro Isolation Engine の仕組みと、AWS が形式的検証によって証明したその 4 つの性質を解説します。]]></content>
+        <author>
+            <name>中島 章博</name>
+        </author>
+        <category label="Security, Identity, &amp; Compliance"/>
+        <category label="AWS Nitro System"/>
+        <category label="Security Blog"/>
+        <published>2026-11-27T12:15:56.000Z</published>
+    </entry>
+</feed>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/</id>
+    <title>DevelopersIO｜企業テックブログRSS</title>
+    <updated>2026-11-28T18:05:31.876Z</updated>
+    <generator>fuhitonakagawa/my-tech-blog-rss-feed</generator>
+    <link rel="alternate" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/"/>
+    <link rel="self" href="https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/rss/developersio/feeds/atom.xml"/>
+    <subtitle>DevelopersIOセクションのブログ更新をまとめたRSSフィード</subtitle>
+    <logo>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/icon.png</logo>
+    <icon>https://fuhitonakagawa.github.io/my-tech-blog-rss-feed/images/favicon.ico</icon>
+    <rights>fuhitonakagawa/my-tech-blog-rss-feed</rights>
+    <entry>
+        <title type="html"><![CDATA[Kiro Enterprise で GPT 6 Luna が Preview として利用できるようになりました | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/kiro-enterprise-gpt-6-luna/</id>
+        <link href="https://dev.classmethod.jp/articles/kiro-enterprise-gpt-6-luna/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790874832/eyecatch/ka0q8r1fii0ptkuwmyu2.png" type="image/png"/>
+        <updated>2026-11-28T15:48:58.000Z</updated>
+        <summary type="html"><![CDATA[GPT 6 Luna が Kiro Enterprise で Preview として提供開始されました。クレジット倍率は前バージョンの GPT-5.6 Luna の 3分の1です。100K トークンを超えるリクエストでは Haiku 5.5 に近い倍率です。費用対効果の良いモデルとして利用できる可能性があります。]]></summary>
+        <content type="html"><![CDATA[GPT 6 Luna が Kiro Enterprise で Preview として提供開始されました。クレジット倍率は前バージョンの GPT-5.6 Luna の 3分の1です。100K トークンを超えるリクエストでは Haiku 5.5 に近い倍率です。費用対効果の良いモデルとして利用できる可能性があります。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-28T15:48:58.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ELB for Envoy で Transit Gateway 越しの別 VPC の ALB へ HTTPS でリバースプロキシしてみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/elb-for-envoy-transit-gateway-1to1-nat/</id>
+        <link href="https://dev.classmethod.jp/articles/elb-for-envoy-transit-gateway-1to1-nat/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870850/eyecatch/mdcf3wtjpz1enrhca29r.png" type="image/png"/>
+        <updated>2026-11-28T15:11:23.000Z</updated>
+        <summary type="html"><![CDATA[ELB for Envoy から別 VPC の ALB へ、通常の Transit Gateway 経由でも、CIDR が重複する VPC をつなぐ 1:1 NAT 経由でも、ホスト名を照合した HTTPS で転送できました。1:1 NAT では ALB の DNS 名だと接続がタイムアウトし、プライベートホストゾーンに変換後のアドレスを書くと接続できました。]]></summary>
+        <content type="html"><![CDATA[ELB for Envoy から別 VPC の ALB へ、通常の Transit Gateway 経由でも、CIDR が重複する VPC をつなぐ 1:1 NAT 経由でも、ホスト名を照合した HTTPS で転送できました。1:1 NAT では ALB の DNS 名だと接続がタイムアウトし、プライベートホストゾーンに変換後のアドレスを書くと接続できました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-28T15:11:23.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Route 53 のアフィニティルーティングを試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/amazon-route53-az-affinity-routing/</id>
+        <link href="https://dev.classmethod.jp/articles/amazon-route53-az-affinity-routing/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870887/eyecatch/oa2tajbz1u8ialkh962f.png" type="image/png"/>
+        <updated>2026-11-28T14:20:29.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Route 53 のアフィニティルーティング（affinity routing）を試しました。クライアントと同じ AZ のレコードが返ること、なければ Zone Group、Region、Global の順に切り替わること、パブリックホストゾーンでは VPC の外からのクエリに Global が返ることを確かめました。]]></summary>
+        <content type="html"><![CDATA[Amazon Route 53 のアフィニティルーティング（affinity routing）を試しました。クライアントと同じ AZ のレコードが返ること、なければ Zone Group、Region、Global の順に切り替わること、パブリックホストゾーンでは VPC の外からのクエリに Global が返ることを確かめました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-28T14:20:29.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Kinesis Data Streams がサポートしたキューを試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/kinesis-data-streams-queues-getting-started/</id>
+        <link href="https://dev.classmethod.jp/articles/kinesis-data-streams-queues-getting-started/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870333/eyecatch/ijlihszsdnnc4uxkpk0w.png" type="image/png"/>
+        <updated>2026-11-28T12:40:04.000Z</updated>
+        <summary type="html"><![CDATA[Amazon Kinesis Data Streams で、オンデマンドモードのデータストリームから、シャードを意識せずにデータを受信できるようになりました。AWS CLI でキューからレコードを受信して ack してみました。]]></summary>
+        <content type="html"><![CDATA[Amazon Kinesis Data Streams で、オンデマンドモードのデータストリームから、シャードを意識せずにデータを受信できるようになりました。AWS CLI でキューからレコードを受信して ack してみました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-28T12:40:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Amazon CloudWatch Query Studio でクエリを保存して再利用できるようになったので試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/cloudwatch-query-studio-saved-queries/</id>
+        <link href="https://dev.classmethod.jp/articles/cloudwatch-query-studio-saved-queries/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-d6a3bc85cad6419960fbda152152cd8c/ba5841cea06b96f4933878762028b090/amazon-cloudwatch" type="image//ct0aopd36mqt/wp-thumbnail-d6a3bc85cad6419960fbda152152cd8c/ba5841cea06b96f4933878762028b090/amazon-cloudwatch"/>
+        <updated>2026-11-28T11:41:40.000Z</updated>
+        <summary type="html"><![CDATA[Amazon CloudWatch の Query Studio でクエリを保存・再利用できるようになったので、コンソールと AWS CLI からの操作を試してみました。]]></summary>
+        <content type="html"><![CDATA[Amazon CloudWatch の Query Studio でクエリを保存・再利用できるようになったので、コンソールと AWS CLI からの操作を試してみました。]]></content>
+        <author>
+            <name>荒巻 美南海</name>
+        </author>
+        <published>2026-11-28T11:41:40.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon OpenSearch Service Optimized engine で index を S3 Tables へ公開してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/opensearch-publish-indices-s3-tables/</id>
+        <link href="https://dev.classmethod.jp/articles/opensearch-publish-indices-s3-tables/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870344/eyecatch/vyus2dsdiyhjdrtqk4ji.png" type="image/png"/>
+        <updated>2026-11-28T10:02:56.000Z</updated>
+        <summary type="html"><![CDATA[index を公開してできたテーブルを、DuckDB から S3 Tables の table bucket を指定して、集計クエリで照会できました。catalog publishing を有効にした domain の作成から、公開、DuckDB での照会までのコマンドと設定を紹介します。]]></summary>
+        <content type="html"><![CDATA[index を公開してできたテーブルを、DuckDB から S3 Tables の table bucket を指定して、集計クエリで照会できました。catalog publishing を有効にした domain の作成から、公開、DuckDB での照会までのコマンドと設定を紹介します。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-28T10:02:56.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[初めて技術書典に出展してみました（技術書典21・『筋肉を支える技術』） | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/techbookfest21-first-exhibit-muscle-tech-book/</id>
+        <link href="https://dev.classmethod.jp/articles/techbookfest21-first-exhibit-muscle-tech-book/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1795859482/eyecatch/necq6eqyei4usegimdch.jpg" type="image/jpg"/>
+        <updated>2026-11-28T09:52:06.000Z</updated>
+        <author>
+            <name>佐藤雅樹</name>
+        </author>
+        <published>2026-11-28T09:52:06.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS IoT Core の HTTP ルールアクションを専用 IPv6 レンジだけ許可した API Gateway で受けてみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aws-iot-core-http-action-ipv6-ranges/</id>
+        <link href="https://dev.classmethod.jp/articles/aws-iot-core-http-action-ipv6-ranges/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790871112/eyecatch/jna5nswbtfj0wo2up9uk.png" type="image/png"/>
+        <updated>2026-11-28T09:31:55.000Z</updated>
+        <summary type="html"><![CDATA[AAAA レコードだけを公開した API Gateway へ IoT Core のルールから送信したところ、送信元は東京リージョンのレンジ 2406:da33:4000::/48 に収まりました。このレンジだけを許可するリソースポリシーを付けても配信は通り、手元から IPv6 で送った curl は 403 で拒否されました。]]></summary>
+        <content type="html"><![CDATA[AAAA レコードだけを公開した API Gateway へ IoT Core のルールから送信したところ、送信元は東京リージョンのレンジ 2406:da33:4000::/48 に収まりました。このレンジだけを許可するリソースポリシーを付けても配信は通り、手元から IPv6 で送った curl は 403 で拒否されました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-28T09:31:55.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ELB for Envoy を NLB 経由の PrivateLink で別 VPC に公開してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/elb-for-envoy-privatelink-nlb/</id>
+        <link href="https://dev.classmethod.jp/articles/elb-for-envoy-privatelink-nlb/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870850/eyecatch/mdcf3wtjpz1enrhca29r.png" type="image/png"/>
+        <updated>2026-11-28T08:11:43.000Z</updated>
+        <summary type="html"><![CDATA[プロキシの IP を NLB の ip ターゲットに登録し、その NLB をエンドポイントサービスにすると、別 VPC の EC2 からのリクエストに PrivateLink 経由で固定応答が返りました。NLB はプロキシの IP の変更に自動では追従しないので、追従する仕組みが必要でした。]]></summary>
+        <content type="html"><![CDATA[プロキシの IP を NLB の ip ターゲットに登録し、その NLB をエンドポイントサービスにすると、別 VPC の EC2 からのリクエストに PrivateLink 経由で固定応答が返りました。NLB はプロキシの IP の変更に自動では追従しないので、追従する仕組みが必要でした。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-28T08:11:43.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[無料提供が始まった Basic OpenTelemetry enrichment を有効にして Lambda のメトリクスを PromQL で取得してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/cloudwatch-basic-otel-enrichment-promql/</id>
+        <link href="https://dev.classmethod.jp/articles/cloudwatch-basic-otel-enrichment-promql/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870721/eyecatch/dallwkb1rduxic8kjsbs.png" type="image/png"/>
+        <updated>2026-11-28T07:10:47.000Z</updated>
+        <summary type="html"><![CDATA[start-otel-enrichment で、課金対象の resource tag enrichment（取り込みに1GB あたり $0.50）を省いた Basic OpenTelemetry enrichment を有効にして、Lambda の Invocations を PromQL で取得できました。]]></summary>
+        <content type="html"><![CDATA[start-otel-enrichment で、課金対象の resource tag enrichment（取り込みに1GB あたり $0.50）を省いた Basic OpenTelemetry enrichment を有効にして、Lambda の Invocations を PromQL で取得できました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-28T07:10:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CloudWatch の AWS 提供メトリクスに基本エンリッチメントの概念が生まれ、追加料金無しで OpenTelemetry メトリクス化できるようになりました（リソースタグも含める場合は追加課金） | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/cloudwatch-aws-vended-basic-metric-free/</id>
+        <link href="https://dev.classmethod.jp/articles/cloudwatch-aws-vended-basic-metric-free/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870721/eyecatch/dallwkb1rduxic8kjsbs.png" type="image/png"/>
+        <updated>2026-11-28T05:56:47.000Z</updated>
+        <summary type="html"><![CDATA[PromQL を使わない理由がどんどん消えていく]]></summary>
+        <content type="html"><![CDATA[PromQL を使わない理由がどんどん消えていく]]></content>
+        <author>
+            <name>枡川 健太郎</name>
+        </author>
+        <published>2026-11-28T05:56:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ELB for Envoy の IP 1 つあたりの帯域と同時接続数を測ってみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/elb-for-envoy-per-ip-throughput/</id>
+        <link href="https://dev.classmethod.jp/articles/elb-for-envoy-per-ip-throughput/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870850/eyecatch/mdcf3wtjpz1enrhca29r.png" type="image/png"/>
+        <updated>2026-11-28T05:52:27.000Z</updated>
+        <summary type="html"><![CDATA[Elastic Load Balancing (ELB) for Envoy 経由で Nginx の HTTP 配信性能を m9g.2xlarge で測ると、IP 1 つあたり約 12 Gbps、20,000 の同時接続も可能でした。負荷をかけ始めて約 1 分 15 秒後に IP が追加されました。]]></summary>
+        <content type="html"><![CDATA[Elastic Load Balancing (ELB) for Envoy 経由で Nginx の HTTP 配信性能を m9g.2xlarge で測ると、IP 1 つあたり約 12 Gbps、20,000 の同時接続も可能でした。負荷をかけ始めて約 1 分 15 秒後に IP が追加されました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-28T05:52:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS re:Invent 2026 を日本から学び、楽しむ方法 ― ライブ配信の登録、日本時間のスケジュール、振り返りイベントまで #AWSreInvent | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/20261128-aws-reinvent-2026-from-japan/</id>
+        <link href="https://dev.classmethod.jp/articles/20261128-aws-reinvent-2026-from-japan/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790875157/eyecatch/zettwdjcftbeaqfmbezn.png" type="image/png"/>
+        <updated>2026-11-28T04:49:59.000Z</updated>
+        <summary type="html"><![CDATA[現地に行かなくても AWS re:Invent 2026 は日本から学べます。無料のライブ配信「Live from re:Invent」の登録手順、日本時間のキーノートと配信スケジュール、日本語で質問できる AI でのセッション探し、Black Belt 速報や re:Growth、JAWS-UG などの振り返りイベントをまとめました。]]></summary>
+        <content type="html"><![CDATA[現地に行かなくても AWS re:Invent 2026 は日本から学べます。無料のライブ配信「Live from re:Invent」の登録手順、日本時間のキーノートと配信スケジュール、日本語で質問できる AI でのセッション探し、Black Belt 速報や re:Growth、JAWS-UG などの振り返りイベントをまとめました。]]></content>
+        <author>
+            <name>石川覚</name>
+        </author>
+        <published>2026-11-28T04:49:59.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[集約したCloudWatch Alarmの通知に発生元のアカウントIDを出すなら、Step Functionsで取り出そう | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/centralized-cloudwatch-alarm-notification-source-account-id/</id>
+        <link href="https://dev.classmethod.jp/articles/centralized-cloudwatch-alarm-notification-source-account-id/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-48037b4d08a5d4b9224074300706dc60/b96cdc54bea6dbeec12fad9b23858b1a/amazon-eventbridge" type="image//ct0aopd36mqt/wp-thumbnail-48037b4d08a5d4b9224074300706dc60/b96cdc54bea6dbeec12fad9b23858b1a/amazon-eventbridge"/>
+        <updated>2026-11-28T01:15:36.000Z</updated>
+        <summary type="html"><![CDATA[集約したCloudWatch Alarmの通知に発生元のアカウントIDを出そうとしたところ、EventBridgeのInput Transformerでは取り出せませんでした。取り出せなかった理由と、代わりにStep Functionsで取り出してから通知に渡す構成をまとめます。]]></summary>
+        <content type="html"><![CDATA[集約したCloudWatch Alarmの通知に発生元のアカウントIDを出そうとしたところ、EventBridgeのInput Transformerでは取り出せませんでした。取り出せなかった理由と、代わりにStep Functionsで取り出してから通知に渡す構成をまとめます。]]></content>
+        <author>
+            <name>吉田 岳史</name>
+        </author>
+        <published>2026-11-28T01:15:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon RDS for PostgreSQL 18.7 を試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/rds-postgresql-18-7-minor-versions-cve-eol/</id>
+        <link href="https://dev.classmethod.jp/articles/rds-postgresql-18-7-minor-versions-cve-eol/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790869602/eyecatch/q1exussjxzltgdgujrkq.png" type="image/png"/>
+        <updated>2026-11-27T18:04:11.000Z</updated>
+        <summary type="html"><![CDATA[PostgreSQL コミュニティが 2026年11月12日に公開したマイナーバージョンが、RDS で利用可能になりました。52 件の脆弱性が修正され、14 系は 14.25 が最終リリースになります。]]></summary>
+        <content type="html"><![CDATA[PostgreSQL コミュニティが 2026年11月12日に公開したマイナーバージョンが、RDS で利用可能になりました。52 件の脆弱性が修正され、14 系は 14.25 が最終リリースになります。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-27T18:04:11.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ELB for Envoy 経由で Aurora（PostgreSQL / MySQL）への DB 接続を試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/elb-for-envoy-aurora-tcp-proxy/</id>
+        <link href="https://dev.classmethod.jp/articles/elb-for-envoy-aurora-tcp-proxy/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870850/eyecatch/mdcf3wtjpz1enrhca29r.png" type="image/png"/>
+        <updated>2026-11-27T17:34:52.000Z</updated>
+        <summary type="html"><![CDATA[Aurora PostgreSQL は、ELB for Envoy の tcp_proxy 経由で EC2 から接続できました。Aurora MySQL は、フィルターのタイムアウト後も接続を維持する指定により接続できました。]]></summary>
+        <content type="html"><![CDATA[Aurora PostgreSQL は、ELB for Envoy の tcp_proxy 経由で EC2 から接続できました。Aurora MySQL は、フィルターのタイムアウト後も接続を維持する指定により接続できました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-27T17:34:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] Generative AI Use Cases（GenU）v5.6.0 で管理者が全ユーザーのトークン数と概算料金を管理できるようになりました | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/genu-v560-admin-token-usage-mng/</id>
+        <link href="https://dev.classmethod.jp/articles/genu-v560-admin-token-usage-mng/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/348VnC3440CoUtpS4pd5NS/8a7182ab96a0851a72a88d40328811b3/aws.png" type="image/png"/>
+        <updated>2026-11-27T17:20:34.000Z</updated>
+        <summary type="html"><![CDATA[盾マークみたいなところから使える]]></summary>
+        <content type="html"><![CDATA[盾マークみたいなところから使える]]></content>
+        <author>
+            <name>いわさ</name>
+        </author>
+        <published>2026-11-27T17:20:34.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CloudWatch エージェントのログ収集パスを変更する手順（SSM パラメータストア + Run Command） | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/cloudwatch-agent-change-log-path/</id>
+        <link href="https://dev.classmethod.jp/articles/cloudwatch-agent-change-log-path/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870721/eyecatch/dallwkb1rduxic8kjsbs.png" type="image/png"/>
+        <updated>2026-11-27T15:04:36.000Z</updated>
+        <summary type="html"><![CDATA[CloudWatch エージェントの設定をSSMパラメータストアで管理している場合、EC2（Windows）でログ収集パスを変更する手順を、パラメータ編集からRun Commandでの反映、動作確認まで紹介します。]]></summary>
+        <content type="html"><![CDATA[CloudWatch エージェントの設定をSSMパラメータストアで管理している場合、EC2（Windows）でログ収集パスを変更する手順を、パラメータ編集からRun Commandでの反映、動作確認まで紹介します。]]></content>
+        <author>
+            <name>lee-huisu</name>
+        </author>
+        <published>2026-11-27T15:04:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elastic Load Balancing for Envoy の ddos_protection と AWS WAF 連携を試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/aws-elb-for-envoy-syn-cookie-waf/</id>
+        <link href="https://dev.classmethod.jp/articles/aws-elb-for-envoy-syn-cookie-waf/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870850/eyecatch/mdcf3wtjpz1enrhca29r.png" type="image/png"/>
+        <updated>2026-11-27T14:58:20.000Z</updated>
+        <summary type="html"><![CDATA[ddos_protection の SYN cookie mode を continuous にすると、SYN-ACK の形が変わり、不正な ACK に SYN-ACK を再送しなくなりました。AWS WAF の Block ルール（IP 指定、レートルール）による遮断も確認できました。]]></summary>
+        <content type="html"><![CDATA[ddos_protection の SYN cookie mode を continuous にすると、SYN-ACK の形が変わり、不正な ACK に SYN-ACK を再送しなくなりました。AWS WAF の Block ルール（IP 指定、レートルール）による遮断も確認できました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-27T14:58:20.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【2027 Japan All AWS Credentials Engineers】 Microcredentialsを受験して、バッジを取得してみた！ | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/202611-mitsuguchi-awsexam-microcredentials-serverless/</id>
+        <link href="https://dev.classmethod.jp/articles/202611-mitsuguchi-awsexam-microcredentials-serverless/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790873759/eyecatch/ztrfxrckdyyahcnjueoh.png" type="image/png"/>
+        <updated>2026-11-27T14:47:57.000Z</updated>
+        <summary type="html"><![CDATA[2027年から AWS 認定に加えて Microcredentials の取得が条件になります。実際に「AWS サーバーレスの実証」を受験して合格しましたので、流れや難易度、受験してみた感覚をお届けします！]]></summary>
+        <content type="html"><![CDATA[2027年から AWS 認定に加えて Microcredentials の取得が条件になります。実際に「AWS サーバーレスの実証」を受験して合格しましたので、流れや難易度、受験してみた感覚をお届けします！]]></content>
+        <author>
+            <name>三ツ口寛太（Kanta Mitsuguchi）</name>
+        </author>
+        <published>2026-11-27T14:47:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CodeCommit のマージ方式（Fast Forward / 3-way / Squash）の違い、複数人が続けてマージするとエラーになる理由 | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/codecommit-merge-methods/</id>
+        <link href="https://dev.classmethod.jp/articles/codecommit-merge-methods/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870487/eyecatch/b4wyioiz2czei3dnizfy.png" type="image/png"/>
+        <updated>2026-11-27T14:09:33.000Z</updated>
+        <summary type="html"><![CDATA[複数人が AWS CodeCommit の main ブランチへ続けてマージするときに、2人目以降がエラーになった経験はありませんか？Fast Forward、3-way、Squash の3つのマージ方式の違いと、それぞれの使い分けについて図を交えて解説します。]]></summary>
+        <content type="html"><![CDATA[複数人が AWS CodeCommit の main ブランチへ続けてマージするときに、2人目以降がエラーになった経験はありませんか？Fast Forward、3-way、Squash の3つのマージ方式の違いと、それぞれの使い分けについて図を交えて解説します。]]></content>
+        <author>
+            <name>lee-huisu</name>
+        </author>
+        <published>2026-11-27T14:09:33.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenSearch Service の新エンジンがサポートした join、高カーディナリティ集計、query DSL を試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/opensearch-new-engine-joins-and-dsl/</id>
+        <link href="https://dev.classmethod.jp/articles/opensearch-new-engine-joins-and-dsl/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870344/eyecatch/vyus2dsdiyhjdrtqk4ji.png" type="image/png"/>
+        <updated>2026-11-27T13:43:52.000Z</updated>
+        <summary type="html"><![CDATA[単一ノードの新エンジンドメインで、100 万件のログに対し、PPL と SQL による約 51 万件の span との join、PPL の lookup、distinct な値の集計を実行しました。いずれも 1 秒未満で返り、query DSL の _search も 2 つのクエリで期待どおりの件数を返しました。]]></summary>
+        <content type="html"><![CDATA[単一ノードの新エンジンドメインで、100 万件のログに対し、PPL と SQL による約 51 万件の span との join、PPL の lookup、distinct な値の集計を実行しました。いずれも 1 秒未満で返り、query DSL の _search も 2 つのクエリで期待どおりの件数を返しました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-27T13:43:52.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon OpenSearch Service が対応した OpenSearch 3.9 を試してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/opensearch-3-9-vector-compression-base64/</id>
+        <link href="https://dev.classmethod.jp/articles/opensearch-3-9-vector-compression-base64/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870344/eyecatch/vyus2dsdiyhjdrtqk4ji.png" type="image/png"/>
+        <updated>2026-11-27T12:56:17.000Z</updated>
+        <summary type="html"><![CDATA[OpenSearch 3.9 でサポートされた half_float 型（1 次元 16 bit）、bf16 エンコーダ、2 bit・4 bit のスカラー量子化について、インデックスサイズの削減などを試しました。]]></summary>
+        <content type="html"><![CDATA[OpenSearch 3.9 でサポートされた half_float 型（1 次元 16 bit）、bf16 エンコーダ、2 bit・4 bit のスカラー量子化について、インデックスサイズの削減などを試しました。]]></content>
+        <author>
+            <name>suzuki.ryo</name>
+        </author>
+        <published>2026-11-27T12:56:17.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NVIDIAのVLM「Cosmos 3」をローカルで触ってみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/local-vlm-nvidia-cosmos/</id>
+        <link href="https://dev.classmethod.jp/articles/local-vlm-nvidia-cosmos/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790875035/eyecatch/tk0qj2ifibb7ejfukcyw.png" type="image/png"/>
+        <updated>2026-11-27T11:46:13.000Z</updated>
+        <summary type="html"><![CDATA[NVIDIAのオープンなVLM「Cosmos 3」を、DGX Spark上のローカル環境でセットアップしてみました。uvのインストールから公式サンプルの実行、自分で撮った猫の画像を読ませるところまで、ハマったポイントも含めて実際に試した結果をお伝えします。]]></summary>
+        <content type="html"><![CDATA[NVIDIAのオープンなVLM「Cosmos 3」を、DGX Spark上のローカル環境でセットアップしてみました。uvのインストールから公式サンプルの実行、自分で撮った猫の画像を読ませるところまで、ハマったポイントも含めて実際に試した結果をお伝えします。]]></content>
+        <author>
+            <name>uchiganeku.takayo</name>
+        </author>
+        <published>2026-11-27T11:46:13.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【登壇レポート】 勉強会 opsmethod#5 「Claudeを活用した、 運用報告書作成の自動化・効率化」というタイトルで登壇しました！ | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/opsmethod-5-2026-11-19-ryo-kikuchi/</id>
+        <link href="https://dev.classmethod.jp/articles/opsmethod-5-2026-11-19-ryo-kikuchi/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1795584501/eyecatch/osnm3qvrfreq70k4o09s.png" type="image/png"/>
+        <updated>2026-11-27T11:31:47.000Z</updated>
+        <summary type="html"><![CDATA[Claudeで運用報告書作成を自動化する方法について、勉強会での登壇内容をご紹介します]]></summary>
+        <content type="html"><![CDATA[Claudeで運用報告書作成を自動化する方法について、勉強会での登壇内容をご紹介します]]></content>
+        <author>
+            <name>ryo-kikuchi</name>
+        </author>
+        <published>2026-11-27T11:31:47.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CodeCommitのプルリクで変更したファイルだけlint、formatする | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/codecommit-pr-lint-format-changed-files/</id>
+        <link href="https://dev.classmethod.jp/articles/codecommit-pr-lint-format-changed-files/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790870487/eyecatch/b4wyioiz2czei3dnizfy.png" type="image/png"/>
+        <updated>2026-11-27T11:30:04.000Z</updated>
+        <summary type="html"><![CDATA[CodeCommitでプルリクエストを作成、更新した際に、EventBridgeとCodeBuildを使ってlinterとformatterを実行する仕組みを構築してみました。この記事では、変更したファイルのみを対象とする方法について紹介しています。]]></summary>
+        <content type="html"><![CDATA[CodeCommitでプルリクエストを作成、更新した際に、EventBridgeとCodeBuildを使ってlinterとformatterを実行する仕組みを構築してみました。この記事では、変更したファイルのみを対象とする方法について紹介しています。]]></content>
+        <author>
+            <name>kato</name>
+        </author>
+        <published>2026-11-27T11:30:04.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[非エンジニアの私がCopilotでスキルを作ってみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/20261127_copilot_agentskills/</id>
+        <link href="https://dev.classmethod.jp/articles/20261127_copilot_agentskills/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790873843/eyecatch/iuq3vglu1ctyfe09da4q.jpg" type="image/jpg"/>
+        <updated>2026-11-27T10:42:03.000Z</updated>
+        <summary type="html"><![CDATA[Copilotに追加されたAgent Skils機能を試してみました。会社のテンプレートをスキル化することで、プレゼン資料作成時にAIが定型フォーマットやガイドラインを自動で反映できるようになります。その手順を紹介します。]]></summary>
+        <content type="html"><![CDATA[Copilotに追加されたAgent Skils機能を試してみました。会社のテンプレートをスキル化することで、プレゼン資料作成時にAIが定型フォーマットやガイドラインを自動で反映できるようになります。その手順を紹介します。]]></content>
+        <author>
+            <name>hosomi-noriko@製造BT部</name>
+        </author>
+        <published>2026-11-27T10:42:03.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[アップデート] AWS CloudFormation でも ELB for Envoy を作成できるようになりました | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/cloudformation-elb-envoy/</id>
+        <link href="https://dev.classmethod.jp/articles/cloudformation-elb-envoy/"/>
+        <link rel="enclosure" href="https://images.ctfassets.net/ct0aopd36mqt/wp-thumbnail-f650a3011b384cc3781610c17755bc71/c37c67c9bc40b72e6dce1a49f4153283/elastic-load-balancing" type="image//ct0aopd36mqt/wp-thumbnail-f650a3011b384cc3781610c17755bc71/c37c67c9bc40b72e6dce1a49f4153283/elastic-load-balancing"/>
+        <updated>2026-11-27T08:46:36.000Z</updated>
+        <summary type="html"><![CDATA[話題の ELB for Envoy が早速 CloudFormation に]]></summary>
+        <content type="html"><![CDATA[話題の ELB for Envoy が早速 CloudFormation に]]></content>
+        <author>
+            <name>いわさ</name>
+        </author>
+        <published>2026-11-27T08:46:36.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WAF Automatorで使用技術に応じた緊急ルールセットを受け取れるようになりました | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/waf-automator-emergency-rule-delivery-update/</id>
+        <link href="https://dev.classmethod.jp/articles/waf-automator-emergency-rule-delivery-update/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1793950808/eyecatch/bdsmb0snznrz7awch7tb.png" type="image/png"/>
+        <updated>2026-11-27T05:33:34.000Z</updated>
+        <summary type="html"><![CDATA[WAF Automatorの緊急ルール配信方式がアップデートされ、使用技術に応じたルールセットを受け取れるようになりました。主な変更点に加え、管理画面での使用技術の選択方法と、個別ルールの動作を切り替える手順を紹介します。]]></summary>
+        <content type="html"><![CDATA[WAF Automatorの緊急ルール配信方式がアップデートされ、使用技術に応じたルールセットを受け取れるようになりました。主な変更点に加え、管理画面での使用技術の選択方法と、個別ルールの動作を切り替える手順を紹介します。]]></content>
+        <author>
+            <name>山﨑</name>
+        </author>
+        <published>2026-11-27T05:33:34.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Splunk 公式 MCP Server を導入して Claude から SPL を書かずにログ調査してみた | DevelopersIO]]></title>
+        <id>https://dev.classmethod.jp/articles/splunk-mcp-server/</id>
+        <link href="https://dev.classmethod.jp/articles/splunk-mcp-server/"/>
+        <link rel="enclosure" href="https://devio2024-media.developers.io/image/upload/f_auto,q_auto/c_limit,w_1200/v1790874791/eyecatch/h5bzp9brzgtftdflygzn.png" type="image/png"/>
+        <updated>2026-11-26T23:49:48.000Z</updated>
+        <summary type="html"><![CDATA[Splunk MCP Serverを導入してClaudeから自然言語でCloudTrailを調査してみました。SPLを1行も書かずに調査が成立するだけでなく、曖昧な指示を調査条件に翻訳し、データのノイズに気づいて検算するなど、ログ分析の設計そのものをAIが肩代わりしてくれます。権限設計のポイントも含めて、導入手順から実際の活用まで紹介します。]]></summary>
+        <content type="html"><![CDATA[Splunk MCP Serverを導入してClaudeから自然言語でCloudTrailを調査してみました。SPLを1行も書かずに調査が成立するだけでなく、曖昧な指示を調査条件に翻訳し、データのノイズに気づいて検算するなど、ログ分析の設計そのものをAIが肩代わりしてくれます。権限設計のポイントも含めて、導入手順から実際の活用まで紹介します。]]></content>
+        <author>
+            <name>酒井剛</name>
+        </author>
+        <published>2026-11-26T23:49:48.000Z</published>
+    </entry>
+</feed>
